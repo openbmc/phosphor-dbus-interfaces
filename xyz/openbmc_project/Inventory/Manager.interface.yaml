@@ -1,0 +1,24 @@
+description: >
+    Implement to provide inventory management features.
+
+    An OpenBMC implementation providing inventory functions may provide zero
+    or more implementations on the inventory namespace root.  An implementing
+    service should additionally implement org.freedesktop.DBus.ObjectManager
+    on the inventory namespace root.
+methods:
+    - name: Notify
+      description: >
+          Signal the implementing service that an item is ready to have its
+          state managed.
+      parameters:
+        - name: path
+          type: o
+          description: >
+              The path of the item to be managed, relative to the inventory
+              namespace root.
+        - name: object
+          type: a{sa{sv}}
+          description: >
+              The fully enumerated item to be managed.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

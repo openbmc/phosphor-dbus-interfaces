@@ -1,0 +1,10 @@
+description: >
+    Implement to indicate item availability changes.
+properties:
+    - name: Cached
+      type: b
+      description: >
+          Whether or not the item is cached.  When true, the item
+          and its remaining attributes are undefined.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

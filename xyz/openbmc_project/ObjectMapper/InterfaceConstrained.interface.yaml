@@ -1,0 +1,68 @@
+description: >
+    Implement to provide interface constrained DBus service lookup features.
+
+    Any OpenBMC implementation must provide exactly one implementation of
+    xyz.openbmc_project.ObjectMapper.InterfaceConstrained on
+    /xyz/openbmc_project/ObjectMapper.
+methods:
+    - name: GetObject
+      description: >
+          Obtain the implementing DBus service for a given path and interface.
+          for the given path.
+      parameters:
+        - name: path
+          type: s # TODO: o
+          description: >
+            The object path for which the result should be fetched.
+        - name: interface
+          type: s
+          description: >
+            The constraining interface.
+      returns:
+        - name: service
+          type: s
+          description: >
+            The implementing DBus service.
+    - name: GetAncestors
+      description: >
+          Obtain a dictionary of ancestor -> implementing service, where ancestor
+          is an ancestor of path.
+      parameters:
+        - name: path
+          type: s # TODO: o
+          description: >
+            The path for which the result should be fetched.
+        - name: interface
+          type: s
+          description: >
+            The constraining interface.
+      returns:
+        - name: ancestors
+          type: a{ss} # TODO a{os}
+          description: >
+            A dictionary of ancestor -> services.
+    - name: GetSubTree
+      description: >
+          Obtain a dictionary of path -> implementing service, where path is in
+          sutbtree.
+      parameters:
+        - name: subtree
+          type: s # TODO: o
+          description: >
+            The subtree path for which the result should be fetched.
+        - name: depth
+          type: i
+          description: >
+            The maximum subtree depth for which results should be fetched.
+            For unconstrained fetches use a depth of zero.
+        - name: interface
+          type: s
+          description: >
+            The constraining interface.
+      returns:
+        - name: services
+          type: a{ss} # TODO a{os}
+          description: >
+            A dictionary of path -> services.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

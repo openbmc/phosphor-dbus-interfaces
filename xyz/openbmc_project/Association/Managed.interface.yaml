@@ -1,0 +1,13 @@
+description: >
+    Implement to delegate xyz.openbmc_project.Association interface management
+    responsibilities to another application.
+properties:
+    - name: Associated
+      type: a(sss) #TODO should be a(sso)
+      description: >
+          An array of forward, reverse, endpoint tuples where:
+              forward - The type of the association.
+              reverse - The type of the association to create for the endpoint.
+              endpoint - The association endpoint.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

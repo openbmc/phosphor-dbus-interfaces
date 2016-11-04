@@ -20,5 +20,7 @@ methods:
           type: a{sa{sv}}
           description: >
               The fully enumerated item to be managed.
+      errors:
+          - org.freedesktop.DBus.Error.FileNotFound
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

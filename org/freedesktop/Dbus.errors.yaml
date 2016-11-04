@@ -1,0 +1,17 @@
+- name: FileNotFound
+  description: A required file was not found
+  level: INFO
+  meta:
+    - str: "ERRNUM=0x%.4X"
+      type: int
+    - str: FILE_PATH=%s
+      type: const char *
+    - str: FILE_NAME=%s
+      type: const char *
+
+- name: InvalidArgs
+  description: Invalid argument passed into interface
+  level: ERR
+  meta:
+        - str: INVALID_PARAM=%s
+          type: const char*

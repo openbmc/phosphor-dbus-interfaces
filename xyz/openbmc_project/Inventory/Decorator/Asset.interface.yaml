@@ -1,0 +1,31 @@
+description: >
+    Implement to provide item physical asset attributes.
+properties:
+    - name: PartNumber
+      type: string
+      description: >
+          The item part number, typically a stocking number.
+    - name: SerialNumber
+      type: string
+      description: >
+          The item serial number.
+    - name: Manufacturer
+      type: string
+      description: >
+          The item manufacturer.
+    - name: BuildDate
+      type: string
+      description: >
+          The date of item manufacture in
+          YYYYMMDD format.
+    - name: FileId
+      type: string
+      description: >
+          Version of the file that was used to burn information
+          about the item on an item eeprom, for example.
+    - name: Model
+      type: string
+      description: >
+          The model of the item.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

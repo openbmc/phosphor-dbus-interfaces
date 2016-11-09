@@ -1,0 +1,11 @@
+description: >
+    Provides a property that depicts the current Asserted state of LED group.
+    To assert this group, property needs to be set to True.
+    To Deasserrt, property needs to be set to False.
+
+    This is needed by all the objects that are in phosphor::Led namespace.
+properties:
+    - name: Assert
+      type: b
+      description: >
+        Whether or not the group is currently asserted.

@@ -1,0 +1,96 @@
+description: >
+    Interface to update the flash.
+
+    This interface allows applications to update the firmware. The implementer
+    of this interface is also responsible for image verification (for boot
+    security) as it should be the final dbus interface before the physical flash
+    device is modified.
+
+    If this interface controls a shared flash chip (i.e. host flash), it can
+    fail due to not having exclusive access to the flash.
+methods:
+    - name: Stage
+      description: >
+        Attempts to verify and stage an update in memory. Both the provided
+        image and signature must be loaded into memory before they are
+        processed. If an image is already staged for update, it must be unstaged
+        before this method is called (or this method will return an error).
+
+        If the given image is not a tarball, the entire thing will be written
+        to the flash as-is.
+
+        If the image is given as a tarball, there will be an intermediate step
+        where the files are extracted and individually loaded into memory. The
+        tarball should contain a flash map, which contains the flash layout and
+        file mapping, and individual files for partitions that need to be
+        updated. The provided signature should be for all the files in the
+        tarball concatenated together (the flash map and individual files).
+
+        TODO - Define / link what the flash map should look like
+      parameters:
+        - name: image_path
+          type: std::string
+          description: >
+              The filesystem path where the image to be staged is stored.
+        - name: signature_file_path
+          type: std::string
+          description: >
+              The filesystem path where the signature for the image to be staged
+              is stored.
+      returns:
+        - name: result
+          type: size_t
+          description: >
+              The result of staging a flash image. Failure modes::
+                  * IMAGE_ALREADY_STAGED
+                  * INVALID_FILE_PATH
+                  * FAILED_VERIFICATION
+              See xyz::openbmc_project::control::FlashStagingResult for more
+              information.
+    - name: Unstage
+      description: >
+        Unstage any currently staged image.
+      returns:
+        - name: result
+          type: bool
+          description: >
+            Returns true if an image was unstaged.
+    - name: Apply
+      description: >
+        Start writing staged image to flash. This is a non-reversible action.
+        Progress can be monitored via the Progress property.
+      returns:
+        - name: result
+          type: bool
+          description: >
+            Returns true only if an image was successfully staged and access to
+            the underlying flash is available exclusively for update.
+properties:
+    - name: HasStagedImage
+      type: bool
+      description: >
+        An image is currently staged for update.
+    - name: StagedFilePath
+      type: std::string
+      description: >
+        File path of the image that is currently staged. Valid only when
+        HasStagedImage is true.
+    - name: Progress
+      type: uint8_t
+      description: >
+        Flashing progress (0 to 100) representing bytes flashed vs image size.
+    - name: TargetDevice
+      type: std::string
+      description: >
+        Name of the flash device (i.e. /dev/mtd0).
+signals:
+    - name: ImageStaged
+      description: >
+        Signal indicating that an image has been staged.
+      properties:
+        - type: std::string
+          description: >
+            The path of the file being staged.
+    - name: Done
+      description: >
+        Flashing is done.

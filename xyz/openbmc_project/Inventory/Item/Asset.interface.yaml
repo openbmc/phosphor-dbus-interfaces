@@ -4,7 +4,7 @@ properties:
     - name: PartNumber
       type: s
       description: >
-          The item part number.
+          The item part number. Typically a stocking number.
     - name: SerialNumber
       type: s
       description: >
@@ -13,5 +13,13 @@ properties:
       type: s
       description: >
           The item manufacturer.
+    - name: Tag
+      type: s
+      description: >
+          A tag to classify this item.
+    - name: BuildDate
+      type: s
+      description: >
+          The item date of manufacture
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

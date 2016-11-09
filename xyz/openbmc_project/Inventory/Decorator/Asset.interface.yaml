@@ -2,16 +2,25 @@ description: >
     Implement to provide item physical asset attributes.
 properties:
     - name: PartNumber
-      type: s
+      type: string
       description: >
-          The item part number.
+          The item part number, typically a stocking number.
     - name: SerialNumber
-      type: s
+      type: string
       description: >
           The item serial number.
     - name: Manufacturer
-      type: s
+      type: string
       description: >
           The item manufacturer.
+    - name: BuildDate
+      type: string
+      description: >
+          The date of item manufacture in
+          YYYYMMDD format.
+    - name: Model
+      type: string
+      description: >
+          The model of the item.
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

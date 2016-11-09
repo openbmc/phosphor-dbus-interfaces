@@ -1,0 +1,10 @@
+description: >
+    Interface to control LED groups.
+    This is needed by all the objects that are in phosphor::Led namespace.
+properties:
+    - name: Assert
+      type: b
+      description: >
+        Whether or not the group is currently asserted.
+        To assert a group, set this to True.
+        To Deassert, set this to False.

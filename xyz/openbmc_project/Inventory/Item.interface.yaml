@@ -3,11 +3,11 @@ description: >
     within the inventory namespace.
 properties:
     - name: PrettyName
-      type: s
+      type: string
       description: >
           The human readable name of the item.
     - name: Present
-      type: b
+      type: boolean
       description: >
           Whether or not the item is present.
 

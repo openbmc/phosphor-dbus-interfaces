@@ -1,0 +1,10 @@
+description: >
+    Implement to provide custom properties added to an item by the
+    item vendor.
+properties:
+    - name: Properties
+      type: a{sv}
+      description: >
+          Custom properties relevant to item vendor.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

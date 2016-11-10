@@ -1,0 +1,22 @@
+description: >
+    Implement to provide direct-attached (onto the planar)
+    DIMM attributes.
+properties:
+    - name: MemoryRotator
+      type: dict[string, variant]
+      description: >
+          Memory Rotator data.
+    - name: MemoryTerminator
+      type: dict[string, variant]
+      description: >
+          Memory terminator mapping.
+    - name: MemoryClock
+      type: dict[string, variant]
+      description: >
+          Memory clock enablement data.
+    - name: DQData
+      type: dict[string, variant]
+      description: >
+          Memory DQ(data bus) data.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

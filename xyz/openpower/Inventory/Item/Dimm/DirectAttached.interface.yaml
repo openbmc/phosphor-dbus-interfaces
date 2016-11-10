@@ -1,0 +1,22 @@
+description: >
+    Implement to provide direct-attached (onto the planar)
+    DIMM attributes.
+properties:
+    - name: MemoryRotator
+      type: a{sv}
+      description: >
+          Memory Rotator data.
+    - name: MemoryTerminator
+      type: a{sv}
+      description: >
+          Memory terminator mapping.
+    - name: MemoryClock
+      type: a{sv}
+      description: >
+          Memory clock enablement data.
+    - name: DQData
+      type: a{sv}
+      description: >
+          Memory DQ(data bus) data.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

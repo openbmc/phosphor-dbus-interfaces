@@ -1,0 +1,14 @@
+description: >
+    Implement to provide basic item attributes.  Required by all objects
+    within the inventory namespace.
+properties:
+    - name: PrettyName
+      type: s
+      description: >
+          The human readable name of the item.
+    - name: Present
+      type: b
+      description: >
+          Whether or not the item is present.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

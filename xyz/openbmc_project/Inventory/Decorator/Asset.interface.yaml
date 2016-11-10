@@ -17,5 +17,10 @@ properties:
       type: s
       description: >
           The date of item manufacture.
+    - name: FileId
+      type: s
+      description: >
+          Version of the file that was used to burn information
+          about the item on an item eeprom, for example.
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

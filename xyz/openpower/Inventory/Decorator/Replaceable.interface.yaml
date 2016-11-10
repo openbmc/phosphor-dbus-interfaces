@@ -1,0 +1,22 @@
+description: >
+    Implement to provide item replacement attributes.
+properties:
+    - name: FieldReplaceable
+      type: b
+      description: >
+          Whether or not the item is field replaceable.
+    - name: FruNumber
+      type: s
+      description: >
+          Field replacable unit number.
+    - name: HasFault
+      type: b
+      description: >
+          Whether or not the item encountered a fault.
+    - name: FailureData
+      type: a{sv}
+      description: >
+          Information to help the item manufacturer identify
+          item fault(s).
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

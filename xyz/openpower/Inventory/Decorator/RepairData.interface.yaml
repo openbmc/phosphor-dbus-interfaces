@@ -1,0 +1,10 @@
+description: >
+    Implement to provide properties added to an item by the
+    item vendor to enable repair.
+properties:
+    - name: Properties
+      type: a{sv}
+      description: >
+          Repair data added by item vendor.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

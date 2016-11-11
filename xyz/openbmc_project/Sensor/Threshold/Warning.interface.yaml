@@ -1,0 +1,31 @@
+description: >
+    Implement to provide warning class sensor thresholds.  Objects implementing
+    Sensor.Threshold.Warning must be instantiated in the correct hierarchy within
+    the sensors namespace.  The following sensor hierarchies are recognized:
+      temperature
+      fan_tach
+      voltage
+      altitude
+
+    Additionally, any object implementing Sensor.Threshold.Warning must also
+    implement Sensor.Value.
+
+properties:
+    - name: WarningHigh
+      type: int64
+      description: >
+          The upper bound of the warning threshold.
+    - name: WarningLow
+      type: int64
+      description: >
+          The lower bound of the warning threshold.
+    - name: WarningAlarm
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bounds.
+          False if the sensor value has not exceeded the defined bounds.
+
+          WarningAlarm may be set to False to clear an alarm condition.
+          The behavior of setting WarningAlarm to True is undefined.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

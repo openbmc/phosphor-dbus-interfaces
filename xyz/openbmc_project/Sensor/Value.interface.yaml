@@ -1,0 +1,34 @@
+description: >
+    Implement to provide sensor readings.  Objects implementing
+    Sensor.Value must be instantiated in the correct
+    hierarchy within the sensors namespace.  The following sensor
+    hierarchies are recognized:
+      temperature
+      fan_tach
+      voltage
+      altitude
+
+    Any service implementing Sensor.Value on one or more objects must
+    implement org.freedesktop.DBus.ObjectManager on the sensors namespace root.
+
+    All Sensor.Value properties are read-only.
+
+properties:
+    - name: Value
+      type: i
+      description: >
+          The sensor reading.
+    - name: Unit
+      type: s
+      description: >
+          The unit of the reading.  
+          For objects in the temperature namespace, Unit must be "degrees C".
+          For objects in the fan_tach namespace, Unit must be "RPMs".
+          For objects in the voltage namespace, Unit must be "volts".
+          For objects in the altitude namespace, Unit must be "meters".
+    - name: Scale
+      type: i
+      description: >
+          The reading scaling factor N, where the actual reading is Value * 10^N.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

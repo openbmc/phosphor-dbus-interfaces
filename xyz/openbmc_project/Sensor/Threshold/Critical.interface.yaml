@@ -1,0 +1,31 @@
+description: >
+    Implement to provide critical class sensor thresholds.  Objects implementing
+    Sensor.Threshold.Critical must be instantiated in the correct hierarchy within
+    the sensors namespace.  The following sensor hierarchies are recognized:
+      temperature
+      fan_tach
+      voltage
+      altitude
+
+    Additionally, any object implementing Sensor.Threshold.Critical must also
+    implement Sensor.Value.
+
+properties:
+    - name: CriticalHigh
+      type: int64
+      description: >
+          The upper bound of the critical threshold.
+    - name: CriticalLow
+      type: int64
+      description: >
+          The lower bound of the critical threshold.
+    - name: CriticalAlarm
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bounds.
+          False if the sensor value has not exceeded the defined bounds.
+
+          CriticalAlarm may be set to False to clear an alarm condition.
+          The behavior of setting CriticalAlarm to True is undefined.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

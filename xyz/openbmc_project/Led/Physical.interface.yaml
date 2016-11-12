@@ -1,0 +1,35 @@
+description: >
+    Interface to control physical LED.
+
+properties:
+    - name: State
+      type: enum[self.Action]
+      default: OFF
+      description: >
+        Current State of the LED.
+
+    - name: DutyOn
+      type: byte
+      default: 50
+      description: >
+        Percentage time the LED needs to be ON while blinking.
+
+    - name: Color
+      type: string
+      description: >
+        Color of the LED, like amber, green, blue etc.
+
+enumerations:
+    - name: Action
+      description: >
+          Possible states a LED can be in.
+      values:
+        - name: OFF
+          description: >
+            LED is in OFF state
+        - name: ON
+          description: >
+            LED is in solid ON state
+        - name: BLINK
+          description: >
+            LED is blinking

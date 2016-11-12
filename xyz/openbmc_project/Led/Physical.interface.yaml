@@ -1,0 +1,26 @@
+description: >
+    Interface to control physical LED.
+properties:
+    - name: State
+      type: s
+      default: "OFF"
+      allowed: ["ON", "OFF", "BLINK"]
+      description: >
+          Possible states a LED can be in.
+
+      name: DutyOn
+      type: i
+      default: 50
+      description: >
+          Percentage time the LED needs to be ON while blinking.
+
+      name: DutyOff
+      type: i
+      default: 50
+      description: >
+          Percentage time the LED needs to be OFF while blinking.
+
+    - name: Color
+      type: s
+      description: >
+          Color of the LED, like amber, green, blue etc.

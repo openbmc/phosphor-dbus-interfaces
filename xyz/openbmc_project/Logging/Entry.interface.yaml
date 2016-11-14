@@ -1,0 +1,55 @@
+description: >
+    Implement to provide event/error entry attributes.
+    This interface should be instantiated for the phosphor::logging namespace.
+    This interface is a collection of objects, therefore it is required to
+    implement org.freedesktop.DBus.ObjectManager on the logging namespace root.
+    Optionally, implement org.openbmc.Object.Delete to allow the deletion of
+    individual entries.
+properties:
+    - name: Id
+      type: uint32
+      description: >
+          The error event entry id number.
+    - name: Severity
+      type: enum[self.Level]
+      description: >
+          The severity of the error event entry.
+    - name: Message
+      type: string
+      description: >
+          The message description of the error event entry.
+    - name: AdditionalData
+      type: array[string]
+      description: >
+          Additional information in the form of metadata field strings VAR=val
+
+enumerations:
+    - name: Level
+      description: >
+          Possible severity levels for an error log entry.
+      values:
+        - name: Emergency
+          description: >
+              System is unusable.
+        - name: Alert
+          description: >
+              Should be corrected immediately.
+        - name: Critical
+          description: >
+              Critical condition.
+        - name: Error
+          description: >
+              Error condition.
+        - name: Warning
+          description: >
+              An error may occur if action is not taken.
+        - name: Notice
+          description: >
+              Unusual condition, but not an error.
+        - name: Informational
+          description: >
+              Normal operational message that does not require action.
+        - name: Debug
+          description: >
+              Information useful to developers for debugging the application.
+

@@ -1,0 +1,10 @@
+description: >
+    Implement to control system time.
+properties:
+    - name: Elapsed
+      type: uint64
+      description: >
+          Time elpased since the
+          Epoch(1 Jan 1970 00:00:00 UTC), in microseconds.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

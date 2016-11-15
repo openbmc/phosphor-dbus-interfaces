@@ -1,0 +1,11 @@
+description: >
+    Implement to configure NTP settings.
+properties:
+    - name: enable
+      type: b
+      default: true
+      description: >
+          Whether or not time should be synced with
+          the network time.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

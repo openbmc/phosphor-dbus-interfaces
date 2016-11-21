@@ -4,7 +4,7 @@ description: >
 properties:
     - name: State
       type: enum[self.Action]
-      default: OFF
+      default: Off
       description: >
         Current State of the LED.
 
@@ -15,21 +15,48 @@ properties:
         Percentage time the LED needs to be ON while blinking.
 
     - name: Color
-      type: string
+      type: enum[self.Pallet]
+      default: Unknown
       description: >
-        Color of the LED, like amber, green, blue etc.
+        Color that the LED can emit.
 
 enumerations:
     - name: Action
       description: >
           Possible states a LED can be in.
       values:
-        - name: OFF
+        - name: Off
           description: >
             LED is in OFF state
-        - name: ON
+        - name: On
           description: >
             LED is in solid ON state
-        - name: BLINK
+        - name: Blink
           description: >
             LED is blinking
+
+    - name: Pallet
+      description: >
+          Possible colors that the LED can emit.
+      values:
+        - name: Red
+          description: >
+            LED can emit Red color.
+        - name: Green
+          description: >
+            LED can emit Green color.
+        - name: Blue
+          description: >
+            LED can emit Blue color.
+        - name: Cyan
+          description: >
+            LED can emit Cyan color.
+        - name: Magenta
+          description: >
+            LED can emit Magenta color.
+        - name: Yellow
+          description: >
+            LED can emit Yellow color.
+        - name: Unknown
+          description: >
+            Color emitted by LED is unknown.

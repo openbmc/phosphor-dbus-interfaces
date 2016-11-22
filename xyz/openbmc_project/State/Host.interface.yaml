@@ -1,0 +1,45 @@
+description: >
+    Implement to provide host state management
+
+properties:
+    - name: HostTransition
+      type: enum[self.Transition]
+      default: None
+      description: >
+          The desired host transition
+
+    - name: CurrentHostState
+      type: enum[self.HostState]
+      description: >
+          The current state of the host firmware. A user can determine
+          if a system is in transition by looking at the HostTranstion
+          property along with this property. This is a read-only property.
+
+enumerations:
+    - name: Transition
+      description: >
+        The desired transition for host firmware
+      values:
+        - name: 'None'
+          description: >
+            No transition is in progress
+        - name: 'Off'
+          description: >
+            Host firmware should be off
+        - name: 'On'
+          description: >
+            Host firmware should be on
+        - name: 'Reboot'
+          description: >
+            Host firmware should be rebooted with chassis power remaining on
+
+    - name: HostState
+      description: >
+        The current state of the host firmware
+      values:
+        - name: 'Off'
+          description: >
+            Host firmware is not running
+        - name: 'Running'
+          description: >
+            Host firmware is running

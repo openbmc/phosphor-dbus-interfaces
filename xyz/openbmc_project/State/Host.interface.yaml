@@ -1,0 +1,43 @@
+description: >
+    Implement to provide host state management
+
+properties:
+    - name: RequestedHostTransition
+      type: enum[self.Transition]
+      default: 'Off'
+      description: >
+          The desired host transition.  This will be preserved across AC
+          power cycles of the BMC.
+
+    - name: CurrentHostState
+      type: enum[self.HostState]
+      description: >
+          The current state of the host firmware. A user can determine
+          if a system is in transition by looking at the HostTranstion
+          property along with this property. This is a read-only property.
+
+enumerations:
+    - name: Transition
+      description: >
+        The desired transition for host firmware
+      values:
+        - name: 'Off'
+          description: >
+            Host firmware should be off
+        - name: 'On'
+          description: >
+            Host firmware should be on
+        - name: 'Reboot'
+          description: >
+            Host firmware should be rebooted with chassis power remaining on
+
+    - name: HostState
+      description: >
+        The current state of the host firmware
+      values:
+        - name: 'Off'
+          description: >
+            Host firmware is not running
+        - name: 'Running'
+          description: >
+            Host firmware is running

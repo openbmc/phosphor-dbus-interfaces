@@ -1,0 +1,38 @@
+description:
+    Implement to provide the chassis power management
+
+properties:
+    - name: PowerTransition
+      type: enum[self.Transition]
+      description: >
+          The desired power transition to start on this chassis
+
+    - name: CurrentPowerState
+      type: enum[self.PowerState]
+      description: >
+          The current state of the chassis power.  A user can determine
+          if a chassis is in transition by looking at the PowerTranstion
+          property along with this property. This is a read-only property.
+
+enumerations:
+    - name: Transition
+      description: >
+        The desired power transition for the chassis
+      values:
+        - name: 'Off'
+          description: >
+            Chassis  power should be off
+        - name: 'On'
+          description: >
+            Chassis power should be on
+
+    - name: PowerState
+      description: >
+        The current state of the chassis power
+      values:
+        - name: 'Off'
+          description: >
+            Chassis power is off
+        - name: 'On'
+          description: >
+            Chassis power is on

@@ -1,0 +1,73 @@
+description: >
+    Implement to provide host state management and system power functions
+
+    All CurrentState properties are read only.
+
+properties:
+    - name: DesiredState
+      type: enum[self.DesiredHostState]
+      description: >
+          The desired state to move the host to
+    - name: CurrentState
+      type: enum[self.CurrentHostState]
+      description: >
+          The current state of the host
+    - name: DesiredPowerState
+      type: enum[self.DesiredPowerState]
+      description: >
+          The desired power state to move the system to
+    - name: CurrentPowerState
+      type: enum[self.CurrentPowerState]
+      description: >
+          The current state of the system power
+
+enumerations:
+    - name: DesiredHostState
+      description: >
+        The desired state for the host firmware to be in
+      values:
+        - name: OFF
+          description: >
+            Host firmware should be off
+        - name: ON
+          description: >
+            Host firmware should be on
+        - name: REBOOT
+          description: >
+            Host firmware should be rebooted
+    - name: CurrentHostState
+      description: >
+        The current state for the host firmware
+      values:
+        - name: OFF
+          description: >
+            Host firmware is not running
+        - name: BOOTING
+          description: >
+            Host firmware is currently booting
+        - name: RUNNING
+          description: >
+            Host firmware is booted and ready for the user to interact with it
+    - name: DesiredPowerState
+      description: >
+        The desired power state of the system to be in
+      values:
+        - name: OFF
+          description: >
+            System power should be off
+        - name: ON
+          description: >
+            System power should be on
+    - name: CurrentPowerState
+      description: >
+        The current state of the system power
+      values:
+        - name: OFF
+          description: >
+            System power is off
+        - name: TRANSITION
+          description: >
+            System power is transitioning to either ON or OFF
+        - name: ON
+          description: >
+            System power is on

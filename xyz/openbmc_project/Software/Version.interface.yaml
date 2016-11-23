@@ -1,0 +1,32 @@
+description: >
+    Simple definition of a Software or Firmware version.
+properties:
+    - name: Version
+      type: string
+      description: >
+        The version identifier.
+    - name: Purpose
+      type: enum[self.VersionPurpose]
+      description: >
+        The purpose of the version.  As in, what can it be used for or
+        applied to?
+enumerations:
+    - name: VersionPurpose
+      description: >
+        An enumeration of possible purposes of the version.
+      values:
+        - name: Unknown
+          description: >
+            The version is of unknown purpose.
+        - name: Other
+          description: >
+            The version is of some other purpose.
+        - name: System
+          description: >
+            The version is an aggregate for the system as a whole.
+        - name: BMC
+          description: >
+            The version is a version for the BMC.
+        - name: Host
+          description: >
+            The version is a version for a managed host.

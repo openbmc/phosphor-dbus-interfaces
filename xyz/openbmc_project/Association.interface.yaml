@@ -8,7 +8,7 @@ description: >
     of the object implementing Association.
 properties:
     - name: Endpoints
-      type: as # TODO should be ao
+      type: array[path]
       description: >
           An array of association endpoints.
 

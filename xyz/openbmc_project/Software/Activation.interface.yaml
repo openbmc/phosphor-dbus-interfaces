@@ -1,0 +1,48 @@
+description: >
+    Activation state for an associated xyz.openbmc_project.Software.Level.
+properties:
+    - name: Activation
+      type: enum[Activations]
+      description: >
+        The current Activation state of the Software.Level.
+    - name: RequestedActivation
+      type: enum[RequestedActivations]
+      description: >
+        The desired Activation state of the Software.Level.
+enumerations:
+    - name: Activations
+      description: >
+        The possible Activation states of the Software.Level.
+      values:
+        - name: NotReady
+          description: >
+            The system is still analyzing the Software.Level and is
+            currently unable to activate.
+        - name: Invalid
+          description: >
+            The Software.Level is invalid and unable to be activated.
+        - name: Ready
+          description: >
+            The Software.Level has been processed and is ready for Activation.
+        - name: Activating
+          description: >
+            The Software.Level is in the process of being Activated.
+        - name: Active
+          description: >
+            The Software.Level is currently Active.
+        - name: Failed
+          description: >
+            The Software.Level failed during or after Activation.
+    - name: RequestedActivations
+      description: >
+        The possible RequestedActivation states of a Software.Level.
+      values:
+        - name: None
+          description: >
+            No action has been directed for this Software.Level.
+        - name: Active
+          description: >
+            The Software.Level has been requested for Activation.
+# TODO: Specify "EAGAIN" type error when requested is unable to be acted on
+#       due to current system state.  Currently, sdbusplus does not support
+#       errors on properties.

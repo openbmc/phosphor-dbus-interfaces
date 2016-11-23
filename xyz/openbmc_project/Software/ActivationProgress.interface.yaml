@@ -1,0 +1,8 @@
+description: >
+    Activation progress for an associated xyz.openbmc_project.Software.Level.
+properties:
+    - name: Progress
+      type: uint8
+      description: >
+        An integer between 0 and 100 representing the percentage complete of
+        the current activation progress.

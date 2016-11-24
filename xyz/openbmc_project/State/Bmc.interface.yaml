@@ -1,0 +1,32 @@
+description: >
+   Implement to provide Bmc state management
+
+properties:
+   - name: BmcTransition
+     type: enum[self.Transition]
+     description: >
+         The desired transition of the Bmc
+   - name: CurrentBmcState
+     type: enum[self.BmcState]
+     description: >
+         The current state of the Bmc and is a read-only property
+
+enumerations:
+   - name: Transition
+     description: >
+       The desired transition for the bmc firmware
+     values:
+       - name: Reboot
+         description: >
+           Bmc system should rebooted
+
+   - name: BmcState
+     description: >
+       The current state of the bmc firmware
+     values:
+       - name: Ready
+         description: >
+           Ready implies all services started and are running successfully
+       - name: NotReady
+         description: >
+           Not ready implies not all services have started or are not running successfully

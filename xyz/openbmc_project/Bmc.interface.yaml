@@ -1,0 +1,34 @@
+description: >
+   Properties needed to operate both managment states
+
+properties:
+   - name: CurrentState
+     type: enum[self.CurrentBmcState]
+     description: >
+         The current state of the Bmc and are read only properties
+   - name: DesiredState
+     type: enum[self.DesiredBmcState]
+     description: >
+         The desired state of the Bmc
+
+enumerations:
+   - name: CurrentBmcState
+     description: >
+       The current state that the bmc is in
+     values:
+       - name: READY
+         description: >
+           Ready implies all services started and are running successfully
+       - name: NOT_READY
+         description: >
+           Not ready implies not all services have started or are not running successfully
+   - name: DesiredBmcState
+     description: >
+       The desired state for the bmc to be in
+     values:
+       - name: READY
+         description: >
+           The desired state is ready to be aquired
+       - name: REBOOT
+         description: >
+           System should rebooted

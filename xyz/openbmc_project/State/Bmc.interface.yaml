@@ -1,0 +1,37 @@
+description: >
+   Implementation of BMC state management.  When rebooting we are in
+   transition and would want to apply flash updates.  When we are Ready
+   all services required are running successfully.  When we are Not Ready
+   this implies not all services have started that are required to be.
+
+properties:
+   - name: RequestedBmcTransition
+     type: enum[self.Transition]
+     default: Ready
+     description: >
+         The desired transition of the BMC
+
+   - name: CurrentBmcState
+     type: enum[self.BmcState]
+     description: >
+         The current state of the BMC and is a read-only property.
+
+enumerations:
+   - name: Transition
+     description: >
+       The desired transition for the BMC firmware
+     values:
+       - name: 'Reboot'
+         description: >
+           BMC system should rebooted
+
+   - name: BmcState
+     description: >
+       The current state of the BMC firmware
+     values:
+       - name: 'Ready'
+         description: >
+           Ready implies all services started and are running successfully
+       - name: 'NotReady'
+         description: >
+           Not ready implies not all services have started or are not running successfully

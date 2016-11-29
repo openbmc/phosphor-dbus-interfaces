@@ -4,7 +4,7 @@ description: >
 properties:
     - name: State
       type: enum[self.Action]
-      default: Off
+      default: 'Off'
       description: >
         Current State of the LED.
 
@@ -25,13 +25,13 @@ enumerations:
       description: >
           Possible states a LED can be in.
       values:
-        - name: Off
+        - name: 'Off'
           description: >
             LED is in OFF state
-        - name: On
+        - name: 'On'
           description: >
             LED is in solid ON state
-        - name: Blink
+        - name: 'Blink'
           description: >
             LED is blinking
 

@@ -1,0 +1,28 @@
+description: >
+    Implement the watchdog function.
+properties:
+    - name: Enabled
+      type: boolean
+      description: >
+          The watchdog is enabled or not.
+      default: false
+    - name: Interval
+      type: uint64
+      description: >
+          Time interval to arm the watchdog, in mili-second.
+      default: 30000
+    - name: TimeRemaining
+      type: uint64
+      description: >
+          Time remaining before timeout, in mili-second.
+      default: 30000
+methods:
+    - name: Reset
+      description: >
+          Re-arm the watchdog timer.
+signals:
+    - name: Timeout
+      description: >
+          Signal indicating that watchdog timed out.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

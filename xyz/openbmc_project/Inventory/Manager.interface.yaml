@@ -12,12 +12,12 @@ methods:
           state managed.
       parameters:
         - name: path
-          type: o
+          type: path
           description: >
               The path of the item to be managed, relative to the inventory
               namespace root.
         - name: object
-          type: a{sa{sv}}
+          type: dict[string,dict[string,variant[int64,string]]]
           description: >
               The fully enumerated item to be managed.
 

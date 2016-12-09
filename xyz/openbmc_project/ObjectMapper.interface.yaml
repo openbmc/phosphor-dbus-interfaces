@@ -10,16 +10,16 @@ methods:
           for the given path.
       parameters:
         - name: path
-          type: s # TODO: o
+          type: path
           description: >
             The object path for which the result should be fetched.
         - name: interfaces
-          type: as
+          type: array[string]
           description: >
             An array of result set constraining interfaces.
       returns:
         - name: services
-          type: a{sas}
+          type: dict[string,array[string]]
           description: >
             A dictionary of service -> implemented interface(s).
     - name: GetAncestors
@@ -29,16 +29,16 @@ methods:
           GetObject method.
       parameters:
         - name: path
-          type: s # TODO: o
+          type: path
           description: >
             The path for which the result should be fetched.
         - name: interfaces
-          type: as
+          type: array[string]
           description: >
             An array of result set constraining interfaces.
       returns:
         - name: ancestors
-          type: a{sa{sas}} # TODO a{oa{sas}}
+          type: dict[path,dict[string,array[string]]]
           description: >
             A dictionary of ancestor -> services.
     - name: GetSubTree
@@ -48,21 +48,21 @@ methods:
           GetObject method.
       parameters:
         - name: subtree
-          type: s # TODO: o
+          type: path
           description: >
             The subtree path for which the result should be fetched.
         - name: depth
-          type: i
+          type: int32
           description: >
             The maximum subtree depth for which results should be fetched.
             For unconstrained fetches use a depth of zero.
         - name: interfaces
-          type: as
+          type: array[string]
           description: >
             An array of result set constraining interfaces.
       returns:
         - name: objects
-          type: a{sa{sas}} # TODO a{oa{sas}}
+          type: dict[path,dict[string,array[string]]]
           description: >
             A dictionary of path -> services.
     - name: GetSubTreePaths
@@ -70,21 +70,21 @@ methods:
           Obtain an array of paths where array elements are in subtree.
       parameters:
         - name: subtree
-          type: s # TODO: o
+          type: path
           description: >
             The subtree path for which the result should be fetched.
         - name: depth
-          type: i
+          type: int32
           description: >
             The maximum subtree depth for which results should be fetched.
             For unconstrained fetches use a depth of zero.
         - name: interfaces
-          type: as
+          type: array[string]
           description: >
             An array of result set constraining interfaces.
       returns:
         - name: paths
-          type: as # TODO ao
+          type: array[path]
           description: >
             An array of paths.
 

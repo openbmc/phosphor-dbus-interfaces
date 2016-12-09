@@ -29,6 +29,6 @@ LT_INIT([dlopen disable-static shared])
 LT_LIB_DLLOAD
 
 # Create configured output
-AC_CONFIG_FILES([Makefile.interfaces],[./generate_makefile.sh > Makefile.interfaces])
+AC_CONFIG_FILES([Makefile.interfaces],[${srcdir}/generate_makefile.sh ${srcdir} > Makefile.interfaces])
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

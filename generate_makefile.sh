@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd $1
+
 toplevel_dirs=xyz
 interfaces=`find $toplevel_dirs -name "*.interface.yaml"`
 

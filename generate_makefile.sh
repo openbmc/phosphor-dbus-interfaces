@@ -13,11 +13,11 @@ do
 
 ${i%.interface.yaml}/server.cpp: ${i} ${i%.interface.yaml}/server.hpp
 	@mkdir -p \`dirname \$@\`
-	sdbus++ -r \$(srcdir) interface server-cpp ${iface} > \$@
+	\$(SDBUSPLUSPLUS) -r \$(srcdir) interface server-cpp ${iface} > \$@
 
 ${i%.interface.yaml}/server.hpp: ${i}
 	@mkdir -p \`dirname \$@\`
-	sdbus++ -r \$(srcdir) interface server-header ${iface} > \$@
+	\$(SDBUSPLUSPLUS) -r \$(srcdir) interface server-header ${iface} > \$@
 
 MAKEFILE
 

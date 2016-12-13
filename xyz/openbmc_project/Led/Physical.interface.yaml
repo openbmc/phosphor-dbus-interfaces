@@ -20,6 +20,12 @@ properties:
       description: >
         Color that the LED can emit.
 
+    - name: Frequency
+      type: uint16
+      default: 1000
+      description: >
+        LED blink frequency expressed as milliseconds per on/off cycle.
+
 enumerations:
     - name: Action
       description: >

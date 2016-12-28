@@ -6,6 +6,9 @@ description: >
       fan_tach
       voltage
       altitude
+      current
+      power
+      energy
 
     Additionally, any object implementing Sensor.Threshold.Critical must also
     implement Sensor.Value.
@@ -27,5 +30,6 @@ properties:
 
           CriticalAlarm may be set to False to clear an alarm condition.
           The behavior of setting CriticalAlarm to True is undefined.
+
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

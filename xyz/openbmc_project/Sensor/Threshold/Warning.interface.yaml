@@ -6,6 +6,10 @@ description: >
       fan_tach
       voltage
       altitude
+      current
+      power
+      energy
+
 
     Additionally, any object implementing Sensor.Threshold.Warning must also
     implement Sensor.Value.

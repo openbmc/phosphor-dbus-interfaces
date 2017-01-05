@@ -7,4 +7,53 @@ properties:
           Time elpased since the
           Epoch(1 Jan 1970 00:00:00 UTC), in microseconds.
 
+    - name: CurrentTimeMode
+      type: enum[self.Mode]
+      description: >
+          The current time mode
+
+    - name: CurrentTimeOwner
+      type: enum[self.Owner]
+      description: >
+          The current time owner
+
+    - name: RequestedTimeMode
+      type: enum[self.Mode]
+      description: >
+          The requested time mode.
+
+    - name: RequestedTimeOwner
+      type: enum[self.Owner]
+      description: >
+          The requested time owner.
+
+enumerations:
+    - name: Mode
+      description: >
+          Possible mode.
+      values:
+        - name: Ntp
+          description: >
+              NTP
+        - name: Manual
+          description: >
+              MANUAL
+    - name: Owner
+      description: >
+          Possible owner
+
+      values:
+        - name: Bmc
+          description: >
+              BMC
+        - name: Host
+          description: >
+              HOST
+        - name: Split
+          description: >
+              SPLIT
+        - name: Both
+          description: >
+              BOTH
+
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

@@ -7,4 +7,36 @@ properties:
           Time elpased since the
           Epoch(1 Jan 1970 00:00:00 UTC), in microseconds.
 
+    - name: curr_time_mode
+      type: s
+      default: "NTP"
+      validation: list
+      allowed: ["NTP", "MANUAL"]
+      description: >
+          The current time mode
+
+    - name: curr_time_owner
+      type: s
+      default: "BMC"
+      validation: list
+      allowed: ["BMC", "HOST", "SPLIT", "BOTH"]
+      description: >
+          The current time owner
+
+    - name: requested_time_mode
+      type: s
+      default: "NTP"
+      validation: list
+      allowed: ["NTP", "MANUAL"]
+      description: >
+          The requested time mode.
+
+    - name: requested_time_owner
+      type: s
+      default: "BMC"
+      validation: list
+      allowed: ["BMC", "HOST", "SPLIT", "BOTH"]
+      description: >
+          The requested time owner.
+
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

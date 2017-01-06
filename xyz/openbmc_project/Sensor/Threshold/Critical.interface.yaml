@@ -22,14 +22,22 @@ properties:
       type: int64
       description: >
           The lower bound of the critical threshold.
-    - name: CriticalAlarm
+    - name: CriticalAlarmHigh
       type: boolean
       description: >
-          True if the sensor value has exceeded the defined bounds.
-          False if the sensor value has not exceeded the defined bounds.
+          True if the sensor value has exceeded the defined bound.
+          False if the sensor value has not exceeded the defined bound.
 
-          CriticalAlarm may be set to False to clear an alarm condition.
-          The behavior of setting CriticalAlarm to True is undefined.
+          CriticalAlarmHigh may be set to False to clear an alarm condition.
+          The behavior of setting CriticalAlarmHigh to True is undefined.
+    - name: CriticalAlarmLow
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bound.
+          False if the sensor value has not exceeded the defined bound.
+
+          CriticalAlarmLow may be set to False to clear an alarm condition.
+          The behavior of setting CriticalAlarmLow to True is undefined.
 
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

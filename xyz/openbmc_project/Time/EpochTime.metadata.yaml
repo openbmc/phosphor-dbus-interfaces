@@ -1,0 +1,9 @@
+- name: NotAllowed
+  meta:
+    - str: "CURRENT_MODE=%s"
+      type: string
+    - str: "CURRENT_OWNER=%s"
+      type: string
+
+- name: InternalError
+  level: ERR

@@ -1,0 +1,6 @@
+- name: IPMISensor
+  meta:
+    - str: "CALLOUT_IPMI_SENSOR_TYPE=%s"
+      type: string
+    - str: "CALLOUT_IPMI_SENSOR_NUM=%u"
+      type: uint32

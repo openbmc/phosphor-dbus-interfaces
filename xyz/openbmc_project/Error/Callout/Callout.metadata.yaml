@@ -1,0 +1,15 @@
+- name: Callout
+  meta:
+    - str: "CALLOUT_PRIORITY=%s"
+      type: enum[self.Level]
+    - str: "CALLOUT_ERRNO=%d"
+      type: int32
+
+enumerations:
+    - name: Level
+      description: >
+        Possible priority levels for a callout
+      values:
+        - name: HIGH
+        - name: MEDIUM
+        - name: LOW

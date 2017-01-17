@@ -1,0 +1,5 @@
+#xyz.openbmc_project.Error.Callout.IPMISensor
+- name: IPMISensor
+  description: Callout IPMI sensor
+  inherits:
+    - xyz.openbmc_project.Error.Callout.Callout

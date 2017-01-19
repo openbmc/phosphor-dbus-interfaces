@@ -1,0 +1,15 @@
+description: >
+    Implement the IPMI Soft Power Off function.
+properties:
+    - name: Initiate
+      type: boolean
+      description: >
+          Set to true to initiate a soft power off
+      default: false
+    - name: AckReceived
+      type: boolean
+      description: >
+          Set to true to indicate that the Host has acknowledged the request.
+          This could be the acknowledge that is received for either SMS_ATN or
+          the followup message that is involved during Soft Power Off sequence.
+      default: false

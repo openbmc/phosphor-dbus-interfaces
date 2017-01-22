@@ -10,6 +10,10 @@ properties:
       type: uint32
       description: >
           The error event entry id number.
+    - name: Timestamp
+      type: int64
+      description: >
+          Commit timestamp of the error event entry in seconds since 1970.
     - name: Severity
       type: enum[self.Level]
       description: >

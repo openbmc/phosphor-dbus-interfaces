@@ -17,7 +17,7 @@ methods:
               The path of the item to be managed, relative to the inventory
               namespace root.
         - name: object
-          type: dict[string,dict[string,variant[int64,string]]]
+          type: dict[string,dict[string,variant[boolean,int64,string]]]
           description: >
               The fully enumerated item to be managed.
 

@@ -11,14 +11,9 @@ methods:
           Signal the implementing service that an item is ready to have its
           state managed.
       parameters:
-        - name: path
-          type: path
-          description: >
-              The path of the item to be managed, relative to the inventory
-              namespace root.
         - name: object
-          type: dict[string,dict[string,variant[boolean,int64,string]]]
+          type: dict[path,dict[string,dict[string,variant[boolean,int64,string]]]]
           description: >
-              The fully enumerated item to be managed.
+              A dictionary of fully enumerated items to be managed.
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

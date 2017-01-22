@@ -10,6 +10,10 @@ properties:
       type: uint32
       description: >
           The error event entry id number.
+    - name: Timestamp
+      type: int32
+      description: >
+          Time when the error event entry was created in Epoch time.
     - name: Severity
       type: enum[self.Level]
       description: >

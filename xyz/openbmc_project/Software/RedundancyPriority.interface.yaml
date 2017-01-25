@@ -3,7 +3,7 @@ description: >
     xyz.openbmc_project.Software.Version.
 properties:
     - name: Priority
-      type: uint8
+      type: byte
       description: >
         The priority order specified for the associated Software.Version,
         represented as a value between 0 (High) and 127 (Low).  Any value

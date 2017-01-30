@@ -10,6 +10,9 @@ libphosphor_dbus_la_CXXFLAGS = $(SYSTEMD_CFLAGS)
 BUILT_SOURCES = libphosphor_dbus.cpp
 CLEANFILES = libphosphor_dbus.cpp
 
+pkgconfiglibdir = ${libdir}/pkgconfig
+pkgconfiglib_DATA = phosphor-dbus-interfaces.pc
+
 clean-local: clean-dbus
 
 -include Makefile.interfaces

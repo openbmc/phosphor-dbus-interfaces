@@ -17,3 +17,8 @@ clean-local: clean-dbus
 
 -include Makefile.interfaces
 
+yamldir = ${pkgdatadir}/yaml
+nobase_yaml_DATA = ## Filled in by Makefile.yaml
+
+-include Makefile.yaml
+

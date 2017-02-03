@@ -17,32 +17,39 @@ AC_CHECK_PROG([FIND], find, find)
 AC_CHECK_PROG([BASENAME], basename, basename)
 AC_CHECK_PROG([DIRNAME], dirname, dirname)
 
-AC_PATH_PROG([SDBUSPLUSPLUS], [sdbus++])
-AS_IF([test "x$SDBUSPLUSPLUS" == "x"],
-    AC_MSG_ERROR([Cannot find sdbus++]))
+AC_ARG_ENABLE([libphosphor_dbus],
+    AS_HELP_STRING([--disable-libphosphor_dbus], [Disable libphosphor_dbus]))
 
-# Checks for libraries.
-PKG_CHECK_MODULES([SYSTEMD], [libsystemd >= 221],,
-    [AC_MSG_ERROR(["systemd required and not found."])])
+AM_CONDITIONAL([WANT_LIBPHOSPHOR_DBUS], [test "x$enable_libphosphor_dbus" != "xno"])
 
-# Checks for typedefs, structures, and compiler characteristics.
-AX_CXX_COMPILE_STDCXX_14([noext])
-AX_APPEND_COMPILE_FLAGS([-Wall -Werror], [CFLAGS])
-AX_APPEND_COMPILE_FLAGS([-Wall -Werror], [CXXFLAGS])
+AS_IF([test "x$enable_libphosphor_dbus" != "xno"], [
+    AC_PATH_PROG([SDBUSPLUSPLUS], [sdbus++])
+    AS_IF([test "x$SDBUSPLUSPLUS" == "x"],
+        AC_MSG_ERROR([Cannot find sdbus++]))
 
-# Checks for header files.
-AC_CHECK_HEADER(sdbusplus/server.hpp, ,[AC_MSG_ERROR([Could not find sdbusplus/server.hpp...sdbusplus package required])])
+    # Checks for libraries.
+    PKG_CHECK_MODULES([SYSTEMD], [libsystemd >= 221],,
+        [AC_MSG_ERROR(["systemd required and not found."])])
 
-# Checks for library functions.
-LT_INIT([dlopen disable-static shared])
-LT_LIB_DLLOAD
+    # Checks for typedefs, structures, and compiler characteristics.
+    AX_CXX_COMPILE_STDCXX_14([noext])
+    AX_APPEND_COMPILE_FLAGS([-Wall -Werror], [CFLAGS])
+    AX_APPEND_COMPILE_FLAGS([-Wall -Werror], [CXXFLAGS])
 
-# Create configured output
-AC_CONFIG_FILES([Makefile.interfaces],
-    [${srcdir}/generate_makefile.sh ${srcdir} > Makefile.interfaces])
+    # Checks for header files.
+    AC_CHECK_HEADER(sdbusplus/server.hpp, ,[AC_MSG_ERROR([Could not find sdbusplus/server.hpp...sdbusplus package required])])
+
+    # Checks for library functions.
+    LT_INIT([dlopen disable-static shared])
+    LT_LIB_DLLOAD
+
+    # Create configured output
+    AC_CONFIG_FILES([Makefile.interfaces],
+        [${srcdir}/generate_makefile.sh ${srcdir} > Makefile.interfaces])
+    AC_CONFIG_FILES([phosphor-dbus-interfaces.pc])
+])
 AC_CONFIG_FILES([Makefile.yaml],
     [${srcdir}/generate_yaml_makefile.sh ${srcdir} > Makefile.yaml])
 
 AC_CONFIG_FILES([Makefile])
-AC_CONFIG_FILES([phosphor-dbus-interfaces.pc])
 AC_OUTPUT

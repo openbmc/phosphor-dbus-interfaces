@@ -2,3 +2,5 @@
   meta:
     - str: "CALLOUT_GPIO_NUM=%u"
       type: uint32
+  #inherits:
+    #- xyz.openbmc_project.Error.Callout.Device

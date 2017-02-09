@@ -4,3 +4,5 @@
       type: string
     - str: "CALLOUT_IIC_ADDR=0x%hx"
       type: uint16
+  #inherits:
+    #- xyz.openbmc_project.Error.Callout.Device

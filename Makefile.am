@@ -5,8 +5,8 @@ nobase_include_HEADERS = ## These get filled in by Makefile.interfaces
 
 libphosphor_dbusdir = ${libdir}
 libphosphor_dbus_LTLIBRARIES = libphosphor_dbus.la
-libphosphor_dbus_la_LDFLAGS = $(SYSTEMD_LIBS) -version-info 0:0:0 -shared
-libphosphor_dbus_la_CXXFLAGS = $(SYSTEMD_CFLAGS)
+libphosphor_dbus_la_LDFLAGS = $(SYSTEMD_LIBS) $(SDBUSPLUS_LIBS) -version-info 0:0:0 -shared
+libphosphor_dbus_la_CXXFLAGS = $(SYSTEMD_CFLAGS) $(SDBUSPLUS_CFLAGS)
 
 BUILT_SOURCES = libphosphor_dbus.cpp
 CLEANFILES = libphosphor_dbus.cpp

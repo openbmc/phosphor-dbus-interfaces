@@ -28,8 +28,8 @@ AS_IF([test "x$enable_libphosphor_dbus" != "xno"], [
         AC_MSG_ERROR([Cannot find sdbus++]))
 
     # Checks for libraries.
-    PKG_CHECK_MODULES([SYSTEMD], [libsystemd >= 221],,
-        [AC_MSG_ERROR(["systemd required and not found."])])
+    AX_PKG_CHECK_MODULES([SYSTEMD], [], [libsystemd >= 221], [], [AC_MSG_ERROR(["systemd required and not found."])])
+    AX_PKG_CHECK_MODULES([SDBUSPLUS], [], [sdbusplus], [], [AC_MSG_ERROR(["sdbusplus required and not found."])])
 
     # Checks for typedefs, structures, and compiler characteristics.
     AX_CXX_COMPILE_STDCXX_14([noext])

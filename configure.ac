@@ -23,6 +23,12 @@ AC_ARG_ENABLE([libphosphor_dbus],
 AM_CONDITIONAL([WANT_LIBPHOSPHOR_DBUS], [test "x$enable_libphosphor_dbus" != "xno"])
 
 AS_IF([test "x$enable_libphosphor_dbus" != "xno"], [
+    # Checks for transaction id support.
+    AC_ARG_ENABLE([transaction],
+        AS_HELP_STRING([--enable-transaction], [Enable transaction id support]))
+    AS_IF([test "x$enable_transaction" = "xyes"], 
+        AC_DEFINE(WANT_TRANSACTION, 1, [Transaction id support]))
+
     AC_PATH_PROG([SDBUSPLUSPLUS], [sdbus++])
     AS_IF([test "x$SDBUSPLUSPLUS" == "x"],
         AC_MSG_ERROR([Cannot find sdbus++]))

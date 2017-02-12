@@ -39,7 +39,7 @@ echo
 
 cat << MAKEFILE
 libphosphor_dbus.cpp: \$(libphosphor_dbus_cpp_SOURCES)
-	cat \$^ > \$@
+	echo "#include \"config.h\"" > \$@; cat \$^ >> \$@
 
 nobase_include_HEADERS = \$(libphosphor_dbus_hpp_SOURCES)
 

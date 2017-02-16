@@ -21,7 +21,7 @@ current state, and a requested transition.
 it's required target (Ready) or it's on it's way there (NotReady).  Users can
 request a (Reboot).
 
-2. *Host* : The host is either (Off), or it's (Running).
+2. *Host* : The host is either (Off), (Quiesce) or it's (Running).
 Running simply implies that the processors are executing instructions.  Users
 can request the host be in a (Off), (On), or (Reboot) state.  More details on
 different Reboot options below.

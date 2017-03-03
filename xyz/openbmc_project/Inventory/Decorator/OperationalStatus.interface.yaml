@@ -1,0 +1,49 @@
+description: >
+    Implement to indicate the operational status of the resource
+properties:
+    - name: State
+      type: enum[self.States]
+      description: >
+        The current operational status of the resource
+enumerations:
+    - name: States
+      description: >
+        The possible operational status of the resource
+      values:
+        - name: Enabled
+          description: >
+            This function or resource has been enabled.
+        - name: Disabled
+          description: >
+            This function or resource has been disabled.
+        - name: StandbyOffline
+          description: >
+            This function or resource is enabled, but awaiting
+            an external action to activate it.
+        - name: StandbySpare
+          description: >
+            This function or resource is part of a redundancy set and is
+            awaiting a failover or other external action to activate it.
+        - name: InTest
+          description: >
+            This function or resource is undergoing testing.
+        - name: Starting
+          description: >
+            This function or resource is starting.
+        - name: Absent
+          description: >
+            This function or resource is not present or not detected.
+        - name: UnavailableOffline
+          description: >
+            This function or resource is present but cannot be used.
+        - name: Deferring
+          description: >
+            The element will not process any commands but will queue
+            new requests.
+        - name: Quiesced
+          description: >
+            The element is enabled but only processes a restricted
+            set of commands.
+        - name: Updating
+          description: >
+            The element is updating and may be unavailable or degraded.

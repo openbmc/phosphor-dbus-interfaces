@@ -1,0 +1,18 @@
+description: >
+    Implement to indicate the operational status of the object
+properties:
+    - name: State
+      type: enum[self.States]
+      description: >
+        The current operational status of the object
+enumerations:
+    - name: States
+      description: >
+        The possible operational status of the object
+      values:
+        - name: Enabled
+          description: >
+            This object has been enabled.
+        - name: Disabled
+          description: >
+            This object has been disabled.

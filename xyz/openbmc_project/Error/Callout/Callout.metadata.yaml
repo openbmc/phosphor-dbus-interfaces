@@ -1,0 +1,32 @@
+- name: Device
+  meta:
+    - str: "CALLOUT_ERRNO=%d"
+      type: int32
+    - str: "CALLOUT_DEVICE_PATH=%s"
+      type: string
+
+- name: GPIO
+  meta:
+    - str: "CALLOUT_GPIO_NUM=%u"
+      type: uint32
+  #inherits:
+  #- xyz.openbmc_project.Error.Callout.Device
+
+- name: IIC
+  meta:
+    - str: "CALLOUT_IIC_BUS=%s"
+      type: string
+    - str: "CALLOUT_IIC_ADDR=0x%hx"
+      type: uint16
+  #inherits:
+  #- xyz.openbmc_project.Error.Callout.Device
+
+- name: Inventory
+  meta:
+    - str: "CALLOUT_INVENTORY_PATH=%s"
+      type: string
+
+- name: IPMISensor
+  meta:
+    - str: "CALLOUT_IPMI_SENSOR_NUM=%u"
+      type: uint32

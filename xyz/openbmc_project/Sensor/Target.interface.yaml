@@ -1,0 +1,39 @@
+description: >
+    Implement to provide writing to a sensor.  Objects implementing
+    Sensor.Target must be instantiated in the correct
+    hierarchy within the sensors namespace.  The following sensor
+    hierarchies are recognized:
+      fan_tach
+      fan_pwm
+
+    Any service implementing Sensor.Target on one or more objects must
+    implement org.freedesktop.DBus.ObjectManager on the sensors namespace root.
+
+    All Sensor.Target properties are read/write.
+
+properties:
+    - name: Target
+      type: int64
+      description: >
+          The sensor target value.
+    - name: Unit
+      type: enum[self.Unit]
+      description: >
+          The unit of the sensor write.
+          For objects in the fan_tach namespace, Unit must be "RPMS".
+          For objects in the fan_pwm namespace, Unit must be "PWMS".
+
+enumerations:
+    - name: Unit
+      description: >
+        A sensor write unit.
+      values:
+        - name: RPMS
+          description: >
+            Frequency of rotation as revolutions per minute.
+        - name: PWMS
+          description: >
+            Frequency of rotation as pulse width modulations.
+
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

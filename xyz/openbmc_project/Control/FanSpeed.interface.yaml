@@ -1,0 +1,19 @@
+description: >
+    Implement to provide fan speed control. The method of control is hardware
+    dependent and objects implementing Control.FanSpeed must be instantiated
+    in the correct hierarchy within the sensors namespace.
+    The following sensor hierarchies are recognized:
+      fan_tach
+
+    Any service implementing Control.FanSpeed on one or more objects must
+    implement org.freedesktop.DBus.ObjectManager on the sensors namespace root.
+
+    All Control.FanSpeed properties are read/write.
+
+properties:
+    - name: Target
+      type: int64
+      description: >
+          The fan speed target RPM value.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

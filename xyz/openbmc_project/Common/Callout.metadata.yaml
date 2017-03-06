@@ -4,6 +4,7 @@
       type: int32
     - str: "CALLOUT_DEVICE_PATH=%s"
       type: string
+      process: true
 
 - name: GPIO
   meta:

@@ -1,0 +1,15 @@
+- name: Open
+    - str: "ERRNO=%d"
+      type: int32
+    - str: "PATH=%s"
+      type: string
+
+- name: Seek
+    - str: "OFFSET=%ll"
+      type: int64
+    - str: "WHENCE=%d"
+      type: int32
+    - str: "ERRNO=%d"
+      type: int32
+    - str: "PATH=%s"
+      type: string

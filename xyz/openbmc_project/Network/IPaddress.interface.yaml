@@ -1,0 +1,32 @@
+description: >
+    This defines an IPv4address
+properties:
+    - name: Address
+      type: string
+      description: >
+          The value of this property shall be an IPv4 address assigned to this interface.
+    - name: prefixLength
+      type: byte
+      description: >
+          This is the IPv4 Subnet mask.
+    - name: AddressOrigin
+      type: enum[IPAddressOrigin]
+      description: >
+          This indicates how the address was determined.
+    - name: Gateway
+      type: string
+      description: >
+          This is the IPv4 gateway for this address.
+
+
+enumerations:
+    - name: IPAddressOrigin
+      description: >
+          Possible IPv4 address origin types.
+      values:
+        - name: Static
+          description: >
+              Static address configured by the server.
+        - name: DHCP
+          description: >
+              Address is provided by a DHCPv4 service.

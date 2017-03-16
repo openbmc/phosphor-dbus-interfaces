@@ -1,0 +1,65 @@
+description: >
+    Implement to provide system specific network configuration features.
+properties:
+    - name: HostName
+      type: string
+      description: >
+          The value of this property shall be host name of the system.
+    - name: DefaultGateway
+      type: string
+      description: >
+          The default gateway for the system.
+    - name: Nameservers
+      type: array[string]
+      description: >
+          DNS servers on the system.
+methods:
+    - name: AddVLAN
+      description: >
+          Add the VLAN on the given ethernet interface.
+      parameters:
+        - name: interface
+          type: string
+          description: >
+              Ethernet interface name where we want to add the VLAN.
+        - name: vlanId
+          type: string
+          description: >
+              VLAN interface identifier.
+
+    - name: CreateBonding
+      description: >
+          Bind multiple ethernet interfaces into a single virtual interface.
+      parameters:
+        - name: interfaces
+          type: array[string]
+          description: >
+              Interface list.
+
+    - name: RemoveInterface
+      description: >
+          Removes the virtual/ethernet interface from the system.
+      parameters:
+        - name: interface
+          type: string
+          description: >
+              Name of the virtual/ethernet interface.
+
+    - name: AddNameserver
+      description: >
+          Add domain nameserver.
+      parameters:
+        - name: nameserver
+          type: string
+          description: >
+              Domain nameserver.
+
+    - name: RemoveNameserver
+      description: >
+          Remove the domain nameserver.
+      parameters:
+        - name: nameserver
+          type: string
+          description: >
+              Domain nameserver.
+

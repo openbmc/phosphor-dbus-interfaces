@@ -2,7 +2,7 @@ description: >
     Implement to provide DBus service lookup features.
 
     Any OpenBMC implementation must provide exactly one implementation of
-    xyz.openbmc_project.ObjectMapper on /xyz/openbmc_project/ObjectMapper.
+    xyz.openbmc_project.ObjectMapper on /xyz/openbmc_project/object_mapper.
 methods:
     - name: GetObject
       description: >

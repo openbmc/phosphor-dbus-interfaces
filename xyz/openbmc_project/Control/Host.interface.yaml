@@ -1,0 +1,42 @@
+description: >
+    Implement to provide host interface support
+
+methods:
+    - name: Execute
+      description: >
+          Execute the requested command by the caller. This command will be
+          processed in first in first out order. See the Command enum
+          description below for details on all supported commands.
+      parameters:
+          - name: cmd
+            type: enum[self.Command]
+            description: Requested command to execute against the host
+
+signals:
+    - name: CommandComplete
+      description: >
+        Signal indicating that a Command has completed
+      properties:
+        - name: cmd
+          type: enum[self.Command]
+          description: Executed command
+        - name: status
+          type: boolean
+          description: true/false based on success or failure of command
+
+enumerations:
+    - name: Command
+      description: >
+        The command to execute against the host
+      values:
+        - name: SoftOff
+          description: >
+            Host firmware should do a clean shutdown and request a chassis power
+            off to the BMC when complete.  This command will return once the
+            command has been sent to the host.
+        - name: Heartbeat
+          description: >
+            Used to determine if the host is running and functional.  This
+            command will return once the command has been sent to the host.
+            The response to the attention and the reading of the command
+            provides the needed functional information.

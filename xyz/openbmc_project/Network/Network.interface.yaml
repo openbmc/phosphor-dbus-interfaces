@@ -1,0 +1,12 @@
+description: >
+    Implement to provide system specific network configuration features.
+properties:
+    - name: hostName
+      type: string
+      description: >
+          The value of this property shall be host name of the system.
+    - name: defaultGateway
+      type: string
+      description: >
+           The default gateway for the system.
+

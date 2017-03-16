@@ -1,10 +1,12 @@
 - name: Open
+  meta:
     - str: "ERRNO=%d"
       type: int32
     - str: "PATH=%s"
       type: string
 
 - name: Seek
+  meta:
     - str: "OFFSET=%ll"
       type: int64
     - str: "WHENCE=%d"

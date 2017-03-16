@@ -1,0 +1,48 @@
+description: >
+    Implement to provide system specific network configuration features.
+properties:
+    - name: HostName
+      type: string
+      description: >
+          The value of this property shall be host name of the system.
+    - name: DefaultGateway
+      type: string
+      description: >
+           The default gateway for the system.
+methods:
+    - name: AddVlan
+      description: >
+          Add the vlan on the given interface.
+      parameters:
+        - name: interface
+          type: string
+          description: >
+            The interface name where we want to add the vlan.
+
+    - name: CreateBonding
+      description: >
+          Bind multiple interfaces into a single interface.
+      parameters:
+        - name: interfaces
+          type: array[string]
+          description: >
+            Interface list.
+
+    - name: AddNameserver
+      description: >
+          Add the domain name server.
+      parameters:
+        - name: nameServer
+          type: string
+          description: >
+            Domain name server.
+
+    - name: RemoveNameserver
+      description: >
+           Remove the domain name server.
+      parameters:
+        - name: nameServer
+          type: string
+          description: >
+            Domain name server.
+

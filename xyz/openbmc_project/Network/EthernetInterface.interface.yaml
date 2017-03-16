@@ -1,0 +1,96 @@
+description: >
+    This defines an ethernet interface.
+    An object implementing this interface should implement
+    xyz.openbmc_project.State.OperationalStatus interface.
+properties:
+    - name: InterfaceName
+      type: string
+      description: >
+          Name of the ethernet interface.
+    - name: MACAddress
+      type: string
+      description: >
+          MAC address of the ethernet interface.
+    - name: Speed
+      type: string
+      description: >
+          Current speed of the ethernet interface, in Mbps.
+    - name: AutoNeg
+      type: boolean
+      description: >
+          This indicates if the speed and duplex are automatically negotiated
+          and configured on this ethernet interface.
+    - name: DomainName
+      type: string
+      description: >
+          Domain name of the ethernet interface.
+    - name: DHCPEnabled
+      type: boolean
+      description: >
+          Address mode of the ethernet interface.
+methods:
+    - name: AddIPAddress
+      description: >
+          Add the IP address on the given ethernet interface.
+      parameters:
+        - name: type
+          type: enum[self.Protocol]
+          description: >
+              protocol type can be IPv4 or IPv6 etc.
+        - name: address
+          type: string
+          description: >
+              The value of this property shall be an IP address assigned to this interface.
+        - name: prefixLength
+          type: byte
+          description: >
+              This denotes the number of network bits in the IP address.
+        - name: gateway
+          type: string
+          description: >
+              This is the gateway for this IPaddress.
+
+    - name: RemoveIPAddress
+      description: >
+          Removes the IP address from the given interface.
+      parameters:
+        - name: type
+          type: enum[self.Protocol]
+          description: >
+              protocol type can be IPv4 or IPv6 etc.
+        - name: address
+          type: string
+          description: >
+              The value of this property shall be an IP address assigned to this interface.
+        - name: prefixLength
+          type: byte
+          description: >
+              This denotes the number of network bits in the IP address.
+        - name: gateway
+          type: string
+          description: >
+              This is the  gateway for this IP address.
+
+    - name: GetIPAddresses
+      description: >
+          Get all the IP addresses on the interface.
+      parameters:
+        - name: type
+          type: enum[self.Protocol]
+          description: >
+              protocol type can be IPv4 or IPv6 etc.
+      returns:
+        - name: ipaddresses
+          type: array[struct[string,byte,string]]
+          description: >
+               Returns the list of ipaddresses.
+               ipaddress,prefixlength,gateway
+
+enumerations:
+    - name: Protocol
+      description: >
+          Possible IP protocol types.
+      values:
+        - name: IPv4
+        - name: IPv6
+

@@ -1,0 +1,37 @@
+description: >
+    This defines an IPaddress
+properties:
+    - name: Address
+      type: string
+      description: >
+          The value of this property shall be an IP address assigned to this interface.
+    - name: PrefixLength
+      type: byte
+      description: >
+          This is the prefixLength(no of network bits in the ipaddress).
+    - name: AddressOrigin
+      type: enum[self.IPAddressOrigin]
+      description: >
+          This indicates how the address was determined.
+    - name: Gateway
+      type: string
+      description: >
+          This is the IP gateway for this address.
+
+enumerations:
+    - name: IPAddressOrigin
+      description: >
+          Possible IP address origin types.
+      values:
+        - name: Static
+          description: >
+              Static address configured by the server.
+        - name: DHCP
+          description: >
+              Address is provided by a DHCP service.
+        - name: LinkLocal
+          description: >
+              Address is valid only for this network segment.
+        - name: SLAAC
+          description: >
+              Address is provided by a Stateless Address AutoConfiguration.

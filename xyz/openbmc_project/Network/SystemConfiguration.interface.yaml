@@ -1,0 +1,47 @@
+description: >
+    Implement to provide system specific network configuration features.
+properties:
+    - name: HostName
+      type: string
+      description: >
+          The value of this property shall be host name of the system.
+    - name: DefaultGateway
+      type: string
+      description: >
+          default gateway of the system.
+    - name: TunnelType
+      type: enum[self.Type]
+      description: >
+          Type of tunnel.
+enumerations:
+    - name: Type
+      description: >
+          Possible tunnel types.
+      values:
+        - name: gre
+          description: >
+              A Level 3 GRE tunnel over IPv4.
+        - name: gretap
+          description: >
+              A Level 2 GRE tunnel over IPv4.
+        - name: ip6gre
+          description: >
+              A Level 3 GRE tunnel over IPv6.
+        - name: ip6tnl
+          description: >
+              An IPv4 or IPv6 tunnel over IPv6.
+        - name: ip6gretap
+          description: >
+              A Level 2 GRE tunnel over IPv6.
+        - name: ipip
+          description: >
+              An IPv4 over IPv4 tunnel.
+        - name: sit
+          description: >
+              An IPv6 over IPv4 tunnel.
+        - name: vti
+          description: >
+              An IPv4 over IPSec tunnel.
+        - name: vti6
+          description: >
+              An IPv6 over IPSec tunnel.

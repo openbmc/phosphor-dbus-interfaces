@@ -1,0 +1,55 @@
+description: >
+    This defines an IPv6address.
+    An object implementing IPv6address interface should implement
+    xyz.openbmc_project.Network.IPaddress interface.
+
+    - name: AddressState
+      type: enum[self.IPAddressState]
+      description: >
+          The current state of the address as defined in RFC4862.
+
+    - name: AddressOrigin
+      type: enum[self.IPV6AddressOrigin]
+      description: >
+          This indicates how the address was determined.
+
+enumerations:
+    - name: IPV6AddressOrigin
+      description: >
+          Possible IPv6 address origin types.
+      values:
+        - name: Static
+          description: >
+              Static address configured by the server.
+        - name: DHCPV6
+          description: >
+              Address is provided by a DHCPv6 service.
+        - name: LinkLocal
+          description: >
+              Address is valid only for this network segment.
+        - name: SLAAC
+          description: >
+              Address is provided by a Stateless Address AutoConfiguration.
+
+    - name: IPAddressState
+      description: >
+          Possible IPv6 address states.
+      values:
+        - name: Tentative
+          description: >
+              An address whose uniqueness on a link is being verified.
+        - name: Preferred
+          description: >
+              An address used to send and receive data packets from and to a network interface.
+        - name: Deprecated
+          description: >
+             A preferred address becomes deprecated when its preferred lifetime expires.
+        - name: Duplicate
+          description: >
+              If DAD finds that an address is not unique, it is moved to the duplicate state.
+        - name: Valid
+          description: >
+              A uniquely verified address that you can assign to a network interface for sending and receiving data.
+        - name: Invalid
+          description: >
+              A network interface address that can no longer send or receive data packets.

@@ -1,0 +1,32 @@
+description: >
+    This defines an ethernet interface.
+    An object implementing this interface must implement
+    xyz.openbmc_project.Collection,
+    xyz.openbmc_project.Object.Delete,
+    xyz.openbmc_project.State.OperationalStatus.
+properties:
+    - name: InterfaceName
+      type: string
+      description: >
+          Name of the ethernet interface.
+    - name: MACAddress
+      type: string
+      description: >
+          MAC address of the ethernet interface.
+    - name: Speed
+      type: string
+      description: >
+          Current speed of the ethernet interface, in Mbps.
+    - name: AutoNeg
+      type: boolean
+      description: >
+          This indicates if the speed and duplex are automatically negotiated
+          and configured on this ethernet interface.
+    - name: DomainName
+      type: string
+      description: >
+          Domain name of the ethernet interface.
+    - name: DHCPEnabled
+      type: boolean
+      description: >
+          Address mode of the ethernet interface.

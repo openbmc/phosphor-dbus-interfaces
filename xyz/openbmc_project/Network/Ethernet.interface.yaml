@@ -1,0 +1,48 @@
+description: >
+    This defines a ethernet resource.
+    An object implementing Ethernet interface should implement
+    xyz.openbmc_project.State.OperationalStatus interface.
+properties:
+    - name: InterfaceName
+      type: string
+      description: >
+          Name of the Interface.
+    - name: MACAddress
+      type: string
+      description: >
+          Mac address of the Interface.
+    - name: SpeedMbps
+      type: string
+      description: >
+          Current speed in Mbps of the interface.
+    - name: AutoNeg
+      type: boolean
+      description: >
+          This indicates if the speed and duplex are automatically negotiated and configured on this interface.
+    - name: DomainName
+      type: string
+      description: >
+          The value of this property shall be Domain name for this interface.
+    - name: IPv4Addresses
+      type: array[struct[string,byte,string]]
+      description: >
+          An array of ipv4address,prefix,gateway tuples where
+            ipv4address:- The ipaddress on the interface.
+            prefix:- Length of the prefix.
+            gateway:- Gateway address.
+    - name: IPv6Addresses
+      type: array[struct[string,byte,string]]
+      description: >
+          The IPv6 addresses assigned to this interface.
+          An array of ipv6address,prefix,gateway tuples where
+            ipv6address:- The ipaddress on the interface.
+            prefix:- Length of the prefix.
+            gateway:- Gateway address.
+    - name: NameServers
+      type: array[string]
+      description: >
+          This represents DNS name servers that are currently in use on this interface.
+    - name: DHCPEnabled
+      type: boolean
+      description: >
+           Address mode for the interface.

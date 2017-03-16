@@ -1,0 +1,39 @@
+description: >
+    Implement to provide host interface support
+
+properties:
+    - name: RequestedCommand
+      type: enum[self.Command]
+      default: None
+      description: >
+          The requested command of the caller.  This command will be processed
+          in a first in first out order.  This interface will not return to the
+          caller until the command has been processed by the host.
+          It is up to the caller to provide timeout support, there will be
+          none implemented in this interface.
+
+    - name: CurrentCommand
+      type: enum[self.Command]
+      default: None
+      description: >
+          A read-only property describing the current command being processed
+
+enumerations:
+    - name: Command
+      description: >
+        The command to send to the host
+      values:
+        - name: None
+          description: >
+            No command currently requested and/or running
+        - name: SoftOff
+          description: >
+            Host firmware should do a clean shutdown and start the host power
+            off target once complete.  This command will return once the
+            command has been sent to the host.
+        - name: HeartBeat
+          description: >
+            Used to determine if the host is running and functional.  This
+            command will return once the command has been sent to the host.
+            The response to the attention and the reading of the command
+            provides the needed functional information.

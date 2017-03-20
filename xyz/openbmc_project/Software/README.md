@@ -24,7 +24,9 @@ to allow additional images to be added to the BMC, such as Object.Add() for
 REST and DownloadViaTFTP() for TFTP.  The standard Object.Delete() interface
 would also be provided to facilitate removing images which are no longer
 needed.  Images maintained in the file system would be presented as a
-corresponding `/xyz/openbmc_project/software/<id>` object.
+corresponding `/xyz/openbmc_project/software/<id>` object. In addition, the
+`xyz.openbmc_project.Common.FilePath` interface would be provided to specify
+the location of the image.
 
 It is assumed that the *ImageManager* has [at least] a bare minimum amount of
 parsing knowledge, perhaps due to a common image format, to allow it to

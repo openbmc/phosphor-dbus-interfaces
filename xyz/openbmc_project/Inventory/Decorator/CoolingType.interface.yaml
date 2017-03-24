@@ -1,0 +1,13 @@
+description: >
+    Implement properties to indicate the system cooling type (air, water, etc.).
+properties:
+    - name: airCooled
+      type: boolean
+      description: >
+          The system uses air/fans for cooling when set to true.
+    - name: waterCooled
+      type: boolean
+      description: >
+          The system uses water for cooling when set to true.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

@@ -26,6 +26,13 @@ properties:
       type: array[string]
       description: >
           Additional information in the form of metadata field strings VAR=val
+    - name: Resolved
+      type: boolean
+      description: >
+          Error resolution status. Indicate if the problem being reported by
+          this error log has been resolved. This will start out 'false' by
+          default. Setting this to 'true' will NOT result in the error log being
+          deleted.
 
 enumerations:
     - name: Level

@@ -1,0 +1,12 @@
+description: >
+    Implement to provide TFTP (Trivial File Transfer Protocol). 
+properties:
+    - name: FileName
+      type: string
+      description: >
+        The filename for the file to transfer. 
+        Note the <FileName> should be a tarball. 
+    - name: ServerAddress
+      type: string
+      description: >
+        The TFTP Server IP Address.

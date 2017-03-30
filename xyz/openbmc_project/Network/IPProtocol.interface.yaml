@@ -1,0 +1,15 @@
+description: >
+    This defines IP protocol types.
+properties:
+    - name: Type
+      type: enum[self.Protocol]
+      description: >
+          protocol type can be IPv4 or IPv6 etc.
+
+enumerations:
+    - name: Protocol
+      description: >
+          Possible IP protocol types.
+      values:
+        - name: IPv4
+        - name: IPv6

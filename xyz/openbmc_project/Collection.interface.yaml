@@ -1,0 +1,13 @@
+description: >
+    Implement to create an object which would be
+    part of collection.
+methods:
+    - name: Create
+      description: >
+          Create the object with the given parameters
+          which is key value pair.
+      parameters:
+        - name: object
+        - type: dict[string,variant[boolean,int64,string]]
+          description:
+              A dictionary of key value pairs.

@@ -1,0 +1,54 @@
+description: >
+    Implement to provide BMC Dump entry attributes.
+
+    This interface should be instantiated for the phosphor::Dump namespace.
+
+    Object which implement this interface must implement
+    xyz.openbmc_project.Time.EpochTime  for  the Dump
+    creation time,
+    xyz.openbmc_project.common.FilePath  for the Dump
+    file location,
+    xyz.openbmc_project.Object.Delete to allow the deletion of
+    individual entries.
+
+properties:
+    - name: Id
+      type: uint32
+      description: >
+          BMC Dump unique id.
+
+    - name: Size
+      type: uint32
+      description: >
+          Size of the BMC Dump.
+
+    - name: Trigger
+      type: enum[self.Trigger]
+      description: >
+          Type of the Dump trigger.
+
+    - name: Valid
+      type: boolean
+      description: >
+          Whether the Dump is valid or not.
+
+enumerations:
+    - name: Trigger
+      description: >
+          Possible cause for the BMC Dump.
+      values:
+        - name: KernelPanic
+          description: >
+              Dump triggered due to Kernel Panic.
+        - name: ApplicationCored
+          description: >
+              Dump Triggered due to application core.
+        - name: BootFail
+          description: >
+              Dump triggered due to boot fail.
+        - name: UserInitiated
+          description: >
+              Dump Triggered by user.
+        - name: BMCReset
+          description: >
+              Dump Triggered due to BMC reset.

@@ -1,0 +1,15 @@
+description: >
+    Implement to provide Dump attributes.
+
+    Object which implements this interface must implement
+    xyz.openbmc_project.Time.EpochTime for the Dump
+    creation time.
+    Object which implements this interface should implement
+    xyz.openbmc_project.Object.Delete to allow the deletion of
+    individual Dump objects.
+
+properties:
+    - name: Size
+      type: uint64
+      description: >
+          Size of the Dump.

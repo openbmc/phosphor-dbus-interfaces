@@ -1,0 +1,77 @@
+description: >
+    Implement to provide BMC Dump.
+    Optionally, implement xyz.openbmc_project.Object.Delete to allow the deletion of
+    individual Dump entries, xyz.openbmc_project.Object.Create to initiate user
+    requested BMC Dump and xyz.openbmc_project.Object.Read to retrive the BMC Dump.
+
+properties:
+    - name: Id
+      type: uint32
+      description: >
+          BMC DUMP unique id.
+
+    - name: Timestamp
+      type: uint64
+      description: >
+          Timestamp of BMC Dump creation in milliseconds since 1970.
+
+    - name: Size
+      type: uint32
+      description: >
+          Size of the BMC Dump.
+
+    - name: Trigger
+      type: enum[self.Trigger]
+      description: >
+          Type of the Dump trigger.
+
+    - name: Type
+      type: enum[self.Type]
+      description: >
+          BMC Dump Type.
+
+    - name: Valid
+      type: boolean
+      description: >
+          Whether the Dump is valid or not.
+
+    - name: Creatable
+      type: boolean
+      description: >
+          Enable create method to support user initiate BMC Dump.
+      default: 'true'
+
+enumerations:
+    - name: Trigger
+      description: >
+          Possible cause for the BMC Dump.
+      values:
+        - name: KernelPanic
+          description: >
+              Dump triggered due to Kernel Panic.
+        - name: AppCrash
+          description: >
+              Dump Triggered due to Application Crash.
+        - name: BootFail
+          description: >
+              Dump triggered due to boot Fail.
+        - name: UserInitiated
+          description: >
+              Dump Triggered by user.
+        - name: BMCReset
+          description: >
+              Dump Triggered Due to BMC Reset.
+
+    - name: Type
+      description: >
+          Possible BMC Dump Types.
+      values:
+        - name: Fast
+          description: >
+              Fast Dump with Minimum Data.
+        - name: Normal
+          description: >
+              Default Dump based on allowed size.
+        - name: Maximum
+          description: >
+              Detailed Dump based on Maximum allowed size.

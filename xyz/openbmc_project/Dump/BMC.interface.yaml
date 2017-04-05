@@ -1,0 +1,87 @@
+description: >
+    Implementation of BMC Dump. 
+    Optionally, implement org.openbmc.Object.Delete to allow the deletion of
+    individual Dump entries, org.openbmc.Object.Create to initiate user
+    requested BMC Dump and org.openbmc.Object.Read to retrive the BMC Dump. 
+
+properties:
+    - name: Id
+      type: uint32
+      description: >
+          The BMC Dump event entry id number.
+
+    - name: Timestamp
+      type: uint64
+      description: >
+          Commit timestamp of the BMC Dump event entry in milliseconds since 1970.
+
+    - name: Size
+      type: uint32
+      description: >
+          The size of the BMC Dump.
+
+    - name: Trigger
+      type: enum[self.Trigger]
+      description: >
+          Type of the Dump trigger.
+
+    - name: AdditionalData
+      type: uint32
+      description: >
+          Additional information related to error log associated to BMC Dump.
+
+    - name: MaxSize
+      type: uint64
+      description: >
+          The Maximum allowed size of the BMC Dump.
+
+    - name: DumpType
+      type: enum[self.DumpType]
+      description: >
+          BMC Dump Type.
+
+    - name: Valid
+      type: boolean
+      description: >
+          Whether the Dump is valid or not.
+
+    - name: Create
+      type: boolean
+      description: >
+          Enable create method to support user initiate BMC Dump.
+      default: 'true'
+ 
+enumerations:
+    - name: Trigger
+      description: >
+          Possible cause for the BMC Dump.
+      values:
+        - name: KernelPanic
+          description: >
+              Dump Triggered due to Kernel Panic.
+        - name: AppCrash
+          description: >
+              Dump Triggered due to Application Crash.
+        - name: BootFail
+          description: >
+              Dump triggered due to Boot Fail.
+        - name: UserInited
+          description: >
+              Dump Triggered by user.
+        - name: BMCReset
+          description: >
+              Dump Triggered Due to BMC Reset.
+
+    - name: DumpType
+      description: >
+          Possible BMC Dump Types.
+      values:
+        - name: Fast
+          description: >
+              Fast Dump with Minimum Data.
+        - name: Normal
+          description: >
+              Default Dump based on allowed size.
+        - name: Maximum
+          description: >
+              Detailed Dump based on Maximum allowed size.

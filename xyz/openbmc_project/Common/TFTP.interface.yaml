@@ -13,3 +13,6 @@ methods:
           type: string
           description: >
             The TFTP Server IP Address.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument

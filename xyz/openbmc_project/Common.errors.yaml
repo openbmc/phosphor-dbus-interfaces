@@ -1,2 +1,9 @@
 - name: Timeout
-  description: Operation timed out
+  description: >
+    Operation timed out.
+- name: InternalFailure
+  description: >
+    The operation failed internally.
+- name: InvalidArgument
+  description: >
+    Invalid argument was given.

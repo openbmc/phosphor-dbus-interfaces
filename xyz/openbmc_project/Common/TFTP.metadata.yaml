@@ -1,0 +1,8 @@
+- name: DownloadViaTFTP
+  description: >
+      Download a file via TFTP.
+  meta:
+    - str: "FILENAME=%s"
+      type: string
+    - str: "SERVERADDRESS=%s"
+      type: string

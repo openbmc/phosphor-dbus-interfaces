@@ -1,0 +1,7 @@
+- name: DownloadViaTFTP
+  level: ERR
+  meta:
+    - str: "FILENAME=%s"
+      type: string
+    - str: "SERVERADDRESS=%s"
+      type: string

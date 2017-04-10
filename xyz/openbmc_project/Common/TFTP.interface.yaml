@@ -13,3 +13,8 @@ methods:
           type: string
           description: >
             The TFTP Server IP Address.
+      errors:
+          - self.Error.FileNameEmpty
+          - self.Error.ServerAddressEmpty
+          - self.Error.TFTP
+          - self.Error.Fork

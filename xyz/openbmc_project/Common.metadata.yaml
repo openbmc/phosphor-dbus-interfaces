@@ -2,3 +2,7 @@
   meta:
     - str: "TIMEOUT_IN_MSEC=%llu"
       type: uint64
+- name: InvalidArgument
+  meta:
+    - str: "ARGUMENT_NAME=%s"
+      type: string

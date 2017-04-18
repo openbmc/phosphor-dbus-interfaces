@@ -27,7 +27,7 @@ can request the host be in a (Off), (On), or (Reboot) state.  More details on
 different Reboot options below.
 Quiesced means the host OS is in a quiesce state and the system should be
 checked for errors. For more information refer to
-(Error Handling of systemd)[https://github.com/openbmc/docs/blob/master/openbmc-systemd.md#error-handling-of-systemd]
+[Error Handling of systemd](https://github.com/openbmc/docs/blob/master/openbmc-systemd.md#error-handling-of-systemd)
 
 3. *Chassis* : The chassis is either (Off) or (On)
 This represents the state of power to the chassis.  The Chassis being on
@@ -56,14 +56,14 @@ The *Host* would provide interfaces at
 The *Chassis* would provide interfaces at
 `/xyz/openbmc_project/state/chassis<instance>`
 
-## Cold vs. Warm Host Reboots
+## Hard vs. Soft Power Off
 
-A cold reboot is where you simply cut power to a chassis, and then reapply
-power.  You don't give the software running on that chassis any chance to
-cleanly shut down.  A warm reboot is where you send a notification to the host
-that is running on that chassis that a shutdown is requested, and wait for that
-host firmware to indicate it has shut itself down.  You then remove power from
-the chassis.  By default, a reboot transition request against the host object
-will result in a warm reboot.  If a user desires a cold reboot then they should
-simply issue a power off transition request to the chassis, and then issue an on
-transition request to the host.
+A hard power off is where you simply cut power to a chassis.  You don't give
+the software running on that chassis any chance to cleanly shut down.
+A soft power off is where you send a notification to the host that is running
+on that chassis that a shutdown is requested, and wait for that host firmware
+to indicate it has shut itself down.  Once complete, power is then removed
+from the chassis. By default, a host off or reboot request does the soft
+power off.  If a user desires a cold reboot then they should simply issue a
+power off transition request to the chassis, and then issue an on transition
+request to the host.

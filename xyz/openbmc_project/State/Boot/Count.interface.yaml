@@ -1,0 +1,9 @@
+description: >
+    Implement to specify boot count.
+
+properties:
+    - name: BootCount
+      type: uint32
+      default: 2
+      description: >
+        Number of times system did booting.

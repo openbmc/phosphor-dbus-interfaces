@@ -1,0 +1,84 @@
+description: >
+    Implement to indicate progress of ongoing boot.
+
+properties:
+    - name: BootProgress
+      type: enum[self.ProgressStages]
+      default: Unspecified
+      description: >
+        Current boot progress
+
+enumerations:
+   - name: ProgressStages
+     description: >
+       The boot progress stage
+     values:
+       - name: 'Unspecified'
+         description: >
+           Unknown state
+       - name: 'MemoryInit'
+         description: >
+           Memory Initialization
+       - name: 'HardDiskInit'
+         description: >
+           Hard Disk Initialization
+       - name: 'SecProcInit'
+         description: >
+           Secondary Processor Initialization
+       - name: 'UserAuth'
+         description: >
+           User Authentication
+       - name: 'UserInitSetup'
+         description: >
+           User Initiated System Setup
+       - name: 'USBResConf'
+         description: >
+           USB Resourse Configuration.
+       - name: 'PCIResConf'
+         description: >
+           PCI Resourse Configuration.
+       - name: 'OptRomInit'
+         description: >
+           Optial ROM Initialization
+       - name: 'VideoInit'
+         description: >
+           Video Initialization
+       - name: 'CacheInit'
+         description: >
+           Cache Initialization
+       - name: 'SMBusInit'
+         description: >
+           SM Bus Initialization.
+       - name: 'KBCtrlInit'
+         description: >
+           Keyboard Control Initialization.
+       - name: 'MCInit'
+         description: >
+           Management Control Initialization.
+       - name: 'DocAttach'
+         description: >
+           Docking Station Attachment.
+       - name: 'DockEnable'
+         description: >
+           Enabling Docking Station.
+       - name: 'DockEject'
+         description: >
+           Ejecting Docking Station.
+       - name: 'OSWakeup'
+         description: >
+           Calling OPerating System Wakeup Vector.
+       - name: 'MBInit'
+         description: >
+           Motherboard Initialization
+       - name: 'FloppyInit'
+         description: >
+           Floppy Initialization
+       - name: 'KBTest'
+         description: >
+           Keyboard Test
+       - name: 'PDTest'
+         description: >
+           Pointing Device Test.
+       - name: 'PrimProcInit'
+         description: >
+           Primary Processor Initialization.

@@ -1,0 +1,8 @@
+description: >
+    Definition of boot progress sensor. Implement to indicates the progress
+    in booting process
+properties:
+    - name: BootProgress
+      type: string
+      description: >
+        Current boot progress

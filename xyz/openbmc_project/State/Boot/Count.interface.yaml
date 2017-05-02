@@ -1,0 +1,8 @@
+description: >
+    Definition of boot count sensor, which indictaes the number
+    of times booting is attempted.
+properties:
+    - name: bootCount
+      type: uint32
+      description: >
+        Number of times booting is attempted.

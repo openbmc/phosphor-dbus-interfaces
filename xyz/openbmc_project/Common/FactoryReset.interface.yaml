@@ -1,0 +1,6 @@
+description: >
+    An interface to reset the target service to its factory state.
+methods:
+    - name: Start
+      description: >
+          Generic method to start factory reset. Implemented by each service.

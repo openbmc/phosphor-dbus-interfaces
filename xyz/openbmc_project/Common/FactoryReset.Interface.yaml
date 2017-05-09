@@ -1,0 +1,17 @@
+description: >
+    An interface to factory reset the system.
+methods:
+    - name: ResetHost
+      description: >
+          Clear the PNOR partitions of a particular host.
+      parameters:
+        - name: HostID
+          type: uint32
+          description: >
+            The ID of the host to reset.
+    - name: ResetNetwork
+      description: >
+          Reset the BMC network to factory state.
+    - name: ResetBMC
+      description: >
+          Reset BMC settings to factory state.

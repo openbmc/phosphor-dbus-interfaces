@@ -22,8 +22,19 @@ properties:
       type: string
       description: >
           This is the IP gateway for this address.
+    - name: Type
+      type: enum[self.Protocol]
+      description: >
+          IP protocol type which can be IPv4 or IPv6 etc.
 
 enumerations:
+    - name: Protocol
+      description: >
+          Possible IP protocol types.
+      values:
+        - name: IPv4
+        - name: IPv6
+
     - name: AddressOrigin
       description: >
           Possible IP address origin types.

@@ -1,0 +1,20 @@
+description: >
+    Implement to specify a restricted mode of operation.
+
+properties:
+    - name: RestrictionMode
+      type: enum[self.Modes]
+      description: >
+          The restriction mode.
+
+enumerations:
+    - name: Modes
+      description: >
+        Possible modes of restriction.
+      values:
+        - name: Whitelist
+          description: >
+            Allow, only if in the whitelist.
+        - name: Blacklist
+          description: >
+            Prevent, if in the blacklist.

@@ -1,0 +1,36 @@
+description: >
+    Implement to specify network configuration settings.
+
+properties:
+    - name: IPAddress
+      type: string
+      description: >
+          Internet Protocol address.
+    - name: Origin
+      type: enum[self.Origins]
+      description: >
+          This indicates how the IP address was determined.
+    - name: Prefix
+      type: byte
+      description: >
+          Number of bits in the subnet mask.
+    - name: Gateway
+      type: string
+      description: >
+          The IP gateway for IPAddress above.
+    - name: MACAddress
+      type: string
+      description: >
+          Hadrware address of a network interface.
+
+enumerations:
+    - name: Origins
+      description: >
+          Possible IP address origins.
+      values:
+        - name: Static
+          description: >
+              Static address configuration.
+        - name: DHCP
+          description: >
+              Address is provided by a DHCP service.

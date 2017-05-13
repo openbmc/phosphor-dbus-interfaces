@@ -1,0 +1,32 @@
+description: >
+    Implement to specify network configuration settings.
+
+properties:
+    - name: IPAddress
+      type: string
+      description: >
+          Address of a network interface.
+    - name: AddressType
+      type: enum[self.Protocol]
+      description: >
+          Type of the IP address.
+    - name: Prefix
+      type: byte
+      description: >
+          Number of bits in the subnet mask.
+    - name: Gateway
+      type: string
+      description: >
+          The IP gateway.
+    - name: MACAddress
+      type: string
+      description: >
+          Hadrware address of a network interface.
+
+enumerations:
+    - name: Protocol
+      description: >
+        Possible types of IP addresses.
+      values:
+        - name: IPv4
+        - name: IPv6

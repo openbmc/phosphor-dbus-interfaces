@@ -1,0 +1,10 @@
+description: >
+    Implement to specify an operating frequency higher than the base
+    operating frequency.
+
+properties:
+    - name: TurboEnabled
+      type: boolean
+      description: >
+          Whether the operating frequency is in a turbo mode - higher than
+          the normal value.

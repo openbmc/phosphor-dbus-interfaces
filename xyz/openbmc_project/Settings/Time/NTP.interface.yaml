@@ -1,0 +1,8 @@
+description: >
+    Implement to provide common NTP policies.
+
+properties:
+    - name: DHCPProvidedNTP
+      type: boolean
+      description: >
+          Whether to use an NTP server provided by the DHCP server.

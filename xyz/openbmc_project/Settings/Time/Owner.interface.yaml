@@ -1,0 +1,26 @@
+description: >
+    Implement to set time owner.
+
+properties:
+    - name: TimeOwner
+      type: enum[self.Owners]
+      description: >
+          The time owner.
+
+enumerations:
+    - name: Owners
+      description: >
+        Possible owners of time.
+      values:
+        - name: BMC
+          description: >
+            BMC alone owns system time.
+        - name: Host
+          description: >
+            Host alone owns system time.
+        - name: Both
+          description: >
+            BMC and host own system time.
+        - name: Split
+          description: >
+            BMC and host maintain their own time.

@@ -1,0 +1,15 @@
+description: >
+    Implement to capture BMC Dump 
+
+methods:
+    - name: Create
+      description: >
+          Method to create BMC Dump.
+      returns:
+        - name: Path
+          type: string
+          description: >
+            The Dump entry path for the dbus object.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.Timeout

@@ -1,0 +1,7 @@
+- name: DumpDisabled
+  level: ERR
+
+- name: DumpCapped
+  meta:
+    - str: "REASON = %s"
+      type: string

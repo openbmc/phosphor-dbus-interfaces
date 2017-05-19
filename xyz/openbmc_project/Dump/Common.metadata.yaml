@@ -1,0 +1,6 @@
+- name: DumpDisabled
+  level: ERR
+- name: NotEnoughStorage
+  meta:
+    - str: "FILE_PATH=%s"
+      type: string

@@ -24,7 +24,10 @@ enumerations:
       values:
         - name: 'Off'
           description: >
-            Host firmware should be off
+            Host firmware should be notified to shutdown and then stopped
+        - name: 'HardOff'
+          description: >
+            Host firmware should be immediately stopped with no notification
         - name: 'On'
           description: >
             Host firmware should be on

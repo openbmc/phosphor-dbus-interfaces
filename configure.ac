@@ -48,8 +48,10 @@ AS_IF([test "x$enable_libphosphor_dbus" != "xno"], [
         [${srcdir}/generate_makefile.sh ${srcdir} > Makefile.interfaces])
     AC_CONFIG_FILES([phosphor-dbus-interfaces.pc])
 ])
-AC_CONFIG_FILES([Makefile.yaml],
-    [${srcdir}/generate_yaml_makefile.sh ${srcdir} > Makefile.yaml])
+AC_CONFIG_FILES([Makefile.interface.yaml],
+    [${srcdir}/generate_interface_yaml_makefile.sh ${srcdir} > Makefile.interface.yaml])
 
+AC_CONFIG_FILES([Makefile.error.yaml],
+    [${srcdir}/generate_error_yaml_makefile.sh ${srcdir} > Makefile.error.yaml])
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

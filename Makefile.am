@@ -20,7 +20,11 @@ clean-local: clean-dbus
 endif
 
 yamldir = ${pkgdatadir}/yaml
-nobase_yaml_DATA = ## Filled in by Makefile.yaml
+nobase_yaml_DATA = ## Filled in by Makefile.interface.yaml
 
--include Makefile.yaml
+error_yamldir = ${datadir}/error/yaml
+nobase_error_yaml_DATA = ## Filled in by Makefile.error.yaml
+
+-include Makefile.interface.yaml
+-include Makefile.error.yaml
 

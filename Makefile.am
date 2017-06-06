@@ -19,7 +19,7 @@ clean-local: clean-dbus
 -include Makefile.interfaces
 endif
 
-yamldir = ${pkgdatadir}/yaml
+yamldir = ${datadir}/phosphor-dbus-yaml/yaml
 nobase_yaml_DATA = ## Filled in by Makefile.yaml
 
 -include Makefile.yaml

@@ -1,0 +1,33 @@
+description: >
+    This defines DHCP client configuration.
+properties:
+    - name: DNS
+      type: boolean
+      description: >
+          if true then the DNS servers received from the DHCP server
+          will be used and take precedence over any statically configured ones.
+    - name: NTP
+      type: boolean
+      description: >
+          if true then the NTP servers received from the DHCP server
+          will be used by systemd-timesyncd and take precedence over any
+          statically configured ones.
+    - name: HostName
+      type: boolean
+      description: >
+          if true then the hostname received from the DHCP server
+          will be set as the transient hostname of the system.
+    - name: ClientIdentifier
+      type: enum[self.Identifier]
+      description: >
+          The DHCPv4 client identifier to use.
+
+enumerations:
+    - name: Identifier
+      description: >
+          Possible client identifiers.
+      values:
+        - name: MAC
+          description: Use the MAC address of the link.
+        - name: DUID
+          description: Use the DHCP Unique Identifier RFC4361-compliant Client ID.

@@ -1,4 +1,9 @@
 description: >
     Implement to provide BMC attributes.
-
+properties:
+    - name: uuid
+      type: string
+      description: >
+          UUID of object to which the interface is bound.
+          It is in canonical 8-4-4-4-12 format.
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

@@ -1,0 +1,15 @@
+description: >
+    Implement to provide fan manual control.
+
+    All Control.FanCtrl.Mode properties are read/write.
+
+    Each zone is represented by /xyz/openbmc_project/settings/fanctrl/zone{id}
+    and grouped under the bus xyz.openbmc_project.State.FanCtrl
+
+properties:
+    - name: Manual
+      type: boolean
+      description: >
+          Whether the FanCtrl should be in manual or automatic mode.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

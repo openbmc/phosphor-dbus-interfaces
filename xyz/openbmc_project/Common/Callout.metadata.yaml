@@ -26,6 +26,7 @@
   meta:
     - str: "CALLOUT_INVENTORY_PATH=%s"
       type: string
+      process: true
 
 - name: IPMISensor
   meta:

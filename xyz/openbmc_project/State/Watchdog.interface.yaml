@@ -9,12 +9,12 @@ properties:
     - name: Interval
       type: uint64
       description: >
-          Time interval to arm the watchdog, in mili-second.
+          Time interval to arm the watchdog, in milli-second.
       default: 30000
     - name: TimeRemaining
       type: uint64
       description: >
-          Time remaining before timeout, in mili-second.
+          Time remaining before timeout, in milli-second.
           Setting this property can re-arm the watchdog.
       default: 0
 

@@ -1,0 +1,11 @@
+description: >
+    An interface to enable field mode, blocking the activation of PNOR patches.
+
+properties:
+    - name: Fielded
+      type: boolean
+      description: >
+          If set true, an environment variable will be set, indicating that the
+          BMC is in field mode. When fielded, the system will no longer monitor
+          the PNOR patch patch for images. Enabling field mode is intended to
+          be a one-way operation.

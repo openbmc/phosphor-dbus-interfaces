@@ -1,0 +1,11 @@
+description: >
+    An interface to enable field mode, which, when enabled, stops the system
+    from monitoring the host patch path.
+
+properties:
+    - name: FieldModeEnabled
+      type: boolean
+      description: >
+          Indicates whether the BMC is in field mode. Enabling field mode is
+          intended to be a one-way operation.
+      default: false

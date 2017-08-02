@@ -1,0 +1,11 @@
+description: >
+    An interface to enable field mode, which, when enabled, indicates that the
+    system is in production.
+
+properties:
+    - name: FieldModeEnabled
+      type: boolean
+      description: >
+          Keeps track of whether the BMC is in field mode. Enabling field mode
+          is intended to be a one-way operation.
+      default: false

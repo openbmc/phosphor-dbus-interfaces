@@ -1,11 +1,19 @@
 description: >
     Implement to designate the source of a boot image.
+    IPMI V2.0 can take only single value from either this or what
+    is defined in Boot/Mode as bootparam. If both Boot/Mode and
+    BootSource are set, then the IPMI daemon chooses what is in
+    BootSource.
 
 properties:
     - name: BootSource
       type: enum[self.Sources]
       description: >
           The desired boot image source.
+    - name: Persist
+      type: boolean
+      description: >
+          Whether the BootSource should be considered permanent or not
 
 enumerations:
     - name: Sources

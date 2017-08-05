@@ -1,12 +1,20 @@
 description: >
     Implement to set boot mode. The mode typically identifies
     the end target of the boot process.
+    IPMI V2.0 can take only single value from either this or what
+    is defined in Boot/Source as bootparam. If both BootMode and
+    Boot/Source are set, then the IPMI daemon chooses what is in
+    Boot/Source.
 
 properties:
     - name: BootMode
       type: enum[self.Modes]
       description: >
           The desired boot mode.
+    - name: Persist
+      type: boolean
+      description: >
+          Whether the BootMode should be considered permanent or not
 
 enumerations:
     - name: Modes

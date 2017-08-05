@@ -7,6 +7,10 @@ properties:
       type: enum[self.Modes]
       description: >
           The desired boot mode.
+    - name: Persist
+      type: boolean
+      description: >
+          Whether the BootMode should be consider permanent or not
 
 enumerations:
     - name: Modes

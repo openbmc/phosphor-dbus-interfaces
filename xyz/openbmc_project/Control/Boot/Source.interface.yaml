@@ -6,6 +6,10 @@ properties:
       type: enum[self.Sources]
       description: >
           The desired boot image source.
+    - name: Persist
+      type: boolean
+      description: >
+          Whether the BootMode should be consider permanent or not
 
 enumerations:
     - name: Sources

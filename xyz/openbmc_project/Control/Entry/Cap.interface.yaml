@@ -1,0 +1,9 @@
+description: >
+    Implement to specify a cap on maximum logging entries.
+
+properties:
+    - name: EntryCap
+      type: uint32
+      description: >
+          Logging entry cap value. This is to limit the number of error
+          log entries committed.

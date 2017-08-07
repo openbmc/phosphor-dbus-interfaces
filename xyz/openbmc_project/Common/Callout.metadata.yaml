@@ -28,6 +28,12 @@
       type: string
       process: true
 
+- name: Sensor
+  meta:
+    - str: "CALLOUT_SENSOR_PATH=%s"
+      type: string
+      process: true
+
 - name: IPMISensor
   meta:
     - str: "CALLOUT_IPMI_SENSOR_NUM=%u"

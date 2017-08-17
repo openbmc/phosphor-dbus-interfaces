@@ -31,7 +31,7 @@ the location of the image.
 It is assumed that the *ImageManager* has [at least] a bare minimum amount of
 parsing knowledge, perhaps due to a common image format, to allow it to
 populate all of the properties of `xyz.openbmc_project.Software.Version`.
-*ItemUpdater*s will likely listen for standard dbus signals to identify new
+*ItemUpdater*s will likely listen for standard D-Bus signals to identify new
 images being created.
 
 ### *ItemUpdater*
@@ -40,12 +40,13 @@ The *ItemUpdater* is responsible for monitoring for new `Software.Version` eleme
 being created to identify versions that are applicable to the inventory
 element(s) it is managing.  The *ItemUpdater* should dynamically create
 an `xyz.openbmc_project.Software.Activation` interface under
-`/xyz/openbmc_project/software/active/`, an association of type
-`{activation,software_version}` between the `Software.Version` and
-`Software.Activation`, and an association of type `{active_image,item}` between
-the `Inventory.Item` and `Software.Activation`.  Application of the software
-image is then handled through the `RequestedActivation` property of the
-`Software.Activation` interface.
+`/xyz/openbmc_project/software/`, an association of type
+`{active_image,software_version}` between the `Software.Version` and
+`Software.Activation` under `/xyz/openbmc_project/software/`, and an
+association of type `{activation,item}` between the `Inventory.Item`
+and `Software.Activation` under `/xyz/openbmc_project/software/<id>`.
+Application of the software image is then handled through the
+`RequestedActivation` property of the `Software.Activation` interface.
 
 The *ItemUpdater* should, if possible, also create its own
 `xyz.openbmc_project.Software.Version` objects, and appropriate associations
@@ -58,7 +59,7 @@ software versions when the *ImageManager* no longer contains a copy.
 ### Image Identifier
 
 The *ImageManager* and *ItemUpdater* should use a common, though perhaps
-implementation specific, algorithm for the `<id>` portion of a dbus path for
+implementation specific, algorithm for the `<id>` portion of a D-Bus path for
 each `Software.Version`.  This allows the same software version to be contained
 in multiple locations but represented by the same object path.
 
@@ -66,7 +67,7 @@ A reasonable algorithm might be:
 `echo <Version.Version> <Version.Purpose> | sha512sum | cut -b 1-8`
 
 > TODO: May need an issue against the REST server to 'merge' two copies of
->       a single dbus object into a single REST object.
+>       a single D-Bus object into a single REST object.
 
 ### Activation States
 
@@ -140,7 +141,7 @@ association to retrieve version information.
 
 ### Find all software versions on a managed element.
 
-List `/xyz/openbmc_project/inventory/.../<item>/active_image` association.
+List `/xyz/openbmc_project/inventory/.../<item>/activation` association.
 
 ### Upload new version via REST
 

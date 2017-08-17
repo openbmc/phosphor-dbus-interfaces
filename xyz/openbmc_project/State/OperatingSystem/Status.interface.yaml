@@ -4,7 +4,7 @@ description: >
 properties:
     - name: OperatingSystemState
       type: enum[self.OSStatus]
-      default: BootComplete
+      default: Inactive
       description: >
         Current state of the operating system.
 
@@ -31,3 +31,6 @@ enumerations:
        - name: BootComplete
          description: >
            Boot Completed or Unspecified Boot Device.
+       - name: Inactive
+         description: >
+           System Inactive.

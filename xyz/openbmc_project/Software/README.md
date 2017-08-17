@@ -40,7 +40,7 @@ The *ItemUpdater* is responsible for monitoring for new `Software.Version` eleme
 being created to identify versions that are applicable to the inventory
 element(s) it is managing.  The *ItemUpdater* should dynamically create
 an `xyz.openbmc_project.Software.Activation` interface under
-`/xyz/openbmc_project/software/active/`, an association of type
+`/xyz/openbmc_project/software/`, an association of type
 `{activation,software_version}` between the `Software.Version` and
 `Software.Activation`, and an association of type `{active_image,item}` between
 the `Inventory.Item` and `Software.Activation`.  Application of the software

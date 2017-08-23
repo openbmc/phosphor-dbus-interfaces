@@ -30,3 +30,10 @@ properties:
       type: array[string]
       description: >
           DNS servers on the interface.
+    - name: NTPServers
+      type: array[string]
+      description: >
+          This property describes the NTP Servers on the interface.
+          Implementation of this Dbus-interface is required to implement this property.
+          This property supports read/write operation.
+          Configure the NTP servers on the system during write operation.

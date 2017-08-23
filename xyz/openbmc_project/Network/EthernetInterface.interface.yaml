@@ -30,3 +30,7 @@ properties:
       type: array[string]
       description: >
           DNS servers on the interface.
+    - name: NTPServers
+      type: array[string]
+      description: >
+          NTP Servers on the interface.

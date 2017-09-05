@@ -1,0 +1,60 @@
+description: >
+    Implement to provide event logging.
+
+    This interface should be instantiated for the phosphor::logging namespace.
+    This interface is a collection of objects, therefore it is required to
+    implement org.freedesktop.DBus.ObjectManager on the logging namespace root.
+    Optionally, implement org.openbmc.Object.Delete to allow the deletion of
+    individual entries.
+
+properties:
+    - name: Id
+      type: uint32
+      description: >
+          The event id.
+    - name: Timestamp
+      type: uint64
+      description: >
+          Timestamp of the event being reported, in milliseconds since 1970.
+    - name: Message
+      type: string
+      description: >
+          The description of the event.
+    - name: AdditionalData
+      type: array[string]
+      description: >
+          Additional information in the form of metadata field strings ATTR=val
+    - name: Category
+      type: enum[self.Categories]
+      description: >
+          The event category.
+
+enumerations:
+    - name: Categories
+      description: >
+          Possible event types.
+      values:
+        - name: Thermal
+          description: >
+              An event in the thermal domain.
+        - name: BootState
+          description: >
+              An event indicating a system boot.
+        - name: UserAccount
+          description: >
+              An event denoting a change in user accounts.
+
+methods:
+    - name: Notify
+      description: >
+          Signal the implementing service that an event is ready to be reported.
+      parameters:
+        - name: Category
+          type: enum[self.Categories]
+          description: >
+              The event category.
+        - name: metadata
+          type: dict[string,variant[boolean,int64,string]]
+          description: >
+              A dictionary containing name-value pairs for event attributes and
+              their values.

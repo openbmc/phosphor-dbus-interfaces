@@ -1,0 +1,19 @@
+description: >
+    Implement to provide minimum aggregation method for sensor objects
+    implementing Sensor.Value interface. The minimum aggregation method
+    will aggregate the sensor value to the minimum value of all the values
+    in the time range.
+
+    The property is read-only.
+
+properties:
+    - name: Timestamp
+      type: uint64
+      description: >
+          Commit timestamp of the error event entry in milliseconds since 1970.
+    - name: Minimum
+      type: int64
+      description: >
+          The minimum value.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

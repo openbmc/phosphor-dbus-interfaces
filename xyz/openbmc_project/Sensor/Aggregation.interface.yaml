@@ -1,0 +1,25 @@
+description: >
+    Implement to provide aggregation of sensor readings for objects implementing
+    Sensor.Value interface.
+
+    All properties are read-only.
+
+    properties:
+    - name: Timestamp
+      type: uint64
+      description: >
+          Commit timestamp of the error event entry in milliseconds since 1970.
+    - name: Minimum
+      type: int64
+      description: >
+          The minimum value.
+    - name: Maximum
+      type: int64
+      description: >
+          The maximum value.
+    - name: Average
+      type: int64
+      description: >
+          The average value.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

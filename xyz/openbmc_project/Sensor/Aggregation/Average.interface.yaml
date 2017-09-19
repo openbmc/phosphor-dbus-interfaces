@@ -1,0 +1,19 @@
+description: >
+    Implement to provide average aggregation method for sensor objects
+    implementing Sensor.Value interface. The average aggregation method
+    will aggregate the sensor value to the average value of all the values
+    in the time range.
+
+    All properties are read-only.
+
+properties:
+    - name: Timestamp
+      type: uint64
+      description: >
+          Commit timestamp of the error event entry in milliseconds since 1970.
+    - name: Average
+      type: int64
+      description: >
+          The average value.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

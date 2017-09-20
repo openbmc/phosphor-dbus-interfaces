@@ -1,0 +1,13 @@
+description: >
+    Implement to specify a derating factor on power supply
+    The power supply derating factor represents the efficiency of the
+    power supplies. For example, if the power supply derating factor is 90,
+    then that implies the power supply loses 10 percent of the drawn power.
+    This derating factor is taken into account when a power cap is applied
+    to the system.
+
+properties:
+    - name: PowerSupplyDerating
+      type: uint32
+      description: >
+          Power Supply Derating value in percentage.

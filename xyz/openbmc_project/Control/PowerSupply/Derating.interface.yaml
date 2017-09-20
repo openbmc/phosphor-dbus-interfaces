@@ -1,0 +1,12 @@
+description: >
+    Implement to specify a derating factor on power supply
+    Power Supply Derating factor is percentage of maximum rated power provided 
+    to the system, i.e. if someone puts in 90, that means the power supply loses
+    10% so any power caps for the system will need to take that loss into
+    account.
+
+properties:
+    - name: PowerSupplyDerating
+      type: uint32
+      description: >
+          Power Supply Derating value in percentage.

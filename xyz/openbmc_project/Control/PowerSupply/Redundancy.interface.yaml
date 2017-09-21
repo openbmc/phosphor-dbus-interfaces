@@ -1,0 +1,9 @@
+description: >
+    Implement to specify whether power supply redundancy is enabled.
+    Systems can have redundant power supplies to prevent operational failures
+    due to power failure from a single source.
+properties:
+    - name: PowerSupplyRedundancy
+      type: boolean
+      description: >
+          Power Supply Redundancy is enabled or not.

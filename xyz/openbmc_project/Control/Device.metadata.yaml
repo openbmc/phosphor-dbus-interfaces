@@ -1,3 +1,7 @@
 - name: WriteFailure
   inherits:
     - xyz.openbmc_project.Common.Callout.Device
+
+- name: ReadFailure
+  inherits:
+    - xyz.openbmc_project.Common.Callout.Device

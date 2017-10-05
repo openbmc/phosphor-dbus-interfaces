@@ -1,0 +1,39 @@
+description: >
+    Implement to provide severity of error/event.
+    This interface should be instantiated for the phosphor::logging namespace.
+properties:
+    - name: Severity
+      type: enum[self.Level]
+      description: >
+          The severity of the error event entry.
+          This property is readonly.
+enumerations:
+    - name: Level
+      description: >
+          Possible severity levels for an error log entry.
+      values:
+        - name: Emergency
+          description: >
+              System is unusable.
+        - name: Alert
+          description: >
+              Should be corrected immediately.
+        - name: Critical
+          description: >
+              Critical condition.
+        - name: Error
+          description: >
+              Error condition.
+        - name: Warning
+          description: >
+              An error may occur if action is not taken.
+        - name: Notice
+          description: >
+              Unusual condition, but not an error.
+        - name: Informational
+          description: >
+              Normal operational message that does not require action.
+        - name: Debug
+          description: >
+              Information useful to developers for debugging the application.
+

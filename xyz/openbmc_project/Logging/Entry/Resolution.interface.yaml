@@ -1,0 +1,12 @@
+description: >
+    Implement to provide resolution status of error/event.
+    This interface should be instantiated for the phosphor::logging namespace.
+properties:
+    - name: Resolved
+      type: boolean
+      description: >
+          Error resolution status. Indicate if the problem being reported by
+          this error log has been resolved. This will start out 'false' by
+          default. Setting this to 'true' will NOT result in the error log being
+          deleted.
+

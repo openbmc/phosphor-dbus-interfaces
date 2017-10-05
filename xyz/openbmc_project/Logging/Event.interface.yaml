@@ -1,0 +1,19 @@
+description: >
+    Implement to provide event entry attributes.
+properties:
+    - name: Id
+      type: uint32
+      description: >
+          The event entry id number.
+    - name: Timestamp
+      type: uint64
+      description: >
+          Commit timestamp of the event entry in milliseconds since 1970.
+    - name: Message
+      type: string
+      description: >
+          The message description of the event entry.
+    - name: AdditionalData
+      type: array[string]
+      description: >
+          Additional information in the form of metadata field strings VAR=val

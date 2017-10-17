@@ -1,12 +1,13 @@
 description: >
-    Implement to specify power transition behavior on restoration of lost main
-    power source.
+    Implement to specify power transition behavior on a BMC reset.
+    The implementation may choose to only enforce the policy on
+    a power loss or on both a power loss and BMC reboot.
 
 properties:
     - name: PowerRestorePolicy
       type: enum[self.Policy]
       description: >
-          The policy to adopt on restoration of power.
+          The policy to adopt after the BMC reset.
 
 enumerations:
     - name: Policy
@@ -21,5 +22,5 @@ enumerations:
             Remain powered off.
         - name: Restore
           description: >
-            Restore power to a state that was known, just before the main power
-            was lost.
+            Restore power to last requested state recorded before the BMC was
+            reset.

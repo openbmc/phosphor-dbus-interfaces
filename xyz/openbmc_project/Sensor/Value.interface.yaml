@@ -24,7 +24,7 @@ properties:
     - name: Unit
       type: enum[self.Unit]
       description: >
-          The unit of the reading.
+          The unit of the reading.  Immutable once set for a sensor.
           For objects in the temperature namespace, Unit must be "DegreesC".
           For objects in the fan_tach namespace, Unit must be "RPMS".
           For objects in the voltage namespace, Unit must be "Volts".
@@ -36,6 +36,7 @@ properties:
       type: int64
       description: >
           The reading scaling factor N, where the actual reading is Value * 10^N.
+          This is immutble once set for a sensor.
 
 enumerations:
     - name: Unit

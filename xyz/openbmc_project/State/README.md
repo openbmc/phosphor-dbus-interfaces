@@ -56,6 +56,38 @@ The *Host* would provide interfaces at
 The *Chassis* would provide interfaces at
 `/xyz/openbmc_project/state/chassis<instance>`
 
+## BMC to Host to Chassis Mapping
+
+In the future, OpenBMC will provide an association API, which allows one
+to programmatically work out the mapping between BMCs, Chassis and Hosts.
+
+In order to not introduce subtle bugs with existing API users, `bmc0`,
+`chassis0` and `host0` are special. If they exist, they are guaranteed to talk
+to the system as a whole as if it was a system with one BMC, one chassis and
+one host. If there are multiple hosts, then bmc0/chassis0/host0
+will *not* exist. In the event of multiple BMCs or Chassis, bmc0 and chassis0
+will act on all entities as if they are one (if at all possible).
+
+This behaviour means that existing code will continue to work, or error out
+if the request would be ambiguous and probably not what the user wanted.
+
+For example, if a system has two chassis, only powering off the first chassis
+(while leaving the second chassis on) is certainly *not* what the API user had
+in mind as they likely desired to hard power off the system. In such a
+multi-chassis system, starting counting from 1 rather than 0 would avoid this
+problem, while allowing an API user to *intentionally* only power off one
+chassis. With chassis0 being special, it would allow existing code to continue
+to function on this multi-chassis system.
+
+For example, a system with multiple hosts would have BMCs, Chassis and Hosts
+*all* start numbering from 1 rather than 0. This is because multiple hosts
+could be in the same chassis, or controlled by the same BMC, so taking action
+against them would *not* be what the API user intended.
+
+It is safe to continue to write code referencing bmc0, host0 and
+chassis0 and that code will continue to function, or error out rather than
+doing something undesirable.
+
 ## Hard vs. Soft Power Off
 
 A hard power off is where you simply cut power to a chassis.  You don't give

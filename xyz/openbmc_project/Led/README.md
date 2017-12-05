@@ -81,6 +81,13 @@ Using the yaml definition above, a user can just set the `asserted` property to
 boolean `true` on '/xyz/openbmc_project/led/groups/enclosure_identify' and that
 would result in blinking the front and rear Identify LEDs of the enclosure.
 
+It is mandatory that anything implementing the interface
+xyz.openbmc_project.Led.Group be in the /xyz/openbmc_project/led/groups
+namespace. The reasoning behind this is to make it easier for clients to find a
+specific LED group. If this were not the case all clients would have to find all
+objects that expose interface xyz.openbmc_project.Led.Group, and compare the last
+member of the path, which is error prone.
+
 ## Mandatory groups
 
 It is mandatory that all implementations provide definitions of atleast 2 groups
@@ -93,6 +100,10 @@ Example: The Group yaml may just be;
 bmc_booted:
 power_on:
 ```
+
+For the IPMI command "chassis identify" to function, **enclosure_identify** must
+also be implemented.
+
 ## Understanding Physical LEDs
 
 It is always **recommended** that external users use **only** the LED groups.

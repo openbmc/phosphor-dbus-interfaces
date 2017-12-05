@@ -93,6 +93,10 @@ Example: The Group yaml may just be;
 bmc_booted:
 power_on:
 ```
+
+For the IPMI command "chassis identify" to function, **enclosure_identify** must
+also be implemented.
+
 ## Understanding Physical LEDs
 
 It is always **recommended** that external users use **only** the LED groups.

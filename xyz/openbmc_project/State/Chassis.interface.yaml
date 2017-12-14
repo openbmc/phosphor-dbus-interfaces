@@ -16,6 +16,11 @@ properties:
           A user can determine if a chassis is in transition by comparing
           the CurrentPowerState and RequestedPowerTransition properties.
 
+    - name: uuid
+      type: string
+      description: >
+          A read-only property describing the current device guid.
+
 enumerations:
     - name: Transition
       description: >

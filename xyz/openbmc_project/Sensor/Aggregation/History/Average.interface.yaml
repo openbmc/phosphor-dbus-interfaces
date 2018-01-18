@@ -1,0 +1,20 @@
+description: >
+    Implement to provide an object that contains a history of averages.  The
+    object this interface is placed on should provide information about the
+    duration the average is calculated over.
+
+    This property is read-only.
+
+properties:
+    - name: Scale
+      type: int64
+      description: >
+          The reading scaling factor N, where the actual reading is value * 10^N.
+          This is immutable once set.
+
+    - name: Values
+      type: array[struct[uint64,int64]]
+      description: >
+          An array of timestamp, average value tuples.  The timestamp is the
+          number of milliseconds since 1970.  The entries in the array will
+          always be ordered from newest to oldest.

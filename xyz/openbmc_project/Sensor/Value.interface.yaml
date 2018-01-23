@@ -21,6 +21,14 @@ properties:
       type: int64
       description: >
           The sensor reading.
+    - name: MaxValue
+      type: int64
+      description: >
+          The Maximum supported sensor reading.
+    - name: MinValue
+      type: int64
+      description: >
+          The Minimum supported sensor reading.
     - name: Unit
       type: enum[self.Unit]
       description: >

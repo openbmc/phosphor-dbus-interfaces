@@ -12,6 +12,11 @@ properties:
       description: >
           The watchdog is enabled or not.
       default: false
+    - name: ExpireAction
+      type: enum[self.Action]
+      description: >
+          The action the watchdog should perform when it expires.
+      default: 'None'
     - name: Interval
       type: uint64
       description: >
@@ -23,5 +28,23 @@ properties:
           Time remaining before timeout, in milli-second.
           Setting this property can re-arm the watchdog.
       default: 0
+
+enumerations:
+   - name: Action
+     description: >
+       The type of action to perform.
+     values:
+       - name: 'None'
+         description: >
+           Do nothing.
+       - name: 'HardReset'
+         description: >
+           Perform a reset of the system.
+       - name: 'PowerOff'
+         description: >
+           Perform a power off of the system.
+       - name: 'PowerCycle'
+         description: >
+           Perform a power cycle of the system.
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

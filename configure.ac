@@ -37,7 +37,10 @@ AS_IF([test "x$enable_libphosphor_dbus" != "xno"], [
     AX_APPEND_COMPILE_FLAGS([-Wall -Werror], [CXXFLAGS])
 
     # Checks for header files.
+    old_CPPFLAGS="$CPPFLAGS"
+    CPPFLAGS="$SDBUSPLUS_CFLAGS $CPPFLAGS"
     AC_CHECK_HEADER(sdbusplus/server.hpp, ,[AC_MSG_ERROR([Could not find sdbusplus/server.hpp...sdbusplus package required])])
+    CPPFLAGS="$old_CPPFLAGS"
 
     # Checks for library functions.
     LT_INIT([dlopen disable-static shared])

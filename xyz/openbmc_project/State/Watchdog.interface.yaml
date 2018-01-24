@@ -1,6 +1,12 @@
 description: >
     Implement the watchdog function.
+
 properties:
+    - name: Initialized
+      type: boolean
+      description: >
+          Whether the host has configured the watchdog yet.
+      default: false
     - name: Enabled
       type: boolean
       description: >

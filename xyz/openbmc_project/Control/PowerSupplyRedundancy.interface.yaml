@@ -1,0 +1,8 @@
+description: >
+    An interface to set whether the power supplies are redundant.
+properties:
+    - name: PowerSupplyRedundancyEnabled
+      type: boolean
+      description: >
+          When true, the power supplies are redundant, therefore a fail of
+          a power supply does not fail or shutdown the system.

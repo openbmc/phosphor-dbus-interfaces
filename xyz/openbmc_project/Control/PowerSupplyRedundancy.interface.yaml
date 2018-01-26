@@ -1,0 +1,7 @@
+description: >
+    An interface to set whether the power supplies are redundant.
+properties:
+    - name: PowerSupplyRedundancyEnabled
+      type: boolean
+      description: >
+          When true, the power supplies are redundant.

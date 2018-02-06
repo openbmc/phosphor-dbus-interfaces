@@ -17,3 +17,18 @@ properties:
       description: >
           if true then the hostname received from the DHCP server
           will be set as the transient hostname of the system.
+    - name: dHCPOpt12Enabled
+      type: boolean
+      description: >
+          if true then Option 12 field will be included in the DHCP
+          packet.
+    - name: dHCPOpt60Opt43Enabled
+      type: boolean
+      description: >
+          if true then Option 60 field and Option 43 field will be
+          included in the DHCP packet.
+    - name: VendorClassIdentifier
+      type: string
+      description: >
+          The vendor class identifier used to identify vendor type
+          and configuration.

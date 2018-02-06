@@ -17,3 +17,8 @@ properties:
       description: >
           if true then the hostname received from the DHCP server
           will be set as the transient hostname of the system.
+    - name: SendHostNameEnabled
+      type: boolean
+      description: >
+          if true then DHCP option 12 is enabled i.e machine`s hostname will be
+          sent to the DHCP server.

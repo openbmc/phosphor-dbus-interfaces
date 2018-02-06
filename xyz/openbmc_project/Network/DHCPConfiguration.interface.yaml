@@ -17,3 +17,13 @@ properties:
       description: >
           if true then the hostname received from the DHCP server
           will be set as the transient hostname of the system.
+    - name: SendHostNameEnabled
+      type: boolean
+      description: >
+          if true then the machine`s hostname will be sent to the
+          DHCP server.
+    - name: VendorClassIdentifier
+      type: string
+      description: >
+          The vendor class identifier used to identify vendor type
+          and configuration.

@@ -160,3 +160,69 @@ Modify `RequestedActivation` to *Active* on the desired `Activation`.
 
 Set `Priority` to 0 on the desired `RedundancyPriority` interface.
 
+# IMAGE Signing
+
+### What is OpenBMC firmware Signing and verification?
+
+It is the process of digitally signing Open BMC firmware to ensure that the
+software has not been altered since it was signed and also helps to validates
+identify the source of the image.
+
+### How Signing works?
+
+The build process results in the creation of the various files together which
+make up the firmware image. Once the firmware image files are successfully
+built, it is ready to be packaged. These image files are signed before
+they are packaged. As part of the packaging, calculate “digest” by executing
+a hash function on the image and use the private key to sign the digest.
+Include this signature information for all image files mentioned in the
+Packaging section. Update Manifest file with the hash function public key
+and type of the key information.
+
+### Package Information:
+    image-kernel, image-kernel.signature
+    image-u-boot, image-u-boot.signature
+    image-rofs, image-rofs.signature
+    image-rwfs, image-rwfs.signature
+    MANIFEST
+
+### How Verification works?
+
+1. Keep the tar image in /tmp path.
+2. Extract the manifest file and do the validation of the Manifest
+   file using any of the available public key and hash function available
+   in the system. This will help different types of public key based
+   code upgrades.
+3. Read the Key, type and hash function information from Manifest file
+   and compare the BMC saved key.
+     - If the key or Hash function is different update the BMC with new values.
+4. Validate the files(except Manifest file) using BMC public key and hash
+   function provided by the manifest file.
+     - For any failure during this process report failure and stop the process.
+5. After Successful validation continues the normal code update process.
+
+### Activation Key and hash function location in BMC
+
+ /etc/activationdata/ HashFunction -> Hash Function used for Signing.
+ /etc/activationdata/Keys: OpenBMC, GA, Witherspoon -> Different types of Keys.
+
+### Key Distribution
+
+1. Public keys and hash function used for the digital signature will be
+   installed on the system by manufacturing as part of the basic firmware image.
+2. Packaging should include Hash function, key and type(Witherspoon, public key)
+   information as part of the manifest file.
+3. If for some reason the public key or hash function can no longer be used,
+   a new key or hash function will be included in the manifest file.
+   The manifest must be signed using the old public key and hash function
+   information.
+4. Due to the replacement of the old public keys or hash function,
+   once the new public key or hash function has been installed then any old
+   service packs can no longer be applied. In order for a customer to go to
+   a previous level, must republish the old service packs with the new key
+   and hash function.
+5. Since the un-signed flash image doesn’t have a business logic to verify
+   the signed image, unsigned to signed image code upgrade works smoothly.
+6. Code down-grade from signed to unsigned is currently not allowed.
+7. Different type (Eg: GA-> Witherspoon) image update requires manifest file
+   signed with Known BMC public key.

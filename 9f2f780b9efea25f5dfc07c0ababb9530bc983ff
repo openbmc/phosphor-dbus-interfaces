@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9adffdf1_b8e15d9c",
+        "filename": "xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2018-02-19T10:52:28Z",
+      "side": 1,
+      "message": "It might help to put some \"user\" context for this feature:\n\n    - What are the security concerns with the current code update ?\n    - What is being proposed ? - such as signing the firmare image.\n    - What are the security implications ? e.g.\n             - Only firmware signed by IBM can be used ?\n             - Firmware downgrade support ?\n             - 3rd party firmware support ?\n             - How do we mitigate if the signing keys are compromised ?\n    - What is the proposed change in the MNFG process ?\n    - What is the proposed change in the build process ?\n    - What is the proposed change in the Dev process ?\n\t    - Test builds - Do they have to be signed too ?\n    - Does the REST API remain the same for the proposed secure firmware upgrade ?\n    - Can the signature verification be disabled ? Probably through another REST API ?\n    - Can the stored public key(s) in the system be modified through a REST API ? e.g. In order to boot 3rd part firmware.",
+      "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9adffdf1_b24adeaa",
         "filename": "xyz/openbmc_project/Software/README.md",
         "patchSetId": 2

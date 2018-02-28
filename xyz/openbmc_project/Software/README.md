@@ -131,6 +131,15 @@ a single managed element.  It is expected that all installed versions are listed
 as *Active* and the `Priority` shows which version is the primary and which are
 available for redundancy.
 
+### Priority Change
+
+When multiple software versions are uploaded for a single element, it becomes
+necessary to manipulate `Priority` values, whether by the user, the software
+updater, or both. Changing version priorities is an asynchronous process
+outside of the software updater, so the
+`xyz.openbmc_project.Software.PriorityChange` interface tracks whether
+priorities are currently changing,
+
 ## REST use-cases
 
 ### Find all software versions on the system, either active or available.

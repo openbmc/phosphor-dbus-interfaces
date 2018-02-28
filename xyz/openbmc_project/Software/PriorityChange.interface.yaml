@@ -1,0 +1,9 @@
+description: >
+    Tracks priority change for associated xyz.openbmc_project.Software.Version.
+properties:
+    - name: PriorityUpdating
+      type: boolean
+      description: >
+          Tracks whether the BMC software updater is currently manipulating
+          version priorities.
+      default: false

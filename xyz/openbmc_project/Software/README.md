@@ -137,7 +137,8 @@ available for redundancy.
 
 List `/xyz/openbmc_project/software/`.  This list can be filtered to just
 active listing `.../software/active/` and following the `software_version`
-association to retrieve version information.
+association to retrieve version information.  To list just "functional" or
+running versions list `/xyz/openbmc_project/software/functional/`.
 
 ### Find all software versions on a managed element.
 

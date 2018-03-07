@@ -1,0 +1,99 @@
+description: >
+    Provides user management functionality to create new user or delete
+    existing user. As communication to this service is through authenticated
+    & authorized session, there won't be any validation on the same.
+
+    This will expose basic methods & properties residing in User Manager
+    service to create / delete user objects accordingly
+methods:
+    - name: AddUser
+      description: >
+          Creates a new user. If the user already exists, then it will throw
+          an error.
+      parameters:
+        - name: UserName
+          type: string
+          description: >
+              User name which has to be added
+        - name: GroupNames
+          type: array[string]
+          description: >
+              List of groups to which the user has to be added
+        - name: Privilege
+          type: string
+          description: >
+              Privilege of the user to be added
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.User.Common.Error.UserNameExists
+        - xyz.openbmc_project.User.Common.Error.UserNameGrpPrivFail
+        - xyz.openbmc_project.User.Common.Error.NoResource
+
+    - name: DeleteUser
+      description: >
+          Deletes existing user. If the user doesn't exist then it will throw
+          an error.
+      parameters:
+        - name: UserName
+          type: string
+          description: >
+              User name which has to be creaetd
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
+        - xyz.openbmc_project.User.Common.Error.NoResource
+
+properties:
+     - name: ListPrivileges
+       type: array[string]
+       description: >
+           Lists available user privileges in the system
+
+     - name: ListGroups
+       type: array[string]
+       description: >
+           List all available groups in the system
+
+signals:
+     - name: UserUpdated
+       description: >
+          Signal indicating user has been updated
+       properties:
+          - name: Update
+            type: enum[self.UserUpdate]
+            description: indicates the change CREATE/DELETE/UPDATE
+          - name: UserName
+            type: string
+            description: User name which got updated
+          - name: GroupNames
+            type: array[string]
+            description: >
+                Updated group names of the user
+          - name: Privilege
+            type: string
+            description: >
+                Updated privilege of the user
+
+enumerations:
+    - name: UserUpdate
+      description: >
+          Possible updates with the user
+      values:
+        - name: 'Added'
+          description: >
+            User added.
+        - name: 'Deleted'
+          description: >
+            User deleted.
+        - name: 'PrivilegeUpdated'
+          description: >
+            User privilege updated.
+        - name: 'GroupUpdated'
+          description: >
+            User groups updated.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

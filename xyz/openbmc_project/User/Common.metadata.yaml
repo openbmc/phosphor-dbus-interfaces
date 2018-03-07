@@ -1,0 +1,14 @@
+- name: UserNameExists
+  level: ERR
+- name: UserNameDoesNotExist
+  level: ERR
+- name: UserNameGrpPrivFail
+  level: ERR
+  meta:
+    - str: "REASON = %s"
+      type: string
+- name: NoResource
+  level: ERR
+  meta:
+    - str: "REASON = %s"
+      type: string

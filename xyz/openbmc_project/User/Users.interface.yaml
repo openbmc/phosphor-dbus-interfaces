@@ -1,0 +1,16 @@
+description: >
+    Provides User Objects and it's properties.
+    As communication to this service is through authenticated
+    & authorized session, there won't be any validation on the same.
+
+properties:
+     - name: UserGroups
+       type: array[string]
+       description: >
+           Groups to which the user belong.
+
+     - name: UserPrivilege
+       type: string
+       description: >
+           Privilege of the user.
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

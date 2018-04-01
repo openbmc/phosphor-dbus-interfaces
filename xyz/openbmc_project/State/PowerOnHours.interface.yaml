@@ -1,0 +1,9 @@
+description: >
+    Implement to return a counter value proportional to the system operating
+    power-on hours.
+properties:
+    - name: POHCounter
+      type: uint32
+      description: >
+        This counter shows since how many hours the system was powered on. This
+        is a cumulative one includes all boots.

@@ -1,0 +1,25 @@
+description: >
+    This defines the network client.
+# TODO Fix it through https://github.com/openbmc/openbmc/issues/1438
+# creatable: true
+properties:
+    - name: Address
+      type: string
+      description: >
+          The value of this property is the ip address of the network client.
+    - name: Port
+      type: uint16
+      description: >
+          The value of this property is the network port number.
+    - name: AddressFamily
+      type: enum[self.IPProtocol]
+      description: >
+          IP protocol type which can be IPv4 or IPv6 etc.
+
+enumerations:
+    - name: IPProtocol
+      description: >
+          Possible IP protocol types.
+      values:
+        - name: IPv4
+        - name: IPv6

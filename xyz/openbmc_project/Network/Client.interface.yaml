@@ -1,0 +1,11 @@
+description: >
+    This defines the network endpoint.
+properties:
+    - name: Address
+      type: string
+      description: >
+          The value of this property can be IP/hostname of the network endpoint.
+    - name: Port
+      type: uint16
+      description: >
+          The value of this property is the network port number.

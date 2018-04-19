@@ -1,0 +1,13 @@
+description: >
+    This defines the network client.
+# TODO Fix it through https://github.com/openbmc/openbmc/issues/1438
+# creatable: true
+properties:
+    - name: Address
+      type: string
+      description: >
+          The value of this property is the ip addres of the network client.
+    - name: Port
+      type: uint16
+      description: >
+          The value of this property is the network port number.

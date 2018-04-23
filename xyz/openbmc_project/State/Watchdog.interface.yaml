@@ -1,6 +1,21 @@
 description: >
     Implement the watchdog function.
 
+methods:
+    - name: ResetTimeRemaining
+      description: >
+          Resets the time remaining to the configured interval.
+          This is equivalent to reading the Interval and writing it
+          into the TimeRemaining.
+      parameters:
+        - name: EnableWatchdog
+          type: boolean
+          description: >
+              If true the watchdog will be enabled when the reset
+              is performed.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+
 properties:
     - name: Initialized
       type: boolean

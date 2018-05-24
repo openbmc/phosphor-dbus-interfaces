@@ -1,0 +1,81 @@
+description: >
+    Provides user management functionality.
+    As communication to this service is done through authenticated
+    & authorized session, there won't be any validation for the both.
+
+methods:
+    - name: CreateUser
+      description: >
+          Creates a new user. If the user already exists, then it will throw
+          an error.
+      parameters:
+        - name: UserName
+          type: string
+          description: >
+              User name which has to be created.
+        - name: GroupNames
+          type: array[string]
+          description: >
+              List of groups to which the user has to be added.
+        - name: Privilege
+          type: string
+          description: >
+              Privilege of the user to be added.
+        - name: Enabled
+          type: boolean
+          description: >
+              user enabled / disabled.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.User.Common.Error.UserNameExists
+        - xyz.openbmc_project.User.Common.Error.UserNameGrpPrivFail
+        - xyz.openbmc_project.User.Common.Error.NoResource
+
+    - name: RenameUser
+      description: >
+          Rename's existing user to new one. All other properties of the
+          user will remain same.
+      parameters:
+        - name: UserName
+          type: string
+          description: >
+              User name which has to be updated.
+        - name: NewUserName
+          type: string
+          description: >
+              New User name to which user has to be updated.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
+        - xyz.openbmc_project.User.Common.Error.UserNameExists
+        - xyz.openbmc_project.User.Common.Error.UserNameGrpPrivFail
+        - xyz.openbmc_project.User.Common.Error.NoResource
+
+properties:
+    - name: AllPrivileges
+      type: array[string]
+      description: >
+          Lists all available user privileges in the system.
+
+    - name: AllGroups
+      type: array[string]
+      description: >
+          Lists all available groups in the system.
+
+signals:
+    - name: UserRenamed
+      description: >
+         Signal indicating user's name is updated.
+      properties:
+         - name: UserName
+           type: string
+           description: Name of the user which got renamed.
+         - name: NewUserName
+           type: string
+           description: New name of the user.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

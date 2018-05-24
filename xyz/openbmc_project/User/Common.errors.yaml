@@ -1,0 +1,12 @@
+# xyz.openbmc_project.User.Common.Error.UserNameExists
+- name: UserNameExists
+  description: Specified user name already exists.
+# xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
+- name: UserNameDoesNotExist
+  description: Specified user name does not exist.
+# xyz.openbmc_project.User.Common.Error.UserNameRoleFail
+- name: UserNameGrpPrivFail
+  description: Specified Group / Privilege related restriction failure.
+# xyz.openbmc_project.User.Common.Error.NoResource
+- name: NoResource
+  description: No resource available.

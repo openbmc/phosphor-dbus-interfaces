@@ -7,4 +7,12 @@ properties:
           Time elpased since the
           Epoch(1 Jan 1970 00:00:00 UTC), in microseconds.
 
+          On setting this property, errors may be thrown.
+          InternalFailure means BMC fails to set the time.
+          InsufficientPermission means it is not allowed to set time depend
+          on the time settings.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

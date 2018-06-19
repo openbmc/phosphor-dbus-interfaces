@@ -10,10 +10,14 @@ properties:
       description: >
           The value of this property shall be an IP address assigned to
           the ethernet interface.
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: PrefixLength
       type: byte
       description: >
           This is the number of network bits in the ipaddress.
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: Origin
       type: enum[self.AddressOrigin]
       description: >
@@ -22,6 +26,8 @@ properties:
       type: string
       description: >
           This is the IP gateway for this address.
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: Type
       type: enum[self.Protocol]
       description: >

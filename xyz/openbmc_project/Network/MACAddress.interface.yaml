@@ -6,4 +6,5 @@ properties:
       type: string
       description: >
           MAC address of the ethernet interface.
-
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument

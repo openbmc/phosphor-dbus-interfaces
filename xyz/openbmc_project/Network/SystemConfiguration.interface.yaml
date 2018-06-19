@@ -9,3 +9,5 @@ properties:
       type: string
       description: >
           default gateway of the system.
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument

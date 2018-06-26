@@ -1,0 +1,19 @@
+description: >
+    ID button control service
+methods:
+    - name: simPress
+      description: >
+        Emulate ID button press.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+
+signals:
+    - name: Released
+      description: >
+        ID button released signal
+    - name: Pressed
+      description: >
+        ID button pressed signal

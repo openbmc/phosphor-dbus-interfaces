@@ -1,0 +1,18 @@
+description: >
+    Reset button control service
+methods:
+    - name: simPress
+      description: >
+        Emulate reset button press.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+
+signals:
+    - name: Released
+      description: >
+        Reset button released signal
+    - name: Pressed
+      description: >
+        Reset button pressed signal

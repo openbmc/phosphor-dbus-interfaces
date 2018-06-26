@@ -1,0 +1,51 @@
+description: >
+    power button control service
+methods:
+    - name: simPress
+      description: >
+        emulate power button press.
+      returns:
+        - name: state
+          type: boolean
+          description: >
+            The result of command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: simLongPress
+      description: >
+        emulate power button long press.
+      returns:
+        - name: state
+          type: boolean
+          description: >
+            The result of command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+properties:
+    - name: ButtonState
+      type: boolean
+      default: 0
+      description: >
+       power button value
+
+    - name: PressedTime
+      type: uint64
+      default: 0
+      description: >
+       when power button is pressed
+signals:
+    - name: Released
+      description: >
+        power button release signal
+    - name: Pressed
+      description: >
+        power button pressed signal
+    - name: PressedLong
+      description: >
+        power button long pressed signal

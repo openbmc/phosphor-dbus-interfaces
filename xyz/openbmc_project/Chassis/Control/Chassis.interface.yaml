@@ -1,0 +1,94 @@
+description: >
+    chassis control service
+methods:
+    - name: powerOn
+      description: >
+        Power on system.
+      returns:
+        - name: state
+          type: int32
+          description: >
+            The result of command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: powerOff
+      description: >
+        Power Off system.
+      returns:
+        - name: state
+          type: int32
+          description: >
+            The result of command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: softPowerOff
+      description: >
+        Soft Power off system.
+      returns:
+        - name: state
+          type: int32
+          description: >
+            The result of command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: reboot
+      description: >
+        reboot system.
+      returns:
+        - name: state
+          type: int32
+          description: >
+            The result of command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: softReboot
+      description: >
+        Soft Reboot  system.
+      returns:
+        - name: state
+          type: int32
+          description: >
+            The result of command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: quiesce
+      description: >
+        Quiesce system.
+      returns:
+        - name: state
+          type: int32
+          description: >
+            The result of command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: getPowerState
+      description: >
+        Get system power state.
+      returns:
+        - name: state
+          type: int32
+          description: >
+            The result of command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.InvalidParameter
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+

@@ -1,0 +1,10 @@
+description: >
+    Implement to provide the time the BMC was last rebooted.
+    It is recommended that this interface is implemented on the
+    BMC state object, assuming there is one.
+properties:
+    - name: LastRebootTime
+      type: uint64
+      description: >
+          The last time at which the BMC came out of a reboot as
+          determined by its uptime, in epoch time, in milliseconds.

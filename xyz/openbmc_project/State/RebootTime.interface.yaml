@@ -1,0 +1,12 @@
+description: >
+    Implement to provide the time the BMC was last rebooted.
+methods:
+    - name: GetLastRebootTime
+      description: >
+          Returns the last time at which the BMC came out of a reboot as
+          determined by its uptime.
+      returns:
+        - name: Time
+          type: uint64
+          description: >
+            The last reboot time in milliseconds since 1970.

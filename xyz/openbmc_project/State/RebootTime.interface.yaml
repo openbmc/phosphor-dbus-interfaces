@@ -1,0 +1,8 @@
+description: >
+    Implement to provide the time the BMC was last rebooted.
+properties:
+    - name: LastRebootTime
+      type: uint64
+      description: >
+          The last time at which the BMC came out of a reboot as
+          determined by its uptime, in milliseconds since 1970.

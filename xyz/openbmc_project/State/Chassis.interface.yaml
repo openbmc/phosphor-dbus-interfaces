@@ -16,6 +16,13 @@ properties:
           A user can determine if a chassis is in transition by comparing
           the CurrentPowerState and RequestedPowerTransition properties.
 
+    - name: LastStateChange
+      type: uint64
+      description: >
+          The last time at which the CurrentPowerState property changed,
+          in epoch time, in milliseconds.  This can be used to tell when
+          the chassis was last powered on or off.
+
 enumerations:
     - name: Transition
       description: >

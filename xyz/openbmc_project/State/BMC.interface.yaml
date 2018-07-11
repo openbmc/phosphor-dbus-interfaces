@@ -16,6 +16,12 @@ properties:
      description: >
          The current state of the BMC and is a read-only property.
 
+   - name: LastRebootTime
+     type: uint64
+     description: >
+        The last time at which the BMC came out of a reboot as
+        determined by its uptime, in epoch time, in milliseconds.
+
 enumerations:
    - name: Transition
      description: >

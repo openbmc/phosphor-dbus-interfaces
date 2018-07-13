@@ -12,3 +12,14 @@
   level: ERR
 - name: InsufficientPermission
   level: INFO
+- name: MethodError
+  level: ERR
+  meta:
+    - str: "METHOD_NAME=%s"
+      type: string
+    - str: "PATH=%s"
+      type: string
+    - str: "INTERFACE=%s"
+      type: string
+    - str: "MISC=%s"
+      type: string

@@ -12,7 +12,7 @@ properties:
           InsufficientPermission means it is not allowed to set time depend
           on the time settings.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Time.Error.NotAllowed
+        - xyz.openbmc_project.Time.Error.Failed
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

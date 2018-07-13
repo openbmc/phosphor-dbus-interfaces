@@ -12,3 +12,8 @@
   level: ERR
 - name: InsufficientPermission
   level: INFO
+- name: NotAllowed
+  level: INFO
+  meta:
+    - str: "REASON=%s"
+      type: string

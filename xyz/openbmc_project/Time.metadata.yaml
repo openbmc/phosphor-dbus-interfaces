@@ -1,0 +1,10 @@
+- name: NotAllowed
+  meta:
+    - str: "OWNER=%s"
+      type: string
+    - str: "SYNC_METHOD=%s"
+      type: string
+- name: Failed
+  meta:
+    - str: "REASON=%s"
+      type: string

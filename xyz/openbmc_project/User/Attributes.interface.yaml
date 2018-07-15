@@ -18,4 +18,14 @@ properties:
       type: boolean
       description: >
           Enabled or disabled state of the user.
+
+    - name: UserLockedForFailedAttempt
+      type: boolean
+      description: >
+          Locked or unlocked state of the user. After repeated failed
+          login attempt (configured through MaxLoginAttemptBeforeLockout),
+          locked out user can be unlocked manually by setting false to
+          this property. This property will return true if user is locked
+          out user. AccountUnlockTimeout property can be configured to unlock
+          the user after a timeout.
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

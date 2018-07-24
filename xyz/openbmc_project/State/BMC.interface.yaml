@@ -21,8 +21,6 @@ properties:
      description: >
         The last time at which the BMC came out of a reboot as
         determined by its uptime, in epoch time, in milliseconds.
-     errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
 
 enumerations:
    - name: Transition

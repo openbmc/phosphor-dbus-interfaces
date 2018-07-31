@@ -15,11 +15,11 @@ description: >
 
 properties:
     - name: CriticalHigh
-      type: int64
+      type: double
       description: >
           The upper bound of the critical threshold.
     - name: CriticalLow
-      type: int64
+      type: double
       description: >
           The lower bound of the critical threshold.
     - name: CriticalAlarmHigh

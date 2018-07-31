@@ -19,15 +19,15 @@ description: >
 
 properties:
     - name: Value
-      type: int64
+      type: double
       description: >
           The sensor reading.
     - name: MaxValue
-      type: int64
+      type: double
       description: >
           The Maximum supported sensor reading.
     - name: MinValue
-      type: int64
+      type: double
       description: >
           The Minimum supported sensor reading.
     - name: Unit
@@ -42,11 +42,6 @@ properties:
           For objects in the power namespace, Unit must be "Watts".
           For objects in the energy namespace, Unit must be "Joules".
           For objects in the utilization namespace, Unit must be "Percent"
-    - name: Scale
-      type: int64
-      description: >
-          The reading scaling factor N, where the actual reading is Value * 10^N.
-          This is immutable once set for a sensor.
 
 enumerations:
     - name: Unit

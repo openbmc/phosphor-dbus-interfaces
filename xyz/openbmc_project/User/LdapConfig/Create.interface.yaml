@@ -1,0 +1,27 @@
+description: >
+    Implement to create LDAP name service daemon configuration file.
+
+methods:
+    - name: createConfig
+      description: >
+          The createConfig method takes a dictionary as input, to be able to
+          provide the flexibility to choose a set of configuration information
+          by the LDAP admin.
+          A key in this dictionary must be a property documented in
+          xyz/openbmc_project/User/LdapConfig.interface.yaml. An implementation
+          must ensure to throw an error if an unknown key is present in the
+          dictionary.
+          This method always creates a new config, it will destroy an existing
+          one, if found. In other words, this is not an update API. Individual
+          properties can be updated as per the
+          xyz/openbmc_project/User/LdapConfig.interface.yaml.
+      parameters:
+        - name: properties
+          type: dict[string, variant[boolean, uint32, string]]
+          description: >
+              Dictionary of all mandatory properties.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

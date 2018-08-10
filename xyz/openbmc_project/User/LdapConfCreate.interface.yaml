@@ -1,0 +1,34 @@
+description: >
+    Implement to create LDAP name service daemon configuration file.
+
+    Any LDAP config create implementation must accept a dictionary, to provide
+    the way to pass values to mandatory properties mentioned in LdapConfUpdate
+    interface.
+    The list of acceptable keys(properties) are SecureLDAP(bool),
+    LDAPServerURI(string), LDAPBindDN(string),LDAPBaseDN(string),
+    LDAPBINDDNpassword(string), LDAPBaseSearch(string) and
+    LDAPSearchScope(uint32).
+    It shouldn't accept dictionary of keys other than those mentioned in the
+    above property list. It has to throw the error if mention any other property.
+    It must return back the values of all mandatory properties.
+
+methods:
+    - name: createConfig
+      description: >
+          Using this method, we can set all mandatory properties using a single
+          D-bus call.
+      parameters:
+        - name: properties
+          type: dict[string, variant[boolean, uint32, string]]
+          description: >
+              Dictionary of all mandatory properties.
+      returns:
+        - name: properties
+          type: dict[string, variant[boolean, uint32, string]]
+          description: >
+              A dictionary of mandatory properties.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

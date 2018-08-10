@@ -1,0 +1,62 @@
+description: >
+    Implement to update LDAP mandatory properties.
+
+properties:
+    - name: SecureLDAP
+      type: boolean
+      description: >
+          Specifies whether to use SSL or not.
+      default: false
+    - name: LDAPServerURI
+      type: string
+      description: >
+          Specifies the LDAP URI of the server to connect to.
+    - name: LDAPBindDN
+      type: string
+      description: >
+          Specifies the distinguished name with which to bind to the directory
+          server for lookups.
+    - name: LDAPBaseDN
+      type: string
+      description: >
+          Specifies the base distinguished name to use as search base.
+    - name: LDAPBINDDNpassword
+      type: string
+      description: >
+          Specifies the clear text credentials with which to bind. This option
+          is only applicable when used with LDAPBindDN.
+    - name: LDAPBaseSearch
+      type: string
+      description: >
+          Specifies the base DN from where the search should start in the LDAP
+          tree.
+    - name: LDAPSearchScope
+      type: enum[self.SearchScope]
+      description: >
+          Specifies the search scope:subtree, one level or base object.
+      default: 0
+    - name: LDAPType
+      type: enum[self.Type]
+      description: >
+          Specifies the the configured server is ActiveDirectory(AD) or
+          OpenLdap. It's just an indication for the LDAP stack running on
+          the BMC, in case the app is implemented in such a way that it has
+          to react differently for AD vs openldap.
+
+enumerations:
+    - name: SearchScope
+      description: >
+          Possible base scopes.
+      values:
+        - name: sub
+        - name: one
+        - name: base
+
+    - name: Type
+      description: >
+          Possible LDAP Types.
+      values:
+        - name: ActiveDirectory
+        - name: OpenLdap
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

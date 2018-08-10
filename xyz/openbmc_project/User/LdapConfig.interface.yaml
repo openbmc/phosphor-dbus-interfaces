@@ -1,0 +1,56 @@
+description: >
+    Implement to create LDAP name service daemon configuration file.
+
+    Any LDAP config file implementation must provide the way to pass values to
+    below given mandatory properties.
+
+properties:
+    - name: SecureLDAP
+      type: boolean
+      description: >
+          Specifies whether to use SSL or not.
+      default: false
+    - name: LDAPServerURI
+      type: string
+      description: >
+          Specifies the LDAP URI of the server to connect to.
+    - name: LDAPBindDN
+      type: string
+      description: >
+          Specifies the distinguished name with which to bind to the directory
+          server for lookups.
+    - name: LDAPBaseDN
+      type: string
+      description: >
+          Specifies the base distinguished name to use as search base.
+    - name: LDAPBINDDNpassword
+      type: string
+      description: >
+          Specifies the clear text credentials with which to bind. This option
+          is only applicable when used with LDAPBindDN.
+    - name: LDAPBaseSearch
+      type: string
+      description: >
+          Specifies the base DN from where the search should start in the LDAP
+          tree.
+    - name: LDAPSearchScope
+      type: uint32
+      description: >
+          Specifies the search scope:subtree(0), one level(1) or base(2) object.
+      default: 0
+
+methods:
+    - name: updateConfig
+      description: >
+          Using this method we can set all mandatory properties using singles
+          a D-bus call.
+      parameters:
+        - name: options
+          type: dict[string, variant[boolean, uint32, string]]
+          description: >
+              Dictionary of all mandatory properties
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

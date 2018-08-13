@@ -1,0 +1,15 @@
+description: >
+    Certificate management interface to activate server and client certificates.
+methods:
+    - name: Activate
+      description: >
+          Install the certificate and activate the associated services.
+      parameters:
+        - name: Path 
+          type: string
+          description: >
+              Certificate key file path. This is a temporary file location
+              to keep the user uploaded certificates and keys.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Certs.Activate.Error.InvalidCertificate

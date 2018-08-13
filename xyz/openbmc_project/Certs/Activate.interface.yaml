@@ -1,0 +1,15 @@
+description: >
+    Certificate management interface to activate server and client cerficates.
+methods:
+    - name: Activate
+      description: >
+          Replace the existing certificate key file with another (possibly CA
+          signed) Certificate key file.
+      parameters:
+        - name: Path 
+          type: string
+          description: >
+              Certificate key file path.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Certs.Activate.Error.InvalidCertificate

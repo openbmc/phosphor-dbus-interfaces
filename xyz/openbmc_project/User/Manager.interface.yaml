@@ -68,6 +68,14 @@ properties:
       description: >
           Lists all available groups in the system.
 
+    - name: LocalAccountsDisabled
+      type: boolean
+      description: >
+          Used to disable all local accounts, including system accounts
+          such as root, so that they cannot be used to log in to the BMC.
+          This setting persists across reboots.  New local accounts
+          cannot be created while this is true.
+
 signals:
     - name: UserRenamed
       description: >

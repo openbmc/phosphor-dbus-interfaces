@@ -3,5 +3,7 @@ description: >
 properties:
     - name: PowerSupplyRedundancyEnabled
       type: boolean
+      flags:
+        - const
       description: >
           When true, the power supplies are redundant.

@@ -1,0 +1,26 @@
+description: >
+    Implement to provide role attributes.
+
+properties:
+    - name: Role
+      type: enum[self.Roles]
+      description: >
+          The role associated with the entry.
+
+enumerations:
+    - name: Roles
+      description: >
+        Possible roles of the group.
+      values:
+        - name: 'Admin'
+          description: >
+            Admin role.
+        - name: 'Operator'
+          description: >
+            Operator role.
+        - name: 'User'
+          description: >
+            User role.
+        - name: 'Callback'
+          description: >
+            Callback role.

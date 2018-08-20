@@ -1,0 +1,23 @@
+description: >
+    Implement this interface to determine the privilege of the user based on
+    the group name.The users in the group will inherit the privilege mapped
+    to the group.
+
+methods:
+    - name: CreatePrivilegeMapper
+      description: >
+          Creates a mapping for the group to the privilege.
+      parameters:
+        - name: GroupName
+          type: string
+          description: >
+              Group Name to which the privilege is to be assigned.
+        - name: Privilege
+          type: string
+          description: >
+              The privilege role associated with the group. The set of available
+              privileges is xyz.openbmc_project.User.Manager.AllPrivileges
+
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument

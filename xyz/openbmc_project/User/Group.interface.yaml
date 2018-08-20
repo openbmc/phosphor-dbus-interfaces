@@ -1,0 +1,33 @@
+description: >
+    Implement this interface to provide role based access for groups.
+    The users in the group will inherit the role of the group.
+
+methods:
+    - name: CreateGroupRole
+      description: >
+          Creates a mapping for the group to the role.
+      parameters:
+        - name: GroupName
+          type: string
+          description: >
+              Group Name to which the role needs to be assigned.
+        - name: Role
+          type: enum[self.Roles]
+          description: >
+              The role associated with the group.
+
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+enumerations:
+    - name: Roles
+      description: >
+        Possible roles of the group.
+      values:
+        - name: Admin
+          description: >
+            Admin role.
+        - name: User
+          description: >
+            User role.

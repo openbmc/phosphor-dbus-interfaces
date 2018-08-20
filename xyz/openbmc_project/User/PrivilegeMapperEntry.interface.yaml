@@ -1,0 +1,13 @@
+description: >
+    Implement to provide role attributes.
+
+properties:
+    - name: Privilege
+      type: string
+      description: >
+          Privilege associated with the entry. The set of available privileges
+          are xyz.openbmc_project.User.Manager.AllPrivileges.
+
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument

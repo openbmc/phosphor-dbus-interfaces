@@ -1,0 +1,9 @@
+description: >
+    An interface to set control characteristics for the power supplies.
+properties:
+    - name: DeratingFactor
+      type: int32
+      flags:
+        - const
+      description: >
+          The power supply derating factor.

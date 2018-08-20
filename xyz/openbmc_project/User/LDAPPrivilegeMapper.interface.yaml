@@ -1,0 +1,27 @@
+description: >
+    Implement this interface to provide privilege role based access for groups.
+    The users in the group will inherit the privilege role of the group.
+
+methods:
+    - name: CreatePrivilegeMapper
+      description: >
+          Creates a mapping for the group to the role.
+      parameters:
+        - name: GroupName
+          type: string
+          description: >
+              Group Name to which the privilege role needs to be assigned.
+        - name: Privilege
+          type: string
+          description: >
+              The privilege role associated with the group.
+
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          
+properties:
+    - name: AllPrivileges
+      type: array[string]
+      description: >
+          Lists all available user privilege roles in the system.

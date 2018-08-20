@@ -1,0 +1,8 @@
+description: >
+    Implement to provide role attributes.
+
+properties:
+    - name: Role
+      type: enum[xyz.openbmc_project.User.Group.Roles]
+      description: >
+          The role associated with the entry.

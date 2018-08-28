@@ -12,3 +12,6 @@ properties:
       type: uint16
       description: >
           The value of this property is the network port number.
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.Common.Error.InternalFailure

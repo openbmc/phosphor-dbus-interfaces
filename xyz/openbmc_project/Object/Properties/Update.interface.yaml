@@ -1,0 +1,73 @@
+description: >
+    Implement to provide the ability to set multiple D-Bus properties at once.
+
+    The method defined in this interface is not a replacement for the 'Set'
+    method defined in the standard org.freedesktop.DBus.Properties interface,
+    which lets the caller update only one property per call. This interface is
+    meant to be implemented in addition to the standard interface, if there's
+    a need.
+
+    The method defined in this interface lets the caller set multiple D-Bus
+    properties in one call. Such a method may be desriable for various reasons,
+    some of which will be mentioned below.
+
+    First of all, an alternate way to solve the same problem this method tries
+    to solve is to define a D-Bus method, which takes as arguments all the D-Bus
+    properties that need to be set. This approach is not preferred, because it
+    drives the need to define a D-Bus method, whereas the same interface could
+    have been described via D-Bus properties and then one could rely on
+    standard interfaces to get/set those properties. Consider the example of a
+    Network.Client interface - minimally a couple of D-Bus properties this
+    interface would have is the IP address and the port. Instead of defining a
+    D-Bus method as well which lets the caller specify both the IP address and
+    port, it's much lesser work to describe this interface via just D-Bus
+    properties (IP address and port), and let the caller get/set them via
+    standard DBus.Properties methods. This makes caller code consistent.
+
+    Some applications can react to D-Bus properties being set only after all
+    properties are set. With the same Network.Client interface example, unless
+    an app knows both the IP address and port, it can't do much. Let's say such
+    an app has to write the provided address and port to a network config file
+    and restart a network service - the app has to either run a timer until a
+    caller has provided both the address and the port, or if possible it has to
+    write these fields in two separate operations to the network config file,
+    and then restart the network service twice, which may cause a lack of
+    performance or serviceability as seen by the caller.
+
+    The method described in this interface overcomes these problems by letting
+    the caller provide all required/desired D-Bus properties in one call.
+    Defining it in the Object namespace labels it as a generic API that any
+    D-Bus object, which has at least two D-Bus properties, can implement.
+
+    It is optional to implement this interface, and if implemented, the fact
+    should be documented in D-Bus API. In addition, it's recommended for
+    D-Bus objects with well-known paths to implement this interface, so a caller
+    doesn't have to resort to introspection to determine whether to use the
+    standard property set method, or this one.
+
+    It is recommened for applications to fail on the first property that can't
+    be set for whatever reason, and return back an array of properties that
+    were successfully set, even if that's just a subset of the input properties.
+    In case of errors, either an InternalFailture or InvalidArgument (when one
+    of the property values is unexepcted) exception is thrown.
+
+methods:
+    - name: Update
+      description: >
+          Set values for multiple given D-Bus properties. Properties that are
+          containers are not settable currently.
+      parameters:
+        - name: properties
+          type: dict[string,variant[boolean, int64, string]]
+          description: >
+            A dictionary of property name -> property value. The value type is
+            variant[boolean, int64, string, which should suffice all
+            non-container types.
+      returns:
+        - name: updates
+          type: array[string]
+          description: >
+            An array of names of properties that were successfully updated.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument

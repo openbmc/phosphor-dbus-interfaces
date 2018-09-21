@@ -17,3 +17,8 @@ properties:
           The value of this property is the network port number.
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: AddressFamily
+      type: enum[xyz.openbmc_project.Network.Client.IPProtocol]
+      description: >
+          protocol type can be IPv4 or IPv6 etc.
+

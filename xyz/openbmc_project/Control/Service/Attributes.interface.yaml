@@ -1,0 +1,36 @@
+description: >
+    This interface exposes properties for service objects like
+    SSH, web, RMCP+ etc. under the service configuration manager.
+    This interface can be used to get/set of service properties.
+
+properties:
+    - name: State
+      type: enum[self.SupportedStates]
+      description: >
+          Specifies the state of the service.
+    - name: Port
+      type: uint32
+      description: >
+          Specifies the listening port number of service.
+          This property is used to get or set the service
+          listening port number.
+    - name: Channel
+      type: array[string]
+      description: >
+          Specifies the channel on which service allows client
+          connections. This property is used to get or set the
+          allowed channel interfaces in array of strings. It accepts
+          the interface names, which are created as objects in
+          network service and returns error if not found.
+
+enumerations:
+    - name: SupportedStates
+      description: >
+          State values.
+      values:
+        - name: 'enabled'
+          description: >
+            Service is enabled.
+        - name: 'disabled'
+          description: >
+            Service is disabled.

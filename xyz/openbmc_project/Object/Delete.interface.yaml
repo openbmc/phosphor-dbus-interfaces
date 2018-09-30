@@ -4,5 +4,7 @@ methods:
     - name: Delete
       description: >
           Delete the object implementing Delete.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

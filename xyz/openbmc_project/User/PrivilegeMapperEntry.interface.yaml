@@ -2,6 +2,11 @@ description: >
     Implement to provide privilege for the group.
 
 properties:
+    - name: GroupName
+      type: string
+      description: >
+          Group Name to which the privilege is to be assigned. In the case of
+          LDAP, the GroupName will be the LDAP group the user is part of.
     - name: Privilege
       type: string
       description: >

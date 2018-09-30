@@ -19,7 +19,10 @@ methods:
           description: >
               Group Name to which the privilege is to be assigned. In the case
               of LDAP, the GroupName will be the LDAP group the user is part
-              of.
+              of. GroupName is an element in the D-Bus object path and should
+              only contain the ASCII characters [A-Z][a-z][0-9]_. If there is
+              space in the GroupName, space is removed before adding as an
+              element in the D-Bus object path.
         - name: Privilege
           type: string
           description: >

@@ -37,6 +37,9 @@ properties:
           OpenLdap. It's just an indication for the LDAP stack running on
           the BMC, in case the app is implemented in such a way that it has
           to react differently for AD vs openldap.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
 
 enumerations:
     - name: SearchScope

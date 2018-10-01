@@ -7,29 +7,45 @@ properties:
       description: >
           Specifies whether to use SSL or not.
       default: false
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
     - name: LDAPServerURI
       type: string
       description: >
           Specifies the LDAP URI of the server to connect to.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: LDAPBindDN
       type: string
       description: >
           Specifies the distinguished name with which to bind to the directory
           server for lookups.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: LDAPBaseDN
       type: string
       description: >
           Specifies the base distinguished name to use as search base.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: LDAPBINDDNpassword
       type: string
       description: >
           Specifies the clear text credentials with which to bind. This option
           is only applicable when used with LDAPBindDN.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: LDAPSearchScope
       type: enum[self.SearchScope]
       description: >
           Specifies the search scope:subtree, one level or base object.
       default: 0
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
     - name: LDAPType
       type: enum[self.Type]
       description: >
@@ -37,6 +53,8 @@ properties:
           OpenLdap. It's just an indication for the LDAP stack running on
           the BMC, in case the app is implemented in such a way that it has
           to react differently for AD vs openldap.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
 
 enumerations:
     - name: SearchScope

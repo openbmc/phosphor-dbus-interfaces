@@ -32,7 +32,7 @@ AS_IF([test "x$enable_libphosphor_dbus" != "xno"], [
     AX_PKG_CHECK_MODULES([SDBUSPLUS], [], [sdbusplus], [], [AC_MSG_ERROR(["sdbusplus required and not found."])])
 
     # Checks for typedefs, structures, and compiler characteristics.
-    AX_CXX_COMPILE_STDCXX_14([noext])
+    AX_CXX_COMPILE_STDCXX_17([noext])
     AX_APPEND_COMPILE_FLAGS([-Wall -Werror], [CFLAGS])
     AX_APPEND_COMPILE_FLAGS([-Wall -Werror], [CXXFLAGS])
 

@@ -14,3 +14,8 @@ methods:
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
         - xyz.openbmc_project.Certs.Install.Error.InvalidCertificate
+
+signals:
+    - name: InstallCompleted
+      description: >
+         Signal indicating certificate installation is completed.

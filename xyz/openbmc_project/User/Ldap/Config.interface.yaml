@@ -9,6 +9,7 @@ properties:
       default: false
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.NoCACertificate
     - name: LDAPServerURI
       type: string
       description: >

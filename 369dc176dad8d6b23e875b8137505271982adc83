@@ -16,6 +16,23 @@
       "revId": "369dc176dad8d6b23e875b8137505271982adc83",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7542846e_57b1a79e",
+        "filename": "xyz/openbmc_project/Certs/Install.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2018-10-18T14:00:24Z",
+      "side": 1,
+      "message": "can there only be one pending install?  Don\u0027t you need some token returned from the\ninstall method that is included with the signal so you can correlate?  Or does the\napi only support a single pending install?",
+      "revId": "369dc176dad8d6b23e875b8137505271982adc83",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

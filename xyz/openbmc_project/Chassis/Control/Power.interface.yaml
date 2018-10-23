@@ -1,0 +1,61 @@
+description: >
+    Power control service
+methods:
+    - name: setPowerState
+      description: >
+        set host power state.
+      parameters:
+        - name: state
+          type: int32
+          description: >
+            0 for force power off host
+            1 for power on host
+      returns:
+        - name: status
+          type: int32
+          description: >
+            0: means success
+            -1: means other errors not throwing out.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: getPowerState
+      description: >
+        Get current host power status.
+      returns:
+        - name: status
+          type: int32
+          description: >
+            Current host status,
+            0 for host power off
+            1 for host power on
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: forcePowerOff
+      description: >
+        Force power off the host.
+      returns:
+        - name: status
+          type: int32
+          description: >
+            The result of power off command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+properties:
+    - name: PGood
+      type: int32
+      default: 0
+      description: >
+       PSU Power good property
+    - name: State
+      type: int32
+      default: 0
+      description: >
+       System power status,
+       0: power is off
+       1: power is on

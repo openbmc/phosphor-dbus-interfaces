@@ -32,14 +32,6 @@ properties:
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
         - xyz.openbmc_project.Common.Error.InvalidArgument
-    - name: LDAPBINDDNpassword
-      type: string
-      description: >
-          Specifies the clear text credentials with which to bind. This option
-          is only applicable when used with LDAPBindDN.
-      errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: LDAPSearchScope
       type: enum[self.SearchScope]
       description: >

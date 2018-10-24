@@ -10,10 +10,6 @@ methods:
           properties can be updated as per the
           xyz/openbmc_project/User/Ldap/Config.interface.yaml.
       parameters:
-        - name: SecureLDAP
-          type: boolean
-          description: >
-              Specifies whether to use SSL or not.
         - name: LDAPServerURI
           type: string
           description: >

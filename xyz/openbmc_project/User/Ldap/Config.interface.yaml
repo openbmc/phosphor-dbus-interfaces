@@ -2,14 +2,6 @@ description: >
     Implement to update LDAP mandatory properties.
 
 properties:
-    - name: SecureLDAP
-      type: boolean
-      description: >
-          Specifies whether to use SSL or not.
-      default: false
-      errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.NoCACertificate
     - name: LDAPServerURI
       type: string
       description: >
@@ -17,6 +9,7 @@ properties:
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
         - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.Common.Error.NoCACertificate
     - name: LDAPBindDN
       type: string
       description: >

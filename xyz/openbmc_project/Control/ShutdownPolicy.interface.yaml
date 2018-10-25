@@ -1,0 +1,10 @@
+description: >
+    An interface for node shutdown policy on multi-node products.
+properties:
+    - name: Policy
+      type: byte
+      description: >
+          0: Do not shutdown node on a power supply over current(OC)
+          or a power supply over temperature(OT) event.
+          1: Shutdown node on an OC/OT event.
+          Only available on multi-node products.

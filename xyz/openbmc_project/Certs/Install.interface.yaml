@@ -21,3 +21,8 @@ signals:
          Signal indicating certificate installation is completed.
          Application can use the signal path information for getting
          certificate and service types information from the signal message.
+    - name: DeleteCompleted
+      description: >
+         Signal indicating certificate deletion is completed.
+         Application can use the signal path information for getting
+         certificate and service types information from the signal message.

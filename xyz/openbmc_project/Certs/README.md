@@ -21,6 +21,13 @@ in .pem format, which includes both private key and signed certificate.
            of the certificate application handling LDAP client certificate.
 - REST server should call the install method of the certificate application
   instance.
+- Certificate manager application creates a new d-bus object, which includes the
+  view/delete of certificate.. View includes the standard information in X.509
+  certificate. Refer https://en.wikipedia.org/wiki/X.509 for details.
+- Impacted application should subscribe the associated d-bus upload interface,
+  and responsible for any application specific action.
+- Incase of "server" type certificates delete action, certificate manager
+  creates a new self signed certificate after successfull delete.
 
 ### REST interface details:
 
@@ -50,6 +57,18 @@ in .pem format, which includes both private key and signed certificate.
 
    ```
 
+### CA Certificate management
+ update-ca-certificates is a program that updates the directory /etc/ssl/certs
+ to hold SSL certificates and generates certificates.crt, a concatenated
+ single-file list of certificates. Refer man page for details.
+ https://www.unix.com/man-page/suse/8/update-ca-certificates/
+
+- Existing certificate management interfaces can be used for uploading the CA
+  certificates in the local trust store.
+- Certificate manager application internally uses the update-ca-certificates
+  back-end to install the CA certificates.
+- CA d-bus interface provides delete/blacklist/view CA certificates.
+- Well-known CA certificates included as part of the packaging process.
 
 ### d-bus interfaces:
 

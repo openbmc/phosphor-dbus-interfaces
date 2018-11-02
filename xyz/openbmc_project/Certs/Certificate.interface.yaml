@@ -1,0 +1,95 @@
+description: >
+    Implement to provide certificate management features.
+
+    An OpenBMC implementation providing installed certificate management
+    functions. An implementation service should additionally implement
+    xyz.openbmc_project.Object.Delete to allow the deletion of individual
+    certificate objects.
+properties:
+    - name: CertificateString
+      type: string
+      description: >
+          The string for the certificate.
+
+          This is a X.509 public certificate in PEM format.
+          PEM wiki - https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail
+
+          An X.509 certificate contains a public key, validity, and an
+          identity (a hostname, or an organization, or an individual),
+          and is either signed by a certificate authority or self-signed.
+          Refer https://en.wikipedia.org/wiki/X.509 for details.
+    - name: KeyUsage
+      type: enum[self.KeyUsages]
+      description: >
+          The usage of the key contained in the certificate.
+    - name: Issuer
+      type: dict[string, string]
+      description: >
+          The issuer of the certificate.
+          Refer X.509 certificate wiki for the "Issuer" Key and value details.
+          Refer https://en.wikipedia.org/wiki/X.509
+    - name: Subject
+      type: dict[string, string]
+      description: >
+          The subject of the certificate
+          Refer X.509 certificate wiki for the "Subject" Key and value details.
+          Refer https://en.wikipedia.org/wiki/X.509
+    - name: ValidNotAfter
+      type: uint64
+      description: >
+          The certificate expiry date and time, in epoch time, in milliseconds
+    - name: ValidNotBefore
+      type: uint64
+      description: >
+          The certificate validity start date and time,
+          in epoch time, in milliseconds.
+enumerations:
+    - name: KeyUsages
+      description: >
+          The usages of a key contained within a certificate.
+          ClientAuthentication: The public key is used for TLS WWW client
+                                authentication.
+          CodeSigning: The public key is used for the signing of executable code.
+          CRLSigning: The public key is used for verifying signatures on
+                      certificate revocation lists (CLRs).
+          DataEncipherment: The public key is used for directly enciphering
+                            raw user data without the use of an intermediate
+                            symmetric cipher.
+          DecipherOnly: The public key could be used for deciphering data
+                        while performing key agreement.
+          DigitalSignature: The public key is used for verifying digital
+                            signatures, other than signatures on certificates
+                            and CRLs.
+          EmailProtection: The public key is used for email protection.
+          EncipherOnly: The public key could be used for enciphering data
+                        while performing key agreement.
+          KeyCertSign: The public key is used for verifying signatures on
+                       public key certificates.
+          KeyEncipherment: The public key is used for enciphering private or
+                           secret keys.
+          NonRepudiation: The public key is used to verify digital signatures,
+                          other than signatures on certificates and CRLs,
+                          and used to provide a non- repudiation service that
+                          protects against the signing entity falsely denying
+                          some action.
+          OCSPSigning: The public key is used for signing OCSP responses.
+          ServerAuthentication: The public key is used for TLS WWW server
+                                authentication.
+          Timestamping: The public key is used for binding the hash of an
+                        object to a time.
+      values:
+        - name: ClientAuthentication
+        - name: CodeSigning
+        - name: CRLSigning
+        - name: DataEncipherment
+        - name: DecipherOnly
+        - name: DigitalSignature
+        - name: EmailProtection
+        - name: EncipherOnly
+        - name: KeyAgreement
+        - name: KeyCertSign
+        - name: KeyEncipherment
+        - name: NonRepudiation
+        - name: OCSPSigning
+        - name: ServerAuthentication
+        - name: Timestamping

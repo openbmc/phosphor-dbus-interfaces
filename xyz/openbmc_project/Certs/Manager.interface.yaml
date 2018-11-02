@@ -1,0 +1,44 @@
+description: >
+    Implement to provide certificate management features.
+
+    An OpenBMC implementation providing installed certificate management
+    functions. An implementation service should additionally implement
+    xyz.openbmc_project.Object.Delete to allow the deletion of individual
+    certificate objects.
+methods:
+    - name: View
+      description: >
+          Method to view certificate in X.509 format.
+      returns:
+        - name: certificate 
+          type: array[byte]
+          description: >
+              An X.509 certificate contains a public key, validity, and an
+              identity (a hostname, or an organization, or an individual),
+              and is either signed by a certificate authority or self-signed.
+              Refer https://en.wikipedia.org/wiki/X.509 for details.
+
+properties:
+    - name: Type
+      type: enum[self.Types]
+      description: >
+          Certificate type.
+    - name: Path
+      type: string
+      description: >
+          Path of file that contains signed certificate or signed certificate
+          and key information.
+
+enumerations:
+    - name: Types
+      description: >
+          Possible certificate types.
+          Server: Used to identify servers to clients via
+                  SSL (server authentication).
+          Client: Used to identify clients to servers via
+                  SSL (client authentication).
+          Authority: Used to determine the given certificate can be trusted.
+      values:
+        - name: Server
+        - name: Client
+        - name: Authority

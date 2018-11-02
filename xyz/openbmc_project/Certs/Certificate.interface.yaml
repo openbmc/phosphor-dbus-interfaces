@@ -1,0 +1,58 @@
+description: >
+    Implement to provide certificate management features.
+
+    An OpenBMC implementation providing installed certificate management
+    functions. An implementation service should additionally implement
+    xyz.openbmc_project.Object.Delete to allow the deletion of individual
+    certificate objects.
+properties:
+    - name: CertificateString
+      type: string
+      description: >
+          The string for the certificate.
+
+          This is a X.509 public certificate in PEM format.
+          PEM wiki - https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail
+
+          An X.509 certificate contains a public key, validity, and an
+          identity (a hostname, or an organization, or an individual),
+          and is either signed by a certificate authority or self-signed.
+          Refer https://en.wikipedia.org/wiki/X.509 for details.
+    - name: KeyUsage
+      type: enum[self.KeyUsages]
+      description: >
+          The usage of the key contained in the certificate.
+    - name: Issuer
+      type: dict[string, string]
+      description: >
+          The issuer of the certificate.
+    - name: Subject
+      type: dict[string, string]
+      description: >
+          The subject of the certificate
+    - name: SerialNumber
+      type: string
+      description: >
+          Serial number of the certificate.
+    - name: ValidNotAfter
+      type: string
+      description: >
+          The certificate expiry date and time.
+    - name: ValidNotBefore
+      type: string
+      description: >
+          The certificate validity start date and time.
+enumerations:
+    - name: KeyUsages
+      description: >
+          The usages of a key contained within a certificate.
+          ClientAuthentication: The public key is used for TLS WWW client
+                                authentication.
+          ServerAuthentication: The public key is used for TLS WWW server
+                                authentication.
+          KeyCertSign: The public key is used for verifying signatures on
+                       public key certificates.
+      values:
+        - name: ClientAuthentication
+        - name: ServerAuthentication
+        - name: KeyCertSign

@@ -21,6 +21,25 @@ in .pem format, which includes both private key and signed certificate.
            of the certificate application handling LDAP client certificate.
 - REST server should call the install method of the certificate application
   instance.
+- Certificate manager application also implements d-bus object
+  xyz.openbmc_project.Certs.Manager. This includes the collection of
+  "certificates specific d-bus objects" installed in the system. This d-bus
+  provide option to view the certificate on PEM format and delete the same.
+  Refer https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail for details.
+     e.g. for Certificate specific d-bus path
+        -  /xyz/openbmc_project/certs/Server/<unique-id> maps to
+           instance of the server types certificate.
+        -  /xyz/openbmc_project/certs/Client/<unique-id> maps to
+           instance of the client type certificate.
+     note: unique id is the hash value of certificate issuer and serial number.
+
+- Applications should subscribe the xyz.openbmc_project.Certs.Manager
+  to see any new certificate is uploaded or change in the existing
+  certificates.
+- Certificate manager scope is limited to manage the certificate and impacted
+  application is responsible for application specific changes.
+- Incase of delete action, certificate manager creates a new self signed
+  certificate after successful delete.
 
 ### REST interface details:
 
@@ -49,10 +68,6 @@ in .pem format, which includes both private key and signed certificate.
        500  Internal server error
 
    ```
-
-
-### d-bus interfaces:
-
 #### d-bus interface to install certificate and private Key
 - Certs application must:
   - validate the certificate and Private key file by checking, if the Private

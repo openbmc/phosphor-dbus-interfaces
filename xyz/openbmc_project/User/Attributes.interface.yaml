@@ -8,16 +8,22 @@ properties:
       type: array[string]
       description: >
           Groups to which the user belong.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
 
     - name: UserPrivilege
       type: string
       description: >
           Privilege of the user.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
 
     - name: UserEnabled
       type: boolean
       description: >
           Enabled or disabled state of the user.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
 
     - name: UserLockedForFailedAttempt
       type: boolean
@@ -28,4 +34,6 @@ properties:
           this property. This property will return true if user is locked
           out user. AccountUnlockTimeout property can be configured to unlock
           the user after a timeout.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

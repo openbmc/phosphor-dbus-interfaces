@@ -11,7 +11,7 @@ methods:
           xyz/openbmc_project/User/Ldap/Config.interface.yaml.
       parameters:
         - name: LDAPServerURI
-          type: string
+          type: array[string]
           description: >
               Specifies the LDAP URI of the server to connect to.
         - name: LDAPBindDN

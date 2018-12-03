@@ -3,7 +3,7 @@ description: >
 
 properties:
     - name: LDAPServerURI
-      type: string
+      type: array[string]
       description: >
           Specifies the LDAP URI of the server to connect to.
       errors:

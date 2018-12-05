@@ -44,6 +44,16 @@ properties:
           Time remaining before timeout, in milli-second.
           Setting this property can re-arm the watchdog.
       default: 0
+    - name: TimerUse
+      type: enum[self.TimerUseField]
+      description: >
+          The current timer use assigned to the watchdog timer.
+      default: 'Reserved'
+    - name: TimerUseExpirationFlag
+      type: enum[self.TimerUseField]
+      description: >
+          The current timer use expiration flags assigned to the watchdog timer.
+      default: 'Reserved'
 
 enumerations:
    - name: Action
@@ -62,5 +72,28 @@ enumerations:
        - name: 'PowerCycle'
          description: >
            Perform a power cycle of the system.
+
+   - name: TimerUseField
+     description: >
+       The type of timer use.
+     values:
+       - name: 'Reserved'
+         description: >
+           Reserved.
+       - name: 'BIOSFRB2'
+         description: >
+           BIOS FRB2.
+       - name: 'BIOSPOST'
+         description: >
+           BIOS POST.
+       - name: 'OSLoad'
+         description: >
+           OS Load.
+       - name: SMSOS
+         description: >
+           SMS OS.
+       - name: 'OEM'
+         description: >
+           OEM.
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

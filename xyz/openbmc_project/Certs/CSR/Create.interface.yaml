@@ -1,0 +1,40 @@
+description: >
+    Implement to create Certificate Signing Request(CSR).
+
+methods:
+    - name: GenerateCSR
+      description: >
+          Method to create CSR.
+
+          InternalFailure error would mean that, caller had provided invalid
+          input or software error during CSR creation.
+          Errorlog metadata would provide details of the failure.
+      parameters:
+        - name: Organization
+          type: string
+          description: >
+              The legal name of the organization. This should not be abbreviated
+              and should include suffixes such as Inc, Corp, or LLC.
+              For example, IBM Corp.
+        - name: Country
+          type: string
+          description: >
+              The two-letter ISO code for the country where your organization
+              is located. For example US is the valid code for United States.
+        - name: Region
+          type: string
+          description: >
+              The state or province where the organization is located.
+              This should not be abbreviated. For example, Texas.
+        - name: City
+          type: string
+          description: >
+              The city or locality where the organization is located.
+              For Example Austin
+      returns:
+        - name: Id
+          type: uint32
+          description: >
+              Unique id associated to CSR request.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure

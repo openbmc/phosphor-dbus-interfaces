@@ -7,7 +7,7 @@ install both the server and client certificates. The REST interface allows to
 update the certificate, using an unencrypted certificate and private key file
 in .pem format, which includes both private key and signed certificate.
 
-### Signed Certificate upload Design flow:
+### Signed Certificate upload Design flow(Pre-generated):
 
 - The REST Server copies the certificate and private key file to a temporary
   location.
@@ -50,6 +50,32 @@ in .pem format, which includes both private key and signed certificate.
 
    ```
 
+### User flow for generating and installing Certificates(CSR Based):
+   Certificate Signing Request [CSR](https://en.wikipedia.org/wiki/Certificate_signing_request)
+is a message sent from an applicant to a certitificate authority in order to
+apply for a digital identity certificate. This section provides the details of
+the CSR based certificate user flow.
+- The user performs the CSR/create interface
+      BMC creates new private key and CSR object which includes CSR information.
+- The user performs the CSR/export interface
+      Allows the user to export the CSR file which is part of newly created
+      CSR object. This can be provided to the CA to create SSL certificate.
+- The user perform the certificate upload on appropriate services.
+      Example: if trying to replace the HTTPS certificate for a Manager,
+      navigate to the Manager’s Certificate object upload interface.
+      The Upload method internally  pairs the private key used in the first
+      step with the installed certificate.
+
+#### Additional interfaces:
+- CSR/delete interface
+      Allows the user the delete the CSR and and its associated private key
+      in the system.
+
+### Assumptions:
+- BMC  updates the private key associated to CSR for any new CSR request.
+  Any CSR based certificate upload will fail for the old CSR based certificates.
+- BMC upload process automatically appends certificate file with system CSR
+  private key, for the service which requirs certificate and key.
 
 ### d-bus interfaces:
 

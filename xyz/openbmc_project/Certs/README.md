@@ -7,7 +7,7 @@ install both the server and client certificates. The REST interface allows to
 update the certificate, using an unencrypted certificate and private key file
 in .pem format, which includes both private key and signed certificate.
 
-### Signed Certificate upload Design flow:
+### Signed Certificate upload Design flow(Pre-generated):
 
 - The REST Server copies the certificate and private key file to a temporary
   location.
@@ -68,6 +68,67 @@ in .pem format, which includes both private key and signed certificate.
        500  Internal server error
 
    ```
+
+## CSR
+
+### User flow for generating and installing Certificates(CSR Based):
+   Certificate Signing Request [CSR](https://en.wikipedia.org/wiki/Certificate_signing_request)
+is a message sent from an applicant to a certitificate authority in order to
+apply for a digital identity certificate. This section provides the details of
+the CSR based certificate user flow.
+- The user performs the CSR/create interface
+      BMC creates new private key and CSR object which includes CSR information.
+- The user performs the CSR/export interface
+      Allows the user to export the CSR file which is part of newly created
+      CSR object. This can be provided to the CA to create SSL certificate.
+- The user perform the certificate upload on appropriate services.
+      Example: if trying to replace the HTTPS certificate for a Manager,
+      navigate to the Manager’s Certificate object upload interface.
+      The Upload method internally  pairs the private key used in the first
+      step with the installed certificate.
+
+### Assumptions:
+- BMC updates the private key associated to CSR for any new CSR request.
+- BMC upload process automatically appends certificate file with system CSR
+  private key, for the service which requirs certificate and key.
+- CSR based Certificate validation is alway's based on private key in the system.
+
+### Example usage for the GenerateCSR POST request
+
+   ```
+   url: /redfish/v1/CertificateService
+   Action: #CertificateService.GenerateCSR {
+    "City": "HYB",
+    "CertificateCollection": "/redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/",
+    "CommonName": "www.company.com",
+    "ContactPerson":"myname",
+    "AlternativeNames":["mycompany.com","mycompany2.com"],
+    "ChallengePassword":"abc123",
+    "Email":"xxx@xx.com",
+    "GivenName":"localhost",
+    "Initials":"G",
+    "Country": "IN",
+    "KeyCurveId":"0",
+    "KeyUsage":["ServerAuthentication","ServerAuthentication"],
+    "KeyBitLength": 2048,
+    "KeyPairAlgorithm": "RSA",
+    "Organization": "ABCD",
+    "OrganizationUnit": "XY",
+    "State": "TX",
+    "SurName": "XX",
+    "UnstructuredName": "xxx"
+   }
+   Description: This is used to perform a certificate signing request.
+   Method: POST
+
+  ```
+
+### Additional interfaces:
+- CertificateService.ReplaceCertificate
+      Allows the user to replace an existing certificate.
+
+### d-bus interfaces:
+
 #### d-bus interface to install certificate and private Key
 - Certs application must:
   - validate the certificate and Private key file by checking, if the Private

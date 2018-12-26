@@ -15,6 +15,18 @@ methods:
        - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
        - xyz.openbmc_project.Chassis.Common.Error.IOError
 
+properties:
+    - name: Enabled
+      type: boolean
+      default: false
+      description: >
+        Enable/disable power button.
+        false means power button is disabled
+        true means power button is enabled
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
 signals:
     - name: Released
       description: >

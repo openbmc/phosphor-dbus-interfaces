@@ -33,6 +33,16 @@ properties:
       description: >
           The action the watchdog should perform when it expires.
       default: 'HardReset'
+    - name:  PreTimeoutInterruptOccurred
+      type: boolean
+      description: >
+          The pre-timeout interrupt occurred.
+      default: false
+    - name: PreTimeoutInterval
+      type: uint64
+      description: >
+          Pre-timout interval in milli-second.
+      default: 0
     - name: Interval
       type: uint64
       description: >

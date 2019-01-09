@@ -29,7 +29,7 @@ properties:
       type: enum[self.SearchScope]
       description: >
           Specifies the search scope:subtree, one level or base object.
-      default: 0
+      default: sub
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
     - name: LDAPType

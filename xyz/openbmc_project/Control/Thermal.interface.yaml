@@ -1,0 +1,15 @@
+description: >
+    Implement to provide altering the thermal control mode of a system which
+    would then use different thermal control parameters defined.
+
+    Control.Thermal.Mode is read/write.
+
+properties:
+    - name: Mode
+      type: string
+      description: >
+          A set of modes that the thermal control application uses to select a
+          different set of thermal control parameters other than the defaults
+          for a system.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

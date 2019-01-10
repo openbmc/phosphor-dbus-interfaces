@@ -1,0 +1,17 @@
+description: >
+    Implement to provide alternative thermal control modes of a system
+    that can be enabled, overriding the system defaults.
+
+    Control.ThermalMode.Custom is read/write. Not all implementations may
+    support having this property enabled.
+
+properties:
+    - name: Custom
+      type: boolean
+      default: false
+      description: >
+          An implemention specific mode that the thermal control application
+          can be configured to use in selecting a different set of parameters
+          that do not follow other mode definitions.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

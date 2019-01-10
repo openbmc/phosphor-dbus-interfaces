@@ -1,0 +1,29 @@
+description: >
+    Implement to provide alternative thermal control states of a system
+    that can be enabled, overriding the system defaults.
+
+    Control.Thermal.CustomMode is read/write. Not all implementations may
+    support having this property enabled.
+
+properties:
+    - name: CustomMode
+      type: enum[self.ModeState]
+      default: 'Off'
+      description: >
+          An implemention specific mode that the thermal control application
+          can be configured to use in selecting a different set of parameters
+          that do not follow other mode definitions.
+
+enumerations:
+    - name: ModeState
+      description: >
+          The states of thermal control modes
+      values:
+          - name: 'Off'
+            description: >
+                Mode is disabled
+          - name: 'On'
+            description: >
+                Mode is enabled
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

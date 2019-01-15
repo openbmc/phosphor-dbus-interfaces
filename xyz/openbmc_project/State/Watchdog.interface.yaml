@@ -44,15 +44,15 @@ properties:
           Time remaining before timeout, in milli-second.
           Setting this property can re-arm the watchdog.
       default: 0
-    - name: TimerUse
-      type: enum[self.TimerUseField]
+    - name: CurrentTimerUse
+      type: enum[self.TimerUse]
       description: >
-          The current timer use assigned to the watchdog timer.
+          The host defined user of this timer.
       default: 'Reserved'
-    - name: TimerUseExpirationFlag
-      type: enum[self.TimerUseField]
+    - name: ExpiredTimerUse
+      type: enum[self.TimerUse]
       description: >
-          The current timer use expiration flags assigned to the watchdog timer.
+          The timer user at the time of expiration.
       default: 'Reserved'
 
 enumerations:
@@ -73,7 +73,7 @@ enumerations:
          description: >
            Perform a power cycle of the system.
 
-   - name: TimerUseField
+   - name: TimerUse
      description: >
        The type of timer use.
      values:

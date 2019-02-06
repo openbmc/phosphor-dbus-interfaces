@@ -39,6 +39,16 @@ methods:
               OpenLdap. It's just an indication for the LDAP stack running on
               the BMC, in case the app is implemented in such a way that it has
               to react differently for AD vs openldap.
+        - name: GroupNameAttribute
+          type: string
+          description: >
+              Specifies the attribute name that contains the name
+              of the Group in the LDAP server.
+        - name: UsernameAttribute
+          type: string
+          description: >
+              Specifies the attribute name that contains
+              the username in the LDAP server.
       returns:
         - name: path
           type: string

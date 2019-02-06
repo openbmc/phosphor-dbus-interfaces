@@ -41,7 +41,25 @@ properties:
           to react differently for AD vs openldap.
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
-
+    - name: LDAPServiceEnabled
+      type: bool
+      description: >
+          Specifies that the LDAP service is enabled or not.
+    - name: GroupName
+      type: string
+      description: >
+          The value of this property shall be the attribute name
+          that contains the name of the Group in the LDAP server.
+    - name: Groups
+      type: string
+      description: >
+          The value of this property shall be the attribute name
+          that contains the groups for a user in the LDAP server.
+    - name: Username
+      type: string
+      description: >
+          The value of this property shall be the attribute name
+          that contains the username in the LDAP server.
 enumerations:
     - name: SearchScope
       description: >

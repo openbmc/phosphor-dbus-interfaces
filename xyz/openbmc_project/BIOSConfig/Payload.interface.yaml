@@ -1,0 +1,43 @@
+description: >
+    Remote BIOS Config manager daemon will create payload objects
+    for every payload received in the system under
+    object path /xyz/openbmc_project/biosconfigMgr/<PayloadType>.
+    Each payload object can be handled through 'org.freedesktop.DBus.ObjectManager'.
+    PayloadType object will expose following properties and methods.
+    xyz.openbmc_project.BIOSConfig.Payload interface
+
+properties:
+
+        - name: Status
+          type: enum[xyz.openbmc_project.BIOSConfig.BIOSConfigMgr.PayloadStatus]
+          description: >
+            This contain current payload status.
+            or in error state
+        - name: Totallength
+          type: uint32
+          description: >
+            This contain total payload length
+        - name: TotalChecksum
+          type: uint32
+          description: >
+            This contain total payload checksum
+        - name: CreationTime
+          type: uint32
+          description: >
+            This contain payload creation time
+        - name: FilePath
+          type: string
+          description: >
+             This contain payload file path
+        - name: Version
+          type: uint16
+          description: >
+             This contain payload /File version
+           
+signals:
+        - name: PayloadStatusChanged
+          description: >
+             Signal indicating when payload Status is changed and available.
+             Supported State -Created / In transfer / EndofTransfer/ ValidPayload / Invalid Payload
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

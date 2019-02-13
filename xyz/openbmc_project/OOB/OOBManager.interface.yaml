@@ -1,0 +1,202 @@
+description: >
+    Provides OOB management functionality.
+    As communication to this service is done through authenticated
+    & authorized session, there won't be any validation for both.
+
+methods:
+    - name: SetBIOSAttributeValue 
+      description: >
+          To set the particular  BIOS attribute  with new value. This will throw an error.
+          an error.
+      parameters:
+        - name: AttributeName
+          type: string
+          description: >
+              AttributeName which has to be changed.
+        - name: AttributeValue
+          type: string
+          description: >
+              Attribute value whihc need to be set.
+        - name: AttributeValueType
+          type: string
+          description: >
+              Attribute value type  tells attribute value type.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.OOB.Common.Error.AttributeNotSettable
+        - xyz.openbmc_project.OOB.Common.Error.AttributeSettingFailed
+        - xyz.openbmc_project.OOB.Common.Error.AttributeNotFound
+        - xyz.openbmc_project.OOB.Common.Error.NoResource
+        - xyz.openbmc_project.OOB.Common.Error.InvalidValue
+
+    - name: GetBIOSAttributeValue
+      description: >
+          To get the bios attribute current values and pending values if again.
+      parameters:
+        - name: AttributeName
+          type: string
+          description: >
+             AttributeName which has to be retrived.
+        - name: Value
+          type: string
+          description: >
+              Attribute Current value present in BIOS.
+        - name: PendingValue
+          type: string
+          description: >
+              Attribute Pending value present in BIOS.
+        - name: ValueType
+          type: string
+          description: >
+             Attribute value type  tells attribute value type. 
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.OOB.Common.Error.AttributeNotFound
+        - xyz.openbmc_project.OOB.Common.Error.NoResource
+        - xyz.openbmc_project.OOB.Common.Error.InvalidValue
+
+    - name: ValidatePayloadFile
+      description: > 
+          To validate the BIOS attribute / Image file uploaded.
+      parameters:
+        - name: PayloadType
+          type: byte
+          description: >
+              Files Payload type 
+        - name: FilePath
+          type: path
+          description: >
+              File's location path whihc need to be validated 
+      returns:
+        - name: Status
+          type: boolean
+          description: >
+              This return true if given file is valid and fine else return false. 	
+
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.OOB.Common.Error.NoResource
+        - xyz.openbmc_project.OOB.Common.Error.FileNotFound
+        - xyz.openbmc_project.OOB.Common.Error.InvalidPayloadType
+
+    - name: SendPayloadFilePath  
+      description: >
+           To send the full BIOS Attribute file path and file payload type
+      parameters:
+        - name: PayloadType
+          type: byte
+          description: >
+              Files Payload type 
+        - name: FilePath
+          type: path
+          description: >
+              File's location path whihc need to be validated 
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.OOB.Common.Error.NoResource
+        - xyz.openbmc_project.OOB.Common.Error.FileNotFound
+        - xyz.openbmc_project.OOB.Common.Error.InvalidPayloadType
+
+    - name: GetPayloadFilePath
+      description: >
+          To get the payload file path based on the payload type
+      parameters:
+        - name: PayloadType
+          type: byte
+          description: >
+              Files Payload type 
+      returns:
+        - name: FilePath
+          type: path
+          description: >
+              Payload File's location path 
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.OOB.Common.Error.NoResource
+        - xyz.openbmc_project.OOB.Common.Error.FileNotFound
+        - xyz.openbmc_project.OOB.Common.Error.InvalidPayloadType
+
+    - name: CreatePayload
+      description: >
+           Create the payload object for storing the payload details
+      parameters:
+        - name: PayloadType
+          type: byte
+          description: >
+             Files Payload type 
+        - name: PayloadVersion
+          type: int16
+          description: >
+             Files Payload version  
+        - name: PayloadTSize
+          type: int32
+          description: >
+              Files Payload total size   
+        - name: PayloadChecksum
+          type: int32
+          description: >
+             Files Payload total checksum 
+        - name: PayloadFlag
+          type: int32
+          description: >
+             Files Payload flag 
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.OOB.Common.Error.NoResource
+        - xyz.openbmc_project.OOB.Common.Error.InvalidPayloadType
+        - xyz.openbmc_project.OOB.Common.Error.OOBNotReady
+
+    - name: ValidateUserPassword
+      description: >
+            To check the user password valid or not 
+      parameters:
+        - name: UserPassword
+          type: array[byte]
+          description: >
+              An array of up to 32 bytes of user password
+      returns:
+        - name: Status
+          type: boolean
+          description: >
+              This return true if given user password is valid and fine else return false. 	
+
+properties:
+    - name: MaxPayloadSupported
+      type: byte
+      description: >
+           Contain max payload supported in OOB feature
+    - name: OOBCapability
+      type: int32
+      description: >
+           Contain OOB capabilities flag  set by BIOS
+    - name: IsUserPwdInitDone
+      type: byte
+      description: >
+           contain user password is init or not details. 
+    - name: userBIOSPwdHash
+      type: array[byte]
+      description: >
+           contain user password hash array of upto 32  set by user if bios password check enforcment flag   is set
+    - name: BIOSPasswordHash
+      type: array[byte]
+      description: >
+         contain bios password hash array of upto 32  set by BIOS
+ 
+    - name: BIOSPasswordSeed
+      type: array[byte]
+      description: >
+          contain bios password seed array of upto 16 set by BIOS.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

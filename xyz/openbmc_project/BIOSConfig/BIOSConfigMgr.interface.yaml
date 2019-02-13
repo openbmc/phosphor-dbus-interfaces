@@ -1,0 +1,203 @@
+description: >
+    Provides Remote BIOS configuration management functionality.
+    As communication to this service is done through authenticated
+    & authorized session, there won't be any validation for both.
+
+methods:
+    - name: GetAllBaseAttributes
+      description: >
+          To get all BIOS base attributes details from RBC daemon.
+      returns:
+        - name: AttributesData
+          type: dict[string,struct[string,string,string,string,variant[boolean,byte,uint32,uint64,string],variant[boolean,byte,uint32,uint64,string],dict[string,variant[boolean,byte,uint32,uint64,string]]]]
+          description: >
+              map{attributename,struct{valuetype,displayname,description,pagePtr,
+              currentvalue,defaultvalue,array{map{optionstring,optionvalue}}}}
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: SetAllBaseAttributes
+      description: >
+          To set all BIOS attributes.
+          This Method is used by interface to set the base
+          attributes details to the RBC daemon.
+      parameters:
+        - name: AttributesData
+          type: dict[string,struct[string,string,string,string,variant[boolean,byte,uint32,uint64,string],variant[boolean,byte,uint32,uint64,string],dict[string,variant[boolean,byte,uint32,uint64,string]]]]
+          description: >
+              map{attributename,struct{array{valuetype,displayname,description,pagePtr},
+              currentvalue,defaultvalue,array{map{optionstring,optionvalue}}}}
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: SetAttribute
+      description: >
+          To set the new value on new or existing attribute name.
+      parameters:
+         - name: AtributeName
+           type: string
+           description: >
+               AttributeName which has to be changed.
+         - name: AttributeValue
+           type: array[byte]
+           description: >
+               New attribute value
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotSettable
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidValue
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: GetAttribute
+      description: >
+          To get the attribute value of existing attributes.
+      parameters:
+         - name: AtributeName
+           type: string
+           description: >
+               To get the bios attribute current values and pending values if available.
+      returns:
+        - name: CurrentValue
+          type: array[byte]
+          description: >
+              The attribute current value.
+        - name: PendingValue
+          type: array[byte]
+          description: >
+              The pending attribute value if its available.
+        - name: AttributeValueType
+          type: enum[self.AttributeType]
+          description: >
+              PLDM attribute Type present in PLDM spec
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: GetPendingAttributes
+      description: >
+          To get the pending attributes list.
+          list of attributename,valuetype,new value
+      returns:
+        - name: Pendinglist
+          type: dict[string,struct[enum[self.AttributeType],variant[boolean,byte,uint32,uint64,string]]]
+          description: >
+              The Pending attribute name and new value.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: SetPendingAttributes
+      description: >
+          To set the pending attributes list.
+           list of attributename,valuetype,new value
+      parameters:
+        - name: Pendinglist
+          type: dict[string,struct[enum[self.AttributeType],variant[boolean,byte,uint32,uint64,string]]]
+          description: >
+              The Pending attribute name and new value.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+
+
+properties:
+
+    - name: RBCCapability
+      type: int32
+      description: >
+           Contain RBC capabilities flags
+           Ex: PLDM based or IPMI based
+           Ex: Immediate/ Deffered model
+
+signals:
+
+    - name: ResetBIOSSettings
+      description: >
+         Signal indicating reset BIOS settings request from user.
+      properties:
+         - name: ResetFlag
+           type: enum[self.ResetFlag]
+           description: >
+             Reset BIOS setting type requested by user.
+
+    - name: AttributeChanged
+      description: >
+         Signal indicating the particular attribute is changed.
+      properties:
+         - name: AtributeName
+           type: string
+           description: >
+            Particular attribute name is changed.
+         - name: AtributeValue
+           type: array[byte]
+           description: >
+            Attribute new value.
+
+enumerations:
+    - name: ResetFlag
+      description: >
+        Reset BIOS setting type requested by user.
+      values:
+        - name: FactoryDefaults
+          description: >
+            Used to set factory default settings.
+        - name: FailSafeDefaults
+          description: >
+            Used to set the fail safe settings.
+
+    - name: AttributeType
+      description: >
+        Attribute value types based on PLDM spec
+      values:
+        - name: BIOSEnumeration
+          description: >
+            BIOSEnumeration represents a BIOS attribute that
+            can have a value from a set of possible values.
+        - name: BIOSString
+          description: >
+            BIOSString represents a string that the BIOS uses
+        - name: BIOSPassword
+          description: >
+             the password encoding type
+        - name: BIOSInteger
+          description: >
+            BIOSInteger represents a BIOS integer
+        - name: BIOSBootConfigSetting
+          description: >
+            BIOSBootConfigSetting represents a boot configuration setting
+            that includes information about the boot sources
+        - name: BIOSCollection
+          description: >
+            BIOSCollection represents a collection of the BIOS attributes.
+        - name: BIOSConfigSet
+          description: >
+            BIOSConfigSet represents the types of BIOS configuration sets
+            that the BIOS supports.
+        - name: BIOSEnumerationReadOnly
+          description: >
+            ReadOnly BIOSEnumeration type
+        - name: BIOSStringReadOnly
+          description: >
+            ReadOnly BIOS string type
+        - name: BIOSPasswordReadOnly
+          description: >
+            ReadOnly BIOS Password.type.
+        - name: BIOSIntegerReadOnly
+          description: >
+            ReadOnly BIOS integer type.
+        - name: BIOSBootConfigSettingReadOnly
+          description: >
+            ReadOnly boot configuration settings.
+        - name: BIOSCollectionReadOnly
+          description: >
+            ReadOnly collection of the BIOS attributes.
+        - name: BIOSConfigSetReadOnly
+          description: >
+            ReadOnly types of BIOS configuration sets
+            that the BIOS supports.
+
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

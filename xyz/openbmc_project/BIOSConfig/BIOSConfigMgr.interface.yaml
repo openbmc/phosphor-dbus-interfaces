@@ -1,0 +1,192 @@
+description: >
+    Provides Remote BIOS Configuration management functionality.
+    As communication to this service is done through authenticated
+    & authorized session, there won't be any validation for both.
+
+methods:
+    - name: GetAllBaseAttributes
+      description: >
+          To get all BIOS base attributes details from
+          Remote BIOS Configuration (RBC) daemon.
+      returns:
+        - name: AttributesData
+          type: dict[string,struct[string,string,string,string,variant[boolean,byte,uint32,uint64,string],variant[boolean,byte,uint32,uint64,string],dict[string,variant[boolean,byte,uint32,uint64,string]]]]
+          description: >
+              map{name,struct{valuetype,displayname,description,pagePtr,
+              currentvalue,defaultvalue,array{map{optionstring,optionvalue}}}}
+              Ex-{"QuietBoot",
+                  {"byte",
+                   "Quiet Boot",
+                   "[Enabled] - Display the logo screen during POST.
+                    [Disabled] - Display the diagnostic screen during POST.",
+                   "Main/Quiet Boot",
+                   "0x01",
+                   "0x00",
+                   { {"Enabled", 0x1},
+                     {"Disabled", 0x0}
+                   }
+                  }
+                 }
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: SetAllBaseAttributes
+      description: >
+          To set all BIOS attributes.
+          This Method is used by interface to set the base
+          attributes details to the RBC daemon.
+      parameters:
+        - name: AttributesData
+          type: dict[string,struct[string,string,string,string,variant[boolean,byte,uint32,uint64,string],variant[boolean,byte,uint32,uint64,string],dict[string,variant[boolean,byte,uint32,uint64,string]]]]
+          description: >
+              map{name,struct{valuetype,displayname,description,pagePtr,
+              currentvalue,defaultvalue,array{map{optionstring,optionvalue}}}}
+              {"DdrFreqLimit",
+              {"string",
+               "Memory Operating Speed Selection",
+               "Force specific Memory Operating Speed or use Auto setting.",
+               "Advanced/Memory Configuration/Memory Operating Speed Selection",
+               "0x00",
+               "0x0B",
+               { {"Auto selection", "auto"},
+                 {"2133 MT/s", "2133"},
+                 {"2400 MT/s", "2400"},
+                 {"2666 MT/s", "266"},
+                 {"2933 MT/s", "2933"}
+               }
+              }
+              }
+      returns:
+        - name: status
+          type: byte
+          description: >
+            For success, return 0. If any data validation errors
+            return non zero.
+            ex-check current & default value are matching with option list
+
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: SetAttribute
+      description: >
+          To set the new value on new or existing attribute name.
+      parameters:
+         - name: AtributeName
+           type: string
+           description: >
+               AttributeName which has to be changed.
+         - name: AttributeValue
+           type: array[byte]
+           description: >
+               New attribute value
+      returns:
+        - name: status
+          type: byte
+          description: >
+            For success, return 0. If any data validation errors
+            return non zero.
+            ex-check current & default value are matching with option list
+
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotSettable
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidValue
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: GetAttribute
+      description: >
+          To get the attribute value of existing attributes.
+      parameters:
+         - name: AtributeName
+           type: string
+           description: >
+               To get the bios attribute current values and
+               pending values if previously set by setAttribute or
+               SetPendingAttributes.
+
+      returns:
+        - name: CurrentValue
+          type: array[byte]
+          description: >
+              The attribute current value.
+        - name: PendingValue
+          type: array[byte]
+          description: >
+              The pending attribute value if its available.
+        - name: AttributeValueType
+          type: string
+          description: >
+              PLDM attribute Type present in PLDM spec
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: GetPendingAttributes
+      description: >
+          To get the pending attributes list.
+          list of attributename,valuetype,new value.
+      returns:
+        - name: Pendinglist
+          type: dict[string,struct[string,variant[boolean,byte,uint32,uint64,string]]]
+          description: >
+              The Pending attribute name and new value.
+              ex- { {"QuietBoot","byte", 0x1},
+                    { "DdrFreqLimit","string","2933"}
+                  }
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: SetPendingAttributes
+      description: >
+          To set the pending attributes list.
+           list of attributename,valuetype,new value
+      parameters:
+        - name: Pendinglist
+          type: dict[string,struct[string,variant[boolean,byte,uint32,uint64,string]]]
+          description: >
+              The Pending attribute name and new value.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+
+
+properties:
+
+    - name: ResetBIOSSettings
+      type: enum[self.ResetFlag]
+      default: NoAction
+      description: >
+          Contain reset BIOS setting type:
+           By default 0,1-Factory defaults, 2-Fail safe defaults.
+           Interface have to reset to 0 this property.
+           when Reset BIOS settings are informed to the BIOS.
+
+signals:
+
+    - name: PendingAttributesCreated
+      description: >
+         Signal indicating the Pending attributes list is created.
+         so that Interfaces can get the pending list from RBC daemon
+         and inform the BIOS for immediate model.
+
+enumerations:
+    - name: ResetFlag
+      description: >
+        Reset BIOS setting type requested by user.
+      values:
+        - name: NoAction
+          description: >
+            Default value, In order to cancel the reset BIOS settings.
+        - name: FactoryDefaults
+          description: >
+            Used to set factory default settings.
+        - name: FailSafeDefaults
+          description: >
+            Used to set the fail safe settings.
+
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

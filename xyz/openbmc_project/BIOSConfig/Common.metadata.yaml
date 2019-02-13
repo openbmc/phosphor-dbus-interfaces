@@ -1,0 +1,38 @@
+- name: AttributeNotFound
+  level: ERR
+- name: AttributeSettingFailed
+  level: ERR
+  meta:
+    - str: "REASON = %s"
+      type: string
+- name: AttributeNotSettable
+  level: ERR
+  meta:
+    - str: "REASON=%s"
+      type: string
+- name: NoResource
+  level: ERR
+- name: InvalidValue
+  level: ERR
+  meta:
+    - str: "UNSUPPORTED_VALUE=%s"
+      type: string
+- name: InvalidPayloadType
+  level: ERR
+  meta:
+    - str: "MAX_PAYLOAD_TYPE=%d"
+      type: byte
+- name: InvalidChecksum
+  level: ERR
+  meta:
+    - str: "EXPECTED_CHECKSUM=%x"
+      type: int32
+- name: TransferInComplete
+  level: ERR
+  meta:
+    - str: "REASON=%s"
+      type: string
+- name: InvalidCurrentPassword
+  level: ERR
+- name: PasswordNotSettable
+  level: ERR

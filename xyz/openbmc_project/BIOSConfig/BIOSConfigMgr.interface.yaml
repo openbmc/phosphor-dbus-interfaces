@@ -1,0 +1,202 @@
+description: >
+    Provides Remote BIOS configuration management functionality.
+    As communication to this service is done through authenticated
+    & authorized session, there won't be any validation for both.
+
+methods:
+    - name: GetAllAttributes
+      description: >
+          To get all the BIOS attributes.
+      parameters:
+        - name: Attributeformat
+          type: enum[self.AttributesModel]
+          description: >
+            Attributes fetch type. All attributes details or all name:value pair list.
+      returns:
+        - name: Attributes
+          type: string
+          description: >
+              Stringified JSON value of BIOS attributes.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: SetAttribute
+      description: >
+          To set the new attribute value.
+      parameters:
+         - name: AtributeName
+           type: string
+           description: >
+               AttributeName which has t be changed.
+         - name: AttributeValue
+           type: array[byte]
+           description: >
+               New attribute value
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotSettable
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidValue
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: GetAttribute
+      description: >
+          To set the new attribute value.
+      parameters:
+         - name: AtributeName
+         - type: string
+           description: >
+               To get the bios attribute current values and pending values if again.
+      returns:
+        - name: CurrentValue
+        - type: array[byte]
+          description: >
+              The attribute current value.
+        - name: PendingValue
+        - type: array[byte]
+          description: >
+              The pending attribute value if its available.
+        - name: AttributeValueType
+        - type: byte
+        
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+        
+        
+    - name: ResetBIOS
+      description: >
+          Reset the BIOS setting to factory default.
+      parameters:
+         - name: ResetFlag
+         - type: enum[self.ResetFlag]
+           description: >
+               To default bios setting flags
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: SetPayload
+      description: >
+           Create the payload object and store the payload data.
+      parameters:
+        - name: PayloadType
+          type: byte
+          description: >
+             Payload type
+        - name: PayloadVersion
+          type: int16
+          description: >
+             Payload version, Payload Tag
+        - name: PayloadDataSize
+          type: int32
+          description: >
+             Payload data size
+        - name: PayloadChecksum
+          type: int32
+          description: >
+             Payload total checksum
+        - name: PayloadFlag
+          type: int32
+          description: >
+             Payload flag
+        - name: Data
+          type: array[byte]
+          description: >
+             Payload data
+
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidChecksum
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidPayloadType
+        - xyz.openbmc_project.BIOSConfig.Common.Error.TransferInComplete
+
+    - name: GetPayload
+      description: >
+           To get the payload data.
+      parameters:
+        - name: PayloadType
+          type: byte
+          description: >
+             Payload type
+        - name: PayloadDatalen
+          type: int32
+          description: >
+             no of bytes to read
+        - name: Offset
+          type: int32
+          description: >
+             Payload data Offset
+      returns:
+        - name: PayloadData
+          type: array[byte]
+          description: >
+             Payload data
+
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidChecksum
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidPayloadType
+        - xyz.openbmc_project.BIOSConfig.Common.Error.TransferInComplete
+
+properties:
+    - name: ResetBIOS
+      type: byte
+      description: >
+          Contain reset default setting type:
+           1-  Factory defaults / 2- Fail safe defaults 
+    - name: MaxPayloadSupported
+      type: byte
+      description: >
+           Contain max payload supported in Remote BIOS Configuration Manager
+           0- XML type 0 / 1- XML type 1 / 2-  Redfish fomat / 3-4-5-6 PLDM data
+    - name: RBCCapability
+      type: int32
+      description: >
+           Contain  RBC capabilities flags, Ex: update model, PLDM capabilities
+
+signals:
+    - name: PayloadCreated
+      description: >
+         Signal indicating new Payload type is created.
+      properties:
+         - name: PayloadType
+           type: byte
+           description: >
+            PayloadType.
+
+    - name: ResetBIOSSettings
+      description: >
+         Signal indicating reset BIOS settings request from user.
+      properties:
+         - name: ResetFlag
+           type: byte
+           description: >
+             Reset BIOS setting type requested by user.
+
+enumerations:
+    - name: AttributesModel
+      description: >
+        The Attribute retrieval format
+      values:
+        - name: Attributeslist
+          description: >
+            Used to get all attribute name:value pair information of BIOS.
+        - name: AttributesRegistry
+          description: >
+            Used to get the whole attribute registry information of BIOS.
+
+enumerations:
+    - name: ResetFlag
+      description: >
+        Reset BIOS setting type requested by user.
+      values:
+        - name: FactoryDefaults
+          description: >
+            Used to set factory default settings.
+        - name: FailSafeDefaults
+          description: >
+            Used to set the fail safe settings.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

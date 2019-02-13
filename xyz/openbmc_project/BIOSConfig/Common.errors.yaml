@@ -1,0 +1,24 @@
+# xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+- name: AttributeNotFound
+  description: Specified Attribute is not found.
+# xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotSettable
+- name: AttributeNotSettable
+  description: Specified Attribute is not settable condition.
+# xyz.openbmc_project.BIOSConfig.Common.Error.InvalidValue
+- name: InvalidValue
+  description: Given value is not supported in attribute
+# xyz.openbmc_project.BIOSConfig.Common.Error.InvalidPayloadType
+- name: InvalidPayloadType
+  description: Specified Payload type is not supported
+# xyz.openbmc_project.BIOSConfig.Common.Error.InvalidChecksum
+- name: InvalidChecksum
+  description: Specified Payload data / payload checksum is not matched
+# xyz.openbmc_project.BIOSConfig.Common.Error.TransferInComplete
+- name: TransferInComplete
+  description: Specified Payload data / payload transfer is incomplete or error in state.
+# xyz.openbmc_project.BIOSConfig.Common.Error.InvalidCurrentPassword
+- name: InvalidCurrentPassword
+  description: CurrentPassword verification failed.
+# xyz.openbmc_project.BIOSConfig.Common.Error.PasswordNotSettable
+- name: PasswordNotSettable
+  description: Unable to set the new password.

@@ -1,0 +1,36 @@
+# xyz.openbmc_project.OOB.Common.Error.AttributeNotFound
+- name: AttributeNotFound
+  description: Specified Attribute is not found in XML file.
+# xyz.openbmc_project.OOB.Common.Error.AttributeSettingFailed
+- name: AttributeSettingFailed
+  description: Unable to set the given Attribute.
+# xyz.openbmc_project.OOB.Common.Error.AttributeNotSettable
+- name: AttributeNotSettable
+  description: Specified Attribute is not settable condition.
+# xyz.openbmc_project.OOB.Common.Error.OOBNotReady
+- name: OOBNotReady
+  description: OOB not ready. / Type0 is not found or not in ready state.
+# xyz.openbmc_project.OOB.Common.Error.NoResource
+- name: NoResource
+  description: No resource available.
+# xyz.openbmc_project.OOB.Common.Error.InvalidValue
+- name: InvalidValue
+  description: Given value is not supported in attribute
+# xyz.openbmc_project.OOB.Common.Error.InvalidValueType
+- name: InvalidValueType
+  description: Given value type is not supported in attribute
+# xyz.openbmc_project.OOB.Common.Error.InvalidPayloadType
+- name: InvalidPayloadType
+  description: Specified Payload type is not supported 
+# xyz.openbmc_project.OOB.Common.Error.InvalidChecksum
+- name: InvalidChecksum
+  description: Specified Payload data / payload checksum is not matched
+# xyz.openbmc_project.OOB.Common.Error.TransferInComplete
+- name: TransferInComplete
+  description: Specified Payload data / payload transfer is incompeted or error in state.
+# xyz.openbmc_project.OOB.Common.Error.UserPwdCheckFailed
+- name: UserPwdCheckFailed
+  description: User given password veritifcation failed.
+# xyz.openbmc_project.OOB.Common.Error.FileNotFound
+- name: FileNotFound
+  description: File is not present in given locatoion

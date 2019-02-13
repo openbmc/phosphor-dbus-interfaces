@@ -1,0 +1,160 @@
+description: >
+    Provides Remote BIOS Configuration management functionality.
+    As communication to this service is done through authenticated
+    & authorized session, there won't be any validation for both.
+
+methods:
+    - name: SetAttribute
+      description: >
+          To set the new value on new or existing attribute name.
+      parameters:
+         - name: AtributeName
+           type: string
+           description: >
+               AttributeName which has to be changed.
+         - name: AttributeValue
+           type: variant[uint64,string]
+           description: >
+               New attribute value
+
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotSettable
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidValue
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: GetAttribute
+      description: >
+          To get the attribute value of existing attributes.
+      parameters:
+         - name: AtributeName
+           type: string
+           description: >
+               To get the bios attribute current values and
+               pending values if previously set by setAttribute or
+               SetPendingAttributes.
+
+      returns:
+        - name: CurrentValue
+          type: variant[uint64,string]
+          description: >
+              The attribute current value.
+        - name: PendingValue
+          type: variant[uint64,string]
+          description: >
+              The pending attribute value if its available.
+        - name: AttributeValueType
+          type: enum[self.ValueType]
+          description: >
+              PLDM attribute Type present in PLDM spec
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: GetPendingAttributes
+      description: >
+          To get the pending attributes list.
+          list of attributename,valuetype,new value.
+      returns:
+        - name: Pendinglist
+          type: dict[string,struct[enum[self.ValueType],variant[uint64,string]]]
+          description: >
+              The Pending attribute name and new value.
+              ex- { {"QuietBoot",3, 0x1},
+                    { "DdrFreqLimit",1,"2933"}
+                  }
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: SetPendingAttributes
+      description: >
+          To set the pending attributes list.
+           list of attributename,valuetype,new value
+      parameters:
+        - name: Pendinglist
+          type: dict[string,struct[enum[self.ValueType],variant[uint64,string]]]
+          description: >
+              The Pending attribute name and new value.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+
+
+properties:
+
+    - name: ResetBIOSSettings
+      type: enum[self.ResetFlag]
+      default: NoAction
+      description: >
+          Contain reset BIOS setting type:
+           By default 0,1-Factory defaults, 2-Fail safe defaults.
+           Interface have to reset to 0 this property.
+           when Reset BIOS settings are informed to the BIOS.
+
+    - name: AllBaseAttributesData
+      type: dict[string,struct[enum[self.ValueType],boolean,string,string,string,variant[uint64,string],variant[uint64,string],dict[string,variant[uint64,string]]]]
+      description: >
+              map{name,struct{valuetype,readonly status,displayname,description,
+              pagePtr,current,default,array{map{optionstring,optionvalue}}}}
+              {"DdrFreqLimit",
+              {1,
+               false,
+               "Memory Operating Speed Selection",
+               "Force specific Memory Operating Speed or use Auto setting.",
+               "Advanced/Memory Configuration/Memory Operating Speed Selection",
+               "0x00",
+               "0x0B",
+               { {"Auto selection", "auto"},
+                 {"2133 MT/s", "2133"},
+                 {"2400 MT/s", "2400"},
+                 {"2666 MT/s", "266"},
+                 {"2933 MT/s", "2933"}
+               }
+              }
+              }
+
+
+signals:
+
+    - name: PendingAttributesCreated
+      description: >
+         Signal indicating the Pending attributes list is created.
+         so that Interfaces can get the pending list from RBC daemon
+         and inform the BIOS for immediate model.
+
+enumerations:
+    - name: ValueType
+      description: >
+        Attribute value Type.
+      values:
+        - name: Enumeration
+          description: >
+            Enumeration value Type.
+        - name: String
+          description: >
+             string value Type.
+        - name: Password
+          description: >
+             string has an additional characteristic:Password encoding type.
+        - name: Integer
+          description: >
+            Integer value Type.
+
+    - name: ResetFlag
+      description: >
+        Reset BIOS setting type requested by user.
+      values:
+        - name: NoAction
+          description: >
+            Default value, In order to cancel the reset BIOS settings.
+        - name: FactoryDefaults
+          description: >
+            Used to set factory default settings.
+        - name: FailSafeDefaults
+          description: >
+            Used to set the fail safe settings.
+
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

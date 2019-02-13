@@ -1,0 +1,102 @@
+description: >
+    Out-Of-Band(OOB) BIOS Config manager daemon will create payload objects
+    for every payload received in the system under 
+    object path /xyz/openbmc_project/OOB/<PayloadType>.
+    Each OOB payload object can be handled through 'org.freedesktop.DBus.ObjectManager'.
+    PayloadType object will expose following properties and methods.
+    xyz.openbmc_project.OOB.PayloadTransfer interface
+
+methods:
+    - name: SetPayloadData
+      description: >
+           Set the payload data by part once payload Type object is created by createPayload
+      parameters:
+        - name: PayloadState
+          type: byte
+          description: >
+             Payload state which payload is in transfer state / end of transfer.
+        - name: PayloadDataLength
+          type: int32
+          description: >
+             File Payload version
+        - name: PayloadChecksum
+          type: int32
+          description: >
+             File Payload total size
+        - name: PayloadData
+          type: array[byte]
+          description: >
+             Payload data bytes up to data size present in PayloadDataLength
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.OOB.Common.Error.NoResource
+        - xyz.openbmc_project.OOB.Common.Error.OOBNotReady
+        - xyz.openbmc_project.OOB.Common.Error.TransferInComplete
+        - xyz.openbmc_project.OOB.Common.Error.InvalidChecksum
+
+        - name: GetPayloadData
+          description: >
+            Get the payload data by part once payload Type object is created.
+      parameters:
+        - name: PayloadDataLength
+          type: int32
+          description: >
+             File Payload version
+        - name: PayloadChecksum
+          type: int32
+          description: >
+             File Payload total size
+
+        - name: PayloadData
+          type: array[byte]
+          description: >
+             Payload data bytes up to data size present in PayloadDataLength
+
+      returns:
+        - name: State
+          type: byte
+          description: >
+            This return payload state. Supported state-
+               Created / In transfer / EndofTransfer/ ValidPayload / Invalid Payload
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.OOB.Common.Error.NoResource
+        - xyz.openbmc_project.OOB.Common.Error.OOBNotReady
+        - xyz.openbmc_project.OOB.Common.Error.FileNotFound
+        - xyz.openbmc_project.OOB.Common.Error.InvalidChecksum
+
+properties:
+
+        - name: PayloadState
+          type: byte
+          description: >
+            This contain current paylaod status whether payload is in valid state or in transfer state
+            or in error state
+        - name: TotalPayloadlength
+          type: int32
+          description: >
+            This contain total payload length
+        - name: TotalPayloadChecksum
+          type: int32
+          description: >
+            This contain total payload checksum
+        - name: PayloadCreationTime
+          type: int32
+          description: >
+            This contain payload creation time
+        - name: PayloadFlag
+          type: byte
+          description: >
+             This contain current payload flag which contain payload format details.
+             BIT0 - Compressed or RAW  /BIT1 - Compressed with BIOS Setup Password protected / BIT2-7 - Reserved
+signals:
+        - name: PayloadStatusChanged
+          description: >
+             Signal indicating when payload Status is changed and available.
+             Supported State -Created / In transfer / EndofTransfer/ ValidPayload / Invalid Payload
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

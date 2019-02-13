@@ -1,0 +1,267 @@
+description: >
+    Provides Remote BIOS configuration management functionality.
+    As communication to this service is done through authenticated
+    & authorized session, there won't be any validation for both.
+
+methods:
+    - name: GetAllAttributes
+      description: >
+          To get all the BIOS attributes.
+      parameters:
+        - name: Attributeformat
+          type: enum[self.AttributesModel]
+          description: >
+            Attributes fetch type. All attributes details or all name:value pair list.
+      returns:
+        - name: Attributes
+          type: string
+          description: >
+              Stringified JSON values of BIOS attributes.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: SetAttribute
+      description: >
+          To set the new attribute value.
+      parameters:
+         - name: AtributeName
+           type: string
+           description: >
+               AttributeName which has to be changed.
+         - name: AttributeValue
+           type: array[byte]
+           description: >
+               New attribute value
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotSettable
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidValue
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: GetAttribute
+      description: >
+          To get the new attribute value.
+      parameters:
+         - name: AtributeName
+           type: string
+           description: >
+               To get the bios attribute current values and pending values if available.
+      returns:
+        - name: CurrentValue
+          type: array[byte]
+          description: >
+              The attribute current value.
+        - name: PendingValue
+          type: array[byte]
+          description: >
+              The pending attribute value if its available.
+        - name: AttributeValueType
+          type: byte
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+
+    - name: SetPayload
+      description: >
+           Create the payload object and store the payload data.
+      parameters:
+        - name: PayloadStatus
+          type: enum[self.PayloadStatus]
+          description: >
+             Payload transfer status
+        - name: PayloadType
+          type: enum[self.PayloadType]
+          description: >
+             Payload transfer status
+        - name: ReservationID
+          type: uint32
+          description: >
+             Reservation ID generated in StartTransfer.
+             Used to identify the sender.
+        - name: PayloadVersion
+          type: uint16
+          description: >
+             Payload version
+        - name: PayloadOffset
+          type: uint32
+          description: >
+             Payload Offset
+        - name: PayloadDataSize
+          type: uint32
+          description: >
+             Payload data size
+        - name: PayloadChecksum
+          type: uint32
+          description: >
+             Payload data checksum
+        - name: PayloadTotalSize
+          type: uint32
+          description: >
+             Total Payload data size
+        - name: PayloadTotalChecksum
+          type: uint32
+          description: >
+             Total Payload checksum
+        - name: Data
+          type: array[byte]
+          description: >
+             Payload data
+      returns:
+        - name: ResponseData
+          type: uint32
+          description: >
+              Current Reservation ID, actual data recevied 
+              and Total Payload received
+        
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidChecksum
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidPayloadType
+        - xyz.openbmc_project.BIOSConfig.Common.Error.TransferInComplete
+
+    - name: GetPayload
+      description: >
+           To get the payload data.
+      parameters:
+        - name: PayloadType
+          type: enum[self.PayloadType]
+          description: >
+             Payload type
+        - name: PayloadDatalen
+          type: uint32
+          description: >
+             no of bytes to read
+        - name: Offset
+          type: uint32
+          description: >
+             Payload data Offset
+      returns:
+        - name: PayloadData
+          type: array[byte]
+          description: >
+             Payload data
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidChecksum
+        - xyz.openbmc_project.BIOSConfig.Common.Error.InvalidPayloadType
+        - xyz.openbmc_project.BIOSConfig.Common.Error.TransferInComplete
+
+properties:
+    - name: ResetBIOSType
+      type: enum[self.ResetFlag]
+      description: >
+          Contain reset default setting type:
+           1-  Factory defaults / 2- Fail safe defaults
+    - name: RBCCapability
+      type: int32
+      description: >
+           Contain  RBC capabilities flags, Ex: update model, PLDM capabilities
+
+signals:
+    - name: PayloadCreated
+      description: >
+         Signal indicating new Payload type is created.
+      properties:
+         - name: PayloadType
+           type: enum[self.PayloadType]
+           description: >
+            PayloadType.
+
+    - name: ResetBIOSSettings
+      description: >
+         Signal indicating reset BIOS settings request from user.
+      properties:
+         - name: ResetFlag
+           type: enum[self.ResetFlag]
+           description: >
+             Reset BIOS setting type requested by user.
+
+    - name: AttributeChanged
+      description: >
+         Signal indicating the particular attribute is changed.
+      properties:
+         - name: AtributeName
+           type: string
+           description: >
+            Particular attribute name is changed.
+
+enumerations:
+    - name: AttributesModel
+      description: >
+        The Attribute retrieval format
+      values:
+        - name: Attributeslist
+          description: >
+            Used to get all attribute name:value pair information of BIOS.
+        - name: AttributesRegistry
+          description: >
+            Used to get the whole attribute registry information of BIOS.
+        - name: PendingAttributelist
+          description: >
+            Used to retreive Pending attribute name:value pair list.
+
+    - name: ResetFlag
+      description: >
+        Reset BIOS setting type requested by user.
+      values:
+        - name: FactoryDefaults
+          description: >
+            Used to set factory default settings.
+        - name: FailSafeDefaults
+          description: >
+            Used to set the fail safe settings.
+
+    - name: PayloadType
+      description: >
+        Payload Types.
+      values:
+        - name: Payload0
+          description: >
+            proprietary XML payload contain all attributes details.
+        - name: Payload1
+          description: >
+            proprietary XML payload contain changed attribute name and value pair.
+        - name: Payload2
+          description: >
+            Stringified JSON - Attribute registry.
+        - name: Payload3
+          description: >
+            BIOS string table.
+        - name: Payload4
+          description: >
+           BIOS Attribute name table.
+        - name: Payload5
+          description: >
+            BIOS Attribute value table.
+        - name: Payload6
+          description: >
+            Attribute pending table.
+
+    - name: PayloadStatus
+      description: >
+        Payload and Payload transfer status
+      values:
+        - name: StartTransfer
+          description: >
+            Used to start the Payload transfer in setPayload
+        - name: InProgress
+          description: >
+            Used to indicate the payload transfer in progress in setPayload
+        - name: EndTransfer
+          description: >
+            Used to indicate end of the payload transfer in setPayload
+        - name: UserAbort
+          description: >
+            Used to abort the current payload transfer in setPayload
+        - name: Valid
+          description: >
+            valid status is set  by BIOS config daemon based on  checksum verification
+        - name: Corrupted
+          description: >
+            corrupted status is set  by BIOS config daemon based on 
+            total size, checksum verification
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

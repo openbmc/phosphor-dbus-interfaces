@@ -1,0 +1,11 @@
+description: >
+    Interface to query intrusion sensor status.
+
+properties:
+    - name: Status
+      type: int64
+      default: 0
+      description: >
+        Status of chassis intrusion sensor.
+        1 means chassis intrusion sensor is asserted
+        0 means chassis intrusion sensor is de-asserted

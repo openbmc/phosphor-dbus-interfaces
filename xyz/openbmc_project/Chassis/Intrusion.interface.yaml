@@ -1,0 +1,11 @@
+description: >
+    Interface to query intrusion detector status.
+
+properties:
+    - name: Status
+      type: int64
+      default: 0
+      description: >
+        Status of chassis intrusion detector.
+        1 means chassis intrusion detector is asserted
+        0 means chassis intrusion detector is de-asserted

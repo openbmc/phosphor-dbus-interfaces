@@ -1,0 +1,37 @@
+description: >
+    SOL properties
+properties:
+    - name: Progress
+      type: byte
+      description: >
+        Set In Progress property, indicate when any parameters are being
+        updated.
+    - name: Enable
+      type: boolean
+      description: >
+        SOL Enable property, this controls whether the SOL payload type
+        can be activated.
+    - name: Authentication
+      type: byte
+      description: >
+        If SOL enable Force Payload Encryption and Authenticaton.
+        And the minimun operating privilege level SOL required.
+    - name: Accumulate
+      type: byte
+      description: >
+        Character Accumulate Interval in 5ms increments.
+        BMC will wait this time before transmitting a packet.
+    - name: Threshold
+      type: byte
+      description: >
+        BMC will automatically send an SOL character data packet containing
+        this number of characters.
+    - name: RetryCount
+      type: byte
+      description: >
+        Packet will be dropped if no ACK/NACK received by time retries
+        expire.
+    - name: RetryInterval
+      type: byte
+      description: >
+        Retry Interval in 10ms increments.

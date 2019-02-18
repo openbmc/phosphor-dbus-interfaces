@@ -1,0 +1,11 @@
+description: >
+    Interface to query intrusion detector status.
+
+properties:
+    - name: Status
+      type: string
+      description: >
+        Status string of kinds of intrusion detector, such as
+        chassis intrusion detector, fan intrusion detector, etc.
+        The value is defined in chassis redfish schema.
+        Can be "Normal" or "HardwareIntrusion".

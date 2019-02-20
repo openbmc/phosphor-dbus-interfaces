@@ -41,16 +41,7 @@ properties:
           to react differently for AD vs openldap.
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
-    - name: GroupNameAttribute
-      type: string
-      description: >
-          The value of this property shall be the attribute name
-          that contains the name of the Group in the LDAP server.
-    - name: UserNameAttribute
-      type: string
-      description: >
-          The value of this property shall be the attribute name
-          that contains the username in the LDAP server.
+
 enumerations:
     - name: SearchScope
       description: >

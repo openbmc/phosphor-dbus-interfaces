@@ -47,6 +47,11 @@ methods:
           type: string
           description: >
               New User name to which user has to be updated.
+      returns:
+        - name: user
+          type: string
+          description: >
+              The object path of the D-Bus object representing the config.
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
         - xyz.openbmc_project.Common.Error.InsufficientPermission
@@ -54,6 +59,27 @@ methods:
         - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
         - xyz.openbmc_project.User.Common.Error.UserNameExists
         - xyz.openbmc_project.User.Common.Error.UserNameGroupFail
+        - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
+        - xyz.openbmc_project.User.Common.Error.NoResource
+
+    - name: GetUserInfo
+      description: >
+          Get user information like privilege,groups,user enabled and userLocked state.
+      parameters:
+        - name: UserName
+          type: string
+          description: >
+              User name whose properties have to be returned.
+      returns:
+        - name: userInfo
+          type: dict[string,variant[string,array[string],boolean]]
+          description: >
+              The Map of user properties.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
         - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
         - xyz.openbmc_project.User.Common.Error.NoResource
 

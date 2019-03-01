@@ -57,6 +57,32 @@ methods:
         - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
         - xyz.openbmc_project.User.Common.Error.NoResource
 
+    - name: GetUserInfo
+      description: >
+          Get user privilege,groups,user enabled,userLocked state and remote user.
+      parameters:
+        - name: UserName
+          type: string
+          description: >
+              User name whose properties have to be returned.
+      returns:
+        - name: userInfo
+          type: dict[string,variant[string,array[string],boolean]]
+          description: >
+              A dictionary of user properties.
+              userPrivilege -> privilege of the user(string)
+              userGroups    -> list of groups this user belongs to(array[string])
+              userEnabled   -> user enabled state(boolean)
+              userLockedForFailedAttempt -> user locked state(boolean)
+              remoteUser    ->  remote or local user(boolean)
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InsufficientPermission
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
+        - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
+        - xyz.openbmc_project.User.Common.Error.NoResource
+
 properties:
     - name: AllPrivileges
       type: array[string]

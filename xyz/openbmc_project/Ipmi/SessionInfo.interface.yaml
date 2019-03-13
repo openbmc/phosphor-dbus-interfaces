@@ -1,0 +1,59 @@
+description: >
+    Provides properties for IPMI RMCP+ session objects.
+    Provides RMCP+ session information as session objects
+    with Session ID (unique identifier) as path suffix.
+
+properties:
+    - name: SessionHandle
+      type: byte
+      description: >
+          Session Handle,unique number to locate the session.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: ChannelNum
+      type: byte
+      description: >
+          channelnumber which session is created.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: CurrentPrivilege
+      type: byte
+      description: >
+          Privilege of the session.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: RemoteIPAddr
+      type: uint32
+      description: >
+          IP address of remote console.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: RemotePort
+      type: uint16
+      description: >
+          Port number of remote console.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: RemoteMACAddress
+      type: array[byte]
+      description: >
+          MAC address of remote console.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: UserID
+      type: byte
+      description: >
+           Session created by given user ID.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: State
+      type: byte
+      default: 0
+      description: >
+          Session state.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

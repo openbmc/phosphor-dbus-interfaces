@@ -1,12 +1,9 @@
 description: >
-    Certificate management interface to install server and client certificates.
+    Certificate interface to replace existing certificate.
 methods:
-    - name: Install
+    - name: Replace
       description: >
-          Install the certificate and restart the associated services.
-          NotAllowed error thrown if certificate already exists.
-          Install is successfull after the specified services are
-          restarted/reloaded with the installed certificate file.
+          Replace the certificate and restart the associated services.
       parameters:
         - name: Path
           type: string
@@ -16,5 +13,4 @@ methods:
               certificate and private key).
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.NotAllowed
         - xyz.openbmc_project.Certs.Error.InvalidCertificate

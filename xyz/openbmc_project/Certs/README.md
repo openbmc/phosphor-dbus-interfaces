@@ -41,6 +41,12 @@ in .pem format, which includes both private key and signed certificate.
 - Incase of delete action, certificate manager creates a new self signed
   certificate after successful delete.
 
+### Certificate object
+- Certificate class implements xyz.opebmc_project.Certs.Certificate
+  interface to specify the properties of the certificate.
+- Certificate class implements xyz.openbmc_project.Certs.Install
+  interface to cater for replacing existing certificate.
+
 ### REST interface details:
 
    ```

@@ -1,9 +1,9 @@
 description: >
-    Certificate management interface to install server and client certificates.
+    Certificate management interface to install/replace server and client certificates.
 methods:
     - name: Install
       description: >
-          Install the certificate and restart the associated services.
+          Install/Replace the certificate and restart the associated services.
       parameters:
         - name: Path
           type: string

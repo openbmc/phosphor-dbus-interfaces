@@ -93,6 +93,19 @@ be in the following states:
 6. *Failed* - The `Software.Version` or the storage medium on which it is stored
               has failed.  An event may be recorded with additional details.
 
+### Image Activation Time
+
+`xyz.openbmc_project.Software.Activation` has a property called 
+RequestedApplyTime that indicates when the newly applied software image will
+be activated. The new property is added under UpdateService redfish schema
+and the RequestedApplyTime value can be supplied through HttpPushUriApplyTime
+object. Below are the currently supported values:
+
+1. *Immediate* - Indicating that the `Software.Version` needs to be activated
+                 immediately.
+2. *OnReset* - Indicating that the `Software.Version` needs to be activated
+               on the next reset.
+
 ### Blocking State Transitions
 
 It is sometimes useful to block a system state transition while activations

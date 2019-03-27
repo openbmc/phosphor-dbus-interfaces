@@ -9,6 +9,11 @@ properties:
       type: enum[self.RequestedActivations]
       description: >
         The desired Activation state of the Software.Version.
+    - name: RequestedApplyTime
+      type: enum[self.RequestedApplyTime]
+      description: >
+        This property indicates when the software image update should be
+        applied.
 enumerations:
     - name: Activations
       description: >
@@ -44,6 +49,18 @@ enumerations:
         - name: Active
           description: >
             The Software.Version has been requested for Activation.
+    - name: RequestedApplyTime
+      description: >
+        The possible values of this property indicate when the newly
+        updated software image will be activated.
+
+      values:
+        - name: Immediate
+          description: >
+            Apply immediately.
+        - name: OnReset
+          description: >
+            Apply on a reset.
 # TODO: Specify "EAGAIN" type error when requested is unable to be acted on
 #       due to current system state.  Currently, sdbusplus does not support
 #       errors on properties.

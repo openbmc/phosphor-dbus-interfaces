@@ -1,0 +1,48 @@
+description: >
+  IPMI FRU MultiRecord Area, DC Output record (Type 0x01)
+  In accordance with IPMI Platform Management FRU Information
+  Storage Definition v1.0 Document Revision 1.3, Table 18-2
+
+properties:
+    - name: Standby
+      type: boolean
+      description: >
+        Offset 0, bit 7.
+        Standby.
+    - name: OutputNumber
+      type: int64
+      description: >
+        Offset 0, bits 3..0.
+        Output number.
+    - name: NominalVoltage
+      type: int64
+      description: >
+        Offset 1.
+        Nominal voltage (10 mV).
+    - name: MaxNegativeVoltage
+      type: int64
+      description: >
+        Offset 3.
+        Maximum negative voltage (10 mV)
+        (most negative voltage with respect to nominal).
+    - name: MaxPositiveVoltage
+      type: int64
+      description: >
+        Offset 5.
+        Maximum positive voltage (10 mV)
+        (most positive voltage with respect to nominal).
+    - name: RippleAndNoise
+      type: int64
+      description: >
+        Offset 7.
+        Ripple and Noise pk-pk 10Hz to 30 MHz (mV).
+    - name: MinCurrentDraw
+      type: int64
+      description: >
+        Offset 9.
+        Minimum current draw (mA).
+    - name: MaxCurrentDraw
+      type: int64
+      description: >
+        Offset 11.
+        Maximum current draw (mA).

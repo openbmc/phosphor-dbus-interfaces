@@ -1,0 +1,134 @@
+description: >
+  MultiRecord Power Supply Information (Record Type 0x00)
+  In accordance with IPMI Platform Management FRU Information
+  Storage Definition v1.0 Document Revision 1.3, Table 18-1.
+
+properties:
+    - name: OverallCapacity
+      type: int64
+      description: >
+        Offset 0, bits 11..0.
+        Overall capacity (watts)
+    - name: PeakVA
+      type: int64
+      description: >
+        Offset 2.
+        Peak VA
+    - name: InrushCurrent
+      type: int64
+      description: >
+        Offset 4.
+        Inrush current
+    - name: InrushInterval
+      type: int64
+      description: >
+        Offset 5.
+        Inrush interval in ms.
+    - name: LowInputVoltage1
+      type: int64
+      description: >
+        Offset 6.
+        Low end Input voltage range 1 (10mV)
+    - name: HighInputVoltage1
+      type: int64
+      description: >
+        Offset 8.
+        High end Input voltage range 1 (10mV)
+    - name: LowInputVoltage2
+      type: int64
+      description: >
+        Offset 10.
+        Low end Input voltage range 2 (10mV)
+    - name: HighInputVoltage2
+      type: int64
+      description: >
+        Offset 12.
+        High end Input voltage range 2 (10mV)
+    - name: LowInputFrequency
+      type: int64
+      description: >
+        Offset 14.
+        Low end Input frequency range
+    - name: HighInputFrequency
+      type: int64
+      description: >
+        Offset 15.
+        High end Input frequency range
+    - name:  InDropoutTolerance
+      type: int64
+      description: >
+        Offset 16.
+        Input dropout tolerance in ms
+    - name: TachoPulsesPerRotation
+      type: int64
+      description: >
+        Derived from Offset 17, bit 4.
+        Tachometer uses 2 or 1 pulses per rotation.
+        Zero means that PrediciveFailSupport is true.
+    - name: PredictiveFailPinNegated
+      type: boolean
+      description: >
+        Offset 17, bit 4.
+        Predictive fail pin polarity.
+        Meaningful only if PrediciveFailSupport is true.
+        False means assertion of pin indicates failure.
+        True means deassertion of pin indicates failure.
+    - name: HotSwap
+      type: boolean
+      description: >
+        Offset 17, bit 3.
+        Hot Swap Support
+    - name: Autoswitch
+      type: boolean
+      description: >
+        Offset 17, bit 2.
+        Autoswitch
+    - name: PowerFactor
+      type: boolean
+      description: >
+        Offset 17, bit 1.
+        Power factor correction
+    - name: PredictiveFailSupport
+      type: boolean
+      description: >
+        Offset 17, bit 0.
+        Predictive fail pin supported.
+        When true, check PredictiveFailPinNegated.
+        When false, check TachoUses2PulsesPerRotation.
+        The counterpart property in each case must be ignored.
+    - name: HoldUpTime
+      type: int64
+      description: >
+        Offset 18, bits 15..12.
+        Peak Wattage hold up time in seconds
+    - name: PeakCapacity
+      type: int64
+      description: >
+        Offset 18, bits 11..0.
+        Peak capacity (watts)
+    - name: Voltage1
+      type: int64
+      description: >
+        Offset 20, byte 1, bits 7..4.
+        Combined Wattage Voltage 1
+        The value in this property is decoded as per section 18.1.14
+        and is represented in 10mV units.
+    - name: Voltage2
+      type: int64
+      description: >
+        Offset 20, byte 1, bits 3..0.
+        Combined Wattage Voltage 2
+        The value in this property is decoded as per section 18.1.14
+        and is represented in 10mV units.
+    - name: TotalWattage
+      type: int64
+      description: >
+        Offset 20, bytes 2..3.
+        Total Combined Wattage. If this value is 0, then Voltage1 and
+        Voltage2 are also zero and have no meaning.
+    - name: TachometerLow
+      type: int64
+      description: >
+        Offset 23.
+        Predictive fail tachometer lower threshold (RPS).
+        Used when PredictiveFailSupport is false.

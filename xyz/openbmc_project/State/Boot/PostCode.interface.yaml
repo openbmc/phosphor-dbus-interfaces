@@ -1,0 +1,33 @@
+description: >
+    Monitor Post code coming and buffer all of them based on boot cycle
+    into file system.
+
+properties:
+    - name: CurrentBootCycleIndex
+      type: uint16
+      description: >
+          It is used to indicate current boot cycle index.
+          Index is start from 1 and increase to MaxBootCycleNum
+    - name: MaxBootCycleNum
+      type: uint16
+      description: >
+          The max cached boot cycles for post code.
+          It is used to indicate end user what's the max boot number,
+          and make sure get command parameter less than it.
+methods:
+    - name: GetPostCodes
+      description: >
+          Method to get the cached post code for each boot cycle.
+      parameters:
+        - name: Index
+          type: uint16
+          description: >
+              Index indicates which boot cycle of post codes is requested.
+      returns:
+        - name: codes
+          type: array[uint64]
+          description: >
+            An array of post codes of one boot cycle.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument

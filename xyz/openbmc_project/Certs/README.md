@@ -93,6 +93,26 @@ the CSR based certificate user flow.
   private key, for the service which requirs certificate and key.
 - CSR based Certificate validation is alway's based on private key in the system.
 
+### CSR Request
+- CSR requests initiated through D-Bus are time-consuming and might result
+  D-Bus time-out error.
+- To overcome the time-out error, parent process is forked and CSR operation
+  is performed in the child process so that parent process can return the
+  calling thread immediately.
+- Parent process registers child process PID and a callback method in the
+  sd_event_lopp so that callback method is invoked upon completion
+  the CSR request in the child process.
+- Callback method invoked creates a CSR object with the status of the CSR
+  operation returned from the child process.
+- CSR read operation will return the CSR string if status is SUCCESS else throws
+  InternalFailure exception to the caller.
+- Certificate Manager implements "/xyz/openbmc_project/Certs/CSR/Create"
+  interface.
+- CSR object created implements "/xyz/openbmc_project/Certs/CSR" interface.
+- Caller needs to validate the CSR request parameters.
+- Caller need to wait on "InterfacesAdded" signal generated upon creation
+  of the CSR object to start reading CSR string.
+
 ### Example usage for the GenerateCSR POST request
 
    ```

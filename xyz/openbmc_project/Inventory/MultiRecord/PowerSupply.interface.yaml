@@ -59,14 +59,22 @@ properties:
       description: >
         Offset 16.
         Input dropout tolerance in ms
-    - name: TachoPPR_FailPinPolarity
+    - name: TachoUses2PulsesPerRotation
       type: boolean
       description: >
         Offset 17, bit 4.
-        Tachometer pulses per rotation/Predictive fail pin polarity.
-        Meaning depends on PrediciveFailSupport.
-        False means 1 pulse per rotation (for tacho) or assertion indicates failure (for predictive falure pin).
-        True means 2 pulses per rotation (for tacho) or deassertion indicates failure (for predictive falure pin).
+        Tachometer uses 2 or 1 pulses per rotation.
+        Meaningful only if PrediciveFailSupport is false.
+        False means 1 pulse per rotation.
+        True means 2 pulses per rotation.
+    - name: PredictiveFailPinNegated
+      type: boolean
+      description: >
+        Offset 17, bit 4.
+        Predictive fail pin polarity.
+        Meaningful only if PrediciveFailSupport is true.
+        False means assertion of pin indicates failure.
+        True means deassertion of pin indicates failure.
     - name: HotSwap
       type: boolean
       description: >
@@ -86,8 +94,10 @@ properties:
       type: boolean
       description: >
         Offset 17, bit 0.
-        Predictive fail pin supported. When false, tachometer is used instead.
-        Affects meaning of TachoPPR_FailPinPolarity.
+        Predictive fail pin supported.
+        When true, check PredictiveFailPinNegated.
+        When false, check TachoUses2PulsesPerRotation.
+        The counterpart property in each case must be ignored.
     - name: HoldUpTime
       type: int64
       description: >
@@ -103,16 +113,21 @@ properties:
       description: >
         Offset 20, byte 1, bits 7..4.
         Combined Wattage Voltage 1
+        The value in this property is decoded as per section 18.1.14
+        and is represented in millivolts.
     - name: Voltage2
       type: int64
       description: >
         Offset 20, byte 1, bits 3..0.
         Combined Wattage Voltage 2
+        The value in this property is decoded as per section 18.1.14
+        and is represented in millivolts.
     - name: TotalWattage
       type: int64
       description: >
         Offset 20, bytes 2..3.
-        Total Combined Wattage
+        Total Combined Wattage. If this value is 0, then Voltage1 and
+        Voltage2 are also zero and have no meaning.
     - name: TachometerLow
       type: int64
       description: >

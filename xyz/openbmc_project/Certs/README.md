@@ -92,3 +92,52 @@ in .pem format, which includes both private key and signed certificate.
 
 ### Repository:
   phosphor-certificate-manager
+
+### Redfish support for Certificate Upload
+#### Certificate Upload
+- User initiates certificate upload by issuing a POST request on the
+  certificate collection with the certificate file as   input
+- BMCWeb based upon the URI of the POST request invokes the Install method of
+  the corresponding certificate manager instance.     
+  - Example: If URI points to HTTPS certificate then install method of bmcweb
+    certificate manager instance is invoked.
+- Certificate file is validated and for any validation failures
+  InvalidCertificate error is returned to the caller.
+- After sucessfull validation a Certificate object is created with the
+  certificate details and caller is returned with the certificate details
+- Only one certificate per certificate type is allowed, NotAllowed error is
+  thrown if a certificate is already existing.
+- Certificate Manager class implements "xyz.openbmc_project.Certs.Install" 
+  D-Bus interface
+- Command to POST a certifiate on CertificateCollection: 
+  curl -c cjar -b cjar -k -H "X-Auth-Token: $bmc_token" -H \
+  "Content-Type: application/octet-stream" -X POST -T testcert.pem \
+  https://${bmc}/redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates
+- Command to list certificates installed for a specific certificate collection
+  curl -k -H "X-Auth-Token: $bmc_token" -X GET \
+  https://${bmc}/redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/
+- Command to list the certificate details
+  curl -k -H "X-Auth-Token: $bmc_token" -X GET \
+  https://${bmc}/redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1
+
+#### Bootup
+- During bootup if a certificate is already existing in the system it is
+  validated and an instance of Certificate is created with the certificate
+  details.
+
+#### Replacing existing certificate
+- Certificate class implments "xyz.openbmc_project.Certs.Replace" D-Bus
+  interface to cater for replacing an existing certificate.
+- User can initiate certificate replace by invoking the ReplaceCertificate
+  Action of the CertificateService
+- Example for replacing an existing HTTPS certificate
+  curl -c cjar -b cjar -k -H "X-Auth-Token: $bmc_token" -X POST \
+  https://${bmc}/redfish/v1/CertificateService/Actions/CertificateService.ReplaceCertificate/ \
+  -d '{"CertificateType":"PEM", "CertificateString":"zzzzz", \
+  "CertificateUri":"/redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1"}'
+
+#### Certificate Deletion
+- Certificate deletion is not allowed as per Redfish specification. 
+- User can use ReplaceCertificate Action of the CertificateService to replace
+  an expired certificate.
+

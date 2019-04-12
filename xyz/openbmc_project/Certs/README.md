@@ -92,3 +92,63 @@ in .pem format, which includes both private key and signed certificate.
 
 ### Repository:
   phosphor-certificate-manager
+### Redfish Certificate Support
+#### Certificate Upload
+- Redfish initiates certificate upload by issuing a POST request on the Redfish
+  CertificateCollection with the certificate file.
+  Fo example: For HTTPS certificate upload POST request is issued on URI
+  "/redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates"
+- Bmcweb receives the POST request and it maps the Redfish URI to the
+  corresponding Certificate Manager D-Bus URI.
+  e.g: HTTPS certificate collection URI
+  /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates is mapped to
+  /xyz/openbmc_project/certs/server/https.
+- Bmcweb invokes an asynchronous  method call by passing reference to a callback
+  method.
+- Asynchronous method invokes the Install method of the Certificate Manager
+  by passing the certificate file.
+- Certificate Manager validates, installs the certificate file and creates a
+  Certificate object.
+- Certificate manager reloads the services specified, so that the services  can
+  read the installed certificate and reload the SSL context.
+- Bmcweb's asynchronous method invokes the Callback method with the status of
+  the "Install" D-Bus method received from Certificate Manager.
+- Callback method checks the response received, if failure sets the response
+  message error details, if success sets the response message with newly created
+  certificate details
+- Certificate Manager implements "xyz.openbmc_project.Certs.Install" interface
+  to cater for installing certificates in the system.
+- Certificate object D-Bus  path is mapped to corresponding Redfish
+  certificate URI.
+  e.g: /xyz/openbmc_project/certs/server/https/1 is mapped to
+  /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1
+  ID of the certificate is appended to the collection URI.
+#### Certificate Replace
+- Certificate Object implements "xyz.openbmc_project.Certs.Replace" interface to
+  for replacing existing certificate.
+- Redfish issues Replace certificate request by invoking the ReplaceCertificate
+  action of the CertificateService.
+- Redfish Certificate Collection URI is mapped to corresponding Certificate
+  D-Bus object URI
+  e.g: HTTPS certificate object 1 URI
+  /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1 is mapped to
+  /xyz/openbmc_project/certs/server/https/1.
+- Bmcweb receives POST request for Replace Certificate, invokes the Replace
+  D-Bus method of the Certificate object asynchronously.
+- Callback method will be passed to the bmcweb asynchronous method which will
+  called after completion of the D-Bus Replace method.
+- Callback method checks the response received, if failure response message is
+  set with error details, if success response message is set with  the replaced
+  certificate details.
+
+#### Bootup
+- During bootup certificate objects created for the existing certificates.
+### Errors thrown by Certificate Manager
+- NotAllowed exception thrown if Install method invoked with a certificate
+  already existing. At present only one certificate per certificate type is
+  allowed.
+- InvalidCertificate excption thrown for validation errors.
+
+#### Certificate Deletion
+- Certificate deletion is not allowed as per Redfish specification.
+

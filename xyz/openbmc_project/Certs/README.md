@@ -92,3 +92,50 @@ in .pem format, which includes both private key and signed certificate.
 
 ### Repository:
   phosphor-certificate-manager
+### Redfish Certificate Support
+#### Certificate Upload
+- Redfish initiates certificate upload by issuing a POST request on the Redfish
+  CertificateCollection.
+  Fo example: For HTTPS certificate upload POST request is issued on URI
+  "/redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates"
+- Redfish Certificate Collection URI is mapped to corresponding Certificate
+  Manager D-Bus object
+  path.
+  e.g: HTTPS certificate collection URI
+  /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates is mapped to
+  /xyz/openbmc_project/certs/server/https.
+- Certificate Manager implements "xyz.openbmc_project.Certs.Install" interface
+  to cater for installing certificates in the system.
+- Certificate Manager validates the certificate, creates installs the
+  certificate,  reloads the specified services and creates a Certificate object.
+- Certificate object D-Bus  path is mapped to corresponding Redfish
+  certificate URI. 1 in the below example indicates certificate ID.
+  e.g: /xyz/openbmc_project/certs/server/https/1 is mapped to
+  /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1
+  ID of the certificate is appended to the collection URI.
+- After successful installation of the certificate bmwcweb response message is
+  updated with the data of the newly created resource.
+#### Certificate Replace
+- Certificate Object implements "xyz.openbmc_project.Certs.Replace" interface to
+  for replacing existing certificate.
+- Redfish issues Replace certificate request by invoking the ReplaceCertificate
+  action of the CertificateService.
+- Redfish Certificate Collection URI is mapped to corresponding Certificate
+  D-Bus object
+  e.g: HTTPS certificate object 1 URI
+  /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1 is mapped to
+  /xyz/openbmc_project/certs/server/https/1.
+- After successfull replace of the certificate bmcweb response message is
+  updated with the data of the modified certificate resource.
+
+#### Bootup
+- During bootup certificate objects created for the existing certificates.
+### Errors thrown by Certificate Manager
+- NotAllowed exception thrown if Install method invoked with a certificate
+  already existing. At present only one certificate per certificate type is
+  allowed.
+- InvalidCertificate excption thrown for validation errors.
+
+#### Certificate Deletion
+- Certificate deletion is not allowed as per Redfish specification.
+

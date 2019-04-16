@@ -52,8 +52,11 @@ properties:
           OpenLdap. It's just an indication for the LDAP stack running on
           the BMC, in case the app is implemented in such a way that it has
           to react differently for AD vs openldap.
+          This property is readonly, Once the D-Bus object gets created then
+          this property should not be modifiable.
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.NotAllowed
     - name: GroupNameAttribute
       type: string
       description: >

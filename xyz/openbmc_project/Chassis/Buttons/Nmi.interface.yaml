@@ -1,0 +1,18 @@
+description: >
+    Nmi button is the non maskable interrupt button,
+    user can press Nmi button on the front panel and then trigger Nmi signal.
+methods:
+    - name: simPress
+      description: >
+        Emulate Nmi button press.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+signals:
+    - name: Released
+      description: >
+        Nmi button released signal
+    - name: Pressed
+      description: >
+        Nmi button pressed signal

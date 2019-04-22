@@ -18,5 +18,9 @@ properties:
     - name: Enabled
       type: boolean
       description: >
-        Whether the object is enabled or not.
+        Whether the object is enabled or not.Implementation may throw error "NotAllowed"
+        where there are multiple objects implementing the same interface under the same
+        service and one of the object can be enbaled at a time.
       default: false
+      errors:
+        - xyz.openbmc_project.Common.Error.NotAllowed

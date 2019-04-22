@@ -1,5 +1,7 @@
 description: >
     Implement to update LDAP mandatory properties.
+    Any service implementing User.Ldap.Config interface on one or more
+    objects must implement Object.Enable interface on the object.
 
 properties:
     - name: LDAPServerURI

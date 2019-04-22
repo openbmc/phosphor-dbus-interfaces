@@ -99,3 +99,15 @@ from the chassis. By default, a host off or reboot request does the soft
 power off.  If a user desires a cold reboot then they should simply issue a
 power off transition request to the chassis, and then issue an on transition
 request to the host.
+
+## Operating System State and Boot Progress Properties
+
+[OperatingSystemState](https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/xyz/openbmc_project/State/OperatingSystem/Status.interface.yaml)
+property is used to track different progress states of the OS or the hypervisor
+boot, while the [BootProgress](https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/xyz/openbmc_project/State/Boot/Progress.interface.yaml)
+property is used mainly for indicating system firmware boot progress.
+The enumerations used in both the cases are influenced by standard interfaces
+like IPMI 2.0 (Section 42.2, Sensor Type Codes and Data, Table 42, Base OS
+boot status) and PLDM state spec (DSP0249, Section 6.3, State Sets Tables,
+Table 7 – Boot-Related State Sets, Set ID - 196 Boot Progress).
+

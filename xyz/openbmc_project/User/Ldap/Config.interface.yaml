@@ -1,6 +1,8 @@
 description: >
     Implement to update LDAP mandatory properties.
-
+    Implementation should also implement the object.enable interface
+    with this config interface which can be used to enable/disable the
+    LDAP service.
 properties:
     - name: LDAPServerURI
       type: string

@@ -15,5 +15,9 @@ properties:
       type: string
       description: >
           default IPv6 gateway of the system.
+    - name: LinkLocalAutoConf
+      type: boolean
+      description: >
+          link local auto configuration of the system
       errors:
         - xyz.openbmc_project.Common.Error.InvalidArgument

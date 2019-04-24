@@ -37,3 +37,8 @@ properties:
           Implementation of this Dbus-interface is required to implement this property.
           This property supports read/write operation.
           Configure the NTP servers on the system during write operation.
+    - name: LinkLocalAutoConf
+      type: boolean
+      description: >
+          This indicates if link local auto configuration enable/disable on this ethernet
+          interface and configured on this ethernet interface.

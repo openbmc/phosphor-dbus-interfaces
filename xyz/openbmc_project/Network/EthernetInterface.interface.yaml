@@ -37,3 +37,19 @@ properties:
           Implementation of this Dbus-interface is required to implement this property.
           This property supports read/write operation.
           Configure the NTP servers on the system during write operation.
+    - name: LinkLocalAutoConf
+      type: enum[self.LinkLocalConf]
+      description: >
+          This indicates link local auto configuration on this ethernet
+          interface and configured on this ethernet interface.
+
+enumerations:
+    - name: LinkLocalConf
+      description: >
+          Possible link local auto configuration values.
+      values:
+        - name: none
+        - name: v4
+        - name: v6
+        - name: both
+

@@ -7,5 +7,8 @@ properties:
       type: boolean
       description: >
           Keeps track of whether the BMC is in field mode. Enabling field mode
-          is intended to be a one-way operation.
+          is intended to be a one-way operation. Therefore if a value of 0 is
+          passed to clear the property, a NotAllowed error would be returned.
       default: false
+      errors:
+        - xyz.openbmc_project.Common.Error.NotAllowed

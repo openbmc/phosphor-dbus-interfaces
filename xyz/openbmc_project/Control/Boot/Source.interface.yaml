@@ -15,12 +15,15 @@ enumerations:
         - name: Disk
           description: >
             Boot from the local hard disk.
-        - name: ExternalMedia
+        - name: ExternalMedia 
           description: >
-            Boot from CD/DVD/USB, etc.
+            Boot from CD/DVD.
         - name: Network
           description: >
             Boot from a remote source over a network.
         - name: Default
           description: >
             Boot from an implementation defined source.
+        - name: RemovableMedia
+          description: >
+            Boot from floppy/primary removable media(USB).

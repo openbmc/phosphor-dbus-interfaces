@@ -7,3 +7,24 @@ properties:
         - const
       description: >
           When true, the power supplies are redundant.
+    - name: RotationEnabled
+      type: boolean
+      description: >
+        Cold redundancy rotation enabled or not.
+    - name: RotationAlgorithm
+      type: byte
+      description: >
+        Rotation algorithm use for cold redundancy. 0 is BMC Specific, 1 is User Specific.
+    - name: RotationRankOrder
+      type: array[byte]
+      description: >
+        The rank order for each PSU. 0 means will not go into cold standby state.
+    - name: PeriodOfRotation
+      type: uint32
+      description: >
+        Rotation Period for cold redundancy. If rotation algorithm is BMC Specific,
+        and rotation is enabled, BMC will change PSU rank order after this time.
+    - name: ColdRedundancyStatus
+      type: byte
+      description: >
+        Cold redundancy setting status, set in progress or set completed.

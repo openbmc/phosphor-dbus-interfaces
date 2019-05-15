@@ -1,6 +1,18 @@
 description: >
     This defines DHCP client configuration.
 properties:
+    - name: ClientIdentifier
+      type: enum[self.ClientIdentifier]
+      description: >
+          This is passed as client ID in the DHCP request.
+      default: MACAddress
+    - name: DUIDType
+      type: enum[self.DUIDType]
+      description: >
+          This specifies how the DUID should be generated.
+      default: LinkLayer
+      errors:
+        - xyz.openbmc_project.Common.Error.NotSupported
     - name: DNSEnabled
       type: boolean
       description: >
@@ -28,3 +40,39 @@ properties:
       description: >
           if true then DHCP option 12 is enabled i.e machine`s hostname will be
           sent to the DHCP server.
+
+enumerations:
+    - name: ClientIdentifier
+      description: >
+          Possible Client Identifiers.
+      values:
+        - name: MACAddress
+          description: >
+              Generate client ID based on MAC address.
+        - name: DUID
+          description: >
+              Generate RFC-4361 based client ID.
+        - name: DUIDOnly
+          description: >
+              Generate RFC non-compliant client ID.
+
+    - name: DUIDType
+      description: >
+          Possible DUID types.
+      values:
+        - name: Vendor
+          description: >
+              DUID will be generated using machine-id.
+        - name: UUID
+          description: >
+              Product UUID is used as DUID.
+        - name: LinkLayerTime
+          description: >
+              MAC address of the interface and an additional time value
+              after a colon is used as DUID value. 
+        - name: LinkLayer
+          description: >
+              MAC address of the interface is used as DUID value.
+
+
+

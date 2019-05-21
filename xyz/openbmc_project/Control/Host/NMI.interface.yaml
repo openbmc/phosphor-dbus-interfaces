@@ -1,0 +1,14 @@
+description: >
+    It is a non-maskable interrupt or signal for triggering dumps from the host
+    operating system when host is unresponsive or hung. This is done by getting
+    all Host CPUs in reset vector and then,Linux has a mechanism to drive the
+    dump path to get it captured.
+
+methods:
+    - name: NmiReset
+      description: >
+         Generic method to start sreset.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+
+

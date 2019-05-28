@@ -48,6 +48,29 @@
     },
     {
       "key": {
+        "uuid": "43cb658a_4020d26f",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2019-05-28T07:43:23Z",
+      "side": 1,
+      "message": "do you need to introduce this error for the ClientIdentifier also?\n\nWhat are the use cases when this error can be hit?",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 15,
+        "endChar": 58
+      },
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7114a9b2_9ae2f103",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 1
@@ -59,6 +82,24 @@
       "writtenOn": "2019-05-28T07:11:07Z",
       "side": 1,
       "message": "This takes 3 values. Takes one of \"mac\", \"duid\" or \"duid-only\"",
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "73f6e1dc_24ab5bc8",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2019-05-28T07:43:23Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "7114a9b2_9ae2f103",
       "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

@@ -1,0 +1,40 @@
+description: >
+    This interface contains a Create method, which can be implemented
+    to allow creation of xyz.openbmc_project.Logging.Entry objects
+    directly over D-Bus, without needing the errors defined in
+    the *.Error/metadata.yaml files.  It also provides a parameter
+    for passing data through to extensions.
+
+methods:
+    - name: Create
+      description: >
+          Create a xyz.openbmc_project.Logging.Entry object.
+      parameters:
+        - name: Message
+          type: string
+          description: >
+            The Message property of the event entry.
+        - name: Severity
+          type: enum[xyz.openbmc_project.Logging.Entry.Level]
+          description: >
+            The Severity property of the event entry.  These values
+            match the ones defined in xyz.openbmc_project.Logging.Entry.
+        - name: AdditionalData
+          type: dict[string, string]
+          description: >
+            The AdditionalData property of the event entry.
+            e.g.:
+              {
+                "key1": "value1",
+                "key2": "value2"
+              }
+            ends up in AdditionaData like:
+              ["KEY1=value1", "KEY2=value2"]
+        - name: ExtensionParameterJSON
+          type: string
+          description: >
+              A JSON string that can contain parameters for any
+              logging extensions.  Extensions will be tolerant of
+              of entries in the JSON not meant for them, and will
+              also allow an empty string as there are other APIs
+              to create a log that won't have this data anyway.

@@ -106,6 +106,69 @@
     },
     {
       "key": {
+        "uuid": "3d1c32ab_1714a86a",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2019-05-30T21:40:04Z",
+      "side": 1,
+      "message": "MAC ? to match the capitalization of other enumerations e.g.\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Software/Version.interface.yaml#L27 \n\nOr MACAddress maybe ?",
+      "range": {
+        "startLine": 43,
+        "startChar": 16,
+        "endLine": 43,
+        "endChar": 19
+      },
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9fdd3ae3_1880b301",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2019-05-30T21:40:04Z",
+      "side": 1,
+      "message": "Should it be DUID to match the capitalization of other enumerations e.g. \nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Software/Version.interface.yaml#L27",
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b6a0ea0_71242c35",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2019-05-30T21:40:04Z",
+      "side": 1,
+      "message": "Vendor?",
+      "range": {
+        "startLine": 54,
+        "startChar": 16,
+        "endLine": 54,
+        "endChar": 22
+      },
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a841aafa_a1fe414b",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 1
@@ -123,6 +186,24 @@
     },
     {
       "key": {
+        "uuid": "f0a830e3_fa76cb06",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2019-05-30T21:40:04Z",
+      "side": 1,
+      "message": "UUID ?",
+      "parentUuid": "a841aafa_a1fe414b",
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9ad0cfea_4c809c96",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 1
@@ -134,6 +215,52 @@
       "writtenOn": "2019-05-28T07:11:07Z",
       "side": 1,
       "message": "This is link-layer-time and below is link-layer. The difference is \u0027_\u0027 and \u0027-\u0027",
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0bd37c5b_c2588895",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2019-05-30T21:40:04Z",
+      "side": 1,
+      "message": "LinkLayerTime ? I don\u0027t see _ in other D-Bus interface names",
+      "range": {
+        "startLine": 60,
+        "startChar": 16,
+        "endLine": 60,
+        "endChar": 31
+      },
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "73ad8e6f_3fe06489",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2019-05-30T21:40:04Z",
+      "side": 1,
+      "message": "LinkLayer ?",
+      "range": {
+        "startLine": 64,
+        "startChar": 16,
+        "endLine": 64,
+        "endChar": 26
+      },
       "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

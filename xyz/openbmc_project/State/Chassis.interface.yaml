@@ -31,10 +31,14 @@ enumerations:
       values:
         - name: 'Off'
           description: >
-            Chassis  power should be off
+            Chassis power should be off
         - name: 'On'
           description: >
             Chassis power should be on
+        - name: 'PowerCycle'
+          description: >
+            Chassis power should be cycled from off to on. There will be a 5
+            second delay between the off and the on.
 
     - name: PowerState
       description: >

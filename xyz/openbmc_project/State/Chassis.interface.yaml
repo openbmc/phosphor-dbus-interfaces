@@ -31,10 +31,17 @@ enumerations:
       values:
         - name: 'Off'
           description: >
-            Chassis  power should be off
+            Chassis power should be off
         - name: 'On'
           description: >
             Chassis power should be on
+        - name: 'PowerCycle'
+          description: >
+            Chassis power should be cycled
+        - name: 'Reset'
+          description: >
+            Chassis should be reset
+
 
     - name: PowerState
       description: >

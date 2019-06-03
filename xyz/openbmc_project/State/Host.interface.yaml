@@ -22,6 +22,9 @@ enumerations:
       description: >
         The desired transition for host firmware
       values:
+        - name: 'Interrupt'
+          description: >
+            Host firmware should be interrupted
         - name: 'Off'
           description: >
             Host firmware should be off

@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4c034e66_939ce1fb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000344
+      },
+      "writtenOn": "2019-06-06T17:41:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "abf51c81_f45b01d6",
+      "range": {
+        "startLine": 10,
+        "startChar": 20,
+        "endLine": 10,
+        "endChar": 31
+      },
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cc051ff2_1f875563",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "2bc595e4_0814e579",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000344
+      },
+      "writtenOn": "2019-06-06T17:41:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc051ff2_1f875563",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 213
+      },
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "43cb658a_4020d26f",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 1
@@ -68,6 +116,30 @@
       "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e42b15d7_e1a195bc",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000344
+      },
+      "writtenOn": "2019-06-06T17:41:47Z",
+      "side": 1,
+      "message": "Though \"vendor\" and \"uuid\" are valid enums for DUIDType, they are not support by OpenBMC. Hence, to prevent setting these values, this error is used.\n\nIn case of ClientIdentifier, the valid enums are mac, duid, and duid-only and all these types are supported. Hence, there is no need to introduce error.",
+      "parentUuid": "43cb658a_4020d26f",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 15,
+        "endChar": 58
+      },
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     },
     {
       "key": {
@@ -106,6 +178,24 @@
     },
     {
       "key": {
+        "uuid": "89f114a3_f5180c24",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000344
+      },
+      "writtenOn": "2019-06-06T17:41:47Z",
+      "side": 1,
+      "message": "Looks like \"duid-only\" is back port of \"duid\" to DHCP4. This is not a RFC compliant.\n\ndhcp4: introduce new option \u0027duid-only\u0027 for ClientIdentifier\u003d\n\nThis makes users can configure DHCPv4 client with ClientIdentifier\u003dduid-only.\nIf set so, then DHCP client sends only DUID as the client identifier.\nThis may not be RFC compliant, but some setups require this.",
+      "parentUuid": "73f6e1dc_24ab5bc8",
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3d1c32ab_1714a86a",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 1
@@ -129,6 +219,30 @@
     },
     {
       "key": {
+        "uuid": "ea5a1532_d4634571",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000344
+      },
+      "writtenOn": "2019-06-06T17:41:47Z",
+      "side": 1,
+      "message": "As per the specification, the config file understand only these values :\nmac, duid, duid-only. As enums does not support \"-\" (hyphen) in the name, we are forced to use \"_\" (underscore) for enum names.\n\n\nhttps://www.freedesktop.org/software/systemd/man/networkd.conf.html#",
+      "parentUuid": "3d1c32ab_1714a86a",
+      "range": {
+        "startLine": 43,
+        "startChar": 16,
+        "endLine": 43,
+        "endChar": 19
+      },
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9fdd3ae3_1880b301",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 1
@@ -140,6 +254,24 @@
       "writtenOn": "2019-05-30T21:40:04Z",
       "side": 1,
       "message": "Should it be DUID to match the capitalization of other enumerations e.g. \nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Software/Version.interface.yaml#L27",
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "21b56caa_b5454248",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000344
+      },
+      "writtenOn": "2019-06-06T17:41:47Z",
+      "side": 1,
+      "message": "As per the specification, the config file understands only \"duid\". Hence, the enum name is also \"duid\".",
+      "parentUuid": "9fdd3ae3_1880b301",
       "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -204,6 +336,24 @@
     },
     {
       "key": {
+        "uuid": "48321df3_e85ffa89",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000344
+      },
+      "writtenOn": "2019-06-06T17:41:47Z",
+      "side": 1,
+      "message": "My bad. I have updated it.",
+      "parentUuid": "a841aafa_a1fe414b",
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ad0cfea_4c809c96",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 1
@@ -241,6 +391,24 @@
       "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cef0b8a7_b6a51ed1",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000344
+      },
+      "writtenOn": "2019-06-06T17:41:47Z",
+      "side": 1,
+      "message": "If the name here is \"link-layer-time\", then at the time of generating the code from the .yaml file, an enum named link-layer-time is created. As \"-\" (hypen) is not allowed in the enum name, compilation fails. Hence,the enum is named as \"link_layer_time\". While updating the config file /etc/systemd/network/00-bmc-eth0.network, it is updated as \"link-layer-time\"",
+      "parentUuid": "9ad0cfea_4c809c96",
+      "revId": "1c0e689dae18c2dae81229b6b52048239f009f29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     },
     {
       "key": {

@@ -21,6 +21,8 @@ properties:
       type: int64
       description: >
           The sensor reading.
+      errors:
+        - xyz.openbmc_project.Sensor.Device.Error.ReadFailure
     - name: MaxValue
       type: int64
       description: >

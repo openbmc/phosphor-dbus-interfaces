@@ -21,3 +21,19 @@ enumerations:
         - name: Blacklist
           description: >
             Prevent, if in the blacklist.
+        - name: Provisioning
+          description: >
+            Indicate that system is in provisioning mode
+            and all commands are allowed in system inteface
+            in both pre and post BIOS boot.
+        - name: ProvisionedHostWhiteList
+          description: >
+            Commands in the whitelist will only be executed
+            through system interface after BIOS POST complete.
+            All KCS commands are supported before POST complete.
+        - name: ProvisionedHostDisabled
+          description: >
+            Commands through system interface are executed only
+            till BIOS POST complete notification, after
+            which no system interface commands will be executed(other
+            than BIOS SMI based ones).

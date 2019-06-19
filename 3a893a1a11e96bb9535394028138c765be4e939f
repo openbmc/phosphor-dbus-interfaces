@@ -34,6 +34,24 @@
       "revId": "3a893a1a11e96bb9535394028138c765be4e939f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b57a5cad_a9c22243",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2019-06-19T20:25:20Z",
+      "side": 1,
+      "message": "Yes, please follow the convention of our DBus apis and convert underscore / hyphenated names to camel case. This is not meant to be directly tied to systemd-networkd even though it happens to be implemented that way right now. I\u0027d prefer not to have any fields that are networkd specific or mostly unused.",
+      "parentUuid": "5fca43f1_f638a7c8",
+      "revId": "3a893a1a11e96bb9535394028138c765be4e939f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -45,6 +45,10 @@ properties:
       description: >
           The reading scaling factor N, where the actual reading is Value * 10^N.
           This is immutable once set for a sensor.
+    - name: HasFaultFile
+      type: boolean
+      description: >
+         The sensor has a fault file or not.
 
 enumerations:
     - name: Unit

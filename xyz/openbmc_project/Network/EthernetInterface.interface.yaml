@@ -42,6 +42,10 @@ properties:
       description: >
           This indicates link local auto configuration on this ethernet
           interface and configured on this ethernet interface.
+    - name: IPv6AcceptRA
+      type: boolean
+      description: >
+          Boolean for accepting router advertisements in IPv6
 
 enumerations:
     - name: LinkLocalConf

@@ -1,0 +1,14 @@
+description: >
+    Security key related settings.
+
+properties:
+    - name: ClearHostSecurityKeys
+      type: uint8
+      description: >
+          This is a bit mask used to specify clearing different security keys
+          or resetting those values back to default by the host. Setting this
+          property does not guarantee a successful operation as additional
+          conditions will be checked by the host to clear/reset the sensitive
+          data. Some of customer usecases include clearing OS platform key,
+          clearing system security officer certificate and resetting the
+          system key value back to its default state.

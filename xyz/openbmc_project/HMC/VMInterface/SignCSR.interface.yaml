@@ -1,0 +1,19 @@
+description: >
+    Interface to send certificate signing request(CSR) to VM interface.
+methods:
+    - name: signCSR
+      description: >
+          Method to send the CSR string to VM interface
+
+      parameters:
+        - name: ClientCsrString
+          type: string
+          description: >
+              Certificate signing request string in the Base-64 encoded PEM format.
+      returns:
+        - name: CertString
+          type: string
+          description: >
+             The string which includes both client certificate and root CA certificate.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure

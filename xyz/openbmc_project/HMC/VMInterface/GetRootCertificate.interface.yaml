@@ -1,0 +1,20 @@
+description: >
+    Interface to retrive self signed root certificate from VM interface.
+methods:
+    - name: GetRootCert
+      description: >
+          Method to get CA certificate from VM interface
+
+      parameters:
+        - name: HmcId
+          type: string
+          description: >
+                Unique id of Harware management console.
+ 
+      returns:
+        - name: CaCertificateString
+          type: string
+          description: >
+            The string for the CA certificate.  
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure

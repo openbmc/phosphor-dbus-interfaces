@@ -1,0 +1,24 @@
+description: >
+    Interface to send certificate signing request(CSR) to VM interface.
+methods:
+    - name: SignClientCSR
+      description: >
+          Method to send the CSR string to VM interface
+
+      parameters:
+        - name: HmcId
+          type: string
+          description: >
+                Unique id of Harware management console.
+
+        - name: ClientCsrString
+          type: string
+          description: >
+              Certificate signing request string in the Base-64 encoded PEM format.
+      returns:
+        - name: ClientCertString
+          type: string
+          description: >
+             The string for the client certificate. 
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure

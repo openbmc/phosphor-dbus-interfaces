@@ -1,0 +1,6 @@
+- name: PowerOnFail
+  inherits:
+    - xyz.openbmc_project.State.SystemdTarget.Failure
+- name: PowerOffFail
+  inherits:
+    - xyz.openbmc_project.State.SystemdTarget.Failure

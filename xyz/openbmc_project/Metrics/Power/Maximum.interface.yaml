@@ -1,0 +1,33 @@
+description: >
+    Implement to provide the maximum power consumed metrics. The object this
+    interface resides on should provide the interval and unit of time that
+    the maximum power consumed is calculated over.
+
+properties:
+    - name: Watts
+      type: uint64
+      description: >
+          The maximum amount of power consumed over the interval of time.
+    - name: Interval
+      type: uint64
+      description: >
+          Interval of time to calculate the maximum amount of power consumed.
+    - name: Unit
+      type: enum[self.Unit]
+      description: >
+          The unit of time the interval is measured on.
+
+enumerations:
+    - name: Unit
+      description: >
+          Unit of time for calculating the maximum power consumed.
+      values:
+          - name: Seconds
+            description: >
+                Maximum power consumed in seconds.
+          - name: Minutes
+            description: >
+                Maximum power consumed in minutes.
+          - name: Hours
+            descriptions: >
+                Maximum power consumed in hours.

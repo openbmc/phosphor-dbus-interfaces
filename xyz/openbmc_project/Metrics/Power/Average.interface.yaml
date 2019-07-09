@@ -1,0 +1,33 @@
+description: >
+    Implement to provide average power consumed metrics. The object this
+    interface resides on should provide the interval and unit of time that
+    the average power consumed is calculated over.
+
+properties:
+    - name: Watts
+      type: uint64
+      description: >
+          The average amount of power consumed over the interval of time.
+    - name: Interval
+      type: uint64
+      description: >
+          Interval of time to calculate the average amount of power consumed.
+    - name: Unit
+      type: enum[self.Unit]
+      description: >
+          The unit of time the interval is measured on.
+
+enumerations:
+    - name: Unit
+      description: >
+          Unit of time for calculating the average power consumed.
+      values:
+          - name: Seconds
+            description: >
+                Average power consumed in seconds.
+          - name: Minutes
+            description: >
+                Average power consumed in minutes.
+          - name: Hours
+            descriptions: >
+                Average power consumed in hours.

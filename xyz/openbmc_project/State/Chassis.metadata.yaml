@@ -1,0 +1,10 @@
+- name: PowerOnFail
+  level: ERR
+  meta:
+    - str: "SYSTEMD_RESULT=%s"
+      type: string
+- name: PowerOffFail
+  level: ERR
+  meta:
+    - str: "SYSTEMD_RESULT=%s"
+      type: string

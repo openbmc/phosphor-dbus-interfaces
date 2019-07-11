@@ -23,7 +23,7 @@ properties:
       description: >
           Domain names of the ethernet interface.
     - name: DHCPEnabled
-      type: boolean
+      type: enum[self.DHCPConf]
       description: >
           Address mode of the ethernet interface.
     - name: Nameservers
@@ -59,4 +59,11 @@ enumerations:
         - name: v4
         - name: v6
         - name: none
-
+    - name: DHCPConf
+      description: >
+          A list of the permitted DHCP settings used by systemd.
+      values:
+        - name: both
+        - name: v4
+        - name: v6
+        - name: none

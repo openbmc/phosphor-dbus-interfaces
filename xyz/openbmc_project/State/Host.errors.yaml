@@ -1,3 +1,18 @@
 # xyz.openbmc_project.State.Host.SoftOffTimeout
 - name: SoftOffTimeout
   description: Host did not shutdown within configured time.
+# xyz.openbmc_project.State.Host.Error.HostStart
+- name: HostStartFail
+  description: The systemd obmc-host-start.target failed to complete
+# xyz.openbmc_project.State.Host.Error.HostMinStart
+- name: HostMinStartFail
+  description: The systemd obmc-host-start-min.target failed to complete
+# xyz.openbmc_project.State.Host.Error.HostShutdown
+- name: HostShutdownFail
+  description: The systemd obmc-host-shutdown.target failed to complete
+# xyz.openbmc_project.State.Host.Error.HostStop
+- name: HostStopFail
+  description: The systemd obmc-host-stop.target failed to complete
+# xyz.openbmc_project.State.Host.Error.HostReboot
+- name: HostRebootFail
+  description: The systemd obmc-host-reboot.target failed to complete

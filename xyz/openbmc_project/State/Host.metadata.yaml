@@ -1,3 +1,18 @@
 - name: SoftOffTimeout
   inherits:
     - xyz.openbmc_project.Common.Timeout
+- name: HostStartFail
+  inherits:
+    - xyz.openbmc_project.State.SystemdTarget.Failure
+- name: HostMinStartFail
+  inherits:
+    - xyz.openbmc_project.State.SystemdTarget.Failure
+- name: HostShutdownFail
+  inherits:
+    - xyz.openbmc_project.State.SystemdTarget.Failure
+- name: HostStopFail
+  inherits:
+    - xyz.openbmc_project.State.SystemdTarget.Failure
+- name: HostRebootFail
+  inherits:
+    - xyz.openbmc_project.State.SystemdTarget.Failure

@@ -32,6 +32,7 @@ properties:
           DNS servers on the interface.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz::openbmc_project.Common.Error.NotAllowed
     - name: NTPServers
       type: array[string]
       description: >

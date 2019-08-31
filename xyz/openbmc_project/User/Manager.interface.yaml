@@ -101,11 +101,15 @@ methods:
 properties:
     - name: AllPrivileges
       type: array[string]
+      flags:
+          - const
       description: >
           Lists all available user privileges in the system.
 
     - name: AllGroups
       type: array[string]
+      flags:
+          - const
       description: >
           Lists all available groups in the system.
 

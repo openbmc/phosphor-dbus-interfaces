@@ -12,6 +12,13 @@ methods:
               Path of file that contains both the certificate public and
               private key. (Example: a .PEM file containing both signed
               certificate and private key).
+
+      returns:
+        - name: ObjectPath
+          type: string
+          description: >
+              D-Bus object path to created object.
+
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
         - xyz.openbmc_project.Common.Error.NotAllowed

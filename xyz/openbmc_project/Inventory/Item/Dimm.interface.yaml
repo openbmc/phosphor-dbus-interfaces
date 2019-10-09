@@ -1,4 +1,36 @@
 description: >
     Implement to provide DIMM attributes.
-
+properties:
+    - name: MemoryDataWidth
+      type: uint16
+      description: >
+          Data width of Memory.
+    - name: MemorySizeInKB
+      type: uint32
+      description: >
+          Memory size of DIMM in Kilobyte.
+    - name: MemoryDeviceLocator
+      type: string
+      description: >
+          Socket on base board where Memory located.
+    - name: MemoryType
+      type: string
+      description: >
+          Type of memory.
+    - name: MemoryTypeDetail
+      type: string
+      description: >
+          Additional detail on Memory.
+    - name: MemorySpeed
+      type: uint16
+      description: >
+          The maximum capable speed of Memory, in megahertz.
+    - name: MemoryAttributes
+      type: byte
+      description: >
+          Rank attributes of Memory.
+    - name: MemoryConfClockSpeed
+      type: uint16
+      description: >
+          Configured clock speed to Memory, in megahertz.
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

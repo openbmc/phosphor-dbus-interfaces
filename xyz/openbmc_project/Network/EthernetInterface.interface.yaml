@@ -29,10 +29,19 @@ properties:
     - name: Nameservers
       type: array[string]
       description: >
-          DNS servers on the interface.
+          DNS servers that are currently in use on this interface.
       errors:
-          - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz::openbmc_project.Common.Error.NotAllowed
+    - name: StaticNameServers
+      type: array[string]
+      description: >
+          A statically defined set of DNS server IP addresses to be used when
+          DHCP provisioning is not enabled for name server configuration. As
+          an implementation option this may also be used in addition to DHCP
+          provided addresses, or in cases where the DHCP server provides no DNS
+          assigments.
+      errors:
+         - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: NTPServers
       type: array[string]
       description: >

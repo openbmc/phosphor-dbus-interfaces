@@ -19,6 +19,29 @@
     },
     {
       "key": {
+        "uuid": "fd018cdc_ff099e00",
+        "filename": "xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1000443
+      },
+      "writtenOn": "2019-10-16T11:37:27Z",
+      "side": 1,
+      "message": "typo: should be \"helps to validate\" I suppose",
+      "range": {
+        "startLine": 168,
+        "startChar": 59,
+        "endLine": 168,
+        "endChar": 77
+      },
+      "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9adffdf1_b24adeaa",
         "filename": "xyz/openbmc_project/Software/README.md",
         "patchSetId": 2
@@ -62,6 +85,52 @@
       "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "137e7990_aeccc399",
+        "filename": "xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1000443
+      },
+      "writtenOn": "2019-10-16T11:37:27Z",
+      "side": 1,
+      "message": "I\u0027d suggest to reference specific digital signature schemes/standards we want to support, that would make both signing and verification sections simpler and unambiguous.",
+      "range": {
+        "startLine": 177,
+        "startChar": 33,
+        "endLine": 177,
+        "endChar": 71
+      },
+      "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "64f0d377_24934d85",
+        "filename": "xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1000443
+      },
+      "writtenOn": "2019-10-16T11:37:27Z",
+      "side": 1,
+      "message": "There\u0027s no such thing as a public key of a hash function. Is \"public part of the signing key\" meant here? Or maybe there\u0027s just a comma missing and that was \"hash function, public key and type of the key\"?\n\nSignature scheme/algoritm reference should IMHO be another thing to add here, because those three alone don\u0027t define the scheme in some cases (e.g. RSA with PKCS formatting vs. RSA with PSS one).",
+      "range": {
+        "startLine": 179,
+        "startChar": 49,
+        "endLine": 179,
+        "endChar": 73
+      },
+      "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     },
     {
       "key": {
@@ -122,6 +191,29 @@
     },
     {
       "key": {
+        "uuid": "1bf5ecab_6921730c",
+        "filename": "xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1000443
+      },
+      "writtenOn": "2019-10-16T11:37:27Z",
+      "side": 1,
+      "message": "I\u0027d rather suggest to replace this with \"using the digital signature scheme that was used for signing\" or somesuch - as specific steps and even the use of specific hash functions may be dependent on the scheme.",
+      "range": {
+        "startLine": 193,
+        "startChar": 8,
+        "endLine": 194,
+        "endChar": 16
+      },
+      "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9adffdf1_325fce74",
         "filename": "xyz/openbmc_project/Software/README.md",
         "patchSetId": 2
@@ -165,6 +257,52 @@
       "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "abb030d6_d32381f9",
+        "filename": "xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1000443
+      },
+      "writtenOn": "2019-10-16T11:37:27Z",
+      "side": 1,
+      "message": "Do you mean here that the Manifest will be signed by a different key and will in turn contain another public key, from a keypair that was was used to sign the binaries themselves? If yes, I\u0027d suggest to make this more explicit in the description. If not, please clarify.",
+      "range": {
+        "startLine": 198,
+        "startChar": 7,
+        "endLine": 198,
+        "endChar": 78
+      },
+      "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de5ed1d4_46a61ed9",
+        "filename": "xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1000443
+      },
+      "writtenOn": "2019-10-16T11:37:27Z",
+      "side": 1,
+      "message": "typo: should be \"continue\"",
+      "range": {
+        "startLine": 202,
+        "startChar": 31,
+        "endLine": 202,
+        "endChar": 40
+      },
+      "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     },
     {
       "key": {

@@ -1,0 +1,24 @@
+description: >
+    Provide Memory attributes in Serial Presence Detect (SPD).
+    All these attributes are defined in JEDEC Standard.
+properties:
+    - name: CASLatencies
+      type: uint16
+      description: >
+          CAS Latency (CL) values are supported. The CAS latency is the delay
+          between the time at which the column address and the column address
+          strobe signal are presented to the memory module and the time at which
+          the corresponding data is made available by the memory module.
+    - name: ManufacturingDate
+      type: uint16
+      description: >
+          Manufacturing date, for example, week 47 in year 2003 would be coded
+          as 0x03 (0000 0011) in higher byte and 0x47 (0100 0111) in lower byte.
+    - name: RevisionCode
+      type: uint16
+      description: >
+          Revision code provided by the individual manufacturer.
+    - name: ECC
+      type: byte
+      description: >
+          If memory support ECC or not. value 0 is no ECC, 1 is 8 bit ECC.

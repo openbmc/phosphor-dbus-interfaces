@@ -29,6 +29,13 @@ AS_IF([test "x$enable_openpower_dbus_interfaces" == "xyes"], [
        YAML_DIRS="$YAML_DIRS org/open_power"
 ])
 
+AC_ARG_ENABLE([ibm_dbus_interfaces],
+    AS_HELP_STRING([--enable-ibm-dbus-interfaces], [Enable the IBM D-Bus interfaces]))
+
+AS_IF([test "x$enable_ibm_dbus_interfaces" == "xyes"], [
+       YAML_DIRS="$YAML_DIRS com/ibm"
+])
+
 AM_CONDITIONAL([WANT_LIBPHOSPHOR_DBUS], [test "x$enable_libphosphor_dbus" != "xno"])
 
 AS_IF([test "x$enable_libphosphor_dbus" != "xno"], [

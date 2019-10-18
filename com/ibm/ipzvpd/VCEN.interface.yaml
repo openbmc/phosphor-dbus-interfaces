@@ -1,0 +1,33 @@
+description: >
+    Implement to represent the VCEN record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: DR
+      type: array[byte]
+      description: >
+          Descrition of the record.
+    - name: SE
+      type: array[byte]
+      description: >
+          SE keyword.
+    - name: TM
+      type: array[byte]
+      description: >
+          System eclosure type and model.
+    - name: FC
+      type: array[byte]
+      description: >
+          System enclosure feature code.
+    - name: RG
+      type: array[byte]
+      description: >
+          RG keyword.
+    - name: RB
+      type: array[byte]
+      description: >
+          RB keyword.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

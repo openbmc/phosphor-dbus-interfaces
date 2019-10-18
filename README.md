@@ -7,3 +7,8 @@ Enable the OpenPower D-Bus interfaces with:
 ```
 --enable-openpower-dbus-interfaces
 ```
+Enable IBM D-Bus interfaces with:
+```
+--enable-ibm-dbus-interfaces
+```
+

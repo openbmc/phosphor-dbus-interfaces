@@ -1,0 +1,21 @@
+description: >
+    Implement to represent the VRTN record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: SO
+      type: array[byte]
+      description: >
+          SO keyword.
+    - name: IN
+      type: array[byte]
+      description: >
+          IN keyword.
+    - name: I2
+      type: array[byte]
+      description: >
+          I2 keyword.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

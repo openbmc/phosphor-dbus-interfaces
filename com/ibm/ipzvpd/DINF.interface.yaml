@@ -1,0 +1,17 @@
+description: >
+    Implement to represent the DINF record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: RI
+      type: array[byte]
+      description: >
+          RI keyword.
+    - name: FL
+      type: array[byte]
+      description: >
+          FL keyword.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

@@ -2,7 +2,7 @@
 
 cd $1
 
-toplevel_dirs=xyz
+toplevel_dirs=xyz com
 all_yaml=`find $toplevel_dirs -name "*.yaml"`
 
 echo "nobase_yaml_DATA = \\"

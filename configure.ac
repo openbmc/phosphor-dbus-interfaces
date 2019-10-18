@@ -20,6 +20,14 @@ AC_CHECK_PROG([DIRNAME], dirname, dirname)
 AC_ARG_ENABLE([libphosphor_dbus],
     AS_HELP_STRING([--disable-libphosphor_dbus], [Disable libphosphor_dbus]))
 
+YAML_DIRS="xyz"
+AC_ARG_ENABLE([ibm_dbus_interfaces],
+    AS_HELP_STRING([--enable-ibm-dbus-interfaces], [Enable the IBM D-Bus interfaces]))
+
+AS_IF([test "x$enable_ibm_dbus_interfaces" == "xyes"], [
+       YAML_DIRS="$YAML_DIRS com/ibm"
+])
+
 AM_CONDITIONAL([WANT_LIBPHOSPHOR_DBUS], [test "x$enable_libphosphor_dbus" != "xno"])
 
 AS_IF([test "x$enable_libphosphor_dbus" != "xno"], [
@@ -48,11 +56,13 @@ AS_IF([test "x$enable_libphosphor_dbus" != "xno"], [
 
     # Create configured output
     AC_CONFIG_FILES([Makefile.interfaces],
-        [${srcdir}/generate_makefile.sh ${srcdir} > Makefile.interfaces])
+        [${srcdir}/generate_makefile.sh ${srcdir} "${yamlDirs}" > Makefile.interfaces],
+            [yamlDirs="$YAML_DIRS"])
     AC_CONFIG_FILES([phosphor-dbus-interfaces.pc])
 ])
 AC_CONFIG_FILES([Makefile.yaml],
-    [${srcdir}/generate_yaml_makefile.sh ${srcdir} > Makefile.yaml])
+    [${srcdir}/generate_yaml_makefile.sh ${srcdir} "${yamlDirs}" > Makefile.yaml],
+        [yamlDirs="$YAML_DIRS"])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

@@ -27,7 +27,7 @@ can request the host be in a (Off), (On), or (Reboot) state.  More details on
 different Reboot options below.
 Quiesced means the host OS is in a quiesce state and the system should be
 checked for errors. For more information refer to
-[Error Handling of systemd](https://github.com/openbmc/docs/blob/master/openbmc-systemd.md#error-handling-of-systemd)
+[Error Handling of systemd](https://github.com/openbmc/docs/blob/master/architecture/openbmc-systemd.md#error-handling-of-systemd)
 
 3. *Chassis* : The chassis is either (Off) or (On)
 This represents the state of power to the chassis.  The Chassis being on

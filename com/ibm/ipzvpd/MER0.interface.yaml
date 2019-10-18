@@ -1,0 +1,9 @@
+description: >
+    Implement to represent the MER0 record in IPZ VPD
+properties:
+    - name: PD_I
+      type: array[byte]
+      description: >
+          The "#I" keyword
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

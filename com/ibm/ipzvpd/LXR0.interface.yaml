@@ -1,0 +1,13 @@
+description: >
+    Implement to represent the LXR0 record in IPZ VPD
+properties:
+    - name: VZ
+      type: array[byte]
+      description: >
+          VZ keyword. The record version.
+    - name: LX
+      type: array[byte]
+      description: >
+          LX keyword.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

@@ -2,7 +2,7 @@
 
 cd $1
 
-toplevel_dirs=xyz
+toplevel_dirs="xyz com"
 interfaces=`find $toplevel_dirs -name "*.interface.yaml"`
 
 for i in ${interfaces};

@@ -58,6 +58,10 @@ properties:
       type: boolean
       description: >
           Boolean for accepting router advertisements in IPv6
+    - name: NICEnabled
+      type: boolean
+      description: >
+          Boolean for to enabling or disabling the ethernet port
 
 enumerations:
     - name: LinkLocalConf

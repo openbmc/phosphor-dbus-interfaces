@@ -94,6 +94,9 @@ enumerations:
           This property shall contain the Memory Device Type as defined by
           SMBIOS.
       values:
+        - name: Unknown
+          description: >
+              Unknown Memory Device Type.
         - name: DDR
           description: >
               Double Data Rate SDRAM.

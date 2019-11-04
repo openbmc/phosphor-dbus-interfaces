@@ -44,3 +44,6 @@ enumerations:
        - name: 'NotReady'
          description: >
            Not ready implies not all services have started or are not running successfully
+       - name: 'FirmwareUpdate'
+         description: >
+           Firmware Update implies BMC is in firmware update mode

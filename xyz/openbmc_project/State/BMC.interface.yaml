@@ -44,3 +44,8 @@ enumerations:
        - name: 'NotReady'
          description: >
            Not ready implies not all services have started or are not running successfully
+       - name: 'UpdateInProgress'
+         description: >
+           UpdateInProgress implies BMC is in firmware update mode. CurrentBMCState
+           will be set to "UpdateInProgress" while starting image download and
+           reset to Ready, once activation is done or error case during update process.

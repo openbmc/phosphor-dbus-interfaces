@@ -15,10 +15,13 @@ in .pem format, which includes both private key and signed certificate.
   The recommendation for the D-Bus application implementing certificate D-Bus
   objects is to use the same path structure as the REST endpoint.
      e.g.:
-         - The URI /xyz/openbmc_project/certs/Server/Https maps to instance
+     - The URI /xyz/openbmc_project/certs/server/https maps to instance
            of the certificate application handling Https server certificate.
-         - The URI /xyz/openbmc_project/certs/Client/LDAP maps to instance
+     - The URI /xyz/openbmc_project/certs/client/ldap maps to instance
            of the certificate application handling LDAP client certificate.
+     - The URI /xyz/openbmc_project/certs/authority/ldap maps to instance
+           of the certificate application handling Certificate Autohority
+           certificates.
 - REST server should call the install method of the certificate application
   instance.
 - Certificate manager application also implements d-bus object
@@ -26,37 +29,30 @@ in .pem format, which includes both private key and signed certificate.
   "certificates specific d-bus objects" installed in the system. This d-bus
   provide option to view the certificate on PEM format and delete the same.
   Refer https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail for details.
-     e.g. for Certificate specific d-bus path
-        -  /xyz/openbmc_project/certs/Server/<unique-id> maps to
-           instance of the server types certificate.
-        -  /xyz/openbmc_project/certs/Client/<unique-id> maps to
-           instance of the client type certificate.
-     note: unique id is the hash value of certificate issuer and serial number.
-
 - Applications should subscribe the xyz.openbmc_project.Certs.Manager
   to see any new certificate is uploaded or change in the existing
   certificates.
 - Certificate manager scope is limited to manage the certificate and impacted
   application is responsible for application specific changes.
-- Incase of delete action, certificate manager creates a new self signed
-  certificate after successful delete.
+- In case of delete action, certificate manager creates a new self signed
+  certificate after successful delete (regards only server type certificates)
 
 ### REST interface details:
 
    ```
-   url: /xyz/openbmc_project/certs/Server/Https
+   url: /xyz/openbmc_project/certs/server/https
    Description: Update https server signed certificate and the private key.
    Method: PUT
 
-   url: /xyz/openbmc_project/certs/Server/Https
+   url: /xyz/openbmc_project/certs/server/https/<cert_id>
    Description: Delete https server signed certificate and the private key.
    Method: DELETE
 
-   url: /xyz/openbmc_project/certs/Client/LDAP
+   url: /xyz/openbmc_project/certs/client/ldap
    Description: Update ldap client certificate and the private key.
    Method: PUT
 
-   url: /xyz/openbmc_project/certs/Client/LDAP
+   url: /xyz/openbmc_project/certs/client/ldap/<cert_id>
    Description: Delete ldap client certificate and the private key.
    Method: DELETE
 
@@ -180,8 +176,12 @@ the CSR based certificate user flow.
 - Certificate Manager implements "xyz.openbmc_project.Certs.Install" interface
   for installing certificates in the system.
 - Redfish initiates certificate upload by issuing a POST request on the Redfish
-  CertificateCollection with the certificate file.
-  Fo example: For HTTPS certificate upload POST request is issued on URI
+  CertificateCollection with the certificate file. Acceptable body formats are:
+  raw pem text or json that is acceptable by action
+  [CertificateService.ReplaceCertificate](
+  https://www.dmtf.org/sites/default/files/standards/documents/DSP2046_2019.1.pdf)
+
+  For example the HTTPS certificate upload POST request is issued on URI
   "/redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates"
 - Bmcweb receives the POST request and it maps the Redfish URI to the
   corresponding Certificate Manager D-Bus URI.
@@ -221,17 +221,26 @@ the CSR based certificate user flow.
 - Callback method will be passed to the bmcweb asynchronous method which will
   called after completion of the D-Bus Replace method.
 - Callback method checks the response received, if failure response message is
-  set with error details, if success response message is set with  the replaced
+  set with error details, if success response message is set with the replaced
   certificate details.
 
 #### Bootup
 - During bootup certificate objects created for the existing certificates.
 ### Errors thrown by Certificate Manager
 - NotAllowed exception thrown if Install method invoked with a certificate
-  already existing. At present only one certificate per certificate type is
-  allowed.
+  already existing. At present only one certificate per server and client
+  certificate type is allowed.
 - InvalidCertificate excption thrown for validation errors.
 
 #### Certificate Deletion
-- Certificate deletion is not allowed as per Redfish specification.
+- For server and client certificate type the certificate deletion is not
+  allowed. In case of authority certificate type the delete option is
+  acceptable and can be done on individial certificates, for example:
+
+  ```
+  url: redfish/v1/Managers/bmc/Truststore/Certificates/1
+  Method: DELETE
+
+  Returns: code 204 with empty body content.
+  ```
 

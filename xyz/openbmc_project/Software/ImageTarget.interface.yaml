@@ -1,0 +1,12 @@
+description: >
+    To implement the image target for a newly uploaded firmware image.
+    The image target property is specific to each firmware update package
+    and it can have more than one image targets set to it. The default value
+    of the property is set to none.
+properties:
+    - name: ImageTargets
+      type: array[string]
+      description: >
+        This property indicates to which targets firmware image update should be
+        applied. The ImageTargets are strings referencing to firmware target IDs 
+        that are present in the system and supports firmware update.

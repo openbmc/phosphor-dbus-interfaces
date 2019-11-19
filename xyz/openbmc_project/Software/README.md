@@ -127,7 +127,9 @@ should be assumed.
 Some software versions are a collection of images, each with their own version
 identifiers.  The `xyz.openbmc_project.Software.ExtendedVersion` interface
 can be added to any `Software.Version` to express the versioning of the
-aggregation.
+aggregation. In addition, the `xyz.openbmc_project.Software.VersionAggregate`
+can be used to detail the properties of each individual image that makes up the
+collection, by adding their own `Purpose`, `Version`, and `ExtendedVersion`.
 
 ### Activation Progress
 

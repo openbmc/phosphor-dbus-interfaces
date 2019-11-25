@@ -1,0 +1,67 @@
+description: >
+        Implement to represent the bono type Keyword VPD
+properties:
+        - name: PN
+          type: array[byte]
+          description: >
+                  Keyword which contains Part Number which contains
+                  7 byte FRU Card Assembly(CA) part number. 
+                  This field is used for IBM manufactured cards and
+                  is used for vendor supplied cards if the part has a 
+                  CA number.
+        - name: EC
+          type: array[byte]
+          description: >
+                  Engineering Change level keyword contains IBM 6 byte
+                  EC number with a 1 byte suffix. If there is no suffix,
+                  the trailing character is a blank. The field is used for
+                  vendor supplied electronic FRUs that do not have a
+                  Card Assembly(CA)part number.
+        - name: CT
+          type: array[byte]
+          description: >
+                  A eight digit hex number will be assigned for each new FRU with VPD
+                  to identify the different functions of a Card/FRU. Card type information
+                  is used by te automatic configureation routines of the Service Element
+                  to generate hardware configuration data.
+        - name: FN
+          type: array[byte]
+          description: >
+                  FRU Stocking Part Number. This data field is 8 bytes long and contains
+                  the IBM standard 7 byte FRU stocking part number with a leading blank.
+                  On Squadrons systems the FN data field is only 7 bytes. 
+                  The leading blank was removed.
+        - name: CC
+          type: array[byte]
+          description: >
+                  4 byte Customer Card identification number(CCIN).
+        - name: SN
+          type: array[byte]
+          description: >
+                  11S Y Serial Number of 12 bytes long and contains 11S Y serial number.
+                  This field is the FRU and Card Assembly serial number and is the 
+                  serial number on the 11S label.
+        - name: SI
+          type: array[byte]
+          description: >
+                  Subsystem Vendor ID.
+        - name: B2
+          type: array[byte]
+          description: >
+                  B2 keyword.
+        - name: Z4
+          type: array[byte]
+          description: >
+                  Z4 keyword.
+        - name: Z5
+          type: array[byte]
+          description: >
+                  Z5 keyword.
+        - name: Z6
+          type: array[byte]
+          description: >
+                  Z6 keyword.
+        - name: RV
+          type: array[byte]
+          description: >
+                  RV keyword contains Revision Code data.

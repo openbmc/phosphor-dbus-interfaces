@@ -1,0 +1,13 @@
+description: >
+    To implement the image target busy status when a firmware image uploaded
+    for the specified target using ImageTargets Yaml.
+    The image target busyt property is set to busy when ImageTargets property
+    is set and the update is in progress.The default value of the property is 
+    set to false.
+properties:
+    - name: ImageTargetsBusy
+      type: boolean
+      description: >
+        This property indicates to when any targets are set for firmware image 
+        update by ImageTargets. The ImageTargetsBusy is set to true when any 
+        target firmware is in progress.

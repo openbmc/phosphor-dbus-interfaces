@@ -6,6 +6,24 @@ properties:
       description: >
           Chassis capabilities flags. bit1= Provides front panel lockout,
           bit0 = Provides intrusion. All other bits reserved.
+          Note: Please use the individual bit fields for Capabilities Flags
+          going forward. This common byte representation is deprecated.
+    - name: ChassisIntrusionEnabled
+      type: boolean
+      description: >
+          Chassis Provides intrusion (physical security) sensor.
+    - name: ChassisFrontPanelLockoutEnabled
+      type: boolean
+      description: >
+          Chassis Provides front panel lockout.
+    - name: ChassisNMIEnabled
+      type: boolean
+      description: >
+          Chassis Provides Diagnostic Interrupt (FP NMI).
+    - name: ChassisPowerInterlockEnabled
+      type: boolean
+      description: >
+          Chassis Provides Power Interlock.
     - name: FRUDeviceAddress
       type: byte
       description: >

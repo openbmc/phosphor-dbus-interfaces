@@ -6,6 +6,26 @@ properties:
       description: >
           Chassis capabilities flags. bit1= Provides front panel lockout,
           bit0 = Provides intrusion. All other bits reserved.
+    - name: CapFlagIntrusion
+      type: boolean
+      description: >
+          Chassis Provides intrusion sensor.
+          Bit0 of CapabilitiesFlags.
+    - name: CapFlagFrontPanel
+      type: boolean
+      description: >
+          Chassis Provides front panel lockout.
+          Bit1 of CapabilitiesFlags.
+    - name: CapFlagNMI
+      type: boolean
+      description: >
+          Chassis Provides Diagnostic Interrupt (FP NMI).
+          Bit2 of CapabilitiesFlags.
+    - name: CapFlagPowerInterlock
+      type: boolean
+      description: >
+          Chassis Provides Power Interlock.
+          Bit3 of CapabilitiesFlags.
     - name: FRUDeviceAddress
       type: byte
       description: >

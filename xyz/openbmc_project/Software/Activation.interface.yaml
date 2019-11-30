@@ -28,12 +28,19 @@ enumerations:
         - name: Activating
           description: >
             The Software.Version is in the process of being Activated.
+        - name: ActivatingAsStandbySpare
+          description: >
+            The Software.Version is in the process of being Activated.
         - name: Active
           description: >
             The Software.Version is currently Active.
         - name: Failed
           description: >
             The Software.Version failed during or after Activation.
+        - name: StandbySpare
+          description: >
+            The Software.Version is part of a redundancy set and awaits
+            a failover or external action to activate.
     - name: RequestedActivations
       description: >
         The possible RequestedActivation states of a Software.Version.
@@ -44,6 +51,9 @@ enumerations:
         - name: Active
           description: >
             The Software.Version has been requested for Activation.
+        - name: StandbySpare
+          description: >
+            The Softwaer.Version has been requested for Activation as StanbySpare
 # TODO: Specify "EAGAIN" type error when requested is unable to be acted on
 #       due to current system state.  Currently, sdbusplus does not support
 #       errors on properties.

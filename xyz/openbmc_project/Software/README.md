@@ -92,6 +92,10 @@ be in the following states:
               be *Active* but not the primary version.
 6. *Failed* - The `Software.Version` or the storage medium on which it is stored
               has failed.  An event may be recorded with additional details.
+7. *ActivatingAsStandbySpare* - The Software.Version is in the process of being
+                                processed.
+8. *StandbySpare* - The Software.Version is part of a redundancy set and awaits
+                    a failover or external action to activate.
 
 ### Image Apply Time
 
@@ -169,7 +173,8 @@ Need additional interfaces defined for alternative upload methods.
 
 ### Activate a version.
 
-Modify `RequestedActivation` to *Active* on the desired `Activation`.
+Modify `RequestedActivation` to *Active* or *StandbySpare* on the desired
+target `Activation`.
 
 ### Switch primary image.
 

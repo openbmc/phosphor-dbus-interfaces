@@ -34,6 +34,10 @@ enumerations:
         - name: Failed
           description: >
             The Software.Version failed during or after Activation.
+        - name: Staged
+          description: >
+            The Software.Version is currently in staged flash area. This will
+            be moved from staged flash area to active upon reset.
     - name: RequestedActivations
       description: >
         The possible RequestedActivation states of a Software.Version.

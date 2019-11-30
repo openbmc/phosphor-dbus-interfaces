@@ -92,6 +92,8 @@ be in the following states:
               be *Active* but not the primary version.
 6. *Failed* - The `Software.Version` or the storage medium on which it is stored
               has failed.  An event may be recorded with additional details.
+7. *Staged* - The `Software.Version` is in staged flash area. This will be moved
+              from staged flash area to active upon reset.
 
 ### Image Apply Time
 
@@ -174,4 +176,3 @@ Modify `RequestedActivation` to *Active* on the desired `Activation`.
 ### Switch primary image.
 
 Set `Priority` to 0 on the desired `RedundancyPriority` interface.
-

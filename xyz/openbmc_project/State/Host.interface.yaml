@@ -45,3 +45,9 @@ enumerations:
         - name: 'Quiesced'
           description: >
             Host firmware is quiesced
+        - name: 'CapturingDebug'
+          description: >
+            Host firmware is capturing debug information. Powering off your
+            system while the host is in this state will prevent the debug data
+            from being properly collected. The host will move to one of the
+            other states once complete.

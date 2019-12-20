@@ -134,6 +134,30 @@
     },
     {
       "key": {
+        "uuid": "b955ed10_4932226a",
+        "filename": "xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1000235
+      },
+      "writtenOn": "2019-12-20T16:18:27Z",
+      "side": 1,
+      "message": "I agree with Alexander: we don\u0027t need to explain how signing works.  Instead we should explain which scheme we are using.  How about:\n\nThe following bitbake class picks up the private signing key, signing algorithm (including digest algorithm such as SHA256), creates signatures over selected parts of the image, and adds them to the TAR file it creates:\nhttps://github.com/openbmc/openbmc/blob/master/meta-phosphor/classes/image_types_phosphor.bbclass\n\nThe following bitbake recipe adds the public signing key to the image, for use when validating a firmware image:\nhttps://github.com/openbmc/openbmc/blob/master/meta-phosphor/recipes-phosphor/flash/phosphor-image-signing.bb",
+      "parentUuid": "64f0d377_24934d85",
+      "range": {
+        "startLine": 179,
+        "startChar": 49,
+        "endLine": 179,
+        "endChar": 73
+      },
+      "revId": "9f2f780b9efea25f5dfc07c0ababb9530bc983ff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9adffdf1_db5449cc",
         "filename": "xyz/openbmc_project/Software/README.md",
         "patchSetId": 2

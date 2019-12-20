@@ -1,0 +1,27 @@
+description: >
+    Implement to read or update keyword data in a given VPD record.
+
+methods:
+    - name: WriteKeyword
+      description: >
+          An interface to update the keyword value in a given VPD record.
+      parameters:
+        - name: path
+          type: string
+          description: >
+              path to the VPD record file of the FRU
+        - name: recordName
+          type: string
+          description: >
+              name of the record for which the keyword value
+              has to be modified
+        - name: keyword
+          type: string
+          description: >
+              keyword whose value needs to be updated
+        - name: value
+          type: array[byte]
+          description: >
+              value that needs to be updated for the given keyword
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

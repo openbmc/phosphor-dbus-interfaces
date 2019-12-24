@@ -1,0 +1,19 @@
+description: >
+    Implement to specify Epoch time to power on the Host.
+properties:
+    - name: PowerOnTime
+      type: uint64
+      description: >
+          PowerOnTime is a date time when the host will be
+          powered on. This function is called Timed Power On.
+          The time is the Epoch time, number of seconds since
+          1 Jan 1970 00::00::00 UTC.
+
+          When the PowerOnTime is 0, it means the function
+          Timed Power On is disabled.
+          When the PowerOnTime is smaller than current time,
+          error InvalidTime will be thrown.
+      errors:
+        - xyz.openbmc_project.TimedPowerOn.Error.InvalidTime
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

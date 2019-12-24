@@ -1,0 +1,40 @@
+description: >
+    Implement to schedule Epoch time to power on/off the Host.
+properties:
+    - name: ScheduledTime
+      type: uint64
+      default: 0
+      description: >
+          ScheduledTime is a date time when the host will be
+          powered on/off. The time is the Epoch time, number 
+          of seconds since 1 Jan 1970 00::00::00 UTC.
+
+          When ScheduledTime is 0, it means the function
+          Scheduled Host Transition is disabled.
+          When ScheduledTime is smaller than current time,
+          error InvalidTime will be thrown.
+          When ScheduledTime is past, its value is reset to
+          0 again.
+      errors:
+        - xyz.openbmc_project.ScheduledHostTransition.Error.InvalidTime
+
+    - name: RequestedTransition
+      type: enum[self.Transition]
+      default: 'PowerOn'
+      description: >
+          The desired power transition to support scheduled power on/off.
+          The default operation supports scheduled power on.
+
+enumerations:
+    - name: Transition
+      description: >
+          The desired power transition.
+      values:
+          - name: 'PowerOn'
+            description: >
+                Support scheduled power on.
+          - name: 'PowerOff'
+            description: >
+                Support scheduled power off.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

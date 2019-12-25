@@ -1,0 +1,85 @@
+# Copyright (c) 2019-present Lenovo
+# 
+# Redistribution and use in source and binary forms, with or without 
+# modification, are permitted provided that the following conditions are met:
+#
+# 1. Redistributions of source code must retain the above copyright notice, 
+#    this list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright notice, 
+#    this list of conditions and the following disclaimer in the documentation 
+#    and/or other materials provided with the distribution.
+#
+# 3. Neither the name of the copyright holder nor the names of its contributors 
+#    may be used to endorse or promote products derived from this software without 
+#    specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+description: >
+    Implement to provide PCIe attributes.
+properties:
+    - name: PCIStatus
+      type: enum[self.PCIState]
+      default: ok
+      description: >
+          The state is described in PCI status.
+
+    - name: BusStatus
+      type: enum[self.BusState]
+      default: ok
+      description: >
+          The state is described in Bus status.
+
+    - name: LastBoot
+      type: boolean
+      description: >
+          Whether or not the Last Boot failure is triggered.
+
+enumerations:
+   - name: PCIState
+     description: >
+       The operating pci statuses.
+     values:
+       - name: ok
+         description: >
+           There is no error occurred.
+       - name: PERR
+         description: >
+           PCI PERR detected.
+       - name: SERR
+         description: >
+           PCI SERR detected.
+
+   - name: BusState
+     description: >
+       The operating bus statuses.
+     values:
+       - name: ok
+         description: >
+           There is no error occurred.
+       - name: TimeOut
+         description: >
+           Bus Timeout detected.
+       - name: CE
+         description: >
+           Bus Correct Error detected.
+       - name: UE
+         description: >
+           Bus Uncorrect Error detected.
+       - name: FE
+         description: >
+           Bus Fatal Error detected.
+       - name: Degraded
+         description: >
+           Bus operating in degraded performance state is detected.

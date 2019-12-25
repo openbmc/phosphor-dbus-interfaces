@@ -1,3 +1,7 @@
+# Copyright (c) 2019-present Lenovo
+# 1. Add undefined System Firmware Error and System Firmware Hang event
+# 2. Add undefined Post Error for System Firmware Error event 
+
 description: >
     Implement to indicate progress of ongoing boot.
 
@@ -7,6 +11,17 @@ properties:
       default: Unspecified
       description: >
         Current boot progress
+
+    - name: SysFirmwareErr
+      type: enum[self.PostError]
+      default: None
+      description: >
+        System Firmware Error
+
+    - name: SysFirmwareHang
+      type: boolean
+      description: >
+          Whether or not System Firmware Hang.
 
 enumerations:
    - name: ProgressStages
@@ -31,3 +46,26 @@ enumerations:
        - name: MotherboardInit
          description: >
            Motherboard/Basebord Initialization.
+
+   - name: PostError
+     description: >
+       The system firmware error is asserted.
+     values:
+       - name: None
+         description: >
+           There is no system firmware error.
+       - name: Unspecified
+         description: >
+           Unknown error.
+       - name: NoPhyicalMemory
+         description: >
+           No physical memroy is installed
+       - name: NoUsableMemory
+         description: >
+           No usable memory
+       - name: BoardFailure
+         description: >
+           Unrecoverable system board failure
+       - name: RomCorruption
+         description: >
+           Firmware ROM corruption

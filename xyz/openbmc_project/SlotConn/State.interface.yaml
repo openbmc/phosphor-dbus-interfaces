@@ -1,0 +1,95 @@
+# Copyright (c) 2019-present Lenovo
+# 
+# Redistribution and use in source and binary forms, with or without 
+# modification, are permitted provided that the following conditions are met:
+#
+# 1. Redistributions of source code must retain the above copyright notice, 
+#    this list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright notice, 
+#    this list of conditions and the following disclaimer in the documentation 
+#    and/or other materials provided with the distribution.
+#
+# 3. Neither the name of the copyright holder nor the names of its contributors 
+#    may be used to endorse or promote products derived from this software without 
+#    specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+description: >
+    Implement to provide Slot/Connector attributes.
+properties:
+    - name: DeviceStatus
+      type: enum[self.DeviceState]
+      default: None
+      description: >
+          The state is described in Device status.
+
+    - name: SlotStatus
+      type: enum[self.SlotState]
+      default: None
+      description: >
+          The state is described in Slot status.
+
+    - name: fault
+      type: boolean
+      description: >
+          Whether or not the fault status is asserted.
+
+    - name: identify
+      type: boolean
+      description: >
+          Whether or not the identify status is asserted.
+
+    - name: interlock
+      type: boolean
+      description: >
+          Whether or not the interlock status is asserted.
+
+enumerations:
+   - name: DeviceState
+     description: >
+       The operating device statuses.
+     values:
+       - name: None
+         description: >
+           There is no error occurred.
+       - name: installed
+         description: >
+           Slot/Connector Device installed is detected.
+       - name: readyIn
+         description: >
+           Slot/Connector ready for Device Installation
+       - name: readyRm
+         description: >
+           Slot/Connector ready for Device Removal
+       - name: RmReq
+         description: >
+           Slot/Connector Device Removal Request
+
+   - name: SlotState
+     description: >
+       The operating slot statuses.
+     values:
+       - name: None
+         description: >
+           There is no error occurred.
+       - name: PowerOff
+         description: >
+           Slot power is off.
+       - name: Disable
+         description: >
+           Slot Disable.
+       - name: Spare
+         description: >
+           Slot holds spare device.

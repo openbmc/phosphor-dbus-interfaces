@@ -92,6 +92,12 @@ be in the following states:
               be *Active* but not the primary version.
 6. *Failed* - The `Software.Version` or the storage medium on which it is stored
               has failed.  An event may be recorded with additional details.
+7. *Staged* - The `Software.Version` is in staged flash region. This will be
+              moved from staged flash region to active flash region upon reset.
+              Staged flash region is the designated flash area which is used to
+              store the integrity validated firmware image that comes in during
+              firmware update process. Note that the staged image is not
+              necessarily a functional firmware.
 
 ### Image Apply Time
 

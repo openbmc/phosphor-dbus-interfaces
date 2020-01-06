@@ -1,5 +1,10 @@
 description: >
-    Simple definition of a Software or Firmware version.
+    Simple definition of a Software or Firmware version. Note that this
+    interface may be implemented by D-Bus objects that do not necessarily
+    contain a software level. For example an OpenBMC log may implement this
+    interface to store the software level of the BMC or Host for debug purposes.
+    If looking for real software versions associated with a device then ensure
+    this interface is under the /xyz/openbmc_project/software object path.
 properties:
     - name: Version
       type: string

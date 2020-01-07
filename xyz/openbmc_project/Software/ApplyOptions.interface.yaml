@@ -1,0 +1,11 @@
+description: >
+    To implement the apply options for a newly updated firmware image.
+    The apply options property is global to all firmware update packages.
+properties:
+    - name: ClearConfig
+      type: boolean
+      description: >
+        This property indicates whether to clear the software configurations
+        when the firmware image update is getting applied. A value of true
+        indicates the firmware configurations along with firmware image
+        activation.

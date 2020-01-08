@@ -62,6 +62,15 @@ properties:
       type: boolean
       description: >
           Boolean for to enabling or disabling the ethernet port
+    - name: LinkUp
+      type: boolean
+      flags:
+          - const
+      description: >
+          This property reports the link status for the NIC. The read-only
+          boolean value is TRUE when the network cable is inserted, or there
+          is a carrier signal. It is FALSE when the cable is unplugged, or the
+          carrier signal is missing.
 
 enumerations:
     - name: LinkLocalConf

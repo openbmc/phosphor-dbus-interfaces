@@ -32,5 +32,43 @@ methods:
         description: >
           The PEL data
     errors:
-       - xyz.openbmc_project.Common.Error.InternalFailure
        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+  - name: HostAck
+    description: >
+      Notifies the PEL handler that the host (usually the OS) acked a PEL.
+    parameters:
+      - name: pelID
+        type: uint32
+        description: >
+          The PEL log ID
+    errors:
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
+  - name: HostReject
+    description: >
+      Notifies the PEL handler that the host could not process a PEL.
+    parameters:
+      - name: pelID
+        type: uint32
+        description: >
+          The PEL log ID
+      - name: reason
+        type: enum[self.RejectionReason]
+        description: >
+          The reason the PEL was rejected
+    errors:
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
+enumerations:
+  - name: RejectionReason
+    description: >
+      The reason the PEL was rejected
+    values:
+      - name: BadPEL
+        description: >
+          The PEL was malformed.
+      - name: HostFull
+        description: >
+          The host does not have room for more PELs at this time.
+

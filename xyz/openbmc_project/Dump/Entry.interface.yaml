@@ -13,3 +13,60 @@ properties:
       type: uint64
       description: >
           Size of the Dump.
+    - name: ExternaId
+      type: uint32
+      description: >
+          Id used by the external component which stores the dump
+    - name: Status
+      type: enum[self.Status]
+      description: >
+          Status of the dump.
+    - name: Type
+      type: enum[self.Type]
+      description: >
+          Type of the dump
+    - name: Reason
+      type: enum[self.Reason]
+      description: >
+          Reason behind the creation of the dump.
+
+
+enumerations:
+    - name: Status
+      description: >
+          Status of dump.
+      values:
+        - name: Created
+          description: >
+              A new dump is created
+        - name: OffloadComplete
+          description: >
+              The dump is offloaded
+
+    - name: Type
+      description:
+          Type of the dump
+      values:
+        - name: BmcDump
+          description:
+              A dump created with BMC contents.
+        - name: SystemDump
+          description: >
+              A dump created during a critical failure in the host.
+
+    - name: Reason
+      description: >
+          Reason for the creation of the dump.
+      values:
+        - name: ApplicationCored
+          description: >
+              Dump triggered due to application core.
+        - name: UserRequested
+          description: >
+              Dump triggered by the user.
+        - name: InternalFailure
+          description: >
+              Dump triggered due to InternalFailure type error commit.
+        - name: Checkstop
+          description: >
+              Dump triggered due to Checkstop type error commit.

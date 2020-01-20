@@ -1,0 +1,27 @@
+description: >
+    Implement to notify the creation of new dump.
+    This interface for creating an entry for the dumps got created
+    by some application in the host or in the BMC.
+methods:
+    - name: Notify
+      description: >
+         Create a dump entry based on the parameters.
+      parameters:
+       - name: Type
+         type: enum[xyz.openbmc_project.Dump.Entry.Type]
+         description: >
+            Type of the dump
+       - name: DumpId
+         type: uint32
+         description: >
+            Id of the dump
+       - name: Size
+         type: uint64
+         description: >
+            Size of the dump in KB
+       - name: Reason
+         type: enum[xyz.openbmc_project.Dump.Entry.Reason]
+         description: >
+             Reason behind the creation of the dump.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure

@@ -13,3 +13,27 @@ properties:
       type: uint64
       description: >
           Size of the Dump.
+    - name: Offloaded
+      type: boolean
+      description: >
+          Indicates whether the dump is offloaded to a client.
+          The BMC application which knows the status of the offload
+          operation should set this to true once the entire dump is
+          offloaded.
+    - name: Type
+      type: enum[self.Type]
+      description: >
+          Type of the dump
+
+enumerations:
+
+    - name: Type
+      description:
+          Type of the dump
+      values:
+        - name: BMC
+          description:
+              A dump created with BMC contents.
+        - name: System
+          description: >
+              A dump created during a critical failure in the host.

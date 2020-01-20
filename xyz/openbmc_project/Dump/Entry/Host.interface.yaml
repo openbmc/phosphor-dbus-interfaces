@@ -1,0 +1,17 @@
+description: >
+    Implement to provide properties for dumps stored outside BMC.
+
+    There are dumps which gets created and stored in host memory
+    instead of BMC memory, such dumps will have an id assigned by
+    the host. Implement this interface to implement the management
+    of the dumps which is stored outside the BMC.
+
+properties:
+    - name: SourceDumpId
+      type: uint32
+      description: >
+          The dump id provided by the source of the dump.
+          There are dumps which get generated outside the BMC, like a
+          system dump which gets generated and stored in the host memory.
+          All dumps will have a  unique id  but when communicating
+          to the source of the dump the SourceDumpId will be used.

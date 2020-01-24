@@ -8,6 +8,15 @@ description: >
     xyz.openbmc_project.Object.Delete to allow the deletion of
     individual Dump objects.
 
+methods:
+    - name: InitiateOffload
+      description: >
+         This method initiates the offload of the dump from
+         the dump storage. If there is no exceptions the caller
+         can assume the transfer is successfully initiated.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+
 properties:
     - name: Size
       type: uint64

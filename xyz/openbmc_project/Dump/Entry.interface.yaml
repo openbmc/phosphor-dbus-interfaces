@@ -8,6 +8,21 @@ description: >
     xyz.openbmc_project.Object.Delete to allow the deletion of
     individual Dump objects.
 
+methods:
+    - name: InitiateOffload
+      description: >
+         This method initiates the offload of the dump from the dump storage.
+         The transfer will be initiated to a predefined target. The caller of
+         this function should set up a method to transfer the dump which is
+         implementation-specific. For example, if the transfer is using NBD
+         the caller should setup the NBD with the destination, once the initiate
+         offload is called dump manager or any application responsible for
+         transferring the dump content will start writing to the NBD endpoint.
+         If there is no exceptions the caller can assume the transfer is
+         successfully initiated. Once the transfer is completed the application
+         which is transferring the dump should set offloaded property to true
+         to indicate offload is completed.
+
 properties:
     - name: Size
       type: uint64

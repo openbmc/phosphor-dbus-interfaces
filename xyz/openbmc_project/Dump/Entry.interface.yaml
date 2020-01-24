@@ -8,6 +8,14 @@ description: >
     xyz.openbmc_project.Object.Delete to allow the deletion of
     individual Dump objects.
 
+methods:
+    - name: Get
+      description: >
+         Get the dump from the storage, this method will initiate
+         transfer of the dump.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+
 properties:
     - name: Size
       type: uint64

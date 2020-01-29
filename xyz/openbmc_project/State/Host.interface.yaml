@@ -30,7 +30,17 @@ enumerations:
             Host firmware should be on
         - name: 'Reboot'
           description: >
-            Host firmware should be rebooted
+            Host firmware should be rebooted. Chassis power will be cycled from
+            off to on during this reboot
+        - name: 'GracefulWarmReboot'
+          description: >
+            Host firmware be will notified to shutdown and once complete, the
+            host firmware will be rebooted. Chassis power will remain on
+            throughout the reboot
+        - name: 'ForceWarmReboot'
+          description: >
+            Host firmware will be rebooted without notification and chassis
+            power will remain on throughout the reboot
 
     - name: HostState
       description: >

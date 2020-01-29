@@ -15,6 +15,22 @@ properties:
           It is used to indicate end user what's the max boot number,
           and make sure get command parameter less than it.
 methods:
+    - name: GetPostCodesTS
+      description: >
+          Method to get the cached post codes of the indicated boot cycle.
+      parameters:
+        - name: Index
+          type: uint16
+          description: >
+              Index indicates which boot cycle of post codes is requested.
+      returns:
+        - name: Codes
+          type: dict[string, uint64]
+          description: >
+            An array of post codes and timestamp, time offset in microsecond of one boot cycle 
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: GetPostCodes
       description: >
           Method to get the cached post codes of the indicated boot cycle.
@@ -28,6 +44,12 @@ methods:
           type: array[uint64]
           description: >
             An array of post codes of one boot cycle.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: DeleteAll
+      description: >
+          Method to delete all post codes for all previous boot cycles.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.InvalidArgument

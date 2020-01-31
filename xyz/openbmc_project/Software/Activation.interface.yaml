@@ -1,5 +1,21 @@
 description: >
     Activation state for an associated xyz.openbmc_project.Software.Version.
+methods:
+    - name: Activate
+      description: >
+          Activate the Software.version as per the parameters provided.
+      parameters:
+        - name: RedundancyPriority
+          type: byte
+          description: >
+              The optional byte value indicates the firmware target that's
+              need to be activated. If not specified the default target
+              is activated.
+        - name: ClearConfig
+          type: boolean
+          description: >
+              The optional boolean value indicates to do firmware configuration
+              update along with firmware activate.
 properties:
     - name: Activation
       type: enum[self.Activations]

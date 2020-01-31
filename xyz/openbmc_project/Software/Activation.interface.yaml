@@ -1,5 +1,14 @@
 description: >
     Activation state for an associated xyz.openbmc_project.Software.Version.
+methods:
+    - name: Activate
+      description: >
+          Activate the Software.version as per the parameters provided.
+      parameters:
+        - name: object
+          type: dict[string,variant[byte,boolean]]
+          description: >
+              A dictionary of property names and it's value.
 properties:
     - name: Activation
       type: enum[self.Activations]

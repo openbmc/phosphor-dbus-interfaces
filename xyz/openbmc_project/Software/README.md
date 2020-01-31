@@ -173,9 +173,10 @@ HTTP PUT to `/xyz/openbmc_project/software/`.  *ImageManager* will assign the
 
 Need additional interfaces defined for alternative upload methods.
 
-### Activate a version.
+### Activate a version as per provided parameters.
 
 Modify `RequestedActivation` to *Active* on the desired `Activation`.
+The parameters are optionally used by the activation process as applicable.
 
 ### Switch primary image.
 

@@ -1,5 +1,22 @@
 description: >
     Activation state for an associated xyz.openbmc_project.Software.Version.
+methods:
+    - name: Activate
+      description: >
+        Activate the Software.version as per the parameters provided.
+      parameters:
+        - name: objects
+          type: dict[string, variant[byte,boolean]]
+          description: >
+            A dictionary of optional property names and it's value.
+            Following are properites and its values are optionally 
+            passed to the Activate method.
+            RedudancyPriority -> a byte value indicating the image
+                                 to be activated.
+            ClearConfig -> a boolean value indicating to do update
+                           image configuration during image activation.
+            Setting RequestedActivation property can be deprecated by
+            using this method.
 properties:
     - name: Activation
       type: enum[self.Activations]
@@ -9,6 +26,7 @@ properties:
       type: enum[self.RequestedActivations]
       description: >
         The desired Activation state of the Software.Version.
+        Deprecated, please use Activate method.
 enumerations:
     - name: Activations
       description: >

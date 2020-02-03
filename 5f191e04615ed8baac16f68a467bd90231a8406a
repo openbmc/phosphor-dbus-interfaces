@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "937cd60d_404d4b5f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000312
+      },
+      "writtenOn": "2020-02-03T13:47:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "897914d6_dd1eb287",
+      "range": {
+        "startLine": 7,
+        "startChar": 9,
+        "endLine": 7,
+        "endChar": 19
+      },
+      "revId": "5f191e04615ed8baac16f68a467bd90231a8406a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f88dc8b7_4b44f22e",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2020-02-03T10:37:23Z",
       "side": 1,
       "message": "Certain properties like ApplyOptions, Priority is required when activating an image. In order to better reflect the interfaces exposure time and activating the same in proper manner, use Activate method to initiate Activation by providing the properties as parameters",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 52
+      },
+      "revId": "5f191e04615ed8baac16f68a467bd90231a8406a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4beda85_81df8203",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000312
+      },
+      "writtenOn": "2020-02-03T13:47:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f88dc8b7_4b44f22e",
       "range": {
         "startLine": 9,
         "startChar": 0,
@@ -65,6 +113,24 @@
     },
     {
       "key": {
+        "uuid": "ec80a9c8_ee3fcc28",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000312
+      },
+      "writtenOn": "2020-02-03T13:47:27Z",
+      "side": 1,
+      "message": "i described it as later way, that is as 2 parameters to the method instead of specifying interfaces as well.",
+      "parentUuid": "32ca141f_dacc2c36",
+      "revId": "5f191e04615ed8baac16f68a467bd90231a8406a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f661af09_ffce6447",
         "filename": "xyz/openbmc_project/Software/README.md",
         "patchSetId": 1
@@ -76,6 +142,24 @@
       "writtenOn": "2020-02-03T10:37:23Z",
       "side": 1,
       "message": "this must indicate as next option to provide the Activate a version. \ni meant, \n1. Modify RequestedActivation to *Active*\n2. Call Activate method to *Activate* the firmware version with optional parameters as needed.",
+      "revId": "5f191e04615ed8baac16f68a467bd90231a8406a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f25a152_90c0d317",
+        "filename": "xyz/openbmc_project/Software/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1000312
+      },
+      "writtenOn": "2020-02-03T13:47:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f661af09_ffce6447",
       "revId": "5f191e04615ed8baac16f68a467bd90231a8406a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false

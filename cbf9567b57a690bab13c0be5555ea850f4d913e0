@@ -70,6 +70,30 @@
       "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f6b74a34_c83e604a",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-04T23:26:47Z",
+      "side": 1,
+      "message": "As I think about it more, I wonder why we ever added this enumeration.  All software versions should be associated to an inventory item anyhow.  Isn\u0027t that all you need for querying at an application level?\n\nThere is quite a trend in servers right now of adding CPLDs, FPGAs, and micro-controllers to do \"special\" functionality.  There are already a number of items in most servers that aren\u0027t in this list, not to mention specialized things like GPUs, NCSI-NICs, and custom accelerators, all of which could be updated by the BMC.  Between Intel (ME) and IBM (OCC) we even have items that perform very similar function but with different names.  My worry if we go down this path is that the list of enumerations is going to be quite large to the point it makes utilizing it in a useful way in a GUI pretty useless.\n\nI wonder when PSU was added and what the rationale / current use for it is.  I\u0027ll have to do some investigation.",
+      "parentUuid": "7497cfdb_25b8c5d1",
+      "range": {
+        "startLine": 38,
+        "startChar": 45,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

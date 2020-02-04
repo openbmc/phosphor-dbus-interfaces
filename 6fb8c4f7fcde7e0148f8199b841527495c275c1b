@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "517d5aa0_8614545c",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-02-04T05:57:56Z",
+      "side": 1,
+      "message": "The interface was using `RequestedActivation` to do the \"activate\u0027 operation.\nSo I was expecting the `RedundancyPriority` and `ClearConfig` to be the properties of this interface, instead of the method parameters.\n\nBy adding this method, the interface will have two ways to do the \"activation\", which we should avoid.",
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "efe521e2_6f2724b9",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 3

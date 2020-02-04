@@ -22,6 +22,30 @@
       "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c6b24e50_c66e0ad1",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-04T18:41:16Z",
+      "side": 1,
+      "message": "I wonder if at some point we should consider making {\"Other\" + a free form string} as the desired direction for everything except BMC / Host.  There are a lot of entities that have upgradable firmware which the BMC might be responsible for and it could get quite absurd to have an enum for each of them.",
+      "parentUuid": "87ecab80_e5596043",
+      "range": {
+        "startLine": 38,
+        "startChar": 45,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

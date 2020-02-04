@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "a3762b94_62b067ba",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-02-04T06:29:27Z",
+      "side": 1,
+      "message": "So eventually this change will break existing code (involves bmcweb/webui).\nI think we should be very careful about such changes.\n\n\u003e The problem with old approach is (before RequestedActivation, other properties must be set, and in that case, we need to differentiate the state of the object as the property value during that time, will not be applicable or will convey different meaning, till RequestedActivtion is applied. With method approach, this can also be avoided.\n\nI am not following.\nDo you mean the `RedundancyPriority` and `ClearConfig` are not really the properties of an activation object?\nI am not sure for what `RedundancyPriority` is used here, but for `ClearConfig`, it could be explained as a property of activation, to indicate that if this is to be activated, the config shall be cleared.",
+      "parentUuid": "4eda38aa_f1efa23e",
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "efe521e2_6f2724b9",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 3
@@ -81,6 +99,29 @@
       "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9538cc95_b9abf84a",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-02-04T06:29:27Z",
+      "side": 1,
+      "message": "Is it a value of the target priority to replace?\nE.g. if the system has 3 versions, one with priority 0 which is the running software;\nthe others with priority 1 and 2, which are the backup software.\n\nAnd when this RedundancyPriority is set to 1, it is going to replace the one with priority 1, and when it\u0027s set to 0, it is going to replace the running software?\n\n(I am not sure if the running software could be \"erased and updated\")",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 13,
+        "endChar": 27
+      },
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

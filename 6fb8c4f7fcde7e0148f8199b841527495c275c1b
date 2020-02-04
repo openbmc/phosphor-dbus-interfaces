@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "37b4a6c6_765980d6",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-02-04T06:32:50Z",
+      "side": 1,
+      "message": "An off-topic discussion:\nWhen I was first using the phosphor-dbus-interfaces, I remembered that someone suggested that it\u0027s encouraged to use properties instead of methods. I do not remember who made this suggestion. But if you see existing interfaces, we do use properties a lot to express actions, e.g. RequestedActivation, RequestedBMCTransition, etc.\n\n@Patrick @Brad @Adriana do you know the history?",
+      "parentUuid": "a3762b94_62b067ba",
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "efe521e2_6f2724b9",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 3

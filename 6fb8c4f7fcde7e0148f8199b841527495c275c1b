@@ -57,6 +57,30 @@
       "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "267cf0f5_3fcdd353",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000312
+      },
+      "writtenOn": "2020-02-04T06:15:30Z",
+      "side": 1,
+      "message": "I presumed, if there are no params are passed the activate happens on the default firmware target i.e with redundancy priority \u00270\u0027. I will change it back to Dict to be consistent and compatible to older approach as well.",
+      "parentUuid": "efe521e2_6f2724b9",
+      "range": {
+        "startLine": 12,
+        "startChar": 36,
+        "endLine": 13,
+        "endChar": 27
+      },
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

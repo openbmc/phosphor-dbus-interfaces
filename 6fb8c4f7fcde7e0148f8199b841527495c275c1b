@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "b5e4b215_dfe9a05b",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-02-04T08:39:29Z",
+      "side": 1,
+      "message": "yes, that\u0027s correct expectation Lei, as long as the value act like a attribute and used to change, property makes sense. (Because keeping it as property allows us to get the PropertiesChanged signal and easier to maintain the state value). \n\nBut in this case, with (more values to be set), using property will not be a good one, and better to switch to method based one. (esp, the order of property change will be a troublesome to maintain).\n\n@Patrick, earlier we discussed the same in IRC (just thought of refreshing your memory :) ).",
+      "parentUuid": "37b4a6c6_765980d6",
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "efe521e2_6f2724b9",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 3

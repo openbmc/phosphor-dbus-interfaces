@@ -127,6 +127,24 @@
     },
     {
       "key": {
+        "uuid": "2c7cb88c_9fba0419",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2020-02-05T19:49:19Z",
+      "side": 1,
+      "message": "We could stage the migration, make this method a no-op in the *-code-mgmt repos for now, implement the method as time permits, maybe Vikram can help, then move bmcweb and any other repo calling RequestedActivation to this new method, and finally deprecate it.",
+      "parentUuid": "a7f952c3_74ac67e2",
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "efe521e2_6f2724b9",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 3
@@ -194,6 +212,30 @@
       "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4dc32538_07d60f26",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2020-02-05T19:49:19Z",
+      "side": 1,
+      "message": "One you change it back to dict, maybe would be good to have a comment of example supported properties, like saying that the are under xyz/openbmc_project/Software",
+      "parentUuid": "267cf0f5_3fcdd353",
+      "range": {
+        "startLine": 12,
+        "startChar": 36,
+        "endLine": 13,
+        "endChar": 27
+      },
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

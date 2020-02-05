@@ -166,6 +166,30 @@
       "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8597e4f_78de591a",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-02-05T04:21:49Z",
+      "side": 1,
+      "message": "\u003e Couldn\u0027t this also have been solved via the association to an Inventory or State.Host object?\n\nThe association is created *after* BMC/PNOR code manager handles the uploaded image, and it *depends* on the VersionPurpose to tell which (BMC or Host) the image is for.\n\n\u003e We may have two different PSUs that are accepted by a single server (two different manufacturers).  The \"VersionPurpose\u003dPSU\" doesn\u0027t actually tell you that the image works for the particular PSU that phosphor-psu-code-mgmt happens to support.\n\nThe VersionPurpose\u003dPSU only tells the image is for PSU, and phosphor-psu-code-mgmt will check the PSU *model* and *manufacture* to see which PSUs in the systems matches the uploaded PSU image, where the information is put in `ExtendedVersion`.\nThe phosphor-psu-code-mgmt already handles such case.\n\nYou could see the related information in design doc https://github.com/openbmc/docs/blob/master/designs/psu-firmware-update.md#update-by-api :\n\n\u003e The \"Version\" interface needs to be extended:\n\u003e Add a new VersionPurpose for PSU;\n\u003e Re-use the existing ExtendedVersion as an additional string for vendor-specific purpose, e.g. to indicate the PSU model.\n\nSuch information (PSU model and manufacture) is put in the MANIFEST by the generate-psu-tar tool (see usage in https://github.com/openbmc/phosphor-psu-code-mgmt#psu-update)\n\n\u003e I\u0027m suspect it is possible even the \"Purpose\u003dME\" will fail in the multi-host case because we can have two different hosts managed by the same BMC with different processor generations (ie. \"Recent Lake\" and \"Older Lake\")\n\nThe \"VersionPurpose\" is to tell the category of the uploaded image, e.g. ME.\nTo tell which ME host, you could re-use the `ExtendedVersion` to indicate which \"Recent Lake\" or \"Older Lake\", or you could introduce additional property for such information.",
+      "parentUuid": "e4a799d6_f73cd623",
+      "range": {
+        "startLine": 38,
+        "startChar": 45,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

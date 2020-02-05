@@ -142,6 +142,30 @@
       "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4a799d6_f73cd623",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-05T03:51:43Z",
+      "side": 1,
+      "message": "Thanks Lei for responding with the background.\n\n\u003e This enum was used by code managers (e.g. BMC/PNOR) to know which kind of software tarball is uploaded, where the tarball contains a MANIFEST that declares the VersionPurpose.\n\n\u003e The existing BMC/PNOR code manager then will check the purpose and know if it shall handle the uploaded image or not.\n\nCouldn\u0027t this also have been solved via the association to an Inventory or State.Host object?\n\n\u003e With the newly added enum, phosphor-psu-code-mgmt could simply query the VersionPurpose for PSU image.\n\nThere is in my opinion a serious design flaw with this line of thought.  We may have two different PSUs that are accepted by a single server (two different manufacturers).  The \"VersionPurpose\u003dPSU\" doesn\u0027t actually tell you that the image works for the particular PSU that phosphor-psu-code-mgmt happens to support.  This is even more serious when you consider \"VersionPurpose\u003dHost\" because we have multi-host servers that can support multiple servers / architectures (think of a \"blade center\" like chassis).\n\nI personally think we made a mistake when we introduced this property even before PSU existed and we shouldn\u0027t continue in this direction.  Associations to real objects are the only fully-expressive way to express \"this software blob is applicable to this thing\".\n\nI\u0027m suspect it is possible even the \"Purpose\u003dME\" will fail in the multi-host case because we can have two different hosts managed by the same BMC with different processor generations (ie. \"Recent Lake\" and \"Older Lake\").",
+      "parentUuid": "ebe92d40_72b4f8ef",
+      "range": {
+        "startLine": 38,
+        "startChar": 45,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

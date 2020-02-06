@@ -214,6 +214,30 @@
       "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0612a695_5471523c",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-06T18:32:51Z",
+      "side": 1,
+      "message": "\u003e The association is created *after* BMC/PNOR code manager handles the uploaded image, and it *depends* on the VersionPurpose to tell which (BMC or Host) the image is for.\n\nGot it.  I think I remember this now.  One service handles the image uploading and another handles the activation / inventory association.\n\n\u003e The VersionPurpose\u003dPSU only tells the image is for PSU, and phosphor-psu-code-mgmt will check the PSU *model* and *manufacture* to see which PSUs in the systems matches the uploaded PSU image, where the information is put in `ExtendedVersion`.\n\nBut you could have checked VersionPurpose\u003dOTHER and done the *exact* same ExtendedVersion analysis.  Having VersionPurpose\u003dPSU is a trivial optimization for something that happens so infrequently (listening to signals for all VersionPurpose\u003dOTHER images that are uploaded vs listening specifically for VersionPurpose\u003dPSU).  I don\u0027t see the need for that optimization.\n\nIt is clear here that we need to rely on ExtendedVersion to determine how the image can be applied.  Maybe we should just come up with standards on ExtendedVersion\u0027s format?  Even if we don\u0027t and leave it implementation dependent, you haven\u0027t convinced me that VersionPurpose\u003dPSU (or \u003dME) is providing any meaningful enhancement here.",
+      "parentUuid": "43dd7295_83c1ffd5",
+      "range": {
+        "startLine": 38,
+        "startChar": 45,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

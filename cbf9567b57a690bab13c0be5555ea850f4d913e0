@@ -238,6 +238,30 @@
       "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5cdf4e24_2faa847c",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-02-07T06:03:47Z",
+      "side": 1,
+      "message": "\u003e But you could have checked VersionPurpose\u003dOTHER and done the *exact* same ExtendedVersion analysis.  Having VersionPurpose\u003dPSU is a trivial optimization for something that happens so infrequently (listening to signals for all VersionPurpose\u003dOTHER images that are uploaded vs listening specifically for VersionPurpose\u003dPSU).  I don\u0027t see the need for that optimization.\n\nIt\u0027s true, but there is another consideration.\nHaving specific VersionPurpose makes an \"activation\" more specific, and it makes it easier to query.\nFor example, if someone would like to get all the PSU softwares via Redfish, bmcweb could run a mapper call to find all objects that implement Version interface with `PSU` property.\nThe same for ME.\nIf we use `OTHER`, bmcweb will have to get all softwares with `OTHER` property, and having extra code to tell which associations it has, and tell which type the software is.\nSo why not add specific types here? Eventually, we could have BMC, Host, System (as bundle), PSU, ME, CPLD, ACCELERATOR, etc. And they look clear and straightforward.\n\n\u003e It is clear here that we need to rely on ExtendedVersion to determine how the image can be applied.  Maybe we should just come up with standards on ExtendedVersion\u0027s format? Even if we don\u0027t and leave it implementation dependent\n\nYeah, we could discuss about this in the mailing list.\nCurrently, ExtendedVersion is used by OpnePOWER\u0027s PNOR version and PSU version. They use a different format for now.\n\n\u003e you haven\u0027t convinced me that VersionPurpose\u003dPSU (or \u003dME) is providing any meaningful enhancement here.\n\nSee the above usage about querying softwares.",
+      "parentUuid": "0612a695_5471523c",
+      "range": {
+        "startLine": 38,
+        "startChar": 45,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

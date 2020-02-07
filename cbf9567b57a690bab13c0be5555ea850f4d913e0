@@ -262,6 +262,30 @@
       "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e050ad9a_8ba3571f",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T16:15:38Z",
+      "side": 1,
+      "message": "\u003e If we use `OTHER`, bmcweb will have to get all softwares with `OTHER` property, and having extra code to tell which associations it has, and tell which type the software is.\nSo why not add specific types here? Eventually, we could have BMC, Host, System (as bundle), PSU, ME, CPLD, ACCELERATOR, etc. And they look clear and straightforward.\n\nThat isn\u0027t even an extensive list though.  Where does it stop?  It\u0027s a pretty big burden on bmcweb to have to keep adding new categories.  Associations solve this, which is partially why the exist.  The inventory object already tells you what it is so you can display it to the user.\n\nWe\u0027re missing VR, TPMs, PFR (or OpenTitan-like alternatives).  We haven\u0027t specified the OCC firmware for Power servers, which provides very similar functionality to the ME, not to mention whatever ARM servers have.  CPLD doesn\u0027t really even tell you anything because we have some boards with multiple CPLDs.  Usually people are using this as referring to the power sequencer.  Water cooled servers might have a water pump controller.  GPUs and accelerators often have both a micro-controller (ala ME/OCC) and core chip firmware plus someone is going to want to break out GPU and ML accelerators into two separate categories.  NCSI NICs have firmware.  NVMe drives have firmware.  Facebook\u0027s multi-host servers have something called a BIC (bridge-IC) that acts like a mini-BMC on each host sled.  I\u0027m sure I\u0027m missing a few, but these are *just* the things that exist *today*.\n\nI don\u0027t understand what we\u0027re going to decide to make \"first class\" citizens, like BMC/Host, and what is going to be \"other\", but adding all of these as first class is going to be a nightmare.",
+      "parentUuid": "5cdf4e24_2faa847c",
+      "range": {
+        "startLine": 38,
+        "startChar": 45,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

@@ -286,6 +286,30 @@
       "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0fb39caa_57a04b7b",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-02-10T03:21:55Z",
+      "side": 1,
+      "message": "\u003e That isn\u0027t even an extensive list though.  Where does it stop?  It\u0027s a pretty big burden on bmcweb to have to keep adding new categories.  Associations solve this, which is partially why the exist.  The inventory object already tells you what it is so you can display it to the user.\n\nCould you elaborate on how associations solve this?\n\nFrom what I know, association is just a link to a DBus object path. E.g.\n /xyz/openbmc_project/softwares/abcdefgh\nhas an association to\n /xyz/openbmc_project/inventory/system/chassis/foo/bar\n\nHow do you tell what type the software is?\nYou either query the interfaces implemented by the software or the inventory D-Bus object.\n\nSo from bmcweb perspective, to query the softwares of ME:\n* If we have VersionPurpose\u003dME, it simply does the query;\n* If we only have VersionPurpose\u003dOthers, it needs to query for all softwares, get the associations, and query the interfaces of the associated object, and see if there is something like Inventory.Item.ME.\n\nThe latter seems more burdensome.\n\n\u003e I don\u0027t understand what we\u0027re going to decide to make \"first class\" citizens, like BMC/Host, and what is going to be \"other\", but adding all of these as first class is going to be a nightmare.\n\nFor now, I think it\u0027s reasonable to add items used regularly in systems, such as BMC/Host/PSU/ME (OCC is part of PNOR). When we have further items, we could discuss then to see if a refactor is needed or not.\n\nI would give +1 to this patch as long as @Richard\u0027s comment is fixed (to describe what the ME is).\nLet\u0027s see how others think about this.",
+      "parentUuid": "e050ad9a_8ba3571f",
+      "range": {
+        "startLine": 38,
+        "startChar": 45,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

@@ -145,6 +145,24 @@
     },
     {
       "key": {
+        "uuid": "f241822d_d41e54d6",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000312
+      },
+      "writtenOn": "2020-02-11T10:49:34Z",
+      "side": 1,
+      "message": "Yes, we will eventually need to deprecate \u0027RequestedActivation\u0027. I will submit the changes in phosphor-bmc-code-mgmt and bmcweb soon.",
+      "parentUuid": "2c7cb88c_9fba0419",
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "efe521e2_6f2724b9",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 3
@@ -236,6 +254,54 @@
       "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e9ac860c_cf6825ba",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000312
+      },
+      "writtenOn": "2020-02-11T10:49:34Z",
+      "side": 1,
+      "message": "Currently we are in need of using \u0027RedundancyPriority\u0027 property under Software during image Activation in the method. The other property \u0027ClearConfig\u0027 is not going to be stored under Software.",
+      "parentUuid": "4dc32538_07d60f26",
+      "range": {
+        "startLine": 12,
+        "startChar": 36,
+        "endLine": 13,
+        "endChar": 27
+      },
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ebb52cae_90c8f3d6",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000312
+      },
+      "writtenOn": "2020-02-11T10:49:34Z",
+      "side": 1,
+      "message": "Yes, we actually have a use case where we support updating and activating a running image (priority \u00270\u0027), we  have already introduced \u0027Staged\u0027 image state for this purpose, which gives a transitional state for any \u0027Ready\u0027 to activate image which can go selected priority image.",
+      "parentUuid": "9538cc95_b9abf84a",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 13,
+        "endChar": 27
+      },
+      "revId": "6fb8c4f7fcde7e0148f8199b841527495c275c1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

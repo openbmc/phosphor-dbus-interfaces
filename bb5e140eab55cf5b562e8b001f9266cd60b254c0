@@ -16,6 +16,24 @@
       "revId": "bb5e140eab55cf5b562e8b001f9266cd60b254c0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5d6f633_a282c8fd",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000312
+      },
+      "writtenOn": "2020-02-12T09:54:04Z",
+      "side": 1,
+      "message": "This is new approach we are trying. Yes, dicts are chosen since the parameters are optional. With this method, the no.of parameters and its types can be varied as per each OEM\u0027s requirements. For e.g: now we want to send both priority value and clearconfig bool to the method, later in future we might need to pass any other parameters that\u0027s needed for activation.\nWe don\u0027t want to limit or confine the Activation process to one\u0027s design specific.",
+      "parentUuid": "6dc46a5b_dff57bd2",
+      "revId": "bb5e140eab55cf5b562e8b001f9266cd60b254c0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

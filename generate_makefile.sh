@@ -19,6 +19,10 @@ ${i%.interface.yaml}/server.hpp: ${i}
 	@mkdir -p \`dirname \$@\`
 	\$(SDBUSPLUSPLUS) -r \$(srcdir) interface server-header ${iface} > \$@
 
+${i%.interface.yaml}/client.hpp: ${i}
+	@mkdir -p \`dirname \$@\`
+	\$(SDBUSPLUSPLUS) -r \$(srcdir) interface client-header ${iface} > \$@
+
 MAKEFILE
 
 done
@@ -63,19 +67,30 @@ for e in ${errors};
 do
     echo "	${e%.errors.yaml}/error.hpp\\"
 done
+echo
 
+echo "libphosphor_dbus_client_hpp_SOURCES = \\"
+for i in ${interfaces};
+do
+    echo "	${i%.interface.yaml}/client.hpp \\"
+done
 echo
 
 cat << MAKEFILE
 libphosphor_dbus.cpp: \$(libphosphor_dbus_cpp_SOURCES)
 	cat \$^ > \$@
 
-nobase_include_HEADERS = \$(libphosphor_dbus_hpp_SOURCES)
+libphosphor_dbus_client.hpp: \$(libphosphor_dbus_client_hpp_SOURCES)
+	cat \$^ > \$@
+
+nobase_include_HEADERS = \$(libphosphor_dbus_hpp_SOURCES) \\
+                         \$(libphosphor_dbus_client_hpp_SOURCES)
 
 .PHONY: clean-dbus
 clean-dbus:
 	for i in \$(libphosphor_dbus_cpp_SOURCES) \\
-	         \$(libphosphor_dbus_hpp_SOURCES); \\
+	         \$(libphosphor_dbus_hpp_SOURCES) \\
+	         \$(libphosphor_dbus_client_hpp_SOURCES); \\
 	do \\
 	    test -e \$\$i && rm \$\$i ; \\
 	    test -d \`dirname \$\$i\` && rmdir -p \`dirname \$\$i\` ; \\

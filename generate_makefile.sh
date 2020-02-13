@@ -19,6 +19,10 @@ ${i%.interface.yaml}/server.hpp: ${i}
 	@mkdir -p \`dirname \$@\`
 	\$(SDBUSPLUSPLUS) -r \$(srcdir) interface server-header ${iface} > \$@
 
+${i%.interface.yaml}/common-include.hpp: ${i}
+	@mkdir -p \`dirname \$@\`
+	\$(SDBUSPLUSPLUS) -r \$(srcdir) interface common-header ${iface} > \$@
+
 MAKEFILE
 
 done
@@ -63,18 +67,28 @@ for e in ${errors};
 do
     echo "	${e%.errors.yaml}/error.hpp\\"
 done
+echo
 
+echo "libphosphor_dbus_common_header_SOURCES = \\"
+for i in ${interfaces};
+do
+    echo "	${i%.interface.yaml}/common-include.hpp \\"
+done
 echo
 
 cat << MAKEFILE
 libphosphor_dbus.cpp: \$(libphosphor_dbus_cpp_SOURCES)
 	cat \$^ > \$@
 
-nobase_include_HEADERS = \$(libphosphor_dbus_hpp_SOURCES)
+libphosphor_dbus_common.hpp: \$(libphosphor_dbus_common_header_SOURCES)
+	cat \$^ > \$@
+
+nobase_include_HEADERS = \$(libphosphor_dbus_hpp_SOURCES) libphosphor_dbus_common.hpp
 
 .PHONY: clean-dbus
 clean-dbus:
 	for i in \$(libphosphor_dbus_cpp_SOURCES) \\
+	         \$(libphosphor_dbus_common_header_SOURCES) \\
 	         \$(libphosphor_dbus_hpp_SOURCES); \\
 	do \\
 	    test -e \$\$i && rm \$\$i ; \\

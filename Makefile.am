@@ -8,8 +8,8 @@ libphosphor_dbus_LTLIBRARIES = libphosphor_dbus.la
 libphosphor_dbus_la_LDFLAGS = $(SYSTEMD_LIBS) $(SDBUSPLUS_LIBS) -version-info 0:0:0 -shared
 libphosphor_dbus_la_CXXFLAGS = $(SYSTEMD_CFLAGS) $(SDBUSPLUS_CFLAGS) -flto
 
-BUILT_SOURCES = libphosphor_dbus.cpp
-CLEANFILES = libphosphor_dbus.cpp
+BUILT_SOURCES = libphosphor_dbus.cpp libphosphor_dbus_common.hpp
+CLEANFILES = libphosphor_dbus.cpp libphosphor_dbus_common.hpp
 
 pkgconfiglibdir = ${libdir}/pkgconfig
 pkgconfiglib_DATA = phosphor-dbus-interfaces.pc

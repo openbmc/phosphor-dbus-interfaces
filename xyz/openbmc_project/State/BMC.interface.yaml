@@ -22,6 +22,16 @@ properties:
         The last time at which the BMC came out of a reboot as
         determined by its uptime, in epoch time, in milliseconds.
 
+   - name: ModularBMCMode
+     type: enum[self.ModularMode]
+     description: >
+        The current BMC mode in Modular systems.
+
+   - name: ModularBMCRole
+     type: enum[self.ModularRole]
+     description: >
+        The current BMC role in Modular system.
+
 enumerations:
    - name: Transition
      description: >
@@ -49,3 +59,32 @@ enumerations:
            UpdateInProgress implies BMC is in firmware update mode. CurrentBMCState
            will be set to "UpdateInProgress" while starting image download and
            reset to Ready, once activation is done or error case during update process.
+
+   - name: ModularMode
+     description: >
+       The current BMC mode in Modular systems.
+     values:
+       - name: 'Standalone'
+         description: >
+           BMC currently is working in partitioned mode. In this mode BMC will
+           work as normal.
+       - name: 'FourSocket'
+         description: >
+           BMC currently is working in 4 socket mode. In this mode, one BMC
+           will work as a master and another BMC will work as a slave. And
+           master BMC  is responsible for management of system level resources.
+       - name: 'EightSocket'
+         description: >
+           BMC currently is working in 8 socket mode. In this mode, one BMC
+           will work as a master and three other BMCs will work as slaves.
+
+   - name: ModularRole
+     description: >
+       The current BMC role in Modular systems.
+     values:
+       - name: 'Master'
+         description: >
+           BMC now is working as a master in 4S or 8S mode.
+       - name: 'Slave'
+         description: >
+           BMC now is working as a slave in 4S or 8S mode.

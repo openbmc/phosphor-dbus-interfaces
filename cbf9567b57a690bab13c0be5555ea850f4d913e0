@@ -358,6 +358,30 @@
       "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a7ba3f39_d02ed2d8",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-18T22:00:41Z",
+      "side": 1,
+      "message": "\u003e If we only have VersionPurpose\u003dOthers, it needs to query for all softwares, get the associations, and query the interfaces of the associated object, and see if there is something like Inventory.Item.ME.\n\nGenerally you\u0027d do the association the other direction.  If I\u0027m looking for software that is applicable to a ME, find the ME then look at its associations.  It is just a 2 step process.\n\nVersionPurpose\u003dME is honestly a short-sighted shortcut.  We have blade-like servers which could have different processor families, with different ME versions.  Having VersionPurpose\u003dME doesn\u0027t even tell me if that image can be applied to *this* ME.\n\n\u003e For now, I think it\u0027s reasonable to add items used regularly in systems, such as BMC/Host/PSU/ME (OCC is part of PNOR). When we have further items, we could discuss then to see if a refactor is needed or not.\n\nI don\u0027t see how the other items I listed aren\u0027t \"regularly in systems\" though.  FB\u0027s OpenBMC already supports updating the VRs, NICs, and CPLD.",
+      "parentUuid": "f1ce88d3_4582f9e2",
+      "range": {
+        "startLine": 38,
+        "startChar": 45,
+        "endLine": 38,
+        "endChar": 47
+      },
+      "revId": "cbf9567b57a690bab13c0be5555ea850f4d913e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

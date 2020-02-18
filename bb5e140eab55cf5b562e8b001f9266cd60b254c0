@@ -34,6 +34,24 @@
       "revId": "bb5e140eab55cf5b562e8b001f9266cd60b254c0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0bee855c_f193bf1b",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-18T18:49:24Z",
+      "side": 1,
+      "message": "My concern with this approach is much broader than this specific feature.  If we start to allow dynamic fields like this, there is no way to document and statically confirm what are valid.  \n\nOne of the reasons we moved away from a dynamic language like Python was because we kept running into maintenance issues where one part of the code would change and you couldn\u0027t tell until you exercised that code path.  With dynamic properties like this we have no way to know if a particular client/server combination of this dbus interface will work together without runtime tests, and we don\u0027t have a good runtime testing framework that is supported by all machines.",
+      "parentUuid": "d5d6f633_a282c8fd",
+      "revId": "bb5e140eab55cf5b562e8b001f9266cd60b254c0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

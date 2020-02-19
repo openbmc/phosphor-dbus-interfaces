@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "278cf471_8de2f883",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-19T16:29:15Z",
+      "side": 1,
+      "message": "The only options we have are:\n\n- Dynamic parameters via dict (current proposal).\n- New functions for different parameter requirements.\n   - https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/28880 is sort of doing this.\n- Additional properties either here or in new [optional] interfaces.\n\nWe could also request a feature to sdbusplus to allow defaulted parameters, but since we don\u0027t have a generated client binding this isn\u0027t all that helpful yet.\n\n----\n\nIn my reading of the history of this commit, these seem to be optional properties that will only be used by specific implementations.  My personal preference would be we make new optional interfaces that hold the property and can be implemented just by the implementations that require them.\n\nEx. xyz/openbmc_project/Software/Activation/ClearConfig.interface.yaml with a single property ClearConfig that can be implemented on BMC and Host update providers but not on PSU.",
+      "parentUuid": "68c0c753_355e3d67",
+      "revId": "bb5e140eab55cf5b562e8b001f9266cd60b254c0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f5b03407_05cf8a5b",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 6

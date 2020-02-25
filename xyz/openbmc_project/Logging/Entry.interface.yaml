@@ -33,6 +33,13 @@ properties:
           this error log has been resolved. This will start out 'false' by
           default. Setting this to 'true' will NOT result in the error log being
           deleted.
+    - name: UpdateTimestamp
+      type: uint64
+      description: >
+          The timestamp when any property was last modified.  As only the
+          Resolved property has a reason to change, a value that doesn't
+          match the Timestamp property's value (which indicates when the
+          log was created) would indicate that Resolved was changed.
 
 enumerations:
     - name: Level

@@ -1,2 +1,65 @@
 description: >
     Implement to provide CPU attributes.
+properties:
+    - name: Socket
+      type: string
+      description: >
+          Processor Socket designation on MotherBoard.
+    - name: Type
+      type: enum[self.Type]
+      description: >
+          Processor Type of CPU.
+    - name: Family
+      type: string
+      description: >
+          Processor Family of CPU.
+    - name: Id
+      type: uint64
+      description: >
+          This Processor ID field contains processor-specific information
+          that describes the processor's features. Refer to DMTF DSP0134
+          Section 7.5.3 for details.
+    - name: MaxSpeedInMhz
+      type: uint32
+      description: >
+          Max Speed in megahertz the CPU can support.
+    - name: Characteristics
+      type: dict[string, boolean]
+      description: >
+          The set of boolean flags for processor's capability, such as
+          64-bit Capable, Multi-Core, Hardware Thread, Execute Protection,
+          Ehanced Virtualization, Power/Performance Control,
+          128-bit Capable etc.
+    - name: CoreCount
+      type: uint16
+      description: >
+          The number of cores in the processor.
+    - name: ThreadCount
+      type: uint16
+      description: >
+          The maximum number of threads the processor can support.
+
+enumerations:
+    - name: Type
+      description: >
+          Processor Type. The enumeration values are based off DMTF DSP0134
+          specification.
+      values:
+        - name: Other
+          description: >
+              Some devices which are not defined in this table.
+        - name: Unknown
+          description: >
+              Unknown or invalid device.
+        - name: Central
+          description: >
+              Central Processor.
+        - name: Math
+          description: >
+              Math Processor.
+        - name: DSP
+          description: >
+              DSP Processor.
+        - name: Video
+          description: >
+              Video Processor.

@@ -144,6 +144,24 @@
     },
     {
       "key": {
+        "uuid": "6f2c540e_2043fd2d",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-02-25T17:22:50Z",
+      "side": 1,
+      "message": "what data you are looking for? I thought we don\u0027t need any data as in theory need to set 3 property in our case. Also before #3, 1 \u0026 2 must be set (ordering is also needed).\n1. Priority\n2. clear config\n3. RequestedStateTransition\n\nwith method, it is one D-Bus call.",
+      "parentUuid": "9601f66a_bf790a69",
+      "revId": "bb5e140eab55cf5b562e8b001f9266cd60b254c0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f5b03407_05cf8a5b",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 6

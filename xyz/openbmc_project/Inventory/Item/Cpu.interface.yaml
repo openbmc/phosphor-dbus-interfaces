@@ -1,4 +1,69 @@
 description: >
     Implement to provide CPU attributes.
+properties:
+    - name: ProcessorSocket
+      type: string
+      description: >
+          Processor Socket designation on MotherBoard.
+    - name: ProcessorType
+      type: enum[self.Type]
+      description: >
+          Processor Type of CPU.
+    - name: ProcessorFamily
+      type: string
+      description: >
+          Processor Family of CPU.
+    - name: ProcessorManufacturer
+      type: string
+      description: >
+          Processor Manufacturer of CPU.
+    - name: ProcessorId
+      type: uint32
+      description: >
+          Processor ID of CPU.
+    - name: ProcessorVersion
+      type: string
+      description: >
+          Processor Version of CPU.
+    - name: ProcessorMaxSpeedInMhz
+      type: uint16
+      description: >
+          Max Speed in megahertz that CPU can support.
+    - name: ProcessorCharacteristics
+      type: string
+      description: >
+          The Characteristics CPU can support, such as 64-bit Capable,
+          Multi-Core, Hardware Thread, etc.
+    - name: ProcessorCoreCount
+      type: uint16
+      description: >
+          The Count of Core in CPU.
+    - name: ProcessorThreadCount
+      type: uint16
+      description: >
+          The Count of Thread CPU can support.
 
+enumerations:
+    - name: Type
+      description: >
+          Processor Type.
+      values:
+        - name: Other
+          description: >
+              Some devices which are not defined in this table.
+        - name: Unknown
+          description: >
+              Unknown device.
+        - name: Central
+          description: >
+              Central Processor.
+        - name: Math
+          description: >
+              Math Processor.
+        - name: DSP
+          description: >
+              DSP Processor.
+        - name: Video
+          description: >
+              Video Processor.
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

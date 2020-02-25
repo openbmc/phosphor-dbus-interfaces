@@ -33,6 +33,11 @@ properties:
           this error log has been resolved. This will start out 'false' by
           default. Setting this to 'true' will NOT result in the error log being
           deleted.
+    - name: ResolvedTimestamp
+      type: uint64
+      description: >
+          The time when the resolved property was changed, in milliseconds
+          since 1970.
 
 enumerations:
     - name: Level

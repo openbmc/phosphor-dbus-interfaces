@@ -1,2 +1,64 @@
 description: >
     Implement to provide CPU attributes.
+properties:
+    - name: Socket
+      type: string
+      description: >
+          Processor Socket designation on MotherBoard.
+    - name: Family
+      type: string
+      description: >
+          A free form string indicates processor family type.
+          For example, values can be "Intel Xeon
+          processor", "AS400 Family", etc.
+    - name: Id
+      type: uint64
+      description: >
+          This Processor ID field contains processor-specific information
+          that describes the processor's features. Details depend on
+          processor architecture.
+          For x86 and ARM processors, DMTF DSP0134 Section 7.5.3 is used.
+      default: 0
+    - name: MaxSpeedInMhz
+      type: uint32
+      description: >
+          Max Speed in megahertz the CPU can support.
+    - name: Characteristics
+      type: array[enum[self.Capability]]
+      description: >
+          The set of boolean flags for processor's capability, such as
+          64-bit Capable, Multi-Core, Hardware Thread, Execute Protection,
+          Enhanced Virtualization, Power/Performance Control etc.
+    - name: CoreCount
+      type: uint16
+      description: >
+          The number of cores in the processor.
+    - name: ThreadCount
+      type: uint16
+      description: >
+          The maximum number of threads the processor can support.
+
+enumerations:
+    - name: Capability
+      description: >
+          List of capabilities that a processor can support.
+          Values are based off DMTF DSP0134 specification.
+      values:
+        - name: Capable64bit
+          description: >
+              Capable of 64-bit.
+        - name: MultiCore
+          description: >
+              Support multi-core.
+        - name: HardwareThread
+          description: >
+              Support hardware thread.
+        - name: ExecuteProtection
+          description: >
+              Support execute protection.
+        - name: EnhancedVirtualization
+          description: >
+              Support enhanced virtualization.
+        - name: PowerPerformanceControl
+          description: >
+              Support power/performance control.

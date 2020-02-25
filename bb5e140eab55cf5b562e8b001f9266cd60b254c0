@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "f2ca22c0_9eb4df56",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-02-25T15:59:23Z",
+      "side": 1,
+      "message": "Actually, the same has been started in that angle, and we changed the logic to this way, when tried to add invalid state value to the Priority property https://gerrit.openbmc-project.xyz/#/c/openbmc/phosphor-dbus-interfaces/+/28237/\n\ni.e. ClearConfig / Priority can be implemented as optional interfaces, but when the image is downloaded, before requesting for activation, it may need to expose the property with value being invalid / need to initialize. \n\nChanged to method for the following reason\n1. Invalid state / value was rejected sighting, method update is better.\n2. Method solves the problem of setting the properties in order etc.\n\nThe only reason we have dynamic parameters was it allows a way to provide lot more information for oem based on the need. Can be updated to fixed param here too, provided invalid / ignore value for those params are acceptable. \nHaving more in property results in too many D-Bus calls to do one single methodology.\n\nNote: I agree dictionaries doesn\u0027t control checking, and we have association in the similar manner. I am not against dictionary when it is used in places where it is really required. Let us know the acceptable scenario in this case.\n\nWe need to set both Priority \u0026 Clear config to the downloaded image, and if interface needs to be exposed, then we need to define invalid value / ignore value to the priority, to differentiate between the states.",
+      "parentUuid": "d4825549_6a59dc30",
+      "revId": "bb5e140eab55cf5b562e8b001f9266cd60b254c0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f5b03407_05cf8a5b",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 6

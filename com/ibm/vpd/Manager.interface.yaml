@@ -1,0 +1,37 @@
+description: >
+    Implement to edit VPD data for a given FRU.
+methods:
+    - name: WriteKeyword
+      description: >
+          A method to update the keyword value for a given VPD record.
+      parameters:
+        - name: path
+          type: string
+          description: >
+              Path to the D-Bus object that represents the FRU.
+        - name: record
+          type: string
+          description: >
+              Record whose keyword value needs to be modified.
+        - name: keyword
+          type: string
+          description: >
+              Keyword whose value needs to be updated.
+        - name: value
+          type: array[byte]
+          description: >
+              Value to be updated for the keyword.
+
+    - name: GetInventoriesAtLocation
+      description: >
+          A method to get list inventory paths for a given Location code.
+      parameters:
+        - name: locationCode
+          type: string
+          description: >
+              Location code.
+      returns:
+        - name: InventoryList
+          type: array[string]
+          description: >
+              List of all the inventories at the given location code.

@@ -1,0 +1,68 @@
+description: >
+    Implement to edit VPD data for a given FRU.
+methods:
+    - name: WriteKeyword
+      description: >
+          A method to update the keyword value for a given VPD record.
+      parameters:
+        - name: path
+          type: string
+          description: >
+              Path to the D-Bus object that represents the FRU.
+        - name: record
+          type: string
+          description: >
+              Record whose keyword value needs to be modified.
+        - name: keyword
+          type: string
+          description: >
+              Keyword whose value needs to be updated.
+        - name: value
+          type: array[byte]
+          description: >
+              Value to be updated for the keyword.
+
+    - name: GetFRUsByUnexpandedLocationCode
+      description: >
+          A method to get list of FRUs D-BUS object path for a given
+          unexpanded location code.
+          Returns empty vector if no FRU found for that location code.
+      parameters:
+        - name: unExplocationCode
+          type: string
+          description: >
+              An un-expanded Location code.
+        - name: nodeNumber
+          type: uint16
+          description: >
+              Denotes the node in case of a multi-drawer configuration,
+              otherwise ignored.
+      returns:
+        - name: inventoryList
+          type: array[path]
+          description: >
+              List of all the FRUs D-Bus object path for the given location code.
+      
+      errors:
+        - xyz.openbmc_project.common.Error.InvalidArgument
+        - com.ibm.vpd.Error.NoEntry
+
+    - name: GetFRUsByExpandedLocationCode
+      description: >
+          A method to get list of FRUs D-BUS object path for a given expanded
+          location code.
+          Returns empty vector if no FRU found for that location code.
+      parameters:
+        - name: expandedLocationCode
+          type: string
+          description: >
+              Location code in expanded format.
+      returns:
+        - name: inventoryList
+          type: array[path]
+          description: >
+              List of all the FRUs D-Bus object path for the given location code.
+
+      errors:
+        - xyz.openbmc_project.common.Error.InvalidArgument
+        - com.ibm.vpd.Error.NoEntry

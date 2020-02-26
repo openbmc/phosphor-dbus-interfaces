@@ -1,0 +1,24 @@
+description: >
+    Implement to edit VPD file.
+methods:
+    - name: WriteKeyword
+      description: >
+          An interface to update the keyword value for a given VPD record.
+      parameters:
+        - name: path
+          type: string
+          description: >
+              Path to the D-Bus object that represents the FRU.
+        - name: record
+          type: string
+          description: >
+              Record whose keyword value needs to be modified.
+        - name: keyword
+          type: string
+          description: >
+              Keyword whose value needs to be updated.
+        - name: value
+          type: array[byte]
+          description: >
+              Value to be updated for the keyword.
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

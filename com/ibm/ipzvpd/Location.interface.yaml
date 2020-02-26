@@ -1,0 +1,10 @@
+description: >
+    Implement to represent the physical location for the FRU.
+properties:
+    - name: LocationCode
+      type: string
+      description: >
+          A string describing the physical location of the FRU.
+          The location is determined based on the system design.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

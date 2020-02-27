@@ -1,0 +1,36 @@
+description:
+  Interface used to represent the supported MCTP message types.
+  This will be exposed by all MCTP endpoints.
+
+properties:
+    - name: MctpControl
+      type: boolean
+      description: Indicates support availability
+
+    - name: PLDM
+      type: boolean
+      description: Indicates support availability
+
+    - name: NCSI
+      type: boolean
+      description: Indicates support availability
+
+    - name: Ethernet
+      type: boolean
+      description: Indicates support availability
+
+    - name: NVMeMgmtMsg
+      type: boolean
+      description: Indicates support availability
+
+    - name: SPDM
+      type: boolean
+      description: Indicates support availability
+
+    - name: VDPCI
+      type: boolean
+      description: Indicates support availability
+
+    - name: VDIANA
+      type: boolean
+      description: Indicates support availability

@@ -1,0 +1,14 @@
+description: >
+  Interface exposed by MCTP daemon for SMBus binding
+properties:
+    - name: ArpMasterSupport
+      type: boolean
+      description: >
+        The SMBus binding can also run ARP Master protocol and
+        assign SMBus addresses to the devices on the bus.
+    - name: BusNumber
+      type: byte
+      description: I2C bus number of the medium used
+    - name: SlaveAddress
+      type: byte
+      description: Slave address to be used for this medium

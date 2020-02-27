@@ -1,0 +1,15 @@
+description: >
+    Interface exposed by MCTP root object, when executing in Bus Owner mode.
+
+properties:
+    - name: EidPool
+      type: array[struct[byte, byte]]
+      description: Pool of allowed EIDs to be used
+
+    - name: TopMostBusOwner
+      type: boolean
+      description: To indicate whether BMC is topmost Bus Owner
+
+    - name: OwnEidPool
+      type: boolean
+      descritpion: Indicates Eid pool is managed by self

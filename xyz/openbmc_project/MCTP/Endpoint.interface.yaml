@@ -1,0 +1,19 @@
+description:
+  Interface exposed by discovered MCTP endpoints.
+
+properties:
+    - name: Uuid
+      type: array[byte]
+      description: >
+        Universally unique identifier (UUID), also referred to as a globally
+        unique ID (GUID), for the management controller or management device.
+
+    - name: Mode
+      type: enum[xyz.openbmc_project.MCTP.Base.BindingModeTypes]
+      description: Endpoint / BusOwner / Bridge
+
+    - name: NetworkId
+      type: uint16
+      description: >
+        MCTP network ID a unique identifier to distinguish each independent
+        MCTP network within a platform.

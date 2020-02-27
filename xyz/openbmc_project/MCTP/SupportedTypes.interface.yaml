@@ -1,0 +1,20 @@
+description:
+  Interface used to represent the supported MCTP types. This will be exposed
+  by both Base object (for both Bus Owner & Device endpoint) and in all the
+  discovered MCTP devices (in case of Bus Owner MCTP daemon)
+properties:
+    - name: MCTPControl
+      type: boolean
+      description: Indicates support availability
+    - name: PLDM
+      type: boolean
+      description: Indicates support availability
+    - name: NVMeMgmtMsg
+      type: boolean
+      description: Indicates support availability
+    - name: SPDM
+      type: boolean
+      description: Indicates support availability
+    - name: PCIVendorDefined
+      type: boolean
+      description: Indicates support availability

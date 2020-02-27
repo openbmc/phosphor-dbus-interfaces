@@ -1,0 +1,13 @@
+description:
+  Interface exposed by MCTP daemon on each discovered MCTP devices.
+properties:
+    - name: Eid
+      type: byte
+      description: >
+        Endpoint ID. The logical address used to route MCTP messages to a
+        specific MCTP endpoint.
+    - name: Uuid
+      type: array[byte]
+      description: >
+        Universally unique identifier (UUID), also referred to as a globally
+        unique ID (GUID), for the management controller or management device.

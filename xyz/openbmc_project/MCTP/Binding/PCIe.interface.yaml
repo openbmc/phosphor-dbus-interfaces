@@ -1,0 +1,29 @@
+description: >
+    Interface exposed by MCTP daemon for PCIe binding
+
+properties:
+    - name: DiscoveredFlag
+      type: enum[self.DiscoveryFlags]
+      description: >
+        Each endpoint (except the bus owner) on the PCIe bus maintains an
+        internal flag called the Discovered flag. The flag is set to the
+        discovered state when the Set Endpoint ID command is received.
+
+    - name: BDF
+      type: uint16
+      description: >
+        Byte 1 [7:0] Bus number
+        Byte 2 [7:3] Device number [2:0] Function Number
+
+enumerations:
+    - name: DiscoveryFlags
+      description: >
+          The Prepare for Endpoint Discovery message causes each recipient
+          endpoint on the PCIe bus to set their respective Discovered flag to
+          the undiscovered state. For the Prepare for Endpoint Discovery request
+          message, the routing in the physical transport header should be set to
+          011b (Broadcast from Root Complex).
+      values:
+        - name: Discovered
+        - name: Undiscovered
+        - name: NotApplicable

@@ -17,6 +17,12 @@ properties:
           comparing the CurrentHostState and the RequestedHostTransition
           properties.
 
+    - name: RestartCause
+      type: enum[self.RestartCause]
+      default: 'Unknown'
+      description: >
+          A property to define restart cause of a host.
+
 enumerations:
     - name: Transition
       description: >
@@ -61,3 +67,32 @@ enumerations:
             system while the host is in this state will prevent the debug data
             from being properly collected. The host will move to one of the
             other states once complete.
+
+    - name: RestartCause
+      description: >
+        The reason for host restart.
+      values:
+        - name: 'Unknown'
+          description: >
+            Reason Unknown
+        - name: 'RemoteCommand'
+          description: >
+            Remote command issued
+        - name: 'ResetButton'
+          description: >
+            Reset button pressed
+        - name: 'PowerButton'
+          description: >
+            Power button pressed
+        - name: 'WatchdogTimer'
+          description: >
+            Watchdog Timer expired
+        - name: 'PowerPolicyAlwaysOn'
+          description: >
+            Power Policy Host Always on
+        - name: 'PowerPolicyPreviousState'
+          description: >
+            Power Policy Previous State of Host
+        - name: 'SoftReset'
+          description: >
+            Soft reset of Host

@@ -61,3 +61,44 @@ enumerations:
             system while the host is in this state will prevent the debug data
             from being properly collected. The host will move to one of the
             other states once complete.
+
+    - name: RestartCause
+      description: >
+        The reason for host restart.
+      values:
+        - name: 'Unknown'
+          description: >
+            Reason Unknown
+        - name: 'RemoteCommand'
+          description: >
+            Remote command issued
+        - name: 'ResetButton'
+          description: >
+            Reset button pressed
+        - name: 'PowerButton'
+          description: >
+            Power button pressed
+        - name: 'WatchdogTimer'
+          description: >
+            Watchdog Timer expiry triggered host restart
+        - name: 'OEM'
+          description: >
+            OEM command issued
+        - name: 'PowerPolicyAlwaysOn'
+          description: >
+            As per Power Policy Always on Host
+        - name: 'PowerPolicyPreviousState'
+          description: >
+            As per Power Policy Previous State of Host
+        - name: 'PEFReset'
+          description: >
+            PEF Reset
+        - name: 'PEFPowerCycle'
+          description: >
+            PEF Power Cycle
+        - name: 'SoftReset'
+          description: >
+            Soft reset of Host
+        - name: 'RTCWakeup'
+          description: >
+            RTC Wakeup event

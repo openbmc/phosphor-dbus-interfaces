@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "6df0d61b_5d7d5b73",
+        "filename": "xyz/openbmc_project/Control/Boot/Mailbox.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000192
+      },
+      "writtenOn": "2020-03-04T12:30:45Z",
+      "side": 1,
+      "message": "Exactly. Also, I\u0027m not aware of any means that would allow putting in a hard requirement for the minimum value for this property.",
+      "parentUuid": "95e47d04_31760fde",
+      "range": {
+        "startLine": 35,
+        "startChar": 18,
+        "endLine": 35,
+        "endChar": 22
+      },
+      "revId": "a0f29dfa7569efe40c79fdf471ff97656fc451e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9aedeb59_6ef4fb10",
         "filename": "xyz/openbmc_project/Control/Boot/Mailbox.interface.yaml",
         "patchSetId": 2
@@ -60,6 +84,30 @@
       "writtenOn": "2020-03-02T21:44:33Z",
       "side": 1,
       "message": "Can you somehow block this requirement section in a way that shows that these are the IPMI requirements for this interface. Not all users of this interface will be IPMI and they may have different requirements. And in reality, even the IPMI end of this (the command handlers) will need to be probably need to be able to adjust to data that does not conform that was set by another interface.\n\nI guess what I am saying is that interfaces should not be transport (IPMI/PLDM/Redfish/etc.) specific.",
+      "range": {
+        "startLine": 47,
+        "startChar": 10,
+        "endLine": 60,
+        "endChar": 24
+      },
+      "revId": "a0f29dfa7569efe40c79fdf471ff97656fc451e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "638e332d_a88d5884",
+        "filename": "xyz/openbmc_project/Control/Boot/Mailbox.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000192
+      },
+      "writtenOn": "2020-03-04T12:30:45Z",
+      "side": 1,
+      "message": "Well, since this is an implementation of an IPMI feature, I\u0027m not sure we actually need to make it that abstract. I think it may be totally different for PLDM or Redfish. They may not even need the separate IANA Enterprise Number property.",
+      "parentUuid": "9aedeb59_6ef4fb10",
       "range": {
         "startLine": 47,
         "startChar": 10,

@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f0235bf9_ba1c10a3",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T06:18:08Z",
+      "side": 1,
+      "message": "Duplicated",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 58
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42a0e300_5cc21611",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T06:18:08Z",
+      "side": 1,
+      "message": "Need another boolean property to indicate whether the payload is raw bytes OR we are passing the fd. (In case of large payloads, we pass the fd of the payload to the upperlayer instead of posting the payload on dbus)",
+      "range": {
+        "startLine": 96,
+        "startChar": 7,
+        "endLine": 98,
+        "endChar": 42
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28ac0dbe_46b67a9d",
+        "filename": "xyz/openbmc_project/MCTP/Device.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T06:18:08Z",
+      "side": 1,
+      "message": "We may have endpoint devices without UUID. We probably should have another boolean property to indicate whether UUID is present or not.",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "320e1418_b56d64d3",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T06:18:08Z",
+      "side": 1,
+      "message": "what if we discover another bridging device instead of a regular endpoint? Probably we don\u0027t have a usecase of this currently but can we consider having something like \"DeviceRole\" property to indicate whether its a regular endpoint or a bridging device.",
+      "range": {
+        "startLine": 32,
+        "startChar": 4,
+        "endLine": 32,
+        "endChar": 35
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1985b26f_6ac0d970",
+        "filename": "xyz/openbmc_project/MCTP/SupportedTypes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T06:18:08Z",
+      "side": 1,
+      "message": "nit:NVMeMgmtMsg",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90b3f4d6_cb3a0ff5",
+        "filename": "xyz/openbmc_project/MCTP/SupportedTypes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T06:18:08Z",
+      "side": 1,
+      "message": "nit:SPDM",
+      "range": {
+        "startLine": 15,
+        "startChar": 12,
+        "endLine": 15,
+        "endChar": 24
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1af87654_023954fd",
+        "filename": "xyz/openbmc_project/MCTP/SupportedTypes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T06:18:08Z",
+      "side": 1,
+      "message": "nit:PCIVendorDefined",
+      "range": {
+        "startLine": 18,
+        "startChar": 12,
+        "endLine": 18,
+        "endChar": 16
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    }
+  ]
+}

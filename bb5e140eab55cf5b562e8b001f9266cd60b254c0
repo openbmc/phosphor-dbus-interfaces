@@ -233,6 +233,24 @@
     },
     {
       "key": {
+        "uuid": "ed99fb08_f1f71ac4",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000163
+      },
+      "writtenOn": "2020-03-10T22:36:14Z",
+      "side": 1,
+      "message": "After reading all the comments, I think I would agree with Patrick. Setting a handful of parameters is not a real burden. Firmware updates are measured on the order of many seconds to minutes. An extra 10 or even 1000 D-Bus calls will not make much of a difference.\n\nIt should be well documented that the order might matter (i.e., don\u0027t change the RequestedActivation until you have set all the other properties), but setting each of the individual properties is not the end of the world.",
+      "parentUuid": "2c2d1246_71838a25",
+      "revId": "bb5e140eab55cf5b562e8b001f9266cd60b254c0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f5b03407_05cf8a5b",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 6

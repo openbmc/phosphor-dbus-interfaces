@@ -144,6 +144,30 @@
     },
     {
       "key": {
+        "uuid": "9a575aca_d78d832b",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T16:01:34Z",
+      "side": 1,
+      "message": "Agree to the above two methods.",
+      "parentUuid": "b232a878_989d4525",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 58
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "42a0e300_5cc21611",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 1
@@ -179,6 +203,30 @@
       "side": 1,
       "message": "If we use boolean, again we are trying to overload current signal. In this case recommendation is to create second signal dedicated for large payloads.",
       "parentUuid": "42a0e300_5cc21611",
+      "range": {
+        "startLine": 96,
+        "startChar": 7,
+        "endLine": 98,
+        "endChar": 42
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d1e1f5e2_d3015f3f",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T16:01:34Z",
+      "side": 1,
+      "message": "Yes, agree to having two signals.",
+      "parentUuid": "d908b3b7_168d06e5",
       "range": {
         "startLine": 96,
         "startChar": 7,
@@ -296,6 +344,30 @@
       "side": 1,
       "message": "Can we use nil UUID for this purpose ?\n\nrfc4122 4.1.7\nIETF, RFC4122, A Universally Unique Identifier (UUID) URN Namespace, July 2005\n265 http://datatracker.ietf.org/doc/rfc4122/",
       "parentUuid": "28ac0dbe_46b67a9d",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "644d5b06_2095c239",
+        "filename": "xyz/openbmc_project/MCTP/Device.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-10T16:01:34Z",
+      "side": 1,
+      "message": "Yeah, that should work :)",
+      "parentUuid": "08e68dff_2efada78",
       "range": {
         "startLine": 9,
         "startChar": 12,

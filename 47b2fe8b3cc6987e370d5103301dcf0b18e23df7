@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "395723c2_fb23fe92",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2bf291c_5f27c2cd",
+      "range": {
+        "startLine": 7,
+        "startChar": 12,
+        "endLine": 7,
+        "endChar": 16
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f0235bf9_ba1c10a3",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 1
@@ -96,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "b232a878_989d4525",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "Recommendation from the bug is to \n\"add different names (and perhaps deprecate the overloaded ones) \".\nWhat do you think about two separate functions:\n1. SendMctpMessageRawPayload(DstId, MstTag, TagOwner, Payload)\n2. SendMctpMessageFilePayload(DstId, MstTag, TagOwner, FileDescriptor)",
+      "parentUuid": "9780bcf0_86a6a685",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 58
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "42a0e300_5cc21611",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 1
@@ -119,6 +167,30 @@
     },
     {
       "key": {
+        "uuid": "d908b3b7_168d06e5",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "If we use boolean, again we are trying to overload current signal. In this case recommendation is to create second signal dedicated for large payloads.",
+      "parentUuid": "42a0e300_5cc21611",
+      "range": {
+        "startLine": 96,
+        "startChar": 7,
+        "endLine": 98,
+        "endChar": 42
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "af83fe5f_12ea182c",
         "filename": "xyz/openbmc_project/MCTP/Binding/Pcie.interface.yaml",
         "patchSetId": 1
@@ -136,6 +208,24 @@
     },
     {
       "key": {
+        "uuid": "77093a8c_8c9dc429",
+        "filename": "xyz/openbmc_project/MCTP/Binding/Pcie.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "af83fe5f_12ea182c",
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "47926b21_0e09d65a",
         "filename": "xyz/openbmc_project/MCTP/Binding/Smbus.interface.yaml",
         "patchSetId": 1
@@ -147,6 +237,24 @@
       "writtenOn": "2020-03-10T07:59:07Z",
       "side": 1,
       "message": "File name is SMBus follows the abbrevation standard, similar to MCTP.",
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1c7e08e5_e0f0f50a",
+        "filename": "xyz/openbmc_project/MCTP/Binding/Smbus.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "47926b21_0e09d65a",
       "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
@@ -173,6 +281,30 @@
       "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08e68dff_2efada78",
+        "filename": "xyz/openbmc_project/MCTP/Device.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "Can we use nil UUID for this purpose ?\n\nrfc4122 4.1.7\nIETF, RFC4122, A Universally Unique Identifier (UUID) URN Namespace, July 2005\n265 http://datatracker.ietf.org/doc/rfc4122/",
+      "parentUuid": "28ac0dbe_46b67a9d",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     },
     {
       "key": {
@@ -223,6 +355,30 @@
     },
     {
       "key": {
+        "uuid": "3519bdf5_d7f18f2b",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "Since we do not have use case at the moment, would it be better to add it later ?",
+      "parentUuid": "06652937_6172786a",
+      "range": {
+        "startLine": 32,
+        "startChar": 4,
+        "endLine": 32,
+        "endChar": 35
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1985b26f_6ac0d970",
         "filename": "xyz/openbmc_project/MCTP/SupportedTypes.interface.yaml",
         "patchSetId": 1
@@ -234,6 +390,30 @@
       "writtenOn": "2020-03-10T06:18:08Z",
       "side": 1,
       "message": "nit:NVMeMgmtMsg",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "16ebb8b1_a3ec94df",
+        "filename": "xyz/openbmc_project/MCTP/SupportedTypes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1985b26f_6ac0d970",
       "range": {
         "startLine": 12,
         "startChar": 12,
@@ -269,6 +449,30 @@
     },
     {
       "key": {
+        "uuid": "5e488ac9_b298a311",
+        "filename": "xyz/openbmc_project/MCTP/SupportedTypes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "90b3f4d6_cb3a0ff5",
+      "range": {
+        "startLine": 15,
+        "startChar": 12,
+        "endLine": 15,
+        "endChar": 24
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1af87654_023954fd",
         "filename": "xyz/openbmc_project/MCTP/SupportedTypes.interface.yaml",
         "patchSetId": 1
@@ -280,6 +484,30 @@
       "writtenOn": "2020-03-10T06:18:08Z",
       "side": 1,
       "message": "nit:PCIVendorDefined",
+      "range": {
+        "startLine": 18,
+        "startChar": 12,
+        "endLine": 18,
+        "endChar": 16
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ac8190d6_4ed9a7b6",
+        "filename": "xyz/openbmc_project/MCTP/SupportedTypes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000587
+      },
+      "writtenOn": "2020-03-10T13:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1af87654_023954fd",
       "range": {
         "startLine": 18,
         "startChar": 12,

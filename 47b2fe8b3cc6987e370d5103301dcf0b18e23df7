@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "c2bf291c_5f27c2cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-03-10T07:59:07Z",
+      "side": 1,
+      "message": "D-Bus",
+      "range": {
+        "startLine": 7,
+        "startChar": 12,
+        "endLine": 7,
+        "endChar": 16
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f0235bf9_ba1c10a3",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 1
@@ -13,6 +36,30 @@
       "writtenOn": "2020-03-10T06:18:08Z",
       "side": 1,
       "message": "Duplicated",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 58
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50aaaba1_97f60479",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-03-10T07:59:07Z",
+      "side": 1,
+      "message": "this is with Fd.",
+      "parentUuid": "f0235bf9_ba1c10a3",
       "range": {
         "startLine": 37,
         "startChar": 0,
@@ -42,6 +89,40 @@
         "endLine": 98,
         "endChar": 42
       },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "af83fe5f_12ea182c",
+        "filename": "xyz/openbmc_project/MCTP/Binding/Pcie.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-03-10T07:59:07Z",
+      "side": 1,
+      "message": "PCIe.interface.yaml.",
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "47926b21_0e09d65a",
+        "filename": "xyz/openbmc_project/MCTP/Binding/Smbus.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-03-10T07:59:07Z",
+      "side": 1,
+      "message": "File name is SMBus follows the abbrevation standard, similar to MCTP.",
       "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
@@ -82,6 +163,30 @@
       "writtenOn": "2020-03-10T06:18:08Z",
       "side": 1,
       "message": "what if we discover another bridging device instead of a regular endpoint? Probably we don\u0027t have a usecase of this currently but can we consider having something like \"DeviceRole\" property to indicate whether its a regular endpoint or a bridging device.",
+      "range": {
+        "startLine": 32,
+        "startChar": 4,
+        "endLine": 32,
+        "endChar": 35
+      },
+      "revId": "47b2fe8b3cc6987e370d5103301dcf0b18e23df7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06652937_6172786a",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-03-10T07:59:07Z",
+      "side": 1,
+      "message": "Even bridging will have EID \u0026 UUID, but we may need to add another interface or something fo bridging to differentiate the same.",
+      "parentUuid": "320e1418_b56d64d3",
       "range": {
         "startLine": 32,
         "startChar": 4,

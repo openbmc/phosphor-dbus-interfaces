@@ -215,6 +215,24 @@
     },
     {
       "key": {
+        "uuid": "2c2d1246_71838a25",
+        "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-03-10T20:34:57Z",
+      "side": 1,
+      "message": "Sorry for my slowness at getting back to this.\n\nWe had a long discussion over IRC about change 28237 and I\u0027m not remembering all the details.  I thought we determined, from the current design, that the RedundancyPriority doesn\u0027t even make sense for an image that isn\u0027t yet Active?\n\nI know the default phosphor implementation fairly well but not the Intel one.  When the phosphor one activates a new image, it currently always goes to a default RedundancyPriority of 0 (highest priority).  In that implementation, we could make an optional (in a new interface) property DesiredPriority which defaults to 0.  If the user were to set DesiredPriority to something other than 0 prior to calling Activate, it can be applied at that point; if they don\u0027t change it then the priority of 0 is what would have been applied anyhow.\n\nIs there a case where you don\u0027t know what the \"default\" priority would be when someone calls Activate?  My point here is that an \"invalid\" priority doesn\u0027t really gain us anything.",
+      "parentUuid": "cc8375cd_08a9b9a2",
+      "revId": "bb5e140eab55cf5b562e8b001f9266cd60b254c0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f5b03407_05cf8a5b",
         "filename": "xyz/openbmc_project/Software/Activation.interface.yaml",
         "patchSetId": 6

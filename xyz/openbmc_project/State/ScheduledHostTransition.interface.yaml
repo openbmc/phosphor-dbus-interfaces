@@ -14,22 +14,20 @@ properties:
           When ScheduledTime is smaller than current time,
           error InvalidTime will be thrown.
           When the controller detects the ScheduledTime has passed,
-          it will execute the RequestedTransition and reset the
+          it will execute the ScheduledTransition and reset the
           value to 0. Once the transition starts, there won't be
           any retries.
           When the real time changes, the controller shall check if
           the time is still in the future. If so, it will stop the
           existing timer and restart it with new wait time. Otherwise,
-          stop the existing timer and check the state of host. If the
-          state is not the same as required, set it as
-          RequestedTransition.
+          stop the existing timer and execute the ScheduledTransition.
           When ScheduledTime is reached, but the host is not ready
           to power on/off, e.g. when BMC is rebooting, BMC shall
-          set the host RequestedTransition after it is ready.
+          set the host ScheduledTransition after it is ready.
       errors:
         - xyz.openbmc_project.ScheduledTime.Error.InvalidTime
 
-    - name: RequestedTransition
+    - name: ScheduledTransition
       type: enum[xyz.openbmc_project.State.Host.Transition]
       default: 'On'
       description: >

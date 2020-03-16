@@ -42,6 +42,70 @@
     },
     {
       "key": {
+        "uuid": "f1942711_6f44ef95",
+        "filename": "com/ibm/kwvpd/KWVPD.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2020-03-16T09:50:59Z",
+      "side": 1,
+      "message": "I agree, how about we use com/ibm/VPD/KWVPD.interface.yaml ?",
+      "parentUuid": "f757fa37_200e4f94",
+      "revId": "a105e6e16a9b8e7f1a03fab051111fa176258fb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a46e14c3_0e1f5005",
+        "filename": "com/ibm/kwvpd/KWVPD.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2020-03-16T09:50:59Z",
+      "side": 1,
+      "message": "\"which contains\" is being repeated here. Please reword, perhaps as \"Keyword which contains...\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 18,
+        "endLine": 7,
+        "endChar": 67
+      },
+      "revId": "a105e6e16a9b8e7f1a03fab051111fa176258fb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "757aa35e_17d2daa2",
+        "filename": "com/ibm/kwvpd/KWVPD.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2020-03-16T09:50:59Z",
+      "side": 1,
+      "message": "Please cleanup trailing spaces throughout.",
+      "range": {
+        "startLine": 8,
+        "startChar": 58,
+        "endLine": 8,
+        "endChar": 60
+      },
+      "revId": "a105e6e16a9b8e7f1a03fab051111fa176258fb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1152f711_06c8534d",
         "filename": "com/ibm/kwvpd/KWVPD.interface.yaml",
         "patchSetId": 1
@@ -134,6 +198,23 @@
     },
     {
       "key": {
+        "uuid": "3a8e370c_bd108b2e",
+        "filename": "com/ibm/kwvpd/KWVPD.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2020-03-16T09:50:59Z",
+      "side": 1,
+      "message": "I don;t see a need to specify this level of detail. Just saying \"Serial Number\" is good enough. It is a well known concept and does not need details such as 11S, especially because the interface does not really validate that in any way.",
+      "revId": "a105e6e16a9b8e7f1a03fab051111fa176258fb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c3fce214_4a6eda6a",
         "filename": "com/ibm/kwvpd/KWVPD.interface.yaml",
         "patchSetId": 1
@@ -145,6 +226,30 @@
       "writtenOn": "2019-12-05T15:27:17Z",
       "side": 1,
       "message": "explain these more?",
+      "range": {
+        "startLine": 51,
+        "startChar": 18,
+        "endLine": 51,
+        "endChar": 21
+      },
+      "revId": "a105e6e16a9b8e7f1a03fab051111fa176258fb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "addbc04d_5c19fdd9",
+        "filename": "com/ibm/kwvpd/KWVPD.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2020-03-16T09:50:59Z",
+      "side": 1,
+      "message": "Some of these are legacy with very little documentation. I would leave this as-is",
+      "parentUuid": "c3fce214_4a6eda6a",
       "range": {
         "startLine": 51,
         "startChar": 18,

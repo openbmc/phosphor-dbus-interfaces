@@ -1,0 +1,17 @@
+description: >
+    Implement to provide security capability attributes.
+properties:
+    - name: MaxPassphraseCount
+      type: int32
+      description: >
+          Maximum number of passphrases supported for this Memory.
+    - name: PassphraseCapable
+      type: boolean
+      description: >
+          Memory passphrase set capability.
+    - name: SecurityStates
+      type: array[string]
+      description: >
+          Security states supported by the Memory.
+
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

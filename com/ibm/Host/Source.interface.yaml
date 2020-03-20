@@ -1,0 +1,24 @@
+description: >
+        Implement to choose the hypervisor.
+        This property reflects the user settings and not a status.
+        It is possible that the user can change the setting
+        at any point of time. But the property will be applied
+        only when the host boots the next time.
+
+properties:
+        -name: Source
+         type: enum[ self.Hypervisor ]
+         description:
+                The desired hypervisor.
+
+enumerations:
+        -name: Hypervisor
+         description: >
+                Possible hypervisors.
+         values:
+            -name: PowerVM
+             description: >
+                PowerVM as the hypervisor.
+            -name: OPAL
+             description: >
+                OPAL as the hypervisor.

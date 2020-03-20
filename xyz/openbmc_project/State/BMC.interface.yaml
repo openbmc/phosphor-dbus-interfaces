@@ -49,8 +49,3 @@ enumerations:
            UpdateInProgress implies BMC is in firmware update mode. CurrentBMCState
            will be set to "UpdateInProgress" while starting image download and
            reset to Ready, once activation is done or error case during update process.
-       - name: 'Quiesced'
-         description: >
-           Quiesced implies an event has occurred on the system requiring
-           attention by the operator. Review phosphor-logging event logs for
-           the cause.

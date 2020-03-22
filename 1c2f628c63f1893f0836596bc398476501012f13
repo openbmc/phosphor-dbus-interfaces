@@ -46,6 +46,29 @@
       "revId": "1c2f628c63f1893f0836596bc398476501012f13",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ade64f35_dcc2c3ba",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-03-22T23:26:20Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we expose devices found by MCTP Bus Owner even if BMC acts as MCTP endpoint? In endpoint mode there is Get Routing Table Entries command (section 12.12 of DSP0236) which can be used to request MCTP bus owner to return data from its present routing table.",
+      "range": {
+        "startLine": 36,
+        "startChar": 45,
+        "endLine": 37,
+        "endChar": 26
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

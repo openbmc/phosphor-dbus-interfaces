@@ -72,6 +72,121 @@
     },
     {
       "key": {
+        "uuid": "4b8a2aee_c1d1c35a",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-25T06:57:08Z",
+      "side": 1,
+      "message": "Why tack on \u0027Base\u0027 and not just have \u0027xyz.openbmc_project.MCTP\u0027? Also do we want to version the interface? It\u0027s generally recommended by the DBus spec though this doesn\u0027t appear to have much adoption in the OpenBMC community\n\nhttps://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-interface",
+      "range": {
+        "startLine": 17,
+        "startChar": 28,
+        "endLine": 17,
+        "endChar": 33
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "718b84fa_004eb2ec",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-25T06:57:08Z",
+      "side": 1,
+      "message": "s/PCie/PCIe/, though do we want to be more specific (e.g. s/PCIe/DSP0238/)?",
+      "range": {
+        "startLine": 23,
+        "startChar": 55,
+        "endLine": 23,
+        "endChar": 59
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "594a02d7_5f812071",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-25T06:57:08Z",
+      "side": 1,
+      "message": "This should either be `/xyz/openbmc_project/mctp/device/\u003cuuid\u003e` or `/xyz/openbmc_project/mctp/endpoint/\u003ceid\u003e`. `/xyz/openbmc_project/mctp/device/\u003ceid\u003e` is confusing two well defined concepts (one device may have multiple endpoints).",
+      "range": {
+        "startLine": 28,
+        "startChar": 24,
+        "endLine": 28,
+        "endChar": 61
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c7d28fad_59e9119c",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-25T06:57:08Z",
+      "side": 1,
+      "message": "I assume this is message types?",
+      "range": {
+        "startLine": 30,
+        "startChar": 3,
+        "endLine": 31,
+        "endChar": 37
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "325dd39b_d4747efd",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-25T06:57:08Z",
+      "side": 1,
+      "message": "Needs to be multiple.",
+      "range": {
+        "startLine": 32,
+        "startChar": 67,
+        "endLine": 32,
+        "endChar": 70
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ade64f35_dcc2c3ba",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 5
@@ -136,6 +251,53 @@
         "startChar": 45,
         "endLine": 37,
         "endChar": 26
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94f08e15_0c371802",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-25T06:57:08Z",
+      "side": 1,
+      "message": "I think we need to spend time fleshing out the idea of how to describe MCTP networks in terms of D-Bus connections/objects/interfaces. I haven\u0027t seen any mention so far.",
+      "parentUuid": "b9ff6a6a_14aa4633",
+      "range": {
+        "startLine": 36,
+        "startChar": 45,
+        "endLine": 37,
+        "endChar": 26
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d574141a_53769071",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-25T06:57:08Z",
+      "side": 1,
+      "message": "s/PCie/PCIe/",
+      "range": {
+        "startLine": 48,
+        "startChar": 55,
+        "endLine": 48,
+        "endChar": 59
       },
       "revId": "1c2f628c63f1893f0836596bc398476501012f13",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",

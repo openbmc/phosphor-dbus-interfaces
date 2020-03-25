@@ -1,0 +1,13 @@
+description: >
+    Inventory component manufacturers can provide different model identifiers
+    (xyz.openbmc_project.Inventory.Decorator.Asset) for their components that
+    don't require different software configurations.
+
+    xyz.openbmc_project.Inventory.Decorator.Group can be implemented to add an
+    additional, more generalized dimension of classification to inventory
+    components.
+properties:
+    - name: Name
+      type: string
+      description: >
+          The name of the group.

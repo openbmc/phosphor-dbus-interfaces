@@ -187,6 +187,29 @@
     },
     {
       "key": {
+        "uuid": "aa24aa9a_0b2c0c28",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000472
+      },
+      "writtenOn": "2020-03-25T09:56:25Z",
+      "side": 1,
+      "message": "It seems that this interface shall be exposed for discovered MCTP endpoint. If yes, please change it to \u0027endpoint\u0027 instead of \u0027device\u0027.",
+      "range": {
+        "startLine": 33,
+        "startChar": 9,
+        "endLine": 33,
+        "endChar": 36
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ade64f35_dcc2c3ba",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 5
@@ -270,6 +293,30 @@
       "side": 1,
       "message": "I think we need to spend time fleshing out the idea of how to describe MCTP networks in terms of D-Bus connections/objects/interfaces. I haven\u0027t seen any mention so far.",
       "parentUuid": "b9ff6a6a_14aa4633",
+      "range": {
+        "startLine": 36,
+        "startChar": 45,
+        "endLine": 37,
+        "endChar": 26
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5116af93_944c2880",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000472
+      },
+      "writtenOn": "2020-03-25T09:56:25Z",
+      "side": 1,
+      "message": "Maybe list of discovered MCTP endpoints shall be exposed using separate interface, which will be implemented by either MCTP bus owner or MCTP endpoint? And, please be precise, use \u0027MCTP endpoint\u0027 when we mean it, the device may expose multiple endpoints.",
+      "parentUuid": "94f08e15_0c371802",
       "range": {
         "startLine": 36,
         "startChar": 45,

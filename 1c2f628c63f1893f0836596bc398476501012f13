@@ -254,6 +254,30 @@
     },
     {
       "key": {
+        "uuid": "e0a00230_9f5e2be9",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-03-27T13:48:22Z",
+      "side": 1,
+      "message": "yes, but we can generate UUID (whether it is exposed as property or in path). \n\nMain thing is we have not covered handling of Bridge devices here or devices which has multiple ports. \nSay a device which is connecting to 2 different networks, say I2c \u0026 to PCIe.\nwith UUID in path we will be able to understand that this belongs to single object, when we query the object using ObjectMapper itself.",
+      "parentUuid": "8b16ce4a_bb2b6eac",
+      "range": {
+        "startLine": 28,
+        "startChar": 24,
+        "endLine": 28,
+        "endChar": 61
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c7d28fad_59e9119c",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 5

@@ -230,6 +230,30 @@
     },
     {
       "key": {
+        "uuid": "8b16ce4a_bb2b6eac",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-03-27T12:06:25Z",
+      "side": 1,
+      "message": "Not all devices have UUID - UUID is not mandatory for all endpoints. \n\n/xyz/openbmc_project/mctp/endpoint/\u003ceid\u003e with Device_UUID as a property under endpoint interface can be one solution.",
+      "parentUuid": "1ac4f808_4f84bc39",
+      "range": {
+        "startLine": 28,
+        "startChar": 24,
+        "endLine": 28,
+        "endChar": 61
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c7d28fad_59e9119c",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 5

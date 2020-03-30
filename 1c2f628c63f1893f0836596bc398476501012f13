@@ -136,6 +136,30 @@
     },
     {
       "key": {
+        "uuid": "3c5e2a4c_54b773ec",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-30T01:14:18Z",
+      "side": 1,
+      "message": "\u003e 1. want to group all MCTP interfaces under MCTP folder, hence we need interface name under MCTP, else MCTP.interface.yaml must be created under xyz.openbmc_project folder itself\n\nBut why? Just pushing on this reasoning a little :)\n\nAnyway, my issue is that it\u0027s not clear what something called \u0027Base\u0027 is modelling in terms of objects and interfaces. It\u0027s like having a package called \u0027Common\u0027 - IMO it\u0027s an anti-pattern.",
+      "parentUuid": "9129d9e3_0e168f05",
+      "range": {
+        "startLine": 17,
+        "startChar": 28,
+        "endLine": 17,
+        "endChar": 33
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "718b84fa_004eb2ec",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 5
@@ -171,6 +195,30 @@
       "side": 1,
       "message": "+1, it must be PCIe\n\nNot now, but future changes, we may need to look for version option. \nAs far as i know spec may need to support backward compatibility, and will extend. Hence majorly we don\u0027t anticipate any version.",
       "parentUuid": "718b84fa_004eb2ec",
+      "range": {
+        "startLine": 23,
+        "startChar": 55,
+        "endLine": 23,
+        "endChar": 59
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "09b8ef8b_33c61b89",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-30T01:14:18Z",
+      "side": 1,
+      "message": "\u003e As far as i know spec may need to support backward compatibility, and will extend. Hence majorly we don\u0027t anticipate any version.\n\nIs this in response to my comment above? If so, how we represent the spec on DBus is a separate problem from the versions applied to the spec. What you\u0027re suggesting is we\u0027re going to get it right the first time :)",
+      "parentUuid": "31a7afcf_d21a69db",
       "range": {
         "startLine": 23,
         "startChar": 55,
@@ -278,6 +326,30 @@
     },
     {
       "key": {
+        "uuid": "a8b92618_2120c3a0",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-30T01:14:18Z",
+      "side": 1,
+      "message": "\u003e Yes Andrew. Agree. But when we have multiple endpoints each device will end up with it\u0027s own supportedTypes, hence we need to differentiate based on eid.\n\nI don\u0027t follow. You say that like I was suggesting we shouldn\u0027t differentiate based on EID. I offered two solutions for object naming, one EID-based and one UUID-based. Each unique EID will have a corresponding unique, EID-named object implementing the SupportedTypes interface. Isn\u0027t this what you want?",
+      "parentUuid": "e0a00230_9f5e2be9",
+      "range": {
+        "startLine": 28,
+        "startChar": 24,
+        "endLine": 28,
+        "endChar": 61
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c7d28fad_59e9119c",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 5
@@ -360,6 +432,30 @@
       "side": 1,
       "message": "i think with uuid/eid object path consideration we don\u0027t need to have EID / UUID as a separate property?",
       "parentUuid": "325dd39b_d4747efd",
+      "range": {
+        "startLine": 32,
+        "startChar": 67,
+        "endLine": 32,
+        "endChar": 70
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c6421c7f_78eaab43",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-30T01:14:18Z",
+      "side": 1,
+      "message": "You would want EIDs as a property on the object under the UUID path and a UUID property on the object under the EID path.",
+      "parentUuid": "b830c993_99111c3b",
       "range": {
         "startLine": 32,
         "startChar": 67,
@@ -550,6 +646,30 @@
       "side": 1,
       "message": "would recommend to wait for routing table entries, till we implement it. Any D-Bus interfaces designed now, will not fit for it, till we lay out a state flow.",
       "parentUuid": "5116af93_944c2880",
+      "range": {
+        "startLine": 36,
+        "startChar": 45,
+        "endLine": 37,
+        "endChar": 26
+      },
+      "revId": "1c2f628c63f1893f0836596bc398476501012f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f9547b10_0c861e2c",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-03-30T01:14:18Z",
+      "side": 1,
+      "message": "\u003e would recommend to wait for routing table entries, till we implement it.\n\nWhat do you mean by \"it\" here?\n\n\u003e Any D-Bus interfaces designed now, will not fit for it, till we lay out a state flow.\n\nI feel like we need to be thinking ahead to avoid designing ourselves into a corner?",
+      "parentUuid": "1767c3c9_103a61c1",
       "range": {
         "startLine": 36,
         "startChar": 45,

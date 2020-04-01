@@ -1,0 +1,71 @@
+description: >
+    Implement to represent the CRP0 record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VD
+      type: array[byte]
+      description: >
+          VD keyword. Version ID.
+    - name: ED
+      type: array[byte]
+      description: >
+          ED keyword.
+    - name: TE
+      type: array[byte]
+      description: >
+          TE keyword.
+    - name: DD
+      type: array[byte]
+      description: >
+          DD keyword.
+    - name: DN
+      type: array[byte]
+      description: >
+          DN keyword.
+    - name: IQ
+      type: array[byte]
+      description: >
+          IQ keyword.
+    - name: TC
+      type: array[byte]
+      description: >
+          TC keyword.
+    - name: TA
+      type: array[byte]
+      description: >
+          TA keyword.
+    - name: DO
+      type: array[byte]
+      description: >
+          DO keyword.
+    - name: PD_W
+      type: array[byte]
+      description: >
+          The "#W" keyword.
+    - name: PD_V
+      type: array[byte]
+      description: >
+          The "#V" keyword.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword.
+    - name: D5
+      type: array[byte]
+      description: >
+          D5 keyword.
+    - name: D8
+      type: array[byte]
+      description: >
+          D8 keyword.
+    - name: F5
+      type: array[byte]
+      description: >
+          F5 keyword.
+    - name: CI
+      type: array[byte]
+      description: >
+          CI keyword.

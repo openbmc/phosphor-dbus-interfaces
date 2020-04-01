@@ -1,0 +1,52 @@
+description: >
+    Implement to represent the LWP0 record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VD
+      type: array[byte]
+      description: >
+          VD keyword. Version ID.
+    - name: 20
+      type: array[byte]
+      description: >
+          The "20" keyword.
+    - name: 21
+      type: array[byte]
+      description: >
+          The "21" keyword.
+    - name: 22
+      type: array[byte]
+      description: >
+          The "22" keyword.
+    - name: 23
+      type: array[byte]
+      description: >
+          The "23" keyword.
+    - name: 30
+      type: array[byte]
+      description: >
+          The "30" keyword.
+    - name: 31
+      type: array[byte]
+      description: >
+          The "31" keyword.
+    - name: 32
+      type: array[byte]
+      description: >
+          The "32" keyword.
+    - name: 33
+      type: array[byte]
+      description: >
+          The "33" keyword.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword.
+    - name: F5
+      type: array[byte]
+      description: >
+          F5 keyword.
+

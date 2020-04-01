@@ -1,0 +1,52 @@
+description: >
+    Implement to represent the CP00 record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VD
+      type: array[byte]
+      description: >
+          VD keyword. Version ID.
+    - name: PG
+      type: array[byte]
+      description: >
+          PG keyword.
+    - name: MK
+      type: array[byte]
+      description: >
+          MK keyword.
+    - name: PD_G
+      type: array[byte]
+      description: >
+          The "#G" keyword.
+    - name: PD_R
+      type: array[byte]
+      description: >
+          The "#R" keyword.
+    - name: SB
+      type: array[byte]
+      description: >
+          SB keyword.
+    - name: PZ
+      type: array[byte]
+      description: >
+          PZ keyword.
+    - name: AW
+      type: array[byte]
+      description: >
+          AW keyword.
+    - name: PD_P
+      type: array[byte]
+      description: >
+          The "#P" keyword.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword.
+    - name: D5
+      type: array[byte]
+      description: >
+          D5 keyword.
+

@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "588d8212_3278bb64",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-04-02T08:22:46Z",
+      "side": 1,
+      "message": "When BMC is connected to different networks, EID is not guaranteed to be unique. So there is a possibility that we will have multiple endpoint objects with same EID (coming from different MCTP Daemon instances). Now, if the upper layers want to talk to a certain EID, then how do they differentiate ?\n\nI think we might need Network ID as a property here.\n-If BMC works in BusOwner mode, generate Network ID\n-If BMC works in EndPoint mode, get the Network ID from the BusOwner. If BusOwner does not respond to Get Network ID control command, then probably should generate it ourselves.",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 11
+      },
+      "revId": "dd67bc045f6633033956175ce3877fec6f2a3d91",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a25bae8_c0c5084e",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-04-02T08:22:46Z",
+      "side": 1,
+      "message": "nit: queried",
+      "range": {
+        "startLine": 12,
+        "startChar": 57,
+        "endLine": 12,
+        "endChar": 65
+      },
+      "revId": "dd67bc045f6633033956175ce3877fec6f2a3d91",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    }
+  ]
+}

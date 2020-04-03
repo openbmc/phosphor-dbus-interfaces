@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c07d1655_4a7ef0a1",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-04-03T19:44:31Z",
+      "side": 1,
+      "message": "SourceEid or should it be SrcEid like DstEid, or change DstEid to DestinationEid?",
+      "range": {
+        "startLine": 82,
+        "startChar": 16,
+        "endLine": 82,
+        "endChar": 25
+      },
+      "revId": "bb6270023e535a7c192ec2754d928a562f1d2fda",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce6e7eb1_6ee9677a",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-04-03T19:44:31Z",
+      "side": 1,
+      "message": "Can we use one naming convention rather than mixing conventions?\nE.g. MCTP/Mctp, Eid/EID, PCIe/Pcie, and so on.\n\nNote, this applies to all files.",
+      "range": {
+        "startLine": 135,
+        "startChar": 14,
+        "endLine": 135,
+        "endChar": 25
+      },
+      "revId": "bb6270023e535a7c192ec2754d928a562f1d2fda",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4908976_d5ca1db7",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-04-03T19:44:31Z",
+      "side": 1,
+      "message": "s/the/The",
+      "range": {
+        "startLine": 209,
+        "startChar": 12,
+        "endLine": 209,
+        "endChar": 15
+      },
+      "revId": "bb6270023e535a7c192ec2754d928a562f1d2fda",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3be591d4_d759cd80",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-04-03T19:44:31Z",
+      "side": 1,
+      "message": "Ditto.",
+      "range": {
+        "startLine": 216,
+        "startChar": 12,
+        "endLine": 216,
+        "endChar": 14
+      },
+      "revId": "bb6270023e535a7c192ec2754d928a562f1d2fda",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5458bffe_6d384667",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-04-03T19:44:31Z",
+      "side": 1,
+      "message": "It refers to BMC BDF, rigth? I wonder if this value can be easily extracted on any BMC hardware. Can we make this property optional? Or maybe can we drop this if there is no use case?",
+      "range": {
+        "startLine": 12,
+        "startChar": 5,
+        "endLine": 12,
+        "endChar": 15
+      },
+      "revId": "bb6270023e535a7c192ec2754d928a562f1d2fda",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa91a7a1_2a5f2e1a",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-04-03T19:44:31Z",
+      "side": 1,
+      "message": "This description is just a fragment of 6.9.1 section of DSP0239. It seems to be not relevant here.",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 25,
+        "endChar": 45
+      },
+      "revId": "bb6270023e535a7c192ec2754d928a562f1d2fda",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "44c0c53f_c7032161",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-04-03T19:44:31Z",
+      "side": 1,
+      "message": "s/descritpion/description",
+      "range": {
+        "startLine": 15,
+        "startChar": 6,
+        "endLine": 15,
+        "endChar": 17
+      },
+      "revId": "bb6270023e535a7c192ec2754d928a562f1d2fda",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0e2b2387_0bd26906",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-04-03T19:44:31Z",
+      "side": 1,
+      "message": "To be consistent, please s/End Point/Endpoint/g",
+      "range": {
+        "startLine": 5,
+        "startChar": 29,
+        "endLine": 5,
+        "endChar": 38
+      },
+      "revId": "bb6270023e535a7c192ec2754d928a562f1d2fda",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

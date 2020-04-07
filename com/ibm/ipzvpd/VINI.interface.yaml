@@ -12,7 +12,7 @@ properties:
     - name: CE
       type: array[byte]
       description: >
-          CE keyword. The CCIN extension.
+          CE keyword.
     - name: VZ
       type: array[byte]
       description: >
@@ -36,11 +36,11 @@ properties:
     - name: HE
       type: array[byte]
       description: >
-          HE keyword. The hardware EC level.
+          HE keyword.
     - name: CT
       type: array[byte]
       description: >
-          CT keyword. The card type.
+          CT keyword.
     - name: HW
       type: array[byte]
       description: >
@@ -48,25 +48,34 @@ properties:
     - name: B3
       type: array[byte]
       description: >
-          B3 keyword. Contains hardware characteristics.
+          B3 keyword.
     - name: B4
       type: array[byte]
       description: >
-          B4 keyword. Manufacturing FRU control information.
+          B4 keyword.
     - name: B7
       type: array[byte]
       description: >
-          B7 keyword. Manufacturing test data.
+          B7 keyword.
     - name: HX
       type: array[byte]
       description: >
-          HX keyword. Slot bifurcation information for PCIe FRUs.
+          HX keyword.
     - name: FG
       type: array[byte]
       description: >
-          FG keyword. Card related data.
+          FG keyword.
     - name: TS
       type: array[byte]
       description: >
           TS keyword. Technology source.
+    - name: PR
+      type: array[byte]
+      description: >
+          PR keyword.
+    - name: VN
+      type: array[byte]
+      description: >
+          VN keyword.
 
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

@@ -1,0 +1,35 @@
+description: >
+    Implement to represent the VWML record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VD
+      type: array[byte]
+      description: >
+          VD keyword. Version ID.
+    - name: OC
+      type: array[byte]
+      description: >
+          OC keyword.Power-on Cycles.
+    - name: PD_I
+      type: array[byte]
+      description: >
+          The "#I" keyword.Contains the repair data.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword.
+    - name: D5
+      type: array[byte]
+      description: >
+          D5 keyword.
+    - name: D8
+      type: array[byte]
+      description: >
+          D8 keyword.
+    - name: F5
+      type: array[byte]
+      description: >
+          F5 keyword.

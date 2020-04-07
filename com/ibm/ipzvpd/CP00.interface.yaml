@@ -1,0 +1,53 @@
+description: >
+    Implement to represent the CP00 record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VD
+      type: array[byte]
+      description: >
+          VD keyword. Record version ID.
+    - name: PG
+      type: array[byte]
+      description: >
+          PG keyword.Partial Good Vector.
+    - name: MK
+      type: array[byte]
+      description: >
+          MK keyword.Mesh Clock Skew.
+    - name: PD_G
+      type: array[byte]
+      description: >
+          The "#G" keyword.GPTR Ring Image.
+    - name: PD_R
+      type: array[byte]
+      description: >
+          The "#R" keyword.Array repair Data.
+    - name: SB
+      type: array[byte]
+      description: >
+          SB keyword.SBE code version.
+    - name: PZ
+      type: array[byte]
+      description: >
+          PZ keyword.On Chip Precision Voltage Reference,
+          PVREF.
+    - name: AW
+      type: array[byte]
+      description: >
+          AW keyword.Array Write-assist.
+    - name: PD_P
+      type: array[byte]
+      description: >
+          The "#P" keyword.PLL Overrides.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword.
+    - name: D5
+      type: array[byte]
+      description: >
+          D5 keyword.
+

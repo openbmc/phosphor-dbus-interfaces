@@ -1,0 +1,31 @@
+description: >
+    Implement to represent the VRML record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VD
+      type: array[byte]
+      description: >
+          VD keyword. Record Version ID.
+    - name: PN
+      type: array[byte]
+      description: >
+          Part Number.
+    - name: SN
+      type: array[byte]
+      description: >
+          Serial Number.
+    - name: TV
+      type: array[byte]
+      description: >
+          TV keyword.Template Version.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword.
+    - name: F5
+      type: array[byte]
+      description: >
+          F5 keyword.

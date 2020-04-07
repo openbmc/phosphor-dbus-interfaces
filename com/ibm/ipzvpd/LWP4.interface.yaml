@@ -1,0 +1,52 @@
+description: >
+    Implement to represent the LWP4 record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VD
+      type: array[byte]
+      description: >
+          VD keyword. Version ID.
+    - name: N_20
+      type: array[byte]
+      description: >
+          The "20" keyword.Core0 L2 Line delete.
+    - name: N_21
+      type: array[byte]
+      description: >
+          The "21" keyword.Core1 L2 Line delete.
+    - name: N_22
+      type: array[byte]
+      description: >
+          The "22" keyword.Core2 L2 Line delete.
+    - name: N_23
+      type: array[byte]
+      description: >
+          The "23" keyword.Core3 L2 Line delete.
+    - name: N_30
+      type: array[byte]
+      description: >
+          The "30" keyword.Core0 L2 Line delete.
+    - name: N_31
+      type: array[byte]
+      description: >
+          The "31" keyword.Core1 L2 Line delete.
+    - name: N_32
+      type: array[byte]
+      description: >
+          The "32" keyword.Core2 L2 Line delete.
+    - name: N_33
+      type: array[byte]
+      description: >
+          The "33" keyword.Core3 L2 Line delete.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword.
+    - name: F5
+      type: array[byte]
+      description: >
+          F5 keyword.
+

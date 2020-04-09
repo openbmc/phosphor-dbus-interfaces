@@ -12,6 +12,17 @@ methods:
       errors:
        - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
        - xyz.openbmc_project.Chassis.Common.Error.IOError
+    - name: sledReset
+      description: >
+        Sled reset the chassis
+      returns:
+        - name: status
+          type: boolean
+          description: >
+            The result of power off command.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
 
 properties:
     - name: PGood

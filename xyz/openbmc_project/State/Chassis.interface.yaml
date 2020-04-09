@@ -39,6 +39,9 @@ enumerations:
           description: >
             Chassis power should be cycled from off to on. There will be a 5
             second delay between the off and the on.
+        - name: 'SledReset'
+          description: >
+            Chassis sled reset, a hard reset of power for whole chassis.
 
     - name: PowerState
       description: >

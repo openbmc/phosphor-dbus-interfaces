@@ -65,6 +65,7 @@ methods:
              -user groups
              -user enabled state
              -user locked state
+             -user password expired state
              -remote user flag
           If its ldap user, method returns
              -user privilege
@@ -84,6 +85,7 @@ methods:
               UserGroups    -> list of groups user belongs to(array[string])
               UserEnabled   -> user enabled state(boolean)
               UserLockedForFailedAttempt -> user locked state(boolean)
+              UserPasswordExpired -> user password expired(boolean)
               RemoteUser    ->  remote or local user(boolean)
 
               For detailed documentation of user properties refer

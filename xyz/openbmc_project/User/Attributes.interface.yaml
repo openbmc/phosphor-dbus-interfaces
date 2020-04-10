@@ -36,3 +36,18 @@ properties:
           the user after a timeout.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: RemoteUser
+      type: boolean
+      description: >
+          False for local users.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: UserPasswordExpired
+      type: boolean
+      description: >
+          True when the user's password must be changed before access should
+          be granted.  Passwords can be changed via Linux PAM.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure

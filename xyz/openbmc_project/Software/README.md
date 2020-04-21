@@ -151,6 +151,14 @@ a single managed element.  It is expected that all installed versions are listed
 as *Active* and the `Priority` shows which version is the primary and which are
 available for redundancy.
 
+Prior to `Activation`, it can be useful to indicate a desired
+`RedundancyPriority`.  This can be done by setting the `Priority` on the
+`RequestedRedundancyPriority` interface.  Some *ItemUpdater* implementations
+may not honor this field or be unable to comply with the request, in which
+case the resulting `Activation` may result in one of two conditions: a
+`ActivationState = Failed` or an `ActivateState = Active`` with a
+`RedundancyPriority = 0 (High)`.
+
 ## REST use-cases
 
 ### Find all software versions on the system, either active or available.

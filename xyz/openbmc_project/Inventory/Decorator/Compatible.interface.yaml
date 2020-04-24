@@ -10,4 +10,24 @@ properties:
     - name: Names
       type: array[string]
       description: >
-          The names that are compatible with the inventory item.
+          The value of the Names property is a list strings that define the
+          programming model of the inventory object on which the Compatible
+          interface is implemented.  The list of strings should be used by
+          applications to match the object with entries or configuration in a
+          hardware database.
+
+          Strings appear in the list from most specific to most general.  This
+          allows an inventory object to express compatibility with a family of
+          similar devices, allowing an application to match a variety of
+          devices with a single Name list entry.
+
+          The recommended Name list entry format is "manufacturer,model" where
+          manufacturer is a string describing the name of the manufacturer and
+          model specifies the model number.
+
+          ["ibm,cffps2", "pmbus"]
+
+          In this example, an application would first search for a
+          configuration that supports the ibm common form factor power supply
+          version two and if one is not found, search for a configuration for a
+          generic power supply that supports pmbus.

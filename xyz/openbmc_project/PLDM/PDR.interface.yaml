@@ -1,0 +1,53 @@
+description: >
+    Implement to fetch the StateEffecterPDRs. PDRs are Platform Descriptor
+    Records which are the collection of information that includes semantic
+    and association information. PLDM state effecter controls or configures
+    the state of an entity.
+    This  API would be used by PLDM Requester apps to access the primary PDR repo.
+
+    This implementation maintains the primary PDR repository on the BMC.
+    A OpenBMC implementation provides the  implementation of
+    xyz.openbmc_project.PLDM.PDR on /xyz/openbmc_project/pldm.
+
+    More information about PDR can be found at DSP0248 version 1.2.0 section 25.
+
+
+methods:
+    - name: FindStateEffecterPDR
+      description: >
+          Obtain the state effecter PDR, for the input TID,
+          entity type and state set id.
+
+          When the PDR for the given input TID, entity type
+          and state set id is not found, then the
+          xyz.openbmc_project.Common.Error.ResourceNotFound exception will be thrown.
+
+      parameters:
+        - name: TID
+          type: byte
+          description: >
+            A terminus id.
+
+        - name: EntityType
+          type: uint16
+          description: >
+            Identifies whether the Entity is a logical or physical Entity, and
+            what the type of the Entity it is.
+            More information is found at
+            http://dmtf.org/sites/default/files/standards/documents/DSP0249_1.0.0.pdf
+
+        - name: StateSetId
+          type: uint16
+          description: >
+            A numeric value that identifies the PLDM State Set that is used with this sensor.
+            More information is found at
+            http://dmtf.org/sites/default/files/standards/documents/DSP0249_1.0.0.pdf
+
+      returns:
+        - name: StateEffecterPDR
+          type: array[array[byte]]
+          description: >
+            The State Effecter PDR that provides information about a PLDM Composite State Effecter.
+
+      errors:
+        - xyz.openbmc_project.Common.Error.ResourceNotFound

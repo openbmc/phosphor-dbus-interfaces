@@ -1,0 +1,53 @@
+description: >
+    Implement to fetch the StateEffecterPDR's. This  API would
+    be used by PLDM Requester apps (other than pldm daemon) to
+    access the primary PDR repo.
+
+    A OpenBMC implementation must provide implementation of
+    xyz.openbmc_project.PLDM.PDR on /xyz/openbmc_project/pldm.
+
+
+methods:
+    - name: FindStateEffecterPDR
+      description: >
+          Obtain the state effecter PDR, for the input Tid,
+          entity information and state set id.
+
+      parameters:
+        - name: TID
+          type: byte
+          description: >
+            A terminus id, specified by tid.
+
+        - name: ContainerId
+          type: uint16
+          description: >
+            An opaque number that identifies the containing Entity that the
+            Instance number is defined relative to.If this value is 0x0000,
+            then the containing Entity is considered to be the overall system.
+
+        - name: EntityType
+          type: uint16
+          description: >
+            Identifies whether the Entity is a logical or physical Entity, and
+            what the type of the Entity it is.
+
+        - name: EntityInstance
+          type: uint16
+          description: >
+            A number that identifies the instance of the Entity.
+            This number is defined relative to the Entity that contains it.
+
+        - name: StateSetId
+          type: uint16
+          description: >
+            A numeric value that identifies the PLDM State Set that is used with this sensor.
+
+      returns:
+        - name: StateEffecterPDR
+          type: array[byte]
+          description: >
+            The State Effecter PDR that provides information about a PLDM Composite State Effecter.
+
+      errors:
+        - xyz.openbmc_project.Common.Error.ResourceNotFound

@@ -1,0 +1,55 @@
+description: >
+  Provides D-Bus access to certificate fds and host ack
+
+methods:
+  - name: GetCertficateFds
+    description: >
+      Returns csr fd
+    parameters:
+      - name: id
+        type: uint32
+        description: >
+          CSR file ID to retrieve.
+    returns:
+      - name: csrfd
+        type: unixfd
+        description: >
+          A file descriptor for a file that contains the CSR
+      - name: certfd
+        type: unixfd
+        description: >
+          A file descriptor for a file to write client certificate
+     errors:
+       - xyz.openbmc_project.Common.Error.InternalFailure
+
+  - name: HostAck
+    description: >
+      Notifies the certificate handler that the host acked a CSR request
+    parameters:
+      - name: id
+        type: uint32
+        description: >
+          The CSR ID
+      - name: ack
+        type: enum[self.Ack]
+        description: >
+          Acknowlegement of csr request
+    errors:
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
+
+enumerations:
+  - name: Ack
+    description: >
+      Acknowlegement
+    values:
+      - name: BadCSR
+        description: >
+          The CSR was malformed.
+      - name: InvalidVMIState
+        description: >
+          VMI is not up
+      -name: success
+       description: >
+          CSR request successful
+

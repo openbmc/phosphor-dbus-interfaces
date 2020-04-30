@@ -1,0 +1,26 @@
+description: >
+    Create Hypervisor Certificate Signing Request Entry
+    This interface will be implemented on dbus service "com.ibm.HypervisorCertificate"
+    and root object path "/com/ibm/HypervisorCertificate"
+methods:
+    - name: CreateHypervisorCSREntry
+      description: >
+          This method creates CSR object and returns D-Bus object path.
+          User can use this method after host is booted.
+          These objects are transient, no need to persist.
+          objects will be deleted once host acknowledges request.
+          This object implements Delete interface.
+
+      parameters:
+      - name: CSR
+        type: string
+        description: >
+          Certificate signing request string
+      returns:
+      - name: path
+        type: string
+        description: >
+          The object path of the D-Bus object representing CSR entry.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument

@@ -1,0 +1,14 @@
+description: >
+    Implement to create CSR object entry
+methods:
+    - name: CreateCSR
+      description: >
+          Method to create CSR object
+      parameters:
+      - name: id
+        type: uint32
+        description: >
+          CSR request id
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument

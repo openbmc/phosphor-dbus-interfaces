@@ -56,6 +56,26 @@ The *Host* would provide interfaces at
 The *Chassis* would provide interfaces at
 `/xyz/openbmc_project/state/chassis<instance>`
 
+### *Chassis System*
+This is an instance under *Chassis* and provide interface at
+`/xyz/openbmc_project/state/chassis_system<instance>`
+
+It can be used as with or wothout instance.
+
+Without instance, it will be name as chassis_system and it would provide interface at
+`/xyz/openbmc_project/state/chassis_system`
+
+This chassis_system will be treated as a complete chassis system which will include BMC,
+host and chassis. This will support hard power cycle of complete system and can be
+reffered as Sled reset by many platform.
+
+With instance, it will be name as chassis_system[0-N] and it would provide interface at
+`/xyz/openbmc_project/state/chassis_system<instance>`
+
+This chassis_system[N] will be treated as a pair of host[N] with chassis[N].
+This will support hard power cycle of paired system and can be
+reffered as Sled reset by many platform.
+
 ## BMC to Host to Chassis Mapping
 
 In the future, OpenBMC will provide an association API, which allows one

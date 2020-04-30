@@ -1,0 +1,21 @@
+description: >
+    Signs Certificate Signing Request.
+methods:
+    - name: SignCSR
+      description: >
+          This method provides signing authority functionality.
+
+      parameters:
+      - name: CSR
+        type: string
+        description: >
+          Should be a valid PEM encoded Certificate signing request string.
+
+      returns:
+      - name: path
+        type: string
+        description: >
+          The object path of the D-Bus object.
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.Certs.Error.InvalidAuthorityState

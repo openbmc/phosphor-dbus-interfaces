@@ -1,0 +1,51 @@
+description: >
+    Implement to provide CSR and client certificate file descriptors
+    and get host acknowlegement status.
+    Object which implements this interface should implement
+    xyz.openbmc_project.Object.Delete to allow the deletion of
+    individual CSR objects.
+    This interface 'com.ibm.HypervisorCertficate' implemented on '/com/ibm/HypervisorCertificate'
+    Refer design doc:
+     https://gerrit.openbmc-project.xyz/c/openbmc/docs/+/23420/26/designs/management-console/VMI_Certificate_Exchange.md
+properties:
+    - name: csrfd
+      type: unixfd
+      description: >
+          A file descriptor for a file that contains the CSR
+          This is a read fd for the user to read the CSR.
+          User should open this fd in read-only mode.
+          Size will be passed to host interface as part of request.
+          User can evaluate size in case if it does not get as part
+          of request.
+    - name: certfd
+      type: unixfd
+      description: >
+          A file descriptor for a file to write client certificate
+          This is a write fd where caller writes client certificate
+          by this fd.User can write whole data at once or can write
+          in chunks of bytes and need to close file as soon as writing
+          of data completes.User can fail CSR request if write on fd fails.
+    - name: hostAck
+      type: enum[self.Acknowledgement]
+      default: InProgress
+      description: >
+          Host acknowledgement for a CSR request
+
+enumerations:
+  - name: Acknowledgement
+    description: >
+      Host Acknowlegement
+    values:
+      - name: InProgress
+        description: >
+         this CSR request is being procesed
+         and have not got host acknowledgement yet.
+      - name: BadCSR
+        description: >
+          The CSR was malformed.
+      - name: InvalidHypervisorState
+        description: >
+          Hypervisor is not up
+      - name: Success
+        description: >
+          CSR request successful

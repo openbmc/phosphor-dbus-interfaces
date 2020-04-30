@@ -56,6 +56,21 @@ The *Host* would provide interfaces at
 The *Chassis* would provide interfaces at
 `/xyz/openbmc_project/state/chassis<instance>`
 
+### *Chassis System*
+This is an instance under *Chassis* and provide interface at
+`/xyz/openbmc_project/state/chassis_system<instance>`
+
+Instance 0 (chassis_system0) will be treated as a complete chassis system
+which will include BMC, host and chassis. This will support hard power
+cycle of complete system.
+
+In multi host or multi chassis system, instance number can be used from
+1-N, as 0 is reserved for complete system. In multi chassis system this
+can be named as chassis_system1 to chassis_systemN
+
+This chassis_systemN will be treated as a pair of hostN with chassisN.
+This will support hard power cycle of paired system together
+
 ## BMC to Host to Chassis Mapping
 
 In the future, OpenBMC will provide an association API, which allows one

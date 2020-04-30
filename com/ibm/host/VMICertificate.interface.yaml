@@ -1,0 +1,81 @@
+description: >
+  Implement GetCertificateFds method to share virtualization management
+  interface certificate file descriptors with Host interface.
+  HostAck method is to get host acknowledgement for the CSR request sent
+  to host.
+  This interface 'com.ibm.host.VMICertficate' implemented on '/com/ibm/host'
+  Refer design doc:
+   https://gerrit.openbmc-project.xyz/c/openbmc/docs/+/23420/26/designs/management-console/VMI_Certificate_Exchange.md
+
+methods:
+  - name: GetCertficateFD
+    description: >
+      Returns CSR and client certificate file descriptors
+    parameters:
+      - name: id
+        type: uint32
+        description: >
+          CSR file ID to retrieve.
+    returns:
+      - name: csrfd
+        type: unixfd
+        description: >
+          A file descriptor for a file that contains the CSR
+          This is a read fd where user read CSR by this fd.
+          User should open this fd in read-only mode.
+          Size will be passed to host interface as part of request.
+          User can evaluate size in case if it does not get as part
+          of request.
+      - name: certfd
+        type: unixfd
+        description: >
+          A file descriptor for a file to write client certificate
+          This is a write fd where caller writes client certificate
+          by this fd.User can write whole data at once or can write
+          in chunks of bytes and need to close file as soon as writing
+          of data completes.User can fail CSR request if write on fd fails.
+     errors:
+       - xyz.openbmc_project.Common.Error.InternalFailure
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
+  - name: HostAck
+    description: >
+      Populates the host acknowledgement for a CSR request
+    parameters:
+      - name: id
+        type: uint32
+        description: >
+          The CSR ID
+      - name: ack
+        type: enum[self.Acknowledgement]
+        description: >
+          Acknowledgement of CSR request
+    errors:
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
+signals:
+    - name: HostAckUpdated
+      description: >
+         Signal indicating HostAck is updated.
+      properties:
+         - name: id
+           type: uint32
+           description: CSR ID
+         - name: ack
+           type: enum[self.Ack]
+           description: Acknowlegement of CSR request
+
+enumerations:
+  - name: Acknowledgement
+    description: >
+      Host Acknowlegement
+    values:
+      - name: BadCSR
+        description: >
+          The CSR was malformed.
+      - name: InvalidVMIState
+        description: >
+          VMI is not up
+      -name: Success
+       description: >
+          CSR request successful

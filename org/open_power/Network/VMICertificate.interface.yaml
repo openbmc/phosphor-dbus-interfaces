@@ -1,0 +1,77 @@
+description: >
+  Provides D-Bus access to VMI certificate fds and host ack
+  Management console sends the CSR to VMI(CA) to get signed
+  certificate through redfish command, gets the signed certificate
+  and the CA certificate from VMI to establish connection to VMI.
+  On sign CSR request webserver calls pldm commands to send request
+  to host.these dbus methods are defined to share CSR and certificate
+  file fds with pldm and get host acknowledgment for csr request sent.
+  Refer design doc:
+   https://gerrit.openbmc-project.xyz/c/openbmc/docs/+/23420/26/designs/management-console/VMI_Certificate_Exchange.md
+ 
+methods:
+  - name: GetCertficateFds
+    description: >
+      Returns CSR and client certificate fds      
+    parameters:
+      - name: id
+        type: uint32
+        description: >
+          CSR file ID to retrieve.
+    returns:
+      - name: csrfd
+        type: unixfd
+        description: >
+          A file descriptor for a file that contains the CSR
+          This is a read fd where caller read CSR by this fd.
+      - name: certfd
+        type: unixfd
+        description: >
+          A file descriptor for a file to write client certificate
+          This is a write fd where caller writes client certificate
+          by this fd.
+     errors:
+       - xyz.openbmc_project.Common.Error.InternalFailure
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
+  - name: HostAck
+    description: >
+      Populates the host acknowledgement for a CSR request
+    parameters:
+      - name: id
+        type: uint32
+        description: >
+          The CSR ID
+      - name: ack
+        type: enum[self.Ack]
+        description: >
+          Acknowlegement of csr request
+    errors:
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
+signals:
+    - name: HostAckUpdated
+      description: >
+         Signal indicating HostAck is updated.
+      properties:
+         - name: id
+           type: uint32
+           description: CSR ID
+         - name: ack
+           type: enum[self.Ack]
+           description: Acknowlegement of csr request
+
+enumerations:
+  - name: Ack
+    description: >
+      Acknowlegement
+    values:
+      - name: BadCSR
+        description: >
+          The CSR was malformed.
+      - name: InvalidVMIState
+        description: >
+          VMI is not up
+      -name: Success
+       description: >
+          CSR request successful

@@ -1,0 +1,23 @@
+description: >
+    Create Hypervisor Certificate Signing Request Entry
+    This interface will be implemented on dbus service "com.ibm.HypervisorCertificate"
+    and root object path "/com/ibm/HypervisorCertificate"
+methods:
+    - name: CreateHypervisorCSREntry
+      description: >
+          Method to create CSR object
+      parameters:
+      - name: CSR
+        type: string
+        description: >
+          Certificate signing request string
+      returns:
+      - name: Id
+        type: uint32
+        description: >
+          The certificate entry id number.
+          User can find this object with given id implemented under
+          object path "/com/ibm/HypervisorCertificate/entry/"
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument

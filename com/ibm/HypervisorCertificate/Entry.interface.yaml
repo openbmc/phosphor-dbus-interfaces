@@ -1,0 +1,43 @@
+description: >
+    Implement to provide CSR and client certificate file descriptors
+    and get host acknowledgement status.
+    Object which implements this interface should implement
+    xyz.openbmc_project.Object.Delete to allow the deletion of
+    individual CSR objects.
+    Objects will implement this interface on dbus service 'com.ibm.HypervisorCertficate'
+    and object path will be  '/com/ibm/HypervisorCertificate/entry/<id>'
+    Refer design doc:
+     https://gerrit.openbmc-project.xyz/c/openbmc/docs/+/23420/26/designs/management-console/VMI_Certificate_Exchange.md
+properties:
+    - name: CSR
+      type: array[byte]
+      description: >
+          Certificate signing request content.its read-only property.
+    - name: CERT
+      type: array[byte]
+      description: >
+          Client certificate content
+    - name: hostAck
+      type: enum[self.Acknowledgement]
+      default: InProgress
+      description: >
+          Host acknowledgement for a CSR request
+
+enumerations:
+  - name: Acknowledgement
+    description: >
+      Host Acknowledgement
+    values:
+      - name: InProgress
+        description: >
+         this CSR request is being processed
+         and have not got host acknowledgement yet.
+      - name: BadCSR
+        description: >
+          The CSR was malformed.
+      - name: InvalidHypervisorState
+        description: >
+          Hypervisor isn't in a valid state to serve this CSR request.
+      - name: Success
+        description: >
+          CSR request successful

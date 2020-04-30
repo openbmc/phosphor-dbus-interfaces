@@ -1,0 +1,19 @@
+description: >
+    Implement to create CSR object entry
+methods:
+    - name: VMICreateCSREntry
+      description: >
+          Method to create CSR object
+      parameters:
+      - name: csr
+        type: string
+        description: >
+          CSR string
+      returns:
+      - name: Id
+        type: uint32
+        description: >
+          The certficate entry id number. 
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.InvalidArgument

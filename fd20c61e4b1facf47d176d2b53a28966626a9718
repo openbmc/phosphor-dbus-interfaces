@@ -1,0 +1,348 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b3c39f1_3a74f761",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "The description doesn\u0027t match the enum member name.",
+      "range": {
+        "startLine": 69,
+        "startChar": 8,
+        "endLine": 70,
+        "endChar": 51
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34aad818_3ef75c4f",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "The aesthetics of the camel-case aren\u0027t great. Do we have to break up \"NC\" and \"SI\" in this way?",
+      "range": {
+        "startLine": 80,
+        "startChar": 16,
+        "endLine": 80,
+        "endChar": 27
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c1e6a416_9e5145b9",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "This is inconsistent camel-casing.",
+      "range": {
+        "startLine": 94,
+        "startChar": 16,
+        "endLine": 94,
+        "endChar": 22
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a1472604_0512d53e",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "Again here?",
+      "range": {
+        "startLine": 96,
+        "startChar": 15,
+        "endLine": 96,
+        "endChar": 25
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9d75916e_fef3fece",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "So these aren\u0027t orthogonal in nature - a Bridge is also a BusOwner and is also an EndPoint. Is it perhaps intended that Endpoint \u003c BusOwner \u003c Bridge (i.e. Bridge is a superset of BusOwner, which is a superset of Endpoint)? Some clarification on the mental model would be helpful here.",
+      "range": {
+        "startLine": 99,
+        "startChar": 10,
+        "endLine": 99,
+        "endChar": 26
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "144a4e67_79f97178",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "Why not \"Pldm\" and \"Ncsi\"? \"NCSI\" is inconsistent with \"NcSi\" above. This is an interface between applications, there needs to be some feeling of consistency.",
+      "range": {
+        "startLine": 127,
+        "startChar": 2,
+        "endLine": 128,
+        "endChar": 16
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9ea0d13_aee049e1",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "This should be \"Nvme\" right?",
+      "range": {
+        "startLine": 130,
+        "startChar": 12,
+        "endLine": 130,
+        "endChar": 16
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0fef7579_b2a434f9",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "Inconsistent camel-casing with the rest of the document.",
+      "range": {
+        "startLine": 131,
+        "startChar": 0,
+        "endLine": 133,
+        "endChar": 18
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4df821ef_366f165e",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "This is applicable to all endpoints. Section 12.14 (\"Endpoint Discovery\") describes a generic command and makes no mention of the PCIe binding.",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "45495e86_e1174f43",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "This feels like leaky abstraction. Why not break them out into separate D-Bus properties?",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 16,
+        "endChar": 56
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "21178ee6_962684cf",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "Same issue as DiscoveredFlag above.",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cc04d9ef_a92e7c05",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "What about Bridge mode? This is where I\u0027d like some more clarity on the intent of the mode enumeration.",
+      "range": {
+        "startLine": 2,
+        "startChar": 43,
+        "endLine": 2,
+        "endChar": 76
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "33c45dd8_fcc06784",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "Isn\u0027t this inferred from TopMostBusOwner? If it\u0027s not, what is its purpose?",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 15,
+        "endChar": 56
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14b1f886_c7a3bb80",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "Why is the \u0027Eid\u0027 property in the \u0027Base\u0027 interface and not in the \u0027Endpoint\u0027 interface. It feels like this issue violates the principle of least surprise.\n\nI suggest we move the Eid property here and just have the MCTP daemon also implement the Endpoint interface.",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8116ff12_bc916615",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "This will be the same for all EIDs under a given DBus connection, given part of the architecture you\u0027re proposing is to run one instance of a \u0027MCTP Daemon\u0027 per \"port\" (\"port\" as defined in \"9.1.2 EID options for MCTP bridges\" in DSP0236 v1.3.0).\n\nActually, that leads to a question: If you were to have a bridge in a network in that configuration (one MCTP daemon per port), how do applications interacting with MCTP deal with their segmented view of the network due to multiple daemon instances? Or are you proposing a third daemon be used to implement the bridge and applications connect to that for a complete view of the network? Or is there some discovery process that applications need to follow to find which MCTP daemons to query?",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "093f09f5_762e45fb",
+        "filename": "xyz/openbmc_project/MCTP/SupportedMessageTypes.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-04T12:26:42Z",
+      "side": 1,
+      "message": "Similar issues here as noted in the Base interface wrt camel-casing and capitalisation of identifiers.",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

@@ -209,6 +209,30 @@
     },
     {
       "key": {
+        "uuid": "27a29f3f_9da9b982",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-05-04T20:17:33Z",
+      "side": 1,
+      "message": "Note that the earlier section 12.13 contains the following:\n\"The Endpoint Discovery and Prepare for Endpoint Discovery commands may only be supported on particular transport bindings (e.g. MCTP over PCIeVendor Defined Messaging). If the binding does not use this discovery approach (e.g. SMBus/I2C) the endpoint shall return an ERROR_UNSUPPORTED_CMD completion status for those commands.\"",
+      "parentUuid": "4df821ef_366f165e",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "45495e86_e1174f43",
         "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
         "patchSetId": 14
@@ -232,6 +256,30 @@
     },
     {
       "key": {
+        "uuid": "0b9a986f_3c27eeba",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-05-04T20:17:33Z",
+      "side": 1,
+      "message": "This is a PCI concept and its representation usually looks like this (a single uint16):\n- Section 6.3 of DSP0238 (\"Physical address format for MCTP control messages\") or\n- Linux kernel: https://elixir.bootlin.com/linux/latest/source/include/linux/pci.h#L57",
+      "parentUuid": "45495e86_e1174f43",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 16,
+        "endChar": 56
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "21178ee6_962684cf",
         "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
         "patchSetId": 14
@@ -243,6 +291,24 @@
       "writtenOn": "2020-05-04T12:26:42Z",
       "side": 1,
       "message": "Same issue as DiscoveredFlag above.",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9f38ffdc_93674896",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-05-04T20:17:33Z",
+      "side": 1,
+      "message": "It refers to the section 6.9.1 of DSP0238.",
+      "parentUuid": "21178ee6_962684cf",
       "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -312,6 +378,24 @@
     },
     {
       "key": {
+        "uuid": "10a59105_42e0eb4f",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-05-04T20:17:33Z",
+      "side": 1,
+      "message": "According to README, endpoints in MCTP network should be \"exposed under the path `/xyz/openbmc_project/mctp/device/\u003ceid\u003e\u0027\".\nIn the \"Base\" interface \u0027Eid\u0027 refers to the BMC EID in the given MCTP network.",
+      "parentUuid": "14b1f886_c7a3bb80",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8116ff12_bc916615",
         "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
         "patchSetId": 14
@@ -323,6 +407,24 @@
       "writtenOn": "2020-05-04T12:26:42Z",
       "side": 1,
       "message": "This will be the same for all EIDs under a given DBus connection, given part of the architecture you\u0027re proposing is to run one instance of a \u0027MCTP Daemon\u0027 per \"port\" (\"port\" as defined in \"9.1.2 EID options for MCTP bridges\" in DSP0236 v1.3.0).\n\nActually, that leads to a question: If you were to have a bridge in a network in that configuration (one MCTP daemon per port), how do applications interacting with MCTP deal with their segmented view of the network due to multiple daemon instances? Or are you proposing a third daemon be used to implement the bridge and applications connect to that for a complete view of the network? Or is there some discovery process that applications need to follow to find which MCTP daemons to query?",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "05d6128a_5ed8a7fe",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000461
+      },
+      "writtenOn": "2020-05-04T20:17:33Z",
+      "side": 1,
+      "message": "I believe that the \u0027NetworkId\u0027 property should be moved to the \u0027Base\u0027 interface since it refers to the MCTP network on the current bus.",
+      "parentUuid": "8116ff12_bc916615",
       "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

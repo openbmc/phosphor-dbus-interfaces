@@ -428,6 +428,30 @@
     },
     {
       "key": {
+        "uuid": "b0d3a77c_c6b19142",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-05-05T10:34:32Z",
+      "side": 1,
+      "message": "Bridge mode would need more discussions I believe - MCTP spec by itself does not provide any security, thus we might have to approach bridging with caution. We might consider blocking bridging between a public bus (i.e something like an add-in-card slot\u0027s SMBus) to private bus (to host/ME). Bridging mode will need interfaces of its own",
+      "parentUuid": "cc04d9ef_a92e7c05",
+      "range": {
+        "startLine": 2,
+        "startChar": 43,
+        "endLine": 2,
+        "endChar": 76
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "33c45dd8_fcc06784",
         "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
         "patchSetId": 14
@@ -439,6 +463,30 @@
       "writtenOn": "2020-05-04T12:26:42Z",
       "side": 1,
       "message": "Isn\u0027t this inferred from TopMostBusOwner? If it\u0027s not, what is its purpose?",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 15,
+        "endChar": 56
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "88025494_fe65c1e2",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-05-05T10:34:32Z",
+      "side": 1,
+      "message": "This is to support statically allocated EID pools (Although spec says other BusOwners in the network need to get their pools from TopMostBusOwner, we can consider supporting a design where BusOwners in the network are statically allocated EID pool).",
+      "parentUuid": "33c45dd8_fcc06784",
       "range": {
         "startLine": 13,
         "startChar": 4,

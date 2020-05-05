@@ -233,6 +233,30 @@
     },
     {
       "key": {
+        "uuid": "6604df7c_151cbeb6",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-05T04:00:07Z",
+      "side": 1,
+      "message": "Okay, fair enough, however it\u0027s still the case that this concept can apply to future bindings. I think it\u0027s worth discussing the merits of maintaining this as a separate interface that some binding objects implement even though right now it\u0027s only PCIe that does so. What you\u0027re proposing here is an API so we need to explore the options to avoid application churn for future MCTP bindings.",
+      "parentUuid": "27a29f3f_9da9b982",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "45495e86_e1174f43",
         "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
         "patchSetId": 14
@@ -280,6 +304,30 @@
     },
     {
       "key": {
+        "uuid": "4bd1a2b7_9f2733e1",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-05T04:00:07Z",
+      "side": 1,
+      "message": "Yeah, I\u0027m not necessarily sold on my idea either, just thought it was worth discussion. I think it\u0027s worth calling out the reference to DSP0238 in the description as you\u0027ve done in your reply.",
+      "parentUuid": "0b9a986f_3c27eeba",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 16,
+        "endChar": 56
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "21178ee6_962684cf",
         "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
         "patchSetId": 14
@@ -309,6 +357,24 @@
       "side": 1,
       "message": "It refers to the section 6.9.1 of DSP0238.",
       "parentUuid": "21178ee6_962684cf",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "afd7e1b6_3a7918e1",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-05T04:00:07Z",
+      "side": 1,
+      "message": "Right, but that\u0027s still something that\u0027s applicable to multiple bindings in my mind - do you agree that 6.9.1 of DSP0238 is just a concrete description of the general concepts described in DSP0236?",
+      "parentUuid": "9f38ffdc_93674896",
       "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -396,6 +462,24 @@
     },
     {
       "key": {
+        "uuid": "4f9862d7_f5c0a3f6",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-05T04:00:07Z",
+      "side": 1,
+      "message": "\u003e In the \"Base\" interface \u0027Eid\u0027 refers to the BMC EID in the given MCTP network.\n\nRight, but the BMC is just another endpoint in the network. Can we not publish the daemon\u0027s object at multiple paths?",
+      "parentUuid": "10a59105_42e0eb4f",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8116ff12_bc916615",
         "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
         "patchSetId": 14
@@ -425,6 +509,24 @@
       "side": 1,
       "message": "I believe that the \u0027NetworkId\u0027 property should be moved to the \u0027Base\u0027 interface since it refers to the MCTP network on the current bus.",
       "parentUuid": "8116ff12_bc916615",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fa3f3cde_e8fb488c",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-05T04:00:07Z",
+      "side": 1,
+      "message": "\u003e I believe that the \u0027NetworkId\u0027 property should be moved to the \u0027Base\u0027 interface since it refers to the MCTP network on the current bus.\n\nI agree with you in that I don\u0027t think NetworkId belongs in the Endpoint interface.\n\nI\u0027d still like to see some discussion of how applications should interact with these proposed interfaces in the face of the BMC implementing a bridge between two ports given the resulting segmented view of the network.",
+      "parentUuid": "05d6128a_5ed8a7fe",
       "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

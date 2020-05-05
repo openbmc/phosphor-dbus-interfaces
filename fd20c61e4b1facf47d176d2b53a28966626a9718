@@ -117,6 +117,30 @@
     },
     {
       "key": {
+        "uuid": "6d92568a_204e3c7a",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-05-05T08:10:13Z",
+      "side": 1,
+      "message": "With having multiple instances of MCTP Daemon (one daemon per physical medium) , we can have each instance started with a \"role\" (EP/BO/Bridge) defined. This property is used to advertise the role of the binding on D-Bus. \nThis can be a read only property. Perhaps this can use a modification to accommodate your point - a daemon instance can be:\n1. Simple Endpoint\n2. Simple BusOwner with a statically allocated EID pool\n3. Endpoint + bridging supported on the particular medium\n4. BusOwner with a statically allocated EID pool + bridging supported on the particular medium",
+      "parentUuid": "9d75916e_fef3fece",
+      "range": {
+        "startLine": 99,
+        "startChar": 10,
+        "endLine": 99,
+        "endChar": 26
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "144a4e67_79f97178",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 14

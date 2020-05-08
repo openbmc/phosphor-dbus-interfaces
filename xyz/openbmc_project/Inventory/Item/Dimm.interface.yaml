@@ -162,7 +162,7 @@ properties:
       description: >
           Total size of the cache portion memory in kibibytes (KiB).
     - name: MemoryMedia
-      type: array[string]
+      type: array[enum[self.MemTech]]
       description: Media of this memory.
 
 enumerations:
@@ -351,3 +351,29 @@ enumerations:
         - name: Die
           description: >
               A die within a package.
+    - name: MemTech
+      description: >
+          This property shall contain the Memory Tech as defined by
+          SMBIOS.
+      values:
+        - name: Other
+          description: >
+              Some devices which are not defined in this table.
+        - name: Unknown
+          description: >
+              Unknown device.
+        - name: DRAM
+          description: >
+              Unknown device.
+        - name: NVDIMMN
+          description: >
+              Unknown device.
+        - name: NVDIMMF
+          description: >
+              Unknown device.
+        - name: NVDIMMP
+          description: >
+              Unknown device.
+        - name: Intel3DXPoint
+          description: >
+              Unknown device.

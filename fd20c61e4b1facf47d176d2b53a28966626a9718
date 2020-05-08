@@ -141,6 +141,30 @@
     },
     {
       "key": {
+        "uuid": "7acfdf10_a9de4b04",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-08T05:42:53Z",
+      "side": 1,
+      "message": "Okay, maybe we should back up a bit.\n\nWhat would a piece of software interacting with the daemon do with this information? How would the application change it\u0027s behaviour if it knew that the daemon was acting as a simple endpoint vs a bus owner vs a bridge?\n\nWhy would the application care about static vs dynamic EID pools?\n\nSeparately, my reading of the spec is that \"static pools\" aren\u0027t really a thing. For static assignment, all devices further up the tree must be aware of the static allocations (i.e particularly the top-most bus owner, which must know that these EIDs have been allocated and can\u0027t form part of the dynamic EID pool).",
+      "parentUuid": "6d92568a_204e3c7a",
+      "range": {
+        "startLine": 99,
+        "startChar": 10,
+        "endLine": 99,
+        "endChar": 26
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "144a4e67_79f97178",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 14
@@ -452,6 +476,30 @@
     },
     {
       "key": {
+        "uuid": "8abc4ab6_2e505aa3",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-08T05:42:53Z",
+      "side": 1,
+      "message": "The DBus interfaces don\u0027t care for MCTP network security either, they just need to describe the topology of your network correctly. Security comes from architecting the networks correctly (if isolating certain components from each other is necessary). The system\u0027s composition of the daemons implements the network architecture and therefore provides the isolation.\n\nBut my point is that a Bridge is implicitly a Bus Owner by nature. Therefore the BusOwner interface should also apply to bridges.",
+      "parentUuid": "b0d3a77c_c6b19142",
+      "range": {
+        "startLine": 2,
+        "startChar": 43,
+        "endLine": 2,
+        "endChar": 76
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "33c45dd8_fcc06784",
         "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
         "patchSetId": 14
@@ -487,6 +535,30 @@
       "side": 1,
       "message": "This is to support statically allocated EID pools (Although spec says other BusOwners in the network need to get their pools from TopMostBusOwner, we can consider supporting a design where BusOwners in the network are statically allocated EID pool).",
       "parentUuid": "33c45dd8_fcc06784",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 15,
+        "endChar": 56
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1f379925_6fa220f6",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-08T05:42:53Z",
+      "side": 1,
+      "message": "Has the static EID pool concept been discussed with PMCI?",
+      "parentUuid": "88025494_fe65c1e2",
       "range": {
         "startLine": 13,
         "startChar": 4,

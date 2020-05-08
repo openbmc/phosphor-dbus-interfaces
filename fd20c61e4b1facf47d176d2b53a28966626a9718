@@ -165,6 +165,30 @@
     },
     {
       "key": {
+        "uuid": "5fd8f367_cc420b41",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2020-05-08T07:19:54Z",
+      "side": 1,
+      "message": "Upper layer protocols will not care about this property. But the thinking behind this one was it might come in handy if bridging between two mctp daemon instances is required. Suppose if we want an mctp daemon working under just endpoint mode to not to support any bridging, it can be indicated through this property.",
+      "parentUuid": "7acfdf10_a9de4b04",
+      "range": {
+        "startLine": 99,
+        "startChar": 10,
+        "endLine": 99,
+        "endChar": 26
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "144a4e67_79f97178",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 14

@@ -17,6 +17,7 @@ properties:
           Privilege of the user.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
     - name: UserEnabled
       type: boolean

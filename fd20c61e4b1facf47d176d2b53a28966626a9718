@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "a166386a_c9910eb8",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-05-11T07:59:59Z",
+      "side": 1,
+      "message": "Nope. NCSI must be used here\n\nSMBus, USB, PCI, PCIe  (Better to follow the acronym as such, except in the method name.",
+      "parentUuid": "34aad818_3ef75c4f",
+      "range": {
+        "startLine": 80,
+        "startChar": 16,
+        "endLine": 80,
+        "endChar": 27
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c1e6a416_9e5145b9",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 14
@@ -213,6 +237,30 @@
     },
     {
       "key": {
+        "uuid": "f073c688_e7f4fd47",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-05-11T07:59:59Z",
+      "side": 1,
+      "message": "Only 2 things needs to be defined here. One is endpoint \u0026 another is busowner/ Bridge.\n\nThese are not useful for the Upper application like PLDM / SPDM. But this is used in terms of entity-manager or other configuration files to make sure, how it must be configured. Here we are just exposing the property back (Read only)",
+      "parentUuid": "ed576243_373d5422",
+      "range": {
+        "startLine": 99,
+        "startChar": 10,
+        "endLine": 99,
+        "endChar": 26
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "144a4e67_79f97178",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 14
@@ -224,6 +272,30 @@
       "writtenOn": "2020-05-04T12:26:42Z",
       "side": 1,
       "message": "Why not \"Pldm\" and \"Ncsi\"? \"NCSI\" is inconsistent with \"NcSi\" above. This is an interface between applications, there needs to be some feeling of consistency.",
+      "range": {
+        "startLine": 127,
+        "startChar": 2,
+        "endLine": 128,
+        "endChar": 16
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e827524_e0e84ba2",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-05-11T07:59:59Z",
+      "side": 1,
+      "message": "This is one of the question, which i have asked earlier in IRC but with no response. Basically, for protocol with Acronyms in many of D-Bus properties \u0026 enums it is used as is, except method names. \n\nAgree with you, we need to maintain consistency here and want to use acronym   forms (i.e. it would be PLDM, NVMe etc for usage in properties \u0026 enums, and only for method we will call this as Pldm).",
+      "parentUuid": "144a4e67_79f97178",
       "range": {
         "startLine": 127,
         "startChar": 2,
@@ -353,6 +425,30 @@
     },
     {
       "key": {
+        "uuid": "016e1f60_91a76cca",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-05-11T07:59:59Z",
+      "side": 1,
+      "message": "At this point of time, couldn\u0027t able to envision, any other physical layer, which may need this one. Let us know, and we are OK to change?",
+      "parentUuid": "6604df7c_151cbeb6",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "45495e86_e1174f43",
         "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
         "patchSetId": 14
@@ -412,6 +508,30 @@
       "side": 1,
       "message": "Yeah, I\u0027m not necessarily sold on my idea either, just thought it was worth discussion. I think it\u0027s worth calling out the reference to DSP0238 in the description as you\u0027ve done in your reply.",
       "parentUuid": "0b9a986f_3c27eeba",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 16,
+        "endChar": 56
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8d97c21e_9fd84a3f",
+        "filename": "xyz/openbmc_project/MCTP/Binding/PCIe.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-05-11T07:59:59Z",
+      "side": 1,
+      "message": "Sure, but any advantage in getting the same as single unit. We don\u0027t find any and for tracking purpose single unit representation of B/D/F is better.",
+      "parentUuid": "4bd1a2b7_9f2733e1",
       "range": {
         "startLine": 15,
         "startChar": 1,
@@ -715,6 +835,30 @@
     },
     {
       "key": {
+        "uuid": "f8cb9a1d_e609ab61",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-05-11T07:59:59Z",
+      "side": 1,
+      "message": "OwnEidPool is not needed right? In case of TopMost bus owner, EIDPool represents the ownEidPool.\nEven in case of static EID, the EIDPool should be enough to hold or allocated with the help of bus owner.",
+      "parentUuid": "7b28d49a_d62e84b1",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 15,
+        "endChar": 56
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "14b1f886_c7a3bb80",
         "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
         "patchSetId": 14
@@ -768,6 +912,24 @@
     },
     {
       "key": {
+        "uuid": "1f91051b_e8c05ab1",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-05-11T07:59:59Z",
+      "side": 1,
+      "message": "We want to maintain Eid in Base to represent the self EID, and advertise when there is a change (say we got new SetEID and got changed).\nFor device EID, as it is part of path, we don\u0027t require a separate property, also, when a device changes it\u0027s EID, we want to recreate the object\n(i.e. After discovery, if we the device changes it\u0027s eid, due to another bus owner force it do so etc).",
+      "parentUuid": "4f9862d7_f5c0a3f6",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8116ff12_bc916615",
         "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
         "patchSetId": 14
@@ -815,6 +977,24 @@
       "side": 1,
       "message": "\u003e I believe that the \u0027NetworkId\u0027 property should be moved to the \u0027Base\u0027 interface since it refers to the MCTP network on the current bus.\n\nI agree with you in that I don\u0027t think NetworkId belongs in the Endpoint interface.\n\nI\u0027d still like to see some discussion of how applications should interact with these proposed interfaces in the face of the BMC implementing a bridge between two ports given the resulting segmented view of the network.",
       "parentUuid": "05d6128a_5ed8a7fe",
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "461750ef_d651b63d",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2020-05-11T07:59:59Z",
+      "side": 1,
+      "message": "Probably we kept this, so that by querying the D-Bus object property itself we will be able to get the data.\nwhen we discussed this with wiktor, we envisioned this, i am unable to recollect this, give me a day will get back on this.",
+      "parentUuid": "fa3f3cde_e8fb488c",
       "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

@@ -10,6 +10,7 @@ description: >
       current
       power
       energy
+      utilization
 
     Any service implementing Sensor.Value on one or more objects must
     implement org.freedesktop.DBus.ObjectManager on the sensors namespace root.
@@ -40,6 +41,7 @@ properties:
           For objects in the current namespace, Unit must be "Amperes".
           For objects in the power namespace, Unit must be "Watts".
           For objects in the energy namespace, Unit must be "Joules".
+          For objects in the utilization namespace, Unit must be "Percent"
     - name: Scale
       type: int64
       description: >
@@ -72,3 +74,6 @@ enumerations:
         - name: Joules
           description: >
             Energy transfer as Joules.
+        - name: Percent
+          description: >
+            Resource utilization as percentage.

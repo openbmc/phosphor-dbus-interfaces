@@ -189,6 +189,30 @@
     },
     {
       "key": {
+        "uuid": "ed576243_373d5422",
+        "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-11T01:05:57Z",
+      "side": 1,
+      "message": "\u003e Suppose if we want an mctp daemon working under just endpoint mode to not to support any bridging, it can be indicated through this property.\n\nThat sounds like the wrong approach - you\u0027re trying to drive configuration from the bottom up. How would the bridge process know it needs to use this port/endpoint in the first place? So I think we should flip it: Bridging should be architected from the top down where the bridge process knows which ports/endpoints it needs to aggregate. That way there would be no need for this property.\n\nGenerally, as these are APIs, we should be conservative in what we add as we cannot be liberal in what we remove. I don\u0027t yet feel like there\u0027s a good case for this property - it feels like we don\u0027t have anything concrete that requires it and it\u0027s just a \"nice-to-have\".",
+      "parentUuid": "5fd8f367_cc420b41",
+      "range": {
+        "startLine": 99,
+        "startChar": 10,
+        "endLine": 99,
+        "endChar": 26
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "144a4e67_79f97178",
         "filename": "xyz/openbmc_project/MCTP/Base.interface.yaml",
         "patchSetId": 14
@@ -548,6 +572,30 @@
     },
     {
       "key": {
+        "uuid": "25fa3553_9859eb5a",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-11T01:05:57Z",
+      "side": 1,
+      "message": "Okay. I think the text should make that point so the reader has a crisp idea of what this interface should capture.",
+      "parentUuid": "3268cc30_638e3fa0",
+      "range": {
+        "startLine": 2,
+        "startChar": 43,
+        "endLine": 2,
+        "endChar": 76
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "33c45dd8_fcc06784",
         "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
         "patchSetId": 14
@@ -631,6 +679,30 @@
       "side": 1,
       "message": "Well agree there, static pools are not part of the spec but might be something to consider in the interim. Reason behind this one was the difficulty in deciding the topmost busowner. We will have to consider the sleep states/boot order of the connected components - if the topmost bus owner is unable to boot for some reason, then no busonwers down the tree get their pools.",
       "parentUuid": "1f379925_6fa220f6",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 15,
+        "endChar": 56
+      },
+      "revId": "fd20c61e4b1facf47d176d2b53a28966626a9718",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7b28d49a_d62e84b1",
+        "filename": "xyz/openbmc_project/MCTP/BusOwner.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-05-11T01:05:57Z",
+      "side": 1,
+      "message": "I don\u0027t think that MCTP networks are intended to operate correctly without a top level bus owner. Has this idea been discussed by DMTF?",
+      "parentUuid": "6dfeff9a_3881e244",
       "range": {
         "startLine": 13,
         "startChar": 4,

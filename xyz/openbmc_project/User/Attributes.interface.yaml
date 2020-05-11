@@ -14,9 +14,11 @@ properties:
     - name: UserPrivilege
       type: string
       description: >
-          Privilege of the user.
+          Privilege of the user. Acceptable values of the system are listed
+          under AllPrivileges property under User.Manager interface.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
     - name: UserEnabled
       type: boolean

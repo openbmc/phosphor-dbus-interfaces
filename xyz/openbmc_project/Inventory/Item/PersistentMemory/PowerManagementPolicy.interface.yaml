@@ -1,0 +1,20 @@
+description: >
+    Implement to provide the power management policy for the current
+    resource.
+properties:
+    - name: PolicyEnabled
+      type: boolean
+      description: >
+          Power management policy enabled status.
+    - name: MaxTDPmW
+      type: uint32
+      description: >
+          Maximum TDP in milli watts.
+    - name: PeakPowerBudgetmW
+      type: uint32
+      description: >
+          Peak power budget in milli watts.
+    - name: AveragePowerBudgetmW
+      type: uint32
+      description: >
+          Average power budget in milli watts.

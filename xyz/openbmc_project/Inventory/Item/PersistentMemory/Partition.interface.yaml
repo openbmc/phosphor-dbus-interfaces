@@ -5,7 +5,7 @@ properties:
       type: string
       description: >
           Unique region ID representing a specific region within the Memory.
-    - name: SizeKiB
+    - name: SizeInKiB
       type: uint64
       description: >
           Size of this memory region in kibibytes (KiB).
@@ -13,11 +13,11 @@ properties:
       type: string
       description: >
           Classification of memory occupied by the given memory region.
-    - name: OffsetMiB
+    - name: OffsetInKiB
       type: uint64
       description: >
           Offset with in the Memory that corresponds to the starting of this
-          memory region in MiB.
+          memory region in KiB.
     - name: PassphraseState
       type: boolean
       description: >

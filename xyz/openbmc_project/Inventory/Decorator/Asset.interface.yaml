@@ -29,3 +29,8 @@ properties:
       description: >
           The Sub model of the item.
       default: ""
+    - name: SparePartNumber
+      type: string
+      description: >
+          Fru part number that identifies the field replaceable unit.
+      default: ""

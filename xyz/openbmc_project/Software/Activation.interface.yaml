@@ -38,6 +38,10 @@ enumerations:
           description: >
             The Software.Version is currently in staged flash area.
             This is moved from staged flash area to active upon reset.
+        - name: Staging
+          description: >
+            The Software.Version is currently being staged into the
+            staging flash area.
     - name: RequestedActivations
       description: >
         The possible RequestedActivation states of a Software.Version.

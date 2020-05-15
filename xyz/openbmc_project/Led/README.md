@@ -72,6 +72,18 @@ When the property is set to **false**, the actions are un-done.
   onto `assert` property of the group. Term **de-assert** would mean
   writing **false** to `assert` property.
 
+Additionaly has provision of some methods to configuration LED parameters for
+runtime. The global static config will not be overwrited and changes are only
+applicable to the current BMC session.   
+It's was may be useful to change **action**, blinks **period** and **duration**
+of duty ON. 
+
+* **LedConfigureBlink** - configuration a LED blink arameters
+* **LedConfigureAction** - configuration a LED object action  
+* **GetLedItems** - get list of a LEDs for the group  
+* **ResetSettings** - revert to the static global configuration for a given 
+  Group LEDs 
+
 ## Group Dbus information
 
 **Path: "/xyz/openbmc_project/led/groups/<name>"**

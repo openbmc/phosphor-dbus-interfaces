@@ -1,8 +1,93 @@
 description: >
     Interface to control LED groups.
+methods:
+    - name: LedConfigureBlink
+      description: >
+          Configuration at runtime a LED blink parameters.          
+          Note: the configuration by current way is actuals
+          for current service session and not overwrite 
+          a static global definition          
+          Errors:
+            NotAllowed:
+             - if current LED object is not allowed 
+               of blink action
+            InvalidArgument: 
+             - if present LED `name` is not exists
+             - if present LED `DutyName` is not in [0..100] band
+      parameters:
+        - name: Name
+          type: string
+          description: >
+              A name of the LED       
+        - name: Frequency
+          type: uint16
+          description: >
+              Frequency for define duty cycle of a blinking
+        - name: DutyOn
+          type: byte
+          description: >
+              Precentage of duty  
+              For the BLINK operation, follow 50-50 duty cycle
+      errors:
+        - xyz.openbmc_project.Common.Error.NotAllowed
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: LedConfigureAction
+      description: >
+          Configuration at runtime the LED object action.
+          Note: the configuration by current way is actuals
+          for current service session and not overwrite 
+          a static global definition
+      parameters:
+        - name: Name
+          type: string
+          description: >
+              A name of the LED       
+        - name: Action
+          type: enum[self.actions]
+          description: >
+              A Action of the LED
+        - name: Priority
+          type: enum[self.actions]
+          description: >
+              The Priority of a actions  
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: GetLedItems
+      description: >
+            Get list of a LEDs for the reference group
+      returns:
+        - name: LEDs
+          type: dict[string,struct[byte,uint16,byte,byte,boolean]]
+          description: >
+            A list objects of LEDs for the group.
+            Following dictionary contains:
+              KEY - name of LED for the given group
+              Structure:
+                  Action - action LED
+                  Frequency - period of blinking
+                  DutyOn - duto on of a blinking LED at percentage
+                  Priority - Priority of a actions
+                  Overlapped - flag about overwrite static global config at a runtime session
+            
+    - name: ResetSettings
+      description: >
+            Revert to the static global configuration for a given Group LEDs 
+
 properties:
     - name: Asserted
       type: boolean
       description: >
         Whether or not the group is currently asserted.
         To assert a group, set to True. To de-assert a group, set to False.
+
+
+enumerations:
+    - name: actions
+      description: >
+          Possible actions of LEDs.
+      values:
+        - name: "Off"
+        - name: "On"
+        - name: "Blink"

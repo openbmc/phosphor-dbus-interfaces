@@ -1,36 +1,27 @@
 description: >
-    This interface exposes properties for service objects like
-    SSH, web, RMCP+ etc. under the service configuration manager.
-    This interface can be used to get/set of service properties.
+    Implement to expose the properties of service objects like bmcweb,
+    phosphor-ipmi-net etc. This interface can be used to get and set the
+    properties of the service.
 
 properties:
-    - name: State
-      type: enum[self.SupportedStates]
+    - name: Enabled
+      type: boolean
       description: >
-          Specifies the state of the service.
+          Specifies the current state of the service. This property can be used
+          to enable or disable the service.
+    - name: Masked
+      type: boolean
+      description: >
+          Specifies whether the service is masked or not masked. This property
+          can be used to permanently enable or disable the service.
     - name: Port
-      type: uint32
+      type: uint16
       description: >
-          Specifies the listening port number of service.
-          This property is used to get or set the service
-          listening port number.
-    - name: Channel
-      type: array[string]
+          Specifies the port number on which the service is listening. This
+          property can be set to configure a different port number for the
+          service.
+    - name: Running
+      type: boolean
       description: >
-          Specifies the channel on which service allows client
-          connections. This property is used to get or set the
-          allowed channel interfaces in array of strings. It accepts
-          the interface names, which are created as objects in
-          network service and returns error if not found.
-
-enumerations:
-    - name: SupportedStates
-      description: >
-          State values.
-      values:
-        - name: 'enabled'
-          description: >
-            Service is enabled.
-        - name: 'disabled'
-          description: >
-            Service is disabled.
+          Specifies whether the service is running or not. This property can be
+          used to start or stop a service.

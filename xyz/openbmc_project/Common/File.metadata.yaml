@@ -22,3 +22,10 @@
       type: int32
     - str: "PATH=%s"
       type: string
+
+- name: Read
+  meta:
+    - str: "ERRNO=%d"
+      type: int32
+    - str: "PATH=%s"
+      type: string

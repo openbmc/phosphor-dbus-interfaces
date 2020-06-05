@@ -1,0 +1,22 @@
+description: >
+    Reports the cause of failure for firmware activation.
+properties:
+    - name: Reason
+      type: enum[self.FailureReason]
+      description: >
+        The reasoning behind the failure.
+
+enumerations:
+    - name: FailureReason
+      description: >
+          Reason the activation failed.
+      values:
+        - name: InvalidCapsule
+          description: >
+              The image container was an invalid format.
+        - name: InvalidImage
+          description: >
+              The image format could not be verified.
+        - name: DeviceBusy
+          description: >
+              The device could not be updated at this time.

@@ -1,0 +1,38 @@
+description: >
+    Version 2.0 of the xyz.openbmc_project.Dump.Create interface, Implement
+    to capture Dump based on the dump type. This interface is added to
+    support the creation of multiple types of dumps supported on the system.
+
+    Any OpenBMC implementation must provide exactly one implementation of
+    xyz.openbmc_project.Dump.Create2 on /xyz/openbmc_project/dump.
+methods:
+    - name: CreateDump
+      description: >
+         Initiate the creation of a new dump based on the parameters.
+      parameters:
+       - name: DumpType
+         type: enum[self.DumpType]
+         description: >
+            Type of the dump
+      returns:
+       - name: Id
+         type: uint32
+         description: >
+             The Dump entry id number.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.File.Error.Write
+        - xyz.openbmc_project.Dump.Create.Error.Disabled
+        - xyz.openbmc_project.Dump.Create.Error.QuotaExceeded
+
+enumerations:
+    - name: DumpType
+      description:
+          Type of the dump to be created
+      values:
+        - name: System
+          description: >
+              A disruptive dump created with the host debug information
+        - name: BMC
+          description: >
+              A dump created with BMC debug information

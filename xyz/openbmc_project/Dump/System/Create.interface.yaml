@@ -1,0 +1,18 @@
+description: >
+    Create a dump when host firmware crashes or when user requests.
+    This dump can be requested by the user and the dump contains various
+    information for debugging a host firmare problems.
+methods:
+    - name: CreateDump
+      description: >
+         Initiate the creation of a new system dump.
+      returns:
+       - name: Id
+         type: uint32
+         description: >
+             The Dump entry id number.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.File.Error.Write
+        - xyz.openbmc_project.Dump.Create.Error.Disabled
+        - xyz.openbmc_project.Dump.Create.Error.QuotaExceeded

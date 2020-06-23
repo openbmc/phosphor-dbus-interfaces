@@ -1,0 +1,27 @@
+generated_compile += custom_target(
+  'server.cpp',
+  output: 'server.cpp',
+  input: '../VMPU.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-cpp', 'com.ibm.ipzvpd.VMPU'])
+
+generated_compile += custom_target(
+  'server.hpp',
+  output: 'server.hpp',
+  input: '../VMPU.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-header', 'com.ibm.ipzvpd.VMPU'],
+  install: true,
+  install_dir: get_option('includedir') / 'com/ibm/ipzvpd/VMPU')
+
+install_data(
+  '../VMPU.interface.yaml',
+  install_dir: get_option('datadir') / 'phosphor-dbus-yaml/yaml/com/ibm/ipzvpd')
+
+com_ibm_ipzvpd_VMPU_md += custom_target(
+  'interface.md',
+  output: 'interface.md',
+  input: '../VMPU.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'markdown', 'com.ibm.ipzvpd.VMPU'])
+

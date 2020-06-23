@@ -1,0 +1,27 @@
+generated_compile += custom_target(
+  'server.cpp',
+  output: 'server.cpp',
+  input: '../IOBoard.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-cpp', 'xyz.openbmc_project.Inventory.Item.Board.IOBoard'])
+
+generated_compile += custom_target(
+  'server.hpp',
+  output: 'server.hpp',
+  input: '../IOBoard.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-header', 'xyz.openbmc_project.Inventory.Item.Board.IOBoard'],
+  install: true,
+  install_dir: get_option('includedir') / 'xyz/openbmc_project/Inventory/Item/Board/IOBoard')
+
+install_data(
+  '../IOBoard.interface.yaml',
+  install_dir: get_option('datadir') / 'phosphor-dbus-yaml/yaml/xyz/openbmc_project/Inventory/Item/Board')
+
+xyz_openbmc_project_Inventory_Item_Board_IOBoard_md += custom_target(
+  'interface.md',
+  output: 'interface.md',
+  input: '../IOBoard.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'markdown', 'xyz.openbmc_project.Inventory.Item.Board.IOBoard'])
+

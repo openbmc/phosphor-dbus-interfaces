@@ -1,0 +1,11 @@
+xyz_openbmc_project_Memory_MemoryECC_md = []
+subdir('MemoryECC')
+
+custom_target(
+  'MemoryECC.md',
+  output: 'MemoryECC.md',
+  input: xyz_openbmc_project_Memory_MemoryECC_md,
+  capture: true,
+  command: [cat, '@INPUT@'],
+  install: true,
+  install_dir: get_option('datadir') / meson.project_name() / 'xyz/openbmc_project/Memory/MemoryECC.md')

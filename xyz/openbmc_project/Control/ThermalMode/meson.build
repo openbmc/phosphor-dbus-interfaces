@@ -1,0 +1,27 @@
+generated_compile += custom_target(
+  'server.cpp',
+  output: 'server.cpp',
+  input: '../ThermalMode.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-cpp', 'xyz.openbmc_project.Control.ThermalMode'])
+
+generated_compile += custom_target(
+  'server.hpp',
+  output: 'server.hpp',
+  input: '../ThermalMode.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-header', 'xyz.openbmc_project.Control.ThermalMode'],
+  install: true,
+  install_dir: get_option('includedir') / 'xyz/openbmc_project/Control/ThermalMode')
+
+install_data(
+  '../ThermalMode.interface.yaml',
+  install_dir: get_option('datadir') / 'phosphor-dbus-yaml/yaml/xyz/openbmc_project/Control')
+
+xyz_openbmc_project_Control_ThermalMode_md += custom_target(
+  'interface.md',
+  output: 'interface.md',
+  input: '../ThermalMode.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'markdown', 'xyz.openbmc_project.Control.ThermalMode'])
+

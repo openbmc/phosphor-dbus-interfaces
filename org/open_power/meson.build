@@ -1,0 +1,8 @@
+subdir('Host')
+subdir('Control')
+subdir('Logging')
+subdir('Proc')
+subdir('OCC')
+subdir('Common')
+subdir('Inventory')
+subdir('Sensor')

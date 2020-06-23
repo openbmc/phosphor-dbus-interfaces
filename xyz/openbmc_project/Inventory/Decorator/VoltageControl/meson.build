@@ -1,0 +1,16 @@
+generated_compile += custom_target(
+  'server.cpp',
+  output: 'server.cpp',
+  input: '../VoltageControl.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-cpp', 'xyz.openbmc_project.Inventory.Decorator.VoltageControl'])
+
+generated_compile += custom_target(
+  'server.hpp',
+  output: 'server.hpp',
+  input: '../VoltageControl.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-header', 'xyz.openbmc_project.Inventory.Decorator.VoltageControl'],
+  install: true,
+  install_dir: get_option('includedir') / 'xyz/openbmc_project/Inventory/Decorator/VoltageControl')
+

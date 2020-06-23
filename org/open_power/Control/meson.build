@@ -1,0 +1,2 @@
+subdir('Host')
+subdir('TPM')

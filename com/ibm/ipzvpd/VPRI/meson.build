@@ -1,0 +1,16 @@
+generated_compile += custom_target(
+  'server.cpp',
+  output: 'server.cpp',
+  input: '../VPRI.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-cpp', 'com.ibm.ipzvpd.VPRI'])
+
+generated_compile += custom_target(
+  'server.hpp',
+  output: 'server.hpp',
+  input: '../VPRI.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', phosphor_dbus_root, 'interface', 'server-header', 'com.ibm.ipzvpd.VPRI'],
+  install: true,
+  install_dir: get_option('includedir') / 'com/ibm/ipzvpd/VPRI')
+

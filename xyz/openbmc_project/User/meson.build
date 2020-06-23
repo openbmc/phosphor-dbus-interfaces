@@ -1,0 +1,7 @@
+subdir('Manager')
+subdir('PrivilegeMapperEntry')
+subdir('Common')
+subdir('PrivilegeMapper')
+subdir('AccountPolicy')
+subdir('Attributes')
+subdir('Ldap')

@@ -1,0 +1,27 @@
+sources_com_ibm += custom_target(
+  'server.cpp',
+  output: 'server.cpp',
+  input: '../VSYS.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', dbus_root, 'interface', 'server-cpp', 'com.ibm.ipzvpd.VSYS'])
+
+sources_com_ibm += custom_target(
+  'server.hpp',
+  output: 'server.hpp',
+  input: '../VSYS.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', dbus_root, 'interface', 'server-header', 'com.ibm.ipzvpd.VSYS'],
+  install: true,
+  install_dir: get_option('includedir') / 'com/ibm/ipzvpd/VSYS')
+
+install_data(
+  '../VSYS.interface.yaml',
+  install_dir: get_option('datadir') / 'phosphor-dbus-yaml/yaml/com/ibm/ipzvpd')
+
+_sdbusplus_com_ibm_ipzvpd_VSYS_md += custom_target(
+  'interface.md',
+  output: 'interface.md',
+  input: '../VSYS.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', dbus_root, 'interface', 'markdown', 'com.ibm.ipzvpd.VSYS'])
+

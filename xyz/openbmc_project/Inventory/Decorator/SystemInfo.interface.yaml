@@ -1,0 +1,11 @@
+description: >
+    Implement to provide information which needs to be published at
+    system level.
+    All the properties which are applicable to the complete system
+    instead of individual frus can be published under this interface.
+properties:
+    - name: Brand
+      type: string
+      description: >
+          The system brand identifies system using a 2-character
+          system brand value.

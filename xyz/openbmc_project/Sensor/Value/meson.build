@@ -1,0 +1,27 @@
+sources_xyz_openbmc_project += custom_target(
+  'server.cpp',
+  output: 'server.cpp',
+  input: '../Value.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', dbus_root, 'interface', 'server-cpp', 'xyz.openbmc_project.Sensor.Value'])
+
+sources_xyz_openbmc_project += custom_target(
+  'server.hpp',
+  output: 'server.hpp',
+  input: '../Value.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', dbus_root, 'interface', 'server-header', 'xyz.openbmc_project.Sensor.Value'],
+  install: true,
+  install_dir: get_option('includedir') / 'xyz/openbmc_project/Sensor/Value')
+
+install_data(
+  '../Value.interface.yaml',
+  install_dir: get_option('datadir') / 'phosphor-dbus-yaml/yaml/xyz/openbmc_project/Sensor')
+
+_sdbusplus_xyz_openbmc_project_Sensor_Value_md += custom_target(
+  'interface.md',
+  output: 'interface.md',
+  input: '../Value.interface.yaml',
+  capture: true,
+  command: [sdbusplusplus_prog, '-r', dbus_root, 'interface', 'markdown', 'xyz.openbmc_project.Sensor.Value'])
+

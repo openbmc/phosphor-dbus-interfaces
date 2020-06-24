@@ -23,6 +23,10 @@ methods:
          type: string
          description: >
             The location to offload dump file.
+      errors:
+       - xyz.openbmc_project.Common.Error.InternalFailure
+       - xyz.openbmc_project.Dump.Entry.Error.InvalidURI
+
 properties:
     - name: Size
       type: uint64

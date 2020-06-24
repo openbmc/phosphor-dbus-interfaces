@@ -22,7 +22,13 @@ methods:
        - name: OffloadUri
          type: string
          description: >
-            The location to offload dump file.
+            The location to offload dump file, error InvalidArgument will be
+            returned if the URI is not well formated.
+      errors:
+       - xyz.openbmc_project.Common.File.Error.Open
+       - xyz.openbmc_project.Common.File.Error.Write
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
 properties:
     - name: Size
       type: uint64

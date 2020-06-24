@@ -1,0 +1,3 @@
+#!/bin/sh
+${SDBUSPP_GEN_MESON:=../subprojects/sdbusplus/tools/sdbus++-gen-meson} \
+    --directory .. --command meson --output .

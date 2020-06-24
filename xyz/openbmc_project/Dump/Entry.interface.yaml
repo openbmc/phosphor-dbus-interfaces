@@ -23,6 +23,9 @@ methods:
          type: string
          description: >
             The location to offload dump file.
+      errors:
+       - xyz.openbmc_project.Dump.Entry.Error.InvalidUri
+
 properties:
     - name: Size
       type: uint64

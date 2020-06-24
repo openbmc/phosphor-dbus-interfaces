@@ -7,10 +7,10 @@ The format is described by the [sdbusplus binding generation tool sdbus++][].
 This project can be built with `meson`.  The typical `meson` workflow is:
 `meson builddir && ninja -C builddir`.
 
-Due to the limited code generation methods available in meson today, changes
-to YAML files are not tracked by `meson` and do not automatically cause a new
-recompile.  Subsequent runs when making YAML changes will require running
-`ninja reconfigure` in order to regenerate the code files from the YAML.
+The meson files used to handle the YAML files are automatically generated
+and found under the `gen` subdirectory.  When adding or removing YAML files,
+this must be regenerated.  This can be done with the helper script found
+in the `gen` subdirectory: `cd gen && ./regenerate-meson`.
 
 ## Configuration
 

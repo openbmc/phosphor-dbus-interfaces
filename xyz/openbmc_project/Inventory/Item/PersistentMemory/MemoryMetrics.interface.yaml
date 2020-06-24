@@ -1,0 +1,67 @@
+description: >
+    Implement to provide Memory Metrics attributes.
+properties:
+    - name: BlockSizeBytes
+      type: uint64
+      description: >
+          The block size in bytes of all stucture elements.
+    - name: BandwidthPercent
+      type: uint64
+      description: >
+          The memory bandwidth utilization as a percentage.
+    - name: BlocksReadLifetime
+      type: uint64
+      description: >
+          The number of blocks read for the lifetime of the Memory.
+    - name: BlocksWrittenLifetime
+      type: uint64
+      description: >
+          The number of blocks written for the lifetime of the Memory.
+    - name: BlocksReadCurrent
+      type: uint64
+      description: >
+          The number of blocks read since reset.
+    - name: BlocksWrittenCurrent
+      type: uint64
+      description: >
+          The number of blocks written since reset.
+    - name: RemainingSpareBlockPercentage
+      type: uint64
+      description: >
+          The remaining spare blocks in percentage.
+    - name: LastShutdownSuccess
+      type: boolean
+      description: >
+          The status of the last shutdown.
+    - name: DataLossDetected
+      type: boolean
+      description: >
+          The data loss detection status.
+    - name: PerformanceDegraded
+      type: boolean
+      description: >
+          The performance degraded mode status.
+    - name: PredictedMediaLifeLeftPercent
+      type: uint64
+      description: >
+          An indicator of the percentage of life remaining in the media.
+    - name: AddressParityError
+      type: boolean
+      description: >
+          An address parity error was detected that a retry could not correct.
+    - name: CorrectableECCError
+      type: boolean
+      description: >
+          The correctable error threshold crossing alarm trip was detected.
+    - name: SpareBlockAlarm
+      type: boolean
+      description: >
+          The spare block capacity crossing alarm trip was detected.
+    - name: TemperatureAlarm
+      type: boolean
+      description: >
+          A temperature threshold alarm trip was detected.
+    - name: UncorrectableECCError
+      type: boolean
+      description: >
+          The uncorrectable error threshold alarm trip was detected.

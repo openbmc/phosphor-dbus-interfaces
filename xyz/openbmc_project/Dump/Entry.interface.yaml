@@ -23,6 +23,10 @@ methods:
          type: string
          description: >
             The location to offload dump file.
+      errors:
+       - xyz.openbmc_project.Common.File.Error.Open
+       - xyz.openbmc_project.Common.File.Error.Write
+
 properties:
     - name: Size
       type: uint64

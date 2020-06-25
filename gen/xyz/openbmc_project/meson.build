@@ -108,6 +108,7 @@ subdir('Sensor')
 subdir('Smbios')
 subdir('Software')
 subdir('State')
+subdir('Telemetry')
 subdir('Time')
 generated_others += custom_target(
     'xyz/openbmc_project/Time__markdown'.underscorify(),

@@ -1,0 +1,67 @@
+---
+description: >
+    Implement to provide reports management. Provides report limitation and
+    functions for adding reports.
+methods:
+-   name: AddReport
+    description: >
+        The AddReport method is used to create metric report. The report may
+        contain single or multiple sensor readings.
+    parameters:
+    -   name: name
+        type: string
+        description: >
+            Defines the name of reading report to be exposed over
+            D-Bus
+    -   name: domain
+        type: string
+        description: >
+            Defines the domain for which reading report will be
+            collected
+    -   name: reportingType
+        type: string
+        description: >
+            Reporting type:
+            'Periodic' - For periodic update
+            'OnChange' - For update when value changes
+            'OnRequest' - For update when user requests data
+    -   name: reportAction
+        type: array[string]
+        description: >
+            Any combination of two strings:
+            'Log' - report shall be stored by the MonitoringService
+                    for later retrieval via the Redfish API
+            'Event' - report shall be sent as an event or
+                      telemetry stream.
+    -   name: scanPeriod
+        type: uint32
+        description: >
+            Scan period used when Periodic type is set (in
+            milliseconds)
+    -   name: metrics
+        type: array[struct[array[path],string,string,string]]
+        description: Collection of metric parameters.
+    returns:
+    -   name: report
+        type: string
+        description: >
+            String for created report - ie.
+            /xyz/openbmc_project/MonitoringService/Reports/{Domain}/{Name}
+properties:
+-   name: MaxReports
+    type: uint32
+    description: >
+        The MaxReports property of the
+        xyz.openbmc_project.MonitoringService.ReportsManagement interface
+        contains the max number of metric reports supported by the
+        Monitoring Service. This property is added to be compliant with the
+        Redfish Telemetry Service schema, that contains MaxReports property.
+    flags:
+    - const
+-   name: PollRateResolution
+    type: uint32
+    description: >
+        scanPeriod for Periodic reportingType should be:
+        'x % PollRateResolution == 0 && x >= PollRateResolution'
+    flags:
+    - const

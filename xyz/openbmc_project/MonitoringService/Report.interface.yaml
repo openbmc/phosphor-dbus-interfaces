@@ -1,0 +1,103 @@
+description: >
+    Implement this interface to provide report inspection features. An
+    implementation service should additionally implement
+    xyz.openbmc_project.Object.Delete for deletion of individual report objects.
+
+methods:
+  - name: Update
+    description: >
+        The Update method is defined for the on demand metric report update.
+        It triggers update of the Readings property. If ReportingType is not
+        set to OnRequest then method does nothing.
+
+properties:
+  - name: Persistency
+    type: enum[self.Persistency]
+    description: >
+        Defines how the report shall be stored.
+  - name: ReadingParameters
+    type: array[struct[array[path],enum[self.OperationType],string,string]]
+    description: >
+        Array of structure that contains list of sensor DBus paths, operation
+        type, metric Id and metadata that is used to map DBus paths to Redfish
+        URIs. Redfish URIs are divided by commas.
+  - name: Readings
+    type: array[struct[string,string,double,uint64]]
+    description: >
+        Array of structure that contains metric Id, metadata, reading value and
+        timestamp of reading. Metric Id and metadata are equal to its
+        counterparts in ReadingParameters property.
+    flags:
+    - readonly
+  - name: ReportActions
+    type: array[enum[self.ReportAction]]
+    description: Defines action that is taken on readings update.
+    flags:
+    - const
+  - name: ReportingType
+    type: enum[self.ReportingType]
+    description: Defines how readings are updated.
+  - name: ScanPeriod
+    type: uint64
+    description: >
+        Defines period of time in milliseconds when readings are updated.
+  - name: Timestamp
+    type: uint64
+    description: Defines when readings were updated in milliseconds
+    flags:
+    - readonly
+
+signals:
+  - name: ReportUpdate
+    description: >
+        Emits when readings are updated and only when Event is set in
+        ReportActions property. The purpose of this signal is to integrate
+        Report with the Redfish Event Service.
+
+enumerations:
+   - name: OperationType
+     descritpion: Type of action that is executed on readings.
+     values:
+       - name: Single
+         description: Store a single reading, only allowed on single sensor.
+       - name: Max
+         description: Store maximal reading during defined time period.
+       - name: Min
+         description: Store minimal reading during defined time period.
+       - name: Avg
+         description: Calulate average of readings during defined time period.
+       - name: Sum
+         description: Calulate sum of readings over defined time period.
+   - name: Persistency
+     description: Type of persistency for Report.
+     values:
+       - name: None
+         description: Do not store Report in non volatile memory.
+       - name: ConfigurationOnly
+         description: >
+            Store configuration of Report in non volatile memory. Configuration
+            contains all Report properties excluding Readings and Timestamp.
+       - name: ConfigurationAndData
+         description: >
+            Store configuration and data of Report in non volatile memory. Data
+            contains Readings and Timestamp properties.
+   - name: ReportAction
+     description: The type of action to be performed when readings are updated.
+     values:
+       - name: Event
+         description: Emit ReportUpdate signal on readings update.
+       - name: Log
+         description: Stores readings in Readings property.
+   - name: ReportingType
+     description: >
+       The type that defines when Readings are updated.
+     values:
+       - name: OnChange
+         description: >
+           On sensor reading change.
+       - name: OnRequest
+         description: >
+           On Update method call.
+       - name: Periodic
+         description: >
+           After period of time defined by ScanPeriod property.

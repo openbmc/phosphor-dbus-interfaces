@@ -1,0 +1,61 @@
+---
+description: |-
+    Report to provide report inspection features.
+    An implementation service should additionally implement xyz.openbmc_project.Object.Delete to allow the deletion of individual report objects.
+methods:
+-   name: Update
+    description: >-
+        The Update method is defined for the on demand metric report update. It shall
+        trigger the Readings property to be updated and send PropertiesChanged signal.
+properties:
+-   name: Persistency
+    type: string
+    description: |-
+        The Persistency property defines how the report shall be stored. If 'None' is set, the entire report shall be stored only in the volatile memory. In case, when 'ConfigurationOnly' is set, the report configuration, that is all report properties, except .Readings and the .ReportTimestamp, shall be stored to the non-volatile memory. And when 'ConfigurationAndData' is set, all report's properties shall be stored to the non-volatile memory. After BMC reset the report D-Bus objects shall be created from saved configurations. Those object shall contain metrics data if persistency option was set to the 'ConfigurationAndData'. When persistent report is removed using the .Delete method, all report's data stored to non-volatile memory shall be also removed.
+        Possible values: None, ConfigurationOnly, ConfigurationAndData
+-   name: ReadingParameters
+    type: array[struct[array[path],string,string,string]]
+    description: |-
+        The ReadingParameters property contains an array of structures containing metric id, D-Bus sensor path, aggregated operation type and user's metadata. This property is made writable in order to support metric report modifications.
+        array[struct[array[path to sensor], operationType, metricId, metadata]]
+    flags:
+    - const
+-   name: Readings
+    type: array[struct[string,string,double,string]]
+    description: |-
+        The Readings property contains the array of the structures containing metric id, user's metadata, sensor's reading value and reading timestamp.
+        array[metricId, metadata, sensor value, timestamp]
+    flags:
+    - const
+-   name: ReportAction
+    type: array[string]
+    description: |-
+        The ReportAction property defines whether reading report was defined to be stored by the Monitoring Service or shall be sent as an event. This property is useful from the Redfish API perspective.
+        Possible values: Log, Event
+    flags:
+    - const
+-   name: ReportingType
+    type: string
+    description: |-
+        Reporting type:
+        'Periodic' - For periodic update
+        'OnChange' - For update when value changes
+        'OnRequest' - For update when user requests data
+    flags:
+    - const
+-   name: ScanPeriod
+    type: uint32
+    description: The ScanPeriod property has single value for the whole metric report.
+    flags:
+    - const
+-   name: Timestamp
+    type: string
+    description: Timestamp when raport was generated
+    flags:
+    - const
+signals:
+-   name: ReportUpdate
+    description: >-
+        The ReportUpdate signal shall be generated only for reports that contain action
+        'Event' when report is updated. The purpose of this is to integrate with the
+        Event Service.

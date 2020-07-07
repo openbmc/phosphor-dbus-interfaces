@@ -16,8 +16,8 @@ properties:
     - name: BuildDate
       type: string
       description: >
-          The date of item manufacture in
-          YYYYMMDD format.
+          The date of item manufacture in ISO 8601 format, either as
+          YYYYMMDD or YYYYMMDDhhmmss.
     - name: Model
       type: string
       description: >

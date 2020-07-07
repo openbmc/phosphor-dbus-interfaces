@@ -1,2 +1,18 @@
 description: >
     Implement to provide Fan attributes.
+
+properties:
+    - name: NominalVoltage
+      type: int64
+      description: >
+        The nominal voltage of the fan in mV.
+
+    - name: NominalCurrent
+      type: int64
+      description: >
+        The nominal maximum current of the fan in mA.
+
+    - name: NominalRPM
+      type: int64
+      description: >
+        The nominal speed of the fan in RPMs.

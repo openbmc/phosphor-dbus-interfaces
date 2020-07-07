@@ -44,6 +44,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('CLEI')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/CLEI__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Decorator/CLEI.interface.yaml',  ],
+    output: [ 'CLEI.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Inventory/Decorator/CLEI',
+    ],
+    build_by_default: true,
+)
+
 subdir('Compatible')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/Compatible__markdown'.underscorify(),

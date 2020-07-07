@@ -282,6 +282,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Rotor')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Rotor__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Item/Rotor.interface.yaml',  ],
+    output: [ 'Rotor.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Inventory/Item/Rotor',
+    ],
+    build_by_default: true,
+)
+
 subdir('StorageController')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/StorageController__markdown'.underscorify(),

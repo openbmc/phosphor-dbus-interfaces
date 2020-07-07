@@ -1,0 +1,20 @@
+description: >
+    Implement to provide Rotor attributes.
+    This interface should be at the same object path as a Fan for single-rotor
+    fans or as a set of sub-path for multi-rotor fan design.
+
+properties:
+    - name: NominalVoltage
+      type: double
+      description: >
+        The nominal voltage of the fan in mV.
+
+    - name: NominalCurrent
+      type: double
+      description: >
+        The nominal maximum current of the fan in mA.
+
+    - name: NominalRPM
+      type: double
+      description: >
+        The nominal speed of the fan in RPMs.

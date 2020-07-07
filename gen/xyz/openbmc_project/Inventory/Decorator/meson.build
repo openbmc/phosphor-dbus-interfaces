@@ -89,6 +89,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('ManufacturerExt')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/ManufacturerExt__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Decorator/ManufacturerExt.interface.yaml',  ],
+    output: [ 'ManufacturerExt.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Inventory/Decorator/ManufacturerExt',
+    ],
+    build_by_default: true,
+)
+
 subdir('MeetsMinimumShipLevel')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/MeetsMinimumShipLevel__markdown'.underscorify(),

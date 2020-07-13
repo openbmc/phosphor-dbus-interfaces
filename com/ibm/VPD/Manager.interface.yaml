@@ -96,3 +96,12 @@ methods:
         - xyz.openbmc_project.Common.Error.InvalidArgument
         - com.ibm.VPD.Error.LocationNotFound
         - com.ibm.VPD.Error.NodeNotFound
+
+    - name: FixBrokenEcc
+      description: >
+          An api which fixes the broken ecc for the given object path.
+      parameters:
+        - name: path
+          type: path
+          description: >
+              Path to the D-Bus object that represents the FRU.

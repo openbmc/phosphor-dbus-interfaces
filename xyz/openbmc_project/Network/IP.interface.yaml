@@ -27,13 +27,6 @@ properties:
       errors:
           - xyz::openbmc_project.Common.Error.NotAllowed
 
-    - name: Gateway
-      type: string
-      description: >
-          This is the IP gateway for this address.
-      errors:
-          - xyz::openbmc_project.Common.Error.NotAllowed
-
     - name: Type
       type: enum[self.Protocol]
       description: >

@@ -6,4 +6,12 @@ properties:
       type: uint64
       description: >
           The POST code value.
-
+methods:
+    - name: readPostcode
+      description: >
+          Method to get the cached post codes.
+      parameters:
+        - name: postcode
+          type: uint16
+          description: >
+              postcode indicates which host postcode.

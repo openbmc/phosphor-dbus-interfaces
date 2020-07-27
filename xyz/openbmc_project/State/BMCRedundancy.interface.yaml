@@ -1,0 +1,8 @@
+description: >
+    An interface to describe the primary BMC within a multi-BMC environment.
+properties:
+    - name: ActivePrimaryBMC
+      type: object_path
+      description: >
+          indicates the active-primary BMC object path, looks like:
+          "/xyz/openbmc_project/inventory/system/chassis0/bmc0"

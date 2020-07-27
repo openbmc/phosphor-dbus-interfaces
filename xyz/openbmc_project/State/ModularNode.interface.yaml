@@ -1,0 +1,11 @@
+description: >
+    An interface to set modular node properties.
+properties:
+    - name: NodeCount
+      type: byte
+      description: >
+          Number of BMC nodes in modular node system.
+    - name: Primary
+      type: boolean
+      description: >
+          BMC node is primary node or not.

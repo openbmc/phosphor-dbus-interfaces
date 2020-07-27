@@ -1,0 +1,26 @@
+description: >
+    An interface to set modular node properties.
+properties:
+    - name: NodeCount
+      type: byte
+      description: >
+          Number of BMC nodes in modular node system.
+    - name: Primary
+      type: boolean
+      description: >
+          BMC node is primary node or not.
+    - name: ActivePrimaryBmc
+      type: string
+      description: >
+          indicates the active-primary BMC path, looks like:
+          "/xyz/openbmc_project/inventory/system/chassis0/bmc0"
+    - name: Associations
+      type: array[struct[string,string,string]]
+      description: >
+          under path:"/xyz/openbmc_project/State/BmcRedundancy/Contained"
+          An array of forward, reverse, endpoint tuples where:
+              forward - The type of the association.
+              reverse - The type of the association to create for the endpoint.
+              endpoint - The association endpoint. It looks like
+              "/xyz/openbmc_project/inventory/system/chassisX/bmcX",
+              'X' stands digit number.

@@ -61,6 +61,10 @@ properties:
       type: array[uint16]
       description: >
           Speeds supported by this memory in megatransfers.
+    - name: MemoryMedia
+      type: enum[self.MemoryTech]
+      description: >
+          Memory Technology of this memory.
 
 enumerations:
     - name: Ecc
@@ -79,11 +83,14 @@ enumerations:
         - name: AddressParity
           description: >
               Address parity errors can be corrected.
-    - name: Type
+    - name: MemoryTech
       description: >
           This property shall contain the type ofmemory that this Resource
           represents.
       values:
+        - name: Unknown
+          description: >
+              Unknown device.
         - name: DRAM
           description: >
               The memory module is comprised of volatile memory.

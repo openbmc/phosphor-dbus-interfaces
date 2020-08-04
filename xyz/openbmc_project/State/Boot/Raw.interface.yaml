@@ -6,6 +6,22 @@ properties:
       type: uint64
       description: >
           The POST code value.
+    - name: Value0
+      type: uint64
+      description: >
+          The POST code value for host0.
+    - name: Value1
+      type: uint64
+      description: >
+          The POST code value for host1.
+    - name: Value2
+      type: uint64
+      description: >
+          The POST code value for host2.
+    - name: Value3
+      type: uint64
+      description: >
+          The POST code value for host3.
 methods:
     - name: readPostcode
       description: >

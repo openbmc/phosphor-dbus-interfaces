@@ -54,6 +54,11 @@ properties:
       description: >
           The timer user at the time of expiration.
       default: 'Reserved'
+    - name: ExpiredTimerAction
+      type: enum[self.Action]
+      description: >
+          The action taken at the last expiry
+      default: 'Reserved'
 
 enumerations:
    - name: Action

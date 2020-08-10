@@ -1,0 +1,61 @@
+description: >
+    Interface to control the virtual System Attention Indicator(SAI).
+    Currently, two such virtual indicators are defined, namely,
+    Partition and Platform.
+
+    What is a System Attention Indicator(SAI): When an error happens in the
+    system, usually, it is isolated to a part to be replaced and the LED
+    for that faulty part would be turned on.
+
+    However, in some cases, it may not be possible to isolate the issue to a
+    particular part. In those cases, the error needs to be anyway reported
+    telling that there is something wrong in the system, but the part can not
+    be isolated to. An analysis of event logs would be needed to isolate the
+    faulty part to be serviced.
+
+    As a visual indication, a dedicated LED, System Attention Indicator
+    may be designed to be turned [On] for such usecases.
+
+    Such errors can be detected either by Platform management functionality,
+    BMC; or can be detected by the upper layer partitions. When the physical
+    System Attention Indicator is turned [on], it would be useful to say why
+    it is turned on. As in, is it turned on due to an error seen by BMC or
+    is it due to an error seen by the partition or both.
+
+    If BMC encounters an error that falls under SAI category, then BMC will
+    set a virtual SAI, which is nothing but a software setting indicating so
+    and is called "Platform System Attention Indicator", abbreviated,
+    PlatformSAI.
+
+    Similarly, if a partition encounters an error, then a virtual SAI will
+    be set and is called "Partition System Attention Indicator", abbreviated,
+    PartitionSAI.
+
+    As one possible implementation, The Physical SAI LED will be turned [On]
+    if either of these virtual SAIs are [On]. Similarly, Physical SAI LED
+    will be turned [Off] when both these virtual SAI indicators are [Off].
+
+properties:
+    - name: PartitionSAI
+      type: enum[self.Action]
+      default: 'Off'
+      description: >
+        Current State of the virtual Partition System Attention Indicator.
+
+    - name: PlatformSAI
+      type: enum[self.Action]
+      default: 'Off'
+      description: >
+        Current State of the virtual Platform System Attention Indicator.
+
+enumerations:
+    - name: Action
+      description: >
+          Possible states a virtual System Attention Indicator can be in.
+      values:
+        - name: 'Off'
+          description: >
+            Virtual System Attention Indicator is in OFF state.
+        - name: 'On'
+          description: >
+            Virtual System Attention Indicator is in ON state.

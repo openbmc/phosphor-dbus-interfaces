@@ -30,6 +30,9 @@ enumerations:
        - name: 'Reboot'
          description: >
            BMC system should be rebooted
+       - name: 'HardReboot'
+         description: >
+           BMC system should be non-gracefully rebooted.
        - name: 'None'
          description: >
            No transition is in progress

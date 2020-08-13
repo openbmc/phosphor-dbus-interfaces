@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "68532bec_7e3d8a33",
+        "filename": "xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2020-08-13T12:41:27Z",
+      "side": 1,
+      "message": "There\u0027s not really a use-case for reading just one of the ExpiredTimerAction / ExpiredTimerUse fields - the ipmi sensor implementation needs both, as does the ipmi watchdog get implementation. So, those will be using the GetAll call anyway.\n\nHowever, I\u0027m fine to add that if it\u0027s a requirement. However, I\u0027m not sure how we\u0027d describe the type here in the YAML - are you after something like a dbus `(bs)` type?",
+      "parentUuid": "b5ae4040_c0d59a9d",
+      "revId": "f52138af0c21dc118101e8bf256d5868bc42d2f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d7fb77c6_0e0ce063",
         "filename": "xyz/openbmc_project/State/Watchdog.interface.yaml",
         "patchSetId": 3
@@ -39,6 +57,30 @@
       "revId": "f52138af0c21dc118101e8bf256d5868bc42d2f9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78b14b49_af28433b",
+        "filename": "xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2020-08-13T12:41:27Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d7fb77c6_0e0ce063",
+      "range": {
+        "startLine": 55,
+        "startChar": 44,
+        "endLine": 55,
+        "endChar": 59
+      },
+      "revId": "f52138af0c21dc118101e8bf256d5868bc42d2f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

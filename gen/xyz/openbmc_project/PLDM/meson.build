@@ -29,6 +29,7 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Provider')
 subdir('Requester')
 generated_others += custom_target(
     'xyz/openbmc_project/PLDM/Requester__markdown'.underscorify(),

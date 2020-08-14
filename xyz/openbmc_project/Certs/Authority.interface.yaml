@@ -13,9 +13,12 @@ methods:
 
       returns:
       - name: path
-        type: string
+        type: path
         description: >
-          The object path of the D-Bus object.
+          The object path of an object that implements, at a minimum,
+          xyz.openbmc_project.Certs.Entry and xyz.openbmc_project.Object.Delete
+          If user gets InvalidAuthorityState error, user should make sure
+          authority is up and running to try again.
       errors:
         - xyz.openbmc_project.Common.Error.InvalidArgument
         - xyz.openbmc_project.Certs.Error.InvalidAuthorityState

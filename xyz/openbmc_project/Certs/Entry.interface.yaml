@@ -28,7 +28,9 @@ enumerations:
           The CSR was malformed.
       - name: InvalidAuthorityState
         description: >
-          Signing authority is'nt ready.
+          Signing authority isn't ready.
+          If State==InvalidAuthorityState, User should delete this object
+          and try again.
       - name: Complete
         description: >
           CSR signing complete

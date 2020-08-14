@@ -98,6 +98,24 @@
       "revId": "f52138af0c21dc118101e8bf256d5868bc42d2f9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a12f8c56_3f94907a",
+        "filename": "xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2020-08-14T05:59:35Z",
+      "side": 1,
+      "message": "Not at the moment, no. The service exposing these properties is also the implementation of the watchdog, so it\u0027s very likely to know what it did.",
+      "parentUuid": "4b763499_ea5f7564",
+      "revId": "f52138af0c21dc118101e8bf256d5868bc42d2f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

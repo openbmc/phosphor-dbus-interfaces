@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "a0b0ec4d_c03374c3",
+        "filename": "xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-08-14T14:08:41Z",
+      "side": 1,
+      "message": "\u003e I\u0027m not sure how we\u0027d describe the type here in the YAML - are you after something like a dbus `(bs)` type?\n\nYou can use structs/tuples for properties in the YAML if that helps.\nhttps://github.com/openbmc/sdbusplus/blob/master/docs/interface.md#containers",
+      "parentUuid": "68532bec_7e3d8a33",
+      "revId": "f52138af0c21dc118101e8bf256d5868bc42d2f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d7fb77c6_0e0ce063",
         "filename": "xyz/openbmc_project/State/Watchdog.interface.yaml",
         "patchSetId": 3

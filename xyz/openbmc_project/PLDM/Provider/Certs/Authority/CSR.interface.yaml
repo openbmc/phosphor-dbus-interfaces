@@ -1,0 +1,13 @@
+description: >
+    Implement this interface to pass CSR string to PLDM
+    to get CSR signed by host.
+
+properties:
+    - name: CSR
+      type: string
+      description: >
+          Certificate signing request content.
+          Should be a valid PEM encoded CSR string.
+          It's a const property.
+      flags:
+        - const

@@ -1,17 +1,25 @@
 description: >
-    Implement to capture BMC Dump
+    Implement to capture various types of dumps from the
+    host or BMC. This interface is for user to request a particular
+    type of dump.
+
+    Any OpenBMC implementation should provide one implementation
+    of xyz.openbmc_project.Dump.Create per dump type on
+    /xyz/openbmc_project/dump/<dump type>. On multi-host or on multi-BMC
+    systems the instance number can be added to the path to differentiate,
+    for example /xyz/openbmc_project/dump/<dump type><instance-id>.
+    
 
 methods:
     - name: CreateDump
       description: >
-          Method to create BMC Dump.
+          Method to create a manual Dump.
       returns:
         - name: Id
           type: uint32
           description: >
             The Dump entry id number.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
         - xyz.openbmc_project.Common.File.Error.Write
         - xyz.openbmc_project.Dump.Create.Error.Disabled
         - xyz.openbmc_project.Dump.Create.Error.QuotaExceeded

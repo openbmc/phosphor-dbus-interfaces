@@ -13,3 +13,15 @@
                On IBM systems, certain VPD data must be available
                on for the system to boot. This error is used to
                indicate that no valid data was found by the BMC.
+- name: InvalidEepromPath
+  description: EEPROM path is invalid. Parser failed to access the
+               path.
+- name: InvalidVPD
+  description: VPD file is not valid. Mandatory records are missing
+               in VPD file.
+- name: EccCheckFailed
+  desciption: Invalid VPD data. Ecc check for the data failed.
+- name: InvalidJson
+  description: Invalid Json file.
+- name: DbusFailure
+  description: DBus error occurred.

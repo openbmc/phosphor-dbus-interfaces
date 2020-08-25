@@ -12,7 +12,7 @@ properties:
     - name: Supported
       type: array[string]
       flags:
-          - const
+          - readonly
       description: >
           An implemention specific list of supported modes that the thermal
           control application can be configured to provide for a platform.

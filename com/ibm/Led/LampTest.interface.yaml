@@ -1,0 +1,33 @@
+description: >
+    Interface to initiate a Lamp Test request.
+    Lamp Test is a method of testing the functionality of all the
+    software controlled LEDs in the system. How this is achieved
+    is left to implementations.
+
+    One possible implementation might be to turn ON all applicable LEDs
+    for a certain period of time along with available LCD displays and also
+    the LEDs on the external drawers that are connected via PCIE.
+    This enables a visual inspection of all the LEDs and LCDs for their
+    correctness.
+
+    If the user initiates the lamp test while one is already in progress,
+    then the test continues for the new configured time.
+    Lamp test can also be initiated from the Operator Panel hardware.
+
+    If the state of a particular LED has to be changed during the test, then
+    the implementation might chose to honour the request but not act on physical
+    LED until the test is finished. However, this restriction does not apply to
+    LCD displays.
+
+methods:
+    - name: Initiate
+      description: >
+         Initiate the LampTest request
+
+returns:
+    - name: ObjectPath
+      type: string
+      description: >
+          D-Bus object path to created object.
+          Since Lamp test is a long running request, need an associated
+          D-Bus path so the clients can monitor

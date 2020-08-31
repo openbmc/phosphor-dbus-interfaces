@@ -1,0 +1,27 @@
+description: >
+    Interface to Start and Stop a Lamp Test.
+    Lamp Test is a method of testing the functionality of all the
+    software controlled LEDs in the system. How this is achieved
+    is left to implementations.
+    One possible implementation might be to turn ON all applicable LEDs
+    for a certain period of time. This enables a visual inspection of
+    all the LEDs for their correctness.
+
+properties:
+    - name: Operation
+      type: enum[self.Action]
+      default: 'Stop'
+      description: >
+        Current State of the Lamp Test operation
+
+enumerations:
+    - name: Action
+      description: >
+          Possible values for Lamp Test operation
+      values:
+        - name: 'Start'
+          description: >
+            Start the Lamp Test
+        - name: 'Stop'
+          description: >
+            Stop the Lamp Test

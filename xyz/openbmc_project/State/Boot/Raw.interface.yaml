@@ -6,4 +6,16 @@ properties:
       type: uint64
       description: >
           The POST code value.
-
+methods:
+    - name: ReadPostCode
+      description: >
+          Method to get the post codes from IPMB bus.
+      parameters:
+        - name: postCode
+          type: uint16
+          description: >
+              postcode indicates which host postcode.
+        - name: host
+          type: uint16
+          description: >
+              host indicates host number.

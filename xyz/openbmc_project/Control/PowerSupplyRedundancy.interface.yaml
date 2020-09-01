@@ -35,6 +35,10 @@ properties:
       type: byte
       description: >
         Number of PSUs are currently on system.
+    - name: RedundantCount
+      type: byte
+      description: >
+        System ready to redundancy when working PSUs more than RedundantCount.
 
 enumerations:
     - name: Algo

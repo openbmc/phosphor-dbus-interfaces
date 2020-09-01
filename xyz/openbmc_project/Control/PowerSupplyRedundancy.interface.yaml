@@ -35,6 +35,11 @@ properties:
       type: byte
       description: >
         Number of PSUs are currently on system.
+    - name: RedundantCount
+      type: byte
+      description: >
+        The min number of PSUs in the system required to obtain redundancy
+      default: 2
 
 enumerations:
     - name: Algo

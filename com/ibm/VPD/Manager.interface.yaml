@@ -96,3 +96,10 @@ methods:
         - xyz.openbmc_project.Common.Error.InvalidArgument
         - com.ibm.VPD.Error.LocationNotFound
         - com.ibm.VPD.Error.NodeNotFound
+
+    - name: PerformVPDRecollection
+      description: >
+          An api to check for FRUs replaced and if required, perform
+          recollection of VPD data for them.
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument

@@ -1,0 +1,27 @@
+description: >
+    Implement to provide the progress on user requested activity.
+
+properties:
+    - name: Status
+      type: enum[self.OperationStatus]
+      description: >
+          Inidicate the state of the operation, whether in progress, completed
+          or failed.
+
+enumerations:
+    - name: OperationStatus
+      description: >
+        Status of the activity
+      values:
+        - name: InProgress
+          description: >
+           Requested operation is in progress.
+        - name: Completed
+          description: >
+           The operation is completed.
+        - name: Failed
+          description: >
+           The operation encountered a failure.
+        - name: Aborted
+          description: >
+           The operation is aborted.

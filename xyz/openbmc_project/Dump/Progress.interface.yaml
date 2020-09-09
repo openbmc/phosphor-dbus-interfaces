@@ -1,0 +1,26 @@
+description: >
+    Implement to provide the progress on user requested dump.
+
+    Object which implements this interface should implement
+    xyz.openbmc_project.Object.Delete to allow the deletion of
+    individual Dump objects.
+
+properties:
+    - name: Status
+      type: enum[self.DumpStatus]
+      description: >
+          Indicates whether creation of the dump being tracked is completed
+          or not. This will be true once the dump creation is completed.
+enumerations:
+    - name: DumpStatus
+      description: Status of the dump
+      values:
+        - name: InProgress
+          description: >
+           Requested dump is in progress.
+        - name: Completed
+          description: >
+           Dump creation is completed.
+        - name: Error
+          description: >
+           Failed to create the dump.

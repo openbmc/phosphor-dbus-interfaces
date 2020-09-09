@@ -1,0 +1,45 @@
+description: >
+    Implement to provide the progress on user requested activity.
+    Objects which implements this interface should implement
+    xyz.openbmc_project.Object.Delete to delete individual entries.
+    Objects implementing this interface should implement
+    xyz.openbmc_project.Time.EpochTime to indicate last state change.
+    The service hosting this interface should clear the entries after
+    some time or reaching some number of entries in stable states like
+    completed, failed or aborted.
+
+properties:
+    - name: Status
+      type: enum[self.OperationStatus]
+      description: >
+          Indicate the state of the operation, whether in progress, completed
+          aborted or failed. The default should be InProgress during the
+          implementation if no input is provided.
+    - name: StartTime
+      type: uint64
+      description: >
+          Indicates when the request is created since the Epoch
+          (1 Jan 1970 00:00:00 UTC), in microseconds.
+    - name: CompletedTime
+      type: uint64
+      description: >
+          Indicates when the state is completed since the Epoch
+          (1 Jan 1970 00:00:00 UTC), in microseconds.
+
+enumerations:
+    - name: OperationStatus
+      description: >
+        Status of the activity
+      values:
+        - name: InProgress
+          description: >
+           Requested operation is in progress.
+        - name: Completed
+          description: >
+           The operation is completed.
+        - name: Failed
+          description: >
+           The operation encountered a failure.
+        - name: Aborted
+          description: >
+           The operation is aborted.

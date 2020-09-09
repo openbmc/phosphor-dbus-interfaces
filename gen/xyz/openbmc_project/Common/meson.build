@@ -102,6 +102,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Progress')
+generated_others += custom_target(
+    'xyz/openbmc_project/Common/Progress__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Common/Progress.interface.yaml',  ],
+    output: [ 'Progress.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Common/Progress',
+    ],
+    build_by_default: true,
+)
+
 subdir('TFTP')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/TFTP__markdown'.underscorify(),

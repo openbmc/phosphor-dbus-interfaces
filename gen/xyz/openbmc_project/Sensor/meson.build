@@ -41,3 +41,17 @@ generated_others += custom_target(
     ],
 )
 
+subdir('ValueMutability')
+generated_others += custom_target(
+    'xyz/openbmc_project/Sensor/ValueMutability__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Sensor/ValueMutability.interface.yaml',  ],
+    output: [ 'ValueMutability.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Sensor/ValueMutability',
+    ],
+)
+

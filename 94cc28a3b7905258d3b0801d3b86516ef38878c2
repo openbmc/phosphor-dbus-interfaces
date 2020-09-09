@@ -34,6 +34,24 @@
       "revId": "94cc28a3b7905258d3b0801d3b86516ef38878c2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "67225ed3_aac73be7",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000164
+      },
+      "writtenOn": "2020-09-09T17:08:32Z",
+      "side": 1,
+      "message": "Maybe also make it an array of property names, so that we know which ones are / are not mutable?",
+      "parentUuid": "a8eb2162_10dcee27",
+      "revId": "94cc28a3b7905258d3b0801d3b86516ef38878c2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

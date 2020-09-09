@@ -1,0 +1,18 @@
+description: >
+    Implement to provide the progress on user requested dump.
+
+    Object which implements this interface should implement
+    xyz.openbmc_project.Object.Delete to allow the deletion of
+    individual Dump objects.
+
+properties:
+    - name: Completed
+      type: boolean
+      description: >
+          Indicates whether creation of the dump being tracked is completed
+          or not. This will be true once the dump creation is completed.
+    - name: EntryPath
+      type: string
+      description: >
+          The path to the dump entry, this will be valid once the the dump
+          creation is completed.

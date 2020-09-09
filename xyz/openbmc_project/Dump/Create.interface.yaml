@@ -15,10 +15,12 @@ methods:
       description: >
           Method to create a manual Dump.
       returns:
-        - name: Id
-          type: uint32
+        - name: Path
+          type: object_path
           description: >
-            The Dump entry id number.
+            The object path of the object that implements
+            xyz.openbmc_project.Common.Progress to track the progress
+            of the dump
       errors:
         - xyz.openbmc_project.Common.File.Error.Write
         - xyz.openbmc_project.Dump.Create.Error.Disabled

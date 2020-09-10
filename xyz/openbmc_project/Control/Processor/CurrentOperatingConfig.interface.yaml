@@ -1,0 +1,12 @@
+description: >
+    Processor power and frequency configuration settings.
+properties:
+    - name: AppliedConfig
+      # TODO: Use path when sdbusplus supports it
+      type: string
+      description: Path to currently selected configuration.
+    - name: AvailableConfigs
+      type: array[path]
+      description: Array of available configurations.
+      flags:
+        - readonly

@@ -1,0 +1,11 @@
+description: >
+    Processor power and frequency configuration settings.
+properties:
+    - name: AppliedConfig
+      type: object_path
+      description: Path to currently selected configuration.
+    - name: BaseSpeedPriorityEnabled
+      type: boolean
+      description: >
+        Whether base speed prioritization is enabled in the currently selected
+        configuration.

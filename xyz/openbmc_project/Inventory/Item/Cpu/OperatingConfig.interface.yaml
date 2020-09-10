@@ -1,0 +1,49 @@
+description: >
+    Implement to advertise power and frequency attributes of a single available
+    (but not necessarily active/applied) processor configuration profile.
+properties:
+    - name: BaseSpeed
+      type: uint32
+      description: The base clock speed of the processor in MHz.
+      flags:
+        - readonly
+    - name: BaseSpeedPrioritySettings
+      type: array[struct[uint32, array[uint32]]]
+      description: >
+        An array of objects that specify the base clock frequency for sets of
+        cores when the configuration is operational. Each entry contains two
+        members, first is the base clock speed in MHz, and second is an array
+        identifying the set of core IDs to configure at that base speed.
+      flags:
+        - readonly
+    - name: MaxJunctionTemperature
+      type: uint32
+      description: The maximum temperature of the junction in degrees Celsius.
+      flags:
+        - readonly
+    - name: MaxSpeed
+      type: uint32
+      description: >
+        The maximum clock speed to which the processor can be configured in MHz.
+      flags:
+        - readonly
+    - name: PowerLimit
+      type: uint32
+      description: The thermal design point of the processor in watts.
+      flags:
+        - readonly
+    - name: AvailableCoreCount
+      type: size
+      description: >
+        The number of cores in the processor that can be used in this
+        configuration.
+      flags:
+        - readonly
+    - name: TurboProfile
+      type: array[struct[uint32, size]]
+      description: >
+        An array of objects that specify the turbo profile for a set of active
+        cores. Each entry contains two members, first is the maximum turbo clock
+        speed in MHz, and second is number of cores which can run at that speed.
+      flags:
+        - readonly

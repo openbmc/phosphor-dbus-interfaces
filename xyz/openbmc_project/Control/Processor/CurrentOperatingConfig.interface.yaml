@@ -1,0 +1,11 @@
+description: >
+    Processor power and frequency configuration settings.
+properties:
+    - name: AppliedConfig
+      type: object_path
+      description: Path to currently selected configuration.
+    - name: AvailableConfigs
+      type: array[object_path]
+      description: Array of available configurations.
+      flags:
+        - readonly

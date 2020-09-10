@@ -1,0 +1,11 @@
+description: >
+    Processor power and frequency configuration settings.
+properties:
+    - name: AppliedConfigId
+      type: int32
+      description: ID of currently selected configuration.
+    - name: AvailableConfigIds
+      type: array[int32]
+      description: Array of available config IDs to aid in profile discovery.
+      flags:
+        - readonly

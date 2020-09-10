@@ -88,6 +88,24 @@
       "revId": "94cc28a3b7905258d3b0801d3b86516ef38878c2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ace33b86_fe9a92e5",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2020-09-10T15:09:33Z",
+      "side": 1,
+      "message": "\u003e \u003e Hmm, that sounds a bit over-engineered to me. Which service would own the org.openbmc_project.Common.Mutable object? What would be the name of the interface, would it also be org.openbmc_project.Common.Mutable? Should it be org.openbmc_project or xyz.openbmc_project like the others?\n\u003e \n\u003e The same service that owns the sensor.  We do this all the time.  There is no correspondence between service names and the objects/interfaces they happen to host.\n\n+1\n\n\u003e \n\u003e \u003e Which service would own the org.openbmc_project.Common.Mutable object?\n\u003e \n\u003e A tangent to clarify definitions: \"org.openbmc_project.Common.Mutable\" is an interface and not an object.  An interface can be hosted at any path in the object tree.  An object is a set of interfaces having the same path.\n\u003e \n\u003e \u003e The property name, under that interface, could be simply \"Mutable\". If it\u0027s an array of strings, would each string then be the sensor object path, such as /xyz/openbmc_project/sensors/temperature/cpu_core0? How are those strings then used to look up the objects, when it\u0027s also necessary to know the service name the object is under? That\u0027s something about D-Bus that\u0027s confusing to me.\n\u003e \n\u003e I believe the request would be that the Mutable interface would be added to the _existing_ /xyz/openbmc_project/sensors/tempature/cpu_core0 object.  The array would be a list of PropertyNames such as [ \"MinValue\", \"MaxValue\" ] to indicate that the range is the mutable concept.\n\n+1\n\n\u003e \n\u003e \u003e It seems to me that it would be much simpler to add an optional interface to a sensor, since the entire content of the IPMI SDR is sensors. \n\u003e \n\u003e Hopefully you\u0027ve got the suggestion now but an \"optional interface to a sensor\" is exactly what is being proposed rather than a \"required property on a Sensor.Value\".\n\u003e \n\u003e \u003e I could use \"xyz.openbmc_project.Common.Mutable\" as the name of this optional interface, which would be added to sensors, so that this interface would live alongside the xyz.openbmc_project.Sensor.Value interface. Would this be acceptable?\n\u003e \n\u003e Yes, entirely!  Looks like by the end we\u0027re all on the same page. ;)\n\nWOOHOO!\n\nThe only additional thought I had was whether the new interface should have a mapping of both Interfaces and property names, just to make sure we handle property name collisions.  I\u0027m not sure I like the complexity there, and there\u0027s already other parts of the system that don\u0027t handle collisions gracefully, so I think it\u0027s probably fine to ignore that case.",
+      "parentUuid": "b7aa11cb_b288002f",
+      "revId": "94cc28a3b7905258d3b0801d3b86516ef38878c2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

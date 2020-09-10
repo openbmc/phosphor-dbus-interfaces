@@ -52,6 +52,24 @@
       "revId": "94cc28a3b7905258d3b0801d3b86516ef38878c2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "767b5804_1eb33b1b",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2020-09-10T05:39:51Z",
+      "side": 1,
+      "message": "Hmm, that sounds a bit over-engineered to me. Which service would own the org.openbmc_project.Common.Mutable object? What would be the name of the interface, would it also be org.openbmc_project.Common.Mutable? Should it be org.openbmc_project or xyz.openbmc_project like the others?\n\nThe property name, under that interface, could be simply \"Mutable\". If it\u0027s an array of strings, would each string then be the sensor object path, such as /xyz/openbmc_project/sensors/temperature/cpu_core0? How are those strings then used to look up the objects, when it\u0027s also necessary to know the service name the object is under? That\u0027s something about D-Bus that\u0027s confusing to me.\n\nThe performance would be rather poor. Having to maintain an array of strings, then do a lookup each time, would make it even slower to iterate through the IPMI SDR. It seems to me that it would be much simpler to add an optional interface to a sensor, since the entire content of the IPMI SDR is sensors. If other non-sensor objects are later desired to be mutable, they can have the same optional interface added to them, orthogonally. This would seem to be a better solution.\n\nI could use \"xyz.openbmc_project.Common.Mutable\" as the name of this optional interface, which would be added to sensors, so that this interface would live alongside the xyz.openbmc_project.Sensor.Value interface. Would this be acceptable?",
+      "parentUuid": "67225ed3_aac73be7",
+      "revId": "94cc28a3b7905258d3b0801d3b86516ef38878c2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

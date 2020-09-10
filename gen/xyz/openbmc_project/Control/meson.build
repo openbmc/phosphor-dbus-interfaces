@@ -181,6 +181,7 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Processor')
 subdir('Security')
 subdir('Service')
 subdir('ThermalMode')

@@ -40,6 +40,11 @@ properties:
       description: >
         The min number of PSUs in the system required to obtain redundancy
       default: 2
+    - name: RedundantHealth
+      type: string
+      description: >
+        The health status for PSU redundancy.
+      default: "OK"
 
 enumerations:
     - name: Algo

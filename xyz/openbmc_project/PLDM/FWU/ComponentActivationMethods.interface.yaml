@@ -1,0 +1,40 @@
+description: >
+  This interface has the component activation methods.
+
+properties:
+
+    - name: ACPowerCycle
+      type: boolean
+      description: >
+        Property that tells whether AC power cycle is an activation
+        method or not.
+
+    - name: DCPowerCycle
+      type: boolean
+      description: >
+        Property that tells whether DC power cycle is an activation
+        method or not.
+
+    - name: SystemReboot
+      type: boolean
+      description: >
+        Property that tells whether System reboot is an activation
+        method or not.
+
+    - name: MediumSpecificReset
+      type: boolean
+      description: >
+        Property that tells whether Medium-specific reset is an
+        activation method or not.
+
+    - name: SelfContained
+      type: boolean
+      description: >
+        Property that tells whether Self-Contained option is activation
+        method or not.
+
+    - name: Automatic
+      type: boolean
+      description: >
+        Property that tells whether the component can be activated
+        automatically once apply completes. 

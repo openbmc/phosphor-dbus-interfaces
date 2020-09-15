@@ -1,0 +1,9 @@
+description : >
+  This interface has the PLDM FWU active component image set properties.
+
+properties :
+
+    - name : ActiveComponentImageSetVersionString
+      type : string
+      description: >
+        String describing the active component image set version.

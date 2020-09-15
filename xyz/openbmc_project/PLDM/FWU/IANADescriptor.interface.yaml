@@ -1,0 +1,10 @@
+description : >
+   This interface has device identification info, in which IANA
+   Enterprise ID is used as descriptor.
+
+properties :
+
+    - name : IANAEnterpriseID
+      type : string
+      description: >
+        Property containing the IANA Enterprise ID.

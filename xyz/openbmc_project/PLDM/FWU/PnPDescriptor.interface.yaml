@@ -1,0 +1,14 @@
+description : >
+  This interface has PnP descriptor properties.
+
+properties :
+
+    - name : PnPVendorID
+      type : string
+      description: >
+       Property containing the PnP Vendor ID.
+
+    - name : PnPProductIdentifier
+      type : string
+      description: >
+        Property containing the PnP Product Identifier.

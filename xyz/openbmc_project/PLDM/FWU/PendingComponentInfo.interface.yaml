@@ -1,0 +1,39 @@
+description: >
+  This interface has the component entries for all of the pending
+  components that reside on the FD.
+
+properties:
+
+    - name: PendingComponentComparisonStamp
+      type: uint32
+      description: >
+        Optional firmware component comparison stamp that is pending
+        activation. This field, and all other pending component fields,
+        are valid once the firmware device has received the
+        ActivateFirmware command to prepare the firmware component for
+        activation, but the activation method requires further action
+        to enable the pending image to become the actively running code
+        image.
+        If no pending firmware component exists, this value shall be
+        set to 0x00000000
+
+    - name: PendingComponentReleaseDate
+      type: string
+      description: >
+        Eight byte field containing the date corresponding to the
+        component version level being reported – Format YYYYMMDD.
+        If no pending firmware component exists, this string
+        shall be empty.
+
+    - name: PendingComponentVersionString
+      type: string
+      description: >
+        Firmware component version, which is pending activation. The
+        version reported here should be the one that will become active
+        on the next initialization or activation of the component. The
+        pending component version value may be same as the active
+        component version. Contains a variable type string describing
+        the pending component version. Refer to
+        PendingComponentComparisonStamp field for additional details.
+        If no pending firmware component exists, this field is zero
+        bytes in length.

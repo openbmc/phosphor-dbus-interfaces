@@ -1,0 +1,32 @@
+description : >
+  This interface describes the capabilities during update.
+
+properties :
+
+    - name : UpdateModeRestrictions
+      type : boolean
+      description: >
+       This property tells whether update mode restrictions are
+       supported or not.
+
+    - name : PartialUpdates
+      type : boolean
+      description: >
+        This property tells whether partial updates are supported or not.
+
+    - name : HostFunctionalityDuringFirmwareUpdate
+      type : boolean
+      description: >
+        This property tells whether the host device functionality
+        during firmware update is reduced or not.
+
+    - name : ComponentUpdateFailureRetryCapability
+      type : boolean
+      description: >
+        This property shows the component update failure retry capability.
+
+    - name : ComponentUpdateFailureRecoveryCapability
+      type : boolean
+      description: >
+        This property shows the component update failure recovery
+        capability.

@@ -1,0 +1,21 @@
+description: >
+    This interface provides a method to initiate the PLDM FW update.
+
+methods:
+    - name: StartFWUpdate
+      description: >
+          This method initiates the PLDM FW update.
+      parameters:
+        - name: filePath
+          type: string
+          description: >
+            PLDM FW update package path.
+      returns:
+        - name: status
+          type: byte
+          description: >
+            PLDM FW update status.
+      errors:
+        - xyz.openbmc_project.Common.Error.NotAllowed
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.Common.Error.ResourceNotFound

@@ -1,0 +1,10 @@
+description : >
+  This interface has the PLDM FWU pending component image set
+  properties.
+
+properties :
+
+    - name : PendingComponentImageSetVersionString
+      type : string
+      description: >
+        String describing the pending component image set version.

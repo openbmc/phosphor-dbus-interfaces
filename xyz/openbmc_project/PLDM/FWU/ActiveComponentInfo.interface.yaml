@@ -1,0 +1,55 @@
+description: >
+  This interface has the component entries for all of the updateable
+  active components that reside on the FD.
+
+properties:
+
+    - name: ComponentClassification
+      type: uint16
+      description: >
+        Vendor specific component classification information.
+        Special values: 0x0000, 0xFFFF are reserved.
+
+    - name: ComponentIdentifier
+      type: uint16
+      description: >
+        FD vendor selected unique value to distinguish between
+        component images.
+
+    - name: ComponentClassificationIndex
+      type: byte
+      description: >
+        Used to distinguish identical components that have the same
+        classification and identifier that can use the same component
+        image but the images are stored in different locations in the FD.
+
+    - name: ActiveComponentComparisonStamp
+      type: uint32
+      description: >
+        Optional Firmware component comparison stamp that is currently
+        active. If the firmware component does not provide a component
+        comparison stamp, this value should be set to 0x00000000.
+
+    - name: ActiveComponentReleaseDate
+      type: string
+      description: >
+        Containing the date corresponding to the component version
+        level being reported – Format YYYYMMDD.
+        If the firmware component does not provide a date, this string
+        shall be empty.
+
+    - name: ComponentAutoApply
+      type: boolean
+      description: >
+        Firmware Device performs an ‘auto-apply’ during transfer
+        phase and apply step will be completed immediately if this
+        property is true.
+        Firmware Device will execute an operation during the APPLY
+        state that will include migrating the new component image to its
+        final non-volatile storage destination if this property is
+        false.
+
+    - name: ActiveComponentVersionString
+      type: string
+      description: >
+        String describing the active component version.

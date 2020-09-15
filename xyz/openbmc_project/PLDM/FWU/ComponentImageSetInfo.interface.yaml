@@ -1,0 +1,27 @@
+description : >
+  This interface has the PLDM FWU component image set properties.
+
+properties :
+
+    - name : CapabilitiesDuringUpdate
+      type : uint32
+      description: >
+        It specifies the capability of the firmware device.
+
+    - name : ComponentCount
+      type : uint16
+      description: >
+        The number of firmware components that reside within the FD.
+
+    - name : ActiveComponentImageSetVersionString
+      type : string
+      description: >
+        Component Image Set version information, up to 255 bytes.
+        Contains a variable type string describing the version of the
+        set of component images that are currently active.
+
+    - name : PendingComponentImageSetVersionString
+      type : string
+      description: >
+        Contains a variable type string describing the pending
+        component image set version.

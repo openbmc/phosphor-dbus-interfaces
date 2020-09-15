@@ -1,0 +1,14 @@
+description : >
+   This interface has ACPI descriptor properties.
+
+properties :
+
+    - name : ACPIVendorID
+      type : string
+      description: >
+        Property containing ACPI Vendor ID.
+
+    - name : ACPIProductIdentifier
+      type : string
+      description: >
+        Property containing ACPI Product Identifier.

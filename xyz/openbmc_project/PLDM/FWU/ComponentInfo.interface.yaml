@@ -1,0 +1,96 @@
+description: >
+  This interface has the component entries for all of the updateable
+  components that reside on the FD.
+
+properties:
+
+    - name: ComponentClassification
+      type: uint16
+      description: >
+        Vendor specific component classification information.
+        Special values: 0x0000, 0xFFFF are reserved.
+
+    - name: ComponentIdentifier
+      type: uint16
+      description: >
+        FD vendor selected unique value to distinguish between
+        component images.
+
+    - name: ComponentClassificationIndex
+      type: byte
+      description: >
+        Used to distinguish identical components that have the same
+        classification and identifier that can use the same component
+        image but the images are stored in different locations in the FD.
+
+    - name: ActiveComponentComparisonStamp
+      type: uint32
+      description: >
+        Optional Firmware component comparison stamp that is currently
+        active. If the firmware component does not provide a component
+        comparison stamp, this value should be set to 0x00000000.
+
+    - name: ActiveComponentReleaseDate
+      type: string
+      description: >
+        Containing the date corresponding to the component version
+        level being reported – Format YYYYMMDD.
+        If the firmware component does not provide a date, this value
+        shall be set to ASCII null characters represented by eight 0x00
+        bytes.
+
+    - name: PendingComponentComparisonStamp
+      type: uint32
+      description: >
+        Optional firmware component comparison stamp that is pending
+        activation. This field, and all other pending component fields,
+        are valid once the firmware device has received the
+        ActivateFirmware command to prepare the firmware component for
+        activation, but the activation method requires further action
+        to enable the pending image to become the actively running code
+        image.
+        If no pending firmware component exists, this value shall be
+        set to 0x00000000
+
+    - name: PendingComponentReleaseDate
+      type: string
+      description: >
+        Eight byte field containing the date corresponding to the
+        component version level being reported – Format YYYYMMDD.
+        If no pending firmware component exists, this value shall be
+        set to ASCII null characters represented by eight 0x00 bytes.
+
+    - name: ComponentActivationMethods
+      type: uint16
+      description: >
+        Provides the capability of the FD for firmware activation.
+
+    - name: ComponentAutoApply
+      type: boolean
+      description: >
+        Firmware Device performs an ‘auto-apply’ during transfer
+        phase and apply step will be completed immediately if this
+        property is true.
+        Firmware Device will execute an operation during the APPLY
+        state that will include migrating the new component image to its
+        final non-volatile storage destination if this property is
+        false.
+
+    - name: ActiveComponentVersionString
+      type: string
+      description: >
+        Component version information up to 255 bytes. Contains a
+        variable type string describing the component version.
+
+    - name: PendingComponentVersionString
+      type: string
+      description: >
+        Firmware component version, which is pending activation, up to
+        255 bytes. The version reported here should be the one that
+        will become active on the next initialization or activation of
+        the component. The pending component version value may be same
+        as the active component version. Contains a variable type
+        string describing the pending component version.
+        Refer to PendingComponentComparisonStamp field for additional
+        details. If no pending firmware component exists, this field is
+        zero bytes in length.

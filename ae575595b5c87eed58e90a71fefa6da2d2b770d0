@@ -46,6 +46,30 @@
       "revId": "ae575595b5c87eed58e90a71fefa6da2d2b770d0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b51d2f82_2ba9721e",
+        "filename": "xyz/openbmc_project/Control/PowerSupplyRedundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-09-16T17:46:31Z",
+      "side": 1,
+      "message": "I see the discussion over there.  I have a slight concern that asking a specific process to aggregate the health information results in us only being able to easily implement this when the power supplies are all managed by a single process.\n\nIs there an existing implementation of this?  The only thing I\u0027m finding is in IPMI.  Can we get some of the maintainers of existing implementations to weight in?",
+      "parentUuid": "c67de7bf_3c01ba89",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 19
+      },
+      "revId": "ae575595b5c87eed58e90a71fefa6da2d2b770d0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

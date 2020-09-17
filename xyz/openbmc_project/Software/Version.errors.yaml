@@ -5,3 +5,6 @@
     error include creating logging events and providing information on
     implementation reactions such as when the system is prevented from powering
     on if a minimum version level is not met.
+- name: WrongBootVersion
+  description: >
+    A system has booted from an alternate version instead of the requested

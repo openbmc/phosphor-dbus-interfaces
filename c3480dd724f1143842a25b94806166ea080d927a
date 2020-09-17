@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "84c1cefe_69852bb4",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2020-09-17T21:24:35Z",
+      "side": 1,
+      "message": "Today I don\u0027t think we have any real airflow sensors, but who knows, we might.  Given that today, each sensor unit has its own namespace, I\u0027d rather we keep it 1:1, unless we\u0027re going to remove the namespaces alltogether.",
+      "parentUuid": "d5eaa74a_b0b2fa56",
+      "revId": "c3480dd724f1143842a25b94806166ea080d927a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f63a5d62_94c3329c",
         "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 2
@@ -65,6 +83,24 @@
       "writtenOn": "2020-09-17T21:14:27Z",
       "side": 1,
       "message": "I got it. I was just suggest the CFM metric units as an one for airflow value, because CFMSensor was implement. if this new metric doesn\u0027t quite fit, I\u0027v like abandon of this patch and would define CFMSensor as Unit::Meters. Otherwise, if new CFM metric is required then the L/s or m^3 I like using too. I\u0027m ready do suggest new patch set.\n\nThanks!",
+      "parentUuid": "f63a5d62_94c3329c",
+      "revId": "c3480dd724f1143842a25b94806166ea080d927a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "260304b5_17775e24",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2020-09-17T21:24:35Z",
+      "side": 1,
+      "message": "Today, for better or worse, most servers use CFM;  I\u0027m not necessarily saying that going to metric here would be a bad thing, or that we should care what the industry does, but we\u0027d certainly be going against it, and in those cases we should do that openly, explicitly, and for good reasons.\n\nIt should be noted, I don\u0027t believe there\u0027s any work done in hwmon, as this tends to be virtualized sensor, but someone could certainly sync this stuff with the hwmon subsystem.\n\nQuote from the Redfish Sensors schema:\n\"This value shall indicate a measurement of a volume of gas per unit of time that flows through a particular junction.  The ReadingUnits shall be `cft_i/min\"\n\nhttps://github.com/openbmc/bmcweb/blob/23e64207a6668319df1f273641febdeab4c09148/static/redfish/v1/schema/Sensor_v1.xml#L470\n\n\nIf someone on this thread has access to DMTF, they might go look up the discussion for the Sensor schema, and see if the units disparity was raised.\n\nInterestingly, the LiquidFlow property, literally one line down from airflow, is in liters per second.  Gotta love Redfishes consistency in these regards.",
       "parentUuid": "f63a5d62_94c3329c",
       "revId": "c3480dd724f1143842a25b94806166ea080d927a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",

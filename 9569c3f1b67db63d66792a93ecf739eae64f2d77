@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "b8368fa4_2f279dd7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2020-09-17T20:36:30Z",
+      "side": 1,
+      "message": "Maybe append the name of the new error to the commit msg, like \"Version: Add new WrongBootVersion error\" so it\u0027s easy to know in one line what changed.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "9569c3f1b67db63d66792a93ecf739eae64f2d77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6df6b2c3_dde9bcb0",
         "filename": "xyz/openbmc_project/Software/Version.errors.yaml",
         "patchSetId": 2
@@ -19,6 +42,23 @@
         "endLine": 10,
         "endChar": 74
       },
+      "revId": "9569c3f1b67db63d66792a93ecf739eae64f2d77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fcdc23a2_f75cb875",
+        "filename": "xyz/openbmc_project/Software/Version.metadata.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2020-09-17T20:36:30Z",
+      "side": 1,
+      "message": "Lei, you had commented that this metadata could be filled with:\nBOOTED_VERSION \u003d Golden/Secondary\nEXPECTED_VERSION \u003d Primary\n\nI think that works, even with dual chip systems like Witherspoon we can decide either to add the version string or the chip (primary vs backup) if we detect that the system switched. Or also we could add additional metadata like:\nBOOTED_DEVICE\u003d%s\nEXPECTED_DEVICE\u003d%s\n\nand fill in the VERSION and/or DEVICE metadata when an error occurs either it switched chips or same chip but different version.",
       "revId": "9569c3f1b67db63d66792a93ecf739eae64f2d77",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eea73c9a_03b9f8a7",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000675
+      },
+      "writtenOn": "2020-09-17T21:14:27Z",
+      "side": 1,
+      "message": "I am implementing the feature of populating the \"Unit\" property in the dbus-sensor package.\nActualy, dbus-sensors has the CFMSensor which calculate CFM from a tachometer. \nHowever, I think there are real air flow sensors like the SFM3020. Maybe we should define a separate namespace for FCM sensors?",
+      "parentUuid": "d5eaa74a_b0b2fa56",
+      "revId": "c3480dd724f1143842a25b94806166ea080d927a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f63a5d62_94c3329c",
         "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2020-09-17T16:12:43Z",
       "side": 1,
       "message": "Everywhere else we have used metric units, so I don\u0027t think we want to start using English units for airflow.  Can we use m^3/s or L/s instead?\n\nL/s actually has a similar scale as CFM.  1 L/S \u003d 2.11888 CFM.\n\nGenerally, other units have already been covered by linux-hwmon as well.  I don\u0027t see airflow covered there yet (https://www.kernel.org/doc/Documentation/hwmon/sysfs-interface).  Are we going to be contributing any drivers there?  It would probably be nice to get Guenter\u0027s feedback on appropriate units as well.",
+      "revId": "c3480dd724f1143842a25b94806166ea080d927a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a58572c2_e812ab3d",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000675
+      },
+      "writtenOn": "2020-09-17T21:14:27Z",
+      "side": 1,
+      "message": "I got it. I was just suggest the CFM metric units as an one for airflow value, because CFMSensor was implement. if this new metric doesn\u0027t quite fit, I\u0027v like abandon of this patch and would define CFMSensor as Unit::Meters. Otherwise, if new CFM metric is required then the L/s or m^3 I like using too. I\u0027m ready do suggest new patch set.\n\nThanks!",
+      "parentUuid": "f63a5d62_94c3329c",
       "revId": "c3480dd724f1143842a25b94806166ea080d927a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

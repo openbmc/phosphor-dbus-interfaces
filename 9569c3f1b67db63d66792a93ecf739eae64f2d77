@@ -25,6 +25,23 @@
     },
     {
       "key": {
+        "uuid": "2eacf961_149b228b",
+        "filename": "xyz/openbmc_project/Software/Version.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-09-18T05:42:14Z",
+      "side": 1,
+      "message": "I prefer to make it a property in a separated interface, so that it becomes an optional property of a D-Bus object (e.g. /xyz/openbmc_project/software/\nThe use case would be:\n* In UBI case, it indicates if the running version is the expected one or not;\n* In golden image case, it indicates if the running version is the primary or the golden one.\n\nMaking it a property makes it easier for other services to query the status.\nIf it is just an error in the log, I am not sure how the other services could know the status.",
+      "revId": "9569c3f1b67db63d66792a93ecf739eae64f2d77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6df6b2c3_dde9bcb0",
         "filename": "xyz/openbmc_project/Software/Version.errors.yaml",
         "patchSetId": 2

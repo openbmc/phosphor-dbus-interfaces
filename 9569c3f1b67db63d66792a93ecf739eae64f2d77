@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "3dca1ad5_00b85bbe",
+        "filename": "xyz/openbmc_project/Software/Version.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2020-09-18T18:54:00Z",
+      "side": 1,
+      "message": "We still want an error to be logged to notify the user that something unexpected happened.\nTheoretically the bmc code update app would determine if the expected version or device is loaded, then log this error. At that point it can populate a new property, but is that needed, what other services would be looking at that information?",
+      "parentUuid": "2eacf961_149b228b",
+      "revId": "9569c3f1b67db63d66792a93ecf739eae64f2d77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6df6b2c3_dde9bcb0",
         "filename": "xyz/openbmc_project/Software/Version.errors.yaml",
         "patchSetId": 2

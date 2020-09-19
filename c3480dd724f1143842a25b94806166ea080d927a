@@ -105,6 +105,24 @@
       "revId": "c3480dd724f1143842a25b94806166ea080d927a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5d41842_8c853d3c",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2020-09-19T11:51:45Z",
+      "side": 1,
+      "message": "Patric, this commit is about to improve what we already have, not about develop new stuff and it CFM is industry standard, we be flexible enough to use it.\nTo be honest, we in Yadro have no AirFlow sensors and was not going to use virtual one. Igor\u0027s intention was to enable all sensors in \"dbus-sensors\" to explicitly set units they use via existing interface.\nSaying that we can define both: CFM and L/s and this is the benefit of explicit units definition.",
+      "parentUuid": "260304b5_17775e24",
+      "revId": "c3480dd724f1143842a25b94806166ea080d927a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

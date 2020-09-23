@@ -34,6 +34,24 @@
       "revId": "268362259ef85599caf251f59651f9fd6cc571d3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7be39500_2b46e59c",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-09-23T18:44:39Z",
+      "side": 1,
+      "message": "My general opinion is that we should deprecate this attribute and use ExtendedVersion as needed.  We\u0027ve had this discussion in other code reviews.\n\nI\u0027d need to understand why and what a PLDM is in this context in order to allow it to go forward.  This might instigate me to formalize the deprecation plan on this instead.",
+      "parentUuid": "6cdbc7b8_877d3d5c",
+      "revId": "268362259ef85599caf251f59651f9fd6cc571d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

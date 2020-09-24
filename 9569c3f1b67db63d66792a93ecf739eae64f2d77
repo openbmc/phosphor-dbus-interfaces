@@ -60,6 +60,24 @@
     },
     {
       "key": {
+        "uuid": "b50df676_29265155",
+        "filename": "xyz/openbmc_project/Software/Version.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-09-24T06:41:47Z",
+      "side": 1,
+      "message": "I\u0027m OK with the error logging.\nBut I still want a property on the DBus to represent which flash it is running on, instead of checking the logs.\n\n\u003e what other services would be looking at that information?\n1. The software update service itself creates and looks for this property;\n2. The system admin could query the property to get the status.",
+      "parentUuid": "3dca1ad5_00b85bbe",
+      "revId": "9569c3f1b67db63d66792a93ecf739eae64f2d77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6df6b2c3_dde9bcb0",
         "filename": "xyz/openbmc_project/Software/Version.errors.yaml",
         "patchSetId": 2

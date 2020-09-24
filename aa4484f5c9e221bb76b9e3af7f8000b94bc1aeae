@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5777213e_d657ec0f",
+        "filename": "xyz/openbmc_project/PLDM/FWU/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-09-24T01:25:34Z",
+      "side": 1,
+      "message": "It seems like we are going to have an update to the PLDM document elsewhere, but can we get an explanation on why the current model of software in xyz.openbmc_project.Software is insufficient for the problem?\n\nI feel like we keep having this discussion with PLDM.  A new feature comes out and we try to expose raw PLDM concepts onto DBus and force some other component to do a translation from real BMC concepts into PLDM concepts.  This isn\u0027t an abstraction.  I\u0027ve said it before but I don\u0027t want other software packages to know that they\u0027re talking to PLDM, or Redfish, or IPMI because when the next PLDM/Redfish/IPMI comes out we have to, once again, re-write half of our code.",
+      "revId": "aa4484f5c9e221bb76b9e3af7f8000b94bc1aeae",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

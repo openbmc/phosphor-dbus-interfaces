@@ -1,0 +1,39 @@
+description: >
+    Host-BMC selector button control service
+methods:
+    - name: simPress
+      description: >
+        Emulate Host-BMC selector button press.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+    - name: simLongPress
+      description: >
+        Emulate Host-BMC selector button long press.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+properties:
+    - name: Enabled
+      type: boolean
+      default: true
+      description: >
+        Enable/disable Host-BMC selector button.
+        false means Host-BMC selector button is disabled
+        true means Host-BMC selector button is enabled
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+signals:
+    - name: Released
+      description: >
+        Host-BMC selector button released signal
+    - name: Pressed
+      description: >
+        Host-BMC selector button pressed signal
+    - name: PressedLong
+      description: >
+        Host-BMC selector button long pressed signal 	

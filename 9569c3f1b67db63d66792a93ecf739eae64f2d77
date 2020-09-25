@@ -96,6 +96,24 @@
     },
     {
       "key": {
+        "uuid": "d8e802bf_62c40d26",
+        "filename": "xyz/openbmc_project/Software/Version.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2020-09-25T02:34:19Z",
+      "side": 1,
+      "message": "\u003e Isn\u0027t this a fallout from your proposed static flash layout design?  Shouldn\u0027t you be proposing a property for that?\n\nYup. Here we are discussing the usecase, and if we all agree I will submit a patch to propose a new property.\n\n\u003e As I mentioned in that review, my opinion is that RedundancyPriority already covers that question for UBI-based images (and likely can for Golden also).\n\nI did not think about this, but it looks promising to use RedundancyPriority to represent the golden image.\n\n\u003e If we do need a new property I suspect it would be best as a separate interface because I\u0027m not sure it is applicable to all Software implementations.\n\nYup, it will be a new interface. It could be an optional property enabled by PACKAGE CONFIG.\n\nBut as you suggested, RedundancyPriority is a good candidate for my usage:\n* It could be made read-only for static-layout case;\n* The phosphor-bmc-code-mgmt sets the priority to 0 when it\u0027s running on the primary flash, and 1 when it\u0027s on golden image.",
+      "parentUuid": "6dad0173_c33d30c7",
+      "revId": "9569c3f1b67db63d66792a93ecf739eae64f2d77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6df6b2c3_dde9bcb0",
         "filename": "xyz/openbmc_project/Software/Version.errors.yaml",
         "patchSetId": 2

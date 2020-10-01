@@ -237,6 +237,30 @@
       "revId": "8e5e09b1c70d8ad5c24569b6f87c2a7423a0ce54",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f2359af8_314c4807",
+        "filename": "xyz/openbmc_project/Inventory/Item/PersistentMemory/MemoryMetrics.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2020-10-01T17:54:36Z",
+      "side": 1,
+      "message": "\u003e All of these properties are coming from refish. And these properties are not coming from sensors in lower layer.\n\nThere\u0027s no such thing as a \"sensor\" in a lower layer.  A \"sensor\" is just a way to abstract things that produce a finite value in the number realm, which is what these values are.\n\n\n\u003e Also thermal and media errors are being sent as events(which is separate implementation). so if there is any media/thermal error present on device, they will be logged.\n\nThat\u0027s part of the thing.  If these were sensors, the \"thermal\" events would just get rolled in as threshold events on said sensor, which would be much more usable to the rest of the system.  as is, we\u0027re separating the value, threshold, and logging into their own completely separate implementations, which feels more complex.\n\n\u003e Also all the errors are sent with priorities and severity.\n\nI\u0027m not following what this means.",
+      "parentUuid": "cb40dc60_b0957c6c",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 19
+      },
+      "revId": "8e5e09b1c70d8ad5c24569b6f87c2a7423a0ce54",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

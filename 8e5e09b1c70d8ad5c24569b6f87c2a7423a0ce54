@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "4113462e_b54a3975",
+        "filename": "xyz/openbmc_project/Inventory/Item/PersistentMemory/MemoryMetrics.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2020-10-01T16:43:05Z",
+      "side": 1,
+      "message": "Another, half-baked idea: What if this interface just produced object paths that were pointers to the sensors that did this work.  That way, we\u0027d avoid a little bit of the complexity, but would still have an interface that we could access to get the complete \"memory metrics\" picture.",
+      "parentUuid": "b38b9c39_f70f7cd6",
+      "range": {
+        "startLine": 28,
+        "startChar": 12,
+        "endLine": 28,
+        "endChar": 41
+      },
+      "revId": "8e5e09b1c70d8ad5c24569b6f87c2a7423a0ce54",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "63b508b3_958ff0ea",
         "filename": "xyz/openbmc_project/Inventory/Item/PersistentMemory/MemoryMetrics.interface.yaml",
         "patchSetId": 2

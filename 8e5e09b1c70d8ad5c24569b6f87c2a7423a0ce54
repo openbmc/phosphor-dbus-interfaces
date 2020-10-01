@@ -189,6 +189,30 @@
       "revId": "8e5e09b1c70d8ad5c24569b6f87c2a7423a0ce54",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77afe15e_f3b5b9c0",
+        "filename": "xyz/openbmc_project/Inventory/Item/PersistentMemory/MemoryMetrics.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2020-10-01T16:49:18Z",
+      "side": 1,
+      "message": "Because it\u0027s much easier to track multiples of them, and it\u0027s designed to keep information around in a persistent circular buffer.  It also tracks the time the event occurred, and produces a user facing log.  With that said, it looks like some of these are coming from the redfish schema?  It might make sense to have both in that case?",
+      "parentUuid": "6c09636e_afad84a2",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 19
+      },
+      "revId": "8e5e09b1c70d8ad5c24569b6f87c2a7423a0ce54",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

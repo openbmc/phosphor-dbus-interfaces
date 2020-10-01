@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "113e5b55_c7ffd323",
+        "filename": "xyz/openbmc_project/Inventory/Item/PersistentMemory/MemoryMetrics.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000656
+      },
+      "writtenOn": "2020-10-01T16:12:21Z",
+      "side": 1,
+      "message": "Good suggestion. Let me try this one.",
+      "parentUuid": "38088b41_ec218cfc",
+      "range": {
+        "startLine": 28,
+        "startChar": 12,
+        "endLine": 28,
+        "endChar": 41
+      },
+      "revId": "8e5e09b1c70d8ad5c24569b6f87c2a7423a0ce54",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "63b508b3_958ff0ea",
         "filename": "xyz/openbmc_project/Inventory/Item/PersistentMemory/MemoryMetrics.interface.yaml",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2020-09-28T15:25:10Z",
       "side": 1,
       "message": "Most of these seem like they would be better as log events rather than directly accessible struct members.  Is there a use case for directly accessing the CorrectableEccError bool aside from logging?",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 19
+      },
+      "revId": "8e5e09b1c70d8ad5c24569b6f87c2a7423a0ce54",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c09636e_afad84a2",
+        "filename": "xyz/openbmc_project/Inventory/Item/PersistentMemory/MemoryMetrics.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000656
+      },
+      "writtenOn": "2020-10-01T16:12:21Z",
+      "side": 1,
+      "message": "Yes all of these properties are being used for logging purpose. Can you please explain why it is better to log as events rather than bool properties?",
+      "parentUuid": "63b508b3_958ff0ea",
       "range": {
         "startLine": 32,
         "startChar": 0,

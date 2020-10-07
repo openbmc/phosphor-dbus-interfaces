@@ -103,7 +103,7 @@ install_subdir(
 install_subdir(
     generated_root,
     exclude_files: [ generated_headers, generated_cpp ],
-    install_dir: get_option('datadir') / meson.project_name(),
+    install_dir: get_option('datadir') / 'doc' / meson.project_name(),
     strip_directory: true,
 )
 

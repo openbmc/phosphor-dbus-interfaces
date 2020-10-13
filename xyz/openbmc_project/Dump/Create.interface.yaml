@@ -14,6 +14,25 @@ methods:
     - name: CreateDump
       description: >
           Method to create a manual Dump.
+      parameters:
+        - name: AdditionalData
+          type: dict[string, string]
+          description: >
+            The additional data, if any, for initiating the dump.
+            The key in this case should be an implementation
+            specific enum defined for the specific type of dump
+            either in xyz or in a doamin.
+            The enum-format string is required to come from a
+            parallel class with this specific Enum name.
+            All of the Enum strings should be in the format
+            'domain.Dump.Create.CreateParameters.ParamName'.
+            e.g.:
+              {
+                "key1": "value1",
+                "key2": "value2"
+              }
+            ends up in AdditionaData like:
+              ["KEY1=value1", "KEY2=value2"]
       returns:
         - name: Path
           type: object_path

@@ -1,0 +1,65 @@
+description: >
+    This defines a PCIe slot to be exposed for system management.
+    It includes the slot properties.
+
+properties:
+    - name: PCIeType
+      type: string
+      description: >
+          The maximum PCIe specification that the slot supports
+
+    - name: Lanes
+      type: string
+      description: >
+          The maximum number of PCIe lanes supported by the slot
+
+    - name: Location
+      type: string
+      description: >
+          The location information of the slot
+
+    - name: SlotType
+      type: enum[self.SlotTypes]
+      description: >
+          The type of the slot
+
+enumerations:
+    - name: SlotTypes
+      description: >
+          Possible types of a PCIe slot
+      values:
+        - name: 'FullLength'
+          description: >
+              Full-Length PCIe slot
+
+        - name: 'HalfLength'
+          description: >
+              Half-Length PCIe slot
+
+        - name: 'LowProfile'
+          description: >
+              Low-Profile or Slim PCIe slot
+
+        - name: 'Mini'
+          description: >
+              Mini PCIe slot
+
+        - name: 'M2'
+          description: >
+              PCIe M.2 slot
+
+        - name: 'OEM'
+          description: >
+              An OEM-specific PCIe slot
+
+        - name: 'OCP3Small'
+          description: >
+              Open Compute Project 3.0 small form factor PCIe slot
+
+        - name: 'OCP3Large'
+          description: >
+              Open Compute Project 3.0 large form factor PCIe slot
+
+        - name: 'U2'
+          description: >
+              U.2 / SFF-8639 PCIe slot or bay

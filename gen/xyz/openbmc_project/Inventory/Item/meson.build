@@ -252,6 +252,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('PCIeSlot')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/PCIeSlot__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml',  ],
+    output: [ 'PCIeSlot.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Inventory/Item/PCIeSlot',
+    ],
+    build_by_default: true,
+)
+
 subdir('PersistentMemory')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/PersistentMemory__markdown'.underscorify(),

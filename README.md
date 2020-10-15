@@ -20,6 +20,7 @@ can be enabled by meson options:
 - com/ibm - `-Ddata_com_ibm=true`
 - org/open_power - `-Ddata_org_open_power=true`
 
+Example: `meson builddir -Ddata_com_ibm=true && ninja -C builddir`
 ## References
 
 [sdbusplus binding generation tool sdbus++]: https://github.com/openbmc/sdbusplus/blob/master/README.md#binding-generation-tool

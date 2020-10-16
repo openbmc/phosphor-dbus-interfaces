@@ -7,3 +7,12 @@ properties:
       description: >
           Whether or not auto reboot is enabled.
       default: true
+
+    - name: AutoRebootTemp
+      type: boolean
+      description: >
+          Same as AutoReboot but will be reset to true whenever the host is
+          stopped. Software will first look at this property. If false, then
+          auto reboot will be disabled, otherwise software will utilize
+          AutoReboot for determining reboot policy.
+      default: true

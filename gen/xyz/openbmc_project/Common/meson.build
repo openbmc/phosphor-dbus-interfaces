@@ -27,6 +27,7 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Decorator')
 subdir('Device')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/Device__markdown'.underscorify(),

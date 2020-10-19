@@ -1,0 +1,6 @@
+description: >
+    Implement to indicate the progress of a particular operation.
+    If handling the user request takes more time, the handler could
+    create a D-Bus object implementing this interface and then return
+    the object path to the caller. The caller could then wait until
+    the returned object goes away and then mark the operation done.

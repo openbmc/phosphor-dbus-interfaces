@@ -12,6 +12,12 @@ and found under the `gen` subdirectory.  When adding or removing YAML files,
 this must be regenerated.  This can be done with the helper script found
 in the `gen` subdirectory: `cd gen && ./regenerate-meson`.
 
+If `regenerate-meson` does not work, do the following from `gen` directory
+- run `which sdbus++-gen-meson` and make sure it is referring to a valid `sdbus++-gen-meson`
+- run `export SDBUSPP_GEN_MESON=<output of which sdbus++gen-meson>` ; `./regenerate-meson`
+- If it fails again, then execute the below command
+- `sdbus++-gen-meson --directory .. --command meson --output .`
+
 ## Configuration
 
 Only the xyz/openbmc_project interfaces are built by default.  Other interfaces

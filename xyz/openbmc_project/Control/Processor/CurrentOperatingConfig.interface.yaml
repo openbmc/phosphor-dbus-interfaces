@@ -4,8 +4,21 @@ properties:
     - name: AppliedConfig
       type: object_path
       description: Path to currently selected configuration.
+      errors:
+        # Indicate that the set object_path is not a valid associated
+        # OperatingConfig
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        # Indicate that the property cannot be changed at this time. May be
+        # temporary (invalid platform state), or permanent (processor doesn't
+        # support modification).
+        - xyz.openbmc_project.Common.Error.NotAllowed
     - name: BaseSpeedPriorityEnabled
       type: boolean
       description: >
         Whether base speed prioritization is enabled in the currently selected
         configuration.
+      errors:
+        # Indicate that the property cannot be changed at this time. May be
+        # temporary (invalid platform state), or permanent (processor doesn't
+        # support modification).
+        - xyz.openbmc_project.Common.Error.NotAllowed

@@ -17,12 +17,16 @@ description: >
 properties:
     - name: WarningHigh
       type: double
+      default: NaN
       description: >
-          The upper bound of the warning threshold.
+          The upper bound of the warning threshold.  A value of 'NaN' is used
+          to indicate there is no threshold of this type.
     - name: WarningLow
       type: double
+      default: NaN
       description: >
-          The lower bound of the warning threshold.
+          The lower bound of the warning threshold.  A value of 'NaN' is used
+          to indicate there is no threshold of this type.
     - name: WarningAlarmHigh
       type: boolean
       description: >

@@ -17,11 +17,13 @@ properties:
     - name: CriticalHigh
       type: double
       description: >
-          The upper bound of the critical threshold.
+          The upper bound of the critical threshold.  A value of 'NaN' is used
+          to indicate there is no threshold of this type.
     - name: CriticalLow
       type: double
       description: >
-          The lower bound of the critical threshold.
+          The lower bound of the critical threshold.  A value of 'NaN' is used
+          to indicate there is no threshold of this type.
     - name: CriticalAlarmHigh
       type: boolean
       description: >

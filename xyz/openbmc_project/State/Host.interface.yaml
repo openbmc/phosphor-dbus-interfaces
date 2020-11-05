@@ -55,9 +55,15 @@ enumerations:
         - name: 'Off'
           description: >
             Host firmware is not running
+        - name: 'TransitioningToOff'
+          description: >
+            Host firmware is transitioning to an Off state
         - name: 'Running'
           description: >
             Host firmware is running
+        - name: 'TransitioningToRunning'
+          description: >
+            Host firmware is transitioning to a Running state
         - name: 'Quiesced'
           description: >
             Host firmware is quiesced

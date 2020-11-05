@@ -1,0 +1,20 @@
+description: >
+    Implement this to pass additional parameters to the create dump.
+    Each required parameter for the dump in the ibm domain should be added
+    here as an enum.
+
+enumerations:
+    - name: CreateParameters
+      description:
+          Additional parameters for creating the dump.
+      values:
+        - name: 'VSPString'
+          description: >
+              The resouce dump is collected from various host resources.
+              The resource to collect the dump is indicated by using the
+              resource selector.
+              The resource selector string needs to be passed to host to
+              generate a resource dump.
+        - name: 'Password'
+          description: >
+              The password for authenticating the resource dump request.

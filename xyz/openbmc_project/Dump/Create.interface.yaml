@@ -14,6 +14,11 @@ methods:
     - name: CreateDump
       description: >
           Method to create a manual Dump.
+      parameters:
+        - name: eid
+          type: string
+          description: >
+            The errorlog ID.
       returns:
         - name: Id
           type: uint32

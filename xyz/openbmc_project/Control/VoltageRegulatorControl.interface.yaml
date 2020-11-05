@@ -1,0 +1,23 @@
+description: >
+    Implement to provide control of a voltage regulator.  Objects implementing
+    Control.VoltageRegulatorControl allow for fine grained control of a given
+    voltage regulator channel, and allows external entities to control Voltage
+    Regulator devices.
+
+properties:
+    - name: Voltage
+      type: double
+      description: >
+          The current voltage setting for the voltage regulator.
+    - name: MaxValue
+      type: double
+      flags:
+          - readonly
+      description: >
+          The Maximum supported voltage.
+    - name: MinValue
+      type: double
+      flags:
+          - readonly
+      description: >
+          The Minimum supported voltage.

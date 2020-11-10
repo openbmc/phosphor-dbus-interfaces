@@ -16,6 +16,24 @@
       "revId": "b020c028096efc7cb4c871c5d8ff57520b3a4c80",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "837cada7_9f106bd3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2020-11-10T22:44:23Z",
+      "side": 1,
+      "message": "In the case of the fans, a single fan by itself doesn\u0027t know about the state of other fans, so the threshold interface on a fan sensor can\u0027t be used. Not to mention fan RPM thresholds are moving targets anyway, and we\u0027re going to have delays between a X number of fans fail and when the alert is triggered.\n\nin the case of the temperature, in our case we\u0027re going to have 2 different levels of ambient temp alerts (so I will use this interface on 2 object paths), one of which is isn\u0027t reversible, so even if the temperature drops, it cannot prevent a power off.  Also, we\u0027re going to have hysteresis in the alerts, so the temp at which the alert is triggered is different than the one for when it will be turned off (for the alert that can be turned off at all).\n\nI suppose another option would just be to just use the Object.Enable interface on some unique object paths and call it a day.",
+      "parentUuid": "cc5eb967_55acdf84",
+      "revId": "b020c028096efc7cb4c871c5d8ff57520b3a4c80",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

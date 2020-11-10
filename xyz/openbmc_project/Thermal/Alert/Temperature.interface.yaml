@@ -1,0 +1,9 @@
+description: >
+    Implement to provide a property that holds an indication of a thermal
+    alert caused by temperature, such as a high ambient temp.
+properties:
+    - name: Active
+      type: boolean
+      default: false
+      description: >
+          If the alert is active.

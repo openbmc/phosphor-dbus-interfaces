@@ -22,6 +22,8 @@ methods:
           type: dict[string,array[string]]
           description: >
             A dictionary of service -> implemented interface(s).
+      errors:
+        - xyz.openbmc_project.Common.Error.ResourceNotFound
     - name: GetAncestors
       description: >
           Obtain a dictionary of ancestor -> services where ancestor is an
@@ -41,6 +43,8 @@ methods:
           type: dict[path,dict[string,array[string]]]
           description: >
             A dictionary of ancestor -> services.
+      errors:
+        - xyz.openbmc_project.Common.Error.ResourceNotFound
     - name: GetSubTree
       description: >
           Obtain a dictionary of path -> services where path is in
@@ -65,6 +69,8 @@ methods:
           type: dict[path,dict[string,array[string]]]
           description: >
             A dictionary of path -> services.
+      errors:
+        - xyz.openbmc_project.Common.Error.ResourceNotFound
     - name: GetSubTreePaths
       description: >
           Obtain an array of paths where array elements are in subtree.
@@ -87,3 +93,5 @@ methods:
           type: array[path]
           description: >
             An array of paths.
+      errors:
+        - xyz.openbmc_project.Common.Error.ResourceNotFound

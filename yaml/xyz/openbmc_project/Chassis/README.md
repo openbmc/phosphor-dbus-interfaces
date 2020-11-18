@@ -37,3 +37,11 @@ provides following methods, signals.
 #### signals
 * Released - Reset button released signal.
 * Pressed - Reset button pressed signal.
+
+### Host Selector Button Interface
+Selector button interface `xyz.openbmc_project.Chassis.Buttons.HostSelector`
+provides following property.
+
+### properties
+Position - Value of the Host selector.
+MaxPosition - Max value that the Position value can hold.

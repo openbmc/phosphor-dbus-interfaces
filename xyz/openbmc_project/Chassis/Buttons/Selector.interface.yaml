@@ -1,0 +1,36 @@
+description: >
+    Selector button control service
+methods:
+    - name: simPress
+      description: >
+        Emulate Selector button press.
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+properties:
+    - name: Enabled
+      type: boolean
+      default: true
+      description: >
+        Enable/disable selector button.
+        false means selector button is disabled
+        true means selector button is enabled
+      errors:
+       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+       - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+properties:
+    - name: Position
+      type: uint16
+      default: 1
+      description: >
+        1 means selector button position points to host1 by default
+
+signals:
+    - name: Released
+      description: >
+        Selector button released signal
+    - name: Pressed
+      description: >
+        Selector button pressed signal

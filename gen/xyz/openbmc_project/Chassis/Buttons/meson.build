@@ -59,3 +59,18 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Selector')
+generated_others += custom_target(
+    'xyz/openbmc_project/Chassis/Buttons/Selector__markdown'.underscorify(),
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml',  ],
+    output: [ 'Selector.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.project_source_root(),
+        'xyz/openbmc_project/Chassis/Buttons/Selector',
+    ],
+    build_by_default: true,
+)
+

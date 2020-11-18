@@ -37,3 +37,14 @@ provides following methods, signals.
 #### signals
 * Released - Reset button released signal.
 * Pressed - Reset button pressed signal.
+
+### Selector Button Interface
+Selector button interface `xyz.openbmc_project.Chassis.Buttons.Selector`
+provides following methods, signals.
+
+#### methods
+* simPress - To emulate physical Selector button press.
+
+#### signals
+* Released - Selector button released signal.
+* Pressed - Selector button pressed signal.

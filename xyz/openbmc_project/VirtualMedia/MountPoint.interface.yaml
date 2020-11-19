@@ -71,3 +71,13 @@ properties:
         - const
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: WriteProtected
+      type: boolean
+      description: >
+            Mounting mode, 'True' if the image is read only,
+            'False' otherwise.
+      flags:
+        - const
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure

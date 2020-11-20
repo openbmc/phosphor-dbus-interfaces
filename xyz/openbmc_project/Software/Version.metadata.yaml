@@ -7,3 +7,8 @@
       type: string
     - str: "VERSION_PURPOSE=%s"
       type: string
+- name: AlreadyExists
+  level: ERR
+  meta:
+    - str: "IMAGE_VERSION=%s"
+      type: string

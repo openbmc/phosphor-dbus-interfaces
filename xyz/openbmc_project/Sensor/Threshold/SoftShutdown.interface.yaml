@@ -1,0 +1,60 @@
+description: >
+    Implement to provide soft shutdown class sensor thresholds.  Objects
+    implementing Sensor.Threshold.Shutdown must be instantiated in the correct
+    hierarchy within the sensors namespace.  The following sensor hierarchies
+    are recognized:
+      temperature
+      fan_tach
+      voltage
+      altitude
+      current
+      power
+      energy
+
+
+    Additionally, any object implementing Sensor.Threshold.SoftShutdown must
+    also implement Sensor.Value.
+
+properties:
+    - name: SoftShutdownHigh
+      type: double
+      default: NaN
+      description: >
+          The upper bound of the soft shutdown threshold.  A value of 'NaN' is
+          used to indicate there is no threshold of this type.
+    - name: SoftShutdownLow
+      type: double
+      default: NaN
+      description: >
+          The lower bound of the soft shutdown threshold.  A value of 'NaN' is
+          used to indicate there is no threshold of this type.
+    - name: SoftShutdownAlarmHigh
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bound.
+          False if the sensor value has not exceeded the defined bound.
+
+          SoftShutdownAlarmHigh may be set to False to clear an alarm condition.
+          The behavior of setting SoftShutdownAlarmHigh to True is undefined.
+    - name: SoftShutdownAlarmLow
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bound.
+          False if the sensor value has not exceeded the defined bound.
+
+          SoftShutdownAlarmLow may be set to False to clear an alarm condition.
+          The behavior of setting SoftShutdownAlarmLow to True is undefined.
+    - name: HysteresisHigh
+      type: double
+      default: 0
+      description: >
+          The hysteresis on SoftShutdownHigh.  This means that before
+          SoftShutdownAlarmHigh will get reset, the sensor value would have to
+          decrease to at least SoftShutdownHigh - HysteresisHigh.
+    - name: HysteresisLow
+      type: double
+      default: 0
+      description: >
+          The hysteresis on SoftShutdownLow.  This means that before
+          SoftShutdownAlarmLow will get reset, the sensor value would have to
+          increase to at least SoftShutdownLow + HysteresisLow.

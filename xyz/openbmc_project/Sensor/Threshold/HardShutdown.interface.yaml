@@ -1,0 +1,47 @@
+description: >
+
+    Implement to provide hard shutdown class sensor thresholds.  Objects
+    implementing Sensor.Threshold.HardShutdown must be instantiated in the
+    correct hierarchy within the sensors namespace.  The following sensor
+    hierarchies are recognized:
+      temperature
+      fan_tach
+      voltage
+      altitude
+      current
+      power
+      energy
+
+
+    Additionally, any object implementing Sensor.Threshold.HardShutdown must
+    also implement Sensor.Value.
+
+properties:
+    - name: HardShutdownHigh
+      type: double
+      default: NaN
+      description: >
+          The upper bound of the shutdown threshold.  A value of 'NaN' is used
+          to indicate there is no threshold of this type.
+    - name: HardShutdownLow
+      type: double
+      default: NaN
+      description: >
+          The lower bound of the shutdown threshold.  A value of 'NaN' is used
+          to indicate there is no threshold of this type.
+    - name: HardShutdownAlarmHigh
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bound.
+          False if the sensor value has not exceeded the defined bound.
+
+          HardShutdownAlarmHigh may be set to False to clear an alarm condition.
+          The behavior of setting HardShutdownAlarmHigh to True is undefined.
+    - name: HardShutdownAlarmLow
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bound.
+          False if the sensor value has not exceeded the defined bound.
+
+          HardShutdownAlarmLow may be set to False to clear an alarm condition.
+          The behavior of setting HardShutdownAlarmLow to True is undefined.

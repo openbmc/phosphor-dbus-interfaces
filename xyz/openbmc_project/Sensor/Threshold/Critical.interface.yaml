@@ -42,3 +42,17 @@ properties:
 
           CriticalAlarmLow may be set to False to clear an alarm condition.
           The behavior of setting CriticalAlarmLow to True is undefined.
+    - name: HysteresisHigh
+      type: double
+      default: 0
+      description: >
+          The hysteresis on CriticalHigh.  This means that before
+          CriticalAlarmHigh will get reset, the sensor value would have to
+          decrease to at least CriticalHigh - HysteresisHigh.
+    - name: HysteresisLow
+      type: double
+      default: 0
+      description: >
+          The hysteresis on CriticalLow.  This means that before
+          CriticalAlarmLow will get reset, the sensor value would have to
+          increase to at least CriticalLow + HysteresisLow.

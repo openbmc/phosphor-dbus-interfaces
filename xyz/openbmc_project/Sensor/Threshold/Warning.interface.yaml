@@ -43,3 +43,17 @@ properties:
 
           WarningAlarmLow may be set to False to clear an alarm condition.
           The behavior of setting WarningAlarmLow to True is undefined.
+    - name: HysteresisHigh
+      type: double
+      default: 0
+      description: >
+          The hysteresis on WarningHigh.  This means that before
+          WarningAlarmHigh will get reset, the sensor value would have to
+          decrease to at least WarningHigh - HysteresisHigh.
+    - name: HysteresisLow
+      type: double
+      default: 0
+      description: >
+          The hysteresis on WarningLow.  This means that before
+          WarningAlarmLow will get reset, the sensor value would have to
+          increase to at least WarningLow + HysteresisLow.

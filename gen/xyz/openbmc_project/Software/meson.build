@@ -89,6 +89,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Image')
+generated_others += custom_target(
+    'xyz/openbmc_project/Software/Image__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Software/Image.errors.yaml',  ],
+    output: [ 'Image.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Software/Image',
+    ],
+    build_by_default: true,
+)
+
 subdir('RedundancyPriority')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/RedundancyPriority__markdown'.underscorify(),

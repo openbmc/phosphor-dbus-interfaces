@@ -22,6 +22,30 @@
       "revId": "aede5987447789d60604b68efb270421ef529f10",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5b9a8202_66036c17",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2020-11-30T17:25:49Z",
+      "side": 1,
+      "message": "I\u0027m on the fence.  I had originally suggested making it configurable, but the more I think about it, changing the \"which threshold interface do we look at\" modifies the between-entity associations in a way that I don\u0027t really like.  Imagine a card used in multiple systems declaring a critical interface, and expecting it to be used as the shutdown temp, but the baseboard deciding that it\u0027s going to use the shutdown severity instead.  I\u0027d much rather we just have the card declare \"this is the temperature at which I need the system to be shut down\" which removes any ambiguity.",
+      "parentUuid": "bbf8e166_b158bd71",
+      "range": {
+        "startLine": 11,
+        "startChar": 55,
+        "endLine": 12,
+        "endChar": 4
+      },
+      "revId": "aede5987447789d60604b68efb270421ef529f10",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

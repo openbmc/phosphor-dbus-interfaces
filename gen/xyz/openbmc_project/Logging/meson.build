@@ -74,6 +74,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('SEL')
+generated_others += custom_target(
+    'xyz/openbmc_project/Logging/SEL__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Logging/SEL.errors.yaml',  ],
+    output: [ 'SEL.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Logging/SEL',
+    ],
+    build_by_default: true,
+)
+
 subdir('Settings')
 generated_others += custom_target(
     'xyz/openbmc_project/Logging/Settings__markdown'.underscorify(),

@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0a4d5b8f_b805821d",
+        "filename": "xyz/openbmc_project/Software/Image.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2020-12-02T20:13:27Z",
+      "side": 1,
+      "message": "These are used by bmcweb as well but only for this specific code update path. \nAren\u0027t these already kind of in a subdirectory \"Software\"?\nAnyone really going to use these xyz::openbmc_project::Software::Image errors for a non-Software repo ?\n\nDon\u0027t we have internal / implementation-specific errors in similar paths. E.g. \nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/BIOSConfig/Common.errors.yaml\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/User/Common.errors.yaml",
+      "parentUuid": "6b28682e_77a44ae2",
+      "revId": "ece61b4de37f494af589dc0cfe4f7cc07fc73970",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3ad1b641_84af4445",
         "filename": "xyz/openbmc_project/Software/Image.errors.yaml",
         "patchSetId": 1

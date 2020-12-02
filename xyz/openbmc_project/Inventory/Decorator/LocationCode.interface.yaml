@@ -1,0 +1,8 @@
+description: >
+    Implement to provide location code of a FRU.
+properties:
+    - name: LocationCode
+      type: string
+      description:
+          Location code of the item.
+      default: ""

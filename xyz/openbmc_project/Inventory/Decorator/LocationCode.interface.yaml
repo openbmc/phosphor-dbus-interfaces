@@ -1,0 +1,10 @@
+description: >
+    Implement to provide location code of a FRU.
+properties:
+    - name: LocationCode
+      type: string
+      description:
+          An implementation defined string to provide
+          location code of an Inventory Item. Location codes
+          can be used to identify specific parts in a system.
+      default: ""

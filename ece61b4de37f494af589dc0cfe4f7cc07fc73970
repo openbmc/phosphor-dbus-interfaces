@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "865d2d1b_41d48794",
+        "filename": "xyz/openbmc_project/Software/Image.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-12-02T21:28:25Z",
+      "side": 1,
+      "message": "I think we\u0027re both confused about a few points.\n\n\u003e These are used by bmcweb as well but only for this specific code update path. \n\nHow is this possible?  These aren\u0027t documented in an interface and I suspect they do not ever get returned on a dbus interface based on some of the discussion we had recently.\n\nI looked at the bmcweb code and they\u0027re manually parsing log entries for various.  This is entirely bogus behavior that I don\u0027t even want to give a thought to here (in this commit).\n\n\u003e Aren\u0027t these already kind of in a subdirectory \"Software\"?\n\u003e Anyone really going to use these xyz::openbmc_project::Software::Image errors for a non-Software repo ?\n\nSubdirectory !\u003d internal.  Subdirectory means they are scoped.  Internal means they are only used within a particular implementation for logging its own internal errors and are not passed between processes (via dbus) in response to a dbus request.\n\n\u003e Don\u0027t we have internal / implementation-specific errors in similar paths. E.g. \n\nNo, there is a big difference in the examples you gave.  The errors presented here are not implementation-specific because they are defined by the interface itself.  Certain method and/or property operations specifically return those errors under failure scenarios.  They are the error-return-type, if you will, of those method calls.  _Any_ implementation of those interfaces could (and should) return the same errors under similar situations.\n\nThe errors you\u0027re proposing here are never returned outside of the implementation and thus I\u0027m calling them \"internal\".  These YAML files only exist for a relationship between phosphor-logging and your application and are not related to any dbus interface.",
+      "parentUuid": "0a4d5b8f_b805821d",
+      "revId": "ece61b4de37f494af589dc0cfe4f7cc07fc73970",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3ad1b641_84af4445",
         "filename": "xyz/openbmc_project/Software/Image.errors.yaml",
         "patchSetId": 1

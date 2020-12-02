@@ -16,6 +16,24 @@
       "revId": "ece61b4de37f494af589dc0cfe4f7cc07fc73970",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a063357_c9b32e22",
+        "filename": "xyz/openbmc_project/Software/Image.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2020-12-02T17:30:15Z",
+      "side": 1,
+      "message": "Because that doesn\u0027t have metadata \n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Common.metadata.yaml#L11\n\nlike this one does:\n\n- name: InternalFailure\n  level: ERR\n  meta:\n    - str: \"FAIL\u003d%s\"\n      type: string",
+      "parentUuid": "3ad1b641_84af4445",
+      "revId": "ece61b4de37f494af589dc0cfe4f7cc07fc73970",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

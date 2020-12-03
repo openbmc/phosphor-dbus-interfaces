@@ -200,3 +200,33 @@ generated_others += custom_target(
 )
 
 subdir('TPM')
+subdir('VoltageRegulatorControl')
+generated_others += custom_target(
+    'xyz/openbmc_project/Control/VoltageRegulatorControl__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml',  ],
+    output: [ 'VoltageRegulatorControl.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Control/VoltageRegulatorControl',
+    ],
+    build_by_default: true,
+)
+
+subdir('VoltageRegulatorMode')
+generated_others += custom_target(
+    'xyz/openbmc_project/Control/VoltageRegulatorMode__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Control/VoltageRegulatorMode.interface.yaml',  ],
+    output: [ 'VoltageRegulatorMode.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Control/VoltageRegulatorMode',
+    ],
+    build_by_default: true,
+)
+

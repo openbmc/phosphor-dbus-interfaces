@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a95d6efa_f0ea3acc",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-12-11T17:01:04Z",
+      "side": 1,
+      "message": "I have some confusion on this being classified as a \"button\".  It seems like your implementation has a \"position up\" and \"position down\" button which you are turning into a Position property (or maybe you just have \"position up\").\n\nAt a hardware level you could implement a position selector in (at least) 3 ways:\n    - A position up button with an optional position down.\n    - A rotary dial.\n    - A slider with stops from position 0 to N.\n\nI suspect the consumer of this \"button\" should not care which of the 3 hardware implementations the design has, but this interface design you\u0027ve chosen implies the first option.  Please think about how all 3 hardware designs could be modeled from a software perspective and modify this interface to cover.\n\nIt is quite likely that the signals will need to change, maybe to just a single signal like \"position changed\" but then I don\u0027t know why we need another signal beyond the PropertyChanged signal on Position.",
+      "revId": "3d5efedfb738594dea3cc0ceadc57b5c51919034",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2f90ca9e_a0f4215a",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-12-11T17:01:04Z",
+      "side": 1,
+      "message": "I think you need to have a property to hold the number of positions, right?",
+      "revId": "3d5efedfb738594dea3cc0ceadc57b5c51919034",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "907227e4_a98f96b8",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-12-11T17:01:04Z",
+      "side": 1,
+      "message": "This is a particular implementation of your button and should not be documented in the interface.\n\nI would suggest 0-based position numbers for a selector.",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 67
+      },
+      "revId": "3d5efedfb738594dea3cc0ceadc57b5c51919034",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "7f4abe47_8ec1ab6c",
+        "filename": "xyz/openbmc_project/Software/Image.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-12-17T18:34:50Z",
+      "side": 1,
+      "message": "A couple drive by thoughts...\n\n1 - put all the \"internal\" yaml into the phosphor-logging repo\n2 - skip phosphor-logging+sdbusplus entirely and just call xyz.openbmc_project.Logging.Create directly from your application.",
+      "parentUuid": "865d2d1b_41d48794",
+      "revId": "ece61b4de37f494af589dc0cfe4f7cc07fc73970",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3ad1b641_84af4445",
         "filename": "xyz/openbmc_project/Software/Image.errors.yaml",
         "patchSetId": 1

@@ -44,21 +44,6 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
-subdir('Location')
-generated_others += custom_target(
-    'com/ibm/ipzvpd/Location__markdown'.underscorify(),
-    input: [ meson.source_root() / 'com/ibm/ipzvpd/Location.interface.yaml',  ],
-    output: [ 'Location.md' ],
-    command: [
-        sdbuspp_gen_meson_prog, '--command', 'markdown',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
-        'com/ibm/ipzvpd/Location',
-    ],
-    build_by_default: true,
-)
-
 subdir('LRP0')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LRP0__markdown'.underscorify(),
@@ -310,6 +295,21 @@ generated_others += custom_target(
         '--tool', sdbusplusplus_prog,
         '--directory', meson.source_root(),
         'com/ibm/ipzvpd/LXR0',
+    ],
+    build_by_default: true,
+)
+
+subdir('Location')
+generated_others += custom_target(
+    'com/ibm/ipzvpd/Location__markdown'.underscorify(),
+    input: [ meson.source_root() / 'com/ibm/ipzvpd/Location.interface.yaml',  ],
+    output: [ 'Location.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'com/ibm/ipzvpd/Location',
     ],
     build_by_default: true,
 )

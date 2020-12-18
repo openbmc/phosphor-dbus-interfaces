@@ -1,6 +1,5 @@
 # Generated file; do not modify.
 subdir('Dump')
-subdir('ipzvpd')
 subdir('Logging')
 subdir('VPD')
 generated_others += custom_target(
@@ -17,3 +16,4 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('ipzvpd')

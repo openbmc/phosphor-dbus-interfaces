@@ -184,6 +184,7 @@ generated_others += custom_target(
 subdir('Processor')
 subdir('Security')
 subdir('Service')
+subdir('TPM')
 subdir('ThermalMode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/ThermalMode__markdown'.underscorify(),
@@ -199,7 +200,6 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
-subdir('TPM')
 subdir('VoltageRegulatorControl')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/VoltageRegulatorControl__markdown'.underscorify(),

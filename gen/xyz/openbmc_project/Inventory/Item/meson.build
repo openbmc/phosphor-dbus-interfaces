@@ -222,21 +222,6 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
-subdir('Panel')
-generated_others += custom_target(
-    'xyz/openbmc_project/Inventory/Item/Panel__markdown'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Item/Panel.interface.yaml',  ],
-    output: [ 'Panel.md' ],
-    command: [
-        sdbuspp_gen_meson_prog, '--command', 'markdown',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
-        'xyz/openbmc_project/Inventory/Item/Panel',
-    ],
-    build_by_default: true,
-)
-
 subdir('PCIeDevice')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/PCIeDevice__markdown'.underscorify(),
@@ -263,6 +248,21 @@ generated_others += custom_target(
         '--tool', sdbusplusplus_prog,
         '--directory', meson.source_root(),
         'xyz/openbmc_project/Inventory/Item/PCIeSlot',
+    ],
+    build_by_default: true,
+)
+
+subdir('Panel')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Panel__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Item/Panel.interface.yaml',  ],
+    output: [ 'Panel.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Inventory/Item/Panel',
     ],
     build_by_default: true,
 )

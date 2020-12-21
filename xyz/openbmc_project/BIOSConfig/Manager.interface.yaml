@@ -109,7 +109,10 @@ properties:
               ex- { {"QuietBoot",Type.Integer, 0x1},
                     { "DdrFreqLimit",Type.String,"2933"}
                   }
-
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
+        - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeReadOnly
 
 enumerations:
     - name: AttributeType

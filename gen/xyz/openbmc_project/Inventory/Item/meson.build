@@ -282,6 +282,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('PowerDistribution')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/PowerDistribution__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Item/PowerDistribution.interface.yaml',  ],
+    output: [ 'PowerDistribution.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Inventory/Item/PowerDistribution',
+    ],
+    build_by_default: true,
+)
+
 subdir('PowerSupply')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/PowerSupply__markdown'.underscorify(),

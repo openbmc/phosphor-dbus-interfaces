@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "d7760190_8e0a32fa",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000538
+      },
+      "writtenOn": "2021-01-06T14:00:49Z",
+      "side": 1,
+      "message": "Selector button also same as power and reset button which has pressed \u0026 released signal . \n\nSoftware logic in the selector button moves only up position and rolls over again to host1 after reached to last host.\n\nwe have Rotary Switch in Facebook multi-host system to handle position up \u0026 down detection additional to the selector button in OCP debug card[1]. \n\nWe have Facebook specific process[2] runs parallel to the phosphor-buttons and keeps current host state in the \"Position\" property exposed by phosphor-buttons. \n\nThe user can do power control either from Rotary switch or from selector button OCP debug card.\n\n\n[1] phosphor-buttons\n[2] https://gerrit.openbmc-project.xyz/c/openbmc/meta-facebook/+/39349",
+      "parentUuid": "a95d6efa_f0ea3acc",
+      "revId": "3d5efedfb738594dea3cc0ceadc57b5c51919034",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2f90ca9e_a0f4215a",
         "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "c573e831_f0ba19de",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000538
+      },
+      "writtenOn": "2021-01-06T14:00:49Z",
+      "side": 1,
+      "message": "This property holds the current position not total position . The total number of host pass from machine layer for platforms.\n\nAre you suggesting to add one more property to hold the total number of position as readable property.",
+      "parentUuid": "2f90ca9e_a0f4215a",
+      "revId": "3d5efedfb738594dea3cc0ceadc57b5c51919034",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "907227e4_a98f96b8",
         "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
         "patchSetId": 2
@@ -47,6 +83,30 @@
       "writtenOn": "2020-12-11T17:01:04Z",
       "side": 1,
       "message": "This is a particular implementation of your button and should not be documented in the interface.\n\nI would suggest 0-based position numbers for a selector.",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 67
+      },
+      "revId": "3d5efedfb738594dea3cc0ceadc57b5c51919034",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2d62b3c7_b1ad16ce",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000538
+      },
+      "writtenOn": "2021-01-06T14:00:49Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "907227e4_a98f96b8",
       "range": {
         "startLine": 26,
         "startChar": 0,

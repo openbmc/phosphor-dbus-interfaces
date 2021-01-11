@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "d832bf61_6f457ae2",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-11T22:36:08Z",
+      "side": 1,
+      "message": "\u003e Selector button also same as power and reset button which has pressed \u0026 released signal . \n\n\u003e Software logic in the selector button moves only up position and rolls over again to host1 after reached to last host.\n\nThese are hardware implementation details that I don\u0027t think are interesting for dbus interfaces.  *Your* piece of hardware has a single selector button that rolls over, but someone else could make a rotary dial implementation.  We need to abstract the hardware here.",
+      "parentUuid": "8f3245dc_b1475822",
+      "revId": "3d5efedfb738594dea3cc0ceadc57b5c51919034",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2f90ca9e_a0f4215a",
         "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
         "patchSetId": 2
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "c573e831_f0ba19de",
+      "revId": "3d5efedfb738594dea3cc0ceadc57b5c51919034",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97f400e5_5f9b172f",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-11T22:36:08Z",
+      "side": 1,
+      "message": "Yes, suggest another property with max number of positions.",
+      "parentUuid": "616e6490_5d6e3bee",
       "revId": "3d5efedfb738594dea3cc0ceadc57b5c51919034",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false

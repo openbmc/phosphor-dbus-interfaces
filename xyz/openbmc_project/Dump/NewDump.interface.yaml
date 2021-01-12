@@ -13,6 +13,10 @@ methods:
       description: >
          Create a dump entry based on the parameters.
       parameters:
+       - name: DumpType
+         type: enum[self.DumpType]
+         description: >
+            Type of the dump
        - name: SourceDumpId
          type: uint32
          description: >
@@ -26,4 +30,14 @@ methods:
          description: >
             Size of the dump in bytes
       errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
         - xyz.openbmc_project.Dump.Create.Error.Disabled
+
+enumerations:
+    - name: DumpType
+      description:
+          Type of the dump
+      values:
+        - name: System
+          description: >
+              A dump created during a critical failure in the host.

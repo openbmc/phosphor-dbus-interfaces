@@ -1,0 +1,50 @@
+description: >
+    Some systems have a layer of software commonly called the hypervisor. This
+    software is responsible for providing a virtual operating platform to the
+    operating systems running on the system. In some cases, this Hypervisor can
+    have state. The implementation of this D-Bus object will allow one to
+    inspect the hypervisor state and control it.
+
+properties:
+    - name: RequestedHypervisorTransition
+      type: enum[self.Transition]
+      default: 'None'
+      description: >
+          The desired hypervisor transition. The only supported transition is
+          to Runtime. This property will be reset to 'None' on any system power
+          off as its purpose is to allow users to move the hypervisor to
+          Runtime after the default BootMode is applied on each boot.
+
+    - name: CurrentHypervisorState
+      type: enum[self.HypervisorState]
+      description: >
+          A read-only property describing the current state of the hypervisor
+          firmware. The initial state the hypervisor goes to is controlled by
+          the xyz.openbmc_project.Control.Boot.Mode BootMode property.
+
+enumerations:
+    - name: Transition
+      description: >
+        The desired transition for hypervisor firmware
+      values:
+        - name: 'None'
+          description: >
+            Default state, no request has been made
+        - name: 'Runtime'
+          description: >
+            Hypervisor firmware should go to runtime state
+
+    - name: HypervisorState
+      description: >
+        The current state of the hypervisor firmware
+      values:
+        - name: 'Safe'
+          description: >
+            Hypervisor firmware is in a basic safe state
+        - name: 'Setup'
+          description: >
+            Hypervisor firmware is in an initial BIOS-setup like state
+        - name: 'Runtime'
+          description: >
+            Hypervisor firmware is fully running and ready to start operating
+            systems

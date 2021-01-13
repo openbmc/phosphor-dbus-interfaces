@@ -28,6 +28,7 @@ methods:
        - xyz.openbmc_project.Common.File.Error.Open
        - xyz.openbmc_project.Common.File.Error.Write
        - xyz.openbmc_project.Common.Error.InvalidArgument
+       - xyz.openbmc_project.Common.Error.NotAllowed
 
 properties:
     - name: Size

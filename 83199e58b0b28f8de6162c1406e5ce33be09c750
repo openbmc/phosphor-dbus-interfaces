@@ -16,6 +16,24 @@
       "revId": "83199e58b0b28f8de6162c1406e5ce33be09c750",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dc8510de_e0df4a2f",
+        "filename": "xyz/openbmc_project/State/Hypervisor.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-01-14T16:43:15Z",
+      "side": 1,
+      "message": "\u003e Are these properties of a Redfish schema (I can\u0027t seem to find them) or are they the states of the Power hypervisor? \n\nThese have a pretty good correlation with the BootProgress states we got in recently (see BootProgressTypes in https://redfish.dmtf.org/schemas/v1/ComputerSystem.v1_13_0.json)\n\nSystemHardwareInitializationComplete -\u003e Safe\nOSRunning -\u003e Runtime\n\nAnd a new one which I\u0027ve proposed and has been approved in https://github.com/DMTF/Redfish/issues/4336\n(name may change but currently it is this)\nSystemFirmwareSetupEntered -\u003e Setup\n\nFrom a \"how will we show this in Redfish\" perspective, we\u0027ll do something like we do with Systems/system in https://github.com/openbmc/bmcweb/blob/master/redfish-core/lib/systems.hpp#L616 (getHostState()), we\u0027ll translate them over to what make sense.\n\n\u003e Can you get someone from the PowerKVM team to weigh in?\n\nSure, let me add Klaus. I think OPAL at least has the Safe/Runtime concept.",
+      "parentUuid": "02a19ddd_ca9dd10b",
+      "revId": "83199e58b0b28f8de6162c1406e5ce33be09c750",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

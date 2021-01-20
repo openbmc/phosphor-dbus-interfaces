@@ -16,6 +16,24 @@
       "revId": "82769556aed8a2c238b837f490ca1e890281d236",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b5f148ad_de4f2093",
+        "filename": "com/ibm/Dump/Create.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-20T22:42:14Z",
+      "side": 1,
+      "message": "I\u0027m not sure what you mean by \"enumeration of an enumeration\".  We don\u0027t typically name enumerations plural.\n\nI think you\u0027ll want to look at the verbiage in xyz.openbmc_project.Dump.Create method CreateDump parameter AdditionalData description.  I think this proposal is reasonable.\n\nYou will end up with AdditionalData parameters like:\n\n  { \"com.ibm.Dump.Create.CreateParameters.DumpType\": \"com.ibm.Dump.Create.DumpType.Hostboot\" }",
+      "parentUuid": "18cc679d_5c0aef6c",
+      "revId": "82769556aed8a2c238b837f490ca1e890281d236",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

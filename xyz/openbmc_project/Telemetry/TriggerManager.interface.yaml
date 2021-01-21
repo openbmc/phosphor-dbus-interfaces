@@ -1,0 +1,59 @@
+description: >
+    Implement to provide triggers management.
+
+methods:
+  - name: AddTrigger
+    description:
+        Create new object that represent Trigger with
+        xyz.openbmc_project.Telemetry.Trigger interface stored in path
+        /xyz/openbmc_project/Telemetry/Triggers/{Domain}/{Name} where
+        Domain and Name are parameters of this method.
+    parameters:
+      - name: name
+        type: string
+        description: >
+            Defines the name of report to be exposed over D-Bus. Service allows
+            to use separator '/' in name to group reports in directory.
+      - name: discrete
+        type: boolean
+        description: >
+            Defines if thresholds parameter contains discrete thresholds.
+            Otherwise thresholds contain numeric thresholds.
+      - name: logToJournal
+        type: boolean
+        description: >
+            Defines if trigger logs to system journal when threshold conditions
+            are met.
+      - name: logToRedfish
+        type: boolean
+        description: >
+            Defines if trigger logs Redfish message when threshold conditions
+            are met.
+      - name: updateReport
+        type: boolean
+        description: >
+            Defines if trigger updates reports that are specified in reportNames
+            parameter when threshold conditions are met.
+      - name: sensors
+        type: array[struct[object_path,string]]
+        description: >
+            Array of sensors that is monitored within trigger. Object path
+            points to a sensor in DBus envrionment. String is used as user
+            metadata.
+      - name: reportNames
+        type: array[string]
+        description: >
+            Collection of report names that are updated when threshold
+            conditions are met. This parameter is ignored if updateReport
+            parameter is set to false.
+      - name: thresholds
+        type: variant[array[struct[enum[xyz.openbmc_project.Telemetry.Trigger.Type],enum[xyz.openbmc_project.Telemetry.Trigger.Direction],uint64,double]],array[struct[string,enum[xyz.openbmc_project.Telemetry.Trigger.Severity],uint64,double]]]
+        description: >
+            Contains array of numeric or discrete thresholds that are described
+            in xyz.openbmc_project.Telemetry.Trigger interface.
+    returns:
+      - name: triggerPath
+        type: object_path
+        description: >
+            Path to new trigger ->
+            /xyz/openbmc_project/Telemetry/Triggers/{name}.

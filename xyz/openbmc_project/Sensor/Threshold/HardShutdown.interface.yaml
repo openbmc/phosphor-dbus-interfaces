@@ -45,3 +45,21 @@ properties:
 
           HardShutdownAlarmLow may be set to False to clear an alarm condition.
           The behavior of setting HardShutdownAlarmLow to True is undefined.
+
+signals:
+    - name: ThresholdAsserted
+      description: >
+          One of the alarm properties changed.
+      properties:
+         - name: PropertyName
+           type: string
+           description: >
+               The alarm property that changed.
+         - name: Value
+           type: boolean
+           description: >
+               The alarm property value.
+         - name: SensorValue
+           type: double
+           description: >
+               The sensor value that triggered the alarm change.

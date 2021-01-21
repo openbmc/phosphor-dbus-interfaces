@@ -44,3 +44,30 @@ properties:
 
           SoftShutdownAlarmLow may be set to False to clear an alarm condition.
           The behavior of setting SoftShutdownAlarmLow to True is undefined.
+
+signals:
+    - name: ThresholdAsserted
+      description: >
+          One of the alarm properties changed.
+      properties:
+         - name: SensorName
+           type: string
+           description: >
+               The name of the owning sensor.
+         - name: Interface
+           type: string
+           description: >
+               This interface:
+               "xyz.openbmc_project.Sensor.Threshold.SoftShutdown"
+         - name: PropertyName
+           type: string
+           description: >
+               The alarm property that changed.
+         - name: Value
+           type: boolean
+           description: >
+               The alarm property value.
+         - name: SensorValue
+           type: double
+           description: >
+               The sensor value that triggered the alarm change.

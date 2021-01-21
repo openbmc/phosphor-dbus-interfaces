@@ -1,0 +1,91 @@
+description: >
+    Implement this interface to provide trigger inspection features. An
+    implementation service should additionaly implement
+    xyz.openbmc_project.Object.Delete for deletion of individual trigger.
+
+properties:
+  - name: Discrete
+    type: boolean
+    description: >
+        If true than trigger uses discrete thresholds as threshold conditions.
+        Otherwise numeric thresholds is used.
+    flags:
+    - const
+  - name: LogToJournal
+    type: boolean
+    description: >
+        Defines if trigger logs to system journal when threshold conditions are
+        met. LogToJournal is a trigger action.
+    flags:
+    - const
+  - name: LogToRedfish
+    type: boolean
+    description: >
+        Defines if trigger logs Redfish message when threshold conditions are
+        met. LogToRedfish is a trigger action.
+    flags:
+    - const
+  - name: UpdateReport
+    type: boolean
+    description: >
+        Defines if trigger updates report when threshold conditions are
+        met. Reports that will be updated are specified in ReportNames property.
+        UpdateReport is a trigger action.
+    flags:
+    - const
+  - name: Persistent
+    type: boolean
+    description: Defines if Trigger is stored in non volatile memory.
+  - name: ReportNames
+    type: array[string]
+    description: >
+        Collection of report names that are updated when threshold conditions
+        are met. List is ignored if UpdateReport property is false.
+  - name: Sensors
+    type: array[struct[object_path, string]]
+    description: >
+        Array of sensors that is monitored within trigger. First parameter of a
+        structure is a sensor path. Second parameter is a metadata that is used
+        to store user data about sensor.
+  - name: Thresholds
+    type: variant[array[struct[enum[self.Type],enum[self.Direction],uint64,double]],array[struct[string,enum[self.Severity],uint64,double]]]
+    description: >
+        First type in variant is a collection of numeric thresholds that has
+        following fields - type, direction, dwell time and threshold value.
+        Second type holds by variant is a collection of discrete thresholds that
+        contains following fields - user id, severity, dwell time and threshold
+        value. Numeric threshold array is limited by Type enumeration, only 4
+        elements are allowed. Discrete threshold array size is not limited. If
+        Discrete threshold array is empty than every value change is taken into
+        account of threshold condition. Dwell time specify for how long
+        condition has to persist to trigger an action.
+
+enumerations:
+  - name: Type
+    description: Defines message type for trigger action.
+    values:
+      - name: LowerCritical
+      - name: LowerWarning
+      - name: UpperWarning
+      - name: UpperCritical
+  - name: Direction
+    description: >
+        Defines in which direction threshold value is crossed to commit a
+        trigger action.
+    values:
+      - name: Either
+        description: Crossing threshold value always triggers an action.
+      - name: Decreasing
+        description: >
+            Action is commited when threshold value is crossed and previous
+            sensor value was greater then threshold value.
+      - name: Increasing
+        description: >
+            Action is commited when threshold value is crossed and previous
+            sensor value was less then threshold value.
+  - name: Severity
+    description: Defines message severity for trigger actions.
+    values:
+      - name: OK
+      - name: Warning
+      - name: Critical

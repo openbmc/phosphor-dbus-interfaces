@@ -88,6 +88,24 @@
       "revId": "83199e58b0b28f8de6162c1406e5ce33be09c750",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "86459648_efd5cbda",
+        "filename": "xyz/openbmc_project/State/Hypervisor.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-01-22T20:31:39Z",
+      "side": 1,
+      "message": "\u003e So does this means that it is expected some hypervisor action whenever this field transitions? I\u0027m not sure we have any (easy) way of doing this from Skiroot / Petitboot, much less from Linux, but I\u0027ll point the Skiboot folks (Vasant, Mahesh) to this topic.\n\nNot a requirement that it\u0027s implemented, just an option if we want it. The way this will work with PHYP is there is a PLDM effecter which the BMC will send up.\n\n\u003e Excluding the scenario where this transitions and some action is expected from the hypervisor (question above), I guess that for reporting this, the BMC could monitor our ipmi boot sensor and set this field to \u0027runtime\u0027 accordingly. Note that we don\u0027t have any redfish interfaces in OPAL, so that\u0027s probably the easiest / most straightforward path.\n\nYes this is my plan, to watch the BootProgress sensor to know the appropriate hypervisor state to report. This sensor works with both IPMI and PLDM inband protocols.",
+      "parentUuid": "0757d4f1_9df7ac3d",
+      "revId": "83199e58b0b28f8de6162c1406e5ce33be09c750",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

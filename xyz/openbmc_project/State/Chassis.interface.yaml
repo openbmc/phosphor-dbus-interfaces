@@ -47,6 +47,12 @@ enumerations:
         - name: 'Off'
           description: >
             Chassis power is off
+        - name: 'TransitioningToOff'
+          description: >
+            Firmware is transitioning the chassis to an Off state
         - name: 'On'
           description: >
             Chassis power is on
+        - name: 'TransitioningToOn'
+          description: >
+            Firmware is transitioning the chassis to an On state

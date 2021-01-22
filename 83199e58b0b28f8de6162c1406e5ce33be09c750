@@ -70,6 +70,24 @@
       "revId": "83199e58b0b28f8de6162c1406e5ce33be09c750",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0757d4f1_9df7ac3d",
+        "filename": "xyz/openbmc_project/State/Hypervisor.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000964
+      },
+      "writtenOn": "2021-01-22T17:55:31Z",
+      "side": 1,
+      "message": "\u003e Thanks for the feedback Klaus.\n\u003e \n\u003e \u003e 3) I\u0027m not sure what I\u0027d do with this information.. i.e., in OPAL mode, would we monitor this? What would we do if this signals a transition to Runtime? I don\u0027t have an \"Idle\" state other than powered off, or auto-boot cancelled/failed perhaps\n\u003e \n\u003e I think this would be an indication to boot the default device and try to start the OS?\n\nSo does this means that it is expected some hypervisor action whenever this field transitions? I\u0027m not sure we have any (easy) way of doing this from Skiroot / Petitboot, much less from Linux, but I\u0027ll point the Skiboot folks (Vasant, Mahesh) to this topic.\n\n\n\u003e \u003e 4) Feels strange that we allow transitions from None to Runtime but apparently not the other way around.. Again, for OPAL/Linux, this is probably analogous with poweron/poweroff\n\u003e \n\u003e Yeah, I don\u0027t think there\u0027s anything to stop us from allowing you go from Runtime to Safe but there doesn\u0027t seem to be any use case for it now. Like you said, in most cases you just do the normal power off path of the system from Runtime.\n\n\nExcluding the scenario where this transitions and some action is expected from the hypervisor (question above), I guess that for reporting this, the BMC could monitor our ipmi boot sensor and set this field to \u0027runtime\u0027 accordingly. Note that we don\u0027t have any redfish interfaces in OPAL, so that\u0027s probably the easiest / most straightforward path.",
+      "parentUuid": "21cdffb3_fc562506",
+      "revId": "83199e58b0b28f8de6162c1406e5ce33be09c750",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

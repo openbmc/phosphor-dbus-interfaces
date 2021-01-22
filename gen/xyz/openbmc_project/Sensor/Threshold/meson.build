@@ -42,6 +42,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('PerformanceLoss')
+generated_others += custom_target(
+    'xyz/openbmc_project/Sensor/Threshold/PerformanceLoss__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Sensor/Threshold/PerformanceLoss.interface.yaml',  ],
+    output: [ 'PerformanceLoss.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Sensor/Threshold/PerformanceLoss',
+    ],
+    build_by_default: true,
+)
+
 subdir('SoftShutdown')
 generated_others += custom_target(
     'xyz/openbmc_project/Sensor/Threshold/SoftShutdown__markdown'.underscorify(),

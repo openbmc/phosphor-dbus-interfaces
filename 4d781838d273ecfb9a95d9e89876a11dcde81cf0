@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ecad2f6c_d90ea38e",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-01-25T15:15:20Z",
+      "side": 1,
+      "message": "Sensor name and interface could definitely be retrieved from any signal, but I\u0027m matching this to the signal already coded into dbus-sensors that the sel-logger code is consuming (i wasn\u0027t involved in that).  While I guess theoretically I could go change that code, my systems don\u0027t use sellogger so I can\u0027t test.\n\nThreshold interfaces have two alarm properties, alarm low and alarm high, and they are customized per interface name, like warningAlarmHigh vs criticalAlarmHigh, so the property name is needed in this case.",
+      "parentUuid": "4d668240_d6e9045b",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 47
+      },
+      "revId": "4d781838d273ecfb9a95d9e89876a11dcde81cf0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2956177d_811486f2",
         "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2021-01-22T22:49:33Z",
       "side": 1,
       "message": "Isn\u0027t this always going to be true?",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 0
+      },
+      "revId": "4d781838d273ecfb9a95d9e89876a11dcde81cf0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0b989d27_e2c27a61",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-01-25T15:15:20Z",
+      "side": 1,
+      "message": "Alarms can deassert.  (yea, the signal name is ThresholdAsserted so that is a bit misleading,  but again I am just documenting what is actually being used today, so that I can implement this in other apps.)",
+      "parentUuid": "2956177d_811486f2",
       "range": {
         "startLine": 62,
         "startChar": 0,

@@ -58,6 +58,12 @@ enumerations:
         - name: 'TransitioningToOff'
           description: >
             Host firmware is transitioning to an Off state
+        - name: 'Standby'
+          description: >
+            Host firmware is in a standby state. It is awaiting a Transition
+            request to On to move to Running. This is an intermediate state
+            that some implementations of this object may move to between Off
+            and Running.
         - name: 'Running'
           description: >
             Host firmware is running

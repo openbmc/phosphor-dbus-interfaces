@@ -66,7 +66,11 @@ enumerations:
             Host firmware is transitioning to a Running state
         - name: 'Quiesced'
           description: >
-            Host firmware is quiesced
+            Host firmware is quiesced. The host firmware is enabled but either
+            unresponsive or only processing a restricted set of commands. This
+            state can be a result of the host entering an error state or booting
+            into a BIOS setup environment. The BootProgress property will
+            provide details on which it is.
         - name: 'DiagnosticMode'
           description: >
             Host firmware is capturing debug information. Powering off your

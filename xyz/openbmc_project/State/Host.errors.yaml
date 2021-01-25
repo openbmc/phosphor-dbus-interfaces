@@ -16,3 +16,6 @@
 # xyz.openbmc_project.State.Host.Error.HostRebootFailure
 - name: HostRebootFailure
   description: The systemd obmc-host-reboot.target failed to complete
+# xyz.openbmc_project.State.Host.Error.InvalidRequestForObject
+- name: UnsupportedRequestForObject
+  description: The RequestedHostTransition is not supported for targeted object

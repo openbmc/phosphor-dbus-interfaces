@@ -16,3 +16,8 @@
 - name: HostRebootFailure
   inherits:
     - xyz.openbmc_project.State.SystemdTarget.Failure
+- name: InvalidRequestForObject
+  level: INFO
+  meta:
+    - str: "INVALID_REQUEST=%s"
+      type: string

@@ -22,6 +22,30 @@
       "revId": "a98db30d3a2565a5a2065720c7ae0120a1bcfe7b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8159ae5a_14304c6e",
+        "filename": "xyz/openbmc_project/State/Chassis.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-01-25T17:12:24Z",
+      "side": 1,
+      "message": "When I did this same type of change with the host code, I got the PDI code approved and merged, and then went ahead and added support to phosphor-state-manager and updated bmcweb to handle it in parallel. I\u0027m not too concerned with breaking things as code looking for On or Off will continue to be fine, but our Redfish API will need an update (https://github.com/openbmc/bmcweb/blob/master/redfish-core/lib/chassis.hpp#L55) once I add the actual support of this into phosphor-state-manager. Any areas that specifically worry you Ed?",
+      "parentUuid": "b559565f_4d0b657d",
+      "range": {
+        "startLine": 50,
+        "startChar": 17,
+        "endLine": 50,
+        "endChar": 35
+      },
+      "revId": "a98db30d3a2565a5a2065720c7ae0120a1bcfe7b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

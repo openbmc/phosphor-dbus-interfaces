@@ -14,6 +14,9 @@ enumerations:
       description: >
         Possible power restoration policies.
       values:
+        - name: None
+          description: >
+            Perform no power restore logic.
         - name: AlwaysOn
           description: >
             Perform a complete power on process.

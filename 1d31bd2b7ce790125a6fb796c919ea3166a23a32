@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "911cb639_592dda57",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-01-28T21:06:13Z",
+      "side": 1,
+      "message": "What if we did something like this instead?  The below greatly simplifies the content of the signal itself that needs sent, and has far fewer ways that a producer of this signal can mess it up.  IMO, it\u0027s also much more obvious, and lets consumers add matches on exactly what they want, rather than having to match on a generic threshold asserted then filter within the application.\n\nsignals:\n    - name: CriticalHighThresholdAsserted\n      description: \u003e\n          One of the alarm properties changed.\n      properties:\n         - name: SensorValue\n           type: double\n           description: \u003e\n               The sensor value that triggered the alarm change.\n    - name: CriticalHighThresholdDeAsserted\n      description: \u003e\n          One of the alarm properties changed.\n      properties:\n         - name: SensorValue\n           type: double\n           description: \u003e\n               The sensor value that triggered the alarm change.\n    - name: CriticalLowThresholdasserted\n      description: \u003e\n          One of the alarm properties changed.\n      properties:\n         - name: SensorValue\n           type: double\n           description: \u003e\n               The sensor value that triggered the alarm change.\n    - name: CriticalLowThresholdDeasserted\n      description: \u003e\n          One of the alarm properties changed.\n      properties:\n         - name: SensorValue\n           type: double\n           description: \u003e\n               The sensor value that triggered the alarm change.",
+      "revId": "1d31bd2b7ce790125a6fb796c919ea3166a23a32",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

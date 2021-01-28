@@ -16,6 +16,24 @@
       "revId": "1d31bd2b7ce790125a6fb796c919ea3166a23a32",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "557c716e_276b09b8",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-01-28T21:30:32Z",
+      "side": 1,
+      "message": "I need to care about 5 thresholds (the new 3 just from virtual-sensor), so that would give me 20 signal handlers as opposed to 1, but I\u0027m OK with it if that\u0027s what can merge.\n\nIt would be nice if someone would agree to make the corresponding change in phoshor-sel-logger (since I can\u0027t do the work) to change to using 8 matches for warning/critical so that dbus-sensors can change so I can get signals from it, which I will need to do (though that isn\u0027t quite as urgent).",
+      "parentUuid": "911cb639_592dda57",
+      "revId": "1d31bd2b7ce790125a6fb796c919ea3166a23a32",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

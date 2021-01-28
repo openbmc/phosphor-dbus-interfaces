@@ -34,6 +34,24 @@
       "revId": "1d31bd2b7ce790125a6fb796c919ea3166a23a32",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e234ae5b_7c2f19c9",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-01-28T21:33:55Z",
+      "side": 1,
+      "message": "At a minimum in the old way you\u0027d need 1 per interface, right?  5 to 20 isn\u0027t great.\n\nIf we rename them to take the type name out of the signal, does it help?\n\nso, HighThresholdAsserted instead of CriticalHighThresholdAsserted, ect.\n\nI forget if match expressions let you match on multiple interfaces at once, but if it does the above would at least cut down on the duplication a little.",
+      "parentUuid": "557c716e_276b09b8",
+      "revId": "1d31bd2b7ce790125a6fb796c919ea3166a23a32",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

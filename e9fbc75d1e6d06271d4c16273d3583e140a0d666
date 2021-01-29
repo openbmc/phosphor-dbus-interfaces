@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d2c6ee88_59eb0e2b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-29T20:10:27Z",
+      "side": 1,
+      "message": "Don\u0027t we already get this same information from a PropertyChanged event though?  Why do we need to define a new one?",
+      "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f61702e_9dc405c0",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-29T20:10:27Z",
+      "side": 1,
+      "message": "These names are problematic for the class generator.  When the expectation is that we will combine classes together into a single instance using sdbusplus::object, we need to have different names for members across all the combined-classes.  That is why the property names here all include their interface type, like \u003cCritical\u003eAlarmLow.\n\nWithout unique names a server will call `instance-\u003ehighAlarmAsserted(value)` and there is ambiguity as to which one you are intending to call.",
+      "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

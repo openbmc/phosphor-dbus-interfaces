@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "bd4da11b_60261147",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-01-29T20:27:20Z",
+      "side": 1,
+      "message": "it has the sensor value from the Value interface that tripped it.",
+      "parentUuid": "d2c6ee88_59eb0e2b",
+      "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8f61702e_9dc405c0",
         "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2021-01-29T20:10:27Z",
       "side": 1,
       "message": "These names are problematic for the class generator.  When the expectation is that we will combine classes together into a single instance using sdbusplus::object, we need to have different names for members across all the combined-classes.  That is why the property names here all include their interface type, like \u003cCritical\u003eAlarmLow.\n\nWithout unique names a server will call `instance-\u003ehighAlarmAsserted(value)` and there is ambiguity as to which one you are intending to call.",
+      "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01afd7d0_dcc7e92b",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-01-29T20:27:20Z",
+      "side": 1,
+      "message": "I guess then I don\u0027t see a way forward here, which I\u0027m OK with (other than all the time I\u0027ve spent on it) since propertiesChanged followed by a getProperty will of course work for me.\n\n* Ed didn\u0027t want the ThresholdAsserted signal currently being used by dbus-sensors, which would have allowed 1 match to get all alarm changes on all types of threshold interfaces\n* How it is now has the problem you state.\n* having a unique signal for each property could mean up to 20 matches to watch all the interfaces.",
+      "parentUuid": "8f61702e_9dc405c0",
       "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

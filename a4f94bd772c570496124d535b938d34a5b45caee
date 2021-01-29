@@ -93,6 +93,30 @@
       "revId": "a4f94bd772c570496124d535b938d34a5b45caee",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "62d736cb_d1d07a2b",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/PerfLoss.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000318
+      },
+      "writtenOn": "2021-01-29T21:08:10Z",
+      "side": 1,
+      "message": "Yes if a system is at too high of an altitude, the pressure is lower, the fans can\u0027t sufficiently cool the system, so performance might be taken away to keep the system thermally safe.  The systems are designed to run within a specific thermal/altitude envelope unfortunately.",
+      "parentUuid": "729a5dd0_47f96f09",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 14
+      },
+      "revId": "a4f94bd772c570496124d535b938d34a5b45caee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

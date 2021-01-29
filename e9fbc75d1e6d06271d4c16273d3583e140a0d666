@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ef5ab45f_c33350f8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-01-29T20:47:59Z",
+      "side": 1,
+      "message": "This is solving a problem we\u0027ve discussed a couple times on discord and IRC;  Those threads probably do it better justice than this commit message.",
+      "parentUuid": "bd4da11b_60261147",
+      "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8f61702e_9dc405c0",
         "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
         "patchSetId": 3
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "I guess the single ThresholdAsserted signal would also have the multi-inheritance problems...",
       "parentUuid": "01afd7d0_dcc7e92b",
+      "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7d25249e_1f4d72e3",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-01-29T20:47:59Z",
+      "side": 1,
+      "message": "Groan.... i forgot about that limitation in PDI.  I wonder how hard that would be to fix in the generator code, if an interface conflics, prefix the object with the interface name.\n\nAssuming that\u0027s not possible or easy, my preference here would be to just go back to the prefixed version and have the 20 matches if you really need to get every threshold event.  I imagine most things won\u0027t need 20 matches;  IPMI only cares about 4 types of events.  Redfish is pretty similar, in that it would need 4 matches.\n\nIn terms of dbus, having a lot of very precise matches is probably the more correct answer anyway, as just matching on signal name would mean that if we ever put this signal name in a non-sensors interface, we\u0027d still hit the match unintentionally.",
+      "parentUuid": "14ea0329_21060b90",
       "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

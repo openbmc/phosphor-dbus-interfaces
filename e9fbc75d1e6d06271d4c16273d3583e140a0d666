@@ -141,6 +141,24 @@
       "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1af260fb_fe55ce77",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-01-29T20:56:03Z",
+      "side": 1,
+      "message": "\u003e I mentioned this on Discord before but it sounded like these thresholds were an attempt at unnecessary optimization. The right approach from a dbus perspective is to send a single PropertiesChanged signal for both the Boolean and the value. Unfortunately, we don’t have a great mechanism to facilitate that...\n\nThe threshold events exist on different Interfaces, and PropertiesChanged doesn\u0027t have an array for Interface name, so you\u0027re required to send two messages, and dbus doesn\u0027t have a concept of a properties \"transaction\" that I\u0027m aware of.  It should be noted, we implemented this first with PropertiesChanged triggering a GetProperty call like dbus would expect, but it was inefficient, and had race conditions that occurred in practice for high poll rate sensors, so this was the solution that worked in practice. .\n\n\u003e \n\u003e I’ll add it to the list of features for sdbusplus.",
+      "parentUuid": "c7439338_1f869fc1",
+      "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

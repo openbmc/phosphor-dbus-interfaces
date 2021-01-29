@@ -159,6 +159,24 @@
       "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9d66c715_5ae0ac41",
+        "filename": "xyz/openbmc_project/Sensor/Threshold/Critical.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-29T21:14:18Z",
+      "side": 1,
+      "message": "\u003e The threshold events exist on different Interfaces, and PropertiesChanged doesn\u0027t have an array for Interface name, so you\u0027re required to send two messages, and dbus doesn\u0027t have a concept of a properties \"transaction\" that I\u0027m aware of. \n\nOh, you are right.  PropertiesChanged won\u0027t work here due to two different interfaces.\n\n\u003e i forgot about that limitation in PDI.  I wonder how hard that would be to fix in the generator code, if an interface conflicts, prefix the object with the interface name.\n\nPretty hard.  The generator currently runs on one interface at a time.  We would have to have it load all of them at once and run unique across everything.  It doesn\u0027t really know \"these interfaces are likely to be combined together\".\n\nI suspect most compilers will tell you the call is ambiguous and force you to be explicit `\u003cinterface\u003e::\u003cfunction\u003e(...)`, but I don\u0027t know how you possibly do overloads then, if that were necessary.\n\nOverloads are likely pretty handy for these in particular.  You could just call \u0027HighAlarmAsserted(value)\u0027 and have the alarm set as a side-effect of the overloaded function.  Probably cleans up some of our sensor threshold logic (basing that on some code in phosphor-virtual-sensors that Matt worked on recently).",
+      "parentUuid": "1af260fb_fe55ce77",
+      "revId": "e9fbc75d1e6d06271d4c16273d3583e140a0d666",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

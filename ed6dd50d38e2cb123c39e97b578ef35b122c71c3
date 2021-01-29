@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3d025f0f_492c0061",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-29T20:19:43Z",
+      "side": 1,
+      "message": "Please fix the line wrap of your commit message.  \u003c 80 char at least, but prefer 72.\n\nSee https://chris.beams.io/posts/git-commit/#wrap-72",
+      "range": {
+        "startLine": 9,
+        "startChar": 62,
+        "endLine": 9,
+        "endChar": 77
+      },
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8d70cb52_2e553bf4",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-29T20:19:43Z",
+      "side": 1,
+      "message": "What does simPress do w.r.t. signals below?  This method doesn\u0027t seem relevant to what you\u0027re defining with signals.",
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "902c3eee_3b92c14b",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-29T20:19:43Z",
+      "side": 1,
+      "message": "Are we intending to be able to disable?  What does \"disabled\" mean?\n\nI see other buttons have this property but the ID button doesn\u0027t.  I\u0027m not sure why you would or would not want it.",
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "953f57eb_e118d910",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-29T20:19:43Z",
+      "side": 1,
+      "message": "size_t please.",
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "41b306ed_f8f1b549",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-29T20:19:43Z",
+      "side": 1,
+      "message": "size_t please",
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "28e29ab5_3d023573",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-01-29T20:19:43Z",
+      "side": 1,
+      "message": "Why do we have pressed / released and up / down?",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 38
+      },
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

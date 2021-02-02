@@ -46,6 +46,12 @@ properties:
            Session created by given user ID.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: Username
+      type: string
+      description: >
+           Session created by given user Name.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
     - name: State
       type: byte
       default: 0

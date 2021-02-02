@@ -16,6 +16,7 @@ so that both phosphor-ipmi-host & phosphr-ipmi-net will be in sync.
 * RemotePort   - Remote port address.
 * RemoteMACAddress -Remote MAC Address.
 * UserID  - Session created by given user id.
+* Username - Session created by given user name.
 
 
 

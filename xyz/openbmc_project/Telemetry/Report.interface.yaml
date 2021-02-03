@@ -17,11 +17,12 @@ properties:
         Defines if the report configuration is stored in non volatile memory.
         Configuration contains all Report properties excluding Readings.
   - name: ReadingParameters
-    type: array[struct[array[object_path],enum[self.OperationType],string,string]]
+    type: array[struct[object_path,enum[self.OperationType],string,string]]
     description: >
-        Array of structure that contains list of sensor paths, operation type,
-        metric Id and metadata. Metric Id and metadata are used to store user
-        details, e.g. metadata can be used to map sensor name to DBus path.
+        Array of structures that contains sensor path that is monitored by
+        Telemetry service, operation type, metric Id and metadata. Metric Id and
+        metadata are used to store user details, e.g. metadata can be used to
+        map sensor name to DBus path.
   - name: Readings
     type: struct[uint64,array[struct[string,string,double,uint64]]]
     description: >
@@ -59,7 +60,7 @@ enumerations:
      descritpion: Type of action that is executed on readings.
      values:
        - name: Single
-         description: Store a single reading, only allowed on single sensor.
+         description: Store the latest reading.
        - name: Max
          description: Store maximal reading during defined time period.
        - name: Min

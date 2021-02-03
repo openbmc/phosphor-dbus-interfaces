@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "a7331149_7e7b1b77",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000538
+      },
+      "writtenOn": "2021-02-03T13:15:38Z",
+      "side": 1,
+      "message": "phosphor-buttons takes two kind of signal from below hardware to update the position,\n \n  1. OCP Debug card single GPIO button press(Pressed/Released signal)\n  2. Rotary switch(up/down)\n\nIn Facebook Yosemitev2 platform , user can change host position by below scenario,\n\n  * Using OCP debug card with simple press single GPIO button to increment position(No decrement/down)\n  * Using Rotary/knob switch to change up/down signal to update the position.",
+      "parentUuid": "8d70cb52_2e553bf4",
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "902c3eee_3b92c14b",
         "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
         "patchSetId": 4
@@ -53,6 +71,24 @@
       "writtenOn": "2021-01-29T20:19:43Z",
       "side": 1,
       "message": "Are we intending to be able to disable?  What does \"disabled\" mean?\n\nI see other buttons have this property but the ID button doesn\u0027t.  I\u0027m not sure why you would or would not want it.",
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "310f9cb7_7fcbade2",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000538
+      },
+      "writtenOn": "2021-02-03T13:15:38Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "902c3eee_3b92c14b",
       "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -76,6 +112,24 @@
     },
     {
       "key": {
+        "uuid": "e571b535_f9727ab9",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000538
+      },
+      "writtenOn": "2021-02-03T13:15:38Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "953f57eb_e118d910",
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "41b306ed_f8f1b549",
         "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
         "patchSetId": 4
@@ -93,6 +147,24 @@
     },
     {
       "key": {
+        "uuid": "1fe38a5c_ee23a355",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000538
+      },
+      "writtenOn": "2021-02-03T13:15:38Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "41b306ed_f8f1b549",
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "28e29ab5_3d023573",
         "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
         "patchSetId": 4
@@ -104,6 +176,30 @@
       "writtenOn": "2021-01-29T20:19:43Z",
       "side": 1,
       "message": "Why do we have pressed / released and up / down?",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 38
+      },
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9fcc24e7_2b78e483",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000538
+      },
+      "writtenOn": "2021-02-03T13:15:38Z",
+      "side": 1,
+      "message": "phosphor-buttons takes two kind of signal from below hardware to update position,\n \n  1. OCP Debug card single GPIO button press(Pressed/Released signal)\n  2. Rotary switch(up/down signal)",
+      "parentUuid": "28e29ab5_3d023573",
       "range": {
         "startLine": 35,
         "startChar": 0,

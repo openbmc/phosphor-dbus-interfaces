@@ -72,3 +72,13 @@ enumerations:
           description: >
               Information useful to developers for debugging the application.
 
+methods:
+  - name: GetEntry
+    description: >
+      Returns the file descriptor to the raw Entry file, which is a binary blob.
+      The mode of the file descriptor is to be reaad-only.
+    returns:
+      - name: data
+        type: unixfd
+        description: >
+          The file descriptor to the Entry file.

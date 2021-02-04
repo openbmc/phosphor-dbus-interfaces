@@ -1,0 +1,15 @@
+description: >
+    Implement this interface to expose an I2C device as an inventory item.
+    Properties include the I2C bus number and the device address.
+
+properties:
+    - name: Bus
+      type: size
+      description: >
+          The I2C adapter number as defined in the Linux kernel's i2c dev
+          interface document.
+
+    - name: Address
+      type: size
+      description: >
+          I2C address of the device as defined in the Linux kernel documents.

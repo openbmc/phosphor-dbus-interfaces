@@ -72,3 +72,12 @@ enumerations:
           description: >
               Information useful to developers for debugging the application.
 
+methods:
+  - name: GetEntry
+    description: >
+      Returns the file descriptor to the Entry file.
+    returns:
+      - name: data
+        type: unixfd
+        description: >
+          The file descriptor to the Entry file.

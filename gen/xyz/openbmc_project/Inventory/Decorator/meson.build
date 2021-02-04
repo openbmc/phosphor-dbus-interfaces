@@ -89,6 +89,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('I2CDevice')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/I2CDevice__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Decorator/I2CDevice.interface.yaml',  ],
+    output: [ 'I2CDevice.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Inventory/Decorator/I2CDevice',
+    ],
+    build_by_default: true,
+)
+
 subdir('LocationCode')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/LocationCode__markdown'.underscorify(),

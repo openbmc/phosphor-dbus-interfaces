@@ -93,6 +93,30 @@
       "revId": "7ba8373b1bf2ff4910468f3246a3a9169e151ec1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a5eeefda_fa6a0e07",
+        "filename": "xyz/openbmc_project/State/Host.metadata.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-02-05T16:58:58Z",
+      "side": 1,
+      "message": "\u003e This is more for the person debugging. It\u0027s nice to have this in the journal when I get pinged about an issue. \n\nI get that.  It is just that we are logging it into the journal from the wrong place (the called function rather than the calling function).\n\nI\u0027m thinking about someone repeatedly calling the redfish interface and filling up the journal with this spam to cover up their prior, nefarious activity.  Do we care?\n\n\u003e  I\u0027m not really sure we can put comments in these files? I\u0027ve not seen that done elsewhere.\n\nIt wouldn\u0027t be a comment but rather a yaml element called \u0027description\u0027 or something like that.",
+      "parentUuid": "87066105_26d0437b",
+      "range": {
+        "startLine": 22,
+        "startChar": 28,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "7ba8373b1bf2ff4910468f3246a3a9169e151ec1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -117,6 +117,30 @@
       "revId": "7ba8373b1bf2ff4910468f3246a3a9169e151ec1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6444cb8b_67a93a2b",
+        "filename": "xyz/openbmc_project/State/Host.metadata.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-02-05T17:26:38Z",
+      "side": 1,
+      "message": "Gotcha, since you gave me a +1, lets see what Patrick thinks. We\u0027ve got a lot of situations where people could execute commands against Redfish to fill up our journal (although that doesn\u0027t make it right!). I think long term our goal is to get that audit log in place, which would log all critical security events to a separate log.",
+      "parentUuid": "a5eeefda_fa6a0e07",
+      "range": {
+        "startLine": 22,
+        "startChar": 28,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "7ba8373b1bf2ff4910468f3246a3a9169e151ec1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

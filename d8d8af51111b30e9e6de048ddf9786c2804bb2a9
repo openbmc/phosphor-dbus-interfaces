@@ -34,6 +34,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fccc66ce_7d7039c3",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-02-05T04:16:26Z",
+      "side": 1,
+      "message": "Yes, the plan is to just do what FruDevice does today and have the EM key off of that data so other apps can write configurations against it. That said, I am not sure how publishing the address of the eeprom is going to help apps that are interested in other devices that the inventory item may have on this I2C bus. So looking for more feedback there.",
+      "parentUuid": "70b95d21_d77bc55d",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

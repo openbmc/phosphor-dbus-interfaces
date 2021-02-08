@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0119f9e0_a03590d8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-02-08T18:00:44Z",
+      "side": 1,
+      "message": "Yeah, the concern is that the bmcweb process may not be able to open the file when privilege features are implemented , but by having the file descriptor, it can read its contents. Ed\u0027s concern here: https://gerrit.openbmc-project.xyz/c/openbmc/bmcweb/+/40136/3..4/redfish-core/lib/log_services.hpp",
+      "parentUuid": "7dfe3fc7_b9d7697b",
+      "range": {
+        "startLine": 11,
+        "startChar": 24,
+        "endLine": 11,
+        "endChar": 58
+      },
+      "revId": "d8de815552ace9f2b329ed760400ccd632848de7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "23030553_88131cc7",
         "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "2a97fb7c_c648eab5",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-02-08T18:00:44Z",
+      "side": 1,
+      "message": "Done. Yeah, changed. Probably leftover when I was looking at returning the actual data vs the fd. Per Ed in the bmcweb commit, he suggests using an fd.",
+      "parentUuid": "23030553_88131cc7",
+      "range": {
+        "startLine": 81,
+        "startChar": 14,
+        "endLine": 81,
+        "endChar": 18
+      },
+      "revId": "d8de815552ace9f2b329ed760400ccd632848de7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "995fb5f7_1412eefa",
         "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
         "patchSetId": 2
@@ -59,6 +107,24 @@
       "writtenOn": "2021-02-08T16:46:29Z",
       "side": 1,
       "message": "Is it guaranteed that all implementations must have an associated fd?",
+      "revId": "d8de815552ace9f2b329ed760400ccd632848de7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c666471_d1115de1",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-02-08T18:00:44Z",
+      "side": 1,
+      "message": "Yeah, phosphor-logging, when it recreates the d-bus interfaces, checks that a file exists for the entry and if it exists, it creates its interface and populates the FilePath property with the file, so we\u0027re guaranteed that phosphor-logging can open the associated file and return the fd.",
+      "parentUuid": "995fb5f7_1412eefa",
       "revId": "d8de815552ace9f2b329ed760400ccd632848de7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

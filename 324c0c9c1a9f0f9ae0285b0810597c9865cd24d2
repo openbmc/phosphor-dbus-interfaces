@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5913b526_d526e315",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-02-08T16:27:45Z",
+      "side": 1,
+      "message": "Done. Yeah, binary blob, added it to the description.",
+      "parentUuid": "963947c1_47240128",
+      "revId": "324c0c9c1a9f0f9ae0285b0810597c9865cd24d2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f3b7923c_18e2a355",
         "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2021-02-08T13:33:09Z",
       "side": 1,
       "message": "What state is the FD in?  Hopefully read-only?\n\nDoes this actually satisfy permission issues?  If one process has ability to read a file, opens a file descriptor, and then sends the file descriptor along dbus, the recipient gains permissions to the file?  That is surprising to me.",
+      "revId": "324c0c9c1a9f0f9ae0285b0810597c9865cd24d2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d85e7805_a76fd2b7",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-02-08T16:27:45Z",
+      "side": 1,
+      "message": "Yeah state is read-only. I\u0027d assume it satisfies the permission issue since theoretically from the kernel\u0027s perspective, having the fd allows access to the file that the fd points to.",
+      "parentUuid": "f3b7923c_18e2a355",
       "revId": "324c0c9c1a9f0f9ae0285b0810597c9865cd24d2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

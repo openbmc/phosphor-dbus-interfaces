@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "bfb9cede_7ab180bb",
+        "filename": "xyz/openbmc_project/Telemetry/Trigger.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000677
+      },
+      "writtenOn": "2021-02-08T14:19:54Z",
+      "side": 1,
+      "message": "Thanks for comment. It is not connected with Sensors.Threshold interfaces. Type only defines a context of a message that is send when numeric threshold conditions are met.\nThis Trigger interface is based on Redfish Trigger schema. We want to provide an API to a user that allows to define custom thresholds. Interfaces from Sensors namespace are implemented in dbus-sensors services and are critical for system. User should not modify them. Here we come with solution where user is able to set many custom thresholds on different sensors or same sensor. Mostly it could be used as debug tool to catch specific sensor reading. If you feel like this is a wrong way, I can try to connect Trigger with Sensors.Threshold but it limit user to amount of Threshold implemented by dbus-serivces.\nThe other way is to change Type enumaration to string and let user to chose the context of a message, ex. instead of LowerWarning user would set it to \u0027Lower Warning is reached\u0027",
+      "parentUuid": "ebb6f2ee_2f75e15e",
+      "revId": "f1252332b9f14738eefc7486eb0b432f2874570d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ccb97488_01530f57",
         "filename": "xyz/openbmc_project/Telemetry/Trigger.interface.yaml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2021-02-08T13:29:09Z",
       "side": 1,
       "message": "I’m not sure if these severities all make sense now.  We also added a “PerformanceLoss” threshold recently.",
+      "revId": "f1252332b9f14738eefc7486eb0b432f2874570d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63c88ab0_d20a1ef3",
+        "filename": "xyz/openbmc_project/Telemetry/Trigger.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000677
+      },
+      "writtenOn": "2021-02-08T14:19:54Z",
+      "side": 1,
+      "message": "Severity is used to define a context of a message that is send when discrete threshold conditions are met. Maybe I should rewrite a description",
+      "parentUuid": "ccb97488_01530f57",
       "revId": "f1252332b9f14738eefc7486eb0b432f2874570d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

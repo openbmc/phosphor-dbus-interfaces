@@ -16,6 +16,24 @@
       "revId": "e77342662afe9c3198110f5735a7597d2c1003d7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b04aee35_c5b0e2de",
+        "filename": "xyz/openbmc_project/Ipmi/SessionInfo.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000416
+      },
+      "writtenOn": "2021-02-09T15:31:20Z",
+      "side": 1,
+      "message": "In BMCWEB recipe, we dont have any API (even busctl call also) to get username by using userID. So added this property in SessionInfo interface. In phosphor-host-ipmid API are present but we can not call from BMCWEB.",
+      "parentUuid": "e80c47d6_8b84bc5c",
+      "revId": "e77342662afe9c3198110f5735a7597d2c1003d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

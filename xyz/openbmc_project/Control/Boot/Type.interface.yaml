@@ -1,0 +1,21 @@
+description: >
+    Implement to designate the type of a boot image.
+
+properties:
+    - name: BootType
+      type: enum[self.Types]
+      description: >
+          The desired boot image type.
+      default: EFI
+
+enumerations:
+    - name: Types
+      description: >
+        Possible types of a boot image.
+      values:
+        - name: Legacy
+          description: >
+            PC compatible boot.
+        - name: EFI
+          description: >
+            Extensible Firmware Interface Boot.

@@ -209,6 +209,30 @@
       "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3d9c3a59_ac82863a",
+        "filename": "xyz/openbmc_project/Chassis/Buttons/Selector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-10T12:45:06Z",
+      "side": 1,
+      "message": "It seems like you\u0027re trying to model your hardware in this object rather than creating an appropriate abstraction for software to consume.  \"Pressed\" and \"Released\" on a selector doesn\u0027t have any meaning, and no software should consume it.\n\nIt sounds like in your OCP debug card implementation there is a single button press which only increases the selector (and then wraps around at max).  In that case, the button press at a hardware level would cause the Up signal.\n\nTo be honest, I\u0027m not even convinced we need these signals on the Selector because we already have PropertyChanged signals that will be emitted for Position, but if you want to keep them here for consistency with other buttons, that is up to you.  I would suggest you think through how they would be used by a consuming client and if you can think of any use for them over monitoring the Position property directly.",
+      "parentUuid": "9fcc24e7_2b78e483",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 38
+      },
+      "revId": "ed6dd50d38e2cb123c39e97b578ef35b122c71c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e49303c7_79bafcef",
+        "filename": "xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-10T12:37:54Z",
+      "side": 1,
+      "message": "It seems like we\u0027ve deviated from the meaning of \u0027Quiesced\u0027 in the System (or Chassis?), which is unfortunate.  In System it means \"on but doing nothing\", here it means \"on but doing nothing useful\".\n\n\"The host firmware is enabled... can be a result of the host entering an error state\" \u003c-- these seem contradictory.  Is there an \u0027or\u0027 missing somewhere in here?  Should this become a list.\n\n\"enabled but only processing\" \u003c-- should this be \"but _may be_ only\"?  Is there any case where it could be processing all commands, whatever that means?  Is there any case where it could be processing no commands?  What does \"processing commands\" even mean; from who\u0027s perspective is it?\n\nDo we need any language to indicate that no data loss can be expected from turning off in this state?  This seems kind of like the \"It is now safe to turn off your computer\" screen state in Windows 95.",
+      "range": {
+        "startLine": 69,
+        "startChar": 39,
+        "endLine": 70,
+        "endChar": 52
+      },
+      "revId": "a626a322e2691750099c5d00af09e565844819e9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

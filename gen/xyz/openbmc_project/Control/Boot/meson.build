@@ -59,3 +59,18 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Type')
+generated_others += custom_target(
+    'xyz/openbmc_project/Control/Boot/Type__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Control/Boot/Type.interface.yaml',  ],
+    output: [ 'Type.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Control/Boot/Type',
+    ],
+    build_by_default: true,
+)
+

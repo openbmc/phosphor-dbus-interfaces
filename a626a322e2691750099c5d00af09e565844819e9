@@ -22,6 +22,30 @@
       "revId": "a626a322e2691750099c5d00af09e565844819e9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5d783e5_c117651a",
+        "filename": "xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-02-10T17:46:20Z",
+      "side": 1,
+      "message": "We were pretty short and vague in our initial definitions of PDI. That resulted in the implementations of the interfaces having a bit more leeway. I\u0027m wondering if I should have just left this as-is and allowed the implementation and it\u0027s use by external API\u0027s like Redfish to be where clarity is found? Let me see if I can find a good combo here. It definitely does need an \"or\".\n\nProcessing commands from a system perspective means the ability to start an operating system or request a graceful shutdown. From a hypervisor perspective it means the ability of it to process certain PLDM commands.\n\nWhen the system quiesces, that could be a sign of an unexpected error, so no guarantees on data integrity. But, powering off from this state will not make it any worse so I think I\u0027ll just leave out any mention.",
+      "parentUuid": "e49303c7_79bafcef",
+      "range": {
+        "startLine": 69,
+        "startChar": 39,
+        "endLine": 70,
+        "endChar": 52
+      },
+      "revId": "a626a322e2691750099c5d00af09e565844819e9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

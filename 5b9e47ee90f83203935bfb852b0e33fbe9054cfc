@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "040c89cb_1c303eeb",
+        "filename": "xyz/openbmc_project/State/Host.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-10T12:29:05Z",
+      "side": 1,
+      "message": "I\u0027d suggest dropping the \"ForObject\" part.  It doesn\u0027t seem to be adding any information.\n\nShould we just add a Common.Errors.Unsupported?  I\u0027m surprised we don\u0027t have that already.",
+      "range": {
+        "startLine": 19,
+        "startChar": 53,
+        "endLine": 19,
+        "endChar": 62
+      },
+      "revId": "5b9e47ee90f83203935bfb852b0e33fbe9054cfc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

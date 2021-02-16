@@ -52,6 +52,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "578c0296_1e80b8f2",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-16T14:04:18Z",
+      "side": 1,
+      "message": "Two questions:\n\n1. Isn\u0027t an \"I2CDevice\" a Decorator (I2CAddress maybe?) and not an inventory Item of its own?\n\n2. How are we certain that this bus/address scheme is portable between Linux versions, appropriate for hot-plugged i2c hubs, etc?  Doesn\u0027t Linux assign the bus number in an arbitrary manner?",
+      "parentUuid": "fccc66ce_7d7039c3",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

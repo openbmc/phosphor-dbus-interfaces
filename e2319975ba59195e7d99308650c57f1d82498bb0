@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6d29c4bc_fcd42758",
+        "filename": "xyz/openbmc_project/Control/Boot/Type.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-17T16:35:45Z",
+      "side": 1,
+      "message": "Should we make EFI the default value?\n\nDo we need another value for systems for which this concept doesn’t even make sense?  This is mostly an x86-only setting. Should we make an x86-only interface?  I guess it is self-contained enough that it would only be instantiated on x86 machines?",
+      "revId": "e2319975ba59195e7d99308650c57f1d82498bb0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

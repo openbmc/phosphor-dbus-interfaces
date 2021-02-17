@@ -70,6 +70,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b5a4f38a_4a84fd31",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-02-17T09:27:52Z",
+      "side": 1,
+      "message": "\u003e Isn\u0027t an \"I2CDevice\" a Decorator (I2CAddress maybe?) and not an inventory Item of its own?\nI tend to agree here, a given inventory item may even have multiple such I2C devices on it. I can change this accordingly, provided we are in agreement about changing the EM code to utilize the new property.\n\n\u003e Doesn\u0027t Linux assign the bus number in an arbitrary manner?\nThis relies on the bus number being explicitly defined in the device tree.",
+      "parentUuid": "578c0296_1e80b8f2",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

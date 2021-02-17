@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "bf8a0860_202de6bb",
+        "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-17T23:45:32Z",
+      "side": 1,
+      "message": "It seems like we should put default to Restore while we are at it?",
+      "revId": "0ddc4c4705e43c1fc7da51f4665fdc8474adb01e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5da0e82d_bc6930bd",
+        "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-17T23:45:32Z",
+      "side": 1,
+      "message": "I also think this word might be a little confusing from a quick look. Can we find another word to more concisely describe?  The only thing that comes to mind is Retain, but maybe you can look at a thesaurus for something similar. “LeaveItAlone” doesn’t look great.",
+      "revId": "0ddc4c4705e43c1fc7da51f4665fdc8474adb01e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "423650bb_f62507b2",
         "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
         "patchSetId": 2
@@ -13,6 +47,30 @@
       "writtenOn": "2021-02-05T17:27:38Z",
       "side": 1,
       "message": "Adding the None enum will probably confuse people given the current wording here.  It should probably say something like \"Perform a complete power off process\"",
+      "range": {
+        "startLine": 25,
+        "startChar": 12,
+        "endLine": 25,
+        "endChar": 18
+      },
+      "revId": "0ddc4c4705e43c1fc7da51f4665fdc8474adb01e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f057ce10_45017ae7",
+        "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-17T23:45:32Z",
+      "side": 1,
+      "message": "Right, the wording here seems like when this was just for AC power loss and not BMC reset paths. Please update this wording as well.",
+      "parentUuid": "423650bb_f62507b2",
       "range": {
         "startLine": 25,
         "startChar": 12,

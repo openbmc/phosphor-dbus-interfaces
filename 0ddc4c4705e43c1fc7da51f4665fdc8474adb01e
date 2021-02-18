@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "84125f58_5dcbe1dc",
+        "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-02-18T18:58:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bf8a0860_202de6bb",
+      "revId": "0ddc4c4705e43c1fc7da51f4665fdc8474adb01e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5da0e82d_bc6930bd",
         "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2021-02-17T23:45:32Z",
       "side": 1,
       "message": "I also think this word might be a little confusing from a quick look. Can we find another word to more concisely describe?  The only thing that comes to mind is Retain, but maybe you can look at a thesaurus for something similar. “LeaveItAlone” doesn’t look great.",
+      "revId": "0ddc4c4705e43c1fc7da51f4665fdc8474adb01e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "abc945eb_2200ba79",
+        "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-02-18T18:58:30Z",
+      "side": 1,
+      "message": "Some other options that came up, Maintain, Preserve, Nil. I think I like Nil best.",
+      "parentUuid": "5da0e82d_bc6930bd",
       "revId": "0ddc4c4705e43c1fc7da51f4665fdc8474adb01e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -71,6 +107,30 @@
       "side": 1,
       "message": "Right, the wording here seems like when this was just for AC power loss and not BMC reset paths. Please update this wording as well.",
       "parentUuid": "423650bb_f62507b2",
+      "range": {
+        "startLine": 25,
+        "startChar": 12,
+        "endLine": 25,
+        "endChar": 18
+      },
+      "revId": "0ddc4c4705e43c1fc7da51f4665fdc8474adb01e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ec9ca9b2_bdd7c253",
+        "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-02-18T18:58:30Z",
+      "side": 1,
+      "message": "I think what\u0027s confusing here is that there\u0027s another separate policy that says never power off the system if the host is running. This power restore service is not even run if the BMC is reset and the host is detected to still be up and running after the reboot. That\u0027s outside of this interface though so I don\u0027t think we need to mention it. If this service is run, and AlwaysOff is set, it will power off.",
+      "parentUuid": "f057ce10_45017ae7",
       "range": {
         "startLine": 25,
         "startChar": 12,

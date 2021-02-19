@@ -34,6 +34,24 @@
       "revId": "e2319975ba59195e7d99308650c57f1d82498bb0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fb8e2bc3_546829e1",
+        "filename": "xyz/openbmc_project/Control/Boot/Type.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-02-19T21:45:41Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t think we need to add another value. This boot type parameter is just a hint for the host firmware. Even x86 firmware might not follow it, if it doesn\u0027t want to or does not support it.\n\nTechnically this is a value for all EFI firmware, not just x86 (ARM64 can boot UEFI these days too).\n\nWith that said, what would the other option be for?  Wouldn\u0027t systems that only support a single boot mode just not publish this interface, as it implies that the mode can be changed, which it cant?\n\n\u003e For example we can have legacy BIOS (coreboot+SeaBIOS) that can\u0027t even boot EFI images. In this case this setting wouldn\u0027t make any sense either, but even here I think one would expect that after `ipmitool ... efiboot` boot type would be indicated as EFI, and after setting boot to legacy, boot type would be later read as legacy.\n\u003e It is up to the system user to decide if this setting sane or not.\n\u003e \n\u003e As for the default value, I think it should be EFI. As OpenBMC positions itself as a modern project, it should use modern standard for the default boot type. Moreover I think by now EFI is a de facto standard for the x86.\n\nDon\u0027t we (OpenBMC) have no control over the default?  It\u0027s that entirely within the various BIOSes control?",
+      "parentUuid": "a2112e18_7c9d4526",
+      "revId": "e2319975ba59195e7d99308650c57f1d82498bb0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

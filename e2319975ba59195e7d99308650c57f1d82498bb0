@@ -52,6 +52,24 @@
       "revId": "e2319975ba59195e7d99308650c57f1d82498bb0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "42ed18e3_b1fa0329",
+        "filename": "xyz/openbmc_project/Control/Boot/Type.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-19T22:11:19Z",
+      "side": 1,
+      "message": "We can have a default in the sense that the property (BootType) should have a default value of EFI so that a default-constructed instance has that as the property value.  The way this is coded up now, Legacy will be the default by nature of how C++ enumeration assigning is done.\n\nWe cannot have a default in the sense of actively forcing the BIOS to do something.  What our default would do is set up the default response, if the user does nothing else, in our IPMI command.\n\n@Konstantin, you\u0027ll want to add a \u0027default: self.Types.EFI\u0027 to BootType above.",
+      "parentUuid": "fb8e2bc3_546829e1",
+      "revId": "e2319975ba59195e7d99308650c57f1d82498bb0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

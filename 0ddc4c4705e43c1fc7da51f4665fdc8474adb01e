@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "4cf02b94_a6c23c52",
+        "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-20T15:43:01Z",
+      "side": 1,
+      "message": "Not to be a naysayer, but I dislike Nil more than None.  The English word has the same meaning as zero and very little contextual difference from None.  \u0027Nil\u0027 is used as an alternative to \u0027Null\u0027 in some programming languages (like Objective-C) but none that we use in this project.  The word almost never comes up in conversational English.\n\nWith these two points, especially, I think it puts non-native developers at a disadvantage by using the word here:\n    - It is not used in conversational English.\n    - It is rarely used in programming contexts, unless you have experience with very specific languages.\n\nSince we\u0027re not already it elsewhere, I\u0027d rather not here either.\n\nWith the change to the \u0027AlwaysOff\u0027 language, I think \u0027None\u0027 is reasonable and has none of the downsides of \u0027Nil\u0027.  Also \u0027Preserve\u0027 seems like a good choice to me as we are \"preserving the current state\" with this option.",
+      "parentUuid": "abc945eb_2200ba79",
+      "revId": "0ddc4c4705e43c1fc7da51f4665fdc8474adb01e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "423650bb_f62507b2",
         "filename": "xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml",
         "patchSetId": 2

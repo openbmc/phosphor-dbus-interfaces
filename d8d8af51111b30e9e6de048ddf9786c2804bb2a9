@@ -88,6 +88,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "304057b4_c4d57eaf",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-21T13:19:54Z",
+      "side": 1,
+      "message": "\u003e This relies on the bus number being explicitly defined in the device tree.\n\nHow does this work for a system that uses something like RunBMC then?  In a design like that you may have a single flash image that supports 5 different machines and then uses EntityManager support to determine what device it is running on, and dynamically bind the downstream i2c hubs.  You\u0027re not going to have i2c information in the device tree because the different machines the RunBMC card plugs into have different structures.",
+      "parentUuid": "b5a4f38a_4a84fd31",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

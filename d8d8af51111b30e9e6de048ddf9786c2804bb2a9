@@ -142,6 +142,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b813dbfa_f8fafc37",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-21T18:41:25Z",
+      "side": 1,
+      "message": "The alternative to dt overlays is direct binding calls though, right?  And this won\u0027t work if we go that direction.  So it seems like this interface is forcing us to go a direction that isn\u0027t even supported by the upstream kernel when there is another path that is supported upstream...",
+      "parentUuid": "74c2e76b_954c3a1d",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

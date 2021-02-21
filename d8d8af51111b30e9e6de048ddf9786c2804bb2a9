@@ -124,6 +124,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "74c2e76b_954c3a1d",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-02-21T17:43:58Z",
+      "side": 1,
+      "message": "I would note, nothing about this dbus interface precludes making the above work, and having it exist means that people are far less likely to be hardcoding bus numbers in config files, so that when/if we do get dt overlays working again, we should have minimal code to fix in the individual reactors.",
+      "parentUuid": "93cacc62_b974bd11",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

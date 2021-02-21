@@ -196,6 +196,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5b8bda4_d1f09d5f",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-02-21T23:18:11Z",
+      "side": 1,
+      "message": "\u003e By \u0027bind\u0027 I was referring to the sysfs interface. I guess PCIe and USB calls it that but i2c doesn\u0027t.\n\u003e \n\u003e https://www.kernel.org/doc/html/v5.10/i2c/instantiating-devices.html#method-4-instantiate-from-user-space\n\nThis API is exactly what this interface is used for today (I mistakenly called it \"add device\" not \"new_device\".  My bad.)\n\nThe dbus interface exists so we can pass along the dynamic runtime-generated bus information about the newly added device to the userspace code responsible for instantiating the dbus interfaces.\n\nIn a perfect world, the bind would be done in the individual reactors, not centralized in EM, so we include all the data to make that possible in the future without breaking this API.  The reasons it\u0027s the way it is now are largely because of using DT overlays in the past, it made more sense to stick all the code for that in one spot.\n \n\u003e \n\u003e There is also \u0027drivers_probe\u0027 UAPI for setting up the engine itself, I think.\n\nI was unaware of this UAPI.  I\u0027ll have to look into what interfaces it provides and see if they\u0027re useful to us.",
+      "parentUuid": "d8bed284_d5f6f86e",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

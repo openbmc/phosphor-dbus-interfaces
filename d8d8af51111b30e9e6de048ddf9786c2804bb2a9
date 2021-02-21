@@ -106,6 +106,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93cacc62_b974bd11",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-02-21T17:40:16Z",
+      "side": 1,
+      "message": "\u003e \u003e This relies on the bus number being explicitly defined in the device tree.\n\u003e \n\u003e How does this work for a system that uses something like RunBMC then?\n\nToday it doesn\u0027t.\n\n\u003e  In a design like that you may have a single flash image that supports 5 different machines and then uses EntityManager support to determine what device it is running on, and dynamically bind the downstream i2c hubs.  You\u0027re not going to have i2c information in the device tree because the different machines the RunBMC card plugs into have different structures.\n\nThe intent when entity-manager was designed was that we could use device tree overlays.  In practice we used them for sensors for a while, but then when beaglebone gave up on their patch to add a userspace dt overlay interface, we moved back to the add_device api for keeping things working with an upstream kernel.  Something like that would be required for runBMC to be able to enable/disable i2c busses at will at runtime.  If I ever have to personally support a runBMC system, that\u0027s what I\u0027d do.\n\nIf someone working on a runBMC system wanted this to work with a single image, we\u0027d likely need to get those beaglebone patches going again in upstream.",
+      "parentUuid": "304057b4_c4d57eaf",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

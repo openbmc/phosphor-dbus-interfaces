@@ -160,6 +160,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ad26c06_213e02a3",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-02-21T18:53:30Z",
+      "side": 1,
+      "message": "Direct bindings as in, have a device tree per system?  I\u0027m not quite following what direct binding calls would allow for here.  Can you expand a little?\n\nThe EM code that exists today works with this interface on the mainline kernel, so when you say it \"isn\u0027t even supported by the upstream kernel\" that\u0027s not really true.  We use the add device API, then pass the generated bus and i2c address information to dbus, we\u0027re just limited in the things we can instantiate.  We can\u0027t, for example, turn on root i2c bus 3, but we certainly can instantiate a mux with 4 new busses on bus 3 if it\u0027s already instantiated, then pass that information down the line to other things that might need that info to instantiate, say, a sensor behind that mux.\n\nIf you know how to do this in a simpler, more upstream compatible way, I\u0027m all ears, I\u0027d love to see something easier to digest.",
+      "parentUuid": "b813dbfa_f8fafc37",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

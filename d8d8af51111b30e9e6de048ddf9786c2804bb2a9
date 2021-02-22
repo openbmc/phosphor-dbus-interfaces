@@ -214,6 +214,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1e955579_410595bb",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-02-22T13:56:24Z",
+      "side": 1,
+      "message": "\u003e The dbus interface exists so we can pass along the dynamic runtime-generated bus information about the newly added device to the userspace code responsible for instantiating the dbus interfaces.\n\nAh, I might have misunderstood something along the way.  I assumed these were specified in EM json statically and EM just creates them.  It seems like you\u0027re suggesting that EM creates these dynamically based on what it sees in sysfs?  In that case I have no concerns.\n\nMy concern was if we were going down a path where i2c bus/addr information is hard coded in json because that is fragile.",
+      "parentUuid": "f5b8bda4_d1f09d5f",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

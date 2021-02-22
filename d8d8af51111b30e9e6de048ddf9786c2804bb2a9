@@ -232,6 +232,24 @@
       "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69bad157_bdc0703f",
+        "filename": "xyz/openbmc_project/Inventory/Item/I2CDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-02-22T16:37:50Z",
+      "side": 1,
+      "message": "\u003e \u003e The dbus interface exists so we can pass along the dynamic runtime-generated bus information about the newly added device to the userspace code responsible for instantiating the dbus interfaces.\n\u003e \n\u003e Ah, I might have misunderstood something along the way.  I assumed these were specified in EM json statically and EM just creates them.  It seems like you\u0027re suggesting that EM creates these dynamically based on what it sees in sysfs?  In that case I have no concerns.\n\u003e \n\u003e My concern was if we were going down a path where i2c bus/addr information is hard coded in json because that is fragile.\n\n\nIt\u0027s a combination of both.  They CAN be hardcoded in a config, in the case of undetectable devices that have a known address and bus number in the DTS/board wiring, but in most of the usages it\u0027s for when cards are installed, or muxes are instantiated that might not have consistent bus numbering.  Having this interface means that we deal with the fragile part of the code in one spot, so individual reactors aren\u0027t trying to roll their own \"predict the bus number\" logic.\n\nIn EM we try to keep the hardcoded bit to the bare minimum, and only where it\u0027s truly required as there\u0027s no other way to detect the device.  In the future, if we have device tree overlays again, I\u0027m hoping we can even make most of that dynamic.",
+      "parentUuid": "1e955579_410595bb",
+      "revId": "d8d8af51111b30e9e6de048ddf9786c2804bb2a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

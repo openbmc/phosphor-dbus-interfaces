@@ -83,6 +83,11 @@ enumerations:
             system while the host is in this state will prevent the debug data
             from being properly collected. The host will move to one of the
             other states once complete.
+        - name: 'Setup'
+          description: >
+            Host firmware has entered a setup state. This is commonly the BIOS
+            configuration setup where a user can configure a myriad of options
+            for their system before fully booting it.
 
     - name: RestartCause
       description: >

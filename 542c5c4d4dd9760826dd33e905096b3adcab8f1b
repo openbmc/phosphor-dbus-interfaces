@@ -33,6 +33,24 @@
       "revId": "542c5c4d4dd9760826dd33e905096b3adcab8f1b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bdd7068c_029a241c",
+        "filename": "xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-03-01T22:27:28Z",
+      "side": 1,
+      "message": "Yeah, good question. My thinking was that the redfish/v1/Systems/hypervisor state object would be updated to \"Quiesced\" when this BootProgress is entered. That\u0027s confusing though because we have a Quiesced host state already so you\u0027d expect a 1x1 mapping there. Let me poke around a bit and see if we can just get away with the BootProgress value.",
+      "parentUuid": "bd6fb51c_4044c618",
+      "revId": "542c5c4d4dd9760826dd33e905096b3adcab8f1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

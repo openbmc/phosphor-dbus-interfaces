@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b0c5665d_4a4e5170",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2021-03-01T21:36:39Z",
+      "side": 1,
+      "message": "This is merged and will be part of 2021.1",
+      "revId": "542c5c4d4dd9760826dd33e905096b3adcab8f1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd6fb51c_4044c618",
+        "filename": "xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2021-03-01T21:36:39Z",
+      "side": 1,
+      "message": "Why do you need this here as well? \nI thought Redfish Boot Progress mapped to our Boot/Progress.Interface?\n \nWhat state does this represent in Status?\n\n \"State\": {\n            \"enum\": [\n                \"Enabled\",\n                \"Disabled\",\n                \"StandbyOffline\",\n                \"StandbySpare\",\n                \"InTest\",\n                \"Starting\",\n                \"Absent\",\n                \"UnavailableOffline\",\n                \"Deferring\",\n                \"Quiesced\",\n                \"Updating\",\n                \"Qualified\"\n            ],\n            \"enumDescriptions\": {\n                \"Absent\": \"This function or resource is either not present or detected.\",\n                \"Deferring\": \"The element does not process any commands but queues new requests.\",\n                \"Disabled\": \"This function or resource is disabled.\",\n                \"Enabled\": \"This function or resource is enabled.\",\n                \"InTest\": \"This function or resource is undergoing testing, or is in the process of capturing information for debugging.\",\n                \"Qualified\": \"The element quality is within the acceptable range of operation.\",\n                \"Quiesced\": \"The element is enabled but only processes a restricted set of commands.\",\n                \"StandbyOffline\": \"This function or resource is enabled but awaits an external action to activate it.\",\n                \"StandbySpare\": \"This function or resource is part of a redundancy set and awaits a failover or other external action to activate it.\",\n                \"Starting\": \"This function or resource is starting.\",\n                \"UnavailableOffline\": \"This function or resource is present but cannot be used.\",\n                \"Updating\": \"The element is updating and might be unavailable or degraded.\"\n            },\n\n\"Starting\" ?",
+      "revId": "542c5c4d4dd9760826dd33e905096b3adcab8f1b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

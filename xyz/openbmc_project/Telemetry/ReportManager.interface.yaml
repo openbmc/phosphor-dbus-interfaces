@@ -18,6 +18,9 @@ methods:
       - name: reportingType
         type: enum[xyz.openbmc_project.Telemetry.Report.ReportingType]
         description: Defines report type
+      - name: reportingUpdate
+        type: enum[xyz.openbmc_project.Telemetry.Report.ReportingUpdate]
+        description: Defines report update type
       - name: emitsReadingsUpdate
         type: boolean
         description: >

@@ -50,6 +50,9 @@ properties:
   - name: ReportingType
     type: enum[self.ReportingType]
     description: Defines how readings are updated.
+  - name: ReportingUpdate
+    type: enum[self.ReportingUpdate]
+    description: Defines how handles subsequent metric reports.
   - name: Interval
     type: uint64
     description: >
@@ -82,3 +85,23 @@ enumerations:
        - name: Periodic
          description: >
            After period of time defined by ScanPeriod property.
+   - name: ReportingUpdate
+     description: >
+       The type that defines how handles subsequent metric reports.
+     values:
+       - name: Overwrite
+         description: >
+            Overwrite the metric report.
+       - name: AppendWrapsWhenFull
+         description: >
+           New information is appended to the metric report.  The metric report
+           entries are overwritten with new entries when the metric report has
+           reached its maximum capacity.
+       - name: AppendStopsWhenFull
+         description: >
+           New information is appended to the metric report.  The service stops
+           adding entries when the metric report has reached its maximum capacity.
+       - name: NewReport
+         description: >
+           A new metric report is created, whose resource name is the metric report
+           resource name concatenated with the timestamp.

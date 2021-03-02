@@ -50,6 +50,12 @@ properties:
   - name: ReportingType
     type: enum[self.ReportingType]
     description: Defines how readings are updated.
+  - name: ReportUpdates
+    type: enum[self.ReportUpdates]
+    description: Defines how Readings array is filled.
+  - name: AppendLimit
+    type: uint64
+    description: Limited size.
   - name: Interval
     type: uint64
     description: >
@@ -82,3 +88,16 @@ enumerations:
        - name: Periodic
          description: >
            After period of time defined by ScanPeriod property.
+   - name: ReportUpdates
+     description: >
+       The type that defines how Readings are updated.
+     values:
+       - name: Overwrite
+         description: >
+           Last sensor reading is written to Readings overwriting the previous value.
+       - name: AppendWrapsWhenFull
+         description: >
+           Append sensor reading to Readings up to limit specify in AppendLimit then start from the beginning.
+       - name: AppendStopsWhenFull
+         description: >
+           Append sensor reading to Readings up to limit specify in AppendLimit then stop till report update.

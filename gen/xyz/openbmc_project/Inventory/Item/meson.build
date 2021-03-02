@@ -27,6 +27,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Adapter')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Adapter__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Item/Adapter.interface.yaml',  ],
+    output: [ 'Adapter.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Inventory/Item/Adapter',
+    ],
+    build_by_default: true,
+)
+
 subdir('Battery')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/Battery__markdown'.underscorify(),

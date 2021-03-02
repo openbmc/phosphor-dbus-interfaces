@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1eb93238_641e7b7c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-03-02T18:07:54Z",
+      "side": 1,
+      "message": "Please update your Author and Signed-Off-By to be a public email server rather than your internal machine.",
+      "revId": "0d6cfbaee081eb0dd35a794a37f8d141d2b5efe4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63525f46_6b339835",
+        "filename": "xyz/openbmc_project/Inventory/Item/Adapter.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-03-02T18:07:54Z",
+      "side": 1,
+      "message": "It appears that Redfish has two different classes for FabricAdapters and NetworkAdapters?  Is there any reason we\u0027re trying to put them into one class broken up by an enumeration?",
+      "revId": "0d6cfbaee081eb0dd35a794a37f8d141d2b5efe4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

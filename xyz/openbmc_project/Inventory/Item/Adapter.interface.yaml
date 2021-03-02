@@ -1,0 +1,20 @@
+description: >
+    Implement to provide adapter attributes.
+
+    properties: >
+        - name: AdapterType
+          type: enum[self.Type]
+          description: >
+              Type of adapter.
+
+enumerations:
+    - name: Type
+      description: >
+          Defines types of adapter.
+      values:
+        - name: FabricAdapter
+          description: >
+              A physical fabric adapter capable of connecting
+              to an interconnect fabric. Example includes but
+              are not limited to Ethernet, NVMe over Fabrics,
+              etc.

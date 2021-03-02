@@ -18,6 +18,12 @@ methods:
       - name: reportingType
         type: enum[xyz.openbmc_project.Telemetry.Report.ReportingType]
         description: Defines report type
+      - name: reportUpdates
+        type: enum[xyz.openbmc_project.Telemetry.Report.ReportUpdates]
+        description: Defines report update type
+      - name: appendLimit
+        type: size
+        description: Defines a limit of readings per sensor
       - name: emitsReadingsUpdate
         type: boolean
         description: >

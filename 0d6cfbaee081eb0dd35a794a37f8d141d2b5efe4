@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "91c02c03_26f59792",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2021-03-03T13:17:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1eb93238_641e7b7c",
+      "revId": "0d6cfbaee081eb0dd35a794a37f8d141d2b5efe4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "63525f46_6b339835",
         "filename": "xyz/openbmc_project/Inventory/Item/Adapter.interface.yaml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2021-03-02T18:07:54Z",
       "side": 1,
       "message": "It appears that Redfish has two different classes for FabricAdapters and NetworkAdapters?  Is there any reason we\u0027re trying to put them into one class broken up by an enumeration?",
+      "revId": "0d6cfbaee081eb0dd35a794a37f8d141d2b5efe4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "693ab32b_16cee2a5",
+        "filename": "xyz/openbmc_project/Inventory/Item/Adapter.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2021-03-03T13:17:20Z",
+      "side": 1,
+      "message": "No, There is no particular reason. It\u0027s just that different type of adapters can implement a common interface with specifying their corresponding type. Also I think this way we will not have to define different interfaces for different adapters.\n\nThough, I do not have any issue defining adapter specific interfaces. \nLet me know your opinion here.",
+      "parentUuid": "63525f46_6b339835",
       "revId": "0d6cfbaee081eb0dd35a794a37f8d141d2b5efe4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

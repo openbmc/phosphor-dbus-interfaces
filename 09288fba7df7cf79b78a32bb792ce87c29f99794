@@ -16,6 +16,24 @@
       "revId": "09288fba7df7cf79b78a32bb792ce87c29f99794",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "461f2548_0d719954",
+        "filename": "xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000900
+      },
+      "writtenOn": "2021-03-04T03:50:17Z",
+      "side": 1,
+      "message": "Yeah, that could work except it\u0027s documented as using the canonical UUID format, whereas this is more a freeform string. Do you know of anything that might break if I don\u0027t follow the UUID format?",
+      "parentUuid": "30da5c2c_9974b581",
+      "revId": "09288fba7df7cf79b78a32bb792ce87c29f99794",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

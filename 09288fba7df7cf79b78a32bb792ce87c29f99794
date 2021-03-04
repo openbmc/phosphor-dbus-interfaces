@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30da5c2c_9974b581",
+        "filename": "xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-03-04T03:10:04Z",
+      "side": 1,
+      "message": "Is ‘xyz.openbmc_project.Common.UUID’ useful here instead?\n\nSince this sounds like a fairly rare value on an inventory entity, I’d prefer a separate Decorator if Common.UUID cannot work for some reason.",
+      "revId": "09288fba7df7cf79b78a32bb792ce87c29f99794",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

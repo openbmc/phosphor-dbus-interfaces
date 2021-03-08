@@ -123,6 +123,24 @@
       "revId": "0d6cfbaee081eb0dd35a794a37f8d141d2b5efe4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d4cd5d4a_b949f9df",
+        "filename": "xyz/openbmc_project/Inventory/Item/Adapter.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2021-03-08T15:47:04Z",
+      "side": 1,
+      "message": "I got your point here. Yes, it does not make sense to make them common in this case.\nI will modify the commit and put specific interface for fabric adapters.",
+      "parentUuid": "628a5de6_f7eae9a9",
+      "revId": "0d6cfbaee081eb0dd35a794a37f8d141d2b5efe4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

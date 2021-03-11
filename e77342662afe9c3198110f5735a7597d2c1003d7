@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "db0583ab_83f0d0e1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-03-11T21:29:20Z",
+      "side": 1,
+      "message": "Why would we need to mix session ids between IPMI and redfish?  Seems like a really odd use case, and something I\u0027m not super enthusiastic to support in code, but lets figure out why you\u0027re looking to do this, and we can go from there.\n\nPart of me wonders if we need to be using common linux sessions or something similar to how linux mixes ssh and x11 sessions under a common framework.",
+      "range": {
+        "startLine": 10,
+        "startChar": 32,
+        "endLine": 10,
+        "endChar": 39
+      },
+      "revId": "e77342662afe9c3198110f5735a7597d2c1003d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e80c47d6_8b84bc5c",
         "filename": "xyz/openbmc_project/Ipmi/SessionInfo.interface.yaml",
         "patchSetId": 2
@@ -31,6 +54,24 @@
       "side": 1,
       "message": "In BMCWEB recipe, we dont have any API (even busctl call also) to get username by using userID. So added this property in SessionInfo interface. In phosphor-host-ipmid API are present but we can not call from BMCWEB.",
       "parentUuid": "e80c47d6_8b84bc5c",
+      "revId": "e77342662afe9c3198110f5735a7597d2c1003d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f8470617_ef1aa422",
+        "filename": "xyz/openbmc_project/Ipmi/SessionInfo.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-03-11T21:29:20Z",
+      "side": 1,
+      "message": "Why would we need to use this interface at all in bmcweb?  It has its own sessions.",
+      "parentUuid": "b04aee35_c5b0e2de",
       "revId": "e77342662afe9c3198110f5735a7597d2c1003d7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

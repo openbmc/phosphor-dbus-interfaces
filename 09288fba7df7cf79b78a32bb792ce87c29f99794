@@ -70,6 +70,24 @@
       "revId": "09288fba7df7cf79b78a32bb792ce87c29f99794",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "18417f04_a9e449e0",
+        "filename": "xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-03-15T13:09:11Z",
+      "side": 1,
+      "message": "\u003e 1. New interface like xyz.openbmc_project.Inventory.Decorator.UniqueIdentifier\n\nLets go with this one.  Make sure you use similar language as Decorator.LocationCode to indicate that the string is free-form and \"should not be used for programmatic interrogation\".",
+      "parentUuid": "271c7e44_7aec6f8d",
+      "revId": "09288fba7df7cf79b78a32bb792ce87c29f99794",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

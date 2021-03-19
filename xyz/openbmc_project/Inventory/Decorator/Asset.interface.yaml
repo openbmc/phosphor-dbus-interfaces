@@ -38,3 +38,8 @@ properties:
           no specific SparePartNumber and instead PartNumber should
           be used in user interfaces.
       default: ""
+    - name: Present
+      type: boolean
+      description: >
+          Indicates presence of the item.
+      default: false

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0811935e_f2346eb1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-03-19T20:11:59Z",
+      "side": 1,
+      "message": "Can you talk through in detail WHY you would want to do this.  I suspect you\u0027re wanting to have a way to represent assets where the slot might be empty (like a dimm slot that isn\u0027t populated) where we might want to present the \"slot\" to external interfaces, but explicitly mark it as empty.\n\n\nThese are all just guesses, based on some of your other reviews recently.  If you could push better details into your commit message about the details around why this is needed, it\u0027d be appreciated.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 0
+      },
+      "revId": "1613018b72c8e1e630a6f38544143d0135022615",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

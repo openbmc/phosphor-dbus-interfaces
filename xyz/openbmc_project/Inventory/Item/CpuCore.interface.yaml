@@ -1,2 +1,9 @@
 description: >
     Implement to provide CPU core attributes.
+properties:
+  - name: Id
+    type: uint64
+    description: >
+          This Processor core ID field contains core-specific information
+          that describes the processor core features. Details depend on the
+          processor architecture & implementation.

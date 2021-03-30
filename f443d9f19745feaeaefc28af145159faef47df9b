@@ -46,6 +46,30 @@
       "revId": "f443d9f19745feaeaefc28af145159faef47df9b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "88ec5e82_cf2d2e85",
+        "filename": "xyz/openbmc_project/Telemetry/Report.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1000677
+      },
+      "writtenOn": "2021-03-30T05:55:41Z",
+      "side": 1,
+      "message": "And extend the description of the behavior. It is hard to tell what is an overwrite or what is a limit\nMaybe:\nOverwrite: Last sensor reading is written to Readings overwriting the previous value.\nAppendWrapWhenFull: Append sensor reading to Readings up to limit specify in AppendLimit then start from the begging (or then repeat??)\nAppendStopsWhenFull:  Append sensor reading to Readings up to limit specify in AppendLimit then stop till report update",
+      "parentUuid": "6f4c4edb_928cb06f",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 79
+      },
+      "revId": "f443d9f19745feaeaefc28af145159faef47df9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

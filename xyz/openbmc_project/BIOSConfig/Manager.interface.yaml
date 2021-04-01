@@ -114,6 +114,16 @@ properties:
         - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
         - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeReadOnly
 
+    - name: Version
+      type: string
+      description: >
+              Version of the message registry
+
+    - name: OwningEntity
+      type: string
+      description: >
+              The name of the owning entity of the message registry
+
 enumerations:
     - name: AttributeType
       description: >

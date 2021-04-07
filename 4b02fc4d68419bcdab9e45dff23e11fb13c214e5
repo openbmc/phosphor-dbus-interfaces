@@ -70,6 +70,30 @@
       "revId": "4b02fc4d68419bcdab9e45dff23e11fb13c214e5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4f9ae20c_dfeda0d2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-04-07T16:36:56Z",
+      "side": 1,
+      "message": "+1 to adding this to the commit message.\n\nI\u0027m not an expert here, but wouldn\u0027t the easier fix be to simply make MemorySizeInKB an int64?  That seems more in line with the other interface in that area.\n\nWith that said, I\u0027ll defer to the maintainers opinion here.",
+      "parentUuid": "437b224f_5259b69b",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 31
+      },
+      "revId": "4b02fc4d68419bcdab9e45dff23e11fb13c214e5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

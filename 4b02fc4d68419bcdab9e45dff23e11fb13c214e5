@@ -22,6 +22,30 @@
       "revId": "4b02fc4d68419bcdab9e45dff23e11fb13c214e5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a9b4293_b3682c88",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000353
+      },
+      "writtenOn": "2021-04-07T10:47:08Z",
+      "side": 1,
+      "message": "because This property defined in  phosphor-dbus-interfaces/xyz/openbmc_project/Inventory/Item/Dimm.interface.yaml \n\nis as-\n    - name: MemorySizeInKB\n      type: uint32\n      description: \u003e\n          Memory size of DIMM in Kilobyte.\n\nSo, notify call to set \"MemorySizeInKB\" fails for \"Invalid conversion in MakeVariantVisitor\" without this support.",
+      "parentUuid": "607a1ed6_abb7e893",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 31
+      },
+      "revId": "4b02fc4d68419bcdab9e45dff23e11fb13c214e5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

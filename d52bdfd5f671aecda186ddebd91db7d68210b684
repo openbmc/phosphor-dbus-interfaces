@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8bcaf6ea_1d47e51e",
+        "filename": "xyz/openbmc_project/Inventory/Item/CpuCore.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-07T19:27:31Z",
+      "side": 1,
+      "message": "type: size?",
+      "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e789b74a_c4b8a501",
         "filename": "xyz/openbmc_project/Inventory/Item/CpuCore.interface.yaml",
         "patchSetId": 2
@@ -31,6 +48,23 @@
       "side": 1,
       "message": "I am not sure if other implementations really have an unique Id for cores, The intent is to propose this in a generic way so that implementations can decide what they want to stuff-in this property.",
       "parentUuid": "e789b74a_c4b8a501",
+      "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bfe56754_a4ec37d4",
+        "filename": "xyz/openbmc_project/Inventory/Item/CpuCore.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-07T19:27:31Z",
+      "side": 1,
+      "message": "Is there any relationship between this commit and https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/41050 ?\n\nI do not feel like \"ID\" is a good name for this.  To me an ID is usually an identifier.  This is an architecture-specific feature set like the \u0027flags\u0027 field in /proc/cpuinfo, right?\n\nMight \u0027Inventory.Decorator.Compatible\u0027 be used for this?  If it really is architecture specific then something like \u0027org.openpower.Inventory.Decorator.PowerArchCoreFeatureFlags\u0027 might be appropriate too?  (I\u0027m purposefully being overly verbose on the name PowerArchCoreFeatureFlags in hopes you find something better than both ID and that. ;) )\n\nIt might be good to work with someone from Intel and see if you can find an interface that works for both of you.  Also, I would suggest some research into how this is handled in the Linux kernel (see cpuinfo above) and if there is anything we can learn from how they do it.",
       "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

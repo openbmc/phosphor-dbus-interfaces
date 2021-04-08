@@ -86,6 +86,24 @@
       "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "83dda19e_b2710a51",
+        "filename": "xyz/openbmc_project/Inventory/Item/CpuCore.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-08T13:58:37Z",
+      "side": 1,
+      "message": "I\u0027m still not convinced we\u0027re all on the same page as to what you\u0027re looking for.\n\nUniqueIdentifier is suppose to be a UUID-like identifier.  There is exactly 1 processor in the world with a particular identifier.\n\nx86 systems have a CPUID instruction, which is similar to the PVR register in Power.  Some of the language you used here made me think you were referring to this and that is why I mentioned \"cpu flags:\" because that field is derived from CPUID/PVR.\n\nYour latest comments make me think this is simply an \"absolute position number\" instead of a \"relative position number\" like the value in the object path?  ie. object path might be /.../proc1/core3 and you\u0027re looking for an absolute core id of (24 cores-per-proc + 3 \u003d 27)?\n\nCan you maybe give me an example of one of these values and how you determine it on your system?",
+      "parentUuid": "c281f41a_55b71c65",
+      "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

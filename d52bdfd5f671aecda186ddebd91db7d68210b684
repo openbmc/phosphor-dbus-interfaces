@@ -68,6 +68,24 @@
       "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c281f41a_55b71c65",
+        "filename": "xyz/openbmc_project/Inventory/Item/CpuCore.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-04-08T05:53:31Z",
+      "side": 1,
+      "message": "\u003e Is there any relationship between this commit and https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/41050 ?\n\u003e \n\nYes, exactly, i think we can use UniqueIdentifier interface.\n\n\u003e I do not feel like \"ID\" is a good name for this.  To me an ID is usually an identifier.  This is an architecture-specific feature set like the \u0027flags\u0027 field in /proc/cpuinfo, right?\n\u003e \n\u003e Might \u0027Inventory.Decorator.Compatible\u0027 be used for this?  If it really is architecture specific then something like \u0027org.openpower.Inventory.Decorator.PowerArchCoreFeatureFlags\u0027 might be appropriate too?  (I\u0027m purposefully being overly verbose on the name PowerArchCoreFeatureFlags in hopes you find something better than both ID and that. ;) )\n\u003e \n\u003e It might be good to work with someone from Intel and see if you can find an interface that works for both of you.  Also, I would suggest some research into how this is handled in the Linux kernel (see cpuinfo above) and if there is anything we can learn from how they do it.\n\nNo patrick, what we are looking for is an ID field, much like \"core id\" in the /proc/cpuinfo. For IBM systems we have a unique ID for cores ,its a unit64 bit number. we call that a MRU ID. But i think making it a string does not harm us and we can also have a common UniqueIdentifier interface as well.\n\nWhat do you suggest ?",
+      "parentUuid": "bfe56754_a4ec37d4",
+      "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

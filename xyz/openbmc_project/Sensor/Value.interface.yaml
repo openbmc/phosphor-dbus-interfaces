@@ -24,10 +24,12 @@ properties:
           The sensor reading.
     - name: MaxValue
       type: double
+      default: infinity
       description: >
           The Maximum supported sensor reading.
     - name: MinValue
       type: double
+      default: -infinity
       description: >
           The Minimum supported sensor reading.
     - name: Unit

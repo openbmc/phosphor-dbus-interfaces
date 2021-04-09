@@ -122,6 +122,24 @@
       "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b61cc065_0a98c78f",
+        "filename": "xyz/openbmc_project/Inventory/Item/CpuCore.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-04-09T01:39:32Z",
+      "side": 1,
+      "message": "\u003e Your latest comments make me think this is simply an \"absolute position number\" instead of a \"relative position number\" like the value in the object path?  ie. object path might be /.../proc1/core3 and you\u0027re looking for an absolute core id of (24 cores-per-proc + 3 \u003d 27)?\n\n\u003e Can you maybe give me an example of one of these values and how you determine it on your system?\n\nAs far as heard, we get the MRU ID from the machine readable workbook and i am not sure how they are determined , These ID\u0027s are sent down by the host during poweron as a PLDM FRU Record set PDR\u0027s \u0026 here is how the sample values looks like this :\n\nMRU ID Value\n0x000F0000\n0x000E0000",
+      "parentUuid": "17287675_eb709293",
+      "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

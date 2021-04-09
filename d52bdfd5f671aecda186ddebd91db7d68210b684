@@ -104,6 +104,24 @@
       "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "17287675_eb709293",
+        "filename": "xyz/openbmc_project/Inventory/Item/CpuCore.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-04-09T00:31:39Z",
+      "side": 1,
+      "message": "Drive-by +1 to what Patrick has mentioned, this seems overly generic, and given that, I\u0027m not sure what the impact would be to things consuming this API. \n\nAt least based on your last message, it kinda sounds like you\u0027re wanting to use this to be analogous to core IDs from /proc/cpuinfo?  Maybe simply changing this to \"Index\" and adding a description that \"this should match the value given from /proc/cpuinfo core id field\" might be enough to clarify what this is for in a way that\u0027s portable to the various implementations?  That would be a lot more clear than saying its data is CPU specific.\nUnless I\u0027m mistaken (which very well could be the case) I would assume this isn\u0027t a intended to be the full output of a flags API, but just one piece of it?  The description really leaves something to be desired.",
+      "parentUuid": "83dda19e_b2710a51",
+      "revId": "d52bdfd5f671aecda186ddebd91db7d68210b684",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

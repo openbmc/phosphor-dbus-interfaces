@@ -16,6 +16,24 @@
       "revId": "e68c6c0d114ef1afe61a91d40e7c94dcc5f2d28c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b9d22b3_8607d092",
+        "filename": "xyz/openbmc_project/BIOSConfig/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2021-04-12T09:51:30Z",
+      "side": 1,
+      "message": "\u003e 1. How does the dbus path interact with this?  Why can\u0027t the dbus path of the object be used to create unique entities?\n\nThe dbus path is hardcoded here /xyz/openbmc_project/BiosConfig/Manager (https://gerrit.openbmc-project.xyz/c/openbmc/bios-settings-mgr/+/35563/)\n\nThe BIOS table would be different for different companies, in that case when redfish creates its own registry from this BIOS table. Here the confusion is what if two companies take the openbmc stack and build the BIOS conf manager -\u003e how to generate a unique name for the BIOS registry.\n\nHence there should be way in the dbus object which should tell that who owns this registry - like IBM Intel Facebook, to differentiate each of them.\n\n\n\u003e 2. What is the expected format of these strings?  Can any comparison be done between two objects with different versions\n\nThe format would look something like x.x.x\n\n\n\u003e 3. What is an \"owning entity\"?\n\nDefines who is the owner of the BIOS table - eg., company name.\n\n\n\u003e 4. What is a \"message registry\"?  Nothing else in this object uses this term, so I don\u0027t even know what it is a reference to.\n\nMeta data of the BIOS table is the BIOS message registry.\n\n\n\"Redfish Message Objects can be represented in different ways. In bmcweb, we have chosen to use Message Registries with Message Objects that are referenced using a MessageId and MessageArgs fields.\"\n(Ref: https://github.com/openbmc/docs/blob/master/architecture/redfish-logging-in-bmcweb.md#:~:text\u003dthe%20Redfish%20Specification.-,Message%20Registries,redfish%2Fv1%2FRegistries%22.)\n\nIn bmcweb, the bios\u0027s message registry is under \"redfish-core/include/registries/bios_registry.hpp\"\nBut as per the comments, it is said that two systems shouldnt publish the message registries with same name. Hence we came up with the owning entity and version as the parameters to differentiate each of them\nSo, with these parameters, specific message registries can be created.",
+      "parentUuid": "c7abe72d_59627792",
+      "revId": "e68c6c0d114ef1afe61a91d40e7c94dcc5f2d28c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

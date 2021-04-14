@@ -1,18 +1,13 @@
 project('phosphor-dbus-interfaces', 'cpp',
-    meson_version: '>= 0.54.1',
+    meson_version: '>= 0.57.0',
     default_options: [
         'buildtype=debugoptimized',
-        'cpp_std=c++17',
+        'cpp_std=c++20',
         'warning_level=3',
         'werror=true',
     ],
     version: '1.0.0',
 )
-# meson_version >= 0.54.1 is necessary because that is the first place meson
-# generates unique object filenames for two files with the same `basename`.
-# Many sdbus++ generated files have `basename` collisions because they are
-# named like `.../server.cpp`.  Prior to this version, meson would create a
-# ninja recipe for a single `server.o` file.
 
 # Get sdbusplus dependency.
 sdbusplus_dep = dependency('sdbusplus', required: false)

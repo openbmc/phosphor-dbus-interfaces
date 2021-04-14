@@ -1,8 +1,8 @@
 project('phosphor-dbus-interfaces', 'cpp',
-    meson_version: '>= 0.54.1',
+    meson_version: '>= 0.57.0',
     default_options: [
         'buildtype=debugoptimized',
-        'cpp_std=c++17',
+        'cpp_std=c++20',
         'warning_level=3',
         'werror=true',
     ],

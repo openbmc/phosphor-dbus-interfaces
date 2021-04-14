@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$(git rev-parse --show-toplevel)/gen/regenerate-meson
+"$(git rev-parse --show-toplevel)/gen/regenerate-meson"
 
 GIT_STATUS="$(git status --porcelain --untracked-files)"
 if [ -n "$GIT_STATUS" ]; then

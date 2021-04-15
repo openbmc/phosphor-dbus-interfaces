@@ -1,13 +1,13 @@
 # Generated file; do not modify.
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory/Item/Board__cpp'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Item/Board.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Inventory/Item/Board.interface.yaml',  ],
     output: [ 'server.cpp', 'server.hpp', 'client.hpp',  ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
+        '--directory', meson.project_source_root(),
         'xyz/openbmc_project/Inventory/Item/Board',
     ],
 )
@@ -15,13 +15,13 @@ generated_sources += custom_target(
 subdir('IOBoard')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/Board/IOBoard__markdown'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Item/Board/IOBoard.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Inventory/Item/Board/IOBoard.interface.yaml',  ],
     output: [ 'IOBoard.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
+        '--directory', meson.project_source_root(),
         'xyz/openbmc_project/Inventory/Item/Board/IOBoard',
     ],
     build_by_default: true,
@@ -30,13 +30,13 @@ generated_others += custom_target(
 subdir('Motherboard')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/Board/Motherboard__markdown'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Item/Board/Motherboard.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Inventory/Item/Board/Motherboard.interface.yaml',  ],
     output: [ 'Motherboard.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
+        '--directory', meson.project_source_root(),
         'xyz/openbmc_project/Inventory/Item/Board/Motherboard',
     ],
     build_by_default: true,

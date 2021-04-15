@@ -2,13 +2,13 @@
 subdir('ID')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/ID__markdown'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Chassis/Buttons/ID.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Chassis/Buttons/ID.interface.yaml',  ],
     output: [ 'ID.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
+        '--directory', meson.project_source_root(),
         'xyz/openbmc_project/Chassis/Buttons/ID',
     ],
     build_by_default: true,
@@ -17,13 +17,13 @@ generated_others += custom_target(
 subdir('NMI')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/NMI__markdown'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Chassis/Buttons/NMI.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Chassis/Buttons/NMI.interface.yaml',  ],
     output: [ 'NMI.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
+        '--directory', meson.project_source_root(),
         'xyz/openbmc_project/Chassis/Buttons/NMI',
     ],
     build_by_default: true,
@@ -32,13 +32,13 @@ generated_others += custom_target(
 subdir('Power')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/Power__markdown'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml',  ],
     output: [ 'Power.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
+        '--directory', meson.project_source_root(),
         'xyz/openbmc_project/Chassis/Buttons/Power',
     ],
     build_by_default: true,
@@ -47,13 +47,13 @@ generated_others += custom_target(
 subdir('Reset')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/Reset__markdown'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Chassis/Buttons/Reset.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Chassis/Buttons/Reset.interface.yaml',  ],
     output: [ 'Reset.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
+        '--directory', meson.project_source_root(),
         'xyz/openbmc_project/Chassis/Buttons/Reset',
     ],
     build_by_default: true,

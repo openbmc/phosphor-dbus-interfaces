@@ -113,7 +113,7 @@ libphosphor_dbus = library(
 )
 
 import('pkgconfig').generate(
-    libraries: libphosphor_dbus,
+    libphosphor_dbus,
     name: meson.project_name(),
     version: meson.project_version(),
     description: 'Generated sdbusplus bindings for phosphor-dbus-interfaces'

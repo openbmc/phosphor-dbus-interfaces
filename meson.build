@@ -118,3 +118,9 @@ import('pkgconfig').generate(
     version: meson.project_version(),
     description: 'Generated sdbusplus bindings for phosphor-dbus-interfaces'
 )
+
+phosphor_dbus_interfaces_dep = declare_dependency(
+    include_directories: include_directories('gen'),
+    link_with: libphosphor_dbus,
+    dependencies: sdbusplus_dep
+)

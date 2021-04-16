@@ -38,10 +38,11 @@ if get_option('data_xyz_openbmc_project')
 endif
 
 # Install the selected YAML files.
+inst_yaml_dir = get_option('datadir') / 'phosphor-dbus-yaml/yaml'
 foreach d : selected_subdirs
     install_subdir(
         d,
-        install_dir: get_option('datadir') / 'phosphor-dbus-yaml/yaml' / d,
+        install_dir: inst_yaml_dir / d,
         strip_directory: true,
     )
 endforeach
@@ -116,11 +117,13 @@ import('pkgconfig').generate(
     libphosphor_dbus,
     name: meson.project_name(),
     version: meson.project_version(),
-    description: 'Generated sdbusplus bindings for phosphor-dbus-interfaces'
+    description: 'Generated sdbusplus bindings for phosphor-dbus-interfaces',
+    variables: ['yamldir=' + inst_yaml_dir],
 )
 
 phosphor_dbus_interfaces_dep = declare_dependency(
     include_directories: include_directories('gen'),
     link_with: libphosphor_dbus,
-    dependencies: sdbusplus_dep
+    dependencies: sdbusplus_dep,
+    variables: ['yamldir=' + meson.project_source_root()],
 )

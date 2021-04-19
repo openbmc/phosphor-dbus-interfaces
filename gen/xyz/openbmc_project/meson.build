@@ -48,6 +48,7 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Condition')
 subdir('Control')
 subdir('Dump')
 subdir('Inventory')

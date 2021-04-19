@@ -2,11 +2,25 @@ description: >
     Implement to provide host interface support
 
 methods:
-    - name: Execute
+    - name: IsHostRunning
+      description: >
+          Utilize the implementation specific protocol (i.e. IPMI, PLDM, ...)
+          of the application implementing this method to determine if the host
+          is running. This should be used in place of the Heartbeat command type
+          below when available.
+      returns:
+        - name: running
+          type: boolean
+          description: >
+            True if the host is running, otherwise false
+
+   - name: Execute
       description: >
           Execute the requested command by the caller. This command will be
           processed in first in first out order. See the Command enum
           description below for details on all supported commands.
+          Users monitor the CommandComplete signal to know when the command
+          has completed and what the status of it was.
       parameters:
           - name: command
             type: enum[self.Command]

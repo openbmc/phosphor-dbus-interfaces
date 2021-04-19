@@ -1,0 +1,27 @@
+description: >
+    Implement to provide information on the condition of the host firmware.
+    The expectation is the implementer of this interface utilize their host
+    protocol (IPMI, PLDM, ...) to check the state of the host firmware running
+    on the system.
+
+properties:
+    - name: CurrentHostCondition
+      type: enum[self.HostCondition]
+      default: 'Unknown'
+      description: >
+          The current condition of the host
+
+enumerations:
+    - name: HostCondition
+      description: >
+        The current condition of the host firmware
+      values:
+        - name: 'Unknown'
+          description: >
+            The condition of the host firmware is unknown
+        - name: 'Off'
+          description: >
+            Host firmware is not responsive to communication
+        - name: 'Running'
+          description: >
+            Host firmware is running and responsive to communication

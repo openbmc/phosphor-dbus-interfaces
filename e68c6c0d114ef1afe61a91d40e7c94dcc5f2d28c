@@ -34,6 +34,24 @@
       "revId": "e68c6c0d114ef1afe61a91d40e7c94dcc5f2d28c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5111846a_66657643",
+        "filename": "xyz/openbmc_project/BIOSConfig/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-19T18:31:58Z",
+      "side": 1,
+      "message": "\u003e The BIOS table would be different for different companies, in that case when redfish creates its own registry from this BIOS table. Here the confusion is what if two companies take the openbmc stack and build the BIOS conf manager -\u003e how to generate a unique name for the BIOS registry.\n\nI don\u0027t understand what this solves or how it could be accomplished.  You could have a system with two different BIOS vendors (consider a Blade-Center type system for example).  How does the BMC know which \"owning entity\" to use here?\n\nIf we need some kind of unique identifier, that is because there are multiple of them in a single system?  Why can\u0027t the dbus path be used to differentiate?\n\n\u003e The format would look something like x.x.x\n\nI\u0027ve gained no more insight from this response.  Please update the commit with your proposal.\n\nAll of the rest of your responses follow in this vein as well.  The purpose of my questions are that you do not have enough information in the commit for us to merge it.  These are questions that any other casual reader should have as well and they cannot be answered by simply pointing backwards to a Gerrit review.",
+      "parentUuid": "8b9d22b3_8607d092",
+      "revId": "e68c6c0d114ef1afe61a91d40e7c94dcc5f2d28c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

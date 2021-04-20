@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da68e4f7_4f7676a9",
+        "filename": "xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-20T20:35:09Z",
+      "side": 1,
+      "message": "Do we want bonding to be part of the interface itself or a separate association / interface for a Bond?",
+      "revId": "4a5cab7ab64ce19c413cdf5d7edc3bc4c8fa3e45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2aae56f4_4f7f39bb",
+        "filename": "xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-20T20:35:09Z",
+      "side": 1,
+      "message": "We should avoid using the terminology \u0027slave\u0027 now.\n\nWhat does primary device mean in this context?  Primary device for the bond?  Make sure at least bond is referenced in the description (if not name).  What does a primary device mean for a bond?",
+      "revId": "4a5cab7ab64ce19c413cdf5d7edc3bc4c8fa3e45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

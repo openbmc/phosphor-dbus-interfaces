@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9fde6067_cefd52b2",
+        "filename": "xyz/openbmc_project/Control/Host.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-04-21T23:36:15Z",
+      "side": 1,
+      "message": "\u003e I would recommend a separate interface for this so that implementations which do not support the other Commands don\u0027t have to make a dummy implementation that throws a \"NotSupported\".\n\nYeah, makes sense. I\u0027m struggling a bit with the right interface name but I\u0027ll put something up and we can discuss.\n\n\u003e We do not have any other properties or methods with \"Is\" prefixes.  I would suggest another name.\n\nSure\n\n\u003e The implication to me, based on the name and description, is that this should be a property.  Is there a reason why it is a method?  Please document the reasons.\n\nI assumed there was a reason we made the \"Execute\" one a method but I can\u0027t some up with any reason so will make a property.\n\n\u003e Will this always be a simple \"yes/no\" answer?  Should there be an enumeration or enumeration-set returned by this?\n\nWe always start simple and get burned later so yeah, I like the idea of an enum that we could expand later if needed.",
+      "parentUuid": "d8f66c6e_65fba0b4",
+      "revId": "b74eac71fae094022a0a820463bec747c576dacd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "41dfa633_b7c257b2",
         "filename": "xyz/openbmc_project/Control/Host.interface.yaml",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2021-04-21T14:43:55Z",
       "side": 1,
       "message": "Lowercase (you don\u0027t need to name returns, but if you do they should be the same style as parameters).",
+      "revId": "b74eac71fae094022a0a820463bec747c576dacd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa358767_3a3eccca",
+        "filename": "xyz/openbmc_project/Control/Host.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-04-21T23:36:15Z",
+      "side": 1,
+      "message": "Moved to a property",
+      "parentUuid": "41dfa633_b7c257b2",
       "revId": "b74eac71fae094022a0a820463bec747c576dacd",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

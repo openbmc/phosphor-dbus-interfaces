@@ -52,6 +52,24 @@
       "revId": "e68c6c0d114ef1afe61a91d40e7c94dcc5f2d28c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e097037b_be53c8ac",
+        "filename": "xyz/openbmc_project/BIOSConfig/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2021-04-21T09:20:32Z",
+      "side": 1,
+      "message": "Hi Patrick.\n\nCurrently, the redfish BIOS registry URI for a single system would be:\n\"/redfish/v1/Registries/BiosAttributeRegistry\"\n\n\n\u003e  You could have a system with two different BIOS vendors (consider a Blade-Center type system for example).  How does the BMC know which \"owning entity\" to use here?\n\nConsidering this case (where there are multiple BIOS Vendors), we would be having equal number of Bios Attribute Registries.\n\nThe requirement is \"we should not be reporting two different BIOS message registries with the same name\".\n\nFor example, say we have two systems (facebook and IBM) having openbmc stack, with the current implementation, we would be displaying two registries with the same name \"BiosAttributeRegistry\"\n\nSo, in terms of Redfish responses, bios registries should have different names for each system.\n\nIn this case, as an initial thought, I thought of defining the \"owning entity\" (BIOS vendor) in the dbus object to differentiate each of the systems implementing BIOS message registries. Hence, we would be having a unique bios registry name in the redfish response, for example: \"/redfish/v1/Registries/\u003cowning entity\u003e_BiosAttributeRegistry\"\n\n\n\u003e  Now as you suggested that why not use the unique Dbus object.\n\nI am hoping, you mean to say that for IBM system, there would be a unique dbus object name v/s for facebook, the D-bus object name would be unique.\nPlease correct me if i am getting it wrong here. Thanks.",
+      "parentUuid": "5111846a_66657643",
+      "revId": "e68c6c0d114ef1afe61a91d40e7c94dcc5f2d28c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

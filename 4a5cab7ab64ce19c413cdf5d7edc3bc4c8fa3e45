@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "d02362a5_e9d46a3d",
+        "filename": "xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-04-21T06:03:37Z",
+      "side": 1,
+      "message": "We just found there is https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Network/Experimental/Bond.interface.yaml that covers this change.\n\nSo abandon this.",
+      "parentUuid": "da68e4f7_4f7676a9",
+      "revId": "4a5cab7ab64ce19c413cdf5d7edc3bc4c8fa3e45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2aae56f4_4f7f39bb",
         "filename": "xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2021-04-20T20:35:09Z",
       "side": 1,
       "message": "We should avoid using the terminology \u0027slave\u0027 now.\n\nWhat does primary device mean in this context?  Primary device for the bond?  Make sure at least bond is referenced in the description (if not name).  What does a primary device mean for a bond?",
+      "revId": "4a5cab7ab64ce19c413cdf5d7edc3bc4c8fa3e45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0319717c_51c37d57",
+        "filename": "xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-04-21T06:03:37Z",
+      "side": 1,
+      "message": "This is actually the config from systemd-networkd.\nBut we could avoid using such terminology.",
+      "parentUuid": "2aae56f4_4f7f39bb",
       "revId": "4a5cab7ab64ce19c413cdf5d7edc3bc4c8fa3e45",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

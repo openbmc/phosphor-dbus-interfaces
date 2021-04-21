@@ -29,6 +29,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Mode')
+generated_others += custom_target(
+    'xyz/openbmc_project/Control/Power/Mode__markdown'.underscorify(),
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Control/Power/Mode.interface.yaml',  ],
+    output: [ 'Mode.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.project_source_root(),
+        'xyz/openbmc_project/Control/Power/Mode',
+    ],
+    build_by_default: true,
+)
+
 subdir('RestorePolicy')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/RestorePolicy__markdown'.underscorify(),

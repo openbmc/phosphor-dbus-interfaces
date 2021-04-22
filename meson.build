@@ -118,7 +118,7 @@ import('pkgconfig').generate(
     name: meson.project_name(),
     version: meson.project_version(),
     description: 'Generated sdbusplus bindings for phosphor-dbus-interfaces',
-    variables: ['yamldir=' + get_option('prefix') / inst_yaml_dir],
+    variables: ['yamldir=' + '${prefix}' / inst_yaml_dir],
 )
 
 phosphor_dbus_interfaces_dep = declare_dependency(

@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e1fac08_7d01817d",
+        "filename": "xyz/openbmc_project/Condition/Host.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-28T15:50:00Z",
+      "side": 1,
+      "message": "How about HostFirmware as the interface then?  I suspect we\u0027ll have other things which might be related to the \u0027host\u0027 as a whole in the future.",
+      "range": {
+        "startLine": 2,
+        "startChar": 61,
+        "endLine": 2,
+        "endChar": 74
+      },
+      "revId": "bd6609ec61df46514cd6935a6c09897dff510735",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93e0088c_5c4f1b77",
+        "filename": "xyz/openbmc_project/Condition/Host.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-28T15:50:00Z",
+      "side": 1,
+      "message": "FirmwareCondition to go along with the interface change also?  \n\nI don\u0027t think we need to be too worried about property name collisions.  It is up to you if you want to do property:FirmwareCondition/enum:FirmwareConditions or property:CurrentFirmwareCondition/enum:FirmwareCondition.  Either of those seem reasonable to me.",
+      "revId": "bd6609ec61df46514cd6935a6c09897dff510735",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2846e575_de654dc3",
+        "filename": "xyz/openbmc_project/Condition/Host.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-28T15:50:00Z",
+      "side": 1,
+      "message": "👍.  Thanks for putting a default.",
+      "revId": "bd6609ec61df46514cd6935a6c09897dff510735",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de4d0ce9_5cb81290",
+        "filename": "xyz/openbmc_project/Control/Host.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-04-28T15:50:00Z",
+      "side": 1,
+      "message": "Might suggest adding a deprecated indication somewhere on this one?",
+      "revId": "bd6609ec61df46514cd6935a6c09897dff510735",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

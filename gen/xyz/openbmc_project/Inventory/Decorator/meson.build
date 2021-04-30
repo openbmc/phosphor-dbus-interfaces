@@ -182,13 +182,13 @@ generated_others += custom_target(
 subdir('UniqueIdentifier')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/UniqueIdentifier__markdown'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Decorator/UniqueIdentifier.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Inventory/Decorator/UniqueIdentifier.interface.yaml',  ],
     output: [ 'UniqueIdentifier.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.source_root(),
+        '--directory', meson.project_source_root(),
         'xyz/openbmc_project/Inventory/Decorator/UniqueIdentifier',
     ],
     build_by_default: true,

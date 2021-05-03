@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b207785_3ea2b1ed",
+        "filename": "gen/xyz/openbmc_project/Inventory/Item/meson.build",
+        "patchSetId": 6
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-03T14:21:59Z",
+      "side": 1,
+      "message": "The `./gen/regenerate_meson` needs to be re-ran on this.  The underlying meson generator changed recently and this blob is now outdated (from your simple rebase).  You\u0027ll also see CI is failing because it is catching that this blob is out-of-date.",
+      "revId": "7c9f6c2c70c379ddf6bca630ca41b8e3d672a94d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

@@ -34,3 +34,10 @@ enumerations:
           description: >
               Hostboot dump is collected during a boot failure during the
               hostboot booting phase.
+        - name: 'Hardware'
+          desription: >
+              Hardware dump is collected during a system checkstop.
+        - name: 'SystemInitiated'
+          description: >
+              Indicates that the dump is a system initiated dump due to
+              a hardware or software failure.

@@ -1,0 +1,20 @@
+description: >
+    An MCTP Network may provide an MCTP Network ID that can be used to
+    differentiate different MCTP Networks when more than one MCTP Network can be
+    accessed by an entity such as system software. The Network ID is also used
+    when an entity has more than one point of access to the MCTP Network. In
+    this case, the MCTP Network ID enables the entity to tell whether the access
+    points provide access to the same MCTP Network or to different MCTP
+    Networks.
+
+    A system implementation can contain multiple MCTP Networks. Each MCTP
+    Network has its own separate EID space. There is no coordination of EIDs
+    between MCTP Networks. EIDs can overlap between MCTP Networks.
+
+properties:
+
+    - name: NetworkId
+      type: int32
+      description: >
+          A unique identifier to distinguish each independent MCTP network
+          within a platform.

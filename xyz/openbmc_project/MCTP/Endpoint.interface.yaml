@@ -1,0 +1,35 @@
+description: >
+    Describe an MCTP endpoint. It is an MCTP communication terminus. An MCTP
+    endpoint is a terminus or origin of MCTP packets or messages. The combined
+    functionality within a physical device that communicates using the MCTP
+    transport protocol and handles MCTP control commands. This includes
+    MCTP-capable management controllers and managed devices.
+
+properties:
+
+    - name: EID
+      type: byte
+      description: >
+          The logical address used to route MCTP messages to a specific MCTP
+          endpoint. A numeric handle (logical address) that uniquely identifies
+          a particular MCTP endpoint within a system for MCTP communication and
+          message routing purposes. Endpoint IDs are unique among MCTP
+          endpoints that comprise an MCTP communication network within a
+          system. MCTP EIDs are only unique within a particular MCTP network.
+          That is, they can be duplicated or overlap from one MCTP network to 
+          the next. This is also referred to as "endpoint ID" and abbreviated
+          as "EID".
+
+    - name: SupportedMessageTypes
+      type: array[byte]
+      description: >
+          List of MCTP message types supported by the MCTP endpoint. MCTP
+          message type is an enumeration that identifies the type of the
+          communication payload in an MCTP message. The well defined message
+          types are MCTP Control(0x00), PLDM(0x01), NC-SI over MCTP(0x02),
+          Ethernet over MCTP(0x03), NVM Express Management Messages over
+          MCTP(0x04) and SPDM over MCTP(0x05). There are ranges for vendor
+          defined message types. All the message types are specified in the
+          DSP0239 specification. A device that supports a given message type
+          may not support that message type equally across all buses that
+          connect to the device.

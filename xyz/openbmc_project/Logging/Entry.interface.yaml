@@ -33,6 +33,13 @@ properties:
           this error log has been resolved. This will start out 'false' by
           default. Setting this to 'true' will NOT result in the error log being
           deleted.
+    - name: CallHome
+      type: boolean
+      default: false
+      description: >
+          When this flag is set it indicates that an error event that requires
+          a service action by an IBM CE or a skilled service provider to replace
+          hardware part or update code to correct the error.
     - name: UpdateTimestamp
       type: uint64
       description: >

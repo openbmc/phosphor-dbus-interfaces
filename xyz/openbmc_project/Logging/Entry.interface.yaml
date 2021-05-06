@@ -33,6 +33,14 @@ properties:
           this error log has been resolved. This will start out 'false' by
           default. Setting this to 'true' will NOT result in the error log being
           deleted.
+    - name: ServiceProviderNotified
+      type: boolean
+      default: false
+      description: >
+          This property when set to 'true' indicates that this event log should
+          be notified to the service provider, if that is implemented on the
+          system. An event of this type requires a service action to replace the
+          hardware part or update code to correct the error.
     - name: UpdateTimestamp
       type: uint64
       description: >

@@ -22,6 +22,30 @@
       "revId": "ab2aee493a91d1d4c6b0bfdc17b3d1186c596c12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "75acc220_8e3fe104",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-05-10T21:23:01Z",
+      "side": 1,
+      "message": "I think it would be more accurate as ServiceProviderNotify since that\u0027s what it will actually represent.  The only weirdness there is bmcweb will end up mapping this Notify D-Bus property to the Notified Redfish property",
+      "parentUuid": "0c169e7c_30fa644d",
+      "range": {
+        "startLine": 36,
+        "startChar": 27,
+        "endLine": 36,
+        "endChar": 35
+      },
+      "revId": "ab2aee493a91d1d4c6b0bfdc17b3d1186c596c12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "e315b749_9c2e3403",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-05-10T15:59:31Z",
+      "side": 1,
+      "message": "The next official Redfish release is targeted for May.  There\u0027s a preview release at https://www.dmtf.org/dsp/DSP8010.  From LogEntry.v1_9_0.json in that zip file:\n\n                \"ServiceProviderNotified\": {\n                    \"description\": \"Indicates if the log entry has been sent to the service provider.\",\n                    \"longDescription\": \"This property shall contain an indication if the log entry has been sent to the service provider.\",\n                    \"readonly\": true,\n                    \"type\": [\n                        \"boolean\",\n                        \"null\"\n                    ],\n                    \"versionAdded\": \"v1_9_0\"\n                },\n\n\nThere\u0027s a slight difference between what we\u0027re using the property for and what Redfish put in.  We are using it for: this needs to be called home (or: the service provided should be notified), instead of: the notification was already done.  Notification is all done off our BMC, so we will never know what was actually sent.  However, we still have use for the property in Redfish.\n\nThis could of course be on a unique interface as well if necessary.",
+      "parentUuid": "5f4a8b97_83f38205",
+      "revId": "cad6aeb2481e66e12dd07ea9ba8574cbd6d5a5d0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1f3aef32_98623614",
         "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
         "patchSetId": 8

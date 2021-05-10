@@ -34,6 +34,24 @@
       "revId": "cc420a8f24dae1ccb93abd6a6019833793242d2e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "58080e28_0f141d90",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-05-10T12:42:06Z",
+      "side": 1,
+      "message": "The destination endpoint described by this interface can be behind a MCTP bridge. The goal is to have upper layer protocol like PLDM abstracted from the MCTP network and topology information.\n\nIf the case is that the BMC has multiple local physical interfaces[1], and the suggestion is that PLDM should be able to specify the interface the MCTP message goes out. My view is that it should be another interface that exposes the possible transport types to upper layer protocols.\n\n[1]https://github.com/openbmc/docs/blob/master/designs/mctp/mctp-kernel.md#structure-interfaces--networks",
+      "parentUuid": "a7051373_9e3963a8",
+      "revId": "cc420a8f24dae1ccb93abd6a6019833793242d2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

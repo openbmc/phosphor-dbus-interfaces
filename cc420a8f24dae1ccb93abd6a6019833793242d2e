@@ -16,6 +16,24 @@
       "revId": "cc420a8f24dae1ccb93abd6a6019833793242d2e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a7051373_9e3963a8",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-05-10T12:08:20Z",
+      "side": 1,
+      "message": "I think you need connected bus type because for a case where an implementation assigns the same EID to two bus paths to an endpoint, the bus type will enable upper layers to pick one (based on speed/redundancy). The \"bus type\" that I\u0027m talking about is \"MCTP physical medium identifiers\" from DSP0239.",
+      "parentUuid": "56c0f65a_da072f2e",
+      "revId": "cc420a8f24dae1ccb93abd6a6019833793242d2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "56c0f65a_da072f2e",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-05-10T11:58:30Z",
+      "side": 1,
+      "message": "I think some of the detail in the commit message should be described here as well - what typically implements this, and what typically uses this? Also you should mention that the implementer may also implement the UUID D-Bus interface since that is an MCTP specified way to aid identification.\n\nSome of the text here (and the property description below) might be from DSP0236 and it should be fine to just point to that. More relevant here is the why and how. You need to specify details like:\n- when are objects supposed to be created by the implementer (post MCTP discovery?)?\n- does a bridge endpoint need to be specified?\n- one object per discovered endpoint?\n- why are EID and SupportedMessageTypes needed to be implemented?\n- UUID?\n- what should happen if an endpoint goes down?\n- lifetime of the objects\n- is there a well known root path that implementers must know of?\n- what about connected bus type (where applicable)?",
+      "revId": "cc420a8f24dae1ccb93abd6a6019833793242d2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

@@ -46,6 +46,30 @@
       "revId": "3bd3c1bbc0fdcc0ae8f2c74b6d1d823f88ada13c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "57cb85ba_5fb59dab",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-05-11T14:18:33Z",
+      "side": 1,
+      "message": "The service provider is a different entity than whatever is receiving Redfish alerts.  In fact, it could be that the alert receiver is the one notifying the service provider based on the value of his property.\n\nIn our case, the service provider is IBM, as software running in an IBM site.  We have management consoles on the BMC network that receive Redfish events from the BMCs, and then can send them to IBM (after customer opt-ins, agreements, warrranties, etc) based on if the event log said they needed to be sent (technically really the manager will look inside a PEL, and we want this Redfish field so the user knows it was/will be sent).\n\nWe cannot do this based on severity, for us we figure it out from a PEL field.  In fact as we match our IBM PEL event logs to these event logs, we would set it based on the PEL contents when the event log/PEL is created.\n\nIf this would need to only be enabled based on a feature, then it would have to be on its own interface, which is an option.  Many interfaces in PDI though have properties that are only used by a subset of implementers, so I figured we\u0027d start as a property on an existing interface.",
+      "parentUuid": "6cf5bcef_be5f94bd",
+      "range": {
+        "startLine": 41,
+        "startChar": 13,
+        "endLine": 41,
+        "endChar": 45
+      },
+      "revId": "3bd3c1bbc0fdcc0ae8f2c74b6d1d823f88ada13c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b258f4ac_223cbbe3",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-05-11T07:48:44Z",
+      "side": 1,
+      "message": "To me this is a bit confusing in the context of Redfish alerts (a push event from the BMC using something like SSE), which is a form of notification as well. Can this property co-exist with SSE?",
+      "range": {
+        "startLine": 41,
+        "startChar": 13,
+        "endLine": 41,
+        "endChar": 45
+      },
+      "revId": "3bd3c1bbc0fdcc0ae8f2c74b6d1d823f88ada13c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

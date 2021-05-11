@@ -88,6 +88,24 @@
       "revId": "cc420a8f24dae1ccb93abd6a6019833793242d2e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "60f6e5e0_e08ea08e",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2021-05-11T09:03:33Z",
+      "side": 1,
+      "message": "\u003e @andrew - I don\u0027t see how this d-bus interface implies pldmd will send MCTP messages over D-Bus (it doesn\u0027t say that anywhere).\n\nOkay, I was just concerned by:\n\n\u003e The goal is to have upper layer protocol like PLDM abstracted from the MCTP network and topology information.\n\nContinuing:\n\n\u003e That\u0027s definitely not the intent (and maybe Tom should clarify - see my first comment above). This is more about MCTP discovery, specifically dynamic discovery (PCIe VDM). In the MCTP kernel design, it isn\u0027t clear to me what entity performs discovery and assigns EID\n\nThat\u0027s covered here:\n\nhttps://github.com/openbmc/docs/blob/master/designs/mctp/mctp-kernel.md#mctp-control-protocol-implementation\n\n\u003e and subsequently how does that entity make that information (all EIDs discovered/configured statically, UUIDs if present, transport types, etc) available to upper layer protocols like PLDM.\n\nAll present EIDs would be present in the route table, both static and dynamic. I don\u0027t think the route table should contain route entries for dynamic EIDs that have been provided as part of a device pool but yet to be allocated to an actual endpoint.\n\nAs for transport type, are you looking for the transport type of local interfaces or the transport that the endpoint is attached to?\n\n\u003e I don\u0027t think PLDM for eg cares about how a message is routed, so it doesn\u0027t care about the routing table.\n\nThe point here is that the route table gives you some of the information your after. You don\u0027t necessarily care about the routes themselves.",
+      "parentUuid": "1d290985_f393e9e8",
+      "revId": "cc420a8f24dae1ccb93abd6a6019833793242d2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

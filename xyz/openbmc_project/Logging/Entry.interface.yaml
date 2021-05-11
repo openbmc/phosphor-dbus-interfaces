@@ -22,6 +22,10 @@ properties:
       type: string
       description: >
           The message description of the error event entry.
+    - name: EventId
+      type: string
+      description: >
+          An implementation dependent unique identifier for this event. 
     - name: AdditionalData
       type: array[string]
       description: >

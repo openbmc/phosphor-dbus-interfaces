@@ -52,6 +52,24 @@
       "revId": "cc420a8f24dae1ccb93abd6a6019833793242d2e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f6946327_c25bc2b4",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2021-05-11T00:09:02Z",
+      "side": 1,
+      "message": "How are you expecting pldmd to send its MCTP messages? It feels like the answer might be \"over D-Bus\" which is not the direction MCTP in OpenBMC is headed.\n\nWhy should mctpd expose a D-Bus implementation of what is effectively the routing table when this can be queried by applications through standard kernel interfaces?\n\nThe MCTP socket API should provide a mechanism for binding a socket to a specific interface on the BMC, which will allow you to route packets directly out that interface. Routing table metrics provide information about which interface is preferred in the face of multiple possible routes.",
+      "parentUuid": "58080e28_0f141d90",
+      "revId": "cc420a8f24dae1ccb93abd6a6019833793242d2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

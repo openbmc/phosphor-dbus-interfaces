@@ -9,7 +9,9 @@ properties:
     - name: Id
       type: uint32
       description: >
-          The error event entry id number.
+          The error event entry id number. This property can be a
+          sequence number which identifies a resource within a
+          collection and it must have a value.
     - name: Timestamp
       type: uint64
       description: >
@@ -22,6 +24,13 @@ properties:
       type: string
       description: >
           The message description of the error event entry.
+    - name: EventId
+      type: string
+      description: >
+          An implementation-dependent unique identifier for this event. This
+          property is different from Id in the sense that Id is a unique number
+          per event but EventId is an optional identifier that is associated
+          with the event. The content of this property is user-defined.
     - name: AdditionalData
       type: array[string]
       description: >

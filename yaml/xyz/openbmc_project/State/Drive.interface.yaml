@@ -7,3 +7,70 @@ properties:
       default: false
       description: >
           Describes if the drive is currently rebuilding.
+    - name: RequestedDriveTransition
+      type: enum[self.Transition]
+      default: "NotSupported"
+      description: >
+          The desired Drive transition
+    - name: CurrentDriveState
+      type: enum[self.DriveState]
+      description: >
+          The current state of the Drive and is a read-only property.
+      flags:
+          - readonly
+    - name: UptimeCounter
+      type: uint64
+      default: 0
+      description: >
+          Counter in milliseconds since the last reboot event.
+          The property use 0 as default if it is not supported since that is
+          what other services do like the boot time counter properties on
+          systemd.
+      flags:
+          - readonly
+
+enumerations:
+    - name: Transition
+      description: >
+          The desired transition for the Drive
+      values:
+          - name: "Reboot"
+            description: >
+                The Drive should be rebooted.
+          - name: "HardReboot"
+            description: >
+                The Drive should be non-gracefully rebooted.
+          - name: "Powercycle"
+            description: >
+                The Drive should be powercycled.
+          - name: "None"
+            description: >
+                No transition is in progress.
+          - name: "NotSupported"
+            description: >
+                Transition request is not supported.
+
+    - name: DriveState
+      description: >
+          The current state of the Drive
+      values:
+          - name: "Ready"
+            description: >
+                Ready implies all services started and are running successfully
+          - name: "NotReady"
+            description: >
+                Not ready implies not all services have started or are not
+                running successfully
+          - name: "Offline"
+            description: >
+                The Drive is ready, but waiting for external action to enable it
+          - name: "Debug"
+            description: >
+                The Drive is ready and in debug mode. The functionilities might
+                be limited
+          - name: "UpdateInProgress"
+            description: >
+                UpdateInProgress implies the Drive is in firmware update mode.
+                Current DriveState will be set to "UpdateInProgress" while
+                starting firmware download and reset to Ready, once activation
+                is done or error case during update process.

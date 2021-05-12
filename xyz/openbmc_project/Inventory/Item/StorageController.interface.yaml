@@ -1,2 +1,34 @@
 description: >
     Implement to provide storage controller attributes.
+
+methods:
+    - name: Reset
+      description: >
+          Reset the storage device.
+      returns:
+          - name: status
+            type: boolean
+            description: >
+                Status of the reset storage command.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+properties:
+    - name: Version
+      type: string
+      description: >
+          Version of the storage device.
+    - name: ROGPIO
+      type: array[boolean]
+      description: >
+          Read only GPIOs
+    - name: RWGPIO
+      type: array[boolean]
+      description: >
+          Read Write GPIOs
+    - name: Debug
+      type: array[string]
+      description: >
+          Extra debug information for the storage device.
+      flags:
+          - readonly

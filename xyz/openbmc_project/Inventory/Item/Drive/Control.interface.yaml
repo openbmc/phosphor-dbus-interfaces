@@ -1,0 +1,28 @@
+description: >
+  Implement to provide control interfaces for drives.
+
+methods:
+  - name: Reset
+    description: >
+      Trigger the reset operation on the drive.
+    returns:
+      - name: result
+        type: boolean
+        description: >
+          Result of reset operation on the drive.
+            true: Able to succefully reset the drive.
+            false: Failed to reset the drive.
+    errors:
+      - xyz.openbmc_project.Common.Error.InternalFailure
+
+properties:
+  - name: Control
+    type: array[boolean]
+    description: >
+      GPIO values to control/trigger the services in the drive.
+      This maybe include interface like disabling watchdog or triggering resets.
+  - name: OperatingMode
+    type: array[boolean]
+    description: >
+      GPIO values to enable/disable the operating modes for the drive.
+      This maybe include debug mode or manufacturing mode.

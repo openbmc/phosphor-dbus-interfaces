@@ -162,6 +162,7 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Drive')
 subdir('Ethernet')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/Ethernet__markdown'.underscorify(),

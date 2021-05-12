@@ -1,2 +1,25 @@
 description: >
     Implement to provide drive attributes.
+
+properties:
+    - name: BootFailureCount
+      type: int64
+      description: >
+          Number of times the drive failed to boot.
+    - name: Mode
+      type: array[boolean]
+      description: >
+          GPIO values representing the operation mode of the drive.
+          This may include status on debug mode or manufacturing mode.
+    - name: Triggered
+      type: array[boolean]
+      description: >
+          GPIO values representing the tirggered state of drive.
+          This may include a information on wether watchdog is triggered.
+    - name: Protected
+      type: array[boolean]
+      description: >
+          GPIO values representing the pretected state of the drive.
+          This may include information on write protection for registers.
+      flags:
+          - readonly

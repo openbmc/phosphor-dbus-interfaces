@@ -1,0 +1,17 @@
+description: >
+  Implement to provide power interfaces for drives.
+
+properties:
+  - name: State
+    type: array[boolean]
+    description: >
+      GPIO values for the power state of the drive.
+      This maybe include state of different power signals.
+    flags:
+      - readonly
+  - name: PowerSequence
+    type: int64
+    description: >
+      The current power sequence state of the drive.
+    flags:
+      - readonly

@@ -1,0 +1,18 @@
+description: >
+  Implementation of Drive power management.
+
+properties:
+  - name: PowerGood
+    type: array[byte]
+    description: >
+      Power good signal for different power signal in the Drive.
+      Each index represents a different signal with non-zero indicates good
+      signal.
+    flags:
+      - readonly
+  - name: PowerSequence
+    type: int64
+    description: >
+      The current power sequence state of the drive.
+    flags:
+      - readonly

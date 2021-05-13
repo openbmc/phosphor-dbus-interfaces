@@ -52,6 +52,24 @@
       "revId": "e1ba0c1a41bb0e2337d1c1c94b2d6ffb4dd46a31",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cdb72563_f892247d",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001063
+      },
+      "writtenOn": "2021-05-13T20:07:49Z",
+      "side": 1,
+      "message": "\u003e We need some better language in description then to make a clear delineation.  We used the word \"ID\" in both of them for two different purposes.\n-Done\n\n\u003e If I were implementing this dbus object, how would I know what is suppose to be in EventId?  (And I need you to clarify this in the commit because frankly, I have no idea what you\u0027re intending to go here.)\n- updated commit message and the description\n\n\u003e Since our Entries are currently created from metadata that is in this repository, connected to phosphor-logging, how does this affect phosphor-logging and the metadata in this repository? \n- This is user defined, we add SRC and 8 hex double-words to make it unique\n\n\u003e Wouldn\u0027t a sha256(Message) be a \"Unique Identifier for the Event\"?\n- it can be, since its implementation defined",
+      "parentUuid": "44c48060_0710762f",
+      "revId": "e1ba0c1a41bb0e2337d1c1c94b2d6ffb4dd46a31",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

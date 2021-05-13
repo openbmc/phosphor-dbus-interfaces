@@ -26,6 +26,13 @@ properties:
       type: array[string]
       description: >
           Additional information in the form of metadata field strings VAR=val
+    - name: Resolution
+      type: string
+      description: >
+          Suggestion for error resolution of this event. The service provider
+          can use this suggestion to replace parts to resolve a situation that
+          caused the log entry. This property can have an entry from the message
+          registry or a more specific resolution suggestion to fix this issue.
     - name: Resolved
       type: boolean
       description: >

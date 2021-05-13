@@ -26,6 +26,10 @@ properties:
       type: array[string]
       description: >
           Additional information in the form of metadata field strings VAR=val
+    - name: Resolution
+      type: string
+      description: >
+          Suggestion for error resolution of this event.
     - name: Resolved
       type: boolean
       description: >

@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "06495507_6fbe8644",
+        "filename": "xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-13T16:27:59Z",
+      "side": 1,
+      "message": "yeah, that\u0027s probably right.\n\nShould the interface be\n\nxyz/openbmc_project/Inventory/Item/ResettableStorage.interface.yaml instead?\n\nJust for context, this is for SSDs.\n\n----\n\nI will rename after resolving the other issues.",
+      "parentUuid": "5e2e8c16_ba502d0c",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 17
+      },
+      "revId": "bbb47a06d5bd6ed77375c245d7dd891e5751e342",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "42240b43_9e8c48bc",
         "filename": "xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2021-05-13T00:00:21Z",
       "side": 1,
       "message": "I\u0027m assuming you didn\u0027t mean command here?",
+      "range": {
+        "startLine": 12,
+        "startChar": 44,
+        "endLine": 12,
+        "endChar": 51
+      },
+      "revId": "bbb47a06d5bd6ed77375c245d7dd891e5751e342",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b01f75b6_8723a062",
+        "filename": "xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-13T16:27:59Z",
+      "side": 1,
+      "message": "I think meant it?\n\nLike it is a command that reset storage device?\n\nCould you explain what your concerns are?\n\nMaybe its better with,\n\n```\nResult of triggering the reset storage command.\n```\n?",
+      "parentUuid": "42240b43_9e8c48bc",
       "range": {
         "startLine": 12,
         "startChar": 44,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "e0064dc7_c1b55363",
+        "filename": "xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-13T16:27:59Z",
+      "side": 1,
+      "message": "sounds good. \n\nSo we can remove this. and when we add the d-bus object, Add the other interface instead?",
+      "parentUuid": "8ab6601d_4e71db59",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 40
+      },
+      "revId": "bbb47a06d5bd6ed77375c245d7dd891e5751e342",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cbf36923_87282374",
         "filename": "xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
         "patchSetId": 2
@@ -82,6 +154,30 @@
       "writtenOn": "2021-05-13T00:00:21Z",
       "side": 1,
       "message": "These are generally lower level than we\u0027d publish on dbus.  Direct access to gpio is generally represented as more structured APIs that represent what the GPIOs actually do (light an LED, reset a device, ect).",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 26
+      },
+      "revId": "bbb47a06d5bd6ed77375c245d7dd891e5751e342",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6ea14c99_58af9981",
+        "filename": "xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-13T16:27:59Z",
+      "side": 1,
+      "message": "yeah, I agree.\n\nI am not sure how we want to approach this... since it hard to group all the different requirements that different hardware might have.\n\nIs it better to have a methods and do all the hardware specific stuff there.\n\nLike GetGPIO(),\n\nThen in the class that inherent the API, it will have the list of GPIOs that it is in charged of with all different permission types.\n\nOr is that bad design?",
+      "parentUuid": "cbf36923_87282374",
       "range": {
         "startLine": 21,
         "startChar": 0,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "a5523ebb_ab8867b3",
+        "filename": "xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-13T16:27:59Z",
+      "side": 1,
+      "message": "same as previous comments. Use method instead?",
+      "parentUuid": "f7c8f2a4_d054901a",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 17
+      },
+      "revId": "bbb47a06d5bd6ed77375c245d7dd891e5751e342",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ff45d528_31daecd8",
         "filename": "xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
         "patchSetId": 2
@@ -128,6 +248,30 @@
       "writtenOn": "2021-05-13T00:00:21Z",
       "side": 1,
       "message": "When you move these, better descriptions for all this stuff would be good.",
+      "range": {
+        "startLine": 32,
+        "startChar": 10,
+        "endLine": 32,
+        "endChar": 57
+      },
+      "revId": "bbb47a06d5bd6ed77375c245d7dd891e5751e342",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "95c5d92b_e4b6a95a",
+        "filename": "xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-13T16:27:59Z",
+      "side": 1,
+      "message": "yep, just initial draft for now. \n\nI was about to mark as WIP... I guess I can\u0027t even send out message like that. 😞",
+      "parentUuid": "ff45d528_31daecd8",
       "range": {
         "startLine": 32,
         "startChar": 10,

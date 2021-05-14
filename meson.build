@@ -12,8 +12,8 @@ project('phosphor-dbus-interfaces', 'cpp',
 # Get sdbusplus dependency.
 sdbusplus_dep = dependency('sdbusplus', required: false)
 if sdbusplus_dep.found()
-    sdbusplusplus_prog = find_program('sdbus++')
-    sdbuspp_gen_meson_prog = find_program('sdbus++-gen-meson')
+    sdbusplusplus_prog = find_program('sdbus++', native: true)
+    sdbuspp_gen_meson_prog = find_program('sdbus++-gen-meson', native: true)
 else
     sdbusplus_proj = subproject('sdbusplus', required: true)
     sdbusplus_dep = sdbusplus_proj.get_variable('sdbusplus_dep')

@@ -128,6 +128,7 @@ import('pkgconfig').generate(
 )
 
 phosphor_dbus_interfaces_dep = declare_dependency(
+    sources: generated_files_headers,
     include_directories: include_directories('gen'),
     link_with: libphosphor_dbus,
     dependencies: sdbusplus_dep,

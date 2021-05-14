@@ -5,6 +5,7 @@ project('phosphor-dbus-interfaces', 'cpp',
         'cpp_std=c++20',
         'warning_level=3',
         'werror=true',
+        'generate_md=' + (meson.is_subproject() ? 'false' : 'true'),
     ],
     version: '1.0.0',
 )
@@ -66,7 +67,7 @@ custom_target(
     output: 'md',
     capture: true,
     depends: generated_others,
-    build_by_default: true)
+    build_by_default: get_option('generate_md'))
 
 generated_files_headers = []
 generated_files_cpp = []

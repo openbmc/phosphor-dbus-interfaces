@@ -112,6 +112,7 @@ install_subdir(
 libphosphor_dbus = library(
     'phosphor_dbus',
     generated_sources,
+    implicit_include_directories: false,
     include_directories: include_directories('gen'),
     dependencies: sdbusplus_dep,
     version: meson.project_version(),

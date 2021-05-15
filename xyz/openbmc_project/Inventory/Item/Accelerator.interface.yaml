@@ -3,3 +3,9 @@ description: >
     accelerator used to perform some functions more efficiently than is
     possible in software running on a general-purpose CPU. Examples of
     possible hardware accelerators include: GPUs, FPGAs, and ASICs.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          The type of accelerator.

@@ -3,3 +3,25 @@ description: >
     accelerator used to perform some functions more efficiently than is
     possible in software running on a general-purpose CPU. Examples of
     possible hardware accelerators include: GPUs, FPGAs, and ASICs.
+
+properties:
+    - name: Type
+      type: enum[self.AcceleratorType]
+      default: 'Unknown'
+      description: >
+          The type of accelerator.
+
+enumerations:
+    - name: AcceleratorType
+      description: >
+          Possible accelerator type
+      values:
+        - name: 'FPGA'
+          description: >
+              An FPGA.
+        - name: 'GPU'
+          description: >
+              A GPU.
+        - name: 'Unknown'
+          description: >
+              An unknown type.

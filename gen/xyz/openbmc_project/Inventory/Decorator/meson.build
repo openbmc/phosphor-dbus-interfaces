@@ -164,6 +164,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('PowerLimit')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/PowerLimit__markdown'.underscorify(),
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml',  ],
+    output: [ 'PowerLimit.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.project_source_root(),
+        'xyz/openbmc_project/Inventory/Decorator/PowerLimit',
+    ],
+    build_by_default: true,
+)
+
 subdir('Replaceable')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/Replaceable__markdown'.underscorify(),

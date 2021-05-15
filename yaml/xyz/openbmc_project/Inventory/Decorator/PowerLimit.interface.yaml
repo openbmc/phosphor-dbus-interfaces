@@ -1,0 +1,12 @@
+description: >
+    Implement to provide power limit attributes.
+
+properties:
+    - name: MinPowerWatts
+      type: size
+      description: >
+        The lower bound of the total power consumed in watts.
+    - name: MaxPowerWatts
+      type: size
+      description: >
+        The upper bound of the total power consumed in watts.

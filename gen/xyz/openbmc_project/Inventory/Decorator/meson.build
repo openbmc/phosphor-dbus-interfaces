@@ -89,6 +89,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('Dimension')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/Dimension__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Inventory/Decorator/Dimension.interface.yaml',  ],
+    output: [ 'Dimension.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.source_root(),
+        'xyz/openbmc_project/Inventory/Decorator/Dimension',
+    ],
+    build_by_default: true,
+)
+
 subdir('I2CDevice')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/I2CDevice__markdown'.underscorify(),

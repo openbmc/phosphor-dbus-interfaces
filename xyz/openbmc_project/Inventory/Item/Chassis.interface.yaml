@@ -6,3 +6,13 @@ properties:
       type: string
       description: >
           The type of physical form factor of the chassis.
+    - name: MinPowerWatts
+      type: uint32
+      description: >
+        The lower bound of the total power consumed by the chassis
+        in watts.
+    - name: MaxPowerWatts
+      type: uint32
+      description: >
+        The upper bound of the total power consumed by the chassis
+        in watts.

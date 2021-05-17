@@ -1,0 +1,41 @@
+descirption: >
+    Implement to provide the isolated hardware entry attributes.
+
+    Object which implements this interface should implement
+    xyz.openbmc_project.Object.Delete to allow the deletion of
+    individual isolated hardware object.
+
+    Object which implements this interface must implement
+    xyz.openbmc_project.Time.EpochTime for the isolated hardware
+    creation time.
+
+properties:
+    - name: Id
+      type: uint32
+      description: >
+          The isolated hardware record id.
+    - name: ErrorLog
+      type: path
+      description: >
+          The error log which is caused the hardware isolation.
+    - name: IsolatedHardware
+      type: path
+      description: >
+          The inventory item path which is isolated.
+    - name: Severity
+      type: enum[self.Level]
+      description: >
+          The severity of isolated hardware.
+
+enumerations:
+    - name: Level
+      description: >
+          Possible severity for isolated hardware.
+      values:
+        - name: Critical
+          description: >
+              Critical hardware to repair or replace.
+        - name: Warning
+          description: >
+              System can boot without the isolated hardware but,
+              will lose the system configuration benefits of isolated hardware.

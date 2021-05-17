@@ -1,0 +1,36 @@
+description: >
+    This interface contains create method, which can be implemented to
+    create an xyz.openbmc_project.HardwareIsolation.Entry object
+    which will use to provide the information of isolated hardware.
+
+methods:
+    - name: Create
+      description: >
+          Create an xyz.openbmc_project.HardwareIsolation.Entry object
+          if any of the hardware, needs to be isolated. This interface
+          can be used if want to isolate hardware without an error log,
+          for example, the user voluntarily tried to isolate hardware.
+      parameters:
+        - name: IsolateHardware
+          type: path
+          description: >
+              The hardware inventory path which is needs to isolate.
+        - name: Severity
+          type: enum[xyz.openbmc_project.HardwareIsolation.Entry.Type]
+          description: >
+              The severity of hardware isolation.
+      returns:
+        - name: Path
+          type: path
+          description: >
+              The path of created xyz.openbmc_project.HardwareIsolation.Entry
+              object.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.TooManyResources
+          - xyz.openbmc_project.Common.File.Error.Open
+          - xyz.openbmc_project.Common.File.Error.Seek
+          - xyz.openbmc_project.Common.File.Error.Read
+          - xyz.openbmc_project.Common.File.Error.Write
+          - xyz.openbmc_project.HardwareIsolation.Errors.Error.IsolatedAlready
+          - xyz.openbmc_project.HardwareIsolation.Errors.Error.ManualIsolationNotAllowed

@@ -1,0 +1,21 @@
+description: >
+    This interface contains create method, which can be implement to
+    create a org.open_power.HardwareIsolation.Entry object
+    which will use to provide the information of isolated hardware.
+
+methods:
+    - name: Create
+      description: >
+          Create a org.open_power.HardwareIsolation.Entry object if want
+          to isolate the any hardware part.
+      parameters:
+        - name: IsolateHardware
+          type: path
+          description: >
+              The hardware inventory item path which is needs to isolate.
+      returns:
+        - name: Path
+          type: path
+          description: >
+              The path of created org.open_power.HardwareIsolation.Entry
+              object.

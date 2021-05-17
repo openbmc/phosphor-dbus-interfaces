@@ -1,0 +1,46 @@
+description: >
+    This interface contains create method, which can be implemented to
+    create an org.open_power.HardwareIsolation.Entry object
+    which will use to provide the information of isolated hardware.
+
+methods:
+    - name: Create
+      description: >
+          Create an org.open_power.HardwareIsolation.Entry object if any
+          of hardware, need to be isolated.
+      parameters:
+        - name: IsolateHardware
+          type: variant[path, array[byte], string]
+          description: >
+              The hardware path which is needs to isolate.
+              The first type in the variant is the hardware inventory path
+              for example,
+              "/xyz/openbmc_project/inventory/system/chassis/motherboard/cpu0".
+              The second type in the variant is the hardware entity path which
+              is key between BMC OpenPOWER based applications and
+              host applications. for example,
+              "23 01 00 02 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00".
+              The Third type in the variant is the hardware physical path
+              which is equivalent to entity path but, human-understandable
+              format. for example, "physical:sys-0/node-0/proc-0".
+              One of the types from variant can be used to isolate hardware.
+        - name: Severity
+          type: enum[org.open_power.HardwareIsolation.Entry.Type]
+          description: >
+              The severity of isolating hardware.
+        - name: BmcErrorLogId
+          type: uint32
+          description: >
+              The BMC error log caused the isolation of hardware.
+              This parameter can be optional (pass 0) if the severity type
+              is org.open_power.HardwareIsolation.Entry.Type.User.
+      returns:
+        - name: Path
+          type: path
+          description: >
+              The path of created org.open_power.HardwareIsolation.Entry
+              object.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.NotAllowed

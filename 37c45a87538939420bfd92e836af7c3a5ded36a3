@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6b1982a_47d20cff",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-05-19T13:50:38Z",
+      "side": 1,
+      "message": "Another option I thought  was to name the D-Bus object path as /xyz/openbmc_project/mctp/\u003cMCTP network ID\u003e/deviceN. But endpoints could be management controller as well, so didn\u0027t proceed.\n\nThere was a suggestion to have the UUID in the object path to ease discovery of endpoints related to the same device. I didn\u0027t proceed with it, once reason being that UUID is optional. Other being that UUID string is \u0027-\u0027 separated and not valid in the D-Bus object path.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 56
+      },
+      "revId": "37c45a87538939420bfd92e836af7c3a5ded36a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

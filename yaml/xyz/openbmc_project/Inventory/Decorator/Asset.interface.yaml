@@ -1,6 +1,10 @@
 description: >
     Implement to provide item physical asset attributes.
 properties:
+    - name: Name
+      type: string
+      description: >
+          The item name.
     - name: PartNumber
       type: string
       description: >

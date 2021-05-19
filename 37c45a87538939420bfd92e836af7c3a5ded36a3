@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "0bfb1bfa_6a7005a9",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2021-05-19T23:54:48Z",
+      "side": 1,
+      "message": "Can we describe here the advantage of doing this using a DBus interface provided by mctpd and not having an application listen for changes on / iterate the MCTP route table and querying the supported message types for each endpoint?\n\nAlso, paragraph splits in this section would be nice.",
+      "range": {
+        "startLine": 19,
+        "startChar": 27,
+        "endLine": 23,
+        "endChar": 79
+      },
+      "revId": "37c45a87538939420bfd92e836af7c3a5ded36a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "67396ae7_c3f11d3b",
         "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
         "patchSetId": 4
@@ -36,6 +59,24 @@
       "writtenOn": "2021-05-19T14:05:36Z",
       "side": 1,
       "message": "I don\u0027t think the NetworkID should be part of this interface. Network IDs are optional, typically useful to system software (MCTP host interface) or add-in cards. I don\u0027t think its reasonable to expect everyone to implement this, We could define a new MCTP.Network interface which can have an \"ID\" property and the object implementing that shall also add the Associations interface to associate with endpoints.",
+      "revId": "37c45a87538939420bfd92e836af7c3a5ded36a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ef3d0184_eadd09c3",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2021-05-19T23:54:48Z",
+      "side": 1,
+      "message": "That sounds reasonable to me.",
+      "parentUuid": "67396ae7_c3f11d3b",
       "revId": "37c45a87538939420bfd92e836af7c3a5ded36a3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

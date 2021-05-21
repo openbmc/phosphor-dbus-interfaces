@@ -119,6 +119,21 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
+subdir('State')
+generated_others += custom_target(
+    'xyz/openbmc_project/Software/State__markdown'.underscorify(),
+    input: [ meson.project_source_root() / 'xyz/openbmc_project/Software/State.interface.yaml',  ],
+    output: [ 'State.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.project_source_root(),
+        'xyz/openbmc_project/Software/State',
+    ],
+    build_by_default: true,
+)
+
 subdir('Version')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Version__markdown'.underscorify(),

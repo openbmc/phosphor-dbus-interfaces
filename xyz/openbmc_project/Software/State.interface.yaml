@@ -1,0 +1,16 @@
+description: >
+  Implement to provide software state management.
+
+properties:
+  - name: WriteProtected
+    type: boolean
+    default: false
+    description: >
+      Describes if the software is write protected.
+  - name: Updatable
+    type: boolean
+    default: false
+    description: >
+      Describes if the software is updatable.
+    flags:
+      - readonly

@@ -159,6 +159,27 @@ case the resulting `Activation` may result in one of two conditions: a
 `ActivationState = Failed` or an `ActivateState = Active`` with a
 `RedundancyPriority = 0 (High)`.
 
+### Software Settings
+
+The `xyz.openbmc_project.Software.Settings` interface is provided
+to show the settings of the given software. The `Sofware.Settings`
+should be added to along side `Software.Version` to represent
+its state from the same service.
+
+```
+busctl introspect $SERVICE /xyz/openbmc_project/software/software_0
+...
+xyz.openbmc_project.Software.Version   interface   -
+.Purpose                               property    s
+.Version                               property    s
+xyz.openbmc_project.Software.Settings  interface   -
+.WriteProtected                        property    b
+...
+```
+
+The states represents fields such as `WriteProtected` and
+`Updatable` to help the *ItemUpdater* manage the software.
+
 ## REST use-cases
 
 ### Find all software versions on the system, either active or available.

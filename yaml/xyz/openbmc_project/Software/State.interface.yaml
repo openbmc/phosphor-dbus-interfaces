@@ -1,0 +1,21 @@
+description: >
+  Implement to provide software state management.
+
+properties:
+  - name: WriteProtected
+    type: boolean
+    default: false
+    description: >
+      This property shall indicate whether the software image can be
+      overwritten, where a value `true` shall indicate that the software cannot
+      be altered or overwritten.
+  - name: Updatable
+    type: boolean
+    default: true
+    description: >
+      This property shall indicate whether the Update Service can update this
+      software.  If `true`, the Service can update this software.  If `false`,
+      the Service cannot update this software and the software is for reporting
+      purposes only.
+    flags:
+      - readonly

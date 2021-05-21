@@ -159,6 +159,21 @@ case the resulting `Activation` may result in one of two conditions: a
 `ActivationState = Failed` or an `ActivateState = Active`` with a
 `RedundancyPriority = 0 (High)`.
 
+### Software States
+
+The `xyz.openbmc_project.Software.State` interface is provided
+to show the state of the given software. The `Sofware.State`
+should be added to along side `Software.Version` to represent
+its state.
+
+```
+/xyz/openbmc_project/software/software_0
+|__/xyz/openbmc_project/software/software_0/state
+```
+
+The states represents fields such as `WriteProtected` and
+`Updatable` to help the *ItemUpdater* manage the software.
+
 ## REST use-cases
 
 ### Find all software versions on the system, either active or available.

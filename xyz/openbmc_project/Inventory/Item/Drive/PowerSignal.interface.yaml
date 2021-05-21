@@ -1,0 +1,11 @@
+description: >
+  Implementation of Drive power signal management.
+
+properties:
+  - name: PowerGood
+    type: boolean
+    description: >
+      Power good signal in the Drive indicates that all of the voltages are
+      within specification.
+    flags:
+      - readonly

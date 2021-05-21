@@ -1,0 +1,10 @@
+description: >
+  Implementation of Drive power sequence management.
+
+properties:
+  - name: PowerSequenceState
+    type: string
+    description: >
+      The current power sequence state of the drive.
+    flags:
+      - readonly

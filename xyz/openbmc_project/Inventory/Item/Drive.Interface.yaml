@@ -1,2 +1,7 @@
 description: >
     Implement to provide drive attributes.
+properties:
+    - name: PhysicalSlot
+      type: string
+      description: >
+          Physical slot location of the drive device.

@@ -6,6 +6,10 @@ description: >
     If looking for real software versions associated with a device then ensure
     this interface is under the /xyz/openbmc_project/software object path.
 properties:
+    - name: Name
+      type: string
+      description: >
+        The software name identifier.
     - name: Version
       type: string
       description: >
@@ -38,3 +42,6 @@ enumerations:
         - name: PSU
           description: >
             The version is a version for a PSU.
+        - name: Drive
+          description: >
+            The version is a version for a Drive.

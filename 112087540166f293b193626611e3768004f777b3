@@ -16,6 +16,24 @@
       "revId": "112087540166f293b193626611e3768004f777b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "32c8e32a_60b2651f",
+        "filename": "xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-05-24T16:09:22Z",
+      "side": 1,
+      "message": "I think Redfish imposes a requirement in terms of defining this:\n        \"ProcessorType\": {\n            \"enum\": [\n                \"CPU\",\n                \"GPU\",\n                \"FPGA\",\n                \"DSP\",\n                \"Accelerator\",\n                \"Core\",\n                \"Thread\",\n                \"OEM\"\n            ],\n\nThis is actually not specific to an accelerator. I propose we define the enum in Item.Processor, and have the \u0027Type\u0027 defined in Processor and here - that way we don\u0027t force implementations to implement both Item.CPU and Item.Accelerator. As far as the datatype goes, we could make it an enum having the values above to start with. Does this make sense?",
+      "parentUuid": "e14e59c6_ddb3bc3f",
+      "revId": "112087540166f293b193626611e3768004f777b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

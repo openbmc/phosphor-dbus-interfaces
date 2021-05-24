@@ -52,6 +52,24 @@
       "revId": "112087540166f293b193626611e3768004f777b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "17f5c49b_10785183",
+        "filename": "xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-05-24T16:25:49Z",
+      "side": 1,
+      "message": "Do you mean we also define Item.GPU, Item.FPGA, etc? On Nvidia\u0027s platforms, we require GPU and FPGA to be differentiated when inventory is reported. Redfish supports that already. So we could either define other \"empty interfaces\" or add this property.",
+      "parentUuid": "b016e2d2_74b7aa36",
+      "revId": "112087540166f293b193626611e3768004f777b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

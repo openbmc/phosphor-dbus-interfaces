@@ -34,6 +34,24 @@
       "revId": "112087540166f293b193626611e3768004f777b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b016e2d2_74b7aa36",
+        "filename": "xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-24T16:22:40Z",
+      "side": 1,
+      "message": "I don\u0027t understand why we would add this property then if that is the value.  This is already Item.Accelerator.  Redfish can fill in ProcessorType from that, can\u0027t it?  ie. the Redfish provider can make its own determination of this property value based on the type of object from dbus it is consuming.",
+      "parentUuid": "32c8e32a_60b2651f",
+      "revId": "112087540166f293b193626611e3768004f777b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

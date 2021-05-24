@@ -106,6 +106,24 @@
       "revId": "112087540166f293b193626611e3768004f777b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "22f8c47b_92aa58f3",
+        "filename": "xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-24T17:05:55Z",
+      "side": 1,
+      "message": "Even if Item.Cpu has a number of properties you would like to use for GPU, I\u0027d rather duplicate the interface than trying to conflate them.  It is likely to put us into a bind in the future by trying to make that one interface support different things.",
+      "parentUuid": "ce06c7b1_facb6b20",
+      "revId": "112087540166f293b193626611e3768004f777b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

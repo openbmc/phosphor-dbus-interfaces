@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "738c304e_1236ac5c",
+        "filename": "xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-24T16:36:03Z",
+      "side": 1,
+      "message": "Can you update the Software/README.md with some words as to how you intend to use this and how other systems incorporate this new interface?  Different pieces of the software objects are created by different daemons.  I\u0027m not sure how this State object works when you likely have multiple drives in a system and those drives may have different WriteProtected states (for example).",
+      "revId": "393dbf27d62f5653e22f68953f00444eeb96dd55",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fce0e89d_67418c92",
+        "filename": "xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-24T16:36:03Z",
+      "side": 1,
+      "message": "Wouldn\u0027t this default to true?",
+      "revId": "393dbf27d62f5653e22f68953f00444eeb96dd55",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

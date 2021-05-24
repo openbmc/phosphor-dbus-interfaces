@@ -22,6 +22,30 @@
       "revId": "fcf99b05ff373d32e978e3a38b050b9f37e0a304",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "98e8dfe9_a42bf12b",
+        "filename": "xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-05-24T15:12:53Z",
+      "side": 1,
+      "message": "Is enum preferred over a free-form string for things such as these? I guess I\u0027ve seen comments for/against both, so wanted to check if there\u0027s a guideline. In this case we could make this an enum and map it to Redfish enums, but that could make the interface Redfish specific. A free-form string could be more generic.",
+      "parentUuid": "924fae8f_e6c305d3",
+      "range": {
+        "startLine": 8,
+        "startChar": 12,
+        "endLine": 8,
+        "endChar": 16
+      },
+      "revId": "fcf99b05ff373d32e978e3a38b050b9f37e0a304",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

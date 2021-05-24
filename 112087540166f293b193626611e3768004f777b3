@@ -88,6 +88,24 @@
       "revId": "112087540166f293b193626611e3768004f777b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce06c7b1_facb6b20",
+        "filename": "xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-05-24T16:53:19Z",
+      "side": 1,
+      "message": "Almost all GPU related properties that we care about are already defined in Item.Cpu, Item.Decorator.Asset, etc. So I\u0027m leaning towards defining Type as an enum here.",
+      "parentUuid": "c92e5cad_a9a74fa9",
+      "revId": "112087540166f293b193626611e3768004f777b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

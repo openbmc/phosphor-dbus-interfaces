@@ -70,6 +70,24 @@
       "revId": "112087540166f293b193626611e3768004f777b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c92e5cad_a9a74fa9",
+        "filename": "xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-24T16:44:31Z",
+      "side": 1,
+      "message": "Or define Type as an enumeration of the useful ones to you here rather than an arbitrary string.\n\nI suspect it is useful to have Item/GPU anyhow though.  I don\u0027t have a good idea of what kind of inventory information might be on an FPGA vs an in-silicon accelerator to make a judgement on if we would want a separate Item.FPGA or an enumeration here to differentiate is sufficient for the time being.",
+      "parentUuid": "17f5c49b_10785183",
+      "revId": "112087540166f293b193626611e3768004f777b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

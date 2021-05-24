@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9b34e1f_a1195a6b",
+        "filename": "xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-24T16:02:41Z",
+      "side": 1,
+      "message": "These properties feel like they belong in a common power-related Decorator rather than in the Item.Chassis itself.  That way any device can indicate power bounds.\n\nIs there a reason we want this specific for chassis and not for any arbitrary inventory item?",
+      "revId": "222af5e9edd94b9d1e9681f5ea2bc830955cf998",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c9009d8d_db6f0db5",
+        "filename": "xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-24T16:02:41Z",
+      "side": 1,
+      "message": "Use size unless you have a good reason to fix these at 32bit.",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 18
+      },
+      "revId": "222af5e9edd94b9d1e9681f5ea2bc830955cf998",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "efa6e472_e41b96ef",
+        "filename": "xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-05-24T16:02:41Z",
+      "side": 1,
+      "message": "Default should probably be max-int (or infinity?).",
+      "revId": "222af5e9edd94b9d1e9681f5ea2bc830955cf998",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

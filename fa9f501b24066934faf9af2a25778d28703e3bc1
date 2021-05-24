@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "abb59d5d_4319fc31",
+        "filename": "xyz/openbmc_project/Inventory/Item/Drive/PowerSequence.interface copy.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-24T18:30:42Z",
+      "side": 1,
+      "message": "I\u0027ll add some enums to cover some of the status.\n\nThe only issue is that I want to support might be too specific.",
+      "parentUuid": "4c36b496_eadf6b16",
+      "revId": "fa9f501b24066934faf9af2a25778d28703e3bc1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "57945f24_26705366",
         "filename": "xyz/openbmc_project/Inventory/Item/Drive/PowerSignal.interface.yaml",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2021-05-24T16:33:22Z",
       "side": 1,
       "message": "We already have Chassis.Control.Power, which contains a pgood field.  Is this something that could be adapted to drives?",
+      "revId": "fa9f501b24066934faf9af2a25778d28703e3bc1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "810d270d_fbd5d5c9",
+        "filename": "xyz/openbmc_project/Inventory/Item/Drive/PowerSignal.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-24T18:30:42Z",
+      "side": 1,
+      "message": "Thanks for the update,\n\nyeah, I think it can work with Chassis.Control.Power.\n\nThanks.\n\n----\n\nDo you think it is still appropriate if we want to have multiple PGood signals? In this case, it does not fully represent a PSU, but more of just a power signal.\n\nSo like\n\n```\nDrive\n |_Drive/power_signal_0\n |_Drive/power_signal_1\n```\n\nThen `Chassis.Control.Power` is under `Drive/power_signal_X` with the PGood info. Don\u0027t care about State and the method.",
+      "parentUuid": "57945f24_26705366",
       "revId": "fa9f501b24066934faf9af2a25778d28703e3bc1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9035fd7c_5c965efa",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-25T10:01:33Z",
+      "side": 1,
+      "message": "I was thinking of cases when there are multiple Softwares.\n\nThen the path will be something like\n\n```\n/softwawre0\n/softwawre1\n```\n\nI thought having a Name property will provide a clean software name that can be use to id the software. Although path can already do that for the most part.\n\nI added this mostly due to the Redfish implementation of SoftwareInventory have a Name property. I think we can remove this if it does not provide too much extra use.",
+      "parentUuid": "f58ca65a_4cb09a01",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 37
+      },
+      "revId": "d996142fd0860d0d40c4c18fe7961eef2f790d08",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "955ef47a_75471122",
         "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2021-05-24T16:31:18Z",
       "side": 1,
       "message": "I\u0027ve been wanting to avoid adding new ones of these and want to work towards deprecating PSU (at least).  I\u0027d like to see a schema defined when VersionPurpose is \"Other\" where any other devices can be supported.  We need to be able to have some \u0027compatible\u0027 strings on these anyhow because an image supported on one drive vendor and/or model will not apply to another.\n\nI planned on either making ExtendedVersion more well-defined to encode this schema or adding an additional interface for it, but hadn\u0027t gotten around to having a device myself yet that required it.  Feel free to contact me on Discord if you want to coordinate moving forward on it.",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 49
+      },
+      "revId": "d996142fd0860d0d40c4c18fe7961eef2f790d08",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "60a1db0c_a1f5cd32",
+        "filename": "xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-25T10:01:33Z",
+      "side": 1,
+      "message": "I am not exactly sure what you mean here right now. Do you mean that you want `Other` to support everything else and have a new Interface in ExtendedVersion have will have the different supported types?\n\nah, sounds good. I\u0027ll contact you on Discord for more detail on this.",
+      "parentUuid": "955ef47a_75471122",
       "range": {
         "startLine": 45,
         "startChar": 0,

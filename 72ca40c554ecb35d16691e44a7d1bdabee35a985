@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "b21a220b_fddfe45e",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-25T10:17:08Z",
+      "side": 1,
+      "message": "I am not sure if I understand the question. I don\u0027t have a deep understanding of how d-bus works yet.\n\nBut I thought that a new properties does not required overrides. So we can just add new properties without affecting existing implementation?",
+      "parentUuid": "209052cd_88532bd8",
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1686af98_725fb88a",
         "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
         "patchSetId": 12
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "c6ccfa7f_b62de51a",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-25T10:17:08Z",
+      "side": 1,
+      "message": "does properties have error? I thought it was just methods?",
+      "parentUuid": "1686af98_725fb88a",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 38
+      },
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "96f5f991_c4f9d5a1",
         "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
         "patchSetId": 12
@@ -53,6 +95,24 @@
       "writtenOn": "2021-05-24T16:42:10Z",
       "side": 1,
       "message": "What if the hardware has no way to determine this?",
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ea644078_c132d830",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-05-25T10:17:08Z",
+      "side": 1,
+      "message": "maybe just default to 0?",
+      "parentUuid": "96f5f991_c4f9d5a1",
       "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

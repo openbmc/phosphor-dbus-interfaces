@@ -22,6 +22,30 @@
       "revId": "aa3e9667d9bd1194d76e41bb43508563cc340273",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2adb0d5b_e3d0c020",
+        "filename": "xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1001063
+      },
+      "writtenOn": "2021-05-26T19:27:22Z",
+      "side": 1,
+      "message": "\u003e Please update tense to Notify based on your text below \"this event log should be notified\".  It seems based on your other language that this does not indicate that the service provider *has* been notified but that it *should*.  It may or may-not have been notified at this point...\n\u003e \nDone\n\u003e \u003e The only weirdness there is bmcweb will end up mapping this Notify D-Bus property to the Notified Redfish property\n\u003e \n\u003e This does feel like the property definition here will end up being unusable by the intended interface though?  Do we need to rethink how this is expressed to be able to communicate a log that should be notified and one that has been notified?\nIt would probably make sense to have one more Property to say if the service provider is already notified. I will change the name to notify to make sure it corresponds to the text below",
+      "parentUuid": "b0e42973_32d244c8",
+      "range": {
+        "startLine": 36,
+        "startChar": 12,
+        "endLine": 36,
+        "endChar": 35
+      },
+      "revId": "aa3e9667d9bd1194d76e41bb43508563cc340273",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

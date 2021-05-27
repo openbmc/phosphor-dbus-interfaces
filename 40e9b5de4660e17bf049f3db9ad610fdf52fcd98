@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2246e841_16207f85",
+        "filename": "org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-05-27T16:30:41Z",
+      "side": 1,
+      "message": "Can this be based on https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/xyz/openbmc_project/State/Decorator? ErrorLog and severity could just be a d-bus association to an error log d-bus object. Id could be part of the path or an implementation detail not on d-bus?",
+      "revId": "40e9b5de4660e17bf049f3db9ad610fdf52fcd98",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

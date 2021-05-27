@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "46e771c3_e3dcf042",
+        "filename": "xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-05-27T14:32:04Z",
+      "side": 1,
+      "message": "Not all these are accelerator types, they are processor types. Let\u0027s just add: Accelerator (and make that the default value in the YAML), GPU, FPGA.",
+      "revId": "1d1dc702619956f01d1573f5727165af5c393072",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

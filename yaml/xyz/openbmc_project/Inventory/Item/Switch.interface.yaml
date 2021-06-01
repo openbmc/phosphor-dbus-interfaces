@@ -1,0 +1,58 @@
+description: >
+    This defines a Switch to be exposed for system management.
+    It contains properties that describe a fabric switch.
+
+properties:
+    - name: Type
+      type: enum[self.SwitchType]
+      default: Ethernet
+      description: >
+          Indicates the protocol being sent over this switch.
+
+    - name: SupportedProtocols
+      type: array[enum[self.SwitchType]]
+      description: >
+          An array of protocols this switch supports.
+
+    - name: Enabled
+      type: boolean
+      description: >
+          An indication of whether this switch is enabled.
+
+    - name: CurrentBandwidth
+      type: size
+      description: >
+          The current internal bandwidth of this switch in Gbps.
+
+    - name: MaxBandwidth
+      type: size
+      description: >
+          The maximum internal bandwidth of this switch as currently
+          configured.
+
+    - name: TotalSwitchWidth
+      type: size
+      description: >
+          The total number of lanes, phys, or other physical transport
+          links that this switch contains.
+
+enumerations:
+    - name: SwitchType
+      description: >
+          Possible protocols supported by switch.
+      values:
+        - name: Ethernet
+          description: >
+              An Ethernet.
+
+        - name: FC
+          description: >
+              A Fibre Channel.
+
+        - name: NVLink
+          description: >
+              An NVLink.
+
+        - name: OEM
+          description: >
+              An OEM-specific.

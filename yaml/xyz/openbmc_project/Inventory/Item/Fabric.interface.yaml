@@ -1,0 +1,29 @@
+description: >
+    Implement to provide fabric attributes.
+    A simple fabric consists of one or more switches,
+    zero or more endpoints, and zero or more zones.
+
+properties:
+    - name: Type
+      type: enum[self.FabricType]
+      default: Ethernet
+      description: >
+          Indicates the protocol being sent over this fabric.
+
+enumerations:
+    - name: FabricType
+      description: >
+          Possible protocols supported by fabric.
+      values:
+        - name: Ethernet
+          description: >
+              An Ethernet.
+        - name: FC
+          description: >
+              A Fibre Channel.
+        - name: NVLink
+          description: >
+              An NVLink.
+        - name: OEM
+          description: >
+              An OEM-specific.

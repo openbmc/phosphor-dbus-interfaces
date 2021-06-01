@@ -166,6 +166,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Fabric')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Fabric__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Fabric.interface.yaml',  ],
+    output: [ 'Fabric.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/Fabric',
+    ],
+)
+
 subdir('FabricAdapter')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/FabricAdapter__markdown'.underscorify(),

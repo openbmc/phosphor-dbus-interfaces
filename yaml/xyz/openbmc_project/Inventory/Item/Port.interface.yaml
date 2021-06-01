@@ -1,0 +1,120 @@
+description: >
+    This defines a Port to be exposed for system management.
+    It contains properties that describe a port of a switch, controller,
+    chassis, or any other device that could be connected to another entity.
+
+properties:
+    - name: Type
+      type: enum[self.PortType]
+      default: UpstreamPort
+      description: >
+          Indicates the port type.
+
+    - name: Protocol
+      type: enum[self.PortProtocol]
+      default: Ethernet
+      description: >
+          The protocol being sent over this port.
+
+    - name: CurrentSpeed
+      type: size
+      description: >
+          The current speed of this port in Gbps.
+
+    - name: MaxSpeed
+      type: size
+      description: >
+          The maximum speed of this port in Gbps.
+
+    - name: Width
+      type: size
+      description: >
+          The number of lanes, phys, or other physical transport links
+          that this port contains.
+
+    - name: LinkState
+      type: enum[self.LinkStates]
+      default: Enabled
+      description: >
+          The desired link state for this interface.
+
+    - name: LinkStatus
+      type: enum[self.LinkStatusType]
+      default: LinkUp
+      description: >
+          The desired link status for this interface.
+
+
+enumerations:
+    - name: PortType
+      description: >
+          Possible port types.
+      values:
+        - name: BidirectionalPort
+          description: >
+              This port connects to any type of device.
+        - name: DownstreamPort
+          description: >
+              This port connects to a target device.
+        - name: InterswitchPort
+          description: >
+              This port connects to another switch.
+        - name: ManagementPort
+          description: >
+              This port connects to a switch manager.
+        - name: UnconfiguredPort
+          description: >
+              This port has not yet been configured.
+        - name: UpstreamPort
+          description: >
+              This port connects to a host device.
+
+    - name: PortProtocol
+      description: >
+          Possible protocols supported by port.
+      values:
+        - name: Ethernet
+          description: >
+              An Ethernet.
+        - name: FC
+          description: >
+              A Fibre Channel.
+        - name: NVLink
+          description: >
+              An NVLink.
+        - name: OEM
+          description: >
+              An OEM-specific.
+
+    - name: LinkStates
+      description: >
+          Possible link states.
+      values:
+        - name: Disabled
+          description: >
+              This link is disabled.
+        - name: Enabled
+          description: >
+              This link is enabled.
+
+    - name: LinkStatusType
+      description: >
+          Possible link status.
+      values:
+        - name: LinkDown
+          description: >
+              The link on this interface is down.
+        - name: LinkUp
+          description: >
+              This link on this interface is up.
+        - name: NoLink
+          description: >
+              No physical link detected on this interface.
+        - name: Starting
+          description: >
+              This link on this interface is starting. A physical
+              link has been established, but the port is not able
+              to transfer data.
+        - name: Training
+          description: >
+              This physical link on this interface is training.

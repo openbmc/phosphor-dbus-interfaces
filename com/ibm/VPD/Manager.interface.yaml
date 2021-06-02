@@ -103,3 +103,14 @@ methods:
           recollection of VPD data for them.
       errors:
         - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: CollectSingleFRUVPD
+      description: >
+          An api to trigger VPD collection for a given FRU.
+      parameters:
+        - name: inventoryPath
+          type: path
+          description: >
+              Dbus path of the FRU whose VPD needs to be collected.
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument

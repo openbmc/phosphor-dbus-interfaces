@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "cc0b59fe_b4c03c09",
+        "filename": "xyz/openbmc_project/MCTP/Network.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-03T09:41:06Z",
+      "side": 1,
+      "message": "Ack, will change this to int16",
+      "parentUuid": "26a82871_692d4465",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f5f998b2_c0d31d27",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 7
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "d1dffd46_baf3c5c8",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-03T09:41:06Z",
+      "side": 1,
+      "message": "I can rephrase this section, to make it generic with how it will be for example.com along with  openbmc_project.xyz. But the interface definition itself is named xyz.openbmc_project.MCTP.Endpoint. Curious if it is  plausible that object path is com/example/mctp and interface is owned by openbmc_project.xyz. I can revise the section like below.\n\n\"Object paths are often namespaced by starting with a reversed domain name. For instance, if the owner of example.com is implementing this MCTP interface then the root D-Bus object path for the mctpd is `/com/example/mctp\u0027. In OpenBMC, the root D-Bus object path for mctpd is `/xyz/openbmc_project/mctp`.\"",
+      "parentUuid": "f5f998b2_c0d31d27",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "51f1b58a_661fff39",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 7
@@ -47,6 +83,24 @@
       "writtenOn": "2021-06-03T02:09:49Z",
       "side": 1,
       "message": "Following on a little from previous discussion about networks:\n\nI think the layout at the moment, with separate networks \u0026 endpoints, makes the most sense. I\u0027m not so sure networks being optional though. If we\u0027re representing MCTP endpoints (ie, something that has an EID), then the endpoint has to be on one (and only one) network. That network may well be the \u0027default\u0027, for cases where the system only has one network - which will probably be the usual case.\n\nSo I think the fixed structure of /xyz/openbmc_project/mctp/\u003cnetwork\u003e/\u003cendpoint\u003e would work best.",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3cee8a13_fc284769",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-03T09:41:06Z",
+      "side": 1,
+      "message": "My initial thought process was to have the NetworkID as part of the interface and have it as MCTP_NET_ANY in the case of only one network. Based on the feedback, had the Network as a separate interface to express the NetworkID as optional.\n\nHow to express the default network? One possibility is to use MCTP_NET_ANY(0). Then the D-Bus object path will be in /xyz/openbmc_project/mctp/0/\u003cendpoint\u003e and does not implement the xyz.openbmc_project.MCTP.Network interface.",
+      "parentUuid": "51f1b58a_661fff39",
       "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

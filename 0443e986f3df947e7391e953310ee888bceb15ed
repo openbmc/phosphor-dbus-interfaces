@@ -63,6 +63,24 @@
       "revId": "0443e986f3df947e7391e953310ee888bceb15ed",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "09c4c20b_2c133d8c",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000524
+      },
+      "writtenOn": "2021-06-03T23:28:41Z",
+      "side": 1,
+      "message": "From here https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-9-rules-and-style-conventions-spelling-unit-names\n\nHowever, a \"single\" unit may be plural; for example, the value 5 kPa is spelled out as \"five kilopascals,\" although \"five kilopascal\" is acceptable. If in such a single-unit case the number is less than one, the unit is always singular when spelled out; for example, 0.5 kPa is spelled out as \"five-tenths kilopascal.\"",
+      "parentUuid": "8fc48f04_c1a764be",
+      "revId": "0443e986f3df947e7391e953310ee888bceb15ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

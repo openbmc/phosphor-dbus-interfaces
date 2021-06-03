@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d51aaa2_155a06e4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-06-03T04:36:21Z",
+      "side": 1,
+      "message": "nit: VPD",
+      "range": {
+        "startLine": 9,
+        "startChar": 56,
+        "endLine": 9,
+        "endChar": 59
+      },
+      "revId": "843777b670b064fa42df220f79242f02f8e9edbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3e5ccf5b_48a099b3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-06-03T04:36:21Z",
+      "side": 1,
+      "message": "nit: API",
+      "range": {
+        "startLine": 9,
+        "startChar": 20,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "843777b670b064fa42df220f79242f02f8e9edbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "280972ed_c2a0fcc2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-06-03T04:36:21Z",
+      "side": 1,
+      "message": "nit: FRU",
+      "range": {
+        "startLine": 10,
+        "startChar": 8,
+        "endLine": 10,
+        "endChar": 11
+      },
+      "revId": "843777b670b064fa42df220f79242f02f8e9edbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9a173e69_b3a7b7a3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-06-03T04:36:21Z",
+      "side": 1,
+      "message": "I think we should add some more detail to this commit message. Namely, that the API is expected to return fairly quickly without actually completing the VPD collection and associated actions. That the caller is expected to listen on the Present property for the operation to complete. A pre-requisite would be that the Present property is set to false before this call is made.",
+      "revId": "843777b670b064fa42df220f79242f02f8e9edbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

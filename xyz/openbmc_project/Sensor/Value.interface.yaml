@@ -11,6 +11,7 @@ description: >
       power
       energy
       utilization
+      pressure
 
     Any service implementing Sensor.Value on one or more objects must
     implement org.freedesktop.DBus.ObjectManager on the sensors namespace root.
@@ -45,6 +46,7 @@ properties:
           For objects in the energy namespace, Unit must be "Joules".
           For objects in the utilization namespace, Unit must be "Percent"
           For objects in the airflow namespace, Unit must be "CFM"
+          For objects in the pressure namespace, Unit must be "pascal"
 
 enumerations:
     - name: Unit
@@ -78,3 +80,6 @@ enumerations:
         - name: CFM
           description: >
             To calculate Air Flow in Cubic Feet per Minute
+        - name: Pascal
+          description: >
+            Pressure as pascal.

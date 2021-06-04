@@ -3,10 +3,42 @@ description: >
 properties:
     - name: LocationCode
       type: string
-      description:
+      description: >
           A free form, implementation defined string to provide
           location code of an Inventory Item.
           Location codes can be used to identify specific parts
           in a system. Although this field should not be used for
           programmatic interrogation of an inventory object.
       default: ""
+    - name: LocationType
+      type: enum[self.Type]
+      description:
+          This property shall contain the type of location of the part, such as
+          slot, bay, socket and slot.
+      flags:
+          - readonly
+
+enumerations:
+    - name: Type
+      description: >
+          The desired transition for the BMC firmware
+      values:
+          - name: "Bay"
+            description: >
+                This value shall indicate the part is located in a bay.
+          - name: "Connector"
+            description: >
+                This value shall indicate the part is located in a connector or
+                port.
+          - name: "Embedded"
+            description: >
+                This value shall indicate the part is embedded or otherwise
+                permanently incorporated into a larger part or device. This
+                value shall not be used for parts which can be removed by a
+                user or are considered field-replaceable.
+          - name: "Slot"
+            description: >
+                This value shall indicate the part is located in a slot.
+          - name: "Socket"
+            description: >
+                This value shall indicate the part is located in a socket.

@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "a7556c6e_4f7403a9",
+        "filename": "xyz/openbmc_project/Inventory/Item/Drive/PowerSequence.interface copy.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-04T17:50:42Z",
+      "side": 1,
+      "message": "yeah, this is a bit outdate.\n\nInitially I wanted add a new resource for Drive and maybe other. Similar issue in https://github.com/DMTF/Redfish/issues/4523.\n\nMaybe this is not needed anymore, since I am not sure what different PowerSequenceState that we  want to support in general.\n\nMaybe just wrap it around DriveState in https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/43155 instead... and just map it to State.Status on Redfish.",
+      "parentUuid": "b6371746_acf96ef9",
+      "revId": "fa9f501b24066934faf9af2a25778d28703e3bc1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "57945f24_26705366",
         "filename": "xyz/openbmc_project/Inventory/Item/Drive/PowerSignal.interface.yaml",
         "patchSetId": 4

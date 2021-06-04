@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8ba110e9_05ec1843",
+        "filename": "xyz/openbmc_project/MCTP/Network.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2021-06-04T01:23:03Z",
+      "side": 1,
+      "message": "I wasn\u0027t referring to the signed-ness there, more that you\u0027ve only allowed 16 bits for the network ID. We have an `int` for the network id, which would best map to a dbus int32.",
+      "parentUuid": "cc0b59fe_b4c03c09",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f5f998b2_c0d31d27",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 7
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "e92215d2_4e645bd5",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2021-06-04T01:23:03Z",
+      "side": 1,
+      "message": "I\u0027m not super concerned about making this generic between implementations - more that we choose and Interface definitions (and object path, to a lesser extent) that caters for non-OpenBMC use cases.\n\nIf the interface definition namespace makes the most sense as xyz.openbmc_project.*, because we\u0027re defining the specification, then I\u0027m fine to go with that.",
+      "parentUuid": "d1dffd46_baf3c5c8",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "51f1b58a_661fff39",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 7
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "My initial thought process was to have the NetworkID as part of the interface and have it as MCTP_NET_ANY in the case of only one network. Based on the feedback, had the Network as a separate interface to express the NetworkID as optional.\n\nHow to express the default network? One possibility is to use MCTP_NET_ANY(0). Then the D-Bus object path will be in /xyz/openbmc_project/mctp/0/\u003cendpoint\u003e and does not implement the xyz.openbmc_project.MCTP.Network interface.",
       "parentUuid": "51f1b58a_661fff39",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "100cab36_4331ec23",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2021-06-04T01:23:03Z",
+      "side": 1,
+      "message": "The system will always know what network any given endpoint is on; I\u0027m not sure we\u0027d ever need to represent an \"default network\" for this interface at all.\n\nHowever, yes, we\u0027ve reserved network ID 0 for \"send to the default network\", or \"receive from any network\". But I don\u0027t think we want to use those here - we can always be specific.",
+      "parentUuid": "3cee8a13_fc284769",
       "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

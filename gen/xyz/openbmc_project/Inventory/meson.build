@@ -12,6 +12,7 @@ generated_sources += custom_target(
     ],
 )
 
+subdir('Connector')
 subdir('Decorator')
 subdir('Item')
 generated_others += custom_target(

@@ -40,6 +40,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Bay')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Bay__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Bay.interface.yaml',  ],
+    output: [ 'Bay.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/Bay',
+    ],
+)
+
 subdir('Bmc')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/Bmc__markdown'.underscorify(),
@@ -149,6 +163,20 @@ generated_others += custom_target(
         '--tool', sdbusplusplus_prog,
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/DiskBackplane',
+    ],
+)
+
+subdir('Embedded')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Embedded__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Embedded.interface.yaml',  ],
+    output: [ 'Embedded.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/Embedded',
     ],
 )
 
@@ -317,6 +345,20 @@ generated_others += custom_target(
         '--tool', sdbusplusplus_prog,
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Rotor',
+    ],
+)
+
+subdir('Socket')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Socket__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Socket.interface.yaml',  ],
+    output: [ 'Socket.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/Socket',
     ],
 )
 

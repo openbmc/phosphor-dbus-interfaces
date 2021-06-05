@@ -2,13 +2,13 @@
 subdir('Availability')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Decorator/Availability__markdown'.underscorify(),
-    input: [ '../../../../../xyz/openbmc_project/State/Decorator/Availability.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/Availability.interface.yaml',  ],
     output: [ 'Availability.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../..',
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Decorator/Availability',
     ],
 )
@@ -16,13 +16,13 @@ generated_others += custom_target(
 subdir('OperationalStatus')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Decorator/OperationalStatus__markdown'.underscorify(),
-    input: [ '../../../../../xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml',  ],
     output: [ 'OperationalStatus.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../..',
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Decorator/OperationalStatus',
     ],
 )

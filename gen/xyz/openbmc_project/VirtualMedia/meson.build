@@ -2,13 +2,13 @@
 subdir('Legacy')
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/Legacy__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/VirtualMedia/Legacy.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/Legacy.interface.yaml',  ],
     output: [ 'Legacy.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/Legacy',
     ],
 )
@@ -16,13 +16,13 @@ generated_others += custom_target(
 subdir('MountPoint')
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/MountPoint__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/VirtualMedia/MountPoint.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/MountPoint.interface.yaml',  ],
     output: [ 'MountPoint.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/MountPoint',
     ],
 )
@@ -30,13 +30,13 @@ generated_others += custom_target(
 subdir('Process')
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/Process__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/VirtualMedia/Process.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/Process.interface.yaml',  ],
     output: [ 'Process.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/Process',
     ],
 )
@@ -44,13 +44,13 @@ generated_others += custom_target(
 subdir('Proxy')
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/Proxy__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/VirtualMedia/Proxy.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/Proxy.interface.yaml',  ],
     output: [ 'Proxy.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/Proxy',
     ],
 )
@@ -58,13 +58,13 @@ generated_others += custom_target(
 subdir('Stats')
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/Stats__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/VirtualMedia/Stats.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/Stats.interface.yaml',  ],
     output: [ 'Stats.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/Stats',
     ],
 )

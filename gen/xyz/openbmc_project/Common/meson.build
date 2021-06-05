@@ -1,13 +1,13 @@
 # Generated file; do not modify.
 generated_sources += custom_target(
     'xyz/openbmc_project/Common__cpp'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common.errors.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common.errors.yaml',  ],
     output: [ 'error.cpp', 'error.hpp',  ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common',
     ],
 )
@@ -15,13 +15,13 @@ generated_sources += custom_target(
 subdir('Callout')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/Callout__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common/Callout.errors.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/Callout.errors.yaml',  ],
     output: [ 'Callout.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/Callout',
     ],
 )
@@ -29,13 +29,13 @@ generated_others += custom_target(
 subdir('Device')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/Device__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common/Device.errors.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/Device.errors.yaml',  ],
     output: [ 'Device.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/Device',
     ],
 )
@@ -43,13 +43,13 @@ generated_others += custom_target(
 subdir('FactoryReset')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/FactoryReset__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common/FactoryReset.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/FactoryReset.interface.yaml',  ],
     output: [ 'FactoryReset.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/FactoryReset',
     ],
 )
@@ -57,13 +57,13 @@ generated_others += custom_target(
 subdir('File')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/File__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common/File.errors.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/File.errors.yaml',  ],
     output: [ 'File.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/File',
     ],
 )
@@ -71,13 +71,13 @@ generated_others += custom_target(
 subdir('FilePath')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/FilePath__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common/FilePath.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/FilePath.interface.yaml',  ],
     output: [ 'FilePath.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/FilePath',
     ],
 )
@@ -85,13 +85,13 @@ generated_others += custom_target(
 subdir('ObjectPath')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/ObjectPath__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common/ObjectPath.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/ObjectPath.interface.yaml',  ],
     output: [ 'ObjectPath.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/ObjectPath',
     ],
 )
@@ -99,13 +99,13 @@ generated_others += custom_target(
 subdir('Progress')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/Progress__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common/Progress.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/Progress.interface.yaml',  ],
     output: [ 'Progress.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/Progress',
     ],
 )
@@ -113,13 +113,13 @@ generated_others += custom_target(
 subdir('TFTP')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/TFTP__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common/TFTP.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/TFTP.interface.yaml',  ],
     output: [ 'TFTP.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/TFTP',
     ],
 )
@@ -127,13 +127,13 @@ generated_others += custom_target(
 subdir('UUID')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/UUID__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Common/UUID.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/UUID.interface.yaml',  ],
     output: [ 'UUID.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/UUID',
     ],
 )

@@ -40,7 +40,7 @@ endif
 inst_yaml_dir = get_option('datadir') / 'phosphor-dbus-yaml/yaml'
 foreach d : selected_subdirs
     install_subdir(
-        d,
+        'yaml' / d,
         install_dir: inst_yaml_dir / d,
         strip_directory: true,
     )
@@ -140,5 +140,5 @@ phosphor_dbus_interfaces_dep = declare_dependency(
     include_directories: include_directories('gen'),
     link_with: libphosphor_dbus,
     dependencies: sdbusplus_dep,
-    variables: ['yamldir=' + meson.project_source_root()],
+    variables: ['yamldir=' + meson.project_source_root() / 'yaml'],
 )

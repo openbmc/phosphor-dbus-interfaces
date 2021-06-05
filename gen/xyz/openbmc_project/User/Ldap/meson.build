@@ -2,13 +2,13 @@
 subdir('Config')
 generated_others += custom_target(
     'xyz/openbmc_project/User/Ldap/Config__markdown'.underscorify(),
-    input: [ '../../../../../xyz/openbmc_project/User/Ldap/Config.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/User/Ldap/Config.interface.yaml',  ],
     output: [ 'Config.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../..',
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/User/Ldap/Config',
     ],
 )
@@ -16,13 +16,13 @@ generated_others += custom_target(
 subdir('Create')
 generated_others += custom_target(
     'xyz/openbmc_project/User/Ldap/Create__markdown'.underscorify(),
-    input: [ '../../../../../xyz/openbmc_project/User/Ldap/Create.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/User/Ldap/Create.interface.yaml',  ],
     output: [ 'Create.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../..',
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/User/Ldap/Create',
     ],
 )

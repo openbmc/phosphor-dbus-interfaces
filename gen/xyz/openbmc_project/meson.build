@@ -2,13 +2,13 @@
 subdir('Association')
 generated_others += custom_target(
     'xyz/openbmc_project/Association__markdown'.underscorify(),
-    input: [ '../../../xyz/openbmc_project/Association.interface.yaml',  ],
+    input: [ '../../../yaml/xyz/openbmc_project/Association.interface.yaml',  ],
     output: [ 'Association.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../..',
+        '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Association',
     ],
 )
@@ -17,13 +17,13 @@ subdir('BIOSConfig')
 subdir('Certs')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs__markdown'.underscorify(),
-    input: [ '../../../xyz/openbmc_project/Certs.errors.yaml',  ],
+    input: [ '../../../yaml/xyz/openbmc_project/Certs.errors.yaml',  ],
     output: [ 'Certs.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../..',
+        '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Certs',
     ],
 )
@@ -34,13 +34,13 @@ subdir('Collection')
 subdir('Common')
 generated_others += custom_target(
     'xyz/openbmc_project/Common__markdown'.underscorify(),
-    input: [ '../../../xyz/openbmc_project/Common.errors.yaml',  ],
+    input: [ '../../../yaml/xyz/openbmc_project/Common.errors.yaml',  ],
     output: [ 'Common.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../..',
+        '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Common',
     ],
 )
@@ -51,13 +51,13 @@ subdir('Dump')
 subdir('Inventory')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory__markdown'.underscorify(),
-    input: [ '../../../xyz/openbmc_project/Inventory.errors.yaml',  ],
+    input: [ '../../../yaml/xyz/openbmc_project/Inventory.errors.yaml',  ],
     output: [ 'Inventory.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../..',
+        '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Inventory',
     ],
 )
@@ -72,13 +72,13 @@ subdir('Object')
 subdir('ObjectMapper')
 generated_others += custom_target(
     'xyz/openbmc_project/ObjectMapper__markdown'.underscorify(),
-    input: [ '../../../xyz/openbmc_project/ObjectMapper.interface.yaml',  ],
+    input: [ '../../../yaml/xyz/openbmc_project/ObjectMapper.interface.yaml',  ],
     output: [ 'ObjectMapper.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../..',
+        '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/ObjectMapper',
     ],
 )
@@ -88,13 +88,13 @@ subdir('PLDM')
 subdir('ScheduledTime')
 generated_others += custom_target(
     'xyz/openbmc_project/ScheduledTime__markdown'.underscorify(),
-    input: [ '../../../xyz/openbmc_project/ScheduledTime.errors.yaml',  ],
+    input: [ '../../../yaml/xyz/openbmc_project/ScheduledTime.errors.yaml',  ],
     output: [ 'ScheduledTime.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../..',
+        '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/ScheduledTime',
     ],
 )
@@ -107,13 +107,13 @@ subdir('Telemetry')
 subdir('Time')
 generated_others += custom_target(
     'xyz/openbmc_project/Time__markdown'.underscorify(),
-    input: [ '../../../xyz/openbmc_project/Time.errors.yaml',  ],
+    input: [ '../../../yaml/xyz/openbmc_project/Time.errors.yaml',  ],
     output: [ 'Time.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../..',
+        '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Time',
     ],
 )

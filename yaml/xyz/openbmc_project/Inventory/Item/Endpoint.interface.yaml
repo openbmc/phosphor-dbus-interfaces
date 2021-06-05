@@ -1,0 +1,9 @@
+description: >
+    Implement to provide endpoint attributes.
+    An endpoint represents the properties of an entity that
+    sends or receives protocol-defined messages over a transport.
+    An port item can define inventory endpoint item using association
+    as `connected_port`.
+    An inventory endpoint can be a inventory item like Accelerator
+    using association `entity_link` to an accelerator item.
+

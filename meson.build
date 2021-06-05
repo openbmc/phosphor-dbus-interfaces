@@ -63,6 +63,13 @@ subdir('gen')
 foreach d : selected_subdirs
   subdir('gen' / d)
 endforeach
+custom_target(
+    'md',
+    command: 'true',
+    output: 'md',
+    capture: true,
+    depends: generated_others,
+    build_by_default: true)
 
 # Parse through the list from sdbus++-gendir and put into sets.
 generated_headers = []

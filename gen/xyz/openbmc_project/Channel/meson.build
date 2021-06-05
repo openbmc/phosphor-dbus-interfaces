@@ -2,15 +2,14 @@
 subdir('ChannelAccess')
 generated_others += custom_target(
     'xyz/openbmc_project/Channel/ChannelAccess__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'xyz/openbmc_project/Channel/ChannelAccess.interface.yaml',  ],
+    input: [ '../../../../xyz/openbmc_project/Channel/ChannelAccess.interface.yaml',  ],
     output: [ 'ChannelAccess.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../..',
         'xyz/openbmc_project/Channel/ChannelAccess',
     ],
-    build_by_default: true,
 )
 

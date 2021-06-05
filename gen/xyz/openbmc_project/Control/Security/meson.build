@@ -2,30 +2,28 @@
 subdir('RestrictionMode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Security/RestrictionMode__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'xyz/openbmc_project/Control/Security/RestrictionMode.interface.yaml',  ],
+    input: [ '../../../../../xyz/openbmc_project/Control/Security/RestrictionMode.interface.yaml',  ],
     output: [ 'RestrictionMode.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../../..',
         'xyz/openbmc_project/Control/Security/RestrictionMode',
     ],
-    build_by_default: true,
 )
 
 subdir('SpecialMode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Security/SpecialMode__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'xyz/openbmc_project/Control/Security/SpecialMode.interface.yaml',  ],
+    input: [ '../../../../../xyz/openbmc_project/Control/Security/SpecialMode.interface.yaml',  ],
     output: [ 'SpecialMode.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../../..',
         'xyz/openbmc_project/Control/Security/SpecialMode',
     ],
-    build_by_default: true,
 )
 

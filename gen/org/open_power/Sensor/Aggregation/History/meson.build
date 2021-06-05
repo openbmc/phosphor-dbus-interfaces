@@ -2,30 +2,28 @@
 subdir('Average')
 generated_others += custom_target(
     'org/open_power/Sensor/Aggregation/History/Average__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'org/open_power/Sensor/Aggregation/History/Average.interface.yaml',  ],
+    input: [ '../../../../../../org/open_power/Sensor/Aggregation/History/Average.interface.yaml',  ],
     output: [ 'Average.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../../../..',
         'org/open_power/Sensor/Aggregation/History/Average',
     ],
-    build_by_default: true,
 )
 
 subdir('Maximum')
 generated_others += custom_target(
     'org/open_power/Sensor/Aggregation/History/Maximum__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'org/open_power/Sensor/Aggregation/History/Maximum.interface.yaml',  ],
+    input: [ '../../../../../../org/open_power/Sensor/Aggregation/History/Maximum.interface.yaml',  ],
     output: [ 'Maximum.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../../../..',
         'org/open_power/Sensor/Aggregation/History/Maximum',
     ],
-    build_by_default: true,
 )
 

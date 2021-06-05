@@ -4,16 +4,15 @@ subdir('Logging')
 subdir('VPD')
 generated_others += custom_target(
     'com/ibm/VPD__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'com/ibm/VPD.errors.yaml',  ],
+    input: [ '../../../com/ibm/VPD.errors.yaml',  ],
     output: [ 'VPD.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../..',
         'com/ibm/VPD',
     ],
-    build_by_default: true,
 )
 
 subdir('ipzvpd')

@@ -2,60 +2,56 @@
 subdir('ACPIPowerState')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/ACPIPowerState__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'xyz/openbmc_project/Control/Power/ACPIPowerState.interface.yaml',  ],
+    input: [ '../../../../../xyz/openbmc_project/Control/Power/ACPIPowerState.interface.yaml',  ],
     output: [ 'ACPIPowerState.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../../..',
         'xyz/openbmc_project/Control/Power/ACPIPowerState',
     ],
-    build_by_default: true,
 )
 
 subdir('Cap')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/Cap__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'xyz/openbmc_project/Control/Power/Cap.interface.yaml',  ],
+    input: [ '../../../../../xyz/openbmc_project/Control/Power/Cap.interface.yaml',  ],
     output: [ 'Cap.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../../..',
         'xyz/openbmc_project/Control/Power/Cap',
     ],
-    build_by_default: true,
 )
 
 subdir('Mode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/Mode__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'xyz/openbmc_project/Control/Power/Mode.interface.yaml',  ],
+    input: [ '../../../../../xyz/openbmc_project/Control/Power/Mode.interface.yaml',  ],
     output: [ 'Mode.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../../..',
         'xyz/openbmc_project/Control/Power/Mode',
     ],
-    build_by_default: true,
 )
 
 subdir('RestorePolicy')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/RestorePolicy__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml',  ],
+    input: [ '../../../../../xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml',  ],
     output: [ 'RestorePolicy.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../../..',
         'xyz/openbmc_project/Control/Power/RestorePolicy',
     ],
-    build_by_default: true,
 )
 

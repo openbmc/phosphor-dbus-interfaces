@@ -2,15 +2,14 @@
 subdir('Asset')
 generated_others += custom_target(
     'org/open_power/Inventory/Decorator/Asset__markdown'.underscorify(),
-    input: [ meson.project_source_root() / 'org/open_power/Inventory/Decorator/Asset.interface.yaml',  ],
+    input: [ '../../../../../org/open_power/Inventory/Decorator/Asset.interface.yaml',  ],
     output: [ 'Asset.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.project_source_root(),
+        '--directory', meson.current_source_dir() / '../../../../..',
         'org/open_power/Inventory/Decorator/Asset',
     ],
-    build_by_default: true,
 )
 

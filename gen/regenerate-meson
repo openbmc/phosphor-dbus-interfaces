@@ -19,5 +19,5 @@ fi
 
 $SDBUSPP_GEN_MESON \
     --command meson \
-    --directory "$REPO_ROOT" \
+    --directory "$REPO_ROOT/yaml" \
     --output "$REPO_ROOT/gen"

@@ -2,13 +2,13 @@
 subdir('Device')
 generated_others += custom_target(
     'xyz/openbmc_project/Sensor/Device__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Sensor/Device.errors.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Sensor/Device.errors.yaml',  ],
     output: [ 'Device.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Sensor/Device',
     ],
 )
@@ -16,13 +16,13 @@ generated_others += custom_target(
 subdir('Threshold')
 generated_others += custom_target(
     'xyz/openbmc_project/Sensor/Threshold__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Sensor/Threshold.errors.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Sensor/Threshold.errors.yaml',  ],
     output: [ 'Threshold.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Sensor/Threshold',
     ],
 )
@@ -30,13 +30,13 @@ generated_others += custom_target(
 subdir('Value')
 generated_others += custom_target(
     'xyz/openbmc_project/Sensor/Value__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Sensor/Value.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Sensor/Value.interface.yaml',  ],
     output: [ 'Value.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Sensor/Value',
     ],
 )

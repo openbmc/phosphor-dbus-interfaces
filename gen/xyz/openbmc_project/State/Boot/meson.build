@@ -2,13 +2,13 @@
 subdir('PostCode')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Boot/PostCode__markdown'.underscorify(),
-    input: [ '../../../../../xyz/openbmc_project/State/Boot/PostCode.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/State/Boot/PostCode.interface.yaml',  ],
     output: [ 'PostCode.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../..',
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Boot/PostCode',
     ],
 )
@@ -16,13 +16,13 @@ generated_others += custom_target(
 subdir('Progress')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Boot/Progress__markdown'.underscorify(),
-    input: [ '../../../../../xyz/openbmc_project/State/Boot/Progress.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml',  ],
     output: [ 'Progress.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../..',
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Boot/Progress',
     ],
 )
@@ -30,13 +30,13 @@ generated_others += custom_target(
 subdir('Raw')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Boot/Raw__markdown'.underscorify(),
-    input: [ '../../../../../xyz/openbmc_project/State/Boot/Raw.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/State/Boot/Raw.interface.yaml',  ],
     output: [ 'Raw.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../..',
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Boot/Raw',
     ],
 )

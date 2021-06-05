@@ -2,13 +2,13 @@
 subdir('Activation')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Activation__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Software/Activation.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/Activation.interface.yaml',  ],
     output: [ 'Activation.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/Activation',
     ],
 )
@@ -16,13 +16,13 @@ generated_others += custom_target(
 subdir('ActivationBlocksTransition')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ActivationBlocksTransition__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Software/ActivationBlocksTransition.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/ActivationBlocksTransition.interface.yaml',  ],
     output: [ 'ActivationBlocksTransition.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ActivationBlocksTransition',
     ],
 )
@@ -30,13 +30,13 @@ generated_others += custom_target(
 subdir('ActivationProgress')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ActivationProgress__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Software/ActivationProgress.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/ActivationProgress.interface.yaml',  ],
     output: [ 'ActivationProgress.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ActivationProgress',
     ],
 )
@@ -44,13 +44,13 @@ generated_others += custom_target(
 subdir('ApplyOptions')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ApplyOptions__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Software/ApplyOptions.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/ApplyOptions.interface.yaml',  ],
     output: [ 'ApplyOptions.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ApplyOptions',
     ],
 )
@@ -58,13 +58,13 @@ generated_others += custom_target(
 subdir('ApplyTime')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ApplyTime__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Software/ApplyTime.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml',  ],
     output: [ 'ApplyTime.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ApplyTime',
     ],
 )
@@ -72,13 +72,13 @@ generated_others += custom_target(
 subdir('ExtendedVersion')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ExtendedVersion__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Software/ExtendedVersion.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml',  ],
     output: [ 'ExtendedVersion.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ExtendedVersion',
     ],
 )
@@ -86,13 +86,13 @@ generated_others += custom_target(
 subdir('RedundancyPriority')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/RedundancyPriority__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Software/RedundancyPriority.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/RedundancyPriority.interface.yaml',  ],
     output: [ 'RedundancyPriority.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/RedundancyPriority',
     ],
 )
@@ -100,13 +100,13 @@ generated_others += custom_target(
 subdir('RequestedRedundancyPriority')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/RequestedRedundancyPriority__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Software/RequestedRedundancyPriority.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/RequestedRedundancyPriority.interface.yaml',  ],
     output: [ 'RequestedRedundancyPriority.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/RequestedRedundancyPriority',
     ],
 )
@@ -114,13 +114,13 @@ generated_others += custom_target(
 subdir('Version')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Version__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/Software/Version.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/Version.interface.yaml',  ],
     output: [ 'Version.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/Version',
     ],
 )

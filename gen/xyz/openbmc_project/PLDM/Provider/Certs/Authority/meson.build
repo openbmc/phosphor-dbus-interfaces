@@ -2,13 +2,13 @@
 subdir('CSR')
 generated_others += custom_target(
     'xyz/openbmc_project/PLDM/Provider/Certs/Authority/CSR__markdown'.underscorify(),
-    input: [ '../../../../../../../xyz/openbmc_project/PLDM/Provider/Certs/Authority/CSR.interface.yaml',  ],
+    input: [ '../../../../../../../yaml/xyz/openbmc_project/PLDM/Provider/Certs/Authority/CSR.interface.yaml',  ],
     output: [ 'CSR.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../../../..',
+        '--directory', meson.current_source_dir() / '../../../../../../../yaml',
         'xyz/openbmc_project/PLDM/Provider/Certs/Authority/CSR',
     ],
 )

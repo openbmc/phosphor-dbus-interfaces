@@ -2,13 +2,13 @@
 subdir('Common')
 generated_others += custom_target(
     'xyz/openbmc_project/BIOSConfig/Common__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/BIOSConfig/Common.errors.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/BIOSConfig/Common.errors.yaml',  ],
     output: [ 'Common.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/BIOSConfig/Common',
     ],
 )
@@ -16,13 +16,13 @@ generated_others += custom_target(
 subdir('Manager')
 generated_others += custom_target(
     'xyz/openbmc_project/BIOSConfig/Manager__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/BIOSConfig/Manager.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/BIOSConfig/Manager.interface.yaml',  ],
     output: [ 'Manager.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/BIOSConfig/Manager',
     ],
 )
@@ -30,13 +30,13 @@ generated_others += custom_target(
 subdir('Password')
 generated_others += custom_target(
     'xyz/openbmc_project/BIOSConfig/Password__markdown'.underscorify(),
-    input: [ '../../../../xyz/openbmc_project/BIOSConfig/Password.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/BIOSConfig/Password.interface.yaml',  ],
     output: [ 'Password.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/BIOSConfig/Password',
     ],
 )

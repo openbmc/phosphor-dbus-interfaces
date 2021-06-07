@@ -22,6 +22,30 @@
       "revId": "9f474e2bfa93010d0219d1df2874286dc7106c28",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fa26a3f2_97830b62",
+        "filename": "gen/run-ci",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-06-07T02:35:59Z",
+      "side": 1,
+      "message": "set -e is generally not reliable (it doesn\u0027t work inside negations), so I tend to avoid it. The implicit value of `exit` is the last return status. Since it\u0027s after ||, it\u0027s always going to exit non-zero.",
+      "parentUuid": "0e0dd552_fb2f60eb",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 26
+      },
+      "revId": "9f474e2bfa93010d0219d1df2874286dc7106c28",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

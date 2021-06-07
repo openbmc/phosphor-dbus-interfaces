@@ -57,6 +57,19 @@ properties:
           Resolved property has a reason to change, a value that doesn't
           match the Timestamp property's value (which indicates when the
           log was created) would indicate that Resolved was changed.
+    - name: EntryType
+      type: enum[self.EntryType]
+      description: >
+          This property shall represent the type of log entry. If the resource
+          represents an IPMI SEL entry, the value shall contain SEL. If the
+          resource represents a Redfish event log entry, the value shall contain
+          Event. If the resource represents an OEM log entry format, the value
+          shall contain Oem.
+    - name: OemRecordFormat
+      type: string
+      description: >
+          This property shall represent the OEMspecific format of the entry.
+          This property shall be required if the EntryType value is Oem.
 
 enumerations:
     - name: Level
@@ -87,6 +100,19 @@ enumerations:
         - name: Debug
           description: >
               Information useful to developers for debugging the application.
+    - name: EntryType
+      description: >
+          Possible entry types for a log entry.
+      values:
+        - name: Event
+          description: >
+              A Redfish-defined message.
+        - name: Oem
+          description: >
+              An entry in an OEM-defined format.
+        - name: SEL
+          description: >
+              A legacy IPMI System Event Log (SEL) entry.
 
 methods:
   - name: GetEntry

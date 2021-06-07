@@ -22,6 +22,30 @@
       "revId": "94c85de60d1019ef33f5b7bdf7c1df793586327e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "73265746_65a71194",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-06-07T18:20:51Z",
+      "side": 1,
+      "message": "It doesn\u0027t work if you are using a copy of phosphor-dbus-interfaces that has subprojects linked in / checked out. It propagates through to sdbusplus and breaks because the yaml scanner in phosphor-logging and other projects looks at all yamls files recursively in the directory. This makes it hard to do subproject builds of a bunch of locally checked out / modified repositories as you have to go back and remove subprojects depending on what you are building.\n\nIt\u0027s probably cleaner to ensure that `yamldir` is a pure as possible and only contains yaml files anyway, even if we did add workarounds to the tools that iterate through it.",
+      "parentUuid": "1814b197_732ef409",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 24
+      },
+      "revId": "94c85de60d1019ef33f5b7bdf7c1df793586327e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

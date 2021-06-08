@@ -1,13 +1,13 @@
 # Generated file; do not modify.
 generated_sources += custom_target(
     'com/ibm/VPD__cpp'.underscorify(),
-    input: [ '../../../../com/ibm/VPD.errors.yaml',  ],
+    input: [ meson.project_source_root() / 'com/ibm/VPD.errors.yaml',  ],
     output: [ 'error.cpp', 'error.hpp',  ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.project_source_root(),
         'com/ibm/VPD',
     ],
 )
@@ -15,14 +15,15 @@ generated_sources += custom_target(
 subdir('Manager')
 generated_others += custom_target(
     'com/ibm/VPD/Manager__markdown'.underscorify(),
-    input: [ '../../../../com/ibm/VPD/Manager.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'com/ibm/VPD/Manager.interface.yaml',  ],
     output: [ 'Manager.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.project_source_root(),
         'com/ibm/VPD/Manager',
     ],
+    build_by_default: true,
 )
 

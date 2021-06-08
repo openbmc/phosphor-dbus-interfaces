@@ -2,14 +2,15 @@
 subdir('Policy')
 generated_others += custom_target(
     'com/ibm/Logging/Policy__markdown'.underscorify(),
-    input: [ '../../../../com/ibm/Logging/Policy.interface.yaml',  ],
+    input: [ meson.project_source_root() / 'com/ibm/Logging/Policy.interface.yaml',  ],
     output: [ 'Policy.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../..',
+        '--directory', meson.project_source_root(),
         'com/ibm/Logging/Policy',
     ],
+    build_by_default: true,
 )
 

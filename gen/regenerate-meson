@@ -6,11 +6,16 @@ REPO_ROOT=$(git rev-parse --show-toplevel)
 #   1. Check $SDBUSPP_GEN_MESON
 #   2. Check in $PATH
 #   3. Check in subprojects/sdbusplus
+#      a. Update to the latest version at master
 if [ ! -x "$SDBUSPP_GEN_MESON" ]; then
     SDBUSPP_GEN_MESON="$(which sdbus++-gen-meson 2> /dev/null)"
 fi
 if [ ! -x "$SDBUSPP_GEN_MESON" ]; then
     SDBUSPP_GEN_MESON="$REPO_ROOT/subprojects/sdbusplus/tools/sdbus++-gen-meson"
+    pushd "$REPO_ROOT/subprojects/sdbusplus"
+    git checkout master
+    git pull origin master
+    popd
 fi
 if [ ! -x "$SDBUSPP_GEN_MESON" ]; then
     echo "Cannot find sdbus++-gen-meson ($SDBUSPP_GEN_MESON)."

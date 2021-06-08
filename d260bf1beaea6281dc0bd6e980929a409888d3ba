@@ -22,6 +22,30 @@
       "revId": "d260bf1beaea6281dc0bd6e980929a409888d3ba",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2fd319d_08d1effd",
+        "filename": "xyz/openbmc_project/Inventory/Decorator/LocationCode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-08T06:15:57Z",
+      "side": 1,
+      "message": "ah, should we add an interface for each type?\n\nOr have a happing a mapping of the existing items to a type.\n\n---\n\nYou probably mean the first one, since a Board type can vary a lot in connection types.",
+      "parentUuid": "a92a9b80_95bed06e",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 74
+      },
+      "revId": "d260bf1beaea6281dc0bd6e980929a409888d3ba",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

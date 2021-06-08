@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "b6817e5c_a6dec1f2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-06-08T23:07:15Z",
+      "side": 1,
+      "message": "Presumably this isn\u0027t used by the client directly.  Would this be a custom OEM IPMI interface?  Redfish?",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 0
+      },
+      "revId": "d260bf1beaea6281dc0bd6e980929a409888d3ba",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a92a9b80_95bed06e",
         "filename": "xyz/openbmc_project/Inventory/Decorator/LocationCode.interface.yaml",
         "patchSetId": 3
@@ -37,6 +60,30 @@
       "side": 1,
       "message": "ah, should we add an interface for each type?\n\nOr have a happing a mapping of the existing items to a type.\n\n---\n\nYou probably mean the first one, since a Board type can vary a lot in connection types.",
       "parentUuid": "a92a9b80_95bed06e",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 74
+      },
+      "revId": "d260bf1beaea6281dc0bd6e980929a409888d3ba",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2aacb273_fe618acf",
+        "filename": "xyz/openbmc_project/Inventory/Decorator/LocationCode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-06-08T23:07:15Z",
+      "side": 1,
+      "message": "It\u0027s really up to the maintainer here, but as a guess, I suspect that\u0027s what we would do.",
+      "parentUuid": "b2fd319d_08d1effd",
       "range": {
         "startLine": 21,
         "startChar": 0,

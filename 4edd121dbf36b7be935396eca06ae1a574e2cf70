@@ -34,6 +34,29 @@
       "revId": "4edd121dbf36b7be935396eca06ae1a574e2cf70",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b75b67f2_7194c40d",
+        "filename": "xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-06-08T18:38:18Z",
+      "side": 1,
+      "message": "Generally we shouldn\u0027t enumerate types like this, we would create Inventory.Item.GPU, Inventory.Item.FPGA, and Inventory.Item.FPGA\n\n\nI\u0027m not really following why we wouldn\u0027t do the same here, but maybe there\u0027s a good reason?",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 20
+      },
+      "revId": "4edd121dbf36b7be935396eca06ae1a574e2cf70",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

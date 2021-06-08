@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a92a9b80_95bed06e",
+        "filename": "xyz/openbmc_project/Inventory/Decorator/LocationCode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-06-08T01:06:38Z",
+      "side": 1,
+      "message": "This would generally be handled using the xyz.openbmc_project.Item.X interface, where X is Drive/Board ect.  In fact, PCIe slot already exists:\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/495981805244269650bee13d1ee8f13543b2bc5a/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 74
+      },
+      "revId": "d260bf1beaea6281dc0bd6e980929a409888d3ba",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

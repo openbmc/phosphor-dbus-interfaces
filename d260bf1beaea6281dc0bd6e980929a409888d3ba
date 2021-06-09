@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "82c4f070_f145d73b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-09T00:25:05Z",
+      "side": 1,
+      "message": "yeah, not the users directly. I guess I was thinking of a wrapper client that will call IPMI or Redfish can use it to build the device path.\n\nThis will be used by the Redfish to show the ConnectionType for Physical Locations.",
+      "parentUuid": "b6817e5c_a6dec1f2",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 0
+      },
+      "revId": "d260bf1beaea6281dc0bd6e980929a409888d3ba",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a92a9b80_95bed06e",
         "filename": "xyz/openbmc_project/Inventory/Decorator/LocationCode.interface.yaml",
         "patchSetId": 3
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "It\u0027s really up to the maintainer here, but as a guess, I suspect that\u0027s what we would do.",
       "parentUuid": "b2fd319d_08d1effd",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 74
+      },
+      "revId": "d260bf1beaea6281dc0bd6e980929a409888d3ba",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "11e00da5_a519663c",
+        "filename": "xyz/openbmc_project/Inventory/Decorator/LocationCode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-09T00:25:05Z",
+      "side": 1,
+      "message": "sounds good. I\u0027ll have the Interface version first and revert to this if needed.\n\nThis version is really targeting Redfish... but the other method might be more suited for OpenBMC in general.",
+      "parentUuid": "2aacb273_fe618acf",
       "range": {
         "startLine": 21,
         "startChar": 0,

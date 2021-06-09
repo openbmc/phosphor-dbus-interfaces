@@ -16,6 +16,24 @@
       "revId": "fbf4dddb99ffe8f2414f864f63f2877988383a42",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4abe6ed7_2db3769e",
+        "filename": "xyz/openbmc_project/Inventory/Item/Embedded.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-09T20:30:27Z",
+      "side": 1,
+      "message": "These interfaces should be decorators that should only be used to determine the connection types. Maybe adding to Decorator folder is better? \n\nI put it here because `Connector` and `PCIESlot` are also an item here... which is also supported as a type. Maybe create a new Connector/Slot interface under Decorator.\n\n\nAnother approach that I am taking is having a property in LocationCode instead like\nhttps://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/43796/1\n\nYeah, looking at `Item.Embedded` doesn\u0027t make much sense. Maybe `Item.Connector.Embedded` is better.\n\nRedfish supports, Slot, Bay, Connector, Socket, and soon Embedded\n\nMaybe we can have \n\nItem.Connector\n  |_Item.Connector.Bay\n  |_Item.Connector.Connector\n  |_Item.Connector.Socket\n  |_Item.Connector.Slot\n  |_Item.Connector.Embedded",
+      "parentUuid": "2b38d5c8_e2d48d1b",
+      "revId": "fbf4dddb99ffe8f2414f864f63f2877988383a42",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

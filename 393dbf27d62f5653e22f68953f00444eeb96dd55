@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "34c44d0e_3c4baa2e",
+        "filename": "xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-10T16:01:37Z",
+      "side": 1,
+      "message": "Actually,\n\nI think Software.Version and Software.State can just be in the same object path. So it will be available for the Installer to get the information if needed without looking for other object paths.\n\n---\n\nDo we not want it for which ever service exporting the Version to also export the States?",
+      "parentUuid": "dc33615e_9a9dff55",
+      "revId": "393dbf27d62f5653e22f68953f00444eeb96dd55",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "fce0e89d_67418c92",
         "filename": "xyz/openbmc_project/Software/State.interface.yaml",
         "patchSetId": 1

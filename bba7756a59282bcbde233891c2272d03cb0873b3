@@ -248,6 +248,24 @@
       "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69695565_f395c6e6",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-06-10T08:22:32Z",
+      "side": 1,
+      "message": "I\u0027m not sure I followed. Is this about 12.16 Get Network ID from DSP0236 or something else. The Network ID as defined in DSP0236 is optional:\n\n\"A Network ID is required for add-in MCTP networks (For example, an MCTP Network on an add-in card or module). A Network ID is not required for a fixed (not add-in) MCTP network provided there is only one network in the system implementation.\"\n\nFurther, \"The format of the ID follows the byte (octet) format specified in RFC4122.\", a UUID.",
+      "parentUuid": "f692b2a5_aa7fef06",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

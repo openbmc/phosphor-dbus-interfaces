@@ -230,6 +230,24 @@
       "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f692b2a5_aa7fef06",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-10T06:55:21Z",
+      "side": 1,
+      "message": "\u003e Even if it\u0027s on the \"default\" network, it\u0027s useful to know the network ID of an endpoint; I\u0027d suggest that we always represent the network ID in the dbus structure, even if it\u0027s the default (and the default may change).\n\nSure, since a network ID exists in the case of default network as well. We can have it in the D-Bus structure.\n\nDeepak/Andrew does that work for both of you?",
+      "parentUuid": "b4d653dc_d120c461",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

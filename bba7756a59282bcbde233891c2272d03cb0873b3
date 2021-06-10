@@ -212,6 +212,24 @@
       "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b4d653dc_d120c461",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2021-06-10T04:52:38Z",
+      "side": 1,
+      "message": "Even if it\u0027s on the \"default\" network, it\u0027s useful to know the network ID of an endpoint; I\u0027d suggest that we always represent the network ID in the dbus structure, even if it\u0027s the default (and the default may change).\n\n[This may mean it\u0027s no longer useful to split the interfaces into Endpoint \u0026 Network, but I\u0027m OK with either approach there]",
+      "parentUuid": "75d42f35_918b26fc",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

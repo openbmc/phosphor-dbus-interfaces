@@ -42,6 +42,48 @@
     },
     {
       "key": {
+        "uuid": "f9132a20_8c7e4f14",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-14T11:26:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5ff24ad9_3ce2f3a9",
+      "range": {
+        "startLine": 9,
+        "startChar": 6,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "4eed79c02e691d087fcbd2e20ed8f487a1e0f42b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "47e76430_915be70b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-14T11:26:16Z",
+      "side": 1,
+      "message": "Yes, since this dbus interface implementation is OpenPOWER specific.\n\nI am not sure, I can push into xyz/openbmc_project when implementation is specific to host architecture (POWER).\n\nAny thoughts?",
+      "parentUuid": "a0cecffb_7f1d65fe",
+      "revId": "4eed79c02e691d087fcbd2e20ed8f487a1e0f42b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "71a3be0b_c689ff80",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "4c4afc4e_22a4c02e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-14T11:26:16Z",
+      "side": 1,
+      "message": "Ack, the boot will confuse, right? like whether it meant bmc/host.\n\nWhat about \"next boot of the host\" ?",
+      "parentUuid": "71a3be0b_c689ff80",
+      "range": {
+        "startLine": 12,
+        "startChar": 20,
+        "endLine": 12,
+        "endChar": 30
+      },
+      "revId": "4eed79c02e691d087fcbd2e20ed8f487a1e0f42b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "38f41500_322e098f",
         "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 3
@@ -76,6 +142,24 @@
       "writtenOn": "2021-06-14T09:12:58Z",
       "side": 1,
       "message": "better to match with design document definition.\n\n - Type: Type of Guard\n                - Manual - Manually Guarded\n                - Critical  - Guarded based on a critical error\n                - Warning - Guarded based on an error which is not\n                  critical, but eventually, there can be critical failures.",
+      "revId": "4eed79c02e691d087fcbd2e20ed8f487a1e0f42b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "334c7a46_ee1df780",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-14T11:26:16Z",
+      "side": 1,
+      "message": "I am trying to make more generic than IBM term (\"Manual\") because those type will be used in bmcweb to form isolated hardware entry into redfish.",
+      "parentUuid": "38f41500_322e098f",
       "revId": "4eed79c02e691d087fcbd2e20ed8f487a1e0f42b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -96,6 +180,24 @@
       "revId": "4eed79c02e691d087fcbd2e20ed8f487a1e0f42b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ced5da98_d61d8ff0",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-14T11:26:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "584d6d43_5964bbc5",
+      "revId": "4eed79c02e691d087fcbd2e20ed8f487a1e0f42b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

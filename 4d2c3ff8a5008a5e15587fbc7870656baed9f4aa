@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c78348b0_f7517d0b",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2021-06-14T05:27:13Z",
+      "side": 1,
+      "message": "Representing supported message types as array[bytes] is perfectly ok, however representing them with boolean properties gives the advantage of easier parsing from the upper layer protocol: https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/30139/14/xyz/openbmc_project/MCTP/SupportedMessageTypes.interface.yaml",
+      "range": {
+        "startLine": 24,
+        "startChar": 12,
+        "endLine": 24,
+        "endChar": 23
+      },
+      "revId": "4d2c3ff8a5008a5e15587fbc7870656baed9f4aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8832cc5b_94092c61",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2021-06-14T05:27:13Z",
+      "side": 1,
+      "message": "The proposed interfaces look fine, however few queries -\n\n1. If BMC acts as a responder for upper layer protocol (say PLDM etc), the proposed mctpd should respond with the list of the supported message types it supports. Do you see an usecase of having a \"registerSupportedMessagetTypes\" method through which responder applications on BMC register themselves with mctpd? This should enable the proposed mctpd to respond to queries of get supported message types command\n\n2. You could have upper layer protocols that look for MCTP devices on a specific medium only; thus can we have a physical medium identifier as a property on the endpoint object?",
+      "revId": "4d2c3ff8a5008a5e15587fbc7870656baed9f4aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69d9b2ae_2a3f0b20",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000410
+      },
+      "writtenOn": "2021-06-14T05:27:13Z",
+      "side": 1,
+      "message": "Sorry, I might be missing something. Why does this not correspond to actual endpoint ID?",
+      "range": {
+        "startLine": 32,
+        "startChar": 11,
+        "endLine": 32,
+        "endChar": 56
+      },
+      "revId": "4d2c3ff8a5008a5e15587fbc7870656baed9f4aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

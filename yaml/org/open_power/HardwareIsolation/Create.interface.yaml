@@ -63,3 +63,33 @@ methods:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.NotAllowed
+
+    - name: CreateWithPhysicalPath
+      description: >
+          Create an org.open_power.HardwareIsolation.Entry object if want
+          to isolate any hardware part.
+      parameters:
+        - name: PhysicalPath
+          type: string
+          description: >
+              The physical path of hardware is needed to isolate.
+        - name: Severity
+          type: enum[org.open_power.HardwareIsolation.Entry.Type]
+          description: >
+              The severity of isolating hardware.
+        - name: BmcErrorLogId
+          type: uint32
+          description: >
+              The bmc error log caused the isolation of hardware.
+              This parameter can be optional (pass 0) if severity type is
+              org.open_power.HardwareIsolation.Entry.Type.User.
+      returns:
+        - name: Path
+          type: path
+          description: >
+              The path of created org.open_power.HardwareIsolation.Entry
+              object.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.NotAllowed

@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "71d4c532_8329f748",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-14T15:42:27Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9630deb0_d0ae9840",
+      "range": {
+        "startLine": 9,
+        "startChar": 65,
+        "endLine": 10,
+        "endChar": 39
+      },
+      "revId": "896063534627e964c81e0f27f596f403e5c9ce7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0fb712f1_aee1460b",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 3
@@ -59,6 +83,30 @@
       "writtenOn": "2021-06-14T11:30:18Z",
       "side": 1,
       "message": "PEL ID? instead of using BmcErrorLogId.",
+      "range": {
+        "startLine": 20,
+        "startChar": 16,
+        "endLine": 20,
+        "endChar": 29
+      },
+      "revId": "896063534627e964c81e0f27f596f403e5c9ce7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c4ed2a5_e6d76892",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-14T15:42:27Z",
+      "side": 1,
+      "message": "I am preferring BMCErrorLog because it can be used in isolated hardware entry to form a redfish response.\n\nand I guess this interface can be triggered in PEL infrastructure (which already may know the bmc error log id) or directly from the application which can get through https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/org/open_power/Logging/PEL.interface.yaml#L63  \n\nAny different opinion?",
+      "parentUuid": "0fb712f1_aee1460b",
       "range": {
         "startLine": 20,
         "startChar": 16,
@@ -94,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "dc06e4a5_4e2cab78",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-14T15:42:27Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c0cfa66e_6a73c79d",
+      "range": {
+        "startLine": 23,
+        "startChar": 18,
+        "endLine": 23,
+        "endChar": 21
+      },
+      "revId": "896063534627e964c81e0f27f596f403e5c9ce7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fc4dd2b5_a975b832",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 3
@@ -114,6 +186,30 @@
       "revId": "896063534627e964c81e0f27f596f403e5c9ce7e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "09432a0a_1712d141",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-14T15:42:27Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "fc4dd2b5_a975b832",
+      "range": {
+        "startLine": 24,
+        "startChar": 57,
+        "endLine": 24,
+        "endChar": 65
+      },
+      "revId": "896063534627e964c81e0f27f596f403e5c9ce7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

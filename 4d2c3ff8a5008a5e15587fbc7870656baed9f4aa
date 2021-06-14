@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "5828e488_5fa44c3e",
+        "filename": "xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-14T09:09:42Z",
+      "side": 1,
+      "message": "\u003e 1. If BMC acts as a responder for upper layer protocol (say PLDM etc), the proposed mctpd should respond with the list of the supported message types it supports. Do you see an usecase of having a \"registerSupportedMessagetTypes\" method through which responder applications on BMC register themselves with mctpd? This should enable the proposed mctpd to respond to queries of get supported message types command\n\nSounds good.\n\n\u003e 2. You could have upper layer protocols that look for MCTP devices on a specific medium only; thus can we have a physical medium identifier as a property on the endpoint object?\n\nI am not handling such a scenario now, feel free to make changes as follow-up patches.",
+      "parentUuid": "8832cc5b_94092c61",
+      "revId": "4d2c3ff8a5008a5e15587fbc7870656baed9f4aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "69d9b2ae_2a3f0b20",
         "filename": "xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 8
@@ -53,6 +71,30 @@
       "writtenOn": "2021-06-14T05:27:13Z",
       "side": 1,
       "message": "Sorry, I might be missing something. Why does this not correspond to actual endpoint ID?",
+      "range": {
+        "startLine": 32,
+        "startChar": 11,
+        "endLine": 32,
+        "endChar": 56
+      },
+      "revId": "4d2c3ff8a5008a5e15587fbc7870656baed9f4aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd71165c_4bc19723",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-14T09:09:42Z",
+      "side": 1,
+      "message": "\u003e does not correspond to the actual endpoint ID\n\nEndpoint ID\u0027s may not be unique and can be duplicate across networks. So didn\u0027t want that conflict in D-Bus object paths. Will revisit the section with the latest feedback.",
+      "parentUuid": "69d9b2ae_2a3f0b20",
       "range": {
         "startLine": 32,
         "startChar": 11,

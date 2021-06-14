@@ -284,6 +284,24 @@
       "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8150acb7_8f8c1548",
+        "filename": "xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-14T09:09:42Z",
+      "side": 1,
+      "message": "For upper layer protocols communicating with the MCTP kernel stack would need both the eid and the network ID, patchset 4 with eid and network ID as properties looks to be a good fit.\n\n\u003e Your reference to the Get Network ID does bring up a good point though - we need some way to represent the UUID for a network. That confirms the need for an actual dbus object for the network, with a UUID property.\n\nNetwork ID can be implemented as a separate D-Bus object, like /xyz/openbmc_project/mctp/network/\u003cnetwork ID\u003e implementing UUID interface. There can be D-Bus associations between endpoints and this D-Bus object.",
+      "parentUuid": "8a949010_c1a3c546",
+      "revId": "bba7756a59282bcbde233891c2272d03cb0873b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

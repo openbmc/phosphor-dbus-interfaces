@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "88236fc2_2fa5aa8c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-15T07:29:58Z",
+      "side": 1,
+      "message": "I have discussed with the hostboot team on this patch.\n\nThe discussion point is, all the chiplet items (which are present as chiplet type in this patch) are not subunits of chiplet, and it is all about how we packaged processor subunits for a machine.\n\nLooks, we need to model a separate inventory item for all the isolatable (guardable) FRU/FRU units.\n\nAny different thoughts?",
+      "parentUuid": "a20b6701_f0602993",
+      "range": {
+        "startLine": 7,
+        "startChar": 33,
+        "endLine": 7,
+        "endChar": 42
+      },
+      "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "cd6cadce_eb5665b2",
         "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2021-06-15T04:18:09Z",
       "side": 1,
       "message": "Need to include all the guard able unit info.based on POWER processor spec.\nHow you are going to handle this list across processor genarations?",
+      "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "05dee2a3_875c3060",
+        "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-15T07:29:58Z",
+      "side": 1,
+      "message": "\u003e Need to include all the guard able unit info.based on POWER processor spec.\n\nReplied in https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/44037/2//COMMIT_MSG#7\n\n\u003e How you are going to handle this list across processor genarations?\n\nI think we need add based on needs if future processor coming with new unit/fru which can be isolated.",
+      "parentUuid": "cd6cadce_eb5665b2",
       "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

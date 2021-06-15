@@ -220,6 +220,24 @@
     },
     {
       "key": {
+        "uuid": "953135dc_26bcad2c",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-15T07:09:05Z",
+      "side": 1,
+      "message": "When you say legacy usage, you meant IBM terms? If so, Can we use the IBM term in the openBMC community?\nI guess we discussed this in the internal BMC design call.\n- How we need to go forward from the redfish perspective while returning isolated hardware information in redfish.\n- DMTF will agree \"Manual\" type?\n\nand even, IBM BMC team felt like \"User\" will be appropriate because the user only can manually isolate the hardware and not from system applications.\n\nI agree that we won\u0027t map dbus terminology with redfish terminology and that translation can happen in bmcweb.\n\nDo we need to change to \"Manual\" instead of \"User\"?",
+      "parentUuid": "10b1f5f7_37fb5505",
+      "revId": "4eed79c02e691d087fcbd2e20ed8f487a1e0f42b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "584d6d43_5964bbc5",
         "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 3

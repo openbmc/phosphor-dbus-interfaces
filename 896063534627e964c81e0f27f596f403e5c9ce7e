@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "c52399ca_8206c384",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-15T06:37:49Z",
+      "side": 1,
+      "message": "Agree but, I think we have different types of id\u0027s to error log in the openpower context, for example, BMC Event Log ID which can use to pull the PEL ID, PLID, and EID based on needs.\n\nI felt it will confuse the consumer of this interface like which one needs to pass so, mentioning the exact id which is expected by this interface, and if this interface getting bmc event id then, we can get whatever we need from BMC Event log. \n\nOr what about this \"EventLogID\"?",
+      "parentUuid": "eba09880_77336646",
+      "range": {
+        "startLine": 20,
+        "startChar": 16,
+        "endLine": 20,
+        "endChar": 29
+      },
+      "revId": "896063534627e964c81e0f27f596f403e5c9ce7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c0cfa66e_6a73c79d",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 3

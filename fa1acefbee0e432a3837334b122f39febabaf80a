@@ -81,6 +81,46 @@
       "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1e2ce6ed_8dbada61",
+        "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T17:48:05Z",
+      "side": 1,
+      "message": "I suspect many of these enumeration types are specific to the particular generation of chip you are currently working on.  Should this interface be \"P10Chiplet\"?",
+      "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47d4b54f_47d8302e",
+        "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T17:48:05Z",
+      "side": 1,
+      "message": "Is this a mistake?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 33
+      },
+      "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

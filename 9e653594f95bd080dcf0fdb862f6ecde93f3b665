@@ -94,6 +94,30 @@
       "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b00ce2e1_e37fd715",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2021-06-15T10:44:57Z",
+      "side": 1,
+      "message": "Key point you need to consider here is to avoid usage of physical path based interface in the production code.\n\nAnother problem statement i heard from guard tool users( dev/test/lab) , how to get guardable units information , to create guard records. to get entity path ot physical path , need to look devtree for gettibg this info. If you can  provide some  option in tool or interface  to dump guardable units keys  based on the type , that will be more useful.",
+      "parentUuid": "95ffed6e_67d2afd6",
+      "range": {
+        "startLine": 24,
+        "startChar": 13,
+        "endLine": 25,
+        "endChar": 66
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

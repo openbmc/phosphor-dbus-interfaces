@@ -2,6 +2,75 @@
   "comments": [
     {
       "key": {
+        "uuid": "273ee31e_546914d2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T17:41:59Z",
+      "side": 1,
+      "message": "Why are the interfaces unique to OpenPOWER?  The design document was proposed in a way which would be generic.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 57
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4b941cfb_b2cd0470",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T17:41:59Z",
+      "side": 1,
+      "message": "We need to define what those associations are.  Shouldn\u0027t that be in the design?  The design implied they were attributes in the Entry (I\u0027m fine with, and typically prefer, associations though).",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7815f5a6_dc0fb6bc",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T17:41:59Z",
+      "side": 1,
+      "message": "Should or must?  Should seems reasonable but I want to confirm.",
+      "range": {
+        "startLine": 9,
+        "startChar": 47,
+        "endLine": 9,
+        "endChar": 53
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8cbaba8f_9f65ec09",
         "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 4

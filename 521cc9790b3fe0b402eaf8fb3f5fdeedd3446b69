@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a4e21835_9a58b118",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T21:41:30Z",
+      "side": 1,
+      "message": "I don\u0027t really understand what this commit is proposing.  Log entries aren\u0027t \"Redfish\" or \"SEL\" as it is.  They can be transposed into Redfish events or SELs, but they are *not* those things and never were intended to be those things.  Likely they contain a superset of information that those external interfaces might want.\n\nI don\u0027t think we should expect a logging entry to say \"I want to be surfaced out this particular external interface\".\n\nWhat would we do for existing logging entries?",
+      "revId": "521cc9790b3fe0b402eaf8fb3f5fdeedd3446b69",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ffffd922_e0ae816b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T21:41:30Z",
+      "side": 1,
+      "message": "How?  What does an \"OEM Record\" look like?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 30
+      },
+      "revId": "521cc9790b3fe0b402eaf8fb3f5fdeedd3446b69",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a75a5472_e152c1f7",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T21:41:30Z",
+      "side": 1,
+      "message": "What does a proper value of this property look like?  I can\u0027t even make a judgement on this property because there isn\u0027t any information.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 72
+      },
+      "revId": "521cc9790b3fe0b402eaf8fb3f5fdeedd3446b69",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

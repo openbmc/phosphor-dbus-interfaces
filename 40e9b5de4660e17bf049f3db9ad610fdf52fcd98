@@ -16,6 +16,24 @@
       "revId": "40e9b5de4660e17bf049f3db9ad610fdf52fcd98",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "56b7f751_21dbc696",
+        "filename": "org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-15T15:31:07Z",
+      "side": 1,
+      "message": "Hi @Deepak,\n\nApologies, Somehow I have missed your comments, and sorry for the very very late response.\n\nAgree with you regarding the below points.\n\n- ID\nYes, it can be implementation-specific and it can be part of the path.\nThe original proposal in design documents used a separate property but, when I have started the implementation, figure out that id can be part of the path. Fixed in the latest patch.\n\n- ErrorLog and IsolatedHardware\nYes, it can be an association in this entry object, recently I got to knew that there is an association concept while watching discord and I felt the same as you said, it can be an association to point error log and isolated hardware inventory path. Fixed in the latest patch.\n\n- Severity\nSeverity can be an association? Not getting your point can you elaborate?\n\nI am not sure you mean the severity of the error log? \n\nHere I am referring, the severity of isolated hardware which will vary from error log severity (I guess) so I thought it can be separate property in this entry to get to know about the severity/type of isolated hardware entry.",
+      "parentUuid": "2246e841_16207f85",
+      "revId": "40e9b5de4660e17bf049f3db9ad610fdf52fcd98",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

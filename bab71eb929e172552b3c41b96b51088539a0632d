@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1afe83ef_7170f882",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T21:47:51Z",
+      "side": 1,
+      "message": "Does the MCTP protocol require these to be byte?  Are NetworkIDs similarly expected to be int32 by the spec?",
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "53dff3d8_3eb095ad",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T21:47:51Z",
+      "side": 1,
+      "message": "Can we make these enumeration values?",
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1b3d4165_fc3ddd53",
+        "filename": "yaml/xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T21:47:51Z",
+      "side": 1,
+      "message": "If these are part of the path, why are they also properties in the object?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 78
+      },
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

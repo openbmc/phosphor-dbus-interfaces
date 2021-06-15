@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cdb66d80_155ffd92",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T21:59:36Z",
+      "side": 1,
+      "message": "I\u0027m surprised that RackMount is the default because the text for it says \"a group of racks\".  Wouldn\u0027t the default be an Enclosure?",
+      "revId": "472613fec2a3a4f08271f76c1dc65ed0adbb3321",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c4b36ef0_f08250d8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T21:59:36Z",
+      "side": 1,
+      "message": "Can you check the line wraps on all of these?  Almost every one in this file is wrapping at a place that isn\u0027t 80 characters.",
+      "range": {
+        "startLine": 18,
+        "startChar": 75,
+        "endLine": 18,
+        "endChar": 85
+      },
+      "revId": "472613fec2a3a4f08271f76c1dc65ed0adbb3321",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "391c57a2_d48862b0",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-15T21:59:36Z",
+      "side": 1,
+      "message": "This text doesn\u0027t match what Redfish says.  Is that your intention?\n\nJsonSchemas/Chassis/Chassis.json:                \"RackMount\": \"A single-system chassis designed specifically for mounting in an equipment rack.\",\n\nLooking further, it looks like you used RackGroup\u0027s text for RackMount.",
+      "revId": "472613fec2a3a4f08271f76c1dc65ed0adbb3321",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

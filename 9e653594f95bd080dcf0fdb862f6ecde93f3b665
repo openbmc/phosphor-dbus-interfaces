@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e57b4688_0cb78617",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T09:29:00Z",
+      "side": 1,
+      "message": "Yeah true but felt the same as other change comments (https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/43532/4//COMMIT_MSG#12)\n\nI think I can move once I got feedback for the above comment.",
+      "parentUuid": "b355f086_3d785af1",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 78
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a593c9cc_55e29f0e",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2021-06-15T17:46:19Z",
       "side": 1,
       "message": "Where does this \"key\" come from?  Why isn\u0027t your PLDM provider performing the translation?",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 79
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db55614d_84d9f261",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T09:29:00Z",
+      "side": 1,
+      "message": "This is key is coming from PHAL (POWER Hardware Abstraction Layer) i.e there is CEC (Central Electronics Complex) device tree which contains BMC and HostBoot interested cec hardware details and each hardware having a key called \"EntityPath\".\n\nPHAL layer will push into upstream (OpenPOWER) shortly and this layer will be used in openPOWER based BMC applications (openpower-proc-control, openpower-hw-diags) so those applications may interested to isolate many other hardwares which are not modeled in inventory. \n\nToday, we are modeling Core and Dimm through PLDM and the remaining BMC interested POWER processor subunits (hardware for example Memory Controller, etc..) details we are pulling from the PHAL CEC device tree. \n\nThis version (entity path) of the interface will be used by BMC openPOWER based applications to isolate hardware.",
+      "parentUuid": "a593c9cc_55e29f0e",
       "range": {
         "startLine": 19,
         "startChar": 0,
@@ -238,6 +286,30 @@
     },
     {
       "key": {
+        "uuid": "1038b137_98e8c515",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T09:29:00Z",
+      "side": 1,
+      "message": "This interface can be used by an external user to manually isolate hardware and we don\u0027t have/generate the event log because this is not an error case and the user voluntarily tried to isolate hardware.\n\nand I think we can not use optional parameter in dbus right? Please let me know if there is a way to do that if it makes sense to you.\n\nor Any different thoughts?",
+      "parentUuid": "736adc4b_56617346",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 66
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "43e382e0_37c9ecb5",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 4
@@ -261,6 +333,30 @@
     },
     {
       "key": {
+        "uuid": "120022c4_df4b1363",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T09:29:00Z",
+      "side": 1,
+      "message": "Ah ok make sense since we can not get the exact reason but, the daemon which will implement this interface using a library (libguard) from openPOWER to create a record into the PNOR partition and it throwing runtime exception so I thought to use Interfailure in those cases.",
+      "parentUuid": "43e382e0_37c9ecb5",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 60
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f45ccd1d_adab9e90",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 4
@@ -272,6 +368,30 @@
       "writtenOn": "2021-06-15T17:46:19Z",
       "side": 1,
       "message": "Under what conditions would it be \"NotAllowed\"?",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 55
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cd40700b_58579bec",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T09:29:00Z",
+      "side": 1,
+      "message": "We have a use case to check whether the maximum count reached to create the record in PNOR so, I thought will throw this error if the count is reached and could not create the record for isolating hardware.",
+      "parentUuid": "f45ccd1d_adab9e90",
       "range": {
         "startLine": 46,
         "startChar": 0,

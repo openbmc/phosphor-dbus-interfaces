@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "06739451_99b18127",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-16T11:39:51Z",
+      "side": 1,
+      "message": "\u003e PHAL layer will push into upstream (OpenPOWER) shortly and this layer will be used in openPOWER based BMC applications (openpower-proc-control, openpower-hw-diags) so those applications may interested to isolate many other hardwares which are not modeled in inventory. \n\nThis statement is implying an entire design which has not been discussed with the open source community.  We don\u0027t currently have \"libraries\" like what you\u0027re suggesting here.  It is disappointing that it sounds like you\u0027re team has gone off and written a bunch of code in a closed manner and then are expecting to drop it on the rest of us when it doesn\u0027t fit the rest of the software design.",
+      "parentUuid": "db55614d_84d9f261",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 79
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2f0b1cd4_5bc27047",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 4
@@ -310,6 +334,30 @@
     },
     {
       "key": {
+        "uuid": "1dfbebc1_b534837a",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-16T11:39:51Z",
+      "side": 1,
+      "message": "\u003e and I think we can not use optional parameter in dbus right? Please let me know if there is a way to do that if it makes sense to you.\n\nCorrect, there are no optional values.  If you want a way to create manual entries without a corresponding log, when most of the non-manual cases have a log, you\u0027ll need a separate method for that.\n\nCan the entry, when it exists, be a path?",
+      "parentUuid": "1038b137_98e8c515",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 66
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "43e382e0_37c9ecb5",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 4
@@ -357,6 +405,30 @@
     },
     {
       "key": {
+        "uuid": "b37dff6e_e4d0ca0f",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-16T11:39:51Z",
+      "side": 1,
+      "message": "Again, we don\u0027t have libraries like this.  Won\u0027t this all be in the \"guard\" daemon (ie. the implementation of this interface).",
+      "parentUuid": "120022c4_df4b1363",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 60
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f45ccd1d_adab9e90",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 4
@@ -392,6 +464,30 @@
       "side": 1,
       "message": "We have a use case to check whether the maximum count reached to create the record in PNOR so, I thought will throw this error if the count is reached and could not create the record for isolating hardware.",
       "parentUuid": "f45ccd1d_adab9e90",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 55
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b1c47563_a6491c2c",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-16T11:39:51Z",
+      "side": 1,
+      "message": "Please don\u0027t reuse Common.Errors for non-standard purposes.  \"NotAllowed\" is typically used in for a bad state request.  (Eg. someone asked to power on a device and the device is already powered on)\n\nI think it would be better to define your own error for this case unless you can find an existing common error that more succinctly encapsulates the error condition.  Maybe Common.Error.TooManyResources.",
+      "parentUuid": "cd40700b_58579bec",
       "range": {
         "startLine": 46,
         "startChar": 0,

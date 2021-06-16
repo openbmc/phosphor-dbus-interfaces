@@ -155,6 +155,24 @@
     },
     {
       "key": {
+        "uuid": "1bc3dbda_2f55aec0",
+        "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T17:58:17Z",
+      "side": 1,
+      "message": "\u003e I\u0027m not sure if any of these on the list here are going to be generally applicable. \nOh ok thanks for your suggestion in the early stage itself - I started this analysis yesterday onwards. You saved my time :). \n\n\u003e Are there any attributes associated with them? \nI am planning to implement \"PrettyName\" which is need for hardware isolation to get to know the name of the subunit which is isolated. \n\nI am not seeing any other attributes now.\n\n\u003e If there aren\u0027t any attributes anyhow, I think it is simpler to just keep them in open_power, otherwise we n need to discuss with Intel, AMD, Arm and understand if it also matches their hardware design and that will just slow you down.\nYeah got the pain point. I will try to push into org/openpower then.\n\n\u003e I\u0027ve previously worked on P5 thru P9 and none of these chiplets existed for any of those chips except the \u0027MC\u0027 and \u0027PHB\u0027 (and arguably what the \u0027MC\u0027 contained has changed on every processor generation since P5).  I\u0027d still recommend putting these into a subdirectory.  Maybe \"Item.Chiplet.Power10.xxx\", but ultimately that is up to your team to decide.\n\nAh ok, Thanks for sharing your experience on this, and Yes, \"Item.Chiplet.Power10.xxx\" makes sense to me but, I will check with the hostboot team who owning those subunits to init.\n\n\u003e It would be good of your team to have discussions in public.  If people on your team have opinions, especially the BMC team itself, they should express those and review your commits.  That way we can know the consensus building around certain directions and you are not having to act as a middle man.\n\nGot it, I just pushed this patch two days back, and Luckily, I got a slot to discuss with the internal team on my patches and got the above feedback from various teams. I got an indication that starts the discussion in discord but, looks you are very fast :)   \n\n\u003e By saying \"we discussed this and we decided XXX\", the only way I can take that you personally decided.  I don\u0027t know who these people are, how large of a group they are, why their opinion should matter, what evidence they brought to the discussion, etc.\n\nYeah, I can understand, I will make sure that next time onwards I will try to use the community forum.",
+      "parentUuid": "be82a38e_4c1c8d42",
+      "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "47d4b54f_47d8302e",
         "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
         "patchSetId": 2
@@ -214,6 +232,30 @@
       "side": 1,
       "message": "If those are two different things they need two different descriptions.",
       "parentUuid": "7caeb529_2334a4b8",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 33
+      },
+      "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bb85ce14_dd253609",
+        "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T17:58:17Z",
+      "side": 1,
+      "message": "Yeah got the confusion, I will change it with a more appropriate description.",
+      "parentUuid": "ef0fc591_4c382a8a",
       "range": {
         "startLine": 21,
         "startChar": 0,

@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "393c88a1_eaedca6d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T13:45:02Z",
+      "side": 1,
+      "message": "\u003e No, this is not true in any way, nor am I sure where you got that from.  If the concepts are generic, the interface should be generic even if the current implementation is architecture or OEM specific.  Otherwise we\u0027d have a LOT more OEM interfaces and as you see there isn\u0027t a single one for Intel platforms.\n\nAh ok, I got it from some internal folks. I will push into xyz/openbmc_project then.\n\nThanks for sharing the info.\n\n\u003e This should be a discussion on the mailing list, not here.  You\u0027re going to need to request a repository for this work anyhow.\n\nMake sense and thanks for the suggestion. I will send mail on this.",
+      "parentUuid": "2aa6913e_755e9d81",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 57
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4b941cfb_b2cd0470",
         "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 4
@@ -144,6 +168,30 @@
     },
     {
       "key": {
+        "uuid": "191dbc6b_4635523d",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T13:45:02Z",
+      "side": 1,
+      "message": "Sure, I will update both the place.",
+      "parentUuid": "4d24a7f3_3c41f1af",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7815f5a6_dc0fb6bc",
         "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 4
@@ -203,6 +251,30 @@
       "side": 1,
       "message": "That is fine.  I just wanted to confirm.",
       "parentUuid": "fd2d1e76_4097f3d7",
+      "range": {
+        "startLine": 9,
+        "startChar": 47,
+        "endLine": 9,
+        "endChar": 53
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "401a12a7_d2ec3945",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T13:45:02Z",
+      "side": 1,
+      "message": "OK, Thanks for pointing to think deeply while writing YAML.",
+      "parentUuid": "de6455ba_7c4d25cd",
       "range": {
         "startLine": 9,
         "startChar": 47,

@@ -120,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "6347bd8e_1177b179",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T17:31:55Z",
+      "side": 1,
+      "message": "Yeah, Agree. are you saying we (the community) won\u0027t encourage to use \"libraries\" when there is a dbus to talk between processes?",
+      "parentUuid": "06739451_99b18127",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 79
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2f0b1cd4_5bc27047",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 4
@@ -358,6 +382,30 @@
     },
     {
       "key": {
+        "uuid": "3cbc4757_c7c45ee6",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T17:31:55Z",
+      "side": 1,
+      "message": "\u003e If you want a way to create manual entries without a corresponding log, when most of the non-manual cases have a log, you\u0027ll need a separate method for that.\n\nYeah, that is doable like \"Create\" and \"CreateWithErrorLog\" \n\n\u003e Can the entry, when it exists, be a path?\n\nI am not sure, I got your point fully. Correct me if I am wrong.\nI guess you meant the event log entry can exist while trying to isolate hardware?\n\nI think it depends on when this interface is called.\nI guess if an error log entry does not exist, I think we will get the below error from dbus-broker while calling this interface?\n\n\u003e Peer :X.XXX is being disconnected as it sent a message with an invalid body.\n\nWhat I noticed is, when I am sending a dbus object which does not exist, I got the above error, and after looking dbus-broker got to know that when I am passing signature with \"o\" it making sure that given object exists or not",
+      "parentUuid": "1dfbebc1_b534837a",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 66
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "43e382e0_37c9ecb5",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 4
@@ -429,6 +477,30 @@
     },
     {
       "key": {
+        "uuid": "92385314_15e20f44",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T17:31:55Z",
+      "side": 1,
+      "message": "Yeah, I think we can do it, maybe port and refactor the libguard code from a bmc perspective if we strictly not encouraging libraries in openBMC?\n\nOR Can we do stage by stage i.e first pass with libguard and second pass implement in daemon itself? if strictly no libraries?",
+      "parentUuid": "b37dff6e_e4d0ca0f",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 60
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f45ccd1d_adab9e90",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 4
@@ -488,6 +560,30 @@
       "side": 1,
       "message": "Please don\u0027t reuse Common.Errors for non-standard purposes.  \"NotAllowed\" is typically used in for a bad state request.  (Eg. someone asked to power on a device and the device is already powered on)\n\nI think it would be better to define your own error for this case unless you can find an existing common error that more succinctly encapsulates the error condition.  Maybe Common.Error.TooManyResources.",
       "parentUuid": "cd40700b_58579bec",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 55
+      },
+      "revId": "9e653594f95bd080dcf0fdb862f6ecde93f3b665",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77d30067_71d1ff2b",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T17:31:55Z",
+      "side": 1,
+      "message": "\u003e Please don\u0027t reuse Common.Errors for non-standard purposes.  \"NotAllowed\" is typically used in for a bad state request.  (Eg. someone asked to power on a device and the device is already powered on)\n\nOh ok, I am not aware of this. I assumed like for some reason the dbus interfaces operation is not allowing us to do something to throw an error.\n\nBut, Agree the use case which referring to is a non-standard one.  \n\n\u003e I think it would be better to define your own error for this case unless you can find an existing common error that more succinctly encapsulates the error condition.  Maybe Common.Error.TooManyResources.\n\nI think \"TooManyResources\" will fit for this use case but, Yes I will try to see if more error case is coming then I will define own errors for this daemon.",
+      "parentUuid": "b1c47563_a6491c2c",
       "range": {
         "startLine": 46,
         "startChar": 0,

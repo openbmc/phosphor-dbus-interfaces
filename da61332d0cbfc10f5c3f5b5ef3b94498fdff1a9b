@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7511762c_9b97af04",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T08:38:06Z",
+      "side": 1,
+      "message": "Apologies for the big message :)\n\nYeah, it can be generic but, the implementation of this interface will be host architecture-specific (going to propose a new daemon that is openPOWER specific) because of the below reasons. \n\nfor example, \n- We (IBM) will create a dbus entry after the record creation in the partition (PNOR) which is accessible by BMC and host applications (hostboot/hostboot runtime apps) \n- IBM host applications will create a record into partition if there is an error and the BMC application (new daemon) will monitor that partition and then BMC will create an entry object.\n- Today, we (IBM) not providing support neither in PLDM nor any other host interfaces to isolate the host hardware.\n\nBut, other vendors may not do it in this way, right? \n\nI heard like, if dbus interface implementation is OEM specific then we need to push dbus under the respective umbrella (org/open_power or com/IBM). - is it not true \n\nOR still, we can propose the dbus interface as generic and consumers of the interface need to use generic code or OEM code based on the implementation?\n\nThe end goal is, exchanging the isolated hardware details from internal interfaces (dbus entry) to external interfaces (redfish log entry).\n\nI had two thoughts about the dbus implementation.\n- Option1: \n\"New generic daemon\" with an extension like how phosphor-logging or phosphor-debug-collector or pldm providing a way to add OEM code.\n  - Default case nothing will be there, because we (IBM) are not providing support in PLDM nor any other host interfaces to isolate hardware.\n  - The extension will have OEM-specific implementation. \n- Option2:\n\"New OEM daemon\" so, implementation will be OEM specific and platform can get from them respective bitbake meta-layer.\n\nFor Option1, I am wondering about the following scenario.\n- If the BMC application (bmcweb) using a generic internal interface (dbus) but, the implementation is OEM specific then the different system platforms (Facebook, Google, Intel, etc...) will get a response like \"Interface/ObjectPath Not Found\" right? if so, then that is dead-code right? \n- and also, I heard like the openBMC community nowadays not encouraging the extension approach into a generic repository for some reason unless there is a valid reason. \n\nFor Option2, \n- I think bmcweb providing a configuration (ibm-management-console) option to use IBM implementation so the new OEM daemon interfaces can be used as OEM code inside the bmcweb so, that we can avoid dead-code from an external interface user perspective for different system platforms.",
+      "parentUuid": "273ee31e_546914d2",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 57
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4b941cfb_b2cd0470",
         "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 4
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "2ad08c61_332e2fa2",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T08:38:06Z",
+      "side": 1,
+      "message": "Yeah, I am also preferring association because recently I got to knew that concept, and while started the implementation felt like the association is the best fit for this use case.\n\nPlanning to add the association like below to the bmc event log and inventory item path which is contained the isolated hardware attributes and error details.\n\nFor example,\n\n```\nroot@p10bmc:~# busctl call org.open_power.HardwareIsolation /org/open_power/hardware_isolation org.open_power.HardwareIsolation.Create Create osu /xyz/openbmc_project/inventory/system/chassis/motherboard/dimm0 org.open_power.HardwareIsolation.Entry.Type.User 0\no \"/org/open_power/hardware_isolation/entry/2\"\n\nroot@p10bmc:~# busctl -j get-property org.open_power.HardwareIsolation /org/open_power/hardware_isolation/entry/2 xyz.openbmc_project.Association.Definitions Associations\n{\n\t\"type\" : \"a(sss)\",\n\t\"data\" : [\n\t\t[\n\t\t\t\"isolated_hw\",\n\t\t\t\"isolated_hw_entry\",\n\t\t\t\"/xyz/openbmc_project/inventory/system/chassis/motherboard/dimm0\"\n\t\t]\n\t]\n}\nroot@p10bmc:~# \nroot@p10bmc:~# busctl -j get-property xyz.openbmc_project.ObjectMapper /org/open_power/hardware_isolation/entry/2/isolated_hw xyz.openbmc_project.Association endpoints\n{\n\t\"type\" : \"as\",\n\t\"data\" : [\n\t\t\"/xyz/openbmc_project/inventory/system/chassis/motherboard/dimm0\"\n\t]\n}\nroot@p10bmc:~# \nroot@p10bmc:~# busctl -j get-property xyz.openbmc_project.ObjectMapper  /xyz/openbmc_project/inventory/system/chassis/motherboard/dimm0/isolated_hw_entry xyz.openbmc_project.Association endpoints\n{\n\t\"type\" : \"as\",\n\t\"data\" : [\n\t\t\"/org/open_power/hardware_isolation/entry/1\",\n\t\t\"/org/open_power/hardware_isolation/entry/2\"\n\t]\n}\n```\n\nYou want me to update the design document if the association is ok instead of separate properties for the event log and inventory path?",
+      "parentUuid": "4b941cfb_b2cd0470",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7815f5a6_dc0fb6bc",
         "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 4
@@ -59,6 +107,30 @@
       "writtenOn": "2021-06-15T17:41:59Z",
       "side": 1,
       "message": "Should or must?  Should seems reasonable but I want to confirm.",
+      "range": {
+        "startLine": 9,
+        "startChar": 47,
+        "endLine": 9,
+        "endChar": 53
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fd2d1e76_4097f3d7",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T08:38:06Z",
+      "side": 1,
+      "message": "Yeah, I am preferring \"Should\" and I think it\u0027s implementation specific because I don\u0027t think there is a limitation in dbus to add number objects - Any idea?",
+      "parentUuid": "7815f5a6_dc0fb6bc",
       "range": {
         "startLine": 9,
         "startChar": 47,

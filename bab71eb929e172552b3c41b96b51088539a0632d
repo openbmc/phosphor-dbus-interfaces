@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "786c73ad_c1a0f5a0",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-16T04:54:45Z",
+      "side": 1,
+      "message": "EID is a single byte in the specification, can\u0027t rule out the possibility of a change in the next version of MCTP spec.\n\n\u003e Are NetworkIDs similarly expected to be int32 by the spec?\nNetworkID is a MCTP kernel stack defined identifier(int smctp_network) and not coming from the specification.\n\nhttps://github.com/openbmc/docs/blob/master/designs/mctp/mctp-kernel.md",
+      "parentUuid": "1afe83ef_7170f882",
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53dff3d8_3eb095ad",
         "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
         "patchSetId": 10
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "947fa107_aa548540",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-16T04:54:45Z",
+      "side": 1,
+      "message": "Array of enumerations?\n\nFrom my initial reading of the spec, my understanding was that a range of message types is vendor defined, in which case I was not sure how to express it in the property as an enumeration. \n\nOn a closer look at the spec, the vendor defined message types are well defined [Vendor Defined – PCI - 0x7E], [Vendor Defined – IANA - 0x7F], so the D-Bus property needs to only show this capability.",
+      "parentUuid": "53dff3d8_3eb095ad",
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1b3d4165_fc3ddd53",
         "filename": "yaml/xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 10
@@ -47,6 +83,30 @@
       "writtenOn": "2021-06-15T21:47:51Z",
       "side": 1,
       "message": "If these are part of the path, why are they also properties in the object?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 78
+      },
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b270108c_e192e634",
+        "filename": "yaml/xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-16T04:54:45Z",
+      "side": 1,
+      "message": "\u003cNetworkId\u003e was added to the network path to aid enumeration of endpoints under the NetworkId, not particular that the implementation have the \u003cEID\u003e in the object patch. A previous patchset had the objectPath naming as \u003cNetworkId\u003e/endpointN where N was implementation dependent. Any suggestions?",
+      "parentUuid": "1b3d4165_fc3ddd53",
       "range": {
         "startLine": 22,
         "startChar": 0,

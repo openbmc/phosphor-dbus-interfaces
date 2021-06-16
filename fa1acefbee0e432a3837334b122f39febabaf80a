@@ -101,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "02962cdb_f02dd077",
+        "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T09:46:25Z",
+      "side": 1,
+      "message": "I have discussed with the IBM hostboot team on this patch.\n\nThe discussion point is, all the chiplet items (which are present as chiplet type in this patch) are not subunits of chiplet, and it is all about how we packaged processor subunits for a machine.\n\nLooks, we need to model a separate inventory item for all the isolatable (guardable) FRU/FRU units. \n\nand we (IBM BMC team) discussed this and All are felt like pushing as the separate item will be usable in the future so I am going to push separate inventory item for each type but, I felt like If I have pushed those inventory item into xyz/openbmc_project it may be useful for others because I guess maybe a few are generic and a few are specific to POWER bus - I am in the process of background study to understand each hardware usage (not very familiar with each hardware usage :)) \n\nAny different thoughts?",
+      "parentUuid": "1e2ce6ed_8dbada61",
+      "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "47d4b54f_47d8302e",
         "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
         "patchSetId": 2
@@ -112,6 +130,30 @@
       "writtenOn": "2021-06-15T17:48:05Z",
       "side": 1,
       "message": "Is this a mistake?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 33
+      },
+      "revId": "fa1acefbee0e432a3837334b122f39febabaf80a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7caeb529_2334a4b8",
+        "filename": "yaml/org/open_power/Inventory/Item/Chiplet.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-16T09:46:25Z",
+      "side": 1,
+      "message": "Looks No. In POWER, they are modelled MCC under MC for example, pervasive bus -\u003e mc -\u003e mi -\u003e mcc",
+      "parentUuid": "47d4b54f_47d8302e",
       "range": {
         "startLine": 21,
         "startChar": 0,

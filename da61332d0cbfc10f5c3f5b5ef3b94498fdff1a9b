@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "2aa6913e_755e9d81",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-16T11:31:49Z",
+      "side": 1,
+      "message": "\u003e I heard like, if dbus interface implementation is OEM specific then we need to push dbus under the respective umbrella (org/open_power or com/IBM). - is it not true \n\nNo, this is not true in any way, nor am I sure where you got that from.  If the concepts are generic, the interface should be generic even if the current implementation is architecture or OEM specific.  Otherwise we\u0027d have a LOT more OEM interfaces and as you see there isn\u0027t a single one for Intel platforms.\n\n\u003e I had two thoughts about the dbus implementation.\n\nThis should be a discussion on the mailing list, not here.  You\u0027re going to need to request a repository for this work anyhow.",
+      "parentUuid": "7511762c_9b97af04",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 57
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4b941cfb_b2cd0470",
         "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 4
@@ -96,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "4d24a7f3_3c41f1af",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-16T11:31:49Z",
+      "side": 1,
+      "message": "I think the association endpoint names should be added both here and the design document, yes.",
+      "parentUuid": "2ad08c61_332e2fa2",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7815f5a6_dc0fb6bc",
         "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 4
@@ -131,6 +179,30 @@
       "side": 1,
       "message": "Yeah, I am preferring \"Should\" and I think it\u0027s implementation specific because I don\u0027t think there is a limitation in dbus to add number objects - Any idea?",
       "parentUuid": "7815f5a6_dc0fb6bc",
+      "range": {
+        "startLine": 9,
+        "startChar": 47,
+        "endLine": 9,
+        "endChar": 53
+      },
+      "revId": "da61332d0cbfc10f5c3f5b5ef3b94498fdff1a9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de6455ba_7c4d25cd",
+        "filename": "yaml/org/open_power/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-16T11:31:49Z",
+      "side": 1,
+      "message": "That is fine.  I just wanted to confirm.",
+      "parentUuid": "fd2d1e76_4097f3d7",
       "range": {
         "startLine": 9,
         "startChar": 47,

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54b16010_f0821bc0",
+        "filename": "yaml/xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 16
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-06-17T10:21:59Z",
+      "side": 1,
+      "message": "I feel like this is a confusing way to word the description. It\u0027s just a monotonic counter since the last reboot event? How does the drive have a time reference? Is this converting the monotonic counter based on the BMC time?",
+      "revId": "bc5fef0edb7ef2028dcca8ea03255a2612115160",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

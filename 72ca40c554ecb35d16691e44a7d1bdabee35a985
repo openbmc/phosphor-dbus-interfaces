@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "936a5692_bcf548bd",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-06-17T10:21:59Z",
+      "side": 1,
+      "message": "I assume those drives would just return \"None\" as the response and the caller would be forced to handle it. The caller would also need to deal with sending \"Reboot\" and possible getting back \"PowerCycle\" if called during a powercycle.",
+      "parentUuid": "b21a220b_fddfe45e",
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1686af98_725fb88a",
         "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
         "patchSetId": 12
@@ -84,6 +102,30 @@
     },
     {
       "key": {
+        "uuid": "17bf2e96_f2dca290",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-06-17T10:21:59Z",
+      "side": 1,
+      "message": "I think you can just add a NotSupported transition to the enum to achieve the desired result.",
+      "parentUuid": "c6ccfa7f_b62de51a",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 38
+      },
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "96f5f991_c4f9d5a1",
         "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
         "patchSetId": 12
@@ -113,6 +155,41 @@
       "side": 1,
       "message": "maybe just default to 0?",
       "parentUuid": "96f5f991_c4f9d5a1",
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2f702f7c_ca1c0530",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-06-17T10:21:59Z",
+      "side": 1,
+      "message": "That\u0027s what most other instances do (See boot time counter properties on systemd1), you should comment about that.",
+      "parentUuid": "ea644078_c132d830",
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0a522d22_efa6f041",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-06-17T10:21:59Z",
+      "side": 1,
+      "message": "This probably needs a NotSupported / Unknown state that is used by default",
       "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

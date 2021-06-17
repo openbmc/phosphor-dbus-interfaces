@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "01ca331f_6d3e276e",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-17T17:56:43Z",
+      "side": 1,
+      "message": "I got the structure from BMC State in https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/State/BMC.interface.yaml.\n\nI wonder how those are handled there.",
+      "parentUuid": "936a5692_bcf548bd",
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1686af98_725fb88a",
         "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
         "patchSetId": 12
@@ -126,6 +144,30 @@
     },
     {
       "key": {
+        "uuid": "e63c4eb3_c6c27dcb",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-17T17:56:43Z",
+      "side": 1,
+      "message": "I have added NotSupported as the default.",
+      "parentUuid": "17bf2e96_f2dca290",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 38
+      },
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "96f5f991_c4f9d5a1",
         "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
         "patchSetId": 12
@@ -179,6 +221,24 @@
     },
     {
       "key": {
+        "uuid": "77bc269f_0eeb3381",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-17T17:56:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f702f7c_ca1c0530",
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0a522d22_efa6f041",
         "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
         "patchSetId": 12
@@ -193,6 +253,24 @@
       "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "481f4336_6d46925a",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-17T17:56:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a522d22_efa6f041",
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

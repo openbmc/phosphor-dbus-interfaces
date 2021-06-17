@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1ace0674_41274ea9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-17T07:15:02Z",
+      "side": 1,
+      "message": "yeah, this is to support the Redfish property of the same name. It help differentiate how the log is processed. But as you were saying... sounds like we don\u0027t want that restriction at all.\n\n----\n\nThere shouldn\u0027t be any changes to existing logging entries. If it does, I don\u0027t think we should add this change then.",
+      "parentUuid": "a4e21835_9a58b118",
+      "revId": "521cc9790b3fe0b402eaf8fb3f5fdeedd3446b69",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ffffd922_e0ae816b",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -30,6 +48,30 @@
       "writtenOn": "2021-06-15T21:41:30Z",
       "side": 1,
       "message": "How?  What does an \"OEM Record\" look like?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 30
+      },
+      "revId": "521cc9790b3fe0b402eaf8fb3f5fdeedd3446b69",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "70a4730e_6014b151",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-17T07:15:02Z",
+      "side": 1,
+      "message": "OEM Record is just a free string that the end client can use to determine which way to process the log.... but it might be too open to be part of the Dbus API.",
+      "parentUuid": "ffffd922_e0ae816b",
       "range": {
         "startLine": 12,
         "startChar": 0,

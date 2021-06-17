@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "54b86688_5609f163",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000997
+      },
+      "writtenOn": "2021-06-17T14:43:56Z",
+      "side": 1,
+      "message": "The default was taken from existing bmcweb https://github.com/openbmc/bmcweb/blob/master/redfish-core/lib/chassis.hpp#L262\nLet me know if it make sense.",
+      "parentUuid": "cdb66d80_155ffd92",
+      "revId": "472613fec2a3a4f08271f76c1dc65ed0adbb3321",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c4b36ef0_f08250d8",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
         "patchSetId": 2
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "5bb7c779_5e4037b6",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000997
+      },
+      "writtenOn": "2021-06-17T14:43:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c4b36ef0_f08250d8",
+      "range": {
+        "startLine": 18,
+        "startChar": 75,
+        "endLine": 18,
+        "endChar": 85
+      },
+      "revId": "472613fec2a3a4f08271f76c1dc65ed0adbb3321",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "391c57a2_d48862b0",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
         "patchSetId": 2
@@ -56,6 +98,24 @@
       "revId": "472613fec2a3a4f08271f76c1dc65ed0adbb3321",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c63a8ad8_0817ccc0",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000997
+      },
+      "writtenOn": "2021-06-17T14:43:56Z",
+      "side": 1,
+      "message": "My bad, Fixed it.",
+      "parentUuid": "391c57a2_d48862b0",
+      "revId": "472613fec2a3a4f08271f76c1dc65ed0adbb3321",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

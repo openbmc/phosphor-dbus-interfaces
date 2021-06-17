@@ -22,6 +22,30 @@
       "revId": "4a28885abadb6c872ffcc998bee67ba45be3c682",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1c1078f8_6bf0c58c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1000997
+      },
+      "writtenOn": "2021-06-17T14:36:26Z",
+      "side": 1,
+      "message": "Removed it, As not a supported type in redfish. Lets redfish fill as empty string if supported type is not found.",
+      "parentUuid": "3fcd6346_eee8d2c1",
+      "range": {
+        "startLine": 328,
+        "startChar": 0,
+        "endLine": 330,
+        "endChar": 51
+      },
+      "revId": "4a28885abadb6c872ffcc998bee67ba45be3c682",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

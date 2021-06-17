@@ -16,6 +16,24 @@
       "revId": "aa1f374d502c633d190f96ab1c8f8afc7d4bde80",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd97920f_294db88a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000997
+      },
+      "writtenOn": "2021-06-17T13:33:29Z",
+      "side": 1,
+      "message": "The default `Accelerator` was taken to keep current behavior from bmcweb here https://github.com/openbmc/bmcweb/blob/master/redfish-core/lib/processor.hpp#L445\nLet me know if it is fine.",
+      "parentUuid": "1784e628_8832c665",
+      "revId": "aa1f374d502c633d190f96ab1c8f8afc7d4bde80",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

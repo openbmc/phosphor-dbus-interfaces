@@ -28,3 +28,35 @@ methods:
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.Common.Error.TooManyResources
+
+    - name: CreateWithErrorLog
+      description: >
+          Create an xyz.openbmc_project.HardwareIsolation.Entry object
+          if any of the hardware, needs to be isolated. This interface
+          can be used if the system wants to isolate hardware with
+          an error log that is caused to isolate hardware.
+          This method is not going to create an error log and the consumer
+          of method needs to create an error log and pass the created error
+          log object path.
+      parameters:
+        - name: IsolateHardware
+          type: path
+          description: >
+              The hardware inventory path which is needs to isolate.
+        - name: Severity
+          type: enum[xyz.openbmc_project.HardwareIsolation.Entry.Type]
+          description: >
+              The severity of isolating hardware.
+        - name: BmcErrorLog
+          type: path
+          description: >
+              The BMC error log caused the isolation of hardware.
+      returns:
+        - name: Path
+          type: path
+          description: >
+              The path of created xyz.openbmc_project.HardwareIsolation.Entry
+              object.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.TooManyResources

@@ -1,0 +1,40 @@
+description: >
+    This interface contains create method, which can be implemented to
+    create an xyz.openbmc_project.HardwareIsolation.Entry object
+    which will use to provide the information of isolated hardware.
+
+methods:
+    - name: CreateWithEntityPath
+      description: >
+          Create an xyz.openbmc_project.HardwareIsolation.Entry object if any
+          of hardware, need to be isolated.
+      parameters:
+        - name: EntityPath
+          type: array[byte]
+          description: >
+              The hardware entity path which is needs to isolate.
+              The hardware entity path is key between BMC OpenPOWER based
+              applications and host applications. for example,
+              "23 01 00 02 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+              it representing the following hardware entity
+              "physical:sys-0/node-0/proc-0".
+        - name: Severity
+          type: enum[xyz.openbmc_project.HardwareIsolation.Entry.Type]
+          description: >
+              The severity of isolating hardware.
+        - name: BmcErrorLog
+          type: path
+          description: >
+              The BMC error log caused the isolation of hardware.
+      returns:
+        - name: Path
+          type: path
+          description: >
+              The path of created xyz.openbmc_project.HardwareIsolation.Entry
+              object.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.TooManyResources
+          - xyz.openbmc_project.HardwareIsolation.Error.IsolatedAlready
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Unavailable

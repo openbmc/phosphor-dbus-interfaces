@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8f0dd771_cf4644ec",
+        "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-18T07:30:36Z",
+      "side": 1,
+      "message": "yeah, you are right. This should be more like property to Software instead of States. Should we move this to Software Version or maybe just rename this to Software/Property?\n\nFor write Protect and Updatable, they are related but are not exactly overlap. Since there could be software that is not Updatable at all... and WriteProtected does not matter at all.\n\nThinking about it more... maybe it is not needed...",
+      "parentUuid": "47248882_ee7bf406",
+      "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c475a224_136b66fe",
         "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2021-06-17T21:17:23Z",
       "side": 1,
       "message": "You mentioned that this property would replace the updatable association \"and gather the different states in one place.\"\n\nWhy is a replacement needed? There are other apps querying the associations interface to find out the properties of the version, such as if it\u0027s functional, updatable, etc. I\u0027d be a bit hesitant on moving one or more associations to a different interface without a reason.\n\nDescription of the associations here:\nhttps://github.com/openbmc/docs/blob/master/architecture/code-update/code-update.md#associations",
+      "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3d7f0d75_5d965eb0",
+        "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-18T07:30:36Z",
+      "side": 1,
+      "message": "I guess I don\u0027t meant that we need to migrate it to this. Just have the option to do so.\n\nMaybe I should just update the association doc to support WriteProtected instead of adding this property as d-bus API.\n\n---\n\nThanks for the reference.",
+      "parentUuid": "c475a224_136b66fe",
       "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

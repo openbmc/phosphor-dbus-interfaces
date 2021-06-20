@@ -222,6 +222,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('ManagementService')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/ManagementService__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/ManagementService.interface.yaml',  ],
+    output: [ 'ManagementService.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/ManagementService',
+    ],
+)
+
 subdir('MemoryBuffer')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/MemoryBuffer__markdown'.underscorify(),

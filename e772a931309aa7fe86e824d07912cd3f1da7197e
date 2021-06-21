@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "77667152_5dfb6e00",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-06-21T12:14:33Z",
+      "side": 1,
+      "message": "this needs more discussion, if the present property is already set and then some one calls this function. how does this function behave ? can the inventory manager set the present property to false \u0026 recollect vpd and set it back to true again ? or return an error saying already vpd collected ? \n\ni believe enforcing other dbus applications to do some checking before calling this api enforces a lot of redundant code in all the consumers of this API(clients).  \n\ni feel if the method call depends on the present property, then this needs to explicitly documented in the yaml.",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 37
+      },
+      "revId": "e772a931309aa7fe86e824d07912cd3f1da7197e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "395f676a_dc4311f4",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-06-21T12:14:33Z",
+      "side": 1,
+      "message": "Can you also add a new dbus method/ change the existing method to take another parameter - that states whether it is a concurrent add/remove operation that is being performed.\n\nso that when some one calls this API with cm_add function ,vpd service can collect VPD and update Present property to true, and when cm_remove is performed vpd service can remove the VPD and set the present property of the FRU to false.",
+      "range": {
+        "startLine": 107,
+        "startChar": 4,
+        "endLine": 109,
+        "endChar": 59
+      },
+      "revId": "e772a931309aa7fe86e824d07912cd3f1da7197e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7e52a61c_15872260",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-06-21T12:14:33Z",
+      "side": 1,
+      "message": "in-addition to this , i think this api should return some error when it fails to collect the VPD. if the consumer should be looking at the present property to true. that will be never set in vpd collection failure case, then how are the clients of this API intimated about this error ?",
+      "range": {
+        "startLine": 115,
+        "startChar": 6,
+        "endLine": 116,
+        "endChar": 58
+      },
+      "revId": "e772a931309aa7fe86e824d07912cd3f1da7197e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

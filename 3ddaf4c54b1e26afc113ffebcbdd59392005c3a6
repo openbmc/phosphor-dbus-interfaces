@@ -16,6 +16,24 @@
       "revId": "3ddaf4c54b1e26afc113ffebcbdd59392005c3a6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b819899b_b8bc1586",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-21T09:28:37Z",
+      "side": 1,
+      "message": "\u003e Why need new interface ?\n\nhttps://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/43533/4/yaml/org/open_power/HardwareIsolation/Create.interface.yaml#36\n\n\u003e can we add  BmcErrorLog as optional parametr and implmentation app can  decide it is required mandotary or optional?\n\nIn dbus, we can not add optional parameter.",
+      "parentUuid": "d2db45bd_ad0c6110",
+      "revId": "3ddaf4c54b1e26afc113ffebcbdd59392005c3a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

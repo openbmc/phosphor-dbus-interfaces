@@ -6,3 +6,39 @@ properties:
       description: >
         The object is functional or not.
       default: false
+    - name: State
+      type: enum[self.StateType]
+      description: >
+        The object known state.
+
+enumerations:
+    - name: StateType
+      description: >
+          Possible state type
+      values:
+        - name: Absent
+          description: >
+              This function or resource is either not present or detected.
+        - name: Deferring
+          description: >
+              The element does not process any commands but queues new
+              requests.
+        - name: Disabled
+          description: >
+              This function or resource is disabled.
+        - name: Enabled
+          description: >
+              This function or resource is enabled.
+        - name: StandbyOffline
+          description: >
+              This function or resource is enabled but awaits an external
+              action to activate it.
+        - name: Starting
+          description: >
+              This function or resource is starting.
+        - name: UnavailableOffline
+          description: >
+              This function or resource is present but cannot be used.
+        - name: Updating
+          description: >
+              The element is updating and might be unavailable or degraded.

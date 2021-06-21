@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "4e6b237a_3c6fe3c2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-21T10:26:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "016643cd_2096bf3a",
+      "range": {
+        "startLine": 9,
+        "startChar": 34,
+        "endLine": 10,
+        "endChar": 35
+      },
+      "revId": "e6a3eb5f3520a6d4422834df43ca4f4f7be2b1de",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d2af5020_4f0d92e0",
         "filename": "/COMMIT_MSG",
         "patchSetId": 5
@@ -96,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "f0d96eca_ef912271",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-21T10:26:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "63bfea64_0a2a9660",
+      "range": {
+        "startLine": 10,
+        "startChar": 36,
+        "endLine": 11,
+        "endChar": 18
+      },
+      "revId": "e6a3eb5f3520a6d4422834df43ca4f4f7be2b1de",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "170cbe1f_b83c821e",
         "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Entry.interface.yaml",
         "patchSetId": 5
@@ -131,6 +179,30 @@
       "side": 1,
       "message": "\u003e Factory reset use case , this restriction is valid?\n\nWhat is Factory reset use case  ? Can you elaborate (I am not aware that) ?\n\n\u003e It will be good to provide little more explanation on this why resoolved status restrictinon deleteion on entry.\n\nYeah sure, May be it should be based on design doc change which I pushed recently.\n\n\"Setting this to \"true\" will not delete this entry object because in a few system platforms isolated hardware entries may not be deleted and used for further analysis.\"",
       "parentUuid": "170cbe1f_b83c821e",
+      "range": {
+        "startLine": 32,
+        "startChar": 10,
+        "endLine": 32,
+        "endChar": 61
+      },
+      "revId": "e6a3eb5f3520a6d4422834df43ca4f4f7be2b1de",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6205d1fa_0bf8efb9",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-21T10:26:48Z",
+      "side": 1,
+      "message": "\u003e It will be good to provide little more explanation on this why resoolved status restrictinon deleteion on entry.\n\n\u003e Yeah sure, May be it should be based on design doc change which I pushed recently.\n\u003e \"Setting this to \"true\" will not delete this entry object because in a few system platforms isolated hardware entries may not be deleted and used for further analysis.\"\n\nDone",
+      "parentUuid": "c4b5b110_44a9341f",
       "range": {
         "startLine": 32,
         "startChar": 10,

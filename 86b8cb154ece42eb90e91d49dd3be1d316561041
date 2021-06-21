@@ -87,6 +87,24 @@
       "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72fc6abb_9e56b5e9",
+        "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-06-21T21:18:52Z",
+      "side": 1,
+      "message": "I wouldn\u0027t think it\u0027s too much, probably is more about how it\u0027s going to be used. Would this be a property that the user set instead of being something that it\u0027s set in the image itself?\nIf the user sets this value, how would it be enforced? Would the code update app prevent the update and deletion of it (or do you see something like the image would need to be remounted read-only)?\n\nIf it\u0027s a user setting, probably a property makes more sense than an association, the association seems it\u0027s something the apps determine and not the user.",
+      "parentUuid": "20dd9afb_d36e0f7a",
+      "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

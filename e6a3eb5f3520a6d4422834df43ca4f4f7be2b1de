@@ -212,6 +212,30 @@
       "revId": "e6a3eb5f3520a6d4422834df43ca4f4f7be2b1de",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a3ae7e1b_4b4974da",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2021-06-22T10:25:52Z",
+      "side": 1,
+      "message": "A factory reset, is kind of hard reset or master reset, to get BMC to  original system state by erasing all of the information stored on the device. Mainly my question is that need to clear guard records in this path or not and guard providing any interface for this or not?",
+      "parentUuid": "6205d1fa_0bf8efb9",
+      "range": {
+        "startLine": 32,
+        "startChar": 10,
+        "endLine": 32,
+        "endChar": 61
+      },
+      "revId": "e6a3eb5f3520a6d4422834df43ca4f4f7be2b1de",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "fe8d6f96_b7292148",
+        "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-22T18:45:24Z",
+      "side": 1,
+      "message": "oh, I think I misunderstood William\u0027s comment.\n\nYeah, it will return \"None\" by default (or NotSupported with the new change).\n\nFor,\n```\nThe caller would also need to deal with sending \"Reboot\" and possible getting back \"PowerCycle\" if called during a powercycle.\n```\n\nDoes the user care if it returns `PowerCycle` when we call `Reboot`? This just indicate failure right? if it does not match.",
+      "parentUuid": "01ca331f_6d3e276e",
+      "revId": "72ca40c554ecb35d16691e44a7d1bdabee35a985",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1686af98_725fb88a",
         "filename": "xyz/openbmc_project/State/Drive.interface.yaml",
         "patchSetId": 12

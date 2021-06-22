@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "25bcec28_326496cf",
+        "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-22T22:49:57Z",
+      "side": 1,
+      "message": "I will move it to `yaml/xyz/openbmc_project/Software/Settings.interface.yaml` for now to clean this up a bit.\n\nSettings make sense for this user configurable property.\n\nWill change is if any patrick@ has and preference on it.",
+      "parentUuid": "9f48e6c8_38782dc3",
+      "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c475a224_136b66fe",
         "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
         "patchSetId": 7
@@ -174,6 +192,24 @@
       "side": 1,
       "message": "Ok I see, yeah I meant enforced by the service, which you confirmed that whatever is needed to enforce this property will be done by the service that exports it.\nJust for my reference, do you have in mind already a service that would implement this? Were you thinking perhaps that would be added to the phophor-bmc-code-mgmt, or you\u0027re still working on a service to implement this new property at a later time?",
       "parentUuid": "f7078ce1_f31540bf",
+      "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c27c856_db0b4b14",
+        "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-06-22T22:49:57Z",
+      "side": 1,
+      "message": "yeah, sounds good.\n\nI don\u0027t have any service in mind right now. I will be using this internally first to support SSD controller software for now. With the property being controlled by the SSD itself.\n\nNot sure how this will be used in openbmc in general. Mostly added this to support Redfish properties with the same name (WriteProtected).",
+      "parentUuid": "42cd6a50_e4d6b077",
       "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

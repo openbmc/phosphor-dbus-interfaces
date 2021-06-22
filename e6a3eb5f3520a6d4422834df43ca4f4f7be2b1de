@@ -236,6 +236,30 @@
       "revId": "e6a3eb5f3520a6d4422834df43ca4f4f7be2b1de",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "28fa4fd8_9218409a",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-22T11:21:40Z",
+      "side": 1,
+      "message": "\u003e A factory reset, is kind of hard reset or master reset, to get BMC to  original system state by erasing all of the information stored on the device.\n\nThanks for the information about Factory Reset use cases. \n\n\u003e Mainly my question is that need to clear guard records in this path or not\n\nIt is platform-specific, right? If we need to clear then we can use \"xyz.openbmc_project.Object.Delete\" interfaces or clear all at the same means, manager of this interface can implement xyz.openbmc_project.Collection.DeleteAll interfaces.\n\nBut, I guess based on my understanding from the below documentation is, Factory reset is boot the bmc with manufacturer setting, right? if so, it will restart all bmc processes so, the respective process owning dbus entries will get deleted right? - is it not true ?\n \n\u003e guard providing any interface for this or not?\n\nNo, are you mentioning any special interface needs for factory reset use cases to restore the deleted dbus entries ?\n\nI have looked at the https://github.com/openbmc/docs/blob/master/architecture/code-update/code-update.md#software-factory-reset and https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/Common/FactoryReset documentation and it says during factory reset it will clear all the persistent files in the BMC and on the host side as well. \n\nSo, I am wondering if it is a fresh boot for BMC and host?",
+      "parentUuid": "a3ae7e1b_4b4974da",
+      "range": {
+        "startLine": 32,
+        "startChar": 10,
+        "endLine": 32,
+        "endChar": 61
+      },
+      "revId": "e6a3eb5f3520a6d4422834df43ca4f4f7be2b1de",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

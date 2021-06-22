@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "9f48e6c8_38782dc3",
+        "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-06-22T20:55:20Z",
+      "side": 1,
+      "message": "What about `yaml/xyz/openbmc_project/Software/Settings.interface.yaml`? It seems that this property is not just something that describes the version, but also it can be modified by the user, so maybe Settings would be appropriate in this case. I see \"./xyz/openbmc_project/Logging/Settings.interface.yaml\" perhaps as an example, where it says those properties control the behavior of the logging interface.\n\n@patrick: Any preference/thoughts?",
+      "parentUuid": "9edb81ad_918dffaa",
+      "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c475a224_136b66fe",
         "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
         "patchSetId": 7
@@ -138,6 +156,24 @@
       "side": 1,
       "message": "I think I would want the WriteProtected to be able to set by the users to match how Redfish does it.\n\nI am not sure how the user set values will be enforced. (Not exactly sure what you mean. Dow you mean enforced by the service?) \n\nFor,\n```\nWould the code update app prevent the update and deletion of it (or do you see something like the image would need to be remounted read-only)\n```\n\nIdeally, that\u0027s what the value should indicate, but I am not sure how that can be enforced by the user. I was thinking that this property/flag is more like an indicator to let us know if that is the case and provide us with options to modify it. What happens after setting the values are all dependent on the service that exported them. \n\n----\n\nOk, yeah, property does make more sense for user setting.",
       "parentUuid": "72fc6abb_9e56b5e9",
+      "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "42cd6a50_e4d6b077",
+        "filename": "yaml/xyz/openbmc_project/Software/State.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-06-22T20:55:20Z",
+      "side": 1,
+      "message": "Ok I see, yeah I meant enforced by the service, which you confirmed that whatever is needed to enforce this property will be done by the service that exports it.\nJust for my reference, do you have in mind already a service that would implement this? Were you thinking perhaps that would be added to the phophor-bmc-code-mgmt, or you\u0027re still working on a service to implement this new property at a later time?",
+      "parentUuid": "f7078ce1_f31540bf",
       "revId": "86b8cb154ece42eb90e91d49dd3be1d316561041",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

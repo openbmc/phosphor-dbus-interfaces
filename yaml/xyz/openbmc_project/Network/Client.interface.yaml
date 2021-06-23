@@ -17,3 +17,9 @@ properties:
           The value of this property is the network port number.
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: Context
+      type: string
+      description: >
+          The value of this property is the context of client.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure

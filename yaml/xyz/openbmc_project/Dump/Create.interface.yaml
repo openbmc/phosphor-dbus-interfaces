@@ -16,12 +16,13 @@ methods:
           Method to create a manual Dump.
       parameters:
         - name: AdditionalData
-          type: dict[string, string]
+          type: dict[string, variant[string,uint32]]
           description: >
             The additional data, if any, for initiating the dump.
             The key in this case should be an implementation
             specific enum defined for the specific type of dump
             either in xyz or in a domain.
+            The values can be either a string or a 32 bit number.
             The enum-format string is required to come from a
             parallel class with this specific Enum name.
             All of the Enum strings should be in the format

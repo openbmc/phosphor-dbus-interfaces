@@ -21,7 +21,7 @@ enumerations:
         - name: 'ErrorLogId'
           description: >
               The id of the log associated with action which triggered the
-              dump.
+              dump. The value should be a 32 bit unsigned integer.
         - name: 'DumpType'
           description: >
               Type of the dump to be collected

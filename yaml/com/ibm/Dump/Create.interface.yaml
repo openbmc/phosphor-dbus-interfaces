@@ -21,13 +21,14 @@ enumerations:
         - name: 'ErrorLogId'
           description: >
               The id of the log associated with action which triggered the
-              dump.
+              dump. The value should be a 32 bit number.
         - name: 'DumpType'
           description: >
               Type of the dump to be collected
         - name: 'FailingUnitId'
           description: >
               A unique id of failing hardware unit which is causing the dump.
+              The value should be an 8 bit number.
 
     - name: DumpType
       description: >

@@ -34,6 +34,24 @@
       "revId": "aa1f374d502c633d190f96ab1c8f8afc7d4bde80",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "949a35f4_395750f9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-06-23T10:04:53Z",
+      "side": 1,
+      "message": "Sharad - I think it makes sense to remove Accelerator from here. That will not break bmcweb code because there\u0027s still Item.Accelerator. We should add \u0027Unknown\u0027 and make that the default. I think I saw a question from someone in another commit as to what does \u0027Unknown\u0027 map to in bmcweb, and I believe that\u0027s something for bmcweb to handle (for eg by not adding the property at all).",
+      "parentUuid": "bd97920f_294db88a",
+      "revId": "aa1f374d502c633d190f96ab1c8f8afc7d4bde80",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

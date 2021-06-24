@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "13751e26_2bd9e96c",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-24T01:37:42Z",
+      "side": 1,
+      "message": "Can we just use \u0027size\u0027 for both of them then?",
+      "parentUuid": "786c73ad_c1a0f5a0",
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53dff3d8_3eb095ad",
         "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
         "patchSetId": 10
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Array of enumerations?\n\nFrom my initial reading of the spec, my understanding was that a range of message types is vendor defined, in which case I was not sure how to express it in the property as an enumeration. \n\nOn a closer look at the spec, the vendor defined message types are well defined [Vendor Defined – PCI - 0x7E], [Vendor Defined – IANA - 0x7F], so the D-Bus property needs to only show this capability.",
       "parentUuid": "53dff3d8_3eb095ad",
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b234478f_a9a976b8",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-24T01:37:42Z",
+      "side": 1,
+      "message": "When it is something like \"Vendor Defined - IANA\" is there additional information you need for support?  Or is that just one type where there is some kind of identifier sent in the message to correspond with IANA?\n\nIf you can create enumerations for these it seems less error prone to me than spreading the #defines around for these.",
+      "parentUuid": "947fa107_aa548540",
       "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -107,6 +143,30 @@
       "side": 1,
       "message": "\u003cNetworkId\u003e was added to the network path to aid enumeration of endpoints under the NetworkId, not particular that the implementation have the \u003cEID\u003e in the object patch. A previous patchset had the objectPath naming as \u003cNetworkId\u003e/endpointN where N was implementation dependent. Any suggestions?",
       "parentUuid": "1b3d4165_fc3ddd53",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 78
+      },
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6660aaa_7b1da4f3",
+        "filename": "yaml/xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-24T01:37:42Z",
+      "side": 1,
+      "message": "It seems like NetworkId can come from the path then but not EID?  Those are just arbitrarily assigned?  It\u0027s up to you.  It seems partially redundant but we also don\u0027t really want code to have to parse the path if they\u0027re using the NetworkId to turn around and make a kernel call.",
+      "parentUuid": "b270108c_e192e634",
       "range": {
         "startLine": 22,
         "startChar": 0,

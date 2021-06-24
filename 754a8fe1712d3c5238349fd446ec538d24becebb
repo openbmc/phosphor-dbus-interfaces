@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ade3b96_2d8c9815",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2021-06-24T19:29:07Z",
+      "side": 1,
+      "message": "What does this map to in Redfish?",
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "89e1344a_70de6426",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2021-06-24T19:29:07Z",
+      "side": 1,
+      "message": "But the File is called PowerLimit which makes me think of PowerCap..\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/08baf48ad5f15774d393fbbf4e9479a0ef3e82d0/yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml#L5\n\nBut that is not what this is, correct?",
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "812b662c_1fcd350e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2021-06-24T19:29:07Z",
+      "side": 1,
+      "message": "This are ReadWrite?",
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "378aa4c8_777de898",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2021-06-24T19:29:07Z",
+      "side": 1,
+      "message": "We don\u0027t need a Property for the current reading?",
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

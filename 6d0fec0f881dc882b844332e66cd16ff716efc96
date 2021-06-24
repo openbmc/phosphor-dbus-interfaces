@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "cd42ffc0_dab26ed2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000400
+      },
+      "writtenOn": "2021-06-24T01:41:23Z",
+      "side": 1,
+      "message": "Hi Patrick， \nThanks for your review.\n\nThe description of \"Context\" property in redfish is like this：\nThis property shall contain a client-supplied context that remains with the connection through the connection\u0027s lifetime.\n\nUsing redfish to create and get SNMP clients is what I am doing.\nWhen we use redfish to create an SNMP client, if there is a \"Context\" property in the redfish request data, we need to store it. So I want to add a \"Context\" property to the Client interface.\n\nWhen we use redfish to get the SNMP client, we must have the \"Context\" property. If there is no “Context”, redfish validator will fail.\n\n\n\u003e Can you elaborate why?  If an empty string is acceptable, why do we need it?\nThe test result just shows that I added a \"Context\" property, I will modify the commit message. When there is \"Context\" in the redfish request, this string will be filled. For example:\nI use redfish to create an SNMP client:\ncurl -k -H \"X-Auth-Token: $token\" -X POST   https://${bmc}/redfish/v1/EventService/Subscriptions   -d \u0027{\"Destination\": \"snmp://192.168.31.91:162\", \"SubscriptionType\": \"SNMPTrap\", \"Protocol\": \"SNMPv2c\",\"Context\": \"testContext\"}\u0027\n\nThen I can use busctl to see the SNMP client：\nbusctl introspect xyz.openbmc_project.Network.SNMP /xyz/openbmc_project/network/snmp/manager/5  xyz.openbmc_project.Network.Client\nNAME                               TYPE      SIGNATURE RESULT/VALUE    FLAGS\n.Address                           property  s         \"192.168.31.91\" emits-change writable\n.Context                           property  s         \"testContext\"   emits-change writable\n.Port                              property  q         162             emits-change writable\n\n\n\n\u003e We need to document what the expectations are for users to fill in.  As a developer of a network application I\u0027d have no idea what you expect for \"Context\".\nI expect to fill in the \"Context\" string in the redfish create SNMP client request. I\u0027ll modify the description.",
+      "parentUuid": "15bb22e7_2072c1b8",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 33
+      },
+      "revId": "6d0fec0f881dc882b844332e66cd16ff716efc96",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f9602b43_f66c842d",
         "filename": "yaml/xyz/openbmc_project/Network/Client.interface.yaml",
         "patchSetId": 1

@@ -114,6 +114,23 @@ methods:
           Note that the PEL's platform log ID (PLID) field is always
           equal to the PEL log ID for BMC created PELs.
 
+  - name: GetEIDFromOBMCID
+    description: >
+        Returns the Entry ID (which is a unique id in the PEL) based on the
+        given OpenBMC event log ID.
+    parameters:
+      - name: obmcLogID
+        type: uint32
+        description: >
+          The OpenBMC event log ID of the PEL to retrieve the Entry ID.
+    returns:
+      - name: EID
+        type: uint32
+        description: >
+            The Entry ID of the PEL.
+    errors:
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
 enumerations:
   - name: RejectionReason
     description: >

@@ -131,6 +131,22 @@ methods:
     errors:
        - xyz.openbmc_project.Common.Error.InvalidArgument
 
+  - name: GetOBMCIDFromEID
+    description: >
+        Returns the OpenBMC event log ID based on the given Entry ID.
+    parameters:
+      - name: entryID
+        type: uint32
+        description: >
+          The Entry ID of the PEL to retrieve the OpenBMC event log ID.
+    returns:
+      - name: OBMCID
+        type: uint32
+        description: >
+            The OpenBMC event log ID of the PEL.
+    errors:
+       - xyz.openbmc_project.Common.Error.InvalidArgument
+
 enumerations:
   - name: RejectionReason
     description: >

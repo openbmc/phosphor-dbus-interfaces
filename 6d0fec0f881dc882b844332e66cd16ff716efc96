@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "2c8a9b4a_8683aade",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000400
+      },
+      "writtenOn": "2021-06-24T02:40:46Z",
+      "side": 1,
+      "message": "\u003e Why can\u0027t Redfish hold the context id itself? \nWe have some discussions about this：https://gerrit.openbmc-project.xyz/c/openbmc/bmcweb/+/38599/23/redfish-core/lib/event_service.hpp#55\n\n\n\u003e I think we need maintainers from both SNMP subsystem and Redfish (bmcweb) to also weigh in here.\nYes, I\u0027ll invite them to review",
+      "parentUuid": "8fe9f5b5_b26c3c71",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 33
+      },
+      "revId": "6d0fec0f881dc882b844332e66cd16ff716efc96",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f9602b43_f66c842d",
         "filename": "yaml/xyz/openbmc_project/Network/Client.interface.yaml",
         "patchSetId": 1

@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "8fe9f5b5_b26c3c71",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-24T02:13:00Z",
+      "side": 1,
+      "message": "\u003e I expect to fill in the \"Context\" string in the redfish create SNMP client request. I\u0027ll modify the description.\n\nThank you.  We certainly need more information in this commit.\n\nIn general, my opinion is that we should not be pushing Redfish-specific requirements into other applications.  If SNMP doesn\u0027t already have a concept of a \"Context\" itself, the fact that we\u0027re manipulating SNMP via Redfish shouldn\u0027t push additional requirements down into that application.  Why can\u0027t Redfish hold the context id itself?  Couldn\u0027t the context be the SNMP path (rather than 5)?  Should SNMP have another name for this to map it back to the originator (ie. some kind of client-handle)?\n\nI think we need maintainers from both SNMP subsystem and Redfish (bmcweb) to also weigh in here.",
+      "parentUuid": "cd42ffc0_dab26ed2",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 33
+      },
+      "revId": "6d0fec0f881dc882b844332e66cd16ff716efc96",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f9602b43_f66c842d",
         "filename": "yaml/xyz/openbmc_project/Network/Client.interface.yaml",
         "patchSetId": 1

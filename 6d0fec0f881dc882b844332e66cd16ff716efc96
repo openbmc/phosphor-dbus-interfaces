@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "2b09abcd_e1916e50",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-24T03:07:01Z",
+      "side": 1,
+      "message": "In that review Ed said:\n\n\u003eThe two options I see are:\n\u003e 1. The SNMP interface needs to change to accept some kind of user defined \"name\" for this connection that we can get back out.\n\u003e 2. bmcweb needs to store some persistent state that can track the name to subscription;  That needs to handle all the cases where the subscription is deleted outside of redfish, so the former would be preferred.\n\n#2 is what I would prefer.  Again, I don\u0027t think every little aspect of Redfish should be pushed down into every application.  If there is some reason for SNMP to hold this for other purposes then it is reasonable but if it is just some handle for Redfish-only, I don\u0027t see a good reason to push this down on everyone.\n\nSignals can be used to trigger a clean up any persistent state.",
+      "parentUuid": "2c8a9b4a_8683aade",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 33
+      },
+      "revId": "6d0fec0f881dc882b844332e66cd16ff716efc96",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f9602b43_f66c842d",
         "filename": "yaml/xyz/openbmc_project/Network/Client.interface.yaml",
         "patchSetId": 1

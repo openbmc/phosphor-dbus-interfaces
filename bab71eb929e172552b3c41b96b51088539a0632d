@@ -144,6 +144,24 @@
     },
     {
       "key": {
+        "uuid": "63acab75_c8934fa8",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2021-06-24T08:32:00Z",
+      "side": 1,
+      "message": "As it stands at the moment, the kernel won\u0027t have any knowledge of the message types; it just uses the (opaque-to-the-kernel) 7-bit value in order to correlate messages to sockets.\n\nSo, vendor-defined message types won\u0027t be any different from the standard sets in that regard.",
+      "parentUuid": "f870617e_0334f7a9",
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1b3d4165_fc3ddd53",
         "filename": "yaml/xyz/openbmc_project/MCTP/README.md",
         "patchSetId": 10

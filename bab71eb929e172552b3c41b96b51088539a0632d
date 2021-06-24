@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "f3cce3b6_38528e42",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-24T08:26:10Z",
+      "side": 1,
+      "message": "Sure",
+      "parentUuid": "13751e26_2bd9e96c",
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53dff3d8_3eb095ad",
         "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
         "patchSetId": 10
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "When it is something like \"Vendor Defined - IANA\" is there additional information you need for support?  Or is that just one type where there is some kind of identifier sent in the message to correspond with IANA?\n\nIf you can create enumerations for these it seems less error prone to me than spreading the #defines around for these.",
       "parentUuid": "947fa107_aa548540",
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f870617e_0334f7a9",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-24T08:26:10Z",
+      "side": 1,
+      "message": "\u003e When it is something like \"Vendor Defined - IANA\" is there additional information you need for support?  Or is that just one type where there is some kind of identifier sent in the message to correspond with IANA?\n\nFrom the reading of the spec, as part of endpoint discovery, GetMessageTypeSupport command is sent. If vendor defined message type is supported then GetVendorDefinedMessageSupport command is sent to get the PCI Vendor ID or/and IANA. Consumers of this message type would need to know  PCI Vendor ID/IANA to communicate with the vendor defined message type.\n\nWe might need more discussion on how kernel stack will handle vendor defined message types. I am right now interested in the standard types.",
+      "parentUuid": "b234478f_a9a976b8",
       "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -176,6 +212,30 @@
       "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c6921086_92b5cda7",
+        "filename": "yaml/xyz/openbmc_project/MCTP/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2021-06-24T08:26:10Z",
+      "side": 1,
+      "message": "The NetworkID and EID are assigned by the discovery portion of the MCTP protocol.\n\nAgree, there is redundancy of data in the object path and properties and seems awkward to parse the object path to setup the socket.",
+      "parentUuid": "d6660aaa_7b1da4f3",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 78
+      },
+      "revId": "bab71eb929e172552b3c41b96b51088539a0632d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

@@ -145,6 +145,30 @@
     },
     {
       "key": {
+        "uuid": "20f228dc_63875783",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2021-06-25T03:11:45Z",
+      "side": 1,
+      "message": "Ed, I am not sure why we are trying to support the context for the SNMP.\nI understand that Event Destination schema has the optional property called \"Context\", but why we are supporting that.\n\nHow it is going to be used in the SNMP trap? Till now backend is not using it.\n\nFor me, we should not implement the context wrt to SNMP.If the need arise later, we can support.",
+      "parentUuid": "cc32c86f_55f68112",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 33
+      },
+      "revId": "6d0fec0f881dc882b844332e66cd16ff716efc96",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f9602b43_f66c842d",
         "filename": "yaml/xyz/openbmc_project/Network/Client.interface.yaml",
         "patchSetId": 1

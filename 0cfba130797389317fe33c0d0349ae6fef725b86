@@ -22,6 +22,30 @@
       "revId": "0cfba130797389317fe33c0d0349ae6fef725b86",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d071df58_ddd06c39",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-25T13:15:46Z",
+      "side": 1,
+      "message": "Why you are expecting a flag to control the error log, when we have separate interfaces to isolated hardware with OR without an error log?\n\nWhy need to enforce the consumer to pass flag without error log path and also, In dbus, we can not pass an optional parameter (afaik, definitely  we can not pass invalid object path because dbus broker itself will through an error before giving to a handler of the interface) \n\nagain the intention is, the implementer of this interface is not going to create an error log because we already have a separate interface to create an error log and in this interface mentioned as \"The BMC error log caused the isolation of hardware.\" - is not clear? \n\nMaybe I will update the commit message as well.",
+      "parentUuid": "390898fb_168766c8",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 23
+      },
+      "revId": "0cfba130797389317fe33c0d0349ae6fef725b86",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

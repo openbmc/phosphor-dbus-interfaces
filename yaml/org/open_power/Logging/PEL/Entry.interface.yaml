@@ -1,0 +1,21 @@
+description: >
+    Implement to provide PEL event/error entry attributes.
+properties:
+    - name: subsystem
+      type: string
+      description: >
+            For error events, this is the failing subsystem. We can have many
+            sunbsystems in a system.            
+            Some examples of Possible subsystems
+                - Processor Subsystem
+                - Processor FRU
+                - Processor Chip Cache
+                - Processor Unit (CPU)
+                - Processor Bus Controller
+                - Memory Subsystem
+                - Memory Controller
+                - Memory Bus Interface
+                - Memory DIMM
+                - Memory Card/FRU
+                - I/O Storage Subsystem
+

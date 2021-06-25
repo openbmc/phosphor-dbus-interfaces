@@ -16,6 +16,24 @@
       "revId": "7dd544f9191049f6aa25b124d5fee18e6a378597",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "13d9b94e_23c269f2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-25T12:55:24Z",
+      "side": 1,
+      "message": "\u003e Why need this separate interface for user Guard, Can we use the proposed create interface and type as \"User\" ? \n\nThis is interface gives flexibility to the consumer if they don\u0027t want to create an error log but want to isolate hardware irrespective of type.\n\n\u003e the back-end application can decide, required to cerate error log or not incase user type. \n\nThe intention of this interface doesn\u0027t want to create an error log just to isolate hardware from the boot of the host.\n\nare you seeing any use cases to create an error log by the manager of this interface instead of creating by the consumer of this interface? If this interface wants to create the error log means what are the error log details you will be expected to give?\n\nIn openBMC, we already have an interface to create an error log (https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Logging/Create.interface.yaml) and so why you cannot use that interface and pass that created error log path into another proposed interface (https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/44229).\n\nand why we need to mingle the responsibility hardware isolation and bmc event log managers here? - I am thinking like why this interface needs to act as a mediator to just create an error log by getting all the expected input from the consumer and pass it to the bmc event log manager OR why the implementor of this interface needs to act as another bmc log manager?  \n\n\u003e is there any other use case for this create interface?\n\nIn few platforms, vendors don\u0027t want to create an error log when the user isolating hardware because it may not an error case for them.",
+      "parentUuid": "7b3c7d66_e961fa8a",
+      "revId": "7dd544f9191049f6aa25b124d5fee18e6a378597",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

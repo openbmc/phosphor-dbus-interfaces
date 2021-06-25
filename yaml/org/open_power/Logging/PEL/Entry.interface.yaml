@@ -1,0 +1,105 @@
+description: >
+    Implement to provide event/error entry attributes.
+properties:
+    - name: creator
+      type: string
+      description: >
+            Creator -- subsystem creating the error log entry
+            Possible creators in a system
+                - HMC,
+                - SP (FipS error logger)
+                - PHYP,
+                - Power Control
+                - Partition FW
+                - SLIC
+                - Hostboot
+                - OCC
+                - I/O Drawer
+                - Sapphire
+                - POWERNV
+                - BMC
+
+    - name: subsystem
+      type: string
+      description: >
+            For error events, this is the failing subsystem
+            Possible subsystems
+                - Processor Subsystem
+                - Processor FRU
+                - Processor Chip Cache
+                - Processor Unit (CPU)
+                - Processor Bus Controller
+                - Memory Subsystem
+                - Memory Controller
+                - Memory Bus Interface
+                - Memory DIMM
+                - Memory Card/FRU
+                - External Cache
+                - I/O Subsystem
+                - I/O Hub
+                - I/O Bridge
+                - I/O bus interface
+                - I/O Processor
+                - SMA Hub
+                - PCI Bridge Chip
+                - I/O Adapter Subsystem
+                - I/O Adapter Communication
+                - I/O Device Subsystem
+                - I/O Device Disk
+                - I/O External Peripheral
+                - I/O External Peripheral Local Work Station
+                - I/O Storage Mezza Expansion Subsystem
+                - CEC Hardware Subsystem
+                - CEC Hardware: Service Processor A
+                - CEC Hardware: Service Processor B
+                - CEC Hardware: Node Controller
+                - CEC Hardware: VPD Interface
+                - CEC Hardware: I2C Devices
+                - CEC Hardware: CEC Chip Interface
+                - CEC Hardware: Clock
+                - CEC Hardware: Operator Panel
+                - CEC Hardware: Time-Of-Day Hardware
+                - CEC Hardware: Memory Device
+                - CEC Hardware: Hypervisor-Service Processor Interface
+                - CEC Hardware: Service Network
+                - CEC Hardware: Hostboot-Service Processor Interface
+                - Power/Cooling Subsystem
+                - Power Supply
+                - Power Control Hardware
+                - Fan (AMD)
+                - Digital Power Supply Subsystem
+                - Miscellaneous
+                - HMC Subsystem & Hardware
+                - Test Tool
+                - Removable Media
+                - Multiple Subsystems
+                - Not Applicable
+                - Miscellaneous
+                - Hypervisor lost communication with service processor
+                - Service processor lost communication with Hypervisor
+                - Service processor lost communication with HMC
+                - HMC lost communication with logical partition
+                - HMC lost communication with BPA
+                - HMC lost communication with another HMC
+                - Platform Firmware
+                - Service Processor Firmware
+                - System Hypervisor Firmware
+                - Partition Firmware
+                - SLIC Firmware
+                - System Power Control Network Firmware
+                - Bulk Power Firmware Side A
+                - HMC Code
+                - Bulk Power Firmware Side B
+                - Virtual Service Processor Firmware
+                - HostBoot
+                - OCC
+                - BMC Firmware
+                - Software
+                - Operating System software
+                - XPF software
+                - Application software
+                - External Environment
+                - Input Power Source (ac)
+                - Room Ambient Temperature
+                - User Error
+                - Corrosion

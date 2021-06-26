@@ -1,0 +1,50 @@
+description: >
+    Implement to provide the attributes of open-POWER chiplets.
+
+properties:
+    - name: ChipletType
+      type: enum[self.Type]
+      description: >
+          The type of open-POWER chiplet.
+
+enumerations:
+    - name: Type
+      description: >
+          Possible chiplets type.
+      values:
+          - name: 'EQ'
+            description: >
+                Quad
+          - name: 'IOHS'
+            description: >
+                High speed SMP/OpenCAPI Link
+          - name: 'MC'
+            description: >
+                Memory Controller
+          - name: 'MCC'
+            description: >
+                Memory Controller
+          - name: 'MI'
+            description: >
+                Processor To Memory Buffer Interface
+          - name: 'NMMU'
+            description: >
+                Nest Memory Management Unit
+          - name: 'OMI'
+            description: >
+                OpenCAPI Memory Interface
+          - name: 'OMIC'
+            description: >
+                OpenCAPI Memory Interface Controller
+          - name: 'PAU'
+            description: >
+                POWER Accelerator Unit
+          - name: 'PAUC'
+            description: >
+                POWER Accelerator Unit Controller
+          - name: 'PEC'
+            description: >
+                PCI Express controllers
+          - name: 'PHB'
+            description: >
+                PCIe host bridge (PHB)

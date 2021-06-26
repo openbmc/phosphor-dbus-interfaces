@@ -1,0 +1,7 @@
+- name: IsolatedAlready
+  description: The requested hardware is already isolated.
+
+- name: ManualIsolationNotAllowed
+  description: The system or hardware is not in a state where
+               Manual Isolation can be performed, such as hardware
+               which can only be isolated when the system is powered off.

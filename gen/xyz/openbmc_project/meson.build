@@ -49,6 +49,19 @@ subdir('Condition')
 subdir('Control')
 subdir('Dump')
 subdir('HardwareIsolation')
+generated_others += custom_target(
+    'xyz/openbmc_project/HardwareIsolation__markdown'.underscorify(),
+    input: [ '../../../yaml/xyz/openbmc_project/HardwareIsolation.errors.yaml',  ],
+    output: [ 'HardwareIsolation.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../yaml',
+        'xyz/openbmc_project/HardwareIsolation',
+    ],
+)
+
 subdir('Inventory')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory__markdown'.underscorify(),

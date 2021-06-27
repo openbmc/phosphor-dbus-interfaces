@@ -103,3 +103,18 @@ methods:
           recollection of VPD data for them.
       errors:
         - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: deleteFRUVPD
+      description: >
+          An api to delete VPD of a given FRU and set its Present
+          property as false on DBus.
+          This api is to be called before requesting VPD parser to
+          collect VPD of any given FRU in case of concurrent
+          maintenance.
+      parameters:
+        - name: inventoryPath
+          type: path
+          description: >
+              Dbus path of the FRU whose VPD needs to be removed.
+      errors:
+        - xyz.openbmc_project.Common.Error.InvalidArgument

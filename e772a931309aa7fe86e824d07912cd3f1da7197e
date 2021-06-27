@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f5c4e324_f1a8854e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2021-06-27T17:13:28Z",
+      "side": 1,
+      "message": "Updated as discussed",
+      "parentUuid": "77667152_5dfb6e00",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 37
+      },
+      "revId": "e772a931309aa7fe86e824d07912cd3f1da7197e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "395f676a_dc4311f4",
         "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
         "patchSetId": 6
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1472649b_474171ab",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2021-06-27T17:13:28Z",
+      "side": 1,
+      "message": "As discussed in the design meeting, a new api to delete the VPD has been added.\nhttps://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/44499/1",
+      "parentUuid": "395f676a_dc4311f4",
+      "range": {
+        "startLine": 107,
+        "startChar": 4,
+        "endLine": 109,
+        "endChar": 59
+      },
+      "revId": "e772a931309aa7fe86e824d07912cd3f1da7197e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7e52a61c_15872260",
         "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
         "patchSetId": 6
@@ -59,6 +107,30 @@
       "writtenOn": "2021-06-21T12:14:33Z",
       "side": 1,
       "message": "in-addition to this , i think this api should return some error when it fails to collect the VPD. if the consumer should be looking at the present property to true. that will be never set in vpd collection failure case, then how are the clients of this API intimated about this error ?",
+      "range": {
+        "startLine": 115,
+        "startChar": 6,
+        "endLine": 116,
+        "endChar": 58
+      },
+      "revId": "e772a931309aa7fe86e824d07912cd3f1da7197e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d80f9b57_5902682d",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2021-06-27T17:13:28Z",
+      "side": 1,
+      "message": "As discussed, a timer and present property change should be used at caller end to ensure call success.",
+      "parentUuid": "7e52a61c_15872260",
       "range": {
         "startLine": 115,
         "startChar": 6,

@@ -117,6 +117,30 @@
       "revId": "b5d9e4fca5dfffdde41b841cd53859d95349f9cf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1350a467_8e6a0a6b",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Errors.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-28T12:53:36Z",
+      "side": 1,
+      "message": "\u003e Am trying to understand this requirement, is there any specific reason , isolation action allowing only based on states?\n\nNot all the isolation types, for example, Critical and Warning type isolation may be triggered by the system at any time, and the isolation process (applying the isolation) may be happening in the next boot of the host (it may vary in different platforms)\n\nBut, we are trying to restrict a user to do manual hardware isolation when the host is running because if he wants to see the impact of isolation so he needs to do power-off and power-on the host so through this error code he may aware \"Shit, I did isolation during host running and I can not see the impact of my isolation... Now What I should do to see my isolation status\" - is that make sense? OR You mean something else?\n\n\u003e Note that isolation units is not alway\u0027s going to be host specific , host state check is not going to help here right?\n\nSorry, not getting Can you elaborate?\n- Do you mean units that are not owned by the host? if so, can you give some examples of that units? \n- If those units not owned by the host means when the isolation process happen? in owned component or host?\n\n\u003e Applying the isolation is happening during hot initialization window. Is there any restriction in adding this support in Host runtime?\n\nWhat you mean by \"hot initialization window\"?\n\nand Sorry, I made as resolved - so reverting this comment until you are satisfied to make resolve.",
+      "parentUuid": "c640f054_5c90913c",
+      "range": {
+        "startLine": 5,
+        "startChar": 15,
+        "endLine": 6,
+        "endChar": 35
+      },
+      "revId": "b5d9e4fca5dfffdde41b841cd53859d95349f9cf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

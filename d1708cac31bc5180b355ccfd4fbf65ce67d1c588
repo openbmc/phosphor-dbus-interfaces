@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6f7cf2d1_5376886c",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2021-06-28T06:44:35Z",
+      "side": 1,
+      "message": "It is actually not the severity of the hardware but the isolation, so I think it should be \"The severity of hardware isolation\"",
+      "range": {
+        "startLine": 25,
+        "startChar": 10,
+        "endLine": 25,
+        "endChar": 44
+      },
+      "revId": "d1708cac31bc5180b355ccfd4fbf65ce67d1c588",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b0f46f5e_aa9fdc4b",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2021-06-28T06:44:35Z",
+      "side": 1,
+      "message": "\"may not\" may be more suitable since you mentioned the entry will be kept on few platforms for further analysis but not all",
+      "range": {
+        "startLine": 32,
+        "startChar": 33,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "d1708cac31bc5180b355ccfd4fbf65ce67d1c588",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bdd7d96e_57e02a88",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Entry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2021-06-28T06:44:35Z",
+      "side": 1,
+      "message": "severity is not for hardware but isolation.",
+      "range": {
+        "startLine": 39,
+        "startChar": 32,
+        "endLine": 39,
+        "endChar": 50
+      },
+      "revId": "d1708cac31bc5180b355ccfd4fbf65ce67d1c588",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e11d241c_7a851d77",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Errors.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-28T10:10:41Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "667b8ada_b74dde01",
+      "range": {
+        "startLine": 2,
+        "startChar": 14,
+        "endLine": 2,
+        "endChar": 33
+      },
+      "revId": "b5d9e4fca5dfffdde41b841cd53859d95349f9cf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e6144e61_1241655e",
         "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Errors.errors.yaml",
         "patchSetId": 1
@@ -45,6 +69,30 @@
       "revId": "b5d9e4fca5dfffdde41b841cd53859d95349f9cf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d1842bda_770fe9e5",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Errors.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-28T10:10:41Z",
+      "side": 1,
+      "message": "When the host is power-off still I am seeing BMC state as Ready?\nI think manual isolation should allow when the host is off right? since isolation will be handled by the host only right?\n\nMay be it can be like below\n\"Manual hardware isolation is allowed only when the host state is \"Off\" (https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/State/Host.interface.yaml#L55).\"\n\n```\nDuring PowerOff:\n\nCurrentBMCState     : xyz.openbmc_project.State.BMC.BMCState.Ready\nCurrentPowerState   : xyz.openbmc_project.State.Chassis.PowerState.Off\nCurrentHostState    : xyz.openbmc_project.State.Host.HostState.Off\nBootProgress        : xyz.openbmc_project.State.Boot.Progress.ProgressStages.Unspecified\nOperatingSystemState: xyz.openbmc_project.State.OperatingSystem.Status.OSStatus.Inactive\n\nDuring PowerOn:\n\nCurrentBMCState     : xyz.openbmc_project.State.BMC.BMCState.Ready\nCurrentPowerState   : xyz.openbmc_project.State.Chassis.PowerState.On\nCurrentHostState    : xyz.openbmc_project.State.Host.HostState.Running\nBootProgress        : xyz.openbmc_project.State.Boot.Progress.ProgressStages.OSRunning\nOperatingSystemState: xyz.openbmc_project.State.OperatingSystem.Status.OSStatus.Inactive\n\n```\n\nMay be it can be like below\n\"Manual hardware isolation is allowed only when the host is power-off.\"",
+      "parentUuid": "e6144e61_1241655e",
+      "range": {
+        "startLine": 5,
+        "startChar": 15,
+        "endLine": 6,
+        "endChar": 35
+      },
+      "revId": "b5d9e4fca5dfffdde41b841cd53859d95349f9cf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

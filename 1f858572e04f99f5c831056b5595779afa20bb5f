@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5cb56132_3c24bee5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-29T19:24:50Z",
+      "side": 1,
+      "message": "The thing is that nobody knows what those key\u003c-\u003e type relationships are though and there is no way to document them.",
+      "parentUuid": "85c354eb_c083d716",
+      "range": {
+        "startLine": 12,
+        "startChar": 41,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "1f858572e04f99f5c831056b5595779afa20bb5f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "58eca780_257c7028",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
         "patchSetId": 1
@@ -78,6 +102,24 @@
       "side": 1,
       "message": "the maximum size of error log is 32bit thats why added uint32, a uint64 also needed for a future use case?",
       "parentUuid": "58eca780_257c7028",
+      "revId": "1f858572e04f99f5c831056b5595779afa20bb5f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4fd4150c_dddd8d6f",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-29T19:24:50Z",
+      "side": 1,
+      "message": "How about a \u0027size\u0027 type then?  Generally speaking when I see a int-size restriction (such as uint32) it is not of much benefit, because there is no underlying hardware constraint that is influencing that int-size choice.  There is only minimal benefit to using \u0027uint32\u0027 vs \u0027uint64\u0027 from a code size/optimization perspective, so I\u0027m not suspecting that benefit is sufficient to lock us into a particular int-size.\n\nUnless you have a strong reason to lock this at 32 bits, I think one of { uint64, int64, size, ssize } is a better choice for long-term compatibility.",
+      "parentUuid": "83f7e118_b7949742",
       "revId": "1f858572e04f99f5c831056b5595779afa20bb5f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

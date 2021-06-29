@@ -22,6 +22,30 @@
       "revId": "05936b0d1d435e1c94188508198e2b48594fa527",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "33053a61_de8be9e0",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-29T17:57:15Z",
+      "side": 1,
+      "message": "Agree with you, the user of this interface cannot do anything with those error and all are internal errors\nbut, I cannot use InternalFailure (and I heard, Interfailure will trigger bmc dump)? Can I use it?\n\nand I think we discussed like, \"NotAllowed\" also can not use since it have specific reason (standard error) in BMC.",
+      "parentUuid": "875142f6_8f36cf8c",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "05936b0d1d435e1c94188508198e2b48594fa527",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "732f7277_cf6ef1aa",
+        "filename": "yaml/org/open_power/Logging/PEL/Entry.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-06-29T20:40:03Z",
+      "side": 1,
+      "message": "With all the additional values listed here, these should probably be an enum instead of a string.  That being said, we still need to emit a human readable version via redfish, so either the enum needs to be human displayable, or bmcweb would need to convert the enum to a better string.",
+      "revId": "b412d0b830555c2763555f4ac666eb4521a4414a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

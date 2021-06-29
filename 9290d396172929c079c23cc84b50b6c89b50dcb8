@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2bf3c59f_6df5b625",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Errors.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-29T19:33:32Z",
+      "side": 1,
+      "message": "Three comments:\n\n- Isn\u0027t Common.NotAllowed typically used for the same purpose?\n\n- \"is allowed only when the host state is off\" seems very specific to a particular implementation.  I this something along the lines of \"the system or hardware is not in a state where Manual Isolation can be performed, such as hardware which can only be isolated when the system is powered off\" might be more appropriate.\n\n- Why do we have cases where new manual isolation records cannot be created but non-manual ones could?  That isn\u0027t intuitive.  Shouldn\u0027t you be able to create one at any time and the system will apply it next time it is able to?  Is there a design doc element to describe this feature/requirement aspect?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 37
+      },
+      "revId": "9290d396172929c079c23cc84b50b6c89b50dcb8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

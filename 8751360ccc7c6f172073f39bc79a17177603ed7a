@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3850a5bc_3d45b7c8",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-29T16:10:50Z",
+      "side": 1,
+      "message": "Is there a design reference for these \"entity paths\"?  That name is, on the surface, easily confused with an inventory path from entity-manager.\n\nWhy isn\u0027t PLDM doing this translation for you to an inventory path before it gets into the rest of the BMC applications?",
+      "range": {
+        "startLine": 15,
+        "startChar": 18,
+        "endLine": 15,
+        "endChar": 38
+      },
+      "revId": "8751360ccc7c6f172073f39bc79a17177603ed7a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4814ee6a_700ef656",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-29T16:10:50Z",
+      "side": 1,
+      "message": "I have no idea what this representation is.  Is there a document for a pointer?",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 45
+      },
+      "revId": "8751360ccc7c6f172073f39bc79a17177603ed7a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "022e25ea_0e6f9df0",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-29T16:10:50Z",
+      "side": 1,
+      "message": "What is the user of your interface expected to do with these?  It doesn\u0027t seem reasonable to expose these out.  They seem like an implementation detail and not an API.",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 55
+      },
+      "revId": "8751360ccc7c6f172073f39bc79a17177603ed7a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

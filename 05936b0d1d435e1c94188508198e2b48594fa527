@@ -46,6 +46,30 @@
       "revId": "05936b0d1d435e1c94188508198e2b48594fa527",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "25e3cc21_2c0eb849",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-29T19:19:07Z",
+      "side": 1,
+      "message": "We probably need broader consensus on what to do for error paths like this.\n\nMy initial feeling is that the daemon should terminate itself on Open/Seek/Read/Write fails, which will as a side effect cause the dbus-call to fail plus a core dump of the daemon.  By sending it out the dbus, you are effectively ignoring it inside your own daemon and not allowing the most likely successful recovery to be done (restarting the daemon).\n\nThe way the dbus framework currently works you cannot both respond (such as with NotAllowed) and crash your daemon (by throwing an exception out of the response-handler).  In any case the NotAllowed is a similar \"what does the client do with this?\".  With the \"daemon crashed in the middle of the call\" state we could at least insert code into sdbusplus to catch this condition and potentially retry or at least turn it into a well-formed sdbusplus exception which would allow the client to retry on its own.",
+      "parentUuid": "33053a61_de8be9e0",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "05936b0d1d435e1c94188508198e2b48594fa527",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

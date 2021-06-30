@@ -22,6 +22,30 @@
       "revId": "9290d396172929c079c23cc84b50b6c89b50dcb8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "620cb6d3_d23ca98e",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Errors.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-30T09:36:26Z",
+      "side": 1,
+      "message": "\u003e Isn\u0027t Common.NotAllowed typically used for the same purpose?\n\nCan I use it? I assumed it is some openbmc specific standard error and even dbus documented as `The operation is not allowed` - But, I meant the same as `The operation is not allowed`.\n\n\u003e \"the system or hardware is not in a state where Manual Isolation can be performed, such as hardware which can only be isolated when the system is powered off\" might be more appropriate.\n\nPerfect 🔥.\n\n\u003e Why do we have cases where new manual isolation records cannot be created but non-manual ones could?  That isn\u0027t intuitive.  Shouldn\u0027t you be able to create one at any time and the system will apply it next time it is able to?  \n\nFrom my understanding, manual isolation won\u0027t make any effects when the system is booting and in Non-manual cases, system application can isolate if found any faulty hardware during the boot process but, I am thinking this all is implementation-specific and we need to give some generic error description (like you suggested - very perfect one) \n\n\u003e Is there a design doc element to describe this feature/requirement aspect?\n\n@Dhruv, you covered this requirement in the design document?\n\nLooks not, \"Manual guard: An operation to manually add a unit to the list of isolated units. This operation is helpful in isolating a suspected component without physically removing it from the server.\"  - If needs an update I can update the design document and I guess it will be a good discussion point from the community because each vendor may prefer differently (Allow or Don\u0027t allow in a certain state (I guess this is a big question in the interface)) - or Generally allow when only the system is power off or some policy (not sure we have any concept like that in openBMC)",
+      "parentUuid": "2bf3c59f_6df5b625",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 37
+      },
+      "revId": "9290d396172929c079c23cc84b50b6c89b50dcb8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

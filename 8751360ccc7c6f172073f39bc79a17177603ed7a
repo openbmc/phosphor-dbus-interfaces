@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "745e9742_74eb6ba3",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-30T10:18:30Z",
+      "side": 1,
+      "message": "\u003e Is there a design reference for these \"entity paths\"?\n\nI will try to share once found any documentation (which can share in a public forum) from the OpenPOWER project.\n\n\u003e That name is, on the surface, easily confused with an inventory path from entity-manager.\n\nAgree.\n\n\u003e Why isn\u0027t PLDM doing this translation for you to an inventory path before it gets into the rest of the BMC applications?\n\nToday, we are translating few hardwares through PLDM which needs to isolate through redfish and this interface will be useful for hardwares which are not translated by PLDM but, need to isolate by OpenPOWER based BMC applications (openpower-hw-digs and openpower-proc-control, those applications will get that entity path from another repository called device tree (data driven) which is modeled based on OpenPOWER architecture )",
+      "parentUuid": "3850a5bc_3d45b7c8",
+      "range": {
+        "startLine": 15,
+        "startChar": 18,
+        "endLine": 15,
+        "endChar": 38
+      },
+      "revId": "8751360ccc7c6f172073f39bc79a17177603ed7a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4814ee6a_700ef656",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 5
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "ca5a0ffe_ca0bacb6",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-30T10:18:30Z",
+      "side": 1,
+      "message": "I will try to share once found any documentation (which can share in a public forum) from the OpenPOWER project.\n\nNot sure, is there any documentation - usually I will refer to the system MRW (Machine Readable Workbook) file but, I don\u0027t think I can share that reference here, I will check with IBM folks about this.",
+      "parentUuid": "4814ee6a_700ef656",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 45
+      },
+      "revId": "8751360ccc7c6f172073f39bc79a17177603ed7a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "022e25ea_0e6f9df0",
         "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
         "patchSetId": 5
@@ -59,6 +107,30 @@
       "writtenOn": "2021-06-29T16:10:50Z",
       "side": 1,
       "message": "What is the user of your interface expected to do with these?  It doesn\u0027t seem reasonable to expose these out.  They seem like an implementation detail and not an API.",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 55
+      },
+      "revId": "8751360ccc7c6f172073f39bc79a17177603ed7a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd94a2d1_936d5e9d",
+        "filename": "yaml/org/open_power/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-30T10:18:30Z",
+      "side": 1,
+      "message": "I will change once got suggestion in https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/43533/9/yaml/xyz/openbmc_project/HardwareIsolation/Create.interface.yaml#34 - same comment in another patch",
+      "parentUuid": "022e25ea_0e6f9df0",
       "range": {
         "startLine": 38,
         "startChar": 0,

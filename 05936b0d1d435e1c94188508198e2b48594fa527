@@ -70,6 +70,30 @@
       "revId": "05936b0d1d435e1c94188508198e2b48594fa527",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b0c62db2_9cadfba1",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Create.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-06-30T09:10:48Z",
+      "side": 1,
+      "message": "\u003eMy initial feeling is that the daemon should terminate itself on Open/Seek/Read/Write fails, which will as a side effect cause the dbus-call to fail plus a core dump of the daemon.\n\nYes I have noticed this and I wondered about core dump because in my early my experience (Telecom) we will care about core dump and service availability but, Looks openBMC following some principle on this (some service reset policy - trying to gather information on this) and I will agree, it will vary based on project scope.\n\nis the openbmc design principle is like follow, should throw an exception from daemon and dbus-call (handler of this interface (auto-generated code)) will fail and it start core dump and restart the daemon. If so, I will remove those FileError from all create interfaces.\n\n\u003e The way the dbus framework currently works you cannot both respond (such as with NotAllowed) and crash your daemon (by throwing an exception out of the response-handler).\nGood info, I will keep it in my mind and it will help in the future to think more about this.\n\n\u003e In any case the NotAllowed is a similar \"what does the client do with this?\".  With the \"daemon crashed in the middle of the call\" state we could at least insert code into sdbusplus to catch this condition and potentially retry or at least turn it into a well-formed sdbusplus exception which would allow the client to retry on its own.\n\nToday, are there any retry mechanisms from sdbusplus? I have looked at the auto-generated code of interfaces like how it calling sdbusplus api \"C++\" -\u003e dbus api (\"C\") but, not sure I missed anything in this - May be discord discussion If so, I can connect with you?",
+      "parentUuid": "25e3cc21_2c0eb849",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "05936b0d1d435e1c94188508198e2b48594fa527",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

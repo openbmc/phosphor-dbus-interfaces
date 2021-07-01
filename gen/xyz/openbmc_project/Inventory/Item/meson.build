@@ -152,6 +152,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Drive')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Drive__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml',  ],
+    output: [ 'Drive.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/Drive',
+    ],
+)
+
 subdir('Ethernet')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/Ethernet__markdown'.underscorify(),

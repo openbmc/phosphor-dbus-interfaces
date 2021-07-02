@@ -15,6 +15,10 @@ properties:
       description: >
         The purpose of the version.  As in, what can it be used for or
         applied to?
+    - name: BmcMachine
+      type: string
+      description: >
+        This property indicates the current machine name of the BMC.
 enumerations:
     - name: VersionPurpose
       description: >

@@ -52,6 +52,24 @@
       "revId": "87b47dd7ed0a86bf881c4af3812dd62c2578b80f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "449237a6_deb016db",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2021-07-02T13:21:12Z",
+      "side": 1,
+      "message": "Actually in Redfish Service Root API, for the Product property, the platform name will be the appropriate data, and it is not available with any DBus service.\nSo this will helps to show the platform name as a Product in Redfish side.",
+      "parentUuid": "a798d336_30b6cd83",
+      "revId": "87b47dd7ed0a86bf881c4af3812dd62c2578b80f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

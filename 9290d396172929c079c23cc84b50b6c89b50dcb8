@@ -94,6 +94,30 @@
       "revId": "9290d396172929c079c23cc84b50b6c89b50dcb8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ee6e9e4_4d04845a",
+        "filename": "yaml/xyz/openbmc_project/HardwareIsolation/Errors.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-07-03T07:32:08Z",
+      "side": 1,
+      "message": "Ah thanks for the information.\n\nIf we are restricting for both the cases (manual and non-manual) then \"NotAllowed\" or \"Unavailable\" we can use but, if only in anyone of the use case means can we use?\n\nI think, the same question \"Why only manual use case?\" you asked in design document :)",
+      "parentUuid": "2dc87e54_bf85ebab",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 37
+      },
+      "revId": "9290d396172929c079c23cc84b50b6c89b50dcb8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b73913ed_ebfc4bd3",
+        "filename": "yaml/xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 21
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-06T18:58:41Z",
+      "side": 1,
+      "message": "Sorry I didn\u0027t respond very quickly to this discussion.\n\nI think I prefer the \u0027LastRebootTime\u0027 design direction instead because it keeps any time calculation contained within the provider.  I\u0027m ok with indicating that an EpochTime of 0 or maxint indicates that it is unsupported.\n\nBonus points if you enhance sdbusplus:tools/sdbusplus/property.py to be able to express a uint64 to default as \u0027maxint\u0027",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 20
+      },
+      "revId": "81c3c0932c4d85b083153a2a6162401f51824380",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "419ef62c_372a3c11",
+        "filename": "yaml/xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 21
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-06T18:58:41Z",
+      "side": 1,
+      "message": "+1",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 52
+      },
+      "revId": "81c3c0932c4d85b083153a2a6162401f51824380",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

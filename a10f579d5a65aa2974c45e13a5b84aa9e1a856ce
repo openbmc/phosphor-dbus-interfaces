@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e1ded7e1_bded1ca0",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-07T13:43:57Z",
+      "side": 1,
+      "message": "I\u0027m confused how this helps the *ItemUpdater*.  Shouldn\u0027t it be created *by* the ItemUpdater?\n\nIt isn\u0027t the software version that is potentially write-protected, but the flash location where the software version is intended to be written.  Doesn\u0027t only the ItemUpdater know this?\n\nFor example, consider the BMC with two static-layout flash banks where NOR-0 is locked with a write-protect resistor.  Both flash banks could contain version v123.  It isn\u0027t v123 that is write-protected but NOR-0.  If you upload v124, how does the *ImageManager* know that v124 is not write-protected?  Only the *ItemUpdater* can know this.",
+      "range": {
+        "startLine": 179,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 58
+      },
+      "revId": "a10f579d5a65aa2974c45e13a5b84aa9e1a856ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4adb60d4_b88b60ab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2021-07-08T11:08:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "93b1eb8c_05bb21b9",
+      "range": {
+        "startLine": 7,
+        "startChar": 24,
+        "endLine": 7,
+        "endChar": 30
+      },
+      "revId": "b3fb2f57516bbffb8b3aa81802cb18f11aa07c76",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "49be27f0_d1556db7",
         "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
         "patchSetId": 3
@@ -45,6 +69,30 @@
       "revId": "b3fb2f57516bbffb8b3aa81802cb18f11aa07c76",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e98fb216_f100489d",
+        "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2021-07-08T11:08:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "49be27f0_d1556db7",
+      "range": {
+        "startLine": 24,
+        "startChar": 42,
+        "endLine": 24,
+        "endChar": 46
+      },
+      "revId": "b3fb2f57516bbffb8b3aa81802cb18f11aa07c76",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     },
     {
       "key": {
@@ -83,6 +131,30 @@
       "side": 1,
       "message": "👍.  It should probably just be an unsigned integer (ie. equivalent to size_t).",
       "parentUuid": "08a85447_df94218f",
+      "range": {
+        "startLine": 31,
+        "startChar": 37,
+        "endLine": 31,
+        "endChar": 42
+      },
+      "revId": "b3fb2f57516bbffb8b3aa81802cb18f11aa07c76",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f560eaf_0dcfed6e",
+        "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2021-07-08T11:08:50Z",
+      "side": 1,
+      "message": "we may not have that many units, but can be kept as 32 bit",
+      "parentUuid": "7fa4414e_00a8efdc",
       "range": {
         "startLine": 31,
         "startChar": 37,

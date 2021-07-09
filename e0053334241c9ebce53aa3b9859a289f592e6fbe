@@ -22,6 +22,30 @@
       "revId": "e0053334241c9ebce53aa3b9859a289f592e6fbe",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1d60f7b5_f6f9761b",
+        "filename": "xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2021-07-09T07:44:19Z",
+      "side": 1,
+      "message": "Wow, I forgot to add a default! Good catch. The default should be false. It\u0027s the most conservative and correct choice, as false means to make no behavioral change from the previous behavior (not allowing sensors to be externally written at all).",
+      "parentUuid": "46fd51ed_776bc6cc",
+      "range": {
+        "startLine": 42,
+        "startChar": 31,
+        "endLine": 44,
+        "endChar": 35
+      },
+      "revId": "e0053334241c9ebce53aa3b9859a289f592e6fbe",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

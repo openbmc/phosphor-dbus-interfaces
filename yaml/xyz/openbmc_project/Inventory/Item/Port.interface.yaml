@@ -44,6 +44,15 @@ properties:
       description: >
           The desired link status for this interface.
 
+    - name: TXBytes
+      type: size
+      description: >
+          The total number of bytes transmitted on a device.
+
+    - name: RXBytes
+      type: size
+      description: >
+          The total number of bytes received on a device.
 
 enumerations:
     - name: PortType

@@ -25,6 +25,10 @@ properties:
       type: uint16
       description: >
           The maximum capable clock speed of Memory, in megahertz.
+    - name: Utilization
+      type: double
+      description: >
+          The memory bandwidth utilization as a percentage.
     - name: MemoryAttributes
       type: byte
       description: >

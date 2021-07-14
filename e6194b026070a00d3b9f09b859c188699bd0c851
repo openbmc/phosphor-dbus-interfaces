@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f715c4cd_a3a14cf4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-07-14T20:45:32Z",
+      "side": 1,
+      "message": "maybe:  PEL.Entry:   ?",
+      "revId": "e6194b026070a00d3b9f09b859c188699bd0c851",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "097fbd3e_0952f056",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-07-14T20:45:32Z",
+      "side": 1,
+      "message": "area?  A unit is probably a bit too fine grained",
+      "range": {
+        "startLine": 10,
+        "startChar": 54,
+        "endLine": 10,
+        "endChar": 59
+      },
+      "revId": "e6194b026070a00d3b9f09b859c188699bd0c851",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "100723e3_782482bf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-07-14T20:45:32Z",
+      "side": 1,
+      "message": "You may as well mention why you aren\u0027t using an enum, since that will probably be asked. i.e. to save having to do a decoding on the far end into a human readable version of 70+ values.",
+      "revId": "e6194b026070a00d3b9f09b859c188699bd0c851",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3a186cc7_d411d9af",
+        "filename": "yaml/org/open_power/Logging/PEL/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-07-14T20:45:32Z",
+      "side": 1,
+      "message": "It would probably be better to not list these here, because if we add some in the future this would get out of date.  Maybe just some examples",
+      "revId": "e6194b026070a00d3b9f09b859c188699bd0c851",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

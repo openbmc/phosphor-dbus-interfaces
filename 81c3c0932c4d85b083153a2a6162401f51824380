@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2cca3226_48dcfa48",
+        "filename": "yaml/xyz/openbmc_project/State/Drive.interface.yaml",
+        "patchSetId": 21
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-07-15T18:22:57Z",
+      "side": 1,
+      "message": "sorry for the delay.\n\n\nOk, sounds good. yeah, having EpochTime reported as LastRebootTime is more readable/friendly to debug the infomraiton.\n\nI\u0027ll change it.\n\n---\n\nI\u0027ll see if I can make the change for maxint to the property.py. It might be useful for this + other properties in the future.",
+      "parentUuid": "b73913ed_ebfc4bd3",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 20
+      },
+      "revId": "81c3c0932c4d85b083153a2a6162401f51824380",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "419ef62c_372a3c11",
         "filename": "yaml/xyz/openbmc_project/State/Drive.interface.yaml",
         "patchSetId": 21

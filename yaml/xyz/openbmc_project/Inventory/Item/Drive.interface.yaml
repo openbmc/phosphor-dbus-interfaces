@@ -1,2 +1,28 @@
 description: >
     Implement to provide drive attributes.
+
+properties:
+    - name: Type
+      type: enum[self.DriveType]
+      default: Unknown
+      description: >
+          The type of physical form factor of the Drive.
+
+enumerations:
+    - name: DriveType
+      description: >
+          Possible Drive type
+      values:
+          - name: HDD
+            description: >
+                A hard disk drive is an electro-mechanical data storage device
+                that stores and retrieves digital data using magnetic storage.
+          - name: SMR
+            description: >
+                Shingled magnetic recording is a magnetic storage data recording
+                technology used in HHD to increase storage density and overall
+                per-drive storage capacity.
+          - name: SSD
+            description: >
+                A solid-state drive is a solid-state storage device that uses
+                integrated circuit assemblies to store data persistently.

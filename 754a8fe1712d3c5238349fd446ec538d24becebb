@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "68444bba_9e545172",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2021-07-15T17:54:22Z",
+      "side": 1,
+      "message": "These are the ranges so the customer knows what can be used for the power cap.",
+      "parentUuid": "63b4d914_d1e35815",
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d82af5f4_6edc9fd9",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
         "patchSetId": 6
@@ -154,6 +172,24 @@
     },
     {
       "key": {
+        "uuid": "88d43fa8_f5cd1e7f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2021-07-15T17:54:22Z",
+      "side": 1,
+      "message": "This is really the minimum power required for the system to operate.  From OCC perspective, any power cap below this number will not be guaranteed/enforced.",
+      "parentUuid": "d5276f4b_4570e947",
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "23a8ef8b_1069d65e",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
         "patchSetId": 6
@@ -224,6 +260,30 @@
     },
     {
       "key": {
+        "uuid": "aa02294b_fb706ddf",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2021-07-15T17:54:22Z",
+      "side": 1,
+      "message": "This is the max power provided by the power supplies.  So really max power available (not consumed)",
+      "parentUuid": "97f81422_a66c3003",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "378aa4c8_777de898",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
         "patchSetId": 6
@@ -253,6 +313,24 @@
       "side": 1,
       "message": "That could be another interface.",
       "parentUuid": "378aa4c8_777de898",
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6fd45471_922f1a7a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2021-07-15T17:54:22Z",
+      "side": 1,
+      "message": "These are providing the range of valid power cap values.\nThe current power consumed is provided by the OCC and is/will be available on dbus/Redfish.\nThe current power cap is already available - https://github.com/openbmc/phosphor-dbus-interfaces/blob/08baf48ad5f15774d393fbbf4e9479a0ef3e82d0/yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml#L5",
+      "parentUuid": "21bd9830_d4813a3e",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

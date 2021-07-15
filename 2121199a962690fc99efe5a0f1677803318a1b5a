@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "802fd42a_87aaf4e6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2021-07-15T03:31:42Z",
+      "side": 1,
+      "message": "updated to \"updating the dict definition to accept 32 bit unsigned integer.\" that update is in yaml/com/ibm/Dump/Create.interface.yaml\n\nEventhough xyz/openbmc_project/Dump/Create can accept upto 64 bits the specific implementation with com/ibm/Dump/Create can accept only 32 bits",
+      "parentUuid": "903fd00e_f3f07739",
+      "range": {
+        "startLine": 11,
+        "startChar": 32,
+        "endLine": 11,
+        "endChar": 38
+      },
+      "revId": "2121199a962690fc99efe5a0f1677803318a1b5a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "75b39cd3_fdd11c6e",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4

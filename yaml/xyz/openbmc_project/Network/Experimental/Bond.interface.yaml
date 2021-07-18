@@ -5,19 +5,15 @@ description: >
 # creatable: true
 
 properties:
-    - name: InterfaceName
+    - name: BondedInterface
       type: string
-      description: >
-          Name of the interface.
-    - name: BondedInterfaces
-      type: array[string]
       description: >
           Interfaces which needs to be bonded.
     - name: Mode
       type: enum[self.BondingMode]
       description: >
           Network interface bonding modes.
-      default: RoundRobin
+      default: ActiveBackup
     - name: TransmitHashPolicy
       type: enum[self.HashPolicy]
       description:

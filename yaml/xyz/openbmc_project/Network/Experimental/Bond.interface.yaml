@@ -20,6 +20,13 @@ properties:
           Selects the transmit hash policy to use for slave selection in
           balance-xor, 802.3ad, and tlb modes.
       default: Layer2
+    - name: PrimaryBackup
+      type: boolean
+      description: >
+          Boolean value to specify whether this device is the primary device.
+          If true, it will be the active device.
+          This option is only valid for following modes: ActiveBackup, TLB, ALB.
+      default: false
 
 enumerations:
     - name: BondingMode

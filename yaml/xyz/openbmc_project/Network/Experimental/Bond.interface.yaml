@@ -5,12 +5,8 @@ description: >
 # creatable: true
 
 properties:
-    - name: InterfaceName
+    - name: BondedInterface
       type: string
-      description: >
-          Name of the interface.
-    - name: BondedInterfaces
-      type: array[string]
       description: >
           Interfaces which needs to be bonded.
     - name: Mode

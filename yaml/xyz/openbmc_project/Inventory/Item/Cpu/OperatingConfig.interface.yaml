@@ -7,6 +7,16 @@ properties:
       description: The base clock speed of the processor in MHz.
       flags:
         - readonly
+    - name: OperatingSpeed
+      type: uint32
+      description: The operating speed of the processor in MHz.
+      flags:
+        - readonly
+    - name: Utilization
+      type: double
+      description: The CPU utilization of the processor as a percentage.
+      flags:
+        - readonly
     - name: BaseSpeedPrioritySettings
       type: array[struct[uint32, array[uint32]]]
       description: >
@@ -25,6 +35,13 @@ properties:
       type: uint32
       description: >
         The maximum clock speed to which the processor can be configured in MHz.
+      flags:
+        - readonly
+    - name: MinSpeed
+      type: uint32
+      description: >
+        The minimum clock speed to which the processor can be configured
+        in MHz.
       flags:
         - readonly
     - name: PowerLimit
@@ -47,3 +64,21 @@ properties:
         speed in MHz, and second is number of cores which can run at that speed.
       flags:
         - readonly
+    - name: SpeedLimit
+      type: uint32
+      description: >
+        The clock limit of the processor in MHz.
+      errors:
+        # Indicate that the value provided is not within the allowed limits
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        # Indicate a failure to apply changes to the processor.
+        - xyz.openbmc_project.Common.Device.Error.WriteFailure
+    - name: SpeedLocked
+      type: boolean
+      default: false
+      description: >
+        Indicates whether the clock speed of the processor is fixed at the value
+        specified in the SpeedLimit property.
+      errors:
+        # Indicate a failure to apply changes to the processor.
+        - xyz.openbmc_project.Common.Device.Error.WriteFailure

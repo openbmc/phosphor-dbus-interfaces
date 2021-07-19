@@ -18,6 +18,11 @@ properties:
       description: >
           This indicates if the speed and duplex are automatically negotiated
           and configured on this ethernet interface.
+    - name: MTUSize
+      type: uint32
+      description: >
+          This property indicates the size, in bytes, of largest protocol data unit
+          (PDU) that can be passed in an Ethernet (MAC) frame on the interface.
     - name: DomainName
       type: array[string]
       description: >

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b1b80463_1a63b4e2",
+        "filename": "yaml/xyz/openbmc_project/Network/Experimental/Bond.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-07-20T05:35:22Z",
+      "side": 1,
+      "message": "Be noted that this patch changes the \"usage\" of this interface.\nBefore this patch, this interface looks similar to VLAN, that it will create a new bond interface with `InterfaceName`, and set `BondedInterfaces` with e.g. eth0 and eth1.\n\nWith this patch, this Bond interface is going to be used by all the EthernetInterfaces, see the commit message for details.\n\nActually I am not sure if it is a good idea.\nWe have downstream implementation that uses the interface this way, and it has the limitation that the \"bond.netdev\" needs to be created in the machine layer and it does not support to \"unbond\".\n\n^ @Bard @Patrick",
+      "revId": "e414c56356c8db195ca251c42a250045c5f6610b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

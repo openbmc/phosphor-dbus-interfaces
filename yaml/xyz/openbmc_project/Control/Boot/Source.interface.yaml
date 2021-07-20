@@ -6,6 +6,13 @@ properties:
       type: enum[self.Sources]
       description: >
           The desired boot image source.
+    - name: Valid
+      type: boolean
+      description: >
+          Indicate if the boot source setting is valid or not.
+          This flag has the same meaning as boot flag's bit[7]
+          of data1 in IPMI 2.0 spec 28.12.
+      default: true
 
 enumerations:
     - name: Sources

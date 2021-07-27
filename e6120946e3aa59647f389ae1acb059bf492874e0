@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "629c34fe_81a69aaa",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-27T22:03:22Z",
+      "side": 1,
+      "message": "Any reason for \u0027Size\u0027 on this one?",
+      "range": {
+        "startLine": 21,
+        "startChar": 12,
+        "endLine": 21,
+        "endChar": 19
+      },
+      "revId": "e6120946e3aa59647f389ae1acb059bf492874e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a18a0f78_1c9f5557",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-27T22:03:22Z",
+      "side": 1,
+      "message": "Do we need a default value here?  Should \u0027intmax\u0027 be used as the default to indicate unknown or is 0 good to indicate unknown?",
+      "revId": "e6120946e3aa59647f389ae1acb059bf492874e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c62b1e03_14ea7d0e",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-27T22:03:22Z",
+      "side": 1,
+      "message": "Please fix wrapping.",
+      "range": {
+        "startLine": 24,
+        "startChar": 79,
+        "endLine": 24,
+        "endChar": 83
+      },
+      "revId": "e6120946e3aa59647f389ae1acb059bf492874e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

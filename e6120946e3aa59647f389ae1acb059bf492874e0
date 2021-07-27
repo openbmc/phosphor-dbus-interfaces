@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6e16b560_1a4ed13d",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-07-27T23:16:34Z",
+      "side": 1,
+      "message": "+1. should just be MTU",
+      "parentUuid": "629c34fe_81a69aaa",
+      "range": {
+        "startLine": 21,
+        "startChar": 12,
+        "endLine": 21,
+        "endChar": 19
+      },
+      "revId": "e6120946e3aa59647f389ae1acb059bf492874e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a18a0f78_1c9f5557",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2021-07-27T22:03:22Z",
       "side": 1,
       "message": "Do we need a default value here?  Should \u0027intmax\u0027 be used as the default to indicate unknown or is 0 good to indicate unknown?",
+      "revId": "e6120946e3aa59647f389ae1acb059bf492874e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a5d6689f_db8ad6fa",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-07-27T23:16:34Z",
+      "side": 1,
+      "message": "Probably doesn\u0027t matter either way, max is ~9000 and I doubt BMCs will support jumbo frames any time soon. AFAIK no one will do more than 64k for the forseeable future.",
+      "parentUuid": "a18a0f78_1c9f5557",
       "revId": "e6120946e3aa59647f389ae1acb059bf492874e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

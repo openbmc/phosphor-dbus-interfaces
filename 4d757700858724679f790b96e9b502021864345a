@@ -152,6 +152,24 @@
       "revId": "4d757700858724679f790b96e9b502021864345a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "36ea8cf7_3a719ec8",
+        "filename": "yaml/org/open_power/Logging/PEL/Entry.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-07-28T20:42:04Z",
+      "side": 1,
+      "message": "We may get to a \u0027real\u0027 message registry (currently the OpenBMC dbus puts together it\u0027s log entry response from dbus properties and doesn\u0027t use a JSON registry) someday, but if we do, it would just use place holders to fill in this value from the property anyway, like \"error in subsystem %1\u0027.\n\nI guess if we had to, we could live with bmcweb chopping off the \"org.open_power.Logging.PEL.Entry.Subsystem.\" from the full enum name and use that.  That would mean the customer would see ThisSubystem instead of \"This Subsystem\" but I suppose that doesn\u0027t matter that much.\n\nIt\u0027s just more maintenance for us, because every field of that table in the PEL code is still needed as is today, so we\u0027ll have to add these enums to that, and to here.",
+      "parentUuid": "01372b3f_d57055f4",
+      "revId": "4d757700858724679f790b96e9b502021864345a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

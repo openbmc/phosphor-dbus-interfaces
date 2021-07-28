@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "8b1077ae_94638fe7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2021-07-28T19:46:22Z",
+      "side": 1,
+      "message": "There is already a map of the end values we want to use here in the PEL daemon: https://github.com/openbmc/phosphor-logging/blob/master/extensions/openpower-pels/pel_values.cpp#L31\n\nSo if we were to use an enum, we\u0027d basically have to duplicate that in bmcweb, or maybe use a 70 case switch statement to convert the enum back to the string, just to get back to the same result.",
+      "parentUuid": "21be7467_c5912a08",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 58
+      },
+      "revId": "4d757700858724679f790b96e9b502021864345a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a3b93bb4_6f45837e",
         "filename": "yaml/org/open_power/Logging/PEL/Entry.interface.yaml",
         "patchSetId": 6

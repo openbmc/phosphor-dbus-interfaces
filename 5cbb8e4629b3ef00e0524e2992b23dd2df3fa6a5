@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "58968120_402dba91",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-07-28T16:28:43Z",
+      "side": 1,
+      "message": "+1.\n\nI have just added it here.",
+      "parentUuid": "98e42202_b602ea0c",
+      "revId": "5cbb8e4629b3ef00e0524e2992b23dd2df3fa6a5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bc55f0da_79b4e42f",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3
@@ -30,6 +48,30 @@
       "writtenOn": "2021-07-27T22:17:09Z",
       "side": 1,
       "message": "Is this a sub-type of HDD?  Do we need some way of adding these sorts of things so we do not break backwards compatibility when a new technology comes out.  I assume there is some code that just cares about a high-level HDD vs SSD.\n\nHow does Redfish handle it?",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 43
+      },
+      "revId": "5cbb8e4629b3ef00e0524e2992b23dd2df3fa6a5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0d92f367_86b69485",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-07-28T16:28:43Z",
+      "side": 1,
+      "message": "I am not sure how Redfish handles it. Maybe we can just not use it for now until there is a clear use case for it.\n\nBut yeah, I would also think that HDD vs. SSD is enough in general.\n\nEd, do you have any comment on this?",
+      "parentUuid": "bc55f0da_79b4e42f",
       "range": {
         "startLine": 19,
         "startChar": 0,

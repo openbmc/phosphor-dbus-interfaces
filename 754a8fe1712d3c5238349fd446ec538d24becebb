@@ -137,6 +137,30 @@
     },
     {
       "key": {
+        "uuid": "88227adb_26f3f46f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-28T18:18:52Z",
+      "side": 1,
+      "message": "Yes, I am fine with double / negative values allowed here.  No reasonable implementation would put negative values in place though.",
+      "parentUuid": "b4bdeccb_66ad7828",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 16
+      },
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "812b662c_1fcd350e",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
         "patchSetId": 6
@@ -184,6 +208,24 @@
       "side": 1,
       "message": "This is really the minimum power required for the system to operate.  From OCC perspective, any power cap below this number will not be guaranteed/enforced.",
       "parentUuid": "d5276f4b_4570e947",
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca0f21cf_38593f91",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-28T18:18:52Z",
+      "side": 1,
+      "message": "I can\u0027t tell if there is a conclusion here on if these should be Read/Write or Read-Only.",
+      "parentUuid": "88d43fa8_f5cd1e7f",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -272,6 +314,30 @@
       "side": 1,
       "message": "This is the max power provided by the power supplies.  So really max power available (not consumed)",
       "parentUuid": "97f81422_a66c3003",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cdf83844_504e9f88",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-28T18:18:52Z",
+      "side": 1,
+      "message": "0 is reasonable possible value in some cases, I think, so therefore I would suggest not using it for a default.  This is why I suggested \u0027infinity\u0027 as an obvious \"we don\u0027t know the right value for this property\" value in an implementation.",
+      "parentUuid": "aa02294b_fb706ddf",
       "range": {
         "startLine": 15,
         "startChar": 0,

@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "21be7467_c5912a08",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-28T02:55:45Z",
+      "side": 1,
+      "message": "I guess there was a comment here about subsystems being an enumeration but there are too many to count.\n\nWhat does \"save decoding effort at the far end\" mean?\n\nIf we\u0027re going to have a free-form string, we generally leave remarks that it should not be used for any programmatic interpretation.  Is that acceptable in this case?  What we don\u0027t want is arbitrary code trying to parse these strings with constants spread across the code-base.  If you want constants, that is what enumerations are for.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 58
+      },
+      "revId": "4d757700858724679f790b96e9b502021864345a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a3b93bb4_6f45837e",
         "filename": "yaml/org/open_power/Logging/PEL/Entry.interface.yaml",
         "patchSetId": 6

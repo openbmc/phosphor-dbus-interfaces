@@ -16,6 +16,24 @@
       "revId": "6567dafddae77410fed287b07624cae0206bea6f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c8271f5d_64e3594b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/CableType.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000952
+      },
+      "writtenOn": "2021-07-28T00:47:56Z",
+      "side": 1,
+      "message": "I want to match the redfish CableType. Therefore I used string here.\n\n```\n        \u003cProperty Name\u003d\"CableType\" Type\u003d\"Edm.String\"\u003e\n          \u003cAnnotation Term\u003d\"OData.Permissions\" EnumMember\u003d\"OData.Permission/ReadWrite\"/\u003e\n          \u003cAnnotation Term\u003d\"OData.Description\" String\u003d\"The type of this cable.\"/\u003e\n          \u003cAnnotation Term\u003d\"OData.LongDescription\" String\u003d\"This property shall contain a user-defined type for this cable.\"/\u003e\n        \u003c/Property\u003e\n```",
+      "parentUuid": "465f8332_236e168f",
+      "revId": "6567dafddae77410fed287b07624cae0206bea6f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

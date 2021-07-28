@@ -134,6 +134,24 @@
       "revId": "4d757700858724679f790b96e9b502021864345a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01372b3f_d57055f4",
+        "filename": "yaml/org/open_power/Logging/PEL/Entry.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-28T20:26:38Z",
+      "side": 1,
+      "message": "\u003e but we have 70+ values in the PEL spec and we need to have translations both in pel code(extensions) and the redfish API.\n\nCan we get more details on what the intended use of these strings is?  It isn\u0027t coming out to me.\n\nI see Matt pointed to a big table in the PEL code.  This table could instead have been a map from hardware enum to sdbusplus enum.  There is code in sdbusplus to convert from C-enum to string and back again, so this table isn\u0027t really necessary.\n\nWhat do you mean by \"translations...in...the redfish API\"?  Is the Redfish API the only user of this string?  In general, don\u0027t you need some kind of message registry for strings in Redfish?  sdbusplus-enums can be converted to a message registry string, in my opinion, but I don\u0027t know how you intend to keep a message registry with arbitrary strings.\n\nBy \"translations\" did you simply mean between C-enum and strings or did you mean human language translation?",
+      "parentUuid": "dc206cd9_2d7a48d8",
+      "revId": "4d757700858724679f790b96e9b502021864345a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

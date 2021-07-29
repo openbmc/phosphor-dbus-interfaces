@@ -75,3 +75,7 @@ methods:
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
         - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: Clear
+      description: >
+        Clear the SEL entries from their storage location.

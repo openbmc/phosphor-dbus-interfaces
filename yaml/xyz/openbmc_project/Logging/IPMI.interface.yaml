@@ -75,3 +75,9 @@ methods:
       errors:
         - xyz.openbmc_project.Common.Error.InternalFailure
         - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: IpmiSelClear
+      description: >
+        Clear the SEL log files.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure

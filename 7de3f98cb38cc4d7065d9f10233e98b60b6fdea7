@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "79294c2e_d637a5be",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1000908
+      },
+      "writtenOn": "2021-07-29T22:26:27Z",
+      "side": 1,
+      "message": "I called it \u0027IpmiSelClear\u0027 to be consistent with the naming of the other methods. If \u0027Clear\u0027 is preferred, then it can be changed.\n\nThe purpose of this method is for an issue where SEL are stored in /var/log/ipmi_sel file. The discussion is in https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-sel-logger/+/44533 for reference. If the SEL entries are not a collection of dbus objects, should I still implement xyz/openbmc_project/Collection/DeleteAll interface? Forgive me if I misunderstand the meaning of implementing the DeleteAll interface here.",
+      "parentUuid": "afea163c_36d80bb9",
+      "range": {
+        "startLine": 79,
+        "startChar": 12,
+        "endLine": 79,
+        "endChar": 24
+      },
+      "revId": "7de3f98cb38cc4d7065d9f10233e98b60b6fdea7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ff4c96e5_98ab31a6",
         "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
         "patchSetId": 1

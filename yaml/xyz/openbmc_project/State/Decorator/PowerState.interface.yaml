@@ -1,0 +1,41 @@
+description: >
+    Implement to indicate the power state of the object
+properties:
+    - name: PowerState
+      type: enum[self.State]
+      default: Unknown
+      description: >
+        The current power status of the object.
+
+enumerations:
+  - name: State
+    description: >
+      Power state enum.
+    values:
+      - name: On
+        description: >
+         The state is powered on.
+      - name: Off
+        description: >
+         The state is powered off.
+      - name: PoweringOn
+        description: >
+         A temporary state between off and on.
+      - name: PoweringOff
+        description: >
+         A temporary state between on and off.
+      - name: Working
+        description: >
+         The device state is completely powered on and is running.
+      - name: Sleep
+        description: >
+         The device is powered on but in low power idle mode, and can wake up due to some real time action on the device.
+      - name: SoftOff
+        description: >
+         The device is completely shutdown, except the powersupply unit still supplies power at minimum to the power button to allow return to Working state.
+      - name: HardOff
+        description: >
+         Also known as Mechanical Off. In this state the device is completely powered off and power is removed.
+      - name: Unknown
+        description: >
+         The power state is unknown.

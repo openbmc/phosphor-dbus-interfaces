@@ -16,6 +16,24 @@
       "revId": "bdf1d3a56c8b70c8b32dcb910d958fe77e0adf7e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ae598ff_a6cfa19e",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-07-29T15:55:49Z",
+      "side": 1,
+      "message": "Are you suggesting to append them to this enum list ? or replace the exiting options with these ?\n\nThese terms seems have different meanings based on the power management techniques used as far as i investigated. But i understood the following gist, let me know if something is wrong or if there is a better documentation.\n\ncycle/working state - device is completely powered on and is usable\n\nsleep state - low power idle mode (aka standby power) - where the device is powered on but running in low power mode, and can wake up due to some real time action on the device.\n\nsoftoff state - system is completely shutdown, but the power is on ?\n\nhardoff state - aka \"mechanical off\" where machine is completely off and power is removed.",
+      "parentUuid": "9ed732e8_89fc9971",
+      "revId": "bdf1d3a56c8b70c8b32dcb910d958fe77e0adf7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

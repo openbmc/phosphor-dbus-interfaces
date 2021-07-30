@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "fc302b90_62a74e79",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-07-30T13:19:50Z",
+      "side": 1,
+      "message": "\u003e If the SEL entries are not a collection of dbus objects, should I still implement xyz/openbmc_project/Collection/DeleteAll interface?\n\nGood question.  I assumed everything was a collection of dbus objects.\n\nBased on the wording in DeleteAll, I guess it is probably not appropriate based on the argument that \"these aren\u0027t objects\".  I was recommending it because that\u0027s what we\u0027ve used in Error logs and Dumps and SELs seem similar.  I guess I am ok with either approach.\n\n\u003e I called it \u0027IpmiSelClear\u0027 to be consistent with the naming of the other methods. If \u0027Clear\u0027 is preferred, then it can be changed.\n\nI understand and recognized that.  I wasn\u0027t reviewing when this file was originally added, or I would have raised the issue for the existing interfaces as well.  We really shouldn\u0027t have prefixes on method names because the \u0027namespace\u0027 is already encapsulated in the interface name(*).\n\nI\u0027d prefer we start this one with the correct name scheme even though it differs from the rest of the object.\n\n(*) There are subtle cases where we do add a bit of \u0027namespace\u0027 onto method and property names, which is when we intend to incorporate multiple interfaces into a single C++ object due to the way the sdbus++ bindings and C++ virtual / overrides work, but this isn\u0027t one of those cases.",
+      "parentUuid": "79294c2e_d637a5be",
+      "range": {
+        "startLine": 79,
+        "startChar": 12,
+        "endLine": 79,
+        "endChar": 24
+      },
+      "revId": "7de3f98cb38cc4d7065d9f10233e98b60b6fdea7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ff4c96e5_98ab31a6",
         "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
         "patchSetId": 1

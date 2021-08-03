@@ -95,3 +95,13 @@ enumerations:
        - name: 'OEM'
          description: >
            OEM.
+
+signals:
+    - name: Timeout
+      description: >
+        Watchdog timeout event signal
+      properties:
+         - name: Action
+           type: enum[self.Action]
+           description: >
+             The action taken during the watchdog timeout event.

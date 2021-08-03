@@ -95,3 +95,8 @@ enumerations:
        - name: 'OEM'
          description: >
            OEM.
+
+signals:
+    - name: Timeout
+      description: >
+        Watchdog timeout event signal

@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "715b10b0_7a303bc0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000559
+      },
+      "writtenOn": "2021-08-03T22:05:24Z",
+      "side": 1,
+      "message": "Can you provide a little more specifics on the use case you are trying to address here.\nThis interface was added initially mostly modelling Redfish OperatingConfig resources.\nParameters inside the config are not settable (read only) and can\u0027t be selected individually. \nCPU\u0027s \"Active\" config points to one of the available configs.\nPlease refer to the review link Patrick provided for details.  \n\nMore information will be helpful to see if the additional parameters fit into this interface.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 33
+      },
+      "revId": "c2c072ce48768c824b68a9045fe288bb85ef65e9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f3138259_941d162e",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1

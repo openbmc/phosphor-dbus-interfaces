@@ -44,6 +44,12 @@ properties:
           Time remaining before timeout, in milli-second.
           Setting this property can re-arm the watchdog.
       default: 0
+    - name: TriggeredAction
+      type: enum[self.Action]
+      description: >
+          Action triggered by timeout event.
+          If TriggeredAction is not `None`, then a Watchdog action was triggered.
+      default: 'None'
     - name: CurrentTimerUse
       type: enum[self.TimerUse]
       description: >

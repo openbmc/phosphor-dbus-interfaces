@@ -22,6 +22,30 @@
       "revId": "6610753e1b89a6c3f77df5f7f2f92e026fd0266e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cd96d265_72ea8c2a",
+        "filename": "xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000294
+      },
+      "writtenOn": "2021-08-04T04:13:17Z",
+      "side": 1,
+      "message": "First version of this feature, I just provide most customer request to implement it for\nWDIOF_EXTERN1 and WDIOF_CARDRESET case from linux/watchdog.h\n\n#define WDIOF_UNKNOWN       -1  /* Unknown flag error */\n\n#define WDIOF_OVERHEAT      0x0001  /* Reset due to CPU overheat */\n#define WDIOF_FANFAULT      0x0002  /* Fan failed */\n#define WDIOF_EXTERN1       0x0004  /* External relay 1 */\n#define WDIOF_EXTERN2       0x0008  /* External relay 2 */\n#define WDIOF_POWERUNDER    0x0010  /* Power bad/power fault */\n#define WDIOF_CARDRESET     0x0020  /* Card previously reset the CPU */\n#define WDIOF_POWEROVER     0x0040  /* Power over voltage */\n#define WDIOF_SETTIMEOUT    0x0080  /* Set timeout (in seconds) */\n#define WDIOF_MAGICCLOSE    0x0100  /* Supports magic close char */\n#define WDIOF_PRETIMEOUT    0x0200  /* Pretimeout (in seconds), get/set */\n#define WDIOF_ALARMONLY     0x0400  /* Watchdog triggers a management or other external alarm not a reboot */\n#define WDIOF_KEEPALIVEPING 0x8000  /* Keep alive ping reply */\n\nAt least, customer accept this design for their requirement.\nIf this feature is valuable for openbmc, like you said that we should add more cases (ex: WDIOF_EXTERN2). We will implement it at next version.\n\nBTW, we also need to change phosphor-state-manager and webui for this feature.\nhttps://gerrit.openbmc-project.xyz/c/openbmc/phosphor-state-manager/+/41360\nhttps://gerrit.openbmc-project.xyz/c/openbmc/phosphor-webui/+/41366",
+      "parentUuid": "b256f88b_eea343f9",
+      "range": {
+        "startLine": 72,
+        "startChar": 8,
+        "endLine": 74,
+        "endChar": 43
+      },
+      "revId": "6610753e1b89a6c3f77df5f7f2f92e026fd0266e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

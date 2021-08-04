@@ -34,6 +34,24 @@
       "revId": "e414c56356c8db195ca251c42a250045c5f6610b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3983edb4_a1850542",
+        "filename": "yaml/xyz/openbmc_project/Network/Experimental/Bond.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-08-04T12:03:56Z",
+      "side": 1,
+      "message": "I realized that this patch changes the original purpose of this interface.\nThe \"original\" interface looks like it will create a new interface (e.g. bond1) with the InterfaceName, and it could set BondedInterfaces (e.g. eth0/eth1) to represent the bond.\n\nBut in our downstream case, we create bond by the pre-built network and netdev configs, and it does not support unbind.\nIt works for us, but it does not fit the upstream usage.\n\nSo probably this needs to be abandoned.",
+      "parentUuid": "3e41312e_ee0e9b15",
+      "revId": "e414c56356c8db195ca251c42a250045c5f6610b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

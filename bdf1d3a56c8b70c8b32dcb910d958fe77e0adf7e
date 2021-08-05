@@ -34,6 +34,24 @@
       "revId": "bdf1d3a56c8b70c8b32dcb910d958fe77e0adf7e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ed14d173_d0386842",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-08-05T08:25:26Z",
+      "side": 1,
+      "message": "I meant to append to the list. The current list seems very Redfish specific. If you\u0027re basing this on standard specs, you could look at PLDM DSP0249 power states as well.",
+      "parentUuid": "1ae598ff_a6cfa19e",
+      "revId": "bdf1d3a56c8b70c8b32dcb910d958fe77e0adf7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

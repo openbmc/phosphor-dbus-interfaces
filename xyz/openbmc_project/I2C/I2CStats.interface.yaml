@@ -1,0 +1,15 @@
+description: >
+    Implement to provide I2C counters.
+properties:
+    - name: BusErrorCount
+      type: int64
+      description: >
+          Bus Error count.
+    - name: NACKCount
+      type: int64
+      description: >
+          Negative Acknowledgement count.
+    - name: I2CSpeedInHz
+      type: int64
+      description: >
+          Bus speed in Hz.

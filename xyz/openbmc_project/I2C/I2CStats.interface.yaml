@@ -1,0 +1,23 @@
+description: >
+    Implement to provide I2C counters.
+properties:
+    - name: berCnt
+      type: int64
+      description: >
+          Bit Error Rate count.
+    - name: nackCnt
+      type: int64
+      description: >
+          NACK (Negative Acknowledgement) count.
+    - name: recSuccCnt
+      type: int64
+      description: >
+          Bus Recovery success count.
+    - name: recFailCnt
+      type: int64
+      description: >
+          Bus Recovery failure count.
+    - name: i2cSpeed
+      type: int64
+      description: >
+          Bus speed in Hz.

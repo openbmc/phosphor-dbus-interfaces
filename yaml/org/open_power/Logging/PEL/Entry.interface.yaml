@@ -19,3 +19,9 @@ properties:
         A free form, implementation defined string which uniquely and
         permanently identifies a specific subsystem string. This field should
         not be used for programmatic interrogation of an object.
+    - name: ManagementSystemAck
+      type: boolean
+      default: false
+      description: >
+        Notifies the PEL handler that the management system acknowledged a PEL.
+        The management system can be any system monitoring the hardware.

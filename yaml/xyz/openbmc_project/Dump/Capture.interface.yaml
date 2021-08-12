@@ -1,0 +1,58 @@
+description: >
+    Implement this interface to capture dump pieces stored in some
+    locations. Use this interface once dump files are collected
+    and need to be packaged as a dump package. If the dump id
+    is provided the captured dump will be added to the corresponding
+    dump object, otherwise a new dump object will be created.
+
+    Any OpenBMC implementation must provide exactly one implementation of
+    xyz.openbmc_project.Dump.Capture on /xyz/openbmc_project/dump.
+
+methods:
+    - name: CaptureDump
+      description: >
+          Create BMC Dump based on the Dump type.
+      parameters:
+       - name: dumpId
+         type: uint32
+         description: >
+            Id of the dump to be captured, pass 0 to create
+            a new dump entry.
+       - name: Type
+         type: enum[self.Type]
+         description: >
+            Type of the Dump, pass default to create the
+            default type of the dump.
+       - name: FullPaths
+         type: array[string]
+         description: >
+            A list of paths (file paths or d-bus object paths) that must be
+            processed to derive the dump content.
+      errors:
+        - xyz.openbmc_project.Common.File.Error.Write
+        - xyz.openbmc_project.Dump.Create.Error.Disabled
+        - xyz.openbmc_project.Dump.Create.Error.QuotaExceeded
+
+enumerations:
+    - name: Type
+      description: >
+          Possible types of BMC Dump.
+      values:
+        - name: ApplicationCored
+          description: >
+              Dump triggered due to application core.
+        - name: UserRequested
+          description: >
+              Dump triggered by the user.
+        - name: InternalFailure
+          description: >
+              Dump triggered due to InternalFailure type error commit.
+        - name: Checkstop
+          description: >
+              Dump triggered due to Checkstop type error commit.
+        - name: Ramoops
+          description: >
+              Dump triggered due to Ramoops type error commit.
+        - name: Default
+          description: >
+              Default dump for a kind of dump.

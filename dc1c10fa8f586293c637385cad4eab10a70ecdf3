@@ -22,6 +22,30 @@
       "revId": "dc1c10fa8f586293c637385cad4eab10a70ecdf3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e3593628_0e20e7fd",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2021-08-16T15:29:54Z",
+      "side": 1,
+      "message": "Nothing except of keeping this in line with existing IpmiSelAdd and IpmiSelAddOem.\nActually, they are not wide used, so I guess we can rename them also.\nHovewer I would leave \"Sel\" part in the name since we don\u0027t have SEL in the name: just \"logging\" which IMHO would be not so clear.",
+      "parentUuid": "9cfd9438_bfa5a5ac",
+      "range": {
+        "startLine": 54,
+        "startChar": 12,
+        "endLine": 54,
+        "endChar": 25
+      },
+      "revId": "dc1c10fa8f586293c637385cad4eab10a70ecdf3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

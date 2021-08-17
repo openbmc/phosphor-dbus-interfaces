@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "967c1ca0_aebfd5db",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-08-17T12:53:37Z",
+      "side": 1,
+      "message": "nit: \"The state of the object is powered on\" or just \"The object is powered on\"",
+      "range": {
+        "startLine": 17,
+        "startChar": 13,
+        "endLine": 17,
+        "endChar": 18
+      },
+      "revId": "64f49566e537e7e04791c77022a6f7ccdcad11d6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fcab81d2_5d6559e1",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-08-17T12:53:37Z",
+      "side": 1,
+      "message": "\"Working\" seems to overlap with power state and functional status. That seems like a bit more then we\u0027d want in a PowerState interface. I don\u0027t see anything else really tracking state though other then the Item which just tracks presence.",
+      "revId": "64f49566e537e7e04791c77022a6f7ccdcad11d6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

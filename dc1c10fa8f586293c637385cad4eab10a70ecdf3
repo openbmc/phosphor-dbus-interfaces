@@ -46,6 +46,30 @@
       "revId": "dc1c10fa8f586293c637385cad4eab10a70ecdf3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a6d72b6b_f9e0580c",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-18T11:30:50Z",
+      "side": 1,
+      "message": "What logging is there in IPMI that isn\u0027t SEL? ;)\n\nMy preference is for succinctness when possible.\n\nIt should be noted that if you rebase this commit you\u0027ll see we had a similar discussion when adding a new \"Clear\" interface.",
+      "parentUuid": "e3593628_0e20e7fd",
+      "range": {
+        "startLine": 54,
+        "startChar": 12,
+        "endLine": 54,
+        "endChar": 25
+      },
+      "revId": "dc1c10fa8f586293c637385cad4eab10a70ecdf3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

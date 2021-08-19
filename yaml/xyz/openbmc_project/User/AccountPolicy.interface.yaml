@@ -38,3 +38,34 @@ properties:
           this feature is not enforced.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+    
+    - name: MinUpperCaseCharacters
+      type: byte
+      description:
+          Configures how many minimum upper case characters should be added in 
+          the password.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: MinLowerCaseCharacters
+      type: byte
+      description:
+          Configures how many minimum lower case characters should be added in 
+          the password.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: MinDigits
+      type: byte
+      description:
+          Configures how many minimum digits  should be added in the password.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+
+    - name: MinSpecialCharacters
+      type: byte
+      description:
+          Configures how many minimum special character should be added in the password.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure

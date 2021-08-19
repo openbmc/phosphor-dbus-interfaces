@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "26fb57d5_0d8efed5",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-08-19T03:50:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "967c1ca0_aebfd5db",
+      "range": {
+        "startLine": 17,
+        "startChar": 13,
+        "endLine": 17,
+        "endChar": 18
+      },
+      "revId": "64f49566e537e7e04791c77022a6f7ccdcad11d6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fcab81d2_5d6559e1",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
         "patchSetId": 3
@@ -36,6 +60,24 @@
       "writtenOn": "2021-08-17T12:53:37Z",
       "side": 1,
       "message": "\"Working\" seems to overlap with power state and functional status. That seems like a bit more then we\u0027d want in a PowerState interface. I don\u0027t see anything else really tracking state though other then the Item which just tracks presence.",
+      "revId": "64f49566e537e7e04791c77022a6f7ccdcad11d6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bcc4b6fd_3af2f33e",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-08-19T03:50:43Z",
+      "side": 1,
+      "message": "hmm yeah i agree, but this is mapped to the ACPI Power state(https://docs.microsoft.com/en-us/windows/win32/power/system-power-states) that was captured in the dsp0249(https://www.dmtf.org/sites/default/files/standards/documents/DSP0249_1.1.0.pdf) spec.\n\nwhat if i change the text from \"The device state is completely powered on and is running.\" to \"The device state is completely powered on and is usable.\"\n\nor do you want me to remove it completely ?",
+      "parentUuid": "fcab81d2_5d6559e1",
       "revId": "64f49566e537e7e04791c77022a6f7ccdcad11d6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

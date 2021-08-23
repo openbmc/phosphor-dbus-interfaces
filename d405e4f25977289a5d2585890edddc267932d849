@@ -120,6 +120,81 @@
     },
     {
       "key": {
+        "uuid": "8a14ea24_0f7c1b6f",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-23T21:59:08Z",
+      "side": 1,
+      "message": "That name is becoming a bit absurd.  Do we want a separate interface called \"PasswordPolicy\"?  I guess we would need to move the MinPasswordLength property though in that case.",
+      "parentUuid": "5ec27452_96506907",
+      "range": {
+        "startLine": 42,
+        "startChar": 12,
+        "endLine": 42,
+        "endChar": 34
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "91610aec_d9e18508",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-23T21:59:08Z",
+      "side": 1,
+      "message": "An alternative would be to create a property which is \"PasswordPolicy\" as a map\u003cenum, size\u003e and the enum is { \"MinUpperCase\", \"MinLowerCase\", \"MinDigits\", etc. }.",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0001d447_ed82b674",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-23T21:59:08Z",
+      "side": 1,
+      "message": "The preference is for these to be \u0027size\u0027 now.  No need to restrict to a byte and there is no advantage to do so.",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5809fc8_e2279fa9",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-23T21:59:08Z",
+      "side": 1,
+      "message": "I think we\u0027re trying to eliminate these InternalFailures as well.  Do you have a good reason for putting it into these interfaces?",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d7ebf694_22abd60c",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2
@@ -131,6 +206,64 @@
       "writtenOn": "2021-08-23T11:40:01Z",
       "side": 1,
       "message": "Should we have defaults for each of these? For eg 0 or NaN to denote these policies are not enforced?",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d09a81ac_c08b540e",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-23T21:59:08Z",
+      "side": 1,
+      "message": "Seems like 0 is an implied \"not enforced\" right?  Min\u003d0 means you don\u0027t have to have a particular character type.",
+      "parentUuid": "d7ebf694_22abd60c",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5fae6940_0b432431",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-23T21:59:08Z",
+      "side": 1,
+      "message": "Do we need to define what is a \"special character\"?  How does unicode fit into this password policy?  Is 🎉 a special character?  What about ൪ (Malayalam numeric 4)?",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d41795f4_052ff6de",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-23T21:59:08Z",
+      "side": 1,
+      "message": "wrap.",
+      "range": {
+        "startLine": 68,
+        "startChar": 77,
+        "endLine": 68,
+        "endChar": 89
+      },
       "revId": "d405e4f25977289a5d2585890edddc267932d849",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

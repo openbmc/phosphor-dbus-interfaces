@@ -1,0 +1,13 @@
+description: >
+    Interface file for op-panel functionalities over Dbus.
+methods:
+    - name: toggleFunctionState
+      description: >
+          Api to enable/disable op-panel functions by Phyp.
+      parameters:
+        - name: functionBitMap
+          type: array[byte]
+          desription: >
+             Bit map to set/unset state of panel function(s).
+             Each bit number in the bit map corresponds to
+             a function number.

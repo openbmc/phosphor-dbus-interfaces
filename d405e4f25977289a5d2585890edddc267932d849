@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "1f0078d3_1ad5644f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2021-08-24T11:32:23Z",
+      "side": 1,
+      "message": "\u003e Question 1: What is the envision here. Even if we want administrator to change this policy, how administrator is going to make it?\n1. Redfish schema (OEM ? because standard one doesn\u0027t exist).\nUntil it is approved, My thought process to go with OEM Redfish.\nI have already opened a Redfish forum thread for the same.\nhttps://redfishforum.com/thread/524/account-service-password-complexity-missing\n\n\n\u003e From security point of it, a company must enforce minimum needed security (set as compile time policy), and anything further which to be configured by user must be D-Bus property.\nSame is done for Password length, where allow administrator to increase the password length, but can\u0027t reduce it below the compile time. \n\n+1.\n\n\n\u003e Question 2 is, Do we need to allow this one to administrator ? Redfish standard schema doesn\u0027t have the same, and i fail to visualize benefit it brings when compared with Compile time policy based restriction \u0026 ability to change the password min length.\n\nRedfish Forum thread is already opened up, \nOn other note, min password length is there in the standard redfish schema , so hoping these are also candidate for the password policy restriction.\n\nBenefit: Say you have shipped the system with less stricted password policy , now at later moment of time admin wants to restrict the password policy, there should be an run time option.\n\n\n\n\u003e Isn\u0027t that a security concern if admins (ie possible attackers) can change password policy at runtime?  In general I would\u0027ve expected this to be a compile-time policy.\n\nEd, If I get you correctly, You are suspecting that admin credentials have been compromised, In that case admin can do lot of unwanted things.\n\nFor the password policy restriction at runtime we already have MinPasswordLength and Max password length in the redfish standard which admin can change at run time.",
+      "parentUuid": "bbd31cf2_b7e538f3",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 16
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f2bbf83e_ab8043b6",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2
@@ -220,6 +244,24 @@
     },
     {
       "key": {
+        "uuid": "3cbd1286_df89dc7f",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2021-08-24T11:32:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0001d447_ed82b674",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d5809fc8_e2279fa9",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2
@@ -234,6 +276,24 @@
       "revId": "d405e4f25977289a5d2585890edddc267932d849",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dd28c380_395de28e",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2021-08-24T11:32:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d5809fc8_e2279fa9",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     },
     {
       "key": {
@@ -272,6 +332,24 @@
     },
     {
       "key": {
+        "uuid": "599155b7_da81ee3d",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2021-08-24T11:32:23Z",
+      "side": 1,
+      "message": "\u003e Seems like 0 is an implied \"not enforced\" right?\nYes",
+      "parentUuid": "d09a81ac_c08b540e",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5fae6940_0b432431",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2
@@ -283,6 +361,24 @@
       "writtenOn": "2021-08-23T21:59:08Z",
       "side": 1,
       "message": "Do we need to define what is a \"special character\"?  How does unicode fit into this password policy?  Is 🎉 a special character?  What about ൪ (Malayalam numeric 4)?",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6ffeefab_a58ac3ae",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2021-08-24T11:32:23Z",
+      "side": 1,
+      "message": "We will document the supported special characters here.",
+      "parentUuid": "5fae6940_0b432431",
       "revId": "d405e4f25977289a5d2585890edddc267932d849",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -309,6 +405,30 @@
       "revId": "d405e4f25977289a5d2585890edddc267932d849",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af7d15f3_1b79e69c",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2021-08-24T11:32:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d41795f4_052ff6de",
+      "range": {
+        "startLine": 68,
+        "startChar": 77,
+        "endLine": 68,
+        "endChar": 89
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

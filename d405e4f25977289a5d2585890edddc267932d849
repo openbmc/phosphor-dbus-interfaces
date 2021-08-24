@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "382db360_1a2e36c4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-08-24T22:35:58Z",
+      "side": 1,
+      "message": "\u003e \u003e Question 1: What is the envision here. Even if we want administrator to change this policy, how administrator is going to make it?\n\u003e 1. Redfish schema (OEM ? because standard one doesn\u0027t exist).\n\u003e Until it is approved, My thought process to go with OEM Redfish.\n\u003e I have already opened a Redfish forum thread for the same.\n\u003e https://redfishforum.com/thread/524/account-service-password-complexity-missing\n\nThis was brought up in the redfish meeting today, and there were some serious concerns about the completeness, or whether it was even possible to model all these things at runtime.\n\n\u003e \n\u003e \n\u003e \u003e From security point of it, a company must enforce minimum needed security (set as compile time policy), and anything further which to be configured by user must be D-Bus property.\n\u003e Same is done for Password length, where allow administrator to increase the password length, but can\u0027t reduce it below the compile time. \n\u003e \n\u003e +1.\n\u003e \n\u003e \n\u003e \u003e Question 2 is, Do we need to allow this one to administrator ? Redfish standard schema doesn\u0027t have the same, and i fail to visualize benefit it brings when compared with Compile time policy based restriction \u0026 ability to change the password min length.\n\u003e \n\u003e Redfish Forum thread is already opened up, \n\u003e On other note, min password length is there in the standard redfish schema , so hoping these are also candidate for the password policy restriction.\n\u003e \n\u003e Benefit: Say you have shipped the system with less stricted password policy , now at later moment of time admin wants to restrict the password policy, there should be an run time option.\n\u003e \n\u003e \n\u003e \n\u003e \u003e Isn\u0027t that a security concern if admins (ie possible attackers) can change password policy at runtime?  In general I would\u0027ve expected this to be a compile-time policy.\n\u003e \n\u003e Ed, If I get you correctly, You are suspecting that admin credentials have been compromised, In that case admin can do lot of unwanted things.\n\u003e \n\u003e For the password policy restriction at runtime we already have MinPasswordLength and Max password length in the redfish standard which admin can change at run time.",
+      "parentUuid": "1f0078d3_1ad5644f",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 16
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f2bbf83e_ab8043b6",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2

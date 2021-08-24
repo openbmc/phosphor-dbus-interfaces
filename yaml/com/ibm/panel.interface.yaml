@@ -1,0 +1,15 @@
+description: >
+    D-Bus interface(s) to interact with IBM operator pnael applicaton.
+methods:
+    - name: toggleFunctionState
+      description: >
+          Api to enable/disable operator panel functions by Phyp.
+      parameters:
+        - name: functionBitMap
+          type: array[byte]
+          desription: >
+             Bit map to set/unset state of panel function(s).
+             Bits in bitmap will have 1 to 1 mapping with panel
+             functions where bit 0 implies function 1 and so on.
+             Bit value 0/1 implies disable/enable function
+             respectively. 

@@ -1,6 +1,7 @@
 # Generated file; do not modify.
 subdir('Dump')
 subdir('Logging')
+subdir('Panel')
 subdir('VPD')
 generated_others += custom_target(
     'com/ibm/VPD__markdown'.underscorify(),

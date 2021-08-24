@@ -16,3 +16,17 @@ generated_others += custom_target(
 )
 
 subdir('ipzvpd')
+subdir('panel')
+generated_others += custom_target(
+    'com/ibm/panel__markdown'.underscorify(),
+    input: [ '../../../yaml/com/ibm/panel.interface.yaml',  ],
+    output: [ 'panel.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../yaml',
+        'com/ibm/panel',
+    ],
+)
+

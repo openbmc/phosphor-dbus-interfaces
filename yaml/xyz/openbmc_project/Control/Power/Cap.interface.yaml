@@ -13,3 +13,11 @@ properties:
       description: >
           Power cap enable.  Set to true to enable the PowerCap, false
           to disable it.
+
+    - name: MinPowerCapValue
+      type: uint32
+      description: The Maximum supported sensor reading.
+
+    - name: MaxPowerCapValue
+      type: uint32
+      description: The Minimum supported power_cap reading.

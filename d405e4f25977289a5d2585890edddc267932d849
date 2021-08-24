@@ -227,6 +227,30 @@
     },
     {
       "key": {
+        "uuid": "4071d2c7_52f34a61",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2021-08-24T12:40:04Z",
+      "side": 1,
+      "message": "I agree with separate password policy interface-\u003e we can do in two phase.\n\nPhase 1: Move all the newly introduced property into new interface.\nPhase 2 : Move the Min Password Length and MaxPassword length to this new interface.\n\nDo we have any preference for having map of (key value pairs) v/s (individual property for each policy param).?",
+      "parentUuid": "8a14ea24_0f7c1b6f",
+      "range": {
+        "startLine": 42,
+        "startChar": 12,
+        "endLine": 42,
+        "endChar": 34
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0001d447_ed82b674",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2

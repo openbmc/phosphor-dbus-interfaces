@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "bbd31cf2_b7e538f3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2021-08-24T10:17:14Z",
+      "side": 1,
+      "message": "Ratan,\nQuestion 1: What is the envision here. Even if we want administrator to change this policy, how administrator is going to make it?\n1. OEM IPMI commands\n2. Redfish schema (OEM ? because standard one doesn\u0027t exist). \n\nMy View: \nFrom security point of it, a company must enforce minimum needed security (set as compile time policy), and anything further which to be configured by user must be D-Bus property.\nSame is done for Password length, where allow administrator to increase the password length, but can\u0027t reduce it below the compile time. \n\nQuestion 2 is, Do we need to allow this one to administrator ? Redfish standard schema doesn\u0027t have the same, and i fail to visualize benefit it brings when compared with Compile time policy based restriction \u0026 ability to change the password min length.",
+      "parentUuid": "a09e04a4_9200e640",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 16
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f2bbf83e_ab8043b6",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2
@@ -155,6 +179,24 @@
       "writtenOn": "2021-08-23T21:59:08Z",
       "side": 1,
       "message": "An alternative would be to create a property which is \"PasswordPolicy\" as a map\u003cenum, size\u003e and the enum is { \"MinUpperCase\", \"MinLowerCase\", \"MinDigits\", etc. }.",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b21295a6_388d5df3",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2021-08-24T10:17:14Z",
+      "side": 1,
+      "message": "+1.\nAlso explicitly call out the default value or at least document as\n\n\"Minimum password length specified in build time is marked as default value\".\n\nAlso need to say when MinUpperCase + MinLowerCase + MinDigits must be \u003c\u003d MinPasswordlength, else error will be returned.",
+      "parentUuid": "91610aec_d9e18508",
       "revId": "d405e4f25977289a5d2585890edddc267932d849",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

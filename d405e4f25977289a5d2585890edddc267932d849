@@ -251,6 +251,30 @@
     },
     {
       "key": {
+        "uuid": "5c0bf6c6_0a0d791b",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-24T13:24:59Z",
+      "side": 1,
+      "message": "If we do it as a map, I think we can keep it here.  Then phase 2 can be \"refactor them to the map property instead\".  Anytime we have a property name that can is only descriptive enough when it contains \u003e 16 characters probably indicates a scoping problem, hence why I originally suggested a separate PasswordPolicy interface.  The map property solves it similarly.\n\nYou can pick which you want to go.  I think that a map makes it more obvious when we are using the default value (because the value is absent from the map) but is a little harder to interact with because it requires a read-modify-write of the property to add a new policy setting.  The map is nicer for clients, I think, though because it is a single property to read.\n\nIf you go with a PasswordPolicy interface, probably keep them as separate properties.",
+      "parentUuid": "4071d2c7_52f34a61",
+      "range": {
+        "startLine": 42,
+        "startChar": 12,
+        "endLine": 42,
+        "endChar": 34
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0001d447_ed82b674",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2

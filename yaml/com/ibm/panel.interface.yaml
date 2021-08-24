@@ -1,0 +1,20 @@
+description: >
+    Interface file for op-panel functionalities over Dbus.
+methods:
+    - name: enableFunction
+      description: >
+          Api to enable op-panel functions by Phyp.
+      parameters:
+        - name: functionNumber
+          type: uint64
+          desription: >
+             Function number to be enabled.
+
+    - name: disableFunction
+      description: >
+          Api to disable op-panel function by Phyp.
+      parameters:
+        - name: functionNumber
+          type: uint64
+          description: >
+              Function number to be disabled

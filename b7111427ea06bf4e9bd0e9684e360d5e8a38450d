@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf006aa5_724aa52a",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-24T11:51:04Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem like PowerState.  How is \"On\" vs \"Working\" differentiated (and why?)?",
+      "range": {
+        "startLine": 29,
+        "startChar": 44,
+        "endLine": 29,
+        "endChar": 59
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af54c520_19593cdc",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-24T11:51:04Z",
+      "side": 1,
+      "message": "I\u0027m guessing these didn\u0027t come from a DMTF spec because other than the \"PowerSupply\" identifier, \"power supply\" is always two words in Redfish.",
+      "range": {
+        "startLine": 36,
+        "startChar": 55,
+        "endLine": 36,
+        "endChar": 66
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1f10d4fe_9caab5c5",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-24T11:51:04Z",
+      "side": 1,
+      "message": "I don\u0027t see any of these in the linked-to Redfish spec.  Where did they come from?",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 0
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

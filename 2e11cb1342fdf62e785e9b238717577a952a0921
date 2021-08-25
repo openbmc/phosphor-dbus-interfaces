@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3c012679_c7b86904",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000985
+      },
+      "writtenOn": "2021-08-25T02:58:10Z",
+      "side": 1,
+      "message": "it should be phosphor-host-ipmid \n\nIIUC, even though I am adding 2 more properties to the interface, as long as the existing implementation do not need Min, Max values , I wont have to update existing APIs",
+      "parentUuid": "75dd84f6_b8063922",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 0
+      },
+      "revId": "2e11cb1342fdf62e785e9b238717577a952a0921",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1f0e19d4_a53b0821",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
         "patchSetId": 1

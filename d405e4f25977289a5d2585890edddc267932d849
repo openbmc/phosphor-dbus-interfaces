@@ -145,6 +145,30 @@
     },
     {
       "key": {
+        "uuid": "1ddad064_ad9429ea",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2021-08-25T08:40:32Z",
+      "side": 1,
+      "message": "\u003e This was brought up in the redfish meeting today, and there were some serious concerns about the completeness, or whether it was even possible to model all these things at runtime.\n\nIf as a openBMC team we are fine, we can always start with basic mandatory password policy requirement and later on we can add more.\nEd, Any thoughts on the same.",
+      "parentUuid": "382db360_1a2e36c4",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 16
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f2bbf83e_ab8043b6",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2

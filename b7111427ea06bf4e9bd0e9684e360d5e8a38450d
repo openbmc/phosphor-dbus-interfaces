@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "067dd930_bfa8e766",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T11:57:51Z",
+      "side": 1,
+      "message": "But we have other state objects to represent \"working\" already.  Why do we want to muddy things by putting that state here?",
+      "parentUuid": "ba2a7e0e_4f29be88",
+      "range": {
+        "startLine": 29,
+        "startChar": 44,
+        "endLine": 29,
+        "endChar": 59
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "af54c520_19593cdc",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
         "patchSetId": 4
@@ -96,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "73686383_25f8e2ca",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T11:57:51Z",
+      "side": 1,
+      "message": "Please document then.  I see no mention in this commit of ACPI being where some of these came from.",
+      "parentUuid": "d7b610f3_ea51beaa",
+      "range": {
+        "startLine": 36,
+        "startChar": 55,
+        "endLine": 36,
+        "endChar": 66
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1f10d4fe_9caab5c5",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
         "patchSetId": 4
@@ -131,6 +179,30 @@
       "side": 1,
       "message": "I have added these as per the suggestion from Deepak. All the pointed ones came from DSP0249 DMTF PLDM state set specification, state set ID 258(ACPI Power State ACPI power state of the system )\n\nthe mentioned states maps to the ACPI power states. These does not have redfish mapping yet.\n\nAlthough the spec does not talk much about these states , i have gathered that information from the microsoft document https://docs.microsoft.com/en-us/windows/win32/power/system-power-states",
       "parentUuid": "1f10d4fe_9caab5c5",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 0
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "125311b3_9feae758",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-25T11:57:51Z",
+      "side": 1,
+      "message": "I would suggest we put the ACPI ones in a separate commit then.  Let\u0027s start with what is in Redfish because those are easy to agree to.  I don\u0027t think the dbus interfaces should be \"union of all the standards\", but we should make sure we can represent the information if it is useful.  Since there is no Redfish interface, and I can\u0027t really envision right now how internal firmware would care about \"SoftOff\" vs \"HardOff\", it doesn\u0027t seem like this information is currently useful.",
+      "parentUuid": "957c8df8_428123ac",
       "range": {
         "startLine": 27,
         "startChar": 0,

@@ -169,6 +169,30 @@
     },
     {
       "key": {
+        "uuid": "8202e3a8_44daedf4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-08-25T18:33:02Z",
+      "side": 1,
+      "message": "\u003e \u003e This was brought up in the redfish meeting today, and there were some serious concerns about the completeness, or whether it was even possible to model all these things at runtime.\n\u003e \n\u003e If as a openBMC team we are fine, we can always start with basic mandatory password policy requirement and later on we can add more.\n\nI still have serious concerns about the security aspects of this.  If an administrator has access to change these parameters, that means that for administrators there is effectively no password complexity requirements.  Considering that the use of non-admin users is in its infancy, and has a number of holes (rest-dbus for example), I\u0027m not really understanding what the use case for this is until we have better user class support, and even after that, I have serious worries about its effectiveness as a security tool.\n\n\nI would like to see this discussed at length with DMTF, which likely will require you to attend one of the meetings and possibly give a presentation and mockup on these additions.  The very short abstract you gave in your forum post didn\u0027t even include the fact that you wanted these PATCHable.\n\n\u003e Ed, Any thoughts on the same.",
+      "parentUuid": "1ddad064_ad9429ea",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 16
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f2bbf83e_ab8043b6",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2

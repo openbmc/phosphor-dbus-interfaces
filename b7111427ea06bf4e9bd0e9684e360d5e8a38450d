@@ -192,6 +192,30 @@
     },
     {
       "key": {
+        "uuid": "af1ed072_b3aa8a38",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-26T11:52:43Z",
+      "side": 1,
+      "message": "I guess I have trouble finding them in that spec.  When I search for \"Hard Off\" or \"HardOff\" I find only:\n\n\u003e 10 – Off-Hard Graceful : System Power is in hard off mode.\n\nIt isn\u0027t obvious where the text came from that you put in here.",
+      "parentUuid": "454127ce_1dc4e756",
+      "range": {
+        "startLine": 36,
+        "startChar": 55,
+        "endLine": 36,
+        "endChar": 66
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1f10d4fe_9caab5c5",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
         "patchSetId": 4

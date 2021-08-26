@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "ac808467_bba51f6b",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-08-26T09:57:56Z",
+      "side": 1,
+      "message": "sure,i just added it as per deepak\u0027s suggestion. I can remove these ACPI states for now from this commit.",
+      "parentUuid": "067dd930_bfa8e766",
+      "range": {
+        "startLine": 29,
+        "startChar": 44,
+        "endLine": 29,
+        "endChar": 59
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "af54c520_19593cdc",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
         "patchSetId": 4
@@ -144,6 +168,30 @@
     },
     {
       "key": {
+        "uuid": "454127ce_1dc4e756",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-08-26T09:57:56Z",
+      "side": 1,
+      "message": "I have already added the spec link to the commit message when i added these states.did you wanted it to be documented it anywhere else ?",
+      "parentUuid": "73686383_25f8e2ca",
+      "range": {
+        "startLine": 36,
+        "startChar": 55,
+        "endLine": 36,
+        "endChar": 66
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1f10d4fe_9caab5c5",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
         "patchSetId": 4
@@ -203,6 +251,30 @@
       "side": 1,
       "message": "I would suggest we put the ACPI ones in a separate commit then.  Let\u0027s start with what is in Redfish because those are easy to agree to.  I don\u0027t think the dbus interfaces should be \"union of all the standards\", but we should make sure we can represent the information if it is useful.  Since there is no Redfish interface, and I can\u0027t really envision right now how internal firmware would care about \"SoftOff\" vs \"HardOff\", it doesn\u0027t seem like this information is currently useful.",
       "parentUuid": "957c8df8_428123ac",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 0
+      },
+      "revId": "b7111427ea06bf4e9bd0e9684e360d5e8a38450d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "431858fc_6965d20d",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2021-08-26T09:57:56Z",
+      "side": 1,
+      "message": "sure, agreed. Done.",
+      "parentUuid": "125311b3_9feae758",
       "range": {
         "startLine": 27,
         "startChar": 0,

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0cc5caed_a2269d7d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Connection.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-08-28T21:53:09Z",
+      "side": 1,
+      "message": "Shouldn\u0027t these be scoped to the connection type?\n\nMany of these are not really appropriate for Inventory.\n\nWe generally don\u0027t just wholesale copy Redfish definitions if they don\u0027t make sense.",
+      "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

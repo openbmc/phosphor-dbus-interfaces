@@ -12,8 +12,31 @@ properties:
       type: enum[self.DriveType]
       description: >
           The type of physical form factor of the Drive.
+    - name: Interfaces
+      type: array[enum[self.DriveInterface]]
+      description: >
+          The list of interfaces supported by the Drive.
 
 enumerations:
+    - name: DriveInterface
+      description: >
+          Possible interface types
+      values:
+          - name: SAS
+            description: >
+                Serial Attached SCSI.
+          - name: SATA
+            description: >
+                Serial AT Attachment.
+          - name: NVMe
+            description: >
+                Non-Volatile Memory Express.
+          - name: FC
+            description: >
+                Fibre Channel.
+          - name: USB
+            description: >
+                Universal Serial Bus.
     - name: DriveType
       description: >
           Possible Drive type

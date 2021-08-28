@@ -1,0 +1,130 @@
+description: >
+    Implement property to provide communication protocol, used by the item.
+
+properties:
+    - name: Protocol
+      default: Unknown
+      type: enum[self.ProtoType]
+      description: >
+          The type of protocol used to communicate with the system.
+
+enumerations:
+    - name: ProtoType
+      description: >
+          Possible protocol types
+      values:
+          - name: PCIe
+            description: >
+                PCI Express.
+          - name: AHCI
+            description: >
+                Advanced Host Controller Interface (AHCI).
+          - name: UHCI
+            description: >
+                Universal Host Controller Interface (UHCI).
+          - name: SAS
+            description: >
+                Serial Attached SCSI.
+          - name: SATA
+            description: >
+                Serial AT Attachment.
+          - name: USB
+            description: >
+                Universal Serial Bus (USB).
+          - name: NVMe
+            description: >
+                Non-Volatile Memory Express (NVMe).
+          - name: FC
+            description: >
+                Fibre Channel.
+          - name: iSCSI
+            description: >
+                Internet SCSI.
+          - name: FCoE
+            description: >
+                Fibre Channel over Ethernet (FCoE).
+          - name: FCP
+            description: >
+                Fibre Channel Protocol for SCSI.
+          - name: FICON
+            description: >
+                FIbre CONnection (FICON).
+          - name: NVMeOverFabrics
+            description: >
+                NVMe over Fabrics.
+          - name: SMB
+            description: >
+                Server Message Block (SMB).  Also known as the Common Internet
+                File System (CIFS).
+          - name: NFSv3
+            description: >
+                Network File System (NFS) version 3.
+          - name: NFSv4
+            description: >
+                Network File System (NFS) version 4.
+          - name: HTTP
+            description: >
+                Hypertext Transport Protocol (HTTP).
+          - name: HTTPS
+            description: >
+                Hypertext Transfer Protocol Secure (HTTPS).
+          - name: FTP
+            description: >
+                File Transfer Protocol (FTP).
+          - name: SFTP
+            description: >
+                SSH File Transfer Protocol (SFTP).
+          - name: iWARP
+            description: >
+                Internet Wide Area RDMA Protocol (iWARP).
+          - name: RoCE
+            description: >
+                RDMA over Converged Ethernet Protocol.
+          - name: RoCEv2
+            description: >
+                RDMA over Converged Ethernet Protocol Version 2.
+          - name: I2C
+            description: >
+                Inter-Integrated Circuit Bus.
+          - name: TCP
+            description: >
+                Transmission Control Protocol (TCP).
+          - name: UDP
+            description: >
+                User Datagram Protocol (UDP).
+          - name: TFTP
+            description: >
+                Trivial File Transfer Protocol (TFTP).
+          - name: GenZ
+            description: >
+                GenZ.
+          - name: MultiProtocol
+            description: >
+                Multiple Protocols.
+          - name: InfiniBand
+            description: >
+                InfiniBand.
+          - name: Ethernet
+            description: >
+                Ethernet.
+          - name: NVLink
+            description: >
+                NVLink.
+          - name: OEM
+            description: >
+                OEM-specific.
+          - name: DisplayPort
+            description: >
+                DisplayPort.
+          - name: HDMI
+            description: >
+                HDMI.
+          - name: VGA
+            description: >
+                VGA.
+          - name: DVI
+            description: >
+                DVI.
+          - name: Unknown
+            description: >
+                The protocol type is unknown.

@@ -69,6 +69,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Connection')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/Connection__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Decorator/Connection.interface.yaml',  ],
+    output: [ 'Connection.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Decorator/Connection',
+    ],
+)
+
 subdir('CoolingType')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/CoolingType__markdown'.underscorify(),

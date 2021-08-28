@@ -2,6 +2,11 @@ description: >
     Implement to provide drive attributes.
 
 properties:
+    - name: Capacity
+      default: 0
+      type: uint64
+      description: >
+          The size in bytes of the Drive. `0` if cannot be determined.
     - name: Type
       default: Unknown
       type: enum[self.DriveType]

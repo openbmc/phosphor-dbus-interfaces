@@ -217,6 +217,30 @@
     },
     {
       "key": {
+        "uuid": "13b942a0_dda09022",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2021-08-30T09:12:45Z",
+      "side": 1,
+      "message": "Ratan, \nMy question 2 still remains the same\n\ni.e. We already have compile time policy to start with minimum password length and even allow administrator to increase the complexity using MinPasswordLength. \n\nThe same can be performed for increasing the password complexity, but is it required ? i.e. It allows configurable option by Adiministrator, but whether administrator requires to do that. \n\nFor argument sake, I am assuming we are having a need, then my understanding is as follows\n1. Administrator needs to increase password complexity, but reducing it below certain value will not be allowed (protected by compile time policy min value). (same way as MinPasswordLength).\n2. All these password complexities combined can\u0027t increase the MinPasswordLength.\n3. Redfish shouldn\u0027t dictate allowed Special characters that will satisfy for the SpecialCharacterLength. If needed, new property must be introduced in Redfish which will expose the AllowedSpecialCharacters[enum]\n4. Property must be updatable only by Admin.\n5. To support backward compatibility these properties can\u0027t be made as mandatory, and User must not make no complexities required. i.e. If the property is not specified, then complexities in unknown to the user.\n6. i.e. Each \u0026 every property must be satisfied to accept the password, MinPaswword configured must be sum of all these new MinProperties proposed, else error must be returned. \n\n\nEven though i am unable to visualize the use case scenario here, don\u0027t want to block the code, if IBM wants to implement even in OEM Schema (which either administrator / IBM early request - SupportRole will update). \nWe are adding new properties, and need to maintain all those in future, as long as IBM thinks that it is worth it and it is in-need of this should be fine. (Going ahead with +1 for this reason. IBM \u0026 Maintainers can decide)",
+      "parentUuid": "07a8b32a_b4dab55e",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 16
+      },
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f2bbf83e_ab8043b6",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 2
@@ -523,6 +547,24 @@
       "side": 1,
       "message": "We will document the supported special characters here.",
       "parentUuid": "5fae6940_0b432431",
+      "revId": "d405e4f25977289a5d2585890edddc267932d849",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7bf6d259_e4d0b0eb",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000168
+      },
+      "writtenOn": "2021-08-30T09:12:45Z",
+      "side": 1,
+      "message": "Instead of that, create Allowed Special characters as a read-only property which will expose the same. That one will work in the long run",
+      "parentUuid": "6ffeefab_a58ac3ae",
       "revId": "d405e4f25977289a5d2585890edddc267932d849",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

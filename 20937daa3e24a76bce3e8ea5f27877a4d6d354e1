@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "27dd1c3c_95bcd522",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2021-09-01T19:16:40Z",
+      "side": 1,
+      "message": "I was under the impression that new properties being added to an existing interface was not encouraged (in case they break existing implementation?).\n\nAlso, as noted in my other comment:\n\n\"\"\"\nNot sure if this overlaps too much with Cpu.interface.yaml, but looking at how that interface was generated, it was following the DMTF Spec DSP0134 - https://github.com/openbmc/phosphor-dbus-interfaces/commit/259f49e0c40b287d9ea79f77db1654da47161340\n\nI see that Redfish Schema for ProcessorId has the properties I\u0027m looking for (family, model, microcode and step) https://redfish.dmtf.org/schemas/v1/Processor.v1_12_0.json\n\"\"\"\n\nI probably should have marked this WIP, I pushed this to get brief feedback from Ed.",
+      "parentUuid": "cd85820a_3877a73a",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 44
+      },
+      "revId": "20937daa3e24a76bce3e8ea5f27877a4d6d354e1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "70b72d8d_d94ab198",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/CpuTelemetry.interface.yaml",
         "patchSetId": 1

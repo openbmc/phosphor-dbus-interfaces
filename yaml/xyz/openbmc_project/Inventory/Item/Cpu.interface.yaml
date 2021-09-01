@@ -37,6 +37,14 @@ properties:
       type: uint16
       description: >
           The maximum number of threads the processor can support.
+    - name: Step
+      type: string
+      description: >
+          The step value for this processor
+    - name: Microcode
+      type: string
+      description: >
+          The microcode information for this processor
 
 enumerations:
     - name: Capability

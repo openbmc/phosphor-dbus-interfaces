@@ -1,0 +1,130 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "76a485f7_403596b7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-01T19:06:55Z",
+      "side": 1,
+      "message": "I really don\u0027t like the name \"Telemetry\" here unless you can provide some additional context why that is a good name.  Telemetry is one of those way overloaded terms like \"Metrics\" and the way you\u0027re using it here is certainly not how it is used in xyz.openbmc_project.Telemetry.",
+      "revId": "20937daa3e24a76bce3e8ea5f27877a4d6d354e1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cd85820a_3877a73a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-01T19:06:55Z",
+      "side": 1,
+      "message": "Is there a reason we wouldn\u0027t add these to the Cpu object directly?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 44
+      },
+      "revId": "20937daa3e24a76bce3e8ea5f27877a4d6d354e1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "70b72d8d_d94ab198",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/CpuTelemetry.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-01T19:06:55Z",
+      "side": 1,
+      "message": "There is already at least one Location decorator (or similar).  Is that sufficient for this property?  It doesn\u0027t seem like we need something unique for processors where there is both a Location and a Socket, do we?",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 54
+      },
+      "revId": "20937daa3e24a76bce3e8ea5f27877a4d6d354e1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "827fced6_a499bb73",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/CpuTelemetry.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-01T19:06:55Z",
+      "side": 1,
+      "message": "We probably need a default value used to indicate \"the implementation is unable to determine this information\".  0 is not a good default in that case because you could, in theory, have a hardware design of a device that fits in a processor socket with 0 used to expand the IO of the system.",
+      "revId": "20937daa3e24a76bce3e8ea5f27877a4d6d354e1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0d3ed7e3_30e2e95e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/CpuTelemetry.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-01T19:06:55Z",
+      "side": 1,
+      "message": "size_t?",
+      "range": {
+        "startLine": 25,
+        "startChar": 12,
+        "endLine": 25,
+        "endChar": 18
+      },
+      "revId": "20937daa3e24a76bce3e8ea5f27877a4d6d354e1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f252727_f71c85ca",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/CpuTelemetry.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-01T19:06:55Z",
+      "side": 1,
+      "message": "I suspect these are core/thread counts and not \"number\"?  Number is possibly ambiguous to mean position.",
+      "range": {
+        "startLine": 27,
+        "startChar": 19,
+        "endLine": 27,
+        "endChar": 25
+      },
+      "revId": "20937daa3e24a76bce3e8ea5f27877a4d6d354e1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

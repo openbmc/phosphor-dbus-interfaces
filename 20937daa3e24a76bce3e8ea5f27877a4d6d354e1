@@ -114,6 +114,30 @@
     },
     {
       "key": {
+        "uuid": "51d27b11_d1e53412",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-01T20:17:27Z",
+      "side": 1,
+      "message": "👍\n\nSomeone once upon a time added CpuCore.interface as well.  I think they were expecting to model each core.\n\nAlso there is Cpu/OperatingConfig, which I think is different but also has AvailableCoreCount.",
+      "parentUuid": "aa45ebe8_82078f1e",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 44
+      },
+      "revId": "20937daa3e24a76bce3e8ea5f27877a4d6d354e1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "70b72d8d_d94ab198",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/CpuTelemetry.interface.yaml",
         "patchSetId": 1

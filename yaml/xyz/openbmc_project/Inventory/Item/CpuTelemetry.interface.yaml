@@ -1,0 +1,31 @@
+description: >
+    Implement to provide CPU Telemetry attributes.
+properties:
+    - name: Family
+      type: string
+      description: >
+          The effective family for this processor
+    - name: Model
+      type: string
+      description: >
+          The effective model for this processor
+    - name: Step
+      type: string
+      description: >
+          The step value for this processor
+    - name: Microcode
+      type: string
+      description: >
+          The microcode information for this processor
+    - name: Socket
+      type: string
+      description: >
+          Processor Socket designation on MotherBoard.
+    - name: Core
+      type: uint16
+      description: >
+          The core number
+    - name: Thread
+      type: uint16
+      description: >
+          The thread number

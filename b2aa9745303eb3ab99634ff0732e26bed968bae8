@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499cba95_0f190294",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-02T10:15:37Z",
+      "side": 1,
+      "message": "Is this intended to be the \"currently trained speed\" or the \"maximum speed supported by the device\"?  Your wording says \"in use\" but I\u0027m not sure if that is always detectable.  Isn\u0027t it useful to also know the maximum speed the device could have trained?\n\nIs it also useful to support Lanes?  Take a look at PCIeSlot and see if there is information from the slot that should also end up on the device.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 61
+      },
+      "revId": "b2aa9745303eb3ab99634ff0732e26bed968bae8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ccddab6a_583ce1b4",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-02T10:15:37Z",
+      "side": 1,
+      "message": "Inventory/Item/PCIeSlot.interface.yaml already has this enumeration.",
+      "revId": "b2aa9745303eb3ab99634ff0732e26bed968bae8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

@@ -88,6 +88,24 @@
       "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2073d3c5_50df88a2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Connection.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2021-09-02T10:38:00Z",
+      "side": 1,
+      "message": "Then why do we have this Decorator concept at all?\nI thought, it good way to not duplicate same things in different interfaces. Like one might want to specify protocol (SATA/SAS/NVMe) not only for Item.Drive but also for Item.StorageController to show what type of Drives could be connected there.",
+      "parentUuid": "fb697189_a29354f1",
+      "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

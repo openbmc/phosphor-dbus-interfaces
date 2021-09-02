@@ -8,6 +8,16 @@ properties:
       type: string
       description: >
           Indicates if the device is MultiFunction or SingleFunction.
+    - name: GenerationInUse
+      type: enum[xyz.openbmc_project.Inventory.Item.PCIeSlot.Generations]
+      default: 'Unknown'
+      description: >
+          The PCIe interface generation in use by the device.
+    - name: GenerationSupported
+      type: enum[xyz.openbmc_project.Inventory.Item.PCIeSlot.Generations]
+      default: 'Unknown'
+      description: >
+          The maximum PCIe generation supported by the device.
 
     - name: Function0ClassCode
       type: string

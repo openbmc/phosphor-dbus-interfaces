@@ -142,6 +142,24 @@
       "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10ab6c5b_43c46530",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Connection.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-02T12:02:53Z",
+      "side": 1,
+      "message": "\u003e Do you think, we should support a way to specify this from begging?\n\nI think it depends on what you\u0027re trying to model.  If you\u0027re modelling \"current mode\" then a single is fine, if you\u0027re trying to model \"supported modes\" then you need a list.\n\nSince it is a minimal impact to return a list of 1 element, I\u0027d go ahead and make the property that now to avoid any refactoring down the line.",
+      "parentUuid": "643763db_a16e58cf",
+      "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -8,6 +8,11 @@ properties:
       type: string
       description: >
           Indicates if the device is MultiFunction or SingleFunction.
+    - name: PCIeType
+      type: enum[self.PCIeTypes]
+      default: 'Unknown'
+      description: >
+          The PCIe interface generation in use by the device.
 
     - name: Function0ClassCode
       type: string
@@ -277,3 +282,32 @@ properties:
       type: string
       description: >
           The name of the Manufacturer for this device.
+
+enumerations:
+    - name: PCIeTypes
+      description: >
+          Possible PCIe generations
+      values:
+        - name: 'Gen1'
+          description: >
+              PCIe v1.0 device
+
+        - name: 'Gen2'
+          description: >
+              PCIe v2.0 device
+
+        - name: 'Gen3'
+          description: >
+              PCIe v3.0 device
+
+        - name: 'Gen4'
+          description: >
+              PCIe v4.0 device
+
+        - name: 'Gen5'
+          description: >
+              PCIe v5.0 device
+
+        - name: 'Unknown'
+          description: >
+              Version of the PCIe device is unknown

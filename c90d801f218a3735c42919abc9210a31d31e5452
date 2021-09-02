@@ -70,6 +70,24 @@
       "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fb697189_a29354f1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Connection.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-02T10:10:53Z",
+      "side": 1,
+      "message": "\u003e I still prefer to keep this as decorator...\n\nCan you elaborate why?\n\nMaybe you misunderstood me.  I\u0027m not suggesting there should be just 1 enumeration.  I would like the enumerations scoped to the purpose.  I gave example of Storage as an example.\n\nHaving a catch-all of enumerations is 1) difficult for people to find and 2) error prone of picking the wrong enumeration for the intended inventory item.  Keeping it scoped to the inventory item (inventory item type) ensures you\u0027re far more likely to use the right one and you find it when you\u0027re making that inventory item.",
+      "parentUuid": "224f6627_e4445996",
+      "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

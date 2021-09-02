@@ -106,6 +106,24 @@
       "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b3e8d8cf_9eef9dc2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Connection.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-02T10:55:57Z",
+      "side": 1,
+      "message": "Decorators are useful when you want to expose the same properties across multiple interface types.  And if you want to have a \"StorageProtocol\" (though I\u0027m not sure I like the name) interface, you can do that.\n\nEnumerations can already be shared across interfaces, so you don\u0027t need a Decorator for that.  If you want Item.StorageController to have a protocols supported array property and an Protocols enumeration, you can then use that enumeration in Item.Drive as well.  Where you\u0027d want a Decorator is if you wanted to shared the ProtocolsSupported property between both of them.  But, again, the Decorator should be scoped better and not a catch-all like this.\n\nAs you see in my example, having a single property \"Protocol\" probably isn\u0027t even useful.  Many drives and controllers support both SAS and SATA in a single drive (see the SFF-8482 connector).",
+      "parentUuid": "2073d3c5_50df88a2",
+      "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

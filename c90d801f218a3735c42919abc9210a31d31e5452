@@ -124,6 +124,24 @@
       "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "643763db_a16e58cf",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Connection.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2021-09-02T11:09:33Z",
+      "side": 1,
+      "message": "Ok, I got your point. Then I will move this to Item.Drive.\n\n\u003e Many drives and controllers support both SAS and SATA in a single drive (see the SFF-8482 connector).\n\nDo you think, we should support a way to specify this from begging? In my usecase I don\u0027t think I will ever set \"SATA+SAS\" since we can get only actually used protocol from BIOS.",
+      "parentUuid": "b3e8d8cf_9eef9dc2",
+      "revId": "c90d801f218a3735c42919abc9210a31d31e5452",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

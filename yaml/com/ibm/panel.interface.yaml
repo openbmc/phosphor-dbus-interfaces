@@ -11,3 +11,11 @@ methods:
              Bit map to set/unset state of panel function(s).
              Each bit number in the bit map corresponds to
              a function number.
+    - name: triggerPanelLampTest
+      description: >
+          Api to initiate/stop panel lamp test.
+      parameters:
+        - name: panelLampTestState
+          type: boolean
+          description: >
+              State which tells whether to inititate(true) or stop(false) the panel lamp test.

@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4d5e81d7_ae6060e2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000404
+      },
+      "writtenOn": "2021-09-03T08:36:08Z",
+      "side": 1,
+      "message": "Thank you for the suggestion. \"Spencer Ku\" is correct. Already fixed my git config.",
+      "parentUuid": "a38bf8e3_31bd1147",
+      "revId": "b2aa9745303eb3ab99634ff0732e26bed968bae8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "499cba95_0f190294",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 2
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "00669f9b_d104d696",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000404
+      },
+      "writtenOn": "2021-09-03T08:36:08Z",
+      "side": 1,
+      "message": "Yes, we are trying to implement \"currently trained speed\" of device. I think both \"Max Speed Supported\" or \"Lanes\" are also the useful PCIe device information. The reason why I only update \"PCIeType\" is that we are working on implementing this property on bmcweb and peci-pcie and both are under reviewing. The detail can be find in topic \"PcieType\".",
+      "parentUuid": "499cba95_0f190294",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 61
+      },
+      "revId": "b2aa9745303eb3ab99634ff0732e26bed968bae8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ccddab6a_583ce1b4",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 2
@@ -56,6 +98,24 @@
       "revId": "b2aa9745303eb3ab99634ff0732e26bed968bae8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4381b40c_27d1a46e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 1000404
+      },
+      "writtenOn": "2021-09-03T08:36:08Z",
+      "side": 1,
+      "message": "Replace to use the enumeration which provide by PCIeSlot.",
+      "parentUuid": "ccddab6a_583ce1b4",
+      "revId": "b2aa9745303eb3ab99634ff0732e26bed968bae8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

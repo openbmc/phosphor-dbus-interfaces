@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f8843ef5_3579a302",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2021-09-04T08:58:04Z",
+      "side": 1,
+      "message": "That was Patrick\u0027s suggestion, see above (he had SATA+SAS case in mind).\nIn our case it can be only one of them. BTW, here is how we use it:\nhttps://github.com/YADRO-KNS/obmc-yadro-hardware/blob/master/src/storage/inventory.cpp",
+      "parentUuid": "b8998b1e_4722d616",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 56
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c76eb104_5e0558cb",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "b3a5c7b8_889648ac",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2021-09-04T08:58:04Z",
+      "side": 1,
+      "message": "Good point! I have comment in commit message: \"Leave the list empty if supported interfaces unknown.\", forgot to add it to parameter description. Will fix.",
+      "parentUuid": "c76eb104_5e0558cb",
+      "range": {
+        "startLine": 21,
+        "startChar": 12,
+        "endLine": 21,
+        "endChar": 26
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "cabd63e9_812e945e",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2021-09-03T20:16:00Z",
       "side": 1,
       "message": "A USB drive kind of feels like it doesn\u0027t really fit in this abstraction, as it\u0027s not an \"internal drive\" but more of a storage device.  I would expect that something like a flash drive would have its own inventory type, but maybe not?  Is there a use case for this?  Maybe it\u0027s worth omitting until we have a better use case?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 37
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "104dbf96_9d27ffbe",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2021-09-04T08:58:04Z",
+      "side": 1,
+      "message": "No, I have no usecases for USB right now, just thought it might be useful later.\nI don\u0027t mind to remove it.\nPatrick, what\u0027s your opinion here?",
+      "parentUuid": "cabd63e9_812e945e",
       "range": {
         "startLine": 37,
         "startChar": 0,

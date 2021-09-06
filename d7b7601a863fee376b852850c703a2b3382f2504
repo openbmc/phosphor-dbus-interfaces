@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7d4a50f1_45d55069",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-09-06T08:18:40Z",
+      "side": 1,
+      "message": "This description seems a little odd. This should describe the interface itself. I would rephrase this a little:\n\n\"Interface to interact with the IBM operator panel application\"",
+      "range": {
+        "startLine": 2,
+        "startChar": 4,
+        "endLine": 2,
+        "endChar": 58
+      },
+      "revId": "d7b7601a863fee376b852850c703a2b3382f2504",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5b79d9f8_faf3c06b",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-09-06T08:18:40Z",
+      "side": 1,
+      "message": "Nit: D-Bus",
+      "range": {
+        "startLine": 2,
+        "startChar": 53,
+        "endLine": 2,
+        "endChar": 57
+      },
+      "revId": "d7b7601a863fee376b852850c703a2b3382f2504",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cf73bcce_0ee3e530",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-09-06T08:18:40Z",
+      "side": 1,
+      "message": "I\u0027d spell this out too - operator panel",
+      "range": {
+        "startLine": 6,
+        "startChar": 32,
+        "endLine": 6,
+        "endChar": 40
+      },
+      "revId": "d7b7601a863fee376b852850c703a2b3382f2504",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7348d5e7_ddb9f9c1",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-09-06T08:18:40Z",
+      "side": 1,
+      "message": "Please make it explicit that bit 0 \u003d\u003d function 1 and so on. Also, a 1 at the bit position means that the function needs to be enabled, while a 0 means it needs to be disabled.",
+      "range": {
+        "startLine": 12,
+        "startChar": 13,
+        "endLine": 13,
+        "endChar": 31
+      },
+      "revId": "d7b7601a863fee376b852850c703a2b3382f2504",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

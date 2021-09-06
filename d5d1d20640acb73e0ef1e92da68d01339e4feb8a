@@ -117,6 +117,30 @@
     },
     {
       "key": {
+        "uuid": "c1e7ea3e_0ac1ce6e",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2021-09-06T09:40:23Z",
+      "side": 1,
+      "message": "Later on priyanga is going to add interfaces in this file. So I thought. Right now just one interface so interfaces will be wrong. Later on when she will add she does not need to change.",
+      "parentUuid": "33710d65_5d41558a",
+      "range": {
+        "startLine": 2,
+        "startChar": 19,
+        "endLine": 2,
+        "endChar": 22
+      },
+      "revId": "d5d1d20640acb73e0ef1e92da68d01339e4feb8a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a668e244_223a7c47",
         "filename": "yaml/com/ibm/panel.interface.yaml",
         "patchSetId": 5
@@ -128,6 +152,30 @@
       "writtenOn": "2021-09-06T09:37:26Z",
       "side": 1,
       "message": "This API can be used by anyone, PHYP is just one use-case.",
+      "range": {
+        "startLine": 6,
+        "startChar": 60,
+        "endLine": 6,
+        "endChar": 64
+      },
+      "revId": "d5d1d20640acb73e0ef1e92da68d01339e4feb8a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ca97c95_19415fbb",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2021-09-06T09:40:23Z",
+      "side": 1,
+      "message": "But it will accept a bit map set by Phyp. Can other module have that information to send that bitmap?",
+      "parentUuid": "a668e244_223a7c47",
       "range": {
         "startLine": 6,
         "startChar": 60,

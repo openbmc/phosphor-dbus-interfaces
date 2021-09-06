@@ -22,6 +22,30 @@
       "revId": "e4b06e35048b73c37c071691a49fd7744fbfb444",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2dfc9cec_0d5d6ae3",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000404
+      },
+      "writtenOn": "2021-09-06T07:32:52Z",
+      "side": 1,
+      "message": "I\u0027m so sorry i didn\u0027t make myself clear. I think \"negotiated link speed\" is what i want to mean here. In PCIe Device, we can obtain negotiated link speed from \"Current Link Speed\"(CLS)\" field in link status register(LNKSTS). I confuse with the field name. In my opinion, the information between CLS and PCIe type is the same. Please correct me if there is any mistake. \n\nThe description of PCIeType from Redfish PCIeDevice schemas:\nPCIeType:\n\"This property shall contain the negotiated PCIe interface version in use by this device.\"\n\nThe description of CLS:\n\"This field indicates the negotiated link speed of the given PCIe* link.\"\n\nThe description of LNKSTS:\n\"The PCIe* link status register provides information on the status of the PCIe* link\nsuch as negotiated width, training, and so on.\"",
+      "parentUuid": "96fe6272_9bc09b3f",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 61
+      },
+      "revId": "e4b06e35048b73c37c071691a49fd7744fbfb444",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

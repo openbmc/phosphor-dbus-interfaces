@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "f135c8e7_9e099116",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-07T15:28:13Z",
+      "side": 1,
+      "message": "@Spencer - I think the primary issue here is with the name.  I understand Redfish has that name but it is a pretty poor description of what is being modeled.  I\u0027d like to see something more appropriate even though it doesn\u0027t align with what Redfish chose.",
+      "parentUuid": "3cb19b4c_b41d2df5",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 61
+      },
+      "revId": "e4b06e35048b73c37c071691a49fd7744fbfb444",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "cc365a1b_479a2e4f",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 3

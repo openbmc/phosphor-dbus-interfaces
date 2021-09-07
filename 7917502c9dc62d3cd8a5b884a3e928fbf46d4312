@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1105a1_06f9565b",
+        "filename": "yaml/xyz/openbmc_project/Time/Synchronization.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-07T12:19:30Z",
+      "side": 1,
+      "message": "What are the implications of adding another mode here?\n\nFor example: https://github.com/openbmc/bmcweb/blob/b4bec66b24755cf87e924d56219c60e9506f196b/redfish-core/lib/network_protocol.hpp\n\nIt seems that the current behavior throughout the codebase is NTP vs Manual.  Someone could go into the Redfish and set \u0027NTP\u003denabled\u0027 and turn off \"HostSync\" and then set it back to \"NTP\u003ddisabled\" and it will go to \"Manual\".  I don\u0027t think this is the desired behavior on your machine.\n\nSimilarly, isn\u0027t HostSync always the primary mode on your systems, when that method exists?  But, if you cannot get the time from the Host, don\u0027t you fallback to NTP?  \n\nIt doesn\u0027t seem like a simple enumeration achieves what you really want.\n\nCuriously, I see tons of machines that disable NTP in their machine settings overrides.  We might want to email the list and find out some of the reasons why... it might align with what you are trying to do.",
+      "revId": "7917502c9dc62d3cd8a5b884a3e928fbf46d4312",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

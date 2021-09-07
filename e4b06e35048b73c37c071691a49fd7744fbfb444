@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "0773b58a_22371d28",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2021-09-07T17:46:11Z",
+      "side": 1,
+      "message": "Actually, I want to know is this actually expected to be the speed in use, the trained speed, or the speed supported?  My point is the former can be quite dynamic on some cards.\n\nNote that the upstream port and downstream port can limit the speed; and somtimes the upstream can be limited because the backplane or other interconnect doesn\u0027t support what the silicon supports.",
+      "parentUuid": "f135c8e7_9e099116",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 61
+      },
+      "revId": "e4b06e35048b73c37c071691a49fd7744fbfb444",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "cc365a1b_479a2e4f",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 3

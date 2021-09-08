@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "862dbe7e_f38c3cc5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-08T12:01:14Z",
+      "side": 1,
+      "message": "I think we support \u0027set\u0027.",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b8998b1e_4722d616",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3
@@ -131,6 +154,30 @@
       "side": 1,
       "message": "No, I have no usecases for USB right now, just thought it might be useful later.\nI don\u0027t mind to remove it.\nPatrick, what\u0027s your opinion here?",
       "parentUuid": "cabd63e9_812e945e",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 37
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9030ebeb_99d0b7d5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-08T12:01:14Z",
+      "side": 1,
+      "message": "Is \"USB\" even a drive interface?  Isn\u0027t it \"SATA over USB\" or \"SCSI over USB\"?",
+      "parentUuid": "104dbf96_9d27ffbe",
       "range": {
         "startLine": 37,
         "startChar": 0,

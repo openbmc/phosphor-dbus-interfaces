@@ -1,0 +1,14 @@
+description: >
+    Implement this to add SBE dump management.
+
+    Self Boot Engine(SBE) is a microcontroller that sits inside the processor
+    to initialize it to start the booting and also acts as a secure channel
+    for accessing certain control functions on the processor. During the
+    booting or other hardware access operations SBE can encounter errors
+    and become unresponsive. In such situations, the debug data needs to be
+    collected from such SBEs to find out the root cause of the error.
+    This data includes hardware state, configuration, memory, etc.
+    The collected data is then packaged into the OpenPOWER dump format
+    and which is called as SBE dump.
+    There will be one instance of SBE on each processor.
+    Implement this interface to add support for managing the SBE dump.

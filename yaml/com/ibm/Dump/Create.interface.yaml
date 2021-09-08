@@ -41,3 +41,7 @@ enumerations:
           - name: "Hardware"
             desription: >
                 Hardware dump is collected during a system checkstop.
+          - name: 'SBE'
+            description: >
+                A dump collected from Self Boot Engine(SBE) when it encounters
+                an error and become unresponsive.

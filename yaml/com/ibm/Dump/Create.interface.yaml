@@ -48,4 +48,7 @@ enumerations:
             description: >
                 Resource Dump: A dump of host resources, created for various
                 host components. The content may vary accordingly.
-
+          - name: 'SBE'
+            description: >
+                A dump collected from Self Boot Engine(SBE) when it encounters
+                an error and become unresponsive.

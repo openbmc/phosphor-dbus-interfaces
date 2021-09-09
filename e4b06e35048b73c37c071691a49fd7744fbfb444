@@ -145,6 +145,30 @@
     },
     {
       "key": {
+        "uuid": "d2500def_0d5250cd",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000404
+      },
+      "writtenOn": "2021-09-09T02:01:36Z",
+      "side": 1,
+      "message": "@Patrick - Thank you, I understand the problem here. I think \"TrainedGen\" looks good for me?\n\n@Milton - Thanks for your explanation. In my opinion, \"trained speed\" is more nearly to the implementation here. \"speed supported\" may handle by \"MaxPcieType\" in Redfish schama, although the name may be not great.\nFor now, I simply implement the property by getting value from link status register via peci-pcie. I am not sure does others handle the problem you mention. I will do more research about it.",
+      "parentUuid": "0773b58a_22371d28",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 61
+      },
+      "revId": "e4b06e35048b73c37c071691a49fd7744fbfb444",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "cc365a1b_479a2e4f",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 3

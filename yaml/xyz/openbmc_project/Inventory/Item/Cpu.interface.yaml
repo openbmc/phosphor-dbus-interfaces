@@ -11,6 +11,11 @@ properties:
           A free form string indicates processor family type.
           For example, values can be "Intel Xeon
           processor", "AS400 Family", etc.
+    - name: Model
+      type: string
+      description: >
+          The effective Model information as provided by the
+          manufacturer of this processor.
     - name: Id
       type: uint64
       description: >

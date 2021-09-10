@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4d7b571b_e2d8baa2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2021-09-10T06:34:39Z",
+      "side": 1,
+      "message": "Hm? What is \"set\"? I didn\u0027t found it in PDI repo.",
+      "parentUuid": "862dbe7e_f38c3cc5",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b8998b1e_4722d616",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "I would\u0027ve expected SAS would just be the enum for sata+sas?  Making this an array makes it a lot harder to build interfaces, as most interfaces tend to treat this as a single enum.  Otherwise, clients need to then read in the array and priority sort it to determine which things you care about, or you have to make assumptions, like only reading the first one.  I\u0027d much prefer this be a single propertly.",
       "parentUuid": "f8843ef5_3579a302",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 56
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "66348e98_c1a50ca1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2021-09-10T06:34:39Z",
+      "side": 1,
+      "message": "No so big deal, actually, but I prefer single enum too.\n@Patrick?",
+      "parentUuid": "fdab125e_2a7893ee",
       "range": {
         "startLine": 13,
         "startChar": 10,
@@ -235,6 +283,30 @@
       "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c7c73ae7_bfa6b007",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2021-09-10T06:34:39Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f3c6766b_0efa9e65",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 37
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

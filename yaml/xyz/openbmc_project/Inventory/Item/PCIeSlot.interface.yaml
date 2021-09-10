@@ -108,3 +108,12 @@ associations:
           - associated_pcie_slots
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Cpu
+    - name: chassis
+      description: >
+          Objects that implement PCIeSlot can optionally implement the
+          chassis association to provide a link to one or more
+          Chassis
+      reverse_names:
+          - pcie_slots
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Chassis

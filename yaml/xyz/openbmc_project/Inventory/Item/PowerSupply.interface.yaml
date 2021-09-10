@@ -1,2 +1,13 @@
 description: >
     Implement to provide PowerSupply attributes.
+
+associations:
+    - name: chassis
+      description: >
+          Objects that implement PowerSupply unit can optionally
+          implement the chassis association to provide a link to
+          one or more Chassis.
+      reverse_names:
+          - poweredby
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Chassis

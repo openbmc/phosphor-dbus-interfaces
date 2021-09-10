@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "4c9e84b7_8b2bc7a0",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-10T11:38:10Z",
+      "side": 1,
+      "message": "https://github.com/openbmc/sdbusplus/blob/master/docs/interface.md#containers",
+      "parentUuid": "4d7b571b_e2d8baa2",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b8998b1e_4722d616",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3
@@ -132,6 +156,30 @@
       "side": 1,
       "message": "No so big deal, actually, but I prefer single enum too.\n@Patrick?",
       "parentUuid": "fdab125e_2a7893ee",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 56
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77b0c134_2c93dd2f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-10T11:38:10Z",
+      "side": 1,
+      "message": "\u003e Otherwise, clients need to then read in the array and priority sort it to determine which things you care about, or you have to make assumptions, like only reading the first one.\n\nThis is exactly why we support std::set though.  I\u0027m surprised there aren\u0027t any already defined.\n\nBetween adding an Unknown enum and using a set, I\u0027d tend to prefer a set.  It is more accurate (SAS+SATA or SATA+NVMe) and I don\u0027t see it as significantly more complex.\n\n(SATA+NVMe is also a common mode for M.2 card).",
+      "parentUuid": "66348e98_c1a50ca1",
       "range": {
         "startLine": 13,
         "startChar": 10,

@@ -192,6 +192,30 @@
     },
     {
       "key": {
+        "uuid": "cab72ed3_69671855",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-09-10T19:31:06Z",
+      "side": 1,
+      "message": "\u003e \u003e Otherwise, clients need to then read in the array and priority sort it to determine which things you care about, or you have to make assumptions, like only reading the first one.\n\u003e \n\u003e This is exactly why we support std::set though.  I\u0027m surprised there aren\u0027t any already defined.\n\u003e \n\u003e Between adding an Unknown enum and using a set, I\u0027d tend to prefer a set.  It is more accurate (SAS+SATA or SATA+NVMe) and I don\u0027t see it as significantly more complex.\n\nStd::set doesn\u0027t solve the problem though.  Sure, it\u0027s a set, but in general you\u0027re not checking for inclusion into a set, you\u0027re matching against a specific type, so you can produce the appropriate inventory interface to the user.  With Redfish or IPMI as an example, what if a drive posted that it was both SATA and SAS, which should take precedence?  Any decision the transport makes is wrong to some degree, and would require clients to hardcode in some kind of precedence, which starts to push business logic into the channels.  What if drive is NVMe and SAS?  Again, pushing the precedence into Redfish/IPMI doesn\u0027t help here, and unless I\u0027m missing something, doesn\u0027t add any use cases that exist.\n\nMaking it a single parameter makes it a lot more obvious what it\u0027s trying to convey, and keeps the business logic in the producing daemon where it belongs.\n\n\n\u003e \n\u003e (SATA+NVMe is also a common mode for M.2 card).\n\nit is?  I know there are SATA+NVMe slots, but I didn\u0027t know that a drive itself could be both at the same time.  Is there an example?",
+      "parentUuid": "77b0c134_2c93dd2f",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 56
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c76eb104_5e0558cb",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3

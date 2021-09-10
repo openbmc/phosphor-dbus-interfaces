@@ -216,6 +216,30 @@
     },
     {
       "key": {
+        "uuid": "5d888616_24e56cd8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-10T21:06:09Z",
+      "side": 1,
+      "message": "\u003e What if drive is NVMe and SAS?  Again, pushing the precedence into Redfish/IPMI doesn\u0027t help here, and unless I\u0027m missing something, doesn\u0027t add any use cases that exist.\n\nI feel like fundamentally the problem here is that the property description is \"interfaces supported\" and not \"interface in use\".  If you\u0027re listing the capabilities of the device, which is what Inventory should be, you want to know everything the device is capable of.  Ideally something in State would tell you which is in use, but unfortunately some of those we\u0027ve been putting into Inventory also.\n\nIt doesn\u0027t necessarily seem appropriate to have the Inventory collector decide on precedence either.  If Redfish only has the ability to express one Protocol, that isn\u0027t our fault such that we should weaken our own data model, and yes that decision _should_ be pushed into the Redfish app.  Just like our dbus model isn\u0027t a direction union of everything in Redfish and IPMI, it isn\u0027t an interset either.\n\n\u003e it is?  I know there are SATA+NVMe slots, but I didn\u0027t know that a drive itself could be both at the same time.  Is there an example?\n\nI think you might be right on this that the slot supports both and not the drive.  I thought key B was for SATA and key M was for PCIe-x4 (nvme) and I know I\u0027ve seen B+M M.2 cards, but I guess newer SATA drives just do B+M, while NVMe just does M.\n\n\n---\n\nIf you think that there really aren\u0027t any SAS-only drives and SAS always implies (+SATA), and Redfish only wants one of them for a \"interfaces supported\", then I guess we can downgrade this to a single property.  I still don\u0027t feel it really reflects what we\u0027re advertising in the description.",
+      "parentUuid": "cab72ed3_69671855",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 56
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c76eb104_5e0558cb",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3

@@ -55,3 +55,59 @@ associations:
         - upstream_chassis
       required_endpoint_interfaces:
         - xyz.openbmc_project.Inventory.Item.Cable
+    - name: contains
+      description: >
+           Objects that implement Chassis can optionally implement the contains
+           association to provide a link to another chassis.
+      reverse_names:
+        - containedBy
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.Chassis
+    - name: containedBy
+      description: >
+        Objects that implement Chassis can optionally implement the containedBy
+        association to provide a link to another chassis.
+      reverse_names:
+        - contains
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.Chassis
+    - name: processors
+      description: >
+        Objects that implement Chassis can optionally implement the processors
+        association to provide a link to one or more processors.
+      reverse_names:
+        - chassis
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.Cpu
+    - name: memories
+      description: >
+        Objects that implement Chassis can optionally implement the processors
+        association to provide a link to memories.
+      reverse_names:
+        - chassis
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.Dimm
+    - name: pcie_slots
+      description: >
+        Objects that implement Chassis can optionally implement the processors
+        association to provide a link to one or more PCIe slots.
+      reverse_names:
+        chassis
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.PCIeSlot
+    - name: memories
+      description: >
+        Objects that implement Chassis can optionally implement the processors
+        association to provide a link to memories.
+      reverse_names:
+        - chassis
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.Dimm
+    - name: poweredby
+      description: >
+        Objects that implement Chassis can optionally implement the processors
+        association to provide a link to one or more power supply unit
+      reverse_names:
+        chassis
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.PowerSupply

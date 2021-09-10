@@ -97,3 +97,12 @@ associations:
           - upstream_processor
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot
+    - name: chassis
+      description: >
+          Objects that implement Cpu can optionally implement the
+          chassis association to provide a link to one or more
+          Chassis
+      reverse_names:
+          - processors
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Chassis

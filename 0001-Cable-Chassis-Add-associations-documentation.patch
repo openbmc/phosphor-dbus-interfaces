@@ -1,0 +1,64 @@
+From 15f8834388f432e2e76c8269f4f542cb18c1653a Mon Sep 17 00:00:00 2001
+From: Shantappa Teekappanavar <sbteeks@yahoo.com>
+Date: Wed, 27 Oct 2021 19:49:22 -0500
+Subject: [PATCH] Cable, Chassis: Add associations documentation
+
+This documentation is useful for user interface applications such as
+redfish to traverse to what they are connected to add associations.
+
+Signed-off-by: Shantappa Teekappanavar <sbteeks@yahoo.com>
+Change-Id: Ibb285643af4c45a9c9a9d668d2027f2fa6da424b
+Signed-off-by: Zhenwei Chen <zhenweichen0207@gmail.com>
+---
+ .../Inventory/Item/Cable.interface.yaml         | 17 +++++++++++++++++
+ .../Inventory/Item/Chassis.interface.yaml       | 12 ++++++++++++
+ 2 files changed, 29 insertions(+)
+
+diff --git a/yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml b/yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml
+index d2f32a2..cfab53b 100644
+--- a/yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml
++++ b/yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml
+@@ -17,3 +17,20 @@ properties:
+           in user interfaces but this field should not be used for programmatic
+           interrogation of a cable beyond ignoring the default value of the
+           empty string.
++
++associations:
++    - name: downstream_chassis
++      description: >
++          Objects that implement Cable can optionally implement the
++          downstream_chassis association to provide a link to the
++          chassis.
++      reverse_name: attached_cables
++      required_endpoint_interfaces:
++        - xyz.openbmc_project.Inventory.Item.Chassis
++
++    - name: upstream_chassis
++      description: >
++          Objects that implement Cable can optionally implement the
++          uptream_chassis association to provide a link to the chassis.
++      reverse_name: attached_cables
++        - xyz.openbmc_project.Inventory.Item.Chassis
+diff --git a/yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml b/yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml
+index 597ec4b..8670fdb 100644
+--- a/yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml
++++ b/yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml
+@@ -43,3 +43,15 @@ enumerations:
+             description: >
+                 A logical division or portion of a physical chassis that contains
+                 multiple devices or systems that cannot be physically separated.
++
++associations:
++    - name: attached_cables
++      description: >
++          Objects that implement Chassis can optionally implement the
++          attached_cables association to provide a link to one or more
++          cables.
++      reverse_names:
++        - downstream_chassis
++        - upstream_chassis
++      required_endpoint_interfaces:
++        - xyz.openbmc_project.Inventory.Item.Cable
+-- 
+2.35.1.1094.g7c7d902a7c-goog
+

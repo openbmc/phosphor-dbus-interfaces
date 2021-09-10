@@ -265,3 +265,14 @@ enumerations:
           - name: Die
             description: >
                 A die within a package.
+
+associations:
+    - name: chassis
+      description: >
+          Objects that implement DIMM can optionally implement the
+          chassis association to provide a link to one or more
+          Chassis
+      reverse_names:
+          - memories
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Chassis

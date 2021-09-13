@@ -22,6 +22,30 @@
       "revId": "6b50623459b54af222cb9a79c5a0c7912c92da41",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dde31d84_ed08338c",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-13T14:34:57Z",
+      "side": 1,
+      "message": "https://stackoverflow.com/questions/36463531/pyyaml-automatically-converting-certain-keys-to-boolean-values\n\nBut, this shouldn\u0027t matter anymore as I\u0027ve fixed this problem in sdbus++ with:\n\n\u003e I\u0027m going to add code to sdbus++ to catch this as well with I126056e3eac9f97ebd7b095962da2b765046b532.\n\nhttps://github.com/openbmc/sdbusplus/commit/dfb5642201699dc42a7dda12d72718a8b9568151",
+      "parentUuid": "a6b15e2b_ad9e5a8b",
+      "range": {
+        "startLine": 15,
+        "startChar": 8,
+        "endLine": 15,
+        "endChar": 18
+      },
+      "revId": "6b50623459b54af222cb9a79c5a0c7912c92da41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

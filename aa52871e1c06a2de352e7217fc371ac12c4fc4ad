@@ -264,6 +264,30 @@
     },
     {
       "key": {
+        "uuid": "417d1e46_7e1a1b07",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-13T13:06:03Z",
+      "side": 1,
+      "message": "\u003e What are the use cases for drives that are capable of multiple protocols?\n\nI thought I\u0027ve already stated this.  SAS+SATA is a real thing.  As a user, I may want to answer the question: \"can I move this drive from system A to system B?\"  Without knowing if my SAS drive also supports SATA I can\u0027t answer that question.\n\nI would not be surprised if the thing after NVMe ends up with drives that support { NVMe + \"NVMe-next\" } assuming PCIe is still the primary hardware transport protocol at that point, because the vast majority of NVMe disks are fully of firmware to do all the NVMe parts.\n\n\u003e Redfish defines it as a single property.\n\nThe implication here is that Redfish gets everything 100% correct and complete on the first try? ;)\n\n\u003e Why are we adding complexity to something that we don\u0027t have use cases for?\n\nI didn\u0027t think having a `set` was all that complex, but you\u0027ve raised points indicating why it is, especially for Redfish due to the current property definition.\n\n\u003e When and if we find a use case for multiple supported interfaces, we could change this to be multiple, but I have a feeling that we\u0027re never going to need it.\n\nAgain, we need to be clear that \"SAS+SATA\" (hardware) is just \"SAS\" (enum) today.  Maybe we can do that in the comments (ie. something like \"SAS may imply the drive also supports SATA\").  Otherwise, I don\u0027t mind potentially refactoring in the future when/if we need, even though all the hand-coded dbus codes don\u0027t make it especially easy.",
+      "parentUuid": "0e973b33_5d7c766f",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 56
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c76eb104_5e0558cb",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3

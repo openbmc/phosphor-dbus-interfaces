@@ -312,6 +312,30 @@
     },
     {
       "key": {
+        "uuid": "5d2cb70f_9e5d4d47",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-14T11:16:53Z",
+      "side": 1,
+      "message": "\u003e Out of curiosity, does anyone actually do it that way in industry?  As a general rule, every system I\u0027ve been in contact with uses model numbers for that, because whether or not the plug fits is rarely descriptive enough to make repair/replace decisions in a fleet.\n\nI suspect a \"fleet\" likely describes a certain scale where you\u0027re more likely to use model numbers.  I\u0027m expecting someone on the opposite end of the circularity life-cycle is more likely to plug-and-pray and it is those users where I\u0027m more concerned about \"OpenBMC is a pile of junk that always lies to me\" due to their lesser degree of expertise.",
+      "parentUuid": "82a378ac_030f5b92",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 56
+      },
+      "revId": "aa52871e1c06a2de352e7217fc371ac12c4fc4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c76eb104_5e0558cb",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 3

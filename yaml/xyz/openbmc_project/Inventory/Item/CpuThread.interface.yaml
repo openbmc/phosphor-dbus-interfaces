@@ -1,0 +1,8 @@
+description: >
+    Implement to provide CPU thread attributes.
+properties:
+    - name: Microcode
+      type: string
+      description: >
+          The microcode information for this core.
+          Should be left empty if this is not supported.

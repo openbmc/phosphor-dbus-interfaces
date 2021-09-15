@@ -217,6 +217,30 @@
     },
     {
       "key": {
+        "uuid": "8d4c4a36_4942e49d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000404
+      },
+      "writtenOn": "2021-09-15T07:59:46Z",
+      "side": 1,
+      "message": "Thanks Ed\u0027s suggestion, I think both name are suitable here. In my opinion, how about rename \"PCIeType\" to \"GenerationInUse\", and rename \"MaxPCIeType\" to \"GenerationSupported\"?",
+      "parentUuid": "ec984c64_57b9f3d5",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 61
+      },
+      "revId": "e4b06e35048b73c37c071691a49fd7744fbfb444",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "cc365a1b_479a2e4f",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 3

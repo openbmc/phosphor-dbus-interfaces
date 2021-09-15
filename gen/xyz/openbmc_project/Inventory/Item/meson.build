@@ -138,6 +138,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('CpuThread')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/CpuThread__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/CpuThread.interface.yaml',  ],
+    output: [ 'CpuThread.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/CpuThread',
+    ],
+)
+
 subdir('Dimm')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/Dimm__markdown'.underscorify(),

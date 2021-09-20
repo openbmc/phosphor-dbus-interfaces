@@ -23,7 +23,8 @@ methods:
         description: Defines report update type
       - name: appendLimit
         type: size
-        description: Defines a limit of readings per sensor
+        description: >
+            Defines the maximum number of entries in 'Readings' property.
       - name: emitsReadingsUpdate
         type: boolean
         description: >
@@ -40,11 +41,13 @@ methods:
             Defines period of time in milliseconds when Report is updated with
             new readings. Minimal interval is defined in MinInterval property.
       - name: metricParams
-        type: array[struct[object_path,enum[xyz.openbmc_project.Telemetry.Report.OperationType],string,string]]
+        type: array[struct[array[object_path],enum[xyz.openbmc_project.Telemetry.Report.OperationType],string,string,enum[xyz.openbmc_project.Telemetry.Report.CollectionTimescope],uint64]]
         description: >
-            Array of metric parameters where first parameter is a DBus sensor
-            path. Second parameter specifies operation type. Third is a metric
-            Id and fourth is a metadata, both are used to store user details.
+            Array of metric parameters where first parameter is an array of DBus
+            sensor paths. Second parameter specifies operation type. Third is a
+            metric Id and fourth is a metadata, both are used to store user
+            details. Fifth and sixth are used for collection timescope and
+            collection duration.
     returns:
       - name: reportPath
         type: object_path

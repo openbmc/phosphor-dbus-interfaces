@@ -1,0 +1,34 @@
+description: >
+    Implement Idle Power Saver capabilities of the system.
+
+properties:
+    - name: Enabled
+      type: boolean
+      description: >
+          This property shall indicate whether idle power save is enabled.
+
+    - name: EnterUtilizationPercent
+      type: byte
+      description: >
+          This property shall indicate the percentage of utilization that the
+          computer system shall be lower than to enter idle power save.
+
+    - name: EnterDwellTime
+      type: uint64
+      description: >
+          This property shall indicate the duration in milliseconds the computer
+          system is below the EnterUtilizationPercent value before the idle
+          power saver is activated.
+
+    - name: ExitUtilizationPercent
+      type: byte
+      description: >
+          This property shall indicate the percentage of utilization that the
+          computer system shall be above than to exit idle power save.
+
+    - name: ExitDwellTime
+      type: uint64
+      description: >
+          This property shall indicate the duration in milliseconds the computer
+          system is above the ExitUtilizationPercent value before the idle
+          power saver is deactivated.

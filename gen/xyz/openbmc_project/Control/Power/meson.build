@@ -27,6 +27,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('IdlePowerSaver')
+generated_others += custom_target(
+    'xyz/openbmc_project/Control/Power/IdlePowerSaver__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml',  ],
+    output: [ 'IdlePowerSaver.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Control/Power/IdlePowerSaver',
+    ],
+)
+
 subdir('Mode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/Mode__markdown'.underscorify(),

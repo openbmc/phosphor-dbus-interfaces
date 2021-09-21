@@ -1,0 +1,31 @@
+description: >
+    Implement to provide unique identifier of originator of the activity
+
+properties:
+    - name: OriginatorId
+      type: string
+      description: >
+          Unique Id of the originator of the respective
+          operation.
+
+    - name: OriginatorType
+      type: enum[self.OriginatorTypes]
+      description: >
+          Type of the originator that initiated the respective
+          operation.
+
+enumerations:
+    - name: OriginatorTypes
+      description: >
+          Indicates the type of the originator that initiated the operation.
+      values:
+          - name: Client
+            description: >
+                Client of the service that initiated the operation.
+          - name: Internal
+            description: >
+                A process running on the service initiated the operation.
+          - name: SupportingService
+            description: >
+                A process not running on the service but running on a supporting service
+                initiated the operation.

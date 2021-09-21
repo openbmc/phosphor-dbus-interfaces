@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "42eed944_eb6b8837",
+        "filename": "yaml/xyz/openbmc_project/Telemetry/Report.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1001026
+      },
+      "writtenOn": "2021-09-21T14:00:24Z",
+      "side": 1,
+      "message": "I misunderstood \u0027size\u0027 type, my bad. Reverting this.",
+      "parentUuid": "16025557_bebac3b8",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 16
+      },
+      "revId": "00ca95ba9a313d4c63a9ed3d602870ca2301e43d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e44be40_77e64913",
         "filename": "yaml/xyz/openbmc_project/Telemetry/ReportManager.interface.yaml",
         "patchSetId": 3
@@ -39,6 +63,24 @@
       "revId": "00ca95ba9a313d4c63a9ed3d602870ca2301e43d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db31cb73_60f9949e",
+        "filename": "yaml/xyz/openbmc_project/Telemetry/ReportManager.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001026
+      },
+      "writtenOn": "2021-09-21T14:00:24Z",
+      "side": 1,
+      "message": "I misunderstood \u0027size\u0027 type, my bad. Reverting this.",
+      "parentUuid": "8e44be40_77e64913",
+      "revId": "00ca95ba9a313d4c63a9ed3d602870ca2301e43d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

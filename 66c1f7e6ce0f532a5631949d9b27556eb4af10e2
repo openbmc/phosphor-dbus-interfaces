@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7214d72f_d0cc5cea",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000353
+      },
+      "writtenOn": "2021-09-21T10:17:21Z",
+      "side": 1,
+      "message": "I think this is to enable/disable the Test..Trigger will be done via function1 only.\nAm I right?\nIf yes, then name it something like-  toggleLampTestState",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 14,
+        "endChar": 32
+      },
+      "revId": "66c1f7e6ce0f532a5631949d9b27556eb4af10e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0bbe80a5_cb841b93",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000353
+      },
+      "writtenOn": "2021-09-21T10:17:21Z",
+      "side": 1,
+      "message": "are we supporting to check the status  of Lamp test later on?\n\nIf Not, why not we just enable/disable the Lamp test. for that you won\u0027t be needed params.\nIs this really needed?",
+      "range": {
+        "startLine": 18,
+        "startChar": 7,
+        "endLine": 18,
+        "endChar": 34
+      },
+      "revId": "66c1f7e6ce0f532a5631949d9b27556eb4af10e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

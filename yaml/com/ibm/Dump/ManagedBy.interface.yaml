@@ -1,0 +1,12 @@
+description: >
+    Implement to keep track of session id that is used
+    to initiate dump creation. This restricts other users
+    to offload the dump.
+
+properties:
+    - name: SessionId
+      type: string
+      description: >
+          The session id that initiated the dump creation. Only
+          the client with this session id will be able to offload
+          the dump.

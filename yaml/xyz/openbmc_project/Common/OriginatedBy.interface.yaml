@@ -1,0 +1,8 @@
+description: >
+    Implement to provide unique user id on user requested activity
+properties:
+    - name: OriginatorId
+      type: string
+      description: >
+          Unique Id of the user who initiated the respective
+          operation.

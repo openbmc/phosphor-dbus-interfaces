@@ -46,3 +46,9 @@ properties:
       type: string
       description: >
           The URI to write the dump file.
+    - name: InitiatedBy
+      type: string
+      description: >
+          Id of the external user who initiated the dump. This will
+          default to null. This is intended to be populated for
+          user initiated dumps.

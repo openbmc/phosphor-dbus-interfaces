@@ -14,3 +14,17 @@ generated_others += custom_target(
 )
 
 subdir('Entry')
+subdir('InitiatedBy')
+generated_others += custom_target(
+    'com/ibm/Dump/InitiatedBy__markdown'.underscorify(),
+    input: [ '../../../../yaml/com/ibm/Dump/InitiatedBy.interface.yaml',  ],
+    output: [ 'InitiatedBy.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'com/ibm/Dump/InitiatedBy',
+    ],
+)
+

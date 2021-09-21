@@ -29,6 +29,10 @@ enumerations:
           description: >
               A unique id of failing hardware unit which is causing the dump.
               The value should be a 32 bit unsigned integer.
+        - name: 'GeneratorId'
+          description: >
+              A unique id of the user that initiated the dump creation. The
+              value must be a string.
 
     - name: DumpType
       description: >

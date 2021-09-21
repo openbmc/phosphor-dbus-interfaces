@@ -82,6 +82,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('GeneratedBy')
+generated_others += custom_target(
+    'xyz/openbmc_project/Common/GeneratedBy__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml',  ],
+    output: [ 'GeneratedBy.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Common/GeneratedBy',
+    ],
+)
+
 subdir('ObjectPath')
 generated_others += custom_target(
     'xyz/openbmc_project/Common/ObjectPath__markdown'.underscorify(),

@@ -1,0 +1,9 @@
+description: >
+    Implement to keep track of session id that has
+    initiated dump creation.
+
+properties:
+    - name: SessionId
+      type: string
+      description: >
+          The session id that initiated the dump creation.

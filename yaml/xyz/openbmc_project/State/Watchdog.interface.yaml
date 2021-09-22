@@ -54,6 +54,11 @@ properties:
       description: >
           The timer user at the time of expiration.
       default: 'Reserved'
+    - name: PreTimeoutInterval 
+      type: byte 
+      description: >
+          PreTimeoutInterval in seconds.
+      default: 0
 
 enumerations:
    - name: Action

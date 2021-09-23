@@ -58,6 +58,12 @@ enumerations:
            UpdateInProgress implies BMC is in firmware update mode. CurrentBMCState
            will be set to "UpdateInProgress" while starting image download and
            reset to Ready, once activation is done or error case during update process.
+       - name: 'Quiesced'
+         description: >
+           BMC firmware is quiesced. The BMC firmware is enabled but either
+           unresponsive or only processing a restricted set of commands. This
+           state may be the result of a service within the BMC going into a
+           failed state.
 
    - name: RebootCause
      description: >

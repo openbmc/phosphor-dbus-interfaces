@@ -17,6 +17,12 @@ properties:
       description: >
           if true then the hostname received from the DHCP server
           will be set as the transient hostname of the system.
+    - name: DomainEnabled
+      type: boolean
+      description: >
+          if true then the domain names received from the DHCP server
+          will be used by systemd-resolved and take precedence over any
+          statically configured ones.
     - name: SendHostNameEnabled
       type: boolean
       description: >

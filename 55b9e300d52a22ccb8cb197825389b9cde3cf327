@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e5b8382_aeb283bc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000524
+      },
+      "writtenOn": "2021-09-24T13:56:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3ef9d2fc_c39f356c",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f83b76c0_29a92a3c",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2021-09-24T13:23:24Z",
       "side": 1,
       "message": "nit: this isn\u0027t providing a D-Bus service. It\u0027s defining a new USB state property. So maybe something more like \"bmc-usb: property to track usb state\"",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dc378857_ec08a637",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000524
+      },
+      "writtenOn": "2021-09-24T13:56:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f83b76c0_29a92a3c",
       "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "55724d9d_207ab41c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000524
+      },
+      "writtenOn": "2021-09-24T13:56:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c9068e64_2e100d40",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4c843038_08e52905",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2021-09-24T13:23:24Z",
       "side": 1,
       "message": "I don\u0027t think a tested is really needed for PDI commits since it\u0027s just an interface definition but this statement doesn\u0027t make much sense to me. Maybe just show the \"busctl\" command you ran and the output if you want this section? I don\u0027t think we\u0027re going to want a obmcutil option for this. In general we just point people to the external interface (i.e. Redfish) or just ask them to use busctl for testing/debug.",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4f0ba93c_eb26b159",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000524
+      },
+      "writtenOn": "2021-09-24T13:56:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4c843038_08e52905",
       "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "9529a8b0_8052a80d",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000524
+      },
+      "writtenOn": "2021-09-24T13:56:58Z",
+      "side": 1,
+      "message": "I Slacked @joseph-reynolds and we came to agreement we will Enable or Disable all the BMC\u0027s USB ports as one operation;\nso there is no different then between Rainier and Everest. Also the default is Enabled, the intent of Disabled is really just for\nthe customers that really want the BMC\u0027s USB ports Disabled.",
+      "parentUuid": "93ed778c_009afde3",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5288bc45_bd82752d",
         "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
         "patchSetId": 1
@@ -98,6 +188,24 @@
       "writtenOn": "2021-09-24T13:23:24Z",
       "side": 1,
       "message": "Is there going to be a \"RequestedUSBState\" to utilize these? Please create a separate USBTransition for these.",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9735dcaf_3b63d225",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000524
+      },
+      "writtenOn": "2021-09-24T13:56:58Z",
+      "side": 1,
+      "message": "This is the BMC\u0027s USB ports is why I had it under BMC, I believe you are saying that is incorrect to have it under BMC.",
+      "parentUuid": "5288bc45_bd82752d",
       "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

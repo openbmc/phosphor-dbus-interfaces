@@ -1,2 +1,8 @@
 description: >
     Implement to provide CPU core attributes.
+properties:
+    - name: Microcode
+      type: string
+      description: >
+          The microcode information for this processor
+

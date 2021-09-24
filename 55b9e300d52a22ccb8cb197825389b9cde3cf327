@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ef9d2fc_c39f356c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-24T13:23:24Z",
+      "side": 1,
+      "message": "I\u0027m not seeing a \"Why\" in this commit message. Was there a mailing list or design doc for reference? Why would anyone ever want to disable the USB port? Security reasons I assume?",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f83b76c0_29a92a3c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-24T13:23:24Z",
+      "side": 1,
+      "message": "nit: this isn\u0027t providing a D-Bus service. It\u0027s defining a new USB state property. So maybe something more like \"bmc-usb: property to track usb state\"",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c9068e64_2e100d40",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-24T13:23:24Z",
+      "side": 1,
+      "message": "Please be sure to have a line feed between these two lines",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4c843038_08e52905",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-24T13:23:24Z",
+      "side": 1,
+      "message": "I don\u0027t think a tested is really needed for PDI commits since it\u0027s just an interface definition but this statement doesn\u0027t make much sense to me. Maybe just show the \"busctl\" command you ran and the output if you want this section? I don\u0027t think we\u0027re going to want a obmcutil option for this. In general we just point people to the external interface (i.e. Redfish) or just ask them to use busctl for testing/debug.",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93ed778c_009afde3",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-24T13:23:24Z",
+      "side": 1,
+      "message": "Do we only allow users to control the state of all USB ports as a group or do they have individual access to each USB port? Current we only have one instance of /xyz/openbmc_project/state/bmc0 created.",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5288bc45_bd82752d",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-24T13:23:24Z",
+      "side": 1,
+      "message": "Is there going to be a \"RequestedUSBState\" to utilize these? Please create a separate USBTransition for these.",
+      "revId": "55b9e300d52a22ccb8cb197825389b9cde3cf327",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

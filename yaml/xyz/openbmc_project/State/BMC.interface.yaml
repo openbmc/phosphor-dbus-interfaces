@@ -16,6 +16,11 @@ properties:
      description: >
          The current state of the BMC and is a read-only property.
 
+   - name: CurrentUSBState
+     type: enum[self.USBState]
+     description: >
+         The current state of the BMC's USB Port
+
    - name: LastRebootTime
      type: uint64
      description: >
@@ -42,6 +47,12 @@ enumerations:
        - name: 'None'
          description: >
            No transition is in progress
+       - name: 'EnableUsb'
+         description: >
+           Enable BMC's USB Port
+       - name: 'DisableUsb'
+         description: >
+           Disable BMC's USB Port
 
    - name: BMCState
      description: >
@@ -58,6 +69,17 @@ enumerations:
            UpdateInProgress implies BMC is in firmware update mode. CurrentBMCState
            will be set to "UpdateInProgress" while starting image download and
            reset to Ready, once activation is done or error case during update process.
+
+   - name: USBState
+     description: >
+       The current state of the BMC's USB Port
+     values:
+       - name: 'UsbEnabled'
+         description: >
+           BMC's USB Port is Enabled
+       - name: 'UsbDisabled'
+         description: >
+           BMC's USB Port is Disabled
 
    - name: RebootCause
      description: >

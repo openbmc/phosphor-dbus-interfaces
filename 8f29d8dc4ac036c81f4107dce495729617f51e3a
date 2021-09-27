@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "88dd962c_3942b348",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-27T16:10:39Z",
+      "side": 1,
+      "message": "Should this be a float?  What granularity of percentages are useful in this context?  Since you used `uint16` that seems like you intended more granularity than simply 0-100 (because you would have chosen `uint8`?).",
+      "revId": "8f29d8dc4ac036c81f4107dce495729617f51e3a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53a566be_db7662d0",
         "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
         "patchSetId": 2
@@ -18,6 +35,29 @@
         "startChar": 0,
         "endLine": 14,
         "endChar": 71
+      },
+      "revId": "8f29d8dc4ac036c81f4107dce495729617f51e3a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ef2361fe_3bdf9f1d",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-27T16:10:39Z",
+      "side": 1,
+      "message": "I prefer time to be uint64_t and microseconds to match EpochTime.  Any reason this cannot be?",
+      "range": {
+        "startLine": 16,
+        "startChar": 26,
+        "endLine": 16,
+        "endChar": 33
       },
       "revId": "8f29d8dc4ac036c81f4107dce495729617f51e3a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",

@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "27f83896_ac1348bb",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2021-09-27T18:43:16Z",
+      "side": 1,
+      "message": "I got an error when I had uint8, so I assumed that was not a valid value",
+      "parentUuid": "88dd962c_3942b348",
+      "revId": "8f29d8dc4ac036c81f4107dce495729617f51e3a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53a566be_db7662d0",
         "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
         "patchSetId": 2
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "b2a44063_6ac9bffd",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2021-09-27T18:43:16Z",
+      "side": 1,
+      "message": "Yes it is a copy of the redfish text.",
+      "parentUuid": "53a566be_db7662d0",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 71
+      },
+      "revId": "8f29d8dc4ac036c81f4107dce495729617f51e3a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ef2361fe_3bdf9f1d",
         "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
         "patchSetId": 2
@@ -53,6 +95,30 @@
       "writtenOn": "2021-09-27T16:10:39Z",
       "side": 1,
       "message": "I prefer time to be uint64_t and microseconds to match EpochTime.  Any reason this cannot be?",
+      "range": {
+        "startLine": 16,
+        "startChar": 26,
+        "endLine": 16,
+        "endChar": 33
+      },
+      "revId": "8f29d8dc4ac036c81f4107dce495729617f51e3a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4cdb6e54_bc72d0c4",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2021-09-27T18:43:16Z",
+      "side": 1,
+      "message": "It can be a uint64, but internally we only allow 2 bytes which is why I made it uint16.",
+      "parentUuid": "ef2361fe_3bdf9f1d",
       "range": {
         "startLine": 16,
         "startChar": 26,

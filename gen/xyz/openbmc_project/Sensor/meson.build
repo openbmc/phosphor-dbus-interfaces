@@ -13,6 +13,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('RatedValue')
+generated_others += custom_target(
+    'xyz/openbmc_project/Sensor/RatedValue__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Sensor/RatedValue.interface.yaml',  ],
+    output: [ 'RatedValue.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Sensor/RatedValue',
+    ],
+)
+
 subdir('Threshold')
 generated_others += custom_target(
     'xyz/openbmc_project/Sensor/Threshold__markdown'.underscorify(),

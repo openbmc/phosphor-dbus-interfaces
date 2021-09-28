@@ -22,6 +22,30 @@
       "revId": "329d1d8169339717e4955f736b8181fde8f0ac9c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "66eb808a_f6f5f101",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Connector/Slot.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-09-28T07:29:32Z",
+      "side": 0,
+      "message": "I am using it for PCIe slot, but it could be used for any kind of slots. I am not even sure how common other kind of slots are.\n\nIt is used to support the LocationType as shown in https://redfish.dmtf.org/schemas/DSP0268_2020.4.pdf#page\u003d22.\n\nMaybe we can just use PCIe slot to support the `Slot`?",
+      "parentUuid": "f5c5b2cb_4871fbc1",
+      "range": {
+        "startLine": 4,
+        "startChar": 21,
+        "endLine": 4,
+        "endChar": 75
+      },
+      "revId": "329d1d8169339717e4955f736b8181fde8f0ac9c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

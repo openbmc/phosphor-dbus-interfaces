@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "e0949810_dfe84e19",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-29T19:03:34Z",
+      "side": 1,
+      "message": "Not sure why I capitalized this.",
+      "range": {
+        "startLine": 64,
+        "startChar": 11,
+        "endLine": 64,
+        "endChar": 12
+      },
+      "revId": "92848740eabf7cff7595a79f39b1d3c37677ae3b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "199e0fcb_e73abf41",
         "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
         "patchSetId": 2
@@ -25,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "bd33890e_20dcc8d8",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-29T19:03:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "199e0fcb_e73abf41",
+      "range": {
+        "startLine": 65,
+        "startChar": 17,
+        "endLine": 65,
+        "endChar": 23
+      },
+      "revId": "92848740eabf7cff7595a79f39b1d3c37677ae3b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9cc44131_1f8ba2ac",
         "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
         "patchSetId": 2
@@ -36,6 +83,30 @@
       "writtenOn": "2021-09-27T16:33:02Z",
       "side": 1,
       "message": "I thought `Quiesced` was going to be a target?  Wouldn\u0027t that potentially stop some existing targets?",
+      "range": {
+        "startLine": 66,
+        "startChar": 18,
+        "endLine": 67,
+        "endChar": 18
+      },
+      "revId": "92848740eabf7cff7595a79f39b1d3c37677ae3b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5e616d48_bcd2289f",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-29T19:03:34Z",
+      "side": 1,
+      "message": "If a service like phosphor-dbus-monitor.service fails, it will have an OnFailure that starts our new obmc-bmc-service-failure.target. That target could potentially Conflict with some other targets but I haven\u0027t seen a use case there yet. When obmc-bmc-service-failure.target is started, bmc will go into Quiesce.",
+      "parentUuid": "9cc44131_1f8ba2ac",
       "range": {
         "startLine": 66,
         "startChar": 18,

@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc0f7bce_f0f1718b",
+        "filename": "yaml/xyz/openbmc_project/Telemetry/ReportManager.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1001148
+      },
+      "writtenOn": "2021-09-29T11:11:15Z",
+      "side": 1,
+      "message": "This parameter reflects \u0027collection timescope\u0027, shouldn\u0027t it be declared here as enum?",
+      "range": {
+        "startLine": 44,
+        "startChar": 117,
+        "endLine": 44,
+        "endChar": 123
+      },
+      "revId": "23d4fa05d52102666dfa3c571269350da0117f4f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b4cefa3f_d708225a",
+        "filename": "yaml/xyz/openbmc_project/Telemetry/ReportManager.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1001148
+      },
+      "writtenOn": "2021-09-29T11:11:15Z",
+      "side": 1,
+      "message": "This parameter reflects \u0027collection duration\u0027, in dbus registered method it is time value expected as integer, shouldn\u0027t it be declared here as uint64?",
+      "range": {
+        "startLine": 44,
+        "startChar": 124,
+        "endLine": 44,
+        "endChar": 130
+      },
+      "revId": "23d4fa05d52102666dfa3c571269350da0117f4f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

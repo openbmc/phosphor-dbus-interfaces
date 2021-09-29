@@ -16,6 +16,52 @@
       "revId": "1f9dae770c892122bdf8a10a520c7039b2e3a2e7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8b2ddfd_2ccc793c",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/HostSelector.interface.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-29T20:47:41Z",
+      "side": 1,
+      "message": "Check word wrapping.\n\nIs something like this better wording:\n\n\"The current position of the selector.  Position N selects Host Instance N, while Position 0 selects the BMC.\"",
+      "range": {
+        "startLine": 14,
+        "startChar": 8,
+        "endLine": 14,
+        "endChar": 87
+      },
+      "revId": "1f9dae770c892122bdf8a10a520c7039b2e3a2e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2f1df52a_f4a1c794",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/HostSelector.interface.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-09-29T20:47:41Z",
+      "side": 1,
+      "message": "Add to this property:\n\n  flags:\n    - readonly\n\n\nYou should be able to find exmaples in other interfaces.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 16
+      },
+      "revId": "1f9dae770c892122bdf8a10a520c7039b2e3a2e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

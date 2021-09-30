@@ -8,3 +8,11 @@ properties:
       description: >
           The length of the cable in meters.  The default value of NaN
           represents a cable of unknown length.
+    - name: CableTypeDescription
+      type: string
+      default: ""
+      description: >
+          The type of the cable to be shown in user interfaces, such as
+          "Copper" or "Optical".  Applications consuming CableTypeDescription
+          should not apply any logic conditional on the property value, beyond
+          ignoring the default value of the emtry string.

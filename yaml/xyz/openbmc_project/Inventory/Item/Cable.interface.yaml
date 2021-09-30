@@ -1,3 +1,10 @@
 description: >
     xyz.openbmc_project.Inventory.Item.Cable should be implemented on objects
     that represent a cable instance or a system cable instance.
+properties:
+    - name: Length
+      type: double
+      default: NaN
+      description: >
+          The length of the cable in meters.  The default value of NaN
+          represents a cable of unknown length.

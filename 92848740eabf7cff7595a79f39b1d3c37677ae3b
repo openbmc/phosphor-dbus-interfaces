@@ -140,6 +140,30 @@
       "revId": "92848740eabf7cff7595a79f39b1d3c37677ae3b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "da9e4ce6_77eda1f0",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-09-30T14:38:13Z",
+      "side": 1,
+      "message": "\u003e Isn\u0027t it clearly defined?  The failed service + any services that Requires it + any services/targets conflicting with `obmc-bmc-service-failure.target`.\n\nThe issue is that if a service like bmcweb fails, you have no REST interface to your BMC. If something like pldmd fails, you have no inband interface to the host. Any of these services failing can lead to this target starting and the BMC going into Quiesce. So it\u0027s undefined because a user looking at this state does not know which service failure caused Quiesce.\n\n\u003e Is there a reason to call this target \u0027service-failure\u0027 if the state is \u0027quiesced\u0027?  Shouldn\u0027t those names correlate?\n\nYeah, let me think about it, but I think this makes sense. I\u0027ll update the other reviews with this topic if I can\u0027t think of any reasons not to change it.",
+      "parentUuid": "c09a02f2_d3b17873",
+      "range": {
+        "startLine": 66,
+        "startChar": 18,
+        "endLine": 67,
+        "endChar": 18
+      },
+      "revId": "92848740eabf7cff7595a79f39b1d3c37677ae3b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

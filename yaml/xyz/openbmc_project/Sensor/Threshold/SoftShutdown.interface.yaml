@@ -10,7 +10,9 @@ description: >
       current
       power
       energy
-
+      utilization
+      airflow
+      pressure
 
     Additionally, any object implementing Sensor.Threshold.SoftShutdown must
     also implement Sensor.Value.

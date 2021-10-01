@@ -1,8 +1,8 @@
 description: >
     Implement to provide performance loss class sensor thresholds.  Objects
-    implementing Sensor.Threshold.PerformanceLoss must be instantiated in the correct
-    hierarchy within the sensors namespace.  The following sensor hierarchies
-    are recognized:
+    implementing Sensor.Threshold.PerformanceLoss must be instantiated in the
+    correct hierarchy within the sensors namespace.  The following sensor
+    hierarchies are recognized:
       temperature
       fan_tach
       voltage
@@ -10,10 +10,12 @@ description: >
       current
       power
       energy
+      utilization
+      airflow
+      pressure
 
-
-    Additionally, any object implementing Sensor.Threshold.PerformanceLoss must also
-    implement Sensor.Value.
+    Additionally, any object implementing Sensor.Threshold.PerformanceLoss must
+    also implement Sensor.Value.
 
 properties:
     - name: PerformanceLossHigh
@@ -34,16 +36,18 @@ properties:
           True if the sensor value has exceeded the defined bound.
           False if the sensor value has not exceeded the defined bound.
 
-          PerformanceLossAlarmHigh may be set to False to clear an alarm condition.
-          The behavior of setting PerformanceLossAlarmHigh to True is undefined.
+          PerformanceLossAlarmHigh may be set to False to clear an alarm
+          condition. The behavior of setting PerformanceLossAlarmHigh to True
+          is undefined.
     - name: PerformanceLossAlarmLow
       type: boolean
       description: >
           True if the sensor value has exceeded the defined bound.
           False if the sensor value has not exceeded the defined bound.
 
-          PerformanceLossAlarmLow may be set to False to clear an alarm condition.
-          The behavior of setting PerformanceLossAlarmLow to True is undefined.
+          PerformanceLossAlarmLow may be set to False to clear an alarm
+          condition. The behavior of setting PerformanceLossAlarmLow to True is
+          undefined.
 signals:
     - name: PerformanceLossHighAlarmAsserted
       description: >

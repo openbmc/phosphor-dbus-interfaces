@@ -9,7 +9,9 @@ description: >
       current
       power
       energy
-
+      utilization
+      airflow
+      pressure
 
     Additionally, any object implementing Sensor.Threshold.Warning must also
     implement Sensor.Value.
@@ -43,7 +45,6 @@ properties:
 
           WarningAlarmLow may be set to False to clear an alarm condition.
           The behavior of setting WarningAlarmLow to True is undefined.
-
 signals:
     - name: WarningHighAlarmAsserted
       description: >

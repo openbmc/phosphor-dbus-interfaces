@@ -68,6 +68,30 @@
       "revId": "6f36ac5d2c1521f9db7aafe9b09c329751035851",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c926ceb9_9b29802c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-01T11:48:33Z",
+      "side": 1,
+      "message": "While I agree with what you wrote here, you might want to also use the same terminology used elsewhere:\n\nyaml/org/open_power/Logging/PEL/Entry.interface.yaml:        not be used for programmatic interrogation of an object.\nyaml/xyz/openbmc_project/Inventory/Decorator/LocationCode.interface.yaml:          programmatic interrogation of an inventory object.\nyaml/xyz/openbmc_project/Inventory/Decorator/ManufacturerExt.interface.yaml:          programmatic interrogation should be promoted to a first-class\nyaml/xyz/openbmc_project/Inventory/Decorator/UniqueIdentifier.interface.yaml:        programmatic interrogation of an object.\n\nIf we ever want to make a sdbus++ flag for this, it\u0027ll be easier to find them if they all use similar language.",
+      "parentUuid": "b8750889_df0a5e81",
+      "range": {
+        "startLine": 18,
+        "startChar": 44,
+        "endLine": 18,
+        "endChar": 49
+      },
+      "revId": "6f36ac5d2c1521f9db7aafe9b09c329751035851",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

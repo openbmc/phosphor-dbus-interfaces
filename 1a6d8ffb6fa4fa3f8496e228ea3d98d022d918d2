@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0778b465_3c3cd528",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-01T15:43:25Z",
+      "side": 1,
+      "message": "I kind of see `byte` as a useless optimization here, but I\u0027m not too hung up on it.",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 16
+      },
+      "revId": "1a6d8ffb6fa4fa3f8496e228ea3d98d022d918d2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "96f8c735_6c5413e5",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-01T15:43:25Z",
+      "side": 1,
+      "message": "Is there a reason to express this in seconds?  As I mentioned elsewhere we\u0027re mostly using smaller units for time.  EpochTime uses microseconds, but a few other places use milliseconds (I\u0027d like to refactor them all to use microseconds at some point).  If use use consistent timing there is less need to name these properties \"...Seconds\" (and I\u0027d rather we drop that).",
+      "range": {
+        "startLine": 16,
+        "startChar": 26,
+        "endLine": 16,
+        "endChar": 33
+      },
+      "revId": "1a6d8ffb6fa4fa3f8496e228ea3d98d022d918d2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

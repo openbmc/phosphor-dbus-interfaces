@@ -16,6 +16,24 @@
       "revId": "29d8ba2ad8569c35b1ee8b34e378c48f028138cc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0bbad36a_f2535ced",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-04T21:55:30Z",
+      "side": 1,
+      "message": "Don\u0027t we need a reverse name for the association as well?  I thought associations were bi-directional.\n\n\u003e I guess I should add that the pointed-to objects _must_ implement Item.Processor?\n\nShould we add something to the YAML for this also?",
+      "parentUuid": "0b61a9bb_c874cd1a",
+      "revId": "29d8ba2ad8569c35b1ee8b34e378c48f028138cc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

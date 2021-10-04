@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bb8f21c4_a4d494bc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2021-10-04T05:21:59Z",
+      "side": 1,
+      "message": "I think \"InitiatedBy\" would be more suitable.",
+      "range": {
+        "startLine": 9,
+        "startChar": 19,
+        "endLine": 9,
+        "endChar": 30
+      },
+      "revId": "69cb9b14c42923373c5f9efe6145d7bc8c6ccd75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b0cfb934_0a4f015a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2021-10-04T05:21:59Z",
+      "side": 1,
+      "message": "Please remove this statement. BMC does not ensure that the client who originated the dump only can download this. BMC just tags the session id to the dump entry for the user initiated dumps.",
+      "range": {
+        "startLine": 12,
+        "startChar": 35,
+        "endLine": 14,
+        "endChar": 17
+      },
+      "revId": "69cb9b14c42923373c5f9efe6145d7bc8c6ccd75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "36aeb8a9_51361201",
+        "filename": "yaml/com/ibm/Dump/ManagedBy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2021-10-04T05:21:59Z",
+      "side": 1,
+      "message": "InitiatedBy ? \nThis data does not \"Manage\" the dump entry. Maintainers can share their views here please.",
+      "revId": "69cb9b14c42923373c5f9efe6145d7bc8c6ccd75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2c3d04c8_a3a31aac",
+        "filename": "yaml/com/ibm/Dump/ManagedBy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2021-10-04T05:21:59Z",
+      "side": 1,
+      "message": "Remove this statement. There is no restriction at BMC",
+      "range": {
+        "startLine": 3,
+        "startChar": 31,
+        "endLine": 4,
+        "endChar": 24
+      },
+      "revId": "69cb9b14c42923373c5f9efe6145d7bc8c6ccd75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dfdd0478_241135e4",
+        "filename": "yaml/com/ibm/Dump/ManagedBy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2021-10-04T05:21:59Z",
+      "side": 1,
+      "message": "Remove this as well",
+      "range": {
+        "startLine": 10,
+        "startChar": 59,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "69cb9b14c42923373c5f9efe6145d7bc8c6ccd75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

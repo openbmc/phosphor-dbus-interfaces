@@ -97,3 +97,10 @@ enumerations:
         - name: 'Unknown'
           description: >
               Type of the PCIe slot is unknown
+
+associations:
+    - name: upstream_processor
+      description: >
+          Objects that implement PCIeSlot can optionally implement the
+          upstream_processor association to provide a link back to a PCIe host
+          bridge or on-processor PCIe root complexes.

@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0b534c70_75eb341e",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2021-10-04T14:33:01Z",
+      "side": 1,
+      "message": "This is actually stored internally as a byte.\nYou previously indicated that uint16 made you think it had higher granularity than whole percent, so I reduced it to a byte.",
+      "parentUuid": "0778b465_3c3cd528",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 16
+      },
+      "revId": "1a6d8ffb6fa4fa3f8496e228ea3d98d022d918d2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "96f8c735_6c5413e5",
         "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
         "patchSetId": 3
@@ -45,6 +69,30 @@
       "revId": "1a6d8ffb6fa4fa3f8496e228ea3d98d022d918d2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9a99f4f0_4e67e5dd",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2021-10-04T14:33:01Z",
+      "side": 1,
+      "message": "These are defined in the Redfish spec 2021.2\nThese values are normally defined in seconds because it is a delay in going into/out of a low power mode and you typically do not want to drop to low power after milliseconds of idle.  Typical ranges are 10-600 seconds.",
+      "parentUuid": "96f8c735_6c5413e5",
+      "range": {
+        "startLine": 16,
+        "startChar": 26,
+        "endLine": 16,
+        "endChar": 33
+      },
+      "revId": "1a6d8ffb6fa4fa3f8496e228ea3d98d022d918d2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

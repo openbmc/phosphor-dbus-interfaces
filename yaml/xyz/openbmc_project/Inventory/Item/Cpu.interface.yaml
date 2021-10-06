@@ -11,11 +11,20 @@ properties:
           A free form string indicates processor family type.
           For example, values can be "Intel Xeon
           processor", "AS400 Family", etc.
-    - name: Model
-      type: string
+    - name: EffectiveFamily
+      type: uint16
+      description: >
+          The effective Family information as provided by the
+          manufacturer of this processor in unsigned integer.
+          Default set to 0x02 which is defined as "Unknown" Processor
+          Family in DSP0134 section 7.5.2.
+      default: 0x02
+    - name: EffectiveModel
+      type: uint16
       description: >
           The effective Model information as provided by the
-          manufacturer of this processor.
+          manufacturer of this processor in unsigned integer.
+      default: 0
     - name: Id
       type: uint64
       description: >

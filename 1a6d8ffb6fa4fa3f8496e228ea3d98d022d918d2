@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "b1e2785e_47ebf6a7",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-06T14:27:19Z",
+      "side": 1,
+      "message": "\u003e This is actually stored internally as a byte.\n\nInternal representation in one implementation is still not a great reason to \"optimize\" this down to a byte.\n\n\u003e You previously indicated that uint16 made you think it had higher granularity than whole percent, so I reduced it to a byte.\n\nYep, I\u0027m fine with either `byte` or `float` or `size` in this context at this point in time.  We already have some inconsistency in terms of \"how do you represent a percentage\".  If someone needs additional granularity in the future than whole percentages we can refactor at that point in time.",
+      "parentUuid": "0b534c70_75eb341e",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 16
+      },
+      "revId": "1a6d8ffb6fa4fa3f8496e228ea3d98d022d918d2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "96f8c735_6c5413e5",
         "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
         "patchSetId": 3
@@ -93,6 +117,30 @@
       "revId": "1a6d8ffb6fa4fa3f8496e228ea3d98d022d918d2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "26e7d492_0df4ee7b",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-06T14:27:19Z",
+      "side": 1,
+      "message": "\u003e These are defined in the Redfish spec 2021.2\n\nI\u0027d still prefer consistency on time concepts to milliseconds even if you don\u0027t use the granularity here.  It is a pretty trivial conversion using `std::chrono` to round down to the nearest second in your implementation.\n\nI\u0027ll try to elevate the priority of https://github.com/openbmc/sdbusplus/issues/42 so we don\u0027t need to have these discussions in the future.  If you implement as milliseconds now it will certainly me refactoring work when I get #42 done.",
+      "parentUuid": "9a99f4f0_4e67e5dd",
+      "range": {
+        "startLine": 16,
+        "startChar": 26,
+        "endLine": 16,
+        "endChar": 33
+      },
+      "revId": "1a6d8ffb6fa4fa3f8496e228ea3d98d022d918d2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

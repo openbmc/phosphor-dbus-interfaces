@@ -22,6 +22,53 @@
       "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3e47e16b_c08954bc",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-06T21:19:35Z",
+      "side": 1,
+      "message": "Right now I still think that is fairly common to Cpus and not many other items.",
+      "parentUuid": "c815f91f_fb0f34fd",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d45b295b_0cb11d97",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-06T21:19:35Z",
+      "side": 1,
+      "message": "If this is in hex why don\u0027t we put it as an integer type and let external interfaces do the conversion, if appropriate?\n\nDo we have some reference we can point to as a standardized set of values?  Even if we don\u0027t paste a URL, at least having a document name / standard body will tell people where to go when they make a new processor.",
+      "range": {
+        "startLine": 18,
+        "startChar": 41,
+        "endLine": 18,
+        "endChar": 48
+      },
+      "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

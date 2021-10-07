@@ -17,6 +17,26 @@ properties:
       type: enum[self.DriveType]
       description: >
           The type of physical form factor of the Drive.
+    - name: EncryptionStatus
+      default: Unknown
+      type: enum[self.DriveEncryptionState]
+      description: >
+          The current state of encryption on the drive.
+    - name: LockedStatus
+      default: Unknown
+      type: enum[self.DriveLockState]
+      description: >
+        Indicates if the data on the drive is accessible.
+        This does not correspond to write locked
+    - name: PredictedMediaLifeLeftPercent
+      default: maxint
+      type: byte
+      description: >
+        How much of the drives life is remaining in a percentage from 0-100 .
+        If the reading the value is not supported returns the max value for
+        the type (255).
+
+
 
 enumerations:
     - name: DriveProtocol
@@ -53,3 +73,29 @@ enumerations:
           - name: Unknown
             description: >
                 The Drive type is unknown.
+    - name: DriveEncryptionState
+      description: >
+          Possible encryption states drives could have
+      values:
+          - name: Encrypted
+            description: >
+                The drive is in an encrypted state.
+          - name: Unencrypted
+            description: >
+                The drive in in an unencrypted state.
+          - name: Unknown
+            description: >
+                The encryption state of the drive is not known.
+    - name: DriveLockState
+      description: >
+          Possible lock states drives could have
+      values:
+          - name: Locked
+            description: >
+                The drive is in a locked state.
+          - name: Unlocked
+            description: >
+                The drive in in unlocked state.
+          - name: Unknown
+            description: >
+                The locked state of the drive is not known.

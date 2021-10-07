@@ -22,6 +22,30 @@
       "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "935b48fe_1d92ee51",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-07T23:33:18Z",
+      "side": 1,
+      "message": "As we discussed in person, percent is 0 to 100 (inclusive), not 0 to 1.  \n\nAlso, I see little value in reporting a drive has 110 percent of its life remaining, or a divers has -10 percent of its life left.",
+      "parentUuid": "53d2d7eb_4de7755c",
+      "range": {
+        "startLine": 29,
+        "startChar": 8,
+        "endLine": 29,
+        "endChar": 64
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1f379a15_54fb2af1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-10-08T17:14:02Z",
+      "side": 1,
+      "message": "probably want int here, but that is also going to force you to pick a number for \"unknown\" that isn\u0027t NAN;  I\u0027d probably recommend -1.",
+      "range": {
+        "startLine": 27,
+        "startChar": 12,
+        "endLine": 27,
+        "endChar": 18
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53d2d7eb_4de7755c",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 1
@@ -42,6 +65,53 @@
         "startChar": 8,
         "endLine": 29,
         "endChar": 64
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1c275353_46e02014",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-10-08T17:14:02Z",
+      "side": 1,
+      "message": "it think making my previously commented change will make this obvious that it\u0027s 0-100, not 0.0 to 1.0.  With that said, adding \"from 0-100\" here seems reasonable to me.",
+      "parentUuid": "935b48fe_1d92ee51",
+      "range": {
+        "startLine": 29,
+        "startChar": 8,
+        "endLine": 29,
+        "endChar": 64
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "274cec40_f9efe7d7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-10-08T17:14:02Z",
+      "side": 1,
+      "message": "Considering theses are all parameters that can and do change at runtime, I wonder if we want them on a separate interface \"DriveStatistics\", so if we ever have to cache them, we can cache the inventory ones separately from the telemetry ones?\n\nPatrick, any strong opinions either way?",
+      "range": {
+        "startLine": 73,
+        "startChar": 12,
+        "endLine": 73,
+        "endChar": 32
       },
       "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",

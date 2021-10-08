@@ -46,13 +46,14 @@ properties:
           default. Setting this to 'true' will NOT result in the error log being
           deleted.
     - name: ServiceProviderNotify
-      type: boolean
-      default: false
+      type: enum[self.Notify]
+      default: NotSupported
       description: >
-          This property when set to 'true' indicates that this event log should
-          be notified to the service provider, if that is implemented on the
-          system. An event of this type requires a service action to replace the
-          hardware part or update code to correct the error.
+          If this property value is set to 'Notify', the service provider must
+          be notified about the Entry. If the value is set to 'Inhibit' then
+          notification is not sent to the service provider. An event of this
+          type requires a service action to correct the event, such as replacing
+          the hardware part or updating code.
     - name: UpdateTimestamp
       type: uint64
       description: >
@@ -91,6 +92,20 @@ enumerations:
           - name: Debug
             description: >
                 Information useful to developers for debugging the application.
+
+    - name: Notify
+      description: >
+          Possible ServiceProviderNotify values for an error log entry.
+      values:
+          - name: NotSupported
+            description: >
+                ServiceProviderNotify property is not supported.
+          - name: Notify
+            description: >
+                The service provider should be notified about the event log.
+          - name: Inhibit
+            description: >
+                The service provider should not be notified about the event log.
 
 methods:
     - name: GetEntry

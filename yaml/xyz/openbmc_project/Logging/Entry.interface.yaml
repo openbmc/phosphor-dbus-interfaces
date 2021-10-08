@@ -46,8 +46,8 @@ properties:
           default. Setting this to 'true' will NOT result in the error log being
           deleted.
     - name: ServiceProviderNotify
-      type: boolean
-      default: false
+      type: enum[self.Notify]
+      default: NotSupported
       description: >
           This property when set to 'true' indicates that this event log should
           be notified to the service provider, if that is implemented on the
@@ -91,6 +91,19 @@ enumerations:
         - name: Debug
           description: >
               Information useful to developers for debugging the application.
+    - name: Notify
+      description: >
+          Possible ServiceProviderNotify values for an error log entry.
+      values:
+        - name: NotSupported
+          description: >
+              Property not supported.
+        - name: NotNotify
+          description: >
+              Do not notify this event to service provider.
+        - name: Notify
+          description: >
+              This event log should be notified to the service provide.
 
 methods:
   - name: GetEntry

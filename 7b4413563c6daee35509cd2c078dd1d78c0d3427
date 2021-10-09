@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "2c18e85d_31d587f5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-10-09T16:28:42Z",
+      "side": 1,
+      "message": "Patrick might have a stronger opinion, but int16/byte/int sounds fine to me.\n\nWith that said..... in my head I\u0027m backtracking a little bit;  Is there such a thing as a drive that has \u003c 1% precision on this metric?  I originally didn\u0027t think so, but now I\u0027m not sure.",
+      "parentUuid": "37df4607_9c1e0397",
+      "range": {
+        "startLine": 27,
+        "startChar": 12,
+        "endLine": 27,
+        "endChar": 18
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53d2d7eb_4de7755c",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 1

@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "37df4607_9c1e0397",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-09T00:17:35Z",
+      "side": 1,
+      "message": "I tried int8, but it is not in the list\n\nKeyError: \u0027int8\u0027\nhttps://github.com/openbmc/sdbusplus/blob/08dc23c10c29015b3438fc3b972f3741a0ba0247/tools/sdbusplus/property.py#L184\n\nI could do byte, if that would be better",
+      "parentUuid": "8af448a1_f01127f3",
+      "range": {
+        "startLine": 27,
+        "startChar": 12,
+        "endLine": 27,
+        "endChar": 18
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53d2d7eb_4de7755c",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 1

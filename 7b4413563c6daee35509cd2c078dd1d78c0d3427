@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "a1ea37b0_c1912841",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-11T20:24:55Z",
+      "side": 1,
+      "message": "that is a reasonable question.\nSDD\u0027s currently use S.M.A.R.T to report information like life spans and the Life Left, is represented in a range 100(full life) to 0(no life).\n\nThat being said, I am sure it it possible to define a standard using \u003c1% precision. (everyone needs to be innovative:). I don\u0027t have strong feelings.",
+      "parentUuid": "2c18e85d_31d587f5",
+      "range": {
+        "startLine": 27,
+        "startChar": 12,
+        "endLine": 27,
+        "endChar": 18
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53d2d7eb_4de7755c",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 1

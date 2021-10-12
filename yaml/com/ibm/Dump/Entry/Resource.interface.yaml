@@ -23,4 +23,11 @@ properties:
       type: string
       description: >
           The password required by host to validate the request.
+    - name: requestToken
+      type: uint32
+      description: >
+          When a resource dump is requested to the host, a 32bit
+          number will be sent to the BMC as a token. Once the dump
+          is created in the host, host will notify the BMC with this
+          token, so BMC will be able to correlate which is completed.
 

@@ -1,0 +1,58 @@
+description: >
+    Implement to indicate the status of the object
+
+properties:
+    - name: State
+      type: enum[self.StateType]
+      default: Unknown
+      description: >
+          The known state of the object.
+
+enumerations:
+    - name: StateType
+      description: >
+          Possiable states for the object.
+      values:
+         - name: Unknown
+           description: >
+               The object is in an unknown state.
+         - name: Absent
+           description: >
+               The object is either not present or detected.
+         - name: Deferring
+           description: >
+               The object does not process any commands but queues new requests.
+         - name: Disabled
+           description: >
+               The object is disabled.
+         - name: Enabled
+           description: >
+               The object is enabled.
+         - name: InTest
+           description: >
+               The object is undergoing testing or is in the process
+               of capturing information for debugging.
+         - name: Qualified
+           description: >
+               The object quality is within the acceptable range of operation.
+         - name: Quiesced
+           description: >
+               The object is enabled but only processes a restricted set of
+               commands.
+         - name: StandbyOffline
+           description: >
+               The object is enabled but awaits an external action to
+               activate it.
+         - name: StandbySpare
+           description: >
+               The object is part of a redundancy set and awaits a failover or
+               other external action to activate it.
+         - name: Starting
+           description: >
+               The object function is starting.
+         - name: UnavailableOffline
+           description: >
+               The object is present but cannot be used.
+         - name: Updating
+           description: >
+               The object is updating and might be unavailable or degraded.

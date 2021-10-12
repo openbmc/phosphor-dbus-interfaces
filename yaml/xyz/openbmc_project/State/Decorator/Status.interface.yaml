@@ -1,0 +1,120 @@
+description: >
+    Implement to indicate the status of the object
+
+properties:
+    - name: Conditions
+      type: array[struct[path,path,enum[self.StatusLevel],uint64,struct[string,string,array[struct[string,string,variant[boolean,byte,int16,int32,int64,uint16,uint32,uint64,double,string]]]]]]
+      description: >
+          * The object conditions that represent the status.
+          * The conditions must be empty if the object does not required
+            any condition to represent the status.
+          * array[struct(errorLog,originOfCondition,severity,timestamp,
+                         struct(messageId,message,
+                                array[struct(messageArgName,messageArgDesc,
+                                                            messageArgVal)]))].
+            array - No of conditions that represent the status of the object.
+             struct - The condition for the object.
+              errorLog - The error log path that created for this condition.
+                          Must be empty if no entry object for the condition.
+              originOfCondition - The object path that originated the condition.
+                                  Must be empty if no origination for
+                                  the condition.
+              severity - The severity of the condition.
+                         Must be Unknown if the condition does not require.
+              timestamp - The condition occurred time and it must be epoch time.
+              struct - The additional message details for this condition and
+                       must be defined.
+               messageId - The message identifier for this condition.
+                           Must be defined in the below format.
+                           RegistryName.MajorVersion.MinorVersion.MessageKey
+                           Ex=> OpenBMC.0.1.FooMsg
+               message - The human-readable message for this condition.
+                         It can contain the messageArgVal and that must be
+                         defined as like below array documentation.
+               array - An list of message arguments that are substituted for the
+                       arguments in the message.
+                       It helps the external API (Redfish client) handler to get
+                       these arguments details individually if required.
+                struct - An message argument details
+                 messageArgName - The message argument name.
+                 messageArgDesc - The description of message argument.
+                 messageArgVal - The value of message argument.
+
+    - name: Health
+      type: enum[self.StatusLevel]
+      default: Unknown
+      description: >
+          The health state of the object in the absence of its dependent
+          resources.
+
+    - name: State
+      type: enum[self.StateType]
+      default: Unknown
+      description: >
+          The known state of the object.
+
+enumerations:
+    - name: StatusLevel
+      description: >
+          Possiable status levels for the object.
+      values:
+        - name: Unknown
+          description: >
+              The object status level is unknown.
+        - name: Ok
+          description: >
+              The status level is normal and attention is not required.
+        - name: Critical
+          description: >
+              The status level is critical and requires immediate attention.
+        - name: Warning
+          description: >
+              The status level is warning and requires attention.
+
+    - name: StateType
+      description: >
+          Possiable states for the object.
+      values:
+         - name: Unknown
+           description: >
+               The object is in an unknown state.
+         - name: Absent
+           description: >
+               The object is either not present or detected.
+         - name: Deferring
+           description: >
+               The object does not process any commands but queues new requests.
+         - name: Disabled
+           description: >
+               The object is disabled.
+         - name: Enabled
+           description: >
+               The object is enabled.
+         - name: InTest
+           description: >
+               The object is undergoing testing or is in the process
+               of capturing information for debugging.
+         - name: Qualified
+           description: >
+               The object quality is within the acceptable range of operation.
+         - name: Quiesced
+           description: >
+               The object is enabled but only processes a restricted set of
+               commands.
+         - name: StandbyOffline
+           description: >
+               The object is enabled but awaits an external action to
+               activate it.
+         - name: StandbySpare
+           description: >
+               The object is part of a redundancy set and awaits a failover or
+               other external action to activate it.
+         - name: Starting
+           description: >
+               The object function is starting.
+         - name: UnavailableOffline
+           description: >
+               The object is present but cannot be used.
+         - name: Updating
+           description: >
+               The object is updating and might be unavailable or degraded.

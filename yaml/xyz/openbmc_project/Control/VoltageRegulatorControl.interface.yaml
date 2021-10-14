@@ -1,7 +1,7 @@
 description: >
     Implement to provide control of a voltage regulator.  Objects implementing
     Control.VoltageRegulatorControl allow for fine grained control of a given
-    voltage regulator channel, and allows external entities to control Voltage
+    voltage regulator rail, and allows external entities to control Voltage
     Regulator devices.
 
 properties:
@@ -27,3 +27,82 @@ properties:
           - readonly
       description: >
           The minimum step size supported by this voltage interface.
+    - name: RailType
+      type: enum[self.VoltageRailType]
+      default: Unknown
+      description: >
+          The voltage regulator rail type.
+      flags:
+          - readonly
+
+enumerations:
+    - name: VoltageRailType
+      description: >
+          Voltage regulator rail types.
+      values:
+          - name: Standby
+            description: >
+                Standby voltage rail.
+          - name: Standby1p1V
+            description: >
+                Standby 1.1V voltage rail.
+          - name: Standby3p3V
+            description: >
+                Standby 3.3V voltage rail.
+          - name: Standby5V
+            description: >
+                Standby 5V voltage rail.
+          - name: Standby12V
+            description: >
+                Standby 12V voltage rail.
+          - name: General1p1V
+            description: >
+                General-purpose 1.1V voltage rail.
+          - name: General3p3V
+            description: >
+                General-purpose 3.3V voltage rail.
+          - name: General5V
+            description: >
+                General-purpose 5V voltage rail.
+          - name: General12V
+            description: >
+                General-purpose 12V voltage rail.
+          - name: Processor
+            description: >
+                Processor voltage rail.
+          - name: ProcessorCore
+            description: >
+                Processor core voltage rail.
+          - name: ProcessorCoreAnalog
+            description: >
+                Analog processor core voltage rail.
+          - name: ProcessorCache
+            description: >
+                Processor cache voltage rail.
+          - name: ProcessorNest
+            description: >
+                Processor nest voltage rail.
+          - name: ProcessorIO
+            description: >
+                Processor I/O voltage rail.
+          - name: ProcessorPCIe
+            description: >
+                Processor PCIe voltage rail. 
+          - name: IO
+            description: >
+                I/O voltage rail.
+          - name: Memory
+            description: >
+                Memory voltage rail.
+          - name: PCIe
+            description: >
+                PCIe voltage rail.
+          - name: Storage
+            description: >
+                Storage voltage rail.
+          - name: Other
+            description: >
+                Voltage rail not belonging to any of the other types.
+          - name: Unknown
+            description: >
+                Unknown rail type.

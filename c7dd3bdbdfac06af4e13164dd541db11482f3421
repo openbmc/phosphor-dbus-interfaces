@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "c0f5b1ea_fa712b83",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2021-10-14T04:41:04Z",
+      "side": 1,
+      "message": "I see. I will keep this as a CPU interface then.",
+      "parentUuid": "3e47e16b_c08954bc",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d45b295b_0cb11d97",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
         "patchSetId": 1
@@ -60,6 +84,30 @@
       "writtenOn": "2021-10-06T21:19:35Z",
       "side": 1,
       "message": "If this is in hex why don\u0027t we put it as an integer type and let external interfaces do the conversion, if appropriate?\n\nDo we have some reference we can point to as a standardized set of values?  Even if we don\u0027t paste a URL, at least having a document name / standard body will tell people where to go when they make a new processor.",
+      "range": {
+        "startLine": 18,
+        "startChar": 41,
+        "endLine": 18,
+        "endChar": 48
+      },
+      "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "727b7f31_b612012f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2021-10-14T04:41:04Z",
+      "side": 1,
+      "message": "Hmm yeah we could do that I suppose. I put these as string because currently bmcweb side expects / stores these values as strings in my bmcweb side change https://gerrit.openbmc-project.xyz/c/openbmc/bmcweb/+/46884 .\n\nI think I remember you mentioning on another dbus-interface CL that if we set them as uintX_t, there is a problem of default values? Maybe I\u0027m misremembering.\n\n\nAs for what the format should look like - I can point them to what my commit message points to:\n\nhttps://www.dmtf.org/sites/default/files/standards/documents/DSP2046_2021.2.pdf\n\nSection 6.86.6 at page 668, we see:\n\n```\n\"Manufacturer\": \"Intel(R) Corporation\",\n\"Model\": \"Multi-Core Intel(R) Xeon(R) processor 7xxx Series\",\n\"ProcessorId\": {\n    \"VendorId\": \"GenuineIntel\",\n    \"IdentificationRegisters\": \"0x34AC34DC8901274A\",\n    \"EffectiveFamily\": \"0x42\",\n    \"EffectiveModel\": \"0x61\",\n    \"Step\": \"0x1\",\n    \"MicrocodeInfo\": \"0x429943\"\n},\n```",
+      "parentUuid": "d45b295b_0cb11d97",
       "range": {
         "startLine": 18,
         "startChar": 41,

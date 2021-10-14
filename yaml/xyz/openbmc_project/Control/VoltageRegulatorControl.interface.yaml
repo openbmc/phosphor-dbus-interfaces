@@ -1,14 +1,14 @@
 description: >
     Implement to provide control of a voltage regulator.  Objects implementing
     Control.VoltageRegulatorControl allow for fine grained control of a given
-    voltage regulator channel, and allows external entities to control Voltage
+    voltage regulator rail, and allows external entities to control Voltage
     Regulator devices.
 
 properties:
     - name: Voltage
       type: double
       description: >
-          The current voltage setting for the voltage regulator.
+          The current voltage setting for the voltage regulator rail.
     - name: MaxValue
       type: double
       flags:
@@ -27,3 +27,12 @@ properties:
           - readonly
       description: >
           The minimum step size supported by this voltage interface.
+    - name: RailType
+      type: string
+      default: ""
+      description: >
+          The voltage regulator rail type, such as 'vdd', 'vcc', or 'vio'.  The
+          data type of this property is a string rather than an enumeration
+          because rail types are often system-specific.
+      flags:
+          - readonly

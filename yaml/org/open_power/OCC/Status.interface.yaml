@@ -21,3 +21,7 @@ properties:
       default: 0
       description: >
         Indicates memory throttling due to an over temperature condition
+signals:
+    - name: SensorsRefreshed
+      description: >
+        Sent after a poll command was issued and sensors were updated on D-Bus

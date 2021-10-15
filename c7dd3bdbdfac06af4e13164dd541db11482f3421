@@ -117,6 +117,30 @@
       "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e9ecdb5c_4a344b16",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-15T02:02:49Z",
+      "side": 1,
+      "message": "\u003e I think I remember you mentioning on another dbus-interface CL that if we set them as uintX_t, there is a problem of default values? Maybe I\u0027m misremembering.\n\nThat\u0027s a good point.  When we put them as integers we need some kind of default value as an indication of \"unknown\".  Often we use 0 or maxint, but based on DSP0134 we might want to use 0x1 \u003d Unknown.  I suspect that 0x1(Unknown) for Family + 0x0 for model would be acceptable defaults?\n\nhttps://www.dmtf.org/sites/default/files/standards/documents/DSP0134_3.5.0.pdf",
+      "parentUuid": "727b7f31_b612012f",
+      "range": {
+        "startLine": 18,
+        "startChar": 41,
+        "endLine": 18,
+        "endChar": 48
+      },
+      "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

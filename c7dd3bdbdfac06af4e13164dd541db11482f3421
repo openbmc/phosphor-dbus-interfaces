@@ -141,6 +141,30 @@
       "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9f21a41d_adcdacbf",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-10-16T18:36:29Z",
+      "side": 1,
+      "message": "I would be in favor of making this an int value.  We currently have code that uses an uint16_t to do this in bmcweb for Memory parameters that are similar.\nhttps://github.com/openbmc/bmcweb/blob/11a2f0f0186983d5939351c276c60b054c059c5a/redfish-core/lib/memory.hpp#L157\n\nPs, ignore the boost::format mess.  Whomever wrote that originally didn\u0027t read the rules on boost usage and I have a patchset to clean it up.",
+      "parentUuid": "e9ecdb5c_4a344b16",
+      "range": {
+        "startLine": 18,
+        "startChar": 41,
+        "endLine": 18,
+        "endChar": 48
+      },
+      "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

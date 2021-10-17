@@ -145,6 +145,30 @@
     },
     {
       "key": {
+        "uuid": "79b6ba81_fc7bc14f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-10-17T22:06:10Z",
+      "side": 1,
+      "message": "\u003e that is a reasonable question.\n\u003e SDD\u0027s currently use S.M.A.R.T to report information like life spans and the Life Left, is represented in a range 100(full life) to 0(no life).\n\u003e \n\nRight, but internally is that range represented by a uint8_t?  or a uint16/32/64?  if it\u0027s the former, int would be good here.  If it\u0027s the later, and it has more precision than I thought, we might want to stick with double.\n\n\u003e That being said, I am sure it it possible to define a standard using \u003c1% precision. (everyone needs to be innovative:). I don\u0027t have strong feelings.\n\nlets follow the standards bodies here.  If no standard specifies \u003e 1% resolution, we shouldn\u0027t add it here.\n\nPS, it\u0027s only innovative if it\u0027s actually useful in a real context 😊  If no drives in existence support it, its just extra bits on the wire, and extra conversions and checks that resources have to do in the various protocols.",
+      "parentUuid": "a1ea37b0_c1912841",
+      "range": {
+        "startLine": 27,
+        "startChar": 12,
+        "endLine": 27,
+        "endChar": 18
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "53d2d7eb_4de7755c",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 1

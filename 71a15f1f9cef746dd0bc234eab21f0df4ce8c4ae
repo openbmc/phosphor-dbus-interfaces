@@ -94,6 +94,30 @@
       "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad392b58_f73e33f1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-19T20:03:05Z",
+      "side": 1,
+      "message": "\u003e I was thinking of PCIe devices that might have a MUX and split the slot into lanes? Is that unexpected?\n\nGenerally bifurcation is controlled either the root complex itself or in a PCIe switch.  A slot is 16x, 4x, 1x, etc.  What you can have is two 16x slots that lead back to a root complex, which itself only has 16 usable lanes.  The root complex has a bifurcation options of [[16x], [8x, 8x]].  If you put two 16x cards in the two slots they only end up running at 8x.\n\nEven if this were in another object, I don\u0027t think that a simple array expresses the bifurcation options, but it does express the bifurcation in effect.  At one point I thought we discussed having a different property here for \"physical lanes\" and \"lanes used\", but I only see the one property here.",
+      "parentUuid": "0b5081e1_c0c74c11",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 0
+      },
+      "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -25,6 +25,12 @@ properties:
       description: >
           Whether this PCIe slot supports hotplug
 
+    - name: Bifurcation
+      type: array[size]
+      description: >
+          PCIe bifurcation information represented by how the lanes are split. 
+          The sum of all the lanes must add up to the max PCIe lanes supported.
+
 enumerations:
     - name: Generations
       description: >

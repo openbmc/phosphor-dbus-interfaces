@@ -165,6 +165,30 @@
       "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "058a72d6_848278a5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2021-10-19T20:42:42Z",
+      "side": 1,
+      "message": "Thanks Patrick and Ed.\n\nLooking through the DSP0134 - \"7.5.2 Processor Information — Processor Family\" (page 49) it looks like `02h` is unknown for Processor Family\n\nI can\u0027t seem to find anything about model, but I think `00h` is fine for model as default as well.\n\nAs for the size of uint - CPUID EAX\u003d1 section (https://en.wikipedia.org/wiki/CPUID) seems to imply that Effective Family will need 2 bytes / uint16:\n  * The actual processor family is derived from the Family ID and Extended Family ID fields. If the Family ID field is equal to 15, the family is equal to the sum of the Extended Family ID and the Family ID fields. Otherwise, the family is equal to value of the Family ID field.\n    * Family ID is 4 bits, Extended Family is 8 bits - so if Family ID  and Extended Family are all 1s, then it will overflow to 9 bits\n    * DSP0134 section above also seems to describe up to FFFFh\n\nAs for Effective Model, I think 1 byte is sufficient since:\n   * The actual processor model is derived from the Model, Extended Model ID and Family ID fields. If the Family ID field is either 6 or 15, the model is equal to the sum of the Extended Model ID field shifted left by 4 bits and the Model field. Otherwise, the model is equal to the value of the Model field.\n     * Model ID is 4 bits and Extended Model ID is also 4 bits. Extended Model ID shifted 4 bits then added to Model ID can go up to at most 0xff\n  * However, should we future proof this and just put it as 2 bytes / uint16?\n\nI\u0027ll push the code review with uint16 for family and uint 8 for model for now.",
+      "parentUuid": "9f21a41d_adcdacbf",
+      "range": {
+        "startLine": 18,
+        "startChar": 41,
+        "endLine": 18,
+        "endChar": 48
+      },
+      "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

@@ -16,6 +16,40 @@
       "revId": "6554bd1c6ef815becea729fc910c126bae030171",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "00ba8456_6df125e6",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/Status.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-10-19T15:58:17Z",
+      "side": 1,
+      "message": "This seems very Redfish specific. At the outset, it seems like bmcweb should be able to compute this from mostly existing D-Bus interfaces. It may have to pull out information from multiple interfaces, associations, etc.",
+      "revId": "6554bd1c6ef815becea729fc910c126bae030171",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4d6d04d2_955086cf",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/Status.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-10-19T15:58:17Z",
+      "side": 1,
+      "message": "There\u0027s also https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/44711.",
+      "revId": "6554bd1c6ef815becea729fc910c126bae030171",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

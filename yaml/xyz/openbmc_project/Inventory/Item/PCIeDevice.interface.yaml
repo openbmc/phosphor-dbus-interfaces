@@ -287,3 +287,8 @@ properties:
       type: string
       description: >
           The name of the Manufacturer for this device.
+
+    - name: MaxLanes
+      type: size
+      description: >
+          The maximum number of PCIe lanes supported by the PCIe Device

@@ -189,6 +189,30 @@
       "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "61292c81_a77b1a7b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2021-10-20T02:12:11Z",
+      "side": 1,
+      "message": "It looks like the CI is not happy with uint8:\n\n```\nopenbmc/phosphor-dbus-interfaces:     entry \u003d propertyMap[first]\nopenbmc/phosphor-dbus-interfaces: KeyError: \u0027uint8\u0027\n```\n\nChanging to uint16",
+      "parentUuid": "058a72d6_848278a5",
+      "range": {
+        "startLine": 18,
+        "startChar": 41,
+        "endLine": 18,
+        "endChar": 48
+      },
+      "revId": "c7dd3bdbdfac06af4e13164dd541db11482f3421",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

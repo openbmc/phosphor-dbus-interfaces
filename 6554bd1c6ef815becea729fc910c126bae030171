@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "303dedaa_057c7007",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/Status.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-10-20T06:14:19Z",
+      "side": 1,
+      "message": "Hi @Deepak,\n\n\u003e This seems very Redfish specific. \n\nYes, you are right, it is like Redfish Status.Condition.\n\n\u003e At the outset, it seems like bmcweb should be able to compute this from mostly existing D-Bus interfaces. It may have to pull out information from multiple interfaces, associations, etc. \n\nCan you point me to the existing interfaces that you are mentioning here for the defined properties? One of the goals we are trying to discuss with this interface is a single interface vs multiple interfaces to form the Redfish Condition. Any opinion?\n\nand also having an association will demand more dbus calls for each inventory item object to get all required properties (from that associated object) to form the Redfish Status.Condition if the redfish client triggered GET request, right? is it fine?\n\nFor example, 2 * N (1 - Use mapper to get service name, 1 - Use GetManagedObjects to get all properties, N - No of particular inventory item objects)\n\nHi @Gunnar,\n\n\u003e Can conditions be a separate commit?\n\nYes, I can push as a separate commit, I will split this commit for further discussion.",
+      "parentUuid": "d3cdc38f_819a8afc",
+      "revId": "6554bd1c6ef815becea729fc910c126bae030171",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4d6d04d2_955086cf",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/Status.interface.yaml",
         "patchSetId": 2
@@ -65,6 +83,24 @@
       "writtenOn": "2021-10-19T15:58:17Z",
       "side": 1,
       "message": "There\u0027s also https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/44711.",
+      "revId": "6554bd1c6ef815becea729fc910c126bae030171",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "62e7832b_8beedfee",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/Status.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-10-20T06:14:19Z",
+      "side": 1,
+      "message": "Hi @Deepak/@sharad\n\nI have looked at that patch, I felt both Health and State can be used to indicate the status of the object, right? but, the Functional property (which is used for Redfish.Status.Health) is boolean and that can only cover any two enums (Ok, Critical, and Warning) which are defined in the Redfish.Status.Health enum list but, we are interested in all these three and those will be updated based on the backend implementer i.e based on different conditions.\n\nI have noticed the comment from Patrick in that patch, can you reply - If it is already discussed, can you point me to the discussion? - I believe that will address in this new interface.\n\nI am ready to listen to your usages in that interface. Looks, we are discussing where the Redfish Status properties D-Bus mapping should go.",
+      "parentUuid": "4d6d04d2_955086cf",
       "revId": "6554bd1c6ef815becea729fc910c126bae030171",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

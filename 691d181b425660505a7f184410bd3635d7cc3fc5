@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "dc2ea9f1_d6ec318d",
+        "filename": "yaml/xyz/openbmc_project/Control/README.regulators.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2021-10-21T15:15:49Z",
+      "side": 1,
+      "message": "Good feedback, the way I worded that was a little confusing.\n\nI\u0027ve updated it to be more specific and hopefully clearer.\n\nI didn\u0027t create either of these interfaces, and I haven\u0027t used the VoltageRegulatorMode interface myself.  However, I was trying to create a document that covered both and explained where and when to use them.\n\nSince VoltageRegulatorMode specifies an implementation-specific \u0027mode\u0027 for the regulator, it is not obvious whether it should be implemented on the regulator object path or the rail object path.  It depends on what setting the mode actually does in a specific implementation.\n\nSo I took the approach that if you implement the VoltageRegulatorMode interface on a regulator object path, it is setting a mode that applies to the entire regulator and all the rails that it produces.  Perhaps it increases the maximum allowed voltage or current on all rails, or it updates settings that are not rail-specific.\n\nIf you implement the the VoltageRegulatorMode interface on a rail object path, it is setting a mode that applies only to that rail.  Perhaps it increases the voltage level or the max allowed current for just that rail.\n\nIf I\u0027m misunderstanding the interface and how it should be used, I\u0027m happy to update the wording to be more accurate.",
+      "parentUuid": "18f1e55b_f68ab7b6",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 77
+      },
+      "revId": "691d181b425660505a7f184410bd3635d7cc3fc5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e25a9cb2_44d6751f",
         "filename": "yaml/xyz/openbmc_project/Control/README.regulators.md",
         "patchSetId": 2
@@ -39,6 +63,24 @@
       "revId": "691d181b425660505a7f184410bd3635d7cc3fc5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d4f4771c_6eb34146",
+        "filename": "yaml/xyz/openbmc_project/Control/README.regulators.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2021-10-21T15:15:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e25a9cb2_44d6751f",
+      "revId": "691d181b425660505a7f184410bd3635d7cc3fc5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7781e98a_04f6310e",
+        "filename": "yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-22T20:58:53Z",
+      "side": 1,
+      "message": "Who is the intended user of this \"VoltageRailType\" broken out like this?  Some of these are still fairly hardware specific (as an example the Core vs CoreAnalog seems tied to a particular design) and I worry we\u0027re going to be adding more and more of these until they effectively become strings.\n\nIs there any programmatic cases where I need to \"find me the regulator that powers the ProcessorIO rail\"?  Or are these delineations mostly for humans?\n\nI wonder if it would be useful to have instead:\n- A property for the Voltage (which we already have).\n- An enumeration for \u0027State\u0027 { Standby, Runtime } (maybe Runtime isn\u0027t a great name).\n- The name being useful for humans purposes of identifying which goes where within a single device.",
+      "revId": "f1f0b0b36d38fefd58a2c5e25f62853dae358fc1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fec66b3f_20a97dc0",
+        "filename": "yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-22T20:58:53Z",
+      "side": 1,
+      "message": "\"Nest\" is Power(processor) specific, isn\u0027t it?",
+      "revId": "f1f0b0b36d38fefd58a2c5e25f62853dae358fc1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

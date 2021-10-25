@@ -102,6 +102,24 @@
       "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5ec4910c_0c388c53",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-10-25T16:19:24Z",
+      "side": 1,
+      "message": "Do we need to explicitly state that?  It seems unimportant to know or specify the difference between \"hardware encrypted\" and \"software encrypted\" at an interface level.  Also, all drives that support \"hardware\" encryption are a good bit of software as well, so where to draw the line gets confusing.  Given that it\u0027s attached to a \"drive\" object, and not a \"volume\" object, it seems like a given that it\u0027s the hardware variety, although I\u0027m not against adding more, I\u0027m just not sure what john would add that wouldn\u0027t make it more confusing.",
+      "parentUuid": "71020978_50559366",
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

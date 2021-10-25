@@ -228,6 +228,24 @@
       "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3bdf8b5d_e363c342",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-25T21:52:53Z",
+      "side": 1,
+      "message": "\u003e If the volume is LUKS (or any other software scheme) encrypted, I would expect this to return encrypted.\n\nHow would you know unless you\u0027re parsing the data in the drive itself?  Are there some drives where you might know if encryption is enabled via a side-band channel, but not be able to look at the data itself to know if it is software-encrypted?",
+      "parentUuid": "38174448_b40aa625",
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

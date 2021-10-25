@@ -16,6 +16,24 @@
       "revId": "6bf3083572dd35974f4c1506eedf01477d3afdfb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "05788831_1f4a5d23",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-25T23:22:18Z",
+      "side": 1,
+      "message": "very cool, it uses std::numeric_limits\u003cuint8_t\u003e::max(). I did not it did that, and I agree it is better then the const 255. Thanks",
+      "parentUuid": "4e0a6d16_1ccfd58b",
+      "revId": "6bf3083572dd35974f4c1506eedf01477d3afdfb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

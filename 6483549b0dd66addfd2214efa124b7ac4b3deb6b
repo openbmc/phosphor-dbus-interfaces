@@ -246,6 +246,24 @@
       "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "86b08752_8e43aa8c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-25T23:22:18Z",
+      "side": 1,
+      "message": "These are valid concerns.\n\nMy suspicion, is that if you can\u0027t read the drive, then you don\u0027t know if it is encypted or not, and we would return Unknown. That would be sub-optimal in the side band case you would always be reporting unknown. \n\nMy guess is in the side band mode, the bmc knows if the there is hardware encyprtion but not if the data is encrypted, right?\n\nI don\u0027t a plan now, but I am interested to hear Ed\u0027s take.",
+      "parentUuid": "3bdf8b5d_e363c342",
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

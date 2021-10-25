@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c93a2ebe_552e9334",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-25T20:52:09Z",
+      "side": 1,
+      "message": "reasonable, byte/255, fits what Ed\u0027s wanted also.",
+      "parentUuid": "9158d7f8_d12219e6",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 17
+      },
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c916f94b_151c53a2",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 4
@@ -39,6 +63,24 @@
       "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4a649f45_c54754d7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-25T20:52:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c916f94b_151c53a2",
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     },
     {
       "key": {
@@ -88,6 +130,54 @@
     },
     {
       "key": {
+        "uuid": "0e9d9685_68634eeb",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-25T20:52:09Z",
+      "side": 1,
+      "message": "Good concern, we had been thinking locked in the redfish terms. But non-rf used will use this also. \n\nunlocked \u003d \"data is accessible to the user in\"\nlocked \u003d \"data is NOT accessible to the user\"\n\nhttps://github.com/openbmc/bmcweb/blob/c0bd5e4b37f65ce29a392594d1ef240c64c99734/static/redfish/v1/schema/Drive_v1.xml#L363 \n\nWe need to think about this, to keep the interface clear. You will not be the only one with this rational and different definition of locked. Maybe we change the name to \"accessible\"?",
+      "parentUuid": "d6d16536_5b4c71d2",
+      "range": {
+        "startLine": 35,
+        "startChar": 29,
+        "endLine": 35,
+        "endChar": 36
+      },
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b478082d_0d56c65b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-25T20:52:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "20125880_b44afdd7",
+      "range": {
+        "startLine": 35,
+        "startChar": 44,
+        "endLine": 35,
+        "endChar": 49
+      },
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "71020978_50559366",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 4
@@ -117,6 +207,24 @@
       "side": 1,
       "message": "Do we need to explicitly state that?  It seems unimportant to know or specify the difference between \"hardware encrypted\" and \"software encrypted\" at an interface level.  Also, all drives that support \"hardware\" encryption are a good bit of software as well, so where to draw the line gets confusing.  Given that it\u0027s attached to a \"drive\" object, and not a \"volume\" object, it seems like a given that it\u0027s the hardware variety, although I\u0027m not against adding more, I\u0027m just not sure what john would add that wouldn\u0027t make it more confusing.",
       "parentUuid": "71020978_50559366",
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "38174448_b40aa625",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-10-25T20:52:09Z",
+      "side": 1,
+      "message": "If the volume is LUKS (or any other software scheme) encrypted, I would expect this to return encrypted.\nI understand how it might be important to clarify that in the interface.  \n\nWe might be able to add another enum that would describe the type of encryption used on given drive. Is there interest in that?",
+      "parentUuid": "5ec4910c_0c388c53",
       "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

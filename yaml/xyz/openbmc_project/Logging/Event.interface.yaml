@@ -30,3 +30,13 @@ properties:
       type: array[string]
       description: >
           Additional information in the form of metadata field strings VAR=val
+
+associations:
+    - name: event_indicator
+      description: >
+          The object that implements this event interface can implement the
+          event_indicator association to represent the status of the pointed
+          object through this association link so the pointed object can use
+          "reverse_name" to get more details about the event and indicate
+          the status and vice versa.
+      reverse_name: event_log

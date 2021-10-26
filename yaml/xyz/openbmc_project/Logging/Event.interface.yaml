@@ -30,6 +30,29 @@ properties:
       type: array[string]
       description: >
           Additional information in the form of metadata field strings VAR=val
+    - name: Severity
+      type: enum[self.SeverityLevel]
+      default: Unknown
+      description: >
+          The severity of the event.
+
+enumerations:
+    - name: SeverityLevel
+      description: >
+          Possiable severity levels for the event.
+      values:
+        - name: Unknown
+          description: >
+              The event severity is unknown.
+        - name: Ok
+          description: >
+              The event severity is normal and attention is not required.
+        - name: Critical
+          description: >
+              The event severity is critical and requires immediate attention.
+        - name: Warning
+          description: >
+              The event severity is warning and requires attention.
 
 associations:
     - name: event_indicator

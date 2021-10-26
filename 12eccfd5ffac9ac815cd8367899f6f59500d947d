@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "ba485462_e311be18",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-10-26T17:47:03Z",
+      "side": 1,
+      "message": "sorry, not following what you mean by this.",
+      "range": {
+        "startLine": 10,
+        "startChar": 38,
+        "endLine": 11,
+        "endChar": 29
+      },
+      "revId": "12eccfd5ffac9ac815cd8367899f6f59500d947d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3db558cf_103f30e2",
+        "filename": "yaml/xyz/openbmc_project/Logging/Event.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2021-10-26T17:47:03Z",
+      "side": 1,
+      "message": "Not following how this helps with Status.Conditions. I\u0027m still not convinced if we need anything additional on D-Bus to what we have already for implementing the Redfish Status property.",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 36
+      },
+      "revId": "12eccfd5ffac9ac815cd8367899f6f59500d947d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f76c6858_3ceca350",
         "filename": "yaml/xyz/openbmc_project/Logging/Event.interface.yaml",
         "patchSetId": 2

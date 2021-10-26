@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5d42b13d_710e57e2",
+        "filename": "yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2021-10-26T16:27:59Z",
+      "side": 1,
+      "message": "Sorry for the delay in responding.  I was out yesterday.\n\n\u003e Who is the intended user of this \"VoltageRailType\" broken out like this?  Some of these are still fairly hardware specific (as an example the Core vs CoreAnalog seems tied to a particular design) and I worry we\u0027re going to be adding more and more of these until they effectively become strings.\n\u003e \n\u003e Is there any programmatic cases where I need to \"find me the regulator that powers the ProcessorIO rail\"?  Or are these delineations mostly for humans?\n\u003e \n\u003e I wonder if it would be useful to have instead:\n\u003e - A property for the Voltage (which we already have).\n\u003e - An enumeration for \u0027State\u0027 { Standby, Runtime } (maybe Runtime isn\u0027t a great name).\n\u003e - The name being useful for humans purposes of identifying which goes where within a single device.\n\nThe intended user of this property is another BMC application, not a human.\n\nFor my current use case, the host (hostboot firmware) will look at the current system configuration and determine a new voltage value for the processor IO rail (VIO).  It will send that voltage down to PLDM, and PLDM will request the voltage change using this interface.  My application will see that request and apply the voltage change.\n\nAssociations can be used to point to the rails that power a specific processor.  But since multiple rail types power the processor in my case, PLDM needs a way to select the correct rail.  The host code knows it wants to change VIO, so PLDM needs to find the matching rail.\n\nI can certainly change this to a string.  I thought that an application like PLDM specifying an enumeration value when calling this D-Bus method would be better since it would result in a compile-time failure vs. a run-time failure if they specify an invalid rail type.\n\nHowever, you are probably correct that I have a few POWER-specific values in this enumeration.  I tried to make the names generic so they would not be platform-specific, but some might need to be tweaked.\n\nIf you feel strongly that a string is better, I\u0027m fine with that.  It will be less work overall for my regulators application.  Whatever is the best design.\n\nI don\u0027t currently have a use case for a \u0027State\u0027 field, but maybe someone else does and will want to add it?",
+      "parentUuid": "7781e98a_04f6310e",
+      "revId": "f1f0b0b36d38fefd58a2c5e25f62853dae358fc1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "fec66b3f_20a97dc0",
         "filename": "yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2021-10-22T20:58:53Z",
       "side": 1,
       "message": "\"Nest\" is Power(processor) specific, isn\u0027t it?",
+      "revId": "f1f0b0b36d38fefd58a2c5e25f62853dae358fc1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f69fd76_fb43724d",
+        "filename": "yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2021-10-26T16:27:59Z",
+      "side": 1,
+      "message": "Sorry I\u0027m not sure.  If so, I can rename to something more generic.  Or if you feel strongly about changing RailType to a string, then the concern goes away.",
+      "parentUuid": "fec66b3f_20a97dc0",
       "revId": "f1f0b0b36d38fefd58a2c5e25f62853dae358fc1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

@@ -40,3 +40,11 @@ associations:
           "reverse_name" to get more details about the event and indicate
           the status and vice versa.
       reverse_name: event_log
+    - name: error_log
+      description: >
+          The object that implements this event interface can implement the
+          error_log association to point the error log object that can be
+          used to get more details about the event.
+      reverse_name: event_log
+      required_endpoint_interfaces:
+          xyz.openbmc_project.Logging.Entry

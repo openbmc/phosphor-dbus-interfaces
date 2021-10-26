@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f76c6858_3ceca350",
+        "filename": "yaml/xyz/openbmc_project/Logging/Event.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-10-26T13:02:33Z",
+      "side": 1,
+      "message": "The event_indicator association can be created to any inventory item interface or entry interface so, how we can use the `required_endpoint_interfaces` field in the association documentation?\n\n\nShould we add with the required interface and later we can extend that list based on the needs?\n\nOR\n\nCan we just add the details on this in the `description`?",
+      "revId": "12eccfd5ffac9ac815cd8367899f6f59500d947d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

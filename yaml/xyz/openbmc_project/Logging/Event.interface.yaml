@@ -48,3 +48,9 @@ associations:
       reverse_name: event_log
       required_endpoint_interfaces:
           xyz.openbmc_project.Logging.Entry
+    - name: event_originator
+      description: >
+          The object that implements this event interface can implement the
+          event_originator association to point the object that originated
+          this event.
+      reverse_name: event_log

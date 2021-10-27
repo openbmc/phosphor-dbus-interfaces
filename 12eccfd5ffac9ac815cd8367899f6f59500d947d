@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "31c47504_4ddaa670",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-10-27T11:31:37Z",
+      "side": 1,
+      "message": "Sorry about that, added more details on this, please share your view.",
+      "parentUuid": "ba485462_e311be18",
+      "range": {
+        "startLine": 10,
+        "startChar": 38,
+        "endLine": 11,
+        "endChar": 29
+      },
+      "revId": "12eccfd5ffac9ac815cd8367899f6f59500d947d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3db558cf_103f30e2",
         "filename": "yaml/xyz/openbmc_project/Logging/Event.interface.yaml",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2021-10-26T17:47:03Z",
       "side": 1,
       "message": "Not following how this helps with Status.Conditions. I\u0027m still not convinced if we need anything additional on D-Bus to what we have already for implementing the Redfish Status property.",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 36
+      },
+      "revId": "12eccfd5ffac9ac815cd8367899f6f59500d947d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "65619678_92b49b93",
+        "filename": "yaml/xyz/openbmc_project/Logging/Event.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-10-27T11:31:37Z",
+      "side": 1,
+      "message": "Sorry about that, I have added more details about \"Why we are looking for the Redfish Status.Condition along with Redfish Status.Health, Status.HealthRollup, and Status.State\" (point 3 and 4) and also \"The new association usage\" (point 4.1, 4.2, and 4.3) in the commit message. - Can you please share your view on this?",
+      "parentUuid": "3db558cf_103f30e2",
       "range": {
         "startLine": 37,
         "startChar": 0,

@@ -68,15 +68,12 @@ properties:
       type: boolean
       description: >
           Boolean for to enabling or disabling the ethernet port
-    - name: LinkUp
-      type: boolean
-      flags:
-          - const
+    - name: LinkStatus
+      type: enum[self.EthernetLinkState]
       description: >
           This property reports the link status for the NIC. The read-only
-          boolean value is TRUE when the network cable is inserted, or there
-          is a carrier signal. It is FALSE when the cable is unplugged, or the
-          carrier signal is missing.
+          enum value Link Up, Link Down and noLink. noLink will be returned
+          when the NIC cable is not connected.
     - name: DefaultGateway
       type: string
       description: >
@@ -103,6 +100,14 @@ enumerations:
         - name: v4
         - name: v6
         - name: none
+
+    - name: EthernetLinkState
+      description: >
+          Possible link state of the ethernet link
+      values:
+        - name: linkdown
+        - name: linkup
+        - name: nolink
 
     - name: DHCPConf
       description: >

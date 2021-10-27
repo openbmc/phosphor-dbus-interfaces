@@ -282,6 +282,24 @@
       "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad162d13_97d2f91a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-10-27T17:41:18Z",
+      "side": 1,
+      "message": "Considering this is on the \"drive\" interface, I would expect that this has to be a drive.  LUKS would be on a \"Partition\" schema.\n\nWith that said, I\u0027m not sure we care about the distinction.  Given that most \"hardware\" encryption is a bunch of software anyway, just running in firmware instead of in userspace, I\u0027m not sure it really matters to make them distinct, or try to put too fine of a detail on it.",
+      "parentUuid": "3fcc8611_f3f24648",
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

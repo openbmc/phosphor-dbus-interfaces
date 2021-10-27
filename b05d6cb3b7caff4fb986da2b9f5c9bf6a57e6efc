@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ac5d359f_6a8c1b55",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-27T13:43:04Z",
+      "side": 1,
+      "message": "I\u0027d prefer a better title than this.  This isn\u0027t really a \"fix\" but a new feature and this isn\u0027t just useful for Redfish.",
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "51a4346a_3553bb78",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-27T13:43:04Z",
+      "side": 1,
+      "message": "systemd-networkd has quite a bit more states.  How are we going to map the systemd states to these proposed states?\n\nnetworkd states are { missing, off, no-carrier, dormant, degraded-carrier, carrier, degraded, enslaved, routable }.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "da38dc9a_4ba129c3",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-27T13:43:04Z",
+      "side": 1,
+      "message": "You seem to have removed the \u0027flags\u003dconst\u0027 on this though?",
+      "range": {
+        "startLine": 74,
+        "startChar": 65,
+        "endLine": 74,
+        "endChar": 74
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "393f1997_5894246f",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-27T13:43:04Z",
+      "side": 1,
+      "message": "Please use matching names with below.  Even better if they are `BackTickEscaped`.",
+      "range": {
+        "startLine": 75,
+        "startChar": 21,
+        "endLine": 75,
+        "endChar": 50
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c5be116_9e696df0",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-27T13:43:04Z",
+      "side": 1,
+      "message": "The general preference for names in this repository is UpperCamelCase.  There is code that will, depending on the C++ context, turn the UpperCamelCase into the appropriate case per our standards.  By not using, for example, LinkDown, you won\u0027t end up with \u0027link_down\u0027 or \u0027linkDown()\u0027 to match our coding standards.\n\n(I do realize that other enumerations in this file are also done incorrectly, but I think they are single words and not as affected and could be trivially refactored without impact.)",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 22
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

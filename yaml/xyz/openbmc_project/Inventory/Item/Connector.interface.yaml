@@ -1,3 +1,14 @@
 description: >
     Implement to provide connector attributes. A connector is typically an
     external port or a slot into which cables are plugged.
+
+associations:
+    - name: attached_cables
+      description: >
+          Objects that implement Connector can optionally implement the
+          attached_cables association to provide a link to the cable.
+      reverse_names:
+          - upstream_connector
+          - downstream_connector
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cable

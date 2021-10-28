@@ -17,3 +17,19 @@ properties:
           user interfaces but this field should not be used for programmatic
           interrogation of a cable beyond ignoring the default value of the
           empty string.
+
+associations:
+    - name: upstream_connector
+      description: >
+          Objects that implement Cable can optionally implement the
+          upstream_connector association to provide a link to the connector.
+      reverse_name: attached_cables
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Connector
+    - name: downstream_connector
+      description: >
+          Objects that implement Cable can optionally implement the
+          downstream_connector association to provide a link to the connector.
+      reverse_name: attached_cables
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Connector

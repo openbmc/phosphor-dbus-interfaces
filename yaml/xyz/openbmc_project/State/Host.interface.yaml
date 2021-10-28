@@ -112,3 +112,7 @@ enumerations:
         - name: 'SoftReset'
           description: >
             Soft reset of Host
+        - name: 'ScheduledPowerOn'
+          description: >
+            The restart was scheduled via the
+            xyz.openbmc_project.State.ScheduledHostTransition interface

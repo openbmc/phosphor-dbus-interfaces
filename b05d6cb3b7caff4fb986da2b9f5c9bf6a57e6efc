@@ -84,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "c40db7e1_faf90f21",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-28T12:11:51Z",
+      "side": 1,
+      "message": "\u003e The current goal is to match open-bmc with Redfish Spec. \n\nWho\u0027s goal is this?  I\u0027ve regularly said we shouldn\u0027t necessarily take the Redfish schemas and directly turn them into dbus interfaces.\n\n\u003e\u003e How are we going to map the systemd states to these proposed states?\n\nDeferring until later still doesn\u0027t answer this question, which is most important considering you actually need an implementation of this proposed interface change and the current implementation uses systemd-networkd.",
+      "parentUuid": "53c5aa92_15582a59",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "da38dc9a_4ba129c3",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 1
@@ -213,6 +237,30 @@
       "side": 1,
       "message": "I followed what other enum did. If this requires a fix, then I will fix it. Thanks for the comment.",
       "parentUuid": "0c5be116_9e696df0",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 22
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "39dfd815_16965489",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-28T12:11:51Z",
+      "side": 1,
+      "message": "Yes, in this case lets follow the correct conventions, rather than what is already in the file.",
+      "parentUuid": "00789ada_e2b88696",
       "range": {
         "startLine": 108,
         "startChar": 0,

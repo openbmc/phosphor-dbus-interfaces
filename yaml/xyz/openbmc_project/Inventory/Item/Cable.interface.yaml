@@ -17,3 +17,11 @@ properties:
           user interfaces but this field should not be used for programmatic
           interrogation of a cable beyond ignoring the default value of the
           empty string.
+associations:
+    - name: connecting
+      description: >
+          Objects that implement Cable can optionally implement the 'connecting'
+          association to provide a link to any inventory items.
+      reverse_name: connected_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

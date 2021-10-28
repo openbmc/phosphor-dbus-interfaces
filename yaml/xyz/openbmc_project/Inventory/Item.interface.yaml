@@ -110,6 +110,20 @@ associations:
       reverse_name: protecting
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.TrustedComponent
+    - name: connecting
+      description: >
+          Objects that implement Cable can optionally implement the 'connecting'
+          association to provide a link to any inventory items.
+      reverse_name: connected_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cable
+    - name: connected_to
+      description: >
+          Objects that implement Cable can optionally implement the
+          'connected_to' association to provide a link to any inventory items.
+      reverse_name: connecting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cable
 
 paths:
     - namespace: /xyz/openbmc_project/inventory

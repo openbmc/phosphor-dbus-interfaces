@@ -59,3 +59,13 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+
+    - name: attached_cables
+      description: >
+          Objects that implement Chassis can optionally implement the
+          attached_cables association to provide a link to one or more cables.
+      reverse_names:
+          - downstream_chassis
+          - upstream_chassis
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cable

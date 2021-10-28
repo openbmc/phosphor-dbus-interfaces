@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a0e75f87_ce3cfd8e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001244
+      },
+      "writtenOn": "2021-10-28T08:43:25Z",
+      "side": 1,
+      "message": "OK",
+      "parentUuid": "ac5d359f_6a8c1b55",
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "51a4346a_3553bb78",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -30,6 +48,30 @@
       "writtenOn": "2021-10-27T13:43:04Z",
       "side": 1,
       "message": "systemd-networkd has quite a bit more states.  How are we going to map the systemd states to these proposed states?\n\nnetworkd states are { missing, off, no-carrier, dormant, degraded-carrier, carrier, degraded, enslaved, routable }.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "53c5aa92_15582a59",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001244
+      },
+      "writtenOn": "2021-10-28T08:43:25Z",
+      "side": 1,
+      "message": "The current goal is to match open-bmc with Redfish Spec. Once Redfish spec is updated with other systemd-networkd states, the changes to this yml can be made.",
+      "parentUuid": "51a4346a_3553bb78",
       "range": {
         "startLine": 9,
         "startChar": 0,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "c06ccfff_6f86c8af",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1001244
+      },
+      "writtenOn": "2021-10-28T08:43:25Z",
+      "side": 1,
+      "message": "Agreed. Will add the flags\u003dconst back.",
+      "parentUuid": "da38dc9a_4ba129c3",
+      "range": {
+        "startLine": 74,
+        "startChar": 65,
+        "endLine": 74,
+        "endChar": 74
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "393f1997_5894246f",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 1
@@ -88,6 +154,30 @@
     },
     {
       "key": {
+        "uuid": "77ca99a1_36f9754d",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1001244
+      },
+      "writtenOn": "2021-10-28T08:43:25Z",
+      "side": 1,
+      "message": "Ok..will fix it.",
+      "parentUuid": "393f1997_5894246f",
+      "range": {
+        "startLine": 75,
+        "startChar": 21,
+        "endLine": 75,
+        "endChar": 50
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0c5be116_9e696df0",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 1
@@ -99,6 +189,30 @@
       "writtenOn": "2021-10-27T13:43:04Z",
       "side": 1,
       "message": "The general preference for names in this repository is UpperCamelCase.  There is code that will, depending on the C++ context, turn the UpperCamelCase into the appropriate case per our standards.  By not using, for example, LinkDown, you won\u0027t end up with \u0027link_down\u0027 or \u0027linkDown()\u0027 to match our coding standards.\n\n(I do realize that other enumerations in this file are also done incorrectly, but I think they are single words and not as affected and could be trivially refactored without impact.)",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 22
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "00789ada_e2b88696",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1001244
+      },
+      "writtenOn": "2021-10-28T08:43:25Z",
+      "side": 1,
+      "message": "I followed what other enum did. If this requires a fix, then I will fix it. Thanks for the comment.",
+      "parentUuid": "0c5be116_9e696df0",
       "range": {
         "startLine": 108,
         "startChar": 0,

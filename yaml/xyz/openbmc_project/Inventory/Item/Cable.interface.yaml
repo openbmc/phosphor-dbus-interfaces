@@ -17,3 +17,20 @@ properties:
           in user interfaces but this field should not be used for programmatic
           interrogation of a cable beyond ignoring the default value of the
           empty string.
+
+associations:
+    - name: downstream_chassis
+      description: >
+          Objects that implement Cable can optionally implement the
+          downstream_chassis association to provide a link to the
+          chassis.
+      reverse_name: attached_cables
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.Chassis
+
+    - name: upstream_chassis
+      description: >
+          Objects that implement Cable can optionally implement the
+          uptream_chassis association to provide a link to the chassis.
+      reverse_name: attached_cables
+        - xyz.openbmc_project.Inventory.Item.Chassis

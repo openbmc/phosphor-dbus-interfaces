@@ -116,3 +116,7 @@ enumerations:
           description: >
             The restart was scheduled via the
             xyz.openbmc_project.State.ScheduledHostTransition interface
+        - name: 'HostCrash'
+          description: >
+            The host firmware crashed and the BMC has automatically initiated a
+            restart of the host firmware

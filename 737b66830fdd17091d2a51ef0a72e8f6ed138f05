@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "35577bf3_b80d995c",
+        "filename": "yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-11-01T23:19:19Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem like it\u0027s enough, is it?  Presumably on most servers you\u0027d need to know this is \"VCC for socket 1\" or maybe \"VCC for socket 1, numa node 1\"\n\nAlso, put on a property like this, it\u0027s really hard to ask the mapper to help you out, and in code you\u0027d have to pull every sensor to find the one you\u0027re looking for.  Maybe if this were put in the path, it might be more useful?\n\n/xyz/openbmc_project/regulators/\u003cfoo vr\u003e\n\nAlso, do we need to make a statement about uniqueness?  As-written, I could have two \"vcc\" regulators.  In the dbus-path model, it\u0027s implied that they\u0027re required to be unique.",
+      "range": {
+        "startLine": 34,
+        "startChar": 51,
+        "endLine": 34,
+        "endChar": 72
+      },
+      "revId": "737b66830fdd17091d2a51ef0a72e8f6ed138f05",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

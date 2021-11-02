@@ -87,14 +87,14 @@ endforeach
 generated_root = meson.current_build_dir() / 'gen/'
 exclude_cpp = []
 foreach f : generated_files_cpp
-    exclude_cpp += f.full_path().replace(generated_root, '')
+    exclude_cpp += f.full_path().replace(generated_root, '').strip('/')
 endforeach
 
 # Install the generated header files.
 exclude = exclude_cpp
 foreach o : generated_others
     foreach f : o.to_list()
-        exclude += f.full_path().replace(generated_root, '')
+        exclude += f.full_path().replace(generated_root, '').strip('/')
     endforeach
 endforeach
 install_subdir(
@@ -107,7 +107,7 @@ install_subdir(
 # Install the generated markdown files.
 exclude = exclude_cpp
 foreach f : generated_files_headers
-    exclude += f.full_path().replace(generated_root, '')
+    exclude += f.full_path().replace(generated_root, '').strip('/')
 endforeach
 install_subdir(
     generated_root,

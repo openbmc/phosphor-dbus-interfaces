@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9b0eab54_5a2ca279",
+        "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2021-11-02T05:05:55Z",
+      "side": 1,
+      "message": "So I have kept this as a separate interface because, any dbus object can implement this interface to indicate who has initiated the activity/operation, if applicable.\nThis is because, the DMTF community also seem to need this interface for audit logs (forum thread at: https://redfishforum.com/thread/547/usage-originofcondition-parameter-logentry-schema)\n\nThis \"GeneratorId\" is needed here in the Create dump method as an additional parameter, whose value if not null, will then be populated in the dump entry dbus object.\nSo all the user initiated dumps will have this assitional parameter with the unique id as its value.",
+      "parentUuid": "73ed14ac_878ac524",
+      "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7c6d4491_bc6b1038",
         "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2021-10-28T21:52:27Z",
       "side": 1,
       "message": "I still have concerns about this being interoperable. A free-form string means users can put whatever they want in it. How does this map to Redfish?",
+      "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72e16930_5adcedc6",
+        "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2021-11-02T05:05:55Z",
+      "side": 1,
+      "message": "IMU, this should be taken care in the implementation.\nExample: for dumps, client ip that has caused the dump creation will be assigned to this property and the bmcweb will then display it in the redfish response.\n\nLikewise, whereever this prop is implemented, they must be assigning any unique id of the entity that has caused the operation and then should send it in the redfish response.",
+      "parentUuid": "7c6d4491_bc6b1038",
       "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

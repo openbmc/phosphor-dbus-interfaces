@@ -16,6 +16,24 @@
       "revId": "762b491b5fb9c3753e871d6fe13617e69d25b216",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c0985902_79060636",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-11-03T21:25:04Z",
+      "side": 1,
+      "message": "The \"PowerPolicyAlwaysOn\" / \"PowerPolicyPreviousState\" are only utilized right after the BMC has rebooted. The primary use case with those is AC loss scenarios (blackouts). In those cases the BMC firmware looks at it\u0027s power recovery policy, and if the policy is to power on the host, it will set those reasons accordingly in this property. This new \"HostCrash\" is only for scenarios where the host crashes (and the BMC remains up and running). If the system has an autoreboot policy enabled, then the host will be rebooted. I\u0027d like to have the BMC firmware set this reason as a cookie crumb to easily know it occurred.",
+      "parentUuid": "c605e3f6_ea7408a3",
+      "revId": "762b491b5fb9c3753e871d6fe13617e69d25b216",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

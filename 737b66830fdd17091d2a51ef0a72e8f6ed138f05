@@ -46,6 +46,30 @@
       "revId": "737b66830fdd17091d2a51ef0a72e8f6ed138f05",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "777a7670_9b21452a",
+        "filename": "yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-11-03T22:13:50Z",
+      "side": 1,
+      "message": "\u003e Hi Ed,\n\u003e \n\u003e In the README file in this commit, I tried to cover I think what you are asking about.  I might be misunderstanding though.\n\nAh, so you did.  Mea culpa, I should\u0027ve read the whole patch.\n\n\u003e \n\u003e My proposal in the README is for regulators to have a D-Bus path of the form\n\u003e   /xyz/openbmc_project/regulators/\u003cregulator\u003e\n\u003e and for regulator rails to have a D-Bus path of the form\n\u003e   /xyz/openbmc_project/regulators/\u003cregulator\u003e/\u003crail\u003e\n\u003e \n\u003e For example, if you have multiple CPU regulators, the regulator for CPU 0 might have the path:\n\u003e     /xyz/openbmc_project/regulators/cpu0_vrm\n\u003e \n\u003e And if that regulator produces both a Vcc and a Vio rail for the CPU, those rails might have the path:\n\u003e     /xyz/openbmc_project/regulators/cpu0_vrm/vcc0\n\u003e     /xyz/openbmc_project/regulators/cpu0_vrm/vio0\n\u003e \n\u003e In the README I propose having associations between an inventory item and the regulator rails that power it.  So if you wanted to find the VIO rail for CPU0, you would do the following:\n\u003e * Find the inventory item for CPU0\n\u003e * Find the rails that power it from the \u0027powered_by\u0027 association\n\u003e * If there are multiple rails in the association, determine which one is the VIO rail via the RailType property.\n\u003e \n\u003e In this example, there might be CPU1, CPU2, and CPU3 in the system as well.  So cpu1_vrm/vcc1 and cpu2_vrm/vcc2 would also have the \u0027vcc\u0027 RailType.  The RailType is not intended to be unique.  It is a category of rails that serve a similar purpose, such as powering the IO logic in a CPU.\n\u003e \n\u003e In my use case, the host code knows it wants to set the \u0027vio\u0027 rail for CPU0.  It sends a request down through PLDM.  The code there needs a way to find the vio type rail for CPU0.\n\u003e \n\u003e It would be tough to encode the rail type in the D-Bus path unless we give regulators and rails separate namespaces.  On the systems I work on, many regulators produce two rails of different types.  For example, reg1 might produce vcc0 and vio0.  So the regulator node of the path would not fit solely in either rail type.\n\u003e \n\u003e We had discussed having rails and regulators in separate namespaces in Discord.  For example:\n\u003e   /xyz/openbmc_project/regulators/\u003cregulator\u003e\n\u003e   /xyz/openbmc_project/rails/\u003crail\u003e\n\u003e \n\u003e But then we would probably want associations between them so you know which regulator a rail is produced by for error reporting purposes.  Patrick preferred the single, hierarchical namespace to avoid the extra association lookup.\n\u003e \n\u003e Let me know if I\u0027m off in the weeds.  I\u0027m just trying to find a compromise avoids the concerns people have mentioned.\n\nI think you\u0027re pretty close after having read the README (which again, I should\u0027ve done earlier, sorry about that.)",
+      "parentUuid": "78fcf768_4d8dc5a5",
+      "range": {
+        "startLine": 34,
+        "startChar": 51,
+        "endLine": 34,
+        "endChar": 72
+      },
+      "revId": "737b66830fdd17091d2a51ef0a72e8f6ed138f05",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

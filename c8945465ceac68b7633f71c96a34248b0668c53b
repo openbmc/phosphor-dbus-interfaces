@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5df878a7_0f306f4f",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-04T17:32:08Z",
+      "side": 1,
+      "message": "It seems like \"RestartCause\" is kind of a poor name for this enumeration then since both \u0027PowerButton\u0027, \u0027PowerPolicy*\u0027, and \u0027ScheduledPowerOn\u0027 are all \"StartCause\" and not \"RestartCause\"... oh well.",
+      "revId": "c8945465ceac68b7633f71c96a34248b0668c53b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

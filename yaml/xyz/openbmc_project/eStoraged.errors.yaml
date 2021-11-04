@@ -1,0 +1,7 @@
+- name: EncryptionError
+  description: One of the cryptsetup APIs returned an error.
+- name: EraseError
+  description: Failed to erase the eMMC.
+- name: FilesystemError
+  description: Failed to create the filesystem for the eMMC.
+

@@ -1,0 +1,107 @@
+description: >
+    D-bus interface to manage an encrypted storage device.
+
+methods:
+    - name: Format
+      description: >
+        Format the encrypted device and create filesystem.
+      parameters:
+        - name: password
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.FilesystemError
+
+    - name: Erase
+      description: >
+        Erase the contents of the device
+      parameters:
+        - name: password
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password
+        - name: eraseType
+          type: enum[self.EraseMethod]
+          description: >
+            Describes what type of erase is done.
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.EraseError
+        - self.Error.FilesystemError
+
+    - name: Lock
+      description: >
+        Lock the device and remove sensitive data (e.g. volume key) from memory
+      parameters:
+        - name: password
+          type: array[byte]
+          description: >
+            Password for the device
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.FilesystemError
+
+    - name: Unlock
+      description: >
+        Activate the device and mount the filesystem.
+      parameters:
+        - name: password
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.FilesystemError
+
+    - name: ChangePassword
+      description: >
+        Change the password that unlocks the storage device.
+      parameters:
+        - name: oldPassword
+          type: array[byte]
+          description: >
+            Array of bytes for the old LUKS password.
+        - name: newPassword
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+      errors:
+        - self.Error.EncryptionError
+
+properties:
+    - name: Locked
+      type: boolean
+      default: True
+      description: >
+        Indicates whether the eMMC is locked.
+    - name: Status
+      type: enum[self.State]
+      default: Success
+      description: >
+        Current state of eStoraged.
+
+enumerations:
+    - name: State
+      description: >
+        Indicates success, error, or in progress.
+      values:
+        - name: Success
+          description: >
+            No error has been encountered.
+        - name: Error
+          description: >
+            The service has encountered an error.
+        - name: InProgress
+          description: >
+            A method is in progress.
+
+    - name: EraseMethod
+      description: >
+        Indicates which erase method/step is being
+        requested
+      values:
+        - name: AllZeros
+          description: >
+            Write all zeros to the device.

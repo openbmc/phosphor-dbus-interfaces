@@ -135,3 +135,17 @@ generated_others += custom_target(
 
 subdir('User')
 subdir('VirtualMedia')
+subdir('eStoraged')
+generated_others += custom_target(
+    'xyz/openbmc_project/eStoraged__markdown'.underscorify(),
+    input: [ '../../../yaml/xyz/openbmc_project/eStoraged.interface.yaml',  ],
+    output: [ 'eStoraged.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../yaml',
+        'xyz/openbmc_project/eStoraged',
+    ],
+)
+

@@ -1,0 +1,110 @@
+description: >
+    D-bus interface to manage an encrypted storage device.
+
+methods:
+    - name: Format
+      description: >
+        Format the encrypted device and create an ext4 filesystem.
+      parameters:
+        - name: Password
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.FilesystemError
+
+    - name: Erase
+      description: >
+        Erase the contents of the device.
+      parameters:
+        - name: Password
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+        - name: EraseType
+          type: enum[self.EraseMethod]
+          description: >
+            Describes what type of erase is done.
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.EraseError
+        - self.Error.FilesystemError
+
+    - name: Lock
+      description: >
+        Unmount the filesystem, lock the device, and remove sensitive data
+        (e.g. volume key) from memory.
+      parameters:
+        - name: Password
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.FilesystemError
+
+    - name: Unlock
+      description: >
+        Activate the device and mount the filesystem.
+      parameters:
+        - name: Password
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.FilesystemError
+
+    - name: ChangePassword
+      description: >
+        Change the password that unlocks the storage device.
+      parameters:
+        - name: OldPassword
+          type: array[byte]
+          description: >
+            Array of bytes for the old LUKS password.
+        - name: NewPassword
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+      errors:
+        - self.Error.EncryptionError
+
+properties:
+    - name: Locked
+      type: boolean
+      default: false
+      description: >
+        Indicates whether the device is locked.
+
+enumerations:
+    - name: EraseMethod
+      description: >
+        Indicates which erase method/step is being requested.
+      values:
+        - name: CryptoErase
+          description: >
+            Destroys the encryption key slots, preventing decyrption.
+        - name: VerifyGeometry
+          description: >
+            Confirms a set percent of the disk is accessible.
+        - name: LogicalOverWrite
+          description: >
+            Overwrites the disk with a reproducible incompressible pattern.
+        - name: LogicalVerify
+          description: >
+            Verifies a reproducible pattern has been written to the disk.
+        - name: VendorSanitizie
+          description: >
+            Uses the sanitization provided by the device firmware.
+        - name: ZeroOverWrite
+          description: >
+            Writes zeros over the whole disk.
+        - name: ZeroVerify
+          description: >
+            Verifies the the entire disk has been zeroed.
+        - name: SecuredLocked
+          description: >
+            Locks the disk to prevent data being written to it.
+

@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "7aecf2c8_aba3e38f",
+        "filename": "yaml/xyz/openbmc_project/Control/README.regulators.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-04T17:01:36Z",
+      "side": 1,
+      "message": "There is a problem/solution in dbus with being able to encode unsupported characters into paths.  We have some code in sdbusplus to facilitate this.  When you start a name with a number there can be some collision with this code that encode/decodes the path, so you might want to either:\n\n1. Not start names with a number.\n2. Use the path encoding we have to allow arbitrary strings.  This would allow the path segment (from a code perspective) to be literally \u00273.3 vcs\u0027 but it would be encoded at a dbus level to something like \u0027_33_2e3_vcs\u0027*.\n\nYou can see `sd_bus_path_encode` and in sdbusplus the `string_path_wrapper` class.  (We use a slightly different encoding right now because there are too many collisions currently but we want to transition to sd_bus_path_encode directly).\n\n(*): The point about collisions in our current implementation is what causes the first character to be encoded.  In the future this should become encoded as \u00273_2e3_vcs\u0027 -\u003e \u00273.3 vcs\u0027.",
+      "range": {
+        "startLine": 52,
+        "startChar": 46,
+        "endLine": 52,
+        "endChar": 53
+      },
+      "revId": "737b66830fdd17091d2a51ef0a72e8f6ed138f05",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "35577bf3_b80d995c",
         "filename": "yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml",
         "patchSetId": 4
@@ -66,6 +89,29 @@
         "startChar": 51,
         "endLine": 34,
         "endChar": 72
+      },
+      "revId": "737b66830fdd17091d2a51ef0a72e8f6ed138f05",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "821a6adc_185f0796",
+        "filename": "yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-04T17:01:36Z",
+      "side": 1,
+      "message": "How do we plan to maintain the connection between the two then?  The fact that they are \"system-specific\" arbitrary strings makes matching up fairly fragile.  An alternative here is to have them be strings, but require the string values to be fully-qualified enumeration names like \u0027xyz.openbmc_project.Control.VoltageRegulatorControl.VCS\u0027 or\n\u0027com.ibm.Control.VoltageRegulatorControl.Power10.Fabric\u0027.  We have done similar for \"Dump Parameters\" here:\n\n\u003e yaml/xyz/openbmc_project/Dump/Create.interface.yaml:            \u0027domain.Dump.Create.CreateParameters.ParamName\u0027.\n\nThere is similarly effort going on to enhance code-update to have similar mechanisms to identify the relationship between a piece of inventory and a firmware image using these FQENs.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 55
       },
       "revId": "737b66830fdd17091d2a51ef0a72e8f6ed138f05",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",

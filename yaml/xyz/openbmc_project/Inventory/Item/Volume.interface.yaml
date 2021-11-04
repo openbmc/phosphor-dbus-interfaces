@@ -1,0 +1,106 @@
+description: >
+    D-bus interface to manage a logical storage volume. Currently, this
+    interface only supports LUKS encrypted volumes, but it can be extended in
+    the future to support other types of volumes, as well.
+
+methods:
+    - name: FormatLuks
+      description: >
+        Format a LUKS encrypted device and create a filesystem.
+      parameters:
+        - name: Password
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+        - name: FilesystemType
+          type: string
+          description: >
+            Type of filesystem, e.g. ext2, ext3, ext4, fat, vfat.
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.FilesystemError
+
+    - name: Erase
+      description: >
+        Erase the contents of the volume.
+      parameters:
+        - name: EraseType
+          type: enum[self.EraseMethod]
+          description: >
+            Describes what type of erase is done.
+      errors:
+        - self.Error.EraseError
+        - self.Error.FilesystemError
+
+    - name: Lock
+      description: >
+        Unmount the filesystem, lock the volume, and remove sensitive data
+        (e.g. volume key) from memory.
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.FilesystemError
+
+    - name: Unlock
+      description: >
+        Activate the volume and mount the filesystem.
+      parameters:
+        - name: Password
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+      errors:
+        - self.Error.EncryptionError
+        - self.Error.FilesystemError
+
+    - name: ChangePassword
+      description: >
+        Change the LUKS password that unlocks the storage volume.
+      parameters:
+        - name: OldPassword
+          type: array[byte]
+          description: >
+            Array of bytes for the old LUKS password.
+        - name: NewPassword
+          type: array[byte]
+          description: >
+            Array of bytes to use as the LUKS password.
+      errors:
+        - self.Error.EncryptionError
+
+properties:
+    - name: Locked
+      type: boolean
+      default: false
+      description: >
+        Indicates whether the LUKS volume is locked.
+
+enumerations:
+    - name: EraseMethod
+      description: >
+        Indicates which erase method/step is being requested.
+      values:
+        - name: CryptoErase
+          description: >
+            Destroys the encryption key slots, preventing decyrption.
+        - name: VerifyGeometry
+          description: >
+            Confirms a set percent of the disk is accessible.
+        - name: LogicalOverWrite
+          description: >
+            Overwrites the disk with a reproducible incompressible pattern.
+        - name: LogicalVerify
+          description: >
+            Verifies a reproducible pattern has been written to the disk.
+        - name: VendorSanitize
+          description: >
+            Uses the sanitization provided by the device firmware.
+        - name: ZeroOverWrite
+          description: >
+            Writes zeros over the whole disk.
+        - name: ZeroVerify
+          description: >
+            Verifies the the entire disk has been zeroed.
+        - name: SecuredLocked
+          description: >
+            Locks the disk to prevent data being written to it.
+

@@ -34,19 +34,29 @@ populate all of the properties of `xyz.openbmc_project.Software.Version`.
 *ItemUpdater*s will likely listen for standard D-Bus signals to identify new
 images being created.
 
-### *ItemUpdater*
+### ItemUpdater
 
-The *ItemUpdater* is responsible for monitoring for new `Software.Version` elements
-being created to identify versions that are applicable to the inventory
-element(s) it is managing.  The *ItemUpdater* should dynamically create
-an `xyz.openbmc_project.Software.Activation` interface under
+The *ItemUpdater* is responsible for monitoring for new `Software.Version`
+elements being created to identify versions that are applicable to the
+inventory element(s) it is managing.  The *ItemUpdater* should dynamically
+create an `xyz.openbmc_project.Software.Activation` interface under
 `/xyz/openbmc_project/software/`, an association of type
 `{active_image,software_version}` between the `Software.Version` and
 `Software.Activation` under `/xyz/openbmc_project/software/`, and an
-association of type `{activation,item}` between the `Inventory.Item`
-and `Software.Activation` under `/xyz/openbmc_project/software/<id>`.
-Application of the software image is then handled through the
-`RequestedActivation` property of the `Software.Activation` interface.
+association of type `{activation,item}` between the `Inventory.Item` and
+`Software.Activation` under `/xyz/openbmc_project/software/<id>`.  Application
+of the software image is then handled through the `RequestedActivation`
+property of the `Software.Activation` interface.
+
+In many cases, the *ItemUpdater*'s creation of the `Software.Activation`
+interface will be at the exact same path as the *ImageManager*'s
+`Software.Version` instance (ie. `/xyz/openbmc_project/software/<id>`).  This is
+appropriate when the software image can be applied to exactly one device in the
+system at exactly one storage location.  In cases where multiple devices could
+updated with the same image or multiple locations in the same device could hold
+the same image (such as a primary / secondary flash bank relationship), the
+*ItemUpdater* should create `Software.Activation` interfaces as a sub-path of
+the corresponding image, such as `/xyz/openbmc_project/software/<id>/<device>`.
 
 The *ItemUpdater* should, if possible, also create its own
 `xyz.openbmc_project.Software.Version` objects, and appropriate associations
@@ -155,6 +165,25 @@ may not honor this field or be unable to comply with the request, in which
 case the resulting `Activation` may result in one of two conditions: a
 `ActivationState = Failed` or an `ActivateState = Active`` with a
 `RedundancyPriority = 0 (High)`.
+
+### Image Clean Up
+
+An *ItemUpdater* is responsible for garabage collecting images contained on the
+elements it is managing.  Often an element can only contain a single image so
+this is a natural side-effect of the update process.  In other cases, the
+*ItemUpdater* may remove images based on the `RedundancyPriority` assigned to an
+image.
+
+The *ItemManager* should expose `Object.Delete()` methods to remove images from
+the BMC filesystem.  It is possible that some *ItemUpdater*s will call this
+method once the `Version` is successfully activated.
+
+In some designs there may be multiple *ItemUpdater* instances which are handling
+update for different system elements, all of which can potentially apply the
+same software image (as in a multi-host design).  The *ItemManager* may
+optionally monitor the `Software.Activation` signals and actively garbage
+collect an image once all `Software.Activation` under the `.../software/<id>`
+path are either `Active` or `Staged`.
 
 ### Software Settings
 

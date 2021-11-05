@@ -102,6 +102,28 @@ enumerations:
         Indicates which erase method/step is being
         requested
       values:
-        - name: AllZeros
+        - name: CryptoErase
           description: >
-            Write all zeros to the device.
+            Destroys the encryption key slots, preveting decyrption.
+        - name: VerifyGeometry
+          description: >
+            Confirms a set percent of the disk is accessible
+        - name: LogicalOverWrite
+          description: >
+            Overwrites the disk with a reproducible incompressible pattern
+        - name: LogicalVerify
+          description: >
+            Verifies an reproducible patter has been written to the disk
+        - name: VendorSanitizie
+          description: >
+            Uses the sanitization provided by the eMMC firmware
+        - name: ZeroOeverWrite
+          description: >
+            Writes zeros over the whole disk
+        - name: ZeroVerify
+          description: >
+            Writes zeros over the whole disk
+        - name: SecuredLocked
+          description: >
+            Locks the disk to prevent data being written to it
+

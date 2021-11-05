@@ -14,8 +14,9 @@ code update:
                    this would be a process that controls and updates the BIOS
                    flash module for a managed host.
 
-A simple system design would be to include a single *ImageManager* and two
-*ItemUpdater*s: one for the BMC itself and one for the Host.
+As simple system design the software version management provides a
+single *ImageManager* and two *ItemUpdater*s: one for the BMC itself and one
+generic for the Hosts.
 
 ### ImageManager
 
@@ -36,11 +37,11 @@ images being created.
 
 ### *ItemUpdater*
 
-The *ItemUpdater* is responsible for monitoring for new `Software.Version` elements
-being created to identify versions that are applicable to the inventory
-element(s) it is managing.  The *ItemUpdater* should dynamically create
-an `xyz.openbmc_project.Software.Activation` interface under
-`/xyz/openbmc_project/software/`, an association of type
+The *ItemUpdater* is responsible for monitoring for new
+`Software.Version` elements being created to identify versions that are
+applicable to the inventory element(s) it is managing.  The *ItemUpdater*
+should dynamically create an `xyz.openbmc_project.Software.Activation`
+interface under `/xyz/openbmc_project/software/`, an association of type
 `{active_image,software_version}` between the `Software.Version` and
 `Software.Activation` under `/xyz/openbmc_project/software/`, and an
 association of type `{activation,item}` between the `Inventory.Item`
@@ -53,6 +54,23 @@ The *ItemUpdater* should, if possible, also create its own
 for software versions that are currently present on the managed inventory
 element(s).  This provides a mechanism for interrogation of the
 software versions when the *ImageManager* no longer contains a copy.
+
+The elements created as `/xyz/openbmc_project/software/<id>` are
+distinguished between BMC software and Hosts software by the content of
+the property `Software.Version.Purpose`, so each *ItemUpdater* instance
+manages their own elements.
+
+#### Differences between *BMC ItemUpdater* and *HOST ItemUpdater*
+
+*HOST ItemUpdater* manages multiple `Activation` items per a single
+`/xyz/openbmc_project/software/<id>` to allow multi hosts software update. So
+the `Activation` process must be performed against an element under
+`/xyz/openbmc_project/software/<id>`, as
+`/xyz/openbmc_project/software/<id>/<child>`
+
+Only the interface `xyz.openbmc_project.Software.Activation` will be moved to
+children elements of `/xyz/openbmc_project/software/<id>` other
+interfaces will remain in the parent element.
 
 ## Details
 

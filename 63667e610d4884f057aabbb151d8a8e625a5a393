@@ -22,6 +22,30 @@
       "revId": "63667e610d4884f057aabbb151d8a8e625a5a393",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6ac18d5d_59aec919",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-09T23:56:39Z",
+      "side": 1,
+      "message": "I didn\u0027t think these values needed to be in the design doc, since some of this is specific to Google. One thing that came up during the design doc review is that different organizations have their own ideas of what a secure erase actually entails. So, we wanted to allow other people to add their own erase operations, if they want. And if someone does choose to add another erase type, a new entry would be added to this enum.\n\nIf people think the design doc needs more documentation regarding the erase, let me know.",
+      "parentUuid": "56350235_e0064262",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 128,
+        "endChar": 0
+      },
+      "revId": "63667e610d4884f057aabbb151d8a8e625a5a393",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

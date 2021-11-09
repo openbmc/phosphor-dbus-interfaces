@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c430c9db_0119621d",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-11-09T00:52:42Z",
+      "side": 1,
+      "message": "Anyone could use these steps in any order. I have no problem adding a prefix. However, it is possibly that someone else will want to use one of our erase functions. \nFor example, it might be strange if company x needs to run \"google_erase_step1_crypto_erase\" \n\nI am interested in what others have to say, leaving open, for additional comments.",
+      "parentUuid": "9788ec67_df3c3c1b",
+      "range": {
+        "startLine": 104,
+        "startChar": 6,
+        "endLine": 104,
+        "endChar": 12
+      },
+      "revId": "f457f810d8b853f1867b0d251e686037ee970200",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2f5fa3fa_db8473c3",
         "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
         "patchSetId": 1

@@ -175,6 +175,30 @@
       "revId": "63667e610d4884f057aabbb151d8a8e625a5a393",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5fd8761a_1b73e59b",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2021-11-10T18:47:28Z",
+      "side": 1,
+      "message": "That is good question, and I understand how that could be useful for others.\n\nOur disk erase service manages the erase state. So this service expects to be able to do any of the 8 steps above, and get a result.",
+      "parentUuid": "2f112ef1_dba1d1ed",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 128,
+        "endChar": 0
+      },
+      "revId": "63667e610d4884f057aabbb151d8a8e625a5a393",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

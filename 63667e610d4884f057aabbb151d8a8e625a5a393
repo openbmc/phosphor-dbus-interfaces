@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "40a919fe_8ebaf61f",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-11-10T20:39:38Z",
+      "side": 1,
+      "message": "The concern is good, but we should allow that level of asynchronicity to happen at the DBus call level. As long as the daemon is responding to pings, the requests shouldn\u0027t time out and you can increase per-call timeouts as desired for these operations.",
+      "parentUuid": "3e447e35_4f830856",
+      "revId": "63667e610d4884f057aabbb151d8a8e625a5a393",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "56350235_e0064262",
         "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
         "patchSetId": 7

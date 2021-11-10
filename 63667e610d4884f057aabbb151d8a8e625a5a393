@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3647b4ef_2409eb3b",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-10T17:56:46Z",
+      "side": 1,
+      "message": "Yes, I updated the description to say that.",
+      "parentUuid": "191a3ca7_c7a0d56a",
+      "revId": "63667e610d4884f057aabbb151d8a8e625a5a393",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "925e0ea3_bac4d17e",
         "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
         "patchSetId": 7
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "b1be5edf_b47fe86f",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-10T17:56:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "925e0ea3_bac4d17e",
+      "revId": "63667e610d4884f057aabbb151d8a8e625a5a393",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9d8c5123_ebad6552",
         "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
         "patchSetId": 7
@@ -47,6 +83,24 @@
       "writtenOn": "2021-11-10T11:24:59Z",
       "side": 1,
       "message": "You should get back an error in coordination with the method, why would you want this if you can\u0027t know the exact order of transactions before you?",
+      "revId": "63667e610d4884f057aabbb151d8a8e625a5a393",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3e447e35_4f830856",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-10T17:56:46Z",
+      "side": 1,
+      "message": "Since some of the D-Bus methods might take a while, namely format and erase, I was thinking they might need to be asynchronous, to avoid exceeding the D-Bus timeout. So, after calling the Format method, for example, the caller would need to query the status, to see whether it finished or hit an error, or whether it\u0027s still running.\n\nDo you think it makes sense to do it this way? Making the D-Bus methods synchronous would certainly be simpler, as long as D-Bus timeouts aren\u0027t an issue.",
+      "parentUuid": "9d8c5123_ebad6552",
       "revId": "63667e610d4884f057aabbb151d8a8e625a5a393",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

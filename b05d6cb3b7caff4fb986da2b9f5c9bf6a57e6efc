@@ -156,6 +156,30 @@
     },
     {
       "key": {
+        "uuid": "8f5d85b6_f2074bdf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2021-11-11T21:08:09Z",
+      "side": 1,
+      "message": "My 2c on this change is that you can currently get the information about all 3 states by looking at NICEnabled + LinkUp. NICEnabled tells you the Admin state, and LinkUp tells you whether or not the lower interface is actually running (PHY has a cable plugged in, bridge has a member).\n\nSo really it\u0027s not needed. There is a related phosphor-networkd fix for getting the link carrier state with NCSI, as there is no phy to report IFF_RUNNNING. I don\u0027t know why IFF_RUNNING differs from /sys/class/net/\u003ceth\u003e/carrier, but that doesn\u0027t need interface changes.",
+      "parentUuid": "18972cea_2be0f85a",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "da38dc9a_4ba129c3",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 1

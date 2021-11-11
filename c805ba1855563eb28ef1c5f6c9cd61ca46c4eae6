@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "539cae7b_a538ceb9",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-11T16:31:20Z",
+      "side": 1,
+      "message": "Why ext4?  What if I want to use something else someday?  Need a new API?  Should this simply be \"whatever filesystem the managing daemon decides to use\"?",
+      "range": {
+        "startLine": 7,
+        "startChar": 50,
+        "endLine": 7,
+        "endChar": 54
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2738ab26_15dc5dd7",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-11T16:31:20Z",
+      "side": 1,
+      "message": "Is this restricted to LUKS based implementations?  Should this be documented in the API?",
+      "range": {
+        "startLine": 12,
+        "startChar": 41,
+        "endLine": 12,
+        "endChar": 45
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e090c03_463a3814",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-11T16:31:20Z",
+      "side": 1,
+      "message": "Before I ask it, I\u0027ll preface I don\u0027t have a good answer for this question and I don\u0027t see anything necessarily see anything wrong with this breakdown in error classification.\n\n\nAs a user of your API, what am I expected to do with these?  Generally, we\u0027ve been trying to get rid of InternalError because there is no method that I, as a user of your API, can determine how to get your code into a state where the call will be successful.  I don\u0027t see either of these errors as much different.  If I get \"EncryptionError\" from your API, how do I get the system into a state where it won\u0027t give \"EncryptionError\" anymore?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 36
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2dc2efae_131cf2c5",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-11T16:31:20Z",
+      "side": 1,
+      "message": "Why do I need a password to erase the contents?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 55
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2ecbf4e0_85299852",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-11T16:31:20Z",
+      "side": 1,
+      "message": "I\u0027m similarly surprised you need a password to \u0027lock\u0027 a device.  Is this a hardware-level password?  I thought locking a device was simply forgetting the encryption handles?",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 55
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a34a0c9e_994abb90",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-11T16:31:20Z",
+      "side": 1,
+      "message": "Did we ever settle on terminology for this (Locked)?",
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

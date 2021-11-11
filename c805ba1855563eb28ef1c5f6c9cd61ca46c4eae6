@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "83f135f1_b0bc8056",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-11T19:46:06Z",
+      "side": 1,
+      "message": "I added a parameter for filesystem type. We might want that.\n\nBut on a related note, there are a number of other things that we could expose as parameters. For example, the LUKS type, the cipher mode, mount point, etc. Would it make sense to have a general options parameter, so that we have the ability to support specific things like that without changing the API?",
+      "parentUuid": "539cae7b_a538ceb9",
+      "range": {
+        "startLine": 7,
+        "startChar": 50,
+        "endLine": 7,
+        "endChar": 54
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2738ab26_15dc5dd7",
         "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
         "patchSetId": 9
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "5e08db63_2260369b",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-11T19:46:06Z",
+      "side": 1,
+      "message": "I changed the description at the top to specify LUKS.",
+      "parentUuid": "2738ab26_15dc5dd7",
+      "range": {
+        "startLine": 12,
+        "startChar": 41,
+        "endLine": 12,
+        "endChar": 45
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e090c03_463a3814",
         "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
         "patchSetId": 9
@@ -59,6 +107,30 @@
       "writtenOn": "2021-11-11T16:31:20Z",
       "side": 1,
       "message": "Before I ask it, I\u0027ll preface I don\u0027t have a good answer for this question and I don\u0027t see anything necessarily see anything wrong with this breakdown in error classification.\n\n\nAs a user of your API, what am I expected to do with these?  Generally, we\u0027ve been trying to get rid of InternalError because there is no method that I, as a user of your API, can determine how to get your code into a state where the call will be successful.  I don\u0027t see either of these errors as much different.  If I get \"EncryptionError\" from your API, how do I get the system into a state where it won\u0027t give \"EncryptionError\" anymore?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 36
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "977b1365_9d20e182",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-11T19:46:06Z",
+      "side": 1,
+      "message": "Hmm, I think I see what you mean. These errors alone don\u0027t really tell you much. What you would have to do is probably check the logs to hopefully get more information about what went wrong.\n\nThere might be certain things I could create more specific errors for. For example, if we fail to unlock the device, there\u0027s a good chance the password is wrong. Or if we can\u0027t unmount the filesystem, something is probably still using it. Maybe some more specific error types would help a little bit. But there would be other cases where you have to look at logs.",
+      "parentUuid": "2e090c03_463a3814",
       "range": {
         "startLine": 14,
         "startChar": 0,
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "bec8ea1d_78a058e6",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-11T19:46:06Z",
+      "side": 1,
+      "message": "Initially, I was thinking we might want the password for a couple reasons:\n  - We might need the password to unlock the device at the firmware level.\n  - We could use the password to verify that the erase actually worked, and that we can no longer unlock it.\n\nBut neither of these things really make the password necessary. In the case of an eMMC, you can force erase the device without a password, even if it\u0027s locked (or the caller could call unlock first, I suppose). And if someone really wants to make sure they can\u0027t unlock the LUKS device anymore, they can try calling the unlock method afterwards.\n\nI removed this password parameter.",
+      "parentUuid": "2dc2efae_131cf2c5",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 55
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ecbf4e0_85299852",
         "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
         "patchSetId": 9
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "33737adc_c272ce34",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-11T19:46:06Z",
+      "side": 1,
+      "message": "To lock the LUKS device itself, you don\u0027t need a password. But locking at the device level does need a password, at least in the case of an eMMC. I updated the description, to say why this password parameter is here.",
+      "parentUuid": "2ecbf4e0_85299852",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 55
+      },
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a34a0c9e_994abb90",
         "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
         "patchSetId": 9
@@ -128,6 +248,24 @@
       "writtenOn": "2021-11-11T16:31:20Z",
       "side": 1,
       "message": "Did we ever settle on terminology for this (Locked)?",
+      "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "92621519_8d5e1fa2",
+        "filename": "yaml/xyz/openbmc_project/eStoraged.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-11-11T19:46:06Z",
+      "side": 1,
+      "message": "I don\u0027t remember discussing this. Is there something you think should be clarified?",
+      "parentUuid": "a34a0c9e_994abb90",
       "revId": "c805ba1855563eb28ef1c5f6c9cd61ca46c4eae6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true

@@ -214,6 +214,30 @@
       "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ccdc45dc_4c46d291",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-11T16:16:49Z",
+      "side": 1,
+      "message": "\u003e One with the possible bifurcation modeling the root complex and one at the device level (that bifurcation used).\n\nI don\u0027t really know how bifurcation is related to the device (or slot) at all.  When a slot isn\u0027t populated I guess you have a \"maximum remaining lanes\" concept which tells you how many of the Lanes could be assigned to a device if you were to insert one, but otherwise when a device (or slot) is active you really only have \"number of physical lanes\" and \"number of active lanes\".  I don\u0027t know if the \"maximum remaining lanes\" information could be obtained from however you represent bifurcation at the RC/Switch level.\n\nIt does seem like you should have a separate interface to represent a RC.  We need to also consider is how would you model a PCIe Switch.  \n\nThe root complex has a fixed number of lanes and it can bifurcate in a number of different lane combinations.  Those lane combinations are from a combination of chip-level support AND board wiring to slots.  Should a RC only tell you the chip-level and then you also need to piece together board wiring to figure out the subset of possibilities?  That doesn\u0027t really seem like a great abstraction.  So, I think it is best if two identical processors gave different bifurcation information depending on which board they were plugged into.\n\nA PCIe Switch is a PCIe device with N lanes input, M channels out each having {M_1, M_2, ... M_N} lanes.  \u0027sum(M_i) \u003e\u003d N\u0027 in most cases.  Sometimes there is also bifurcation options in a switch as well, but I think that is rarer.\n\nFor a PCIe Switch you also should consider multi-host configurations.  Many PCIe switches can be configured to have 2 (or more) uplink channels.  See https://docs.broadcom.com/doc/12351853 as an example.  Also https://docs.broadcom.com/doc/12351860 mentions having \"dual upstream\" support where you can combine two 8x ports from the RC to aggregate 16x worth of bandwidth to a large swath of downstream 8x devices.\n\nUnfortunately, there is still a lot of complexity to work through on how best to model the PCIe bifurcation information.",
+      "parentUuid": "338f659b_af5234d8",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 0
+      },
+      "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

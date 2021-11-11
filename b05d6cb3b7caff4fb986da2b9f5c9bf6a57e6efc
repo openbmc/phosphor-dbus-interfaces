@@ -132,6 +132,30 @@
     },
     {
       "key": {
+        "uuid": "18972cea_2be0f85a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-11T16:21:39Z",
+      "side": 1,
+      "message": "\u003e There is probably an argument about operational state of the link in networkd not actually being a 1:1 mapping with a linkState and so it could have a simplified enum such as this one.\n\nAgreed.  We could have a simplified enumeration.  Or, we could make the Redfish provider do the simplification.  Or, somewhere in between.  I don\u0027t have a good explanation on why picking one of these three options is the best path for this particular problem.  Any time the answer is \"because Redfish models it this way\" I tend to ask if we are painting ourselves into a Redfish-only corner.\n\nIt would be nice if we could get some of the phosphor-networkd maintainers to weigh in here...",
+      "parentUuid": "c82efae5_ed8da969",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "da38dc9a_4ba129c3",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 1

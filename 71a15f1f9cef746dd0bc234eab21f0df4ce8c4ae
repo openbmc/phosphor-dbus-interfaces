@@ -238,6 +238,30 @@
       "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0e8c520_64e95874",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000233
+      },
+      "writtenOn": "2021-11-12T00:38:48Z",
+      "side": 1,
+      "message": "Our goal is to handle cases where there could be different bifurcation depending on the specific system configuration, e.g. presence or absence of bifurcation risers[0], PCIe devices that might bifurcate internally, etc. Switches could also be important in the future, but we don\u0027t need to model them immediately for our use case.\n\nWe want to have Inventory objects that express the desired bifurcation of each of these pieces of hardware so that we can inform the BIOS what bifurcation configuration it should apply to the root complex.\n\n[0] Example: https://www.density.sk/product/pcie-bifurcated-riser-cable/",
+      "parentUuid": "ccdc45dc_4c46d291",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 0
+      },
+      "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

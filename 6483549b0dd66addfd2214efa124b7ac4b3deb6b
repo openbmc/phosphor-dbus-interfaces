@@ -178,6 +178,30 @@
     },
     {
       "key": {
+        "uuid": "d70ae315_8f9128c1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-11-12T02:04:16Z",
+      "side": 1,
+      "message": "Locked is pretty ubiquitous for drive manufacturers.  I think it\u0027s pretty well defined about what \"locked\" means in a drive context.  I don\u0027t know what else we would call it.  \"accessible\" has its own issues.",
+      "parentUuid": "0e9d9685_68634eeb",
+      "range": {
+        "startLine": 35,
+        "startChar": 29,
+        "endLine": 35,
+        "endChar": 36
+      },
+      "revId": "6483549b0dd66addfd2214efa124b7ac4b3deb6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "71020978_50559366",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
         "patchSetId": 4

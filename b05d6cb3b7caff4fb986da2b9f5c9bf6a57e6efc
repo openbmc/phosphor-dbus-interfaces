@@ -180,6 +180,30 @@
     },
     {
       "key": {
+        "uuid": "b085a003_9a1040a0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001244
+      },
+      "writtenOn": "2021-11-17T16:31:26Z",
+      "side": 1,
+      "message": "I am confused. These changes are mainly related to link status changes reflecting in the redfish interface. If any additional links status are need to be added then we can add it as part of another checkin. Let us not mix systemd-networkd expectations and redfish expectations.",
+      "parentUuid": "8f5d85b6_f2074bdf",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "da38dc9a_4ba129c3",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 1

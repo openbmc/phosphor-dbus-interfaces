@@ -228,6 +228,30 @@
     },
     {
       "key": {
+        "uuid": "5aed6caf_ba1cbc9c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001244
+      },
+      "writtenOn": "2021-11-18T13:40:20Z",
+      "side": 1,
+      "message": "Sorry, I still did not understand. There are three states as per Redfish Spec. LinkUp, LinkDown and NoLink. When Network cable is removed, Redfish interface shows LinkDown instead of NoLink. Why you think \"don\u0027t need to change anything currently to determine all 3 of the states\"  \n\n\"Generally we don\u0027t want to have the higher level, external APIs dictate the BMC internal dbus interfaces if those interfaces don\u0027t concisely map to underlying implementations and provide flexibility for other callers\"\n[Vinayak] : At present underlying implementation can not report \"NoLink\" status. It can only detect only detect LinkUp and LinkDown\n\nAlso, are you saying Redfish Interface not reporting \"NoLink\" status is \"Not an issue at all\" ?",
+      "parentUuid": "85dfe9be_b38a48dd",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "da38dc9a_4ba129c3",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 1

@@ -262,6 +262,30 @@
       "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b551d3d2_33da4e4e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2021-11-18T23:05:37Z",
+      "side": 1,
+      "message": "Thanks for the feedback. I understanding that modeling the PCIe bifurcation information is complex, so I am thinking that we don\u0027t do that fully. Getting the root-complex information and representing it can be a challenge of its own (I think, correct me if I am wrong).\n\nI am not sure if all of the possible bifurcation the root complex can give is too useful in general. From my point of view, we only care about the current machine config and how we need to bifuricate to suppor the devices,\n\nAs Benjamin mentioned, the goal is to basically determine the desired bifurication based on the device level and ask the BIOS to set the current bifurcation at the root complex to the desired.\n\nThe use cause will be with https://gerrit.openbmc-project.xyz/c/openbmc/google-ipmi-sys/+/47712 that calculate the desired bifurcation to support all of the devices.\n\nFor that goal, we want to model the PCIe device instead of the slot (mistake on my part of adding it here).\n\nI am looking at https://github.com/DMTF/Redfish/pull/4871/files#diff-44c3c9e8dc3fb0569ea0c7e730b34b7cdfc3f1ccd44ec291b4c9591a7c4a7febR601 (Thanks to Benjamin for the reference). Redfish seems to be modeling the slot with max lanes, while modeling the bifurication at the device level. As you mentioned, the lane used information might not be obtainable. \n\nSo if we just have\n |_ Slot (max lanes)\n    |_Device0 (max device lanes, bifurication)\n    |_Device1 (max device lanes, bifurication)\n    |_Device2 (max device lanes, bifurication)\nwill provide us with enough information on how the slot should be bifurcated. Each device should also be able to bifurcate,\n\nExample,\n\n |_ Slot0 (16)\n    |_Device0 (8, [4, 4])\n        |_Device2 (4, [2,2])\n        |_Device3 (4, [])\n    |_Device1 (8, [])\n    \nWith this the slot will be bifurcated to\n\n2x2x4x8 (highest level of bifurcation)\n\nThe devices linked to the slot needs to have the max lanes added up the number of max lines in the slot.\n\nSomething like this? if this make any sense.",
+      "parentUuid": "e0e8c520_64e95874",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 0
+      },
+      "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

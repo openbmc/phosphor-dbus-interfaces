@@ -286,6 +286,30 @@
       "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c1c01c7_df3ca03a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-19T14:06:44Z",
+      "side": 1,
+      "message": "\u003e I am looking at https://github.com/DMTF/Redfish/pull/4871/files#diff-44c3c9e8dc3fb0569ea0c7e730b34b7cdfc3f1ccd44ec291b4c9591a7c4a7febR601 \n\nYou\u0027ve linked to a PR in a private repository that I don\u0027t have access to.\n\n\u003e Redfish seems to be modeling the slot with max lanes, while modeling the bifurication at the device level.\n\nIs this a proposal in Redfish or a merged schema?  I still don\u0027t even understand what \"bifurcation at the device level\" means.  Devices don\u0027t have bifurcation.  PCIe ports off a RC or switch have bifurcation.\n\n```\n |_ Slot0 (16)\n    |_Device0 (8, [4, 4])\n        |_Device2 (4, [2,2])\n        |_Device3 (4, [])\n    |_Device1 (8, [])\n```\n\nI don\u0027t understand this example at a PCIe level at all.\n\n1. Why does a slot have 2 devices in it?  Slots should always have 1 device.\n2. Device0 is a switch or hub?  That is the only rational reason why it would itself have downstream devices.\n3. Is Device2 also a switch?  If not, what does \"[2,2]\" represent?\n\n\u003e The devices linked to the slot needs to have the max lanes added up the number of max lines in the slot.\n\nI feel like you are confusing the terms port and slot.  PCIe ports can be bifurcated.  PCIe slots are physical entities that (typically) allow a single device to be plugged in.",
+      "parentUuid": "b551d3d2_33da4e4e",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 0
+      },
+      "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

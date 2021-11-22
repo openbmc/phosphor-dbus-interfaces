@@ -25,3 +25,7 @@
   description: Invalid Json file.
 - name: DbusFailure
   description: DBus error occurred.
+- name: DTBNotFound
+  description: System type (HW_IM) not found in DTB table.
+               Either it is not supported or wrong vpd.
+               Need to check HW and IM value.

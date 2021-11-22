@@ -25,3 +25,8 @@
   description: Invalid Json file.
 - name: DbusFailure
   description: DBus error occurred.
+- name: DefaultDevTreeLoaded
+  description: Could not determine which device tree to switch to,
+               so a default one has been loaded.
+               Please check the HW and IM keywords in the system VPD
+               and check if they are programmed correctly.

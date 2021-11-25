@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "cfabfd2d_b7a46869",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001244
+      },
+      "writtenOn": "2021-11-25T07:58:51Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a0e75f87_ce3cfd8e",
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "51a4346a_3553bb78",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -264,6 +282,30 @@
       "side": 1,
       "message": "No, I\u0027m saying you can derive the redfish states like\n```\nnicEnabled\u003dfalse -\u003e NoLink\nnicEnabled\u003dtrue \u0026\u0026 linkUp\u003dfalse -\u003e LinkDown\nnicEnabled\u003dtrue \u0026\u0026 linkUp\u003dtrue -\u003e LinkUp\n```\n\nThat being said, the redfish spec has the most vague definitions possible for these states\nLinkDown - \"There is no link on this interface, but the interface is connected.\"\nNoLink - \"There is no link or connection detected on this interface.\"\nA connected cable is the definition of link... 😕",
       "parentUuid": "5aed6caf_ba1cbc9c",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "b05d6cb3b7caff4fb986da2b9f5c9bf6a57e6efc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f50f20a3_f71fe659",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001244
+      },
+      "writtenOn": "2021-11-25T07:58:51Z",
+      "side": 1,
+      "message": "nicEnabled code is setting administrative status of the ethernet and it really does not give carrier status. I have fixed the issue using ioctl.",
+      "parentUuid": "6ce5b337_92ff4f93",
       "range": {
         "startLine": 9,
         "startChar": 0,

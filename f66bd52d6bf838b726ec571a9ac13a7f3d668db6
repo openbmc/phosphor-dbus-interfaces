@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eb5b48f5_b97d5a74",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-11-26T04:14:46Z",
+      "side": 1,
+      "message": "This needs more details, please add a paragraph about when this error will be logged",
+      "revId": "f66bd52d6bf838b726ec571a9ac13a7f3d668db6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "324db643_17551695",
+        "filename": "yaml/com/ibm/VPD.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-11-26T04:14:46Z",
+      "side": 1,
+      "message": "I think DefaultDevTreeLoaded is better",
+      "range": {
+        "startLine": 28,
+        "startChar": 8,
+        "endLine": 28,
+        "endChar": 19
+      },
+      "revId": "f66bd52d6bf838b726ec571a9ac13a7f3d668db6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "521f99a1_53717a56",
+        "filename": "yaml/com/ibm/VPD.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2021-11-26T04:14:46Z",
+      "side": 1,
+      "message": "Please expand on this a  little - How about: \"Could not determine which device tree to switch to, a default one has been loaded. Please check the HW and IM keywords in the system VPD and check if they are programmed correctly.\"",
+      "range": {
+        "startLine": 29,
+        "startChar": 48,
+        "endLine": 29,
+        "endChar": 51
+      },
+      "revId": "f66bd52d6bf838b726ec571a9ac13a7f3d668db6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

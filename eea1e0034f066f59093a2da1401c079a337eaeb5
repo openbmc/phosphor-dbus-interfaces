@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5879a6de_38a8f6fe",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-11-29T19:19:32Z",
+      "side": 1,
+      "message": "In the current design of the dbus interfaces, they intentionally DON\u0027T mirror redfish (or any other protocol) on dbus.  This is to make it easier to port to new APIs in the future, for example, Redfish didn\u0027t exist when the dbus interfaces were first created, yet we were able to add them with relatively few interface-level changes (mostly additions).  This change would be a significant departure from that, which I don\u0027t think is great, considering that in terms of major protocols, we support PLDM, IPMI, and Redfish today, and duplicating the idea of a \"status\" between all three of them would be very wasteful.",
+      "range": {
+        "startLine": 13,
+        "startChar": 42,
+        "endLine": 14,
+        "endChar": 23
+      },
+      "revId": "eea1e0034f066f59093a2da1401c079a337eaeb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "21e77f91_cab9c499",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-11-29T19:19:32Z",
+      "side": 1,
+      "message": "Also, IPMI has a different idea of \"state\" as does PLDM.  Please talk through how we would avoid duplication (see previous comment).",
+      "range": {
+        "startLine": 18,
+        "startChar": 13,
+        "endLine": 18,
+        "endChar": 37
+      },
+      "revId": "eea1e0034f066f59093a2da1401c079a337eaeb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "639ddf88_c1cccda1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-11-29T19:19:32Z",
+      "side": 1,
+      "message": "Agree that this is the status quo, but you don\u0027t mention why this is a problem.  This commit also \"introduce new interfaces\", without deprecating or removing the old ones, so I\u0027m not really following why this patchset is better.  If this were consolidating and removing/deprecating the old status APIs and consolidating them (along with patchsets to update the relevant daemons), i think I could support it more, but as writte, it\u0027s just yet another interface, without clear rules on when to use the existing interfaces, and when to use this interface.",
+      "range": {
+        "startLine": 20,
+        "startChar": 57,
+        "endLine": 22,
+        "endChar": 29
+      },
+      "revId": "eea1e0034f066f59093a2da1401c079a337eaeb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4e81586_0e6a7558",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-11-29T19:19:32Z",
+      "side": 1,
+      "message": "Please talk more about this given my previous comment.  I see having yet another interface that duplicates behavior as less maintainable than what exists today, given that we will have essentially forked all interfaces down two paths.  Can you please talk about this in more length?",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 51
+      },
+      "revId": "eea1e0034f066f59093a2da1401c079a337eaeb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93e39b78_1bf25cbd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2021-11-29T19:19:32Z",
+      "side": 1,
+      "message": "Considering that this commit isn\u0027t removing or deprecating the old interfaces, this is just yet another status interface, and is definitely more than one.",
+      "range": {
+        "startLine": 41,
+        "startChar": 18,
+        "endLine": 41,
+        "endChar": 21
+      },
+      "revId": "eea1e0034f066f59093a2da1401c079a337eaeb5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

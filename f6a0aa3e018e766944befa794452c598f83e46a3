@@ -16,6 +16,24 @@
       "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a417c4da_57936f4b",
+        "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-11-29T17:13:09Z",
+      "side": 1,
+      "message": "We have no requirement that this be available via a Redfish API. I think it could be useful but I was also told to stop generating work for ourselves :) So probably another one to add to the \"potential\" list if someone else comes looking for this some day.",
+      "parentUuid": "ade9a4c9_042e6a69",
+      "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

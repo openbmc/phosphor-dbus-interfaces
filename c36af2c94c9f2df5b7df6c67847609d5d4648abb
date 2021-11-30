@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "57ce05e1_8e42a049",
+        "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-30T17:19:07Z",
+      "side": 1,
+      "message": "I don\u0027t see how this corresponds to the design document directly.\n\nIs there wide use for a new \"GeneratedBy\" interface?  What are the valid values of the strings here?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 0
+      },
+      "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c3ce09f8_0c7a4321",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-30T17:19:07Z",
+      "side": 1,
+      "message": "I don\u0027t think \"Generator\" is the correct verb here.  The user isn\u0027t generating the dump; they are maybe initiating it?",
+      "range": {
+        "startLine": 55,
+        "startChar": 17,
+        "endLine": 55,
+        "endChar": 28
+      },
+      "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "63a7b646_2a0cbb8f",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
         "patchSetId": 8

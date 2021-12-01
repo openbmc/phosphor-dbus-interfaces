@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0dddbc8_682bc658",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-12-01T22:31:15Z",
+      "side": 1,
+      "message": "Wonder if \u003cid\u003e/\u003cdevice\u003e should be the default going forward, it\u0027d apply to single devices too and would make it more consistent instead of having different number of path levels. I do like the idea of having different paths for the primary/secondary flash banks, that\u0027d allow the same fw version to be installed on a system on both banks.\n\nAlso what should the device name be? should it be the actual name of the device/volume like mtd0, mmcblk0, ubi0_0, or some arbitrary name, or both depending if it\u0027s a bmc device or host?",
+      "revId": "ac7adcb5471eed5eaa9474a697dc1db254fa9187",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

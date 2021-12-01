@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "460e5ac6_0ff951a0",
+        "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2021-12-01T08:03:49Z",
+      "side": 1,
+      "message": "For now, we are planning to use it for the dumps, to keep track of who initiated the dump.\nIn future, if there is a need in any app, for saving the initiator\u0027s id, probably they can implement this interface in their dbus object.\n\nThere is no solid definition of this property\u0027s value until Redfish standardizes this. Right now, it is just a string - client\u0027s ip address (for dumps).\nhttps://redfishforum.com/thread/547/usage-originofcondition-parameter-logentry-schema",
+      "parentUuid": "57ce05e1_8e42a049",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 0
+      },
+      "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c3ce09f8_0c7a4321",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
         "patchSetId": 8

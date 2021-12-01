@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "1a726487_db349688",
+        "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-01T20:51:08Z",
+      "side": 1,
+      "message": "\u003e There is no solid definition of this property\u0027s value until Redfish standardizes this. Right now, it is just a string - client\u0027s ip address (for dumps).\n\nip address??  I would have never figured that out from anything you\u0027ve written so far.",
+      "parentUuid": "460e5ac6_0ff951a0",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 0
+      },
+      "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c3ce09f8_0c7a4321",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
         "patchSetId": 8

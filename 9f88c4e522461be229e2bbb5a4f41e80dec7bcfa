@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4548ec6d_b6640808",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-01T20:46:03Z",
+      "side": 1,
+      "message": "Who is \"We\"?  Do we have a design document confirming this direction?",
+      "range": {
+        "startLine": 9,
+        "startChar": 62,
+        "endLine": 10,
+        "endChar": 13
+      },
+      "revId": "9f88c4e522461be229e2bbb5a4f41e80dec7bcfa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5664caae_aede6723",
+        "filename": "yaml/xyz/openbmc_project/Certs/TrustBundle.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-01T20:46:03Z",
+      "side": 1,
+      "message": "I don\u0027t really understand enough of what is being proposed here.\n\nWhat is the relationship between Replace, Install, Certificate, and TrustBundle?\n\nShould this path be read-only?  The interface says \"provide... management features\" but it only provides a single property.  I\u0027m not understanding how this property is used to manage the \"Trust Bundle\".",
+      "revId": "9f88c4e522461be229e2bbb5a4f41e80dec7bcfa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

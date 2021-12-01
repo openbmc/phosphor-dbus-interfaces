@@ -1,0 +1,19 @@
+description: >
+    Implement to provide trust bundle management features.
+
+    Trust bundle is a list of root certificates. An implementation service
+    should additionally implement xyz.openbmc_project.Certs.Replace to allow
+    the update of the trust bundle.
+properties:
+    - name: TrustBundleString
+      type: string
+      description: >
+          The string for the trust bundle.
+
+          This is a list of X.509 public certificates in PEM format.
+          PEM wiki - https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail
+
+          An X.509 certificate contains a public key, validity, and an
+          identity (a hostname, or an organization, or an individual),
+          and is either signed by a certificate authority or self-signed.
+          Refer https://en.wikipedia.org/wiki/X.509 for details.

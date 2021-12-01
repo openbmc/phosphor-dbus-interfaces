@@ -1,0 +1,11 @@
+description: >
+    Implement to provide trust bundle management features.
+
+    Trust bundle is a list of root certificates. An implementation service
+    should additionally implement xyz.openbmc_project.Certs.Replace to allow
+    the update of the trust bundle.
+properties:
+    - name: InstallPath
+      type: string
+      description: >
+          The path of the trust bundle.

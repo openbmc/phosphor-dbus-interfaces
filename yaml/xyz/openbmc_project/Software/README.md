@@ -66,9 +66,6 @@ in multiple locations but represented by the same object path.
 A reasonable algorithm might be:
 `echo <Version.Version> <Version.Purpose> | sha512sum | cut -b 1-8`
 
-> TODO: May need an issue against the REST server to 'merge' two copies of
->       a single D-Bus object into a single REST object.
-
 ### Activation States
 
 `xyz.openbmc_project.Software.Activation` has a property Activation that can

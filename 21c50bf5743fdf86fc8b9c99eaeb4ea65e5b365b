@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95cad72a_cb7df100",
+        "filename": "yaml/xyz/openbmc_project/PECI/raw.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-01T20:40:50Z",
+      "side": 1,
+      "message": "Filename should be \u0027Raw\u0027.",
+      "revId": "21c50bf5743fdf86fc8b9c99eaeb4ea65e5b365b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c308fc66_e2330a0a",
+        "filename": "yaml/xyz/openbmc_project/PECI/raw.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-01T20:40:50Z",
+      "side": 1,
+      "message": "I\u0027m not especially happy we have a bunch of protocols cluttered in the root directory already (Ipmi, MCTP, PLDM, Smbios).  Maybe we could move this to a Protocol/PECI subdirectory at least?\n\nTechnically PECI is an Intel interface.  Should this go into `com/intel`?",
+      "revId": "21c50bf5743fdf86fc8b9c99eaeb4ea65e5b365b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

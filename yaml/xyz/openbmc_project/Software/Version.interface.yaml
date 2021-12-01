@@ -15,6 +15,9 @@ properties:
       description: >
         The purpose of the version.  As in, what can it be used for or
         applied to?
+
+        This property is deprecated in favor of Compatible strings and inventory
+        associations.  The enumeration should not be expanded further.
 enumerations:
     - name: VersionPurpose
       description: >

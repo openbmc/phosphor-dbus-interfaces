@@ -30,9 +30,9 @@ the location of the image.
 
 It is assumed that the *ImageManager* has [at least] a bare minimum amount of
 parsing knowledge, perhaps due to a common image format, to allow it to
-populate all of the properties of `xyz.openbmc_project.Software.Version`.
-*ItemUpdater*s will likely listen for standard D-Bus signals to identify new
-images being created.
+populate all of the properties of `xyz.openbmc_project.Software.Version` and
+`xyz.openbmc_project.Inventory.Decorator.Compatible`.  *ItemUpdater*s will
+likely listen for standard D-Bus signals to identify new images being created.
 
 ### ItemUpdater
 
@@ -74,7 +74,59 @@ each `Software.Version`.  This allows the same software version to be contained
 in multiple locations but represented by the same object path.
 
 A reasonable algorithm might be:
-`echo <Version.Version> <Version.Purpose> | sha512sum | cut -b 1-8`
+`echo <Version.Version> <Compatible.Names> | sha512sum | cut -b 1-8`
+
+### Compatibility
+
+Identifying that a particular Software image is for a particular system element
+can be challenging.  For the BMC, two different images may both be the same size
+but for vastly different hardware.  If the image for one system is applied onto
+the BMC for another it is quite possible that the image won't even boot
+properly.  It is therefore important to be able to specify more details than
+simply "BMC" or "Host".
+
+Early on implementations used the `Software.Version.Purpose` property and a
+custom string in the `Software.ExtendedVersion` to align software images with
+appropriate hardware.  This lead to an ever-increasing set of `Purpose`
+enumeration values and inconsistent implementations of software update routines.
+
+The `Inventory.Decorator.Compatible` interface was introduced to give
+identifiers that can be used to map to common software implementations, in a
+similar manner to how the Linux Device Tree compatible strings are used.
+Software update should leverage these `Compatible.Names` properties to create a
+consistent mapping of `Software.Version` instances to the system element the
+image is applicable to.
+
+At the same path as the `Software.Version`, an *ImageManager* should create an
+`xyz.openbmc_project.Inventory.Decorator.Compatible` interface containing
+strings identifying the system element this image can be applied to.
+Correspondingly, the Inventory Item corresponding to the system element should
+have the same string in its `Inventory.Decorator.Compatible` interface.  These
+strings shall be of the following format:
+
+* `<org>.Software.Element.<identifer>.Type.<type>`
+
+Where:
+
+* `<org>` corresponds to the organization owning the `<identifier>`, such as
+  `xyz.openbmc_project` or `com.foo_corp`.
+* `<identifier>` is a unique name for the element, such as `SystemFoo` or
+  `BoardBar`.  Typically these would be code names for the hardware element such
+  as `Witherspoon`.
+* `<type>` is an identifier for sub-element the image corresponds to and is
+  documented in the `<org>/Software/Element/<identifier>.interface` file under
+  the `Type` enumeration.
+
+The following `<type>` are reserved for a particular meaning:
+
+- BMC - The image is for the BMC contained on that element.
+- Host - The image is the primary firmware for the managed host contained on
+  that element.
+
+If an image contains sub-sections which can be applied to multiple system
+elements, the image should contain `Compatible` strings for each sub-section.
+It is expected that the *ItemUpdater* is aware of how to find the sub-section
+appropriate for any element(s) being Activated.
 
 ### Activation States
 

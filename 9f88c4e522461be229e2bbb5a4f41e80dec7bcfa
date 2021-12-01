@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "69ff663a_4df1dc16",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000682
+      },
+      "writtenOn": "2021-12-01T22:49:29Z",
+      "side": 1,
+      "message": "Thanks for your comment. \n\nI mean the \"certificate dbus object\" is for a single certificate. We need an \"dbus object\" for \"a list of root certificates\".\n\nAnd also in current implementation, we only allow a single root certificate. \nhttps://github.com/openbmc/phosphor-certificate-manager/blob/master/certs_manager.cpp#L156.",
+      "parentUuid": "efbbce5b_dd230c99",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 60
+      },
+      "revId": "9f88c4e522461be229e2bbb5a4f41e80dec7bcfa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4548ec6d_b6640808",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3

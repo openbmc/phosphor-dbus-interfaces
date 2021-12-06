@@ -334,6 +334,30 @@
       "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5df372fb_c5d20e88",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-06T12:32:38Z",
+      "side": 1,
+      "message": "\u003e \u003e \u003e I am looking at https://github.com/DMTF/Redfish/pull/4871/files#diff-44c3c9e8dc3fb0569ea0c7e730b34b7cdfc3f1ccd44ec291b4c9591a7c4a7febR601 \n\u003e \u003e \n\u003e \u003e You\u0027ve linked to a PR in a private repository that I don\u0027t have access to.\n\u003e \u003e \n\u003e \n\u003e Oh dang. I guess I\u0027ll just share a snippet.\n\u003e \n\u003e PCIeDevice\n\u003e ```\n\u003e     \"PCIeInterface\": {\n\u003e         \"PCIeType\": \"Gen2\",\n\u003e         \"MaxPCIeType\": \"Gen3\",\n\u003e         \"LanesInUse\": 1,\n\u003e         \"MaxLanes\": 4\n\u003e     },\n\u003e     \"Slot\": {\n\u003e         \"SlotType\": \"HalfLength\",\n\u003e         \"PCIeType\": \"Gen3\",\n\u003e         \"Lanes\": 1,\n\u003e         \"Location\": {\n\u003e             \"PartLocation\": {\n\u003e                 \"ServiceLabel\": \"Slot 3\",\n\u003e                 \"LocationOrdinalValue\": 3,\n\u003e                 \"LocationType\": \"Slot\",\n\u003e                 \"Orientation\": \"LeftToRight\",\n\u003e                 \"Reference\": \"Rear\"\n\u003e             }\n\u003e         }\n\u003e     },\n\u003e ```\n\u003e Device.MaxLanes: he number of PCIe lanes supported by this device.\n\u003e Device.LanesInUse: The number of PCIe lanes in use by this device.\n\u003e \n\u003e \n\u003e And the device is linked to a slot that shows how many total lanes that the slot support.\n\u003e \n\u003e Slot.Lanes: The number of PCIe lanes supported by this slot.\n\u003e \n\u003e And at each device level, it is linked to some slot. The devices that is linked to the same slot will be implied that the slot is bifuricated.\n\nI follow you all the way until this last line.  This example shows a PCIeDevice \"having\" a Slot and not \"referencing\" a Slot.  And, that isn\u0027t really unreasonable because you can only have one card in a slot anyhow.\n\nWhat do you mean by \"the devices [plural] that is linked to the same slot\"?  Slots only fit one device.  Slots aren\u0027t bifurcated.  Devices aren\u0027t bifurcated.  *Ports* are bifurcated.",
+      "parentUuid": "85ba6015_279b6899",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 0
+      },
+      "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

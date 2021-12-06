@@ -404,6 +404,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Ups')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Ups__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Ups.interface.yaml',  ],
+    output: [ 'Ups.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/Ups',
+    ],
+)
+
 subdir('Vrm')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/Vrm__markdown'.underscorify(),

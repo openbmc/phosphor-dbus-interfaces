@@ -1,0 +1,37 @@
+description: >
+    Implement to provide UPS (Uninterruptible Power Supply) attributes.  This
+    interface provides a subset of the properties on the UPower Device D-Bus
+    interface (https://upower.freedesktop.org/docs/Device.html).
+
+properties:
+    - name: State
+      default: Unknown
+      type: enum[self.UPSState]
+      description: >
+          The UPS power state.
+    - name: WarningLevel
+      default: None
+      type: enum[self.UPSWarningLevel]
+      description: >
+          Warning level of the UPS.
+
+enumerations:
+    - name: UPSState
+      description: >
+          The UPS power state.
+      values:
+          - name: Unknown
+          - name: Charging
+          - name: Discharging
+          - name: Empty
+          - name: FullyCharged
+    - name: UPSWarningLevel
+      description: >
+          Warning level of the UPS.
+      values:
+          - name: Unknown
+          - name: None
+          - name: Discharging
+          - name: Low
+          - name: Critical
+          - name: Action

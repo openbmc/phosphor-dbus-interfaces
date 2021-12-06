@@ -3,3 +3,9 @@ description: >
 
     BMC dump is generated on the BMC with debug data
     for debugging the issues encountered on the BMC.
+
+properties:
+    - name: FileLocation
+      type: string
+      description: >
+          The absolute location of the dump file stored in BMC.

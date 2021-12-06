@@ -4,3 +4,9 @@ description: >
     Hostboot dump collects memory and hardware states
     in the case of a failure during hostboot booting
     phase.
+
+properties:
+    - name: FileLocation
+      type: string
+      description: >
+          The absolute location of the dump file stored in BMC.

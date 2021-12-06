@@ -5,3 +5,9 @@ description: >
     including various registers, and it is used for debugging
     system checkstop. checkstop is the descriptive term for
     entire system termination by the hardware due to a detected error.
+
+properties:
+    - name: FileLocation
+      type: string
+      description: >
+          The absolute location of the dump file stored in BMC.

@@ -34,6 +34,29 @@
       "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "809bfde1_391f54f0",
+        "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-06T17:00:45Z",
+      "side": 1,
+      "message": "The \"or ...\" here seems like it should be configuration dependent.  IBM might want their systems to not power on until the UPS is fully charged, but I think in most cases other companies would.  There might want to be a \"wait until you have N% of charge\" in between as well.\n\nHow do we ensure that customization is documented properly in the interface?",
+      "range": {
+        "startLine": 82,
+        "startChar": 19,
+        "endLine": 82,
+        "endChar": 66
+      },
+      "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
     }
   ]
 }

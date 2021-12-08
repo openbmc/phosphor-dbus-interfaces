@@ -1,0 +1,290 @@
+description: >
+    "org.freedesktop.UPower.Device -- Device interface
+     Defined at https://upower.freedesktop.org/docs/Device.html
+     Objects implementing org.freedesktop.UPower.Device also implement the
+     org.freedesktop.DBus.Introspectable and org.freedesktop.DBus.Properties
+     interfaces. Unless otherwise noted, an empty string or the value 0 in a
+     property on this interface means not set."
+
+methods:
+    - name: Refresh
+      description: >
+          "Refreshes the data collected from the power source. Callers need the
+           org.freedesktop.upower.refresh-power-source authorization"
+
+    - name: GetHistory
+      description: >
+          "Gets history for the power device that is persistent across
+           reboots."
+      parameters:
+        - name: type
+          type: string
+          description: >
+            "The type of history. Valid types are rate or charge."
+        - name: timespan
+          type: uint32
+          description: >
+            "The amount of data to return in seconds, or 0 for all."
+        - name: resolution
+          type: uint32
+          description: >
+            "The approximate number of points to return. A higher resolution is
+             more accurate, at the expense of plotting speed."
+      returns:
+        - name: data
+          type: array[struct[uint32, double, uint32]]
+          description: >
+            "The history data for the power device, if the device supports
+             history. Data is ordered from the earliest in time, to the newest
+             data point. Each element contains the following members:
+               time: The time value in seconds from the gettimeofday() method.
+               value: The data value, for instance the rate in W or the charge
+                      in %.
+               state: The state of the device, for instance charging or
+                      discharging."
+
+    - name: GetStatistics
+      description: >
+          "Gets statistics for the power device that may be interesting to show
+           on a graph in the session."
+      parameters:
+        - name: type
+          type: string
+          description: >
+            "The mode for the statistics. Valid types are charging or
+             discharging."
+      returns:
+        - name: data
+          type: array[struct[double, double]]
+          description: >
+            "The statistics data for the power device. Each element contains the
+             following members:
+               value: The value of the percentage point, usually in seconds.
+               accuracy: The accuracy of the prediction in percent."
+
+properties:
+    - name: NativePath
+      default: ""
+      type: string
+      description: >
+          "OS specific native path of the power source. On Linux this is the
+           sysfs path, for example
+           /sys/devices/LNXSYSTM:00/device:00/PNP0C0A:00/power_supply/BAT0. Is
+           blank if the device is being driven by a user space driver."
+    - name: Vendor
+      default: ""
+      type: string
+      description: >
+          "Name of the vendor of the battery."
+    - name: Model
+      default: ""
+      type: string
+      description: >
+          "Name of the model of this battery."
+    - name: Serial
+      default: ""
+      type: string
+      description: >
+          "Unique serial number of the battery."
+    - name: UpdateTime
+      default: 0
+      type: uint64
+      description: >
+          "The point in time (seconds since the Epoch Jan 1, 1970 0:00 UTC)
+           that data was read from the power source."
+    - name: Type
+      default: 0
+      type: uint32
+      description: >
+          "Type of power source.
+              0: Unknown
+              1: Line Power
+              2: Battery
+              3: Ups
+              4: Monitor
+              5: Mouse
+              6: Keyboard
+              7: Pda
+              8: Phone"
+    - name: PowerSupply
+      default: false
+      type: boolean
+      description: >
+          "If the power device is used to supply the system. This would be set
+           TRUE for laptop batteries and UPS devices, but set FALSE for wireless
+           mice or PDAs."
+    - name: HasHistory
+      default: false
+      type: boolean
+      description: >
+          "If the power device has history."
+    - name: HasStatistics
+      default: false
+      type: boolean
+      description: >
+          "If the power device has statistics."
+    - name: Online
+      default: false
+      type: boolean
+      description: >
+          "Whether power is currently being provided through line power. This
+           property is only valid if the property type has the value
+           'line-power'."
+    - name: Energy
+      default: 0.0
+      type: double
+      description: >
+          "Amount of energy (measured in Wh) currently available in the power
+           source. This property is only valid if the property type has the
+           value 'battery'."
+    - name: EnergyEmpty
+      default: 0.0
+      type: double
+      description: >
+          "Amount of energy (measured in Wh) in the power source when it's
+           considered to be empty. This property is only valid if the property
+           type has the value 'battery'."
+    - name: EnergyFull
+      default: 0.0
+      type: double
+      description: >
+          "Amount of energy (measured in Wh) in the power source when it's
+           considered full. This property is only valid if the property type
+           has the value 'battery'."
+    - name: EnergyFullDesign
+      default: 0.0
+      type: double
+      description: >
+          "Amount of energy (measured in Wh) the power source is designed to
+           hold when it's considered full. This property is only valid if the
+           property type has the value 'battery'."
+    - name: EnergyRate
+      default: 0.0
+      type: double
+      description: >
+          "Amount of energy being drained from the source, measured in W. If
+           positive, the source is being discharged, if negative it's being
+           charged. This property is only valid if the property type has the
+           value 'battery'."
+    - name: Voltage
+      default: 0.0
+      type: double
+      description: >
+          "Voltage in the Cell or being recorded by the meter."
+    - name: Luminosity
+      default: 0.0
+      type: double
+      description: >
+          "Luminosity being recorded by the meter."
+    - name: TimeToEmpty
+      default: 0
+      type: int64
+      description: >
+          "Number of seconds until the power source is considered empty. Is set
+           to 0 if unknown. This property is only valid if the property type
+           has the value 'battery'."
+    - name: TimeToFull
+      default: 0
+      type: int64
+      description: >
+          "Number of seconds until the power source is considered full. Is set
+           to 0 if unknown. This property is only valid if the property type
+           has the value 'battery'."
+    - name: Percentage
+      default: 0.0
+      type: double
+      description: >
+          "The amount of energy left in the power source expressed as a
+           percentage between 0 and 100. Typically this is the same as (energy -
+           energy-empty) / (energy-full - energy-empty). However, some primitive
+           power sources are capable of only reporting percentages and in this
+           case the energy-* properties will be unset while this property is
+           set. This property is only valid if the property type has the value
+           'battery'."
+    - name: Temperature
+      default: 0.0
+      type: double
+      description: >
+          "The temperature of the device in degrees Celsius. This property is
+           only valid if the property type has the value 'battery'."
+    - name: IsPresent
+      default: false
+      type: boolean
+      description: >
+          "If the power source is present in the bay. This field is required as
+           some batteries are hot-removable, for example expensive UPS and most
+           laptop batteries. This property is only valid if the property type
+           has the value 'battery'."
+    - name: State
+      default: 0
+      type: uint32
+      description: >
+          "The battery power state.
+              0: Unknown
+              1: Charging
+              2: Discharging
+              3: Empty
+              4: Fully charged
+              5: Pending charge
+              6: Pending discharge
+           This property is only valid if the property type has the value
+           'battery'."
+    - name: IsRechargeable
+      default: false
+      type: boolean
+      description: >
+          "If the power source is rechargeable. This property is only valid if
+           the property type has the value 'battery'."
+    - name: Capacity
+      default: 0.0
+      type: double
+      description: >
+          "The capacity of the power source expressed as a percentage between 0
+           and 100. The capacity of the battery will reduce with age. A capacity
+           value less than 75% is usually a sign that you should renew your
+           battery. Typically this value is the same as (full-design / full) *
+           100. However, some primitive power sources are not capable reporting
+           capacity and in this case the capacity property will be unset. This
+           property is only valid if the property type has the value 'battery'."
+    - name: Technology
+      default: 0
+      type: uint32
+      description: >
+          "Technology used in the battery:
+             0: Unknown
+             1: Lithium ion
+             2: Lithium polymer
+             3: Lithium iron phosphate
+             4: Lead acid
+             5: Nickel cadmium
+             6: Nickel metal hydride
+           This property is only valid if the property type has the value
+           'battery'."
+    - name: WarningLevel
+      default: 0
+      type: uint32
+      description: >
+          "Warning level of the battery:
+              0: Unknown
+              1: None
+              2: Discharging (only for UPSes)
+              3: Low
+              4: Critical
+              5: Action"
+    - name: BatteryLevel
+      default: 0
+      type: uint32
+      description: >
+          "Level of the battery:
+              0: Unknown
+              1: None (the battery does not use a coarse level of battery reporting)
+              3: Low
+              4: Critical
+              6: Normal
+              7: High
+              8: Full"
+    - name: IconName
+      default: ""
+      type: string
+      description: >
+          "An icon name, following the Icon Naming Specification"

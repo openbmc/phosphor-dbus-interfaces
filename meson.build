@@ -32,6 +32,9 @@ endif
 if get_option('data_org_open_power')
     selected_subdirs += 'org/open_power'
 endif
+if get_option('data_org_freedesktop')
+    selected_subdirs += 'org/freedesktop'
+endif
 if get_option('data_xyz_openbmc_project')
     selected_subdirs += 'xyz/openbmc_project'
 endif

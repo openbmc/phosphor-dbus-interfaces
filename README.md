@@ -14,8 +14,8 @@ in the `gen` subdirectory: `cd gen && ./regenerate-meson`.
 
 ## Configuration
 
-Only the xyz/openbmc_project interfaces are built by default.  Other interfaces
-can be enabled by meson options:
+Only the xyz/openbmc_project and org/freedesktop interfaces are built by
+default.  Other interfaces can be enabled by meson options:
 
 - com/ibm - `-Ddata_com_ibm=true`
 - org/open_power - `-Ddata_org_open_power=true`

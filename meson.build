@@ -29,6 +29,9 @@ selected_subdirs = []
 if get_option('data_com_ibm')
     selected_subdirs += 'com/ibm'
 endif
+if get_option('data_org_freedesktop')
+    selected_subdirs += 'org/freedesktop'
+endif
 if get_option('data_org_open_power')
     selected_subdirs += 'org/open_power'
 endif

@@ -218,6 +218,15 @@ case the resulting `Activation` may result in one of two conditions: a
 `ActivationState = Failed` or an `ActivateState = Active`` with a
 `RedundancyPriority = 0 (High)`.
 
+### Image Slot
+
+If a system has multiple flash chips for BMC/BIOS and has separate images in
+each chip, the `xyz.openbmc_project.Software.Slot` interface is provided to
+express the slot number of the image.
+
+The primary chip should be assigned with slot number 0, and the secondary chip
+should be assigned with slot number 1.
+
 ### Image Clean Up
 
 An *ItemUpdater* is responsible for garabage collecting images contained on the

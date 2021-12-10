@@ -1,0 +1,13 @@
+description: >
+    The slot of the image for static layout.
+    Describe the slot number of the image.
+properties:
+    - name: Slot
+      type: size
+      description: >
+        The slot number of the image.
+        E.g. a system could have dual BMC chips or BIOS chips.
+        The property is set to 0 for the primary image and 1 for the secondary
+        image.
+      flags:
+          - readonly

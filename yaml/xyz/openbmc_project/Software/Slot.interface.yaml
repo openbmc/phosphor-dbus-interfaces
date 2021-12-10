@@ -1,0 +1,13 @@
+description: >
+    The slot of the image for static layout.
+    Typically a systemc could have two BMC chips, and this interfaces
+    describes which slot the image is in.
+properties:
+    - name: Slot
+      type: byte
+      description: >
+        The slot of the image it is running.
+        In typicall dual BMC chips systems, it is 0 for the primary,
+        and 1 for the secondary.
+      flags:
+          - readonly

@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "66084823_f851850a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-12-13T05:17:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9051bb41_4ee10956",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 10
+      },
+      "revId": "6d6f35f82b3fb23acbb86564e9de70fa48a51026",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "310f4a9d_68fc55c3",
         "filename": "yaml/xyz/openbmc_project/Software/Slot.interface.yaml",
         "patchSetId": 1
@@ -71,6 +95,54 @@
     },
     {
       "key": {
+        "uuid": "b97efbf8_f2b52f66",
+        "filename": "yaml/xyz/openbmc_project/Software/Slot.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-12-13T05:17:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2617ae11_51d7ffc2",
+      "range": {
+        "startLine": 3,
+        "startChar": 16,
+        "endLine": 3,
+        "endChar": 23
+      },
+      "revId": "6d6f35f82b3fb23acbb86564e9de70fa48a51026",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ee22c01_63dfe2d1",
+        "filename": "yaml/xyz/openbmc_project/Software/Slot.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-12-13T05:17:48Z",
+      "side": 1,
+      "message": "Yup, it could represent the BIOS chips as well. Update the wording here.",
+      "parentUuid": "310f4a9d_68fc55c3",
+      "range": {
+        "startLine": 3,
+        "startChar": 39,
+        "endLine": 3,
+        "endChar": 42
+      },
+      "revId": "6d6f35f82b3fb23acbb86564e9de70fa48a51026",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b71833cb_0bb0a7ba",
         "filename": "yaml/xyz/openbmc_project/Software/Slot.interface.yaml",
         "patchSetId": 1
@@ -91,6 +163,30 @@
       "revId": "6d6f35f82b3fb23acbb86564e9de70fa48a51026",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "087717d2_97a401dc",
+        "filename": "yaml/xyz/openbmc_project/Software/Slot.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-12-13T05:17:48Z",
+      "side": 1,
+      "message": "Done.\n\nBut I have a second (and off-topic) thought of \"size\" type in dbus-interfaces, this maps to size_t in C/C++, and it could becomes different \"real type\" on DBus, e.g. it may be uint32_t on ARM32, and uint64_t on ARM64, and this will result in different DBus types for the same property on different architectures.\n\nUsers of such interface will have to deal with this difference and it is not good, is it?",
+      "parentUuid": "b71833cb_0bb0a7ba",
+      "range": {
+        "startLine": 7,
+        "startChar": 12,
+        "endLine": 7,
+        "endChar": 16
+      },
+      "revId": "6d6f35f82b3fb23acbb86564e9de70fa48a51026",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     },
     {
       "key": {

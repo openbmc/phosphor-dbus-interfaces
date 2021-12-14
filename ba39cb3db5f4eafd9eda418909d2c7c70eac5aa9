@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5da8b462_5f4a1b41",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-12-14T03:43:13Z",
+      "side": 1,
+      "message": "A second thought, probably we could re-use the RedundancyPriority to represent the slot info, as long as we extend the usage of the RedundancyPriority for the \"golden image\" implementation.\n\nIn the \"golden image\" case, the secondary flash is not to be updated and thus the primary flash always has priority 0, and the secondary flash always has priority 1, even when the BMC is running on the secondary flash.\n\nIn this doc, I could add this info; in implementation, I will add a new config to differentiate the two cases.\n\nHow about this idea?",
+      "parentUuid": "9bf1b5af_28789916",
+      "revId": "ba39cb3db5f4eafd9eda418909d2c7c70eac5aa9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "fc0a33cd_8fc1ad04",
         "filename": "yaml/xyz/openbmc_project/Software/README.md",
         "patchSetId": 2
@@ -39,6 +57,30 @@
       "revId": "ba39cb3db5f4eafd9eda418909d2c7c70eac5aa9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca92ef29_0882f609",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2021-12-14T03:43:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc0a33cd_8fc1ad04",
+      "range": {
+        "startLine": 223,
+        "startChar": 37,
+        "endLine": 223,
+        "endChar": 49
+      },
+      "revId": "ba39cb3db5f4eafd9eda418909d2c7c70eac5aa9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

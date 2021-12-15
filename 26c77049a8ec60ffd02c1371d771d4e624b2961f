@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "043d3cf9_1f92e765",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.errors.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-15T19:38:44Z",
+      "side": 1,
+      "message": "These are nice for potential debug, but as an API, what are your clients expected to do with these?  Is there something they can do to recover?  Was this due to them passing bad parameters, your daemon being in a bad state, the kernel being messed up?  How are these any better than Common.InternalFailure (which we don\u0027t like to have)?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 57
+      },
+      "revId": "26c77049a8ec60ffd02c1371d771d4e624b2961f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ea1145c2_21e31998",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-15T19:38:44Z",
+      "side": 1,
+      "message": "Should this be an enumeration?  How does someone calling this interface know what are valid strings?",
+      "revId": "26c77049a8ec60ffd02c1371d771d4e624b2961f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97d14660_fb8de6b2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-15T19:38:44Z",
+      "side": 1,
+      "message": "It seems like Common.UnsuportedRequest would be an error depending on the FilesystemType parameter value?",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 36
+      },
+      "revId": "26c77049a8ec60ffd02c1371d771d4e624b2961f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

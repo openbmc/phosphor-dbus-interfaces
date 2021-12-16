@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5b21adbc_9b41cdf7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.errors.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-12-16T21:27:50Z",
+      "side": 1,
+      "message": "I removed these custom errors, since they probably don\u0027t gain us much. I\u0027ll plan on using the errors in Common.errors.",
+      "parentUuid": "043d3cf9_1f92e765",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 57
+      },
+      "revId": "26c77049a8ec60ffd02c1371d771d4e624b2961f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ea1145c2_21e31998",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml",
         "patchSetId": 12
@@ -39,6 +63,24 @@
       "revId": "26c77049a8ec60ffd02c1371d771d4e624b2961f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6bcc7e9b_7d8d7f08",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-12-16T21:27:50Z",
+      "side": 1,
+      "message": "I added an enumeration for this, currently with 4 filesystem types. We can add more in the future, if we want.",
+      "parentUuid": "ea1145c2_21e31998",
+      "revId": "26c77049a8ec60ffd02c1371d771d4e624b2961f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     },
     {
       "key": {
@@ -62,6 +104,30 @@
       "revId": "26c77049a8ec60ffd02c1371d771d4e624b2961f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14c010f7_19ff9f0e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2021-12-16T21:27:50Z",
+      "side": 1,
+      "message": "I added Common.UnsupportedRequest. I changed the errors throughout this file to reference those in Common.errors.yaml.",
+      "parentUuid": "97d14660_fb8de6b2",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 36
+      },
+      "revId": "26c77049a8ec60ffd02c1371d771d4e624b2961f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }

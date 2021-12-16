@@ -86,9 +86,9 @@ properties:
     - name: ValidNotAfter
       type: uint64
       description: >
-          The certificate expiry date and time, in epoch time, in milliseconds
+          The certificate expiry date and time, in epoch time, in seconds
     - name: ValidNotBefore
       type: uint64
       description: >
           The certificate validity start date and time,
-          in epoch time, in milliseconds.
+          in epoch time, in seconds.

@@ -1,0 +1,18 @@
+description: >
+  Provide the setting of target slot(s) to be updated.
+
+properties:
+  - name: UpdateTargetSlot
+    type: enum[self.TargetSlot]
+    description: >
+      Indicate which slot(s) to update when an image is to be updated.
+    default: Primary
+
+enumerations:
+  - name: TargetSlot
+    description: >
+        The target slot(s) for code update.
+    values:
+      - name: Primary
+      - name: Secondary
+      - name: Both

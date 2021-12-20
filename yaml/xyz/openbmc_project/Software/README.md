@@ -158,6 +158,26 @@ be in the following states:
               firmware update process. Note that the staged image is not
               necessarily a functional firmware.
 
+### Update Target
+
+For systems with dual flashes, `xyz.openbmc_project.Software.UpdateTarget`
+interface is used to specify the target slot that an activation is to be
+activated.
+
+It is expected that *ItemUpdater* will dynamically create this interface on
+the Activation DBus object if an activation is created for the uploaded image,
+and the user could set the update target on the uploaded Activation object.
+The interface will be removed after the image is activated.
+
+Note that this applies to the static layout only.
+
+Below are the currently supported values:
+* `Primary`: This is the default. The uploaded activation will be flashed to
+  the primary flash.
+* `Secondary`: The activation will be flashed to the secondary flash.
+* `Both`: The activation will be flashed to both the primary and secondary
+  flash.
+
 ### Image Apply Time
 
 `xyz.openbmc_project.Software.ApplyTime` has a property called

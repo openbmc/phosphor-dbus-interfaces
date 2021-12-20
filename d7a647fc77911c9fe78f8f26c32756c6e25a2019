@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "72d25e6f_b09c63dc",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-20T22:45:40Z",
+      "side": 1,
+      "message": "What does \"upstream\" and \"downstream\" mean in this context?  Do all cables have this as a concept?\n\nI think we need to document what the expectations are here better.",
+      "revId": "d7a647fc77911c9fe78f8f26c32756c6e25a2019",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0ce97fd_fba5ecd5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Connector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-20T22:45:40Z",
+      "side": 1,
+      "message": "This name change is really subtle.  I don\u0027t want to see both \u0027reverse_name\u0027 and \u0027reverse_names\u0027 in the repo.  \n\nCan you refactor everything to use \u0027reverse_names\u0027 in the repository (as a separate commit)?  Please use \u0027reverse_names\u0027 throughout this commit as well.",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 19
+      },
+      "revId": "d7a647fc77911c9fe78f8f26c32756c6e25a2019",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}

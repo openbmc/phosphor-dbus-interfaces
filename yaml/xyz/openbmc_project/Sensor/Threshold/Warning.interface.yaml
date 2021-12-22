@@ -2,16 +2,16 @@ description: >
     Implement to provide warning class sensor thresholds.  Objects implementing
     Sensor.Threshold.Warning must be instantiated in the correct hierarchy within
     the sensors namespace.  The following sensor hierarchies are recognized:
-      temperature
-      fan_tach
-      voltage
+      airflow
       altitude
       current
-      power
       energy
-      utilization
-      airflow
+      fan_tach
+      power
       pressure
+      temperature
+      utilization
+      voltage
 
     Additionally, any object implementing Sensor.Threshold.Warning must also
     implement Sensor.Value.

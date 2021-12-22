@@ -62,7 +62,9 @@ properties:
     - name: IPv6AcceptRA
       type: boolean
       description: >
-          Boolean for accepting router advertisements in IPv6
+          Boolean for accepting router advertisements in IPv6. This control is
+          being deprecated in favor of the DHCPConf enumerations
+          below. Removal of this entry is deferred.
     - name: NICEnabled
       type: boolean
       description: >
@@ -105,9 +107,19 @@ enumerations:
 
     - name: DHCPConf
       description: >
-          A list of the permitted DHCP settings used by systemd.
+          High level definitions of available DHCP states.
+          These definitions do not have a 1:1 correlation to the
+          systemd.network configuration file contents.
+          both: Enable IPv4 DHCP and IPv6 Stateful DHCP
+          v4v6stateless: Enable IPv4 DHCP and IPv6 SLAAC
+          v6: Enable IPv6 Stateful DHCP
+          v6stateless: Enable IPv6 SLAAC
+          v4: Enable IPv4 DHCP
+          none: Disable DHCP for IPv4 and IPv6
       values:
           - name: both
-          - name: v4
+          - name: v4v6stateless
           - name: v6
+          - name: v6stateless
+          - name: v4
           - name: none

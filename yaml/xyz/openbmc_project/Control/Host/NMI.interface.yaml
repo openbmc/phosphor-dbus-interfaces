@@ -5,7 +5,53 @@ description: >
 methods:
     - name: NMI
       description: >
-          Generic method to initiate non maskable interrupt on all
-          host processors.
+          Generic method to initiate non-maskable interrupt on all
+          host processors. Set LastNMISource to given value.
+      parameters:
+          - name: Source
+            type: enum[self.NMISource]
+            description: >
+                NMI Source to set before issue the interrupt.
       errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.Common.Error.InternalFailure
+
+properties:
+    - name: LastNMISource
+      type: enum[self.NMISource]
+      description: >
+          Keeps track of NMI signal source in BMC.
+      default: "None"
+
+enumerations:
+    - name: NMISource
+      description: >
+          The type of NMI source.
+      values:
+          - name: None
+            description: >
+                No NMI signals or source unknown.
+          - name: FrontPanelButton
+            description: >
+                Via Front Panel NMI button.
+          - name: Watchdog
+            description: >
+                Via watchdog pre-timeout.
+          - name: ChassisCommand
+            description: >
+                Via Chassis command.
+          - name: MemoryError
+            description: >
+                Via memory error.
+          - name: PCIBusError
+            description: >
+                Via PCI bus error(PERR & SERR).
+          - name: PCH
+            description: >
+                Via southbridge NMI.
+          - name: Chipset
+            description: >
+                Via chipset NMI.
+          - name: BMC
+            description: >
+                Via BMC command.

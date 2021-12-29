@@ -1,0 +1,16 @@
+description: >
+    Authority Manager's interface to replace existing authorities list.
+methods:
+    - name: ReplaceAll
+      description: >
+          Replace the current authorities list and restart the associated
+          services.
+      parameters:
+        - name: Path
+          type: string
+          description: >
+              Path of file that contains multiple root certificates.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Certs.Error.InvalidCertificate
+        - xyz.openbmc_project.Common.Error.NotAllowed

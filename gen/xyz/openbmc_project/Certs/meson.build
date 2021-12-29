@@ -82,6 +82,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('InstallAll')
+generated_others += custom_target(
+    'xyz/openbmc_project/Certs/InstallAll__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Certs/InstallAll.interface.yaml',  ],
+    output: [ 'InstallAll.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Certs/InstallAll',
+    ],
+)
+
 subdir('Replace')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs/Replace__markdown'.underscorify(),
@@ -93,6 +107,20 @@ generated_others += custom_target(
         '--tool', sdbusplusplus_prog,
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs/Replace',
+    ],
+)
+
+subdir('ReplaceAll')
+generated_others += custom_target(
+    'xyz/openbmc_project/Certs/ReplaceAll__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml',  ],
+    output: [ 'ReplaceAll.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Certs/ReplaceAll',
     ],
 )
 

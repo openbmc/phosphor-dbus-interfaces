@@ -66,6 +66,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a8e944a5_59d5d597",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2022-01-04T10:14:47Z",
+      "side": 1,
+      "message": "I thought about this, but I this will require me to change all other interface users which I don\u0027t even know about and can\u0027t test.",
+      "parentUuid": "8ecc329a_aa2221e4",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cb664987_7d4063cc",
         "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
         "patchSetId": 1
@@ -112,6 +136,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fda5d458_7a51c865",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2022-01-04T10:14:47Z",
+      "side": 1,
+      "message": "Sure, no problem",
+      "parentUuid": "d925744c_3a5ae471",
+      "range": {
+        "startLine": 48,
+        "startChar": 16,
+        "endLine": 48,
+        "endChar": 26
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a5dd7760_7bf7bec1",
         "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
         "patchSetId": 1
@@ -146,6 +194,30 @@
       "writtenOn": "2022-01-03T14:03:33Z",
       "side": 1,
       "message": "PCH is something that only exists in Intel.\n\nIn some regards this makes me think that the values of these enumerations shouldn\u0027t all be in this interface, but some should be in \u0027com.intel.Control.Host.NMI\u0027.  We\u0027ve done this in a few other places where the \"enumeration\" property is just a string and the values can come from multiple interfaces.  Would that be the better thing to do on this property so we have less discussions about \"this interrupt is for this architecture\" or are we going to be able to keep a relatively small super-set?",
+      "range": {
+        "startLine": 57,
+        "startChar": 16,
+        "endLine": 57,
+        "endChar": 19
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "095188d6_6da3633c",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2022-01-04T10:14:47Z",
+      "side": 1,
+      "message": "This is something I strongly disagree: the fact that PCH/ME is Intel-specific doesn\u0027t mean, it can\u0027t mentioned as one of possibly values. The interface was already moved from \"com.intel.xxx\" to \"openbmc_project\" to simplify it\u0027s usage, my intention here now is to make it more uniform, to reduce differences between Intel and Power \"worlds\" if OpenBMC project.\n\n\u003e We\u0027ve done this in a few other places where the \"enumeration\" property is just a string and the values can come from multiple interfaces.  \n\nHow could this be implemented on PDI level? How could you generate bindings for that? Do we already have support for such \"multiple enums for one parameter\"? Otherwise is looks to me as you discrediting idea of using PDI-generated binding by yourself by asking to use free from strings instead of enums.",
+      "parentUuid": "7cc1b8ec_2ea3a821",
       "range": {
         "startLine": 57,
         "startChar": 16,

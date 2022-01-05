@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "7214d72f_d0cc5cea",
         "filename": "yaml/com/ibm/panel.interface.yaml",
@@ -20,10 +21,34 @@
         "endChar": 32
       },
       "revId": "66c1f7e6ce0f532a5631949d9b27556eb4af10e2",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "242f4ef2_6350b485",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000362
+      },
+      "writtenOn": "2022-01-05T15:55:26Z",
+      "side": 1,
+      "message": "This is to trigger panel lamp test only.",
+      "parentUuid": "7214d72f_d0cc5cea",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 14,
+        "endChar": 32
+      },
+      "revId": "66c1f7e6ce0f532a5631949d9b27556eb4af10e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "0bbe80a5_cb841b93",
         "filename": "yaml/com/ibm/panel.interface.yaml",
@@ -43,8 +68,31 @@
         "endChar": 34
       },
       "revId": "66c1f7e6ce0f532a5631949d9b27556eb4af10e2",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6156bef7_16532592",
+        "filename": "yaml/com/ibm/panel.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000362
+      },
+      "writtenOn": "2022-01-05T15:55:26Z",
+      "side": 1,
+      "message": "Yes this is needed. In some cases we need to send false to abruptly stop the panel lamp test.",
+      "parentUuid": "0bbe80a5_cb841b93",
+      "range": {
+        "startLine": 18,
+        "startChar": 7,
+        "endLine": 18,
+        "endChar": 34
+      },
+      "revId": "66c1f7e6ce0f532a5631949d9b27556eb4af10e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

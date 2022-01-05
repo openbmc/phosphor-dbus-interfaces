@@ -114,6 +114,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e33ae1f6_bfba691e",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2022-01-05T17:35:22Z",
+      "side": 1,
+      "message": "That\u0027s bad, I was sure, PDI will just create some default implementation which always throw something like \"not implemented\" exception.\n\nActually, Intel implementation had no this `NMIWithSource` method, but they had ugly way to trigger NMI with changing several properties. We can keep this approach to not change openpower specific code, but I really dislike that trick.",
+      "parentUuid": "30d080c4_eb2afadc",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cb664987_7d4063cc",
         "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
         "patchSetId": 1
@@ -266,6 +290,30 @@
       "side": 1,
       "message": "\u003e This is something I strongly disagree: the fact that PCH/ME is Intel-specific doesn\u0027t mean, it can\u0027t mentioned as one of possibly values. The interface was already moved from \"com.intel.xxx\" to \"openbmc_project\" to simplify it\u0027s usage, my intention here now is to make it more uniform, to reduce differences between Intel and Power \"worlds\" if OpenBMC project.\n\nAnd this is good intention on your part.  Typically I\u0027ve been refraining from large enumeration lists that contain architecture-specific values though so that other architectures don\u0027t pay the penalty of these enums.  PCH itself is likely not going to exist for much longer even on Intel.  AMD is going to have their own things.  I don\u0027t want this list to become a superset of every processor ever made.\n\n\u003e How could this be implemented on PDI level? How could you generate bindings for that? Do we already have support for such \"multiple enums for one parameter\"? Otherwise is looks to me as you discrediting idea of using PDI-generated binding by yourself by asking to use free from strings instead of enums.\n\nI\u0027m not asking for free-form strings.  I\u0027m asking for strings of a specific, well-defined structure. ;)\n\nYes, sdbusplus/PDI sort of already supports this.  Not as ideally as I\u0027d like probably but fine enough.  As we get more of these we may decide to make the syntax slightly friendlier perhaps but that will probably require adding some decoration to the YAML to help the generator out.\n\n  sdbusplus::message::convert_from_string\u003cstd::variant\u003cenum1, enum2, enum3\u003e\u003e(source)\n\nThat will return a variant containing one of the 3 enum types.",
       "parentUuid": "095188d6_6da3633c",
+      "range": {
+        "startLine": 57,
+        "startChar": 16,
+        "endLine": 57,
+        "endChar": 19
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e88d578a_6748267d",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000879
+      },
+      "writtenOn": "2022-01-05T17:35:22Z",
+      "side": 1,
+      "message": "Without declaration in YAML, this looks like undocumented hack. I would prefer to not use it in this form.\n\nI still can\u0027t get your point: what is wrong with having all the variants in one YAML file? Do you care about generated code size? Then, we probably can introduce something like \"platfrom\" flag for conditional code-generation, like:\n        - name: PCH\n          platform: x86-intel\n          description: \u003e\n            Via southbridge NMI.",
+      "parentUuid": "4a323b63_e8c1eef4",
       "range": {
         "startLine": 57,
         "startChar": 16,

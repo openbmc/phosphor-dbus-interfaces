@@ -90,6 +90,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "30d080c4_eb2afadc",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-05T16:47:44Z",
+      "side": 1,
+      "message": "You\u0027re going to have to find and fix these anyhow.  By adding a new function the existing implementations of Host.NMI will be missing a function and, if built using PDI, will fail to compile.\n\nhttps://github.com/search?q\u003dorg%3Aopenbmc+host.nmi\u0026type\u003dcode\n\nIt should just be these 3.\n\n  https://github.com/openbmc/openpower-proc-control/blob/2246cca047e65613c4ad76848cfb34f78330bfcc/nmi_interface.hpp\n \n https://github.com/openbmc/bmcweb/blob/1e1e598df6d1d9530dde6e92d8f74f8143f60e50/redfish-core/lib/systems.hpp\n  https://github.com/openbmc/x86-power-control/blob/c46ebb493f0e0cc1ccc5525d5484465bba69551f/src/power_control.cpp\n\nI understand you might not be able to test the openpower-proc-control one.  We\u0027re going to have to rely on the maintainer for assistance there for any testing.  Just be clear to them about that.",
+      "parentUuid": "a8e944a5_59d5d597",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cb664987_7d4063cc",
         "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
         "patchSetId": 1
@@ -218,6 +242,30 @@
       "side": 1,
       "message": "This is something I strongly disagree: the fact that PCH/ME is Intel-specific doesn\u0027t mean, it can\u0027t mentioned as one of possibly values. The interface was already moved from \"com.intel.xxx\" to \"openbmc_project\" to simplify it\u0027s usage, my intention here now is to make it more uniform, to reduce differences between Intel and Power \"worlds\" if OpenBMC project.\n\n\u003e We\u0027ve done this in a few other places where the \"enumeration\" property is just a string and the values can come from multiple interfaces.  \n\nHow could this be implemented on PDI level? How could you generate bindings for that? Do we already have support for such \"multiple enums for one parameter\"? Otherwise is looks to me as you discrediting idea of using PDI-generated binding by yourself by asking to use free from strings instead of enums.",
       "parentUuid": "7cc1b8ec_2ea3a821",
+      "range": {
+        "startLine": 57,
+        "startChar": 16,
+        "endLine": 57,
+        "endChar": 19
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a323b63_e8c1eef4",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-05T16:47:44Z",
+      "side": 1,
+      "message": "\u003e This is something I strongly disagree: the fact that PCH/ME is Intel-specific doesn\u0027t mean, it can\u0027t mentioned as one of possibly values. The interface was already moved from \"com.intel.xxx\" to \"openbmc_project\" to simplify it\u0027s usage, my intention here now is to make it more uniform, to reduce differences between Intel and Power \"worlds\" if OpenBMC project.\n\nAnd this is good intention on your part.  Typically I\u0027ve been refraining from large enumeration lists that contain architecture-specific values though so that other architectures don\u0027t pay the penalty of these enums.  PCH itself is likely not going to exist for much longer even on Intel.  AMD is going to have their own things.  I don\u0027t want this list to become a superset of every processor ever made.\n\n\u003e How could this be implemented on PDI level? How could you generate bindings for that? Do we already have support for such \"multiple enums for one parameter\"? Otherwise is looks to me as you discrediting idea of using PDI-generated binding by yourself by asking to use free from strings instead of enums.\n\nI\u0027m not asking for free-form strings.  I\u0027m asking for strings of a specific, well-defined structure. ;)\n\nYes, sdbusplus/PDI sort of already supports this.  Not as ideally as I\u0027d like probably but fine enough.  As we get more of these we may decide to make the syntax slightly friendlier perhaps but that will probably require adding some decoration to the YAML to help the generator out.\n\n  sdbusplus::message::convert_from_string\u003cstd::variant\u003cenum1, enum2, enum3\u003e\u003e(source)\n\nThat will return a variant containing one of the 3 enum types.",
+      "parentUuid": "095188d6_6da3633c",
       "range": {
         "startLine": 57,
         "startChar": 16,

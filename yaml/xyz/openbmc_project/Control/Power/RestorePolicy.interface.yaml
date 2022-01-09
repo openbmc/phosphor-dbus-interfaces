@@ -9,6 +9,13 @@ properties:
       default: 'Restore'
       description: >
           The policy to adopt after the BMC reset.
+    - name: PowerRestoreDelay
+      type: uint16
+      default: 0
+      description: >
+          The delay in seconds before invoke power restore policy after power
+          applied.
+          0 - disable delay.
 
 enumerations:
     - name: Policy

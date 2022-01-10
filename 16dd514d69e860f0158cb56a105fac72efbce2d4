@@ -138,6 +138,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e047e318_4a923e34",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T22:36:01Z",
+      "side": 1,
+      "message": "\u003e That\u0027s bad, I was sure, PDI will just create some default implementation which always throw something like \"not implemented\" exception.\n\nPDI generates default implementations for properties but not for methods.",
+      "parentUuid": "e33ae1f6_bfba691e",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cb664987_7d4063cc",
         "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
         "patchSetId": 1
@@ -338,6 +362,30 @@
       "side": 1,
       "message": "Is the PCH type used anywhere?  Is it possible to clean up this list, and remove anything that isn\u0027t currently used?  Then we can discuss adding them back in as individual reviews when there is a specific need.",
       "parentUuid": "e88d578a_6748267d",
+      "range": {
+        "startLine": 57,
+        "startChar": 16,
+        "endLine": 57,
+        "endChar": 19
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3077ec5_f120fcd1",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T22:36:01Z",
+      "side": 1,
+      "message": "\u003e Without declaration in YAML, this looks like undocumented hack. I would prefer to not use it in this form.\n\nIt is documented, isn\u0027t it?  Why would we do something different than what other interfaces already do?\n\n\u003e I still can\u0027t get your point: what is wrong with having all the variants in one YAML file? Do you care about generated code size?\n\nNo, it isn\u0027t just code size.  They end up having to have case statements (or a \"default\") for hardware they have no idea what it is.  If they add a \"default\" it means that they lose compile-time-checking for new added hardware that they really DO care about.  At which point, we might as well simply use strings.\n\n\u003e Then, we probably can introduce something like \"platfrom\" flag for conditional code-generation, like:\n\nProposals for an entirely new YAML schema should not be buried in an interface modification like this.  If you want to propose a new way to document this, this is fine, but does that mean you\u0027re also signing up to add support in PDI / sdbus++?",
+      "parentUuid": "ea3ccf38_8cdd097f",
       "range": {
         "startLine": 57,
         "startChar": 16,

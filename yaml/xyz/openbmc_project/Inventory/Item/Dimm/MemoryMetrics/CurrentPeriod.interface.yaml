@@ -1,0 +1,11 @@
+description: >
+    Implement to provide current period I/O memory counter attributes.
+properties:
+    - name: BlockRead
+      type: uint64
+      description: >
+          Number of blocks read in a single reset period.
+    - name: BlockWritten
+      type: uint64
+      description: >
+          Number of blocks written in a single reset period.

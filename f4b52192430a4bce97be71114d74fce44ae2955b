@@ -16,6 +16,23 @@
       "message": "I haven\u0027t reviewed the details here but 3 general comments:\n\n1) You\u0027re not in the Intel CCLA group yet.  Please reach out to your CLA manager so that you get CI on your commits.\n\n2) You haven\u0027t added the (generated) meson files for these so they\u0027re going to fail CI.  See `gen/regenerate-meson`.\n\n3) None of these sound like Inventory interfaces, because they are changing.  Maybe they belong in Sensors or Telemetry?",
       "revId": "f4b52192430a4bce97be71114d74fce44ae2955b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f00561b0_8e368aca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-14T18:28:43Z",
+      "side": 1,
+      "message": "Is there a design anywhere for what you\u0027re attempting to accomplish?  Or are these coming from a standard somewhere that we should point to?\n\nAre these really \"Memory\" or are they a particular memory technology like 3DXP?",
+      "revId": "f4b52192430a4bce97be71114d74fce44ae2955b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

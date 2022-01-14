@@ -490,6 +490,30 @@
       },
       "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b95f67a9_5c46d3b2",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-14T21:25:49Z",
+      "side": 1,
+      "message": "\u003ethere is concern about changing user-facing properties without fully understanding them\n\nWho would be the users here?  If it is existing code we should be able to search for it, right?",
+      "parentUuid": "387aa948_966adea7",
+      "range": {
+        "startLine": 57,
+        "startChar": 16,
+        "endLine": 57,
+        "endChar": 19
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

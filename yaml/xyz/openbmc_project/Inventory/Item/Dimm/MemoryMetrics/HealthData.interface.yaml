@@ -1,0 +1,23 @@
+description: >
+    Implement to provide memory health data attributes.
+properties:
+    - name: RemainingSpareBlockPercentage
+      type: uint64
+      description: >
+          Remaining spare blocks in percentage.
+    - name: LastShutdownSuccess
+      type: boolean
+      description: >
+          Bandwith utilization as percentage.
+    - name: DataLossDetected
+      type: boolean
+      description: >
+          Bandwith utilization as percentage.
+    - name: PerformanceDegraded
+      type: boolean
+      description: >
+          Bandwith utilization as percentage.
+    - name: PredictedMediaLifeLeftPercentage
+      type: uint64
+      description: >
+          Percentage of life remaining in the media.

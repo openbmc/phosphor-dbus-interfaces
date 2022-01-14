@@ -1,0 +1,27 @@
+description: >
+    Implement to provide memory alarm trip attributes.
+properties:
+    - name: AdressParityError
+      type: boolean
+      description: >
+          Indicate if address parity error was detected.
+    - name: CorrectableECCError
+      type: boolean
+      description: >
+          Indicate if correctable error threshold
+          crossing alarm trip was detected.
+    - name: SpareBlock
+      type: boolean
+      description: >
+          Indicate if spare block capacity
+          crossing alarm trip was detected.
+    - name: Temperature
+      type: boolean
+      description: >
+          Indicate if a tempeprature threshold
+          alarm trip was detected.
+    - name: UncorrectableECCError
+      type: boolean
+      description: >
+          Indicate if uncorrectable error threshold
+          crossing alarm trip was detected.

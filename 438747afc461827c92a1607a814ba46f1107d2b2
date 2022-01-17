@@ -33,6 +33,24 @@
       "message": "I don\u0027t understand why this is necessary.  Each slot has its own Activation instance.  Why can\u0027t you activate them directly?",
       "revId": "438747afc461827c92a1607a814ba46f1107d2b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "197d8935_9eea2ad1",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2022-01-17T06:45:55Z",
+      "side": 1,
+      "message": "The intention is to make it possible to specify the target of the uploaded image.\nWithout this interface, the user is not possible to tell which slot is to be updated.\n\nThe description may be a bit confusing, I will update it to make it clear that the interface is for the uploaded image only.",
+      "parentUuid": "2b1a4a2d_1b8eef63",
+      "revId": "438747afc461827c92a1607a814ba46f1107d2b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

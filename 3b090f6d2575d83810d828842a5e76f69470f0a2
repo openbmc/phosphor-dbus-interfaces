@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81f087f6_77845373",
+        "filename": "yaml/xyz/openbmc_project/Certs/InstallAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-19T21:51:02Z",
+      "side": 1,
+      "message": "object_path",
+      "range": {
+        "startLine": 15,
+        "startChar": 22,
+        "endLine": 15,
+        "endChar": 28
+      },
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33b15b41_46ba4e4f",
+        "filename": "yaml/xyz/openbmc_project/Certs/InstallAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-19T21:51:02Z",
+      "side": 1,
+      "message": "Does there need to be any way to DeleteAll?  I guess the Manager already has Collection.DeleteAll?",
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e0056de_3ff3c593",
+        "filename": "yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-19T21:51:02Z",
+      "side": 1,
+      "message": "Now that I see how this is, does it make sense to have a single interface for Authority?  I guess there is already an Install and Replace interface so you\u0027re just following the pattern.  I just expect there aren\u0027t many cases where you have one implemented without the other so having them in separate interface probably doesn\u0027t do anything useful.",
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a2e8b4f_3277a2bc",
+        "filename": "yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-19T21:51:02Z",
+      "side": 1,
+      "message": "spelling",
+      "range": {
+        "startLine": 2,
+        "startChar": 54,
+        "endLine": 2,
+        "endChar": 64
+      },
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e081ead_530e00b0",
+        "filename": "yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-19T21:51:02Z",
+      "side": 1,
+      "message": "wrap?",
+      "range": {
+        "startLine": 6,
+        "startChar": 80,
+        "endLine": 6,
+        "endChar": 82
+      },
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ddea465_9d661fd8",
+        "filename": "yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-19T21:51:02Z",
+      "side": 1,
+      "message": "InstallAll returns an array[object_path] for all the new installed certificates, right?  Why doesn\u0027t ReplaceAll?",
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

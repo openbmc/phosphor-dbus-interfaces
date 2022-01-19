@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e1650f6_bfe6b726",
+        "filename": "yaml/xyz/openbmc_project/Certs/InstallAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000682
+      },
+      "writtenOn": "2022-01-19T23:52:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "81f087f6_77845373",
+      "range": {
+        "startLine": 15,
+        "startChar": 22,
+        "endLine": 15,
+        "endChar": 28
+      },
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "33b15b41_46ba4e4f",
@@ -37,6 +61,24 @@
       "writtenOn": "2022-01-19T21:51:02Z",
       "side": 1,
       "message": "Does there need to be any way to DeleteAll?  I guess the Manager already has Collection.DeleteAll?",
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38398c0d_d9f3b32f",
+        "filename": "yaml/xyz/openbmc_project/Certs/InstallAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000682
+      },
+      "writtenOn": "2022-01-19T23:52:17Z",
+      "side": 1,
+      "message": "Yes, we plan to use the existing Collection.DeleteAll.",
+      "parentUuid": "33b15b41_46ba4e4f",
       "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -58,6 +100,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ece2fed2_8fa607bf",
+        "filename": "yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000682
+      },
+      "writtenOn": "2022-01-19T23:52:17Z",
+      "side": 1,
+      "message": "Yes. The main reason I split them is to keep consistency with existing pattern. I can change to a single Authority interface if we strongly prefer it.",
+      "parentUuid": "3e0056de_3ff3c593",
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9a2e8b4f_3277a2bc",
@@ -71,6 +131,30 @@
       "writtenOn": "2022-01-19T21:51:02Z",
       "side": 1,
       "message": "spelling",
+      "range": {
+        "startLine": 2,
+        "startChar": 54,
+        "endLine": 2,
+        "endChar": 64
+      },
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c080036_8e77b6d3",
+        "filename": "yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000682
+      },
+      "writtenOn": "2022-01-19T23:52:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a2e8b4f_3277a2bc",
       "range": {
         "startLine": 2,
         "startChar": 54,
@@ -104,6 +188,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d18a6580_009f55db",
+        "filename": "yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000682
+      },
+      "writtenOn": "2022-01-19T23:52:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e081ead_530e00b0",
+      "range": {
+        "startLine": 6,
+        "startChar": 80,
+        "endLine": 6,
+        "endChar": 82
+      },
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2ddea465_9d661fd8",
@@ -117,6 +225,24 @@
       "writtenOn": "2022-01-19T21:51:02Z",
       "side": 1,
       "message": "InstallAll returns an array[object_path] for all the new installed certificates, right?  Why doesn\u0027t ReplaceAll?",
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7b39cf7_76d125ac",
+        "filename": "yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000682
+      },
+      "writtenOn": "2022-01-19T23:52:17Z",
+      "side": 1,
+      "message": "This is to be aligned with the existing replace interface. I can add a return value if that\u0027s preferred. But internally, we don\u0027t plan to rely on returned object paths.",
+      "parentUuid": "2ddea465_9d661fd8",
       "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

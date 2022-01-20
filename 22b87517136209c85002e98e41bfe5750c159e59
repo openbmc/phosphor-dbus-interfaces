@@ -39,6 +39,30 @@
       },
       "revId": "22b87517136209c85002e98e41bfe5750c159e59",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7818fe97_e14936f4",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2022-01-20T05:51:10Z",
+      "side": 1,
+      "message": "I did not realize this part.\nIs there any existing code that implemented the sub-path already?\n\n\u003e This is why I don\u0027t understand why we need a new UpdateTarget interface. \n\nSay the user uploads a BMC image on a dual image system:\n1. image-manager will create the version interface on /xyz/openbmc_project/software/\u003cid-to-be-updated\u003e;\n2. itme-updater will create the activation/version interface on the same object as well.\nHow does the user tell which BMC slot is to be updated in the above case?\n\nWith the sub-path concept, the item-updater may need to create two activation objects for this:\n /xyz/openbmc_project/software/\u003cid-to-be-updated\u003e/bmc_primary\n /xyz/openbmc_project/software/\u003cid-to-be-updated\u003e/bmc_secondary\n\nIs the above expected?\n\nIf yes, if the user only wants to update the `\u003cid-to-be-updated\u003e/bmc_primary`, the user needs to set RequestedActivation on the `\u003cid-to-be-updated\u003e/bmc_primary` object, and delete the `\u003cid-to-be-updated\u003e/bmc_secondary`, it looks not so good that doing a code update needs to delete a DBus object...\n\nI see it could express the concept of the same image on multiple devices, but it is not clear to me how good it is to handle the code update case.",
+      "parentUuid": "a7987baf_95c9eb54",
+      "range": {
+        "startLine": 55,
+        "startChar": 41,
+        "endLine": 59,
+        "endChar": 79
+      },
+      "revId": "22b87517136209c85002e98e41bfe5750c159e59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -72,6 +72,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5f40ef1_990635dc",
+        "filename": "yaml/xyz/openbmc_project/Certs/InstallAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-20T03:12:31Z",
+      "side": 1,
+      "message": "Ideally the existing interfaces would be refactored in another commit.  Thanks for doing this one the correct way.",
+      "parentUuid": "f77a5801_649006d3",
+      "range": {
+        "startLine": 15,
+        "startChar": 22,
+        "endLine": 15,
+        "endChar": 28
+      },
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "33b15b41_46ba4e4f",
@@ -267,6 +291,24 @@
       "side": 1,
       "message": "This is to be aligned with the existing replace interface. I can add a return value if that\u0027s preferred. But internally, we don\u0027t plan to rely on returned object paths.",
       "parentUuid": "2ddea465_9d661fd8",
+      "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f205cb86_6fd73e0e",
+        "filename": "yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-20T03:12:31Z",
+      "side": 1,
+      "message": "It seems like we should make them operate the same way.  Either remove it from InstallAll or add it to RemoveAll (even if the singular ones don\u0027t match; I wasn\u0027t around to review some of these older interfaces and I haven\u0027t forced any refactoring).",
+      "parentUuid": "f7b39cf7_76d125ac",
       "revId": "3b090f6d2575d83810d828842a5e76f69470f0a2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

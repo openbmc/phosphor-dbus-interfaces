@@ -16,6 +16,29 @@
       "message": "Hope these can be merged soon.",
       "revId": "22b87517136209c85002e98e41bfe5750c159e59",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7987baf_95c9eb54",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-20T03:03:23Z",
+      "side": 1,
+      "message": "The current design is that there can be multiple Activation interfaces from a single Version and those Activation interfaces are hosted at sub-paths.  The primary/secondary flash bank is one such example that is clearly identified here.  The Activation path might be something like `/xyz/openbmc_project/software/12345/bmc-primary` (for well-defined paths we should probably enumerate in this document what the expectations are).\n\nThis is why I don\u0027t understand why we need a new UpdateTarget interface.  There are already separate Activations that tell you which device you are updating.  The advantage of separate Activations is that it also handles other device types (than just dual flash banks of the BMC).  We are already implementing support for multi-host BIOS update (devices might be host-1, host-2, host-3).  You could also handle VRs, CPLDs, Xeon ME, etc. like this.  IMO separate Activation interfaces is far more flexible because it handles _all_ these cases and not just a dual flash BMC.\n\nSince the separate Activation interfaces _can_ handle a dual-flash BMC, like you are proposing, I don\u0027t see a reason to also have a different way to handle it (ie. your UpdateTarget proposal).  This makes additional work for external interfaces, like bmcweb/Redfish, to special case the BMC.",
+      "range": {
+        "startLine": 55,
+        "startChar": 41,
+        "endLine": 59,
+        "endChar": 79
+      },
+      "revId": "22b87517136209c85002e98e41bfe5750c159e59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

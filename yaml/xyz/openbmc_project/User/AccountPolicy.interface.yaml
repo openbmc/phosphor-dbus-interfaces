@@ -29,6 +29,7 @@ properties:
           set to higher one for security reasons.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
     - name: RememberOldPasswordTimes
       type: byte

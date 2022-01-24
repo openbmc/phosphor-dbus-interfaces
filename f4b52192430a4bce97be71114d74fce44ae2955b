@@ -69,6 +69,24 @@
       "parentUuid": "ea29f02c_fed07164",
       "revId": "f4b52192430a4bce97be71114d74fce44ae2955b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6160ad19_3a967d62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-24T22:48:59Z",
+      "side": 1,
+      "message": "\u003e 3) These are device counters and they doesn\u0027t fit to any of Sensors nor Telemetry. I understand your point and indeed they are changing but they are also an integral part of product we develop.\n\n\"Integral part of product we develop\".  What does this statement mean?  \"They are built into a product we are making\" or \"we have to have these in order to ship our product\"?  Either way, I\u0027m not following why this means the data needs to be in the Inventory namespace.\n\nI don\u0027t want regularly changing data in the Inventory namespace because it makes it harder for the common use cases of dbus signal matches.  Two different use cases are:\n    - \"I want to know when hardware is added or removed from the system\"\n    - \"I want to know when sensors change value\"\n\nThe first requires a match on Inventory, the second requires a match on Sensors, and there is no confusion on the events between the two.  If we start putting Sensor data into Inventory we confuse these.\n\n\"Sensor\" doesn\u0027t necessarily mean \"data contained on a hardware monitoring chip, like a LM75 temperature sensor\".  We have BMC memory and CPU utilization information captured there as well.\n\nIf we have some rationalized argument on why Sensor namespace is a bad idea for this data, I\u0027d like to hear it.  I might consider creating something like \"Metric\" if we can ensure the difference between a \"Sensor.Value\" and a \"Metric\" is well-defined and easily explained.",
+      "parentUuid": "e57be12a_e9937c17",
+      "revId": "f4b52192430a4bce97be71114d74fce44ae2955b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

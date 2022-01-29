@@ -183,6 +183,30 @@
       },
       "revId": "22b87517136209c85002e98e41bfe5750c159e59",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e94ae853_994e6265",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2022-01-29T13:52:44Z",
+      "side": 1,
+      "message": "\u003e This design was written with the intent that it covers both multi-slot (BMC) and multi-device (ex. multi-host BIOS). \n\nThe design is written, but the implementation is not.\n\n\u003e If you\u0027re doing something that deviates from that I\u0027ll need to see what it looks like to make sure it still covers the other intended use cases.  I don\u0027t want to see a divergence.\n\nI do not want to do divergence too.\nBoth Adriana and I are going to support multi-slot BMC by:\n* Create multiple DBus object for each slot;\n* For static-layout, reuse the RedundentPriority to represent slot, it scales if we have 3 or more BMC slots.\n* For ubi/emmc, it has dynamic RedundentPriority anyway so it works fine.\n\nThe code described above is implemented and under review.\nWhat we need to do here is to update this doc and describe the multi-slot support accordingly.\n\nI think HCL guys could weight in here and see if the above implementation works for multiple BIOS as well.\nI think it should be working as expected.\n\nWhat does not scale is the interface here that it currently defines \"primary\", \"secondary\" and \"both\".\nTo support multiple BIOS (that may have 3 or more), this property could changed to a value to indicate which slot to update, and it needs a special value to represent to update all slot.\n\n@Patrick you could check series at https://gerrit.openbmc-project.xyz/q/topic:bmc-dual-image for the above implementation.",
+      "parentUuid": "692a17be_af572056",
+      "range": {
+        "startLine": 55,
+        "startChar": 41,
+        "endLine": 59,
+        "endChar": 79
+      },
+      "revId": "22b87517136209c85002e98e41bfe5750c159e59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

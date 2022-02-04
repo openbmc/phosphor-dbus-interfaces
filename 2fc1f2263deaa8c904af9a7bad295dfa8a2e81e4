@@ -16,6 +16,23 @@
       "message": "Thanks for looking this over.",
       "revId": "2fc1f2263deaa8c904af9a7bad295dfa8a2e81e4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7499ed75_07121ad6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2022-02-04T17:29:46Z",
+      "side": 1,
+      "message": "Just to double check / remind ourselves - I\u0027m guessing we would still have to make the respective change to our `phosphor-dbus-interfaces-mapper-config-native.bbappend` to add to:\n\n```\nPHOSPHOR_MAPPER_SERVICE:append \u003d \" org.google\"\nPHOSPHOR_MAPPER_INTERFACE:append \u003d \" org.google\"\n```\n",
+      "revId": "2fc1f2263deaa8c904af9a7bad295dfa8a2e81e4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

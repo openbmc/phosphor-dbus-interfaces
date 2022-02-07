@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "57ce05e1_8e42a049",
         "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
@@ -20,10 +21,10 @@
         "endChar": 0
       },
       "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "460e5ac6_0ff951a0",
         "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
@@ -44,10 +45,10 @@
         "endChar": 0
       },
       "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "1a726487_db349688",
         "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
@@ -68,10 +69,10 @@
         "endChar": 0
       },
       "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "a84a58a0_8bb57b8c",
         "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
@@ -92,10 +93,34 @@
         "endChar": 0
       },
       "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "33a2249d_77533440",
+        "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-07T15:05:59Z",
+      "side": 1,
+      "message": "@Patrick,\nhttps://redfish.dmtf.org/schemas/v1/LogEntry.v1_11_0.json describes the \"GeneratorId\" property. Its a string type. There is no hard rule that it has to be the IP address. Its up to the implementation to populate a unique id of the device that has generated the specific object",
+      "parentUuid": "a84a58a0_8bb57b8c",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 0
+      },
+      "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "c3ce09f8_0c7a4321",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
@@ -115,10 +140,10 @@
         "endChar": 28
       },
       "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "467cc0cb_a08c6f03",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
@@ -139,10 +164,10 @@
         "endChar": 28
       },
       "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "63a7b646_2a0cbb8f",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
@@ -156,10 +181,10 @@
       "side": 1,
       "message": "are we defining these unique ids somewhere?",
       "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "cd95667b_3b44381a",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
@@ -174,8 +199,7 @@
       "message": "In the design doc it is included\nhttps://gerrit.openbmc-project.xyz/c/openbmc/docs/+/47446\n\nDo i need to define it elsewhere?",
       "parentUuid": "63a7b646_2a0cbb8f",
       "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

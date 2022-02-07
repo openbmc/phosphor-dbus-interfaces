@@ -122,6 +122,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "04beb888_fe7f623f",
+        "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-07T15:53:30Z",
+      "side": 1,
+      "message": "This is the Redfish information:\n\n  \"GeneratorId\": {\n    \"description\": \"An identifier of the device that has generated the IPMI SEL Event Record.\",\n\nThis might be something like \"CPU-0\".  And for that I would agree that it is a \"generator\".  What you have described above is an Initiator.  Are you overloading a Redfish field for something other than what it is intended?\n\n\"Unique Id of the user\" doesn\u0027t sound like an IP address either.\n\nIf you want this to be in common it needs to be better defined.",
+      "parentUuid": "33a2249d_77533440",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 0
+      },
+      "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c3ce09f8_0c7a4321",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
         "patchSetId": 8

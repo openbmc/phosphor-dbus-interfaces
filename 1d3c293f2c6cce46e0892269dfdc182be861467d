@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "73ed14ac_878ac524",
         "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "Why do we need this on Dump and as a separate interface.?",
       "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "9b0eab54_5a2ca279",
         "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
@@ -32,10 +33,10 @@
       "message": "So I have kept this as a separate interface because, any dbus object can implement this interface to indicate who has initiated the activity/operation, if applicable.\nThis is because, the DMTF community also seem to need this interface for audit logs (forum thread at: https://redfishforum.com/thread/547/usage-originofcondition-parameter-logentry-schema)\n\nThis \"GeneratorId\" is needed here in the Create dump method as an additional parameter, whose value if not null, will then be populated in the dump entry dbus object.\nSo all the user initiated dumps will have this assitional parameter with the unique id as its value.",
       "parentUuid": "73ed14ac_878ac524",
       "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "dc64c0d9_ed49c650",
         "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
@@ -50,10 +51,10 @@
       "message": "This enum should be moved to xyz as this one is being used in BMC dump",
       "parentUuid": "9b0eab54_5a2ca279",
       "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "2f837ade_129c44a1",
         "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
@@ -68,10 +69,28 @@
       "message": "Done",
       "parentUuid": "dc64c0d9_ed49c650",
       "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d1f7a50_237b43ca",
+        "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-07T15:10:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f837ade_129c44a1",
+      "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "7c6d4491_bc6b1038",
         "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
@@ -85,10 +104,10 @@
       "side": 1,
       "message": "I still have concerns about this being interoperable. A free-form string means users can put whatever they want in it. How does this map to Redfish?",
       "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "72e16930_5adcedc6",
         "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
@@ -103,8 +122,25 @@
       "message": "IMU, this should be taken care in the implementation.\nExample: for dumps, client ip that has caused the dump creation will be assigned to this property and the bmcweb will then display it in the redfish response.\n\nLikewise, whereever this prop is implemented, they must be assigning any unique id of the entity that has caused the operation and then should send it in the redfish response.",
       "parentUuid": "7c6d4491_bc6b1038",
       "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1db1a2d_e14cb2f6",
+        "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-07T15:10:13Z",
+      "side": 1,
+      "message": "https://redfish.dmtf.org/schemas/v1/LogEntry.v1_11_0.json describes \"GeneratorId\"",
+      "parentUuid": "72e16930_5adcedc6",
+      "revId": "1d3c293f2c6cce46e0892269dfdc182be861467d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

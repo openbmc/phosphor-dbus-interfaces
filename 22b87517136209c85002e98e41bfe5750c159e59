@@ -231,6 +231,30 @@
       },
       "revId": "22b87517136209c85002e98e41bfe5750c159e59",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "024eb69a_14c0ce3c",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2022-02-07T05:56:43Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t really know what you expect here.  Don\u0027t we usually write the design proposal, get consensus on it, and then start implementation?  This isn\u0027t a design that has been sitting around for 6 months; it was literally agreed to in 2022.\n\nIt was proposed on Nov 5 2021, merged on Dec 1 2021, and now we do not see any code at all. I was expecting some POC or WIP code at least. Otherwise how do we know if the design is going to be implemented or not?\n\n\u003e Then _why_ are you diverging?  Nobody has worked on multi-slot / multi-device update for years.  Me and the HCL team spent a bunch of time getting it proposed, reviewed it with Adriana, etc.  And now you\u0027re coming around and doing something different, which doesn\u0027t work for multi-devices, and has no written design.\n\nMy proposal is for dual image support for BMC. The design is at https://gerrit.openbmc-project.xyz/c/openbmc/docs/+/36407 and here.\nThe implementation is submitted as well https://gerrit.openbmc-project.xyz/q/topic:bmc-dual-image\nIt is not diverging at all because there were no implementation at all.\n\n\u003e The primary enhancement here appears to be that we\u0027re using a position indicator to create a separate hash ID.  We could take that position indicator to create the separate Activate object, which is literally the design.  Is this hard to do with this code series?\n\nThe proposal here is more straight forward to indicate which target to update.\nThe proposal in \"define multi-slot/multi-device update\" solves the problem as well, but not so clear and it requires extra cleanup.",
+      "parentUuid": "b48b50ef_0db4f1fb",
+      "range": {
+        "startLine": 55,
+        "startChar": 41,
+        "endLine": 59,
+        "endChar": 79
+      },
+      "revId": "22b87517136209c85002e98e41bfe5750c159e59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,12 +1,13 @@
 description: >
-    Implement to specify a cap on maximum power consumption.
+    Implement to specify the power consumption cap and bounds
 
 properties:
     - name: PowerCap
       type: uint32
       description: >
-          Power cap value. This could for example be specified in absolute
-          wattage. The unit of measurement must be Watts.
+          Power cap value. This is the user specified power cap.  When enabled
+          the power usage of the system will be limited to keep the power at or
+          below this cap.  This value is in Watts.
 
     - name: PowerCapEnable
       type: boolean
@@ -16,10 +17,27 @@ properties:
 
     - name: MinPowerCapValue
       type: uint32
+      flags:
+          - readonly
       default: 0
-      description: The Minimum supported PowerCap reading.
+      description: The Minimum supported PowerCap setting.
 
     - name: MaxPowerCapValue
       type: uint32
+      flags:
+          - readonly
       default: maxint
-      description: The Maximum supported PowerCap reading.
+      description: The Maximum supported PowerCap setting.
+
+    - name: MinSoftPowerCapValue
+      type: uint32
+      flags:
+          - readonly
+      default: 0
+      description: >
+          Minimum supported soft user PowerCap setting.
+          The min soft user PowerCap value is normally less than or equal to
+          the MinPowerCapValue. When the PowerCap is set to any value between
+          MinSoftPowerCapValue and MinPowerCapValue an attempt will be made to
+          maintain the cap but it will not be guaranted.
+

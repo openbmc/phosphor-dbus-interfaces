@@ -23,3 +23,32 @@ properties:
       type: string
       description: >
           The password required by host to validate the request.
+    - name: DumpRequestStatus
+      type: enum[self.HostResponse]
+      description: >
+          The host will send a response code for each request to create a
+          resource dump to indicate whether the request is successful or
+          there is an error.
+
+enumerations:
+    - name: HostResponse
+      description: >
+          These are the possible response codes from the host after sending a
+          resource dump request.
+      values:
+        - name: Success
+          description: >
+              Resource dump parameters and ACF data are successfully validated
+        - name: AcfFileInvalid
+          description: >
+              Invalid ACF file
+        - name: PasswordInvalid
+          description: >
+              Password provided is not valid
+        - name: PermissionDenied
+          descVSPtion: >
+              Caller does not have enough privileges to execute the requested
+              VSP string
+        - name: ResourceSelectorInvalid
+          description: >
+              Resource selector(VSP String) provided is not valid

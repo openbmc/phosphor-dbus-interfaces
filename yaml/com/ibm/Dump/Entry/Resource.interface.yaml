@@ -30,4 +30,54 @@ properties:
           number will be sent to the BMC as a token. Once the dump
           is created in the host, host will notify the BMC with this
           token, so BMC will be able to correlate which is completed.
+    - name: DumpRequestStatus
+      type: enum[self.HostResponse]
+      description: >
+          The response codes from host after sending a request for
+          creating a new resource dump.
+    - name: DumpRequestErrorCodes
+      type: enum[self.HostErrorCodes]
+      description: >
+          The error codes from host if the dump create request is
+          failed.
+
+enumerations:
+    - name: HostResponse
+      description: >
+          Response codes from host
+      values:
+        - name: Success
+          description: Success (Security Validated)
+        - name: AcfFileInvalid
+          description: Invalid ASC file
+        - name: PasswordInvalid
+          description: Invalid password
+        - name: PermissionDenied
+          description: No permission to create the dump
+        - name: ResourceSelectorInvalid
+          description: Provided an invalid resource seletor
+
+    - name: HostErrorCodes
+      description: >
+          Error codes returned by host
+      values:
+        - name: NoError
+          description: No error codes returned
+        - name: InvalidParmLength
+          description: Length of the parameter is invalid
+        - name: UnknownParmVersion
+          description: Parameter version is unknown
+        - name: UnknownClientType
+          descriptiom: Client type is unknown
+        - name: InvalidCommandString
+          description: Command string is not valid
+        - name: InvalidState
+          description: Host is not in a valid state
+        - name: Busy
+          description: Host is busy
+        - name: UnknownDump
+          description: Unknown dump type is requested
+        - name: InvalidOffset
+          description: Invalid offset is provided
+    
 

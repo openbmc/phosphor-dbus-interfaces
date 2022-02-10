@@ -32,3 +32,10 @@ properties:
           This property shall indicate the duration in milliseconds the computer
           system is above the ExitUtilizationPercent value before the idle
           power saver is deactivated.
+
+    - name: Active
+      type: boolean
+      description: >
+          This property shall indicate whether idle power save is currently
+          active on the system. When this is true, the system has reduced power
+          to save energy.

@@ -1,0 +1,24 @@
+description: >
+    Implement to provide sensor implementation type properties.
+
+properties:
+    - name: Implementation
+      type: enum[self.ImplementationType]
+      description: >
+          The implementation of the resource like sensor.
+
+enumerations:
+    - name: ImplementationType
+      description: >
+        Implementation types for a resource.
+      values:
+        - name: PhysicalSensor
+          description: >
+            The reading is acquired from a physical sensor.
+        - name: Synthesized
+          description: >
+            The reading is obtained by applying a calculation on one or more
+            properties or multiple sensors.
+        - name: Reported
+          description: >
+            The reading is obtained from software or a device.

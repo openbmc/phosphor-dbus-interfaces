@@ -27,6 +27,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Type')
+generated_others += custom_target(
+    'xyz/openbmc_project/Sensor/Type__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Sensor/Type.interface.yaml',  ],
+    output: [ 'Type.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Sensor/Type',
+    ],
+)
+
 subdir('Value')
 generated_others += custom_target(
     'xyz/openbmc_project/Sensor/Value__markdown'.underscorify(),

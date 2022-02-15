@@ -382,6 +382,30 @@
       },
       "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13b851e2_f759d11d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2022-02-15T21:58:43Z",
+      "side": 1,
+      "message": "Updated to use MaxLanes for now.\n\nWe can also have \n\n```\nassociations:\n    - name: upstream_pcie_slot\n      description: \u003e\n          Objects that implement PCIeDevice can optionally implement the\n          upstream_pcie_slot association to provide a link back to a PCIe slot.\n      reverse_name: associated_pcie_device\n      required_endpoint_interfaces:\n        - xyz.openbmc_project.Inventory.Item.PCIeSlot\n```\n\nfor the association from the device to the pcie slot to link the relationships. With the two info, then we can determine the current bifurication.",
+      "parentUuid": "e4ac110d_70374098",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 0
+      },
+      "revId": "71a15f1f9cef746dd0bc234eab21f0df4ce8c4ae",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

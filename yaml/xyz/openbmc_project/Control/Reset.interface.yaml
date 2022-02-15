@@ -1,0 +1,38 @@
+description: >
+    Implement to provide device reset support.
+methods:
+    - name: Reset
+      description: >
+        Reset the device like processor.
+      errors:
+        - xyz.openbmc_project.Common.Error.InternalFailure
+        - xyz.openbmc_project.Common.Error.NotAllowed
+        - xyz.openbmc_project.Common.Error.Timeout
+        - xyz.openbmc_project.Common.Error.Unavailable
+
+properties:
+    - name: ResetType
+      type: enum[self.ResetTypes]
+      description: >
+        The type of reset for the device.
+
+enumerations:
+    - name: ResetTypes
+      description: >
+        Reset types.
+      values:
+        - name: ForceOff
+          description: >
+            Turn off the unit immediately (non-graceful shutdown).
+        - name: ForceOn
+          description: >
+            Turn on the unit immediately.
+        - name: ForceRestart
+          description: >
+            Shut down immediately and non-gracefully and restart the system.
+        - name: GracefulRestart
+          description: >
+            Shut down gracefully and restart the system.
+        - name: GracefulShutdown
+          description: >
+            Shut down gracefully and power off.

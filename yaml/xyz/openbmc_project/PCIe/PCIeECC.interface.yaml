@@ -1,0 +1,38 @@
+description: >
+    Implement to provide PCIe ECC attributes.
+properties:
+    - name: ceCount
+      type: int64
+      description: >
+          The total number of the PCIe correctable errors on the device.
+    - name: nonfeCount
+      type: int64
+      description: >
+          The total number of the PCIe non-fatal errors on the device.
+    - name: feCount
+      type: int64
+      description: >
+          The total number of the PCIe fatal errors on the device.
+    - name: L0ToRecoveryCount
+      type: int64
+      description: >
+          The total number of times the PCIe link transitioned from
+          L0 to the recovery state for the device.
+    - name: ReplayCount
+      type: int64
+      description: >
+          The total number of the replays issued on the PCIe link on
+          the device.
+    - name: ReplayRolloverCount
+      type: int64
+      description: >
+          The total number of replay rollovers issued on the PCIe link
+          on the device.
+    - name: NAKSentCount
+      type: int64
+      description: >
+          The total number of NAKs issued on the PCIe link on the device.
+    - name: NAKRecievedCount
+      type: int64
+      description: >
+          The total number of NAKs issued on the PCIe link by the receiver.

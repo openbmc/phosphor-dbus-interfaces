@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "5ade3b96_2d8c9815",
         "filename": "/COMMIT_MSG",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "What does this map to in Redfish?",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "bb1c48a1_e5c53f57",
         "filename": "/COMMIT_MSG",
@@ -32,10 +33,27 @@
       "message": "Please see https://gerrit.openbmc-project.xyz/c/openbmc/bmcweb/+/43442.",
       "parentUuid": "5ade3b96_2d8c9815",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f76d3899_c0035485",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2022-02-15T16:06:55Z",
+      "side": 1,
+      "message": "A commit has already been merged to provide the Min/Max Power Limits as part of PowerCap:\nhttps://github.com/openbmc/phosphor-dbus-interfaces/commit/ed708de3a629531dc2fdb8e70946fb24e112d617\n\nI think that covers what this commit intended to provide.",
+      "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "89e1344a_70de6426",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -49,10 +67,10 @@
       "side": 1,
       "message": "But the File is called PowerLimit which makes me think of PowerCap..\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/08baf48ad5f15774d393fbbf4e9479a0ef3e82d0/yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml#L5\n\nBut that is not what this is, correct?",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "63b4d914_d1e35815",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -67,10 +85,10 @@
       "message": "Right, this is more of an operational range.",
       "parentUuid": "89e1344a_70de6426",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "68444bba_9e545172",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -85,10 +103,10 @@
       "message": "These are the ranges so the customer knows what can be used for the power cap.",
       "parentUuid": "63b4d914_d1e35815",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "d82af5f4_6edc9fd9",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -108,10 +126,10 @@
         "endChar": 16
       },
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "b4bdeccb_66ad7828",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -132,10 +150,10 @@
         "endChar": 16
       },
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "88227adb_26f3f46f",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -156,10 +174,10 @@
         "endChar": 16
       },
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "812b662c_1fcd350e",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -173,10 +191,10 @@
       "side": 1,
       "message": "This are ReadWrite?",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "d5276f4b_4570e947",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -191,10 +209,10 @@
       "message": "No.",
       "parentUuid": "812b662c_1fcd350e",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "88d43fa8_f5cd1e7f",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -209,10 +227,10 @@
       "message": "This is really the minimum power required for the system to operate.  From OCC perspective, any power cap below this number will not be guaranteed/enforced.",
       "parentUuid": "d5276f4b_4570e947",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "ca0f21cf_38593f91",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -227,10 +245,10 @@
       "message": "I can\u0027t tell if there is a conclusion here on if these should be Read/Write or Read-Only.",
       "parentUuid": "88d43fa8_f5cd1e7f",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "23a8ef8b_1069d65e",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -250,10 +268,10 @@
         "endChar": 16
       },
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "19b9b128_4a4c0d32",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -274,10 +292,10 @@
         "endChar": 16
       },
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "97f81422_a66c3003",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -297,10 +315,10 @@
         "endChar": 31
       },
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "aa02294b_fb706ddf",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -321,10 +339,10 @@
         "endChar": 31
       },
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "cdf83844_504e9f88",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -345,10 +363,10 @@
         "endChar": 31
       },
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "378aa4c8_777de898",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -362,10 +380,10 @@
       "side": 1,
       "message": "We don\u0027t need a Property for the current reading?",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "21bd9830_d4813a3e",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -380,10 +398,10 @@
       "message": "That could be another interface.",
       "parentUuid": "378aa4c8_777de898",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "6fd45471_922f1a7a",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerLimit.interface.yaml",
@@ -398,8 +416,7 @@
       "message": "These are providing the range of valid power cap values.\nThe current power consumed is provided by the OCC and is/will be available on dbus/Redfish.\nThe current power cap is already available - https://github.com/openbmc/phosphor-dbus-interfaces/blob/08baf48ad5f15774d393fbbf4e9479a0ef3e82d0/yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml#L5",
       "parentUuid": "21bd9830_d4813a3e",
       "revId": "754a8fe1712d3c5238349fd446ec538d24becebb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

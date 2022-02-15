@@ -50,6 +50,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e650f004_85051fa0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000207
+      },
+      "writtenOn": "2022-02-15T03:21:30Z",
+      "side": 1,
+      "message": "I see that you are yet to update this commit messages after incorporating review comments ?",
+      "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d9a9678a_13802f3d",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -91,6 +108,23 @@
         "endLine": 10,
         "endChar": 15
       },
+      "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ef4edef3_20edfdae",
+        "filename": "yaml/com/ibm/Dump/Entry/Resource.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000207
+      },
+      "writtenOn": "2022-02-15T03:21:30Z",
+      "side": 1,
+      "message": "This property is only filled in if the resource selector invalid (Equals to ResourceSelectorInvalid). Can you please update the description accordingly ?",
       "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -168,6 +202,64 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8abc8108_3d328940",
+        "filename": "yaml/com/ibm/Dump/Entry/Resource.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000207
+      },
+      "writtenOn": "2022-02-15T03:21:30Z",
+      "side": 1,
+      "message": "Hi sagar, fileStatus is different, here we are only talking about the metadata2 and metadata3 and representing those corresponding dbus properties.",
+      "parentUuid": "e65f96f4_e9e5fd99",
+      "range": {
+        "startLine": 33,
+        "startChar": 4,
+        "endLine": 42,
+        "endChar": 17
+      },
+      "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6b99f6e_27c1d0b0",
+        "filename": "yaml/com/ibm/Dump/Entry/Resource.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000207
+      },
+      "writtenOn": "2022-02-15T03:21:30Z",
+      "side": 1,
+      "message": "Can you please rephrase it ? \"Resource dump parameters are validated good along with ACF data.\" Something like this ?",
+      "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c678a8a5_967333d9",
+        "filename": "yaml/com/ibm/Dump/Entry/Resource.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000207
+      },
+      "writtenOn": "2022-02-15T03:21:30Z",
+      "side": 1,
+      "message": "Type ASC --\u003e ACF",
+      "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cd4f6f49_1253dad8",
         "filename": "yaml/com/ibm/Dump/Entry/Resource.interface.yaml",
         "patchSetId": 1
@@ -179,6 +271,40 @@
       "writtenOn": "2022-02-10T14:32:43Z",
       "side": 1,
       "message": "typo selector",
+      "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "195ef0d0_b70d79d3",
+        "filename": "yaml/com/ibm/Dump/Entry/Resource.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000207
+      },
+      "writtenOn": "2022-02-15T03:21:30Z",
+      "side": 1,
+      "message": "Please change something like \"Response codes from host if the resource selector is invalid\"",
+      "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27384787_4792a1a1",
+        "filename": "yaml/com/ibm/Dump/Entry/Resource.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000207
+      },
+      "writtenOn": "2022-02-15T03:21:30Z",
+      "side": 1,
+      "message": "Remove this NoError. HostErrorCodes should be only filled in when the HostResponse is ResourceSelectorInvalid",
       "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -318,6 +444,23 @@
         "endLine": 81,
         "endChar": 49
       },
+      "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dabaab08_8ba2eaf9",
+        "filename": "yaml/com/ibm/Dump/Entry/Resource.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000207
+      },
+      "writtenOn": "2022-02-15T03:21:30Z",
+      "side": 1,
+      "message": "There is one more code \"10\u003d\u003d EndOfFileReached\", if that happens can PLDM map that to InvalidOffset ?",
       "revId": "9f4d78a2d41bd47b026caaeac853928c8827601b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

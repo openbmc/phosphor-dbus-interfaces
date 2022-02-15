@@ -1,0 +1,34 @@
+description: >
+    This defines a fabric zone to be exposed for system management.
+    Zone represents the connections which lists the resources that are allowed
+    to communicate with other resources.
+
+properties:
+    - name: Type
+      type: enum[self.ZoneType]
+      default: Default
+      description: >
+          Indicates the zone type. It is used to differentiate
+          zone of zones from zone of endpoints.
+    - name: RoutingEnabled
+      type: boolean
+      description: >
+          Indicates whether routing within this zone is enabled.
+enumerations:
+    - name: ZoneType
+      description: >
+          Possible zone types.
+      values:
+        - name: Default
+          description: >
+              The zone in which all endpoints are added by default when
+              instantiated.
+        - name: ZoneOfEndpoints
+          description: >
+              A zone that contains endpoints.
+        - name: ZoneOfZones
+          description: >
+              A zone that contains zones.
+        - name: ZoneOfResourceBlocks
+          description: >
+              A zone that contains resource blocks.

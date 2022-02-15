@@ -16,6 +16,12 @@ properties:
       description: >
           The protocol being sent over this port.
 
+    - name: ProtocolVersion
+      type: string
+      description: >
+          The protocol version being sent over this port.
+          Example: "4.0" or "1.1"
+
     - name: CurrentSpeed
       type: size
       description: >

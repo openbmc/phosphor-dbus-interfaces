@@ -37,6 +37,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "95503da7_936aca46",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-16T22:47:59Z",
+      "side": 1,
+      "message": "Is the intention that this property is read-only?  We should probably add appropriate flags in that case.",
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e0a8231c_e5f7118f",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 1
@@ -77,6 +94,52 @@
         "startChar": 0,
         "endLine": 55,
         "endChar": 66
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6c386d6_6fe95fb5",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-16T22:47:59Z",
+      "side": 1,
+      "message": "Under what conditions do we get NotAllowed?  I suspect read-only is what we want to do here and then we don\u0027t need any explicit errors in the YAML.",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 56
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "364e896b_bc5874aa",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-16T22:47:59Z",
+      "side": 1,
+      "message": "What kind of argument detection are we going to have here?",
+      "range": {
+        "startLine": 65,
+        "startChar": 11,
+        "endLine": 65,
+        "endChar": 59
       },
       "revId": "534be382816327b31414ff8234f8b053244ec974",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"

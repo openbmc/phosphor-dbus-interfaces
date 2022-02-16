@@ -1,2 +1,9 @@
 description: >
     Implement to provide Fan attributes.
+
+properties:
+    - name: HotPluggable
+      type: boolean
+      default: true
+      description: >
+          Whether this fan supports being hotplugged

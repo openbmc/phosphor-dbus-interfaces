@@ -18,6 +18,10 @@ properties:
       default: ok
       description: >
           The state is described in ECC status.
+    - name: ECCModeEnabled
+      type: boolean
+      description: >
+          The memory ECC mode enabled/disabled.
 
 enumerations:
    - name: ECCStatus

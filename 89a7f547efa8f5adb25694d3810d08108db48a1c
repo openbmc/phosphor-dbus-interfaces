@@ -22,6 +22,30 @@
       },
       "revId": "89a7f547efa8f5adb25694d3810d08108db48a1c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "129518e5_0b3f543a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-17T16:38:17Z",
+      "side": 1,
+      "message": "No, there is no such thing as optional properties in dbus.\n\nWasn\u0027t there work on-going around CCM and adding some properties to a Decorator?  This property doesn\u0027t actually seem Fan-specific.  Is there some interface that we should have to describe all the different ways an Inventory entity could be manipulated safely by a user?",
+      "parentUuid": "70b65dae_33400493",
+      "range": {
+        "startLine": 7,
+        "startChar": 6,
+        "endLine": 7,
+        "endChar": 19
+      },
+      "revId": "89a7f547efa8f5adb25694d3810d08108db48a1c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

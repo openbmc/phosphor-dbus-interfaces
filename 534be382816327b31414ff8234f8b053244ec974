@@ -233,6 +233,30 @@
       },
       "revId": "534be382816327b31414ff8234f8b053244ec974",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ad1e4c4_e1e235ef",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-17T14:10:26Z",
+      "side": 1,
+      "message": "What is \"IP address format\"?  IPv4, IPv6, hostname, all of the above?  Hostnames are pretty typical, so I\u0027m not sure how you\u0027re going to validate except maybe screening against specific characters like underscores?\n\nPlease document the expectations here.",
+      "parentUuid": "fb09964b_1bac0c24",
+      "range": {
+        "startLine": 65,
+        "startChar": 11,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

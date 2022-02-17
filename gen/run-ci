@@ -1,5 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")" || exit
+find . -mindepth 1 -maxdepth 1 -type d -exec rm -r {} \;
 ./regenerate-meson || exit
 rc=0
 git --no-pager diff --exit-code -- . || rc=$?

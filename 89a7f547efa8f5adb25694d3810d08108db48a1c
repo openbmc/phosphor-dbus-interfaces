@@ -70,6 +70,30 @@
       },
       "revId": "89a7f547efa8f5adb25694d3810d08108db48a1c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "115b08a9_35c9f3a6",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-02-17T16:55:41Z",
+      "side": 1,
+      "message": "\u003e To me, CCM would involve additional steps for a component to be removed/added whereas only a fan does not. That\u0027s not to say that systems could exist where additional steps are required for removal/addition of a fan, which then it would no longer be hot pluggable and result in those CCM Decorator properties.\n\nI don\u0027t disagree with what you\u0027ve written here about hotplug and CCM being different.  My recollection was that someone tried to add a simple boolean for \"can-be-CCM\u0027d\" and the reaction was something along the lines of \"we\u0027re getting a whole lot of random boolean states for how inventory objects can be taken online / offline / replaced and it isn\u0027t clear which possible boolean states are incompatible\".  I think there was some rework being done.\n\nI was hoping that since you were at IBM you\u0027d have better locality to the work being driven for CCM. ;)  I guess I can try to search for that commit and/or design.\n\n\u003e I think if we were to have an interface to describe all the different ways Inventory entities could be manipulated will possibly add alot of unnecessary properties (and default value complexities) to an inventory object that may effectively only require a few of those properties from that interface.\n\nIt could very well be a single property of type `set[Enum]`.  The advantage of that is it allows much broader interpretation of the property than something scoped to a particular Inventory.Item.",
+      "parentUuid": "820c7047_09f57879",
+      "range": {
+        "startLine": 7,
+        "startChar": 6,
+        "endLine": 7,
+        "endChar": 19
+      },
+      "revId": "89a7f547efa8f5adb25694d3810d08108db48a1c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

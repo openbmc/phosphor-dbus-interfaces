@@ -94,6 +94,30 @@
       },
       "revId": "89a7f547efa8f5adb25694d3810d08108db48a1c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9318a59_706ec6b3",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000029
+      },
+      "writtenOn": "2022-02-17T17:23:12Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t disagree with what you\u0027ve written here about hotplug and CCM being different.  My recollection was that someone tried to add a simple boolean for \"can-be-CCM\u0027d\" and the reaction was something along the lines of \"we\u0027re getting a whole lot of random boolean states for how inventory objects can be taken online / offline / replaced and it isn\u0027t clear which possible boolean states are incompatible\".  I think there was some rework being done.\n\u003e \n\u003e I was hoping that since you were at IBM you\u0027d have better locality to the work being driven for CCM. ;)  I guess I can try to search for that commit and/or design.\n\nThat change I was not aware of nor the rework of the design. Honestly, `HotPluggable`, by definition, only deals with the addition of a component while system is running. So, following that definition, fans should have a `HotRemovable` type property...but as we agree, that does not necessarily make fans CCM.\n\n\u003e It could very well be a single property of type `set[Enum]`.  The advantage of that is it allows much broader interpretation of the property than something scoped to a particular Inventory.Item.\n\nAre you thinking the properties on this \"generic inventory objects add/remove states\" would have default enum values of `N/A` and leave it up to external applications responsible for the particular inventory objects to fill in those that are appropriate for the object? This is where I feel many inventory objects could possibly have a cumbersome list of properties that are `N/A` then.\n\nI know we\u0027re just spitballing here, but just want to get a foundation of how these attributes could be represented in interfaces and/or properties.",
+      "parentUuid": "115b08a9_35c9f3a6",
+      "range": {
+        "startLine": 7,
+        "startChar": 6,
+        "endLine": 7,
+        "endChar": 19
+      },
+      "revId": "89a7f547efa8f5adb25694d3810d08108db48a1c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

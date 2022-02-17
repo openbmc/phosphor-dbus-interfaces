@@ -46,6 +46,30 @@
       },
       "revId": "89a7f547efa8f5adb25694d3810d08108db48a1c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "820c7047_09f57879",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000029
+      },
+      "writtenOn": "2022-02-17T16:45:40Z",
+      "side": 1,
+      "message": "To me, CCM would involve additional steps for a component to be removed/added whereas only a fan does not. That\u0027s not to say that systems could exist where additional steps are required for removal/addition of a fan, which then it would no longer be hot pluggable and result in those CCM Decorator properties.\n\nI think if we were to have an interface to describe all the different ways Inventory entities could be manipulated will possibly add alot of unnecessary properties (and default value complexities) to an inventory object that may effectively only require a few of those properties from that interface.",
+      "parentUuid": "129518e5_0b3f543a",
+      "range": {
+        "startLine": 7,
+        "startChar": 6,
+        "endLine": 7,
+        "endChar": 19
+      },
+      "revId": "89a7f547efa8f5adb25694d3810d08108db48a1c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

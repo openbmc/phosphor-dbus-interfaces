@@ -52,6 +52,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3067e51_4113c7eb",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-17T12:07:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "95503da7_936aca46",
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e0a8231c_e5f7118f",
@@ -99,6 +117,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "678e6961_5b68aec1",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-17T12:07:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "31180883_463c5d7a",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 66
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b6c386d6_6fe95fb5",
@@ -122,6 +164,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c7b598e_95cb6767",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-17T12:07:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b6c386d6_6fe95fb5",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 56
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "364e896b_bc5874aa",
@@ -135,6 +201,30 @@
       "writtenOn": "2022-02-16T22:47:59Z",
       "side": 1,
       "message": "What kind of argument detection are we going to have here?",
+      "range": {
+        "startLine": 65,
+        "startChar": 11,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb09964b_1bac0c24",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-17T12:07:59Z",
+      "side": 1,
+      "message": "This property should be an array of string. The string should be validated for the IP address format. If they are not IP addresses, we will be sending InvalidArgument",
+      "parentUuid": "364e896b_bc5874aa",
       "range": {
         "startLine": 65,
         "startChar": 11,

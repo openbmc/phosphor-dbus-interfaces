@@ -72,6 +72,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae5564e8_4d889e57",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000278
+      },
+      "writtenOn": "2022-02-18T22:10:27Z",
+      "side": 1,
+      "message": "The MAC address has been r/w for pretty much the entire life span of OBMC. Only recently has writing the MAC been blocked, and only using a compile time switch. Is there a way dynamically change the YAML to become a read-only property?",
+      "parentUuid": "b42a8278_e03b5508",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 33
+      },
+      "revId": "0383868eed5f1e86b50d730745948dc188512e75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "4202cb96_07b7cb74",

@@ -257,6 +257,30 @@
       },
       "revId": "534be382816327b31414ff8234f8b053244ec974",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d6e3687_fb20ac6d",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-18T04:19:10Z",
+      "side": 1,
+      "message": "The validation would be similar to what we have today at phosphor-networkd for the IP addresses - isValidIP API. This internally does inet_pton call. This should validate all kinds of IP addresses. \nhttps://man7.org/linux/man-pages/man3/inet_pton.3.html",
+      "parentUuid": "4ad1e4c4_e1e235ef",
+      "range": {
+        "startLine": 65,
+        "startChar": 11,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

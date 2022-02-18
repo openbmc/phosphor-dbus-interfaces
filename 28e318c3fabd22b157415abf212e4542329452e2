@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4316818c_8c35ec7d",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-18T04:19:10Z",
+      "side": 1,
+      "message": "This is similar to Nameservers. The latest configured/activated IP address will be the first entry in the array. \n\u003e Do static NTP have higher priority?\nI believe so. But need someone to confirm that from the networkd. \n\nDo we need to document these technical details in the dbus ?",
+      "parentUuid": "749e5619_6d7da61f",
+      "revId": "28e318c3fabd22b157415abf212e4542329452e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9d792734_5e61f40f",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 2
@@ -31,6 +49,30 @@
       "writtenOn": "2022-02-17T14:10:26Z",
       "side": 1,
       "message": "wrap",
+      "range": {
+        "startLine": 61,
+        "startChar": 76,
+        "endLine": 61,
+        "endChar": 85
+      },
+      "revId": "28e318c3fabd22b157415abf212e4542329452e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "acef2cbf_cb8e7a51",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-02-18T04:19:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9d792734_5e61f40f",
       "range": {
         "startLine": 61,
         "startChar": 76,

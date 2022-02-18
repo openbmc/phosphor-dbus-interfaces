@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e3f6e3d_7e3b4151",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000278
+      },
+      "writtenOn": "2022-02-18T21:36:57Z",
+      "side": 1,
+      "message": "A change to phosphor-network was merged not long ago to block p-n from writing the MAC to the systemd.network config file. The default mode of operation is to allow the write to occur. An OEMESON_EXTRA build switch was added to block writing the MAC to the systemd.network file.\nThis change along with a matching p-n change closes a functional gap left by the prior merged commit.",
+      "parentUuid": "2d5a5461_2cbff0bd",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 33
+      },
+      "revId": "0383868eed5f1e86b50d730745948dc188512e75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "4202cb96_07b7cb74",

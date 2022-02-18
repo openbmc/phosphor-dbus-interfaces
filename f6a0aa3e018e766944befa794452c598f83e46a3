@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "ade9a4c9_042e6a69",
         "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "Reading https://gerrit.openbmc-project.xyz/c/openbmc/docs/+/48210/6/designs/power-recovery.md, so this will not be mapped to anything in Redfish? \nNo need for a Redfish client to know about this Status?",
       "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "a417c4da_57936f4b",
         "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
@@ -32,10 +33,28 @@
       "message": "We have no requirement that this be available via a Redfish API. I think it could be useful but I was also told to stop generating work for ourselves :) So probably another one to add to the \"potential\" list if someone else comes looking for this some day.",
       "parentUuid": "ade9a4c9_042e6a69",
       "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a02142da_7b7f8861",
+        "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-02-18T19:45:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a417c4da_57936f4b",
+      "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "809bfde1_391f54f0",
         "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
@@ -55,10 +74,10 @@
         "endChar": 66
       },
       "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "1c24e796_42db5596",
         "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
@@ -79,8 +98,31 @@
         "endChar": 66
       },
       "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a96d0b8_1d9e9ac1",
+        "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-02-18T19:45:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c24e796_42db5596",
+      "range": {
+        "startLine": 82,
+        "startChar": 19,
+        "endLine": 82,
+        "endChar": 66
+      },
+      "revId": "f6a0aa3e018e766944befa794452c598f83e46a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

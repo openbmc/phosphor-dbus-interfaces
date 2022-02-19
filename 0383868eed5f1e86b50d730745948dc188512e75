@@ -146,6 +146,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "7e8089fa_1b43c3c9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001252
+      },
+      "writtenOn": "2022-02-19T06:25:29Z",
+      "side": 1,
+      "message": "Sorry for late reply. This property can be set to readwrite or readonly depends on a build flag of phosphor-network. When it is readonly, it will throw NotAllowed exception. So we need to add this here to make sure it can be caught and will not terminate the service.",
+      "parentUuid": "32e8085a_440ec808",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 33
+      },
+      "revId": "0383868eed5f1e86b50d730745948dc188512e75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "4202cb96_07b7cb74",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1

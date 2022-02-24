@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f83eb666_96230806",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2022-02-24T23:57:47Z",
+      "side": 1,
+      "message": "Thanks for review",
+      "revId": "b592a587466bcf6391e1e8b8b16e749d69dbcc57",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a292aeae_46f5f206",
@@ -24,6 +41,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "515ecb1e_424b915a",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2022-02-24T23:57:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a292aeae_46f5f206",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "b592a587466bcf6391e1e8b8b16e749d69dbcc57",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d947c178_36970ae9",
@@ -37,6 +78,24 @@
       "writtenOn": "2022-02-24T19:31:37Z",
       "side": 1,
       "message": "Is this intended to be set by users or is it status from the daemon?  Should it be read-only also?",
+      "revId": "b592a587466bcf6391e1e8b8b16e749d69dbcc57",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f031d61e_cf6febf8",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2022-02-24T23:57:47Z",
+      "side": 1,
+      "message": "Yes, it is status from daemon.\nDone",
+      "parentUuid": "d947c178_36970ae9",
       "revId": "b592a587466bcf6391e1e8b8b16e749d69dbcc57",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

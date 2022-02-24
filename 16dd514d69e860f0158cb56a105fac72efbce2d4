@@ -634,6 +634,30 @@
       },
       "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cca3e3d6_d69bfdc4",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000276
+      },
+      "writtenOn": "2022-02-24T20:45:29Z",
+      "side": 1,
+      "message": "\u003e \u003ethere is concern about changing user-facing properties without fully understanding them\n\u003e \n\u003e Who would be the users here?  If it is existing code we should be able to search for it, right?\n\nSorry for the delay. The users here are external.  This is an option in intel-ipmi-oem that an external user could set for the source, and since we don\u0027t know if there are any external users that still rely on this setting, we would like to keep it, if possible.",
+      "parentUuid": "b95f67a9_5c46d3b2",
+      "range": {
+        "startLine": 57,
+        "startChar": 16,
+        "endLine": 57,
+        "endChar": 19
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

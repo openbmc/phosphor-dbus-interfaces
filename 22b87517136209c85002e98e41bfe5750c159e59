@@ -303,6 +303,30 @@
       },
       "revId": "22b87517136209c85002e98e41bfe5750c159e59",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5630f6d4_2f055c2b",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-01T15:40:33Z",
+      "side": 1,
+      "message": "\u003e It seems that the information of which item to update is on the MANIFEST, where it\u0027d have BIOS.# image type entry, or in this case BMC.1, or BMC.2, or both, although does that mean we need to build an image that has a MANIFEST for BMC.1, and another for BMC.2, and another that has both? I just posted that question in the multi-host review.\n\nIt is not based on MANIFEST fields but dbus paths.\n\n\u003e I think for this dual bmc case we can go ahead and implement the WriteProtected property: \n\nI agree with this.\n\n\u003e The item updater would create the new subpath interfaces for each bmc (the Activation interfaces can stay under \u003cid\u003e for simplicity and updated as part of the multi host work), \n\nSounds good.  You wrote \"as part of the multi-host work\" but keep in mind that the majority of the multi-host work being proposed for Yv2 (as an implementation) needs to go through a separate micro-controller.  There is a design being worked for a separate daemon to manage that micro-controller since it handles much more than just code-update.  So the work would not naturally touch this code in phosphor-bmc-code-mgmt.",
+      "parentUuid": "90e62e68_f2db2eb1",
+      "range": {
+        "startLine": 55,
+        "startChar": 41,
+        "endLine": 59,
+        "endChar": 79
+      },
+      "revId": "22b87517136209c85002e98e41bfe5750c159e59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -33,6 +33,24 @@
       "message": "Do we have knobs within systemd-networkd that can support only wanting stateful or stateless ipv6? In other words, if someone selects v6, but no dhcpv6 server is available, does the system still get a stateless address, or is there a way to prevent that?",
       "revId": "14d5740df1163e472e6c3c7f8245788fe43d7306",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99570880_9577215e",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1000278
+      },
+      "writtenOn": "2022-03-01T15:43:39Z",
+      "side": 1,
+      "message": "The systemd.network control for this is the DHCPv6Client entry. Setting this false blocks a DHCPv6 server on the link. The Routing Advertisement server can be configured to different modes that impact the BMC address assignment. The RA will have to be configured to allow the BMC systemd.network service to perform SLAAC.",
+      "parentUuid": "0c91c7ae_fdcdd784",
+      "revId": "14d5740df1163e472e6c3c7f8245788fe43d7306",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

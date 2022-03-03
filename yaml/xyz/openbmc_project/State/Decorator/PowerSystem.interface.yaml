@@ -1,0 +1,24 @@
+description: >
+    Implement to describe the status of the power system as a whole that
+    provides power to a chassis.
+properties:
+    - name: Status
+      type: enum[self.Status]
+      default: Good
+      description: >
+        The current status of the power system.
+
+enumerations:
+  - name: Status
+    description: >
+      Power system status enum.
+    values:
+      - name: Fault
+        description: >
+         The power system is not providing enough power for normal chassis
+         operation, such as in a Brownout/Blackout condition where all power
+         supplies report AC loss VIN fault.
+      - name: Good
+        description: >
+         The power system is providing enough power for normal chassis
+         operation.

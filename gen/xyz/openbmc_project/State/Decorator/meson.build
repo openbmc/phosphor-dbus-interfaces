@@ -41,3 +41,17 @@ generated_others += custom_target(
     ],
 )
 
+subdir('PowerSupplyPower')
+generated_others += custom_target(
+    'xyz/openbmc_project/State/Decorator/PowerSupplyPower__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/PowerSupplyPower.interface.yaml',  ],
+    output: [ 'PowerSupplyPower.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/State/Decorator/PowerSupplyPower',
+    ],
+)
+

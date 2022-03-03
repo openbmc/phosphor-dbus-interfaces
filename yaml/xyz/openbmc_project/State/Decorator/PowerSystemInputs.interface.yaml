@@ -1,0 +1,27 @@
+description: >
+    Implement to describe the status of the power supplied to the chassis by the
+    power supply unit(s). It is expected that the relationship to the chassis is
+    shown by implementing this interface under a multi-object path, such as
+    chassisN/unit[N] where unit can be an individual or group, and/or by
+    creating an association to the chassis.
+properties:
+    - name: Status
+      type: enum[self.Status]
+      default: Good
+      description: >
+        The current status of the power being supplied to the chassis.
+
+enumerations:
+  - name: Status
+    description: >
+      Power status enum.
+    values:
+      - name: Fault
+        description: >
+         The power supply unit(s) are not providing enough power for normal
+         chassis operation, such as in a Brownout/Blackout condition where one
+         or more power supplies report AC loss VIN fault.
+      - name: Good
+        description: >
+         The power supply unit(s) are providing enough power for normal chassis
+         operation.

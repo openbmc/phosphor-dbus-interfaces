@@ -16,6 +16,29 @@
       "message": "I ran docker CI locally and passed, not sure if I\u0027m missing something to get jenkins CI to pass or if this is intermittent:\n\nopenbmc/phosphor-dbus-interfaces: Step 4/4 : RUN curl -L https://github.com/openbmc/phosphor-dbus-interfaces/archive/2aa5fa64cf64d1fa81c3bf65f84cb6b942150798.tar.gz | tar -xz \u0026\u0026 cd phosphor-dbus-interfaces* \u0026\u0026  meson builddir --wrap-mode\u003dnodownload -\n...\nopenbmc/phosphor-dbus-interfaces: gzip: stdin: not in gzip format\nopenbmc/phosphor-dbus-interfaces: tar: Child returned status 1\nopenbmc/phosphor-dbus-interfaces: tar: Error is not recoverable: exiting now\nopenbmc/phosphor-dbus-interfaces: Removing intermediate container 948430f16111",
       "revId": "2aa5fa64cf64d1fa81c3bf65f84cb6b942150798",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e63c1f90_810e2d1d",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerSystem.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-03T22:22:57Z",
+      "side": 1,
+      "message": "You wrote \"power system as a whole\" but I thought the words in the document was that the status was suppose to be very localized?  A single power supply or a single VR, right?",
+      "range": {
+        "startLine": 2,
+        "startChar": 44,
+        "endLine": 3,
+        "endChar": 32
+      },
+      "revId": "2aa5fa64cf64d1fa81c3bf65f84cb6b942150798",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

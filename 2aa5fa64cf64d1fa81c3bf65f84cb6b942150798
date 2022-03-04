@@ -63,6 +63,30 @@
       },
       "revId": "2aa5fa64cf64d1fa81c3bf65f84cb6b942150798",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d39d25d_e0cf1e11",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerSystem.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-03-04T16:21:26Z",
+      "side": 1,
+      "message": "Yeah, unless we have a reason to need this on a per supply level, I\u0027d prefer it represent the overall chassis power status. But I am struggling a bit with the difference between this and https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/State/Chassis.interface.yaml#L69 (PowerStatus). Could we make this more specific?  PowerSupplyUnit.interface.yaml? We could leave it up to the system owner on whether they want to represent each individual unit or just abstract it all in one object on D-Bus.",
+      "parentUuid": "60aaacb7_bae1ee61",
+      "range": {
+        "startLine": 2,
+        "startChar": 44,
+        "endLine": 3,
+        "endChar": 32
+      },
+      "revId": "2aa5fa64cf64d1fa81c3bf65f84cb6b942150798",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

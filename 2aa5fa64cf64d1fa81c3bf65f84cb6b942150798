@@ -39,6 +39,30 @@
       },
       "revId": "2aa5fa64cf64d1fa81c3bf65f84cb6b942150798",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60aaacb7_bae1ee61",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerSystem.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2022-03-04T15:16:55Z",
+      "side": 1,
+      "message": "Seems it may be power as whole (\"power going into the chassis\")? Also the doc says state manager would look for any interface that reports a brownout, and brownout applies to all PSUs having a fault failure, otherwise if we report failure on individual PSUs, state manager would need to query all PSUs to check if they\u0027re faulted and therefore determine that a Brownout occurs, versus currently it\u0027s written to subscribe to property changes (only uPower at the moment), and if this new property changes, it\u0027ll assume it\u0027s a brownout condition instead of checking that it\u0027s just one PSU that\u0027s faulted.\n\n\"It will support a per-chassis interface which represents the status of the power going into the target chassis. This interface will be generic in that other applications could host it to report the status of the power. The state-manager software will utilize mapper to look for all implementations of the interface for its chassis and aggregate the status (i.e. if any reports a brownout, then `BrownOut` will be returned).\"",
+      "parentUuid": "e63c1f90_810e2d1d",
+      "range": {
+        "startLine": 2,
+        "startChar": 44,
+        "endLine": 3,
+        "endChar": 32
+      },
+      "revId": "2aa5fa64cf64d1fa81c3bf65f84cb6b942150798",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

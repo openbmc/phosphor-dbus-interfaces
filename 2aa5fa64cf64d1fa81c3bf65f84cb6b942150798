@@ -87,6 +87,30 @@
       },
       "revId": "2aa5fa64cf64d1fa81c3bf65f84cb6b942150798",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c77e9339_86b1c62c",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/PowerSystem.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2022-03-04T17:16:43Z",
+      "side": 1,
+      "message": "Makes sense to name it PowerSupplyUnit.interface.yaml. I guess we still only want a \"Good\" and \"Fault\" properties, even if an app implements it as an individual unit, with the understanding that if they have the state manager feature, then it\u0027ll block the autorestart? Or we can have a 3rd property \"Brownout\" (or just start with \"Good\" and \"Bronwout\") to specifically denote that a brownout condition exists and have state manager trigger off that value.",
+      "parentUuid": "3d39d25d_e0cf1e11",
+      "range": {
+        "startLine": 2,
+        "startChar": 44,
+        "endLine": 3,
+        "endChar": 32
+      },
+      "revId": "2aa5fa64cf64d1fa81c3bf65f84cb6b942150798",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

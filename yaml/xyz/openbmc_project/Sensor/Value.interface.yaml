@@ -48,7 +48,7 @@ properties:
           For objects in the power namespace, Unit must be "Watts".
           For objects in the pressure namespace, Unit must be "Pascals"
           For objects in the temperature namespace, Unit must be "DegreesC".
-          For objects in the utilization namespace, Unit must be "Percent"
+          For objects in the utilization namespace, Unit must be "Percent" or "Bytes".
           For objects in the voltage namespace, Unit must be "Volts".
 
 enumerations:
@@ -89,3 +89,6 @@ enumerations:
         - name: Watts
           description: >
             Rate of energy transfer as Watts.
+        - name: Bytes
+          description: >
+            Bandwidth, throughput, file size usage, etc as bytes.

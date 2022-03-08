@@ -281,6 +281,30 @@
       },
       "revId": "534be382816327b31414ff8234f8b053244ec974",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "128dcbb2_ebac95a1",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2022-03-08T10:16:55Z",
+      "side": 1,
+      "message": "NTP servers can and usually are hostnames in many instances. We can\u0027t really assume all that much about their format.",
+      "parentUuid": "4d6e3687_fb20ac6d",
+      "range": {
+        "startLine": 65,
+        "startChar": 11,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

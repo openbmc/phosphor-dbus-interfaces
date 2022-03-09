@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa772752_6b12a9b7",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000500
+      },
+      "writtenOn": "2022-03-09T20:28:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c4d7e39a_971df7db",
+      "revId": "5015b44514a3e86be7e4633f77b9f8ce693d6919",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a0141ada_6e8b71a4",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-03-09T19:49:29Z",
       "side": 1,
       "message": "I understand the utility of this but I\u0027m really apprehensive about enabling it.  We\u0027ve historically been very careful about sensors being physical concepts that were measured and anything virtual belonged in its own objects.  We allowed utilization and maybe that wasn\u0027t the right decision.\n\nI don\u0027t really want to see us follow the trap of IPMI where \"everything is a sensor\", which is where this seems to lead.  By having a bunch of Sensor values representing assorted storage concepts we don\u0027t have a great way to programatically introspect them.  We\u0027re going to have a pile of specially named \"sensors\" with likely hard-coded strings around the codebase to deal with them.",
+      "revId": "5015b44514a3e86be7e4633f77b9f8ce693d6919",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e0586ad_335c627a",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1000500
+      },
+      "writtenOn": "2022-03-09T20:28:01Z",
+      "side": 1,
+      "message": "I understand what you mean ... I had the concern that those utilization sensors showing up on the WebUI would look weird a long time ago but over the time it seemed it was assumed utilization sensors were the right way to go, especially when the CPU and memory utilization got into phosphor-health-monitor, and I ended up here.\n\nIs xyz.openbmc_project.Memory a good namespace for populating memory utilization?\n\nAlso, the same type of discussion are also needed for disk space, I2C counters, and processor usage, when they go into phosphor-health-monitor and bmcweb. Should we revisit them and move those \"utilization sensors\" to their respective namespaces (such as Memory)? The utilization sensors would affect https://gerrit.openbmc-project.xyz/c/openbmc/bmcweb/+/46081, its children, and related changes in phosphor-health-monitor, and I would also like to have a clear message about which direction the design should head for.",
+      "parentUuid": "a0141ada_6e8b71a4",
       "revId": "5015b44514a3e86be7e4633f77b9f8ce693d6919",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

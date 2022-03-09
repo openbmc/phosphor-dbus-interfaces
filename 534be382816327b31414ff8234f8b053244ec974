@@ -329,6 +329,30 @@
       },
       "revId": "534be382816327b31414ff8234f8b053244ec974",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d1c4e5c_6b48be59",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-09T20:06:41Z",
+      "side": 1,
+      "message": "\u003e But i think still the validation can be done on a resolved hostname. I tried to follow the similar validations like the StaticNameServers in this interface.\n\nWhat do you mean by this?  I could interpret it in two ways:\n\n1. You are expecting the hostname provided to currently resolve.\n2. You are expecting the hostname could be resolved and to do this you\u0027re checking against a set of well-known TLDs.\n3. You\u0027re looking for a specfic character set of allowable characters in the field. \n\nI don\u0027t think any of this approaches is a good idea.\n\nApproach 1: When a machine arrives in a DC it can be placed in an isolated subnet in which no domain names resolve, until configuration is done by some automated management software.  Requiring names resolve prevents me from successfully configuring my system before isolating it.\n\nApproach 2: This assumes that only globally registered TLDs are acceptable for use as hostnames, but many networks use non-standard TLDs purposefully to avoid collisions (or public DNS registration) and to shorten hostnames for internal usage.  mDNS uses `.local` by default and I have my home network configured to `.lan`.\n\nApproach 3: Typically humans interact with UTF-8.  I could enter \"🚀.com\" into my brower and while this isn\u0027t valid directly there is a set of RFCs around \"punycode\" that will automatically translate this into \"xn--158h.com\".  Even though underscores are not acceptable characters for hostnames, there is a whole set of underscore-prefixed DNS queries that are standard practice for aliasing and non-standard data.  It is perfectly acceptable to resolve \"_aaa0.ntp.facebook.com\" by DNS where \"_aaa0\" is some internal code for a data center ID and the query returns all the NTP servers in that data center.  (See https://en.wikipedia.org/wiki/Hostname)",
+      "parentUuid": "6e0efa47_8fce2224",
+      "range": {
+        "startLine": 65,
+        "startChar": 11,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

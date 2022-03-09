@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4d7e39a_971df7db",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-09T19:49:29Z",
+      "side": 1,
+      "message": "I think we should avoid \u0027or\u0027 situations here.",
+      "revId": "5015b44514a3e86be7e4633f77b9f8ce693d6919",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0141ada_6e8b71a4",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-09T19:49:29Z",
+      "side": 1,
+      "message": "I understand the utility of this but I\u0027m really apprehensive about enabling it.  We\u0027ve historically been very careful about sensors being physical concepts that were measured and anything virtual belonged in its own objects.  We allowed utilization and maybe that wasn\u0027t the right decision.\n\nI don\u0027t really want to see us follow the trap of IPMI where \"everything is a sensor\", which is where this seems to lead.  By having a bunch of Sensor values representing assorted storage concepts we don\u0027t have a great way to programatically introspect them.  We\u0027re going to have a pile of specially named \"sensors\" with likely hard-coded strings around the codebase to deal with them.",
+      "revId": "5015b44514a3e86be7e4633f77b9f8ce693d6919",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

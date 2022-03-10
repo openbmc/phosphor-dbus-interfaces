@@ -51,6 +51,24 @@
       "parentUuid": "4517711b_fcac69a7",
       "revId": "dfd72caf06a8d889d6968fdf031093eb5058a276",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2afb5f70_67f76b56",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-10T18:09:18Z",
+      "side": 1,
+      "message": "I\u0027m fine with either as long as we add one and add the definition to the description field.  It obviously doesn\u0027t make sense to have a PCIe device with 0 lanes but it also isn\u0027t likely to have 4Giga-lanes.",
+      "parentUuid": "5dd100a5_4918c9fe",
+      "revId": "dfd72caf06a8d889d6968fdf031093eb5058a276",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

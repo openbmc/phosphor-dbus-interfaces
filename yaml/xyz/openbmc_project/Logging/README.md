@@ -34,8 +34,8 @@
   is defined in the error metadata file. An example of an error metadata YAML
   file can be found [here][metadata-example].
 
-[error-example]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Common/File.errors.yaml
-[metadata-example]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Common/File.metadata.yaml
+[error-example]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common/File.errors.yaml
+[metadata-example]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common/File.metadata.yaml
 
 ## Logging to journal
 
@@ -47,15 +47,15 @@
   - Refer to [elog.hpp][elog-header].
   - Logging entry D-Bus objects are created for the committed errors.
 
-[log-header]: https://github.com/openbmc/phosphor-logging/blob/master/phosphor-logging/log.hpp
-[elog-header]: https://github.com/openbmc/phosphor-logging/blob/master/phosphor-logging/elog.hpp
+[log-header]: https://github.com/openbmc/phosphor-logging/blob/master/lib/include/phosphor-logging/log.hpp
+[elog-header]: https://github.com/openbmc/phosphor-logging/blob/master/lib/include/phosphor-logging/elog.hpp
 
 ## Delete All interface
 
 - Use the [DeleteAll.interface.yaml][deleteall] for deleting all the logging
   entries.
 
-[deleteall]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Collection/DeleteAll.interface.yaml
+[deleteall]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Collection/DeleteAll.interface.yaml
 
 ## REST commands
 

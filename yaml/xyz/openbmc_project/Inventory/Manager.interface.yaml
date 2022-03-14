@@ -11,7 +11,7 @@ methods:
           Signal the implementing service that an item is ready to have its
           state managed.
       parameters:
-        - name: object
-          type: dict[path,dict[string,dict[string,variant[boolean,size,int64,string,array[byte]]]]]
-          description: >
-              A dictionary of fully enumerated items to be managed.
+          - name: object
+            type: dict[path,dict[string,dict[string,variant[boolean,size,int64,string,array[byte]]]]]
+            description: >
+                A dictionary of fully enumerated items to be managed.

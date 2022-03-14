@@ -10,17 +10,17 @@ properties:
 enumerations:
     - name: Modes
       description: >
-        Possible modes available.
+          Possible modes available.
       values:
-        - name: None
-          description: >
-            BMC is under normal working condition.
-        - name: Manufacturing
-          description: >
-            Indicate that BMC is in manufacturing mode
-            and is allowed to perform any manufacturing related
-            activity
-        - name: ValidationUnsecure
-          description: >
-            Indicate that BMC is in validation mode, and can
-            execute any special validation related commands
+          - name: None
+            description: >
+                BMC is under normal working condition.
+          - name: Manufacturing
+            description: >
+                Indicate that BMC is in manufacturing mode
+                and is allowed to perform any manufacturing related
+                activity
+          - name: ValidationUnsecure
+            description: >
+                Indicate that BMC is in validation mode, and can
+                execute any special validation related commands

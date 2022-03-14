@@ -20,29 +20,29 @@ methods:
       description: >
           Method to get the cached post codes of the indicated boot cycle with timestamp.
       parameters:
-        - name: Index
-          type: uint16
-          description: >
-              Index indicates which boot cycle of post codes is requested.
-              1 is for the most recent boot cycle. CurrentBootCycleCount is for the
-              oldest boot cycle.
+          - name: Index
+            type: uint16
+            description: >
+                Index indicates which boot cycle of post codes is requested.
+                1 is for the most recent boot cycle. CurrentBootCycleCount is for the
+                oldest boot cycle.
       returns:
-        - name: Codes
-          type: dict[uint64, struct[uint64,array[byte]]]
-          description: >
-            An array of post codes and timestamp in microseconds since epoch
+          - name: Codes
+            type: dict[uint64, struct[uint64,array[byte]]]
+            description: >
+                An array of post codes and timestamp in microseconds since epoch
     - name: GetPostCodes
       description: >
           Method to get the cached post codes of the indicated boot cycle.
       parameters:
-        - name: Index
-          type: uint16
-          description: >
-              Index indicates which boot cycle of post codes is requested.
-              1 is for the most recent boot cycle. CurrentBootCycleCount is for the
-              oldest boot cycle.
+          - name: Index
+            type: uint16
+            description: >
+                Index indicates which boot cycle of post codes is requested.
+                1 is for the most recent boot cycle. CurrentBootCycleCount is for the
+                oldest boot cycle.
       returns:
-        - name: Codes
-          type: array[struct[uint64,array[byte]]]
-          description: >
-            An array of post codes of one boot cycle.
+          - name: Codes
+            type: array[struct[uint64,array[byte]]]
+            description: >
+                An array of post codes of one boot cycle.

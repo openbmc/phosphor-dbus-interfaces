@@ -1,294 +1,294 @@
 description: >
-  Implement the Hoth command control interface.
+    Implement the Hoth command control interface.
 
 methods:
-  - name: SendHostCommand
-    description: >
-      Send a host command to Hoth and return the response.
-      This will block on Hoth completing its internal operations.
-      Critical host commands like LoadTokens are banned.
-      This method should be called from the IPMI HostCommand passthrough.
-    parameters:
-      - name: Command
-        type: array[byte]
-        description: >
-          Data to write to Hoth SPI host command offset.
-    returns:
-      - name: Response
-        type: array[byte]
-        description: >
-          Data read from Hoth SPI host command offset.
-    errors:
-      - self.Error.CommandFailure
-      - self.Error.ResponseFailure
-      - self.Error.InterfaceError
-      - xyz.openbmc_project.Common.Error.Timeout
+    - name: SendHostCommand
+      description: >
+          Send a host command to Hoth and return the response.
+          This will block on Hoth completing its internal operations.
+          Critical host commands like LoadTokens are banned.
+          This method should be called from the IPMI HostCommand passthrough.
+      parameters:
+          - name: Command
+            type: array[byte]
+            description: >
+                Data to write to Hoth SPI host command offset.
+      returns:
+          - name: Response
+            type: array[byte]
+            description: >
+                Data read from Hoth SPI host command offset.
+      errors:
+          - self.Error.CommandFailure
+          - self.Error.ResponseFailure
+          - self.Error.InterfaceError
+          - xyz.openbmc_project.Common.Error.Timeout
 
-  - name: SendTrustedHostCommand
-    description: >
-      Send a host command to Hoth and return the response.
-      This will block on Hoth completing its internal operations.
-      Critical host commands like LoadTokens are allowed.
-      This method should be called from the BMC.
-    parameters:
-      - name: Command
-        type: array[byte]
-        description: >
-          Data to write to Hoth SPI host command offset.
-    returns:
-      - name: Response
-        type: array[byte]
-        description: >
-          Data read from Hoth SPI host command offset.
-    errors:
-      - self.Error.CommandFailure
-      - self.Error.ResponseFailure
-      - self.Error.InterfaceError
-      - xyz.openbmc_project.Common.Error.Timeout
+    - name: SendTrustedHostCommand
+      description: >
+          Send a host command to Hoth and return the response.
+          This will block on Hoth completing its internal operations.
+          Critical host commands like LoadTokens are allowed.
+          This method should be called from the BMC.
+      parameters:
+          - name: Command
+            type: array[byte]
+            description: >
+                Data to write to Hoth SPI host command offset.
+      returns:
+          - name: Response
+            type: array[byte]
+            description: >
+                Data read from Hoth SPI host command offset.
+      errors:
+          - self.Error.CommandFailure
+          - self.Error.ResponseFailure
+          - self.Error.InterfaceError
+          - xyz.openbmc_project.Common.Error.Timeout
 
-  - name: SendHostCommandAsync
-    description: >
-      Send a host command to Hoth and immediately return without waiting for
-      response. Caller can either poll with calls to GetHostCommandResponse
-      until retrieving the response, or wait for a ResponseReady signal.
-    parameters:
-      - name: Command
-        type: array[byte]
-        description: >
-          Data to write to Hoth SPI host command offset.
-    returns:
-      - name: CallToken
-        type: uint64
-        description: >
-          The representation for the call made
-    errors:
-      - self.Error.CommandFailure
+    - name: SendHostCommandAsync
+      description: >
+          Send a host command to Hoth and immediately return without waiting for
+          response. Caller can either poll with calls to GetHostCommandResponse
+          until retrieving the response, or wait for a ResponseReady signal.
+      parameters:
+          - name: Command
+            type: array[byte]
+            description: >
+                Data to write to Hoth SPI host command offset.
+      returns:
+          - name: CallToken
+            type: uint64
+            description: >
+                The representation for the call made
+      errors:
+          - self.Error.CommandFailure
 
-  - name: GetHostCommandResponse
-    description: >
-      Read the response from Hoth mailbox.
-    parameters:
-      - name: CallToken
-        type: uint64
-        description: >
-          The token returned from SendHostCommandAsync()
-    returns:
-      - name: Response
-        type: array[byte]
-        description: >
-          Data read from Hoth SPI host command offset
-    errors:
-      - self.Error.ResponseFailure
-      - self.Error.ResponseNotFound
-      - self.Error.InterfaceError
+    - name: GetHostCommandResponse
+      description: >
+          Read the response from Hoth mailbox.
+      parameters:
+          - name: CallToken
+            type: uint64
+            description: >
+                The token returned from SendHostCommandAsync()
+      returns:
+          - name: Response
+            type: array[byte]
+            description: >
+                Data read from Hoth SPI host command offset
+      errors:
+          - self.Error.ResponseFailure
+          - self.Error.ResponseNotFound
+          - self.Error.InterfaceError
 
-  - name: UpdateFirmware
-    description: >
-      Write given firmware data to the Hoth firmware partition in EEPROM.
-    parameters:
-      - name: FirmwareData
-        type: array[byte]
-        description: >
-          Hoth firmware image
-    errors:
-      - self.Error.FirmwareFailure
+    - name: UpdateFirmware
+      description: >
+          Write given firmware data to the Hoth firmware partition in EEPROM.
+      parameters:
+          - name: FirmwareData
+            type: array[byte]
+            description: >
+                Hoth firmware image
+      errors:
+          - self.Error.FirmwareFailure
 
-  - name: GetFirmwareUpdateStatus
-    description: >
-      Get the status of the firmware update process.
-    returns:
-      - name: Status
-        type: enum[self.FirmwareUpdateStatus]
-        description: >
-          Status of the firmware update
+    - name: GetFirmwareUpdateStatus
+      description: >
+          Get the status of the firmware update process.
+      returns:
+          - name: Status
+            type: enum[self.FirmwareUpdateStatus]
+            description: >
+                Status of the firmware update
 
-  - name: InitiatePayload
-    description: >
-      Initiates erasure of the EEPROM staging area. Note that this will lock up
-      access to Hoth for an extended time and may go over the kernel's SPI
-      write timeout. Calling multiple small ErasePayload is recommended.
-    errors:
-      - self.Error.CommandFailure
-      - self.Error.ResponseFailure
-      - self.Error.InterfaceError
+    - name: InitiatePayload
+      description: >
+          Initiates erasure of the EEPROM staging area. Note that this will lock up
+          access to Hoth for an extended time and may go over the kernel's SPI
+          write timeout. Calling multiple small ErasePayload is recommended.
+      errors:
+          - self.Error.CommandFailure
+          - self.Error.ResponseFailure
+          - self.Error.InterfaceError
 
-  - name: GetInitiatePayloadStatus
-    description: >
-      Get the status of the payload initiation process.
-    returns:
-      - name: Status
-        type: enum[self.FirmwareUpdateStatus]
-        description: >
-          Status of the payload initiation
+    - name: GetInitiatePayloadStatus
+      description: >
+          Get the status of the payload initiation process.
+      returns:
+          - name: Status
+            type: enum[self.FirmwareUpdateStatus]
+            description: >
+                Status of the payload initiation
 
-  - name: ErasePayload
-    description: >
-      Erases the given size starting at the specified offset of the staging
-      partition.
-    parameters:
-      - name: Offset
-        type: uint32
-        description: >
-          Offset of the staging partition to start erasing from.
-      - name: Size
-        type: uint32
-        description: >
-          Size of the staging partition to erase.
-    errors:
-      - self.Error.CommandFailure
-      - self.Error.ResponseFailure
-      - self.Error.InterfaceError
+    - name: ErasePayload
+      description: >
+          Erases the given size starting at the specified offset of the staging
+          partition.
+      parameters:
+          - name: Offset
+            type: uint32
+            description: >
+                Offset of the staging partition to start erasing from.
+          - name: Size
+            type: uint32
+            description: >
+                Size of the staging partition to erase.
+      errors:
+          - self.Error.CommandFailure
+          - self.Error.ResponseFailure
+          - self.Error.InterfaceError
 
-  - name: SendPayload
-    description: >
-      Chunk and send the binary specified in the image path
-    parameters:
-      - name: ImagePath
-        type: string
-        description: >
-          Firmware image path
-    errors:
-      - self.Error.FirmwareFailure
-      - self.Error.InterfaceError
+    - name: SendPayload
+      description: >
+          Chunk and send the binary specified in the image path
+      parameters:
+          - name: ImagePath
+            type: string
+            description: >
+                Firmware image path
+      errors:
+          - self.Error.FirmwareFailure
+          - self.Error.InterfaceError
 
-  - name: GetSendPayloadStatus
-    description: >
-      Get the status of the send payload process.
-    returns:
-      - name: Status
-        type: enum[self.FirmwareUpdateStatus]
-        description: >
-          Status of the send payload process.
+    - name: GetSendPayloadStatus
+      description: >
+          Get the status of the send payload process.
+      returns:
+          - name: Status
+            type: enum[self.FirmwareUpdateStatus]
+            description: >
+                Status of the send payload process.
 
-  - name: VerifyPayload
-    description: >
-      Initiates the verification process without activating the staging area
-    errors:
-      - self.Error.InterfaceError
+    - name: VerifyPayload
+      description: >
+          Initiates the verification process without activating the staging area
+      errors:
+          - self.Error.InterfaceError
 
-  - name: GetVerifyPayloadStatus
-    description: >
-      Get the status of the payload verification process.
-    returns:
-      - name: Status
-        type: enum[self.FirmwareUpdateStatus]
-        description: >
-          Status of the payload verification
+    - name: GetVerifyPayloadStatus
+      description: >
+          Get the status of the payload verification process.
+      returns:
+          - name: Status
+            type: enum[self.FirmwareUpdateStatus]
+            description: >
+                Status of the payload verification
 
-  - name: ActivatePayload
-    description: >
-      Activates the staging area as persistent or non-persistent for next boot
-      if verification was successful.
-    parameters:
-      - name: MakePersistent
-        type: boolean
-        description: >
-          Flag to determine whether to activate the staged image as persistent
-          or non-persistent for next boot.
-    errors:
-      - self.Error.CommandFailure
-      - self.Error.ResponseFailure
-      - self.Error.InterfaceError
+    - name: ActivatePayload
+      description: >
+          Activates the staging area as persistent or non-persistent for next boot
+          if verification was successful.
+      parameters:
+          - name: MakePersistent
+            type: boolean
+            description: >
+                Flag to determine whether to activate the staged image as persistent
+                or non-persistent for next boot.
+      errors:
+          - self.Error.CommandFailure
+          - self.Error.ResponseFailure
+          - self.Error.InterfaceError
 
-  - name: GetPayloadSize
-    description: >
-      Determines the max size of the payload region.
-    returns:
-      - name: Size
-        type: uint32
-        description: >
-          The size of the payload region
-    errors:
-      - self.Error.CommandFailure
-      - self.Error.ResponseFailure
-      - self.Error.InterfaceError
+    - name: GetPayloadSize
+      description: >
+          Determines the max size of the payload region.
+      returns:
+          - name: Size
+            type: uint32
+            description: >
+                The size of the payload region
+      errors:
+          - self.Error.CommandFailure
+          - self.Error.ResponseFailure
+          - self.Error.InterfaceError
 
-  - name: Confirm
-    description: >
-      Prevents hoth from rolling back and using the previous image.
-      When an image can be comfirmed to be working well, this command is given,
-      which disarms the hoth watchdog.
-    errors:
-      - self.Error.CommandFailure
-      - self.Error.ResponseFailure
-      - self.Error.InterfaceError
+    - name: Confirm
+      description: >
+          Prevents hoth from rolling back and using the previous image.
+          When an image can be comfirmed to be working well, this command is given,
+          which disarms the hoth watchdog.
+      errors:
+          - self.Error.CommandFailure
+          - self.Error.ResponseFailure
+          - self.Error.InterfaceError
 
-  - name: GetTotalBootTime
-    description: >
-      Get total time spending from reset to HVNGOOD.
-    returns:
-      - name: Time
-        type: uint32
-        description: >
-          Time in microseconds.
-    errors:
-      - self.Error.ResponseFailure
-      - self.Error.ExpectedInfoNotFound
+    - name: GetTotalBootTime
+      description: >
+          Get total time spending from reset to HVNGOOD.
+      returns:
+          - name: Time
+            type: uint32
+            description: >
+                Time in microseconds.
+      errors:
+          - self.Error.ResponseFailure
+          - self.Error.ExpectedInfoNotFound
 
-  - name: GetFirmwareUpdateTime
-    description: >
-      Get time spending in the self update routine. Since a proper self update
-      involves a reset, this time is always expected to be low.
-    returns:
-      - name: Time
-        type: uint32
-        description: >
-          Time in microseconds.
-    errors:
-      - self.Error.ResponseFailure
-      - self.Error.ExpectedInfoNotFound
+    - name: GetFirmwareUpdateTime
+      description: >
+          Get time spending in the self update routine. Since a proper self update
+          involves a reset, this time is always expected to be low.
+      returns:
+          - name: Time
+            type: uint32
+            description: >
+                Time in microseconds.
+      errors:
+          - self.Error.ResponseFailure
+          - self.Error.ExpectedInfoNotFound
 
-  - name: GetFirmwareMirroringTime
-    description: >
-      Get time spending in mirroing the self-update. This time is a reasonable
-      proxy for the total self update time.
-    returns:
-      - name: Time
-        type: uint32
-        description: >
-          Time in microseconds.
-    errors:
-      - self.Error.ResponseFailure
-      - self.Error.ExpectedInfoNotFound
+    - name: GetFirmwareMirroringTime
+      description: >
+          Get time spending in mirroing the self-update. This time is a reasonable
+          proxy for the total self update time.
+      returns:
+          - name: Time
+            type: uint32
+            description: >
+                Time in microseconds.
+      errors:
+          - self.Error.ResponseFailure
+          - self.Error.ExpectedInfoNotFound
 
-  - name: GetPayloadValidationTime
-    description: >
-      Get time spending in validating the payload, copying mutable regions and/or
-      dealing with failsafe fallback.
-    returns:
-      - name: Time
-        type: uint32
-        description: >
-          Time in microseconds.
-    errors:
-      - self.Error.ResponseFailure
-      - self.Error.ExpectedInfoNotFound
+    - name: GetPayloadValidationTime
+      description: >
+          Get time spending in validating the payload, copying mutable regions and/or
+          dealing with failsafe fallback.
+      returns:
+          - name: Time
+            type: uint32
+            description: >
+                Time in microseconds.
+      errors:
+          - self.Error.ResponseFailure
+          - self.Error.ExpectedInfoNotFound
 
 signals:
-  - name: HostCommandResponseReady
-    description: >
-      This signal is broadcast when a response is ready for the call that
-      returned CallToken.
-    properties:
-      - name: CallToken
-        type: uint64
-        description: >
-          The token returned from SendHostCommandAsync()
+    - name: HostCommandResponseReady
+      description: >
+          This signal is broadcast when a response is ready for the call that
+          returned CallToken.
+      properties:
+          - name: CallToken
+            type: uint64
+            description: >
+                The token returned from SendHostCommandAsync()
 
 enumerations:
-   - name: FirmwareUpdateStatus
-     description: >
-       The status of a firmware update through hothd
-     values:
-       - name: 'None'
-         description: >
-           No update initiated
-       - name: 'InProgress'
-         description: >
-           Update still in progress
-       - name: 'Error'
-         description: >
-           Update has failed
-       - name: 'Done'
-         description: >
-           Update has completed successfully
+    - name: FirmwareUpdateStatus
+      description: >
+          The status of a firmware update through hothd
+      values:
+          - name: "None"
+            description: >
+                No update initiated
+          - name: "InProgress"
+            description: >
+                Update still in progress
+          - name: "Error"
+            description: >
+                Update has failed
+          - name: "Done"
+            description: >
+                Update has completed successfully

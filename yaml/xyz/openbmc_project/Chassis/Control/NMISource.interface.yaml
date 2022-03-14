@@ -5,42 +5,42 @@ methods:
       description: >
           Enables the BMC NMI out event.
       errors:
-       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
-       - xyz.openbmc_project.Chassis.Common.Error.IOError
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
 
 properties:
     - name: BMCSource
       type: enum[self.BMCSourceSignal]
       description: >
           Keeps track of NMI signal source in BMC.
-      default: 'None'
+      default: "None"
 
 enumerations:
-   - name: BMCSourceSignal
-     description: >
-       The type of NMI source.
-     values:
-       - name: None
-         description: >
-           NONE NMI signal.
-       - name: FrontPanelButton
-         description: >
-           Via Front Panel NMI button.
-       - name: Watchdog
-         description: >
-           Via watchdog pre-timeout.
-       - name: ChassisCmd
-         description: >
-           Via Chassis command.
-       - name: MemoryError
-         description: >
-           Via memory error.
-       - name: PciBusError
-         description: >
-           Via PCI bus error(PERR & SERR).
-       - name: PCH
-         description: >
-           Via southbridge NMI.
-       - name: Chipset
-         description: >
-           Via chipset NMI.
+    - name: BMCSourceSignal
+      description: >
+          The type of NMI source.
+      values:
+          - name: None
+            description: >
+                NONE NMI signal.
+          - name: FrontPanelButton
+            description: >
+                Via Front Panel NMI button.
+          - name: Watchdog
+            description: >
+                Via watchdog pre-timeout.
+          - name: ChassisCmd
+            description: >
+                Via Chassis command.
+          - name: MemoryError
+            description: >
+                Via memory error.
+          - name: PciBusError
+            description: >
+                Via PCI bus error(PERR & SERR).
+          - name: PCH
+            description: >
+                Via southbridge NMI.
+          - name: Chipset
+            description: >
+                Via chipset NMI.

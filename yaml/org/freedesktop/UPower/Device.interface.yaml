@@ -17,50 +17,50 @@ methods:
           "Gets history for the power device that is persistent across
            reboots."
       parameters:
-        - name: type
-          type: string
-          description: >
-            "The type of history. Valid types are rate or charge."
-        - name: timespan
-          type: uint32
-          description: >
-            "The amount of data to return in seconds, or 0 for all."
-        - name: resolution
-          type: uint32
-          description: >
-            "The approximate number of points to return. A higher resolution is
-             more accurate, at the expense of plotting speed."
+          - name: type
+            type: string
+            description: >
+                "The type of history. Valid types are rate or charge."
+          - name: timespan
+            type: uint32
+            description: >
+                "The amount of data to return in seconds, or 0 for all."
+          - name: resolution
+            type: uint32
+            description: >
+                "The approximate number of points to return. A higher resolution is
+                 more accurate, at the expense of plotting speed."
       returns:
-        - name: data
-          type: array[struct[uint32, double, uint32]]
-          description: >
-            "The history data for the power device, if the device supports
-             history. Data is ordered from the earliest in time, to the newest
-             data point. Each element contains the following members:
-               time: The time value in seconds from the gettimeofday() method.
-               value: The data value, for instance the rate in W or the charge
-                      in %.
-               state: The state of the device, for instance charging or
-                      discharging."
+          - name: data
+            type: array[struct[uint32, double, uint32]]
+            description: >
+                "The history data for the power device, if the device supports
+                 history. Data is ordered from the earliest in time, to the newest
+                 data point. Each element contains the following members:
+                   time: The time value in seconds from the gettimeofday() method.
+                   value: The data value, for instance the rate in W or the charge
+                          in %.
+                   state: The state of the device, for instance charging or
+                          discharging."
 
     - name: GetStatistics
       description: >
           "Gets statistics for the power device that may be interesting to show
            on a graph in the session."
       parameters:
-        - name: type
-          type: string
-          description: >
-            "The mode for the statistics. Valid types are charging or
-             discharging."
+          - name: type
+            type: string
+            description: >
+                "The mode for the statistics. Valid types are charging or
+                 discharging."
       returns:
-        - name: data
-          type: array[struct[double, double]]
-          description: >
-            "The statistics data for the power device. Each element contains the
-             following members:
-               value: The value of the percentage point, usually in seconds.
-               accuracy: The accuracy of the prediction in percent."
+          - name: data
+            type: array[struct[double, double]]
+            description: >
+                "The statistics data for the power device. Each element contains the
+                 following members:
+                   value: The value of the percentage point, usually in seconds.
+                   accuracy: The accuracy of the prediction in percent."
 
 properties:
     - name: NativePath

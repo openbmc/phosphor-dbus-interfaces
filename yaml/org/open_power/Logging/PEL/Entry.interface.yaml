@@ -5,23 +5,23 @@ properties:
       type: boolean
       default: false
       description: >
-        Hidden Error - This flag allows events to be placed in a system, but
-        remain hidden from the customer. This event log is visible to
-        development personnel only, e.g. hardware recovered error, etc. No
-        service action is required for this type of errors. In general, when
-        this value is used, the Error Action Flags has the value of
-        "Hidden Error". An event log with this value is used primarily for
-        error thresholding design/code debug or as a record to indicate an
-        error frequency or trend.
+          Hidden Error - This flag allows events to be placed in a system, but
+          remain hidden from the customer. This event log is visible to
+          development personnel only, e.g. hardware recovered error, etc. No
+          service action is required for this type of errors. In general, when
+          this value is used, the Error Action Flags has the value of
+          "Hidden Error". An event log with this value is used primarily for
+          error thresholding design/code debug or as a record to indicate an
+          error frequency or trend.
     - name: Subsystem
       type: string
       description: >
-        A free form, implementation defined string which uniquely and
-        permanently identifies a specific subsystem string. This field should
-        not be used for programmatic interrogation of an object.
+          A free form, implementation defined string which uniquely and
+          permanently identifies a specific subsystem string. This field should
+          not be used for programmatic interrogation of an object.
     - name: ManagementSystemAck
       type: boolean
       default: false
       description: >
-        Notifies the PEL handler that the management system acknowledged a PEL.
-        The management system can be any system monitoring the hardware.
+          Notifies the PEL handler that the management system acknowledged a PEL.
+          The management system can be any system monitoring the hardware.

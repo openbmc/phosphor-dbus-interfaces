@@ -11,19 +11,19 @@ description: >
 methods:
     - name: Notify
       description: >
-         Create a dump entry based on the parameters.
+          Create a dump entry based on the parameters.
       parameters:
-       - name: SourceDumpId
-         type: uint32
-         description: >
-             The dump id provided by the source of the dump.
-             There are dumps which get generated outside the BMC, like a
-             system dump which gets generated and stored in the host memory.
-             All dumps will have a  unique id  but when communicating
-             to the source of the dump the SourceDumpId will be used.
-       - name: Size
-         type: uint64
-         description: >
-            Size of the dump in bytes
+          - name: SourceDumpId
+            type: uint32
+            description: >
+                The dump id provided by the source of the dump.
+                There are dumps which get generated outside the BMC, like a
+                system dump which gets generated and stored in the host memory.
+                All dumps will have a  unique id  but when communicating
+                to the source of the dump the SourceDumpId will be used.
+          - name: Size
+            type: uint64
+            description: >
+                Size of the dump in bytes
       errors:
-        - xyz.openbmc_project.Dump.Create.Error.Disabled
+          - xyz.openbmc_project.Dump.Create.Error.Disabled

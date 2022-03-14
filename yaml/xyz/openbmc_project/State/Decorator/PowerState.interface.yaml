@@ -5,25 +5,25 @@ properties:
       type: enum[self.State]
       default: Unknown
       description: >
-        The current power status of the object.
+          The current power status of the object.
 
 enumerations:
-  - name: State
-    description: >
-      Power state enum.
-    values:
-      - name: "On"
-        description: >
-         The state of the object is powered on.
-      - name: "Off"
-        description: >
-         The state of the object is powered off.
-      - name: PoweringOn
-        description: >
-         The object is in a temporary state between off and on.
-      - name: PoweringOff
-        description: >
-         The object is in a temporary state between on and off.
-      - name: Unknown
-        description: >
-         The power state is unknown.
+    - name: State
+      description: >
+          Power state enum.
+      values:
+          - name: "On"
+            description: >
+                The state of the object is powered on.
+          - name: "Off"
+            description: >
+                The state of the object is powered off.
+          - name: PoweringOn
+            description: >
+                The object is in a temporary state between off and on.
+          - name: PoweringOff
+            description: >
+                The object is in a temporary state between on and off.
+          - name: Unknown
+            description: >
+                The power state is unknown.

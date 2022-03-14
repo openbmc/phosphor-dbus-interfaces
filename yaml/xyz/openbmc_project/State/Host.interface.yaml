@@ -4,7 +4,7 @@ description: >
 properties:
     - name: RequestedHostTransition
       type: enum[self.Transition]
-      default: 'Off'
+      default: "Off"
       description: >
           The desired host transition.  This will be preserved across AC
           power cycles of the BMC.
@@ -19,104 +19,104 @@ properties:
 
     - name: RestartCause
       type: enum[self.RestartCause]
-      default: 'Unknown'
+      default: "Unknown"
       description: >
           A property to define restart cause of a host.
 
 enumerations:
     - name: Transition
       description: >
-        The desired transition for host firmware
+          The desired transition for host firmware
       values:
-        - name: 'Off'
-          description: >
-            Host firmware should be off
-        - name: 'On'
-          description: >
-            Host firmware should be on
-        - name: 'Reboot'
-          description: >
-            Host firmware should be rebooted. Chassis power will be cycled from
-            off to on during this reboot
-        - name: 'GracefulWarmReboot'
-          description: >
-            Host firmware be will notified to shutdown and once complete, the
-            host firmware will be rebooted. Chassis power will remain on
-            throughout the reboot
-        - name: 'ForceWarmReboot'
-          description: >
-            Host firmware will be rebooted without notification and chassis
-            power will remain on throughout the reboot
+          - name: "Off"
+            description: >
+                Host firmware should be off
+          - name: "On"
+            description: >
+                Host firmware should be on
+          - name: "Reboot"
+            description: >
+                Host firmware should be rebooted. Chassis power will be cycled from
+                off to on during this reboot
+          - name: "GracefulWarmReboot"
+            description: >
+                Host firmware be will notified to shutdown and once complete, the
+                host firmware will be rebooted. Chassis power will remain on
+                throughout the reboot
+          - name: "ForceWarmReboot"
+            description: >
+                Host firmware will be rebooted without notification and chassis
+                power will remain on throughout the reboot
 
     - name: HostState
       description: >
-        The current state of the host firmware
+          The current state of the host firmware
       values:
-        - name: 'Off'
-          description: >
-            Host firmware is not running
-        - name: 'TransitioningToOff'
-          description: >
-            Host firmware is transitioning to an Off state
-        - name: 'Standby'
-          description: >
-            Host firmware is in a standby state. It is awaiting a Transition
-            request to On to move to Running. This is an intermediate state
-            that some implementations of this object may move to between Off
-            and Running.
-        - name: 'Running'
-          description: >
-            Host firmware is running
-        - name: 'TransitioningToRunning'
-          description: >
-            Host firmware is transitioning to a Running state
-        - name: 'Quiesced'
-          description: >
-            Host firmware is quiesced. The host firmware is enabled but either
-            unresponsive or only processing a restricted set of commands. This
-            state can be a result of the host entering an error state or booting
-            into a BIOS setup environment. The BootProgress property will
-            provide details on which it is.
-        - name: 'DiagnosticMode'
-          description: >
-            Host firmware is capturing debug information. Powering off your
-            system while the host is in this state will prevent the debug data
-            from being properly collected. The host will move to one of the
-            other states once complete.
+          - name: "Off"
+            description: >
+                Host firmware is not running
+          - name: "TransitioningToOff"
+            description: >
+                Host firmware is transitioning to an Off state
+          - name: "Standby"
+            description: >
+                Host firmware is in a standby state. It is awaiting a Transition
+                request to On to move to Running. This is an intermediate state
+                that some implementations of this object may move to between Off
+                and Running.
+          - name: "Running"
+            description: >
+                Host firmware is running
+          - name: "TransitioningToRunning"
+            description: >
+                Host firmware is transitioning to a Running state
+          - name: "Quiesced"
+            description: >
+                Host firmware is quiesced. The host firmware is enabled but either
+                unresponsive or only processing a restricted set of commands. This
+                state can be a result of the host entering an error state or booting
+                into a BIOS setup environment. The BootProgress property will
+                provide details on which it is.
+          - name: "DiagnosticMode"
+            description: >
+                Host firmware is capturing debug information. Powering off your
+                system while the host is in this state will prevent the debug data
+                from being properly collected. The host will move to one of the
+                other states once complete.
 
     - name: RestartCause
       description: >
-        The reason for host restart.
+          The reason for host restart.
       values:
-        - name: 'Unknown'
-          description: >
-            Reason Unknown
-        - name: 'RemoteCommand'
-          description: >
-            Remote command issued
-        - name: 'ResetButton'
-          description: >
-            Reset button pressed
-        - name: 'PowerButton'
-          description: >
-            Power button pressed
-        - name: 'WatchdogTimer'
-          description: >
-            Watchdog Timer expired
-        - name: 'PowerPolicyAlwaysOn'
-          description: >
-            Power Policy Host Always on
-        - name: 'PowerPolicyPreviousState'
-          description: >
-            Power Policy Previous State of Host
-        - name: 'SoftReset'
-          description: >
-            Soft reset of Host
-        - name: 'ScheduledPowerOn'
-          description: >
-            The restart was scheduled via the
-            xyz.openbmc_project.State.ScheduledHostTransition interface
-        - name: 'HostCrash'
-          description: >
-            The host firmware crashed and the BMC has automatically initiated a
-            restart of the host firmware
+          - name: "Unknown"
+            description: >
+                Reason Unknown
+          - name: "RemoteCommand"
+            description: >
+                Remote command issued
+          - name: "ResetButton"
+            description: >
+                Reset button pressed
+          - name: "PowerButton"
+            description: >
+                Power button pressed
+          - name: "WatchdogTimer"
+            description: >
+                Watchdog Timer expired
+          - name: "PowerPolicyAlwaysOn"
+            description: >
+                Power Policy Host Always on
+          - name: "PowerPolicyPreviousState"
+            description: >
+                Power Policy Previous State of Host
+          - name: "SoftReset"
+            description: >
+                Soft reset of Host
+          - name: "ScheduledPowerOn"
+            description: >
+                The restart was scheduled via the
+                xyz.openbmc_project.State.ScheduledHostTransition interface
+          - name: "HostCrash"
+            description: >
+                The host firmware crashed and the BMC has automatically initiated a
+                restart of the host firmware

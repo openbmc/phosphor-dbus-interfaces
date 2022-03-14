@@ -10,11 +10,11 @@ properties:
 enumerations:
     - name: Method
       description: >
-        Possible methods of time synchronization.
+          Possible methods of time synchronization.
       values:
-        - name: NTP
-          description: >
-            Sync by using the Network Time Protocol.
-        - name: Manual
-          description: >
-            Sync time manually.
+          - name: NTP
+            description: >
+                Sync by using the Network Time Protocol.
+          - name: Manual
+            description: >
+                Sync time manually.

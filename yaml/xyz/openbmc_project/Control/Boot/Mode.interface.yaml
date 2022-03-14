@@ -11,14 +11,14 @@ properties:
 enumerations:
     - name: Modes
       description: >
-        Possible boot modes.
+          Possible boot modes.
       values:
-        - name: Regular
-          description: >
-            The regular/default mode, such as boot to an OS.
-        - name: Safe
-          description: >
-            Boot to a diagnostic/trouble-shooting mode.
-        - name: Setup
-          description: >
-            Boot to BIOS setup.
+          - name: Regular
+            description: >
+                The regular/default mode, such as boot to an OS.
+          - name: Safe
+            description: >
+                Boot to a diagnostic/trouble-shooting mode.
+          - name: Setup
+            description: >
+                Boot to BIOS setup.

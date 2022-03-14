@@ -98,12 +98,12 @@ enumerations:
       description: >
           Memory modes supported by the memory module.
       values:
-        - name: Volatile
-          description: >
-              Memory module supports volatile or non-persistent memory mode.
-        - name: Persistent
-          description: >
-              Memory module supports apt direct mode.
-        - name: Block
-          description: >
-              Memory module supports block mode.
+          - name: Volatile
+            description: >
+                Memory module supports volatile or non-persistent memory mode.
+          - name: Persistent
+            description: >
+                Memory module supports apt direct mode.
+          - name: Block
+            description: >
+                Memory module supports block mode.

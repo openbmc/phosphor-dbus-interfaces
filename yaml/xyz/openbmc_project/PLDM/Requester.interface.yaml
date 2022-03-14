@@ -37,15 +37,15 @@ methods:
           post this interval, the way of handling the same (further retries,
           report an error, etc) is left to the user.
       parameters:
-        - name: eid
-          type: byte
-          description: >
-            The MCTP endpoint, specified by 'eid' (endpoint id), for which the
-            new PLDM instance id needs to be generated.
+          - name: eid
+            type: byte
+            description: >
+                The MCTP endpoint, specified by 'eid' (endpoint id), for which the
+                new PLDM instance id needs to be generated.
       returns:
-        - name: instanceid
-          type: byte
-          description: >
-            PLDM instance id.
+          - name: instanceid
+            type: byte
+            description: >
+                PLDM instance id.
       errors:
-        - xyz.openbmc_project.Common.Error.TooManyResources
+          - xyz.openbmc_project.Common.Error.TooManyResources

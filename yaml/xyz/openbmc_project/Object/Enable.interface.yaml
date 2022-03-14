@@ -18,8 +18,8 @@ properties:
     - name: Enabled
       type: boolean
       description: >
-        Whether the object is enabled or not. Implementation may throw error
-        "NotAllowed" depends on the context how it is used.
+          Whether the object is enabled or not. Implementation may throw error
+          "NotAllowed" depends on the context how it is used.
       default: false
       errors:
-        - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.NotAllowed

@@ -54,31 +54,31 @@ signals:
       description: >
           The high threshold alarm asserted.
       properties:
-         - name: SensorValue
-           type: double
-           description: >
-               The sensor value that triggered the alarm change.
+          - name: SensorValue
+            type: double
+            description: >
+                The sensor value that triggered the alarm change.
     - name: HardShutdownHighAlarmDeasserted
       description: >
           The high threshold alarm deasserted.
       properties:
-         - name: SensorValue
-           type: double
-           description: >
-               The sensor value that triggered the alarm change.
+          - name: SensorValue
+            type: double
+            description: >
+                The sensor value that triggered the alarm change.
     - name: HardShutdownLowAlarmAsserted
       description: >
           The low threshold alarm asserted.
       properties:
-         - name: SensorValue
-           type: double
-           description: >
-               The sensor value that triggered the alarm change.
+          - name: SensorValue
+            type: double
+            description: >
+                The sensor value that triggered the alarm change.
     - name: HardShutdownLowAlarmDeasserted
       description: >
           The low threshold alarm deasserted.
       properties:
-         - name: SensorValue
-           type: double
-           description: >
-               The sensor value that triggered the alarm change.
+          - name: SensorValue
+            type: double
+            description: >
+                The sensor value that triggered the alarm change.

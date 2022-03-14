@@ -3,7 +3,7 @@ description: >
 methods:
     - name: DeleteAll
       description: >
-         Delete all objects in the collection.
+          Delete all objects in the collection.
       errors:
-        - xyz.openbmc_project.Common.Error.NotAllowed
-        - xyz.openbmc_project.Common.Error.Unavailable
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Unavailable

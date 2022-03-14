@@ -6,20 +6,20 @@ methods:
       description: >
           Send raw PECI command(s) to the CPU
       parameters:
-        - name: device
-          type: string
-          description: >
-            The path for the PECI device to use for the command
-        - name: commands
-          type: array[array[byte]]
-          description: >
-            An array of byte arrays where each byte array holds the raw
-            bytes for a single PECI command.  The larger array allows
-            sending multiple PECI commands in a single transaction.
+          - name: device
+            type: string
+            description: >
+                The path for the PECI device to use for the command
+          - name: commands
+            type: array[array[byte]]
+            description: >
+                An array of byte arrays where each byte array holds the raw
+                bytes for a single PECI command.  The larger array allows
+                sending multiple PECI commands in a single transaction.
       returns:
-        - name: results
-          type: array[array[byte]]
-          description: >
-            An array of byte arrays where each byte array holds the raw
-            bytes for a single PECI response corresponding to the command
-            in the command array.
+          - name: results
+            type: array[array[byte]]
+            description: >
+                An array of byte arrays where each byte array holds the raw
+                bytes for a single PECI response corresponding to the command
+                in the command array.

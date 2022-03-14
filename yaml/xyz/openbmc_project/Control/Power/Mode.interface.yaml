@@ -12,23 +12,23 @@ properties:
 enumerations:
     - name: PowerMode
       description: >
-        Possible Power Mode settings
+          Possible Power Mode settings
       values:
-        - name: Static
-          description: >
-              This value shall indicate the system performs at a static base
-              speed.
-        - name: PowerSaving
-          description: >
-              This value shall indicate the system performs at reduced speeds
-              to save power. This mode should be used when power saving is the
-              top priority.
-        - name: MaximumPerformance
-          decription: >
-              This value shall indicate the system performs at the highest
-              speeds possible. This mode should be used when performance is
-              the top priority.
-        - name: OEM
-          description: >
-              This value shall indicate the system performs at an OEM-defined
-              power mode.
+          - name: Static
+            description: >
+                This value shall indicate the system performs at a static base
+                speed.
+          - name: PowerSaving
+            description: >
+                This value shall indicate the system performs at reduced speeds
+                to save power. This mode should be used when power saving is the
+                top priority.
+          - name: MaximumPerformance
+            decription: >
+                This value shall indicate the system performs at the highest
+                speeds possible. This mode should be used when performance is
+                the top priority.
+          - name: OEM
+            description: >
+                This value shall indicate the system performs at an OEM-defined
+                power mode.

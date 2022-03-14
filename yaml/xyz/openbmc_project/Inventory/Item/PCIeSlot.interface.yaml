@@ -5,7 +5,7 @@ description: >
 properties:
     - name: Generation
       type: enum[self.Generations]
-      default: 'Unknown'
+      default: "Unknown"
       description: >
           The PCIe generation of the slot
 
@@ -16,7 +16,7 @@ properties:
 
     - name: SlotType
       type: enum[self.SlotTypes]
-      default: 'Unknown'
+      default: "Unknown"
       description: >
           The type of the slot
 
@@ -30,73 +30,73 @@ enumerations:
       description: >
           Possible PCIe generations
       values:
-        - name: 'Gen1'
-          description: >
-              PCIe v1.0 slot
+          - name: "Gen1"
+            description: >
+                PCIe v1.0 slot
 
-        - name: 'Gen2'
-          description: >
-              PCIe v2.0 slot
+          - name: "Gen2"
+            description: >
+                PCIe v2.0 slot
 
-        - name: 'Gen3'
-          description: >
-              PCIe v3.0 slot
+          - name: "Gen3"
+            description: >
+                PCIe v3.0 slot
 
-        - name: 'Gen4'
-          description: >
-              PCIe v4.0 slot
+          - name: "Gen4"
+            description: >
+                PCIe v4.0 slot
 
-        - name: 'Gen5'
-          description: >
-              PCIe v5.0 slot
+          - name: "Gen5"
+            description: >
+                PCIe v5.0 slot
 
-        - name: 'Unknown'
-          description: >
-              Version of the PCIe slot is unknown
+          - name: "Unknown"
+            description: >
+                Version of the PCIe slot is unknown
 
     - name: SlotTypes
       description: >
           Possible types of a PCIe slot
       values:
-        - name: 'FullLength'
-          description: >
-              Full-Length PCIe slot
+          - name: "FullLength"
+            description: >
+                Full-Length PCIe slot
 
-        - name: 'HalfLength'
-          description: >
-              Half-Length PCIe slot
+          - name: "HalfLength"
+            description: >
+                Half-Length PCIe slot
 
-        - name: 'LowProfile'
-          description: >
-              Low-Profile or Slim PCIe slot
+          - name: "LowProfile"
+            description: >
+                Low-Profile or Slim PCIe slot
 
-        - name: 'Mini'
-          description: >
-              Mini PCIe slot
+          - name: "Mini"
+            description: >
+                Mini PCIe slot
 
-        - name: 'M_2'
-          description: >
-              PCIe M.2 slot
+          - name: "M_2"
+            description: >
+                PCIe M.2 slot
 
-        - name: 'OEM'
-          description: >
-              An OEM-specific PCIe slot
+          - name: "OEM"
+            description: >
+                An OEM-specific PCIe slot
 
-        - name: 'OCP3Small'
-          description: >
-              Open Compute Project 3.0 small form factor PCIe slot
+          - name: "OCP3Small"
+            description: >
+                Open Compute Project 3.0 small form factor PCIe slot
 
-        - name: 'OCP3Large'
-          description: >
-              Open Compute Project 3.0 large form factor PCIe slot
+          - name: "OCP3Large"
+            description: >
+                Open Compute Project 3.0 large form factor PCIe slot
 
-        - name: 'U_2'
-          description: >
-              U.2 / SFF-8639 PCIe slot or bay
+          - name: "U_2"
+            description: >
+                U.2 / SFF-8639 PCIe slot or bay
 
-        - name: 'Unknown'
-          description: >
-              Type of the PCIe slot is unknown
+          - name: "Unknown"
+            description: >
+                Type of the PCIe slot is unknown
 
 associations:
     - name: upstream_processor
@@ -106,4 +106,4 @@ associations:
           bridge or on-processor PCIe root complexes.
       reverse_name: associated_pcie_slots
       required_endpoint_interfaces:
-        - xyz.openbmc_project.Inventory.Item.Cpu
+          - xyz.openbmc_project.Inventory.Item.Cpu

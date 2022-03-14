@@ -10,13 +10,13 @@ properties:
       type: size
       default: 0
       description: >
-        The current position of the selector. Position 1 to N selects
-        Host Instance t to N,Position 0 selects the BMC
-        ( N is maximum number of hosts ).
+          The current position of the selector. Position 1 to N selects
+          Host Instance t to N,Position 0 selects the BMC
+          ( N is maximum number of hosts ).
     - name: MaxPosition
       type: size
       default: 0
       flags:
           - readonly
       description: >
-        Maximum number for position value.
+          Maximum number for position value.

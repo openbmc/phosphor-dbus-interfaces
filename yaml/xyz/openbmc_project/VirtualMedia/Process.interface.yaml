@@ -7,7 +7,7 @@ properties:
       description: >
           `True`, if object is occupied by active process, `False` otherwise.
       flags:
-        - const
+          - const
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
 
@@ -16,6 +16,6 @@ properties:
       description: >
           If process terminates this property will contain returned exit code.
       flags:
-        - const
+          - const
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure

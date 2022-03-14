@@ -4,137 +4,137 @@ description: >
     xyz.openbmc_project.Object.Delete for deletion of individual report objects.
 
 methods:
-  - name: Update
-    description: >
-        The Update method is defined for the on demand metric report update.
-        It triggers update of the Readings property. If ReportingType is not
-        set to OnRequest then method does nothing.
+    - name: Update
+      description: >
+          The Update method is defined for the on demand metric report update.
+          It triggers update of the Readings property. If ReportingType is not
+          set to OnRequest then method does nothing.
 
 properties:
-  - name: Persistency
-    type: boolean
-    description: >
-        Defines if the report configuration is stored in non volatile memory.
-        Configuration contains all Report properties excluding Readings.
-  - name: ReadingParameters
-    type: array[struct[array[object_path],enum[self.OperationType],string,string,enum[self.CollectionTimescope],uint64]]
-    description: >
-        Array of structures that contains array of sensor paths that are
-        monitored by Telemetry service, operation type, metric Id, metadata,
-        collection timescope and collection duration. Metric Id and metadata are
-        used to store user details, e.g. metadata can be used to map sensor name
-        to DBus path.
-  - name: Readings
-    type: struct[uint64,array[struct[string,string,double,uint64]]]
-    description: >
-        Structure that contains timestamp of readings update in milliseconds and
-        array of metric Id, metadata, reading value and timestamp of single
-        reading update in milliseconds. Metric Id and metadata are equal to its
-        counterparts in ReadingParameters property.
-    flags:
-    - readonly
-  - name: EmitsReadingsUpdate
-    type: boolean
-    description: >
-        On Readings update PropertiesChanged signal is emitted. It allows to
-        decrease generation of load on DBus when Readings property is updated.
-        Redfish Event Service requires this option to be equal to true.
-    flags:
-    - const
-  - name: LogToMetricReportsCollection
-    type: boolean
-    description: >
-        Presence of Report in Metric Report Collection in Redfish Telemetry
-        Service.
-    flags:
-    - const
-  - name: ReportingType
-    type: enum[self.ReportingType]
-    description: Defines how readings are updated.
-  - name: ReportUpdates
-    type: enum[self.ReportUpdates]
-    description: Defines how Readings array is filled.
-  - name: AppendLimit
-    type: size
-    description: Defines the maximum number of entries in 'Readings' property.
-    flags:
-    - readonly
-  - name: Interval
-    type: uint64
-    description: >
-        Defines period of time in milliseconds when readings are updated.
-  - name: Enabled
-    type: boolean
-    description: >
-        Indicates if readings in report will be updated. This may be set to
-        false by the service if ReportUpdates property is 'AppendStopsWhenFull'
-        and readings limit specified by AppendLimit is reached.
+    - name: Persistency
+      type: boolean
+      description: >
+          Defines if the report configuration is stored in non volatile memory.
+          Configuration contains all Report properties excluding Readings.
+    - name: ReadingParameters
+      type: array[struct[array[object_path],enum[self.OperationType],string,string,enum[self.CollectionTimescope],uint64]]
+      description: >
+          Array of structures that contains array of sensor paths that are
+          monitored by Telemetry service, operation type, metric Id, metadata,
+          collection timescope and collection duration. Metric Id and metadata are
+          used to store user details, e.g. metadata can be used to map sensor name
+          to DBus path.
+    - name: Readings
+      type: struct[uint64,array[struct[string,string,double,uint64]]]
+      description: >
+          Structure that contains timestamp of readings update in milliseconds and
+          array of metric Id, metadata, reading value and timestamp of single
+          reading update in milliseconds. Metric Id and metadata are equal to its
+          counterparts in ReadingParameters property.
+      flags:
+          - readonly
+    - name: EmitsReadingsUpdate
+      type: boolean
+      description: >
+          On Readings update PropertiesChanged signal is emitted. It allows to
+          decrease generation of load on DBus when Readings property is updated.
+          Redfish Event Service requires this option to be equal to true.
+      flags:
+          - const
+    - name: LogToMetricReportsCollection
+      type: boolean
+      description: >
+          Presence of Report in Metric Report Collection in Redfish Telemetry
+          Service.
+      flags:
+          - const
+    - name: ReportingType
+      type: enum[self.ReportingType]
+      description: Defines how readings are updated.
+    - name: ReportUpdates
+      type: enum[self.ReportUpdates]
+      description: Defines how Readings array is filled.
+    - name: AppendLimit
+      type: size
+      description: Defines the maximum number of entries in 'Readings' property.
+      flags:
+          - readonly
+    - name: Interval
+      type: uint64
+      description: >
+          Defines period of time in milliseconds when readings are updated.
+    - name: Enabled
+      type: boolean
+      description: >
+          Indicates if readings in report will be updated. This may be set to
+          false by the service if ReportUpdates property is 'AppendStopsWhenFull'
+          and readings limit specified by AppendLimit is reached.
 
 enumerations:
-   - name: OperationType
-     description: Type of action that is executed on readings.
-     values:
-       - name: Single
-         description: Store the latest reading.
-       - name: Max
-         description: Store maximal reading during defined time period.
-       - name: Min
-         description: Store minimal reading during defined time period.
-       - name: Avg
-         description: Calculate average of readings during defined time period.
-       - name: Sum
-         description: Calculate sum of readings over defined time period.
-   - name: ReportingType
-     description: >
-       The type that defines when Readings are updated.
-     values:
-       - name: OnChange
-         description: >
-           On sensor reading change.
-       - name: OnRequest
-         description: >
-           On Update method call.
-       - name: Periodic
-         description: >
-           After period of time defined by Interval property.
-   - name: ReportUpdates
-     description: >
-       The type that defines how Readings are updated.
-     values:
-       - name: Overwrite
-         description: >
-           Last sensor reading is written to Readings overwriting the previous
-           value. AppendLimit set by user is ignored. Readings size is equal to
-           count of all sensors across all metrics.
-       - name: AppendWrapsWhenFull
-         description: >
-           Append sensor reading to Readings up to limit specify in AppendLimit
-           then start from the beginning.
-       - name: AppendStopsWhenFull
-         description: >
-           Append sensor reading to Readings up to limit specify in AppendLimit
-           then stop till report update.
-       - name: NewReport
-         description: >
-           A new report is created, whose name is the current metric report name
-           concatenated with the timestamp.
-   - name: CollectionTimescope
-     description: >
-       The time scope of the related metric values.
-     values:
-       - name: Point
-         description: >
-           The corresponding metric apply to a point in time. The reading
-           timestamp in Readings property specifies point in time.
-       - name: Interval
-         description: >
-           The corresponding metric apply to a time interval. The reading
-           timestamp in Readings property specifies the end of the time interval
-           and the collection duration of ReadingParameters specify its duration.
-       - name: StartupInterval
-         description: >
-           The corresponding metric apply to a time interval that began on
-           report creation. The reading timestamp in Readings property specifies
-           the end of the time interval. Collection duration of
-           ReadingParameters specifies the duration between the startup of
-           resource and timestamp.
+    - name: OperationType
+      description: Type of action that is executed on readings.
+      values:
+          - name: Single
+            description: Store the latest reading.
+          - name: Max
+            description: Store maximal reading during defined time period.
+          - name: Min
+            description: Store minimal reading during defined time period.
+          - name: Avg
+            description: Calculate average of readings during defined time period.
+          - name: Sum
+            description: Calculate sum of readings over defined time period.
+    - name: ReportingType
+      description: >
+          The type that defines when Readings are updated.
+      values:
+          - name: OnChange
+            description: >
+                On sensor reading change.
+          - name: OnRequest
+            description: >
+                On Update method call.
+          - name: Periodic
+            description: >
+                After period of time defined by Interval property.
+    - name: ReportUpdates
+      description: >
+          The type that defines how Readings are updated.
+      values:
+          - name: Overwrite
+            description: >
+                Last sensor reading is written to Readings overwriting the previous
+                value. AppendLimit set by user is ignored. Readings size is equal to
+                count of all sensors across all metrics.
+          - name: AppendWrapsWhenFull
+            description: >
+                Append sensor reading to Readings up to limit specify in AppendLimit
+                then start from the beginning.
+          - name: AppendStopsWhenFull
+            description: >
+                Append sensor reading to Readings up to limit specify in AppendLimit
+                then stop till report update.
+          - name: NewReport
+            description: >
+                A new report is created, whose name is the current metric report name
+                concatenated with the timestamp.
+    - name: CollectionTimescope
+      description: >
+          The time scope of the related metric values.
+      values:
+          - name: Point
+            description: >
+                The corresponding metric apply to a point in time. The reading
+                timestamp in Readings property specifies point in time.
+          - name: Interval
+            description: >
+                The corresponding metric apply to a time interval. The reading
+                timestamp in Readings property specifies the end of the time interval
+                and the collection duration of ReadingParameters specify its duration.
+          - name: StartupInterval
+            description: >
+                The corresponding metric apply to a time interval that began on
+                report creation. The reading timestamp in Readings property specifies
+                the end of the time interval. Collection duration of
+                ReadingParameters specifies the duration between the startup of
+                resource and timestamp.

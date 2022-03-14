@@ -16,16 +16,16 @@ properties:
           The current status of the signing operation.
 
 enumerations:
-  - name: State
-    description: >
-      Signing operation state enum.
-    values:
-      - name: Pending
-        description: >
-         Signing request is pending.
-      - name: BadCSR
-        description: >
-          The CSR was malformed.
-      - name: Complete
-        description: >
-          CSR signing complete
+    - name: State
+      description: >
+          Signing operation state enum.
+      values:
+          - name: Pending
+            description: >
+                Signing request is pending.
+          - name: BadCSR
+            description: >
+                The CSR was malformed.
+          - name: Complete
+            description: >
+                CSR signing complete

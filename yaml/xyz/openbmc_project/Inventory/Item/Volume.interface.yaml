@@ -6,119 +6,119 @@ description: >
 methods:
     - name: FormatLuks
       description: >
-        Format a LUKS encrypted device and create a filesystem.
+          Format a LUKS encrypted device and create a filesystem.
       parameters:
-        - name: Password
-          type: array[byte]
-          description: >
-            Array of bytes to use as the LUKS password.
-        - name: Type
-          type: enum[self.FilesystemType]
-          description: >
-            Type of filesystem, e.g. ext2, ext3, ext4, vfat.
+          - name: Password
+            type: array[byte]
+            description: >
+                Array of bytes to use as the LUKS password.
+          - name: Type
+            type: enum[self.FilesystemType]
+            description: >
+                Type of filesystem, e.g. ext2, ext3, ext4, vfat.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.ResourceNotFound
-        - xyz.openbmc_project.Common.Error.UnsupportedRequest
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.UnsupportedRequest
 
     - name: Erase
       description: >
-        Erase the contents of the volume.
+          Erase the contents of the volume.
       parameters:
-        - name: EraseType
-          type: enum[self.EraseMethod]
-          description: >
-            Describes what type of erase is done.
+          - name: EraseType
+            type: enum[self.EraseMethod]
+            description: >
+                Describes what type of erase is done.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
 
     - name: Lock
       description: >
-        Unmount the filesystem, lock the volume, and remove sensitive data
-        (e.g. volume key) from memory.
+          Unmount the filesystem, lock the volume, and remove sensitive data
+          (e.g. volume key) from memory.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.UnsupportedRequest
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.UnsupportedRequest
 
     - name: Unlock
       description: >
-        Activate the volume and mount the filesystem.
+          Activate the volume and mount the filesystem.
       parameters:
-        - name: Password
-          type: array[byte]
-          description: >
-            Array of bytes to use as the LUKS password.
+          - name: Password
+            type: array[byte]
+            description: >
+                Array of bytes to use as the LUKS password.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
 
     - name: ChangePassword
       description: >
-        Change the LUKS password that unlocks the storage volume.
+          Change the LUKS password that unlocks the storage volume.
       parameters:
-        - name: OldPassword
-          type: array[byte]
-          description: >
-            Array of bytes for the old LUKS password.
-        - name: NewPassword
-          type: array[byte]
-          description: >
-            Array of bytes to use as the LUKS password.
+          - name: OldPassword
+            type: array[byte]
+            description: >
+                Array of bytes for the old LUKS password.
+          - name: NewPassword
+            type: array[byte]
+            description: >
+                Array of bytes to use as the LUKS password.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
 
 properties:
     - name: Locked
       type: boolean
       default: false
       description: >
-        Indicates whether the LUKS volume is locked.
+          Indicates whether the LUKS volume is locked.
 
 enumerations:
     - name: EraseMethod
       description: >
-        Indicates which erase method/step is being requested.
+          Indicates which erase method/step is being requested.
       values:
-        - name: CryptoErase
-          description: >
-            Destroys the encryption key slots, preventing decyrption.
-        - name: VerifyGeometry
-          description: >
-            Confirms a set percent of the disk is accessible.
-        - name: LogicalOverWrite
-          description: >
-            Overwrites the disk with a reproducible incompressible pattern.
-        - name: LogicalVerify
-          description: >
-            Verifies a reproducible pattern has been written to the disk.
-        - name: VendorSanitize
-          description: >
-            Uses the sanitization provided by the device firmware.
-        - name: ZeroOverWrite
-          description: >
-            Writes zeros over the whole disk.
-        - name: ZeroVerify
-          description: >
-            Verifies the the entire disk has been zeroed.
-        - name: SecuredLocked
-          description: >
-            Locks the disk to prevent data being written to it.
+          - name: CryptoErase
+            description: >
+                Destroys the encryption key slots, preventing decyrption.
+          - name: VerifyGeometry
+            description: >
+                Confirms a set percent of the disk is accessible.
+          - name: LogicalOverWrite
+            description: >
+                Overwrites the disk with a reproducible incompressible pattern.
+          - name: LogicalVerify
+            description: >
+                Verifies a reproducible pattern has been written to the disk.
+          - name: VendorSanitize
+            description: >
+                Uses the sanitization provided by the device firmware.
+          - name: ZeroOverWrite
+            description: >
+                Writes zeros over the whole disk.
+          - name: ZeroVerify
+            description: >
+                Verifies the the entire disk has been zeroed.
+          - name: SecuredLocked
+            description: >
+                Locks the disk to prevent data being written to it.
 
     - name: FilesystemType
       description: >
-        Type of filesystem used on the storage device.
+          Type of filesystem used on the storage device.
       values:
-        - name: ext2
-          description: >
-            Filesystem type ext2
-        - name: ext3
-          description: >
-            Filesystem type ext3
-        - name: ext4
-          description: >
-            Filesystem type ext4
-        - name: vfat
-          description: >
-            Filesystem type vfat
+          - name: ext2
+            description: >
+                Filesystem type ext2
+          - name: ext3
+            description: >
+                Filesystem type ext3
+          - name: ext4
+            description: >
+                Filesystem type ext4
+          - name: vfat
+            description: >
+                Filesystem type vfat

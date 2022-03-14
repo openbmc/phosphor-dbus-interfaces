@@ -28,17 +28,17 @@ properties:
 enumerations:
     - name: OperationStatus
       description: >
-        Status of the activity
+          Status of the activity
       values:
-        - name: InProgress
-          description: >
-           Requested operation is in progress.
-        - name: Completed
-          description: >
-           The operation is completed.
-        - name: Failed
-          description: >
-           The operation encountered a failure.
-        - name: Aborted
-          description: >
-           The operation is aborted.
+          - name: InProgress
+            description: >
+                Requested operation is in progress.
+          - name: Completed
+            description: >
+                The operation is completed.
+          - name: Failed
+            description: >
+                The operation encountered a failure.
+          - name: Aborted
+            description: >
+                The operation is aborted.

@@ -68,24 +68,24 @@ enumerations:
           List of capabilities that a processor can support.
           Values are based off DMTF DSP0134 specification.
       values:
-        - name: Capable64bit
-          description: >
-              Capable of 64-bit.
-        - name: MultiCore
-          description: >
-              Support multi-core.
-        - name: HardwareThread
-          description: >
-              Support hardware thread.
-        - name: ExecuteProtection
-          description: >
-              Support execute protection.
-        - name: EnhancedVirtualization
-          description: >
-              Support enhanced virtualization.
-        - name: PowerPerformanceControl
-          description: >
-              Support power/performance control.
+          - name: Capable64bit
+            description: >
+                Capable of 64-bit.
+          - name: MultiCore
+            description: >
+                Support multi-core.
+          - name: HardwareThread
+            description: >
+                Support hardware thread.
+          - name: ExecuteProtection
+            description: >
+                Support execute protection.
+          - name: EnhancedVirtualization
+            description: >
+                Support enhanced virtualization.
+          - name: PowerPerformanceControl
+            description: >
+                Support power/performance control.
 
 associations:
     - name: associated_pcie_slots
@@ -95,4 +95,4 @@ associations:
           PCIe slots.
       reverse_name: upstream_processor
       required_endpoint_interfaces:
-        - xyz.openbmc_project.Inventory.Item.PCIeSlot
+          - xyz.openbmc_project.Inventory.Item.PCIeSlot

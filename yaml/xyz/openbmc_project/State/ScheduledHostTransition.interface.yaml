@@ -25,11 +25,11 @@ properties:
           to power on/off, e.g. when BMC is rebooting, BMC shall
           set the host ScheduledTransition after it is ready.
       errors:
-        - xyz.openbmc_project.ScheduledTime.Error.InvalidTime
+          - xyz.openbmc_project.ScheduledTime.Error.InvalidTime
 
     - name: ScheduledTransition
       type: enum[xyz.openbmc_project.State.Host.Transition]
-      default: 'On'
+      default: "On"
       description: >
           The desired power transition to support scheduled power on/off.
           The default operation supports scheduled power on.

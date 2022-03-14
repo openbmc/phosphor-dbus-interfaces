@@ -7,27 +7,27 @@ description: >
 methods:
     - name: simPress
       description: >
-        Emulate NMI button press.
+          Emulate NMI button press.
       errors:
-       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
-       - xyz.openbmc_project.Chassis.Common.Error.IOError
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
 
 properties:
     - name: Enabled
       type: boolean
       default: true
       description: >
-        Enable/disable NMI button.
-        false means NMI button is disabled
-        true means NMI button is enabled
+          Enable/disable NMI button.
+          false means NMI button is disabled
+          true means NMI button is enabled
       errors:
-       - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
-       - xyz.openbmc_project.Chassis.Common.Error.IOError
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
 
 signals:
     - name: Released
       description: >
-        NMI button released signal
+          NMI button released signal
     - name: Pressed
       description: >
-        NMI button pressed signal
+          NMI button pressed signal

@@ -67,38 +67,38 @@ enumerations:
       description: >
           Possible severity levels for an error log entry.
       values:
-        - name: Emergency
-          description: >
-              System is unusable.
-        - name: Alert
-          description: >
-              Should be corrected immediately.
-        - name: Critical
-          description: >
-              Critical condition.
-        - name: Error
-          description: >
-              Error condition.
-        - name: Warning
-          description: >
-              An error may occur if action is not taken.
-        - name: Notice
-          description: >
-              Unusual condition, but not an error.
-        - name: Informational
-          description: >
-              Normal operational message that does not require action.
-        - name: Debug
-          description: >
-              Information useful to developers for debugging the application.
+          - name: Emergency
+            description: >
+                System is unusable.
+          - name: Alert
+            description: >
+                Should be corrected immediately.
+          - name: Critical
+            description: >
+                Critical condition.
+          - name: Error
+            description: >
+                Error condition.
+          - name: Warning
+            description: >
+                An error may occur if action is not taken.
+          - name: Notice
+            description: >
+                Unusual condition, but not an error.
+          - name: Informational
+            description: >
+                Normal operational message that does not require action.
+          - name: Debug
+            description: >
+                Information useful to developers for debugging the application.
 
 methods:
-  - name: GetEntry
-    description: >
-      Returns the file descriptor to the raw Entry file, which is a binary blob.
-      The mode of the file descriptor is to be reaad-only.
-    returns:
-      - name: fd
-        type: unixfd
-        description: >
-          The file descriptor to the Entry file.
+    - name: GetEntry
+      description: >
+          Returns the file descriptor to the raw Entry file, which is a binary blob.
+          The mode of the file descriptor is to be reaad-only.
+      returns:
+          - name: fd
+            type: unixfd
+            description: >
+                The file descriptor to the Entry file.

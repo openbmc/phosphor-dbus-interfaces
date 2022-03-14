@@ -9,41 +9,40 @@ description: >
     systems the instance number can be added to the path to differentiate,
     for example /xyz/openbmc_project/dump/<dump type><instance-id>.
 
-
 methods:
     - name: CreateDump
       description: >
           Method to create a manual Dump.
       parameters:
-        - name: AdditionalData
-          type: dict[string, variant[string,uint64]]
-          description: >
-            The additional data, if any, for initiating the dump.
-            The key in this case should be an implementation
-            specific enum defined for the specific type of dump
-            either in xyz or in a domain.
-            The values can be either a string or a 64 bit number.
-            The enum-format string is required to come from a
-            parallel class with this specific Enum name.
-            All of the Enum strings should be in the format
-            'domain.Dump.Create.CreateParameters.ParamName'.
-            e.g.:
-              {
-                "key1": "value1",
-                "key2": "value2"
-              }
-            ends up in AdditionaData like:
-              ["KEY1=value1", "KEY2=value2"]
+          - name: AdditionalData
+            type: dict[string, variant[string,uint64]]
+            description: >
+                The additional data, if any, for initiating the dump.
+                The key in this case should be an implementation
+                specific enum defined for the specific type of dump
+                either in xyz or in a domain.
+                The values can be either a string or a 64 bit number.
+                The enum-format string is required to come from a
+                parallel class with this specific Enum name.
+                All of the Enum strings should be in the format
+                'domain.Dump.Create.CreateParameters.ParamName'.
+                e.g.:
+                  {
+                    "key1": "value1",
+                    "key2": "value2"
+                  }
+                ends up in AdditionaData like:
+                  ["KEY1=value1", "KEY2=value2"]
       returns:
-        - name: Path
-          type: object_path
-          description: >
-            The object path of the object that implements
-            xyz.openbmc_project.Common.Progress to track the progress
-            of the dump
+          - name: Path
+            type: object_path
+            description: >
+                The object path of the object that implements
+                xyz.openbmc_project.Common.Progress to track the progress
+                of the dump
       errors:
-        - xyz.openbmc_project.Common.File.Error.Write
-        - xyz.openbmc_project.Dump.Create.Error.Disabled
-        - xyz.openbmc_project.Dump.Create.Error.QuotaExceeded
-        - xyz.openbmc_project.Common.Error.NotAllowed
-        - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.File.Error.Write
+          - xyz.openbmc_project.Dump.Create.Error.Disabled
+          - xyz.openbmc_project.Dump.Create.Error.QuotaExceeded
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.InvalidArgument

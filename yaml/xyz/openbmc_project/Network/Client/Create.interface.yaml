@@ -4,18 +4,18 @@ methods:
       description: >
           Create network client endpoint.
       parameters:
-        - name: Address
-          type: string
-          description: >
-              IP Address/Hostname
-        - name: Port
-          type: uint16
-          description: >
-              Network port.
+          - name: Address
+            type: string
+            description: >
+                IP Address/Hostname
+          - name: Port
+            type: uint16
+            description: >
+                Network port.
       errors:
-        - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InvalidArgument
       returns:
-        - name: path
-          type: string
-          description: >
-              Path of the object which has been created.
+          - name: path
+            type: string
+            description: >
+                Path of the object which has been created.

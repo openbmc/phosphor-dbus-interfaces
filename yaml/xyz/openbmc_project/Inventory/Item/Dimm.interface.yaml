@@ -72,196 +72,196 @@ enumerations:
       description: >
           Error-Correcting Code.
       values:
-        - name: NoECC
-          description: >
-              No ECC support.
-        - name: SingleBitECC
-          description: >
-              Single bit data errors can be corrected by ECC.
-        - name: MultiBitECC
-          description: >
-              Multibit data errors can be corrected by ECC.
-        - name: AddressParity
-          description: >
-              Address parity errors can be corrected.
+          - name: NoECC
+            description: >
+                No ECC support.
+          - name: SingleBitECC
+            description: >
+                Single bit data errors can be corrected by ECC.
+          - name: MultiBitECC
+            description: >
+                Multibit data errors can be corrected by ECC.
+          - name: AddressParity
+            description: >
+                Address parity errors can be corrected.
     - name: MemoryTech
       description: >
           This property shall contain the type ofmemory that this Resource
           represents.
       values:
-        - name: Other
-          description: >
-              Some devices which are not defined in SMBIOS table.
-        - name: Unknown
-          description: >
-              Unknown device.
-        - name: DRAM
-          description: >
-              The memory module is comprised of volatile memory.
-        - name: NVDIMM_N
-          description: >
-              The memory module is comprised of volatile memory backed by
-              non-volatile memory.
-        - name: NVDIMM_F
-          description: >
-              The memory module is comprised of non-volatile memory.
-        - name: NVDIMM_P
-          description: >
-              The memory module is comprised of a combination of non-volatile
-              and volatile memory.
-        - name: IntelOptane
-          description: >
-              The memory module is an Intel Optane DC Persistent Memory Module.
+          - name: Other
+            description: >
+                Some devices which are not defined in SMBIOS table.
+          - name: Unknown
+            description: >
+                Unknown device.
+          - name: DRAM
+            description: >
+                The memory module is comprised of volatile memory.
+          - name: NVDIMM_N
+            description: >
+                The memory module is comprised of volatile memory backed by
+                non-volatile memory.
+          - name: NVDIMM_F
+            description: >
+                The memory module is comprised of non-volatile memory.
+          - name: NVDIMM_P
+            description: >
+                The memory module is comprised of a combination of non-volatile
+                and volatile memory.
+          - name: IntelOptane
+            description: >
+                The memory module is an Intel Optane DC Persistent Memory Module.
     - name: DeviceType
       description: >
           This property shall contain the Memory Device Type as defined by
           SMBIOS.
       values:
-        - name: Other
-          description: >
-              Some devices which are not defined in this table.
-        - name: Unknown
-          description: >
-              Unknown device.
-        - name: DRAM
-          description: >
-              Dynamic Random Access Memory.
-        - name: EDRAM
-          description: >
-              Enhanced Dynamic Random Access Memory.
-        - name: VRAM
-          description: >
-              Video Random Access Memory.
-        - name: SRAM
-          description: >
-              Static Random Access Memory.
-        - name: RAM
-          description: >
-              Random Access Memory.
-        - name: ROM
-          description: >
-              Read Only Memory.
-        - name: FLASH
-          description: >
-              Flash Memory.
-        - name: EEPROM
-          description: >
-              Electrically Erasable Programmable Read Only Memory.
-        - name: FEPROM
-          description: >
-              Flash Erasable Programmable Read Only Memory.
-        - name: EPROM
-          description: >
-              Erasable Programmable Read Only Memory.
-        - name: CDRAM
-          description: >
-              Cached Dynamic Random Access Memory.
-        - name: ThreeDRAM
-          description: >
-              Three Dimensional Random Access Memory.
-        - name: SDRAM
-          description: >
-              Synchronous Dynamic Random Access Memory.
-        - name: DDR_SGRAM
-          description: >
-              Double Data Rate Synchronous Graphics Random-Access Memory.
-        - name: RDRAM
-          description: >
-              Direct Rambus Dynamic Random Access Memory.
-        - name: DDR
-          description: >
-              Double Data Rate SDRAM.
-        - name: DDR2
-          description: >
-              Double Data Rate 2 SDRAM.
-        - name: DDR2_SDRAM_FB_DIMM
-          description: >
-              DDR2 SDRAM Fully Buffered DIMM.
-        - name: EDO
-          description: >
-              Extended Data Output Memory.
-        - name: FastPageMode
-          description: >
-              Fast Page Mode Memory.
-        - name: PipelinedNibble
-          description: >
-              Pipelined Nibble Memory.
-        - name: DDR3
-          description: >
-              Double Data Rate 3 SDRAM.
-        - name: FBD2
-          description: >
-              Fully Buffered DIMM 2.
-        - name: DDR4
-          description: >
-              Double Data Rate 4 SDRAM.
-        - name: LPDDR_SDRAM
-          description: >
-              Low-Power Double Data Rate SDRAM.
-        - name: LPDDR2_SDRAM
-          description: >
-              Low-Power Double Data Rate 2 SDRAM.
-        - name: LPDDR3_SDRAM
-          description: >
-              Low-Power Double Data Rate 3 SDRAM.
-        - name: LPDDR4_SDRAM
-          description: >
-              Low-Power Double Data Rate 4 SDRAM.
-        - name: Logical
-          description: >
-              Logical Non-volatile device.
-        - name: HBM
-          description: >
-              High Bandwidth Memory
-        - name: HBM2
-          description: >
-              High Bandwidth Memory Generation 2.
-        - name: DDR2_SDRAM_FB_DIMM_PROB
-          description: >
-              DDR2 SDRAM Fully Buffered DIMM PROBE.
-        - name: DDR4E_SDRAM
-          description: >
-              Double Data Rate 4 Extended Compliant SDRAM.
-        - name: DDR5
-          description: >
-              Double Data Rate 5 SDRAM.
-        - name: LPDDR5_SDRAM
-          description: >
-              Low-Power Double Data Rate 5 SDRAM.
+          - name: Other
+            description: >
+                Some devices which are not defined in this table.
+          - name: Unknown
+            description: >
+                Unknown device.
+          - name: DRAM
+            description: >
+                Dynamic Random Access Memory.
+          - name: EDRAM
+            description: >
+                Enhanced Dynamic Random Access Memory.
+          - name: VRAM
+            description: >
+                Video Random Access Memory.
+          - name: SRAM
+            description: >
+                Static Random Access Memory.
+          - name: RAM
+            description: >
+                Random Access Memory.
+          - name: ROM
+            description: >
+                Read Only Memory.
+          - name: FLASH
+            description: >
+                Flash Memory.
+          - name: EEPROM
+            description: >
+                Electrically Erasable Programmable Read Only Memory.
+          - name: FEPROM
+            description: >
+                Flash Erasable Programmable Read Only Memory.
+          - name: EPROM
+            description: >
+                Erasable Programmable Read Only Memory.
+          - name: CDRAM
+            description: >
+                Cached Dynamic Random Access Memory.
+          - name: ThreeDRAM
+            description: >
+                Three Dimensional Random Access Memory.
+          - name: SDRAM
+            description: >
+                Synchronous Dynamic Random Access Memory.
+          - name: DDR_SGRAM
+            description: >
+                Double Data Rate Synchronous Graphics Random-Access Memory.
+          - name: RDRAM
+            description: >
+                Direct Rambus Dynamic Random Access Memory.
+          - name: DDR
+            description: >
+                Double Data Rate SDRAM.
+          - name: DDR2
+            description: >
+                Double Data Rate 2 SDRAM.
+          - name: DDR2_SDRAM_FB_DIMM
+            description: >
+                DDR2 SDRAM Fully Buffered DIMM.
+          - name: EDO
+            description: >
+                Extended Data Output Memory.
+          - name: FastPageMode
+            description: >
+                Fast Page Mode Memory.
+          - name: PipelinedNibble
+            description: >
+                Pipelined Nibble Memory.
+          - name: DDR3
+            description: >
+                Double Data Rate 3 SDRAM.
+          - name: FBD2
+            description: >
+                Fully Buffered DIMM 2.
+          - name: DDR4
+            description: >
+                Double Data Rate 4 SDRAM.
+          - name: LPDDR_SDRAM
+            description: >
+                Low-Power Double Data Rate SDRAM.
+          - name: LPDDR2_SDRAM
+            description: >
+                Low-Power Double Data Rate 2 SDRAM.
+          - name: LPDDR3_SDRAM
+            description: >
+                Low-Power Double Data Rate 3 SDRAM.
+          - name: LPDDR4_SDRAM
+            description: >
+                Low-Power Double Data Rate 4 SDRAM.
+          - name: Logical
+            description: >
+                Logical Non-volatile device.
+          - name: HBM
+            description: >
+                High Bandwidth Memory
+          - name: HBM2
+            description: >
+                High Bandwidth Memory Generation 2.
+          - name: DDR2_SDRAM_FB_DIMM_PROB
+            description: >
+                DDR2 SDRAM Fully Buffered DIMM PROBE.
+          - name: DDR4E_SDRAM
+            description: >
+                Double Data Rate 4 Extended Compliant SDRAM.
+          - name: DDR5
+            description: >
+                Double Data Rate 5 SDRAM.
+          - name: LPDDR5_SDRAM
+            description: >
+                Low-Power Double Data Rate 5 SDRAM.
     - name: FormFactor
       description: >
           Implementation form factor for this memory device.
       values:
-        - name: RDIMM
-          description: >
-              Registered DIMM.
-        - name: UDIMM
-          description: >
-              Unbuffered DIMM.
-        - name: SO_DIMM
-          description: >
-              Small Outline DIMM.
-        - name: LRDIMM
-          description: >
-              Load-reduced DIMMs.
-        - name: Mini_RDIMM
-          description: >
-              mini Registered DIMM.
-        - name: Mini_UDIMM
-          description: >
-              mini Unbuffered DIMM.
-        - name: SO_RDIMM_72b
-          description: >
-              Small Outline Registered DIMM.
-        - name: SO_UDIMM_72b
-          description: >
-              Small Outline Unbuffered DIMM.
-        - name: SO_DIMM_16b
-          description: >
-              Small Outline DIMM 16 bit.
-        - name: SO_DIMM_32b
-          description: >
-              Small Outline DIMM 32 bit.
-        - name: Die
-          description: >
-              A die within a package.
+          - name: RDIMM
+            description: >
+                Registered DIMM.
+          - name: UDIMM
+            description: >
+                Unbuffered DIMM.
+          - name: SO_DIMM
+            description: >
+                Small Outline DIMM.
+          - name: LRDIMM
+            description: >
+                Load-reduced DIMMs.
+          - name: Mini_RDIMM
+            description: >
+                mini Registered DIMM.
+          - name: Mini_UDIMM
+            description: >
+                mini Unbuffered DIMM.
+          - name: SO_RDIMM_72b
+            description: >
+                Small Outline Registered DIMM.
+          - name: SO_UDIMM_72b
+            description: >
+                Small Outline Unbuffered DIMM.
+          - name: SO_DIMM_16b
+            description: >
+                Small Outline DIMM 16 bit.
+          - name: SO_DIMM_32b
+            description: >
+                Small Outline DIMM 32 bit.
+          - name: Die
+            description: >
+                A die within a package.

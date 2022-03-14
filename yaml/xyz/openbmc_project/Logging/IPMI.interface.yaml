@@ -19,105 +19,105 @@ description: >
 methods:
     - name: IpmiSelAdd
       description: >
-        Log a system event record type SEL entry.
+          Log a system event record type SEL entry.
       parameters:
-        - name: Message
-          type: string
-          description: >
-            The text to log for the event.
-        - name: Path
-          type: path
-          description: >
-            The object path that is generating the SEL entry.
-        - name: SELData
-          type: array[byte]
-          description: >
-            An array of up to 3 bytes of SEL event data.
-        - name: Assert
-          type: boolean
-          description: >
-            An indicator if the SEL event is asserting or de-asserting.
-        - name: GeneratorID
-          type: uint16
-          description: >
-            The Generator ID of the component requesting the new SEL entry.
-            In most cases this will be 0x20 (the BMC Generator ID).
+          - name: Message
+            type: string
+            description: >
+                The text to log for the event.
+          - name: Path
+            type: path
+            description: >
+                The object path that is generating the SEL entry.
+          - name: SELData
+            type: array[byte]
+            description: >
+                An array of up to 3 bytes of SEL event data.
+          - name: Assert
+            type: boolean
+            description: >
+                An indicator if the SEL event is asserting or de-asserting.
+          - name: GeneratorID
+            type: uint16
+            description: >
+                The Generator ID of the component requesting the new SEL entry.
+                In most cases this will be 0x20 (the BMC Generator ID).
       returns:
-        - name: RecordID
-          type: uint16
-          description: >
-            The Record ID of the new SEL entry.
+          - name: RecordID
+            type: uint16
+            description: >
+                The Record ID of the new SEL entry.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
     - name: AddExtended
       description: >
-        Log a system event record SEL entry with custom SensorType/EventType.
+          Log a system event record SEL entry with custom SensorType/EventType.
       parameters:
-        - name: Message
-          type: string
-          description: >
-            The text to log for the event.
-        - name: Path
-          type: path
-          description: >
-            The object path that is generating the SEL entry.
-        - name: SELData
-          type: array[byte]
-          description: >
-            An array of up to 3 bytes of SEL event data.
-        - name: GeneratorID
-          type: uint16
-          description: >
-            The Generator ID of the component requesting the new SEL entry.
-            In most cases this will be 0x20 (the BMC Generator ID).
-        - name: eventType
-          type: byte
-          description: >
-            Type of trigger for the event and event direction.
-        - name: sensorType
-          type: byte
-          description: >
-            Sensor Type Code for sensor that generated the event.
-        - name: sensorNum
-          type: byte
-          description: >
-            Number of sensor that generated the event.
+          - name: Message
+            type: string
+            description: >
+                The text to log for the event.
+          - name: Path
+            type: path
+            description: >
+                The object path that is generating the SEL entry.
+          - name: SELData
+            type: array[byte]
+            description: >
+                An array of up to 3 bytes of SEL event data.
+          - name: GeneratorID
+            type: uint16
+            description: >
+                The Generator ID of the component requesting the new SEL entry.
+                In most cases this will be 0x20 (the BMC Generator ID).
+          - name: eventType
+            type: byte
+            description: >
+                Type of trigger for the event and event direction.
+          - name: sensorType
+            type: byte
+            description: >
+                Sensor Type Code for sensor that generated the event.
+          - name: sensorNum
+            type: byte
+            description: >
+                Number of sensor that generated the event.
       returns:
-        - name: RecordID
-          type: uint16
-          description: >
-            The Record ID of the new SEL entry.
+          - name: RecordID
+            type: uint16
+            description: >
+                The Record ID of the new SEL entry.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
     - name: IpmiSelAddOem
       description: >
-        Log an OEM record type SEL entry requested from external to the BMC.
+          Log an OEM record type SEL entry requested from external to the BMC.
       parameters:
-        - name: Message
-          type: string
-          description: >
-            The text to log for the event.
-        - name: SELData
-          type: array[byte]
-          description: >
-            An array of up to 13 bytes of SEL event data.
-        - name: RecordType
-          type: byte
-          description: >
-            The OEM record type for the SEL entry.
+          - name: Message
+            type: string
+            description: >
+                The text to log for the event.
+          - name: SELData
+            type: array[byte]
+            description: >
+                An array of up to 13 bytes of SEL event data.
+          - name: RecordType
+            type: byte
+            description: >
+                The OEM record type for the SEL entry.
       returns:
-        - name: RecordID
-          type: uint16
-          description: >
-            The Record ID of the new SEL entry.
+          - name: RecordID
+            type: uint16
+            description: >
+                The Record ID of the new SEL entry.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
     - name: Clear
       description: >
-        Clear the SEL entries from their storage location.
+          Clear the SEL entries from their storage location.

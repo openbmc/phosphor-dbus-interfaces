@@ -9,89 +9,89 @@ methods:
           Obtain a dictionary of service -> implemented interface(s)
           for the given path.
       parameters:
-        - name: path
-          type: path
-          description: >
-            The object path for which the result should be fetched.
-        - name: interfaces
-          type: array[string]
-          description: >
-            An array of result set constraining interfaces.
+          - name: path
+            type: path
+            description: >
+                The object path for which the result should be fetched.
+          - name: interfaces
+            type: array[string]
+            description: >
+                An array of result set constraining interfaces.
       returns:
-        - name: services
-          type: dict[string,array[string]]
-          description: >
-            A dictionary of service -> implemented interface(s).
+          - name: services
+            type: dict[string,array[string]]
+            description: >
+                A dictionary of service -> implemented interface(s).
       errors:
-        - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
     - name: GetAncestors
       description: >
           Obtain a dictionary of ancestor -> services where ancestor is an
           ancestor of path and services is of the type returned by the
           GetObject method.
       parameters:
-        - name: path
-          type: path
-          description: >
-            The path for which the result should be fetched.
-        - name: interfaces
-          type: array[string]
-          description: >
-            An array of result set constraining interfaces.
+          - name: path
+            type: path
+            description: >
+                The path for which the result should be fetched.
+          - name: interfaces
+            type: array[string]
+            description: >
+                An array of result set constraining interfaces.
       returns:
-        - name: ancestors
-          type: dict[path,dict[string,array[string]]]
-          description: >
-            A dictionary of ancestor -> services.
+          - name: ancestors
+            type: dict[path,dict[string,array[string]]]
+            description: >
+                A dictionary of ancestor -> services.
       errors:
-        - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
     - name: GetSubTree
       description: >
           Obtain a dictionary of path -> services where path is in
           sutbtree and services is of the type returned by the
           GetObject method.
       parameters:
-        - name: subtree
-          type: path
-          description: >
-            The subtree path for which the result should be fetched.
-        - name: depth
-          type: int32
-          description: >
-            The maximum subtree depth for which results should be fetched.
-            For unconstrained fetches use a depth of zero.
-        - name: interfaces
-          type: array[string]
-          description: >
-            An array of result set constraining interfaces.
+          - name: subtree
+            type: path
+            description: >
+                The subtree path for which the result should be fetched.
+          - name: depth
+            type: int32
+            description: >
+                The maximum subtree depth for which results should be fetched.
+                For unconstrained fetches use a depth of zero.
+          - name: interfaces
+            type: array[string]
+            description: >
+                An array of result set constraining interfaces.
       returns:
-        - name: objects
-          type: dict[path,dict[string,array[string]]]
-          description: >
-            A dictionary of path -> services.
+          - name: objects
+            type: dict[path,dict[string,array[string]]]
+            description: >
+                A dictionary of path -> services.
       errors:
-        - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
     - name: GetSubTreePaths
       description: >
           Obtain an array of paths where array elements are in subtree.
       parameters:
-        - name: subtree
-          type: path
-          description: >
-            The subtree path for which the result should be fetched.
-        - name: depth
-          type: int32
-          description: >
-            The maximum subtree depth for which results should be fetched.
-            For unconstrained fetches use a depth of zero.
-        - name: interfaces
-          type: array[string]
-          description: >
-            An array of result set constraining interfaces.
+          - name: subtree
+            type: path
+            description: >
+                The subtree path for which the result should be fetched.
+          - name: depth
+            type: int32
+            description: >
+                The maximum subtree depth for which results should be fetched.
+                For unconstrained fetches use a depth of zero.
+          - name: interfaces
+            type: array[string]
+            description: >
+                An array of result set constraining interfaces.
       returns:
-        - name: paths
-          type: array[path]
-          description: >
-            An array of paths.
+          - name: paths
+            type: array[path]
+            description: >
+                An array of paths.
       errors:
-        - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.ResourceNotFound

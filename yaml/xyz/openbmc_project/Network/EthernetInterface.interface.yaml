@@ -3,7 +3,6 @@ description: >
     An object implementing this interface must implement
     xyz.openbmc_project.State.OperationalStatus.
 
-
 properties:
     - name: InterfaceName
       type: string
@@ -47,7 +46,7 @@ properties:
           provided addresses, or in cases where the DHCP server provides no DNS
           assigments.
       errors:
-         - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: NTPServers
       type: array[string]
       description: >
@@ -82,7 +81,7 @@ properties:
       description: >
           Default IPv4 gateway of the ethernet interface.
       errors:
-        - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: DefaultGateway6
       type: string
       description: >
@@ -91,24 +90,24 @@ properties:
           Refer below man page for both v4 and v6 address format details
           https://man7.org/linux/man-pages/man3/inet_pton.3.html
       errors:
-        - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
 enumerations:
     - name: LinkLocalConf
       description: >
           Possible link local auto configuration values.
       values:
-        - name: fallback
-        - name: both
-        - name: v4
-        - name: v6
-        - name: none
+          - name: fallback
+          - name: both
+          - name: v4
+          - name: v6
+          - name: none
 
     - name: DHCPConf
       description: >
           A list of the permitted DHCP settings used by systemd.
       values:
-        - name: both
-        - name: v4
-        - name: v6
-        - name: none
+          - name: both
+          - name: v4
+          - name: v6
+          - name: none

@@ -71,12 +71,12 @@ enumerations:
       description: >
           Possible IPv6 tunnel types.
       values:
-        - name: ip6ip6
-          description: >
-              IPv6 over IPv6.
-        - name: ipip6
-          description: >
-              IPv4 over IPv6.
-        - name: any
-          description: >
-              Either ip6ip6 or ipip6.
+          - name: ip6ip6
+            description: >
+                IPv6 over IPv6.
+          - name: ipip6
+            description: >
+                IPv4 over IPv6.
+          - name: any
+            description: >
+                Either ip6ip6 or ipip6.

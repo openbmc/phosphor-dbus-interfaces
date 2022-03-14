@@ -1,162 +1,161 @@
 description: >
-  Provides D-Bus access to OpenPower Platform Event Logs
+    Provides D-Bus access to OpenPower Platform Event Logs
 methods:
-  - name: GetPEL
-    description: >
-      Returns a file desciptor to a PEL.
-    parameters:
-      - name: pelID
-        type: uint32
-        description: >
-          The PEL log ID of the PEL to retrieve.
-    returns:
-      - name: data
-        type: unixfd
-        description: >
-          A file descriptor for a file that contains the PEL.
-    errors:
-       - xyz.openbmc_project.Common.Error.InternalFailure
-       - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: GetPEL
+      description: >
+          Returns a file desciptor to a PEL.
+      parameters:
+          - name: pelID
+            type: uint32
+            description: >
+                The PEL log ID of the PEL to retrieve.
+      returns:
+          - name: data
+            type: unixfd
+            description: >
+                A file descriptor for a file that contains the PEL.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
-  - name: GetPELFromOBMCID
-    description: >
-      Returns PEL data based on the OpenBMC event log ID.
-    parameters:
-      - name: obmcLogID
-        type: uint32
-        description: >
-          The OpenBMC event log ID of the PEL to retrieve.
-    returns:
-      - name: data
-        type: array[byte]
-        description: >
-          The PEL data
-    errors:
-       - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: GetPELFromOBMCID
+      description: >
+          Returns PEL data based on the OpenBMC event log ID.
+      parameters:
+          - name: obmcLogID
+            type: uint32
+            description: >
+                The OpenBMC event log ID of the PEL to retrieve.
+      returns:
+          - name: data
+            type: array[byte]
+            description: >
+                The PEL data
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
-  - name: HostAck
-    description: >
-      Notifies the PEL handler that the host (usually the OS) acked a PEL.
-    parameters:
-      - name: pelID
-        type: uint32
-        description: >
-          The PEL log ID
-    errors:
-       - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: HostAck
+      description: >
+          Notifies the PEL handler that the host (usually the OS) acked a PEL.
+      parameters:
+          - name: pelID
+            type: uint32
+            description: >
+                The PEL log ID
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
-  - name: HostReject
-    description: >
-      Notifies the PEL handler that the host could not process a PEL.
-    parameters:
-      - name: pelID
-        type: uint32
-        description: >
-          The PEL log ID
-      - name: reason
-        type: enum[self.RejectionReason]
-        description: >
-          The reason the PEL was rejected
-    errors:
-       - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: HostReject
+      description: >
+          Notifies the PEL handler that the host could not process a PEL.
+      parameters:
+          - name: pelID
+            type: uint32
+            description: >
+                The PEL log ID
+          - name: reason
+            type: enum[self.RejectionReason]
+            description: >
+                The reason the PEL was rejected
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
-  - name: CreatePELWithFFDCFiles
-    description: >
-      Creates an OpenBMC event log and a corresponding PEL. This method
-      returns the IDs of the created PEL and OpenBMC event log, unlike the
-      'xyz.openbmc_project.Logging.Create.CreateWithFFDCFiles' method which
-      doesn't return anything.
-    parameters:
-      - name: Message
-        type: string
-        description: >
-          The Message property of the OpenBMC event log entry.
-          This is also the key into the PEL message registry.
-      - name: Severity
-        type: enum[xyz.openbmc_project.Logging.Entry.Level]
-        description: >
-          The Severity property of the event entry.
-      - name: AdditionalData
-        type: dict[string, string]
-        description: >
-          The AdditionalData property of the event entry.
-          e.g.:
-            {
-              "key1": "value1",
-              "key2": "value2"
-            }
-          ends up in AdditionaData like:
-            ["KEY1=value1", "KEY2=value2"]
-      - name: FFDC
-        type: array[struct[enum[xyz.openbmc_project.Logging.Create.FFDCFormat], byte, byte, unixfd]]
-        description: >
-          File descriptors for any files containing FFDC, along with metadata
-          about the contents:
+    - name: CreatePELWithFFDCFiles
+      description: >
+          Creates an OpenBMC event log and a corresponding PEL. This method
+          returns the IDs of the created PEL and OpenBMC event log, unlike the
+          'xyz.openbmc_project.Logging.Create.CreateWithFFDCFiles' method which
+          doesn't return anything.
+      parameters:
+          - name: Message
+            type: string
+            description: >
+                The Message property of the OpenBMC event log entry.
+                This is also the key into the PEL message registry.
+          - name: Severity
+            type: enum[xyz.openbmc_project.Logging.Entry.Level]
+            description: >
+                The Severity property of the event entry.
+          - name: AdditionalData
+            type: dict[string, string]
+            description: >
+                The AdditionalData property of the event entry.
+                e.g.:
+                  {
+                    "key1": "value1",
+                    "key2": "value2"
+                  }
+                ends up in AdditionaData like:
+                  ["KEY1=value1", "KEY2=value2"]
+          - name: FFDC
+            type: array[struct[enum[xyz.openbmc_project.Logging.Create.FFDCFormat], byte, byte, unixfd]]
+            description: >
+                File descriptors for any files containing FFDC, along with metadata
+                about the contents:
 
-            FFDCFormat- The format type of the contained data.
-            subType - The format subtype, used for the 'Custom' type.
-            version - The version of the data format, used for the 'Custom'
-                      type.
-            unixfd - The file descriptor to the data file.
+                  FFDCFormat- The format type of the contained data.
+                  subType - The format subtype, used for the 'Custom' type.
+                  version - The version of the data format, used for the 'Custom'
+                            type.
+                  unixfd - The file descriptor to the data file.
 
-          e.g.:
-          [
-            {"xyz.openbmc_project.Logging.Create.FFDCFormat.JSON", 0, 0, 5},
-            {"xyz.openbmc_project.Logging.Create.FFDCFormat.Custom", 1, 2, 6}
-          ]
-    returns:
-      - name: IDs
-        type: struct[uint32, uint32]
-        description: >
-          The IDs of the 2 created logs:
-            - OpenBMC event log ID
-            - PEL log ID: The unique ID of the PEL
-          Note that the PEL's platform log ID (PLID) field is always
-          equal to the PEL log ID for BMC created PELs.
+                e.g.:
+                [
+                  {"xyz.openbmc_project.Logging.Create.FFDCFormat.JSON", 0, 0, 5},
+                  {"xyz.openbmc_project.Logging.Create.FFDCFormat.Custom", 1, 2, 6}
+                ]
+      returns:
+          - name: IDs
+            type: struct[uint32, uint32]
+            description: >
+                The IDs of the 2 created logs:
+                  - OpenBMC event log ID
+                  - PEL log ID: The unique ID of the PEL
+                Note that the PEL's platform log ID (PLID) field is always
+                equal to the PEL log ID for BMC created PELs.
 
-  - name: GetPELIdFromBMCLogId
-    description: >
-        Returns the PEL Id (aka Entry ID (EID)) based on the
-        given BMC event log id.
-    parameters:
-      - name: bmcLogId
-        type: uint32
-        description: >
-          The BMC event log id of the PEL to retrieve the PEL id.
-    returns:
-      - name: pelId
-        type: uint32
-        description: >
-            The Id of the PEL.
-    errors:
-       - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: GetPELIdFromBMCLogId
+      description: >
+          Returns the PEL Id (aka Entry ID (EID)) based on the
+          given BMC event log id.
+      parameters:
+          - name: bmcLogId
+            type: uint32
+            description: >
+                The BMC event log id of the PEL to retrieve the PEL id.
+      returns:
+          - name: pelId
+            type: uint32
+            description: >
+                The Id of the PEL.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
-  - name: GetBMCLogIdFromPELId
-    description: >
-        Returns the BMC event log id based on the given PEL id (aka
-        Entry ID (EID)).
-    parameters:
-      - name: pelId
-        type: uint32
-        description: >
-          The PEL id to retrieve the BMC event log id.
-    returns:
-      - name: bmcLogId
-        type: uint32
-        description: >
-            The BMC event log id of the PEL.
-    errors:
-       - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: GetBMCLogIdFromPELId
+      description: >
+          Returns the BMC event log id based on the given PEL id (aka
+          Entry ID (EID)).
+      parameters:
+          - name: pelId
+            type: uint32
+            description: >
+                The PEL id to retrieve the BMC event log id.
+      returns:
+          - name: bmcLogId
+            type: uint32
+            description: >
+                The BMC event log id of the PEL.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
 enumerations:
-  - name: RejectionReason
-    description: >
-      The reason the PEL was rejected
-    values:
-      - name: BadPEL
-        description: >
-          The PEL was malformed.
-      - name: HostFull
-        description: >
-          The host does not have room for more PELs at this time.
-
+    - name: RejectionReason
+      description: >
+          The reason the PEL was rejected
+      values:
+          - name: BadPEL
+            description: >
+                The PEL was malformed.
+          - name: HostFull
+            description: >
+                The host does not have room for more PELs at this time.

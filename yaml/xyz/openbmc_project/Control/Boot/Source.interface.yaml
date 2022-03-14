@@ -10,23 +10,23 @@ properties:
 enumerations:
     - name: Sources
       description: >
-        Possible sources of a boot image.
+          Possible sources of a boot image.
       values:
-        - name: Disk
-          description: >
-            Boot from the local hard disk.
-        - name: ExternalMedia 
-          description: >
-            Boot from CD/DVD.
-        - name: Network
-          description: >
-            Boot from a remote source over a network.
-        - name: Default
-          description: >
-            Boot from an implementation defined source.
-        - name: RemovableMedia
-          description: >
-            Boot from floppy/primary removable media (USB).
-        - name: HTTP
-          description: >
-            Boot from a remote source over http/https.
+          - name: Disk
+            description: >
+                Boot from the local hard disk.
+          - name: ExternalMedia
+            description: >
+                Boot from CD/DVD.
+          - name: Network
+            description: >
+                Boot from a remote source over a network.
+          - name: Default
+            description: >
+                Boot from an implementation defined source.
+          - name: RemovableMedia
+            description: >
+                Boot from floppy/primary removable media (USB).
+          - name: HTTP
+            description: >
+                Boot from a remote source over http/https.

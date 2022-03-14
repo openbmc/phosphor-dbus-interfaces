@@ -5,24 +5,24 @@ properties:
       type: object_path
       description: Path to currently selected configuration.
       errors:
-        # Indicate that the set object_path is not a valid associated
-        # OperatingConfig.
-        - xyz.openbmc_project.Common.Error.InvalidArgument
-        # Indicate that this property is permanently unable to be changed.
-        - xyz.openbmc_project.Common.Error.NotAllowed
-        # Indicate that this property is temporarily unable to be changed.
-        - xyz.openbmc_project.Common.Error.Unavailable
-        # Indicate a failure to apply changes to the processor.
-        - xyz.openbmc_project.Common.Device.Error.WriteFailure
+          # Indicate that the set object_path is not a valid associated
+          # OperatingConfig.
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          # Indicate that this property is permanently unable to be changed.
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          # Indicate that this property is temporarily unable to be changed.
+          - xyz.openbmc_project.Common.Error.Unavailable
+          # Indicate a failure to apply changes to the processor.
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure
     - name: BaseSpeedPriorityEnabled
       type: boolean
       description: >
-        Whether base speed prioritization is enabled in the currently selected
-        configuration.
+          Whether base speed prioritization is enabled in the currently selected
+          configuration.
       errors:
-        # Indicate that this property is permanently unable to be changed.
-        - xyz.openbmc_project.Common.Error.NotAllowed
-        # Indicate that this property is temporarily unable to be changed.
-        - xyz.openbmc_project.Common.Error.Unavailable
-        # Indicate a failure to apply changes to the processor.
-        - xyz.openbmc_project.Common.Device.Error.WriteFailure
+          # Indicate that this property is permanently unable to be changed.
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          # Indicate that this property is temporarily unable to be changed.
+          - xyz.openbmc_project.Common.Error.Unavailable
+          # Indicate a failure to apply changes to the processor.
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure

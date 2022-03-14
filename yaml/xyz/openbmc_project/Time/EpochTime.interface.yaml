@@ -12,5 +12,5 @@ properties:
           InsufficientPermission means it is not allowed to set time depend
           on the time settings.
       errors:
-        - xyz.openbmc_project.Time.Error.NotAllowed
-        - xyz.openbmc_project.Time.Error.Failed
+          - xyz.openbmc_project.Time.Error.NotAllowed
+          - xyz.openbmc_project.Time.Error.Failed

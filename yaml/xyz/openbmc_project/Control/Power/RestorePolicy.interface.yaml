@@ -6,7 +6,7 @@ description: >
 properties:
     - name: PowerRestorePolicy
       type: enum[self.Policy]
-      default: 'Restore'
+      default: "Restore"
       description: >
           The policy to adopt after the BMC reset.
     - name: PowerRestoreDelay
@@ -20,18 +20,18 @@ properties:
 enumerations:
     - name: Policy
       description: >
-        Possible power restoration policies.
+          Possible power restoration policies.
       values:
-        - name: None
-          description: >
-            Perform no power restore logic.
-        - name: AlwaysOn
-          description: >
-            Perform a complete power on process.
-        - name: AlwaysOff
-          description: >
-            Perform a complete power off process.
-        - name: Restore
-          description: >
-            Restore power to last requested state recorded before the BMC was
-            reset.
+          - name: None
+            description: >
+                Perform no power restore logic.
+          - name: AlwaysOn
+            description: >
+                Perform a complete power on process.
+          - name: AlwaysOff
+            description: >
+                Perform a complete power off process.
+          - name: Restore
+            description: >
+                Restore power to last requested state recorded before the BMC was
+                reset.

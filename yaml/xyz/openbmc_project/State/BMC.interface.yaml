@@ -1,83 +1,83 @@
 description: >
-   Implementation of BMC state management.  When rebooting we are in
-   transition.  When Ready all services required are running
-   successfully.  When we are Not Ready this implies not all services
-   have started that are required to be.
+    Implementation of BMC state management.  When rebooting we are in
+    transition.  When Ready all services required are running
+    successfully.  When we are Not Ready this implies not all services
+    have started that are required to be.
 
 properties:
-   - name: RequestedBMCTransition
-     type: enum[self.Transition]
-     default: 'None'
-     description: >
-         The desired BMC transition
+    - name: RequestedBMCTransition
+      type: enum[self.Transition]
+      default: "None"
+      description: >
+          The desired BMC transition
 
-   - name: CurrentBMCState
-     type: enum[self.BMCState]
-     description: >
-         The current state of the BMC and is a read-only property.
+    - name: CurrentBMCState
+      type: enum[self.BMCState]
+      description: >
+          The current state of the BMC and is a read-only property.
 
-   - name: LastRebootTime
-     type: uint64
-     description: >
-        The last time at which the BMC came out of a reboot as
-        determined by its uptime, in epoch time, in milliseconds.
+    - name: LastRebootTime
+      type: uint64
+      description: >
+          The last time at which the BMC came out of a reboot as
+          determined by its uptime, in epoch time, in milliseconds.
 
-   - name: LastRebootCause
-     type: enum[self.RebootCause]
-     default: 'Unknown'
-     description: >
-         The last BMC reboot cause
+    - name: LastRebootCause
+      type: enum[self.RebootCause]
+      default: "Unknown"
+      description: >
+          The last BMC reboot cause
 
 enumerations:
-   - name: Transition
-     description: >
-       The desired transition for the BMC firmware
-     values:
-       - name: 'Reboot'
-         description: >
-           BMC system should be rebooted
-       - name: 'HardReboot'
-         description: >
-           BMC system should be non-gracefully rebooted.
-       - name: 'None'
-         description: >
-           No transition is in progress
+    - name: Transition
+      description: >
+          The desired transition for the BMC firmware
+      values:
+          - name: "Reboot"
+            description: >
+                BMC system should be rebooted
+          - name: "HardReboot"
+            description: >
+                BMC system should be non-gracefully rebooted.
+          - name: "None"
+            description: >
+                No transition is in progress
 
-   - name: BMCState
-     description: >
-       The current state of the BMC firmware
-     values:
-       - name: 'Ready'
-         description: >
-           Ready implies all services started and are running successfully
-       - name: 'NotReady'
-         description: >
-           Not ready implies not all services have started or are not running successfully
-       - name: 'UpdateInProgress'
-         description: >
-           UpdateInProgress implies BMC is in firmware update mode. CurrentBMCState
-           will be set to "UpdateInProgress" while starting image download and
-           reset to Ready, once activation is done or error case during update process.
-       - name: 'Quiesced'
-         description: >
-           BMC firmware is quiesced. The BMC firmware is enabled but either
-           unresponsive or only processing a restricted set of commands. This
-           state may be the result of a service within the BMC going into a
-           failed state.
+    - name: BMCState
+      description: >
+          The current state of the BMC firmware
+      values:
+          - name: "Ready"
+            description: >
+                Ready implies all services started and are running successfully
+          - name: "NotReady"
+            description: >
+                Not ready implies not all services have started or are not running successfully
+          - name: "UpdateInProgress"
+            description: >
+                UpdateInProgress implies BMC is in firmware update mode. CurrentBMCState
+                will be set to "UpdateInProgress" while starting image download and
+                reset to Ready, once activation is done or error case during update process.
+          - name: "Quiesced"
+            description: >
+                BMC firmware is quiesced. The BMC firmware is enabled but either
+                unresponsive or only processing a restricted set of commands. This
+                state may be the result of a service within the BMC going into a
+                failed state.
 
-   - name: RebootCause
-     description: >
-       The recorded reboot cause of the BMC
-     values:
-       - name: 'POR'
-         description: >
-           Last reboot is caused by Power-On-Reset
-       - name: 'PinholeReset'
-         description: >
-           Last reboot is caused by pinhole reset
-       - name: 'Watchdog'
-         description: >
-           Last reboot is caused by Watchdog
-       - name: 'Unknown'
-         description: >
-           Last reboot is caused by Unknown
+    - name: RebootCause
+      description: >
+          The recorded reboot cause of the BMC
+      values:
+          - name: "POR"
+            description: >
+                Last reboot is caused by Power-On-Reset
+          - name: "PinholeReset"
+            description: >
+                Last reboot is caused by pinhole reset
+          - name: "Watchdog"
+            description: >
+                Last reboot is caused by Watchdog
+          - name: "Unknown"
+            description: >
+                Last reboot is caused by Unknown

@@ -7,21 +7,21 @@ description: >
 properties:
     - name: CurrentFirmwareCondition
       type: enum[self.FirmwareCondition]
-      default: 'Unknown'
+      default: "Unknown"
       description: >
           The current condition of the host
 
 enumerations:
     - name: FirmwareCondition
       description: >
-        The current condition of the host firmware
+          The current condition of the host firmware
       values:
-        - name: 'Unknown'
-          description: >
-            The condition of the host firmware is unknown
-        - name: 'Off'
-          description: >
-            Host firmware is not responsive to communication
-        - name: 'Running'
-          description: >
-            Host firmware is running and responsive to communication
+          - name: "Unknown"
+            description: >
+                The condition of the host firmware is unknown
+          - name: "Off"
+            description: >
+                Host firmware is not responsive to communication
+          - name: "Running"
+            description: >
+                Host firmware is running and responsive to communication

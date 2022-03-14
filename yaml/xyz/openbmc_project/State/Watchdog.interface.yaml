@@ -9,13 +9,13 @@ methods:
           into the TimeRemaining. Optionally the watchdog can be enabled
           during the reset process.
       parameters:
-        - name: EnableWatchdog
-          type: boolean
-          description: >
-              If true the watchdog will be enabled when the reset
-              is performed.
+          - name: EnableWatchdog
+            type: boolean
+            description: >
+                If true the watchdog will be enabled when the reset
+                is performed.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InternalFailure
 
 properties:
     - name: Initialized
@@ -32,7 +32,7 @@ properties:
       type: enum[self.Action]
       description: >
           The action the watchdog should perform when it expires.
-      default: 'HardReset'
+      default: "HardReset"
     - name: Interval
       type: uint64
       description: >
@@ -48,60 +48,60 @@ properties:
       type: enum[self.TimerUse]
       description: >
           The host defined user of this timer.
-      default: 'Reserved'
+      default: "Reserved"
     - name: ExpiredTimerUse
       type: enum[self.TimerUse]
       description: >
           The timer user at the time of expiration.
-      default: 'Reserved'
+      default: "Reserved"
 
 enumerations:
-   - name: Action
-     description: >
-       The type of action to perform.
-     values:
-       - name: 'None'
-         description: >
-           Do nothing.
-       - name: 'HardReset'
-         description: >
-           Perform a reset of the system.
-       - name: 'PowerOff'
-         description: >
-           Perform a power off of the system.
-       - name: 'PowerCycle'
-         description: >
-           Perform a power cycle of the system.
+    - name: Action
+      description: >
+          The type of action to perform.
+      values:
+          - name: "None"
+            description: >
+                Do nothing.
+          - name: "HardReset"
+            description: >
+                Perform a reset of the system.
+          - name: "PowerOff"
+            description: >
+                Perform a power off of the system.
+          - name: "PowerCycle"
+            description: >
+                Perform a power cycle of the system.
 
-   - name: TimerUse
-     description: >
-       The type of timer use.
-     values:
-       - name: 'Reserved'
-         description: >
-           Reserved.
-       - name: 'BIOSFRB2'
-         description: >
-           BIOS FRB2.
-       - name: 'BIOSPOST'
-         description: >
-           BIOS POST.
-       - name: 'OSLoad'
-         description: >
-           OS Load.
-       - name: SMSOS
-         description: >
-           SMS OS.
-       - name: 'OEM'
-         description: >
-           OEM.
+    - name: TimerUse
+      description: >
+          The type of timer use.
+      values:
+          - name: "Reserved"
+            description: >
+                Reserved.
+          - name: "BIOSFRB2"
+            description: >
+                BIOS FRB2.
+          - name: "BIOSPOST"
+            description: >
+                BIOS POST.
+          - name: "OSLoad"
+            description: >
+                OS Load.
+          - name: SMSOS
+            description: >
+                SMS OS.
+          - name: "OEM"
+            description: >
+                OEM.
 
 signals:
     - name: Timeout
       description: >
-        Watchdog timeout event signal
+          Watchdog timeout event signal
       properties:
-         - name: Action
-           type: enum[self.Action]
-           description: >
-             The action taken during the watchdog timeout event.
+          - name: Action
+            type: enum[self.Action]
+            description: >
+                The action taken during the watchdog timeout event.

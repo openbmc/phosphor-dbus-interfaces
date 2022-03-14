@@ -6,16 +6,16 @@ methods:
           Replace the current authorities list and restart the associated
           services.
       parameters:
-        - name: Path
-          type: string
-          description: >
-              Path of file that contains multiple root certificates.
+          - name: Path
+            type: string
+            description: >
+                Path of file that contains multiple root certificates.
       returns:
-        - name: ObjectPath
-          type: array[object_path]
-          description: >
-              D-Bus object path to created objects.
+          - name: ObjectPath
+            type: array[object_path]
+            description: >
+                D-Bus object path to created objects.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Certs.Error.InvalidCertificate
-        - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Certs.Error.InvalidCertificate
+          - xyz.openbmc_project.Common.Error.NotAllowed

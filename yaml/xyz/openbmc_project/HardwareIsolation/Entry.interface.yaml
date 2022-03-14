@@ -38,15 +38,15 @@ enumerations:
       description: >
           Possible severity for hardware isolation.
       values:
-        - name: Critical
-          description: >
-              Critical hardware to repair or replace.
-        - name: Warning
-          description: >
-              The system can boot without the isolated hardware but,
-              will lose the system configuration benefits of isolated
-              hardware.
-        - name: Manual
-          description: >
-              A user attempted to isolate hardware to proceed with
-              the host to boot.
+          - name: Critical
+            description: >
+                Critical hardware to repair or replace.
+          - name: Warning
+            description: >
+                The system can boot without the isolated hardware but,
+                will lose the system configuration benefits of isolated
+                hardware.
+          - name: Manual
+            description: >
+                A user attempted to isolate hardware to proceed with
+                the host to boot.

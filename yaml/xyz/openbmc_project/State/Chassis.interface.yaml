@@ -1,10 +1,9 @@
-description:
-    Implement to provide the chassis power management
+description: Implement to provide the chassis power management
 
 properties:
     - name: RequestedPowerTransition
       type: enum[self.Transition]
-      default: 'Off'
+      default: "Off"
       description: >
           The desired power transition to start on this chassis.
           This will be preserved across AC power cycles of the BMC.
@@ -36,55 +35,55 @@ properties:
 enumerations:
     - name: Transition
       description: >
-        The desired power transition for the chassis
+          The desired power transition for the chassis
       values:
-        - name: 'Off'
-          description: >
-            Chassis power should be off
-        - name: 'On'
-          description: >
-            Chassis power should be on
-        - name: 'PowerCycle'
-          description: >
-            Chassis power should be cycled from off to on. There will be a 5
-            second delay between the off and the on.
+          - name: "Off"
+            description: >
+                Chassis power should be off
+          - name: "On"
+            description: >
+                Chassis power should be on
+          - name: "PowerCycle"
+            description: >
+                Chassis power should be cycled from off to on. There will be a 5
+                second delay between the off and the on.
 
     - name: PowerState
       description: >
-        The current state of the chassis power
+          The current state of the chassis power
       values:
-        - name: 'Off'
-          description: >
-            Chassis power is off
-        - name: 'TransitioningToOff'
-          description: >
-            Firmware is transitioning the chassis to an Off state
-        - name: 'On'
-          description: >
-            Chassis power is on
-        - name: 'TransitioningToOn'
-          description: >
-            Firmware is transitioning the chassis to an On state
+          - name: "Off"
+            description: >
+                Chassis power is off
+          - name: "TransitioningToOff"
+            description: >
+                Firmware is transitioning the chassis to an Off state
+          - name: "On"
+            description: >
+                Chassis power is on
+          - name: "TransitioningToOn"
+            description: >
+                Firmware is transitioning the chassis to an On state
 
     - name: PowerStatus
       description: >
-        The current status of the chassis power
+          The current status of the chassis power
       values:
-        - name: 'Undefined'
-          description: >
-            Chassis power status is unknown
-        - name: 'BrownOut'
-          description: >
-            Chassis power status is in a brownout condition.
-        - name: 'UninterruptiblePowerSupply'
-          description: >
-            Chassis power is being provided via an uninterruptible power
-            supply. Note that some systems may choose to continue to use this
-            status, even once power has returned to the system, to indicate the
-            uninterruptible power supply is charging or is below a certain
-            threshold of charged. This provides system owners the flexibility on
-            whether their system requires a certain level of charged
-            uninterruptible power supply to be in a 'Good' state or not.
-        - name: 'Good'
-          description: >
-            Chassis power status is in a good condition
+          - name: "Undefined"
+            description: >
+                Chassis power status is unknown
+          - name: "BrownOut"
+            description: >
+                Chassis power status is in a brownout condition.
+          - name: "UninterruptiblePowerSupply"
+            description: >
+                Chassis power is being provided via an uninterruptible power
+                supply. Note that some systems may choose to continue to use this
+                status, even once power has returned to the system, to indicate the
+                uninterruptible power supply is charging or is below a certain
+                threshold of charged. This provides system owners the flexibility on
+                whether their system requires a certain level of charged
+                uninterruptible power supply to be in a 'Good' state or not.
+          - name: "Good"
+            description: >
+                Chassis power status is in a good condition

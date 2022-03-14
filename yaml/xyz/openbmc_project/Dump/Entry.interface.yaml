@@ -11,24 +11,24 @@ description: >
 methods:
     - name: InitiateOffload
       description: >
-         This method initiates the offload of the dump from the dump storage.
-         The transfer will be initiated to the target provide. The caller of
-         this function should set up a method to transfer and pass the URI to
-         to this function. If there is no exceptions the caller can assume the
-         transfer is successfully initiated. Once the transfer is completed.
-         The application which is transferring the dump should set offloaded
-         property to true to indicate offload is completed.
+          This method initiates the offload of the dump from the dump storage.
+          The transfer will be initiated to the target provide. The caller of
+          this function should set up a method to transfer and pass the URI to
+          to this function. If there is no exceptions the caller can assume the
+          transfer is successfully initiated. Once the transfer is completed.
+          The application which is transferring the dump should set offloaded
+          property to true to indicate offload is completed.
       parameters:
-       - name: OffloadUri
-         type: string
-         description: >
-            The location to offload dump file, error InvalidArgument will be
-            returned if the URI is not well formated.
+          - name: OffloadUri
+            type: string
+            description: >
+                The location to offload dump file, error InvalidArgument will be
+                returned if the URI is not well formated.
       errors:
-       - xyz.openbmc_project.Common.File.Error.Open
-       - xyz.openbmc_project.Common.File.Error.Write
-       - xyz.openbmc_project.Common.Error.InvalidArgument
-       - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.File.Error.Open
+          - xyz.openbmc_project.Common.File.Error.Write
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.NotAllowed
 
 properties:
     - name: Size

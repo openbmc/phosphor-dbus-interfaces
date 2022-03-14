@@ -10,9 +10,9 @@ methods:
           xyz.openbmc_project.Object.Delete to allow the deletion of CSR objects.
 
       returns:
-        - name: CSRString
-          type: string
-          description: >
-              CSR string in the Base-64 encoded PEM format.
+          - name: CSRString
+            type: string
+            description: >
+                CSR string in the Base-64 encoded PEM format.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InternalFailure

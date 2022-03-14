@@ -9,35 +9,35 @@ properties:
     - name: Version
       type: string
       description: >
-        The version identifier.
+          The version identifier.
     - name: Purpose
       type: enum[self.VersionPurpose]
       description: >
-        The purpose of the version.  As in, what can it be used for or
-        applied to?
+          The purpose of the version.  As in, what can it be used for or
+          applied to?
 
-        This property is deprecated in favor of Compatible strings and inventory
-        associations.  The enumeration should not be expanded further.
+          This property is deprecated in favor of Compatible strings and inventory
+          associations.  The enumeration should not be expanded further.
 enumerations:
     - name: VersionPurpose
       description: >
-        An enumeration of possible purposes of the version.
+          An enumeration of possible purposes of the version.
       values:
-        - name: Unknown
-          description: >
-            The version is of unknown purpose.
-        - name: Other
-          description: >
-            The version is of some other purpose.
-        - name: System
-          description: >
-            The version is an aggregate for the system as a whole.
-        - name: BMC
-          description: >
-            The version is a version for the BMC.
-        - name: Host
-          description: >
-            The version is a version for a managed host.
-        - name: PSU
-          description: >
-            The version is a version for a PSU.
+          - name: Unknown
+            description: >
+                The version is of unknown purpose.
+          - name: Other
+            description: >
+                The version is of some other purpose.
+          - name: System
+            description: >
+                The version is an aggregate for the system as a whole.
+          - name: BMC
+            description: >
+                The version is a version for the BMC.
+          - name: Host
+            description: >
+                The version is a version for a managed host.
+          - name: PSU
+            description: >
+                The version is a version for a PSU.

@@ -8,36 +8,36 @@ enumerations:
       description: >
           Additional parameters for creating the dump.
       values:
-        - name: 'VSPString'
-          description: >
-              The resouce dump is collected from various host resources.
-              The resource to collect the dump is indicated by using the
-              resource selector.
-              The resource selector string needs to be passed to host to
-              generate a resource dump.
-        - name: 'Password'
-          description: >
-              The password for authenticating the resource dump request.
-        - name: 'ErrorLogId'
-          description: >
-              The id of the log associated with action which triggered the
-              dump. The value should be a 32 bit unsigned integer.
-        - name: 'DumpType'
-          description: >
-              Type of the dump to be collected
-        - name: 'FailingUnitId'
-          description: >
-              A unique id of failing hardware unit which is causing the dump.
-              The value should be a 32 bit unsigned integer.
+          - name: "VSPString"
+            description: >
+                The resouce dump is collected from various host resources.
+                The resource to collect the dump is indicated by using the
+                resource selector.
+                The resource selector string needs to be passed to host to
+                generate a resource dump.
+          - name: "Password"
+            description: >
+                The password for authenticating the resource dump request.
+          - name: "ErrorLogId"
+            description: >
+                The id of the log associated with action which triggered the
+                dump. The value should be a 32 bit unsigned integer.
+          - name: "DumpType"
+            description: >
+                Type of the dump to be collected
+          - name: "FailingUnitId"
+            description: >
+                A unique id of failing hardware unit which is causing the dump.
+                The value should be a 32 bit unsigned integer.
 
     - name: DumpType
       description: >
           Type of the host dump to be collected.
       values:
-        - name: 'Hostboot'
-          description: >
-              Hostboot dump is collected during a boot failure during the
-              hostboot booting phase.
-        - name: 'Hardware'
-          desription: >
-              Hardware dump is collected during a system checkstop.
+          - name: "Hostboot"
+            description: >
+                Hostboot dump is collected during a boot failure during the
+                hostboot booting phase.
+          - name: "Hardware"
+            desription: >
+                Hardware dump is collected during a system checkstop.

@@ -43,7 +43,7 @@ properties:
     - name: UserID
       type: byte
       description: >
-           Session created by given user ID.
+          Session created by given user ID.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
     - name: State

@@ -46,22 +46,22 @@ enumerations:
       description: >
           Possible IP protocol types.
       values:
-        - name: IPv4
-        - name: IPv6
+          - name: IPv4
+          - name: IPv6
 
     - name: AddressOrigin
       description: >
           Possible IP address origin types.
       values:
-        - name: Static
-          description: >
-              Static address configured by the server.
-        - name: DHCP
-          description: >
-              Address is provided by a DHCP service.
-        - name: LinkLocal
-          description: >
-              Address is valid only for this network segment.
-        - name: SLAAC
-          description: >
-              Address is provided by a Stateless Address Autoconfiguration.
+          - name: Static
+            description: >
+                Static address configured by the server.
+          - name: DHCP
+            description: >
+                Address is provided by a DHCP service.
+          - name: LinkLocal
+            description: >
+                Address is valid only for this network segment.
+          - name: SLAAC
+            description: >
+                Address is provided by a Stateless Address Autoconfiguration.

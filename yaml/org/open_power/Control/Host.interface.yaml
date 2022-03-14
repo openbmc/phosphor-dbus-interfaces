@@ -23,33 +23,33 @@ methods:
 signals:
     - name: CommandComplete
       description: >
-        Signal indicating that a command has completed
+          Signal indicating that a command has completed
       properties:
-        - name: command
-          type: enum[self.Command]
-          description: Executed command
-        - name: result
-          type: enum[self.Result]
-          description: Result of the command execution
+          - name: command
+            type: enum[self.Command]
+            description: Executed command
+          - name: result
+            type: enum[self.Result]
+            description: Result of the command execution
 
 enumerations:
     - name: Command
       description: >
-        The command to execute against the host
+          The command to execute against the host
       values:
-        - name: OCCReset
-          description: >
-            Host firmware should reset the OCC. This is invoked by
-            OCC error monitor application on detecting the error.
-            Sensor ID of the failing OCC will be sent as data.
-            This command will return once the command has been placed
-            in command Queue.
+          - name: OCCReset
+            description: >
+                Host firmware should reset the OCC. This is invoked by
+                OCC error monitor application on detecting the error.
+                Sensor ID of the failing OCC will be sent as data.
+                This command will return once the command has been placed
+                in command Queue.
 
     - name: Result
       description: >
-        The result of the command execution
+          The result of the command execution
       values:
-        - name: Success
-          description: Command execution was a success
-        - name: Failure
-          description: Command execution was a failure
+          - name: Success
+            description: Command execution was a success
+          - name: Failure
+            description: Command execution was a failure

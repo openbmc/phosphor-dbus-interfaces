@@ -9,17 +9,17 @@ properties:
       description: >
           Specifies the LDAP URI of the server to connect to.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.InvalidArgument
-        - xyz.openbmc_project.Common.Error.NoCACertificate
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.NoCACertificate
     - name: LDAPBindDN
       type: string
       description: >
           Specifies the distinguished name with which to bind to the directory
           server for lookups.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: LDAPBindDNPassword
       type: string
       description: >
@@ -38,15 +38,15 @@ properties:
       description: >
           Specifies the base distinguished name to use as search base.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: LDAPSearchScope
       type: enum[self.SearchScope]
       description: >
           Specifies the search scope:subtree, one level or base object.
       default: sub
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InternalFailure
     - name: LDAPType
       type: enum[self.Type]
       description: >
@@ -57,8 +57,8 @@ properties:
           This property is readonly, Once the D-Bus object gets created then
           this property should not be modifiable.
       errors:
-        - xyz.openbmc_project.Common.Error.InternalFailure
-        - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.NotAllowed
     - name: GroupNameAttribute
       type: string
       description: >
@@ -74,13 +74,13 @@ enumerations:
       description: >
           Possible base scopes.
       values:
-        - name: sub
-        - name: one
-        - name: base
+          - name: sub
+          - name: one
+          - name: base
 
     - name: Type
       description: >
           Possible LDAP Types.
       values:
-        - name: ActiveDirectory
-        - name: OpenLdap
+          - name: ActiveDirectory
+          - name: OpenLdap

@@ -9,25 +9,25 @@ methods:
       description: >
           Create a xyz.openbmc_project.Logging.Entry object.
       parameters:
-        - name: Message
-          type: string
-          description: >
-            The Message property of the event entry.
-        - name: Severity
-          type: enum[xyz.openbmc_project.Logging.Entry.Level]
-          description: >
-            The Severity property of the event entry.
-        - name: AdditionalData
-          type: dict[string, string]
-          description: >
-            The AdditionalData property of the event entry.
-            e.g.:
-              {
-                "key1": "value1",
-                "key2": "value2"
-              }
-            ends up in AdditionaData like:
-              ["KEY1=value1", "KEY2=value2"]
+          - name: Message
+            type: string
+            description: >
+                The Message property of the event entry.
+          - name: Severity
+            type: enum[xyz.openbmc_project.Logging.Entry.Level]
+            description: >
+                The Severity property of the event entry.
+          - name: AdditionalData
+            type: dict[string, string]
+            description: >
+                The AdditionalData property of the event entry.
+                e.g.:
+                  {
+                    "key1": "value1",
+                    "key2": "value2"
+                  }
+                ends up in AdditionaData like:
+                  ["KEY1=value1", "KEY2=value2"]
 
     - name: CreateWithFFDCFiles
       description: >
@@ -41,58 +41,57 @@ methods:
           When the method call is complete the descriptors must be closed and
           the files can be deleted if desired.
       parameters:
-        - name: Message
-          type: string
-          description: >
-            The Message property of the event entry.
-        - name: Severity
-          type: enum[xyz.openbmc_project.Logging.Entry.Level]
-          description: >
-            The Severity property of the event entry.
-        - name: AdditionalData
-          type: dict[string, string]
-          description: >
-            The AdditionalData property of the event entry.
-            e.g.:
-              {
-                "key1": "value1",
-                "key2": "value2"
-              }
-            ends up in AdditionaData like:
-              ["KEY1=value1", "KEY2=value2"]
-        - name: FFDC
-          type: array[struct[enum[self.FFDCFormat], byte, byte, unixfd]]
-          description: >
-            File descriptors for any files containing FFDC, along with metadata
-            about the contents:
+          - name: Message
+            type: string
+            description: >
+                The Message property of the event entry.
+          - name: Severity
+            type: enum[xyz.openbmc_project.Logging.Entry.Level]
+            description: >
+                The Severity property of the event entry.
+          - name: AdditionalData
+            type: dict[string, string]
+            description: >
+                The AdditionalData property of the event entry.
+                e.g.:
+                  {
+                    "key1": "value1",
+                    "key2": "value2"
+                  }
+                ends up in AdditionaData like:
+                  ["KEY1=value1", "KEY2=value2"]
+          - name: FFDC
+            type: array[struct[enum[self.FFDCFormat], byte, byte, unixfd]]
+            description: >
+                File descriptors for any files containing FFDC, along with metadata
+                about the contents:
 
-              FFDCFormat- The format type of the contained data.
-              subType - The format subtype, used for the 'Custom' type.
-              version - The version of the data format, used for the 'Custom'
-                        type.
-              unixfd - The file descriptor to the data file.
+                  FFDCFormat- The format type of the contained data.
+                  subType - The format subtype, used for the 'Custom' type.
+                  version - The version of the data format, used for the 'Custom'
+                            type.
+                  unixfd - The file descriptor to the data file.
 
-            e.g.:
-            [
-              {"xyz.openbmc_project.Logging.Create.FFDCFormat.JSON", 0, 0, 5},
-              {"xyz.openbmc_project.Logging.Create.FFDCFormat.Custom", 1, 2, 6}
-            ]
-
+                e.g.:
+                [
+                  {"xyz.openbmc_project.Logging.Create.FFDCFormat.JSON", 0, 0, 5},
+                  {"xyz.openbmc_project.Logging.Create.FFDCFormat.Custom", 1, 2, 6}
+                ]
 
 enumerations:
     - name: FFDCFormat
       description: >
-        format types
+          format types
       values:
-        - name: JSON
-          description: >
-            Valid fully formed JSON, e.g. {"foo":"bar"}
-        - name: CBOR
-          description: >
-            Valid CBOR (Concise Binary Object Representation)
-        - name: Text
-          description: >
-            ASCII text
-        - name: Custom
-          description: >
-            Something other than the above formats
+          - name: JSON
+            description: >
+                Valid fully formed JSON, e.g. {"foo":"bar"}
+          - name: CBOR
+            description: >
+                Valid CBOR (Concise Binary Object Representation)
+          - name: Text
+            description: >
+                ASCII text
+          - name: Custom
+            description: >
+                Something other than the above formats

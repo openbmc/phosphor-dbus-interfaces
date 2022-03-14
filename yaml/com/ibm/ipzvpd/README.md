@@ -1,4 +1,5 @@
 # IPZ VPD D-Bus Interfaces
+
 IPZ is a VPD (Vital Product Data) format used in IBM Power systems.
 The format consists of keywords that are stored as key-value
 pairs (Keyword name and its value). Keywords are grouped into records,
@@ -16,5 +17,5 @@ D-Bus. Each YAML here represents a record in the IPZ VPD and keywords that
 belong to that record are represented as properties under that interface.
 The type of every property shall be a byte array.
 
-[1]:https://www-355.ibm.com/systems/power/openpower/posting.xhtml?postingId=1D060729AC96891885257E1B0053BC95
-[2]:https://github.com/openbmc/docs/blob/master/designs/vpd-collection.md
+[1]: https://www-355.ibm.com/systems/power/openpower/posting.xhtml?postingId=1D060729AC96891885257E1B0053BC95
+[2]: https://github.com/openbmc/docs/blob/master/designs/vpd-collection.md

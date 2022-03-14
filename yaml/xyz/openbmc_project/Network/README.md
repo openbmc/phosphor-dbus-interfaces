@@ -3,8 +3,9 @@
 ## Overview
 
 A Network Manager is a daemon which handles network management operations.
-It must implement the `xyz.openbmc_project.Network.SystemConfiguration.interface`
-and `org.freedesktop.DBus.ObjectManager`.
+It must implement the
+`xyz.openbmc_project.Network.SystemConfiguration.interface` and
+`org.freedesktop.DBus.ObjectManager`.
 
 When the network manager daemon comes up, it should create objects
 implementing physical link/virtual interfaces such as
@@ -25,7 +26,7 @@ physical/virtual interface object.
 
 ## D-Bus Objects
 
-#### Interface Objects
+### Interface Objects
 
 Interface objects can be physical as well as virtual.
 
@@ -34,7 +35,7 @@ but if it is a virtual interface object it can be deleted.
 
 E.g. `/xyz/openbmc_project/network/<interfacename>`
 
-#### IP Address Objects
+### IP Address Objects
 
 There can be multiple IP address objects under an interface object.
 These objects can be deleted by the delete function.
@@ -47,7 +48,7 @@ IPv6 objects will have the following D-Bus object path:
 
 `/xyz/openbmc_project/network/<interface>/ipv6/<id>`
 
-#### Network Configuration Object
+### Network Configuration Object
 
 The network configuration object will have system configuration parameters:
 
@@ -55,166 +56,249 @@ The network configuration object will have system configuration parameters:
 
 ## Commands
 
-#### Create Static IPv4 Address
+### Create Static IPv4 Address
 
+```sh
+busctl call xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/<interface> \
+    xyz.openbmc_project.Network.IP.Create \
+    IP ssys "xyz.openbmc_project.Network.IP.Protocol.IPv4" \
+    "<IP Address>" <Netmask Prefix> "<Network Gateway>"
 ```
-busctl call  xyz.openbmc_project.Network /xyz/openbmc_project/network/<interface> xyz.openbmc_project.Network.IP.Create IP ssys "xyz.openbmc_project.Network.IP.Protocol.IPv4" "<IP Address>" <Netmask Prefix> "<Network Gateway>"
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X  POST -d '{"data":["xyz.openbmc_project.Network.IP.Protocol.IPv4","<IP Address>", <Netmask Prefix>, "<Network Gateway>"]
-}' https://${bmc}/xyz/openbmc_project/network/<interface>/action/IP
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X  POST \
+    -d '{
+            "data": [
+                "xyz.openbmc_project.Network.IP.Protocol.IPv4",
+                "<IP Address",
+                <Netmask Prefix>,
+                "<Network Gateway>"
+            ]
+        }' \
+    https://${bmc}/xyz/openbmc_project/network/<interface>/action/IP
 ```
 
 E.g.
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X  POST -d '{"data":["xyz.openbmc_project.Network.IP.Protocol.IPv4","8.8.8.8", 24, "8.8.8.0"]}' https://${bmc}/xyz/openbmc_project/network/eth0/action/IP
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X POST \
+    -d '{
+            "data": [
+                "xyz.openbmc_project.Network.IP.Protocol.IPv4",
+                "8.8.8.8",
+                24,
+                "8.8.8.0"
+            ]
+        }' \
+    https://${bmc}/xyz/openbmc_project/network/eth0/action/IP
 ```
 
-Note: After creating the IP address object enumerate the network interface object to get the IPv4 id.
+Note: After creating the IP address object enumerate the network interface
+object to get the IPv4 id.
 
-#### Delete IPv4 Address
+### Delete IPv4 Address
 
-```
-busctl call xyz.openbmc_project.Network /xyz/openbmc_project/network/<interface>/ipv4/<id> xyz.openbmc_project.Object.Delete Delete
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X DELETE https://${bmc}/xyz/openbmc_project/network/<interface>/ipv4/<id>
-```
-
-#### Default Gateway
-
-##### Get
-
-```
-busctl get-property xyz.openbmc_project.Network /xyz/openbmc_project/network/config xyz.openbmc_project.Network.SystemConfiguration DefaultGateway
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" https://${bmc}/xyz/openbmc_project/network/config/attr/DefaultGateway
+```sh
+busctl call xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/<interface>/ipv4/<id> \
+    xyz.openbmc_project.Object.Delete Delete
 ```
 
-##### Set
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X DELETE \
+    https://${bmc}/xyz/openbmc_project/network/<interface>/ipv4/<id>
+```
 
+### Default Gateway
+
+#### Get
+
+```sh
+busctl get-property xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/config \
+    xyz.openbmc_project.Network.SystemConfiguration DefaultGateway
 ```
-busctl set-property xyz.openbmc_project.Network /xyz/openbmc_project/network/config xyz.openbmc_project.Network.SystemConfiguration DefaultGateway s "<DefaultGateway>"
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" \
+    https://${bmc}/xyz/openbmc_project/network/config/attr/DefaultGateway
 ```
+
+#### Set
+
+```sh
+busctl set-property xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/config \
+    xyz.openbmc_project.Network.SystemConfiguration \
+    DefaultGateway s "<DefaultGateway>"
 ```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X  PUT  -d '{"data": "<DefaultGateway>"}' https://${bmc}/xyz/openbmc_project/network/config/attr/DefaultGateway
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X PUT \
+    -d '{"data": "<DefaultGateway>"}' \
+    https://${bmc}/xyz/openbmc_project/network/config/attr/DefaultGateway
 ```
 
 NOTE: The default gateway must be pingable, if not 0.0.0.0 will be used.
 
-#### HostName
+### HostName
 
-##### Get
+#### Get
 
-```
-busctl get-property xyz.openbmc_project.Network /xyz/openbmc_project/network/config xyz.openbmc_project.Network.SystemConfiguration HostName
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" https://${bmc}/xyz/openbmc_project/network/config/attr/HostName
-```
-
-##### Set
-
-```
-busctl set-property xyz.openbmc_project.Network /xyz/openbmc_project/network/config xyz.openbmc_project.Network.SystemConfiguration HostName s "<HostName>"
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X  PUT  -d '{"data": "<HostName>"}' https://${bmc}/xyz/openbmc_project/network/config/attr/HostName
+```sh
+busctl get-property xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/config \
+    xyz.openbmc_project.Network.SystemConfiguration HostName
 ```
 
-#### DHCP
-
-##### Get
-
-```
-busctl get-property xyz.openbmc_project.Network /xyz/openbmc_project/network/eth0 xyz.openbmc_project.Network.EthernetInterface DHCPEnabled
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" https://${bmc}/xyz/openbmc_project/network/eth0/attr/DHCPEnabled
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" \
+    https://${bmc}/xyz/openbmc_project/network/config/attr/HostName
 ```
 
-##### Enable
+#### Set
 
-```
-busctl set-property xyz.openbmc_project.Network /xyz/openbmc_project/network/eth0 xyz.openbmc_project.Network.EthernetInterface DHCPEnabled b 1
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X  PUT  -d '{"data": 1}' https://${bmc}/xyz/openbmc_project/network/eth0/attr/DHCPEnabled
-```
-
-#### MAC Address
-
-##### Get
-
-```
-busctl get-property xyz.openbmc_project.Network /xyz/openbmc_project/network/eth0 xyz.openbmc_project.Network.MACAddress MACAddress
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" https://${bmc}/xyz/openbmc_project/network/<interface>/attr/MACAddress
+```sh
+busctl set-property xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/config \
+    xyz.openbmc_project.Network.SystemConfiguration HostName s "<HostName>"
 ```
 
-##### Set
-
-```
-busctl set-property xyz.openbmc_project.Network /xyz/openbmc_project/network/<interface> xyz.openbmc_project.Network.MACAddress MACAddress s "<MAC Address>"
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/jon" -X  PUT  -d '{"data": "<MAC Address>" }' https://${bmc}/xyz/openbmc_project/network/<interface>/attr/MACAddress
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X PUT \
+    -d '{"data": "<HostName>"}' \
+    https://${bmc}/xyz/openbmc_project/network/config/attr/HostName
 ```
 
-NOTE: MAC address should be a local admin MAC (2nd bit of first byte should be on).
+### DHCP
 
-#### Network Factory Reset
+#### Get
 
-```
-busctl call xyz.openbmc_project.Network /xyz/openbmc_project/network xyz.openbmc_project.Common.FactoryReset Reset
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X POST -d '{"data":[] }' https://${bmc}/xyz/openbmc_project/network/action/Reset
+```sh
+busctl get-property xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/eth0 \
+    xyz.openbmc_project.Network.EthernetInterface DHCPEnabled
 ```
 
-#### VLAN
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" \
+    https://${bmc}/xyz/openbmc_project/network/eth0/attr/DHCPEnabled
+```
 
-##### Create
+#### Enable
 
+```sh
+busctl set-property xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/eth0 \
+    xyz.openbmc_project.Network.EthernetInterface DHCPEnabled b 1
 ```
-busctl call xyz.openbmc_project.Network /xyz/openbmc_project/network xyz.openbmc_project.Network.VLAN.Create VLAN su "<interface>" <VLAN id>
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X PUT \
+    -d '{"data": 1}' \
+    https://${bmc}/xyz/openbmc_project/network/eth0/attr/DHCPEnabled
 ```
+
+### MAC Address
+
+#### Get
+
+```sh
+busctl get-property xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/eth0 \
+    xyz.openbmc_project.Network.MACAddress MACAddress
 ```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X POST -d '{"data":["<interface>", <VLAN id>] }' https://${bmc}/xyz/openbmc_project/network/action/VLAN
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" \
+    https://${bmc}/xyz/openbmc_project/network/<interface>/attr/MACAddress
+```
+
+#### Set
+
+```sh
+busctl set-property xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/<interface> \
+    xyz.openbmc_project.Network.MACAddress MACAddress s "<MAC Address>"
+```
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X PUT \
+    -d '{"data": "<MAC Address>" }' \
+    https://${bmc}/xyz/openbmc_project/network/<interface>/attr/MACAddress
+```
+
+NOTE: MAC address should be a local admin MAC (2nd bit of first byte should be
+on).
+
+### Network Factory Reset
+
+```sh
+busctl call xyz.openbmc_project.Network /xyz/openbmc_project/network \
+    xyz.openbmc_project.Common.FactoryReset Reset
+```
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X POST \
+    -d '{"data":[] }' https://${bmc}/xyz/openbmc_project/network/action/Reset
+```
+
+### VLAN
+
+#### Create
+
+```sh
+busctl call xyz.openbmc_project.Network /xyz/openbmc_project/network \
+    xyz.openbmc_project.Network.VLAN.Create VLAN su "<interface>" <VLAN id>
+```
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X POST \
+    -d '{"data":["<interface>", <VLAN id>] }' \
+    https://${bmc}/xyz/openbmc_project/network/action/VLAN
 ```
 
 E.g.
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X POST -d '{"data":["eth0",50] }' https://${bmc}/xyz/openbmc_project/network/action/VLAN
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X POST \
+    -d '{"data":["eth0",50] }' \
+    https://${bmc}/xyz/openbmc_project/network/action/VLAN
 ```
 
-##### Delete
+#### Delete
 
+```sh
+busctl call xyz.openbmc_project.Network \
+    /xyz/openbmc_project/network/<VLAN interface> \
+    xyz.openbmc_project.Object.Delete Delete
 ```
-busctl call xyz.openbmc_project.Network /xyz/openbmc_project/network/<VLAN interface> xyz.openbmc_project.Object.Delete Delete
-```
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X DELETE https://${bmc}/xyz/openbmc_project/network/<VLAN interface>
+
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X DELETE \
+    https://${bmc}/xyz/openbmc_project/network/<VLAN interface>
 ```
 
 E.g.
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" -X DELETE https://${bmc}/xyz/openbmc_project/network/eth0_50
-```
 
-##### Enumerate
-
-```
-curl -c cjar -b cjar -k -H "Content-Type: application/json" https://${bmc}/xyz/openbmc_project/network/<VLAN interface>/enumerate
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" -X DELETE \
+    https://${bmc}/xyz/openbmc_project/network/eth0_50
 ```
 
-#### IPMI VLAN and IP
+#### Enumerate
 
-#####  Create
-
+```sh
+curl -c cjar -b cjar -k -H "Content-Type: application/json" \
+    https://${bmc}/xyz/openbmc_project/network/<VLAN interface>/enumerate
 ```
+
+### IPMI VLAN and IP
+
+#### Create
+
+```sh
 ipmitool -I dbus lan set 1 ipsrc static
 
 ipmitool -I dbus lan set 1 ipaddr <IP address>
@@ -231,9 +315,9 @@ ipmitool -I dbus raw 0x06 0x40 // To the save settings
 NOTE: It takes 4-5 seconds to create the VLAN and configure the IP.
 If a VLAN interface is not desired don't set the VLAN id above.
 
-##### Delete
+#### Delete
 
-```
+```sh
 ipmitool -I dbus lan set 1 vlan id off
 
 ipmitool -I dbus raw 0x06 0x40 // To the save settings

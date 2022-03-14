@@ -1,13 +1,18 @@
 # Service Management
 
 ## Overview
+
 Applications must use service manager daemon to configure services like
 phosphor-ipmi-net, bmcweb, obmc-console etc in the system, instead of directly
 controlling the same using 'systemd' or 'iptables'. This way client
 applications doesn't need to change to configure services, when the
-implementations differ. The list of services supported are
-`"phosphor-ipmi-net", "bmcweb", "phosphor-ipmi-kcs", "start-ipkvm",
-"obmc-console"`.
+implementations differ. The list of services supported are:
+
+- "bmcweb"
+- "obmc-console"`
+- "phosphor-ipmi-kcs"
+- "phosphor-ipmi-net"
+- "start-ipkvm"
 
 ## Implementation Details
 
@@ -29,37 +34,38 @@ In order to update the property value of a service, `override.conf` file under
 `/etc/systemd/system/<Service unit name>/` is updated and the unit is restarted
 through `org.freedesktop.systemd1`.
 
-#### xyz.openbmc_project.Control.Service.Attributes interface
-##### properties
+### xyz.openbmc_project.Control.Service.Attributes interface
 
-* Enabled - indicates whether the service is enabled or disabled, `true`
-            indicates the service will be started on the next boot and `false
-            indicates that service will not be started on the next boot. This
-            property can be used to change the service behaviour on the next
-            boot, `true` to start the service on the next boot and `false` to
-            not start the service on the next boot. Even if the service is
-            disabled, on the next boot it can be started if there are other
-            service dependencies to satisy. The service cannot be enabled if the
-            service is masked.
+#### properties
 
-* Masked  - indicates whether the service is masked, `true` indicates the
-            service is permanently disabled and `false` indicates the service
-            is enabled. If the property is set to `true`, then the service is
-            permanently disabled and the service is stopped. If the property
-            is set to `false` then the service is enabled and starts running.
+- Enabled - indicates whether the service is enabled or disabled, `true`
+  indicates the service will be started on the next boot and `false` indicates
+  that service will not be started on the next boot. This property can be used
+  to change the service behaviour on the next boot, `true` to start the service
+  on the next boot and `false` to not start the service on the next boot. Even
+  if the service is disabled, on the next boot it can be started if there are
+  other service dependencies to satisy. The service cannot be enabled if the
+  service is masked.
 
-* Running - indicates the current state of the service, `true` if the service
-            is running and `false` if the service is not running. This property
-            can be used to change the running state of the service, to start the
-            service set to `true` and to stop the service set to `false`. The
-            service cannot be started if the service is Masked.
+- Masked - indicates whether the service is masked, `true` indicates the
+  service is permanently disabled and `false` indicates the service
+  is enabled. If the property is set to `true`, then the service is
+  permanently disabled and the service is stopped. If the property
+  is set to `false` then the service is enabled and starts running.
 
-#### xyz.openbmc_project.Control.Service.SocketAttributes interface
-##### properties
+- Running - indicates the current state of the service, `true` if the service
+  is running and `false` if the service is not running. This property
+  can be used to change the running state of the service, to start the
+  service set to `true` and to stop the service set to `false`. The
+  service cannot be started if the service is Masked.
 
-* Port - Port number to which the service is configured to listen, if
-         applicable for service. Services like obmc-console will not
-         implement this interface.
+### xyz.openbmc_project.Control.Service.SocketAttributes interface
+
+#### properties
+
+- Port - Port number to which the service is configured to listen, if
+  applicable for service. Services like obmc-console will not
+  implement this interface.
 
 ## Usage
 
@@ -70,5 +76,3 @@ vice versa to enable a service.
 RMCP+ port number can be modified from the default port number 623 to a custom
 one by updating the `Port` property value under the interface
 `xyz.openbmc_project.Control.Service.SocketAttributes`.
-
-

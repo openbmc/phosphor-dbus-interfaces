@@ -35,50 +35,54 @@ exact part that needs servicing.
 
 Definition of LED groups could be static or generated from MRW and must be in
 YAML format. A group definition looks like this:
-```
+
+```yaml
 bmc_booted:
-    led_1:
-      Action: On
-      Frequency: 1000
-    led_2:
-      Action: Blink
-      Frequency: 1000
-      DutyOn: 50
+  led_1:
+    Action: On
+    Frequency: 1000
+  led_2:
+    Action: Blink
+    Frequency: 1000
+    DutyOn: 50
 
 enclosure_identify:
-    id_front:
-      Action: Blink
-      Frequency: 1000
-      DutyOn: 50
-    id_rear:
-      Action: Blink
-      Frequency: 1000
-      DutyOn: 50
+  id_front:
+    Action: Blink
+    Frequency: 1000
+    DutyOn: 50
+  id_rear:
+    Action: Blink
+    Frequency: 1000
+    DutyOn: 50
 ```
+
 This says that the group `bmc_booted` consists of 2 physical LEDs in it.
 When this group is acted on, led_1 will turn solid [ON], while led_2
 would be blinking at 50% duty cycle.
 
-## Dbus interfaces for LED groups.
+## Dbus interfaces for LED groups
 
-Refer: [specification](https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Led/Group.interface.yaml)
+Refer to the [specification][specification].
+
+[specification]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Led/Group.interface.yaml
 
 There is only one property called **asserted** defined on groups and when set to
 boolean **true**, the actions listed for the LEDs in that group will get into
 effect as described above.
 When the property is set to **false**, the actions are un-done.
 
-* Henceforth, the term **asserted** would mean writing boolean **true**
+- Henceforth, the term **asserted** would mean writing boolean **true**
   onto `assert` property of the group. Term **de-assert** would mean
   writing **false** to `assert` property.
 
 ## Group Dbus information
 
-**Path: "/xyz/openbmc_project/led/groups/<name>"**
-**Interface: "xyz.openbmc_Project.Led.Group"**
+**Path: `/xyz/openbmc_project/led/groups/<name>`**
+**Interface: `xyz.openbmc_Project.Led.Group`**
 
 Using the yaml definition above, a user can just set the `asserted` property to
-boolean `true` on '/xyz/openbmc_project/led/groups/enclosure_identify' and that
+boolean `true` on `/xyz/openbmc_project/led/groups/enclosure_identify` and that
 would result in blinking the front and rear Identify LEDs of the enclosure.
 
 ## Mandatory groups
@@ -89,7 +93,8 @@ BMCReady and PowerOn respecively. It is fine to have no LEDs in those groups but
 the group as such is deemed required.
 
 Example: The Group yaml may just be;
-```
+
+```yaml
 bmc_booted:
 power_on:
 ```
@@ -103,29 +108,29 @@ It is always **recommended** that external users use **only** the LED groups.
 Describing the Physical LED here just for documenting it and strictly NOT to
 be used outside of the firmware code.
 
-## Dbus interfaces for physical LEDs.
+## Dbus interfaces for physical LEDs
 
-Refer: [specification](https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Led/Physical.interface.yaml)
+Refer to the [specification][specification].
+
+[specification]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Led/Physical.interface.yaml
 
 ## Dbus information
 
-**Path: "/xyz/openbmc_project/led/physical/<name>"**
-**Interface: "xyz.openbmc_Project.Led.Physical"**
+**Path: `/xyz/openbmc_project/led/physical/<name>`**
+**Interface: `xyz.openbmc_Project.Led.Physical`**
 
 Using **/xyz/openbmc_project/led/groups/enclosure_identify** as example;
 setting the `asserted` property to `true` would result in these actions in
-*id_front* and *id_rear* physical LEDs.
+`id_front` and `id_rear` physical LEDs.
 
-1) Property *DutyOn* is set to `50` in;
-  `/xyz/openbmc/project/led/physical/id_front` and
-  `/xyz/openbmc/project/led/physical/id_rear`
+1. Property `DutyOn` is set to `50` in;
+   `/xyz/openbmc/project/led/physical/id_front` and
+   `/xyz/openbmc/project/led/physical/id_rear`
 
-2) Property *State* is set to `xyz.openbmc_project.Led.Physical.Action.On` in
+2. Property `State` is set to `xyz.openbmc_project.Led.Physical.Action.On` in
    `/xyz/openbmc/project/led/physical/id_front` and
    `/xyz/openbmc/project/led/physical/id_rear`
 
 Which means, if some test wants to verify if the action on Group really resulted
 in acting on physical LED, those are the properties to be read from physical
 service.
-
-#                                         END of Document

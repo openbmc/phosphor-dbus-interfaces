@@ -16,6 +16,24 @@
       "message": "If I remember right, this is only actually required when phosphor-logging\u0027s report/commit/elog is used...  Looks like I only see one use of that in network manager that will have to change at the same time.",
       "revId": "b68cec084c9a17da457b53d68a195ea88a7e6450",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "942f9d84_1a05ed55",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-16T19:09:13Z",
+      "side": 1,
+      "message": "Correct, these are only used in the report/commit/elog interfaces.  I wanted to give you awareness in case I was missing anything.\n\nMy recollection is that these are all \"optional\" in that nothing will fail to compile but it will cause additional work on the log_manager if one is committed without the correct metadata.  This code seems to back that up:\n\nhttps://github.com/openbmc/phosphor-logging/blob/a2d7b7750ce7a93b1cc785f568acfb69c1ca01b1/log_manager.cpp#L188\n\nI\u0027ll go ahead and make a fix in NM, but I think it can be merged after this one and not a hard co-req.  Agreed?",
+      "parentUuid": "132e6d07_3602498e",
+      "revId": "b68cec084c9a17da457b53d68a195ea88a7e6450",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

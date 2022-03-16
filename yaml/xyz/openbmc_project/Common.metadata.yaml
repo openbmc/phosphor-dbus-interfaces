@@ -23,6 +23,9 @@
   level: INFO
 - name: ResourceNotFound
   level: INFO
+  meta:
+    - str: "RESOURCE=%s"
+      type: string
 - name: UnsupportedRequest
   level: INFO
   meta:

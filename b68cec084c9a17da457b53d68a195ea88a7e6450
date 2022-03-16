@@ -52,6 +52,24 @@
       "parentUuid": "942f9d84_1a05ed55",
       "revId": "b68cec084c9a17da457b53d68a195ea88a7e6450",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ee83783_16240e1b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2022-03-16T19:17:49Z",
+      "side": 1,
+      "message": "I think it will fail to compile, something like:\n\n.../armv7ahf-vfpv4d16-openbmc-linux-gnueabi/usr/include/phosphor-logging/elog.hpp: In instantiation of ‘void phosphor::logging::elog(Args ...) [with T \u003d sdbusplus::xyz::openbmc_project::Common::Device::Error::ReadFailure; Args \u003d {phosphor::logging::xyz::openbmc_project::Common::Callout::_Device::CALLOUT_DEVICE_PATH}]’:\n../pmbus.cpp:162:26:   required from here\n.../armv7ahf-vfpv4d16-openbmc-linux-gnueabi/usr/include/phosphor-logging/elog.hpp:169:74: error: static assertion failed: You are not passing in required arguments for this error\n  169 |                      std::tuple\u003cdetails::deduce_entry_type_t\u003cArgs\u003e...\u003e\u003e::value,\n      |                                                                          ^~~~~",
+      "parentUuid": "942f9d84_1a05ed55",
+      "revId": "b68cec084c9a17da457b53d68a195ea88a7e6450",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

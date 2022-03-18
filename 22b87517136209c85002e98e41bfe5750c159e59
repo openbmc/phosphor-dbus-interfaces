@@ -327,6 +327,30 @@
       },
       "revId": "22b87517136209c85002e98e41bfe5750c159e59",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea0d894c_7686ec86",
+        "filename": "yaml/xyz/openbmc_project/Software/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2022-03-18T06:37:20Z",
+      "side": 1,
+      "message": "\u003e \u003e I think for this dual bmc case we can go ahead and implement the WriteProtected property: \n\u003e \n\u003e I agree with this.\n\nSo we could create WriteProtected interface for each activation and make it true by default.\nWhen we want to update primary, set false to primary\u0027s activation\u0027s `WriteProtected`, something like this?",
+      "parentUuid": "5630f6d4_2f055c2b",
+      "range": {
+        "startLine": 55,
+        "startChar": 41,
+        "endLine": 59,
+        "endChar": 79
+      },
+      "revId": "22b87517136209c85002e98e41bfe5750c159e59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

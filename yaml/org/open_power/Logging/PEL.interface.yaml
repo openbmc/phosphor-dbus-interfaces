@@ -148,6 +148,24 @@ methods:
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
 
+    - name: GetPELJSON
+      description: >
+          Returns the PEL Id (aka Entry ID (EID)) based on the
+          given BMC event log id.
+      parameters:
+          - name: bmcLogId
+            type: uint32
+            description: >
+                The BMC event log id of the PEL to retrieve JSON for
+      returns:
+          - name: json
+            type: string
+            description: >
+                The PEL in JSON format
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
 enumerations:
     - name: RejectionReason
       description: >

@@ -14,6 +14,7 @@ description: >
       temperature
       utilization
       voltage
+      counts
 
     Any service implementing Sensor.Value on one or more objects must
     implement org.freedesktop.DBus.ObjectManager on the sensors namespace root.
@@ -40,6 +41,7 @@ properties:
       description: >
           The unit of the reading.  Immutable once set for a sensor.
           For objects in the airflow namespace, Unit must be "CFM"
+          For objects in the events/errors/counters, Unit must be "Counts"
           For objects in the altitude namespace, Unit must be "Meters".
           For objects in the current namespace, Unit must be "Amperes".
           For objects in the energy namespace, Unit must be "Joules".
@@ -62,6 +64,9 @@ enumerations:
           - name: CFM
             description: >
                 To calculate Air Flow in Cubic Feet per Minute
+          - name: Counts
+            description: >
+                Number of errors, events or counters.
           - name: DegreesC
             description: >
                 Temperature as degrees Celsius.

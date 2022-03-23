@@ -10,19 +10,9 @@ project('phosphor-dbus-interfaces', 'cpp',
     version: '1.0.0',
 )
 
-# Get sdbusplus dependency.
-sdbusplus_dep = dependency('sdbusplus', required: false)
-if sdbusplus_dep.found() and sdbusplus_dep.type_name() != 'internal'
-    sdbusplusplus_prog = find_program('sdbus++', native: true)
-    sdbuspp_gen_meson_prog = find_program('sdbus++-gen-meson', native: true)
-else
-    sdbusplus_proj = subproject('sdbusplus', required: true)
-    sdbusplus_dep = sdbusplus_proj.get_variable('sdbusplus_dep')
-    sdbusplusplus_prog = sdbusplus_proj.get_variable('sdbusplusplus_prog')
-    sdbuspp_gen_meson_prog = sdbusplus_proj.get_variable(
-        'sdbuspp_gen_meson_prog'
-    )
-endif
+sdbusplus_dep = dependency('sdbusplus')
+sdbusplusplus_prog = find_program('sdbus++', native: true)
+sdbuspp_gen_meson_prog = find_program('sdbus++-gen-meson', native: true)
 
 # Parse options to determine appropriate subdirectories to support.
 selected_subdirs = []

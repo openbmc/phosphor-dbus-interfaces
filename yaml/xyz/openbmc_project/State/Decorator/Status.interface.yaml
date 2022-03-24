@@ -1,0 +1,23 @@
+description: >
+    Implement to indicate the health state of the object
+properties:
+    - name: Health
+      type: enum[self.HealthState]
+      default: OK
+      description: >
+        The current health status of the object.
+
+enumerations:
+  - name: HealthState
+    description: >
+      Health state enum.
+    values:
+      - name: OK
+        description: >
+         The state of the object is OK.
+      - name: Warning
+        description: >
+         The state of the object is Warning.
+      - name: Critical
+        description: >
+         The state of the object is Critical.

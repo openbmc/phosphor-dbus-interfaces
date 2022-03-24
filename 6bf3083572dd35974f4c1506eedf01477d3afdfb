@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "4e0a6d16_1ccfd58b",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "Rather than hard-code numbers, I would prefer to use \u0027maxint\u0027 here (I checked on your diff that it will compile, so I\u0027m pretty sure it does the right thing):\n\n        uint8_t _predictedMediaLifeLeftPercent \u003d std::numeric_limits\u003cuint8_t\u003e::max();",
       "revId": "6bf3083572dd35974f4c1506eedf01477d3afdfb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "05788831_1f4a5d23",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
@@ -32,8 +33,25 @@
       "message": "very cool, it uses std::numeric_limits\u003cuint8_t\u003e::max(). I did not it did that, and I agree it is better then the const 255. Thanks",
       "parentUuid": "4e0a6d16_1ccfd58b",
       "revId": "6bf3083572dd35974f4c1506eedf01477d3afdfb",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9801a428_f1e02084",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2022-03-24T17:41:18Z",
+      "side": 1,
+      "message": "done, using maxint.",
+      "parentUuid": "05788831_1f4a5d23",
+      "revId": "6bf3083572dd35974f4c1506eedf01477d3afdfb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -192,6 +192,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6975b624_716bd16c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2022-03-24T17:41:18Z",
+      "side": 1,
+      "message": "it is not a byte, based on the second comment chain.",
+      "parentUuid": "698a1a6d_6a79598f",
+      "range": {
+        "startLine": 27,
+        "startChar": 12,
+        "endLine": 27,
+        "endChar": 18
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "53d2d7eb_4de7755c",
@@ -347,6 +371,30 @@
       "writtenOn": "2022-03-24T15:11:22Z",
       "side": 1,
       "message": "I\u0027m mildly ok with having EncryptionState in Inventory because it _should_ be rarely changing.  The important thing to me is that the Inventory model is relatively static and not flooding out a bunch of rapidly changing signals.  Ideally we would have everything which is expected it could change multiple times during a [host] boot-up in another namespace.",
+      "parentUuid": "52d329e8_7827a4e6",
+      "range": {
+        "startLine": 73,
+        "startChar": 12,
+        "endLine": 73,
+        "endChar": 32
+      },
+      "revId": "7b4413563c6daee35509cd2c078dd1d78c0d3427",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb42eca5_19158ea9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2022-03-24T17:41:18Z",
+      "side": 1,
+      "message": "If we want a DriveStatistics interface later, we can add it. \nBut for now, think adding these items to drives is a good start.\n(closing)",
       "parentUuid": "52d329e8_7827a4e6",
       "range": {
         "startLine": 73,

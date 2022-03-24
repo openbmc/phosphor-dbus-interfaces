@@ -55,3 +55,17 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Status')
+generated_others += custom_target(
+    'xyz/openbmc_project/State/Decorator/Status__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/Status.interface.yaml',  ],
+    output: [ 'Status.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/State/Decorator/Status',
+    ],
+)
+

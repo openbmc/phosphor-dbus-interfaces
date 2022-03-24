@@ -41,31 +41,29 @@ generated_others += custom_target(
     ],
 )
 
+<<<<<<< HEAD
 subdir('PowerSystemInputs')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Decorator/PowerSystemInputs__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/PowerSystemInputs.interface.yaml',  ],
     output: [ 'PowerSystemInputs.md' ],
-    command: [
-        sdbuspp_gen_meson_prog, '--command', 'markdown',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../../yaml',
-        'xyz/openbmc_project/State/Decorator/PowerSystemInputs',
-    ],
-)
-
+=======
 subdir('Health')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Decorator/Health__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/Health.interface.yaml',  ],
     output: [ 'Health.md' ],
+>>>>>>> c1805e1... State: Add Status interface and Health property
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
         '--directory', meson.current_source_dir() / '../../../../../yaml',
+<<<<<<< HEAD
+        'xyz/openbmc_project/State/Decorator/PowerSystemInputs',
+=======
         'xyz/openbmc_project/State/Decorator/Health',
+>>>>>>> c1805e1... State: Add Status interface and Health property
     ],
 )
 

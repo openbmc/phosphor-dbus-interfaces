@@ -16,6 +16,29 @@
       "message": "The stub for this is https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-logging/+/52273",
       "revId": "b9d39df504f8faab41fcfbd5f2654679b5c7d704",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d8d299b_d1b0d2e8",
+        "filename": "yaml/org/open_power/Logging/PEL.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2022-03-25T20:18:56Z",
+      "side": 1,
+      "message": "\"Returns the PEL in a JSON format string\" (something like that), instead of \"Id\"?",
+      "range": {
+        "startLine": 153,
+        "startChar": 10,
+        "endLine": 153,
+        "endChar": 49
+      },
+      "revId": "b9d39df504f8faab41fcfbd5f2654679b5c7d704",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

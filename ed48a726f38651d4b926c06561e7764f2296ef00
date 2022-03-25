@@ -34,6 +34,24 @@
       "parentUuid": "8725849f_375d1013",
       "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "174092db_d7a7f711",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-25T11:12:39Z",
+      "side": 1,
+      "message": "\u003e As my knowledge, there are many sensors which count number of created products. Such as count number of car go thru a gate, number of user in the office.\n\n\u003e For objects in the events/errors/counters, Unit must be \"Counts\"\n\nI know there _can_ be things such as physical counters but this isn\u0027t what you implied here.  I don\u0027t think you are implementing a \"count the number of people in a data center\" for the BMC, so that isn\u0027t relevant to this discussion.\n\nThe only way for other programs to understand what a Sensor.Value is about is by interpreting the path.  This is fine for a small set of well-defined physical entities, but it is not fine for a large set of error counters spread across multiple pieces of hardware.\n\nTake for instance a network switch / fabric controller with 16 ports.  At a minimum you\u0027re going to have 2 errors or events per port (one for each direction).  So you\u0027re going to have to have 32 sensors named things like \"switchN_portM_upstream\u0027.  This leads to a bunch of tightly-coupled string processing between the \"sensor\" program and the \"error handling\" program.\n\nInstead what we want to see is a well-defined interface specific to the problem domain, which can then be associated to a physical Inventory object that it is holding data for.  Maybe \"FabricStatistics\" in the example above and properties like `size Ports`, `array[size] UpstreamErrorCount`, etc.\n\nI hope this helps with the thinking we have that you can map to your problem domain.  If you need more assistance with direction, please let me know some more details on what kinds of events/errors/counts you\u0027re trying to model.",
+      "parentUuid": "46421bbb_3d365959",
+      "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

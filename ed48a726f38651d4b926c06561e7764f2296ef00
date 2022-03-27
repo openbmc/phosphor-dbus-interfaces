@@ -52,6 +52,24 @@
       "parentUuid": "46421bbb_3d365959",
       "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06536994_31dc2f9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2022-03-27T14:36:34Z",
+      "side": 1,
+      "message": "Currently, I\u0027m working \"Adding sensor monitoring\" in PLDM-stack. As the proposed design https://gerrit.openbmc-project.xyz/c/openbmc/docs/+/47252/15/designs/pldm-stack.md the sensors will be managed by pldmd services. Each sensor PDRs will have on sensor D-Bus interface, the value of sensor will be read by pldmd and update to value in sensor D-Bus property.\nI have problem with the counters, number of errors or events which also reported thru PLDM interface. They should also have D-Bus interface to report the value and the functional status of the device report those info. In my implementation, these counters will be add as sensors with baseUnit as counts.\nWhich D-Bus interface should I add for these counters?",
+      "parentUuid": "174092db_d7a7f711",
+      "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

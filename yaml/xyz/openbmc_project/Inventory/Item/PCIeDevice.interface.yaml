@@ -292,3 +292,12 @@ properties:
       type: size
       description: >
           The maximum number of PCIe lanes supported by the PCIe Device
+
+associations:
+    - name: upstream_pcie_slot
+      description: >
+          Objects that implement PCIeDevice can optionally implement the
+          upstream_pcie_slot association to provide a link back to a PCIe slot.
+      reverse_name: associated_pcie_device
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.PCIeSlot

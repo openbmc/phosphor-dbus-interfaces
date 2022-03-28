@@ -70,6 +70,24 @@
       "parentUuid": "174092db_d7a7f711",
       "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8667c083_b895e5f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000957
+      },
+      "writtenOn": "2022-03-28T15:04:03Z",
+      "side": 1,
+      "message": "Hi Thu,\n\nI think the counter sensor you are working on is numeric sensor so it should be correct to implement the value.interface.\n\nRegarding to sensor unit, it would be better to adding one of unit defined in DSP0248 page 133(https://www.dmtf.org/sites/default/files/standards/documents/DSP0248_1.2.1.pdf) instead of just adding \"counts\" unit.\n\nFor example, if the sensor is for counting corrected error, then its numeric PDR should set sensorUnits field to 80(corrected Errors) and the value.interface should also have a corresponding unit for 80(corrected Errors).",
+      "parentUuid": "06536994_31dc2f9d",
+      "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

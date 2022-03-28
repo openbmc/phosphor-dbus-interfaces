@@ -353,6 +353,30 @@
       },
       "revId": "534be382816327b31414ff8234f8b053244ec974",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83bda585_73e6db9f",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-03-28T07:33:45Z",
+      "side": 1,
+      "message": "As i mentioned, i just had plans to put the same validations which are already there for the StaticNameServers. If you think this can cause confusions, please suggest if i need to remove this error type",
+      "parentUuid": "3d1c4e5c_6b48be59",
+      "range": {
+        "startLine": 65,
+        "startChar": 11,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

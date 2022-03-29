@@ -13,3 +13,8 @@ properties:
       type: size
       description: >
           I2C address of the device as defined in the Linux kernel documents.
+
+    - name: DataSize
+      type: size
+      description: >
+          I2C device byte size.

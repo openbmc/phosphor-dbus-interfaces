@@ -16,6 +16,24 @@
       "message": "\u003e Patch Set 2:\n\u003e \n\u003e I see we have an empty CpuCore interface already, but I don\u0027t really see a utility for it when we don\u0027t have any attributes and we already have Cpu\u0027s property CoreCount (and ThreadCount).  Why do we need to individually enumerate each core and thread in the Inventory model, distinctly from the generic counts provided? \n\u003e \n\u003e The original CpuCore interface was added back in 2016 (\"Add inventory interfaces for OpenBMC\") and we don\u0027t currently have any real users of it (https://github.com/search?q\u003dorg%3Aopenbmc+CpuCore\u0026type\u003dcode).  It seems like it should be removed and not add CpuThread unless you can describe a concrete workflow that utilizes it.\n\u003e \n\u003e Large systems in this generation are going to have almost 2k threads.  That seems to be a potential problem for us to represent all of those on dbus if there isn\u0027t a practical purpose and without any properties I don\u0027t see a strong purpose.\n\nTurns out, we would like to have the option of representing individual threads, as thread level subprocessor is better defined in DMTF/Redfish https://github.com/DMTF/Redfish/issues/5008.\n\nI would like to bump this for review.",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "423d7034_529d7080",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-29T04:53:29Z",
+      "side": 1,
+      "message": "How do you intend to solve the scaling concerns?\n\nCan we add properties onto Cpu or CpuCore to get the same information available for Redfish?  Do we really need/want 2k dbus objects just to represent threads?",
+      "parentUuid": "85c58df6_a3355553",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

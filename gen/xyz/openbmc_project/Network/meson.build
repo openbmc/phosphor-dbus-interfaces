@@ -70,6 +70,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('NCSI')
+generated_others += custom_target(
+    'xyz/openbmc_project/Network/NCSI__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Network/NCSI.interface.yaml',  ],
+    output: [ 'NCSI.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Network/NCSI',
+    ],
+)
+
 subdir('Neighbor')
 generated_others += custom_target(
     'xyz/openbmc_project/Network/Neighbor__markdown'.underscorify(),

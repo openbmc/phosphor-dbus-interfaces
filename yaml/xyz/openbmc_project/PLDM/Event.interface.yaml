@@ -49,3 +49,36 @@ signals:
             description: >
                 The event state value for the state from which the present event
                 state was entered.
+    - name: PldmMessagePollEvent
+      description: >
+          Signal indicating that a pldmMessagePollEvent change EventMessage is
+          received.
+          More information about properties can be found at DSP0248 version
+          1.2.0 table 19.
+      properties:
+        - name: TID
+          type: byte
+          description: >
+            A terminus id.
+
+        - name: EventClass
+          type: byte
+          description: >
+            The event class value from the state change that triggered
+            the event message.
+
+        - name: FormatVersion
+          type: byte
+          description: >
+            Version of the event format
+
+        - name: EventID
+          type: uint16
+          description: >
+            Identifier for the event that requires multipart transfer
+
+        - name: DataTransferHandle
+          type: uint32
+          description: >
+            A handle that is used to identify the event data to be received
+            via the PollForPlatformEventMessage command.

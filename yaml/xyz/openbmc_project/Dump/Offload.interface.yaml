@@ -1,0 +1,28 @@
+description: >
+    Implement this interface to receive offload completed notification
+
+    Some dumps get stored in the host memory or other systems other than
+    BMC flash, but BMC stores and manages the dump entry.
+    Therefore, the service implementing the dump entry management may not do
+    the offload of such dumps and may not be aware of the status of such
+    offloads.
+    However, the services can implement this interface to know the status of
+    such offloads.
+
+methods:
+    - name: OffloadCompleted
+      description: >
+          This method can be called the services which are implemented a
+          dump offload to notify the service hosting the dump entries that
+          a dump offload is completed. An enum indicating whether the dump
+          offload is successful or not needs to be passed by the caller.
+      parameters:
+          - name: OffloadSuccessful
+            type: boolean
+            description: >
+                Indicats whether ths offload is successful or not, pass
+                true for successful offload and false for failed offloads
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Unavailable

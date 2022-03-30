@@ -34,6 +34,24 @@
       "parentUuid": "85c58df6_a3355553",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de629984_80f63c6a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2022-03-30T20:27:24Z",
+      "side": 1,
+      "message": "Apologies for the late response - was stuck in meetings all day yesterday and didn\u0027t get back to this.\n\nWould it be possible to get a reference of where we would see ~2k threads (if it\u0027s not under NDA or what not)? We currently have many sensor objects and are able to handle them fine with GetManagedObjects (and they are probably more complicated than the simple / small thread dbus-objects). \n\nAs mentioned in another comment from earlier - we have to map the micrcode information at the thread level granularity. Do you have suggestions on how we would do that if we don\u0027t have this thread level d-bus interface?",
+      "parentUuid": "423d7034_529d7080",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

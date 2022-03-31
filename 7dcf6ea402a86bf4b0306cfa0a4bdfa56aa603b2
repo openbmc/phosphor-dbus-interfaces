@@ -70,6 +70,24 @@
       "parentUuid": "de629984_80f63c6a",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03bf4e51_df5f53aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2022-03-31T23:04:14Z",
+      "side": 1,
+      "message": "Thank you for giving me the datasheet for a possible system that has that many threads.\n\nAlthough I believe you\u0027re aware, this is just the context for this change:\n\nWe are hoping to have Micrcode information per thread level granularity in D-Bus for BMCWeb to expose over Redfish. The reason why Microcode information at thread level is important is because there may be some errors with a core / thread where some threads are at a different Microcode version than all others.\n\nWith `map[string , set[size]]`, I guess we would \"expect\" the map should have 1 entry for 1 microcode -\u003e threads (which bmcweb then would be in charge of creating the thread object), but if there\u0027s a problematic case, we would have 2 (or more) key-value pairs in the map that maps the different microcode that some other threads may have.\n\nLet me know if my understanding is correct. Thanks!",
+      "parentUuid": "57f283ef_02495825",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

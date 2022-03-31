@@ -52,6 +52,24 @@
       "parentUuid": "423d7034_529d7080",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57f283ef_02495825",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-31T02:22:40Z",
+      "side": 1,
+      "message": "\u003e Would it be possible to get a reference of where we would see ~2k threads (if it\u0027s not under NDA or what not)? \n\nThe IBM E1080 has 1920 threads per https://www.ibm.com/downloads/cas/MMOYB4YL .\n\n\u003e Do you have suggestions on how we would do that if we don\u0027t have this thread level d-bus interface?\n\nIf you really have per-thread microcode information, I think the best bet to minimize scaling is some kind of interface on a socket basis that contains the thread information you need in a structure of some sort.\n\nmap[string , set[size]] which maps \"microcode version\" -\u003e set of thread_id seems like it would be the most efficient.  If we pick something like array[string] or map[size, string] the dbus property itself is going to become so large that I think it\u0027ll be fairly slow on its own, especially for applications which use the XML interfaces for introspection.",
+      "parentUuid": "de629984_80f63c6a",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

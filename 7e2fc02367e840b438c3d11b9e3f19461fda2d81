@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "12ed1ba8_3157b856",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
@@ -14,8 +15,25 @@
       "side": 1,
       "message": "I don\u0027t know what \u0027downstream\u0027 means here either.",
       "revId": "7e2fc02367e840b438c3d11b9e3f19461fda2d81",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68c2a903_9ae20ba6",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1001193
+      },
+      "writtenOn": "2022-04-01T14:44:04Z",
+      "side": 1,
+      "message": "It\u0027s a concept in Redfish Cable resources. It represent the physical downstream containers connected to this cable.\n\nFor example:\nFor a Ncsi cable, it has Upstream Chassis which is a motherboard, and a downstream chassis which is the Nic.",
+      "parentUuid": "12ed1ba8_3157b856",
+      "revId": "7e2fc02367e840b438c3d11b9e3f19461fda2d81",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

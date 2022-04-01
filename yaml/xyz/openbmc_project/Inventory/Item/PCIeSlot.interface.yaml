@@ -104,6 +104,7 @@ associations:
           Objects that implement PCIeSlot can optionally implement the
           upstream_processor association to provide a link back to a PCIe host
           bridge or on-processor PCIe root complexes.
-      reverse_name: associated_pcie_slots
+      reverse_names:
+          - associated_pcie_slots
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Cpu

@@ -93,6 +93,7 @@ associations:
           Objects that implement Cpu can optionally implement the
           associated_pcie_slots association to provide a link to one or more
           PCIe slots.
-      reverse_name: upstream_processor
+      reverse_names:
+          - upstream_processor
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot

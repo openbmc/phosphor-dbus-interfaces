@@ -88,6 +88,24 @@
       "parentUuid": "57f283ef_02495825",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ddf58de_3ea58314",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-01T11:52:10Z",
+      "side": 1,
+      "message": "\u003e With `map[string , set[size]]`, I guess we would \"expect\" the map should have 1 entry for 1 microcode -\u003e threads (which bmcweb then would be in charge of creating the thread object), but if there\u0027s a problematic case, we would have 2 (or more) key-value pairs in the map that maps the different microcode that some other threads may have.\n\nI\u0027m not really understanding what you\u0027re asking; it feels like you\u0027re saying \"there might be bugs\".  There _can_ be bugs in any data arrangement, can\u0027t there?\n\nIf you do it as map[size, string] you can be certain each thread-id only has a single string associated with it, but it\u0027s still going to be a really big dbus property (since would expect tons of duplication in the micrcode version).\n\nIf you really wanted to be succinct you could do `map[string, set[pair[size,size]]]` where the pair is a range of thread-ids (or maybe you could even flip the map around in that case with the pairs being the keys).  In the typical case you\u0027re going to end up with a single entry of `[\"version A\" -\u003e [ [0, 239] ]`.",
+      "parentUuid": "03bf4e51_df5f53aa",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

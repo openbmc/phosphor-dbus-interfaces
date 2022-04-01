@@ -106,6 +106,24 @@
       "parentUuid": "03bf4e51_df5f53aa",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9c62631_fe82e3c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2022-04-01T18:34:16Z",
+      "side": 1,
+      "message": "Just to be clear - I was talking about \"bugs / problematic case\" where all the threads are not reporting the same microcode, either due to them actually being different OR them reporting the microcode wrongly.\n\nSo yes, we EXPECT all threads to have the same microcode, so your idea of having `[\"version A\" -\u003e [ [0, 239] ]`. would be the most succinct way to capture all the threads to micrcode. I guess mapping it to bmcweb could be tricky.. let me see if Ed could ring in to this discussion since in the end, the threads will have to expose through bmcweb.\n\nNoting, we have the same thing at the core level currently (cores report microcode). Do you propose we change the core dbus as well? Otherwise, could it make sense to have this dbus interface as an optional one that people could use if their core / thread count isn\u0027t very large (in the thousands) and the map could be used as an alternative for when there is a very large number (or would duplication cause issues).",
+      "parentUuid": "6ddf58de_3ea58314",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

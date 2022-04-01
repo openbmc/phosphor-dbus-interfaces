@@ -294,6 +294,12 @@ properties:
       description: >
           The maximum number of PCIe lanes supported by the PCIe Device
 
+    - name: LanesInUse
+      type: size
+      default: 0
+      description: >
+          The number of PCIe lanes in use by this device.
+
 associations:
     - name: upstream_pcie_slot
       description: >

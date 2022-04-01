@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "72d25e6f_b09c63dc",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "What does \"upstream\" and \"downstream\" mean in this context?  Do all cables have this as a concept?\n\nI think we need to document what the expectations are here better.",
       "revId": "d7a647fc77911c9fe78f8f26c32756c6e25a2019",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "e0ce97fd_fba5ecd5",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Connector.interface.yaml",
@@ -37,8 +38,31 @@
         "endChar": 19
       },
       "revId": "d7a647fc77911c9fe78f8f26c32756c6e25a2019",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d07f478b_f080ebb7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Connector.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001193
+      },
+      "writtenOn": "2022-04-01T01:14:43Z",
+      "side": 1,
+      "message": "https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/52541",
+      "parentUuid": "e0ce97fd_fba5ecd5",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 19
+      },
+      "revId": "d7a647fc77911c9fe78f8f26c32756c6e25a2019",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

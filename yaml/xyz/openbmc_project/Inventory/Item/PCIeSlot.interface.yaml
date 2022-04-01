@@ -25,6 +25,11 @@ properties:
       description: >
           Whether this PCIe slot supports hotplug
 
+    - name: BusId
+      type: size
+      description: >
+          Identifier to detect the PCIe bus linked the slot.
+
 enumerations:
     - name: Generations
       description: >

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "425c2e06_c2342a0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2022-04-01T15:46:54Z",
+      "side": 1,
+      "message": "Seems reasonable. Reading the definition here, https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common.errors.yaml#L17, this error should map to like Redfish\u0027s ServiceTemporarilyUnavailable / HTTP Error 503",
+      "revId": "005b0ff4f8972e9d699d2a14902e802bd8fa82e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

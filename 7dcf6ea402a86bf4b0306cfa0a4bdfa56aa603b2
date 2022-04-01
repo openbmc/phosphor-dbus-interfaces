@@ -124,6 +124,24 @@
       "parentUuid": "6ddf58de_3ea58314",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10c94a98_c470e329",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-01T19:40:17Z",
+      "side": 1,
+      "message": "\u003e Just to be clear - I was talking about \"bugs / problematic case\" where all the threads are not reporting the same microcode, either due to them actually being different OR them reporting the microcode wrongly.\n\nThis in itself doesn\u0027t seem like a problem; that\u0027s why it is a map.  What is a problem is if an implementation has an internal bug like [ \"version A\" -\u003e [ 1 ], \"version B\" -\u003e [ 1 ] ].  Doing a map[size_t, string] prevents this kind of bug, but it\u0027s just a bug and should be fixed if it is discovered.\n\n\u003e Noting, we have the same thing at the core level currently (cores report microcode). Do you propose we change the core dbus as well?\n\nConsidering this is currently the only information in CpuCore, I\u0027d tend to say we should remove that interface and do per-socket microcode information:\n\n    /.../socket_0/microcode/cores\n    /.../socket_0/microcode/threads\n\n(or microcode_cores could be workable)\n\nWe don\u0027t have as much scaling issues on cores, but we might as well make the interrogation consistent.\n\n\u003e Otherwise, could it make sense to have this dbus interface as an optional one that people could use if their core / thread count isn\u0027t very large \n\nI don\u0027t think we want two ways to present the same information.  That just makes it more expensive to consume in applications like bmcweb because they have to implement both and we\u0027re going to end up with 2 different companies that prefer one over the other and one of the implementations will be broken half the time.",
+      "parentUuid": "e9c62631_fe82e3c0",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -36,6 +36,41 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "200c0f73_0cb79057",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-05T15:03:53Z",
+      "side": 1,
+      "message": "@Sunny, looks like a relatively minor change requested.  After that we\u0027ll merge quickly.",
+      "revId": "d61eaea92d44bda5f07d82806df1e8b0ac7d574c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58d472e7_ea9ad2bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-05T15:03:53Z",
+      "side": 1,
+      "message": "\u003e I am not sure how often the lanes in use vs max lanes are different in real use case, but this is supported by the Redfish Schema.\n\nIt is relatively common, I think.  GPUs are typically 16x devices but if you put a bunch of them in a system you might drop them down to 4x because you don\u0027t have enough links to your host.\n\n(The last AI chip I worked on we did exactly this.  The chip was designed for 8x but the first system we put it into we only used 4x lanes.  It was decided that the cost of a PCIe switch wasn\u0027t worth the performance gains to share 4 devices over 16 lanes.)",
+      "parentUuid": "4b83ac95_63c2af65",
+      "revId": "d61eaea92d44bda5f07d82806df1e8b0ac7d574c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d4bec179_0d096e51",
@@ -49,6 +84,30 @@
       "writtenOn": "2022-04-05T14:57:45Z",
       "side": 1,
       "message": "nit: set default value?",
+      "range": {
+        "startLine": 297,
+        "startChar": 6,
+        "endLine": 299,
+        "endChar": 20
+      },
+      "revId": "d61eaea92d44bda5f07d82806df1e8b0ac7d574c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2813ba48_9079d7ee",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-05T15:03:53Z",
+      "side": 1,
+      "message": "Agreed, please add `default: 0` here to match MaxLanes as an indication \"we don\u0027t know\".",
+      "parentUuid": "d4bec179_0d096e51",
       "range": {
         "startLine": 297,
         "startChar": 6,

@@ -51,6 +51,24 @@
       "parentUuid": "9294988b_a1344801",
       "revId": "9dec7cb8b266ca202b47241383c22035f281cb89",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27602c4e_5ee857ed",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-06T15:37:07Z",
+      "side": 1,
+      "message": "I don\u0027t understand how D:B:D:F turns into a `size`.  Please be clear on this and update the description as appropriate.  Please add a default value to indicate \"the implementation doesn\u0027t know the value here\", which I think will be the case for many BMC implementation because BDFs are usually assigned by some combination of host hardware / firmware.",
+      "parentUuid": "61a30e58_39489138",
+      "revId": "9dec7cb8b266ca202b47241383c22035f281cb89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

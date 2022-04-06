@@ -33,6 +33,24 @@
       "message": "What is a \"BusID\"?  Are we talking about the BDF or something else?  Is this relative to a single processor or is it system unique?",
       "revId": "9dec7cb8b266ca202b47241383c22035f281cb89",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61a30e58_39489138",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000338
+      },
+      "writtenOn": "2022-04-06T12:43:36Z",
+      "side": 1,
+      "message": "That is the intention, yes. From the lspci man page:\n```\n[[[[\u003cdomain\u003e]:]\u003cbus\u003e]:][\u003cdevice\u003e][.[\u003cfunc\u003e]]\n```\n\nThe intention here is to use this property for the Domain, which will be system unique.",
+      "parentUuid": "9294988b_a1344801",
+      "revId": "9dec7cb8b266ca202b47241383c22035f281cb89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

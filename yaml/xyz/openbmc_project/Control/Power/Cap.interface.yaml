@@ -15,24 +15,26 @@ properties:
           Power cap enable.  Set to true to enable the PowerCap, false
           to disable it.
 
+    #TODO: These following bounds are currently owned by Settings but need to be
+    #      written by OCC.Control service so must be writable for now.
     - name: MinPowerCapValue
       type: uint32
-      flags:
-          - readonly
+      #flags:
+      #    - readonly
       default: 0
       description: The Minimum supported PowerCap setting.
 
     - name: MaxPowerCapValue
       type: uint32
-      flags:
-          - readonly
+      #flags:
+      #    - readonly
       default: maxint
       description: The Maximum supported PowerCap setting.
 
     - name: MinSoftPowerCapValue
       type: uint32
-      flags:
-          - readonly
+      #flags:
+      #    - readonly
       default: 0
       description: >
           Minimum supported soft user PowerCap setting.

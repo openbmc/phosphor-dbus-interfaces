@@ -377,6 +377,30 @@
       },
       "revId": "534be382816327b31414ff8234f8b053244ec974",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "acf64f08_ac8fe48d",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-04-07T09:44:45Z",
+      "side": 1,
+      "message": "The validations applied to the StaticNameservers are isValidIP for the IPv4 -or- IPv6. The same has been done for the StaticNTPServers as well (its up for review at phosphor-networkd repo) so expecting a IP address string for this property",
+      "parentUuid": "83bda585_73e6db9f",
+      "range": {
+        "startLine": 65,
+        "startChar": 11,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "534be382816327b31414ff8234f8b053244ec974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

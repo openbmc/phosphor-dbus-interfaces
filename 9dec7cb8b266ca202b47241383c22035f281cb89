@@ -87,6 +87,24 @@
       "parentUuid": "27602c4e_5ee857ed",
       "revId": "9dec7cb8b266ca202b47241383c22035f281cb89",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "430a8d5c_c94ab0c1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-08T15:47:33Z",
+      "side": 1,
+      "message": "That makes the update kind of awkward; having it in separate properties.\n\nI assume that you\u0027re getting this as 4 separate PLDM transactions.  But then you\u0027re going to set these properties one-by-one and create 4 separate PropertiesChanged signals.  If I react to on in the middle of this sequence I\u0027m going to get an invalid DBDF.\n\nIt is better, to me, if PLDM figures out how to batch these 4 transactions up and do a single property update.",
+      "parentUuid": "1cb5fe37_ffc0ab23",
+      "revId": "9dec7cb8b266ca202b47241383c22035f281cb89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,17 @@
+description: >
+    Interface representing an e-mail destination for syslog messages.
+
+    The object which implements this interface must implement
+    xyz.openbmc_project.Object.Delete.
+
+properties:
+    - name: Mailto
+      type: string
+      flags:
+          - readonly
+      description: >
+          Specifies the mailto: URI (RFC6068) to send events to.
+    - name: Level
+      type: enum[xyz.openbmc_project.Logging.Entry.Level]
+      description: >
+          Specifies the maximum level for the log events to be sent.

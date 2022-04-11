@@ -1,0 +1,8 @@
+description: >
+    Interface to control sending syslog messages via e-mail.
+
+properties:
+    - name: From
+      type: string
+      description: >
+          Specifies e-mail address from which mails would be sent.

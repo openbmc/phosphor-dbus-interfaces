@@ -1,0 +1,13 @@
+description: >
+    Interface representing an e-mail destination for syslog messages.
+properties:
+    - name: mailto
+      type: string
+      flags:
+          - readonly
+      description: >
+          Specifies the mailto: URI (RFC6068) to send events to.
+    - name: level
+      type: enum[xyz.openbmc_project.Syslog.Level]
+      description: >
+          Specifies the maximum level for the log events to be sent.

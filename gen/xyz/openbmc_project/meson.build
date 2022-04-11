@@ -118,6 +118,20 @@ subdir('Sensor')
 subdir('Smbios')
 subdir('Software')
 subdir('State')
+subdir('Syslog')
+generated_others += custom_target(
+    'xyz/openbmc_project/Syslog__markdown'.underscorify(),
+    input: [ '../../../yaml/xyz/openbmc_project/Syslog.interface.yaml',  ],
+    output: [ 'Syslog.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../yaml',
+        'xyz/openbmc_project/Syslog',
+    ],
+)
+
 subdir('Telemetry')
 subdir('Time')
 generated_others += custom_target(

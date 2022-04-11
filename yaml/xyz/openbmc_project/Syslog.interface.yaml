@@ -1,0 +1,17 @@
+description: >
+    POSIX syslog severity levels.
+
+enumerations:
+    - name: Level
+      description: >
+          POSIX syslog severity levels. See closelog(3p) for detailed
+          specification.
+      values:
+          - name: emerg
+          - name: alert
+          - name: crit
+          - name: err
+          - name: warning
+          - name: notice
+          - name: info
+          - name: debug

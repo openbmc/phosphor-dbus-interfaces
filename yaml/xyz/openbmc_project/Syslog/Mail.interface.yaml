@@ -1,0 +1,33 @@
+description: >
+    Interface to control sending syslog messages via e-mail.
+
+methods:
+    - name: CreateDestination
+      description: >
+          This method creates a new D-Bus object representing the destination
+          for which e-mails would be sent for all syslog messages with matching
+          or lower (meaning more important) level.
+      parameters:
+          - name: mailto
+            type: string
+            description: >
+                Specifies the mailto:// URI (RFC6068) to send events to.
+          - name: level
+            type: enum[xyz.openbmc_project.Syslog.Level]
+            description: >
+                Specifies the maximum level for the log events to be sent.
+      returns:
+          - name: path
+            type: string
+            description: >
+                The object path of the created D-Bus object representing the
+                destination.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+properties:
+    - name: From
+      type: string
+      description: >
+          Specifies e-mail address from which mails would be sent.

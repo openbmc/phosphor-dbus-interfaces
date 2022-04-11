@@ -5,18 +5,3 @@ properties:
       type: string
       description: >
           The value of this property shall be host name of the system.
-    # Deprecating these "DefautGateway" and "DefaultGateway6" properties.
-    # These are no longer needed, as we are going to support Default gateway
-    # per Ethernet interface.
-    - name: DefaultGateway
-      type: string
-      description: >
-          default IPv4 gateway of the system.
-      errors:
-          - xyz.openbmc_project.Common.Error.InvalidArgument
-    - name: DefaultGateway6
-      type: string
-      description: >
-          default IPv6 gateway of the system.
-      errors:
-          - xyz.openbmc_project.Common.Error.InvalidArgument

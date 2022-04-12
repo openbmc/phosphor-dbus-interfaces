@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "44789218_49d16bc8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001252
+      },
+      "writtenOn": "2022-04-12T02:27:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "635e6288_8e65e819",
+      "revId": "ea9b9c5e3d60ed9b5073e4c68fe7ef40ad558deb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b7285ad6_c83a3d6c",
@@ -31,6 +49,30 @@
       "writtenOn": "2022-04-11T17:10:50Z",
       "side": 1,
       "message": "Why isn\u0027t someone working with you to clean these up on the IBM-specific code implementation too?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 21
+      },
+      "revId": "ea9b9c5e3d60ed9b5073e4c68fe7ef40ad558deb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40928785_6cf39a74",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001252
+      },
+      "writtenOn": "2022-04-12T02:27:57Z",
+      "side": 1,
+      "message": "Sorry I\u0027m not the developer of these IBM-specific features, I just did a search in all the repos and found that IBM still using the deprecated DefaultGateway property of xyz.openbmc_project.Network.SystemConfiguration. Of course, IBM can have a patch in meta-ibm for adding it back.\n\nPersonally speaking, I\u0027m totally okay for removing these two properties in both here and phosphor-networkd. Currently I have to return a NotAllowed in networkd in my networkd patch for this compatibility concern https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-networkd/+/52786. If they are removed here, the handlers in networkd can also be removed, which I think is a more clean solution.",
+      "parentUuid": "b7285ad6_c83a3d6c",
       "range": {
         "startLine": 11,
         "startChar": 0,

@@ -16,6 +16,23 @@
       "message": "Patrick, thank you for the review. I pushed a new version where all the points you raised should be resolved.",
       "revId": "cf44f3ce8ea6f88c2cb006e5627bec17a4c13e7f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8147457f_e4132938",
+        "filename": "yaml/xyz/openbmc_project/Logging/Syslog/Destination/Mail/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-12T21:13:01Z",
+      "side": 1,
+      "message": "I\u0027m going to merge this as is, but we\u0027ve been trying to refrain from introducing new InternalFailure errors like this because there isn\u0027t really anything that the caller can do with it, except maybe try again and hope for the best.",
+      "revId": "cf44f3ce8ea6f88c2cb006e5627bec17a4c13e7f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

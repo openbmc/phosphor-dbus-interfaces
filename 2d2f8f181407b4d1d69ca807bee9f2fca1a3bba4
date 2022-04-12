@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4456e615_0b38d289",
+        "filename": "yaml/xyz/openbmc_project/Syslog.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000936
+      },
+      "writtenOn": "2022-04-12T15:31:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "078a0914_e30d5ad6",
+      "revId": "2d2f8f181407b4d1d69ca807bee9f2fca1a3bba4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c66f5e5c_3e4ff3d9",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cf975ba_7d2bfbfc",
+        "filename": "yaml/xyz/openbmc_project/Syslog.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000936
+      },
+      "writtenOn": "2022-04-12T15:31:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c66f5e5c_3e4ff3d9",
+      "revId": "2d2f8f181407b4d1d69ca807bee9f2fca1a3bba4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6cddebbb_44079a38",
@@ -48,6 +84,24 @@
       "writtenOn": "2022-04-11T17:09:31Z",
       "side": 1,
       "message": "FWIW, in most cases we\u0027ve created a separate interface simply called \u0027Create\u0027.  Somethink like `Logging.Syslog.Destination.Create`?  I don\u0027t know if Destination is sufficient or we need a \u0027Mail\u0027 on it.  A corresponding `Logging.Syslog.Destination.Entry` would also be the pattern.\n\nI\u0027m not too hung up on this though if you strongly prefer what you\u0027ve got going on here.",
+      "revId": "2d2f8f181407b4d1d69ca807bee9f2fca1a3bba4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "166c1a7b_155484a9",
+        "filename": "yaml/xyz/openbmc_project/Syslog/Mail.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000936
+      },
+      "writtenOn": "2022-04-12T15:31:41Z",
+      "side": 1,
+      "message": "There might be other destination for syslog messages, so I opted to using Logging.Syslog.Destination.Mail.\nBTW, currently bmcweb supports only Redfish destinations (sending to other hosts via HTTP(S)) and it handles the list of destinations and other related features internally, it\u0027s not accessible via D-Bus at all. But one day this might change.\nOpenBMC also has phosphor-snmp which is currently only useful for sending OpenBMC SEL logger messages as traps, it can be extended to provide objects with Logging.Syslog.Destination.SNMP interface.",
+      "parentUuid": "6cddebbb_44079a38",
       "revId": "2d2f8f181407b4d1d69ca807bee9f2fca1a3bba4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -75,6 +129,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcb0c2e2_9be7a9fd",
+        "filename": "yaml/xyz/openbmc_project/Syslog/Mail.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000936
+      },
+      "writtenOn": "2022-04-12T15:31:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aaa4ca7b_b35f0605",
+      "range": {
+        "startLine": 21,
+        "startChar": 18,
+        "endLine": 21,
+        "endChar": 24
+      },
+      "revId": "2d2f8f181407b4d1d69ca807bee9f2fca1a3bba4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5ccbad65_5f3d67d1",
@@ -88,6 +166,24 @@
       "writtenOn": "2022-04-11T17:09:31Z",
       "side": 1,
       "message": "You should reference an expectation to implement xyz.openbmc_project.Object.Delete on this path location as well.",
+      "revId": "2d2f8f181407b4d1d69ca807bee9f2fca1a3bba4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fb7a70b_8bbbd711",
+        "filename": "yaml/xyz/openbmc_project/Syslog/Mail/Destination.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000936
+      },
+      "writtenOn": "2022-04-12T15:31:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ccbad65_5f3d67d1",
       "revId": "2d2f8f181407b4d1d69ca807bee9f2fca1a3bba4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

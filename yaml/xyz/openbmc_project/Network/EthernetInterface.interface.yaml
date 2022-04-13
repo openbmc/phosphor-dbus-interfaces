@@ -78,7 +78,7 @@ properties:
     - name: LinkUp
       type: boolean
       flags:
-          - const
+          - readonly
       description: >
           This property reports the link status for the NIC. The read-only
           boolean value is TRUE when the network cable is inserted, or there

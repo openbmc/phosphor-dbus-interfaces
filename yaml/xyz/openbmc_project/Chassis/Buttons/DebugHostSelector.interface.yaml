@@ -1,0 +1,27 @@
+description: >
+    Debug Host selector interface is a button when pressed it should
+    increase the hostSelector property of HostSelectorSwitch interface
+    which is used to keep the position of the host.
+methods:
+  - name: simPress
+    description: >
+      Emulate debug selector button press.
+    errors:
+      - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+      - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+  - name: simRelease
+    description: >
+      Emulate debug selector button release.
+
+    errors:
+      - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+      - xyz.openbmc_project.Chassis.Common.Error.IOError
+     
+signals:
+    - name: Released
+      description: >
+        debug host selector button released signal
+    - name: Pressed
+      description: >
+        debug host selector button released signal

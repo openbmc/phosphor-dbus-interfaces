@@ -1,0 +1,49 @@
+description: >
+    Button interface is a generic interface associated with physical
+    front panel component that has a button formfactor which supports
+    two primary actions (pressed/releasd). When the physical button is pressed
+    then the respective dbus button object should emit pressed signal and
+    when associated physical button is released then it should emit
+    the Released signal.
+methods:
+  - name: simPress
+    description: >
+      Emulate button press.
+    errors:
+      - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+      - xyz.openbmc_project.Chassis.Common.Error.IOError
+  - name: simRelease
+    description: >
+      Emulate button release.
+    errors:
+      - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+      - xyz.openbmc_project.Chassis.Common.Error.IOError
+  - name: simLongPress
+    description: >
+      Emulate long button press.
+    errors:
+      - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+      - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+properties:
+    - name: Enabled
+      type: boolean
+      default: true
+      description: >
+          Enable/disable the button object.
+          false means button is disabled
+          true means button is enabled
+      errors:
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+signals:
+    - name: Released
+      description: >
+        Button released signal
+    - name: Pressed
+      description: >
+        Button pressed signal
+    - name: PressedLong
+      description: >
+        Button long pressed signal

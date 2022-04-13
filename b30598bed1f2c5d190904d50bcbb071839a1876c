@@ -16,6 +16,24 @@
       "message": "Why do we need a separate interface for this?  Just use a different object path / instance to show the selector from the debug card vs the one built into the machine, right?",
       "revId": "b30598bed1f2c5d190904d50bcbb071839a1876c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33b0dac9_89edc150",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-04-13T14:30:00Z",
+      "side": 1,
+      "message": "This debug host selector interface is a button type. So it has events similar to power/reset button pressed/released events. host selector interface has only host position as property and no button press/release events so that interface cannot be used for debug host selector button interface.\nwhen debug HS button is pressed and released. the released event is triggered.\nThere is a separate sdbusplus match handler which monitors this event and changes the \"Position\" property which is part of host selector interface.\n\nThe reset button\u0027s interfaces can be used as it has pressed/released signals, but the interface name will be \"xyz.openbmc_project.Chassis.Buttons.Reset\" which is not suitable interface name for debug host selector button but it should work.",
+      "parentUuid": "9a055737_4c3e3e08",
+      "revId": "b30598bed1f2c5d190904d50bcbb071839a1876c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

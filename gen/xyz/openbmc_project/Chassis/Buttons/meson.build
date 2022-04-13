@@ -1,4 +1,18 @@
 # Generated file; do not modify.
+subdir('Button')
+generated_others += custom_target(
+    'xyz/openbmc_project/Chassis/Buttons/Button__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml',  ],
+    output: [ 'Button.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Chassis/Buttons/Button',
+    ],
+)
+
 subdir('HostSelector')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/HostSelector__markdown'.underscorify(),

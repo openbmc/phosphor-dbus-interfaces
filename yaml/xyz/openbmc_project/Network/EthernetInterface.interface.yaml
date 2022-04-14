@@ -10,10 +10,14 @@ properties:
           Name of the ethernet interface.
     - name: Speed
       type: uint32
+      flags:
+          - readonly
       description: >
           Current speed of the ethernet interface, in Mbps.
     - name: AutoNeg
       type: boolean
+      flags:
+          - readonly
       description: >
           This indicates if the speed and duplex are automatically negotiated
           and configured on this ethernet interface.

@@ -7,9 +7,13 @@ description: >
 properties:
     - name: InterfaceName
       type: string
+      flags:
+          - const
       description: >
           Name of the interface.
     - name: Id
       type: uint32
+      flags:
+          - const
       description: >
           VLAN Identifier.

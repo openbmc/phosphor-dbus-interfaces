@@ -6,6 +6,8 @@ description: >
 properties:
     - name: InterfaceName
       type: string
+      flags:
+          - const
       description: >
           Name of the ethernet interface.
     - name: Speed

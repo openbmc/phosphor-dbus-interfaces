@@ -63,9 +63,9 @@ would be blinking at 50% duty cycle.
 
 ## Dbus interfaces for LED groups
 
-Refer to the [specification][specification].
+Refer to the [specification][group_specification].
 
-[specification]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Led/Group.interface.yaml
+[group_specification]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Led/Group.interface.yaml
 
 There is only one property called **asserted** defined on groups and when set to
 boolean **true**, the actions listed for the LEDs in that group will get into
@@ -110,9 +110,9 @@ be used outside of the firmware code.
 
 ## Dbus interfaces for physical LEDs
 
-Refer to the [specification][specification].
+Refer to the [specification][phys_specification].
 
-[specification]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/xyz/openbmc_project/Led/Physical.interface.yaml
+[phys_specification]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Led/Physical.interface.yaml
 
 ## Dbus information
 

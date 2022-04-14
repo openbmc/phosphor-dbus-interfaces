@@ -105,6 +105,30 @@
       },
       "revId": "ea9b9c5e3d60ed9b5073e4c68fe7ef40ad558deb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e687108_fc1a12e5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001252
+      },
+      "writtenOn": "2022-04-14T01:57:16Z",
+      "side": 1,
+      "message": "No, bmcweb is not depending on this phosphor-dbus-interface header file, it still compiles. It just something hardcoded there, and I don\u0027t know whether the backend service requires the header file or not.",
+      "parentUuid": "e113f0d4_1659f665",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 21
+      },
+      "revId": "ea9b9c5e3d60ed9b5073e4c68fe7ef40ad558deb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

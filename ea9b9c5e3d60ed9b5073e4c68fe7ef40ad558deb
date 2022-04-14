@@ -177,6 +177,30 @@
       },
       "revId": "ea9b9c5e3d60ed9b5073e4c68fe7ef40ad558deb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78cc6ec3_5bab392c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-14T17:36:18Z",
+      "side": 1,
+      "message": "\u003e No, bmcweb is not depending on this phosphor-dbus-interface header file, it still compiles. It just something hardcoded there, and I don\u0027t know whether the backend service requires the header file or not.\n\nbmcweb doesn\u0027t compile against the PDI headers, no, so it will still compile if you remove this, but this repository is also intended to serve as documentation.  If this field is \"deprecated\" someone should have updated bmcweb to no longer be using it anymore, right?  Who is going to do that and when?\n\n\u003e I checked code of phosphor-settingsd (xyz.openbmc_project.Settings service), it depends on phosphor-dbus-interfaces header files. So shall we continue keeping these deprecated properties here until IBM fixed it, or just remove it here and add them back as patch in meta-ibm?\n\nWe need to keep them in until someone cleans them up.  That is part of the effort involved in deprecating / removing something.  You can\u0027t just punt on it because the code was written and used by another company and you really shouldn\u0027t expect me to coordinate all this effort for you.  I\u0027ve invited Adriana and Sunitha to weigh in, and hopefully they do, but if you\u0027re removing something used by others you need to coordinate the clean up effort.",
+      "parentUuid": "d3d87dfc_57b0b138",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 21
+      },
+      "revId": "ea9b9c5e3d60ed9b5073e4c68fe7ef40ad558deb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

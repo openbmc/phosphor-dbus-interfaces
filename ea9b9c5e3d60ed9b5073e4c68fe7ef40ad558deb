@@ -201,6 +201,30 @@
       },
       "revId": "ea9b9c5e3d60ed9b5073e4c68fe7ef40ad558deb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7074b95_66aa86ed",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001252
+      },
+      "writtenOn": "2022-04-14T17:57:11Z",
+      "side": 1,
+      "message": "Got your point. My idea is to simply put this patch here unmerged until IBM developers fixed them. This might take a long time.\n\nFor me, this change is made for the networkd change at https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-networkd/+/52786. That change does not depends on the removal, but without removal, there would still be DefaultGateway and DefaultGateway6 properties there, they are just meaningless and writting them only affects the value shown on dbus. I think it is an acceptable behavior.",
+      "parentUuid": "78cc6ec3_5bab392c",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 21
+      },
+      "revId": "ea9b9c5e3d60ed9b5073e4c68fe7ef40ad558deb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -26,6 +26,20 @@ generated_others += custom_target(
     ],
 )
 
+subdir('FaultLog')
+generated_others += custom_target(
+    'xyz/openbmc_project/Dump/Entry/FaultLog__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml',  ],
+    output: [ 'FaultLog.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Dump/Entry/FaultLog',
+    ],
+)
+
 subdir('System')
 generated_others += custom_target(
     'xyz/openbmc_project/Dump/Entry/System__markdown'.underscorify(),

@@ -1,0 +1,16 @@
+description: >
+    Implement this to add FaultLog dump management.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          Type of fault data referenced in MainLogRef (e.g. ACD, CPER).
+    - name: MainLogRef
+      type: string
+      description: >
+          Reference to the main fault data, typically expressed as a D-Bus object path (preferred) or a filesystem path to a log file.
+    - name: SupplementalLogRefs
+      type: array[string]
+      description: >
+          Array of references to supplemental fault data. Each reference is typically expressed as a D-Bus object path (preferred) or a filesystem path to a log file.

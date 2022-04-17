@@ -1,0 +1,31 @@
+description: >
+    Implement this to add FaultLog dump management.
+
+properties:
+    - name: Type
+      type: enum[self.FaultDataType]
+      description: >
+          Type of fault data in the log indicated by PrimaryLogId.
+      flags:
+          - const
+    - name: PrimaryLogId
+      type: string
+      description: >
+          This is intended to be a unique identifier, depending on
+          Type, to reference the primary fault data log but is not
+          intended otherwise to be programatically interpreted
+          (e.g. string parsing)
+      flags:
+          - const
+
+enumerations:
+    - name: FaultDataType
+      description: >
+          Type of fault data logged.
+      values:
+          - name: CPER
+            description: >
+                UEFI Common Platform Error Record
+          - name: Crashdump
+            description: >
+                Crashdump

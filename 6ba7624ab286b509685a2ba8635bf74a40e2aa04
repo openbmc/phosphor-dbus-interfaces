@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d165175_dca38ef6",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-19T11:05:51Z",
+      "side": 1,
+      "message": "Can we define what an \"upstream\" and \"downstream\" is?  Do all cables have a directional?\n\nDo we want/need cables to always attach to Chassis?  Do we need a specific association for Chassis like this or should we have one for any Inventory.Item?",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

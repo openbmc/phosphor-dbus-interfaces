@@ -1,0 +1,11 @@
+description: >
+    This defines Gpio state for each bits.
+properties:
+    - name: State
+      type: boolean
+      default: false
+      description: >
+          Gpio bits
+          0: Gpio bit is low
+          1: Gpio bit is high
+          Read its value to get the system Gpio state.

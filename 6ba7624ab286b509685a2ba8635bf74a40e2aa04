@@ -22,6 +22,30 @@
       },
       "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80bed6e4_5e76943c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1001193
+      },
+      "writtenOn": "2022-04-27T18:49:00Z",
+      "side": 1,
+      "message": "upstream points towards the root complex(like motherboard), downstream is the opposite.\n\nNot all cables have direction. If the cables have no direction, we can assume the entity with an alphanumerical-sorted object path which is earlier is considered upstream.\n\nNot all cables are attached to chassis. From Redfish Cable specification, cable could attach to chassis/port/resources. And resources include port and chassis.\n```\nThis property shall contain an array of links to resources that represent the\nphysical upstream connections connected to this cable. Even if the resource is\nalready referenced in another property within Links, such as UpstreamPorts or\nUpstreamChassis, it shall also be referenced in this property.\n```\nWe could have a specific association for Chassis and Port and have a general association for Resources. \n\nWDYT?",
+      "parentUuid": "1d165175_dca38ef6",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

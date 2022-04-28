@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "210393e1_829df4cc",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-28T19:33:01Z",
+      "side": 1,
+      "message": "Are you expecting these properties to be \u0027readonly\u0027?  \u0027const\u0027?",
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4c30841_f4534c18",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-28T19:33:01Z",
+      "side": 1,
+      "message": "Types should not be an arbitrary string.  Please define enumerations or a mechanism for system-specific enumerations (depending on what you\u0027re trying to encapsulate).",
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82cb3b7e_d15d717f",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-28T19:33:01Z",
+      "side": 1,
+      "message": "I\u0027m not a big fan of this property name.  What have we used in other dumps to represent the path to the associated log?  Is it an association or a property?",
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e789361d_9d643309",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-28T19:33:01Z",
+      "side": 1,
+      "message": "In which cases do we have either of these?  I don\u0027t know how a client can tell the difference.\n\nIf it is a dbus object_path then use object_path and not string.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 134
+      },
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

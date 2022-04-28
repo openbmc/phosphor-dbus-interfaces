@@ -16,6 +16,12 @@ properties:
           - readonly
       description: >
           Current speed of the ethernet interface, in Mbps.
+    - name: FullDuplex
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          Indicates of whether full-duplex mode is enabled.
     - name: AutoNeg
       type: boolean
       flags:

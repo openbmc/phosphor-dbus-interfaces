@@ -52,6 +52,24 @@
       "parentUuid": "8a96a143_9c087224",
       "revId": "ce07049288d5318a45968e785bc1077cce5d9b59",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25e27a9b_fcde366b",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001252
+      },
+      "writtenOn": "2022-04-28T07:58:02Z",
+      "side": 1,
+      "message": "I checked systemd.network config file, there is no options for forcing auto negotiation, link speed and duplex, but ethtool iocal can support setting at runtime. This may be implemented in future, but now it is readonly.",
+      "parentUuid": "824f935f_4215058e",
+      "revId": "ce07049288d5318a45968e785bc1077cce5d9b59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

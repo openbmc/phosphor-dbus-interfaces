@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ced057c_3413a1a2",
+        "filename": "yaml/xyz/openbmc_project/VirtualMedia/Legacy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-29T19:00:10Z",
+      "side": 1,
+      "message": "Returning errno values across dbus is not really an expected practice...\n\nThere really isn\u0027t anything in the Mount/Unmount that gives an indication that it happened asynchronously.  Is it happening asynchronously?  If not, why are we sending events for completion.  If so, how does anyone know that one is in progress AND can we document that the operation is asynchronous?",
+      "revId": "5d5d4de3f2588676b533638384d345e8a6be8233",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

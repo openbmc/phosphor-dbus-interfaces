@@ -26,17 +26,15 @@ properties:
       default: Unknown
       type: enum[self.DriveLockState]
       description: >
-        Indicates if the data on the drive is accessible.
-        This does not correspond to write locked
+          Indicates if the data on the drive is accessible.
+          This does not correspond to write locked
     - name: PredictedMediaLifeLeftPercent
       default: maxint
       type: byte
       description: >
-        How much of the drives life is remaining in a percentage from 0-100 .
-        If the reading the value is not supported returns the max value for
-        the type (255).
-
-
+          How much of the drives life is remaining in a percentage from 0-100 .
+          If the reading the value is not supported returns the max value for
+          the type (255).
 
 enumerations:
     - name: DriveProtocol

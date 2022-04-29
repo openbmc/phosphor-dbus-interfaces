@@ -1,13 +1,13 @@
 - name: Timeout
   meta:
-    - str: "TIMEOUT_IN_MSEC=%llu"
-      type: uint64
+      - str: "TIMEOUT_IN_MSEC=%llu"
+        type: uint64
 - name: InvalidArgument
   meta:
-    - str: "ARGUMENT_NAME=%s"
-      type: string
-    - str: "ARGUMENT_VALUE=%s"
-      type: string
+      - str: "ARGUMENT_NAME=%s"
+        type: string
+      - str: "ARGUMENT_VALUE=%s"
+        type: string
 - name: InternalFailure
   level: ERR
 - name: InsufficientPermission
@@ -15,8 +15,8 @@
 - name: NotAllowed
   level: INFO
   meta:
-    - str: "REASON=%s"
-      type: string
+      - str: "REASON=%s"
+        type: string
 - name: NoCACertificate
   level: ERR
 - name: TooManyResources
@@ -24,10 +24,10 @@
 - name: ResourceNotFound
   level: INFO
   meta:
-    - str: "RESOURCE=%s"
-      type: string
+      - str: "RESOURCE=%s"
+        type: string
 - name: UnsupportedRequest
   level: INFO
   meta:
-    - str: "REASON=%s"
-      type: string
+      - str: "REASON=%s"
+        type: string

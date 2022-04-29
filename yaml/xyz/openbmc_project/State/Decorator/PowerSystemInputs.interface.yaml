@@ -9,19 +9,19 @@ properties:
       type: enum[self.Status]
       default: Good
       description: >
-        The current status of the power being supplied to the chassis.
+          The current status of the power being supplied to the chassis.
 
 enumerations:
-  - name: Status
-    description: >
-      Power status enum.
-    values:
-      - name: Fault
-        description: >
-         The power supply unit(s) are not providing enough power for normal
-         chassis operation, such as in a Brownout/Blackout condition where one
-         or more power supplies report AC loss VIN fault.
-      - name: Good
-        description: >
-         The power supply unit(s) are providing enough power for normal chassis
-         operation.
+    - name: Status
+      description: >
+          Power status enum.
+      values:
+          - name: Fault
+            description: >
+                The power supply unit(s) are not providing enough power for normal
+                chassis operation, such as in a Brownout/Blackout condition where one
+                or more power supplies report AC loss VIN fault.
+          - name: Good
+            description: >
+                The power supply unit(s) are providing enough power for normal chassis
+                operation.

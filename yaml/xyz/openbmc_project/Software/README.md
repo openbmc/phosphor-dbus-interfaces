@@ -15,7 +15,7 @@ code update:
    flash module for a managed host.
 
 A simple system design would be to include a single _ImageManager_ and two
-*ItemUpdater*s: one for the BMC itself and one for the Host.
+_ItemUpdater_(s): one for the BMC itself and one for the Host.
 
 ### ImageManager
 
@@ -31,7 +31,7 @@ the location of the image.
 It is assumed that the _ImageManager_ has [at least] a bare minimum amount of
 parsing knowledge, perhaps due to a common image format, to allow it to
 populate all of the properties of `xyz.openbmc_project.Software.Version` and
-`xyz.openbmc_project.Inventory.Decorator.Compatible`. *ItemUpdater*s will
+`xyz.openbmc_project.Inventory.Decorator.Compatible`. _ItemUpdater_(s) will
 likely listen for standard D-Bus signals to identify new images being created.
 
 ### ItemUpdater
@@ -220,19 +220,19 @@ case the resulting `Activation` may result in one of two conditions: a
 
 ### Image Clean Up
 
-An _ItemUpdater_ is responsible for garabage collecting images contained on the
+An _ItemUpdater_ is responsible for garbage collecting images contained on the
 elements it is managing. Often an element can only contain a single image so
 this is a natural side-effect of the update process. In other cases, the
 _ItemUpdater_ may remove images based on the `RedundancyPriority` assigned to an
 image.
 
-The _ItemManager_ should expose `Object.Delete()` methods to remove images from
-the BMC filesystem. It is possible that some *ItemUpdater*s will call this
+The _ImageManager_ should expose `Object.Delete()` methods to remove images from
+the BMC filesystem. It is possible that some _ItemUpdater_(s) will call this
 method once the `Version` is successfully activated.
 
 In some designs there may be multiple _ItemUpdater_ instances which are handling
 update for different system elements, all of which can potentially apply the
-same software image (as in a multi-host design). The _ItemManager_ may
+same software image (as in a multi-host design). The _ImageManager_ may
 optionally monitor the `Software.Activation` signals and actively garbage
 collect an image once all `Software.Activation` under the `.../software/<id>`
 path are either `Active` or `Staged`.

@@ -19,3 +19,12 @@ methods:
             description: the unmount status. True on success.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+
+signals:
+    - name: Completion
+      description: >
+        Signal indicating completion of mount or unmount action.
+      properties:
+        - name: Result
+          type: int32
+          description: Returns 0 for success or errno on failure.

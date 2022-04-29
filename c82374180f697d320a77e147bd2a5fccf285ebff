@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ddd80898_1c668c6a",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSI.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-29T02:17:23Z",
+      "side": 1,
+      "message": "This is a really odd interface location for this information.  What I would suggest is:\n\n1. Create an Inventory.Decorator.I2CDevice instance to describe the EEPROM.\n2. Add an Inventory.Decorator.Compatible instance to describe the EEPROM size (based on a device-class enumeration of some sort).\n\n3. Then we can enhance EM/fru-device to probe on this device and fill in the inventory information at the same location with \"normal\" inventory interfaces.",
+      "revId": "c82374180f697d320a77e147bd2a5fccf285ebff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

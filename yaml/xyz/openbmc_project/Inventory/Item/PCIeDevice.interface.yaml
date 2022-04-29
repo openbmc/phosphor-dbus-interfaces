@@ -306,6 +306,6 @@ associations:
           Objects that implement PCIeDevice can optionally implement the
           upstream_pcie_slot association to provide a link back to a PCIe slot.
       reverse_names:
-        - associated_pcie_device
+          - associated_pcie_device
       required_endpoint_interfaces:
-        - xyz.openbmc_project.Inventory.Item.PCIeSlot
+          - xyz.openbmc_project.Inventory.Item.PCIeSlot

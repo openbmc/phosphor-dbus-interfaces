@@ -1,11 +1,11 @@
 description: >
-  Implement to provide software settings management.
+    Implement to provide software settings management.
 
 properties:
-  - name: WriteProtected
-    type: boolean
-    default: false
-    description: >
-      This property shall indicate whether the software image can be
-      overwritten, where a value `true` shall indicate that the software cannot
-      be altered or overwritten.
+    - name: WriteProtected
+      type: boolean
+      default: false
+      description: >
+          This property shall indicate whether the software image can be
+          overwritten, where a value `true` shall indicate that the software cannot
+          be altered or overwritten.

@@ -1,8 +1,8 @@
 - name: MasterDetectionFailure
   inherits:
-    - xyz.openbmc_project.Common.Callout.Device
+      - xyz.openbmc_project.Common.Callout.Device
 
 - name: SlaveDetectionFailure
   meta:
-    - str: "ERRNO=%d"
-      type: int32
+      - str: "ERRNO=%d"
+        type: int32

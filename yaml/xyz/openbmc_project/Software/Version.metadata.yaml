@@ -1,16 +1,16 @@
 - name: Incompatible
   level: ERR
   meta:
-    - str: "MIN_VERSION=%s"
-      type: string
-    - str: "ACTUAL_VERSION=%s"
-      type: string
-    - str: "VERSION_PURPOSE=%s"
-      type: string
+      - str: "MIN_VERSION=%s"
+        type: string
+      - str: "ACTUAL_VERSION=%s"
+        type: string
+      - str: "VERSION_PURPOSE=%s"
+        type: string
 - name: AlreadyExists
   level: ERR
   meta:
-    - str: "IMAGE_VERSION=%s"
-      type: string
+      - str: "IMAGE_VERSION=%s"
+        type: string
 - name: InvalidSignature
   level: ERR

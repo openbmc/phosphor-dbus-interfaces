@@ -1,13 +1,13 @@
 - name: Created
   level: INFO
   meta:
-    - str: "RECORD_TYPE=%u"
-      type: uint8
-    - str: "GENERATOR_ID=%u"
-      type: uint16
-    - str: "SENSOR_DATA=%s"
-      type: string
-    - str: "EVENT_DIR=%u"
-      type: uint8
-    - str: "SENSOR_PATH=%s"
-      type: string
+      - str: "RECORD_TYPE=%u"
+        type: uint8
+      - str: "GENERATOR_ID=%u"
+        type: uint16
+      - str: "SENSOR_DATA=%s"
+        type: string
+      - str: "EVENT_DIR=%u"
+        type: uint8
+      - str: "SENSOR_PATH=%s"
+        type: string

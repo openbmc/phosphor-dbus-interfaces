@@ -34,6 +34,24 @@
       "parentUuid": "5ced057c_3413a1a2",
       "revId": "5d5d4de3f2588676b533638384d345e8a6be8233",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "399c3f77_679419ae",
+        "filename": "yaml/xyz/openbmc_project/VirtualMedia/Legacy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-04-29T20:42:47Z",
+      "side": 1,
+      "message": "\u003e Mount/unmount calls are triggers for async actions. This is also defined in the design document.\n\nPlease document this here.\n\n\u003e Actually this form documented as a part of current design document. If there is a doubt, it shall be addressed as CR to design document I suppose.\n\nThis is one reason I don\u0027t like reviewing the dbus interfaces in the design document.  It is really hard to catch details like this there.\n\nI understand this is your current design, so I can merge it as is once you document that the calls are async.",
+      "parentUuid": "b0e4aafe_ab1ba541",
+      "revId": "5d5d4de3f2588676b533638384d345e8a6be8233",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

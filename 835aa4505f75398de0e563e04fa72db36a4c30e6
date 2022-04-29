@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b394726_56ed040c",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-04-29T19:45:24Z",
+      "side": 1,
+      "message": "added this to the generic button interface as it is common property in power and reset buttons.",
+      "parentUuid": "4c7be063_b0d0c212",
+      "revId": "835aa4505f75398de0e563e04fa72db36a4c30e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6aa54307_43d5e9c6",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-04-28T19:26:24Z",
       "side": 1,
       "message": "Do we need a \"PressedLong\"?",
+      "revId": "835aa4505f75398de0e563e04fa72db36a4c30e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27043c48_9693a9a1",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-04-29T19:45:24Z",
+      "side": 1,
+      "message": "Since it is a generic button interface we should have PressedLong signal as well.\nThough it is not needed by OCP debug HS button, other button objects might need to use the PressedLong signal.",
+      "parentUuid": "6aa54307_43d5e9c6",
       "revId": "835aa4505f75398de0e563e04fa72db36a4c30e6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

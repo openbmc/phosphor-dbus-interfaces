@@ -142,6 +142,24 @@
       "parentUuid": "e9c62631_fe82e3c0",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4301a88d_e717c9aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2022-05-03T20:28:09Z",
+      "side": 1,
+      "message": "About a month ago, we finalized on \"I think the map of version to set of threads is the most simple solution\"\n\nhttps://discord.com/channels/775381525260664832/960653386523488296/961015043514834955\n\nI\u0027m thinking again about how this will look like from the BMCWeb side - when we try to enumerate .../Processors/cpu0/SubProcessors/core0/SubProcessors, how would we able to list that there are \"thread0\" and \"thread1\" under core0 ?",
+      "parentUuid": "10c94a98_c470e329",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

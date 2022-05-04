@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "907999fd_1c4646e4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-04T22:52:31Z",
+      "side": 1,
+      "message": "I\u0027m really missing the connection between what was on the mailing list and this proposal.\n\nWhat does it mean by them being \"a flexible state\"?  In my view, either the chassis/host are Ready or they aren\u0027t?  How is it flexible?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 57
+      },
+      "revId": "1ba646c55ad6bf2462c3d20fd267538343d3d75d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33812ec7_91de286f",
+        "filename": "yaml/xyz/openbmc_project/State/Chassis.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-04T22:52:31Z",
+      "side": 1,
+      "message": "These are really ugly.  Why can\u0027t we just advertise that the Chassis cannot be powered on with an appropriately modeled state?\n\nI don\u0027t see what interfaces you\u0027re proposing to return these errors so it is kind of hard to give a full review of the proposal at hand.  This seems really awkward for simple daemons like ... the power button daemon.  Effectively, now the power daemon has to queue up the user request and try again later?  When?  (this same problem is replicated to a whole bunch of daemons now too rather than figuring out a single solution in the state-manager).\n\nWhy isn\u0027t the Chassis/Host end point queuing up the request if certain BMC conditions haven\u0027t been met yet?",
+      "revId": "1ba646c55ad6bf2462c3d20fd267538343d3d75d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

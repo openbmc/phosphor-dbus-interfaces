@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "00c24490_5f719bed",
+        "filename": "yaml/xyz/openbmc_project/Common.errors.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-04T13:04:41Z",
+      "side": 1,
+      "message": "\u003e eg: when user sends in an enum which is not listed in the yaml.\n\nNo code should be doing enum parsing directly.  There are sdbusplus methods for reading the enum out of the message.\n\n\u003e I believe \u0027InvalidArgument\u0027 can be used for methods.\n\u003e And \u0027NotSupported\u0027 can be returned for a value which is not supported for the parameter,\n\nI\u0027m not sure why InvalidArgument couldn\u0027t be used for both.  Why is it valuable to differentiate?  If your expectation _is_ to differentiate we need to document that expectation here so that others continue to follow that convention.  \n\nThe fact that we\u0027ve gone this long without having a \u0027NotSupported\u0027 error for properties tells me others are probably doing something else already.",
+      "parentUuid": "c4524a5b_4fe333ca",
+      "revId": "3f0405b635ddbbe967bdf7509cf1a384df4f692d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "da9f084c_ed0a917f",
         "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 6
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "Default is mentioned at line 8. MACAddress",
       "parentUuid": "da9f084c_ed0a917f",
+      "revId": "3f0405b635ddbbe967bdf7509cf1a384df4f692d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4775cfd5_29a87889",
+        "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-04T13:04:41Z",
+      "side": 1,
+      "message": "Ack.  I missed it for some reason.",
+      "parentUuid": "15b29536_a29297ab",
       "revId": "3f0405b635ddbbe967bdf7509cf1a384df4f692d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -70,6 +70,24 @@
       "parentUuid": "399c3f77_679419ae",
       "revId": "5d5d4de3f2588676b533638384d345e8a6be8233",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6193c94c_4160965c",
+        "filename": "yaml/xyz/openbmc_project/VirtualMedia/Legacy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-04T11:51:34Z",
+      "side": 1,
+      "message": "I want, in this file, the Mount and Unmount operations to indicate that they are async.  There is nothing here that gives any indication of this.  In fact, for some reason, they return a boolean that says \"True on success\" (why we return a bool when dbus should deal in errors is a whole separate discussion).\n\n7 months ago you made a commit to the design titled \"support for asynchronity\" but nothing has been done to _this_ file to reflect that.  That is what I want to see.",
+      "parentUuid": "e74b1ba4_ea75afd5",
+      "revId": "5d5d4de3f2588676b533638384d345e8a6be8233",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

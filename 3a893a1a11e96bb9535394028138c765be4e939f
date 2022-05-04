@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "a75c846c_0a1fa4ec",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "I don\u0027t see underlines in other D-Bus interface names",
       "revId": "3a893a1a11e96bb9535394028138c765be4e939f",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "5fca43f1_f638a7c8",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
@@ -32,10 +33,10 @@
       "message": "The enum values are as per the specification. As per the specification, it is  \"link-layer-time\". As \"-\" (hyphen) is not allowed in enum value, I have used \"_\" (underscore).\n\nI understand your concern.DBus interface names follow capitalizing the first char of the word. If it is based on spec, then it is used as such.",
       "parentUuid": "a75c846c_0a1fa4ec",
       "revId": "3a893a1a11e96bb9535394028138c765be4e939f",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "b57a5cad_a9c22243",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
@@ -50,10 +51,10 @@
       "message": "Yes, please follow the convention of our DBus apis and convert underscore / hyphenated names to camel case. This is not meant to be directly tied to systemd-networkd even though it happens to be implemented that way right now. I\u0027d prefer not to have any fields that are networkd specific or mostly unused.",
       "parentUuid": "5fca43f1_f638a7c8",
       "revId": "3a893a1a11e96bb9535394028138c765be4e939f",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "ccec245e_e9cf3ca7",
         "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
@@ -68,8 +69,25 @@
       "message": "I have updated the names as per OpenBMC DBus naming convention.",
       "parentUuid": "b57a5cad_a9c22243",
       "revId": "3a893a1a11e96bb9535394028138c765be4e939f",
-      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
-      "unresolved": true
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9191090f_a89dc037",
+        "filename": "xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-05-04T10:49:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ccec245e_e9cf3ca7",
+      "revId": "3a893a1a11e96bb9535394028138c765be4e939f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

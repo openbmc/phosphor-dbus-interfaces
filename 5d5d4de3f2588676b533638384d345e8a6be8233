@@ -52,6 +52,24 @@
       "parentUuid": "b0e4aafe_ab1ba541",
       "revId": "5d5d4de3f2588676b533638384d345e8a6be8233",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e74b1ba4_ea75afd5",
+        "filename": "yaml/xyz/openbmc_project/VirtualMedia/Legacy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000460
+      },
+      "writtenOn": "2022-05-04T10:48:29Z",
+      "side": 1,
+      "message": "This is how I understand the following diagram:\nhttps://github.com/openbmc/docs/blame/master/designs/virtual-media.md#L134\nMount is triggered then after some work on VM service side, completion is signaled (#L167). Signal implies asynchronous behavior.\n\nIf this in unclear (indeed, it is not explicitly defined) I could rephrase it.",
+      "parentUuid": "399c3f77_679419ae",
+      "revId": "5d5d4de3f2588676b533638384d345e8a6be8233",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

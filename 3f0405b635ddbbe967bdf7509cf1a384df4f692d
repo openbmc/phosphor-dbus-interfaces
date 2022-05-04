@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c4524a5b_4fe333ca",
+        "filename": "yaml/xyz/openbmc_project/Common.errors.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-05-04T12:42:12Z",
+      "side": 1,
+      "message": "I believe \u0027InvalidArgument\u0027 can be used for methods.\nAnd \u0027NotSupported\u0027 can be returned for a value which is not supported for the parameter, eg: when user sends in an enum which is not listed in the yaml.",
+      "parentUuid": "e938419e_ed0e78ed",
+      "revId": "3f0405b635ddbbe967bdf7509cf1a384df4f692d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "da9f084c_ed0a917f",
         "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 6
@@ -31,6 +49,24 @@
       "writtenOn": "2022-05-04T11:53:09Z",
       "side": 1,
       "message": "default?",
+      "revId": "3f0405b635ddbbe967bdf7509cf1a384df4f692d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15b29536_a29297ab",
+        "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-05-04T12:42:12Z",
+      "side": 1,
+      "message": "Default is mentioned at line 8. MACAddress",
+      "parentUuid": "da9f084c_ed0a917f",
       "revId": "3f0405b635ddbbe967bdf7509cf1a384df4f692d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

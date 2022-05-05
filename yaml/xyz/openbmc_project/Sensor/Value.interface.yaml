@@ -50,6 +50,11 @@ properties:
           For objects in the temperature namespace, Unit must be "DegreesC".
           For objects in the utilization namespace, Unit must be "Percent"
           For objects in the voltage namespace, Unit must be "Volts".
+    - name: Accuracy
+      type: double
+      default: NaN
+      description: >
+          The accuracy range of the Value as a percentage of +/-.
 
 enumerations:
     - name: Unit

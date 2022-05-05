@@ -1,0 +1,16 @@
+description: >
+    Implement to provide accuracy for sensor readings.
+
+    All Sensor.Accuracy properties are read-only.
+
+properties:
+    - name: Accuracy
+      type: double
+      default: NaN
+      description: >
+          The accuracy range (+/-) of the sensor Value as a percentage, with a
+          value between 0 and 100.
+          This is NOT a percentage of the sensor value ranges.
+          A value of 0.25 would be 0.25%, a value of 2 would represent 2%.
+          A value of 2 for 2% would mean that a reading of 10 would have an
+          actual value of 9.8 to 10.2.

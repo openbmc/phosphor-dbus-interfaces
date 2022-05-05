@@ -8,6 +8,15 @@ properties:
           This property shall contain the computer system power mode setting.
           This defines the processor speed based on the priority of power
           consumption and performance.
+    - name: SafeMode
+      type: boolean
+      flags:
+          - readonly
+      default: false
+      description: >
+          This property shall indicate whether the OCC is in Safe Mode.
+          When this is true, the OCCs are in Safe Mode, and can not be
+          communicated with.
 
 enumerations:
     - name: PowerMode

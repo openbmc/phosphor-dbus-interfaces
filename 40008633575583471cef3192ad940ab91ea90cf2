@@ -56,6 +56,41 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f5b76259_39705c4b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000278
+      },
+      "writtenOn": "2022-05-06T15:21:03Z",
+      "side": 1,
+      "message": "In my early days of IPv6 DHCP work I exposed how systemd.network enables IPv6 Stateful assignment.\nIn particular I added IPv6AcceptRA to the D-Bus interface. BMCWeb and IPMI both used this D-Bus entry to control DHCPv6.\nFast forward to Oct 2021, where I discover that control is insufficient. To move to Stateless assignment you also need to control another entry in the systemd.network file.\nOne solution to this is to leak another systemd.network config file element onto D-Bus in order to allow IPMI and Redfish to know how systemd.network sets IPv6 DHCP off, stateful, and stateless.\nAnother solution, which is what I requested, and merged for D-Bus, is to have a higher level API that allows the busctl/IPMI/Redfish requester to make a \"v4v6stateless\" request (for example) and have phosphor-network make the appropriate changes to get the NIC operating with a DHCPv4/SLAAC IPv6 address.\n\nThe busctl/IPMI/BMCWeb implementers don\u0027t need to know anything about the magic puzzle piece combinations of systemd.networkd.\n\nI\u0027m requesting to take some time to determine if there is a higher order D-Bus model that can be created instead of handing out a bunch of puzzle pieces.",
+      "parentUuid": "56a2c1de_7e5499fb",
+      "revId": "40008633575583471cef3192ad940ab91ea90cf2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5187ea22_15ec3647",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000278
+      },
+      "writtenOn": "2022-05-06T15:21:03Z",
+      "side": 1,
+      "message": "Providing additional details.",
+      "revId": "40008633575583471cef3192ad940ab91ea90cf2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dd723cdd_ec7bd456",
         "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 7
@@ -67,6 +102,24 @@
       "writtenOn": "2022-05-06T12:26:29Z",
       "side": 1,
       "message": "The default for systemd is \u0027duid\u0027.  Are we currently actively changing this to MACAddress?  Looks like maybe...\n\n\u003e src/network_config.cpp:                \"[DHCP]\\nClientIdentifier\u003dmac\\n\"",
+      "revId": "40008633575583471cef3192ad940ab91ea90cf2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c208c26c_ee4f6fc8",
+        "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000278
+      },
+      "writtenOn": "2022-05-06T15:21:03Z",
+      "side": 1,
+      "message": "Yes, this has been hardcoded into the WriteConfigurationFile function since the phosphor-network inception (22 May 2017).",
+      "parentUuid": "dd723cdd_ec7bd456",
       "revId": "40008633575583471cef3192ad940ab91ea90cf2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

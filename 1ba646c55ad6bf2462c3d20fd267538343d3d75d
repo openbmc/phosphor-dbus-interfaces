@@ -26,6 +26,47 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c0522775_6b7b7727",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-05-09T17:54:52Z",
+      "side": 1,
+      "message": "My thinking was that we\u0027re going to make a change where the chassis and host wont allow a boot until the BMC is Ready. I was thinking the flexibility would be on what makes the BMC Ready. i.e. you could configure bmc-state manager to look at a different target then multi-user.target (like someone could make a new target that has only required services to boot the system and use that in bmc-state-manager).",
+      "parentUuid": "907999fd_1c4646e4",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 57
+      },
+      "revId": "1ba646c55ad6bf2462c3d20fd267538343d3d75d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f0edc6f_4cfc7869",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-05-09T17:54:52Z",
+      "side": 1,
+      "message": "I\u0027m still not sure the best direction here. I think the general concern is that it\u0027s a bit weird that the BMC state affects the chassis and host capabilities (note it doesn\u0027t affect their states, just their ability to power on).\n\nI was thinking with this commit I could at least get the errors defined and then try and make things configurable from a state-manager concept so different users could configure the BMC service dependencies to their liking.\n\nSounds like this may need a design document?",
+      "revId": "1ba646c55ad6bf2462c3d20fd267538343d3d75d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "33812ec7_91de286f",
         "filename": "yaml/xyz/openbmc_project/State/Chassis.errors.yaml",
         "patchSetId": 1
@@ -37,6 +78,24 @@
       "writtenOn": "2022-05-04T22:52:31Z",
       "side": 1,
       "message": "These are really ugly.  Why can\u0027t we just advertise that the Chassis cannot be powered on with an appropriately modeled state?\n\nI don\u0027t see what interfaces you\u0027re proposing to return these errors so it is kind of hard to give a full review of the proposal at hand.  This seems really awkward for simple daemons like ... the power button daemon.  Effectively, now the power daemon has to queue up the user request and try again later?  When?  (this same problem is replicated to a whole bunch of daemons now too rather than figuring out a single solution in the state-manager).\n\nWhy isn\u0027t the Chassis/Host end point queuing up the request if certain BMC conditions haven\u0027t been met yet?",
+      "revId": "1ba646c55ad6bf2462c3d20fd267538343d3d75d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c3c974c_47f174a8",
+        "filename": "yaml/xyz/openbmc_project/State/Chassis.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-05-09T17:54:52Z",
+      "side": 1,
+      "message": "\u003e Why can\u0027t we just advertise that the Chassis cannot be powered on with an appropriately modeled state?\n\nWe would still need to return a detailed error if someone tried to power on even if the state was not ready. Also, we\u0027d need to add a NotReady concept to the chassis and host objects. Currently they basically tell the user if the chassis power is On or Off. What would NotReady mean? We\u0027d probably need a separate property if we wanted to try and provide a mechanism for the user to know. I was thinking they\u0027d imply it based on BMC state (which does have a NotReady)\n\n\u003e I don\u0027t see what interfaces you\u0027re proposing to return these errors so it is kind of hard to give a full review of the proposal at hand. \n\nbusctl set-property xyz.openbmc_project.State.Chassis /xyz/openbmc_project/state/chassis0 xyz.openbmc_project.State.Chassis RequestedPowerTransition s xyz.openbmc_project.State.Chassis.Transition.On\n\nbusctl set-property xyz.openbmc_project.State.Host /xyz/openbmc_project/state/host0 xyz.openbmc_project.State.Host RequestedHostTransition s xyz.openbmc_project.State.Host.Transition.On\n\n\u003e Why isn\u0027t the Chassis/Host end point queuing up the request if certain BMC conditions haven\u0027t been met yet?\n\nThis seems even more complex. What if things are never Ready? Seems best to return an error to the user and let them worry about it. If it\u0027s something like a power button...yeah that stinks, but the user expectation is you hit the power button and it immediately tries to power on. Best to just fail immediately.",
+      "parentUuid": "33812ec7_91de286f",
       "revId": "1ba646c55ad6bf2462c3d20fd267538343d3d75d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

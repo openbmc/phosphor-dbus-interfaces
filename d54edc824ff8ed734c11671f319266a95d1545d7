@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cbe9dbe_17ef5ee4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-11T20:48:05Z",
+      "side": 1,
+      "message": "cap",
+      "range": {
+        "startLine": 9,
+        "startChar": 48,
+        "endLine": 9,
+        "endChar": 58
+      },
+      "revId": "d54edc824ff8ed734c11671f319266a95d1545d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d34c39ae_ce2bffd9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-11T20:48:05Z",
+      "side": 1,
+      "message": "I\u0027d prefer not to change the type on this property and I don\u0027t particularly care for using -1 as an error state.  Maybe \u0027minint\u0027.  If we don\u0027t want to change the type we could default to \u0027maxint\u0027 too, which would be obviously unreasonable for a number of PCIe lanes.\n\nCan you describe the problem you are envisioning?  Wouldn\u0027t \u0027MaxLanes\u0027 have the same issue?",
+      "revId": "d54edc824ff8ed734c11671f319266a95d1545d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8755b321_4d278045",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-11T20:48:05Z",
+      "side": 1,
+      "message": "spelling",
+      "range": {
+        "startLine": 302,
+        "startChar": 10,
+        "endLine": 302,
+        "endChar": 17
+      },
+      "revId": "d54edc824ff8ed734c11671f319266a95d1545d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

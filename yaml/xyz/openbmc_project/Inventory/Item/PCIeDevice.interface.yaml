@@ -291,9 +291,12 @@ properties:
 
     - name: LanesInUse
       type: size
-      default: 0
+      default: maxint
       description: >
-          The number of PCIe lanes in use by this device.
+          The number of PCIe lanes in use by this device. Deafult value of
+          maxint is to accommodate the situation where the value of this
+          property is not known due to some unknown reason, like hardware
+          failure or link down.
 
 associations:
     - name: upstream_pcie_slot

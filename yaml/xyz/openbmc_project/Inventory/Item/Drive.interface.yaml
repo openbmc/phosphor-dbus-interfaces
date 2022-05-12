@@ -97,3 +97,13 @@ enumerations:
           - name: Unknown
             description: >
                 The locked state of the drive is not known.
+
+associations:
+    - name: Chassis
+      description: >
+          Objects that implement Drive can optionally implement the
+          chassis association to provide a link back to the chassis
+          the drive is physically mounted on.
+      reverse_name: associated_chassis
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.Chassis

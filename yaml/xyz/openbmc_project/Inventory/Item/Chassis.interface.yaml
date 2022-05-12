@@ -43,3 +43,13 @@ enumerations:
             description: >
                 A logical division or portion of a physical chassis that contains
                 multiple devices or systems that cannot be physically separated.
+
+associations:
+     - name: Drives
+       description: >
+           Objects that an implement Chassis can optionally implement
+           the Drives association to provide a link to one or more
+           drives that are physically on the chassis.
+       reverse_name: associated_Drive
+       required_endpoint_interfaces:
+         - xyz.openbmc_project.Inventory.Item.Drive

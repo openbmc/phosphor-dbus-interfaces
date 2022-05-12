@@ -16,6 +16,41 @@
       "message": "This is no different from the following commit in principle except that you\u0027re doing it in papercuts rather than all at once:\n    https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/46806\n\nI\u0027m not approving any of these associations for Inventory until we have a design agreed to.",
       "revId": "5027e9ea35a0f189f67c468910ff21169fb95499",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e9e3bc6_c56d0e5b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2022-05-12T17:07:07Z",
+      "side": 1,
+      "message": "Thanks for the speedy review.",
+      "revId": "5027e9ea35a0f189f67c468910ff21169fb95499",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90f6e6f5_0d4d8d91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000593
+      },
+      "writtenOn": "2022-05-12T17:07:07Z",
+      "side": 1,
+      "message": "Makes sense, I was unaware of the preexisting work:\n   https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/46806\nIt does not match my use case, but it is very similar.\n\nI was simply told this was needed from a bmcweb review.\n   https://gerrit.openbmc-project.xyz/c/openbmc/bmcweb/+/53325/23/redfish-core/lib/chassis.hpp#300\n\nThe referenced design docs was started in March 2021, and the last was early July 2021. \n   https://gerrit.openbmc-project.xyz/c/openbmc/docs/+/41468\n\nI understand that good work takes time, and that making consensus decisions takes even longer. How many (weeks/months/quarters/years) out do you think this design is?",
+      "parentUuid": "fe6598a0_42bbc6a4",
+      "revId": "5027e9ea35a0f189f67c468910ff21169fb95499",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

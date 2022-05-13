@@ -104,6 +104,24 @@
       "parentUuid": "6cd23323_fd1045ac",
       "revId": "5027e9ea35a0f189f67c468910ff21169fb95499",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b0d2eed_92511a8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-13T02:25:21Z",
+      "side": 1,
+      "message": "\u003e Why is there a request for a design doc for a chassis association, but not for a pci device.\n\nGood question.  You could probably make an argument that it should also be included in this inventory design.  But, the simple answer is that Chassis more obviously speaks to \"containment\" and the major point of contention in that design is how we represent \"containment\" (with paths or associations).\n\nSlot -\u003e Device is probably also a containment relationship but it wasn\u0027t as obvious as the Chassis discussion we\u0027ve had a few times over so I let it go through.  Depending on the direction the design arrives at we might want to deprecate that association and get it cleaned out.",
+      "parentUuid": "a0fcf2b6_3b9ee4e2",
+      "revId": "5027e9ea35a0f189f67c468910ff21169fb95499",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

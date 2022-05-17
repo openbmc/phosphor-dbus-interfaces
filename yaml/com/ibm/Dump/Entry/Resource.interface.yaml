@@ -29,6 +29,7 @@ properties:
           The host will send a response code for each request to create a
           resource dump to indicate whether the request is successful or
           there is an error.
+      default: Requested
 
 enumerations:
     - name: HostResponse
@@ -36,6 +37,9 @@ enumerations:
           These are the possible response codes from the host after sending a
           resource dump request.
       values:
+        - name: Requested
+          description: >
+              Requested for resource dump and awaiting the host response
         - name: Success
           description: >
               Resource dump parameters and ACF data are successfully validated

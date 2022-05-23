@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0b72eb32_e50bac14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-05-23T14:44:03Z",
+      "side": 1,
+      "message": "Ratan/William - Do you have any views on this from networkd perspective ? \n\nI believe, we need a dbus property for a network parameter, which is settable/gettable by the user. This is made persistent across the BMC reboot. Editing the network files directly upon the user is not a recommended design of phosphor-networkd.",
+      "parentUuid": "c50f3a71_6c1581f0",
+      "revId": "40008633575583471cef3192ad940ab91ea90cf2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dd723cdd_ec7bd456",
         "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 7

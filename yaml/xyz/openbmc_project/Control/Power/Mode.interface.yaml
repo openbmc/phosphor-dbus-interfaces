@@ -1,6 +1,19 @@
 description: >
     Customer requested system power mode.
 
+methods:
+    - name: PowerModeLock
+      description: >
+          Lock power mode of the system.
+      returns:
+        - name: status
+          type: boolean
+          description: >
+              This method is used to set the read-only PowerModeLocked property
+              to true.
+      flags:
+      - hidden
+
 properties:
     - name: PowerMode
       type: enum[self.PowerMode]
@@ -17,6 +30,15 @@ properties:
           This property shall indicate whether the System is in Safe Mode.
           When this is true, the system power mode is not being used in the
           system.
+    - name: PowerModeLocked
+      type: boolean
+      default: 0
+      description: >
+          This property reflects the status of the power mode setting lock. This
+          property can only be set using the PowerModeLock method.
+      flags:
+      - readonly
+      - hidden
 
 enumerations:
     - name: PowerMode

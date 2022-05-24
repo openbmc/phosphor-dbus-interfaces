@@ -6,3 +6,8 @@ properties:
       type: uint32
       description: >
           Current number of reboot attempts left.
+    - name: RetryAttempts
+      type: uint32
+      description: >
+          Number of total reboot attempts allowed.
+      default: 3

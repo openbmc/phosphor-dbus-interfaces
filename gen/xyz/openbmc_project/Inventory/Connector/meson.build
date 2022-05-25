@@ -1,4 +1,18 @@
 # Generated file; do not modify.
+generated_sources += custom_target(
+    'xyz/openbmc_project/Inventory/Connector__cpp'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Connector.interface.yaml',  ],
+    output: [ 'server.cpp', 'server.hpp', 'client.hpp',  ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'cpp',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Connector',
+    ],
+)
+
 subdir('Embedded')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Connector/Embedded__markdown'.underscorify(),
@@ -26,6 +40,21 @@ generated_others += custom_target(
         '--tool', sdbusplusplus_prog,
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Connector/Slot',
+    ],
+)
+
+subdir('Socket')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Connector/Socket__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Connector/Socket.interface.yaml',  ],
+    output: [ 'Socket.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Connector/Socket',
     ],
 )
 

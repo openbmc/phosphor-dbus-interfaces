@@ -13,7 +13,7 @@ properties:
       description: >
           The communication protocol used by the Drive.
     - name: Type
-      default: Unknown
+      default: Unknownboolean
       type: enum[self.DriveType]
       description: >
           The type of physical form factor of the Drive.
@@ -35,6 +35,13 @@ properties:
           How much of the drives life is remaining in a percentage from 0-100 .
           If the reading the value is not supported returns the max value for
           the type (255).
+    - name: Resettable
+      default: false
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          This property shall indicate whether the Driver is resettable.
 
 enumerations:
     - name: DriveProtocol

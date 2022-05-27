@@ -33,11 +33,6 @@ properties:
           This indicates the size in bytes of largest protocol data unit,
           which can be passed in an Ethernet frame on the interface.
 
-    - name: DomainName
-      type: array[string]
-      description: >
-          Domain names of the ethernet interface.
-
     - name: DHCPEnabled
       type: enum[self.DHCPConf]
       description: >

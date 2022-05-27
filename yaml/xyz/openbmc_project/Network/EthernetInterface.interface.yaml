@@ -10,12 +10,14 @@ properties:
           - const
       description: >
           Name of the ethernet interface.
+
     - name: Speed
       type: uint32
       flags:
           - readonly
       description: >
           Current speed of the ethernet interface, in Mbps.
+
     - name: AutoNeg
       type: boolean
       flags:
@@ -23,26 +25,33 @@ properties:
       description: >
           This indicates if the speed and duplex are automatically negotiated
           and configured on this ethernet interface.
+
     - name: MTU
       type: size
       default: 0
       description: >
           This indicates the size in bytes of largest protocol data unit,
           which can be passed in an Ethernet frame on the interface.
+
     - name: DomainName
       type: array[string]
       description: >
           Domain names of the ethernet interface.
+
     - name: DHCPEnabled
       type: enum[self.DHCPConf]
       description: >
           Address mode of the ethernet interface.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
     - name: Nameservers
       type: array[string]
       description: >
           DNS servers that are currently in use on this interface.
       errors:
           - xyz::openbmc_project.Common.Error.NotAllowed
+
     - name: StaticNameServers
       type: array[string]
       description: >
@@ -53,6 +62,8 @@ properties:
           assigments.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
     - name: NTPServers
       type: array[string]
       flags:
@@ -60,27 +71,38 @@ properties:
       description: >
           NTP servers that are currently in use on this interface.
           This includes both DHCP and static NTP server addresses.
+
     - name: StaticNTPServers
       type: array[string]
       description: >
           This property describes statically defined NTPServers on the
           interface. This property supports read/write operation.
           Configure the NTP servers on the system during write operation.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
     - name: LinkLocalAutoConf
       type: enum[self.LinkLocalConf]
       description: >
           This indicates link local auto configuration on this ethernet
           interface and configured on this ethernet interface.
+
     - name: IPv6AcceptRA
       type: boolean
       description: >
           Boolean for accepting router advertisements in IPv6. This control is
           being deprecated in favor of the DHCPConf enumerations
           below. Removal of this entry is deferred.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
     - name: NICEnabled
       type: boolean
       description: >
           Boolean for to enabling or disabling the ethernet port
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
     - name: LinkUp
       type: boolean
       flags:
@@ -90,12 +112,15 @@ properties:
           boolean value is TRUE when the network cable is inserted, or there
           is a carrier signal. It is FALSE when the cable is unplugged, or the
           carrier signal is missing.
+
     - name: DefaultGateway
       type: string
       description: >
           Default IPv4 gateway of the ethernet interface.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
     - name: DefaultGateway6
       type: string
       description: >
@@ -105,6 +130,7 @@ properties:
           https://man7.org/linux/man-pages/man3/inet_pton.3.html
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
 
 enumerations:
     - name: LinkLocalConf

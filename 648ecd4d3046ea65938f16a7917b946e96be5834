@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ecbf140d_3ea270c9",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001035
+      },
+      "writtenOn": "2022-05-31T19:22:46Z",
+      "side": 1,
+      "message": "Support on the BMC for equivalent FSP function --mode_lock.\nMy understanding is that this Lock can only be set to true in MFG through this function,,, and would require the system to go through a MFG reset to clear it. This would lock the PowerModeLocked into a write once condition.",
+      "parentUuid": "28bb7db3_0da85779",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "af0c02eb_3a8e8a45",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
         "patchSetId": 1
@@ -37,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "817ad43a_9e75ac63",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001035
+      },
+      "writtenOn": "2022-05-31T19:22:46Z",
+      "side": 1,
+      "message": "This may or may not be used, that depends on the customer order.  MFG tool sets Mode parameters and then sets the mode lock to prevent changes.  If a customer wants to buy a system at a specific performance mode, and orders that and the Power Mode Lock is set to prevent changes.",
+      "parentUuid": "af0c02eb_3a8e8a45",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d589b3d5_63577ba1",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
         "patchSetId": 1
@@ -48,6 +84,24 @@
       "writtenOn": "2022-05-31T14:43:51Z",
       "side": 1,
       "message": "What is the rationale for making this hidden?  We don\u0027t have any other properties which are hidden.",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0706e216_73ea36c8",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001035
+      },
+      "writtenOn": "2022-05-31T19:22:46Z",
+      "side": 1,
+      "message": "Since this is read only and the above function is the only way to set it, it makes sense that we would not need this hidden in introspect.  Any end user could not change it. I can change that depending on above feedback.",
+      "parentUuid": "d589b3d5_63577ba1",
       "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

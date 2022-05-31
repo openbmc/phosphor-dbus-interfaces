@@ -51,6 +51,23 @@
       "parentUuid": "99f2652a_21201410",
       "revId": "a7e0bccaacbe47de6e41f855c0361470811238ee",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5da20b5e_5b5a2d20",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-31T13:59:03Z",
+      "side": 1,
+      "message": "We do not want to add new InternalFailure cases because they are useless to clients.  What is the client suppose to do with these?  Call again?  Restart the service?  Restart the BMC?\n\nIt sounds like, from the commit message, you had a case where the networkd application crashed because of an internal failure and you\u0027re trying to punt this onto the client.  Based on the scenario described, crashing the networkd application is probably the most appropriate course of action.",
+      "revId": "a7e0bccaacbe47de6e41f855c0361470811238ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

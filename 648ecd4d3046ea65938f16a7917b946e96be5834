@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28bb7db3_0da85779",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-31T14:43:51Z",
+      "side": 1,
+      "message": "I\u0027m confused why we have a method to change a property.  Why not just make the property not read only?",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af0c02eb_3a8e8a45",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-31T14:43:51Z",
+      "side": 1,
+      "message": "Is there any information on what this is?  Is this something that is supported on many implementations?",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d589b3d5_63577ba1",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-05-31T14:43:51Z",
+      "side": 1,
+      "message": "What is the rationale for making this hidden?  We don\u0027t have any other properties which are hidden.",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

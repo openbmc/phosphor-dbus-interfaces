@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6c9d3c03_2e5d5f1c",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2022-05-31T20:23:02Z",
+      "side": 1,
+      "message": "What it be more re-usable if you just made a single PowerModeLock property, that could have a possible error of xyz::openbmc_project.Common.Error.NotAllowed?\n\nYour implementation could then just return that NotAllowed if someone tried to change it back to false after it was set to true.\n\nThis way, another implementation could could still lock the power mode where the PowerMode property could still not be changed, but the lock itself could be removed.",
+      "parentUuid": "ecbf140d_3ea270c9",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "af0c02eb_3a8e8a45",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
         "patchSetId": 1

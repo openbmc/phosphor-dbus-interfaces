@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e1fda677_36dcf7aa",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001035
+      },
+      "writtenOn": "2022-06-01T21:38:08Z",
+      "side": 1,
+      "message": "It is not if the system is in Manufacturing mode.\nRather it is in the Factory for manufacturing to set a specific performance mode. and then manufacturing sets Mode Lock that prevents the system from being changed at customer level to any other Performance Mode.",
+      "parentUuid": "a7d91e0f_d4962e52",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d589b3d5_63577ba1",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
         "patchSetId": 1

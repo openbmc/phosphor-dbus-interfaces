@@ -22,6 +22,30 @@
       },
       "revId": "490ca39b86750757f25384613178579bdeab03a6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3d3c6da_59fbcfd1",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-06-03T17:18:56Z",
+      "side": 1,
+      "message": "Agree we don\u0027t expect the client to be able to do something to fix the situation.\n\n\"Ideally we\u0027d refactor the daemon to get rid of these on the dbus client side because I don\u0027t think they\u0027re much better than the InternalFailure that we are trying to get rid of also.\"\n\u003e\u003e Could you help me understand better: Does \"daemon\" mean any daemon that calls CreateDump()? If we \"get rid of\" these specific non-actionable errors, what would be the better alternative for specifying a generic non-actionable error?",
+      "parentUuid": "88cb573a_c00d1792",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 55
+      },
+      "revId": "490ca39b86750757f25384613178579bdeab03a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

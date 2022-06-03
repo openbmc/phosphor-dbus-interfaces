@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88cb573a_c00d1792",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-06-03T12:33:53Z",
+      "side": 1,
+      "message": "As a client, it doesn\u0027t seem like I can do much about either of these, can I?  I didn\u0027t pass the path into you so if there is a permission problem I can\u0027t do anything about it.\n\nIdeally we\u0027d refactor the daemon to get rid of these on the dbus client side because I don\u0027t think they\u0027re much better than the InternalFailure that we are trying to get rid of also.",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 55
+      },
+      "revId": "490ca39b86750757f25384613178579bdeab03a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -44,7 +44,7 @@ through `org.freedesktop.systemd1`.
   to change the service behaviour on the next boot, `true` to start the service
   on the next boot and `false` to not start the service on the next boot. Even
   if the service is disabled, on the next boot it can be started if there are
-  other service dependencies to satisy. The service cannot be enabled if the
+  other service dependencies to satisfy. The service cannot be enabled if the
   service is masked.
 
 - Masked - indicates whether the service is masked, `true` indicates the

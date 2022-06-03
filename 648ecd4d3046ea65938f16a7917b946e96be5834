@@ -163,6 +163,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2946abcd_ddef7fd5",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-06-03T20:56:24Z",
+      "side": 1,
+      "message": "\u003e that would just require a PowerModeLock property and adding NotAllowed to power mode.\n\nI don\u0027t really see how that changes anything.  You still have the same one-off property proposal.\n\nIf we need a design for \"properties which can be restricted\" let\u0027s come up with a design for that.  Not make one-off properties to facilitate a specific case.",
+      "parentUuid": "93922bdb_fa7a9a3d",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d589b3d5_63577ba1",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
         "patchSetId": 1

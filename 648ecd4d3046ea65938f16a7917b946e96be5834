@@ -145,6 +145,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "93922bdb_fa7a9a3d",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2022-06-03T16:14:16Z",
+      "side": 1,
+      "message": "It\u0027s possible we\u0027d end up implementing this by allowing only certain Redfish auth levels access to write the power mode lock.\n\nthat would just require a PowerModeLock property and adding NotAllowed to power mode.\n\nIs that doable?  how about a new interface with powerModeLock by itself?",
+      "parentUuid": "6f4f653d_cd2dad8c",
+      "revId": "648ecd4d3046ea65938f16a7917b946e96be5834",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d589b3d5_63577ba1",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
         "patchSetId": 1

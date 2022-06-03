@@ -70,6 +70,30 @@
       },
       "revId": "490ca39b86750757f25384613178579bdeab03a6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfdefaeb_0584358d",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-06-03T22:20:54Z",
+      "side": 1,
+      "message": "Acknowledged. We don\u0027t have the functionality to restore dbus client access to dump entries after daemon restart implemented for all phosphor-debug-collector dump types yet, so it seems preferable to not crash the daemon and lose dbus client access to existing dump entries, even if we\u0027re unable to create new dump files at the moment. Will try to merge this patchset for now.",
+      "parentUuid": "8d85f205_4da89631",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 55
+      },
+      "revId": "490ca39b86750757f25384613178579bdeab03a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

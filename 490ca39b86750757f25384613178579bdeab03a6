@@ -46,6 +46,30 @@
       },
       "revId": "490ca39b86750757f25384613178579bdeab03a6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d85f205_4da89631",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-06-03T20:54:06Z",
+      "side": 1,
+      "message": "\u003e Does \"daemon\" mean any daemon that calls CreateDump()\n\nI meant the daemon exposing the CreateDump interface.  Anyone calling that interface would be the client, in this context.\n\n\u003e ...what would be the better alternative for specifying a generic non-actionable error?\n\nThere shouldn\u0027t be one.  If you aren\u0027t fixing something in the daemon and the client can\u0027t be told how to fix it, what are we going to do?  Errors to the client should be \"you shouldn\u0027t have called me now\" or \"you called me with a bad parameter\" not \"something went wrong; good luck\".  If the daemon needs to be restarted it is better to crash the daemon and let the dbus request naturally error out then to send the client a useless error that no one has and no one will take action to resolve.",
+      "parentUuid": "f3d3c6da_59fbcfd1",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 55
+      },
+      "revId": "490ca39b86750757f25384613178579bdeab03a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

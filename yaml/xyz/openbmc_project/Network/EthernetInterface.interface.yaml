@@ -55,8 +55,6 @@ properties:
           - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: NTPServers
       type: array[string]
-      flags:
-          - readonly
       description: >
           NTP servers that are currently in use on this interface.
           This includes both DHCP and static NTP server addresses.

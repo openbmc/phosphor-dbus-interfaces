@@ -124,6 +124,6 @@ spec (DSP0249, Section 6.3, State Sets Tables, Table 7 – Boot-Related State
 Sets, Set ID - 196 Boot Progress).
 
 [1]: https://github.com/openbmc/docs/blob/master/architecture/openbmc-systemd.md#error-handling-of-systemd
-[2]: https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/xyz/openbmc_project/State/
-[3]: https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/xyz/openbmc_project/State/OperatingSystem/Status.interface.yaml
-[4]: https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/xyz/openbmc_project/State/Boot/Progress.interface.yaml
+[2]: https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/State/
+[3]: https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/State/OperatingSystem/Status.interface.yaml
+[4]: https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml

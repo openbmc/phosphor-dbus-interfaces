@@ -56,14 +56,15 @@ properties:
     - name: NTPServers
       type: array[string]
       description: >
-          NTP servers that are currently in use on this interface.
-          This includes both DHCP and static NTP server addresses.
-    - name: StaticNTPServers
+          A Statically defined set of NTP servers on this interface.
+          This property supports read/write operation.
+    - name: NetworkSuppliedNTPServers
       type: array[string]
+      flags:
+          - readonly
       description: >
-          This property describes statically defined NTPServers on the
-          interface. This property supports read/write operation.
-          Configure the NTP servers on the system during write operation.
+          This is a set of NTP servers supplied by other network protocols
+          like DHCP.
     - name: LinkLocalAutoConf
       type: enum[self.LinkLocalConf]
       description: >

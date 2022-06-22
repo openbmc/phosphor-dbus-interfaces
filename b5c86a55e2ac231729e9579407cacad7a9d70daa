@@ -70,6 +70,24 @@
       "parentUuid": "977f4435_993004a2",
       "revId": "b5c86a55e2ac231729e9579407cacad7a9d70daa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9670f694_31b2ee67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-06-22T16:05:55Z",
+      "side": 1,
+      "message": "\u003e Probably we can change the front end (bmcweb and IPMI) to write to StaticNTPServers  property on PATCH and use NTPServers to hold the active dynamic+static list? Then i think no change needed in dbus. Are you indicating the same Patrick ?\n\nYes.  The read-only flag was reverted because it broke various other applications.  We need to get those applications updated (and the StaticNTPServers implemented?) and then we can re-enable the read-only flag.",
+      "parentUuid": "c6cd8a34_938c32b3",
+      "revId": "b5c86a55e2ac231729e9579407cacad7a9d70daa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

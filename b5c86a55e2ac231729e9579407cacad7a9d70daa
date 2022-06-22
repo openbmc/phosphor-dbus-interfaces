@@ -88,6 +88,24 @@
       "parentUuid": "c6cd8a34_938c32b3",
       "revId": "b5c86a55e2ac231729e9579407cacad7a9d70daa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b86c78f_799c7dc0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-06-22T16:30:00Z",
+      "side": 1,
+      "message": "We need to have a discussion around which parameters are global across the system, and which parameters are per EthernetInterface.\n\n\"StaticNTPServers\" is arguably bmc-wide, not per nic;  This is how Redfish, and other systems model the NTP servers setting.  My understanding is that systemd does something a little out of the ordinary here, and puts them per interface, but that seems like something we can deal with in userspace code.  Does anyone have use cases that require per-interface statically assigned NTP servers?\n\nWe should finish the discussion in DMTF about this before we make any changes, but I suspect the changes that need to be made here are:\n1. StaticNtpServers moves to an interface that is global across the BMC\n2. NTPServers property on EthernetInterfaces moves to read-only\n3. Various front/backends are updated.\n\nWe also likely need a mechanism for configuring whether the NIC will take parameters from DHCP, or to take them from static parameters (or maybe both?).",
+      "parentUuid": "9670f694_31b2ee67",
+      "revId": "b5c86a55e2ac231729e9579407cacad7a9d70daa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

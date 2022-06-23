@@ -106,6 +106,24 @@
       "parentUuid": "9670f694_31b2ee67",
       "revId": "b5c86a55e2ac231729e9579407cacad7a9d70daa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ca07fe9_18f5191f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-06-23T06:56:42Z",
+      "side": 1,
+      "message": "\u003e Yes.  The read-only flag was reverted because it broke various other applications.  We need to get those applications updated (and the StaticNTPServers implemented?) and then we can re-enable the read-only flag.\n\nThanks Patrick. This sounds good. \n\n\u003e Does anyone have use cases that require per-interface statically assigned NTP servers?\n\nSystemd had answered this at https://github.com/systemd/systemd/issues/22384\nI too agree with what systemd said. When the system is setup in such a way that both interfaces are at different subnets, the NTP servers would need to be routed at the interface level. So lets not do (1)\n\nOn the point (2) - already we had made this change and that got reverted. We need to get that back into dbus\n\nIf we have an agreement on the above two, we need to directly work on (3). The bmcweb commit 52671 should get updated to consume the new property NetworkSuppliedServers once the schema are out (along with the current change to write to StaticNTPServer at dbus). Also we can merge the already approved networkd commit https://gerrit.openbmc.org/c/openbmc/phosphor-networkd/+/50156",
+      "parentUuid": "7b86c78f_799c7dc0",
+      "revId": "b5c86a55e2ac231729e9579407cacad7a9d70daa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

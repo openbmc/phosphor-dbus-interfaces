@@ -52,6 +52,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "231b4252_2580e665",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-06-27T16:32:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2851aa0e_3817d606",
+      "revId": "f7fcbf7ac95e5c823c22236ec9c985ad4e0b6a23",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c1fe79e2_4c596409",
@@ -65,6 +83,30 @@
       "writtenOn": "2022-06-24T21:32:12Z",
       "side": 1,
       "message": "Not sure what a \"physical front panel\" has to do with this.  Isn\u0027t that just your particular implementation?",
+      "range": {
+        "startLine": 2,
+        "startChar": 44,
+        "endLine": 3,
+        "endChar": 26
+      },
+      "revId": "f7fcbf7ac95e5c823c22236ec9c985ad4e0b6a23",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cce499bf_3ac8aab4",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-06-27T16:32:34Z",
+      "side": 1,
+      "message": "Corrected it. It was mentioned since the dbus button interface is associated with front panel component which is OCP debug card selector button.",
+      "parentUuid": "c1fe79e2_4c596409",
       "range": {
         "startLine": 2,
         "startChar": 44,

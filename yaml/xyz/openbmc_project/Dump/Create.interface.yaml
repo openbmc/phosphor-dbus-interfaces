@@ -47,3 +47,12 @@ methods:
           - xyz.openbmc_project.Dump.Create.Error.QuotaExceeded
           - xyz.openbmc_project.Common.Error.NotAllowed
           - xyz.openbmc_project.Common.Error.InvalidArgument
+enumerations:
+    - name: CreateParameters
+      description: >
+          Additional parameters for creating the dump.
+      values:
+        - name: 'OriginatorId'
+          description: >
+              A unique id of the user that initiated the dump creation. The
+              value must be a string.

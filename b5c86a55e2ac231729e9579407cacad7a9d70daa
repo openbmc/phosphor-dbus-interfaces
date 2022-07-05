@@ -124,6 +124,24 @@
       "parentUuid": "7b86c78f_799c7dc0",
       "revId": "b5c86a55e2ac231729e9579407cacad7a9d70daa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a02e7320_39e913ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-07-05T17:58:47Z",
+      "side": 1,
+      "message": "\u003e \u003e Yes.  The read-only flag was reverted because it broke various other applications.  We need to get those applications updated (and the StaticNTPServers implemented?) and then we can re-enable the read-only flag.\n\u003e \n\u003e Thanks Patrick. This sounds good. \n\u003e \n\u003e \u003e Does anyone have use cases that require per-interface statically assigned NTP servers?\n\u003e \n\u003e Systemd had answered this at https://github.com/systemd/systemd/issues/22384\n\u003e I too agree with what systemd said. When the system is setup in such a way that both interfaces are at different subnets, the NTP servers would need to be routed at the interface level. So lets not do (1)\n\nSure, that seems reasonable, although now makes matching Redfish code up to it difficult.  We already have to work around the issue in odd ways, and now the code is going to get more complex, but sure, if we have use cases where per-nic NTP servers is required, I guess that makes sense.\n\nI would\u0027ve assumed that if you had per-NIC ntp servers, the gateway routing and subnet routing would be used to determine which nic to communicate with each NTP server on, but I guess systemd thinks that\u0027s too complex.\n\n\u003e \n\u003e On the point (2) - already we had made this change and that got reverted. We need to get that back into dbus\n\u003e \n\u003e If we have an agreement on the above two, we need to directly work on (3). The bmcweb commit 52671 should get updated to consume the new property NetworkSuppliedServers once the schema are out (along with the current change to write to StaticNTPServer at dbus). Also we can merge the already approved networkd commit https://gerrit.openbmc.org/c/openbmc/phosphor-networkd/+/50156\n\nSure, that seems reasonable.  Please make sure to keep up to date (in the commit messages) all the reviews that need to go in together such that things don\u0027t break.",
+      "parentUuid": "0ca07fe9_18f5191f",
+      "revId": "b5c86a55e2ac231729e9579407cacad7a9d70daa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

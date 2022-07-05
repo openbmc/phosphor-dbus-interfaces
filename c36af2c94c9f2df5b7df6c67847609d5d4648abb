@@ -218,6 +218,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "61fc607c_0895a103",
+        "filename": "yaml/xyz/openbmc_project/Common/GeneratedBy.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-05T12:15:28Z",
+      "side": 1,
+      "message": "The Redfish ones are an enumeration though: { Client , Internal , SupportingService }.  Is this sufficient for our needs?  I think we should be documenting what the expectations are for this string in order to make life easier on the Redfish implementation.  Ideally they are enums and/or domain-enums (like the parameters to CreateDump).",
+      "parentUuid": "b833f77e_642f37a3",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 0
+      },
+      "revId": "c36af2c94c9f2df5b7df6c67847609d5d4648abb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c3ce09f8_0c7a4321",
         "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
         "patchSetId": 8

@@ -36,7 +36,16 @@ properties:
     - name: DHCPEnabled
       type: enum[self.DHCPConf]
       description: >
-          Address mode of the ethernet interface.
+          Address mode of the ethernet interface. Deprecated in favor of
+          split options to avoid combinatorics.
+    - name: DHCP4
+      type: boolean
+      description: >
+          Enable or disable IPv4 DHCP.
+    - name: DHCP6
+      type: boolean
+      description: >
+          Enable or disable IPv6 DHCP.
     - name: Nameservers
       type: array[string]
       description: >
@@ -72,9 +81,7 @@ properties:
     - name: IPv6AcceptRA
       type: boolean
       description: >
-          Boolean for accepting router advertisements in IPv6. This control is
-          being deprecated in favor of the DHCPConf enumerations
-          below. Removal of this entry is deferred.
+          Boolean for accepting router advertisements in IPv6.
     - name: NICEnabled
       type: boolean
       description: >

@@ -16,6 +16,23 @@
       "message": "Seems reasonable to me. Thanks for updating the openpower-proc-control code as well. May want a small update to https://github.com/openbmc/docs/blob/master/designs/nmi-dbus-interface.md to reflect the new parameter but it was a pretty minimal design doc to start with.",
       "revId": "fe8ebe1ff2108e0d3629abfab891013d18d56035",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b0861ab_225fd393",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-07T12:40:50Z",
+      "side": 1,
+      "message": "Based on Jason\u0027s remarks above I\u0027d like a small comment added here that this is retained for legacy reasons and additional chipset-specific NMIs are not to be added to this enumeration set.",
+      "revId": "fe8ebe1ff2108e0d3629abfab891013d18d56035",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

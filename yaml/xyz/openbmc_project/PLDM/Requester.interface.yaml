@@ -49,3 +49,19 @@ methods:
                 PLDM instance id.
       errors:
           - xyz.openbmc_project.Common.Error.TooManyResources
+
+    - name: FreeInstanceId
+      description: >
+          Free PLDM instance id, for the input MCTP EID.
+
+      parameters:
+          - name: eid
+            type: byte
+            description: >
+                The MCTP endpoint, specified by 'eid' (endpoint id), for which
+                the PLDM granted instance id needs to be freed.
+
+          - name: instanceid
+            type: byte
+            description: >
+                The PLDM instance id needs to be freed.

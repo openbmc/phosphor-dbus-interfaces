@@ -16,6 +16,24 @@
       "message": "Now I\u0027m lost.  \n\nWe added OriginatorType, which corresponds to a Redfish property, but we didn\u0027t remove OriginatorId or define a schema for it.  Who is the user of OriginatorId if it isn\u0027t Redfish and what do appropriate values look like.  \"Unique Id of the originator\" doesn\u0027t tell me enough to know, as a developer, what kind of values I should be filling in here.  And, we generally do not allow arbitrary strings to be filled into dbus objects because there is no programatic way to interpret them so we end up with random keys spread across the codebase.",
       "revId": "75fa0b00aa85ed0e21ff3ec98f6f7bc0f92cec74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbd9274a_300c62f2",
+        "filename": "yaml/xyz/openbmc_project/Common/OriginatedBy.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2022-07-08T09:20:19Z",
+      "side": 1,
+      "message": "The definition of what this \"OriginatorId\" string should be is application/service specific.\n\nThe service that uses this interface, must decide on what can be stored in this string. Example, for dumps (user-generated dumps), the originator\u0027s IP address will be stored in this property.",
+      "parentUuid": "97d74f55_ff555b6b",
+      "revId": "75fa0b00aa85ed0e21ff3ec98f6f7bc0f92cec74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

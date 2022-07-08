@@ -34,6 +34,24 @@
       "parentUuid": "97d74f55_ff555b6b",
       "revId": "75fa0b00aa85ed0e21ff3ec98f6f7bc0f92cec74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d3086e7_1c603af9",
+        "filename": "yaml/xyz/openbmc_project/Common/OriginatedBy.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-08T12:15:12Z",
+      "side": 1,
+      "message": "\u003e The definition of what this \"OriginatorId\" string should be is application/service specific.\n\nWho/what is the user of this data then?  If they are intended to be used only as part of the dump data itself (used back in IBM maybe?), that is fine, but we do not allow programmatic interpretation of arbitrary strings.\n\nYou will see a number of place in the YAML file where we make a similar statement.  I\u0027d like to see it added here as a comment as well, if this is your intention.\n\n```\nyaml/org/open_power/Logging/PEL/Entry.interface.yaml:          not be used for programmatic interrogation of an object.\nyaml/xyz/openbmc_project/Inventory/Decorator/LocationCode.interface.yaml:          programmatic interrogation of an inventory object.\nyaml/xyz/openbmc_project/Inventory/Decorator/ManufacturerExt.interface.yaml:          These fields must not be used for programmatic interrogation of\nyaml/xyz/openbmc_project/Inventory/Decorator/ManufacturerExt.interface.yaml:          programmatic interrogation should be promoted to a first-class\nyaml/xyz/openbmc_project/Inventory/Decorator/UniqueIdentifier.interface.yaml:          programmatic interrogation of an object.\nyaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml:          in user interfaces but this field should not be used for programmatic\n```\n\nIf somehow programmatic usage of this value *within* the BMC is your intention, then arbitrary strings are not acceptable.",
+      "parentUuid": "fbd9274a_300c62f2",
+      "revId": "75fa0b00aa85ed0e21ff3ec98f6f7bc0f92cec74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

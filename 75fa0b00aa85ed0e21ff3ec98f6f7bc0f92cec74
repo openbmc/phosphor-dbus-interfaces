@@ -52,6 +52,24 @@
       "parentUuid": "fbd9274a_300c62f2",
       "revId": "75fa0b00aa85ed0e21ff3ec98f6f7bc0f92cec74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61c4041c_7568770e",
+        "filename": "yaml/xyz/openbmc_project/Common/OriginatedBy.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2022-07-11T09:45:13Z",
+      "side": 1,
+      "message": "\u003e You will see a number of place in the YAML file where we make a similar statement.  I\u0027d like to see it added here as a comment as well, if this is your intention.\n\n+1\n\nThis interface is used at IBM systems for a user triggered dump usecases. This is added as an independent interface, so that it can be used in any other applications, who need to save/audit; as who created/initiated the action in the system.",
+      "parentUuid": "5d3086e7_1c603af9",
+      "revId": "75fa0b00aa85ed0e21ff3ec98f6f7bc0f92cec74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

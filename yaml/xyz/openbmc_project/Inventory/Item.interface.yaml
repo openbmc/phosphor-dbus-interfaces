@@ -1,6 +1,11 @@
 description: >
     Implement to provide basic item attributes.  Required by all objects
     within the inventory namespace.
+
+    Any service implementing Inventory.Item on one or more objects must
+    implement org.freedesktop.DBus.ObjectManager on
+    /xyz/openbmc_project/inventory.
+
 properties:
     - name: PrettyName
       type: string

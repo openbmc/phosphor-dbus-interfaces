@@ -178,6 +178,24 @@
       "parentUuid": "4301a88d_e717c9aa",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8f6f93e_9d4e3394",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000388
+      },
+      "writtenOn": "2022-07-15T16:29:45Z",
+      "side": 1,
+      "message": "Just wanted to revive this review - Nikhil has worked on the bmcweb side change on how the threads DBus object would be used to expose it on bmcweb (which is what will use this DBus object): https://gerrit.openbmc.org/c/openbmc/bmcweb/+/54900\n\nBecause we have to expose what subprocessors are available for each core and each threads may even have ProcessorMetrics attached to them - I believe we need a per thread DBus object.",
+      "parentUuid": "7c13fac0_c7f612f0",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

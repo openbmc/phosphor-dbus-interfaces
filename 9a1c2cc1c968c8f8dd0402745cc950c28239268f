@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "37f8f1c4_304f9a8c",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-16T02:10:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "210393e1_829df4cc",
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4c30841_f4534c18",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c248851b_e14cf67f",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-16T02:10:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a4c30841_f4534c18",
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "82cb3b7e_d15d717f",
@@ -48,6 +84,24 @@
       "writtenOn": "2022-04-28T19:33:01Z",
       "side": 1,
       "message": "I\u0027m not a big fan of this property name.  What have we used in other dumps to represent the path to the associated log?  Is it an association or a property?",
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1a42bc7_b0605342",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-16T02:10:56Z",
+      "side": 1,
+      "message": "From what I see, other phosphor-debug-collector dump entries aren\u0027t currently referencing logs from other daemons.\n\nI changed directions a bit in patchset 6 (please see the new MainLogRef description). What I\u0027m now trying to do for the two initial types of fault data is to supply the reference as the log ID string needed by the dbus client (bmcweb) to construct the redfish URI to the log. The ID isn\u0027t always in the dbus object path, and I\u0027m trying to add it as a property here to avoid extra dbus calls to look up the ID.\n\nFeel free to suggest a better name or approach if you have one in mind.",
+      "parentUuid": "82cb3b7e_d15d717f",
       "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -70,6 +124,53 @@
         "startChar": 0,
         "endLine": 12,
         "endChar": 134
+      },
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "942064a0_716b0e34",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-16T02:10:56Z",
+      "side": 1,
+      "message": "Updated the description, please take a look.",
+      "parentUuid": "e789361d_9d643309",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 134
+      },
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2a78e50_d20c1da3",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-16T02:10:56Z",
+      "side": 1,
+      "message": "Removing SupplementalLogRefs for now -- will consider it to be future work.",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 31
       },
       "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"

@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8987c7be_1309b677",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-18T19:32:16Z",
+      "side": 1,
+      "message": "Why is it called \u0027MainLogRef\u0027?  That seems like an unusual name.",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b59354a_8f318145",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-18T19:32:16Z",
+      "side": 1,
+      "message": "Are you intending that these are only used by humans or is there suppose to be some utility of it internal to the BMC?  General for arbitrary strings we include some verbiage about it not being programmatically interrogated.",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d33a5260_585d9f82",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-18T19:32:16Z",
+      "side": 1,
+      "message": "Can we re-render this to not be a table and have huge line wrapping?  Maybe these belong nearby the enums?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 89
+      },
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b091a0f_77c9e96d",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-18T19:32:16Z",
+      "side": 1,
+      "message": "Is \"crashdump\" standard terminology or is it relevant to only a certain processor manufacturer?",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

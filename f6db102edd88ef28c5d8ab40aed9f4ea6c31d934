@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed30d056_56c1c066",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-07-19T03:24:00Z",
+      "side": 0,
+      "message": "FWIW, I didn\u0027t remember this being here either.  I only noticed it when I went to go make the change.",
+      "parentUuid": "ecbf567b_1896820c",
+      "range": {
+        "startLine": 19,
+        "startChar": 52,
+        "endLine": 19,
+        "endChar": 78
+      },
+      "revId": "f6db102edd88ef28c5d8ab40aed9f4ea6c31d934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb82fb80_59cd18f7",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-07-19T00:43:26Z",
       "side": 0,
       "message": "Not related to this change, but is this really true in dbus sensors?",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 46
+      },
+      "revId": "f6db102edd88ef28c5d8ab40aed9f4ea6c31d934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69915f69_f5eefa8e",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-07-19T03:24:00Z",
+      "side": 0,
+      "message": "If in \"SpecialMode\" no, but I don\u0027t think James documented that test mode.  Probably worth discussing figuring out how to get that detail into PDI at some point.",
+      "parentUuid": "bb82fb80_59cd18f7",
       "range": {
         "startLine": 21,
         "startChar": 4,

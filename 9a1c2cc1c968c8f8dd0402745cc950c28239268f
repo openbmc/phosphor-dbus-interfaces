@@ -108,6 +108,42 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "66df3ee2_4aec8bb4",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-19T04:31:58Z",
+      "side": 1,
+      "message": "\u003e\u003e From what I see, other phosphor-debug-collector dump entries aren\u0027t currently referencing logs from other daemons.\n\nOh I take it back, there is a \"SourceDumpId\" property in the xyz.openbmc_project.Dump.Entry.System interface referring to an associated log.\n\n(The type and usage of the property are a bit different from the FaultLog use case though, so I figure I shouldn\u0027t make the names very similar.)",
+      "parentUuid": "b1a42bc7_b0605342",
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80f9b13d_f87a7468",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-19T04:31:58Z",
+      "side": 1,
+      "message": "\u003e\u003e From what I see, other phosphor-debug-collector dump entries aren\u0027t currently referencing logs from other daemons.\n\nOh, I take it back, there is a \"SourceDumpId\" property in xyz.openbmc_project.Dump.Entry.System.interface.yaml referring to an associated log.",
+      "parentUuid": "b1a42bc7_b0605342",
+      "revId": "9a1c2cc1c968c8f8dd0402745cc950c28239268f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e789361d_9d643309",
         "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
         "patchSetId": 4

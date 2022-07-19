@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6e9855c6_d347f6e8",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-19T04:31:58Z",
+      "side": 1,
+      "message": "How about MainLogId? Updated the description to say that \"Main\" is in contrast to \"Supplemental\".",
+      "parentUuid": "8987c7be_1309b677",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6b59354a_8f318145",
         "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
         "patchSetId": 7
@@ -37,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "546522f5_90a3bb69",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-19T04:31:58Z",
+      "side": 1,
+      "message": "Please see my previous comment at https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/53018/comments/82cb3b7e_d15d717f about the bmcweb use case I have in mind.",
+      "parentUuid": "6b59354a_8f318145",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d33a5260_585d9f82",
         "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
         "patchSetId": 7
@@ -48,6 +84,30 @@
       "writtenOn": "2022-07-18T19:32:16Z",
       "side": 1,
       "message": "Can we re-render this to not be a table and have huge line wrapping?  Maybe these belong nearby the enums?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 89
+      },
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc5baf4e_62b3d6ee",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-07-19T04:31:58Z",
+      "side": 1,
+      "message": "Removed table.",
+      "parentUuid": "d33a5260_585d9f82",
       "range": {
         "startLine": 14,
         "startChar": 0,

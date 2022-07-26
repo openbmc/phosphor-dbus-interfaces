@@ -37,6 +37,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bfc2203d_daefe4d5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-07-26T18:43:16Z",
+      "side": 1,
+      "message": "@Patrick, do you want the full interface name called out on lines like this?",
+      "range": {
+        "startLine": 5,
+        "startChar": 29,
+        "endLine": 5,
+        "endChar": 43
+      },
+      "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e900ec78_be177219",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
         "patchSetId": 2
@@ -48,6 +71,30 @@
       "writtenOn": "2022-07-26T16:12:01Z",
       "side": 1,
       "message": "And the objects are required to be under that path, right?\n\nnit: check line length",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 83
+      },
+      "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "caeaa4bb_9febb5b4",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-07-26T18:43:16Z",
+      "side": 1,
+      "message": "ACK.  I should\u0027ve paid attention to that.",
+      "parentUuid": "e900ec78_be177219",
       "range": {
         "startLine": 5,
         "startChar": 0,
@@ -71,6 +118,24 @@
       "writtenOn": "2022-07-26T16:12:01Z",
       "side": 1,
       "message": "I don\u0027t think we have words here about the path either.  Probably need them added.",
+      "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4742a4c5_16b21c81",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-07-26T18:43:16Z",
+      "side": 1,
+      "message": "Same thing as you made on the inventory.item interface?  ACK",
+      "parentUuid": "00e284f9_4bba982d",
       "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

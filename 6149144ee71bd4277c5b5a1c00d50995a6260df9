@@ -60,6 +60,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "deab752f_c77d24d8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-26T20:31:29Z",
+      "side": 1,
+      "message": "I don\u0027t think it is necessary since it is self-referencing here.  You could even say \"this interface\".",
+      "parentUuid": "bfc2203d_daefe4d5",
+      "range": {
+        "startLine": 5,
+        "startChar": 29,
+        "endLine": 5,
+        "endChar": 43
+      },
+      "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e900ec78_be177219",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
         "patchSetId": 2
@@ -136,6 +160,24 @@
       "side": 1,
       "message": "Same thing as you made on the inventory.item interface?  ACK",
       "parentUuid": "00e284f9_4bba982d",
+      "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb0e01ba_b9f274c5",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-26T20:31:29Z",
+      "side": 1,
+      "message": "Yeah.  Same thing.  We talked about \u0027namespaces\u0027 here so I\u0027m surprised we didn\u0027t pin down the path.  That was the only reason I wrote anything different.",
+      "parentUuid": "4742a4c5_16b21c81",
       "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

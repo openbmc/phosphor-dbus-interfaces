@@ -16,6 +16,63 @@
       "message": "Any comments on this?",
       "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13e78822_c5a1ac00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-26T16:12:01Z",
+      "side": 1,
+      "message": "Agree in principle.  Minor additions suggested.",
+      "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e900ec78_be177219",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-26T16:12:01Z",
+      "side": 1,
+      "message": "And the objects are required to be under that path, right?\n\nnit: check line length",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 83
+      },
+      "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00e284f9_4bba982d",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-26T16:12:01Z",
+      "side": 1,
+      "message": "I don\u0027t think we have words here about the path either.  Probably need them added.",
+      "revId": "6149144ee71bd4277c5b5a1c00d50995a6260df9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

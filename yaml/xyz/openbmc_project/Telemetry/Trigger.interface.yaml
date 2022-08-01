@@ -20,40 +20,45 @@ properties:
     - name: Persistent
       type: boolean
       description: Defines if Trigger is stored in non volatile memory.
-    - name: ReportNames
-      type: array[string]
+    - name: Reports
+      type: array[object_path]
       description: >
-          Collection of report names that are updated when threshold conditions
-          are met. List is ignored if TriggerActions property does not contain
-          'UpdateReport' action.
+          Collection of Report objects that are updated when threshold
+          conditions are met. List is ignored if TriggerActions property does
+          not contain 'UpdateReport' action.
     - name: Sensors
-      type: array[struct[object_path, string]]
+      type: array[dict[object_path,string]]
       description: >
-          Array of sensors that is monitored within trigger. First parameter of a
-          structure is a sensor path. Second parameter is a metadata that is used
-          to store user data about sensor.
+          Map of sensors that is monitored within trigger. D-Bus sensor path is
+          used as map's key. Its value is a metadata that is used
+          to store user data about sensor. In Redfish, metadata will be set to
+          endpoint corresponding to that sensor.
     - name: Thresholds
       type: variant[array[struct[enum[self.Type],uint64,enum[self.Direction],double]],array[struct[string,enum[self.Severity],uint64,string]]]
       description: >
           First type in variant is a collection of numeric thresholds that has
           following fields - type, dwell time, direction and threshold value.
-          Second type holds by variant is a collection of discrete thresholds that
-          contains following fields - user id, severity, dwell time and threshold
-          value. Discrete value does not need to be a number. Numeric threshold
-          array is limited by Type enumeration, only 4 elements are allowed.
-          Discrete threshold array size is not limited. If discrete threshold
-          array is empty than every value change is taken into account of
-          threshold condition. Dwell time specify for how long condition has to
-          persist to trigger an action.
+          Second type holded by variant is a collection of discrete thresholds
+          that contains following fields - user id, severity, dwell time and
+          threshold value. Discrete value does not need to be a number. Numeric
+          threshold array is limited by Type enumeration, only 4 elements are
+          allowed. Discrete threshold array size is not limited. If discrete
+          threshold array is empty then every value change is taken into account
+          of threshold condition. Dwell time specifies for how long condition
+          has to persist to trigger an action.
+    - name: Name
+      type: string
+      description: >
+          Defines the name of trigger to be exposed over D-Bus.
 
 enumerations:
     - name: TriggerAction
       description: >
           Defines a action which is taken once threshold condition is met.
       values:
-          - name: LogToLogService
+          - name: LogToJournal
             description: Trigger will log to journal.
-          - name: RedfishEvent
+          - name: LogToRedfishEventLog
             description: Trigger will log Redfish message.
           - name: UpdateReport
             description: >
@@ -70,16 +75,17 @@ enumerations:
           - name: UpperCritical
     - name: Direction
       description: >
-          Defines in which direction threshold value is crossed to fulfill numeric
-          threshold condition.
+          Defines in which direction threshold value is crossed to fulfill
+          numeric threshold condition.
       values:
           - name: Either
             description: >
                 Crossing threshold value fulfill numeric threshold condition.
           - name: Decreasing
             description: >
-                If threshold value is crossed and previous sensor value was greater
-                then threshold value then numeric threshold condition is met.
+                If threshold value is crossed and previous sensor value was
+                greater then threshold value then numeric threshold condition is
+                met.
           - name: Increasing
             description: >
                 If threshold value is crossed and previous sensor value was less

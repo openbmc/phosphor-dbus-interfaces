@@ -5,54 +5,65 @@ description: >
 methods:
     - name: AddReport
       description: >
-          Create new object that represent Report with
+          Create new object that represents Report with
           xyz.openbmc_project.Telemetry.Report interface stored in path
-          /xyz/openbmc_project/Telemetry/Reports/{Domain}/{Name} where
-          Domain and Name are parameters of this method.
+          /xyz/openbmc_project/Telemetry/Reports/{properties[Id]} where
+          properties[Id] is passed into this method as a parameter.
       parameters:
-          - name: name
-            type: string
+          - name: properties
+            type: array[dict[string,variant[boolean,uint32,uint64,string,enum[xyz.openbmc_project.Telemetry.Report.ReportingType],enum[xyz.openbmc_project.Telemetry.Report.ReportUpdates],array[enum[xyz.openbmc_project.Telemetry.Report.ReportActions]],array[struct[array[struct[object_path,string]],enum[xyz.openbmc_project.Telemetry.Report.OperationType],string,enum[xyz.openbmc_project.Telemetry.Report.CollectionTimescope],uint64]]]]]
             description: >
-                Defines the name of report to be exposed over D-Bus. Service allows
-                to use separator '/' in name to group reports in directory.
-          - name: reportingType
-            type: enum[xyz.openbmc_project.Telemetry.Report.ReportingType]
-            description: Defines report type
-          - name: reportUpdates
-            type: enum[xyz.openbmc_project.Telemetry.Report.ReportUpdates]
-            description: Defines report update type
-          - name: appendLimit
-            type: size
-            description: >
-                Defines the maximum number of entries in 'Readings' property.
-          - name: emitsReadingsUpdate
-            type: boolean
-            description: >
-                Defines presence of PropertiesChanged signal for
-                xyz.openbmc_project.Telmetry.Report.Readings property.
-          - name: logToMetricReportsCollection
-            type: boolean
-            description: >
-                Defines presence of Report in Metric Report Collection in Redfish
-                Telemetry Service.
-          - name: interval
-            type: uint64
-            description: >
-                Defines period of time in milliseconds when Report is updated with
-                new readings. Minimal interval is defined in MinInterval property.
-          - name: metricParams
-            type: array[struct[array[object_path],enum[xyz.openbmc_project.Telemetry.Report.OperationType],string,string,enum[xyz.openbmc_project.Telemetry.Report.CollectionTimescope],uint64]]
-            description: >
-                Array of metric parameters where first parameter is an array of DBus
-                sensor paths. Second parameter specifies operation type. Third is a
-                metric Id and fourth is a metadata, both are used to store user
-                details. Fifth and sixth are used for collection timescope and
-                collection duration.
+                Map of properties defining added report object. Key is the
+                string identifier of property. Value is a variant, whose
+                underlying type is dependent from the key. Possible key values
+                are: Id, Name, ReportingType, ReportActions, Interval,
+                AppendLimit, ReportUpdates, MetricParams, Enabled. All keys are
+                optional, therefore it is acceptable to pass an empty map here.
+
+                Id (string) - unique identifier of created Report object to be
+                exposed over D-Bus. Acceptable formats are: "{Id}",
+                "{Prefix}/{SubId}", "{Prefix}/". If the last variant is used,
+                service will generate unique SubId value by itself.
+
+                Name (string) - user friendly name of created Report object.
+
+                ReportingType (enum[
+                xyz.openbmc_project.Telemetry.Report.ReportingType]) - indicates
+                when readings should be updated. Possible values are listed in
+                Report interface documentation.
+
+                ReportActions (array[enum[
+                xyz.openbmc_project.Telemetry.Report.ReportActions]]) - possible
+                additional actions to trigger after readings' update, as
+                specified in Report interface documentation.
+
+                Interval (uint64) - period of time in milliseconds when Report
+                is updated with new readings. Minimal interval is defined in
+                MinInterval property.
+
+                AppendLimit (size) - maximum number of entries in 'Readings'
+                property.
+
+                ReportUpdates (enum[
+                xyz.openbmc_project.Telemetry.Report.ReportUpdates]) - indicates
+                how readings should be updated. Possible values are listed in
+                Report interface documentation.
+
+                MetricParams (array[struct[array[struct[object_path,string]],
+                enum[xyz.openbmc_project.Telemetry.Report.OperationType],string,
+                enum[xyz.openbmc_project.Telemetry.Report.CollectionTimescope],
+                uint64]]) - array of metric parameters, which are stored in a
+                way specified in description of ReadingParameters property from
+                Report interface documentation.
+
+                Enabled (boolean) - indicates if readings in report will be
+                updated.
       returns:
           - name: reportPath
             type: object_path
             description: >
-                Path to new report -> /xyz/openbmc_project/Telemetry/Reports/{name}.
+                Path to new report ->
+                  /xyz/openbmc_project/Telemetry/Reports/{parameters[Id]}.
 
 properties:
     - name: MaxReports
@@ -69,5 +80,12 @@ properties:
           Minimal allowed time between readings property updates. It limits
           Interval property in xyz.openbmc_project.Telemetry.Report and
           interval parameter in AddReport method.
+      flags:
+          - const
+    - name: SupportedOperationTypes
+      type: array[enum[xyz.openbmc_project.Telemetry.Report.OperationType]]
+      description: >
+          Contains subset of operation types currently supported by this
+          service.
       flags:
           - const

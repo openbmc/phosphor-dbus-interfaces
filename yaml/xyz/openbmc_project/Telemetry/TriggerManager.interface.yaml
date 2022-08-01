@@ -3,28 +3,34 @@ description: >
 
 methods:
     - name: AddTrigger
-      description: Create new object that represent Trigger with
+      description: >
+          Create new object that represents Trigger with
           xyz.openbmc_project.Telemetry.Trigger interface stored in path
-          /xyz/openbmc_project/Telemetry/Triggers/{Domain}/{Name} where
-          Domain and Name are parameters of this method.
+          /xyz/openbmc_project/Telemetry/Triggers/TelemetryService/{id} where
+          id is parameter of this method.
       parameters:
+          - name: id
+            type: string
+            description: >
+                Defines unique name of created Trigger object to be exposed over 
+                D-Bus.
           - name: name
             type: string
             description: >
-                Defines the name of report to be exposed over D-Bus. Service allows
-                to use separator '/' in name to group reports in directory.
+                Defines user friendly name of created Trigger object.
           - name: triggerActions
             type: array[enum[xyz.openbmc_project.Telemetry.Trigger.TriggerAction]]
             description: >
                 Defines which actions are taken when threshold conditions are met.
           - name: sensors
-            type: array[struct[object_path,string]]
+            type: array[dict[object_path,string]]
             description: >
-                Array of sensors that is monitored within trigger. Object path
-                points to a sensor in DBus envrionment. String is used as user
-                metadata.
-          - name: reportNames
-            type: array[string]
+                Map of sensors that is monitored within trigger. D-Bus sensor path is
+                used as map's key. Its value is a metadata that is used
+                to store user data about sensor. In Redfish, metadata will be set to
+                endpoint corresponding to that sensor.
+          - name: reports
+            type: array[object_path]
             description: >
                 Collection of report names that are updated when threshold
                 conditions are met. This parameter is ignored if triggerActions
@@ -36,7 +42,7 @@ methods:
                 in xyz.openbmc_project.Telemetry.Trigger interface.
       returns:
           - name: triggerPath
-            type: object_path
+            type: string
             description: >
                 Path to new trigger ->
                 /xyz/openbmc_project/Telemetry/Triggers/{name}.

@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9a9befc2_37ee9230",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-08-02T21:47:00Z",
+      "side": 1,
+      "message": "\"Primary\"/\"Secondary\" are fine with me; we are not bound to a particular standard. Are you okay with \"PrimaryLogId\" and \"SecondaryLogId\" to be a little more descriptive of what the Id is for?\n\nYes I\u0027m thinking Secondary IDs would be a list. Maybe a list of pairs of type and ID. (I think we should wait to add it in a future separate code review because we don\u0027t have the details of the use case all figured out yet.)",
+      "parentUuid": "7d0b0ff8_68338b45",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6b59354a_8f318145",
         "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
         "patchSetId": 7
@@ -85,6 +103,24 @@
       "side": 1,
       "message": "Please see my previous comment at https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/53018/comments/82cb3b7e_d15d717f about the bmcweb use case I have in mind.",
       "parentUuid": "6b59354a_8f318145",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "504eb5ba_a7b952d5",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-08-02T21:47:00Z",
+      "side": 1,
+      "message": "The link is meant to point to the comment thread at Patchset 4, line 9 of yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml:\n\n\"I changed directions a bit in patchset 6 (please see the new MainLogRef description). What I\u0027m now trying to do for the two initial types of fault data is to supply the reference as the log ID string needed by the dbus client (bmcweb) to construct the redfish URI to the log. The ID isn\u0027t always in the dbus object path, and I\u0027m trying to add it as a property here to avoid extra dbus calls to look up the ID.\"",
+      "parentUuid": "546522f5_90a3bb69",
       "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -185,6 +221,24 @@
       "side": 1,
       "message": "I guess I have concern about disambiguation then.  Are we talking about kdumps or are we talking about a collection of processor data?",
       "parentUuid": "5336b0dd_9521c6cc",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5abd836_f3aac7f8",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-08-02T21:47:00Z",
+      "side": 1,
+      "message": "We\u0027re talking about a collection of processor data (chipset dump).\"Crashdump\" seems to be becoming the standard term these days. From what I\u0027ve heard, collecting kernel dumps isn\u0027t as common nowadays because of PII and security concerns. But if we end up needing to differentiate them, I think we could consider \"kernel dump\" and \"chipset dump\" to be subtypes of \"crashdump\".",
+      "parentUuid": "cdff493c_23f883db",
       "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

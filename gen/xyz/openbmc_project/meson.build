@@ -77,6 +77,7 @@ generated_others += custom_target(
 )
 
 subdir('Ipmi')
+subdir('KVM')
 subdir('Led')
 subdir('Logging')
 subdir('MCTP')

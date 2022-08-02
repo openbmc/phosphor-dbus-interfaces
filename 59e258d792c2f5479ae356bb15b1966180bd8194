@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7d0b0ff8_68338b45",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-02T20:59:32Z",
+      "side": 1,
+      "message": "Can it be PrimaryID and SecondaryID?  Is \"Main\" and \"Supplemental\" coming from some standard elsewhere we are trying to follow?  Will Secondary/Supplemental IDs be a list?",
+      "parentUuid": "6e9855c6_d347f6e8",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6b59354a_8f318145",
         "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
         "patchSetId": 7
@@ -149,6 +167,24 @@
       "side": 1,
       "message": "It\u0027s pretty standard:  Here\u0027s an instance of the kernel using it for \"kernel crash dump\"\n\nhttps://ubuntu.com/server/docs/kernel-crash-dump",
       "parentUuid": "8b091a0f_77c9e96d",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cdff493c_23f883db",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-02T20:59:32Z",
+      "side": 1,
+      "message": "I guess I have concern about disambiguation then.  Are we talking about kdumps or are we talking about a collection of processor data?",
+      "parentUuid": "5336b0dd_9521c6cc",
       "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

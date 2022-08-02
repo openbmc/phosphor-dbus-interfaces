@@ -112,6 +112,7 @@ generated_others += custom_target(
     ],
 )
 
+subdir('KVM')
 subdir('MinimumShipLevel')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/MinimumShipLevel__markdown'.underscorify(),

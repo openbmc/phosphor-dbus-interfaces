@@ -1,0 +1,14 @@
+description: >
+    Implement screenshot of KVM
+
+methods:
+    - name: Capture
+      description: >
+          Method of KVM screenshot.
+      returns:
+          - name: path
+            type: string
+            description: >
+                The screenshot picture path.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable

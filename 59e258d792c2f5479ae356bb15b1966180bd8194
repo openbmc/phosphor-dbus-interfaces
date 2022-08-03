@@ -72,6 +72,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a75ed0bf_8373ae83",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-03T21:46:19Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9a9befc2_37ee9230",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6b59354a_8f318145",
@@ -257,6 +275,24 @@
       "side": 1,
       "message": "We\u0027re talking about a collection of processor data (chipset dump).\"Crashdump\" seems to be becoming the standard term these days. From what I\u0027ve heard, collecting kernel dumps isn\u0027t as common nowadays because of PII and security concerns. But if we end up needing to differentiate them, I think we could consider \"kernel dump\" and \"chipset dump\" to be subtypes of \"crashdump\".",
       "parentUuid": "cdff493c_23f883db",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "868c74c9_311bcacc",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-03T21:46:19Z",
+      "side": 1,
+      "message": "Aren\u0027t they two totally different things though?  It seems like they would warrant their own type?  My current unsettledness with it is that I believe you are talking about what Intel has traditionally called \u0027crashdump\u0027.  I\u0027m not positive if AMD uses that same terminology and have more doubts about IBM and ARM-based platforms using that terminology, so it sort of becomes architecture-specific.  We tend to avoid architecture-specific enumerations in xyz.openbmc_project and instead place them in, for example, com.intel.",
+      "parentUuid": "b5abd836_f3aac7f8",
       "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

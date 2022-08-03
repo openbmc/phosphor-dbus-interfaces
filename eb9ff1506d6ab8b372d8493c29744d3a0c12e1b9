@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "795f3ad8_4f612357",
+        "filename": "gen/xyz/openbmc_project/KVM/meson.build",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-03T21:39:07Z",
+      "side": 1,
+      "message": "👍",
+      "parentUuid": "9e7cd46c_c4404938",
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "da9226b1_cab621d1",
         "filename": "yaml/xyz/openbmc_project/KVM/ScreenShot.interface.yaml",
         "patchSetId": 3
@@ -66,6 +84,24 @@
       "writtenOn": "2022-08-02T12:47:06Z",
       "side": 1,
       "message": "Please move this under Control/KVM.  I\u0027d prefer not to make new top-level directories.",
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad22bbd4_da4bb3c2",
+        "filename": "yaml/xyz/openbmc_project/KVM/ScreenShot.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-03T21:39:07Z",
+      "side": 1,
+      "message": "Hopefully the author noticed this is still unresolved...",
+      "parentUuid": "da9226b1_cab621d1",
       "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -100,6 +136,30 @@
       "writtenOn": "2022-08-03T19:25:02Z",
       "side": 1,
       "message": "As I commented on the obmc-ikvm patch, I think it would be cleaner to return a file handle for a tempfile containing the screenshot instead of a path.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54a8f9fa_f9e2fb7e",
+        "filename": "yaml/xyz/openbmc_project/KVM/ScreenShot.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-03T21:39:07Z",
+      "side": 1,
+      "message": "How does the screenshot get deleted?  Or is it already deleted but just an open fp passed around?\n\nWhatever we\u0027re doing, please be sure to document this behavior here in the interface.",
+      "parentUuid": "2100407c_4546589d",
       "range": {
         "startLine": 8,
         "startChar": 0,

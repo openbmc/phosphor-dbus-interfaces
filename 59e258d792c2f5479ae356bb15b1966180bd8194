@@ -295,6 +295,24 @@
       "parentUuid": "b5abd836_f3aac7f8",
       "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b551c1e8_f076fb5d",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-08-03T22:07:33Z",
+      "side": 1,
+      "message": "Yes kernel dump and chipset dump (e.g. Intel Crashdump) are totally different things that happen to use the same \"Crashdump\" term. The term \"Crashdump\" seems to be gaining traction in the industry for describing a chipset dump at crash, for example AMD uses the term as well, but I don\u0027t know about IBM and ARM. To address the concerns about ambiguity and being too architecture-specific, what do you think of \"ChipsetCrashdump\" or \"ChipsetDump\" as the property name?",
+      "parentUuid": "868c74c9_311bcacc",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

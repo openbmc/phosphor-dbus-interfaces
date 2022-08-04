@@ -216,6 +216,30 @@
       },
       "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7277e3d_57f561de",
+        "filename": "yaml/xyz/openbmc_project/KVM/ScreenShot.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2022-08-04T02:15:51Z",
+      "side": 1,
+      "message": "I see...yeah, I suppose returning a file descriptor would require a somewhat more sophisticated client program.\n\nIn that case though, how about instead we have the path passed as a parameter from the client instead of the server determining it and returning it?  (i.e. client says \"please write a screenshot to /tmp/foobar.jpg\", server then opens that path and writes it.)  That way the question of whether we\u0027re overwriting an old screenshot or creating a new one becomes the client\u0027s decision and the server doesn\u0027t have to worry about it.",
+      "parentUuid": "eb661da7_569726bf",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

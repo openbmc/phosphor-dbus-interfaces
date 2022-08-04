@@ -16,6 +16,46 @@
       "message": "Made some changes based on Redfish forum thread: https://redfishforum.com/thread/657/simple-sensor-accuracy-property\n",
       "revId": "5e72f005aeaee77aec0d50349bb435dd0c81ca7e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95add32a_c3ae5510",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2022-08-04T20:49:05Z",
+      "side": 1,
+      "message": "Looks good to me.  Thanks for updating with the recent Redfish forum responses.\n\nOne minor comment.",
+      "revId": "5e72f005aeaee77aec0d50349bb435dd0c81ca7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5c377c3_7ff0da51",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Accuracy.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2022-08-04T20:49:05Z",
+      "side": 1,
+      "message": "Nit: there are some trailing spaces at the end of the lines that Gerrit is high-lighting.  Maybe should remove?",
+      "range": {
+        "startLine": 11,
+        "startChar": 78,
+        "endLine": 11,
+        "endChar": 79
+      },
+      "revId": "5e72f005aeaee77aec0d50349bb435dd0c81ca7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

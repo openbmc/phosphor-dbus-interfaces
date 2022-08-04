@@ -288,6 +288,30 @@
       },
       "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "312b4ddc_6af92528",
+        "filename": "yaml/xyz/openbmc_project/KVM/ScreenShot.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2022-08-04T04:06:49Z",
+      "side": 1,
+      "message": "In a hypothetical scenario where OpenBMC services were running under different UIDs, yes, that could be a problem, but in that case wouldn\u0027t the client be unable to access the service\u0027s dbus interface anyway?  Currently as far as I know all OpenBMC dbus communication is between processes that are all running as root, so a client could just as easily directly overwrite a sensitive file by itself instead of going through obmc-ikvm.\n\nIf we\u0027re considering usage that would have separate UIDs sharing the system bus, I think there would be a lot of other existing things that would need to be restructured to make that not trivially exploitable (e.g. xyz.openbmc_project.User.Manager, for one simple example).",
+      "parentUuid": "894c5522_9136d480",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -312,6 +312,30 @@
       },
       "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "724e57c0_b2128d80",
+        "filename": "yaml/xyz/openbmc_project/KVM/ScreenShot.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-04T21:03:15Z",
+      "side": 1,
+      "message": "Generally we let the service control where it writes to, and not be directed by outside.  This also ensures a lot less issues with garbage collection.\n\nIdeally this object would actually be more like a ScreenshotManager, which returns you a dbus-path to the freshly created Screenshot object.  xyz.openbmc_project.Common.FilePath and xyz.openbmc-project.Object.Delete would be implemented on the returned dbus object.",
+      "parentUuid": "312b4ddc_6af92528",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

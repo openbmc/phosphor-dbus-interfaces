@@ -192,6 +192,30 @@
       },
       "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb661da7_569726bf",
+        "filename": "yaml/xyz/openbmc_project/KVM/ScreenShot.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2022-08-04T01:56:48Z",
+      "side": 1,
+      "message": "In practice, we are using a shell script to call the service\u0027s method, and copy the screenshot file to somewhere else as needed.\nBy returning a fp, it could be difficult in such usage.\n\nThat\u0027s why it returns a file name path.\nAnd in implementation (in obmc-ikvm), it\u0027s using a same file path, so that if user is doing a lot of screenshots, it will create only one file instead of creating too many files.",
+      "parentUuid": "433c2fc8_07caf9a0",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

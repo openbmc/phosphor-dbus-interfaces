@@ -336,6 +336,30 @@
       },
       "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bc81fc4_60e4fa8f",
+        "filename": "yaml/xyz/openbmc_project/KVM/ScreenShot.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2022-08-05T02:49:58Z",
+      "side": 1,
+      "message": "\u003e Ideally this object would actually be more like a ScreenshotManager, which returns you a dbus-path to the freshly created Screenshot object.  xyz.openbmc_project.Common.FilePath and xyz.openbmc-project.Object.Delete would be implemented on the returned dbus object.\n\nRight, ideally it should. But this adds unnecessary complication to obmc-ikvm to manage the DBus objects.\nThis repo obmc-ikvm was intented to serve as KVM vncserver and there were no DBus interfaces at all.\nWe just want to add a simple DBus method to do the screenshot, and return a file that the client could access.\n\nIt is possible to implement a standalone service to manage the screen shot files and let it implement the interfaces. However, the process that does the actual screenshot has to be obmc-ikvm in OpenBMC scenario, that provides the most efficient behavior. We tried to use vncsnapshot as the screenshot client, it has various issues that we could not fix.\n\nEventually, we reach the implementation of current design, that let obmc-ikvm provide a simple method and return a filename.",
+      "parentUuid": "724e57c0_b2128d80",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

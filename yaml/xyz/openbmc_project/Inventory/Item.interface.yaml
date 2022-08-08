@@ -15,3 +15,13 @@ properties:
       type: boolean
       description: >
           Whether or not the item is present.
+
+associations:
+    - name: sensors
+      description: >
+          Sensors may implement an 'inventory' to 'sensors' association with 
+          the inventory item related to it.
+      reverse_names:
+          - sensors
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Sensor.Value

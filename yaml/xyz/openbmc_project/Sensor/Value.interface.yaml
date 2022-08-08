@@ -90,3 +90,13 @@ enumerations:
           - name: Watts
             description: >
                 Rate of energy transfer as Watts.
+
+associations:
+    - name: inventory
+      description: >
+          Sensors may implement an 'inventory' to 'sensors' association with
+          the inventory item related to it.
+      reverse_names:
+          - sensors
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

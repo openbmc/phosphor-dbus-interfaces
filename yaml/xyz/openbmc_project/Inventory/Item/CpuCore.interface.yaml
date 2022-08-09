@@ -6,3 +6,13 @@ properties:
       description: >
           The microcode information for this processor
       default: 0
+
+associations:
+    - name: contained_by
+      description: >
+          Objects that implement CpuCore can optionally implement the
+          cpus association to provide a link to cpu
+      reverse_names:
+          - containing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cpu

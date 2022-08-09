@@ -97,3 +97,12 @@ associations:
           - upstream_processor
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot
+    - name: cores
+      description: >
+          Objects that implement Cpu can optionally implement the
+          cores association to provide a link to one or more
+          cores.
+      reverse_names:
+          - cpu
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.CpuCore

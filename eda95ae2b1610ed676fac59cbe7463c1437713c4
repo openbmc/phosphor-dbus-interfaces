@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b224e57_0f24a409",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/CpuCore.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-10T20:57:52Z",
+      "side": 1,
+      "message": "I don\u0027t think you can have a core in multiple CPUs.",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 16
+      },
+      "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec63ca4e_23811089",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-10T20:57:52Z",
+      "side": 1,
+      "message": "As I\u0027ve said elsewhere, I\u0027m not accepting one-off associations until we have an inventory design agreed to.  Otherwise we are defacto accepting one particular design.\n\nTo me there is no strong reason for associations on core/cpu/thread relationships.  This just adds noise to dbus when they are clearly a contained-by relationship (which can be handled with hierarchy).",
+      "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

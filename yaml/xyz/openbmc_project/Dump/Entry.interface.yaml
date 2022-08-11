@@ -6,7 +6,8 @@ description: >
     creation time.
     Object which implements this interface should implement
     xyz.openbmc_project.Object.Delete to allow the deletion of
-    individual Dump objects.
+    individual Dump objects (and its dump object manager should
+    implement xyz.openbmc_project.Collection.DeleteAll).
 
 methods:
     - name: InitiateOffload

@@ -1,0 +1,13 @@
+description: >
+    This defines an interface for NCSI package capabilities of network
+    controller.
+
+properties:
+    - name: PackageId
+      type: int16
+      default: -1
+      flags:
+          - readonly
+      description: >
+          Displays the id of the package. default value is -1 meaning it
+          is not valid.

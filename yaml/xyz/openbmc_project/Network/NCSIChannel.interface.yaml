@@ -1,0 +1,17 @@
+description: >
+    This defines an interface for NCSI channel capabilities of network
+    controller.
+
+properties:
+    - name: Active
+      type: boolean
+      flags:
+          - readonly
+      description: >
+           Indicates NCSI channel active state.
+    - name: LinkState
+      type: size
+      flags:
+          - readonly
+      description: >
+          This property shows the NCSI channel link state.

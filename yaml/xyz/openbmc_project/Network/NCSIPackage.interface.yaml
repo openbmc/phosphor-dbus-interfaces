@@ -1,0 +1,17 @@
+description: >
+    This defines an interface for NCSI package capabilities of network
+    controller.
+
+properties:
+    - name: Selected
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          Indicates if NCSI package selected/not selected.
+    - name: PackageId
+      type: uint32
+      flags:
+          - readonly
+      description: >
+          Displays the id of the package.

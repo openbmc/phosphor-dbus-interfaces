@@ -349,6 +349,24 @@
       "parentUuid": "4c3be9af_6a19896f",
       "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bd0fcd7_4800140e",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-17T15:32:33Z",
+      "side": 1,
+      "message": "Based on this doc it seems like Arm calls it \"crash dump\" or \"scan dump\".  \"scan dump\" is certainly a term I remember it being called at IBM.  Intel, from my observations, uses \"crash dump\".\n\nhttps://documentation-service.arm.com/static/5fb7e810ca04df4095c1d658?token\u003d\n\nUnless we can point to a documented term in a standard (like Redfish), I\u0027d prefer we use something more generic named but still obvious what it is.  \"Crashdump\" seems ambiguous.  At a minimum we should document in the description what we\u0027re talking about so we don\u0027t lead anyone astray.",
+      "parentUuid": "d8e2e4e3_6c430a87",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

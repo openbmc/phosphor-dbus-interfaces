@@ -1,0 +1,23 @@
+description: >
+    This defines an interface for NCSI package capabilities of network
+    controller.
+
+properties:
+    - name: Selected
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          Indicates if NCSI package selected/not selected.
+    - name: HWArbitration
+      type: boolean
+      flags:
+          - readonly
+      description: >
+           hardware arbitration enabled for NCSI package.
+    - name: Ready
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          Indicates NCSI package ready state.

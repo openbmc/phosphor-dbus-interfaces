@@ -1,0 +1,17 @@
+description: >
+    This defines an interface for NCSI channel capabilities of network
+    controller.
+
+properties:
+    - name: Ready
+      type: boolean
+      flags:
+          - readonly
+      description: >
+           Indicates NCSI channel ready state.
+    - name: Enabled
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          This indicates if the NCSI channel is enabled or disabled.

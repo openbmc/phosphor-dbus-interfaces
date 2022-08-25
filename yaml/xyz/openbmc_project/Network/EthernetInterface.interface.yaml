@@ -50,8 +50,8 @@ properties:
       type: array[string]
       description: >
           DNS servers that are currently in use on this interface.
-      errors:
-          - xyz::openbmc_project.Common.Error.NotAllowed
+      flags:
+          - readonly
     - name: StaticNameServers
       type: array[string]
       description: >

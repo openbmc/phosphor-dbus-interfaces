@@ -9,14 +9,20 @@ properties:
       type: string
       description: >
           The IP Address of the neighbor.
+      flags:
+          - const
     - name: MACAddress
       type: string
       description: >
           The low level mac address that the IP maps to.
+      flags:
+          - const
     - name: State
       type: enum[self.State]
       description: >
           State the neighbor is in.
+      flags:
+          - readonly
 
 enumerations:
     - name: State

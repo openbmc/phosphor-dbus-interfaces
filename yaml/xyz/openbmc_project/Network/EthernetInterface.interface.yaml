@@ -29,29 +29,40 @@ properties:
       description: >
           This indicates the size in bytes of largest protocol data unit,
           which can be passed in an Ethernet frame on the interface.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: DomainName
       type: array[string]
       description: >
           Domain names of the ethernet interface.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: DHCPEnabled
       type: enum[self.DHCPConf]
       description: >
           Address mode of the ethernet interface. Deprecated in favor of
           split options to avoid combinatorics.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: DHCP4
       type: boolean
       description: >
           Enable or disable IPv4 DHCP.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: DHCP6
       type: boolean
       description: >
           Enable or disable IPv6 DHCP.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: Nameservers
       type: array[string]
       description: >
           DNS servers that are currently in use on this interface.
       errors:
-          - xyz::openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: StaticNameServers
       type: array[string]
       description: >
@@ -62,30 +73,41 @@ properties:
           assigments.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: NTPServers
       type: array[string]
       description: >
           NTP servers that are currently in use on this interface.
           This includes both DHCP and static NTP server addresses.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: StaticNTPServers
       type: array[string]
       description: >
           This property describes statically defined NTPServers on the
           interface. This property supports read/write operation.
           Configure the NTP servers on the system during write operation.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: LinkLocalAutoConf
       type: enum[self.LinkLocalConf]
       description: >
           This indicates link local auto configuration on this ethernet
           interface and configured on this ethernet interface.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: IPv6AcceptRA
       type: boolean
       description: >
           Boolean for accepting router advertisements in IPv6.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: NICEnabled
       type: boolean
       description: >
           Boolean for to enabling or disabling the ethernet port
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: LinkUp
       type: boolean
       flags:
@@ -101,6 +123,7 @@ properties:
           Default IPv4 gateway of the ethernet interface.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: DefaultGateway6
       type: string
       description: >
@@ -110,6 +133,7 @@ properties:
           https://man7.org/linux/man-pages/man3/inet_pton.3.html
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.Unavailable
 
 enumerations:
     - name: LinkLocalConf

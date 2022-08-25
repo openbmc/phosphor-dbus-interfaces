@@ -6,25 +6,35 @@ properties:
       description: >
           if true then the DNS servers received from the DHCP server
           will be used and take precedence over any statically configured ones.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: NTPEnabled
       type: boolean
       description: >
           if true then the NTP servers received from the DHCP server
           will be used by systemd-timesyncd and take precedence over any
           statically configured ones.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: HostNameEnabled
       type: boolean
       description: >
           if true then the hostname received from the DHCP server
           will be set as the transient hostname of the system.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: DomainEnabled
       type: boolean
       description: >
           if true then the domain names received from the DHCP server
           will be used by systemd-resolved and take precedence over any
           statically configured ones.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
     - name: SendHostNameEnabled
       type: boolean
       description: >
           if true then DHCP option 12 is enabled i.e machine`s hostname will be
           sent to the DHCP server.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable

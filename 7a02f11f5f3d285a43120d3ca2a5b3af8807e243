@@ -52,6 +52,24 @@
       "parentUuid": "dfb7f073_7637fe1b",
       "revId": "7a02f11f5f3d285a43120d3ca2a5b3af8807e243",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3241946f_bcd89f24",
+        "filename": "yaml/xyz/openbmc_project/Network/IP.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-26T22:20:38Z",
+      "side": 1,
+      "message": "I think you are misunderstanding me.\n\nThese interfaces are not only instantiated by phosphor-networkd.  They are also instantiated by phosphor-settingsd to hold data for host-owned settings.  If we set them to read-only, it makes it so that phosphor-settings cannot be updated by Redfish/IPMI calls as needed.",
+      "parentUuid": "4ccd3f7f_ea37d409",
+      "revId": "7a02f11f5f3d285a43120d3ca2a5b3af8807e243",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

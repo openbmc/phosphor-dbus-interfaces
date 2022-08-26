@@ -16,6 +16,24 @@
       "message": "Are there cases where this object is used as a \u0027setting\u0027 in order to hold values for another entity (like the hypervisor) which can be modified by the user?",
       "revId": "7a02f11f5f3d285a43120d3ca2a5b3af8807e243",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfb7f073_7637fe1b",
+        "filename": "yaml/xyz/openbmc_project/Network/IP.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-26T11:00:40Z",
+      "side": 1,
+      "message": "meta-ibm/recipes-phosphor/settings/phosphor-settings-manager/HypervisorInterface-default-p10bmc.override.yml:    - Interface: xyz.openbmc_project.Network.IP\nmeta-ibm/recipes-phosphor/settings/phosphor-settings-manager/HypervisorInterface-default-p10bmc.override.yml:    - Interface: xyz.openbmc_project.Network.IP\nmeta-ibm/recipes-phosphor/settings/phosphor-settings-manager/HypervisorInterface-default-tacoma.override.yml:    - Interface: xyz.openbmc_project.Network.IP",
+      "parentUuid": "5a36234b_b5856ffc",
+      "revId": "7a02f11f5f3d285a43120d3ca2a5b3af8807e243",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

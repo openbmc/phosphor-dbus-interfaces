@@ -88,6 +88,24 @@
       "parentUuid": "3241946f_bcd89f24",
       "revId": "7a02f11f5f3d285a43120d3ca2a5b3af8807e243",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58b0264e_8ab7fd1a",
+        "filename": "yaml/xyz/openbmc_project/Network/IP.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-30T22:32:25Z",
+      "side": 1,
+      "message": "They define static values for initialization (the whole object) but then users _set_ specific values as they see fit.  The IP address is a good example of that.  The user wants to be able to set the IP address of their hypervisor, so they write to this property.",
+      "parentUuid": "4c7b25aa_357f3ff5",
+      "revId": "7a02f11f5f3d285a43120d3ca2a5b3af8807e243",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

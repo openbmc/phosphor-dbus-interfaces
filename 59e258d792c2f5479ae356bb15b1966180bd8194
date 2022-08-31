@@ -421,6 +421,24 @@
       "parentUuid": "ba87dc88_10aae4ce",
       "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fd9fa33_a546994d",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2022-08-31T20:42:57Z",
+      "side": 1,
+      "message": "Thanks all for the input. Patrick, what do you think?\n\nIf we\u0027re unable to agree on a generic type name for chipset crashdumps, then another option is to allow an enum value of \"OEM\" for Type, and use that in conjunction with the \"AdditionalTypeName\" string for company-specific types.",
+      "parentUuid": "d7a4bf92_980ad491",
+      "revId": "59e258d792c2f5479ae356bb15b1966180bd8194",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -9,14 +9,20 @@ properties:
       type: string
       description: >
           The IP Address of the neighbor.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
     - name: MACAddress
       type: string
       description: >
           The low level mac address that the IP maps to.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
     - name: State
       type: enum[self.State]
       description: >
           State the neighbor is in.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
 
 enumerations:
     - name: State

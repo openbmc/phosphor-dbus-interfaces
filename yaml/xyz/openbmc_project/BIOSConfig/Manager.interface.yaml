@@ -112,6 +112,13 @@ properties:
           - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound
           - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeReadOnly
 
+    - name: EnableAfterReset
+      type: boolean
+      description: >
+        An indication to set/reset the Credentials Bootstrapping property on Host
+        power reset or Redfish service reset for the Host Interface.
+      default: true
+
 enumerations:
     - name: AttributeType
       description: >

@@ -16,6 +16,40 @@
       "message": "I\u0027ll give this until sometime Monday GMT for additional feedback.",
       "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86c800f0_7100e643",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2022-09-08T09:26:13Z",
+      "side": 1,
+      "message": "One other thing that occurs to me is the issue of the image format.  Currently obmc-ikvm (AFAIK) only deals in JPEGs, but that\u0027s largely just a side-effect of some implementation details -- PNG, for example, is in most cases a much more natural format for screenshots (and we might want to support it at some point).\n\nSome possibilities:\n - Add an enum argument to request a specific format (though the only implementation for the foreseeable future will likely just return an error for anything but JPEG)\n - Leave it as is without an argument, but change the name to reflect a specific format, e.g. CaptureJPEG\n - No change at all, leaving it implicit/undefined (up to the caller to inspect the file header, I guess)\n\nThoughts?  I think the first would be the most \"thorough\" and extensible, if a bit more work; the second might be a reasonable compromise.",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c854ea30_1c858805",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2022-09-08T09:26:13Z",
+      "side": 1,
+      "message": "Looks like there\u0027s a final trailing \u0027\\n\u0027 missing on this file.",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

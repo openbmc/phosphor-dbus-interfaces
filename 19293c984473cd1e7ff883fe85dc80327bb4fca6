@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d265f76a_f62b1b6b",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2022-09-08T19:49:50Z",
+      "side": 1,
+      "message": "\u003e the format of the captured screenshot is implementation details\n\nHm?  I\u0027d say it\u0027s exactly the opposite of an implementation detail -- it\u0027s the format of the data returned to the caller, and hence very much a part of the interface IMO.\n\n\u003e the caller could potentially know the file format from the file\u0027s extension\n\nPerhaps, but it seems pretty ad-hoc and prone to messiness, because filename extensions are merely a convention, and not even a terribly consistent one at that -- JPEG files, for example, are sometimes named *.jpg and sometimes *.jpeg.",
+      "parentUuid": "c42f1936_85e11d09",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c854ea30_1c858805",
         "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
         "patchSetId": 4

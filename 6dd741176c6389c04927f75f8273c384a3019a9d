@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "802c82b5_7c90d337",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-08T16:39:23Z",
+      "side": 1,
+      "message": "This is failing CI.  Any idea why?\n\nAdding networkd maintainers for feedback.",
+      "revId": "6dd741176c6389c04927f75f8273c384a3019a9d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "634fe99e_d8000729",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIChannel.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-08T16:39:23Z",
+      "side": 1,
+      "message": "Fix stray whitespace.  Not sure why you line-wrapped so quickly.",
+      "range": {
+        "startLine": 2,
+        "startChar": 46,
+        "endLine": 3,
+        "endChar": 39
+      },
+      "revId": "6dd741176c6389c04927f75f8273c384a3019a9d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "178278dc_907e4950",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIChannel.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-08T16:39:23Z",
+      "side": 1,
+      "message": "Should any of these be read-only properties?",
+      "revId": "6dd741176c6389c04927f75f8273c384a3019a9d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18defce4_332c8cac",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIPackage.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-08T16:39:23Z",
+      "side": 1,
+      "message": "Any of these readonly?",
+      "revId": "6dd741176c6389c04927f75f8273c384a3019a9d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f90671a_0ec0e73b",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIPackage.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-08T16:39:23Z",
+      "side": 1,
+      "message": "Spelling.",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 26
+      },
+      "revId": "6dd741176c6389c04927f75f8273c384a3019a9d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

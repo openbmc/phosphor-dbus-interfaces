@@ -5,6 +5,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Common__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Chassis/Common.errors.yaml',  ],
     output: [ 'Common.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -20,6 +21,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Intrusion__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Chassis/Intrusion.interface.yaml',  ],
     output: [ 'Intrusion.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

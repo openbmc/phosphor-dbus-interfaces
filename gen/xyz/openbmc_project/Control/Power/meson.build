@@ -4,6 +4,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/ACPIPowerState__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/ACPIPowerState.interface.yaml',  ],
     output: [ 'ACPIPowerState.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -18,6 +19,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/Cap__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml',  ],
     output: [ 'Cap.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -32,6 +34,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/IdlePowerSaver__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml',  ],
     output: [ 'IdlePowerSaver.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -46,6 +49,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/Mode__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml',  ],
     output: [ 'Mode.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -60,6 +64,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/RestorePolicy__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml',  ],
     output: [ 'RestorePolicy.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

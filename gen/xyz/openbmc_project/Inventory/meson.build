@@ -3,6 +3,7 @@ generated_sources += custom_target(
     'xyz/openbmc_project/Inventory__cpp'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Inventory.errors.yaml',  ],
     output: [ 'error.cpp', 'error.hpp',  ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
         '--output', meson.current_build_dir(),
@@ -19,6 +20,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Inventory/Item.interface.yaml',  ],
     output: [ 'Item.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -33,6 +35,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Manager__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml',  ],
     output: [ 'Manager.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

@@ -3,6 +3,7 @@ generated_sources += custom_target(
     'xyz/openbmc_project/Dump/Entry__cpp'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Dump/Entry.interface.yaml',  ],
     output: [ 'server.cpp', 'server.hpp', 'client.hpp',  ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
         '--output', meson.current_build_dir(),
@@ -17,6 +18,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Dump/Entry/BMC__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Dump/Entry/BMC.interface.yaml',  ],
     output: [ 'BMC.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -31,6 +33,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Dump/Entry/FaultLog__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml',  ],
     output: [ 'FaultLog.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -45,6 +48,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Dump/Entry/System__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml',  ],
     output: [ 'System.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

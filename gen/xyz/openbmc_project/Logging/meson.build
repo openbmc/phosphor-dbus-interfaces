@@ -4,6 +4,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Logging/Create__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/Create.interface.yaml',  ],
     output: [ 'Create.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -18,6 +19,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Logging/Entry__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/Entry.interface.yaml',  ],
     output: [ 'Entry.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -32,6 +34,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Logging/ErrorBlocksTransition__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/ErrorBlocksTransition.interface.yaml',  ],
     output: [ 'ErrorBlocksTransition.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -46,6 +49,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Logging/Event__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/Event.interface.yaml',  ],
     output: [ 'Event.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -60,6 +64,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Logging/IPMI__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml',  ],
     output: [ 'IPMI.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -74,6 +79,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Logging/SEL__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/SEL.errors.yaml',  ],
     output: [ 'SEL.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -88,6 +94,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Logging/Settings__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/Settings.interface.yaml',  ],
     output: [ 'Settings.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

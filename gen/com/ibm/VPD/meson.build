@@ -3,6 +3,7 @@ generated_sources += custom_target(
     'com/ibm/VPD__cpp'.underscorify(),
     input: [ '../../../../yaml/com/ibm/VPD.errors.yaml',  ],
     output: [ 'error.cpp', 'error.hpp',  ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
         '--output', meson.current_build_dir(),
@@ -17,6 +18,7 @@ generated_others += custom_target(
     'com/ibm/VPD/Manager__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/VPD/Manager.interface.yaml',  ],
     output: [ 'Manager.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

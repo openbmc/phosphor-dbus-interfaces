@@ -4,6 +4,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/Activation__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/Activation.interface.yaml',  ],
     output: [ 'Activation.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -18,6 +19,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/ActivationBlocksTransition__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ActivationBlocksTransition.interface.yaml',  ],
     output: [ 'ActivationBlocksTransition.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -32,6 +34,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/ActivationProgress__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ActivationProgress.interface.yaml',  ],
     output: [ 'ActivationProgress.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -46,6 +49,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/ApplyOptions__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ApplyOptions.interface.yaml',  ],
     output: [ 'ApplyOptions.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -60,6 +64,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/ApplyTime__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml',  ],
     output: [ 'ApplyTime.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -74,6 +79,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/ExtendedVersion__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml',  ],
     output: [ 'ExtendedVersion.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -88,6 +94,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/RedundancyPriority__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/RedundancyPriority.interface.yaml',  ],
     output: [ 'RedundancyPriority.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -102,6 +109,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/RequestedRedundancyPriority__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/RequestedRedundancyPriority.interface.yaml',  ],
     output: [ 'RequestedRedundancyPriority.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -116,6 +124,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/Settings__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/Settings.interface.yaml',  ],
     output: [ 'Settings.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
@@ -130,6 +139,7 @@ generated_others += custom_target(
     'xyz/openbmc_project/Software/Version__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/Version.interface.yaml',  ],
     output: [ 'Version.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

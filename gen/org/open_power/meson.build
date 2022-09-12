@@ -6,6 +6,7 @@ generated_others += custom_target(
     'org/open_power/Host__markdown'.underscorify(),
     input: [ '../../../yaml/org/open_power/Host.errors.yaml',  ],
     output: [ 'Host.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

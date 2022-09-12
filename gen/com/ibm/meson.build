@@ -6,6 +6,7 @@ generated_others += custom_target(
     'com/ibm/VPD__markdown'.underscorify(),
     input: [ '../../../yaml/com/ibm/VPD.errors.yaml',  ],
     output: [ 'VPD.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

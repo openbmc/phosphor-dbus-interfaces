@@ -3,6 +3,7 @@ generated_sources += custom_target(
     'org/open_power/Host__cpp'.underscorify(),
     input: [ '../../../../yaml/org/open_power/Host.errors.yaml',  ],
     output: [ 'error.cpp', 'error.hpp',  ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
         '--output', meson.current_build_dir(),
@@ -17,6 +18,7 @@ generated_others += custom_target(
     'org/open_power/Host/Access__markdown'.underscorify(),
     input: [ '../../../../yaml/org/open_power/Host/Access.errors.yaml',  ],
     output: [ 'Access.md' ],
+    depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),

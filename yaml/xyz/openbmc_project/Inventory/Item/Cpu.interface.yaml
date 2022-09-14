@@ -12,6 +12,7 @@ properties:
           A free form string indicates processor family type.
           For example, values can be "Intel Xeon
           processor", "AS400 Family", etc.
+      default: ""
     - name: EffectiveFamily
       type: uint16
       description: >

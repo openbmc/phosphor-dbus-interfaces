@@ -145,6 +145,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c029299f_41806c46",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-16T21:55:09Z",
+      "side": 1,
+      "message": "\u003e My thinking with leaning toward specifying the format explicitly in either the method name or a parameter was that it would be easier to introduce another format with minimal (or no) changes to existing code.\n\nWe regularly refactor dbus interfaces and add new properties / method parameters / etc.  This is all internal to the BMC, so there should be no issue with this.\n\n\u003e Putting format conversion in the client application also isn\u0027t great if the source format provided by the service is already lossily compressed, as in JPEG -- converting that to a PNG doesn\u0027t restore the lost image quality.\n\nI agree with you, but we can add a new parameter when someone wants to add support for PNG.  We\u0027ll have someone add a new enumeration ( { PNG, JPEG } ) and require that enumeration passed to the Capture method.\n\n@LeiYU / @Xie - Please update the description to be clear that this returns a path of a file in JPEG format for now and let\u0027s move on.",
+      "parentUuid": "3c602d73_22fd0c39",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c854ea30_1c858805",
         "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
         "patchSetId": 4

@@ -91,6 +91,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "aebed8b9_2d00a1fe",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2022-09-16T03:33:20Z",
+      "side": 1,
+      "message": "My thinking with leaning toward specifying the format explicitly in either the method name or a parameter was that it would be easier to introduce another format with minimal (or no) changes to existing code.  If the format isn\u0027t explicit anywhere in the code and we later add (say) PNG support then we need to go back and change already-written code to change the method name or add a parameter (or just live with the ugly inconsistency of the PNG operation being `CapturePNG` but the JPEG operation just being `Capture`).  While that might not be a _huge_ amount of work, it would involve multiple repos, and adding four characters to the method name seems like a pretty trivial change to make now so that it\u0027s zero work instead.",
+      "parentUuid": "466ac0b7_b1fee655",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c854ea30_1c858805",
         "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
         "patchSetId": 4

@@ -127,6 +127,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3c602d73_22fd0c39",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2022-09-16T21:44:47Z",
+      "side": 1,
+      "message": "I guess I just disagree?  Putting format conversion in the client application also isn\u0027t great if the source format provided by the service is already lossily compressed, as in JPEG -- converting that to a PNG doesn\u0027t restore the lost image quality.",
+      "parentUuid": "eae1675c_cdf62dcf",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c854ea30_1c858805",
         "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
         "patchSetId": 4

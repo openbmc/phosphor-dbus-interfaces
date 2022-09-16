@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "eae1675c_cdf62dcf",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2022-09-16T05:06:02Z",
+      "side": 1,
+      "message": "I do not like the idea of putting the image format into method name.\nWhat if someone wants other image format, say webp, should we add `CaptureWebp` method for such case? I do not think so.\nIt could be better for the user to convert the image into other format by the application, instead of asking the service to provide the needed format.",
+      "parentUuid": "aebed8b9_2d00a1fe",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c854ea30_1c858805",
         "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
         "patchSetId": 4

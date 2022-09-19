@@ -163,6 +163,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fa4143cb_e9e0a823",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-09-19T21:15:12Z",
+      "side": 1,
+      "message": "These kinds of \"pass a filesystem path\" APIs aren\u0027t something we really want to propagate going forward.  They have really awkward concerns around permissions and cleanup.  We use them in some cases where the ownership of the file in question is clear, but in this case, given it\u0027s temporary, I don\u0027t think just passing the path works.\n\nI\u0027m assuming the eventual goal is to make this available through a web/ipmi API?  I think to do that we\u0027ll need to figure out the race conditions around ownership of this file.\n\nHas it been discussed just sending the image here as an array of bytes?",
+      "range": {
+        "startLine": 9,
+        "startChar": 18,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c854ea30_1c858805",
         "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
         "patchSetId": 4
@@ -174,6 +197,24 @@
       "writtenOn": "2022-09-08T09:26:13Z",
       "side": 1,
       "message": "Looks like there\u0027s a final trailing \u0027\\n\u0027 missing on this file.",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50b82d9d_8452cd27",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-09-19T21:15:12Z",
+      "side": 1,
+      "message": "Are those necessary here?",
+      "parentUuid": "c854ea30_1c858805",
       "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

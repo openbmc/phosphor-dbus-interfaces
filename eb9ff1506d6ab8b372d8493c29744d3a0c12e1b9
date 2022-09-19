@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "53667e46_9ca37fb9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-09-19T21:15:12Z",
+      "side": 1,
+      "message": "How do you expect a user to access these screenshots?",
+      "parentUuid": "03e2d64a_d804e48f",
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9e7cd46c_c4404938",
         "filename": "gen/xyz/openbmc_project/KVM/meson.build",
         "patchSetId": 3
@@ -489,6 +507,30 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "f1c719ea_b948b374",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "eb9ff1506d6ab8b372d8493c29744d3a0c12e1b9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f00cafbb_99391a27",
+        "filename": "yaml/xyz/openbmc_project/KVM/ScreenShot.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-09-19T21:15:12Z",
+      "side": 1,
+      "message": "+1 to patricks concern.  I don\u0027t see the lifetime of this file being documented in the latest patchset anywhere?",
+      "parentUuid": "287a8f73_539426ae",
       "range": {
         "startLine": 8,
         "startChar": 0,

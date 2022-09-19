@@ -217,6 +217,24 @@
       "parentUuid": "c854ea30_1c858805",
       "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33b57f39_f9cca802",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2022-09-19T21:50:04Z",
+      "side": 1,
+      "message": "I don\u0027t know if any of the automation processing these files cares, but I think including it is a nice human-friendly convention to follow (and all but three of the other *.yaml files in the repo do so).  And for what pedantry-points are worth, by the letter of the POSIX law, in order to qualify as a text file a non-empty file is required to end with a \u0027\\n\u0027.",
+      "parentUuid": "50b82d9d_8452cd27",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

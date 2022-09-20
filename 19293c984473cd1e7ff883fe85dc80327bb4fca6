@@ -186,6 +186,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fd89cffd_9a79d08a",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2022-09-20T02:33:12Z",
+      "side": 1,
+      "message": "\u003e Has it been discussed just sending the image here as an array of bytes?\n\nNope, but this makes the method blocking.\nIn real world, the screenshot requires some frames to determine the image\u0027s height/width and it takes times. If we ask the method to return the array of bytes, the method has to be blocked for a while until a screenshot could be done.\n\nIn current implementation (see https://gerrit.openbmc.org/c/openbmc/obmc-ikvm/+/56007), the method simply set a flag and return the path, the file is polled by the caller.\nBe noted that this interface is expected to be used internally (in BMC), we do define ipmi oem cmd and Redfish oem method to trigger a screenshot, poll the file, , download the content, and clear the file.\n\n\u003e I\u0027m assuming the eventual goal is to make this available through a web/ipmi API?  I think to do that we\u0027ll need to figure out the race conditions around ownership of this file.\n\nYup, as described above, the file is polled by the caller, and it depends on the caller to \"use\" the file correctly. As long as the caller does not use the file while it\u0027s doing the screenshot, that\u0027s OK.",
+      "parentUuid": "fa4143cb_e9e0a823",
+      "range": {
+        "startLine": 9,
+        "startChar": 18,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c854ea30_1c858805",
         "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
         "patchSetId": 4

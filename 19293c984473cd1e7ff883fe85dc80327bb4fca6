@@ -210,6 +210,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1b60838_1471cb75",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2022-09-20T02:58:18Z",
+      "side": 1,
+      "message": "\u003e the file is polled by the caller.\n\nOog, I hadn\u0027t realized that.  Is there some reason client-side polling is preferable to a blocking call?  That seems backwards to me.\n\n\u003e Yup, as described above, the file is polled by the caller, and it depends on the caller to \"use\" the file correctly. As long as the caller does not use the file while it\u0027s doing the screenshot, that\u0027s OK.\n\nI assume what you\u0027re describing here is essentially:\n\n```\npath \u003d call_dbus_method()\nwhile !exists(path):\n  wait()\nuse(path)\n```\n\nIf so, that\u0027s still racy, since there\u0027s no easy way for the client to know that the screenshot file\u0027s actually been fully written out, and isn\u0027t still mid-write (short of a format-aware parser that can distinguish a complete JPEG or whatever from a truncated one).",
+      "parentUuid": "fd89cffd_9a79d08a",
+      "range": {
+        "startLine": 9,
+        "startChar": 18,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c854ea30_1c858805",
         "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
         "patchSetId": 4

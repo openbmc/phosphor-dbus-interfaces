@@ -258,6 +258,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6f5cba0b_3082ab01",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-09-21T15:39:49Z",
+      "side": 1,
+      "message": "\u003e Nope, but this makes the method blocking.\n\nWhy does this matter?  Do we expect generating a screenshot to take more than a second or two?  A \"Blocking\" dbus method also doesn\u0027t mean that the calling-daemon event loop blocks, so in this case, I don\u0027t think it would change anything to just return the data, aside from removing the usages of files?\n\n\n\u003e Redfish oem method to trigger a screenshot\n\nI\u0027m not in charge of IPMI, so I can\u0027t speak for Vernon or Tom, but in bmcweb, I\u0027m not going to allow code that runs a command then tries to poll the filesystem until the file exists after running a dbus call when the data could be just returned as part of the call like we do for every other API.  Both phsophor-ipmid and bmcweb use non-blocking reactors, so some amount of blocking should be fine.  If capturing the screenshot takes more time than the timeouts on those interfaces, there\u0027s mechanisms for that too.\n\nUnrelated to this patch, but if you plan on doing Redfish OEM, be sure to read bmcweb/OEM_SCHEMAS.md and follow the guidelines we have for them.\n\n\n\u003e Yup, as described above, the file is polled by the caller, and it depends on the caller to \"use\" the file correctly.\n\nNone of this is described in the DBus API description about how the file needs handled, and I think is part of the source of confusion.",
+      "parentUuid": "fa4143cb_e9e0a823",
+      "range": {
+        "startLine": 9,
+        "startChar": 18,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c854ea30_1c858805",
         "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
         "patchSetId": 4
@@ -323,6 +347,24 @@
       "side": 1,
       "message": "\u003e but I think including it is a nice human-friendly convention to follow\n\n+1",
       "parentUuid": "33b57f39_f9cca802",
+      "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e56a309_f9ecf4af",
+        "filename": "yaml/xyz/openbmc_project/Control/KVM/Screenshot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-09-21T15:39:49Z",
+      "side": 1,
+      "message": "ACK",
+      "parentUuid": "747cf387_53da77fd",
       "revId": "19293c984473cd1e7ff883fe85dc80327bb4fca6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

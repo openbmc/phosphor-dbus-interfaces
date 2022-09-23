@@ -6,3 +6,9 @@ properties:
       type: struct[uint64,array[byte]]
       description: >
           The POST code value.
+    - name: PostComplete
+      type: boolean
+      default: false
+      description: >
+          post code completion status and it is notified by host.
+          It is a read-only property.

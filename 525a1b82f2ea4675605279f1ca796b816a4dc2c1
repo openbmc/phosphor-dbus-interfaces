@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "553b9d60_81d5e0fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000546
+      },
+      "writtenOn": "2022-09-23T16:47:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1d8005a4_aa7a1acd",
+      "revId": "525a1b82f2ea4675605279f1ca796b816a4dc2c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ce480459_565aadf0",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-09-23T15:07:33Z",
       "side": 1,
       "message": "What does \"complete\" mean?  What does it mean to \"verify\" the POST code?  Need more description here.",
+      "revId": "525a1b82f2ea4675605279f1ca796b816a4dc2c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ad9b1ae_3a67818a",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Raw.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000546
+      },
+      "writtenOn": "2022-09-23T16:47:34Z",
+      "side": 1,
+      "message": "This refers to BIOS POST COMPLETE. It indicates that all the postcodes are received from host are completed and indicates the host boot state as BIOS POST COMPLETE. So, this property tells whether the boot state is BIOS POST COMPLETE or not. Updated the same in patch.",
+      "parentUuid": "ce480459_565aadf0",
       "revId": "525a1b82f2ea4675605279f1ca796b816a4dc2c1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -6,3 +6,10 @@ properties:
       type: struct[uint64,array[byte]]
       description: >
           The POST code value.
+    - name: PostComplete
+      type: boolean
+      default: false
+      description: >
+          Indicates all post codes are received and
+          Host Boot state changed to BIOS POST Complete change.
+          It is a read-only property.

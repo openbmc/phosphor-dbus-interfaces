@@ -6,3 +6,9 @@ properties:
       type: struct[uint64,array[byte]]
       description: >
           The POST code value.
+    - name: PostComplete
+      type: boolean
+      default: false
+      description: >
+          Verify POST code completion.
+          It is a read-only property.

@@ -1,2 +1,11 @@
 description: >
     Implement to provide PowerSupply attributes.
+
+associations:
+    - name: upstream_chassis
+      description: >
+          Objects that implement PowerSupply can optionally implement the
+          upstream_chassis association to provide a link back to a Chassis.
+      reverse_name: associated_power_supplies
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.Chassis

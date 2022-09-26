@@ -43,3 +43,13 @@ enumerations:
             description: >
                 A logical division or portion of a physical chassis that contains
                 multiple devices or systems that cannot be physically separated.
+
+associations:
+    - name: associated_power_supplies
+      description: >
+          Objects that implement Chassis can optionally implement the
+          associated_power_supplies association to provide a link to one or more
+          power supplies.
+      reverse_name: upstream_chassis
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.PowerSupply

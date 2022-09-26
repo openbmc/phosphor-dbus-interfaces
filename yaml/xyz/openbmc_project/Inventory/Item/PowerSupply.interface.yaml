@@ -1,2 +1,11 @@
 description: >
     Implement to provide PowerSupply attributes.
+
+associations:
+    - name: Powering
+      description: >
+          Objects that implement PowerSupply can optionally implement the
+          Powering association to provide a link back to a Chassis.
+      reverse_name: PowerSupply
+      required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.Chassis

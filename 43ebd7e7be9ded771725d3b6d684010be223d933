@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c91c91b_e31ca63e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000546
+      },
+      "writtenOn": "2022-09-26T06:45:27Z",
+      "side": 1,
+      "message": "This property \"PostComplete\" is added under \"xyz.openbmc_project.State.Boot.Raw\" interface and \"xyz/openbmc_project/state/boot/raw*\" dbus path. It is similar to the property \"Value\" on the same interface. Once this property is added in dbus, It will be displayed in Redfish as like post code values i think.\n\nhttps://github.com/openbmc/bmcweb/blob/master/redfish-core/lib/log_services.hpp#L907-L992",
+      "parentUuid": "dcffabe3_ad55e5b2",
+      "range": {
+        "startLine": 13,
+        "startChar": 24,
+        "endLine": 14,
+        "endChar": 21
+      },
+      "revId": "43ebd7e7be9ded771725d3b6d684010be223d933",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d1bf68f_9db54e13",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-09-26T06:16:23Z",
       "side": 1,
       "message": "I am not sure I understand the significance of TESTED in this commit ?  as we don\u0027t see how this is implemented yet.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 36
+      },
+      "revId": "43ebd7e7be9ded771725d3b6d684010be223d933",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4996fae8_c085fd33",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000546
+      },
+      "writtenOn": "2022-09-26T06:45:27Z",
+      "side": 1,
+      "message": "I mean, verified that the property is created under \"xyz.openbmc_project.State.Boot.Raw\" interface.",
+      "parentUuid": "3d1bf68f_9db54e13",
       "range": {
         "startLine": 16,
         "startChar": 0,

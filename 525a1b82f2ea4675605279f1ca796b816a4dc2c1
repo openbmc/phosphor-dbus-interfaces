@@ -105,6 +105,24 @@
       "parentUuid": "fd738d3a_5bf7d104",
       "revId": "525a1b82f2ea4675605279f1ca796b816a4dc2c1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff6c984a_3b610f7a",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Raw.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000546
+      },
+      "writtenOn": "2022-09-26T06:45:27Z",
+      "side": 1,
+      "message": "This indicates post code completion status and it is notified by host. Some platform uses ipmb command to get this status and some platform uses gpio to get this status. In our platform, To get this status by sending ipmb command to host. Some power control application needs this Post Complete status.",
+      "parentUuid": "a81a3023_b32bd562",
+      "revId": "525a1b82f2ea4675605279f1ca796b816a4dc2c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

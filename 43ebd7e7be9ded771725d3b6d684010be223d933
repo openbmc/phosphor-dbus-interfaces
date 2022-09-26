@@ -72,6 +72,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "545c6180_b6433bcb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000546
+      },
+      "writtenOn": "2022-09-26T12:26:02Z",
+      "side": 1,
+      "message": "This is not special post code. \n\nThe following IPMB command to get the POST complete status.\n\nbusctl call xyz.openbmc_project.Ipmi.Channel.Ipmb /xyz/openbmc_project/Ipmi/Channel/Ipmb org.openbmc.Ipmb sendRequest yyyyay 0 0x38 0 0x03 3 0x15 0xa0 0\n\nhttps://www.opencompute.org/documents/facebook-twin-lakes-1s-server-spec\n\nThis spec, has more info about this in page no 40.",
+      "parentUuid": "7ef9947d_e3d283fa",
+      "range": {
+        "startLine": 13,
+        "startChar": 24,
+        "endLine": 14,
+        "endChar": 21
+      },
+      "revId": "43ebd7e7be9ded771725d3b6d684010be223d933",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d1bf68f_9db54e13",

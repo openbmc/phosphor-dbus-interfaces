@@ -3,6 +3,9 @@
 YAML descriptors of standard D-Bus interfaces.
 The format is described by the [sdbusplus binding generation tool sdbus++][].
 
+Before defining a new D-Bus interface or modifying an existing one, please read
+through the documented set of the common [requirements and expectations][].
+
 ## Building
 
 This project can be built with `meson`. The typical `meson` workflow is:
@@ -26,3 +29,4 @@ Example: `meson builddir -Ddata_com_ibm=true && ninja -C builddir`
 ## References
 
 [sdbusplus binding generation tool sdbus++]: https://github.com/openbmc/sdbusplus/blob/master/README.md#binding-generation-tool
+[requirements and expectations]: requirements.md

@@ -195,6 +195,24 @@
       "parentUuid": "a3bae085_05c935ea",
       "revId": "525a1b82f2ea4675605279f1ca796b816a4dc2c1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3faa0bec_d9e692b1",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Raw.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-03T15:10:14Z",
+      "side": 1,
+      "message": "I\u0027m still not sure if this is generally applicable.  There isn\u0027t any sort of IPMI command from the host that indicates this, is there?  It doesn\u0027t seem like we should add a property onto this interface just because one system happens to have a GPIO indicating it (how does the BIC even know that the POST is complete?).\n\nWhat are you intending to react to this property?  It seems problematic if not every system implements it to expect any sort of reaction to the property state change.",
+      "parentUuid": "ff492f47_72a9dcd8",
+      "revId": "525a1b82f2ea4675605279f1ca796b816a4dc2c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

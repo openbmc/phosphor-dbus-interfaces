@@ -34,6 +34,92 @@
       "parentUuid": "8e75c150_f8213a11",
       "revId": "06d631995a669693fbc8d9bb10edc0bd1fdd25e4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad802de2_2841a875",
+        "filename": "requirements.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-10-03T14:29:18Z",
+      "side": 1,
+      "message": "\u003e The sdbusplus implementation has built-in support for\n\nI copied this from below.  Consider using it here too, since size_t is also a feature of the bindings and not DBus itself.",
+      "revId": "06d631995a669693fbc8d9bb10edc0bd1fdd25e4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "359f12b5_d10932b4",
+        "filename": "requirements.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-10-03T14:29:18Z",
+      "side": 1,
+      "message": "nit: What does special mean?  Consider omitting this word to avoid questions.  They aren\u0027t special anyway - they flow across DBus just like any other string.",
+      "range": {
+        "startLine": 28,
+        "startChar": 36,
+        "endLine": 28,
+        "endChar": 43
+      },
+      "revId": "06d631995a669693fbc8d9bb10edc0bd1fdd25e4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "49d84c1d_ec6f737c",
+        "filename": "requirements.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-10-03T14:29:18Z",
+      "side": 1,
+      "message": "why is this important?",
+      "range": {
+        "startLine": 60,
+        "startChar": 31,
+        "endLine": 63,
+        "endChar": 73
+      },
+      "revId": "06d631995a669693fbc8d9bb10edc0bd1fdd25e4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f8058d5_16c33cdf",
+        "filename": "requirements.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-10-03T14:29:18Z",
+      "side": 1,
+      "message": "I\u0027m not really understanding these.  Maybe I haven\u0027t had enough coffee?  A non abstract example would probably help.",
+      "range": {
+        "startLine": 65,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 23
+      },
+      "revId": "06d631995a669693fbc8d9bb10edc0bd1fdd25e4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -232,6 +232,24 @@
       "parentUuid": "2f29020c_15b1f9d2",
       "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50432f5a_d747ef77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-05T11:28:08Z",
+      "side": 1,
+      "message": "\u003e I\u0027m thinking again about how this will look like from the BMCWeb side - when we try to enumerate .../Processors/cpu0/SubProcessors/core0/SubProcessors, how would we able to list that there are \"thread0\" and \"thread1\" under core0 ?\n\nI don\u0027t see any effort to solve the scaling issues with this commit.\n\nThere is an architecture for inventory associations now and I have documented rules for them here: https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/57604\n\nPlease see if associations help you solve the interrogation issues.",
+      "parentUuid": "809e87b6_0d03c81c",
+      "revId": "7dcf6ea402a86bf4b0306cfa0a4bdfa56aa603b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

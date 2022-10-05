@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c9fd549_6006cf0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001230
+      },
+      "writtenOn": "2022-10-05T15:52:10Z",
+      "side": 1,
+      "message": "I think this should be removed in favor of DefaultGateway (xyz.openbmc_project.Network.EthernetInterface) so people (like me) don\u0027t start accidentally using this property (which seems is not working [correctly] since 2019...)",
+      "revId": "1f4c151700fd5b3ee5eecc89205e94b7ff3e21bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

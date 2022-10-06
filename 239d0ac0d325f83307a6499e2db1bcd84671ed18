@@ -81,6 +81,30 @@
       },
       "revId": "239d0ac0d325f83307a6499e2db1bcd84671ed18",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b49cb06b_6a41eb88",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-06T02:34:08Z",
+      "side": 1,
+      "message": "\u003e 1. You still have type encoded in here.\n\nThe docs now say:\n\n```\nDirected associations should not codify type\nThe end-point names of an association should not codify the types of the interfaces pointed to by the association.\n\nBad: powered_processor\nGood: powering\n```\n\nYou\u0027re doing exactly this by putting `_chassis`, etc. in the association name.  The type of the object on the other end of the association should not be included in the association name itself.\n\nA power supply could be \"powering\" a chassis, a voltage regulator, a board, a processor, ...  They should all be connected with the same-named \"powering\" association no matter what the type is.",
+      "parentUuid": "8e88eb2a_c0eabb0d",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 56
+      },
+      "revId": "239d0ac0d325f83307a6499e2db1bcd84671ed18",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

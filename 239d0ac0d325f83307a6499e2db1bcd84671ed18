@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a208c0c9_911e6f9d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2022-10-06T01:09:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d4b77ba8_9bbd264f",
+      "revId": "239d0ac0d325f83307a6499e2db1bcd84671ed18",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5cb7657a_9fb4a381",
@@ -31,6 +49,30 @@
       "writtenOn": "2022-10-05T11:23:55Z",
       "side": 1,
       "message": "Two comments:\n\n1. You still have type encoded in here.\n2. \"Associated\" is not the desired verb.  Please pick something more specific.  Powering / powered_by?",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 56
+      },
+      "revId": "239d0ac0d325f83307a6499e2db1bcd84671ed18",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e88eb2a_c0eabb0d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2022-10-06T01:09:48Z",
+      "side": 1,
+      "message": "\u003e Two comments:\n\u003e \n\u003e 1. You still have type encoded in here.\n\nSorry, I am not following this 😞\n\n\u003e 2. \"Associated\" is not the desired verb.  Please pick something more specific.  Powering / powered_by?\n\nAck",
+      "parentUuid": "5cb7657a_9fb4a381",
       "range": {
         "startLine": 47,
         "startChar": 0,

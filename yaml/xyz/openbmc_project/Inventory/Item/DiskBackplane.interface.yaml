@@ -2,3 +2,14 @@ description: >
     Implement to provide disk backplane attributes. A disk
     backplane is a card that typically houses storage disks
     such as hard drives and SSDs.
+
+associations:
+    - name: slots
+      description: >
+          Objects that implement DiskBackplane can optionally implement
+          slot association to provide link to the slots available on that
+          backplane.
+      reverse_names:
+          - inventory
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeSlot

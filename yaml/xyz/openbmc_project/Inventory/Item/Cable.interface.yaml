@@ -16,4 +16,26 @@ properties:
           of a cable, such as optical or copper.  The cable type can be shown
           in user interfaces but this field should not be used for programmatic
           interrogation of a cable beyond ignoring the default value of the
-          empty string.
+          empty string.i
+
+associations:
+    - name: upstream_resource
+      description: >
+          Objects that implement Cables can optionally implement the
+          upstream_resource association to provide a link to the PCIe cards
+          connected to the cable.
+      reverse_names:
+          - attached_cables
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice
+          - xyz.openbmc_project.Inventory.Item.FabricAdapter
+
+    - name: downstream_resource
+      description: >
+          Object that implements Cables can optionally implement the
+          downstream_resource association to provide a link to the disk
+          backplane connected to the cable.
+      reverse_names:
+          - attached_cables
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.DiskBackplane

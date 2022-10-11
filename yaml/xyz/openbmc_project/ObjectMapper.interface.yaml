@@ -95,3 +95,62 @@ methods:
                 An array of paths.
       errors:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetAssociatedSubTree
+      description: >
+          Same as GetSubTree, but only return the dbus paths that is
+          associated to associatedPath.
+      parameters:
+          - name: associatedPath
+            type: path
+            description: >
+                The path where the associated endpoint is fetched from.
+          - name: subtree
+            type: path
+            description: >
+                The subtree path for which the result should be fetched.
+          - name: depth
+            type: int32
+            description: >
+                The maximum subtree depth for which results should be fetched.
+                For unconstrained fetches use a depth of zero.
+          - name: interfaces
+            type: array[string]
+            description: >
+                An array of result set constraining interfaces.
+      returns:
+          - name: objects
+            type: dict[path,dict[string,array[string]]]
+            description: >
+                A dictionary of path -> services.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetAssociatedSubTreePaths
+      description: >
+          Same as GetSubTreePaths, but only return the dbus paths that
+          is associated to associatedPath.
+      parameters:
+          - name: associatedPath
+            type: path
+            description: >
+                The path where the associated endpoint is fetched from.
+          - name: subtree
+            type: path
+            description: >
+                The subtree path for which the result should be fetched.
+          - name: depth
+            type: int32
+            description: >
+                The maximum subtree depth for which results should be fetched.
+                For unconstrained fetches use a depth of zero.
+          - name: interfaces
+            type: array[string]
+            description: >
+                An array of result set constraining interfaces.
+      returns:
+          - name: paths
+            type: array[path]
+            description: >
+                An array of paths.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+

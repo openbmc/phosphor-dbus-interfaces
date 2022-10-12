@@ -16,6 +16,24 @@
       "message": "Hi Patrick,\n\nIt\u0027s compiling error with console logs:\n```\nopenbmc/phosphor-dbus-interfaces: WARNING: You should add the boolean check kwarg to the run_command call.\nopenbmc/phosphor-dbus-interfaces:          It currently defaults to false,\nopenbmc/phosphor-dbus-interfaces:          but it will default to true in future releases of meson.\nopenbmc/phosphor-dbus-interfaces:          See also: https://github.com/mesonbuild/meson/issues/9300\n```\nDoes an issue with the meson build? Please help check.",
       "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "673e8e72_03229e66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-12T11:52:15Z",
+      "side": 1,
+      "message": "That looks like a warning which isn\u0027t stopping the build.  I see something about a clock-skew in the error.  I retriggered for now.",
+      "parentUuid": "5fe83baf_340acbfc",
+      "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

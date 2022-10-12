@@ -18,6 +18,13 @@ properties:
           This can be compared with the current BootProgress value
           to know how long the boot has been on the current boot step.
 
+    - name: BootProgressOem
+      type: string
+      description: >
+          This property shall represent the OEM-specific LastState of
+          the BootProgress. It contains the 9-byte hex values of the Boot
+          Progress code.
+
 enumerations:
     - name: ProgressStages
       description: >
@@ -56,3 +63,6 @@ enumerations:
           - name: MotherboardInit
             description: >
                 Motherboard/Basebord Initialization.
+          - name: OEM
+            description: >
+                OEM-defined boot progress state.

@@ -51,6 +51,24 @@
       "message": "Don\u0027t we already have the progress code interfaces?",
       "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ca13da4_deb289e7",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000940
+      },
+      "writtenOn": "2022-10-13T01:55:39Z",
+      "side": 1,
+      "message": "We already support BootProgress which map to Redfish\u0027s ComputerSystem LastState with supporting properties defined in http://redfish.dmtf.org/schemas/DSP2046_2021.1.html#laststate.\nHowever, this can\u0027t support to specify all boot progress from UEFI. So, DSP0268_2021.4 Redfish Schema Supplement specification has Oem and OemLastState (BootProgress v1.13+). To support IPMI Send/Get Boot Progress Code in SBMR 2.0 spec we need to use these properties.\nWe will also need to support Redfish to display OemLastState as example in SBMR spec below:\n{\n  \"BootProgress\": {\n    \"LastState\": \"OEM\",\n    \"OemLastStae\" : \"0x010000000010010000\",\n    \"LastStateTime\": \"2020-03-13T04:14:13+06:00\",  \u003c-- already supported\n  },\n}",
+      "parentUuid": "47fba14e_24e09838",
+      "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

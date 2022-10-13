@@ -87,6 +87,24 @@
       "parentUuid": "7ca13da4_deb289e7",
       "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5faa7b2_e4b11bac",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000992
+      },
+      "writtenOn": "2022-10-13T03:02:39Z",
+      "side": 1,
+      "message": "Hi Patrick,\n\nIt\u0027s used for the PostCode and I don\u0027t think it will satisfy the BootProgress due to it not a writable method.\n```\nroot@mtjade:~# busctl introspect xyz.openbmc_project.State.Boot.PostCode0 /xyz/openbmc_project/State/Boot/PostCode0\nNAME                                     TYPE      SIGNATURE  RESULT/VALUE  FLAGS\norg.freedesktop.DBus.Introspectable      interface -          -             -\n.Introspect                              method    -          s             -\norg.freedesktop.DBus.ObjectManager       interface -          -             -\n.GetManagedObjects                       method    -          a{oa{sa{sv}}} -\n.InterfacesAdded                         signal    oa{sa{sv}} -             -\n.InterfacesRemoved                       signal    oas        -             -\norg.freedesktop.DBus.Peer                interface -          -             -\n.GetMachineId                            method    -          s             -\n.Ping                                    method    -          -             -\norg.freedesktop.DBus.Properties          interface -          -             -\n.Get                                     method    ss         v             -\n.GetAll                                  method    s          a{sv}         -\n.Set                                     method    ssv        -             -\n.PropertiesChanged                       signal    sa{sv}as   -             -\nxyz.openbmc_project.Collection.DeleteAll interface -          -             -\n.DeleteAll                               method    -          -             -\nxyz.openbmc_project.State.Boot.PostCode  interface -          -             -\n.GetPostCodes                            method    q          a(tay)        -\n.GetPostCodesWithTimeStamp               method    q          a{t(tay)}     -\n.CurrentBootCycleCount                   property  q          100           emits-change writable\n.MaxBootCycleNum                         property  q          100           emits-change writable\n```",
+      "parentUuid": "c83c3496_552562c1",
+      "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

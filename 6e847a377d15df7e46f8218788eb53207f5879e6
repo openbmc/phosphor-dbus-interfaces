@@ -123,6 +123,24 @@
       "parentUuid": "c5faa7b2_e4b11bac",
       "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "332dff84_7066c86d",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-13T18:33:11Z",
+      "side": 1,
+      "message": "\u003e It\u0027s used for the PostCode and I don\u0027t think it will satisfy the BootProgress due to it not a writable method.\n\nIt isn\u0027t intended that you could write directly to the Boot.PostCode interface.  Your system should implement a Boot.Raw object (likely by the phosphor-host-postd repository).  Then phosphor-post-code-manager automatically listens to the signals emitted by the Boot.Raw interface and updates the Boot.PostCode tables.\n\nSee https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/State/Boot/Raw.interface.yaml\n\n\u003e Per SBMR, we need to update OemLastState with 9 bytes Progress Codes. Even when we want to use GetPostCodesWithTimeStamp  for OemLastState, uint16 can just keep 7-bytes of data.\n\nI\u0027m not sure where you got uint16 from.  The Boot.Raw and Boot.PostCode have a uint64-based primary post code as well as an array[byte] for subsequent extended post codes.  If your system has a 9 byte post code, you can figure out how you want to split it across the \u0027uint64, array[byte]\u0027 entry.",
+      "parentUuid": "c7edce3a_2d1efefd",
+      "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -105,6 +105,24 @@
       "parentUuid": "c83c3496_552562c1",
       "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7edce3a_2d1efefd",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000940
+      },
+      "writtenOn": "2022-10-13T03:24:58Z",
+      "side": 1,
+      "message": "Do you mean to use GetPostCodesWithTimeStamp to update OemLastState? Per SBMR, we need to update OemLastState with 9 bytes Progress Codes. Even when we want to use GetPostCodesWithTimeStamp  for OemLastState, uint16 can just keep 7-bytes of data.",
+      "parentUuid": "c5faa7b2_e4b11bac",
+      "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

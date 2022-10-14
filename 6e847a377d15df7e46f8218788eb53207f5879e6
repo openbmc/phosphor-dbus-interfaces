@@ -217,6 +217,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e8cab99c_fc775906",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000940
+      },
+      "writtenOn": "2022-10-14T09:40:31Z",
+      "side": 1,
+      "message": "Let\u0027s try on setting OemLastState from PostCodes (via Boot.Raw) in bmcweb.\nAnd with this approach, I think we still need Oem value for ProgressStages enumerations to indicate the last stage is OEM.",
+      "parentUuid": "2d418d1b_ede667fd",
+      "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8ed845ea_346a6f33",
         "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
         "patchSetId": 1

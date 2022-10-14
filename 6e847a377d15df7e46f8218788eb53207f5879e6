@@ -181,6 +181,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f90ccd3d_0137e73e",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000940
+      },
+      "writtenOn": "2022-10-14T09:22:21Z",
+      "side": 1,
+      "message": "You can find https://github.com/openbmc/bmcweb/blob/525fc07224884d3640e5c4a1b6a551aee024f7bd/redfish-core/lib/systems.hpp#L853 for current bmcweb implementation for BootProgress. It just supports LastState attribute but not OemLastState.\nThe dbusToRfBootProgress() function is to translate dbus\u0027s ProgressStages https://github.com/openbmc/phosphor-dbus-interfaces/blob/844e332c6a85c37e3feda0e092e09cd3bee53366/yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml#L22 to Redfish\u0027s LastState but missing Oem value.\nFor completeness, we need both LastState and OemLastState.",
+      "parentUuid": "4d6d71b1_06b43d52",
+      "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8ed845ea_346a6f33",
         "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
         "patchSetId": 1

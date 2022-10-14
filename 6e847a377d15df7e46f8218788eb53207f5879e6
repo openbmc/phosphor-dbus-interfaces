@@ -163,6 +163,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4d6d71b1_06b43d52",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-14T09:02:20Z",
+      "side": 1,
+      "message": "\u003e I want to have BootProgress with OEM value (actually ARM UEFI Progress Code) in Redfish, as defined in the BootProgress schema as below \n\nThis still doesn\u0027t tell me why we need a new dbus interface.  It sounds like you don\u0027t like the bmcweb implementation as it currently stands.  That isn\u0027t a dbus problem.\n\n\u003e About uint16, might be I am wrong but I refer to\n\nThat is an input parameter to the function, which indicates which boot you\u0027d like the post code history from, not the post code itself.",
+      "parentUuid": "2ce91b6e_476e3003",
+      "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8ed845ea_346a6f33",
         "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
         "patchSetId": 1

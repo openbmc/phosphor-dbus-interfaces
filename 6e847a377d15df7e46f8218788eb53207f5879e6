@@ -141,6 +141,24 @@
       "parentUuid": "c7edce3a_2d1efefd",
       "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ce91b6e_476e3003",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000940
+      },
+      "writtenOn": "2022-10-14T02:30:36Z",
+      "side": 1,
+      "message": "Writing to Boot.Raw object will create new PostCodes record for each time updating Boot.Raw. For example:\n        busctl set-property xyz.openbmc_project.State.Boot.Raw \\\n                /xyz/openbmc_project/state/boot/raw0 \\\n                xyz.openbmc_project.State.Boot.Raw Value \\(tay\\) \"0x200000000\" 0\n\nWill create new PostCodes record like:\n{\n  \"@odata.id\": \"/redfish/v1/Systems/system/LogServices/PostCodes/Entries/B1-1\",\n  \"@odata.type\": \"#LogEntry.v1_8_0.LogEntry\",\n  \"Created\": \"2022-10-13T07:01:18+00:00\",\n  \"EntryType\": \"Event\",\n  \"Id\": \"B1-1\",\n  \"Message\": \"Boot Count: 1; Time Stamp Offset: 0.0000 seconds; POST Code: 0x200000000\",\n  \"MessageArgs\": [\n    \"1\",\n    \"0.0000\",\n    \"0x200000000\"\n  ],\n  \"MessageId\": \"OpenBMC.0.2.BIOSPOSTCode\",\n  \"Name\": \"POST Code Log Entry\",\n  \"Severity\": \"OK\"\n},\n\nHowever, it is not I intended to have. I want to have BootProgress with OEM value (actually ARM UEFI Progress Code) in Redfish, as defined in the BootProgress schema as below (refer to http://redfish.dmtf.org/schemas/DSP2046_2022.2.html):\nBootProgress (v1.13+) {       --\u003e This object describes the last boot progress state.\n      LastState (v1.13+)      --\u003e The last boot progress state. For the possible property values, see LastState in Property details.\n      LastStateTime (v1.13+)  --\u003e The date and time when the last boot state was updated.\n      Oem (v1.13+) {}         --\u003e See the Oem object definition in the Common properties section.\n      OemLastState (v1.13+)   --\u003e The OEM-specific last state, if the LastState type is OEM.\n}\n\n\nAbout uint16, might be I am wrong but I refer to https://github.com/openbmc/phosphor-dbus-interfaces/blob/844e332c6a85c37e3feda0e092e09cd3bee53366/yaml/xyz/openbmc_project/State/Boot/PostCode.interface.yaml#L24",
+      "parentUuid": "332dff84_7066c86d",
+      "revId": "6e847a377d15df7e46f8218788eb53207f5879e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

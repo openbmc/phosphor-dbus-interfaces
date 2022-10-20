@@ -1,0 +1,30 @@
+description: >
+    Implement to specify the power cap limits
+
+properties:
+    - name: MinPowerCapValue
+      type: uint32
+      flags:
+          - readonly
+      default: 0
+      description: The Minimum supported PowerCap setting.
+
+    - name: MaxPowerCapValue
+      type: uint32
+      flags:
+          - readonly
+      default: maxint
+      description: The Maximum supported PowerCap setting.
+
+    - name: MinSoftPowerCapValue
+      type: uint32
+      flags:
+          - readonly
+      default: 0
+      description: >
+          Minimum supported soft user PowerCap setting.
+          The min soft user PowerCap value is normally less than or equal to
+          the MinPowerCapValue. When the PowerCap is set to any value between
+          MinSoftPowerCapValue and MinPowerCapValue an attempt will be made to
+          maintain the cap but it will not be guaranted.
+

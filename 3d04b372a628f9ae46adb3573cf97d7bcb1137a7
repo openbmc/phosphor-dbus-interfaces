@@ -51,6 +51,24 @@
       "parentUuid": "401a0bd9_5a2b7b2b",
       "revId": "3d04b372a628f9ae46adb3573cf97d7bcb1137a7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bebc13b1_fdda016a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2022-10-21T15:32:58Z",
+      "side": 1,
+      "message": "Thanks for the feedback Brad,\n\nYeah, I think replacing the existing mapper method/interface (GetSubTree/GetSubTreePaths) will cause more issue in the migrations across all repos. Although having two set of methods doing similar things are somewhat confusing, I do think that having the different method names help explain how it differs.",
+      "parentUuid": "b457a862_64cf0431",
+      "revId": "3d04b372a628f9ae46adb3573cf97d7bcb1137a7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

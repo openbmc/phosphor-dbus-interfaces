@@ -33,6 +33,24 @@
       "message": "As proposed, associatedPath is just another results filter, like the depth and interfaces parameters.\n\nI wonder if these methods should go in a new interface.  Or if we should version the API.  Use of the mapper seems fundamental and ubiquitous enough that I would not be opposed to helping those that will never upstream their mapper client code to introspect the mapper interfaces in the conventional DBus ways.",
       "revId": "3d04b372a628f9ae46adb3573cf97d7bcb1137a7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b457a862_64cf0431",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-10-21T15:01:00Z",
+      "side": 1,
+      "message": "Thinking about this more...\n\nAny pre-existing client code will continue to work going forward, without changes, using the old interfaces.  On the flip side, I can\u0027t think of how anyone would get themselves in the situation of new client code making use of the new interfaces, simultaneously paired with a deployment of the old mapper.\n\nThis is entering bikeshedding territory but the only other thing I can think of to consider is, is it more or less confusing to have 2 sets of methods that do the same thing (the new ones can satisfy all the use cases of the old ones) vs one set of methods but two versions?  I think for most OpenBMC developers it is probably the former.  Given that, +1 from me.",
+      "parentUuid": "401a0bd9_5a2b7b2b",
+      "revId": "3d04b372a628f9ae46adb3573cf97d7bcb1137a7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

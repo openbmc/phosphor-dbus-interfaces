@@ -26,7 +26,7 @@ methods:
             description: >
                 The text to log for the event.
           - name: Path
-            type: path
+            type: object_path
             description: >
                 The object path that is generating the SEL entry.
           - name: SELData
@@ -60,7 +60,7 @@ methods:
             description: >
                 The text to log for the event.
           - name: Path
-            type: path
+            type: object_path
             description: >
                 The object path that is generating the SEL entry.
           - name: SELData

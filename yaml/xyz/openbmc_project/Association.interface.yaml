@@ -8,6 +8,6 @@ description: >
     of the object implementing Association.
 properties:
     - name: Endpoints
-      type: array[path]
+      type: array[object_path]
       description: >
           An array of association endpoints.

@@ -12,7 +12,7 @@ methods:
           for example, the user voluntarily tried to isolate hardware.
       parameters:
           - name: IsolateHardware
-            type: path
+            type: object_path
             description: >
                 The hardware inventory path which is needs to isolate.
           - name: Severity
@@ -21,7 +21,7 @@ methods:
                 The severity of hardware isolation.
       returns:
           - name: Path
-            type: path
+            type: object_path
             description: >
                 The path of created xyz.openbmc_project.HardwareIsolation.Entry
                 object.
@@ -43,7 +43,7 @@ methods:
           the isolation.
       parameters:
           - name: IsolateHardware
-            type: path
+            type: object_path
             description: >
                 The hardware inventory path which is needs to isolate.
           - name: Severity
@@ -51,12 +51,12 @@ methods:
             description: >
                 The severity of hardware isolation.
           - name: BmcErrorLog
-            type: path
+            type: object_path
             description: >
                 The BMC error log caused the isolation of hardware.
       returns:
           - name: Path
-            type: path
+            type: object_path
             description: >
                 The path of created xyz.openbmc_project.HardwareIsolation.Entry
                 object.

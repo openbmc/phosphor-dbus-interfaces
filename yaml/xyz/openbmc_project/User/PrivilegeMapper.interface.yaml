@@ -36,7 +36,7 @@ methods:
                 https://github.com/openbmc/docs/blob/master/architecture/user-management.md
       returns:
           - name: Path
-            type: path
+            type: object_path
             description: >
                 The path for the created privilege mapping object.
 

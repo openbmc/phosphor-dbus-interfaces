@@ -6,7 +6,7 @@ methods:
           A method to update the keyword value for a given VPD record.
       parameters:
           - name: path
-            type: path
+            type: object_path
             description: >
                 Path to the D-Bus object that represents the FRU.
           - name: record
@@ -43,7 +43,7 @@ methods:
                 ignored on a single node system.
       returns:
           - name: inventoryList
-            type: array[path]
+            type: array[object_path]
             description: >
                 List of all the FRUs D-Bus object paths for the given location
                 code.
@@ -63,7 +63,7 @@ methods:
                 Location code in expanded format.
       returns:
           - name: inventoryList
-            type: array[path]
+            type: array[object_path]
             description: >
                 List of all the FRUs D-Bus object path for the given location
                 code.

@@ -12,6 +12,6 @@ methods:
           state managed.
       parameters:
           - name: object
-            type: dict[path,dict[string,dict[string,variant[boolean,size,int64,string,array[byte]]]]]
+            type: dict[object_path,dict[string,dict[string,variant[boolean,size,int64,string,array[byte]]]]]
             description: >
                 A dictionary of fully enumerated items to be managed.

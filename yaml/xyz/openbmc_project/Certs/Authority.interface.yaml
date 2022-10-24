@@ -13,7 +13,7 @@ methods:
 
       returns:
           - name: path
-            type: path
+            type: object_path
             description: >
                 The object path of an object that implements, at a minimum,
                 xyz.openbmc_project.Certs.Entry and xyz.openbmc_project.Object.Delete

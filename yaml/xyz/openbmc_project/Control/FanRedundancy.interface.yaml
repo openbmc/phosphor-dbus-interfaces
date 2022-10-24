@@ -8,7 +8,7 @@ properties:
       description: >
           Number of fans in error state before redundancy is lost.
     - name: Collection
-      type: array[path]
+      type: array[object_path]
       flags:
           - const
       description: >

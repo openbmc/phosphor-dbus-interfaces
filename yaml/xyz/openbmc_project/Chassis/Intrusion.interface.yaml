@@ -7,3 +7,21 @@ properties:
       description: >
           Status string of chassis intrusion detector. The value is defined in
           chassis redfish schema. Can be "Normal" or "HardwareIntrusion".
+    - name: Rearm
+      type: enum[self.RearmMode]
+      default: "Automatic"
+      description: >
+          Mode string of chassis intrusion detector. The value is defined in
+          chassis redfish schema. Can be "Automatic" or "Manual".
+
+enumerations:
+    - name: RearmMode
+      description: >
+          Methods to rearm the chassis intrusion status.
+      values:
+          - name: "Automatic"
+            description: >
+                Automatic Rearm method.
+          - name: "Manual"
+            description: >
+                Manual Rearm method.

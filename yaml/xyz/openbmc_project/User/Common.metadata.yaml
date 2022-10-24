@@ -17,3 +17,7 @@
   meta:
       - str: "REASON=%s"
         type: string
+- name: GroupNameExists
+  level: ERR
+- name: GroupNameDoesNotExist
+  level: ERR

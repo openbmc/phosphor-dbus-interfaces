@@ -16,3 +16,9 @@
 # xyz.openbmc_project.User.Common.Error.PrivilegeMappingExists
 - name: PrivilegeMappingExists
   description: Specified privilege mapping already exists.
+# xyz.openbmc_project.User.Common.Error.GroupNameExists
+- name: GroupNameExists
+  description: Specified group name already exists.
+# xyz.openbmc_project.User.Common.Error.GroupNameDoesNotExist
+- name: GroupNameDoesNotExist
+  description: Specified group name does not exist.

@@ -100,6 +100,36 @@ methods:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
 
+    - name: CreateGroups
+      description: >
+          Creates a list of new groups. If the group already exists, or the
+          group name is not allowed to be created, it throws an error.
+          The implementation should stop at the first group that throws error.
+      parameters:
+          - name: GroupNames
+            type: array[string]
+            description: >
+                List of groups to be added to the system.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.User.Common.Error.GroupNameExists
+
+    - name: DeleteGroups
+      description: >
+          Deletes a list of new groups. If the group dpesn't exists, or the
+          group name is not allowed to be deleted, it throws an error.
+          The implementation should stop at the first group that throws error.
+      parameters:
+          - name: GroupNames
+            type: array[string]
+            description: >
+                List of groups to be deleted from the system.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.User.Common.Error.GroupNameDoesNotExists
+
 properties:
     - name: AllPrivileges
       type: array[string]

@@ -8,3 +8,9 @@ properties:
           Status string of chassis intrusion detector.
           The value is defined in chassis redfish schema.
           Can be "Normal" or "HardwareIntrusion".
+    - name: ReArm
+      type: string
+      description: >
+          Mode string of chassis intrusion detector.
+          The value is defined in chassis redfish schema.
+          Can be "Automatic" or "Manual".

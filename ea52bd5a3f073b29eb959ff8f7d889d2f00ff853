@@ -16,6 +16,24 @@
       "message": "These will be the power cap limits OCC.Control will write. They will replace the properties in Settings which I had previously made writable.",
       "revId": "ea52bd5a3f073b29eb959ff8f7d889d2f00ff853",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c03a599_23defd2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-24T12:45:18Z",
+      "side": 1,
+      "message": "\u003e These will be the power cap limits OCC.Control will write. They will replace the properties in Settings which I had previously made writable.\n\nI don\u0027t really know what this means.  There are existing properties in Control.Power.Cap and there is a TODO which kind of implies you\u0027re planning to move these to a separate interface.  Is this what this commit is staging for?  Can you add this to the commit message instead of in Gerrit comments?",
+      "parentUuid": "711d9c49_87b84872",
+      "revId": "ea52bd5a3f073b29eb959ff8f7d889d2f00ff853",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

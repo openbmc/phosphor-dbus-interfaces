@@ -171,6 +171,24 @@
       "parentUuid": "5dc27308_317ae988",
       "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98d0cdf2_03e56e88",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001369
+      },
+      "writtenOn": "2022-10-24T20:52:56Z",
+      "side": 1,
+      "message": "So say we use `containing` and `contained_by` as endpoints for both the relationships below\n\n[cpu, cores] -\u003e [containing, contained_by]\n[associated_pcie_slots, upstream_processor] -\u003e [containing, contained_by]\n\nWith this if you do `busctl get-property` as show below, it will return list of cores as well as the pcie_slots  right? If yes, then from bmcweb point of view, how would you know if it is a core or a pcie_slot ?\n\nbusctl get-property xyz.openbmc_project.ObjectMapper\n  /xyz/openbmc_project/inventory/system/chassis/motherboard/cpu0/containing\n    xyz.openbmc_project.Association endpoints\n    \n** Returns list of cores and pcie_slots **",
+      "parentUuid": "0a278597_13d0cc94",
+      "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

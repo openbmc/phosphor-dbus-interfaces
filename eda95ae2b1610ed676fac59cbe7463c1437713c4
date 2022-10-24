@@ -135,6 +135,24 @@
       "parentUuid": "76a77912_ba5072ac",
       "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5dc27308_317ae988",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001369
+      },
+      "writtenOn": "2022-10-24T20:26:14Z",
+      "side": 1,
+      "message": "I see... So instead of cores and cpu we use containing and contained_by as endpoint names. I wonder how will the case be handled when there are more than one relationships under an interface and as per guidelines the valid endpoints turn out to be \"containing\" and \"contained_by\" for all ?\n\nFor e.g. in the current case\n\n[cpu, cores] -\u003e [containing, contained_by]\n[associated_pcie_slots, upstream_processor] -\u003e [containing, contained_by]",
+      "parentUuid": "bced8efc_b6026434",
+      "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -189,6 +189,24 @@
       "parentUuid": "0a278597_13d0cc94",
       "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2425fa0_d9b41c68",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-24T22:07:54Z",
+      "side": 1,
+      "message": "You shouldn\u0027t be interrogating the Association instance directly, but using ObjectMapper calls for it.  Someone is already adding some new APIs to OM in order to be able to query just associations.  Look at the new GetAssociated* functions.\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/ObjectMapper.interface.yaml\n\nEven if you\u0027re using the older interfaces one of the parameters you can pass in is a list of Interface types.  So if you want just a CPU you can already filter on just that.",
+      "parentUuid": "98d0cdf2_03e56e88",
+      "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

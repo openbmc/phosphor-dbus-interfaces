@@ -4,11 +4,13 @@ description: >
 properties:
     - name: SysACPIStatus
       type: enum[self.ACPI]
+      default: Unknown
       description: >
           The ACPI system power status.
 
     - name: DevACPIStatus
       type: enum[self.ACPI]
+      default: Unknown
       description: >
           The ACPI device power status.
 

@@ -1,2 +1,15 @@
 description: >
-    Implement to provide BMC attributes.
+    Implement to provide BMC attributes. Example attributes are
+    the resource utilization of the BMC itself (BMC's CPU and memory,
+    etc).
+
+associations:
+    - name: monitored_by
+      description: >
+      Objects that implement Bmc can implement the
+      'monitored_by' association to link to utilization sensors
+      to indicate the utilization sensors are for the BMC and not
+      the host.
+    - reverse_name: monitoring
+    required_endpoint_interfaces:
+        - xyz.openbmc_project.Sensor.Value

@@ -116,6 +116,30 @@
       },
       "revId": "aefbdb2e9545b3af9506e255743a89e5848c3112",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73c56c2a_d25e289c",
+        "filename": "yaml/xyz/openbmc_project/Configuration/SatelliteController.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-25T22:01:25Z",
+      "side": 1,
+      "message": "\u003e I need to match with what EM has already defined\n\nI understand this, but generally we haven\u0027t just allowed wholesale copies of interfaces here that don\u0027t conform to conventions.  We have to pay the pain of EM having just gone off and made a whole bunch of one-off undocumented interfaces someday.  Seems like as good a day as any...\n\nEM is somewhat self-contained in that they have JSON schemas that can be used to validate certain values.  Once we start extending these APIs outside of EM we can\u0027t rely on those JSON schemas.  sdbusplus enumerations has been the preferred method.",
+      "parentUuid": "c7c2c77a_6a032a97",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 14
+      },
+      "revId": "aefbdb2e9545b3af9506e255743a89e5848c3112",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

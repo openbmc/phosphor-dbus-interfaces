@@ -100,3 +100,11 @@ associations:
           - sensors
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+    - name: monitoring
+      description: >
+          Sensors may monitor the BMC's resource utilization and implement
+          an associatoin to the Bmc item.
+      reverse_names:
+          - monitored_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Bmc

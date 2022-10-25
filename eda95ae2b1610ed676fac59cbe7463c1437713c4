@@ -243,6 +243,24 @@
       "parentUuid": "c35c7d03_dba15e3d",
       "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0933ca2e_c0e2802c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001369
+      },
+      "writtenOn": "2022-10-25T22:26:47Z",
+      "side": 1,
+      "message": "I spoke to Willy about it and seems like he is blocked on some issue that he sees with implementation of GetAssociated* mapper functions. \n\nWilly also helped me understand how can my concern be addressed (Which I think is what you were saying too).\nSo the cpus and cores are at the same object path and are linked by associations\n\n(/xyz/openbmc_project/inventory/system/chassis/motherboard)\n\nFor .e.g\n/xyz/openbmc_project/inventory/system/chassis/motherboard/cpu0\n/xyz/openbmc_project/inventory/system/chassis/motherboard/cpu1\n/xyz/openbmc_project/inventory/system/chassis/motherboard/cpu0_core0\n/xyz/openbmc_project/inventory/system/chassis/motherboard/cpu1_core0\n\n\nSo my concern was that if the endpoint names `containing` and `contained_by` are used to represent multiple relationships at CPU interface (i.e. cpu \u003c-\u003e core and cpu \u003c-\u003e pcie_slots), the endpoints property query will return the core and pcie slots both for the given cpu (and the question was how to get only the cores).\n\nSo to filter out the cores from pcie slots, I should compare the endpoints property result with the GetSubTreePaths results (filtered using Core Interfaces) and get the common elements from it.\n\n```\nWhy would get-subtree on `/xyz/openbmc_project/inventory/system/chassis/motherboard/cpu0/` show anything different than the Association endpoints property would?\n```\n\nThe get-subtree in this case will only dump the endpoint path for cpu0 i.e. /xyz/openbmc_project/inventory/system/chassis/motherboard/cpu0/containing and other possible objects (if there are any). To get the cores or pcie slots you will still need to query the association endpoints property. Willy mentioned that his new mapper implementation for GetAssociated* function will do the same (GetSubTree + Associations endpoints property)\n\n\nI will update the association endpoints in the change to conform with the naming rules.",
+      "parentUuid": "f3323205_cda3a9fe",
+      "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

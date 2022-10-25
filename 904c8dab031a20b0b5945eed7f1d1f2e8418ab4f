@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "60c4b9ab_7e992435",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-25T23:28:56Z",
+      "side": 1,
+      "message": "I\u0027d prefer not to document dbus in terms of Redfish.  Is there something else we can use to keep the same information without explicitly referring to Redfish concepts?",
+      "range": {
+        "startLine": 11,
+        "startChar": 80,
+        "endLine": 11,
+        "endChar": 202
+      },
+      "revId": "904c8dab031a20b0b5945eed7f1d1f2e8418ab4f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2efd1103_d2e9b1ef",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
         "patchSetId": 1
@@ -31,6 +54,29 @@
       "writtenOn": "2022-10-25T23:06:39Z",
       "side": 1,
       "message": "Can you fix the line wraps on this?  Prefer to use reference-style URLs to make the main text shorter.\n\n```\nI am [linking to][ref1]...\n\n[ref1]: https://something.com\n```",
+      "revId": "904c8dab031a20b0b5945eed7f1d1f2e8418ab4f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7520616_7e534f0c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-25T23:28:56Z",
+      "side": 1,
+      "message": "It seems like we should reuse this sensor-association beyond BMCs, right?  Shouldn\u0027t a Sensor.Value be associated to any Inventory.Item with this association name?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 450
+      },
       "revId": "904c8dab031a20b0b5945eed7f1d1f2e8418ab4f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

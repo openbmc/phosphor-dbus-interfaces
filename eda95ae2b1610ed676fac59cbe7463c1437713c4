@@ -207,6 +207,24 @@
       "parentUuid": "98d0cdf2_03e56e88",
       "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c35c7d03_dba15e3d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001369
+      },
+      "writtenOn": "2022-10-25T00:58:54Z",
+      "side": 1,
+      "message": "I see. The GetAssociated* function would be very useful and will address my concerns right now. \n\nBut until we have it, I don\u0027t think there is a good way to get associated list of cores for a give cpu (while conforming to the association naming rules). The \"older mapper\" like GetSubTreePaths, can be used to get the list of cores by using interface list as filter. However it will give each every core that belong to every cpu, which is not what I want. I only need to get cores specific to a cpu.\n\ngetProperty API can be used, but it does not accept interface list. We can use it only if we know that the associated endpoints names for a relationship are unique. (which they are in the current case, so I can still use it. But that may change in the future)\n\nWould you suggest using getProperty API for the time being until we have the GetAssociated* Obj mappers ?",
+      "parentUuid": "f2425fa0_d9b41c68",
+      "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c17ca6bc_25baef77",
+        "filename": "yaml/xyz/openbmc_project/Configuration/SatelliteController.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-10-25T21:52:19Z",
+      "side": 1,
+      "message": "yeah make sense",
+      "parentUuid": "4eb9c64d_90cbe0eb",
+      "revId": "aefbdb2e9545b3af9506e255743a89e5848c3112",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c11d0e5b_85b322d5",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d34bd9a_466c9e11",
+        "filename": "yaml/xyz/openbmc_project/Configuration/SatelliteController.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-10-25T21:52:19Z",
+      "side": 1,
+      "message": "I was just going off of what I saw on d-bus for the signature, it was a \"t\" which I believe is a uint64. May be that entity-manager just makes all numbers that type. The code that parses it in bmcweb expects a uint64_t.",
+      "parentUuid": "c11d0e5b_85b322d5",
+      "revId": "aefbdb2e9545b3af9506e255743a89e5848c3112",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d441cfb7_c2011066",
@@ -48,6 +84,30 @@
       "writtenOn": "2022-10-25T21:26:06Z",
       "side": 1,
       "message": "Ideally this would be an enumeration.",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 14
+      },
+      "revId": "aefbdb2e9545b3af9506e255743a89e5848c3112",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7c2c77a_6a032a97",
+        "filename": "yaml/xyz/openbmc_project/Configuration/SatelliteController.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-10-25T21:52:19Z",
+      "side": 1,
+      "message": "Yeah, as noted in the commit message, would be ideal to be an enumeration but as I  need to match with what EM has already defined, I believe it has to be a string (unless you\u0027ve got some sdbusplus/pdi magic I could do?)",
+      "parentUuid": "d441cfb7_c2011066",
       "range": {
         "startLine": 28,
         "startChar": 0,

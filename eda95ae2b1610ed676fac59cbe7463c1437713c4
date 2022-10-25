@@ -225,6 +225,24 @@
       "parentUuid": "f2425fa0_d9b41c68",
       "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3323205_cda3a9fe",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-25T17:42:23Z",
+      "side": 1,
+      "message": "\u003e Would you suggest using getProperty API for the time being until we have the GetAssociated* Obj mappers ?\n\nCan you check with Willy on this?  I think he is pretty close to having this done.  I don\u0027t think we\u0027re intending for that API to be accessed directly, but I could be misremembering.\n\n\u003e However it will give each every core that belong to every cpu, which is not what I want. I only need to get cores specific to a cpu.\n\nWhy would get-subtree on `/xyz/openbmc_project/inventory/system/chassis/motherboard/cpu0/` show anything different than the Association endpoints property would?  I could be misremembering how the association objects get created.",
+      "parentUuid": "c35c7d03_dba15e3d",
+      "revId": "eda95ae2b1610ed676fac59cbe7463c1437713c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

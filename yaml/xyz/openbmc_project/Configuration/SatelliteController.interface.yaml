@@ -1,0 +1,47 @@
+description: Provides all needed information to access a satellite BMC.
+
+properties:
+    - name: Name
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The distinct name of the satellite BMC. Must not contain a "_" in it.
+
+    - name: Hostname
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The hostname or IP address of the satellite BMC.
+
+    - name: Port
+      type: uint64
+      default: 0
+      flags:
+          - readonly
+      description: >
+          The network port to connect to the satellite BMC on.
+
+    - name: AuthType
+      type: enum[self.AuthType]
+      default: "Undefined"
+      flags:
+          - readonly
+      description: >
+          The authentication protocol required to communicate with the satellite
+          BMC.
+
+enumerations:
+    - name: AuthType
+      description: >
+          The supported authorization types to the satellite BMC
+      values:
+          - name: "Undefined"
+            description: >
+                The authorization type for the BMC is undefined.
+          - name: "None"
+            description: >
+                No authorization is required to talk to the BMC.

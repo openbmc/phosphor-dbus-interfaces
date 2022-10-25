@@ -1,2 +1,10 @@
 description: >
-    Implement to provide BMC attributes.
+    Implement to provide BMC attributes. Example attributes are
+    the resource utilization of the BMC itself (BMC's CPU and memory,
+    etc).
+    The Bmc inventory and its attributes are connected with
+    DBus Associations. For utilization sensors, the Bmc inventory has
+    "monitored_by" endpoints pointing to utilization sensors,
+    while a utilization sensor has a "monitoring" endpoint pointing
+    to the Bmc inventory.
+    

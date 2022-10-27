@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "056c2cf5_8d8ee7d0",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000500
+      },
+      "writtenOn": "2022-10-27T22:52:24Z",
+      "side": 1,
+      "message": "I limited my description to the scope of OpenBMC and DBus.",
+      "parentUuid": "60c4b9ab_7e992435",
+      "range": {
+        "startLine": 11,
+        "startChar": 80,
+        "endLine": 11,
+        "endChar": 202
+      },
+      "revId": "904c8dab031a20b0b5945eed7f1d1f2e8418ab4f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2efd1103_d2e9b1ef",
@@ -58,6 +82,42 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d84cc866_fde2007c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000500
+      },
+      "writtenOn": "2022-10-27T22:52:24Z",
+      "side": 1,
+      "message": "Added documentation.",
+      "parentUuid": "2efd1103_d2e9b1ef",
+      "revId": "904c8dab031a20b0b5945eed7f1d1f2e8418ab4f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9bdf438_eb03001b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000500
+      },
+      "writtenOn": "2022-10-27T22:52:24Z",
+      "side": 1,
+      "message": "Now warpping lines at 80 characters for README.md.",
+      "parentUuid": "a9dc621d_efaf5c02",
+      "revId": "904c8dab031a20b0b5945eed7f1d1f2e8418ab4f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f7520616_7e534f0c",
@@ -71,6 +131,30 @@
       "writtenOn": "2022-10-25T23:28:56Z",
       "side": 1,
       "message": "It seems like we should reuse this sensor-association beyond BMCs, right?  Shouldn\u0027t a Sensor.Value be associated to any Inventory.Item with this association name?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 450
+      },
+      "revId": "904c8dab031a20b0b5945eed7f1d1f2e8418ab4f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fcc2999_659024bb",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000500
+      },
+      "writtenOn": "2022-10-27T22:52:24Z",
+      "side": 1,
+      "message": "I\u0027m not sure? Existing sensor-associations usually use {\"chassis\", \"all_sensors\", \"/inventory/.../chassis/foo\"} and {\"all_sensors\", \"chassis\", \"/sensor/.../foo\"}. In our case, the BMC itself might not be a chassis.\n\nAnother benefit of using a different tuple is it\u0027s easier to distinguish BMC utilization and the host utilization (one could also tell the difference from the assotiation vertexes, but the different association name gives an extra hint.)\n\nModified this paragraph, to give some more information on existing sensor-associations.",
+      "parentUuid": "f7520616_7e534f0c",
       "range": {
         "startLine": 14,
         "startChar": 0,

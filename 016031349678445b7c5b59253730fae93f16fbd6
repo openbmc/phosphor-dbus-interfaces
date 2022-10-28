@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "157679f1_34af00f3",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Bmc.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000500
+      },
+      "writtenOn": "2022-10-28T18:39:30Z",
+      "side": 1,
+      "message": "Added the \"associations:\" paragraph similarly to the Chassis example.",
+      "parentUuid": "7b71c200_7321ae80",
+      "revId": "016031349678445b7c5b59253730fae93f16fbd6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4c3513c8_fc9c6845",
@@ -31,6 +49,30 @@
       "writtenOn": "2022-10-28T14:07:55Z",
       "side": 1,
       "message": "I don\u0027t think this language is necessary.  We actually should refactor _those_ associations to be monitoring/monitored_by.  \u0027all_sensors\u0027 is an association name that violates the pattern now.",
+      "range": {
+        "startLine": 24,
+        "startChar": 25,
+        "endLine": 27,
+        "endChar": 23
+      },
+      "revId": "016031349678445b7c5b59253730fae93f16fbd6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53ddf03a_0fda4005",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000500
+      },
+      "writtenOn": "2022-10-28T18:39:30Z",
+      "side": 1,
+      "message": "I see. Removed the highlighted part and just mentioning the \"monitoring\" and \"monitored_by\" pair.\n\nAlso checked existing .yaml files:\n\n* Sensor.Value: {\"inventory\", \"sensors\"} to Inventory.Item.\n* Inventory.Item: {\"sensors\", \"inventory\"} to Sensor.Value.\n* Inventory.Item.Chassis: {\"powered_by\", \"powering\"} to Inventory.Item.PowerSupply.\n* Inventory.Item.PowerSupply: {\"powering\", \"powered_by\"} to Inventory.Item.Chassis.\n* Inventory.Item.PCIeSlot: {\"upstream_processor\", \"associated_pcie_slots\"} to Inventory.Item.Cpu.\n* Inventory.Item.Cpu: {\"associated_pcie_slots\", \"upstream_processor\"} to Inventory.Item.PCIeSlot.\n* Inventory.Item.PCIeDevice: {\"upstream_pcie_slot\", \"associated_pcie_device\"} to Inventory.Item.PCIeSlot.\n\nLooks like all except \"PCIeDevice\" form pairs, so I added a mirroring paragrah in Sensor.Value.",
+      "parentUuid": "4c3513c8_fc9c6845",
       "range": {
         "startLine": 24,
         "startChar": 25,

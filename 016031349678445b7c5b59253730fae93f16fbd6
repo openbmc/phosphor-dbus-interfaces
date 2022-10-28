@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b71c200_7321ae80",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Bmc.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-28T14:07:55Z",
+      "side": 1,
+      "message": "This is not what I am looking for.\n\nSee this YAML as an example of what I\u0027m wanting.\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/b78a070484513df432e60deec60bd146c9afddf0/yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml#L48",
+      "revId": "016031349678445b7c5b59253730fae93f16fbd6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c3513c8_fc9c6845",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-28T14:07:55Z",
+      "side": 1,
+      "message": "I don\u0027t think this language is necessary.  We actually should refactor _those_ associations to be monitoring/monitored_by.  \u0027all_sensors\u0027 is an association name that violates the pattern now.",
+      "range": {
+        "startLine": 24,
+        "startChar": 25,
+        "endLine": 27,
+        "endChar": 23
+      },
+      "revId": "016031349678445b7c5b59253730fae93f16fbd6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

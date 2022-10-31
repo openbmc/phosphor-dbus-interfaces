@@ -25,3 +25,10 @@ associations:
           - inventory
       required_endpoint_interfaces:
           - xyz.openbmc_project.Sensor.Value
+    - name: cooled_by
+      description: >
+          Objects that implement Item can optionally implement the
+          'cooled_by' association to provide a link to one or more fans.
+      reverse_name: cooling
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Fan

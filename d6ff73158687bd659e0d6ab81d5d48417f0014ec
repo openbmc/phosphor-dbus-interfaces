@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4bf3ca5_07b1ca95",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-10-31T19:48:25Z",
+      "side": 1,
+      "message": "I\u0027m  not understanding this sentence.  very few would describe EM config files as \"static\"",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 22
+      },
+      "revId": "d6ff73158687bd659e0d6ab81d5d48417f0014ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78b060e6_139573fb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-10-31T19:48:25Z",
+      "side": 1,
+      "message": "Have your security teams reviewed SSDP for vulnerabilities analysis?  Last I understood (I\u0027m not an expert) there were possible attacks that prevented most folks from deploying SSDP because of write amplification attacks.  I\u0027m not an expert in this area.",
+      "range": {
+        "startLine": 11,
+        "startChar": 41,
+        "endLine": 13,
+        "endChar": 5
+      },
+      "revId": "d6ff73158687bd659e0d6ab81d5d48417f0014ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ceaff37_d100e1bd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-10-31T19:48:25Z",
+      "side": 1,
+      "message": "Pretty sure we don\u0027t want the existing interface if this is going to be an actual, non config file based thing.",
+      "range": {
+        "startLine": 15,
+        "startChar": 35,
+        "endLine": 15,
+        "endChar": 53
+      },
+      "revId": "d6ff73158687bd659e0d6ab81d5d48417f0014ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b7cac74_4057122d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-10-31T19:48:25Z",
+      "side": 1,
+      "message": "For the moment, the xyz.openbmc_project.Configuration namespace has the implicit requirement that it be implemented within EM.  Breaking that opens us up to some awkward discussions about history that we should probably hash out, but I\u0027m pretty sure implementing EM interfaces outside of EM is going to be a non-starter maintenance-wise.  At a minimum, we should be changing the namespace on this.\n\nAlso, if you define this API outside of EM, it\u0027s not clear how bmcweb would attach the config to a physical component.  We\u0027ve had discussions with DMTF in this regard, and there\u0027s standard changes coming that are going to require the satellite be attached to a dbus Inventory.Item, which it\u0027s not clear how we\u0027d accomplish in the case of SSDP.  Any thoughts on how this would work if the satellite config was no longer attached to an inventory item?",
+      "range": {
+        "startLine": 16,
+        "startChar": 12,
+        "endLine": 16,
+        "endChar": 37
+      },
+      "revId": "d6ff73158687bd659e0d6ab81d5d48417f0014ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "656c604a_e72e92ae",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-10-31T19:48:25Z",
+      "side": 1,
+      "message": "FWIW, at DBus level, Enums are strings.",
+      "range": {
+        "startLine": 18,
+        "startChar": 49,
+        "endLine": 18,
+        "endChar": 53
+      },
+      "revId": "d6ff73158687bd659e0d6ab81d5d48417f0014ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebc5122f_45d1fc70",
+        "filename": "yaml/xyz/openbmc_project/Configuration/SatelliteController.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-10-31T19:48:25Z",
+      "side": 1,
+      "message": "?",
+      "range": {
+        "startLine": 10,
+        "startChar": 50,
+        "endLine": 10,
+        "endChar": 78
+      },
+      "revId": "d6ff73158687bd659e0d6ab81d5d48417f0014ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb8b2549_01eaa778",
+        "filename": "yaml/xyz/openbmc_project/Configuration/SatelliteController.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-10-31T19:48:25Z",
+      "side": 1,
+      "message": "In EM I\u0027m not sure all of these are readonly....  Whether or not we care is a different story.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 20
+      },
+      "revId": "d6ff73158687bd659e0d6ab81d5d48417f0014ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "797839e6_b51bf2e4",
+        "filename": "yaml/xyz/openbmc_project/Configuration/SatelliteController.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2022-10-31T19:48:25Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem like something we should support in a hardened interface.  \"bmcweb picks\" is going to be an issue, but maybe call this \"default\" or something similar?",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 64
+      },
+      "revId": "d6ff73158687bd659e0d6ab81d5d48417f0014ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

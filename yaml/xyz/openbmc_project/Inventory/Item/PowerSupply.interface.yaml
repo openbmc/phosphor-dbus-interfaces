@@ -9,3 +9,17 @@ associations:
       reverse_name: powered_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Chassis
+    - name: identifying
+      description: >
+          Objects that implement PowerSupply can optionally implement the
+          'identifying' association to provide a link back to a LED.
+      reverse_name: identified_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Led.Group
+    - name: faulting
+      description: >
+          Objects that implement PowerSupply can optionally implement the
+          'faulting' association to provide a link back to a LED.
+      reverse_name: faulted_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Led.Group

@@ -6,3 +6,21 @@ properties:
       description: >
           Whether or not the group is currently asserted.
           To assert a group, set to True. To de-assert a group, set to False.
+
+associations:
+    - name: identified_by
+      description: >
+          Objects that implement LED group can optionally implement the
+          'identified_by' association to provide a link to one or more
+          power supplies.
+      reverse_name: identifying
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: faulted_by
+      description: >
+          Objects that implement LED group can optionally implement the
+          'faulted_by' association to provide a link to one or more
+          power supplies.
+      reverse_name: faulting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PowerSupply

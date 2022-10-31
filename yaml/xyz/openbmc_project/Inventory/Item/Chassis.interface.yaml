@@ -53,3 +53,10 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: fanned_by
+      description: >
+          Objects that implement Chassis can optionally implement the
+          'fanned_by' association to provide a link to one or more fans.
+      reverse_name: fanning
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Fan

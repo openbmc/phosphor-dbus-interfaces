@@ -32,3 +32,11 @@ associations:
       reverse_name: cooling
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Fan
+    - name: identified_by
+      description: >
+          Objects that implement Item can optionally implement the
+          'identified_by' association to provide a link to one or more
+          LED Groups.
+      reverse_name: identifying
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Led.Group

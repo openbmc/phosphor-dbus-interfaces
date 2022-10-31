@@ -6,3 +6,13 @@ properties:
       description: >
           Whether or not the group is currently asserted.
           To assert a group, set to True. To de-assert a group, set to False.
+
+associations:
+    - name: identifying
+      description: >
+          Objects that implement LED group can optionally implement the
+          'identifying' association to provide a link to one or more
+          power supplies.
+      reverse_name: identified_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

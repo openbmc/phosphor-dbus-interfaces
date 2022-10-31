@@ -20,3 +20,4 @@ Document ObjectMapper association forward and reverse names as follows:
 * cpu and core: [containing, contained_by]
 * Sensor.Value and Bmc: [monitoring, monitored_by]
 * fan and chassis: [cooling, cooled_by]
+* led and item : [identifying, identified_by]

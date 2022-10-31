@@ -9,3 +9,10 @@ associations:
       reverse_name: fanned_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Chassis
+    - name: identified_by
+      description: >
+          Objects that implement Fan can optionally implement the
+          'identified_by' association to provide a link back to a LED.
+      reverse_name: identifying
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Led.Group

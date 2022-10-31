@@ -199,6 +199,30 @@
       },
       "revId": "aefbdb2e9545b3af9506e255743a89e5848c3112",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdba273b_840b389a",
+        "filename": "yaml/xyz/openbmc_project/Configuration/SatelliteController.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-10-31T19:06:03Z",
+      "side": 1,
+      "message": "FWIW you don\u0027t have to \"handle both\".  You just need to hand-code checking that the string you get over dbus is one of the allowed strings (DBus doesn\u0027t have a concept of enumerations, that is an OpenBMC-ism).",
+      "parentUuid": "ed62c0ae_85ab8399",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 14
+      },
+      "revId": "aefbdb2e9545b3af9506e255743a89e5848c3112",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,2 +1,11 @@
 description: >
     Implement to provide Fan attributes.
+
+associations:
+    - name: cooling
+      description: >
+          Objects that implement Fan can optionally implement the
+          'cooling' association to provide a link back to a Chassis.
+      reverse_name: fanned_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Chassis

@@ -34,6 +34,24 @@
       "parentUuid": "d5d207e1_716026c6",
       "revId": "7149fd1a54fcef72f450087747b825cd526a59ea",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6b15c30_5956a6b3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-01T17:03:19Z",
+      "side": 1,
+      "message": "I don\u0027t think a new interface with a single boolean is really workable either.  This seems like some kind of boot state that probably belongs in one of the higher level interfaces (under State directly instead of State.Boot)?\n\nWhat you are proposing isn\u0027t workable for the following reasons (at least):\n\n1. You have no explanation on how the boolean gets cleared and how long the duration is valid.  Boot.Raw currently exposes the current post/progress code.  I have no idea how a \"boot complete\" is tied to that.\n\n2. There are existing machines that implement Boot.Raw and I don\u0027t believe you are planning on implementing whatever your proposed behavior is on all of them.  Thus we end up with some states having this boolean implemented and some of them not, and there is no indication which is what, so we cannot code up any generic behavior around it.",
+      "parentUuid": "242f76ad_52b38e1e",
+      "revId": "7149fd1a54fcef72f450087747b825cd526a59ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

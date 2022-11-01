@@ -16,6 +16,24 @@
       "message": "I\u0027m not sure what to do with this but it isn\u0027t acceptable in its current state.",
       "revId": "7149fd1a54fcef72f450087747b825cd526a59ea",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "242f76ad_52b38e1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000546
+      },
+      "writtenOn": "2022-11-01T16:41:42Z",
+      "side": 1,
+      "message": "Are you suggesting to create separate interface for this ?\n\nPOST COMPLETE was used as gpio type in x86-power-control earlier. now we used as dbus type as the same gpio pins are used by other gpio\u0027s. So, now we changed to dbus type.\n\nLike power on/off state, post_complete is another state.  This post complete state is specified by this post complete gpio/dbus property status.",
+      "parentUuid": "d5d207e1_716026c6",
+      "revId": "7149fd1a54fcef72f450087747b825cd526a59ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

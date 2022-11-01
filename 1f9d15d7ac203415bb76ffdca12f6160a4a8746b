@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c66061bc_79d84e72",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-01T15:53:34Z",
+      "side": 1,
+      "message": "Need these changes added to Led.Group also.",
+      "revId": "1f9d15d7ac203415bb76ffdca12f6160a4a8746b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d44c0f7_972a5842",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-01T15:53:34Z",
+      "side": 1,
+      "message": "I think you have these backwards.\n\n\u0027Fan 1 is \"identifying\" Led X\u0027 -- no\n\u0027Fan 1 is \"identified_by\" Led X\u0027 -- yes.",
+      "revId": "1f9d15d7ac203415bb76ffdca12f6160a4a8746b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66e3992d_e798aaa3",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-01T15:53:34Z",
+      "side": 1,
+      "message": "\"faulting\" doesn\u0027t seem like the appropriate description here.\n\nTry it as a sentence: \"LED X is faulting Fan 1\".  That doesn\u0027t make much sense to me.",
+      "revId": "1f9d15d7ac203415bb76ffdca12f6160a4a8746b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -1,2 +1,12 @@
 description: >
     Implement to provide board attributes.
+
+associations:
+    - name: containing
+      description: >
+          Objects that implement Board can optionally implement the
+          'containing' association to provide a link to one or more
+          other objects which it physically contains.
+      reverse_name: contained_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0554339_015a30f7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2022-11-02T02:48:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c66061bc_79d84e72",
+      "revId": "1f9d15d7ac203415bb76ffdca12f6160a4a8746b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d44c0f7_972a5842",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4b4f686_fd368d13",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2022-11-02T02:48:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d44c0f7_972a5842",
+      "revId": "1f9d15d7ac203415bb76ffdca12f6160a4a8746b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "66e3992d_e798aaa3",
@@ -48,6 +84,24 @@
       "writtenOn": "2022-11-01T15:53:34Z",
       "side": 1,
       "message": "\"faulting\" doesn\u0027t seem like the appropriate description here.\n\nTry it as a sentence: \"LED X is faulting Fan 1\".  That doesn\u0027t make much sense to me.",
+      "revId": "1f9d15d7ac203415bb76ffdca12f6160a4a8746b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d32af46d_c6e8ea2c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2022-11-02T02:48:46Z",
+      "side": 1,
+      "message": "\u003e \"faulting\" doesn\u0027t seem like the appropriate description here.\n\u003e \n\u003e Try it as a sentence: \"LED X is faulting Fan 1\".  That doesn\u0027t make much sense to me.\n\nfor the fault, i will split it into 2commits",
+      "parentUuid": "66e3992d_e798aaa3",
       "revId": "1f9d15d7ac203415bb76ffdca12f6160a4a8746b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

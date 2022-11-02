@@ -17,5 +17,5 @@ be associated with other inventory objects. Such association can be translated
 to Redfish schemas and then indicate the system topology.
 
 Document ObjectMapper association forward and reverse names as follows:
-* cpu and core: [containing, contained_by]
+* Item and Item: [containing, contained_by]
 * Sensor.Value and Bmc: [monitoring, monitored_by]

@@ -99,12 +99,3 @@ associations:
           - upstream_processor
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot
-    - name: containing
-      description: >
-          Objects that implement Cpu can optionally implement the
-          cores association to provide a link to one or more
-          cores.
-      reverse_names:
-          - contained_by
-      required_endpoint_interfaces:
-          - xyz.openbmc_project.Inventory.Item.CpuCore

@@ -34,6 +34,24 @@
       "parentUuid": "11b69c06_6000e66b",
       "revId": "7ce51cb91aa0269209079bf1bf7d40b933c0ceff",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89044731_64ae7e88",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Board.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-02T22:41:59Z",
+      "side": 1,
+      "message": "but you can already have a Board containing a Chassis in your proposal since you’ve used Item as the end point, right?  That seems similarly unpractical as the ones you’ve listed. Isn’t it on the designer to make sure they don’t have invalid associations?",
+      "parentUuid": "4eef1a0e_d684bf56",
+      "revId": "7ce51cb91aa0269209079bf1bf7d40b933c0ceff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -45,6 +45,14 @@ enumerations:
                 multiple devices or systems that cannot be physically separated.
 
 associations:
+    - name: containing
+      description: >
+          Objects that implement Chassis can optionally implement the
+          'containing' association to provide a link to one or more
+          other objects which it physically contains.
+      reverse_name: contained_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
     - name: powered_by
       description: >
           Objects that implement Chassis can optionally implement the

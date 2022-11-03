@@ -40,3 +40,11 @@ associations:
       reverse_name: identifying
       required_endpoint_interfaces:
           - xyz.openbmc_project.Led.Group
+    - name: fault_identified_by
+      description: >
+          Objects that implement Item can optionally implement the
+          'fault_identified_by' association to provide a link to one or more
+          LED Groups.
+      reverse_name: fault_identifying
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Led.Group

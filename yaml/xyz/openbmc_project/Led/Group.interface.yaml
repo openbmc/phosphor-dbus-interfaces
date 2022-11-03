@@ -16,3 +16,11 @@ associations:
       reverse_name: identified_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+    - name: fault_identifying
+      description: >
+          Objects that implement LED group can optionally implement the
+          'fault_identifying' association to provide a link to one or more
+          power supplies.
+      reverse_name: fault_identified_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

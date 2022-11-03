@@ -52,6 +52,24 @@
       "parentUuid": "4eef1a0e_d684bf56",
       "revId": "7ce51cb91aa0269209079bf1bf7d40b933c0ceff",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "863bd7e5_1cb0ca83",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Board.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000233
+      },
+      "writtenOn": "2022-11-03T18:27:48Z",
+      "side": 1,
+      "message": "Board and Chassis are used interchangeably in OpenBMC (which may be its own issue), so that\u0027s why I included either as an option.\n\nThe associations documented in PDI are normative - there\u0027s nothing actually enforcing them - so I was leaning towards being more descriptive with how they \"should\" be used.",
+      "parentUuid": "89044731_64ae7e88",
+      "revId": "7ce51cb91aa0269209079bf1bf7d40b933c0ceff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

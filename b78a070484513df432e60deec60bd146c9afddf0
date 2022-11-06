@@ -16,6 +16,24 @@
       "message": "I would have expected this to be a name of the vlan instance itself, not the ethernet adapter\u0027s name.",
       "revId": "b78a070484513df432e60deec60bd146c9afddf0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8091bbee_8ffd3bbf",
+        "filename": "yaml/xyz/openbmc_project/Network/VLAN.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2022-11-06T06:09:52Z",
+      "side": 0,
+      "message": "I think we have some bad naming going on here. EthernetInterface is used for any interface on the system, not just physical `eth*` interface. Both EthernetInterface and VlanInterface have an `InterfaceName` and it\u0027s the same value for both interfaces currently. Maybe it would make sense to have `ParentInterface` being a property of the VlanInterface but that would likely be an ObjectPath return type.",
+      "parentUuid": "a35521f5_47e7029c",
+      "revId": "b78a070484513df432e60deec60bd146c9afddf0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

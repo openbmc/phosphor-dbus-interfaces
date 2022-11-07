@@ -70,6 +70,24 @@
       "parentUuid": "89044731_64ae7e88",
       "revId": "7ce51cb91aa0269209079bf1bf7d40b933c0ceff",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc24dbfb_7d8d61cf",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Board.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-07T14:44:45Z",
+      "side": 1,
+      "message": "\u003e The associations documented in PDI are normative - there\u0027s nothing actually enforcing them...\n\nCurrently. ;)\n\n\u003e so I was leaning towards being more descriptive with how they \"should\" be used.\n\nI\u0027ve been pushing similar commits towards the more generic Item instead of the specific interface.  I don\u0027t see a strong reason to make this one restricted.  People are going to want to start adding \"SocketN contained_by Board\" and \"DimmN contained_by Board\" too, so let\u0027s just give them that ability now.\n\nIf this points to some potential performance issues in the mapper queries, as we discussed when we went over the inventory architecture design, let\u0027s get those fixed.  I believe Nan was already working on that.",
+      "parentUuid": "863bd7e5_1cb0ca83",
+      "revId": "7ce51cb91aa0269209079bf1bf7d40b933c0ceff",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

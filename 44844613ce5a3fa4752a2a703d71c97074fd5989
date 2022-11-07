@@ -46,6 +46,30 @@
       },
       "revId": "44844613ce5a3fa4752a2a703d71c97074fd5989",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57fa779f_911c07a0",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-07T14:58:20Z",
+      "side": 1,
+      "message": "I prefer an method rather than RMW of a property in this case.\n\nDo we actually need an array here or should it simply be CreateGroup/DeleteGroup?  There are some boundary cases which are not fun, which is what if the 4th group in a set of 20 has GroupNameExists.  Are the first 3 created?  What about the remainder?",
+      "parentUuid": "7cce09cc_acef0b4a",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 11
+      },
+      "revId": "44844613ce5a3fa4752a2a703d71c97074fd5989",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

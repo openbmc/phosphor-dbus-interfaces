@@ -34,6 +34,24 @@
       "parentUuid": "a35521f5_47e7029c",
       "revId": "b78a070484513df432e60deec60bd146c9afddf0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97adb595_054b5981",
+        "filename": "yaml/xyz/openbmc_project/Network/VLAN.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-07T12:48:42Z",
+      "side": 0,
+      "message": "Do we have a EthernetInterface and VLAN at the same location?  I would have expected something like:\n\n.../eth0 \u003c-- EthernetInterface\n.../eth0/vlan1 \u003c-- VLAN\n\nIn this way the \"ParentInterface\" is obvious.  Maybe it isn\u0027t laid out as sub-directories like this though.\n\nI\u0027m fine with whatever direction you choose to go here.  If you think the current VLAN.InterfaceName is redundant go ahead and merge this commit.",
+      "parentUuid": "8091bbee_8ffd3bbf",
+      "revId": "b78a070484513df432e60deec60bd146c9afddf0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

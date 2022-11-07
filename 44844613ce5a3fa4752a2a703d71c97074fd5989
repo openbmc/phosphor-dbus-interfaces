@@ -70,6 +70,30 @@
       },
       "revId": "44844613ce5a3fa4752a2a703d71c97074fd5989",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20d706eb_259ee62d",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1000682
+      },
+      "writtenOn": "2022-11-07T18:04:17Z",
+      "side": 1,
+      "message": "Yes, my original intuition is to reduce the number of dbus calls. I have no problems changing it to accept single group.\n\n\u003e There are some boundary cases which are not fun, which is what if the 4th group in a set of 20 has GroupNameExists.  Are the first 3 created?  What about the remainder?\n\nYes, in my implementation in https://gerrit.openbmc.org/c/openbmc/phosphor-user-manager/+/58143/8 (patch 8), the first 3 are created and remainder are not attempted. I agree this behavior is not that good. I was just worrying about DBus overhead.",
+      "parentUuid": "57fa779f_911c07a0",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 11
+      },
+      "revId": "44844613ce5a3fa4752a2a703d71c97074fd5989",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

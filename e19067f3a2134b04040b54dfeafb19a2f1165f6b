@@ -87,6 +87,24 @@
       "parentUuid": "d02e8aa0_19585083",
       "revId": "e19067f3a2134b04040b54dfeafb19a2f1165f6b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54b44aff_f6e6acbf",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2022-11-08T00:28:45Z",
+      "side": 1,
+      "message": "\u003e I\u0027m not really following why that is an argument for having the required endpoint be a chassis and not a more generic Item.  Couldn\u0027t anything be cooled_by a fan?\n\nWell, I understand what is you mean, So I do not think this patch is correct(https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/57428), they should all be associated with the project right?",
+      "parentUuid": "be3e3da4_b9f4dd96",
+      "revId": "e19067f3a2134b04040b54dfeafb19a2f1165f6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

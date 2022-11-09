@@ -123,6 +123,24 @@
       "parentUuid": "54b44aff_f6e6acbf",
       "revId": "e19067f3a2134b04040b54dfeafb19a2f1165f6b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71d7eb01_fc4c17c8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-09T21:47:01Z",
+      "side": 1,
+      "message": "\u003e So I do not think this patch is correct(https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/57428), they should all be associated with the project right?\n\nSure.  Feel free to contribute an update to change from PowerSupply:Chassis -\u003e PowerSupply:Item.",
+      "parentUuid": "9005f23f_d695c6b1",
+      "revId": "e19067f3a2134b04040b54dfeafb19a2f1165f6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,10 +1,12 @@
 description: >
-    Implement to provide manual control for an object.  Also provides
-    for the notion of a fail-safe mode.
+    Implement to provide manual control and PWM control for an object.
+    Also provides for the notion of a fail-safe mode.
 
     Control.Mode.Manual is read/write.
     Control.Mode.FailSafe is read/write, however not all implementations
     may respect having this property set externally.
+    Control.Mode.SetPwm is read/write.
+    Control.Mode.SetPwmAll is read/write.
 
 properties:
     - name: Manual
@@ -15,3 +17,15 @@ properties:
       type: boolean
       description: >
           Whether the object is in fail-safe mode or not.
+    - name: SetPwm
+      type: struct[string, double]
+      description: >
+          Set the whole zone to manual mode and set pwm value for
+          specific fan sensor.
+          To restore to auto mode, set manual to false.
+    - name: SetPwmAll
+      type: double
+      description: >
+          Set the whole zone to manual mode and set pwm value for
+          all pwms in this zone.
+          To restore to auto mode, set manual to false.

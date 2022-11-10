@@ -90,6 +90,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('FanZone')
+generated_others += custom_target(
+    'xyz/openbmc_project/Control/FanZone__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Control/FanZone.interface.yaml',  ],
+    output: [ 'FanZone.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Control/FanZone',
+    ],
+)
+
 subdir('FieldMode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/FieldMode__markdown'.underscorify(),

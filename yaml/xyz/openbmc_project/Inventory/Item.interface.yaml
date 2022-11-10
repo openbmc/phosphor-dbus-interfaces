@@ -56,3 +56,11 @@ associations:
       reverse_name: identifying
       required_endpoint_interfaces:
           - xyz.openbmc_project.Led.Group
+    - name: powered_by
+      description: >
+          Objects that implement Item can optionally implement the
+          'powered_by' association to provide a link to one or more
+          power supplies.
+      reverse_name: powering
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PowerSupply

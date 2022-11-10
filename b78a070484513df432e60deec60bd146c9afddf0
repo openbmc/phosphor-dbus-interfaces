@@ -52,6 +52,24 @@
       "parentUuid": "8091bbee_8ffd3bbf",
       "revId": "b78a070484513df432e60deec60bd146c9afddf0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0355ca2b_a4c93861",
+        "filename": "yaml/xyz/openbmc_project/Network/VLAN.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2022-11-10T23:47:17Z",
+      "side": 0,
+      "message": "No, when you create a vlan you get a new EthernetInterface too since that\u0027s how the OS presents it. There is no clean way of knowing the relationship back to the parent today outside of parsing the object path.\n\n```\n/xyz/openbmc_project/Network/eth1 Exposes (EthernetInterface)\n```\n\nAfter CreateVlan on eth1\n\n```\n/xyz/openbmc_project/Network/eth1 Exposes (EthernetInterface)\n/xyz/openbmc_project/Network/eth1.2 Exposes (EthernetInterface, VlanInterface)\n```",
+      "parentUuid": "97adb595_054b5981",
+      "revId": "b78a070484513df432e60deec60bd146c9afddf0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

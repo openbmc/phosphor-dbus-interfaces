@@ -16,6 +16,23 @@
       "message": "Concept LGTM.\n\nSuggestion: Instead of hardcoding the parameter \"All\" or \"all\" as a value that\u0027s a special case, you could have 2 different API calls. Example, \"SetPwm\" takes a string and a double, and \"SetPwmAll\" takes only a double (and sets all fans in the zone). The advantage is that it avoids establishing special meanings to particular hardcoded zone names, which simplifies interactions elsewhere.\n",
       "revId": "36996f5f2c21ef328c267d37d4a9dc3a3eb6c53c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e31a3059_f798c03f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001292
+      },
+      "writtenOn": "2022-11-10T23:37:01Z",
+      "side": 1,
+      "message": "Agree with the other comment on need to separate All into a separate function call.",
+      "revId": "36996f5f2c21ef328c267d37d4a9dc3a3eb6c53c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

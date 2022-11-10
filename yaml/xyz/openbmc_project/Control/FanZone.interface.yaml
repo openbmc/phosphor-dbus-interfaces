@@ -1,0 +1,13 @@
+description: >
+    Implement to provide PWM control for one fan zone.
+
+    Control.FanZone.ManualPwm is read/write.
+
+properties:
+    - name: ManualPwm
+      type: struct[string, double]
+      description: >
+          Set specified pwm value. If the first string is 'All',
+          set all pwms in this zone.
+          Will take effect after setting Control.Mode.Manual to true.
+          To restore to auto mode, set Control.Mode.Manual to false.

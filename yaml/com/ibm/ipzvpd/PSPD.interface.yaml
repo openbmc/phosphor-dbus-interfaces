@@ -1,0 +1,19 @@
+description: >
+    Implement to represent the PSPD record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VZ
+      type: array[byte]
+      description: >
+          VZ keyword. The record version.
+    - name: VM
+      type: array[byte]
+      description: >
+          VM keyword.
+    - name: PD_D
+      type: array[byte]
+      description: >
+          The "#D" keyword.

@@ -329,6 +329,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('PSPD')
+ generated_others += custom_target(
+     'com/ibm/ipzvpd/PSPD__markdown'.underscorify(),
+     input: [ '../../../../yaml/com/ibm/ipzvpd/PSPD.interface.yaml',  ],
+     output: [ 'PSPD.md' ],
+     depend_files: sdbusplusplus_depfiles,
+     command: [
+         sdbuspp_gen_meson_prog, '--command', 'markdown',
+         '--output', meson.current_build_dir(),
+         '--tool', sdbusplusplus_prog,
+         '--directory', meson.current_source_dir() / '../../../../yaml',
+         'com/ibm/ipzvpd/PSPD',
+     ],
+ )
+
 subdir('UTIL')
 generated_others += custom_target(
     'com/ibm/ipzvpd/UTIL__markdown'.underscorify(),

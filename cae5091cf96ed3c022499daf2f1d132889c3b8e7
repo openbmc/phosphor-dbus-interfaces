@@ -51,6 +51,46 @@
       "parentUuid": "985aa6bb_47fbff81",
       "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "783e48ea_ac7483f2",
+        "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-18T19:03:36Z",
+      "side": 1,
+      "message": "These don\u0027t belong in this interface to begin with.  This Control/Mode is not specifically related to PWMs and is intended for a more generic usage.  We shouldn\u0027t be putting PWM-specific properties into it, which are not applicable to non-PWM objects.\n\nThere is already Control.FanPwm.  Why does this not belong there?  Should there be a Control.FanZone interface?",
+      "range": {
+        "startLine": 2,
+        "startChar": 39,
+        "endLine": 2,
+        "endChar": 70
+      },
+      "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88910ea6_b47ba059",
+        "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-18T19:03:36Z",
+      "side": 1,
+      "message": "I don\u0027t like the relationship between all of these properties.  There ends up being non-obvious state-space covered.\n\n1. I hope that Manual doesn\u0027t automatically change state to true because someone wrote to the \u0027SetPwm\u0027 property.  I would expect that someone writes to this property and then switches Manual\u003dtrue to have it take effect.\n\n2. Can we call this \u0027ManualPwm\u0027 or something along those lines to be clear that these are the manual settings to go along with Manual mode?\n\n3. We need to document what the expected values of \u0027string\u0027 are here.  Generally we do not allow arbitrary strings in programming interfaces, but it seems like these likely are added by a human and correspond to some system-specific configuration naming convention?\n\n4. I\u0027d much prefer \"SetPwmAll\" is handled in ManualPwm as a specific string (\"All\"?) than yet another property because now I don\u0027t know the relationship and precedent of the two properties.\n\n5. Shouldn\u0027t \"SetPwm\" be a map[string, double]?  You can set multiple zones with it, right?  I don\u0027t see the point in only being able to set a single Pwm.",
+      "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

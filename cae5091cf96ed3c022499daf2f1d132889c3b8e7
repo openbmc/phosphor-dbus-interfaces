@@ -95,6 +95,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "74124d16_2f385592",
+        "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2022-11-22T04:42:21Z",
+      "side": 1,
+      "message": "I have no objections to this interface being here.\n\nI agree that the Manual/Auto toggle should remain independent of the manual PWM value setting, though. Setting Manual/Auto and setting the PWM value should be two different actions.",
+      "parentUuid": "783e48ea_ac7483f2",
+      "range": {
+        "startLine": 2,
+        "startChar": 39,
+        "endLine": 2,
+        "endChar": 70
+      },
+      "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "88910ea6_b47ba059",
         "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
         "patchSetId": 3
@@ -106,6 +130,24 @@
       "writtenOn": "2022-11-18T19:03:36Z",
       "side": 1,
       "message": "I don\u0027t like the relationship between all of these properties.  There ends up being non-obvious state-space covered.\n\n1. I hope that Manual doesn\u0027t automatically change state to true because someone wrote to the \u0027SetPwm\u0027 property.  I would expect that someone writes to this property and then switches Manual\u003dtrue to have it take effect.\n\n2. Can we call this \u0027ManualPwm\u0027 or something along those lines to be clear that these are the manual settings to go along with Manual mode?\n\n3. We need to document what the expected values of \u0027string\u0027 are here.  Generally we do not allow arbitrary strings in programming interfaces, but it seems like these likely are added by a human and correspond to some system-specific configuration naming convention?\n\n4. I\u0027d much prefer \"SetPwmAll\" is handled in ManualPwm as a specific string (\"All\"?) than yet another property because now I don\u0027t know the relationship and precedent of the two properties.\n\n5. Shouldn\u0027t \"SetPwm\" be a map[string, double]?  You can set multiple zones with it, right?  I don\u0027t see the point in only being able to set a single Pwm.",
+      "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c03b0aa_a403e76d",
+        "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2022-11-22T04:42:21Z",
+      "side": 1,
+      "message": "1. Splitting up the Manual/Auto setting, and the PWM value setting, into two separate settings, as mentioned in the earlier comment above, would help.\n\n2. I agree with name change to \"ManualPwm\" to make it more obvious that the user is setting the PWM to take effect only during Manual mode.\n\n3. The string selects the desired fan to address, by name. I think this makes sense and is an obvious approach.\n\n4. I disagree with having \"All\" be a special-case keyword. I would much rather have a separate command to set all fans at once, versus encode the special-case meaning of the word \"All\" here.\n\nHowever, what happens if the user reads back this setting? Should this interface be write-only? The fan speeds are already available as their own sensors.\n\n5. No need for a map. This interface is per-zone, correct? If so, then each zone would have its own copy of this interface, and the setting would be done there.\n\nOr, are you suggesting that all fans in this zone be exposed in an array? If the interface is an array of (string,double) tuples, then this would make it straightforward to address what fan to change the speed of, and make it easy to change more than one fan value at a time without having to affect them all.",
+      "parentUuid": "88910ea6_b47ba059",
       "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

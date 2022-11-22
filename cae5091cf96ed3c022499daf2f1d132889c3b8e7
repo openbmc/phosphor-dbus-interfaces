@@ -137,6 +137,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "dc567bfe_3903be90",
+        "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-11-22T09:12:29Z",
+      "side": 1,
+      "message": "I added an interface Control.FanZone that have SetPwm property and will add this interface under object: /xyz/openbmc_project/settings/fanctrl/zone.",
+      "parentUuid": "74124d16_2f385592",
+      "range": {
+        "startLine": 2,
+        "startChar": 39,
+        "endLine": 2,
+        "endChar": 70
+      },
+      "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "88910ea6_b47ba059",
         "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
         "patchSetId": 3
@@ -166,6 +190,24 @@
       "side": 1,
       "message": "1. Splitting up the Manual/Auto setting, and the PWM value setting, into two separate settings, as mentioned in the earlier comment above, would help.\n\n2. I agree with name change to \"ManualPwm\" to make it more obvious that the user is setting the PWM to take effect only during Manual mode.\n\n3. The string selects the desired fan to address, by name. I think this makes sense and is an obvious approach.\n\n4. I disagree with having \"All\" be a special-case keyword. I would much rather have a separate command to set all fans at once, versus encode the special-case meaning of the word \"All\" here.\n\nHowever, what happens if the user reads back this setting? Should this interface be write-only? The fan speeds are already available as their own sensors.\n\n5. No need for a map. This interface is per-zone, correct? If so, then each zone would have its own copy of this interface, and the setting would be done there.\n\nOr, are you suggesting that all fans in this zone be exposed in an array? If the interface is an array of (string,double) tuples, then this would make it straightforward to address what fan to change the speed of, and make it easy to change more than one fan value at a time without having to affect them all.",
       "parentUuid": "88910ea6_b47ba059",
+      "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ab8f0a5_d1c2681c",
+        "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-11-22T09:12:29Z",
+      "side": 1,
+      "message": "1. I\u0027ll change the behavior.\n\n2. Ok, I\u0027ll change the name.\n\n3. Yes, the string selects the desired fan sensor name.\n\n4. Would like to know is there any drawbacks if the user reads back this setting?\n\n5. Yes, this interface is per-zone.",
+      "parentUuid": "2c03b0aa_a403e76d",
       "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

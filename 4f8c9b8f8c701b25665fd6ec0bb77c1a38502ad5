@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "4362a4a2_698d6040",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2022-11-23T01:17:12Z",
+      "side": 1,
+      "message": "\u003e Why? Why not both? In bmcweb, I see you using the https://gerrit.openbmc.org/c/openbmc/bmcweb/+/57668/15 powered_by from a chassis to a powersupply\n\nBecause for PowerSupply, it is actively associated with other devices (it can be associated with chassis or other physical devices), and these devices belong to Item, so I think PowerSupply should be associated with Item\n\n\u003e \n\u003e Do we expect all Inventory.Item.Chassis to also have Inventory.Item ?\n\nI don\u0027t think so, IMO, Because for chassis, it should be passive association\n\n@Patrick, What do you think?",
+      "parentUuid": "00f98150_5c93e425",
+      "revId": "4f8c9b8f8c701b25665fd6ec0bb77c1a38502ad5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "5c14e145_17f23c99",

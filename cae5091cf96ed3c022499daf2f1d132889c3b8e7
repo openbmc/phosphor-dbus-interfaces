@@ -246,6 +246,24 @@
       "parentUuid": "24c136a2_a294a1ec",
       "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f177acb6_300949f9",
+        "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-11-24T08:56:49Z",
+      "side": 1,
+      "message": "1. Added new interface FanZone with property ManualPwm.\n\n2. If the first string is \u0027All\u0027, set all PWMs in this zone.\n\n3. Modified commit 58428. User could use Contorl.FanZone.ManualPwm to set pwm and set Contorl.Mode.Manual to true to take effect or set Contorl.Mode.Manual to true first and then use Contorl.FanZone.ManualPwm to set pwm.",
+      "parentUuid": "0b4de375_9726f004",
+      "revId": "cae5091cf96ed3c022499daf2f1d132889c3b8e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

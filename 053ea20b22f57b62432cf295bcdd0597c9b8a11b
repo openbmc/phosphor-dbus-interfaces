@@ -16,6 +16,23 @@
       "message": "It still looks good to me, but I will let Patrick Williams make the final decision.\n",
       "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3fa7688_e0992e2c",
+        "filename": "yaml/xyz/openbmc_project/Control/FanZone.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-28T21:32:39Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we make separate zone instances for each zone instead of having magic strings?\n\nMaybe I\u0027m not understanding what the value besides \"All\" are based on the limited documentation.  How does someone programmatically determine the valid values here?",
+      "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

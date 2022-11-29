@@ -33,6 +33,24 @@
       "message": "Shouldn\u0027t we make separate zone instances for each zone instead of having magic strings?\n\nMaybe I\u0027m not understanding what the value besides \"All\" are based on the limited documentation.  How does someone programmatically determine the valid values here?",
       "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3530a0cd_99da1922",
+        "filename": "yaml/xyz/openbmc_project/Control/FanZone.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-11-29T02:33:50Z",
+      "side": 1,
+      "message": "Hi Patrick,\n\nThe interface Control.FanZone will be added to seperate fan zone object.\n- For example: zone1\n\u003e    root@greatlakes:~# busctl introspect xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone1                                          NAME                                TYPE      SIGNATURE RESULT/VALUE FLAGS\n\u003e    ...\n\u003e    xyz.openbmc_project.Control.FanZone interface -         -            -\n\u003e    .ManualPwm                          property  (sd)      \"\" 0         emits-change writable\n\u003e    xyz.openbmc_project.Control.Mode    interface -         -            -\n\u003e    .FailSafe                           property  b         false        emits-change writable\n\u003e    .Manual                             property  b         false        emits-change writable\n    \nIf we use \u0027All\u0027 for the string of ManualPwm, we can set PWM for all PWM sensors in zone 1.\n\nYou can also control specific PWM sensor in the zone by using the sensor name listed in the \"inputs\" section of the fan table. \n- For example, using \"BB_FAN0_TACH_RPM\" as the string of ManualPwm to set the PWM of PWM 1.\n\u003e    \"sensors\": [\n\u003e    {\n\u003e        \"name\": \"BB_FAN0_TACH_RPM\",\n\u003e        \"type\": \"fan\",\n\u003e        \"readPath\": \"/xyz/openbmc_project/sensors/fan_tach/BB_FAN0_TACH_RPM\",\n\u003e        \"writePath\": \"/xyz/openbmc_project/control/fanpwm/Pwm_1\",\n\u003e        ...\n\u003e    },\n\u003e    ...\n\u003e    \"zones\" : [\n\u003e    {\n\u003e        \"id\": 1,\n\u003e        ...\n\u003e        \"pids\": [\n\u003e            {\n\u003e                \"name\": \"fan0 1 2 3\",\n\u003e                \"type\": \"fan\",\n\u003e                \"inputs\": [\n\u003e                    \"BB_FAN0_TACH_RPM\",\n\u003e                    \"BB_FAN1_TACH_RPM\",\n\u003e                    \"BB_FAN2_TACH_RPM\",\n\u003e                    \"BB_FAN3_TACH_RPM\"\n\u003e                ],\n\u003e    ...",
+      "parentUuid": "e3fa7688_e0992e2c",
+      "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

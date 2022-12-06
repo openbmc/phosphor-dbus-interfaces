@@ -1,18 +1,18 @@
 description: >
-    Host selector interface is used to keep the position of the host
-    selector HW switch as a property.This host selector position value
-    decides which host or bmc is currently selected in a multihost bmc
-    system so that the power and reset button events are routed to
-    the currently selected host or bmc's power control events.
+    Host selector interface is used to keep the position of the host selector HW
+    switch as a property.This host selector position value decides which host or
+    bmc is currently selected in a multihost bmc system so that the power and
+    reset button events are routed to the currently selected host or bmc's power
+    control events.
 
 properties:
     - name: Position
       type: size
       default: 0
       description: >
-          The current position of the selector. Position 1 to N selects
-          Host Instance t to N,Position 0 selects the BMC
-          ( N is maximum number of hosts ).
+          The current position of the selector. Position 1 to N selects Host
+          Instance t to N,Position 0 selects the BMC ( N is maximum number of
+          hosts ).
     - name: MaxPosition
       type: size
       default: 0

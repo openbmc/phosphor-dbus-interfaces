@@ -1,10 +1,10 @@
 description: >
-    Implement to provide host interface support.
-    This will define the interfaces using which, a OpenPower
-    machine can communicate with host on agreed commands.
+    Implement to provide host interface support. This will define the interfaces
+    using which, a OpenPower machine can communicate with host on agreed
+    commands.
 
-    This is for Internal use by the Firmware only. The D-Bus object
-    is visible for the REST but it must not be used.
+    This is for Internal use by the Firmware only. The D-Bus object is visible
+    for the REST but it must not be used.
 
 methods:
     - name: Execute
@@ -39,11 +39,10 @@ enumerations:
       values:
           - name: OCCReset
             description: >
-                Host firmware should reset the OCC. This is invoked by
-                OCC error monitor application on detecting the error.
-                Sensor ID of the failing OCC will be sent as data.
-                This command will return once the command has been placed
-                in command Queue.
+                Host firmware should reset the OCC. This is invoked by OCC error
+                monitor application on detecting the error. Sensor ID of the
+                failing OCC will be sent as data. This command will return once
+                the command has been placed in command Queue.
 
     - name: Result
       description: >

@@ -1,13 +1,12 @@
 description: >
-    Implement to capture various types of dumps from the
-    host or BMC. This interface is for user to request a particular
-    type of dump.
+    Implement to capture various types of dumps from the host or BMC. This
+    interface is for user to request a particular type of dump.
 
-    Any OpenBMC implementation should provide one implementation
-    of xyz.openbmc_project.Dump.Create per dump type on
-    /xyz/openbmc_project/dump/<dump type>. On multi-host or on multi-BMC
-    systems the instance number can be added to the path to differentiate,
-    for example /xyz/openbmc_project/dump/<dump type><instance-id>.
+    Any OpenBMC implementation should provide one implementation of
+    xyz.openbmc_project.Dump.Create per dump type on
+    /xyz/openbmc_project/dump/<dump type>. On multi-host or on multi-BMC systems
+    the instance number can be added to the path to differentiate, for example
+    /xyz/openbmc_project/dump/<dump type><instance-id>.
 
 methods:
     - name: CreateDump
@@ -17,15 +16,13 @@ methods:
           - name: AdditionalData
             type: dict[string, variant[string,uint64]]
             description: >
-                The additional data, if any, for initiating the dump.
-                The key in this case should be an implementation
-                specific enum defined for the specific type of dump
-                either in xyz or in a domain.
-                The values can be either a string or a 64 bit number.
-                The enum-format string is required to come from a
-                parallel class with this specific Enum name.
-                All of the Enum strings should be in the format
-                'domain.Dump.Create.CreateParameters.ParamName'.
+                The additional data, if any, for initiating the dump. The key in
+                this case should be an implementation specific enum defined for
+                the specific type of dump either in xyz or in a domain. The
+                values can be either a string or a 64 bit number. The
+                enum-format string is required to come from a parallel class
+                with this specific Enum name. All of the Enum strings should be
+                in the format 'domain.Dump.Create.CreateParameters.ParamName'.
                 e.g.:
                   {
                     "key1": "value1",
@@ -38,8 +35,8 @@ methods:
             type: object_path
             description: >
                 The object path of the object that implements
-                xyz.openbmc_project.Common.Progress to track the progress
-                of the dump
+                xyz.openbmc_project.Common.Progress to track the progress of the
+                dump
       errors:
           - xyz.openbmc_project.Common.File.Error.Open
           - xyz.openbmc_project.Common.File.Error.Write
@@ -54,13 +51,13 @@ enumerations:
       description: >
           Additional parameters for creating the dump.
       values:
-        - name: 'OriginatorId'
-          description: >
-              Unique Id of the originator of the respective
-              operation. This property is defined in xyz.openbmc_project.
-              Common.OriginatedBy interface.
-        - name: 'OriginatorType'
-          description: >
-              Type of the originator that initiated the respective
-              operation. This property is defined in xyz.openbmc_project.
-              Common.OriginatedBy interface.
+          - name: "OriginatorId"
+            description: >
+                Unique Id of the originator of the respective operation. This
+                property is defined in xyz.openbmc_project. Common.OriginatedBy
+                interface.
+          - name: "OriginatorType"
+            description: >
+                Type of the originator that initiated the respective operation.
+                This property is defined in xyz.openbmc_project.
+                Common.OriginatedBy interface.

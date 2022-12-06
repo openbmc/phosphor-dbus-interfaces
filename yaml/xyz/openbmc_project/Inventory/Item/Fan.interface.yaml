@@ -4,8 +4,8 @@ description: >
 associations:
     - name: cooling
       description: >
-          Objects that implement Fan can optionally implement the
-          'cooling' association to provide a link back to a Item.
+          Objects that implement Fan can optionally implement the 'cooling'
+          association to provide a link back to a Item.
       reverse_name: cooled_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item

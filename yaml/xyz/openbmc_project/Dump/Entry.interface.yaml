@@ -2,12 +2,10 @@ description: >
     Implement to provide Dump attributes.
 
     Object which implements this interface must implement
-    xyz.openbmc_project.Time.EpochTime for the Dump
-    creation time.
-    Object which implements this interface should implement
-    xyz.openbmc_project.Object.Delete to allow the deletion of
-    individual Dump objects (and its dump object manager should
-    implement xyz.openbmc_project.Collection.DeleteAll).
+    xyz.openbmc_project.Time.EpochTime for the Dump creation time. Object which
+    implements this interface should implement xyz.openbmc_project.Object.Delete
+    to allow the deletion of individual Dump objects (and its dump object
+    manager should implement xyz.openbmc_project.Collection.DeleteAll).
 
 methods:
     - name: InitiateOffload
@@ -40,10 +38,9 @@ properties:
     - name: Offloaded
       type: boolean
       description: >
-          Indicates whether the dump is offloaded to a client.
-          The BMC application which knows the status of the offload
-          operation should set this to true once the entire dump is
-          offloaded.
+          Indicates whether the dump is offloaded to a client. The BMC
+          application which knows the status of the offload operation should set
+          this to true once the entire dump is offloaded.
     - name: OffloadUri
       type: string
       description: >

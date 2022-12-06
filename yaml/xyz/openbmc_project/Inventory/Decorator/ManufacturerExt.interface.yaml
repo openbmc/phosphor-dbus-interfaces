@@ -5,11 +5,11 @@ properties:
     - name: ExtendedMFGData
       type: dict[string, string]
       description: >
-          A dictionary of manufacturer-specific extended data fields, which
-          may contain fields such as manufacturing plant, lot number, etc.
+          A dictionary of manufacturer-specific extended data fields, which may
+          contain fields such as manufacturing plant, lot number, etc.
 
-          These fields must not be used for programmatic interrogation of
-          an inventory object but may be useful for various human-oriented
-          tasks, such as part failure analysis.  Any field needed for
-          programmatic interrogation should be promoted to a first-class
-          property in another Item or Decorator interface.
+          These fields must not be used for programmatic interrogation of an
+          inventory object but may be useful for various human-oriented tasks,
+          such as part failure analysis.  Any field needed for programmatic
+          interrogation should be promoted to a first-class property in another
+          Item or Decorator interface.

@@ -43,8 +43,8 @@ properties:
       description: >
           CAS Latency (CL) values are supported. The CAS latency is the delay
           between the time at which the column address and the column address
-          strobe signal are presented to the memory module and the time at
-          which the corresponding data is made available by the memory module.
+          strobe signal are presented to the memory module and the time at which
+          the corresponding data is made available by the memory module.
     - name: RevisionCode
       type: uint16
       description: >
@@ -111,7 +111,8 @@ enumerations:
                 and volatile memory.
           - name: IntelOptane
             description: >
-                The memory module is an Intel Optane DC Persistent Memory Module.
+                The memory module is an Intel Optane DC Persistent Memory
+                Module.
     - name: DeviceType
       description: >
           This property shall contain the Memory Device Type as defined by

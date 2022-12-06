@@ -1,7 +1,7 @@
 description: >
-    Provides user objects, their properties.
-    As communication to this service is done through authenticated
-    & authorized session, there won't be any validation for the both.
+    Provides user objects, their properties. As communication to this service is
+    done through authenticated & authorized session, there won't be any
+    validation for the both.
 
 properties:
     - name: UserGroups
@@ -30,12 +30,12 @@ properties:
     - name: UserLockedForFailedAttempt
       type: boolean
       description: >
-          Locked or unlocked state of the user. After repeated failed
-          login attempt (configured through MaxLoginAttemptBeforeLockout),
-          locked out user can be unlocked manually by setting false to
-          this property. This property will return true if user is locked
-          out user. AccountUnlockTimeout property can be configured to unlock
-          the user after a timeout.
+          Locked or unlocked state of the user. After repeated failed login
+          attempt (configured through MaxLoginAttemptBeforeLockout), locked out
+          user can be unlocked manually by setting false to this property. This
+          property will return true if user is locked out user.
+          AccountUnlockTimeout property can be configured to unlock the user
+          after a timeout.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
 
@@ -53,7 +53,7 @@ properties:
       flags:
           - const
       description: >
-          True when the user's password must be changed before access should
-          be granted.
+          True when the user's password must be changed before access should be
+          granted.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure

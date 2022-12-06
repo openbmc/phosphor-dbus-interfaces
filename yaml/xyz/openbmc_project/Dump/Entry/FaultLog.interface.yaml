@@ -11,17 +11,16 @@ properties:
     - name: AdditionalTypeName
       type: string
       description: >
-          Additional string to further identify the Type (e.g. it
-          can indicate the OEM format of a Crashdump)
+          Additional string to further identify the Type (e.g. it can indicate
+          the OEM format of a Crashdump)
       flags:
           - const
     - name: PrimaryLogId
       type: string
       description: >
-          This is intended to be a unique identifier, depending on
-          Type, to reference the primary fault data log but is not
-          intended otherwise to be programatically interpreted
-          (e.g. string parsing)
+          This is intended to be a unique identifier, depending on Type, to
+          reference the primary fault data log but is not intended otherwise to
+          be programatically interpreted (e.g. string parsing)
       flags:
           - const
 
@@ -35,6 +34,6 @@ enumerations:
                 UEFI Common Platform Error Record
           - name: Crashdump
             description: >
-                Collection of processor and chipset register values
-                typically gathered for debugging purposes at the time
-                of a crash (or sometimes on-demand)
+                Collection of processor and chipset register values typically
+                gathered for debugging purposes at the time of a crash (or
+                sometimes on-demand)

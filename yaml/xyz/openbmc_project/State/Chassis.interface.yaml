@@ -5,32 +5,31 @@ properties:
       type: enum[self.Transition]
       default: "Off"
       description: >
-          The desired power transition to start on this chassis.
-          This will be preserved across AC power cycles of the BMC.
+          The desired power transition to start on this chassis. This will be
+          preserved across AC power cycles of the BMC.
 
     - name: CurrentPowerState
       type: enum[self.PowerState]
       description: >
-          A read-only property describing the current chassis power state.
-          A user can determine if a chassis is in transition by comparing
-          the CurrentPowerState and RequestedPowerTransition properties.
+          A read-only property describing the current chassis power state. A
+          user can determine if a chassis is in transition by comparing the
+          CurrentPowerState and RequestedPowerTransition properties.
 
     - name: CurrentPowerStatus
       type: enum[self.PowerStatus]
       description: >
-          A read-only property describing the current chassis power status.
-          This property aggregates all available information about the status
-          of the power coming into the chassis. Note that this is different
-          then the CurrentPowerState in that it provides status of the power
-          coming into the chassis, not the actual state of the chassis power.
+          A read-only property describing the current chassis power status. This
+          property aggregates all available information about the status of the
+          power coming into the chassis. Note that this is different then the
+          CurrentPowerState in that it provides status of the power coming into
+          the chassis, not the actual state of the chassis power.
 
     - name: LastStateChangeTime
       type: uint64
       description: >
-          The last time at which the chassis power changed state, as
-          tracked by the CurrentPowerState property, in epoch time,
-          in milliseconds.  This can be used to tell when the chassis
-          was last powered on or off.
+          The last time at which the chassis power changed state, as tracked by
+          the CurrentPowerState property, in epoch time, in milliseconds.  This
+          can be used to tell when the chassis was last powered on or off.
 
 enumerations:
     - name: Transition
@@ -78,12 +77,13 @@ enumerations:
           - name: "UninterruptiblePowerSupply"
             description: >
                 Chassis power is being provided via an uninterruptible power
-                supply. Note that some systems may choose to continue to use this
-                status, even once power has returned to the system, to indicate the
-                uninterruptible power supply is charging or is below a certain
-                threshold of charged. This provides system owners the flexibility on
-                whether their system requires a certain level of charged
-                uninterruptible power supply to be in a 'Good' state or not.
+                supply. Note that some systems may choose to continue to use
+                this status, even once power has returned to the system, to
+                indicate the uninterruptible power supply is charging or is
+                below a certain threshold of charged. This provides system
+                owners the flexibility on whether their system requires a
+                certain level of charged uninterruptible power supply to be in a
+                'Good' state or not.
           - name: "Good"
             description: >
                 Chassis power status is in a good condition

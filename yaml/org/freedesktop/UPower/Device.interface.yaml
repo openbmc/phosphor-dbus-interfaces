@@ -28,17 +28,21 @@ methods:
           - name: resolution
             type: uint32
             description: >
-                "The approximate number of points to return. A higher resolution is
+                "The approximate number of points to return. A higher resolution
+                is
                  more accurate, at the expense of plotting speed."
       returns:
           - name: data
             type: array[struct[uint32, double, uint32]]
             description: >
                 "The history data for the power device, if the device supports
-                 history. Data is ordered from the earliest in time, to the newest
+                 history. Data is ordered from the earliest in time, to the
+                newest
                  data point. Each element contains the following members:
-                   time: The time value in seconds from the gettimeofday() method.
-                   value: The data value, for instance the rate in W or the charge
+                   time: The time value in seconds from the gettimeofday()
+                method.
+                   value: The data value, for instance the rate in W or the
+                charge
                           in %.
                    state: The state of the device, for instance charging or
                           discharging."
@@ -57,7 +61,8 @@ methods:
           - name: data
             type: array[struct[double, double]]
             description: >
-                "The statistics data for the power device. Each element contains the
+                "The statistics data for the power device. Each element contains
+                the
                  following members:
                    value: The value of the percentage point, usually in seconds.
                    accuracy: The accuracy of the prediction in percent."
@@ -277,7 +282,8 @@ properties:
       description: >
           "Level of the battery:
               0: Unknown
-              1: None (the battery does not use a coarse level of battery reporting)
+              1: None (the battery does not use a coarse level of battery
+          reporting)
               3: Low
               4: Critical
               6: Normal

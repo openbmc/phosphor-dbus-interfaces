@@ -1,24 +1,22 @@
 description: >
-    Implement to emit D-Bus signal for PLDM Event Messages. PLDM Event
-    Messages are PLDM monitoring and control messages that are used by
-    a PLDM terminus to synchronously or asynchronously report PLDM events
-    to a central party called the PLDM Event Receiver.
+    Implement to emit D-Bus signal for PLDM Event Messages. PLDM Event Messages
+    are PLDM monitoring and control messages that are used by a PLDM terminus to
+    synchronously or asynchronously report PLDM events to a central party called
+    the PLDM Event Receiver.
 
-    When the PLDM daemon receives a sensorEvent of type stateSensorState,
-    it emits the StateSensorEvent signal.
+    When the PLDM daemon receives a sensorEvent of type stateSensorState, it
+    emits the StateSensorEvent signal.
 
-    This signal would be used by PLDM Requester apps on the BMC, which
-    will rely on this signal to determine state changes on a connected
-    PLDM entity.
+    This signal would be used by PLDM Requester apps on the BMC, which will rely
+    on this signal to determine state changes on a connected PLDM entity.
 
-    More information about PLDM Event Messages can be found at DSP0248
-    version 1.2.0 section 13.
+    More information about PLDM Event Messages can be found at DSP0248 version
+    1.2.0 section 13.
 
 signals:
     - name: StateSensorEvent
       description: >
-          Signal indicating that a state sensor change EventMessage is
-          received.
+          Signal indicating that a state sensor change EventMessage is received.
           More information about properties can be found at DSP0248 version
           1.2.0 table 19.
       properties:
@@ -43,11 +41,11 @@ signals:
           - name: eventState
             type: byte
             description: >
-                The event state value from the state change that triggered
-                the event message.
+                The event state value from the state change that triggered the
+                event message.
 
           - name: previousEventState
             type: byte
             description: >
-                The event state value for the state from which the present
-                event state was entered.
+                The event state value for the state from which the present event
+                state was entered.

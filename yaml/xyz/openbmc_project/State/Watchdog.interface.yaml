@@ -4,16 +4,16 @@ description: >
 methods:
     - name: ResetTimeRemaining
       description: >
-          Resets the time remaining to the configured interval.
-          This is equivalent to reading the Interval and writing it
-          into the TimeRemaining. Optionally the watchdog can be enabled
-          during the reset process.
+          Resets the time remaining to the configured interval. This is
+          equivalent to reading the Interval and writing it into the
+          TimeRemaining. Optionally the watchdog can be enabled during the reset
+          process.
       parameters:
           - name: EnableWatchdog
             type: boolean
             description: >
-                If true the watchdog will be enabled when the reset
-                is performed.
+                If true the watchdog will be enabled when the reset is
+                performed.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
 
@@ -41,8 +41,8 @@ properties:
     - name: TimeRemaining
       type: uint64
       description: >
-          Time remaining before timeout, in milli-second.
-          Setting this property can re-arm the watchdog.
+          Time remaining before timeout, in milli-second. Setting this property
+          can re-arm the watchdog.
       default: 0
     - name: CurrentTimerUse
       type: enum[self.TimerUse]

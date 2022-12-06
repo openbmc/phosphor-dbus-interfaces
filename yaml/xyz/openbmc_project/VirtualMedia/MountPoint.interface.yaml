@@ -1,6 +1,6 @@
 description: >
-    Defines the object configuration like mounting mode, image paths,
-    timouts etc.
+    Defines the object configuration like mounting mode, image paths, timouts
+    etc.
 
 properties:
     - name: EndPointId
@@ -38,9 +38,9 @@ properties:
     - name: Timeout
       type: uint16
       description: >
-          Client connection timeout in seconds.
-          If VirtualMedia cannot connect successfully with served
-          image the connection is dropped after that timeout.
+          Client connection timeout in seconds. If VirtualMedia cannot connect
+          successfully with served image the connection is dropped after that
+          timeout.
       flags:
           - const
       errors:
@@ -57,8 +57,8 @@ properties:
     - name: RemainingInactivityTimeout
       type: uint16
       description: >
-          Seconds to drop connection by server, for activated endpoint,
-          0 otherwise.
+          Seconds to drop connection by server, for activated endpoint, 0
+          otherwise.
       flags:
           - const
       errors:
@@ -75,8 +75,7 @@ properties:
     - name: WriteProtected
       type: boolean
       description: >
-          Mounting mode, 'True' if the image is read only,
-          'False' otherwise.
+          Mounting mode, 'True' if the image is read only, 'False' otherwise.
       flags:
           - const
       errors:

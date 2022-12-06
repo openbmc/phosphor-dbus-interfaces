@@ -3,16 +3,15 @@ description: >
     Control.VoltageRegulatorProfile.Supported is read only.  Implementation of
     the Supported property populates the list of supported modes.  In the case
     where the VR has a well defined default, implementations should place the
-    default in index 0.
-    Control.VoltageRegulatorProfile.Current is read/write and sets the
-    implementation specific mode for the voltage regulator to run in.  The
-    definitions of said enum are implementation defined, as systems likely will
-    have a multitude of possible states.  Some examples of naming might be
-    "HighPower" or "LowPower" in the case of bipolar power states, or might be
-    something more complex like, "Profile 1", "Profile 2", "Profile 3" if the VR
-    itself defines the interfaces.
-    Implementations may implement this alongside to a VoltageRegulatorControl
-    interface, and may react to the results of changes to the Control interface.
+    default in index 0. Control.VoltageRegulatorProfile.Current is read/write
+    and sets the implementation specific mode for the voltage regulator to run
+    in.  The definitions of said enum are implementation defined, as systems
+    likely will have a multitude of possible states.  Some examples of naming
+    might be "HighPower" or "LowPower" in the case of bipolar power states, or
+    might be something more complex like, "Profile 1", "Profile 2", "Profile 3"
+    if the VR itself defines the interfaces. Implementations may implement this
+    alongside to a VoltageRegulatorControl interface, and may react to the
+    results of changes to the Control interface.
 
 properties:
     - name: Supported

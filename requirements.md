@@ -1,8 +1,8 @@
 # Requirements and Expectations for dbus interfaces
 
-This document outlines requirements and expectations for dbus interfaces.
-These are usually specified as requirements due to our dbus architecture
-or for consistency in implementations.
+This document outlines requirements and expectations for dbus interfaces. These
+are usually specified as requirements due to our dbus architecture or for
+consistency in implementations.
 
 ## General
 
@@ -13,30 +13,32 @@ unless there is a strong basis for it (usually driven by hardware or another
 protocol's specification).
 
 For countable entities always prefer `size`, which are an sdbusplus implemented
-type that maps to the C equivalent of `size_t` on the architecture.  For
+type that maps to the C equivalent of `size_t` on the architecture. For
 non-countable values prefer `uint64` or `int64`.
 
 ### Avoid use of arbitrary strings
 
-Arbitrary strings should only be utilized for human consumption and never
-parsed by code. Any arbitrary string is typically expected to have a
-description such as "... can be shown in user interfaces but this field should
-not be used for any programmatic interrogation of an object".
+Arbitrary strings should only be utilized for human consumption and never parsed
+by code. Any arbitrary string is typically expected to have a description such
+as "... can be shown in user interfaces but this field should not be used for
+any programmatic interrogation of an object".
 
 ### Leverage enumerations instead of strings or magic values
 
-The sdbusplus implementation has built-in support for enumerations, which
-flow across the dbus as uniquely encoded string values but has support in the
+The sdbusplus implementation has built-in support for enumerations, which flow
+across the dbus as uniquely encoded string values but has support in the
 bindings for automatically converting to a C++ enum type.
 
 In some cases it is useful to have hardware-specific or OEM values for
-enumerations. In those cases a property may be a string, but should specify
-that the values contained within are to be sdbusplus-enumerations of a specific
-pattern. See the [software compatiblity][software-compat] and
-[dump interface][dump-interface] as two current examples of this.
+enumerations. In those cases a property may be a string, but should specify that
+the values contained within are to be sdbusplus-enumerations of a specific
+pattern. See the [software compatiblity][software-compat] and [dump
+interface][dump-interface] as two current examples of this.
 
-[software-compat]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/README.md#compatibility
-[dump-interface]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/991b2b8bdbc950f2a85aebfc29d1b34ea3264686/yaml/xyz/openbmc_project/Dump/Create.interface.yaml#L25
+[software-compat]:
+  https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/README.md#compatibility
+[dump-interface]:
+  https://github.com/openbmc/phosphor-dbus-interfaces/blob/991b2b8bdbc950f2a85aebfc29d1b34ea3264686/yaml/xyz/openbmc_project/Dump/Create.interface.yaml#L25
 
 ## Interfaces
 
@@ -58,24 +60,24 @@ required to be represented in different dbus path hierarchies due to some
 overriding aspect of the dbus design.
 
 Directed associations are more common and are used to show a relationship
-between two different entities. Though it may at times feel contrived,
-directed associations should be considered to have a "primary" and "secondary"
-end, which helps establish a pattern for naming consistency.  For example, a
-chassis might be "containing" (primary) any number of other inventory objects
-which are "contained_by" (secondary) the chassis.
+between two different entities. Though it may at times feel contrived, directed
+associations should be considered to have a "primary" and "secondary" end, which
+helps establish a pattern for naming consistency. For example, a chassis might
+be "containing" (primary) any number of other inventory objects which are
+"contained_by" (secondary) the chassis.
 
 ### Peer associations should be named with hierarchy names
 
 Consider an entity which is contained at `/.../foo/entity` and
-`/.../bar/entity`. The association is what links the `foo` and `bar` aspects
-of the entity in the dbus path hierarchy. Accordingly, the association should
-be named with end-points "foo" and "bar".
+`/.../bar/entity`. The association is what links the `foo` and `bar` aspects of
+the entity in the dbus path hierarchy. Accordingly, the association should be
+named with end-points "foo" and "bar".
 
 A made-up example of a peer association might be a `Inventory.Processor`,
 located under the `.../inventory` hierarchy, and a `Control.Power.Cap` for that
-processor, located under the `.../control` hierarchy.  The peer association
-allows traversal between the `inventory` and `control` namespaces for the
-single Processor entity.
+processor, located under the `.../control` hierarchy. The peer association
+allows traversal between the `inventory` and `control` namespaces for the single
+Processor entity.
 
 ### Directed associations should not codify type
 
@@ -91,8 +93,8 @@ The primary relationship should be a verb with a Present Participle tense
 (ending in '-ing'). The secondary relationship should be a verb with a Past
 Participle tense (typically ending in '-ed').
 
-The association end-points should be named in a way that the following
-sentences are grammatically correct:
+The association end-points should be named in a way that the following sentences
+are grammatically correct:
 
 - The `{primary element}` is `{primary association}` the `{secondary element}`.
 - The `{secondary element}` is `{secondary association}` the

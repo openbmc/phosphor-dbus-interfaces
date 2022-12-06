@@ -1,11 +1,11 @@
 description: >
     To implement the Activation apply options for a newly uploaded firmware
-    image. The apply options property is specific to each firmware update
-    and is used during firmware activation. ApplyOptions usage during
-    firmware activation is implementation specific, not all firmware
-    targets need ApplyOptions. This property is removed after activation
-    of the firmware is done and when the firmware goes to Active state.
-    The default value of this property is false.
+    image. The apply options property is specific to each firmware update and is
+    used during firmware activation. ApplyOptions usage during firmware
+    activation is implementation specific, not all firmware targets need
+    ApplyOptions. This property is removed after activation of the firmware is
+    done and when the firmware goes to Active state. The default value of this
+    property is false.
 properties:
     - name: ClearConfig
       type: boolean

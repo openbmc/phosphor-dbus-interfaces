@@ -1,8 +1,7 @@
 description: >
-    This defines the network endpoint.
-    Application which wants to keep the network endpoint info
-    can use this interface.
-    e.g: Network endpoint could be SNMP mangers or LDAP servers etc.
+    This defines the network endpoint. Application which wants to keep the
+    network endpoint info can use this interface. e.g: Network endpoint could be
+    SNMP mangers or LDAP servers etc.
 properties:
     - name: Address
       type: string

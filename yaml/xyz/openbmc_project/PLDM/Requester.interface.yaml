@@ -31,17 +31,17 @@ methods:
           granted to the input eid, then the
           xyz.openbmc_project.Common.Error.TooManyResources exception will be
           thrown. The recommendation for the caller upon receiving this
-          exception is to retry calling this method, at least once, after a
-          time period equal to the maximum instance id expiration interval,
-          which is 6 seconds as per DSP0240 v1.0.0. If the exception persists
-          post this interval, the way of handling the same (further retries,
-          report an error, etc) is left to the user.
+          exception is to retry calling this method, at least once, after a time
+          period equal to the maximum instance id expiration interval, which is
+          6 seconds as per DSP0240 v1.0.0. If the exception persists post this
+          interval, the way of handling the same (further retries, report an
+          error, etc) is left to the user.
       parameters:
           - name: eid
             type: byte
             description: >
-                The MCTP endpoint, specified by 'eid' (endpoint id), for which the
-                new PLDM instance id needs to be generated.
+                The MCTP endpoint, specified by 'eid' (endpoint id), for which
+                the new PLDM instance id needs to be generated.
       returns:
           - name: instanceid
             type: byte

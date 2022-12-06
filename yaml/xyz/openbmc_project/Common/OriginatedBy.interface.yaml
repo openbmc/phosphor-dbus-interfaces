@@ -5,17 +5,16 @@ properties:
     - name: OriginatorId
       type: string
       description: >
-          Unique Id of the originator that initiated the respective
-          operation. This is an implementation-defined string described
-          by a value of type OriginatorType. The originator id can be
-          shown in user interfaces but this field should not be used for
-          any programmatic interrogation of an object.
+          Unique Id of the originator that initiated the respective operation.
+          This is an implementation-defined string described by a value of type
+          OriginatorType. The originator id can be shown in user interfaces but
+          this field should not be used for any programmatic interrogation of an
+          object.
 
     - name: OriginatorType
       type: enum[self.OriginatorTypes]
       description: >
-          Type of the originator that initiated the respective
-          operation.
+          Type of the originator that initiated the respective operation.
 
 enumerations:
     - name: OriginatorTypes
@@ -30,5 +29,5 @@ enumerations:
                 A process running on the service initiated the operation.
           - name: SupportingService
             description: >
-                A process not running on the service but running on a supporting service
-                initiated the operation.
+                A process not running on the service but running on a supporting
+                service initiated the operation.

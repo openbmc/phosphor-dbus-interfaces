@@ -1,17 +1,16 @@
 description: >
-    Implement this interface to pass CSR string to PLDM
-    to get CSR signed by host.
+    Implement this interface to pass CSR string to PLDM to get CSR signed by
+    host.
 
-    xyz.openbmc_project.Certs.ca.authority.Manager object implements
-    this interface which is added in the below commit
+    xyz.openbmc_project.Certs.ca.authority.Manager object implements this
+    interface which is added in the below commit
     https://gerrit.openbmc-project.xyz/c/openbmc/phosphor-dbus-interfaces/+/31808
 
 properties:
     - name: CSR
       type: string
       description: >
-          Certificate signing request content.
-          Should be a valid PEM encoded CSR string.
-          It's a const property.
+          Certificate signing request content. Should be a valid PEM encoded CSR
+          string. It's a const property.
       flags:
           - const

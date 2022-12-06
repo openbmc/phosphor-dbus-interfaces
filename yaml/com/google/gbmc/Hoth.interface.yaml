@@ -4,10 +4,10 @@ description: >
 methods:
     - name: SendHostCommand
       description: >
-          Send a host command to Hoth and return the response.
-          This will block on Hoth completing its internal operations.
-          Critical host commands like LoadTokens are banned.
-          This method should be called from the IPMI HostCommand passthrough.
+          Send a host command to Hoth and return the response. This will block
+          on Hoth completing its internal operations. Critical host commands
+          like LoadTokens are banned. This method should be called from the IPMI
+          HostCommand passthrough.
       parameters:
           - name: Command
             type: array[byte]
@@ -26,10 +26,10 @@ methods:
 
     - name: SendTrustedHostCommand
       description: >
-          Send a host command to Hoth and return the response.
-          This will block on Hoth completing its internal operations.
-          Critical host commands like LoadTokens are allowed.
-          This method should be called from the BMC.
+          Send a host command to Hoth and return the response. This will block
+          on Hoth completing its internal operations. Critical host commands
+          like LoadTokens are allowed. This method should be called from the
+          BMC.
       parameters:
           - name: Command
             type: array[byte]
@@ -104,9 +104,9 @@ methods:
 
     - name: InitiatePayload
       description: >
-          Initiates erasure of the EEPROM staging area. Note that this will lock up
-          access to Hoth for an extended time and may go over the kernel's SPI
-          write timeout. Calling multiple small ErasePayload is recommended.
+          Initiates erasure of the EEPROM staging area. Note that this will lock
+          up access to Hoth for an extended time and may go over the kernel's
+          SPI write timeout. Calling multiple small ErasePayload is recommended.
       errors:
           - self.Error.CommandFailure
           - self.Error.ResponseFailure
@@ -177,14 +177,14 @@ methods:
 
     - name: ActivatePayload
       description: >
-          Activates the staging area as persistent or non-persistent for next boot
-          if verification was successful.
+          Activates the staging area as persistent or non-persistent for next
+          boot if verification was successful.
       parameters:
           - name: MakePersistent
             type: boolean
             description: >
-                Flag to determine whether to activate the staged image as persistent
-                or non-persistent for next boot.
+                Flag to determine whether to activate the staged image as
+                persistent or non-persistent for next boot.
       errors:
           - self.Error.CommandFailure
           - self.Error.ResponseFailure
@@ -205,8 +205,8 @@ methods:
 
     - name: Confirm
       description: >
-          Prevents hoth from rolling back and using the previous image.
-          When an image can be comfirmed to be working well, this command is given,
+          Prevents hoth from rolling back and using the previous image. When an
+          image can be comfirmed to be working well, this command is given,
           which disarms the hoth watchdog.
       errors:
           - self.Error.CommandFailure
@@ -227,8 +227,8 @@ methods:
 
     - name: GetFirmwareUpdateTime
       description: >
-          Get time spending in the self update routine. Since a proper self update
-          involves a reset, this time is always expected to be low.
+          Get time spending in the self update routine. Since a proper self
+          update involves a reset, this time is always expected to be low.
       returns:
           - name: Time
             type: uint32
@@ -240,8 +240,8 @@ methods:
 
     - name: GetFirmwareMirroringTime
       description: >
-          Get time spending in mirroing the self-update. This time is a reasonable
-          proxy for the total self update time.
+          Get time spending in mirroing the self-update. This time is a
+          reasonable proxy for the total self update time.
       returns:
           - name: Time
             type: uint32
@@ -253,8 +253,8 @@ methods:
 
     - name: GetPayloadValidationTime
       description: >
-          Get time spending in validating the payload, copying mutable regions and/or
-          dealing with failsafe fallback.
+          Get time spending in validating the payload, copying mutable regions
+          and/or dealing with failsafe fallback.
       returns:
           - name: Time
             type: uint32

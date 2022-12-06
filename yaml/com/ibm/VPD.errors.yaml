@@ -9,16 +9,14 @@
 - name: KeywordNotFound
   description: Keyword is not found.
 - name: BlankSystemVPD
-  description: System VPD is blank on both hardware and cache.
-      On IBM systems, certain VPD data must be available
-      for the system to boot. This error is used to
+  description:
+      System VPD is blank on both hardware and cache. On IBM systems, certain
+      VPD data must be available for the system to boot. This error is used to
       indicate that no valid data was found by the BMC.
 - name: InvalidEepromPath
-  description: EEPROM path is invalid. Parser failed to access the
-      path.
+  description: EEPROM path is invalid. Parser failed to access the path.
 - name: InvalidVPD
-  description: VPD file is not valid. Mandatory records are missing
-      in VPD file.
+  description: VPD file is not valid. Mandatory records are missing in VPD file.
 - name: EccCheckFailed
   desciption: Invalid VPD data. Ecc check for the data failed.
 - name: InvalidJson

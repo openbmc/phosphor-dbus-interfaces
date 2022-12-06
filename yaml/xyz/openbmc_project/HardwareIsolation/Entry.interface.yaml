@@ -2,21 +2,19 @@ description: >
     Implement to provide the isolated hardware entry attributes.
 
     The object which implements this interface must implement
-    xyz.openbmc_project.Association.Definitions to point associated
-    object, for example, isolated hardware inventory path and error
-    log if it caused to isolate hardware. The isolated hardware
-    association of forward and reverse name must be following
-    respectively "isolated_hw" and "isolated_hw_entry". The error
-    log association of forward and reverse types must be following
+    xyz.openbmc_project.Association.Definitions to point associated object, for
+    example, isolated hardware inventory path and error log if it caused to
+    isolate hardware. The isolated hardware association of forward and reverse
+    name must be following respectively "isolated_hw" and "isolated_hw_entry".
+    The error log association of forward and reverse types must be following
     respectively "isolated_hw_errorlog" and "isolated_hw_entry".
 
     The object which implements this interface should implement
-    xyz.openbmc_project.Object.Delete to allow the deletion of
-    individual isolated hardware object.
+    xyz.openbmc_project.Object.Delete to allow the deletion of individual
+    isolated hardware object.
 
     The object which implements this interface must implement
-    xyz.openbmc_project.Time.EpochTime for the isolated hardware
-    creation time.
+    xyz.openbmc_project.Time.EpochTime for the isolated hardware creation time.
 
 properties:
     - name: Severity
@@ -27,11 +25,11 @@ properties:
       type: boolean
       default: false
       description: >
-          The isolated hardware resolution status is used to indicate
-          whether the isolated hardware is repaired or replaced.
-          Setting this to "true" may not delete this entry object because
-          in a few system platforms isolated hardware entries may not be
-          deleted and used for further analysis.
+          The isolated hardware resolution status is used to indicate whether
+          the isolated hardware is repaired or replaced. Setting this to "true"
+          may not delete this entry object because in a few system platforms
+          isolated hardware entries may not be deleted and used for further
+          analysis.
 
 enumerations:
     - name: Type
@@ -43,10 +41,9 @@ enumerations:
                 Critical hardware to repair or replace.
           - name: Warning
             description: >
-                The system can boot without the isolated hardware but,
-                will lose the system configuration benefits of isolated
-                hardware.
+                The system can boot without the isolated hardware but, will lose
+                the system configuration benefits of isolated hardware.
           - name: Manual
             description: >
-                A user attempted to isolate hardware to proceed with
-                the host to boot.
+                A user attempted to isolate hardware to proceed with the host to
+                boot.

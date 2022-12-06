@@ -1,16 +1,17 @@
 description: >
-   This interface provides methods for mounting and unmounting images
-    using the legacy mode.
+    This interface provides methods for mounting and unmounting images
+     using the legacy mode.
 
 methods:
     - name: Mount
-      description: Perform an asynchronous operation of mounting to HOST on given object.
+      description:
+          Perform an asynchronous operation of mounting to HOST on given object.
       parameters:
           - name: ImageURL
             type: string
             description: >
-                Url to image. It should start with either `smb://` or
-                `https://` prefix
+                Url to image. It should start with either `smb://` or `https://`
+                prefix
           - name: ReadWrite
             type: boolean
             description: False if the image should be read-only.
@@ -28,7 +29,9 @@ methods:
           - xyz.openbmc_project.Common.Error.InternalFailure
 
     - name: Unmount
-      description: Perform an asynchronous operation of unmounting from HOST on given object.
+      description:
+          Perform an asynchronous operation of unmounting from HOST on given
+          object.
       returns:
           - name: Status
             type: boolean
@@ -39,10 +42,10 @@ methods:
 signals:
     - name: Completion
       description: >
-        Signal indicating completion of mount or unmount action.
+          Signal indicating completion of mount or unmount action.
       properties:
-        - name: Result
-          type: int32
-          description: >
-            Returns 0 for success or errno on failure after background
-            operation completes.
+          - name: Result
+            type: int32
+            description: >
+                Returns 0 for success or errno on failure after background
+                operation completes.

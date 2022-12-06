@@ -1,6 +1,6 @@
 description: >
-    Implement to provide basic item attributes.  Required by all objects
-    within the inventory namespace.
+    Implement to provide basic item attributes.  Required by all objects within
+    the inventory namespace.
 
     Any service implementing Inventory.Item on one or more objects must
     implement org.freedesktop.DBus.ObjectManager on
@@ -20,8 +20,8 @@ associations:
     - name: containing
       description: >
           Any inventory Items (usually Boards or Chassis) can optionally
-          implement the 'containing' association to provide one or more links
-          to Items which it physically contains.
+          implement the 'containing' association to provide one or more links to
+          Items which it physically contains.
       reverse_name: contained_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
@@ -35,32 +35,32 @@ associations:
           - xyz.openbmc_project.Inventory.Item
     - name: sensors
       description: >
-          Sensors may implement an 'inventory' to 'sensors' association with
-          the inventory item related to it.
+          Sensors may implement an 'inventory' to 'sensors' association with the
+          inventory item related to it.
       reverse_names:
           - inventory
       required_endpoint_interfaces:
           - xyz.openbmc_project.Sensor.Value
     - name: cooled_by
       description: >
-          Objects that implement Item can optionally implement the
-          'cooled_by' association to provide a link to one or more fans.
+          Objects that implement Item can optionally implement the 'cooled_by'
+          association to provide a link to one or more fans.
       reverse_name: cooling
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Fan
     - name: identified_by
       description: >
           Objects that implement Item can optionally implement the
-          'identified_by' association to provide a link to one or more
-          LED Groups.
+          'identified_by' association to provide a link to one or more LED
+          Groups.
       reverse_name: identifying
       required_endpoint_interfaces:
           - xyz.openbmc_project.Led.Group
     - name: fault_identified_by
       description: >
           Objects that implement Item can optionally implement the
-          'fault_identified_by' association to provide a link to one or more
-          LED Groups.
+          'fault_identified_by' association to provide a link to one or more LED
+          Groups.
       reverse_name: fault_identifying
       required_endpoint_interfaces:
           - xyz.openbmc_project.Led.Group

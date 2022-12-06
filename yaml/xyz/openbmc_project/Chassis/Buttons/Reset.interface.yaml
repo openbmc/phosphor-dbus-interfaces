@@ -13,9 +13,8 @@ properties:
       type: boolean
       default: true
       description: >
-          Enable/disable reset button.
-          false means reset button is disabled
-          true means reset button is enabled
+          Enable/disable reset button. false means reset button is disabled true
+          means reset button is enabled
       errors:
           - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
           - xyz.openbmc_project.Chassis.Common.Error.IOError

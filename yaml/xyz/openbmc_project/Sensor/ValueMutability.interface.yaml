@@ -5,10 +5,8 @@ properties:
       type: boolean
       default: false
       description: >
-          A hint to a server that provides sensor access
-          to external users, such as an IPMI server,
-          as to whether or not to allow external users
-          to modify the value, via "set sensor value"
-          commands or similar. True to allow
-          modification (read-write). False to disallow
-          modification (read-only).
+          A hint to a server that provides sensor access to external users, such
+          as an IPMI server, as to whether or not to allow external users to
+          modify the value, via "set sensor value" commands or similar. True to
+          allow modification (read-write). False to disallow modification
+          (read-only).

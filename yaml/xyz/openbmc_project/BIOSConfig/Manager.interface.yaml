@@ -1,14 +1,14 @@
 description: >
-    Provides Remote BIOS Configuration management functionality.
-    As communication to this service is done through authenticated
-    & authorized session, there won't be any validation for both.
+    Provides Remote BIOS Configuration management functionality. As
+    communication to this service is done through authenticated & authorized
+    session, there won't be any validation for both.
     https://gerrit.openbmc-project.xyz/c/openbmc/docs/+/29320
 
 methods:
     - name: SetAttribute
       description: >
-          To set the new value on existing attribute name.
-          It will create or add the pending attributes.
+          To set the new value on existing attribute name. It will create or add
+          the pending attributes.
       parameters:
           - name: AttributeName
             type: string
@@ -31,9 +31,8 @@ methods:
           - name: AttributeName
             type: string
             description: >
-                To get the bios attribute current values and
-                pending values if previously set by setAttribute or
-                SetPendingAttributes.
+                To get the bios attribute current values and pending values if
+                previously set by setAttribute or SetPendingAttributes.
 
       returns:
           - name: AttributeValueType
@@ -57,18 +56,17 @@ properties:
       type: enum[self.ResetFlag]
       default: NoAction
       description: >
-          Contain reset BIOS setting type:
-          Interface have to set NoAction this property.
-          when Reset BIOS settings are informed to the BIOS.
+          Contain reset BIOS setting type: Interface have to set NoAction this
+          property. when Reset BIOS settings are informed to the BIOS.
 
     - name: BaseBIOSTable
-      type: dict[string,struct[enum[self.AttributeType],boolean,string,string,string,variant[int64,string],variant[int64,string],array[struct[enum[self.BoundType], variant[int64, string]]]]]
+      type:
+          dict[string,struct[enum[self.AttributeType],boolean,string,string,string,variant[int64,string],variant[int64,string],array[struct[enum[self.BoundType],
+          variant[int64, string]]]]]
       description: >
           map{attributeName,struct{attributeType,readonlyStatus,displayname,
           description,menuPath,current,default,
-          array{struct{optionstring,optionvalue}}}}
-          Example 1:
-          {"DdrFreqLimit",
+          array{struct{optionstring,optionvalue}}}} Example 1: {"DdrFreqLimit",
           {xyz.openbmc_project.BIOSConfig.Manager.AttributeType.String,
            false,
            "Memory Operating Speed Selection",
@@ -82,8 +80,7 @@ properties:
              {"OneOf", "2664"},
              {"OneOf", "2933"}
            }
-          }
-          }
+          } }
            Example 2:
           {"BIOSSerialDebugLevel",
           {xyz.openbmc_project.BIOSConfig.Manager.AttributeType.Integer,
@@ -97,14 +94,13 @@ properties:
              {"MaxBound", 4},
              {"ScalarIncrement",1}
            }
-          }
-          }
+          } }
 
     - name: PendingAttributes
       type: dict[string,struct[enum[self.AttributeType],variant[int64,string]]]
       description: >
-          The Pending attribute name and new value.
-          ex- { {"QuietBoot",Type.Integer, 0x1},
+          The Pending attribute name and new value. ex- {
+          {"QuietBoot",Type.Integer, 0x1},
                 { "DdrFreqLimit",Type.String,"2933"}
               }
       errors:

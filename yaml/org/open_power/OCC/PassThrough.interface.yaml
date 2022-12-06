@@ -12,8 +12,9 @@ methods:
             type: array[int32]
             description: >
                 An array of integers representing the command and payload. This
-                should still be bytes worth of data (as though using array[byte]),
-                so each entry in the array should pack as many bytes as possible.
+                should still be bytes worth of data (as though using
+                array[byte]), so each entry in the array should pack as many
+                bytes as possible.
       returns:
           - name: response
             # TODO via https://github.com/openbmc/openbmc/issues/1160. This should
@@ -21,9 +22,9 @@ methods:
             # data to int32.
             type: array[int32]
             description: >
-                An array of integers representing the response. This
-                should still be bytes worth of data (as though using array[byte]),
-                so each entry in the array should pack as many bytes as possible.
+                An array of integers representing the response. This should
+                still be bytes worth of data (as though using array[byte]), so
+                each entry in the array should pack as many bytes as possible.
 
     - name: SetMode
       description: >

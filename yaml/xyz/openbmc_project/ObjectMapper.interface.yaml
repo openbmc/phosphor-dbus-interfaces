@@ -6,8 +6,8 @@ description: >
 methods:
     - name: GetObject
       description: >
-          Obtain a dictionary of service -> implemented interface(s)
-          for the given path.
+          Obtain a dictionary of service -> implemented interface(s) for the
+          given path.
       parameters:
           - name: path
             type: object_path
@@ -27,8 +27,8 @@ methods:
     - name: GetAncestors
       description: >
           Obtain a dictionary of ancestor -> services where ancestor is an
-          ancestor of path and services is of the type returned by the
-          GetObject method.
+          ancestor of path and services is of the type returned by the GetObject
+          method.
       parameters:
           - name: path
             type: object_path
@@ -47,9 +47,8 @@ methods:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
     - name: GetSubTree
       description: >
-          Obtain a dictionary of path -> services where path is in
-          sutbtree and services is of the type returned by the
-          GetObject method.
+          Obtain a dictionary of path -> services where path is in sutbtree and
+          services is of the type returned by the GetObject method.
       parameters:
           - name: subtree
             type: object_path
@@ -97,8 +96,8 @@ methods:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
     - name: GetAssociatedSubTree
       description: >
-          Same as GetSubTree, but only return the dbus paths that are
-          an association endpoint on associatedPath
+          Same as GetSubTree, but only return the dbus paths that are an
+          association endpoint on associatedPath
       parameters:
           - name: associatedPath
             type: object_path
@@ -126,8 +125,8 @@ methods:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
     - name: GetAssociatedSubTreePaths
       description: >
-          Same as GetSubTreePaths, but only return the dbus paths that are
-          an association endpoint on associatedPath
+          Same as GetSubTreePaths, but only return the dbus paths that are an
+          association endpoint on associatedPath
       parameters:
           - name: associatedPath
             type: object_path
@@ -153,4 +152,3 @@ methods:
                 An array of paths.
       errors:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
-

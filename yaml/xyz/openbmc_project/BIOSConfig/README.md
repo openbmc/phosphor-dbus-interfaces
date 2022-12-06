@@ -46,4 +46,5 @@ Properities:
 - `IsPasswordInitDone` - To indicate BIOS password related details are received
   or not.
 
-[design]: https://github.com/openbmc/docs/blob/master/designs/remote-bios-configuration.md
+[design]:
+  https://github.com/openbmc/docs/blob/master/designs/remote-bios-configuration.md

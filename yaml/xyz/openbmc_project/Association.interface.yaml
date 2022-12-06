@@ -3,9 +3,9 @@ description: >
     namespace.
 
     An object implementing Association describes a one way, one to many
-    association where the parent object is associated to the objects
-    in the Endpoints property, with the association type defined as the name
-    of the object implementing Association.
+    association where the parent object is associated to the objects in the
+    Endpoints property, with the association type defined as the name of the
+    object implementing Association.
 properties:
     - name: Endpoints
       type: array[object_path]

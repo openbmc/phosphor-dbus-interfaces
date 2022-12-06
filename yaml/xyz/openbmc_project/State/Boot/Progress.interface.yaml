@@ -12,11 +12,11 @@ properties:
       type: uint64
       default: 0
       description: >
-          BootProgressLastUpdate is the last time the BootProgress
-          property was updated. The time is the Epoch time, number
-          of microseconds since 1 Jan 1970 00::00::00 UTC.
-          This can be compared with the current BootProgress value
-          to know how long the boot has been on the current boot step.
+          BootProgressLastUpdate is the last time the BootProgress property was
+          updated. The time is the Epoch time, number of microseconds since 1
+          Jan 1970 00::00::00 UTC. This can be compared with the current
+          BootProgress value to know how long the boot has been on the current
+          boot step.
 
 enumerations:
     - name: ProgressStages

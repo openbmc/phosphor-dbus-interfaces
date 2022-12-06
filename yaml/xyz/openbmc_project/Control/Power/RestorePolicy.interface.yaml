@@ -1,7 +1,7 @@
 description: >
-    Implement to specify power transition behavior on a BMC reset.
-    The implementation may choose to only enforce the policy on
-    a power loss or on both a power loss and BMC reboot.
+    Implement to specify power transition behavior on a BMC reset. The
+    implementation may choose to only enforce the policy on a power loss or on
+    both a power loss and BMC reboot.
 
 properties:
     - name: PowerRestorePolicy
@@ -14,8 +14,7 @@ properties:
       default: 0
       description: >
           The delay in microseconds before invoke power restore policy after
-          power applied.
-          0 - disable delay.
+          power applied. 0 - disable delay.
 
 enumerations:
     - name: Policy
@@ -33,5 +32,5 @@ enumerations:
                 Perform a complete power off process.
           - name: Restore
             description: >
-                Restore power to last requested state recorded before the BMC was
-                reset.
+                Restore power to last requested state recorded before the BMC
+                was reset.

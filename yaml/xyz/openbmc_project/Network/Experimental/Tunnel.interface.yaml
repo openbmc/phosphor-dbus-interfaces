@@ -32,26 +32,25 @@ properties:
     - name: IPv6FlowLabel
       type: uint32
       description: >
-          Configures the 20-bit flow label. It can be configured to a value
-          in the range 0–0xFFFFF, or be set to "inherit", in which case the
+          Configures the 20-bit flow label. It can be configured to a value in
+          the range 0–0xFFFFF, or be set to "inherit", in which case the
           original flowlabel is used.
     - name: CopyDSCP
       type: boolean
       description: >
-          When true, the Differentiated Service Code Point
-          (DSCP) field will be copied to the inner header from outer header
-          during the decapsulation of an IPv6 tunnel packet.
+          When true, the Differentiated Service Code Point (DSCP) field will be
+          copied to the inner header from outer header during the decapsulation
+          of an IPv6 tunnel packet.
     - name: EncapsulationLimit
       type: uint32
       description: >
-          The Tunnel Encapsulation Limit option specifies how many
-          additional levels of encapsulation are permitted to be prepended
-          to the packet.
+          The Tunnel Encapsulation Limit option specifies how many additional
+          levels of encapsulation are permitted to be prepended to the packet.
     - name: Key
       type: string
       description: >
-          This parameter specifies the same key to use in both
-          directions (InputKey= and OutputKey=).
+          This parameter specifies the same key to use in both directions
+          (InputKey= and OutputKey=).
     - name: InputKey
       type: string
       description: >

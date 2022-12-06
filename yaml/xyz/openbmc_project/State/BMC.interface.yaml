@@ -1,8 +1,8 @@
 description: >
     Implementation of BMC state management.  When rebooting we are in
     transition.  When Ready all services required are running
-    successfully.  When we are Not Ready this implies not all services
-    have started that are required to be.
+    successfully.  When we are Not Ready this implies not all services have
+    started that are required to be.
 
 properties:
     - name: RequestedBMCTransition
@@ -19,8 +19,8 @@ properties:
     - name: LastRebootTime
       type: uint64
       description: >
-          The last time at which the BMC came out of a reboot as
-          determined by its uptime, in epoch time, in milliseconds.
+          The last time at which the BMC came out of a reboot as determined by
+          its uptime, in epoch time, in milliseconds.
 
     - name: LastRebootCause
       type: enum[self.RebootCause]
@@ -52,18 +52,20 @@ enumerations:
                 Ready implies all services started and are running successfully
           - name: "NotReady"
             description: >
-                Not ready implies not all services have started or are not running successfully
+                Not ready implies not all services have started or are not
+                running successfully
           - name: "UpdateInProgress"
             description: >
-                UpdateInProgress implies BMC is in firmware update mode. CurrentBMCState
-                will be set to "UpdateInProgress" while starting image download and
-                reset to Ready, once activation is done or error case during update process.
+                UpdateInProgress implies BMC is in firmware update mode.
+                CurrentBMCState will be set to "UpdateInProgress" while starting
+                image download and reset to Ready, once activation is done or
+                error case during update process.
           - name: "Quiesced"
             description: >
                 BMC firmware is quiesced. The BMC firmware is enabled but either
-                unresponsive or only processing a restricted set of commands. This
-                state may be the result of a service within the BMC going into a
-                failed state.
+                unresponsive or only processing a restricted set of commands.
+                This state may be the result of a service within the BMC going
+                into a failed state.
 
     - name: RebootCause
       description: >

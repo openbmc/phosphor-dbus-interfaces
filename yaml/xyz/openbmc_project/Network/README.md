@@ -2,18 +2,17 @@
 
 ## Overview
 
-A Network Manager is a daemon which handles network management operations.
-It must implement the
-`xyz.openbmc_project.Network.SystemConfiguration.interface` and
-`org.freedesktop.DBus.ObjectManager`.
+A Network Manager is a daemon which handles network management operations. It
+must implement the `xyz.openbmc_project.Network.SystemConfiguration.interface`
+and `org.freedesktop.DBus.ObjectManager`.
 
-When the network manager daemon comes up, it should create objects
-implementing physical link/virtual interfaces such as
+When the network manager daemon comes up, it should create objects implementing
+physical link/virtual interfaces such as
 `xyz.openbmc_project.Network.EthernetInterface` or
 `xyz.openbmc_project.Network.VLANInterface` on the system.
 
-IP address(v4 and v6) objects must be children objects of the
-physical/virtual interface object.
+IP address(v4 and v6) objects must be children objects of the physical/virtual
+interface object.
 
 ## Interfaces
 
@@ -30,15 +29,15 @@ physical/virtual interface object.
 
 Interface objects can be physical as well as virtual.
 
-If the object is a physical interface, it can't be deleted,
-but if it is a virtual interface object it can be deleted.
+If the object is a physical interface, it can't be deleted, but if it is a
+virtual interface object it can be deleted.
 
 E.g. `/xyz/openbmc_project/network/<interfacename>`
 
 ### IP Address Objects
 
-There can be multiple IP address objects under an interface object.
-These objects can be deleted by the delete function.
+There can be multiple IP address objects under an interface object. These
+objects can be deleted by the delete function.
 
 IPv4 objects will have the following D-Bus object path:
 
@@ -312,8 +311,8 @@ ipmitool -I dbus lan set 1 vlan id <id>
 ipmitool -I dbus raw 0x06 0x40 // To the save settings
 ```
 
-NOTE: It takes 4-5 seconds to create the VLAN and configure the IP.
-If a VLAN interface is not desired don't set the VLAN id above.
+NOTE: It takes 4-5 seconds to create the VLAN and configure the IP. If a VLAN
+interface is not desired don't set the VLAN id above.
 
 #### Delete
 

@@ -23,9 +23,9 @@ properties:
       type: uint64
       default: maxint
       description: >
-          Time when the Drive last rebooted represented in EpochTime.
-          The time reference should be based on the BMC's time.
-          If not supported, it will be represented as maxint.
+          Time when the Drive last rebooted represented in EpochTime. The time
+          reference should be based on the BMC's time. If not supported, it will
+          be represented as maxint.
       flags:
           - readonly
 

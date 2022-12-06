@@ -4,17 +4,15 @@
 #     for logging should go in (Logging/Entry).
 #     https://github.com/openbmc/openbmc/issues/2923
 description: >
-    Implement to provide event entry attributes.
-    This interface should be instantiated for the phosphor::events namespace.
-    This interface is a collection of objects, therefore it is required to
-    implement org.freedesktop.DBus.ObjectManager on the events namespace root.
-    Optionally, implement xyz.openbmc_project.Delete to allow the deletion of
-    individual entries.
-    The event D-Bus object path would look like
-    <PhosphorDbusRoot>/events/<type>/<id>
-    Here "type" is the type of event, Could be network/system state event etc.
-    Type would be given by the application configuration file which would
-    be implementing this interface.
+    Implement to provide event entry attributes. This interface should be
+    instantiated for the phosphor::events namespace. This interface is a
+    collection of objects, therefore it is required to implement
+    org.freedesktop.DBus.ObjectManager on the events namespace root. Optionally,
+    implement xyz.openbmc_project.Delete to allow the deletion of individual
+    entries. The event D-Bus object path would look like
+    <PhosphorDbusRoot>/events/<type>/<id> Here "type" is the type of event,
+    Could be network/system state event etc. Type would be given by the
+    application configuration file which would be implementing this interface.
     Here "id" is positive integer starts from 1 and it gets incremented by 1
     with any newly created object.
 properties:

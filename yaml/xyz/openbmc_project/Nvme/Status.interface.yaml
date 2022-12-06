@@ -22,14 +22,15 @@ properties:
       type: boolean
       default: false
       description: >
-          Represent a temperature is above an over temperature threshold or below an under temperature
-          threshold
+          Represent a temperature is above an over temperature threshold or
+          below an under temperature threshold
     - name: DegradesFault
       type: boolean
       default: false
       description: >
           Represent  the NVM subsystem reliability has been degraded due to
-          significant media related errors or any internal error that degrades NVM subsystem reliability
+          significant media related errors or any internal error that degrades
+          NVM subsystem reliability
     - name: MediaFault
       type: boolean
       default: false

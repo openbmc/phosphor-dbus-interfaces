@@ -1,8 +1,8 @@
 description: >
-    Implement to provide information on the condition of the host firmware.
-    The expectation is the implementer of this interface utilize their host
-    protocol (IPMI, PLDM, ...) to check the state of the host firmware running
-    on the system.
+    Implement to provide information on the condition of the host firmware. The
+    expectation is the implementer of this interface utilize their host protocol
+    (IPMI, PLDM, ...) to check the state of the host firmware running on the
+    system.
 
 properties:
     - name: CurrentFirmwareCondition

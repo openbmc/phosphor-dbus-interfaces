@@ -23,28 +23,28 @@ properties:
       type: double
       default: NaN
       description: >
-          The upper bound of the warning threshold.  A value of 'NaN' is used
-          to indicate there is no threshold of this type.
+          The upper bound of the warning threshold.  A value of 'NaN' is used to
+          indicate there is no threshold of this type.
     - name: PerformanceLossLow
       type: double
       default: NaN
       description: >
-          The lower bound of the warning threshold.  A value of 'NaN' is used
-          to indicate there is no threshold of this type.
+          The lower bound of the warning threshold.  A value of 'NaN' is used to
+          indicate there is no threshold of this type.
     - name: PerformanceLossAlarmHigh
       type: boolean
       description: >
-          True if the sensor value has exceeded the defined bound.
-          False if the sensor value has not exceeded the defined bound.
+          True if the sensor value has exceeded the defined bound. False if the
+          sensor value has not exceeded the defined bound.
 
           PerformanceLossAlarmHigh may be set to False to clear an alarm
-          condition. The behavior of setting PerformanceLossAlarmHigh to True
-          is undefined.
+          condition. The behavior of setting PerformanceLossAlarmHigh to True is
+          undefined.
     - name: PerformanceLossAlarmLow
       type: boolean
       description: >
-          True if the sensor value has exceeded the defined bound.
-          False if the sensor value has not exceeded the defined bound.
+          True if the sensor value has exceeded the defined bound. False if the
+          sensor value has not exceeded the defined bound.
 
           PerformanceLossAlarmLow may be set to False to clear an alarm
           condition. The behavior of setting PerformanceLossAlarmLow to True is

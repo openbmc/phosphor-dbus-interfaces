@@ -1,18 +1,17 @@
 description: >
-    Implement to provide an IPMI System Event Log (SEL) logging interface
-    under the path /xyz/openbmc_project/Logging/IPMI.
+    Implement to provide an IPMI System Event Log (SEL) logging interface under
+    the path /xyz/openbmc_project/Logging/IPMI.
 
-    SEL records store system event information and will contain a record ID
-    and type followed by type-specific information.  The type-specific
-    information includes a timestamp, generator ID (used to identify the
-    component that is adding the SEL record), sensor number, event
-    direction and event-specific data for system type events; or timestamp
-    and OEM data for OEM type events.
+    SEL records store system event information and will contain a record ID and
+    type followed by type-specific information.  The type-specific information
+    includes a timestamp, generator ID (used to identify the component that is
+    adding the SEL record), sensor number, event direction and event-specific
+    data for system type events; or timestamp and OEM data for OEM type events.
 
     The interface allows adding system or OEM type events.  For system type
-    events it requires a generator ID (0x20 for BMC), sensor D-Bus path,
-    event direction (assertion or de-assertion), and event specific data.
-    For OEM type events, it requires the record type and OEM data.
+    events it requires a generator ID (0x20 for BMC), sensor D-Bus path, event
+    direction (assertion or de-assertion), and event specific data. For OEM type
+    events, it requires the record type and OEM data.
 
     It will assign a record ID and timestamp automatically and return the
     assigned record ID.

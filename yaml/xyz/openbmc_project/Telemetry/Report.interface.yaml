@@ -19,16 +19,15 @@ properties:
     - name: ReadingParameters
       type: array[struct[array[struct[object_path,string]],enum[self.OperationType],string,enum[self.CollectionTimescope],uint64]]
       description: >
-          Collection of metric parameters. Single entry consists of:
-          array of [sensor path, metadata] tuples, operation type, metric ID,
-          collection timescope and collection duration. Sensor paths point to
-          sensors providing readings. Metadata contains client information; in
-          case of Redfish it shall be metric's URI. Operation type provides
-          knowledge of action executed on readings. Metric ID contains name that
-          can be mapped to metadata (like Redfish Metric ID). Collection
-          timescope specifies type of time scope applied to specific metric.
-          Collection duration stores timestamp related with timescope type in
-          milliseconds.
+          Collection of metric parameters. Single entry consists of: array of
+          [sensor path, metadata] tuples, operation type, metric ID, collection
+          timescope and collection duration. Sensor paths point to sensors
+          providing readings. Metadata contains client information; in case of
+          Redfish it shall be metric's URI. Operation type provides knowledge of
+          action executed on readings. Metric ID contains name that can be
+          mapped to metadata (like Redfish Metric ID). Collection timescope
+          specifies type of time scope applied to specific metric. Collection
+          duration stores timestamp related with timescope type in milliseconds.
     - name: Readings
       type: struct[uint64,array[struct[string,string,double,uint64]]]
       description: >

@@ -14,8 +14,8 @@ properties:
     - name: RotationAlgorithm
       type: enum[self.Algo]
       description: >
-          Rotation algorithm use for cold redundancy. 0 is BMC Specific, 1 is User
-          Specific.
+          Rotation algorithm use for cold redundancy. 0 is BMC Specific, 1 is
+          User Specific.
     - name: RotationRankOrder
       type: array[byte]
       description: >
@@ -25,8 +25,8 @@ properties:
       type: uint32
       description: >
           Rotation Period for cold redundancy. If rotation algorithm is BMC
-          Specific, and rotation is enabled, BMC will change PSU rank order after
-          this time. The unit of this PeriodOfRotation is in seconds.
+          Specific, and rotation is enabled, BMC will change PSU rank order
+          after this time. The unit of this PeriodOfRotation is in seconds.
     - name: ColdRedundancyStatus
       type: enum[self.Status]
       description: >
@@ -48,14 +48,14 @@ enumerations:
       values:
           - name: bmcSpecific
             description: >
-                With BMC Specific algorithm, when rotation happen, BMC will add 1 to
-                the rank order in each PSU and change the last rank order to the
-                first rank order.
+                With BMC Specific algorithm, when rotation happen, BMC will add
+                1 to the rank order in each PSU and change the last rank order
+                to the first rank order.
           - name: userSpecific
             description: >
-                With User Specific algorithm, user need to set the RotationRankOrder
-                every time before rotation happen, then BMC will update the rank
-                order to PSU.
+                With User Specific algorithm, user need to set the
+                RotationRankOrder every time before rotation happen, then BMC
+                will update the rank order to PSU.
     - name: Status
       description: >
           Cold redundancy setting status.
@@ -67,6 +67,6 @@ enumerations:
                 value, the status will show in progress.
           - name: completed
             description: >
-                For single ndoe system, the status always keep show completed. For
-                multi-node system, only after all the nodes sync to same value of
-                the properties, the status will be completed.
+                For single ndoe system, the status always keep show completed.
+                For multi-node system, only after all the nodes sync to same
+                value of the properties, the status will be completed.

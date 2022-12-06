@@ -6,9 +6,9 @@ properties:
       type: byte
       default: 0
       description: >
-          Upon Activation of the software Version, the *ItemUpdater*
-          should attempt to activate the software version such that
-          the resulting `Software.RedundancyPriority.Priority` is Priority.
+          Upon Activation of the software Version, the *ItemUpdater* should
+          attempt to activate the software version such that the resulting
+          `Software.RedundancyPriority.Priority` is Priority.
 
           See `Software.RedundancyPriority.Priority` for valid values and
           definitions.
@@ -16,5 +16,5 @@ properties:
           By default, any Activation should be done to the highest priority.
           Some *ItemUpdater* implementations may be unable to apply this
           `RequestedRedundancyPriority.Priority`, resulting in an
-          `ActivationState` which is either `Failed` or `Active` with
-          `Priority` of `0 (High)`.
+          `ActivationState` which is either `Failed` or `Active` with `Priority`
+          of `0 (High)`.

@@ -5,9 +5,9 @@ properties:
       type: byte
       description: >
           Note: Please use the individual bit fields for Capabilities Flags
-          going forward. This common byte representation is deprecated.
-          Chassis capabilities flags. bit1= Provides front panel lockout,
-          bit0 = Provides intrusion. All other bits reserved.
+          going forward. This common byte representation is deprecated. Chassis
+          capabilities flags. bit1= Provides front panel lockout, bit0 =
+          Provides intrusion. All other bits reserved.
     - name: ChassisIntrusionEnabled
       type: boolean
       description: >

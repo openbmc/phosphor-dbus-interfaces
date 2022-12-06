@@ -5,15 +5,15 @@ properties:
     - name: ClearHostSecurityKeys
       type: byte
       description: >
-          This is a bit mask used to specify clearing different security keys
-          or resetting those values back to default by the host. Setting this
+          This is a bit mask used to specify clearing different security keys or
+          resetting those values back to default by the host. Setting this
           property does not guarantee a successful operation as additional
           conditions will be checked by the host to clear/reset the sensitive
           data. This property will be mapped to a new IPMI sensor.
 
-          The new property is having an integer value and the default value
-          will be zero. The end operation is determined by the bit value set
-          and some of the customer use cases which maps to bit value are
+          The new property is having an integer value and the default value will
+          be zero. The end operation is determined by the bit value set and some
+          of the customer use cases which maps to bit value are
 
           Bit 0 - Clear All : Clear/reset all the sensitive data controlled by
                   platform firmware from the system. System can generate new

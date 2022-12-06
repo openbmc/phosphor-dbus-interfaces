@@ -1,8 +1,8 @@
 description: >
-    Implement to provide event/error entry attributes.
-    This interface should be instantiated for the phosphor::logging namespace.
-    This interface is a collection of objects, therefore it is required to
-    implement org.freedesktop.DBus.ObjectManager on the logging namespace root.
+    Implement to provide event/error entry attributes. This interface should be
+    instantiated for the phosphor::logging namespace. This interface is a
+    collection of objects, therefore it is required to implement
+    org.freedesktop.DBus.ObjectManager on the logging namespace root.
     Optionally, implement org.openbmc.Object.Delete to allow the deletion of
     individual entries.
 properties:
@@ -58,10 +58,10 @@ properties:
       type: uint64
       description: >
           The timestamp when any property was last modified, in milliseconds
-          since the epoch (1 Jan 1970 00:00:00 UTC).  As only the
-          Resolved property has a reason to change, a value that doesn't
-          match the Timestamp property's value (which indicates when the
-          log was created) would indicate that Resolved was changed.
+          since the epoch (1 Jan 1970 00:00:00 UTC).  As only the Resolved
+          property has a reason to change, a value that doesn't match the
+          Timestamp property's value (which indicates when the log was created)
+          would indicate that Resolved was changed.
 
 enumerations:
     - name: Level
@@ -110,8 +110,8 @@ enumerations:
 methods:
     - name: GetEntry
       description: >
-          Returns the file descriptor to the raw Entry file, which is a binary blob.
-          The mode of the file descriptor is to be reaad-only.
+          Returns the file descriptor to the raw Entry file, which is a binary
+          blob. The mode of the file descriptor is to be reaad-only.
       returns:
           - name: fd
             type: unixfd

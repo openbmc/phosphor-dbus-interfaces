@@ -11,18 +11,18 @@ properties:
       description: >
           The string for the certificate.
 
-          This is a X.509 public certificate in PEM format.
-          PEM wiki - https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail
+          This is a X.509 public certificate in PEM format. PEM wiki -
+          https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail
 
-          An X.509 certificate contains a public key, validity, and an
-          identity (a hostname, or an organization, or an individual),
-          and is either signed by a certificate authority or self-signed.
-          Refer https://en.wikipedia.org/wiki/X.509 for details.
+          An X.509 certificate contains a public key, validity, and an identity
+          (a hostname, or an organization, or an individual), and is either
+          signed by a certificate authority or self-signed. Refer
+          https://en.wikipedia.org/wiki/X.509 for details.
     - name: KeyUsage
       type: array[string]
       description: >
-          Key usage extensions define the purpose of the public key contained
-          in a certificate.
+          Key usage extensions define the purpose of the public key contained in
+          a certificate.
 
           Valid Key usage extensions and its usage description is based on
           Redfish Resource and Schema Guide 2018.3 version.
@@ -30,8 +30,8 @@ properties:
 
           ClientAuthentication: The public key is used for TLS WWW client
                                 authentication.
-          CodeSigning: The public key is used for the signing of executable code.
-          CRLSigning: The public key is used for verifying signatures on
+          CodeSigning: The public key is used for the signing of executable
+          code. CRLSigning: The public key is used for verifying signatures on
                       certificate revocation lists (CLRs).
           DataEncipherment: The public key is used for directly enciphering
                             raw user data without the use of an intermediate
@@ -66,8 +66,8 @@ properties:
 
           Refer X.509 certificate wiki for the "Issuer" Key and value details.
 
-          Example: C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA
-          Here C = country, O=organization, CN= common name.
+          Example: C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA Here
+          C = country, O=organization, CN= common name.
 
     - name: Subject
       type: string
@@ -90,5 +90,5 @@ properties:
     - name: ValidNotBefore
       type: uint64
       description: >
-          The certificate validity start date and time,
-          in epoch time, in milliseconds.
+          The certificate validity start date and time, in epoch time, in
+          milliseconds.

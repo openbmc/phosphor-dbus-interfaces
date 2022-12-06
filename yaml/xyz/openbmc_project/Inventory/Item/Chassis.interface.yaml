@@ -41,5 +41,16 @@ enumerations:
                 An unknown chassis type.
           - name: Zone
             description: >
-                A logical division or portion of a physical chassis that contains
-                multiple devices or systems that cannot be physically separated.
+                A logical division or portion of a physical chassis that
+                contains multiple devices or systems that cannot be physically
+                separated.
+
+associations:
+    - name: powered_by
+      description: >
+          Objects that implement Chassis can optionally implement the
+          'powered_by' association to provide a link to one or more power
+          supplies.
+      reverse_name: powering
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PowerSupply

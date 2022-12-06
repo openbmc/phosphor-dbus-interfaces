@@ -21,41 +21,46 @@
   application. Such errors are defined in the application that uses the error.
 - Refer to [openpower-debug-collector][openpower-debug-collector].
 
-[openpower-debug-collector]: https://github.com/openbmc/openpower-debug-collector
+[openpower-debug-collector]:
+  https://github.com/openbmc/openpower-debug-collector
 
 ### Error YAML files
 
 - Every error defined will have an error YAML file and a corresponding error
   metadata YAML file.
 - The error YAML file contains the error name and a one-line description of the
-  error.
-  An example of an error YAML file can be found [here][error-example].
-- The error metadata YAML file captures required data. The format of the data
-  is defined in the error metadata file. An example of an error metadata YAML
-  file can be found [here][metadata-example].
+  error. An example of an error YAML file can be found [here][error-example].
+- The error metadata YAML file captures required data. The format of the data is
+  defined in the error metadata file. An example of an error metadata YAML file
+  can be found [here][metadata-example].
 
-[error-example]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common/File.errors.yaml
-[metadata-example]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common/File.metadata.yaml
+[error-example]:
+  https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common/File.errors.yaml
+[metadata-example]:
+  https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common/File.metadata.yaml
 
 ## Logging to journal
 
-- Applications can log debug/error information to the journal using
-  the **log** API
+- Applications can log debug/error information to the journal using the **log**
+  API
   - Refer to [log.hpp][log-header].
 - Applications can commit errors to the journal using the **report** or
   **commit** API
   - Refer to [elog.hpp][elog-header].
   - Logging entry D-Bus objects are created for the committed errors.
 
-[log-header]: https://github.com/openbmc/phosphor-logging/blob/master/lib/include/phosphor-logging/log.hpp
-[elog-header]: https://github.com/openbmc/phosphor-logging/blob/master/lib/include/phosphor-logging/elog.hpp
+[log-header]:
+  https://github.com/openbmc/phosphor-logging/blob/master/lib/include/phosphor-logging/log.hpp
+[elog-header]:
+  https://github.com/openbmc/phosphor-logging/blob/master/lib/include/phosphor-logging/elog.hpp
 
 ## Delete All interface
 
 - Use the [DeleteAll.interface.yaml][deleteall] for deleting all the logging
   entries.
 
-[deleteall]: https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Collection/DeleteAll.interface.yaml
+[deleteall]:
+  https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Collection/DeleteAll.interface.yaml
 
 ## REST commands
 

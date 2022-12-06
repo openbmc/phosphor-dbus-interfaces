@@ -7,20 +7,20 @@ properties:
     - name: Scale
       type: int64
       description: >
-          The reading scaling factor N, where the actual reading is value * 10^N.
-          This is immutable once set.
+          The reading scaling factor N, where the actual reading is value *
+          10^N. This is immutable once set.
 
     - name: Unit
       type: enum[self.Unit]
       description: >
-          The unit of the reading.  Immutable once set for a sensor.
-          For objects in the temperature namespace, Unit must be "DegreesC".
-          For objects in the fan_tach namespace, Unit must be "RPMS".
-          For objects in the voltage namespace, Unit must be "Volts".
-          For objects in the altitude namespace, Unit must be "Meters".
-          For objects in the current namespace, Unit must be "Amperes".
-          For objects in the power namespace, Unit must be "Watts".
-          For objects in the energy namespace, Unit must be "Joules".
+          The unit of the reading.  Immutable once set for a sensor. For objects
+          in the temperature namespace, Unit must be "DegreesC". For objects in
+          the fan_tach namespace, Unit must be "RPMS". For objects in the
+          voltage namespace, Unit must be "Volts". For objects in the altitude
+          namespace, Unit must be "Meters". For objects in the current
+          namespace, Unit must be "Amperes". For objects in the power namespace,
+          Unit must be "Watts". For objects in the energy namespace, Unit must
+          be "Joules".
 
     - name: Values
       type: array[struct[uint64,int64]]

@@ -9,10 +9,10 @@ properties:
           remain hidden from the customer. This event log is visible to
           development personnel only, e.g. hardware recovered error, etc. No
           service action is required for this type of errors. In general, when
-          this value is used, the Error Action Flags has the value of
-          "Hidden Error". An event log with this value is used primarily for
-          error thresholding design/code debug or as a record to indicate an
-          error frequency or trend.
+          this value is used, the Error Action Flags has the value of "Hidden
+          Error". An event log with this value is used primarily for error
+          thresholding design/code debug or as a record to indicate an error
+          frequency or trend.
     - name: Subsystem
       type: string
       description: >
@@ -23,5 +23,5 @@ properties:
       type: boolean
       default: false
       description: >
-          Notifies the PEL handler that the management system acknowledged a PEL.
-          The management system can be any system monitoring the hardware.
+          Notifies the PEL handler that the management system acknowledged a
+          PEL. The management system can be any system monitoring the hardware.

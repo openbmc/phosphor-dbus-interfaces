@@ -24,11 +24,12 @@ enumerations:
                 Working, the system is running
           - name: S1_D1
             description: >
-                Hardware context maintained, typically equates to proc/chip
-                set clocks stopped.
+                Hardware context maintained, typically equates to proc/chip set
+                clocks stopped.
           - name: S2_D2
             description: >
-                Typically equates to stopped clocks with proc/cache context lost.
+                Typically equates to stopped clocks with proc/cache context
+                lost.
           - name: S3_D3
             description: >
                 Typically equates to "suspend-to-RAM".

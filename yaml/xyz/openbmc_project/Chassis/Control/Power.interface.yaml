@@ -18,14 +18,10 @@ properties:
       type: boolean
       default: false
       description: >
-          PSU Power good property
-          It is a read-only property.
+          PSU Power good property It is a read-only property.
     - name: State
       type: int32
       default: 0
       description: >
-          System power status
-          0: power is off
-          1: power is on
-          Setting its value to change the system state
-          Read its value to get the system state.
+          System power status 0: power is off 1: power is on Setting its value
+          to change the system state Read its value to get the system state.

@@ -4,10 +4,10 @@ description: >
 methods:
     - name: CreateConfig
       description: >
-          This method always creates a new config file as well as a D-Bus 
-          object to represent the config, it will destroy an existing one,
-          if found. In other words, this is not an update API. Individual
-          properties can be updated as per the
+          This method always creates a new config file as well as a D-Bus object
+          to represent the config, it will destroy an existing one, if found. In
+          other words, this is not an update API. Individual properties can be
+          updated as per the
           xyz/openbmc_project/User/Ldap/Config.interface.yaml.
       parameters:
           - name: LDAPServerURI
@@ -37,18 +37,18 @@ methods:
             description: >
                 Specifies the the configured server is ActiveDirectory(AD) or
                 OpenLdap. It's just an indication for the LDAP stack running on
-                the BMC, in case the app is implemented in such a way that it has
-                to react differently for AD vs openldap.
+                the BMC, in case the app is implemented in such a way that it
+                has to react differently for AD vs openldap.
           - name: GroupNameAttribute
             type: string
             description: >
-                Specifies the attribute name that contains the name
-                of the Group in the LDAP server.
+                Specifies the attribute name that contains the name of the Group
+                in the LDAP server.
           - name: UsernameAttribute
             type: string
             description: >
-                Specifies the attribute name that contains
-                the username in the LDAP server.
+                Specifies the attribute name that contains the username in the
+                LDAP server.
       returns:
           - name: path
             type: string

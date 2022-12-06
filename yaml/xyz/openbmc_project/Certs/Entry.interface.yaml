@@ -1,13 +1,11 @@
 description: >
-    Implement to get CSR string signed by authority and get
-    client certificate.
+    Implement to get CSR string signed by authority and get client certificate.
 
 properties:
     - name: ClientCertificate
       type: string
       description: >
-          Client certificate content.
-          User reads this property based on status.
+          Client certificate content. User reads this property based on status.
           The value of this property is empty until Status.State == complete.
     - name: Status
       type: enum[self.State]

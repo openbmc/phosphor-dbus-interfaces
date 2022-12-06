@@ -8,8 +8,8 @@ properties:
     - name: Address
       type: string
       description: >
-          The value of this property shall be an IP address assigned to
-          the ethernet interface.
+          The value of this property shall be an IP address assigned to the
+          ethernet interface.
       errors:
           - xyz.openbmc_project.Common.Error.NotAllowed
 

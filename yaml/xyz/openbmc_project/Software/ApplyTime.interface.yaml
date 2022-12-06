@@ -1,7 +1,7 @@
 description: >
-    To implement the apply time of a newly updated software image.
-    The apply time property is global to all firmware update packages
-    and the default value of the property is OnReset.
+    To implement the apply time of a newly updated software image. The apply
+    time property is global to all firmware update packages and the default
+    value of the property is OnReset.
 properties:
     - name: RequestedApplyTime
       type: enum[self.RequestedApplyTimes]
@@ -11,8 +11,8 @@ properties:
 enumerations:
     - name: RequestedApplyTimes
       description: >
-          The possible values of this property indicate when the newly
-          updated software image will be activated.
+          The possible values of this property indicate when the newly updated
+          software image will be activated.
       values:
           - name: Immediate
             description: >

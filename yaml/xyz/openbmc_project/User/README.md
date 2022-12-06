@@ -29,8 +29,8 @@ methods, properties and signals.
 
 ##### properties
 
-- MaxLoginAttemptBeforeLockout - Permissible attempt before locking out the
-  user for failed login attempts.
+- MaxLoginAttemptBeforeLockout - Permissible attempt before locking out the user
+  for failed login attempts.
 - AccountUnlockTimeout - Timeout (in seconds) to unlock the account after a
   lockout.
 - MinPasswordLength - Minimum password length, which can be set.
@@ -39,10 +39,10 @@ methods, properties and signals.
 
 ### Users Interface
 
-User manager daemon, will create user objects for every user existing
-in the system under object path `/xyz/openbmc_project/user/<user name>`.
-Each user object can be handled through 'org.freedesktop.DBus.ObjectManager'.
-User object will expose following properties and methods.
+User manager daemon, will create user objects for every user existing in the
+system under object path `/xyz/openbmc_project/user/<user name>`. Each user
+object can be handled through 'org.freedesktop.DBus.ObjectManager'. User object
+will expose following properties and methods.
 
 #### xyz.openbmc_project.User.Attributes interface
 
@@ -61,6 +61,6 @@ User object will expose following properties and methods.
 
 ## Note
 
-This interface doesn't provide ways to set / update password. The same must
-be set / updated through pam_chauthtok() (PAM modules). This is to avoid
-sending out password through D-Bus.
+This interface doesn't provide ways to set / update password. The same must be
+set / updated through pam_chauthtok() (PAM modules). This is to avoid sending
+out password through D-Bus.

@@ -1,36 +1,35 @@
 description: >
-    Button interface is a generic phosphor button interface  which supports
-    two primary actions (pressed/releasd). When the button is pressed
-    "Pressed" signal is emitted and when button is released then "Released"
+    Button interface is a generic phosphor button interface  which supports two
+    primary actions (pressed/releasd). When the button is pressed "Pressed"
+    signal is emitted and when button is released then "Released"
       signal is emitted.
 methods:
-  - name: simPress
-    description: >
-      Emulate button press.
-    errors:
-      - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
-      - xyz.openbmc_project.Chassis.Common.Error.IOError
-  - name: simRelease
-    description: >
-      Emulate button release.
-    errors:
-      - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
-      - xyz.openbmc_project.Chassis.Common.Error.IOError
-  - name: simLongPress
-    description: >
-      Emulate long button press.
-    errors:
-      - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
-      - xyz.openbmc_project.Chassis.Common.Error.IOError
+    - name: simPress
+      description: >
+          Emulate button press.
+      errors:
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
+    - name: simRelease
+      description: >
+          Emulate button release.
+      errors:
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
+    - name: simLongPress
+      description: >
+          Emulate long button press.
+      errors:
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
 
 properties:
     - name: Enabled
       type: boolean
       default: true
       description: >
-          Enable/disable the button object.
-          false means button is disabled
-          true means button is enabled
+          Enable/disable the button object. false means button is disabled true
+          means button is enabled
       errors:
           - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
           - xyz.openbmc_project.Chassis.Common.Error.IOError
@@ -38,10 +37,10 @@ properties:
 signals:
     - name: Released
       description: >
-        Button released signal
+          Button released signal
     - name: Pressed
       description: >
-        Button pressed signal
+          Button pressed signal
     - name: PressedLong
       description: >
-        Button long pressed signal
+          Button long pressed signal

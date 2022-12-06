@@ -6,8 +6,8 @@ properties:
       type: enum[self.Transition]
       default: "Off"
       description: >
-          The desired host transition.  This will be preserved across AC
-          power cycles of the BMC.
+          The desired host transition.  This will be preserved across AC power
+          cycles of the BMC.
 
     - name: CurrentHostState
       type: enum[self.HostState]
@@ -36,12 +36,12 @@ enumerations:
                 Host firmware should be on
           - name: "Reboot"
             description: >
-                Host firmware should be rebooted. Chassis power will be cycled from
-                off to on during this reboot
+                Host firmware should be rebooted. Chassis power will be cycled
+                from off to on during this reboot
           - name: "GracefulWarmReboot"
             description: >
-                Host firmware be will notified to shutdown and once complete, the
-                host firmware will be rebooted. Chassis power will remain on
+                Host firmware be will notified to shutdown and once complete,
+                the host firmware will be rebooted. Chassis power will remain on
                 throughout the reboot
           - name: "ForceWarmReboot"
             description: >
@@ -72,17 +72,17 @@ enumerations:
                 Host firmware is transitioning to a Running state
           - name: "Quiesced"
             description: >
-                Host firmware is quiesced. The host firmware is enabled but either
-                unresponsive or only processing a restricted set of commands. This
-                state can be a result of the host entering an error state or booting
-                into a BIOS setup environment. The BootProgress property will
-                provide details on which it is.
+                Host firmware is quiesced. The host firmware is enabled but
+                either unresponsive or only processing a restricted set of
+                commands. This state can be a result of the host entering an
+                error state or booting into a BIOS setup environment. The
+                BootProgress property will provide details on which it is.
           - name: "DiagnosticMode"
             description: >
                 Host firmware is capturing debug information. Powering off your
-                system while the host is in this state will prevent the debug data
-                from being properly collected. The host will move to one of the
-                other states once complete.
+                system while the host is in this state will prevent the debug
+                data from being properly collected. The host will move to one of
+                the other states once complete.
 
     - name: RestartCause
       description: >
@@ -118,5 +118,5 @@ enumerations:
                 xyz.openbmc_project.State.ScheduledHostTransition interface
           - name: "HostCrash"
             description: >
-                The host firmware crashed and the BMC has automatically initiated a
-                restart of the host firmware
+                The host firmware crashed and the BMC has automatically
+                initiated a restart of the host firmware

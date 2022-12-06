@@ -1,10 +1,9 @@
 description: >
-    Implement to provide the progress on user requested activity.
-    Objects which implements this interface should implement
-    xyz.openbmc_project.Object.Delete to delete individual entries.
-    The service hosting this interface should clear the entries after
-    some time or reaching some number of entries in stable states like
-    completed, failed or aborted.
+    Implement to provide the progress on user requested activity. Objects which
+    implements this interface should implement xyz.openbmc_project.Object.Delete
+    to delete individual entries. The service hosting this interface should
+    clear the entries after some time or reaching some number of entries in
+    stable states like completed, failed or aborted.
 
 properties:
     - name: Status
@@ -17,13 +16,13 @@ properties:
     - name: StartTime
       type: uint64
       description: >
-          Indicates when the request is created since the Epoch
-          (1 Jan 1970 00:00:00 UTC), in microseconds.
+          Indicates when the request is created since the Epoch (1 Jan 1970
+          00:00:00 UTC), in microseconds.
     - name: CompletedTime
       type: uint64
       description: >
-          Indicates when the state is completed since the Epoch
-          (1 Jan 1970 00:00:00 UTC), in microseconds.
+          Indicates when the state is completed since the Epoch (1 Jan 1970
+          00:00:00 UTC), in microseconds.
 
 enumerations:
     - name: OperationStatus

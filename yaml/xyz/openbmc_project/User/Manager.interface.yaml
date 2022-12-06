@@ -1,13 +1,13 @@
 description: >
-    Provides user management functionality.
-    As communication to this service is done through authenticated
-    & authorized session, there won't be any validation for both.
+    Provides user management functionality. As communication to this service is
+    done through authenticated & authorized session, there won't be any
+    validation for both.
 
 methods:
     - name: CreateUser
       description: >
-          Creates a new user. If the user already exists, then it will throw
-          an error.
+          Creates a new user. If the user already exists, then it will throw an
+          error.
       parameters:
           - name: UserName
             type: string
@@ -36,8 +36,8 @@ methods:
 
     - name: RenameUser
       description: >
-          Rename's existing user to new one. All other properties of the
-          user will remain same.
+          Rename's existing user to new one. All other properties of the user
+          will remain same.
       parameters:
           - name: UserName
             type: string
@@ -59,8 +59,7 @@ methods:
 
     - name: GetUserInfo
       description: >
-          Get user properites.
-          If its local user, method returns
+          Get user properites. If its local user, method returns
              -user privilege
              -user groups
              -user enabled state
@@ -79,9 +78,8 @@ methods:
           - name: UserInfo
             type: dict[string,variant[string,array[string],boolean]]
             description: >
-                Dictionary of user properties.
-                List of key name and data type of properties below.
-                UserPrivilege -> privilege of the user(string)
+                Dictionary of user properties. List of key name and data type of
+                properties below. UserPrivilege -> privilege of the user(string)
                 UserGroups    -> list of groups user belongs to(array[string])
                 UserEnabled   -> user enabled state(boolean)
                 UserLockedForFailedAttempt -> user locked state(boolean)
@@ -89,8 +87,7 @@ methods:
                 RemoteUser    ->  remote or local user(boolean)
 
                 For detailed documentation of user properties refer
-                Attributes.interface.yaml
-                examples:
+                Attributes.interface.yaml examples:
                     1.UserInfo["RemoteUser"] returns true for ldap user
                     and false for local user.
                     2.UserInfo["UserGroups"] gets list of groups of user.
@@ -102,8 +99,8 @@ methods:
 
     - name: CreateGroup
       description: >
-          Creates a new groups. If the group already exists, or the
-          group name is not allowed to be created, it throws an error.
+          Creates a new groups. If the group already exists, or the group name
+          is not allowed to be created, it throws an error.
       parameters:
           - name: GroupName
             type: string
@@ -116,8 +113,8 @@ methods:
 
     - name: DeleteGroup
       description: >
-          Deletes an existing groups. If the group doesn't exists, or the
-          group name is not allowed to be deleted, it throws an error.
+          Deletes an existing groups. If the group doesn't exists, or the group
+          name is not allowed to be deleted, it throws an error.
       parameters:
           - name: GroupName
             type: string

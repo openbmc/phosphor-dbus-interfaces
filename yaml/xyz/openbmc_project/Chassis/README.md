@@ -6,8 +6,8 @@ Chassis Power Control service exposes D-Bus methods for chassis power operations
 
 ### Power Button Interface
 
-Power button interface `xyz.openbmc_project.Chassis.Buttons.Power`
-provides following methods, signals.
+Power button interface `xyz.openbmc_project.Chassis.Buttons.Power` provides
+following methods, signals.
 
 #### methods
 
@@ -22,8 +22,8 @@ provides following methods, signals.
 
 ### ID Button Interface
 
-ID button interface `xyz.openbmc_project.Chassis.Buttons.ID`
-provides following methods, signals.
+ID button interface `xyz.openbmc_project.Chassis.Buttons.ID` provides following
+methods, signals.
 
 #### methods
 
@@ -36,8 +36,8 @@ provides following methods, signals.
 
 ### Reset Button Interface
 
-ID button interface `xyz.openbmc_project.Chassis.Buttons.Reset`
-provides following methods, signals.
+ID button interface `xyz.openbmc_project.Chassis.Buttons.Reset` provides
+following methods, signals.
 
 #### methods
 
@@ -55,5 +55,5 @@ provides following property.
 
 ### properties
 
-Position - Value of the Host selector.
-MaxPosition - Max value that the Position value can hold.
+Position - Value of the Host selector. MaxPosition - Max value that the Position
+value can hold.

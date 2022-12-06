@@ -3,7 +3,8 @@ description: >
     activation. Applications can expose the port number of a network service by
     implementing this interface. For example, application like
     service-config-manager will implement this interface for network services
-    like bmcweb and phosphor-ipmi-net and allow the port number to be configured.
+    like bmcweb and phosphor-ipmi-net and allow the port number to be
+    configured.
 
 properties:
     - name: Port

@@ -9,31 +9,29 @@ properties:
     - name: Family
       type: string
       description: >
-          A free form string indicates processor family type.
-          For example, values can be "Intel Xeon
-          processor", "AS400 Family", etc.
+          A free form string indicates processor family type. For example,
+          values can be "Intel Xeon processor", "AS400 Family", etc.
       default: ""
     - name: EffectiveFamily
       type: uint16
       description: >
-          The effective Family information as provided by the
-          manufacturer of this processor in unsigned integer.
-          Default set to 0x02 which is defined as "Unknown" Processor
-          Family in DSP0134 section 7.5.2.
+          The effective Family information as provided by the manufacturer of
+          this processor in unsigned integer. Default set to 0x02 which is
+          defined as "Unknown" Processor Family in DSP0134 section 7.5.2.
       default: 0x02
     - name: EffectiveModel
       type: uint16
       description: >
-          The effective Model information as provided by the
-          manufacturer of this processor in unsigned integer.
+          The effective Model information as provided by the manufacturer of
+          this processor in unsigned integer.
       default: 0
     - name: Id
       type: uint64
       description: >
-          This Processor ID field contains processor-specific information
-          that describes the processor's features. Details depend on
-          processor architecture.
-          For x86 and ARM processors, DMTF DSP0134 Section 7.5.3 is used.
+          This Processor ID field contains processor-specific information that
+          describes the processor's features. Details depend on processor
+          architecture. For x86 and ARM processors, DMTF DSP0134 Section 7.5.3
+          is used.
       default: 0
     - name: MaxSpeedInMhz
       type: uint32
@@ -42,9 +40,9 @@ properties:
     - name: Characteristics
       type: array[enum[self.Capability]]
       description: >
-          The set of boolean flags for processor's capability, such as
-          64-bit Capable, Multi-Core, Hardware Thread, Execute Protection,
-          Enhanced Virtualization, Power/Performance Control etc.
+          The set of boolean flags for processor's capability, such as 64-bit
+          Capable, Multi-Core, Hardware Thread, Execute Protection, Enhanced
+          Virtualization, Power/Performance Control etc.
     - name: CoreCount
       type: uint16
       description: >
@@ -67,8 +65,8 @@ properties:
 enumerations:
     - name: Capability
       description: >
-          List of capabilities that a processor can support.
-          Values are based off DMTF DSP0134 specification.
+          List of capabilities that a processor can support. Values are based
+          off DMTF DSP0134 specification.
       values:
           - name: Capable64bit
             description: >

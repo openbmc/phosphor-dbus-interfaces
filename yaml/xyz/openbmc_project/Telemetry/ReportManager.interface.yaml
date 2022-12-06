@@ -78,8 +78,8 @@ properties:
       type: uint64
       description: >
           Minimal allowed time between readings property updates. It limits
-          Interval property in xyz.openbmc_project.Telemetry.Report and
-          interval parameter in AddReport method.
+          Interval property in xyz.openbmc_project.Telemetry.Report and interval
+          parameter in AddReport method.
       flags:
           - const
     - name: SupportedOperationTypes

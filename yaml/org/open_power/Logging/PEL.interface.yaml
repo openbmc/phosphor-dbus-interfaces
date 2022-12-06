@@ -70,8 +70,8 @@ methods:
           - name: Message
             type: string
             description: >
-                The Message property of the OpenBMC event log entry.
-                This is also the key into the PEL message registry.
+                The Message property of the OpenBMC event log entry. This is
+                also the key into the PEL message registry.
           - name: Severity
             type: enum[xyz.openbmc_project.Logging.Entry.Level]
             description: >
@@ -79,8 +79,7 @@ methods:
           - name: AdditionalData
             type: dict[string, string]
             description: >
-                The AdditionalData property of the event entry.
-                e.g.:
+                The AdditionalData property of the event entry. e.g.:
                   {
                     "key1": "value1",
                     "key2": "value2"
@@ -88,22 +87,25 @@ methods:
                 ends up in AdditionaData like:
                   ["KEY1=value1", "KEY2=value2"]
           - name: FFDC
-            type: array[struct[enum[xyz.openbmc_project.Logging.Create.FFDCFormat], byte, byte, unixfd]]
+            type:
+                array[struct[enum[xyz.openbmc_project.Logging.Create.FFDCFormat],
+                byte, byte, unixfd]]
             description: >
-                File descriptors for any files containing FFDC, along with metadata
-                about the contents:
+                File descriptors for any files containing FFDC, along with
+                metadata about the contents:
 
                   FFDCFormat- The format type of the contained data.
                   subType - The format subtype, used for the 'Custom' type.
-                  version - The version of the data format, used for the 'Custom'
+                  version - The version of the data format, used for the
+                'Custom'
                             type.
                   unixfd - The file descriptor to the data file.
 
-                e.g.:
-                [
-                  {"xyz.openbmc_project.Logging.Create.FFDCFormat.JSON", 0, 0, 5},
-                  {"xyz.openbmc_project.Logging.Create.FFDCFormat.Custom", 1, 2, 6}
-                ]
+                e.g.: [
+                  {"xyz.openbmc_project.Logging.Create.FFDCFormat.JSON", 0, 0,
+                5},
+                  {"xyz.openbmc_project.Logging.Create.FFDCFormat.Custom", 1, 2,
+                6} ]
       returns:
           - name: IDs
             type: struct[uint32, uint32]
@@ -111,13 +113,13 @@ methods:
                 The IDs of the 2 created logs:
                   - OpenBMC event log ID
                   - PEL log ID: The unique ID of the PEL
-                Note that the PEL's platform log ID (PLID) field is always
-                equal to the PEL log ID for BMC created PELs.
+                Note that the PEL's platform log ID (PLID) field is always equal
+                to the PEL log ID for BMC created PELs.
 
     - name: GetPELIdFromBMCLogId
       description: >
-          Returns the PEL Id (aka Entry ID (EID)) based on the
-          given BMC event log id.
+          Returns the PEL Id (aka Entry ID (EID)) based on the given BMC event
+          log id.
       parameters:
           - name: bmcLogId
             type: uint32
@@ -133,8 +135,8 @@ methods:
 
     - name: GetBMCLogIdFromPELId
       description: >
-          Returns the BMC event log id based on the given PEL id (aka
-          Entry ID (EID)).
+          Returns the BMC event log id based on the given PEL id (aka Entry ID
+          (EID)).
       parameters:
           - name: pelId
             type: uint32
@@ -150,8 +152,7 @@ methods:
 
     - name: GetPELJSON
       description: >
-          Returns a string containing the JSON representation
-          of the PEL.
+          Returns a string containing the JSON representation of the PEL.
       parameters:
           - name: bmcLogId
             type: uint32

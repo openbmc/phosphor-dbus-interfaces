@@ -1,7 +1,6 @@
 description: >
-    This defines an ethernet interface.
-    An object implementing this interface must implement
-    xyz.openbmc_project.State.OperationalStatus.
+    This defines an ethernet interface. An object implementing this interface
+    must implement xyz.openbmc_project.State.OperationalStatus.
 
 properties:
     - name: InterfaceName
@@ -27,8 +26,8 @@ properties:
       type: size
       default: 0
       description: >
-          This indicates the size in bytes of largest protocol data unit,
-          which can be passed in an Ethernet frame on the interface.
+          This indicates the size in bytes of largest protocol data unit, which
+          can be passed in an Ethernet frame on the interface.
     - name: DomainName
       type: array[string]
       description: >
@@ -36,8 +35,8 @@ properties:
     - name: DHCPEnabled
       type: enum[self.DHCPConf]
       description: >
-          Address mode of the ethernet interface. Deprecated in favor of
-          split options to avoid combinatorics.
+          Address mode of the ethernet interface. Deprecated in favor of split
+          options to avoid combinatorics.
     - name: DHCP4
       type: boolean
       description: >
@@ -56,8 +55,8 @@ properties:
       type: array[string]
       description: >
           A statically defined set of DNS server IP addresses to be used when
-          DHCP provisioning is not enabled for name server configuration. As
-          an implementation option this may also be used in addition to DHCP
+          DHCP provisioning is not enabled for name server configuration. As an
+          implementation option this may also be used in addition to DHCP
           provided addresses, or in cases where the DHCP server provides no DNS
           assigments.
       errors:
@@ -65,14 +64,14 @@ properties:
     - name: NTPServers
       type: array[string]
       description: >
-          NTP servers that are currently in use on this interface.
-          This includes both DHCP and static NTP server addresses.
+          NTP servers that are currently in use on this interface. This includes
+          both DHCP and static NTP server addresses.
     - name: StaticNTPServers
       type: array[string]
       description: >
           This property describes statically defined NTPServers on the
-          interface. This property supports read/write operation.
-          Configure the NTP servers on the system during write operation.
+          interface. This property supports read/write operation. Configure the
+          NTP servers on the system during write operation.
     - name: LinkLocalAutoConf
       type: enum[self.LinkLocalConf]
       description: >
@@ -92,8 +91,8 @@ properties:
           - readonly
       description: >
           This property reports the link status for the NIC. The read-only
-          boolean value is TRUE when the network cable is inserted, or there
-          is a carrier signal. It is FALSE when the cable is unplugged, or the
+          boolean value is TRUE when the network cable is inserted, or there is
+          a carrier signal. It is FALSE when the cable is unplugged, or the
           carrier signal is missing.
     - name: DefaultGateway
       type: string
@@ -104,9 +103,9 @@ properties:
     - name: DefaultGateway6
       type: string
       description: >
-          Default IPv6 gateway of the ethernet interface.
-          For supported address formats refer RFC 2373.
-          Refer below man page for both v4 and v6 address format details
+          Default IPv6 gateway of the ethernet interface. For supported address
+          formats refer RFC 2373. Refer below man page for both v4 and v6
+          address format details
           https://man7.org/linux/man-pages/man3/inet_pton.3.html
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
@@ -124,15 +123,12 @@ enumerations:
 
     - name: DHCPConf
       description: >
-          High level definitions of available DHCP states.
-          These definitions do not have a 1:1 correlation to the
-          systemd.network configuration file contents.
-          both: Enable IPv4 DHCP and IPv6 Stateful DHCP
-          v4v6stateless: Enable IPv4 DHCP and IPv6 SLAAC
-          v6: Enable IPv6 Stateful DHCP
-          v6stateless: Enable IPv6 SLAAC
-          v4: Enable IPv4 DHCP
-          none: Disable DHCP for IPv4 and IPv6
+          High level definitions of available DHCP states. These definitions do
+          not have a 1:1 correlation to the systemd.network configuration file
+          contents. both: Enable IPv4 DHCP and IPv6 Stateful DHCP v4v6stateless:
+          Enable IPv4 DHCP and IPv6 SLAAC v6: Enable IPv6 Stateful DHCP
+          v6stateless: Enable IPv6 SLAAC v4: Enable IPv4 DHCP none: Disable DHCP
+          for IPv4 and IPv6
       values:
           - name: both
           - name: v4v6stateless

@@ -29,8 +29,8 @@ methods:
 
     - name: GetFRUsByUnexpandedLocationCode
       description: >
-          A method to get list of FRU D-BUS object paths for a given
-          unexpanded location code.
+          A method to get list of FRU D-BUS object paths for a given unexpanded
+          location code.
       parameters:
           - name: locationCode
             type: string
@@ -39,8 +39,8 @@ methods:
           - name: nodeNumber
             type: uint16
             description: >
-                Denotes the node in case of a multi-node configuration,
-                ignored on a single node system.
+                Denotes the node in case of a multi-node configuration, ignored
+                on a single node system.
       returns:
           - name: inventoryList
             type: array[object_path]
@@ -75,8 +75,8 @@ methods:
     - name: GetExpandedLocationCode
       description: >
           An api to get expanded location code corresponding to a given
-          un-expanded location code.
-          Expanded location codes gives the location of the FRU in the system.
+          un-expanded location code. Expanded location codes gives the location
+          of the FRU in the system.
       parameters:
           - name: locationCode
             type: string
@@ -85,8 +85,8 @@ methods:
           - name: nodeNumber
             type: uint16
             description: >
-                Denotes the node in case of multi-node configuration.
-                Ignored in case of single node configuration.
+                Denotes the node in case of multi-node configuration. Ignored in
+                case of single node configuration.
       returns:
           - name: locationCode
             type: string

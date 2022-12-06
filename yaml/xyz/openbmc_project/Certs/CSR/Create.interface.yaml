@@ -4,11 +4,11 @@ description: >
 methods:
     - name: GenerateCSR
       description: >
-          This command is used to initiate a certificate signing request.
-          This command only returns the D-Bus path name for the new CSR object.
-          User need to listen on InterfacesAdded signal emitted by
-          /xyz/openbmc_project/Certs to retrieve the CSR string after
-          successful CSR creation.
+          This command is used to initiate a certificate signing request. This
+          command only returns the D-Bus path name for the new CSR object. User
+          need to listen on InterfacesAdded signal emitted by
+          /xyz/openbmc_project/Certs to retrieve the CSR string after successful
+          CSR creation.
 
           Note: Following Parameters are mandatory or optional based on the
                 Redfish documentation.
@@ -32,15 +32,13 @@ methods:
           - name: City
             type: string
             description: >
-                The city or locality of the organization making the request.
-                For Example Austin
-                This is a required parameter.
+                The city or locality of the organization making the request. For
+                Example Austin This is a required parameter.
           - name: CommonName
             type: string
             description: >
                 The fully qualified domain name of the component that is being
-                secured.
-                This is a required parameter.
+                secured. This is a required parameter.
           - name: ContactPerson
             type: string
             description: >
@@ -48,13 +46,13 @@ methods:
           - name: Country
             type: string
             description: >
-                The country of the organization making the request.
-                This is a required parameter.
+                The country of the organization making the request. This is a
+                required parameter.
           - name: Email
             type: string
             description: >
-                The email address of the contact within the organization
-                making the request.
+                The email address of the contact within the organization making
+                the request.
           - name: GivenName
             type: string
             description: >
@@ -66,8 +64,8 @@ methods:
           - name: KeyBitLength
             type: int64
             description: >
-                The length of the key in bits, if needed based on the value
-                of the KeyPairAlgorithm parameter.
+                The length of the key in bits, if needed based on the value of
+                the KeyPairAlgorithm parameter.
 
                 Refer https://www.openssl.org/docs/man1.0.2/man1/genpkey.html
           - name: KeyCurveId
@@ -87,35 +85,43 @@ methods:
           - name: KeyUsage
             type: array[string]
             description: >
-                Key usage extensions define the purpose of the public key contained
-                in a certificate.
+                Key usage extensions define the purpose of the public key
+                contained in a certificate.
 
                 Valid Key usage extensions and its usage description.
 
                 ClientAuthentication: The public key is used for TLS WWW client
                                       authentication.
-                CodeSigning: The public key is used for the signing of executable code.
-                CRLSigning: The public key is used for verifying signatures on
+                CodeSigning: The public key is used for the signing of
+                executable code. CRLSigning: The public key is used for
+                verifying signatures on
                             certificate revocation lists (CLRs).
-                DataEncipherment: The public key is used for directly enciphering
-                                  raw user data without the use of an intermediate
+                DataEncipherment: The public key is used for directly
+                enciphering
+                                  raw user data without the use of an
+                intermediate
                                   symmetric cipher.
                 DecipherOnly: The public key could be used for deciphering data
                               while performing key agreement.
                 DigitalSignature: The public key is used for verifying digital
-                                  signatures, other than signatures on certificates
+                                  signatures, other than signatures on
+                certificates
                                   and CRLs.
                 EmailProtection: The public key is used for email protection.
                 EncipherOnly: The public key could be used for enciphering data
                               while performing key agreement.
                 KeyCertSign: The public key is used for verifying signatures on
                              public key certificates.
-                KeyEncipherment: The public key is used for enciphering private or
+                KeyEncipherment: The public key is used for enciphering private
+                or
                                  secret keys.
-                NonRepudiation: The public key is used to verify digital signatures,
+                NonRepudiation: The public key is used to verify digital
+                signatures,
                                 other than signatures on certificates and CRLs,
-                                and used to provide a non- repudiation service that
-                                protects against the signing entity falsely denying
+                                and used to provide a non- repudiation service
+                that
+                                protects against the signing entity falsely
+                denying
                                 some action.
                 OCSPSigning: The public key is used for signing OCSP responses.
                 ServerAuthentication: The public key is used for TLS WWW server
@@ -125,22 +131,20 @@ methods:
           - name: Organization
             type: string
             description: >
-                The legal name of the organization. This should not be abbreviated
-                and should include suffixes such as Inc, Corp, or LLC.
-                For example, IBM Corp.
-                This is a required parameter.
+                The legal name of the organization. This should not be
+                abbreviated and should include suffixes such as Inc, Corp, or
+                LLC. For example, IBM Corp. This is a required parameter.
           - name: OrganizationalUnit
             type: string
             description: >
                 The name of the unit or division of the organization making the
-                request.
-                This is a required parameter.
+                request. This is a required parameter.
           - name: State
             type: string
             description: >
-                The state or province where the organization is located.
-                This should not be abbreviated. For example, Texas.
-                This is a required parameter.
+                The state or province where the organization is located. This
+                should not be abbreviated. For example, Texas. This is a
+                required parameter.
           - name: Surname
             type: string
             description: >

@@ -5,18 +5,16 @@ properties:
     - name: MaxLoginAttemptBeforeLockout
       type: uint16
       description: >
-          Configures the maximum permissible attempt before locking
-          out the user. Value of 0 indicates that account lockout
-          feature is disabled.
+          Configures the maximum permissible attempt before locking out the
+          user. Value of 0 indicates that account lockout feature is disabled.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
 
     - name: AccountUnlockTimeout
       type: uint32
       description: >
-          Configures timeout needed (in seconds) to unlock the account
-          after a lockout. Value of 0 indicates that account must be
-          unlocked manually.
+          Configures timeout needed (in seconds) to unlock the account after a
+          lockout. Value of 0 indicates that account must be unlocked manually.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
 
@@ -25,8 +23,8 @@ properties:
       description: >
           Configures the minimum password length. Minimum password length
           specified in build time is marked as default value. This property
-          cannot be configured below the build time default value but can be
-          set to higher one for security reasons.
+          cannot be configured below the build time default value but can be set
+          to higher one for security reasons.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.InvalidArgument
@@ -34,8 +32,8 @@ properties:
     - name: RememberOldPasswordTimes
       type: byte
       description: >
-          Configures the number of times old password shouldn't be allowed
-          when trying to update new password. Value of 0 (by default) indicates
-          this feature is not enforced.
+          Configures the number of times old password shouldn't be allowed when
+          trying to update new password. Value of 0 (by default) indicates this
+          feature is not enforced.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure

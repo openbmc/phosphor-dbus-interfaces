@@ -20,12 +20,11 @@ properties:
           The logical address used to route MCTP messages to a specific MCTP
           endpoint. A numeric handle (logical address) that uniquely identifies
           a particular MCTP endpoint within a system for MCTP communication and
-          message routing purposes. Endpoint IDs are unique among MCTP
-          endpoints that comprise an MCTP communication network within a
-          system. MCTP EIDs are only unique within a particular MCTP network.
-          That is, they can be duplicated or overlap from one MCTP network to
-          the next. This is also referred to as "endpoint ID" and abbreviated
-          as "EID".
+          message routing purposes. Endpoint IDs are unique among MCTP endpoints
+          that comprise an MCTP communication network within a system. MCTP EIDs
+          are only unique within a particular MCTP network. That is, they can be
+          duplicated or overlap from one MCTP network to the next. This is also
+          referred to as "endpoint ID" and abbreviated as "EID".
 
     - name: SupportedMessageTypes
       type: array[byte]
@@ -37,6 +36,6 @@ properties:
           Ethernet over MCTP(0x03), NVM Express Management Messages over
           MCTP(0x04) and SPDM over MCTP(0x05). There are ranges for vendor
           defined message types. All the message types are specified in the
-          DSP0239 specification. A device that supports a given message type
-          may not support that message type equally across all buses that
-          connect to the device.
+          DSP0239 specification. A device that supports a given message type may
+          not support that message type equally across all buses that connect to
+          the device.

@@ -5,7 +5,8 @@
 - name: FirmwareFailure
   description: Failed to send firmware update to Hoth.
 - name: ResponseNotFound
-  description: Could not find a response. The command may not have completed yet.
+  description:
+      Could not find a response. The command may not have completed yet.
 - name: InterfaceError
   description: A system error occured with the Hoth interface.
 - name: ExpectedInfoNotFound

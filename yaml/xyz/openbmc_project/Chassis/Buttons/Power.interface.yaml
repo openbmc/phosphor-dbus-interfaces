@@ -20,9 +20,8 @@ properties:
       type: boolean
       default: true
       description: >
-          Enable/disable power button.
-          false means power button is disabled
-          true means power button is enabled
+          Enable/disable power button. false means power button is disabled true
+          means power button is enabled
       errors:
           - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
           - xyz.openbmc_project.Chassis.Common.Error.IOError

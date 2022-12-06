@@ -3,11 +3,11 @@
 ## Overview
 
 Certificate management allows to replace the existing certificate and private
-key file with another (possibly certification Authority (CA) signed)
-certificate and private key file. Certificate management allows the user to
-install both the server and client certificates. The REST interface allows to
-update the certificate, using an unencrypted certificate and private key file
-in .pem format, which includes both private key and signed certificate.
+key file with another (possibly certification Authority (CA) signed) certificate
+and private key file. Certificate management allows the user to install both the
+server and client certificates. The REST interface allows to update the
+certificate, using an unencrypted certificate and private key file in .pem
+format, which includes both private key and signed certificate.
 
 ### Signed Certificate upload Design flow(Pre-generated)
 
@@ -15,15 +15,13 @@ in .pem format, which includes both private key and signed certificate.
   location.
 - REST server should map the URI to the target DBus application (Certs) object.
   The recommendation for the D-Bus application implementing certificate D-Bus
-  objects is to use the same path structure as the REST endpoint.
-  e.g.:
-  - The URI /xyz/openbmc_project/certs/server/https maps to instance
-    of the certificate application handling Https server certificate.
-  - The URI /xyz/openbmc_project/certs/client/ldap maps to instance
-    of the certificate application handling LDAP client certificate.
-  - The URI /xyz/openbmc_project/certs/authority/ldap maps to instance
-    of the certificate application handling Certificate Autohority
-    certificates.
+  objects is to use the same path structure as the REST endpoint. e.g.:
+  - The URI /xyz/openbmc_project/certs/server/https maps to instance of the
+    certificate application handling Https server certificate.
+  - The URI /xyz/openbmc_project/certs/client/ldap maps to instance of the
+    certificate application handling LDAP client certificate.
+  - The URI /xyz/openbmc_project/certs/authority/ldap maps to instance of the
+    certificate application handling Certificate Autohority certificates.
 - REST server should call the install method of the certificate application
   instance.
 - Certificate manager application also implements d-bus object
@@ -31,9 +29,8 @@ in .pem format, which includes both private key and signed certificate.
   "certificates specific d-bus objects" installed in the system. This d-bus
   provide option to view the certificate on PEM format and delete the same.
   Refer [Wikipedia][privacy-enhanced-mail] for details.
-- Applications should subscribe the xyz.openbmc_project.Certs.Manager
-  to see any new certificate is uploaded or change in the existing
-  certificates.
+- Applications should subscribe the xyz.openbmc_project.Certs.Manager to see any
+  new certificate is uploaded or change in the existing certificates.
 - Certificate manager scope is limited to manage the certificate and impacted
   application is responsible for application specific changes.
 - In case of delete action, certificate manager creates a new self signed
@@ -73,20 +70,19 @@ Return codes
 
 ### User flow for generating and installing Certificates(CSR Based)
 
-[Certificate Signing Request][csr](CSR) is a message sent from an applicant to
-a certitificate authority in order to apply for a digital identity certificate.
+[Certificate Signing Request][csr](CSR) is a message sent from an applicant to a
+certitificate authority in order to apply for a digital identity certificate.
 This section provides the details of the CSR based certificate user flow.
 
-- The user performs the CSR/create interface
-  BMC creates new private key and CSR object which includes CSR information.
-- The user performs the CSR/export interface
-  Allows the user to export the CSR file which is part of newly created
-  CSR object. This can be provided to the CA to create SSL certificate.
-- The user perform the certificate upload on appropriate services.
-  Example: if trying to replace the HTTPS certificate for a Manager,
-  navigate to the Manager’s Certificate object upload interface.
-  The Upload method internally pairs the private key used in the first
-  step with the installed certificate.
+- The user performs the CSR/create interface BMC creates new private key and CSR
+  object which includes CSR information.
+- The user performs the CSR/export interface Allows the user to export the CSR
+  file which is part of newly created CSR object. This can be provided to the CA
+  to create SSL certificate.
+- The user perform the certificate upload on appropriate services. Example: if
+  trying to replace the HTTPS certificate for a Manager, navigate to the
+  Manager’s Certificate object upload interface. The Upload method internally
+  pairs the private key used in the first step with the installed certificate.
 
 [csr]: https://en.wikipedia.org/wiki/Certificate_signing_request
 
@@ -100,16 +96,16 @@ This section provides the details of the CSR based certificate user flow.
 
 ### CSR Request
 
-- CSR requests initiated through D-Bus are time-consuming and might result
-  D-Bus time-out error.
-- To overcome the time-out error, parent process is forked and CSR operation
-  is performed in the child process so that parent process can return the
-  calling thread immediately.
+- CSR requests initiated through D-Bus are time-consuming and might result D-Bus
+  time-out error.
+- To overcome the time-out error, parent process is forked and CSR operation is
+  performed in the child process so that parent process can return the calling
+  thread immediately.
 - OpenSSL library is used in generating CSR based on the algorithm type.
 - At present supporting generating CSR for only "RSA" algorithm type.
 - Parent process registers child process PID and a callback method in the
-  sd_event_lopp so that callback method is invoked upon completion
-  the CSR request in the child process.
+  sd_event_lopp so that callback method is invoked upon completion the CSR
+  request in the child process.
 - Callback method invoked creates a CSR object with the status of the CSR
   operation returned from the child process.
 - CSR read operation will return the CSR string if status is SUCCESS else throws
@@ -118,8 +114,8 @@ This section provides the details of the CSR based certificate user flow.
   interface.
 - CSR object created implements "/xyz/openbmc_project/Certs/CSR" interface.
 - Caller needs to validate the CSR request parameters.
-- Caller need to wait on "InterfacesAdded" signal generated upon creation
-  of the CSR object to start reading CSR string.
+- Caller need to wait on "InterfacesAdded" signal generated upon creation of the
+  CSR object to start reading CSR string.
 
 ### Example usage for the GenerateCSR POST request
 
@@ -154,8 +150,8 @@ Method: POST
 
 ### Additional interfaces
 
-- CertificateService.ReplaceCertificate
-  Allows the user to replace an existing certificate.
+- CertificateService.ReplaceCertificate Allows the user to replace an existing
+  certificate.
 
 ### d-bus interfaces
 
@@ -164,16 +160,16 @@ Method: POST
 - Certs application must:
   - validate the certificate and Private key file by checking, if the Private
     key matches the public key in the certificate file.
-  - copy the certificate and Public Key file to the service specific path
-    based on a configuration file.
+  - copy the certificate and Public Key file to the service specific path based
+    on a configuration file.
   - Reload the listed service(s) for which the certificate is updated.
 
 #### d-bus interface to Delete certificate and Private Key
 
 - certificate manager should provide interface to delete the existing
   certificate.
-- Incase of server type certificate deleting a signed certificate will
-  create a new self signed certificate and will install the same.
+- Incase of server type certificate deleting a signed certificate will create a
+  new self signed certificate and will install the same.
 
 ### Boot process
 
@@ -202,9 +198,8 @@ phosphor-certificate-manager
   "/redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates"
 
 - Bmcweb receives the POST request and it maps the Redfish URI to the
-  corresponding Certificate Manager D-Bus URI.
-  e.g: HTTPS certificate collection URI
-  /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates mapped to
+  corresponding Certificate Manager D-Bus URI. e.g: HTTPS certificate collection
+  URI /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates mapped to
   /xyz/openbmc_project/certs/server/https.
 - Bmcweb initiates an asynchronous call which invokes the "Install" method of
   the Certificate Manager.
@@ -221,8 +216,8 @@ phosphor-certificate-manager
   the response message with newly created certificate details for success.
 - Certificate object D-Bus path mapped to corresponding Redfish certificate URI.
   e.g: /xyz/openbmc_project/certs/server/https/1 is mapped to
-  /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1
-  ID of the certificate is appended to the collection URI.
+  /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1 ID of the
+  certificate is appended to the collection URI.
 
 #### Certificate Replace
 
@@ -231,8 +226,7 @@ phosphor-certificate-manager
 - Redfish issues Replace certificate request by invoking the ReplaceCertificate
   action of the CertificateService.
 - Redfish Certificate Collection URI is mapped to corresponding Certificate
-  D-Bus object URI
-  e.g: HTTPS certificate object 1 URI
+  D-Bus object URI e.g: HTTPS certificate object 1 URI
   /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1 is mapped to
   /xyz/openbmc_project/certs/server/https/1.
 - Bmcweb receives POST request for Replace Certificate, invokes the Replace
@@ -257,8 +251,8 @@ phosphor-certificate-manager
 #### Certificate Deletion
 
 - For server and client certificate type the certificate deletion is not
-  allowed. In case of authority certificate type the delete option is
-  acceptable and can be done on individial certificates, for example:
+  allowed. In case of authority certificate type the delete option is acceptable
+  and can be done on individial certificates, for example:
 
 ```plain
 url: redfish/v1/Managers/bmc/Truststore/Certificates/1

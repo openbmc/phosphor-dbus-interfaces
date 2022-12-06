@@ -12,8 +12,8 @@ properties:
     - name: PowerCapEnable
       type: boolean
       description: >
-          Power cap enable.  Set to true to enable the PowerCap, false
-          to disable it.
+          Power cap enable.  Set to true to enable the PowerCap, false to
+          disable it.
 
     #TODO: These following bounds are currently owned by Settings but need to be
     #      written by OCC.Control service so must be writable for now.
@@ -37,8 +37,8 @@ properties:
       #    - readonly
       default: 0
       description: >
-          Minimum supported soft user PowerCap setting.
-          The min soft user PowerCap value is normally less than or equal to
-          the MinPowerCapValue. When the PowerCap is set to any value between
-          MinSoftPowerCapValue and MinPowerCapValue an attempt will be made to
-          maintain the cap but it will not be guaranted.
+          Minimum supported soft user PowerCap setting. The min soft user
+          PowerCap value is normally less than or equal to the MinPowerCapValue.
+          When the PowerCap is set to any value between MinSoftPowerCapValue and
+          MinPowerCapValue an attempt will be made to maintain the cap but it
+          will not be guaranted.

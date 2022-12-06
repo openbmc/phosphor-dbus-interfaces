@@ -24,7 +24,8 @@ properties:
     - name: MaxSpeed
       type: uint32
       description: >
-          The maximum clock speed to which the processor can be configured in MHz.
+          The maximum clock speed to which the processor can be configured in
+          MHz.
       flags:
           - readonly
     - name: PowerLimit
@@ -43,7 +44,8 @@ properties:
       type: array[struct[uint32, size]]
       description: >
           An array of objects that specify the turbo profile for a set of active
-          cores. Each entry contains two members, first is the maximum turbo clock
-          speed in MHz, and second is number of cores which can run at that speed.
+          cores. Each entry contains two members, first is the maximum turbo
+          clock speed in MHz, and second is number of cores which can run at
+          that speed.
       flags:
           - readonly

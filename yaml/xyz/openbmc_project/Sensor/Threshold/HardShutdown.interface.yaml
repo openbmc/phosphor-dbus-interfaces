@@ -35,16 +35,16 @@ properties:
     - name: HardShutdownAlarmHigh
       type: boolean
       description: >
-          True if the sensor value has exceeded the defined bound.
-          False if the sensor value has not exceeded the defined bound.
+          True if the sensor value has exceeded the defined bound. False if the
+          sensor value has not exceeded the defined bound.
 
           HardShutdownAlarmHigh may be set to False to clear an alarm condition.
           The behavior of setting HardShutdownAlarmHigh to True is undefined.
     - name: HardShutdownAlarmLow
       type: boolean
       description: >
-          True if the sensor value has exceeded the defined bound.
-          False if the sensor value has not exceeded the defined bound.
+          True if the sensor value has exceeded the defined bound. False if the
+          sensor value has not exceeded the defined bound.
 
           HardShutdownAlarmLow may be set to False to clear an alarm condition.
           The behavior of setting HardShutdownAlarmLow to True is undefined.

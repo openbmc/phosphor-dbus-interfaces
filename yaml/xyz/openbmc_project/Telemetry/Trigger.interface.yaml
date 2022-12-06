@@ -30,9 +30,9 @@ properties:
       type: array[dict[object_path,string]]
       description: >
           Map of sensors that is monitored within trigger. D-Bus sensor path is
-          used as map's key. Its value is a metadata that is used
-          to store user data about sensor. In Redfish, metadata will be set to
-          endpoint corresponding to that sensor.
+          used as map's key. Its value is a metadata that is used to store user
+          data about sensor. In Redfish, metadata will be set to endpoint
+          corresponding to that sensor.
     - name: Thresholds
       type: variant[array[struct[enum[self.Type],uint64,enum[self.Direction],double]],array[struct[string,enum[self.Severity],uint64,string]]]
       description: >

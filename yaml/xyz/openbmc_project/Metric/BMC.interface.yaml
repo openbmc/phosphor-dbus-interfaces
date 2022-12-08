@@ -1,0 +1,37 @@
+description: >
+    Implementation of BMC metrics interface. Contains all software-based
+    metrics for the BMC to report to monitor its health.
+
+properties:
+    - name: UserCpuUtilization
+      type: double
+      description: >
+          Userspace utilization of the CPU.
+    - name: KernelCpuUtilization
+      type: double
+      description: >
+          Userspace utilization of the CPU.
+    - name: MemoryUtilization
+      type: size
+      description: >
+        Memory Utilization of the BMC in Resident Size Bytes
+    - name: Uptime
+      type: double
+      description: >
+          The uptime of the BMC in seconds.
+    - name: BootCount
+      type: size
+      description: >
+          The number of times the BMC has booted.
+    - name: CrashCount
+      type: size
+      description: >
+          The number of times the BMC has crashed.
+    - name: PortMetrics
+      type: dict[string, object_path]
+      description: >
+        A dictionary of every port on the BMC to the object_path containing that port's metrics
+    - name: DaemonMetrics
+      type: dict[string, object_path]
+      description: >
+        A dictionary of every daemon running on the BMC to the object_path containing that daemon's metrics.

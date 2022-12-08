@@ -1,0 +1,33 @@
+description: >
+    Implementation of Daemon metrics interface. Contains all metrics related to a certain daemon.
+
+properties:
+    - name: CommandLine
+      type: string
+      description: >
+          The command line of the main process run by the daemon.
+    - name: UserCpuUtilization
+      type: double
+      description: >
+          Userspace utilization of the daemon.
+    - name: KernelCpuUtilization
+      type: double
+      description: >
+          Userspace utilization of the daemon.
+    - name: MemoryUtilization
+      type: size
+      description: >
+        Memory Utilization of the daemon in Resident Size Bytes
+    - name: Uptime
+      type: double
+      description: >
+          The uptime of the daemon in seconds.
+    - name: RestartCount
+      type: double
+      description: >
+          The number of times the daemon has restarted.
+    - name: FileDescriptors
+      type: double
+      description: >
+          The number of open file descriptors on the daemon.
+  

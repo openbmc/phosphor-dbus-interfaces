@@ -1,0 +1,40 @@
+description: >
+    Implementation of Port metrics interface. Contains all metrics related to a
+    certain port.
+
+properties:
+    - name: Speed
+      type: uint32
+      flags:
+          - readonly
+      description: >
+          Current speed of the port interface, in Mbps.
+    - name: RXDroppedPackets
+      type: size
+      flags:
+          - readonly
+      description: >
+          The number of packets dropped on the recieve path.
+    - name: TXDroppedPackets
+      type: size
+      flags:
+          - readonly
+      description: >
+          The number of packets dropped on the transmit path.
+    - name: LinkState
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          The property represents the link state of the port. The boolean is
+          TRUE when the interface is enabled and FALSE when the interface is
+          disabled.
+    - name: LinkUp
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          This property reports the link status for the port interface. The
+          read-only boolean value is TRUE when the network cable is inserted, or
+          there is a carrier signal. It is FALSE when the cable is unplugged, or
+          the carrier signal is missing.

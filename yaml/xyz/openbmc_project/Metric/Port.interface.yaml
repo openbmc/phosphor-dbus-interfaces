@@ -1,0 +1,21 @@
+description: >
+    Implementation of Port metrics interface. Contains all metrics related to a
+    certain port.
+
+properties:
+    - name: CurrentSpeedGbps
+      type: double
+      description: >
+          The current speed in GB/s of the Port.
+    - name: RXDroppedPackets
+      type: size
+      description: >
+          The number of packets dropped on the recieve path.
+    - name: TXDroppedPackets
+      type: size
+      description: >
+          The number of packets dropped on the transmit path.
+    - name: LinkState
+      type: string
+      description: >
+          The link state of the Port.

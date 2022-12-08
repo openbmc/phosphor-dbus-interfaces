@@ -1,0 +1,57 @@
+description: >
+    Implementation of BMC metrics interface. Contains all software-based metrics
+    for the BMC to report to monitor its health.
+
+properties:
+    - name: UserCpuUtilization
+      type: double
+      flags:
+          - readonly
+      description: >
+          Userspace percentage utilization of the CPU.
+    - name: KernelCpuUtilization
+      type: double
+      flags:
+          - readonly
+      description: >
+          Kernelspace percentage utilization of the CPU.
+    - name: MemoryUtilization
+      type: size
+      flags:
+          - readonly
+      description: >
+          Memory Utilization of the BMC in Resident Size Bytes
+    - name: Uptime
+      type: uint64
+      flags:
+          - readonly
+      description: >
+          The uptime of the BMC in milliseconds.
+    - name: BootCount
+      type: size
+      flags:
+          - readonly
+      description: >
+          The number of times the BMC has booted.
+    - name: CrashCount
+      type: size
+      flags:
+          - readonly
+      description: >
+          The number of times the BMC has crashed.
+
+associations:
+    - name: Port
+      description: >
+          Ports on this BMC can optionally implement the 'identifying'
+          association to provide a link back to a BMC
+      reverse_name: BMC
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Metric.Port
+    - name: Daemon
+      description: >
+          Daemons running on this BMC can optionally implement the 'identifying'
+          association to provide a link back to a BMC
+      reverse_name: BMC
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Metric.Daemon

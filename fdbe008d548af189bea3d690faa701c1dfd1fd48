@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d90b75ed_dcd7f350",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2022-12-14T18:59:36Z",
+      "side": 1,
+      "message": "use associations to link to the daemon/port metrics instead.\n\nfor example, https://github.com/openbmc/phosphor-dbus-interfaces/blob/a1347418307d31a94bd21f22897aa508df938dcf/yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml#L303-L311",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 108
+      },
+      "revId": "fdbe008d548af189bea3d690faa701c1dfd1fd48",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a68ba0e9_7c5bdcde",
+        "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000885
+      },
+      "writtenOn": "2022-12-14T18:59:36Z",
+      "side": 1,
+      "message": "size?",
+      "range": {
+        "startLine": 30,
+        "startChar": 6,
+        "endLine": 30,
+        "endChar": 18
+      },
+      "revId": "fdbe008d548af189bea3d690faa701c1dfd1fd48",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

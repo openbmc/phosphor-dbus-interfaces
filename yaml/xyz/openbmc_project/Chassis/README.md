@@ -13,12 +13,14 @@ following methods, signals.
 
 - simPress - To emulate physical power button press.
 - simLongPress - To emulate physical power button long press.
+- simLongerPress - To emulate physical power button longer press.
 
 #### signals
 
 - Released - Power button released signal.
 - Pressed - Power button pressed signal.
 - PressedLong - Power button long pressed signal.
+- PressedLonger - Power button longer pressed signal.
 
 ### ID Button Interface
 

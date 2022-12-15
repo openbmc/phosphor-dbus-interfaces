@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "008381e4_872a4ef3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2022-12-15T15:08:00Z",
+      "side": 1,
+      "message": "I assume most companies have their own specific requirements on what the power button should do, and this is yours...\n\nI know we do, and ours is different.  In fact we did our final implementation downstream so we didn\u0027t force it on every other user of this repo.\n\nWhat if another user shipping systems is already happy with the current implementation and changing it would lead to angry customers?\n\nI don\u0027t know what to do about these issues...  Provide a way to select which handler to run?",
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f1b86c9_d6ac6ed1",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -105,6 +122,30 @@
       "writtenOn": "2022-12-15T12:42:33Z",
       "side": 1,
       "message": "This seems to be getting out of hand.\n\nShould we refactor this to include the length of the press in the \"Pressed\"?  Does the code send out a Pressed signal immediately and then send a PressedLonger later?  When is the Released signal sent?",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 38
+      },
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c373839_549e76d5",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2022-12-15T15:08:00Z",
+      "side": 1,
+      "message": "For whatever reason, it is:\n* pressed() - when button is pressed down()\n* released() - when button is released, unless it was over the \u0027long\u0027 limit, in which case it is:\n* pressedLong() - actually when the power button is released after a long press.\n\n\nI guess the handler could be changed to watch for pressed() to get its timestamp, and then also get the timestamp of released() to do what is wanted accordingly.",
+      "parentUuid": "6983842b_1734bac9",
       "range": {
         "startLine": 47,
         "startChar": 0,

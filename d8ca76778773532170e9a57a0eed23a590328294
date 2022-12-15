@@ -154,6 +154,30 @@
       },
       "revId": "d8ca76778773532170e9a57a0eed23a590328294",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e56e5ea9_b1f23e7c",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-15T15:31:05Z",
+      "side": 1,
+      "message": "\u003e I guess the handler could be changed to watch for pressed() to get its timestamp, and then also get the timestamp of released() to do what is wanted accordingly.\n\nWe can add the length of the press to the Released signal then, right?",
+      "parentUuid": "1c373839_549e76d5",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 38
+      },
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

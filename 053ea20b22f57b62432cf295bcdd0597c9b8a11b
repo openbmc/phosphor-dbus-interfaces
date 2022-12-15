@@ -87,6 +87,24 @@
       "parentUuid": "ad18d941_8f19d613",
       "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4872ba1_ecc9baeb",
+        "filename": "yaml/xyz/openbmc_project/Control/FanZone.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-15T15:29:34Z",
+      "side": 1,
+      "message": "I\u0027m still having a bit of trouble understanding the relationship between this and FanPwm/FanSpeed.\n\n1. We already have FanPwm to represent each fan.  Why do we need a property in the \"Zone\" that the FanPwm is part of?\n\n2. It seems like the primary value here is that we can set the Pwm for the whole Zone?  We could do that with a FanPwm instance representing the zone and the Object.Enable interface to select between the FanPwm for the Zone or the FanPwm for each individual Fan.\n\n3. If we have relationships between this object and other objects (ie, the \u0027string\u0027 portion of the property, those should be object_path and not string values.\n\n4. Why do we use double here but FanPwm and FanSpeed both use an integer?",
+      "parentUuid": "5261b0df_50a7f6d3",
+      "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -36,6 +36,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d47f649d_caa1e809",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIChannel.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-12-16T13:55:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7528803_e7783b1b",
+      "revId": "848767a88419fd8232189f818a403295d8390c6f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fd83fdac_62200830",
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "In general a logical NCSI interface of the Network controller is identified by package and channel id. \ndefinition of package from the NCSI spec (DSP0222)\none or more NC-SI channels in a Network Controller that share a common set of electrical buffers and common electrical buffer controls for the NC-SI bus",
       "parentUuid": "fd83fdac_62200830",
+      "revId": "848767a88419fd8232189f818a403295d8390c6f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c4e915d_560b29ea",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIPackage.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-12-16T13:55:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b3088fa2_f670993a",
       "revId": "848767a88419fd8232189f818a403295d8390c6f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

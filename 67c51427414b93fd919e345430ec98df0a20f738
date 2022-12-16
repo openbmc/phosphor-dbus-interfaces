@@ -82,6 +82,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf1e1318_6e963551",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIChannel.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-12-16T13:55:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3068f3c6_625034d9",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "67c51427414b93fd919e345430ec98df0a20f738",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5e6c7527_024f7f6a",
@@ -113,6 +137,24 @@
       "side": 1,
       "message": "The NCSI driver associates with a value and there are no enum association.\nspecified part of NCSI driver\nNCSI_CHANNEL_ATTR_LINK_STATE: nla_policy(type_\u003dNLA_U32),",
       "parentUuid": "5e6c7527_024f7f6a",
+      "revId": "67c51427414b93fd919e345430ec98df0a20f738",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05f9e453_50beaa4c",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIChannel.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-12-16T13:55:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f41d79b3_88688a2b",
       "revId": "67c51427414b93fd919e345430ec98df0a20f738",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -154,6 +196,30 @@
       "side": 1,
       "message": "This info is read from the ncsi driver. The driver does the initial config and selecting package is not part of the current requirement. only the package selected by the NCSI driver is probed further.",
       "parentUuid": "ed25f84e_97d593a5",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "67c51427414b93fd919e345430ec98df0a20f738",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55d74d10_fc799aa2",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIPackage.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001093
+      },
+      "writtenOn": "2022-12-16T13:55:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e6e2611_849cc0c2",
       "range": {
         "startLine": 6,
         "startChar": 0,

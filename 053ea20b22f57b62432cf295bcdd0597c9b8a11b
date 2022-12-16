@@ -105,6 +105,24 @@
       "parentUuid": "5261b0df_50a7f6d3",
       "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "224cab1b_bcd333e3",
+        "filename": "yaml/xyz/openbmc_project/Control/FanZone.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-16T09:32:22Z",
+      "side": 1,
+      "message": "Hi Patrick,\n\n1. The FanPwm interface is under each independent control/fanpwm object so we could only set the PWM devices one by one.\nTherefore, we would like to support a method to set all PWM device in one fan zone.\n\n2. Yes, we would like to set the PWM for the whole Zone.\nDo you suggest that we could add a instance representing the zone under /xyz/openbmc_project/control/fanpwm and set the PWM of whole zone by setting the FanPwm target in the instance?\n\nFor example:\n\u003e root@greatlakes:~# busctl tree xyz.openbmc_project.FanSensor\n\u003e `-/xyz\n\u003e   `-/xyz/openbmc_project\n\u003e     |-/xyz/openbmc_project/control\n\u003e     | `-/xyz/openbmc_project/control/fanpwm\n\u003e     |   |-/xyz/openbmc_project/control/fanpwm/Zone_1\n\u003e     |   |-/xyz/openbmc_project/control/fanpwm/Pwm_1\n\u003e     |   |-/xyz/openbmc_project/control/fanpwm/Pwm_2\n\u003e     |   |-/xyz/openbmc_project/control/fanpwm/Pwm_3\n\u003e     |   `-/xyz/openbmc_project/control/fanpwm/Pwm_4\n\nIn this case, we could also set the individual PWM by setting the FanPwm target in each fanpwm/Pwm.\n\n3. I think we could set the individual PWM by setting the FanPwm target in each object_path of PWM devices (e.g. /xyz/openbmc_project/control/fanpwm/Pwm_1).\nTherefore, we might not need to support the method to set individual pwm.\n\n4. I\u0027ll change it to integer. Thanks!",
+      "parentUuid": "d4872ba1_ecc9baeb",
+      "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

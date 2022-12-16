@@ -23,6 +23,12 @@ properties:
       description: >
           A property to define restart cause of a host.
 
+    - name: PostComplete
+      type: boolean
+      default: false
+      description: >
+          A property to define the postComplete state of a host.
+
 enumerations:
     - name: Transition
       description: >

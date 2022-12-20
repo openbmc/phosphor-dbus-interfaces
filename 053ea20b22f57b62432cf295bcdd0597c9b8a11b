@@ -159,6 +159,24 @@
       "parentUuid": "8b26276a_edbe2dd2",
       "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c784876_95581d1b",
+        "filename": "yaml/xyz/openbmc_project/Control/FanZone.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2022-12-20T18:43:12Z",
+      "side": 1,
+      "message": "Personally, I prefer the addition of a new layer below `Zone_X`, creating `Zone_X/Pwm_Y` objects to represent each fan output.\n\nI would rename them, though, to `Zone_X/Fan_Y` because `Fan` has a much clearer meaning than `Pwm`.\n\nThis ties in very well with the feature request here: https://github.com/openbmc/phosphor-pid-control/issues/27\n\nIf you add `Zone_X/Fan_Y` then I can see myself logically adding `Zone_X/Pid_Y` or `Zone_X/Input_Y` objects along the same naming scheme, to create an object to represent each PID input. This would allow that feature request to be realized.",
+      "parentUuid": "47967b0b_16a9b377",
+      "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

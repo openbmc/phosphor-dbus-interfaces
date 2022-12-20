@@ -279,6 +279,30 @@
       },
       "revId": "d8ca76778773532170e9a57a0eed23a590328294",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5db81701_c68fb5a9",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000218
+      },
+      "writtenOn": "2022-12-20T09:54:49Z",
+      "side": 1,
+      "message": "I do think it is better to define different scenario for different platform in the daemon. No need to define the special property in the common interface.",
+      "parentUuid": "c8747998_c27ef21d",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 38
+      },
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

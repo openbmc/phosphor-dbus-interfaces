@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcdefe73_bf1a7846",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2022-12-20T23:13:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "acf0e204_22fa5497",
+      "range": {
+        "startLine": 9,
+        "startChar": 9,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "729009e4d9a1434cc7297d838ebdf8bae5ff10a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d9fd41be_e4caf925",
@@ -49,6 +73,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fb4324a3_e4d7caa5",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2022-12-20T23:13:44Z",
+      "side": 1,
+      "message": "Yes I believe so. We could theoretically truncate off the seconds, but I think double makes sense as it would be a floating point number",
+      "parentUuid": "d9fd41be_e4caf925",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 21,
+        "endChar": 43
+      },
+      "revId": "729009e4d9a1434cc7297d838ebdf8bae5ff10a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "526e08f4_befbad66",
         "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
         "patchSetId": 9
@@ -60,6 +108,30 @@
       "writtenOn": "2022-12-19T00:22:44Z",
       "side": 1,
       "message": "use a enum instead of arbitrary string",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 37
+      },
+      "revId": "729009e4d9a1434cc7297d838ebdf8bae5ff10a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5dd7633a_5180d8b2",
+        "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2022-12-20T23:13:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "526e08f4_befbad66",
       "range": {
         "startLine": 18,
         "startChar": 4,

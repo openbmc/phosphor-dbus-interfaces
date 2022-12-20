@@ -141,6 +141,24 @@
       "parentUuid": "224cab1b_bcd333e3",
       "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47967b0b_16a9b377",
+        "filename": "yaml/xyz/openbmc_project/Control/FanZone.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-20T09:16:05Z",
+      "side": 1,
+      "message": "Hi Patrick \u0026 Josh,\nWe have two designs for the Fan Zone instance.\n\nFirst design:\nThere could be many PWMs in one Fan Zone. \nTherefore, if we want to add Zone_1 under object path: control/fanpwm, the Pwm instances should also be under the Zone_1 instance.\n\nFor example:\n\u003e root@greatlakes:~# busctl tree xyz.openbmc_project.FanSensor\n\u003e `-/xyz\n\u003e   `-/xyz/openbmc_project\n\u003e     |-/xyz/openbmc_project/control\n\u003e     | `-/xyz/openbmc_project/control/fanpwm\n\u003e     |   `-/xyz/openbmc_project/control/fanpwm/Zone_1\n\u003e     |     |-/xyz/openbmc_project/control/fanpwm/Zone_1/Pwm_1\n\u003e     |     |-/xyz/openbmc_project/control/fanpwm/Zone_1/Pwm_2\n\u003e     |     |-/xyz/openbmc_project/control/fanpwm/Zone_1/Pwm_3\n\u003e     |     `-/xyz/openbmc_project/control/fanpwm/Zone_1/Pwm_4\n\nWe also need to add some information of Fan Zone in the configureation of enitity-manager for dbus-sensors and entity-manager services to create the Fan Zone instance.\n\nSecond design:\nWe could add FanPwm interface in object path: /xyz/openbmc_project/settings/fanctrl/zone1 which is created by phosphor-pid-control service.\n\nFor expample:\n\u003e root@greatlakes:~# busctl introspect xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone1\n\u003e NAME                                TYPE      SIGNATURE RESULT/VALUE FLAGS\n\u003e ...\n\u003e xyz.openbmc_project.Control.Mode    interface -         -            -\n\u003e .FailSafe                           property  b         false        emits-change writable\n\u003e .Manual                             property  b         false        emits-change writable\n\u003e xyz.openbmc_project.Control.FanPwm  interface -         -            -\n\u003e .Target                             property  t         178          emits-change writable\n\nTherefore, we could set Manual and Fan Zone PWM in same object path and we could set the PWM for each PWM sensors in object path: control/fanpwm/Pwm_1 for debugging purpose.\n\nWould like to know which design do you prefer.",
+      "parentUuid": "8b26276a_edbe2dd2",
+      "revId": "053ea20b22f57b62432cf295bcdd0597c9b8a11b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -16,6 +16,29 @@
       "message": "Hi All,I have addressed/resolved the pending comments could you help review the latest review.",
       "revId": "a6c805da3c615063d1cd64af1a6e5d56328dd553",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ce0be34_03758828",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIPackage.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2022-12-22T16:02:53Z",
+      "side": 1,
+      "message": "Do we need both the properties?\nselected as well as Package ID?\nCan we assume that nonzero package ID means that it is selected too? Default value for the package and channel is -1",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 58
+      },
+      "revId": "a6c805da3c615063d1cd64af1a6e5d56328dd553",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

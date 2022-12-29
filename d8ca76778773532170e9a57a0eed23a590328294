@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d74c1925_f631bd1d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-29T08:59:33Z",
+      "side": 1,
+      "message": "First of all, I agree that behaviors of button should be customized",
+      "parentUuid": "008381e4_872a4ef3",
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f1b86c9_d6ac6ed1",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -71,6 +89,24 @@
       "writtenOn": "2022-12-15T10:23:30Z",
       "side": 1,
       "message": "do you mean press power button? or is it combination of multiple buttons?",
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "421ee429_905da69f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-29T08:59:33Z",
+      "side": 1,
+      "message": "In platform we developing, there are 5 power buttons that 1 for whole chassis and each slot also has 1 power button",
+      "parentUuid": "65a89b2b_e916b7f1",
       "revId": "d8ca76778773532170e9a57a0eed23a590328294",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -295,6 +331,30 @@
       "side": 1,
       "message": "I do think it is better to define different scenario for different platform in the daemon. No need to define the special property in the common interface.",
       "parentUuid": "c8747998_c27ef21d",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 38
+      },
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53520e4a_368a03c5",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-29T08:59:33Z",
+      "side": 1,
+      "message": "So far, most button handler in phosphor-buttons was triggered by property change",
+      "parentUuid": "5db81701_c68fb5a9",
       "range": {
         "startLine": 47,
         "startChar": 0,

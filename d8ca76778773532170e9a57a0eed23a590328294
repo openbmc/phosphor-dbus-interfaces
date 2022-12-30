@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1cb1f48d_78e8d8bc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-30T03:45:45Z",
+      "side": 1,
+      "message": "The behaviors we defined now are just used for new instances of multiple power button, which is independent from former design (single power button),\nSo there are no worries about the impacts to former projects, I\u0027ll state clearer on commit by following revision, thank you.",
+      "parentUuid": "d74c1925_f631bd1d",
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f1b86c9_d6ac6ed1",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -107,6 +125,24 @@
       "side": 1,
       "message": "In platform we developing, there are 5 power buttons that 1 for whole chassis and each slot also has 1 power button",
       "parentUuid": "65a89b2b_e916b7f1",
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3670b5c_6b191e9c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-30T03:45:45Z",
+      "side": 1,
+      "message": "I\u0027ll correct it after discussing below was done, thank you.",
+      "parentUuid": "421ee429_905da69f",
       "revId": "d8ca76778773532170e9a57a0eed23a590328294",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -195,6 +231,24 @@
       "writtenOn": "2022-12-15T10:23:30Z",
       "side": 1,
       "message": "I think you need to consider \u003c\u003d or \u003e\u003d conditions in scenarios. For ex, if power button pressed exactly for 4 secs, then will it \"12V power on\" or \"12V power cycle\"?",
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a0a5583_8fa67a85",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-30T03:45:45Z",
+      "side": 1,
+      "message": "I\u0027ll correct it after discussing below was done, thank you.",
+      "parentUuid": "e581c63e_cb7308cb",
       "revId": "d8ca76778773532170e9a57a0eed23a590328294",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

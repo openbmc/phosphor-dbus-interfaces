@@ -14,6 +14,12 @@ methods:
       errors:
           - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
           - xyz.openbmc_project.Chassis.Common.Error.IOError
+    - name: simLongerPress
+      description: >
+          Emulate power button longer press.
+      errors:
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
 
 properties:
     - name: Enabled
@@ -36,3 +42,6 @@ signals:
     - name: PressedLong
       description: >
           Power button long pressed signal
+    - name: PressedLonger
+      description: >
+          Power button longer pressed signal

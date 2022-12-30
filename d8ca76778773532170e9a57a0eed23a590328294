@@ -166,6 +166,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "af1f83db_77ca7737",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-30T03:36:12Z",
+      "side": 1,
+      "message": "I think that would be appropriate to change the action from calling targets of instead of phosphor-state-manager behaviors directly,\nIf there\u0027s any customized needs, just overwrite the target files under projects.\nPlease to reply if there\u0027s any concerned or agreement, thank you.",
+      "parentUuid": "27ac8415_902ad005",
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e581c63e_cb7308cb",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -355,6 +373,30 @@
       "side": 1,
       "message": "So far, most button handler in phosphor-buttons was triggered by property change",
       "parentUuid": "5db81701_c68fb5a9",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 38
+      },
+      "revId": "d8ca76778773532170e9a57a0eed23a590328294",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7de2c259_c8ce1f41",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2022-12-30T03:36:12Z",
+      "side": 1,
+      "message": "Due to power button is pressed/released by user, it may not be too complex to operate. In reality, is there any existed cases that designs power button behavior to over 4, 5 or more levels? if not we think there\u0027s no urgent concern about changing the current button handler design that cannot bring the pressing timestamp into signal.",
+      "parentUuid": "53520e4a_368a03c5",
       "range": {
         "startLine": 47,
         "startChar": 0,

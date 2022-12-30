@@ -1,12 +1,5 @@
 description: >
     An interface for NMI signal source.
-methods:
-    - name: nmiEnable
-      description: >
-          Enables the BMC NMI out event.
-      errors:
-          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
-          - xyz.openbmc_project.Chassis.Common.Error.IOError
 
 properties:
     - name: BMCSource
@@ -14,6 +7,11 @@ properties:
       description: >
           Keeps track of NMI signal source in BMC.
       default: "None"
+    - name: Enabled
+      type: boolean
+      description: >
+          whether the BMC enables NMI event.
+      default: false
 
 enumerations:
     - name: BMCSourceSignal

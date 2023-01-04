@@ -1,0 +1,31 @@
+description: >
+    Implement to show the states of the zone and thermal/fan PID control loop.
+
+properties:
+    - name: Leader
+      type: string
+      flags:
+          - readonly
+      description: >
+          In zone(/xyz/openbmc_project/settings/fanctrl/zoneX), Leader means the
+          name of the thermal PID config that is driving the fans. In
+          thermal/fan PID(/xyz/openbmc_project/settings/fanctrl/zoneX/PIDName),
+          Leader means the hottest sensor or the highest RPM sensor name in the
+          "Inputs" list.
+
+    - name: Input
+      type: double
+      flags:
+          - readonly
+      description: >
+          In thermal/fan PID, this property is the "Leader" sensor value. Data
+          units are based on sensor(thermal is degreeC or margin, fan is RPM).
+
+    - name: Output
+      type: double
+      flags:
+          - readonly
+      description: >
+          This property is the thermal/fan PID loop result. In thermal PID, this
+          data can be RPM or PWM depending on PID parameter settings. But in fan
+          PID, this data is the PWM duty set for the fan.

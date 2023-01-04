@@ -1,0 +1,26 @@
+description: >
+    Implement to show the states of the power PID control loop.
+
+properties:
+    - name: Leader
+      type: string
+      flags:
+          - readonly
+      description: >
+          This means the name of the power sensor that is the highest watt in
+          input sensor list.
+
+    - name: Input
+      type: double
+      flags:
+          - readonly
+      description: >
+          The "Leader" sensor reading.
+
+    - name: Output
+      type: double
+      flags:
+          - readonly
+      description: >
+          This property is the power PID loop result. This data doesn't have
+          static unit, it can be RPM or PWM depending on PID parameter settings.

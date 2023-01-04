@@ -1,0 +1,13 @@
+description: >
+    Implement to show the states of the PID control loop.
+
+    Control.Zone.Leader is read-only.
+
+properties:
+    - name: Leader
+      type: string
+      flags:
+          - readonly
+      description: >
+          The name of the temperature PID config that is driving the fans for
+          this zone.

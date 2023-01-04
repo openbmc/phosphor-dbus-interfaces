@@ -1,0 +1,28 @@
+description: >
+    Implement to show the states of the thermal/fan PID control loop.
+
+    Control.Zone.Leader is read-only. Control.Zone.Input is read-only.
+    Control.Zone.Output is read-only.
+
+properties:
+    - name: Leader
+      type: string
+      flags:
+          - readonly
+      description: >
+          The name of the thermal/fan config that is driving the fans for
+          this zone/PID loop.
+
+    - name: Input
+      type: double
+      flags:
+          - readonly
+      description: >
+          The Leader's input value that is the input data in PID loop.
+
+    - name: Output
+      type: double
+      flags:
+          - readonly
+      description: >
+          The PID loop's result.

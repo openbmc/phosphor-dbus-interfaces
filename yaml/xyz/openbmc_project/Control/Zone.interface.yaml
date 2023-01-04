@@ -1,0 +1,12 @@
+description: >
+    Implement to show the states of the PID control loop.
+
+    Control.Zone.Leader is read.
+
+properties:
+    - name: Leader
+      type: string
+      flags:
+          - readonly
+      description: >
+          Which PID config lead this zone.

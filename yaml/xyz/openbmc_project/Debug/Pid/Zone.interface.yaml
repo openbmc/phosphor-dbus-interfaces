@@ -1,0 +1,11 @@
+description: >
+    Implement to show the states of the zone.
+
+properties:
+    - name: Leader
+      type: string
+      flags:
+          - readonly
+      description: >
+          This means the name of the thermal/Power PID config that is driving
+          the fans.

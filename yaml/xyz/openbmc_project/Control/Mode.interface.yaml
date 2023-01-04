@@ -4,7 +4,7 @@ description: >
 
     Control.Mode.Manual is read/write. Control.Mode.FailSafe is read/write,
     however not all implementations may respect having this property set
-    externally.
+    externally. Control.Mode.Leader is read.
 
 properties:
     - name: Manual
@@ -15,3 +15,9 @@ properties:
       type: boolean
       description: >
           Whether the object is in fail-safe mode or not.
+    - name: Leader
+      type: string
+      flags:
+          - readonly
+      description: >
+          Which PID config lead this zone.

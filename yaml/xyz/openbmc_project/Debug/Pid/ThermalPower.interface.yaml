@@ -1,0 +1,33 @@
+description: >
+    Implement to show the states of the first PID control loop(thermal/power).
+
+properties:
+    - name: Leader
+      type: string
+      flags:
+          - readonly
+      description: >
+          This means the name of the thermal sensor that is the highest temp in
+          input sensor list.
+
+    - name: Type
+      type: string
+      flags:
+          - readonly
+      description: >
+          The unit of "Leader" sensor. DegreeC or Margin or Watt.
+
+    - name: Input
+      type: double
+      flags:
+          - readonly
+      description: >
+          The "Leader" sensor reading.
+
+    - name: Output
+      type: double
+      flags:
+          - readonly
+      description: >
+          This property is the thermal PID loop result. This data doesn't have
+          static unit, it can be RPM or PWM depending on PID parameter settings.

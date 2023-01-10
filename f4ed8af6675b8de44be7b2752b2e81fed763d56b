@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4818bff2_bb83c306",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000052
+      },
+      "writtenOn": "2023-01-10T20:29:52Z",
+      "side": 1,
+      "message": "In priority order, my concerns with this:\n1. each metric should be timestamped, typically with the time the metric was sampled\n2. support for reading multiple timestamped values of a single metric, so sampling time isn\u0027t necessarily the same as when client tries to read.  I\u0027m expecting client to be something that wants to export metrics off the BMC.  instead of polling at the sampling frequency it can have a lower collection frequency.\n3. metrics are read one at a time? Maybe there\u0027s a bulk property read in the that might make this better.",
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

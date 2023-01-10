@@ -16,6 +16,23 @@
       "message": "In priority order, my concerns with this:\n1. each metric should be timestamped, typically with the time the metric was sampled\n2. support for reading multiple timestamped values of a single metric, so sampling time isn\u0027t necessarily the same as when client tries to read.  I\u0027m expecting client to be something that wants to export metrics off the BMC.  instead of polling at the sampling frequency it can have a lower collection frequency.\n3. metrics are read one at a time? Maybe there\u0027s a bulk property read in the that might make this better.",
       "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0b5be12_cde821ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000052
+      },
+      "writtenOn": "2023-01-10T20:35:52Z",
+      "side": 1,
+      "message": "One more thought, though this is more work.\nA more generic interface that exports metrics of different types.  If you look at metric systems like OpenTelemetry, OpenCensus, Prometheus, they all define metric types like gauge, historgram, counts.  Each metric is named. Versus each metric being explicitly being written out in the yaml.\n\nSomething like this might make it easy for individual daemons to add their own custom metrics too, without having to add to this interface explicitly.  It\u0027s a use case we have but I\u0027m not sure about OpenBMC in general.\n\nI\u0027m question is dbus is the right level for this abstraction or if that\u0027s better left to an exporter.",
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

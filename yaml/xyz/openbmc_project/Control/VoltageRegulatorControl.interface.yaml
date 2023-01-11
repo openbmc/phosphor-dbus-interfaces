@@ -4,6 +4,11 @@ description: >
     voltage regulator channel, and allows external entities to control Voltage
     Regulator devices.
 
+    Any service implementing Control.VoltageRegulatorControl on one or more
+    objects must implement org.freedesktop.DBus.ObjectManager on
+    /xyz/openbmc_project/vr. DBus objects must fall under this path so that they
+    can be found through the GetManagedObjects DBus method.
+
 properties:
     - name: Voltage
       type: double

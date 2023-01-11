@@ -13,6 +13,10 @@ description: >
     alongside to a VoltageRegulatorControl interface, and may react to the
     results of changes to the Control interface.
 
+    Any service implementing Control.VoltageRegulatorControlMode on one or more
+    objects must implement org.freedesktop.DBus.ObjectManager on
+    /xyz/openbmc_project/vr.
+
 properties:
     - name: Supported
       type: array[string]

@@ -33,6 +33,24 @@
       "message": "One more thought, though this is more work.\nA more generic interface that exports metrics of different types.  If you look at metric systems like OpenTelemetry, OpenCensus, Prometheus, they all define metric types like gauge, historgram, counts.  Each metric is named. Versus each metric being explicitly being written out in the yaml.\n\nSomething like this might make it easy for individual daemons to add their own custom metrics too, without having to add to this interface explicitly.  It\u0027s a use case we have but I\u0027m not sure about OpenBMC in general.\n\nI\u0027m question is dbus is the right level for this abstraction or if that\u0027s better left to an exporter.",
       "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5155bab2_f30f7a8b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000052
+      },
+      "writtenOn": "2023-01-11T00:43:21Z",
+      "side": 1,
+      "message": "erase #3.  dbus has a GetAll and that would work.",
+      "parentUuid": "4818bff2_bb83c306",
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

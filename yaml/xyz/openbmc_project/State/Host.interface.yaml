@@ -47,6 +47,9 @@ enumerations:
             description: >
                 Host firmware will be rebooted without notification and chassis
                 power will remain on throughout the reboot
+          - name: "GracefulShutdown"
+            description: >
+                Host firmware will be should be GracefulShutdowned
 
     - name: HostState
       description: >

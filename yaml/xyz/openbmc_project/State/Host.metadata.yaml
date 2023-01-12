@@ -16,3 +16,6 @@
 - name: HostRebootFailure
   inherits:
       - xyz.openbmc_project.State.SystemdTarget.Failure
+- name: HostHardPowerOffFailure
+  inherits:
+      - xyz.openbmc_project.State.SystemdTarget.Failure

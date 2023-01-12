@@ -47,6 +47,9 @@ enumerations:
             description: >
                 Host firmware will be rebooted without notification and chassis
                 power will remain on throughout the reboot
+          - name: "HardPowerOff"
+            description: >
+                CPU should be Powered Off by HW
 
     - name: HostState
       description: >

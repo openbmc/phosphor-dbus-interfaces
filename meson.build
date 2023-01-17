@@ -145,3 +145,5 @@ phosphor_dbus_interfaces_dep = declare_dependency(
     dependencies: sdbusplus_dep,
     variables: ['yamldir=' + meson.project_source_root() / 'yaml'],
 )
+
+meson.override_dependency('phosphor-dbus-interfaces', phosphor_dbus_interfaces_dep)

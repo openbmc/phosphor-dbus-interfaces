@@ -120,3 +120,10 @@ enumerations:
             description: >
                 The host firmware crashed and the BMC has automatically
                 initiated a restart of the host firmware
+          - name: "HardReset"
+            description: >
+                Hard reset of Host
+          - name: "WarmReset"
+            description: >
+                Warm reset of Host
+

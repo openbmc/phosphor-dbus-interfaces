@@ -88,6 +88,24 @@
       "parentUuid": "884d0516_8291b149",
       "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f373e165_16bf7c2e",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-01-19T22:30:58Z",
+      "side": 1,
+      "message": "I\u0027m getting confused. Fundamentally the \"Off\" in this enum is meant to be a graceful shutdown so adding a GracefulShutdown doesn\u0027t make sense. If anything, you should be trying to get a HardPowerOff or something like that in this interface. But that debate has raged for years and the outcome was hard power off\u0027s are done via the chassis.",
+      "parentUuid": "ffc23212_b2d9336c",
+      "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

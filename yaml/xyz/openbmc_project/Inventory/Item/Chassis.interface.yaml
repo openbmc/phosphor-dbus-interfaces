@@ -13,6 +13,11 @@ enumerations:
       description: >
           Possible chassis type
       values:
+          - name: Blade
+            description: >
+                An enclosed or semi-enclosed, typically vertically-oriented,
+                system chassis that must be plugged into a multi-system chassis
+                to function normally.
           - name: Component
             description: >
                 A small chassis, card, or device that contains devices for a

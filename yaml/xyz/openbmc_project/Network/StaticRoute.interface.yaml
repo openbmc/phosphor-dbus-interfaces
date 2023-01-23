@@ -1,0 +1,25 @@
+description: >
+    This interface defines network static routes
+
+properties:
+    - name: Destination
+      type: string
+      description: >
+          The value of this property shall be a destination address
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+    - name: Gateway 
+      type: string
+      description: >
+          The value of this property shall be a next hop address assigned to the
+          ethernet interface to reach destination address.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+    - name: PrefixLength
+      type: byte
+      description: >
+          This is the number of network bits in the address.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed

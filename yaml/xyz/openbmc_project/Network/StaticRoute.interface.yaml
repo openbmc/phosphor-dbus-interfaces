@@ -1,0 +1,18 @@
+description: >
+    This defines IPv4 static routes
+
+properties:
+    - name: DestinationAddress
+      type: string
+      description: >
+          The value of this property shall be a destination address
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+    - name: NextHopAddress
+      type: string
+      description: >
+          The value of this property shall be a next hop address assigned to the
+          ethernet interface to reach destination address.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed

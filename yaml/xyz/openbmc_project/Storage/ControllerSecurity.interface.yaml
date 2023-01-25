@@ -1,0 +1,53 @@
+description: >
+    Implement to provide storage controller security methods.
+
+methods:
+    - name: SecuritySend
+      description: >
+          Send a Security Protocol message to the storage controller. Fields are
+          defined by SPC-5.
+      parameters:
+          - name: Protocol
+            type: byte
+            description: >
+                The Security Protocol field of the request
+          - name: ProtocolSpecific
+            type: uint16
+            description: >
+                The Security Protocol Specific field of the request
+          - name: Data
+            type: array[byte]
+            description: >
+                Binary payload data of the request
+      errors:
+          - xyz.openbmc_project.Common.Error.UnsupportedRequest
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: SecurityReceive
+      description: >
+          Receive a Security Protocol message from the storage controller.
+          Fields are defined by SPC-5.
+      parameters:
+          - name: Protocol
+            type: byte
+            description: >
+                The Security Protocol field of the request
+          - name: ProtocolSpecific
+            type: uint16
+            description: >
+                The Security Protocol Specific field of the request
+          - name: AllocationLength
+            type: size
+            description: >
+                The length of binary data to allow to be returned
+      returns:
+          - name: Data
+            type: array[byte]
+            description: >
+                Binary response data. The length of the data will be at most
+                AllocationLength.
+      errors:
+          - xyz.openbmc_project.Common.Error.UnsupportedRequest
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure

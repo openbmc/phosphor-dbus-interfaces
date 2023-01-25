@@ -41,6 +41,13 @@ properties:
       errors:
           - xyz.openbmc_project.Common.Error.NotAllowed
 
+    - name: RouteMetric
+      type: uint16
+      description: >
+          The metric of the prefix route that decides the route priority.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
 enumerations:
     - name: Protocol
       description: >

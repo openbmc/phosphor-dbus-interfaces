@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7522326_18b94682",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-29T23:45:07Z",
+      "side": 1,
+      "message": "Is there any reason this won\u0027t work for IPv6?",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "edd1f06c_0fe1161a",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-29T23:45:07Z",
+      "side": 1,
+      "message": "(similar to the gateway question, is there a more standard name?)\n\nCan it just be \"Destination\"?",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4df9c139_602363ca",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-29T23:45:07Z",
+      "side": 1,
+      "message": "Isn\u0027t this typically called a \"Gateway\"?  Is there words from a standard we can use instead of \"NextHopAddress\"?",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a20588b5_1ebb7832",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-29T23:45:07Z",
+      "side": 1,
+      "message": "size_t.  Don\u0027t over optimize.",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

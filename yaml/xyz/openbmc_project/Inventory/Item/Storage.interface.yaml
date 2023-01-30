@@ -1,2 +1,16 @@
 description: >
     Implement to provide storage attributes.
+
+associations:
+    - name: storage_controller
+      description: >
+          StorageControllers associated with the Storage object
+      reverse_names: storage
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.StorageController
+    - name: drive
+      description: >
+          Drive objects associated with the Storage object
+      reverse_names: storage
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Drive

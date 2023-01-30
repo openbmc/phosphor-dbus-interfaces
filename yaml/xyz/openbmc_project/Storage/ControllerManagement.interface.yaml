@@ -1,0 +1,27 @@
+description: >
+    Implement to provide storage controller management.
+
+methods:
+    - name: AttachVolume
+      description: >
+          Attach a volume to the controller
+      parameters:
+          - name: path
+            type: object_path
+            description: >
+                Path of the volume
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: DetachVolume
+      description: >
+          Detach a volume from the controller
+      parameters:
+          - name: path
+            type: object_path
+            description: >
+                Path of the volume
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure

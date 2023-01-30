@@ -1,2 +1,10 @@
 description: >
     Implement to provide storage controller attributes.
+
+associations:
+    - name: attaching
+      description: >
+          A StorageController may have attached Volume objects.
+      reverse_names: attached_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Volume

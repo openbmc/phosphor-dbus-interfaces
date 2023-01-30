@@ -125,6 +125,7 @@ subdir('Sensor')
 subdir('Smbios')
 subdir('Software')
 subdir('State')
+subdir('Storage')
 subdir('Telemetry')
 subdir('Time')
 generated_others += custom_target(

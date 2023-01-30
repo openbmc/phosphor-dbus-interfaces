@@ -1,0 +1,32 @@
+description: >
+    NVMe-specific details of a StorageController.
+properties:
+    - name: NVMeVersion
+      type: string
+      description: >
+          The NVMe protocol version as a string, such as "1.4" or "1.2.1"
+    - name: ControllerType
+      type: enum[self.NVMeControllerType]
+      description: >
+          The controller type reported by the NVMe controller.
+
+enumerations:
+    - name: NVMeControllerType
+      description: >
+          The type of NVMe Controller
+      values:
+          - name: IO
+            description: >
+                An IO Controller
+          - name: Administrative
+            description: >
+                An Administrative controller
+          - name: Discovery
+            description: >
+                A Discovery controller
+          - name: NotReported
+            description: >
+                Value 0, from NVMe specification prior to 1.4
+          - name: Unknown
+            description: >
+                Other values

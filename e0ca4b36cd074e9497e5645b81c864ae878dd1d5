@@ -106,6 +106,24 @@
       "parentUuid": "ffc23212_b2d9336c",
       "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "605b9a8c_310550ea",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2023-01-30T02:17:48Z",
+      "side": 1,
+      "message": "As the explanation, I classify the behaviors for each transition now exists:\nhost transition to off -\u003e host graceful shutdown\nchassis transition to off -\u003e whole sled/slot power off\n\nSo if I need to implement an new behavior that hard power off the CPU ONLY, and keep the other partition on slot power on like NIC, BMC, BIC... and so on, what I have to do is adding a new transition to stand as host hard power off, is there any reason that can\u0027t be accepted? thank you for your replying.",
+      "parentUuid": "f373e165_16bf7c2e",
+      "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

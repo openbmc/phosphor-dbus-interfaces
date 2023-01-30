@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e14bc8fa_b0f4aac1",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2023-01-30T08:33:30Z",
+      "side": 1,
+      "message": "This will work for IPv6 as well. Current plan at BMC is to implement for IPv4. But yes, this can be added in generic to ipv6 and ipv4",
+      "parentUuid": "d7522326_18b94682",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "edd1f06c_0fe1161a",
         "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
         "patchSetId": 4
@@ -31,6 +49,29 @@
       "writtenOn": "2023-01-29T23:45:07Z",
       "side": 1,
       "message": "(similar to the gateway question, is there a more standard name?)\n\nCan it just be \"Destination\"?",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "910a32a2_f6ad0db1",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2023-01-30T08:33:30Z",
+      "side": 1,
+      "message": "If it takes only the IP address, then this name seems good. Please check if the hostname is also processed by systemd here. Accordingly this can be renamed.",
+      "range": {
+        "startLine": 8,
+        "startChar": 48,
+        "endLine": 8,
+        "endChar": 67
+      },
       "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -60,6 +101,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "26cb0cc9_7685c812",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2023-01-30T08:33:30Z",
+      "side": 1,
+      "message": "Yes. nexthop is the name used in the man page. If this takes only IP address, then this name is fine. Description needs to give more details",
+      "parentUuid": "4df9c139_602363ca",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a20588b5_1ebb7832",
         "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
         "patchSetId": 4
@@ -71,6 +136,24 @@
       "writtenOn": "2023-01-29T23:45:07Z",
       "side": 1,
       "message": "size_t.  Don\u0027t over optimize.",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db410fba_514a3078",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2023-01-30T08:33:30Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "a20588b5_1ebb7832",
       "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

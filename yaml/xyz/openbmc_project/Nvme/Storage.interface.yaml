@@ -1,0 +1,35 @@
+description: >
+    NVMe-specific details of a Storage object.
+methods:
+    - name: CreateVolume
+      description: >
+          Create a Volume (NVMe Namespace)
+      parameters:
+          - name: Size
+            type: uint64
+            description: >
+                Size of the new volume in bytes
+          - name: LBAFormat
+            type: size
+            description: >
+                The index value of the LBA Format to use for the new namespace,
+                from SupportedFormats property.
+      errors:
+          - xyz.openbmc_project.Common.Error.TooManyResources
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+      returns:
+          - name: path
+            type: object_path
+            description: >
+                Path of the Volume object which has been created.
+
+properties:
+    - name: SupportedFormats
+      type: array[struct[size, size, size]]
+      description: >
+          Returns structs of (index, data_size, metadata_size), the list
+          of formats reported by LBA Format in the Identify Namespace structure
+          for NSID 0 (common to all namespaces).
+          The index field can be used as the .CreateVolume LBAFormat
+          parameter.
+

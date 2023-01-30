@@ -1,0 +1,7 @@
+description: >
+    Details of a Volume that is a NVMe namespace.
+properties:
+    - name: NamespaceId
+      type: uint32
+      description: >
+          The NVMe Namespace Id (NSID)

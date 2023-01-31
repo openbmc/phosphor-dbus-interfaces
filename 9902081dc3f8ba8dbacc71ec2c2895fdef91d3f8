@@ -107,6 +107,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "864f9bcc_80cb4c75",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-31T17:07:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "683b785b_c8f97f92",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "910a32a2_f6ad0db1",
@@ -120,6 +138,30 @@
       "writtenOn": "2023-01-30T08:33:30Z",
       "side": 1,
       "message": "If it takes only the IP address, then this name seems good. Please check if the hostname is also processed by systemd here. Accordingly this can be renamed.",
+      "range": {
+        "startLine": 8,
+        "startChar": 48,
+        "endLine": 8,
+        "endChar": 67
+      },
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f7608b1_6c1c15f9",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-31T17:07:40Z",
+      "side": 1,
+      "message": "Do we need to clarify \"destination address\" can also be a hostname?",
+      "parentUuid": "910a32a2_f6ad0db1",
       "range": {
         "startLine": 8,
         "startChar": 48,
@@ -239,6 +281,30 @@
       "side": 1,
       "message": "Personally I would suggest asking Redfish to match what the rest of the world calls these things then. ;)\n\nI tend not to put significant credence into the names Redfish chose when there is prior art.  Please match systemd/RFCs for these names.  Especially since we are already using `Gateway` in IP.",
       "parentUuid": "b8cffed6_d0f43a13",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16098db4_e1973c65",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-31T17:07:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eacd8779_bb650737",
       "range": {
         "startLine": 12,
         "startChar": 12,

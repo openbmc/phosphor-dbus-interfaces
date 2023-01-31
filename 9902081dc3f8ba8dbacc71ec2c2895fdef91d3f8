@@ -227,6 +227,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "eacd8779_bb650737",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-31T17:05:51Z",
+      "side": 1,
+      "message": "Personally I would suggest asking Redfish to match what the rest of the world calls these things then. ;)\n\nI tend not to put significant credence into the names Redfish chose when there is prior art.  Please match systemd/RFCs for these names.  Especially since we are already using `Gateway` in IP.",
+      "parentUuid": "b8cffed6_d0f43a13",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a20588b5_1ebb7832",
         "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
         "patchSetId": 4
@@ -274,6 +298,24 @@
       "side": 1,
       "message": "Prefixlenght fits in byte value.\nwe also followed the same byte type for Prefixlenght on IP interface",
       "parentUuid": "db410fba_514a3078",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb89a37c_9d8ac974",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-01-31T17:05:51Z",
+      "side": 1,
+      "message": "I understand that PrefixLength exists on IP.interface as a byte.  This has been that way since the beginning in 2017.  Today I would have also asked them to make a change.  I\u0027d prefer we just move this to `size` now and we can figure out how to refactor IP to be `size` at some point in the (hopefully not too distant) future.\n\nIf it is a size or a byte you still have to ensure that it is less than 128 or 32 (depending on IPv4 vs IPv6) so there isn\u0027t any real advantage in choosing byte here.",
+      "parentUuid": "042df618_a73a1288",
       "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

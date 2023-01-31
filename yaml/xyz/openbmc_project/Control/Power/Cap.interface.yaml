@@ -42,3 +42,48 @@ properties:
           When the PowerCap is set to any value between MinSoftPowerCapValue and
           MinPowerCapValue an attempt will be made to maintain the cap but it
           will not be guaranted.
+
+    - name: ExceptionAction
+      type: enum[self.ExceptionActions]
+      description: >
+          Exception Actions, taken if the Power Limit is exceeded and cannot be
+          controlled within the Correction time limit.
+
+    - name: CorrectionTime
+      type: uint64
+      description: >
+          Correction Time Limit in microseconds. Maximum time taken to limit the
+          power after the platform power has reached the power limit before the
+          Exception Action will be taken. The Exception Action shall be taken if
+          the system power usage constantly exceeds the specified power limit
+          for more than the Correction Time Limit interval. The Correction Time
+          Limit timeout automatically restarts if the system power meets or
+          drops below the Power Limit.
+
+    - name: SamplingPeriod
+      type: uint64
+      default: 1
+      description: >
+          Management application Statistics Sampling period in microseconds.
+
+enumerations:
+    - name: ExceptionActions
+      description: >
+          Exception actions, taken if the Power Limit is exceeded and cannot be
+          controlled within the Correction Time Limit.
+      values:
+          - name: NoAction
+            description: >
+                No action is called.
+
+          - name: HardPowerOff
+            description: >
+                Hard Power Off system and log event.
+
+          - name: LogEventOnly
+            decription: >
+                Log Event Only.
+
+          - name: Oem
+            decription: >
+                OEM defined action.

@@ -42,3 +42,103 @@ properties:
           When the PowerCap is set to any value between MinSoftPowerCapValue and
           MinPowerCapValue an attempt will be made to maintain the cap but it
           will not be guaranted.
+
+    - name: ExceptionAction
+      type: enum[self.ExceptionActions]
+      description: >
+          Exception Actions, taken if the Power Limit is exceeded and cannot be
+          controlled within the Correction time limit
+
+    - name: CorrectionTime
+      type: uint32
+      description: >
+          Maximum time taken to limit the power after the platform power has
+          reached the power limit before the Exception Action will be taken. The
+          Exception Action shall be taken if the system power usage constantly
+          exceeds the specified power limit for more than the Correction Time
+          Limit interval. The Correction Time Limit timeout automatically
+          restarts if the system power meets or drops below the Power Limit.
+
+    - name: SamplingPeriod
+      type: uint16
+      default: 1
+      description: >
+          Management application Statistics Sampling period in seconds
+
+enumerations:
+    - name: ExceptionActions
+      description: >
+          Exception Actions, taken if the Power Limit is exceeded and cannot be
+          controlled within the Correction Time Limit
+      values:
+          - name: NoAction
+            description: >
+                No Action
+
+          - name: HardPowerOff
+            description: >
+                Hard Power Off system and log event to SEL
+
+          - name: OEM02
+            decription: >
+                OEM (02) defined action
+
+          - name: OEM03
+            decription: >
+                OEM (03) defined action
+
+          - name: OEM04
+            decription: >
+                OEM (04) defined action
+
+          - name: OEM05
+            decription: >
+                OEM (05) defined action
+
+          - name: OEM06
+            decription: >
+                OEM (06) defined action
+
+          - name: OEM07
+            decription: >
+                OEM (07) defined action
+
+          - name: OEM08
+            decription: >
+                OEM (08) defined action
+
+          - name: OEM09
+            decription: >
+                OEM (09) defined action
+
+          - name: OEM0A
+            decription: >
+                OEM (0A) defined action
+
+          - name: OEM0B
+            decription: >
+                OEM (0B) defined action
+
+          - name: OEM0C
+            decription: >
+                OEM (0C) defined action
+
+          - name: OEM0D
+            decription: >
+                OEM (0D) defined action
+
+          - name: OEM0E
+            decription: >
+                OEM (0E) defined action
+
+          - name: OEM0F
+            decription: >
+                OEM (0F) defined action
+
+          - name: OEM10
+            decription: >
+                OEM (10) defined action
+
+          - name: SELLog
+            decription: >
+                SEL log only

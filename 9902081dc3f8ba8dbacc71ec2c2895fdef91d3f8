@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6cd4d114_3d0ad614",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-01-31T15:20:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a8c4e1d_dfe31fcc",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "edd1f06c_0fe1161a",
@@ -67,6 +85,24 @@
       "writtenOn": "2023-01-29T23:45:07Z",
       "side": 1,
       "message": "(similar to the gateway question, is there a more standard name?)\n\nCan it just be \"Destination\"?",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "683b785b_c8f97f92",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-01-31T15:20:50Z",
+      "side": 1,
+      "message": "I think \"Destination\" is also ok.",
+      "parentUuid": "edd1f06c_0fe1161a",
       "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -167,6 +203,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b8cffed6_d0f43a13",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-01-31T15:20:50Z",
+      "side": 1,
+      "message": "I have tried to match these names to redfish proposal \n\"IPv4StaticRoutes\": [\n{\n\"NextHopAddress\": \"192.168.1.1\",\n\"DestinationAddress\": \"192.1.1.2\",\n\"SubnetMask\": \"255.255.255.255\"\n}\n\nas per systemd-networkd, it uses \"Gateway\" and \"Destination\" terminology which is as per RFCs\n\n[Route]\nGateway\u003d192.168.0.10\nDestination\u003d10.0.0.0/8\n\nI am good with any of these names.",
+      "parentUuid": "783298af_ba89a12d",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a20588b5_1ebb7832",
         "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
         "patchSetId": 4
@@ -196,6 +256,24 @@
       "side": 1,
       "message": "+1",
       "parentUuid": "a20588b5_1ebb7832",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "042df618_a73a1288",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-01-31T15:20:50Z",
+      "side": 1,
+      "message": "Prefixlenght fits in byte value.\nwe also followed the same byte type for Prefixlenght on IP interface",
+      "parentUuid": "db410fba_514a3078",
       "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

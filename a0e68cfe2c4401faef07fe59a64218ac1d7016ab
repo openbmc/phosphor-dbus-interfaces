@@ -52,6 +52,57 @@
       "parentUuid": "5913eebe_ab5384ee",
       "revId": "a0e68cfe2c4401faef07fe59a64218ac1d7016ab",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c53f6067_8db1ad64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-02-02T11:41:57Z",
+      "side": 1,
+      "message": "This is a good idea, and helps me get closer to my vision here: https://github.com/openbmc/phosphor-pid-control/issues/27",
+      "revId": "a0e68cfe2c4401faef07fe59a64218ac1d7016ab",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e5ada0d5_0f4ca7f3",
+        "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-02-02T11:41:57Z",
+      "side": 1,
+      "message": "Suggested wording: is read-only",
+      "revId": "a0e68cfe2c4401faef07fe59a64218ac1d7016ab",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81a56ef8_73beb2a3",
+        "filename": "yaml/xyz/openbmc_project/Control/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-02-02T11:41:57Z",
+      "side": 1,
+      "message": "Suggested wording: The name of the PID loop that is requesting the highest fan RPM for this zone.\n\nThis might be too wordy, requiring word wrap, feel free to trim it if needed, or perhaps use \"driving\" instead of \"requesting\" to be more assertive.",
+      "revId": "a0e68cfe2c4401faef07fe59a64218ac1d7016ab",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

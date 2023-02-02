@@ -174,6 +174,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8f7940f3_11f7dca2",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-02-02T16:18:52Z",
+      "side": 1,
+      "message": "only destination network IP address allowed, won\u0027t allow hostname.\nwill update this in the description",
+      "parentUuid": "3f7608b1_6c1c15f9",
+      "range": {
+        "startLine": 8,
+        "startChar": 48,
+        "endLine": 8,
+        "endChar": 67
+      },
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4df9c139_602363ca",
         "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
         "patchSetId": 4
@@ -382,6 +406,24 @@
       "side": 1,
       "message": "I understand that PrefixLength exists on IP.interface as a byte.  This has been that way since the beginning in 2017.  Today I would have also asked them to make a change.  I\u0027d prefer we just move this to `size` now and we can figure out how to refactor IP to be `size` at some point in the (hopefully not too distant) future.\n\nIf it is a size or a byte you still have to ensure that it is less than 128 or 32 (depending on IPv4 vs IPv6) so there isn\u0027t any real advantage in choosing byte here.",
       "parentUuid": "042df618_a73a1288",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "249ce25d_f2ee38c3",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-02-02T16:18:52Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "fb89a37c_9d8ac974",
       "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

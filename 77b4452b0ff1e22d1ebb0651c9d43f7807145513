@@ -80,6 +80,30 @@
       },
       "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "954dc567_9bde2bca",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-02T17:51:50Z",
+      "side": 1,
+      "message": "I see this in the DCMI spec:\n\n\u003e 02h – 10h OEM defined actions\n\nThis is unacceptable in a dbus interface.",
+      "parentUuid": "8d875728_34f37b31",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 140,
+        "endChar": 39
+      },
+      "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

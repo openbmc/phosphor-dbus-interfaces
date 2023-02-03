@@ -169,6 +169,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "985a7535_aa90228a",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-02-03T18:37:40Z",
+      "side": 1,
+      "message": "What do you mean by this? Usually EpochTime is used to determine a timestamp. The number of milliseconds since the last epoch is used to determine what point in time something occurred. It is not used for ranges of times such as how long a program or system has been active.\n\nIf you mean make the uptime (how long the bmc has been booted up) in uint64 of milliseconds/microseconds passed from current time since boot, then I will make the change.\n\nAlso I found Entry.interface.yaml in the Logging folder and it seems to use milliseconds and not microseconds, which is the convention?",
+      "parentUuid": "157c3eb8_ceaea0ff",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 21,
+        "endChar": 43
+      },
+      "revId": "729009e4d9a1434cc7297d838ebdf8bae5ff10a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "526e08f4_befbad66",
         "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
         "patchSetId": 9

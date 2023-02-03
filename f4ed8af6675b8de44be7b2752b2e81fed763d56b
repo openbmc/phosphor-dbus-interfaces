@@ -72,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "621e2cd4_3aa9c65b",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-02-03T18:37:40Z",
+      "side": 1,
+      "message": "Memory allocation is listed based on page sizes and a page is a whole number of bytes. Could you clarify more on what you mean by problematic?",
+      "parentUuid": "0fade077_a1bcaef2",
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a0e28782_90264010",
         "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
         "patchSetId": 10
@@ -83,6 +101,30 @@
       "writtenOn": "2023-01-27T17:40:24Z",
       "side": 1,
       "message": "How do you plan to obtain these metrics?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 50
+      },
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29a79f62_877b510b",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-02-03T18:37:40Z",
+      "side": 1,
+      "message": "My plan is to query the State Manager and store this information on persistent storage. A program will check the lastRebootTime and check whether it is different than what is stored on the persistent data. If so, then it increments the boot count and if the lastRebootReason is Unknown, it increments the crash counter.",
+      "parentUuid": "a0e28782_90264010",
       "range": {
         "startLine": 22,
         "startChar": 0,
@@ -118,6 +160,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "428c820d_e55353e2",
+        "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-02-03T18:37:40Z",
+      "side": 1,
+      "message": "Same as above conversation. If milliseconds or microseconds is what should be used. Then I will make the change.",
+      "parentUuid": "bc8b7ed1_ace49b74",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 46
+      },
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b454e0b7_fa225890",
         "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
         "patchSetId": 10
@@ -129,6 +195,30 @@
       "writtenOn": "2023-01-27T17:40:24Z",
       "side": 1,
       "message": "We usually avoid putting units on property names.",
+      "range": {
+        "startLine": 6,
+        "startChar": 24,
+        "endLine": 6,
+        "endChar": 28
+      },
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a0a36ea_61baf841",
+        "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-02-03T18:37:40Z",
+      "side": 1,
+      "message": "Will do. I just thought it was supposed to be the same as in the schema.",
+      "parentUuid": "b454e0b7_fa225890",
       "range": {
         "startLine": 6,
         "startChar": 24,
@@ -162,6 +252,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c1e4fe8_e975cfbb",
+        "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-02-03T18:37:40Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ef14e35c_df14acaf",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 48
+      },
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "65e90153_6af7cd88",
@@ -175,6 +289,30 @@
       "writtenOn": "2023-01-27T17:40:24Z",
       "side": 1,
       "message": "Please follow the conventions in EthernetInterface.  Don\u0027t encode two binaries as an enumeration.",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 60
+      },
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b724c6c_da5b2149",
+        "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-02-03T18:37:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "65e90153_6af7cd88",
       "range": {
         "startLine": 18,
         "startChar": 0,

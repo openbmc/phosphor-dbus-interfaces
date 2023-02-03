@@ -170,6 +170,30 @@
       },
       "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36582bb6_7a47039f",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-03T15:08:04Z",
+      "side": 1,
+      "message": "We need to find another solution.  I\u0027m not accepting undocumented \"OEM\" properties that just mirror some IPMI specification.  If we did this everywhere we\u0027d end up with dbus being the _worst_ of all interfaces because it would take all the bad stuff from every \"standard\" in the world.\n\nIf you have an explicit need for some specific OEM behaviors here, please document them with real readable property descriptions and names.\n\nMaking ipmitool work out of the box is not high on my list of concerns.  We can always reject when someone tries to set OEMxx on the IPMI response.",
+      "parentUuid": "304c6d15_193672b4",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 140,
+        "endChar": 39
+      },
+      "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

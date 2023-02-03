@@ -36,6 +36,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b9111ab_024319ee",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2023-02-03T04:25:03Z",
+      "side": 1,
+      "message": "I updated the description to mention units of CorrectionTime.",
+      "parentUuid": "cd9f6710_98defbaf",
+      "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "db455a2a_63724adc",
@@ -49,6 +67,30 @@
       "writtenOn": "2023-02-02T17:48:18Z",
       "side": 1,
       "message": "Don\u0027t use uint16 on this either.",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 63,
+        "endChar": 18
+      },
+      "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67104e7a_6f707c11",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2023-02-03T04:25:03Z",
+      "side": 1,
+      "message": "In the DCMI specification, the unit of SamplingPeriod is second and the number of bytes to describe SamplingPeriod is 2. Therefore, I think the type of this property should be unit16",
+      "parentUuid": "db455a2a_63724adc",
       "range": {
         "startLine": 62,
         "startChar": 0,
@@ -96,6 +138,30 @@
       "side": 1,
       "message": "I see this in the DCMI spec:\n\n\u003e 02h – 10h OEM defined actions\n\nThis is unacceptable in a dbus interface.",
       "parentUuid": "8d875728_34f37b31",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 140,
+        "endChar": 39
+      },
+      "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "304c6d15_193672b4",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2023-02-03T04:25:03Z",
+      "side": 1,
+      "message": "In the ipmitool, it is supporting to configuration exception action is OEM_02/03../0F/10. Therefore, the Dbus-interface should include those options. The application which implements this interface can call a service to handle OEM actions, users can override this service to implement their exception action.",
+      "parentUuid": "954dc567_9bde2bca",
       "range": {
         "startLine": 82,
         "startChar": 0,

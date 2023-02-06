@@ -194,6 +194,30 @@
       },
       "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aed6c28f_7478e2e4",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2023-02-06T02:31:57Z",
+      "side": 1,
+      "message": "Depending on the platform, the algorithm to control the system when the total power consumption exceeds the power limit can be different, therefore an OEM action is necessary.\n\nWhat do you think if I merge all OEMxx actions into one OEM? And add a description that \"OEM defined action. Depending on the platform, users can define their BMC\u0027s behavior when the total power consumption exceeds the power limit. Users have to update the source code to implement this algorithm, depending on the application which implements this interface, it can be a service or script file.\"",
+      "parentUuid": "36582bb6_7a47039f",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 140,
+        "endChar": 39
+      },
+      "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

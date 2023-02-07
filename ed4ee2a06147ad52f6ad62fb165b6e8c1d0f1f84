@@ -16,6 +16,24 @@
       "message": "Can you not ignore 0?",
       "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e406a459_2d631ec4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000937
+      },
+      "writtenOn": "2023-02-07T15:04:16Z",
+      "side": 1,
+      "message": "This patch makes the default to be empty string.\nSo \"0\" won\u0027t be ignored since `\"0\" !\u003d \"\"`",
+      "parentUuid": "6ac3a1ec_eb378054",
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -34,6 +34,24 @@
       "parentUuid": "6ac3a1ec_eb378054",
       "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f609d386_c76b142a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-07T17:17:51Z",
+      "side": 1,
+      "message": "Why not maxint?  That\u0027s what we typically use when 0 is valid.  I don\u0027t think we should change this to a string just to make bmcweb happy.",
+      "parentUuid": "e406a459_2d631ec4",
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

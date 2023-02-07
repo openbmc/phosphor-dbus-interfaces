@@ -3,6 +3,52 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "870d1648_595bf606",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-02-07T18:11:27Z",
+      "side": 1,
+      "message": "At OpenBMC level, I\u0027m not sure this should be string.  Do we have examples of platforms for which \"string\" is needed?  We should really get more input on why DMTF made this a string.  I suspect we need to be pulling in some of the interop guides for the various processors we support, because I believe they constrain this parameter more than just a string.",
+      "range": {
+        "startLine": 13,
+        "startChar": 34,
+        "endLine": 13,
+        "endChar": 40
+      },
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92917dee_66e6b9fd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-02-07T18:11:27Z",
+      "side": 1,
+      "message": "nit, typo.  Please proof read your commit messages.",
+      "range": {
+        "startLine": 14,
+        "startChar": 39,
+        "endLine": 14,
+        "endChar": 45
+      },
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6ac3a1ec_eb378054",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -50,6 +96,41 @@
       "side": 1,
       "message": "Why not maxint?  That\u0027s what we typically use when 0 is valid.  I don\u0027t think we should change this to a string just to make bmcweb happy.",
       "parentUuid": "e406a459_2d631ec4",
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "146bc254_a1cd642b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-02-07T18:11:27Z",
+      "side": 1,
+      "message": "Maxint would also solve the problem as presented.  I think we need to get to the bottom of why DMTF went with a string here (maybe there\u0027s a good reason?)  I suspect we missed some interface level constraints when we built this redfish interface initially.",
+      "parentUuid": "f609d386_c76b142a",
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d455b30e_a02438f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-02-07T18:11:27Z",
+      "side": 1,
+      "message": "To be clear, what I suggested was that there were two paths to go down, and we needed to research to figure out which one was correct.  changing the default to maxint is the simplest, but might not solve the problem entirely.  Changing the type to string aligns us with Redfish, but adds a lot of interface ambiguity, and potential for errors.  We need to weigh those two options against what processors we actually need to support.\n\nFWIW, the Intel processors Step was originally written for use steps of \"A, B, C\" not numbers, so it\u0027s not clear we built this Redfish interface correctly the first time around.",
       "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

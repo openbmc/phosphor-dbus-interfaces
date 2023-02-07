@@ -133,6 +133,24 @@
       "message": "To be clear, what I suggested was that there were two paths to go down, and we needed to research to figure out which one was correct.  changing the default to maxint is the simplest, but might not solve the problem entirely.  Changing the type to string aligns us with Redfish, but adds a lot of interface ambiguity, and potential for errors.  We need to weigh those two options against what processors we actually need to support.\n\nFWIW, the Intel processors Step was originally written for use steps of \"A, B, C\" not numbers, so it\u0027s not clear we built this Redfish interface correctly the first time around.",
       "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35000863_2599c302",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-07T18:51:10Z",
+      "side": 1,
+      "message": "\u003e FWIW, the Intel processors Step was originally written for use steps of \"A, B, C\" not numbers, so it\u0027s not clear we built this Redfish interface correctly the first time around.\n\nAgreed.  Terminology like \"A1\", \"B0\" are pretty common in the silicon world.  Has to do with major/minor tape-outs.\n\nI wonder if the choice of int-type originally was due to a low level standard like IPMI or SMBIOS?  I can\u0027t find this record in either of those standards docs but I swear it was in IPMI somewhere.",
+      "parentUuid": "d455b30e_a02438f0",
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

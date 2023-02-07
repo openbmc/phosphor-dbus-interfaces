@@ -242,6 +242,30 @@
       },
       "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab601343_91aefc7a",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2023-02-07T05:29:04Z",
+      "side": 1,
+      "message": "I updated the values of \"ExceptionActions\" enum as Redfish except for the \"Invalid\" value.\n\nI still keep the name of this enum as \"ExceptionActions\", not \"PowerLimitException\", because I think we don\u0027t have to add the prefix \"PowerLimit\" in this interface.\n\nPlease take a look.",
+      "parentUuid": "d96f31aa_d6b5afd5",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 140,
+        "endChar": 39
+      },
+      "revId": "77b4452b0ff1e22d1ebb0651c9d43f7807145513",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

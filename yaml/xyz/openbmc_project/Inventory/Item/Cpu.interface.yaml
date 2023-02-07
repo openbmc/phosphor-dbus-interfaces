@@ -52,10 +52,10 @@ properties:
       description: >
           The maximum number of threads the processor can support.
     - name: Step
-      type: uint16
+      type: string
       description: >
           The step value for this processor
-      default: 0
+      default: ""
     - name: Microcode
       type: uint32
       description: >

@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "25bc36d0_c88a4892",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:38Z",
+      "side": 1,
+      "message": "The server is intended to be implemented in dbus-sensors, nvmesensor binary. It is used by bmcweb to expose Redfish (Swordfish) interfaces for NVMe management. (copying from the other patch\u0027s comment)",
+      "parentUuid": "8dfe0d5b_45e37bb8",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "310b2814_2b39160f",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Storage.interface.yaml",
         "patchSetId": 1
@@ -31,6 +49,24 @@
       "writtenOn": "2023-02-08T04:38:58Z",
       "side": 1,
       "message": "Please see \u0027requirements.md\u0027 for association naming requirements.",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bc6e986_b07082b7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Storage.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:38Z",
+      "side": 1,
+      "message": "Ok, I will use Inventory.Item\u0027s containing/contained_by.",
+      "parentUuid": "310b2814_2b39160f",
       "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -54,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5ca03b1c_27e1ed68",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:38Z",
+      "side": 1,
+      "message": "A Volume can be attached to multiple StorageControllers, so \"contained\" doesn\u0027t seem to fit this case.",
+      "parentUuid": "adb47d52_3662b53a",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "637339d6_61ff0a83",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml",
         "patchSetId": 1
@@ -65,6 +119,24 @@
       "writtenOn": "2023-02-08T04:38:58Z",
       "side": 1,
       "message": "See Object.Delete instead of writing a new method.",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61fdc7bb_6d144d58",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:38Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "637339d6_61ff0a83",
       "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -82,6 +154,24 @@
       "writtenOn": "2023-02-08T04:38:58Z",
       "side": 1,
       "message": "We\u0027ve been trying to refrain from adding new InternalFailure errors because they\u0027re not particularly helpful from an API perspective.  What is the caller expected to do as a result of it?  Retry?  Silently drop the request?  It is too ambiguous.  ResourceNotFound at least implies a bug on the part of the caller (likely).",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3dab1435_899c2934",
+        "filename": "yaml/xyz/openbmc_project/Storage/ControllerManagement.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:38Z",
+      "side": 1,
+      "message": "I can add a more specific Self.Errors.DeviceError as a catch-all for failures from the device if that helps? The list of NVMe generic error status codes is fairly long, some of them like Write Fault could map to Common.Device.WriteFailure, but others are opaque, including NVMe\u0027s own \"Internal Error\" status code.\n\nhttps://manpages.debian.org/testing/libnvme-dev/nvme_status_field.2.en.html#Constants",
+      "parentUuid": "edfda0bc_ce348ba0",
       "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

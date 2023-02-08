@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc30fedc_63f89c27",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:42:11Z",
+      "side": 1,
+      "message": "Who are the domain experts / destination repository?",
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cef84534_3e7c2aad",
+        "filename": "yaml/xyz/openbmc_project/Nvme/Controller.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:42:11Z",
+      "side": 1,
+      "message": "default\u003dUnknown please.",
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c2683f0_b95d6513",
+        "filename": "yaml/xyz/openbmc_project/Nvme/Storage.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:42:11Z",
+      "side": 1,
+      "message": "Is size good enough for all of these or do you need uint64 anywhere?",
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83ee63d7_507dbe76",
+        "filename": "yaml/xyz/openbmc_project/Nvme/Storage.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:42:11Z",
+      "side": 1,
+      "message": "Is index necessary?  Isn\u0027t the array location itself an index?",
+      "range": {
+        "startLine": 30,
+        "startChar": 30,
+        "endLine": 30,
+        "endChar": 35
+      },
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b11e5dbe_7b6d8452",
+        "filename": "yaml/xyz/openbmc_project/Nvme/Volume.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:42:11Z",
+      "side": 1,
+      "message": "Does this come from a protocol spec where it is required to be u32?  Or is size more appropriate?",
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

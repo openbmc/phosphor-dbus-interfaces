@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1b89b209_96103ee2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000937
+      },
+      "writtenOn": "2023-02-08T06:14:52Z",
+      "side": 1,
+      "message": "\u003e Do we have examples of platforms for which \"string\" is needed?\n\nI don\u0027t have example at this moment. Platforms I used are all using pure numbers in `Step`.\n\n\u003e We should really get more input on why DMTF made this a string. I suspect we need to be pulling in some of the interop guides for the various processors we support, because I believe they constrain this parameter more than just a string.\n\nI created a discussion on Redfish forum. https://redfishforum.com/thread/798/processorid-step-type-string-constraint",
+      "parentUuid": "870d1648_595bf606",
+      "range": {
+        "startLine": 13,
+        "startChar": 34,
+        "endLine": 13,
+        "endChar": 40
+      },
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "92917dee_66e6b9fd",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "Not responding to the non-nit aspects of this diff is surely a way to get your commits ignored.",
       "parentUuid": "46753bf4_e45a274f",
+      "range": {
+        "startLine": 14,
+        "startChar": 39,
+        "endLine": 14,
+        "endChar": 45
+      },
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4dc9602_0d3dc0b9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000937
+      },
+      "writtenOn": "2023-02-08T06:14:52Z",
+      "side": 1,
+      "message": "Thanks for the reminder.\nI was asking question on redfish forum so I can reply Ed\u0027s comment with the link.",
+      "parentUuid": "91fad5e7_6b4b6d0d",
       "range": {
         "startLine": 14,
         "startChar": 39,

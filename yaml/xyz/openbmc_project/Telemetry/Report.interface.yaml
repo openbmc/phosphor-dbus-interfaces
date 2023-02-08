@@ -59,14 +59,6 @@ properties:
           false by the service if ReportUpdates property is
           'AppendStopsWhenFull' and readings limit specified by AppendLimit is
           reached.
-    - name: ErrorMesages
-      type: array[struct[enum[self.ErrorType],string]]
-      description: >
-          Stores errors related with incorrect or conflicting property values.
-          Error messages are stored in pairs containing error type and affected
-          property.
-      flags:
-          - readonly
     - name: Name
       type: string
       description: >

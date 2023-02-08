@@ -10,54 +10,51 @@ methods:
           /xyz/openbmc_project/Telemetry/Reports/{properties[Id]} where
           properties[Id] is passed into this method as a parameter.
       parameters:
-          - name: properties
-            type: array[dict[string,variant[boolean,uint32,uint64,string,enum[xyz.openbmc_project.Telemetry.Report.ReportingType],enum[xyz.openbmc_project.Telemetry.Report.ReportUpdates],array[enum[xyz.openbmc_project.Telemetry.Report.ReportActions]],array[struct[array[struct[object_path,string]],enum[xyz.openbmc_project.Telemetry.Report.OperationType],string,enum[xyz.openbmc_project.Telemetry.Report.CollectionTimescope],uint64]]]]]
+          - name: Id
+            type: string
             description: >
-                Map of properties defining added report object. Key is the
-                string identifier of property. Value is a variant, whose
-                underlying type is dependent from the key. Possible key values
-                are: Id, Name, ReportingType, ReportActions, Interval,
-                AppendLimit, ReportUpdates, MetricParams, Enabled. All keys are
-                optional, therefore it is acceptable to pass an empty map here.
-
-                Id (string) - unique identifier of created Report object to be
-                exposed over D-Bus. Acceptable formats are: "{Id}",
-                "{Prefix}/{SubId}", "{Prefix}/". If the last variant is used,
-                service will generate unique SubId value by itself.
-
-                Name (string) - user friendly name of created Report object.
-
-                ReportingType (enum[
-                xyz.openbmc_project.Telemetry.Report.ReportingType]) - indicates
-                when readings should be updated. Possible values are listed in
-                Report interface documentation.
-
-                ReportActions (array[enum[
-                xyz.openbmc_project.Telemetry.Report.ReportActions]]) - possible
-                additional actions to trigger after readings' update, as
-                specified in Report interface documentation.
-
-                Interval (uint64) - period of time in milliseconds when Report
-                is updated with new readings. Minimal interval is defined in
-                MinInterval property.
-
-                AppendLimit (size) - maximum number of entries in 'Readings'
-                property.
-
-                ReportUpdates (enum[
-                xyz.openbmc_project.Telemetry.Report.ReportUpdates]) - indicates
-                how readings should be updated. Possible values are listed in
-                Report interface documentation.
-
-                MetricParams (array[struct[array[struct[object_path,string]],
-                enum[xyz.openbmc_project.Telemetry.Report.OperationType],string,
-                enum[xyz.openbmc_project.Telemetry.Report.CollectionTimescope],
-                uint64]]) - array of metric parameters, which are stored in a
-                way specified in description of ReadingParameters property from
-                Report interface documentation.
-
-                Enabled (boolean) - indicates if readings in report will be
-                updated.
+                Unique identifier of created Report object to be exposed over
+                D-Bus. Acceptable formats are: "{Id}", "{Prefix}/{SubId}",
+                "{Prefix}/". If the last variant is used, service will generate
+                unique SubId value by itself.
+          - name: Name
+            type: string
+            description: >
+                User friendly name of created Report object.
+          - name: reportingType
+            type: enum[xyz.openbmc_project.Telemetry.Report.ReportingType]
+            description: >
+                Indicates when readings should be updated. Possible values are
+                listed in Report interface documentation.
+          - name: ReportUpdates
+            type: enum[xyz.openbmc_project.Telemetry.Report.ReportUpdates]
+            description: >
+                Indicates how readings should be updated. Possible values are
+                listed in Report interface documentation.
+          - name: AppendLimit
+            type: size
+            description: >
+                Maximum number of entries in 'Readings' property.
+          - name: ReportActions
+            type: array[enum[xyz.openbmc_project.Telemetry.Report.ReportActions]]
+            description: >
+                Possible additional actions to trigger after readings' update,
+                as specified in Report interface documentation.
+          - name: Interval
+            type: uint64
+            description: >
+                Period of time in milliseconds when Report is updated with new
+                readings. Minimal interval is defined in MinInterval property.
+          - name: MetricParams
+            type: array[struct[array[struct[object_path,string]],enum[xyz.openbmc_project.Telemetry.Report.OperationType],string,enum[xyz.openbmc_project.Telemetry.Report.CollectionTimescope],uint64]]
+            description: >
+                Array of metric parameters, which are stored in a way specified
+                in description of ReadingParameters property from Report
+                interface documentation.
+          - name: Enabled
+            type: boolean
+            description: >
+                Indicates if readings in report will be updated.
       returns:
           - name: reportPath
             type: object_path

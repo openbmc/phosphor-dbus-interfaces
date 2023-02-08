@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "82a0f079_c7632c8e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:07Z",
+      "side": 1,
+      "message": "The server is intended to be implemented in dbus-sensors, nvmesensor binary. It is used by bmcweb to expose Redfish (Swordfish) interfaces for NVMe management.",
+      "parentUuid": "bc30fedc_63f89c27",
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cef84534_3e7c2aad",
         "filename": "yaml/xyz/openbmc_project/Nvme/Controller.interface.yaml",
         "patchSetId": 2
@@ -31,6 +49,24 @@
       "writtenOn": "2023-02-08T04:42:11Z",
       "side": 1,
       "message": "default\u003dUnknown please.",
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5a7981b_0105cd6d",
+        "filename": "yaml/xyz/openbmc_project/Nvme/Controller.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:07Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "cef84534_3e7c2aad",
       "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -48,6 +84,24 @@
       "writtenOn": "2023-02-08T04:42:11Z",
       "side": 1,
       "message": "Is size good enough for all of these or do you need uint64 anywhere?",
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1a6faf24_ae71105a",
+        "filename": "yaml/xyz/openbmc_project/Nvme/Storage.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:07Z",
+      "side": 1,
+      "message": "These are disk block sizes so `size` should be sufficient",
+      "parentUuid": "1c2683f0_b95d6513",
       "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -77,6 +131,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d6f02c04_3dd56708",
+        "filename": "yaml/xyz/openbmc_project/Nvme/Storage.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:07Z",
+      "side": 1,
+      "message": "The `index` corresponds to a \"LBA Format\" exposed by the NVMe device (LBAF0-LBAF15, or extended to 64 formats in NVMe 2.0). This then is exposed as an enum in Swordfish. In some cases clients may want to know the underlying LBA Format number so it\u0027s kept as a value here. \n\nI can rename it for clarity.",
+      "parentUuid": "83ee63d7_507dbe76",
+      "range": {
+        "startLine": 30,
+        "startChar": 30,
+        "endLine": 30,
+        "endChar": 35
+      },
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b11e5dbe_7b6d8452",
         "filename": "yaml/xyz/openbmc_project/Nvme/Volume.interface.yaml",
         "patchSetId": 2
@@ -88,6 +166,24 @@
       "writtenOn": "2023-02-08T04:42:11Z",
       "side": 1,
       "message": "Does this come from a protocol spec where it is required to be u32?  Or is size more appropriate?",
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40dd6283_08f93464",
+        "filename": "yaml/xyz/openbmc_project/Nvme/Volume.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001129
+      },
+      "writtenOn": "2023-02-08T08:36:07Z",
+      "side": 1,
+      "message": "It\u0027s from the NVMe Specification as a u32",
+      "parentUuid": "b11e5dbe_7b6d8452",
       "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

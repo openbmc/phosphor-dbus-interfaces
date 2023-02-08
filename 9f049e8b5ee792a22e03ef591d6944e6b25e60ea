@@ -39,6 +39,30 @@
       },
       "revId": "9f049e8b5ee792a22e03ef591d6944e6b25e60ea",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2cec02b_e7d76b38",
+        "filename": "yaml/xyz/openbmc_project/Storage/ControllerSecurity.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2023-02-08T05:36:43Z",
+      "side": 1,
+      "message": "This is to allow security protocol communication between the storage device (as a TCG trusted peripheral) and other external management infrastructure (typically: a Redfish client). For this use-case, the BMC itself does not interact with the protocol data, and is just providing a channel between the Redfish API and the  storage interface.\n\n[The \"opacity\" of this data may even be a hard requirement in some situations; the BMC may not have secrets required to perform its own protocol communication with the TPer.]\n\nWe\u0027re in the process of standardising, through the SNIA, the Redfish side of this interface, for the management infrastructure to communicate with the TPer, via a similar (protocol, protocol-specific-parameter, binary-data) API.\n\nSo, this interface is intended to be a linear mapping between the NVMe/SCSI/Flash  transport (all of which implement the security protocol channel) and the Redfish interface. At this level, we wouldn\u0027t want to be interpreting the protocol data, but this does allow us to have bmcweb interact with the transport-handling process (a dbus-sensors daemon).\n\nWe can certainly propose a design doc if that would help, but this is essentially just an implementation of a standardised interface (or two really: the existing storage transport, and the upcoming Redfish API).",
+      "parentUuid": "304caf22_f02f7ba1",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 50
+      },
+      "revId": "9f049e8b5ee792a22e03ef591d6944e6b25e60ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

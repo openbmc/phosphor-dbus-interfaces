@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8dfe0d5b_45e37bb8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:38:58Z",
+      "side": 1,
+      "message": "Who are the intended domain experts for review here?  Do we have a repository this support is intended to land into?",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "310b2814_2b39160f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Storage.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:38:58Z",
+      "side": 1,
+      "message": "Please see \u0027requirements.md\u0027 for association naming requirements.",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "adb47d52_3662b53a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:38:58Z",
+      "side": 1,
+      "message": "What is the difference between \"attached\" and \"contained\"?  I\u0027d tend to prefer consistent naming if there is not significant value-add to \"attach\".",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "637339d6_61ff0a83",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:38:58Z",
+      "side": 1,
+      "message": "See Object.Delete instead of writing a new method.",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "edfda0bc_ce348ba0",
+        "filename": "yaml/xyz/openbmc_project/Storage/ControllerManagement.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-08T04:38:58Z",
+      "side": 1,
+      "message": "We\u0027ve been trying to refrain from adding new InternalFailure errors because they\u0027re not particularly helpful from an API perspective.  What is the caller expected to do as a result of it?  Retry?  Silently drop the request?  It is too ambiguous.  ResourceNotFound at least implies a bug on the part of the caller (likely).",
+      "revId": "04baa9ca2812abd55457cf9da134c2925dc870b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

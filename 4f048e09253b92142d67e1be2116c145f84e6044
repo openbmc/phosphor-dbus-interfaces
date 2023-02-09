@@ -16,6 +16,24 @@
       "message": "do we need to add this as a common error here, saying another operation is already in progress?\nyaml/xyz/openbmc_project/Common.errors.yaml",
       "revId": "4f048e09253b92142d67e1be2116c145f84e6044",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3369ff3_35b28186",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-09T18:04:51Z",
+      "side": 1,
+      "message": "Isn\u0027t that what Common.Unavailable is for?\n\nI\u0027d rather use Common errors as much as possible.\n\nI see \"Unavailable\" is already returned.  When is Unavailable going to be used now vs the proposed AlreadyInProgress?  And... is that a useful differentiation?  Can we enumerate why?",
+      "parentUuid": "659448e0_49a44f21",
+      "revId": "4f048e09253b92142d67e1be2116c145f84e6044",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

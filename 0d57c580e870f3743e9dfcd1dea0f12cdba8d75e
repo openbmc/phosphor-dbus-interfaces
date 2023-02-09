@@ -37,6 +37,41 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7af7195d_b7ed60d4",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-09T18:02:13Z",
+      "side": 1,
+      "message": "Definitely NoAction, which is implied by it being the first enumeration value, but we should add it explicitly here.",
+      "parentUuid": "f52f8684_dbd4f222",
+      "revId": "0d57c580e870f3743e9dfcd1dea0f12cdba8d75e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe740303_989775f5",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-02-09T18:02:13Z",
+      "side": 1,
+      "message": "Do you want 0 as the default?  I guess if NoAction is the action it probably doesn\u0027t matter.",
+      "revId": "0d57c580e870f3743e9dfcd1dea0f12cdba8d75e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "51fe2fbc_fe5fde02",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
         "patchSetId": 12

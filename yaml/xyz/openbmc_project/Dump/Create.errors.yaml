@@ -5,3 +5,7 @@
 # xyz.openbmc_project.Dump.Create.Error.QuotaExceeded
 - name: QuotaExceeded
   description: Dump not captured due to a cap.
+
+# xyz.openbmc_project.Dump.Create.Error.AlreadyInProgress
+- name: AlreadyInProgress 
+  description: Dump generation already in progress 

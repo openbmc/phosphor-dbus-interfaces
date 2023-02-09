@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2263f09e_f0ef608e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000937
+      },
+      "writtenOn": "2023-02-09T06:34:24Z",
+      "side": 1,
+      "message": "From the Redfish Forum’s reply, it seems like there are 2 reasons to make `Step` as a string.\n1. Json by default is not supporting hex value encoding. Even for the CPU architectures like x86 ensures the `Step` to be a numeral. We still need the value to be `string`. Otherwise it will be converted to decimal.\n2. For non-x86 CPU architectures, it’s not guaranteed that the `Step` from CPU register must be an numeral. So `Step` needs to be `string` to have flexibility to support those cases.",
+      "parentUuid": "1b89b209_96103ee2",
+      "range": {
+        "startLine": 13,
+        "startChar": 34,
+        "endLine": 13,
+        "endChar": 40
+      },
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "92917dee_66e6b9fd",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -157,6 +181,30 @@
       "side": 1,
       "message": "Please communicate that next time when you ack\u0027d / fixed the other issues.  Too many people ignore the \"hard\" comments and just hope their commits will get in.  That\u0027s what it seemed like you were doing.",
       "parentUuid": "b4dc9602_0d3dc0b9",
+      "range": {
+        "startLine": 14,
+        "startChar": 39,
+        "endLine": 14,
+        "endChar": 45
+      },
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aadaa2c0_88588ca4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000937
+      },
+      "writtenOn": "2023-02-09T06:34:24Z",
+      "side": 1,
+      "message": "It will make the response time longer since a “hard” comment is usually “hard” to reply..\nI will try to reply to all the comments at the same time.",
+      "parentUuid": "7a129514_8f5293a2",
       "range": {
         "startLine": 14,
         "startChar": 39,

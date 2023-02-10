@@ -52,6 +52,24 @@
       "parentUuid": "c3369ff3_35b28186",
       "revId": "4f048e09253b92142d67e1be2116c145f84e6044",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f80c1ce9_ac2b7971",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2023-02-10T05:18:27Z",
+      "side": 1,
+      "message": "Patrick,\nThis is the reference link we discussed the comments earlier https://gerrit.openbmc.org/c/openbmc/phosphor-debug-collector/+/51219.\n\nAs mentioned in the reveiw link Devender is trying to stop user initiated BMC dump\u0027s incase one dump collection is in progress. Considering the flash/performance , multiple dump request can slow down the BMC. Basically for any new user requests, incase any dump is in progress , dump manager is not going to collect same data again. Instead saing Notallowed or un available errors it will be good to provide some meaningfull error to user sayng another same type of dump collection is in rprogress and check that dump instead of requesting new. This is the background on this chnage request.",
+      "parentUuid": "c0833760_2498aadd",
+      "revId": "4f048e09253b92142d67e1be2116c145f84e6044",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

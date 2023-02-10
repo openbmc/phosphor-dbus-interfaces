@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "663177be_0df82f11",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-02-10T18:46:15Z",
+      "side": 1,
+      "message": "I don\u0027t think openbmc supports any cases that don\u0027t support CPUID.  I\u0027m fairly sure this can remain an int for the time being.",
+      "parentUuid": "2263f09e_f0ef608e",
+      "range": {
+        "startLine": 13,
+        "startChar": 34,
+        "endLine": 13,
+        "endChar": 40
+      },
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "92917dee_66e6b9fd",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -341,6 +365,24 @@
       "side": 1,
       "message": "\u003e FWIW, the Intel processors Step was originally written for use steps of \"A, B, C\" not numbers, so it\u0027s not clear we built this Redfish interface correctly the first time around.\n\nAgreed.  Terminology like \"A1\", \"B0\" are pretty common in the silicon world.  Has to do with major/minor tape-outs.\n\nI wonder if the choice of int-type originally was due to a low level standard like IPMI or SMBIOS?  I can\u0027t find this record in either of those standards docs but I swear it was in IPMI somewhere.",
       "parentUuid": "d455b30e_a02438f0",
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "678c3570_820a471c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-02-10T18:46:15Z",
+      "side": 1,
+      "message": "I looked into the redfish supplement, and even in Redfish we should be reporting these as ints.  From the schema guide:\n\n```\nFor resources with a ProcessorArchitecture value of x86 , this string is derived from register values resulting from\nthe execution of the processor\u0027s CPUID instruction using this algorithm:\n(eax, ebx, ecx, edx) \u003d cpuid(eax\u003d0x1);\nStep \u003d (eax \u0026 0x000F);\n```",
+      "parentUuid": "35000863_2599c302",
       "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

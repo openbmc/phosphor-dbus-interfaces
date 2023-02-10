@@ -142,6 +142,24 @@
       "parentUuid": "605b9a8c_310550ea",
       "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14ef8dce_488ea4a4",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-02-10T19:12:49Z",
+      "side": 1,
+      "message": "I think I need a better explanation of your server. For example, on my server we have 1 BMC, 1 Chassis power domain, and 1 Host firmware running. The BMC is on a different power domain then the chassis/host so powering off the host/chassis does not affect the BMC or the network into the BMC. Is that not the case with your system?",
+      "parentUuid": "c8d4e18b_62172809",
+      "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

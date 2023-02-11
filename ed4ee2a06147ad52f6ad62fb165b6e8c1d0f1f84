@@ -98,6 +98,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1ca630f1_05df7bbe",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000937
+      },
+      "writtenOn": "2023-02-11T02:00:30Z",
+      "side": 1,
+      "message": "So I will keep the type as `uint16` while change the default value to maxuint16.\nIs that okay to you?",
+      "parentUuid": "663177be_0df82f11",
+      "range": {
+        "startLine": 13,
+        "startChar": 34,
+        "endLine": 13,
+        "endChar": 40
+      },
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "92917dee_66e6b9fd",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -383,6 +407,24 @@
       "side": 1,
       "message": "I looked into the redfish supplement, and even in Redfish we should be reporting these as ints.  From the schema guide:\n\n```\nFor resources with a ProcessorArchitecture value of x86 , this string is derived from register values resulting from\nthe execution of the processor\u0027s CPUID instruction using this algorithm:\n(eax, ebx, ecx, edx) \u003d cpuid(eax\u003d0x1);\nStep \u003d (eax \u0026 0x000F);\n```",
       "parentUuid": "35000863_2599c302",
+      "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14d8aeb1_ca82ce18",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000937
+      },
+      "writtenOn": "2023-02-11T02:00:30Z",
+      "side": 1,
+      "message": "Yes, we have talked about this in the Redfish forum thread.\nCite from Redfish forum:\n\n\u003e there is supplemental documentation provided that shows specific encodings for different CPU architectures (section 6.93.5.19 specifically for \"Step\"). At this time we only have details filled out for x86. I also see that we don\u0027t go so far as to state the value obtained from various CPU registers is to be encoded as a hex string; this is something I think we need to add.\n\nThe supplemental documentation only filled out x86 case at this moment. While they will support non-x86 as well.",
+      "parentUuid": "678c3570_820a471c",
       "revId": "ed4ee2a06147ad52f6ad62fb165b6e8c1d0f1f84",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

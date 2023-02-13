@@ -53,6 +53,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eae0bd2e_1bd54ff6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-02-13T05:10:04Z",
+      "side": 1,
+      "message": "I can\u0027t say I\u0027m an NVMe expert, I kinda just hacked things together enough with nvmesensor to meet our requirements (drive temperature monitoring).",
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cef84534_3e7c2aad",
@@ -160,6 +177,30 @@
       "side": 1,
       "message": "The `index` corresponds to a \"LBA Format\" exposed by the NVMe device (LBAF0-LBAF15, or extended to 64 formats in NVMe 2.0). This then is exposed as an enum in Swordfish. In some cases clients may want to know the underlying LBA Format number so it\u0027s kept as a value here. \n\nI can rename it for clarity.",
       "parentUuid": "83ee63d7_507dbe76",
+      "range": {
+        "startLine": 30,
+        "startChar": 30,
+        "endLine": 30,
+        "endChar": 35
+      },
+      "revId": "46efac8c9c4002e17b83cb60e469f8d59ded4ec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb46fe80_625c07e7",
+        "filename": "yaml/xyz/openbmc_project/Nvme/Storage.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-02-13T05:10:04Z",
+      "side": 1,
+      "message": "Maybe `lba_format` then?",
+      "parentUuid": "d6f02c04_3dd56708",
       "range": {
         "startLine": 30,
         "startChar": 30,

@@ -88,6 +88,24 @@
       "parentUuid": "f80c1ce9_ac2b7971",
       "revId": "4f048e09253b92142d67e1be2116c145f84e6044",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0aeef8d1_d0767053",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000089
+      },
+      "writtenOn": "2023-02-13T10:39:32Z",
+      "side": 1,
+      "message": "There was a stress test where in users were issuing create bmc dump request using (redfish)openbmc-gui that is causing too many dump genertions happening in parallel and system going down.\n\nAs phosphor-dump-manager uses fork to invoke dreport(generates dump) it is not blocking the caller thread.\n\nPlanned to return \"AlreadyInProgress\" error to the caller (redfish) if a dump request is received while one is already in progress.",
+      "parentUuid": "f493c54b_04618dc1",
+      "revId": "4f048e09253b92142d67e1be2116c145f84e6044",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

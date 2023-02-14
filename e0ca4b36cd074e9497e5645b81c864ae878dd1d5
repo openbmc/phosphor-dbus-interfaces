@@ -160,6 +160,24 @@
       "parentUuid": "c8d4e18b_62172809",
       "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d4c8649_d6826416",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2023-02-14T07:22:20Z",
+      "side": 1,
+      "message": "Our server design is that:\n1. 1 BMC on baseboard control 4 server board, and has its power domain independent from the server board\n2. each server board has 1 CPU, NIC, BIC... and so on, CPU boot up when both its own power and 12v power supplied, and most of other partition relied on 12v power only\n\nSo now we design to:\n1. Control the 12v power from chassis power off/on for each server board\u0027s every partition on it\n2. Control the CPU power from host state manager\noff(graceful-shutdown) for gently power off through host\nhardpoweroff(to-do) for shutdown the HW CPU power only",
+      "parentUuid": "14ef8dce_488ea4a4",
+      "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,30 @@
+description: >
+    Indicates the thermal management path through the chassis.
+properties:
+    - name: AirflowDirection
+      type: enum[self.AirflowDirection]
+      default: Invalid
+      description: >
+          This property shall indicate the general direction of the thermal
+           management path through the chassis.
+
+enumerations:
+    - name: AirflowDirection
+      description: >
+          Possible airflow direction
+      values:
+          - name: BackToFront
+            description: >
+                A chassis with the air intake in the back and exhaust out the front.
+          - name: FrontToBack
+            description: >
+                A chassis with the air intake in the front and exhaust out the back.
+          - name: Sealed
+            description: >
+                A sealed chassis with no air pathway.
+          - name: TopExhaust
+            description: >
+                A chassis with air exhaust on the top.
+          - name: Invalid
+            description: >
+                A default type for Airflow direction.

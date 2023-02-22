@@ -178,6 +178,24 @@
       "parentUuid": "14ef8dce_488ea4a4",
       "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a6f70e2_c9197d97",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-02-22T19:11:48Z",
+      "side": 1,
+      "message": "I see, that\u0027s an interesting design, almost like a blade center it sounds like. Each blade shares the 12v power domain, but then each blade has it\u0027s own CPU power domain. As you\u0027ve noticed, we don\u0027t really have support for that.\n\nSo I see a couple of options. You introduce something here called \"HardOff\". That would be implementation specific but you could remove your your CPU power via that. Other implementations could just map to their chassis off target.\n\nAnother idea would be you create a chassis0 instance on d-bus that represents the 12v and then chassis[1-4] for the individual CPU power domains. Then a hard power off of a CPU power domain just targets the appropriate 1-4.\n\nI\u0027m still not sure how all of this will be represented within Redfish. 1 BMC, 1 Chassis, 4 Systems?",
+      "parentUuid": "1d4c8649_d6826416",
+      "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

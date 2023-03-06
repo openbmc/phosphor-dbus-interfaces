@@ -1,0 +1,15 @@
+description: >
+    Provides properties for supported consoles in the system.
+
+properties:
+    - name: SocketName
+      type: array[byte]
+      description: >
+          Unix socket identifier for a console. This is used by a process like
+          bmcweb to put consoles, most likely host serial consoles, out on
+          WebSocket Secure (wss).
+          This attribute provides unix abstract socket name and it's first
+          character is always null hence the attribute type is an array of bytes
+          instead of string.
+      flags:
+          - readonly

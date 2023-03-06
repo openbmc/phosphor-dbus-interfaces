@@ -1,0 +1,12 @@
+description: >
+    Provides properties for supported consoles in the system.
+
+properties:
+    - name: SocketName
+      type: string
+      description: >
+          Unix socket identifier for a console. This is used by a process like
+          bmcweb to put consoles, most likely host serial consoles, out on
+          WebSocket Secure (wss).
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure

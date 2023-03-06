@@ -1,0 +1,19 @@
+description: >
+    Provides properties for supported consoles in the system.
+
+properties:
+    - name: UnixSocketId
+      type: string
+      description: >
+       Unix socket identifier for a console. This is used by a process like
+       bmcweb to put consoles, most likely host serial consoles, out on
+       WebSocket Secure (wss).
+
+    - name: WebSocketPath
+      type: string
+      description: >
+       The WebSocket Secure (wss) path for the console. This WebSocket Secure
+       could then be used by a user interface to provide console acceess. An
+       example of this would be webui-vue's use of xterm, a fully-featured
+       terminal in the browser. If this path was /console0, the console would
+       be available at wss://$bmc/console0.

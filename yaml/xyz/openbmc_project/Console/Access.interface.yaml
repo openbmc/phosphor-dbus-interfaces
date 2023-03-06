@@ -1,0 +1,10 @@
+description: >
+    Provides properties for supported consoles in the system.
+
+properties:
+    - name: SocketName
+      type: string
+      description: >
+          Socket name for the console
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure

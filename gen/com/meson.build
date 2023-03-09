@@ -2,3 +2,4 @@
 subdir('google')
 subdir('ibm')
 subdir('intel')
+subdir('meta')

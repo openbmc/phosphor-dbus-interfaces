@@ -22,6 +22,14 @@ properties:
       type: string
       description: >
           The message description of the error event entry.
+    - name: MessageId
+      type: string
+      description: >
+          The message ID for Redfish registry.
+    - name: MessageArgs
+      type: array[string]
+      description: >
+          The message arguments for Redfish registry.
     - name: EventId
       type: string
       description: >

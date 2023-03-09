@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f18ec35e_9a944492",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2023-03-09T15:41:46Z",
+      "side": 1,
+      "message": "It\u0027s the Message property.\n\nThe messageID is Redfish\u0027s key into a message registry, and must include the registry name and version in the string.  Also, there are multiple message registries which  are all hardcoded in header files inside bmcweb.\n\nI could never figure out a good way forward here so I had pretty much given up.",
+      "parentUuid": "3ab0ef8e_05a707f2",
+      "revId": "e8ebfbd7f3e0a6bcc82b270201a8acbccf877a7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b6ad212b_62b8dabf",
         "filename": "yaml/xyz/openbmc_project/Logging/Entry.interface.yaml",
         "patchSetId": 1

@@ -91,6 +91,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "87e8669f_d53f84be",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ThermalDirection.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-10T15:58:37Z",
+      "side": 1,
+      "message": "Adding to the descritpion here something like \"This decorator should only be added to Inventory.Item.Chassis instances.\"",
+      "parentUuid": "09e79dac_bb9c7972",
+      "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b875e232_7513e132",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ThermalDirection.interface.yaml",
         "patchSetId": 2
@@ -191,6 +209,24 @@
       "side": 1,
       "message": "I referred the below link for the types mentioned for ThermalDirection.\n\nhttps://github.com/openbmc/bmcweb/blob/master/static/redfish/v1/JsonSchemas/Chassis/Chassis.json#L1088",
       "parentUuid": "95caeaf0_4131f599",
+      "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eecccd0f_9dff7431",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ThermalDirection.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-10T15:58:37Z",
+      "side": 1,
+      "message": "It is unfortunate the Redfish schema is so inconsistent.",
+      "parentUuid": "b1683444_b0b6061c",
       "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

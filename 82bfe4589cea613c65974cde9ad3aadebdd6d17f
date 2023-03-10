@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbb95906_5dbe551a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000869
+      },
+      "writtenOn": "2023-03-10T10:56:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a449c021_faccb74d",
+      "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eea09f6b_3af3e55c",
@@ -55,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "09e79dac_bb9c7972",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ThermalDirection.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000869
+      },
+      "writtenOn": "2023-03-10T10:56:39Z",
+      "side": 1,
+      "message": "\u003eAre we going to restrict this to only be on paths containing a Chassis entity? If so, we should document that.\n\nYes, this interface is present based on chassis paths. Could you please let me know where this can be documented ?",
+      "parentUuid": "89e69a72_a88263c6",
+      "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b875e232_7513e132",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ThermalDirection.interface.yaml",
         "patchSetId": 2
@@ -84,6 +120,24 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "b875e232_7513e132",
+      "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f72954f3_440570be",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ThermalDirection.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000869
+      },
+      "writtenOn": "2023-03-10T10:56:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7bf9577_d6f5e6d4",
       "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -125,6 +179,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1683444_b0b6061c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ThermalDirection.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000869
+      },
+      "writtenOn": "2023-03-10T10:56:39Z",
+      "side": 1,
+      "message": "I referred the below link for the types mentioned for ThermalDirection.\n\nhttps://github.com/openbmc/bmcweb/blob/master/static/redfish/v1/JsonSchemas/Chassis/Chassis.json#L1088",
+      "parentUuid": "95caeaf0_4131f599",
+      "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e888de9e_6507350d",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ThermalDirection.interface.yaml",
         "patchSetId": 2
@@ -154,6 +226,24 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "e888de9e_6507350d",
+      "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11593e1f_9afdb724",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ThermalDirection.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000869
+      },
+      "writtenOn": "2023-03-10T10:56:39Z",
+      "side": 1,
+      "message": "\"Unknown\" type is updated.",
+      "parentUuid": "7455ed44_ba33d0d0",
       "revId": "82bfe4589cea613c65974cde9ad3aadebdd6d17f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

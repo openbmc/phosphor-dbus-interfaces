@@ -16,6 +16,24 @@
       "message": "Are we expecting obmc-console to give a web-socket name for the console?  Why?",
       "revId": "2161d5f9860aab966a6970372a75471e0b41c53d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8ed501d_a6bd6788",
+        "filename": "yaml/xyz/openbmc_project/Console/Console.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001634
+      },
+      "writtenOn": "2023-03-20T13:11:23Z",
+      "side": 1,
+      "message": "Yes, Andrew has same comment. bmcweb uses unix socket id and path (/console0, /console1) for each console. I added websocketid for the path so that bmcweb can simply use it but looks like websocket path is something bmcweb created. I will include you in the discord discussion.",
+      "parentUuid": "d08dd83f_6fe52f3d",
+      "revId": "2161d5f9860aab966a6970372a75471e0b41c53d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

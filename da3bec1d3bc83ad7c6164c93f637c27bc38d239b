@@ -34,6 +34,24 @@
       "parentUuid": "0a928f92_d514d414",
       "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35e73489_8527495a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-03-22T18:09:30Z",
+      "side": 1,
+      "message": "Just like any other device Manufacturer will be part of https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml\n\nWhy do we need it to be in yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml?\nIs there any usecase?",
+      "parentUuid": "e1fb5a88_f20d0e98",
+      "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

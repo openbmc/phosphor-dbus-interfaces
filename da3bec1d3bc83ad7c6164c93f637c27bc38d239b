@@ -70,6 +70,24 @@
       "parentUuid": "35e73489_8527495a",
       "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35bdc248_b84af60d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000276
+      },
+      "writtenOn": "2023-03-22T20:14:53Z",
+      "side": 1,
+      "message": "PCIeDevice.Manufacturer is there only to cover the Redfish property.  I wasn\u0027t aware of Asset.Manufacturer at the time.\n\nThe Redfish property is \"the name of the organization responsible for producing the PCIe device\".  Currently, in peci-pcie this is derived from the VendorId of Function 0: https://github.com/openbmc/peci-pcie/blob/master/src/peci_pcie.cpp#L524.  If this information is covered by Asset.Manufacturer, then I don\u0027t have any issue with consolidating.\n\nDo you plan to update consumers of this D-Bus property such as peci-pcie and bmcweb along with this interface change?",
+      "parentUuid": "435185e8_2b463f80",
+      "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

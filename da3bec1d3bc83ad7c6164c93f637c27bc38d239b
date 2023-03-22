@@ -16,6 +16,24 @@
       "message": "I\u0027ve added some people who might care about this change or who have previously edited this interface.\n\nAre we proposing this change because?\n   1) It is redundant.\n   2) It conflicts with the same property being used on two interfaces.\n\nIf it is (1), I suspect that is not the case.  You usually have a manufacturer for the card, which would be the Asset, and a manufacturer for the PCIe chip, which would be here.\n\nIf it is (2), we may have some Redfish interface impacts and a few others but I suspect those are minor.  We likely have impacts to entity-manager and a few misc provider repositories (smbios-mdr, peci-pcie).",
       "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1fb5a88_f20d0e98",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-03-22T17:41:33Z",
+      "side": 1,
+      "message": "https://github.com/DMTF/Redfish/blob/master/metadata/PCIeDevice_v1.xml\n\nOnly Manufacturer that we have in Redfish documentation is for PCIe Device.",
+      "parentUuid": "0a928f92_d514d414",
+      "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -52,6 +52,24 @@
       "parentUuid": "e1fb5a88_f20d0e98",
       "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "435185e8_2b463f80",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-22T18:59:43Z",
+      "side": 1,
+      "message": "I cannot speak to the design decisions of Redfish.\n\nThe \"Manufacturer\" listed in Redfish for PCIeDevice does appear to be the Asset.Manufacturer in our design, which is the manufacturer of the PCIe Card.\n\nThere is also \"VendorId\" under PCIeFunction, which is what I suspect the \"Manufacturer\" here attempted to document.  I wasn\u0027t around when Jason wrote this interface originally, so I\u0027m only guessing.\n\nBased on Redfish (and reality) we would ideally have a collection of PCIeFunction from smbios and not just a single one.  This would likely be separate from the device and could be where the \"VendorId\" is placed.",
+      "parentUuid": "35e73489_8527495a",
+      "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

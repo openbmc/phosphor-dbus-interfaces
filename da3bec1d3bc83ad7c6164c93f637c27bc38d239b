@@ -88,6 +88,24 @@
       "parentUuid": "435185e8_2b463f80",
       "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6369124_d0f0bfd6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-03-23T19:02:24Z",
+      "side": 1,
+      "message": "I dropped changes in bmcweb, under review. There are several commits in chain, please review if you have time\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/40051/11\n\nWe don\u0027t use peci-pcie, I don\u0027t have a way to test peci-pcie. I need help with making changes and testing in peci-pcie. Also we need to change the interface in peci-pcie, \"xyz.openbmc_project.PCIe.Device\" is not available. \nI changed it in bmcweb to \"xyz.openbmc_project.Inventory.Item.PCIeDevice\"\n\nYou brought an interesting point, Manufacturer is derived from VendorId of Function 0, I am not doing that in bmcweb, Do I need to do the same in bmcweb? I am just returning whatever d-bus returns.",
+      "parentUuid": "35bdc248_b84af60d",
+      "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

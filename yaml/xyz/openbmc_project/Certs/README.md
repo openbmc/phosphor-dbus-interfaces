@@ -255,7 +255,7 @@ phosphor-certificate-manager
   and can be done on individial certificates, for example:
 
 ```plain
-url: redfish/v1/Managers/bmc/Truststore/Certificates/1
+url: redfish/v1/Managers/bmc/Certificates/1
 Method: DELETE
 
 Returns: code 204 with empty body content.

@@ -34,6 +34,23 @@
       "parentUuid": "d8e8df60_4668ba66",
       "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7462ce88_9f5f14ad",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-29T17:27:16Z",
+      "side": 1,
+      "message": "`size`?  IP uses `byte` but I don\u0027t think we want to replicate that.  If anything I\u0027d probably refactor IP to use `size` also.",
+      "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

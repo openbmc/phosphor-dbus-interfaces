@@ -16,6 +16,40 @@
       "message": "Adding PLDM maintainers here.",
       "revId": "fadf45d7ad2297d136f78a988788a3717f273f6c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b5b3616_2f2544fe",
+        "filename": "yaml/xyz/openbmc_project/PLDM/Requester.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-30T19:30:46Z",
+      "side": 1,
+      "message": "How do you know that the instance ID being freed wasn\u0027t allocated to a different process?  This doesn\u0027t seem like a great API.",
+      "revId": "fadf45d7ad2297d136f78a988788a3717f273f6c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88ad7837_2d0daf8f",
+        "filename": "yaml/xyz/openbmc_project/PLDM/Requester.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-30T19:30:46Z",
+      "side": 1,
+      "message": "Instance (spelling)",
+      "revId": "fadf45d7ad2297d136f78a988788a3717f273f6c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

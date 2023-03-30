@@ -87,6 +87,24 @@
       "parentUuid": "9951f511_97ff13ca",
       "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b0b2d37_aa4ceff8",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2023-03-30T02:20:53Z",
+      "side": 1,
+      "message": "I\u0027d say it was over optimized if it was potentially possible to have larger prefixes, but the linux kernel uses 8bit ints for this value so it would require an entire netlink overhaul to support something different. It\u0027s also consistent to use 8bit ints if the other interface already uses it.",
+      "parentUuid": "928288df_19179114",
+      "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -69,6 +69,24 @@
       "parentUuid": "7462ce88_9f5f14ad",
       "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "928288df_19179114",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-30T02:16:10Z",
+      "side": 1,
+      "message": "I understand that but I also try not to let us over optimize the interfaces. Just like the coding guidelines recommend size_t for countable items, I apply the same on the dbus interfaces whenever possible.",
+      "parentUuid": "9951f511_97ff13ca",
+      "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

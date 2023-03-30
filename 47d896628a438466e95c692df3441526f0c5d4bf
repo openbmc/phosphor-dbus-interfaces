@@ -89,6 +89,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "16e83f53_98ae424e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-30T19:16:32Z",
+      "side": 1,
+      "message": "Yes.  Unless you have a good argument for doing something different.  In this case you\u0027ve done something different than the default desired type (size) and you\u0027ve done something different than the existing less-desired type in a peer interface (uint8 in IP.interface.yaml).  I see no argument for keeping it as uint16.",
+      "parentUuid": "055ade9b_b8f2c792",
+      "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7462ce88_9f5f14ad",
@@ -156,6 +174,24 @@
       "side": 1,
       "message": "I\u0027d say it was over optimized if it was potentially possible to have larger prefixes, but the linux kernel uses 8bit ints for this value so it would require an entire netlink overhaul to support something different. It\u0027s also consistent to use 8bit ints if the other interface already uses it.",
       "parentUuid": "928288df_19179114",
+      "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a001f3a6_a591c58a",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-30T19:16:32Z",
+      "side": 1,
+      "message": "\u003e the linux kernel uses 8bit ints for this value so it would require an entire netlink overhaul to support something different\n\n\"Entire overhaul\"?  Come on.  We\u0027re talking about a cast.\n\nI\u0027ve regularly rejected this line of reasoning when someone says: \"but {IPMI, SMBIOS} specifies it as a 16 bit field\".  I don\u0027t see the kernel API as any more special.  Pushing details of the internal interfaces into the IPC is a leaky abstraction.  If it is countable, it should be size_t because that is obvious for programmers.\n\n\u003e It\u0027s also consistent to use 8bit ints if the other interface already uses it.\n\nI\u0027d like to see a change to IP as well to match.  This isn\u0027t important to do immediately and maybe I\u0027ll have to work through it myself if nobody else is interested.",
+      "parentUuid": "5b0b2d37_aa4ceff8",
       "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

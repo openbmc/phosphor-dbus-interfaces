@@ -71,3 +71,18 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: connecting
+      description: >
+          Objects that implement Item can optionally implement the 'connecting'
+          association to provide a link to one or more connected PCIe devices.
+      reverse_name: connected_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice
+    - name: connected_to
+      description: >
+          Objects that implement Item can optionally implement the
+          'connected_to' association to provide a link to one or more PCIe
+          slots.
+      reverse_name: connecting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeSlot

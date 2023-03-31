@@ -304,3 +304,11 @@ associations:
           - associated_pcie_device
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot
+    - name: containing
+      description: >
+          Any inventory Items (usually Boards or Chassis) can optionally
+          implement the 'containing' association to provide one or more links to
+          Items which it physically contains.
+      reverse_name: contained_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

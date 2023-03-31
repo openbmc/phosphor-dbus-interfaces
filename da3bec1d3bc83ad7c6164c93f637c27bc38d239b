@@ -106,6 +106,24 @@
       "parentUuid": "35bdc248_b84af60d",
       "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d044e4a9_473e322c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-31T18:22:21Z",
+      "side": 1,
+      "message": "\u003e You brought an interesting point, Manufacturer is derived from VendorId of Function 0\n\nGenerally speaking, this is wrong.  You can have a graphics card manufactured by Asus with a chip by NVIDIA.  Function 0 VendorID would be NVIDIA, but the Inventory item should show it was manufactured by Asus.",
+      "parentUuid": "a6369124_d0f0bfd6",
+      "revId": "da3bec1d3bc83ad7c6164c93f637c27bc38d239b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

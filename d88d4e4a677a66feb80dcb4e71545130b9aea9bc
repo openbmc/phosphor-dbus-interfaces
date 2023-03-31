@@ -16,6 +16,24 @@
       "message": "I don\u0027t know why we have \"PLDM.Event\" to begin with and I don\u0027t really see a whole lot of users of it other than some IBM-only code.\n\nWhat is your intention here?  I really don\u0027t think we should let PLDM details bleed all over the architecture.  What are you planning to use this for?",
       "revId": "d88d4e4a677a66feb80dcb4e71545130b9aea9bc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1424d1e6_f4cf5636",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-03-31T01:01:26Z",
+      "side": 1,
+      "message": "The event from the sender will be sent to the responder module in the pldmd source of BMC. The responder code will send event data to requester code for more actions use the D-Bus PLDM event interface.\nThis is similar as https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/PLDM/Event.interface.yaml#L17\nThe actions in the requester code can be sending new message to the sender to get full data.",
+      "parentUuid": "f9edf6fb_1964b755",
+      "revId": "d88d4e4a677a66feb80dcb4e71545130b9aea9bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -194,6 +194,24 @@
       "parentUuid": "5b0b2d37_aa4ceff8",
       "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2228084a_f00fbec4",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2023-03-31T09:22:50Z",
+      "side": 1,
+      "message": "My comment was about the kernel netlink interface needing an overhaul to support something different, all of the prefix types are uint8_t in non-versioned structs with no extra reserved space. I just don\u0027t think anyone forsees any protocol using a \u003e256 byte address in the future. There aren\u0027t enough atoms in the universe to require it.\n\nBut again, if this is the direction we are going :shrug:. I\u0027m not trying to convince anyone to change our rules here.",
+      "parentUuid": "a001f3a6_a591c58a",
+      "revId": "47d896628a438466e95c692df3441526f0c5d4bf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -16,6 +16,24 @@
       "message": "Same questions on this as the other change to PLDM.Event you tried to add.",
       "revId": "fa8b802c07e230925e165b6dcd276c24a6da1ab2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b16d9c0_764e9a4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-03-31T01:02:23Z",
+      "side": 1,
+      "message": "The reply in other patch set:\n\"The event from the sender will be sent to the responder module in the pldmd source of BMC. The responder code will send event data to requester code for more actions use the D-Bus PLDM event interface.\nThis is similar as https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/PLDM/Event.interface.yaml#L17\nThe actions in the requester code can be sending new message to the sender to get full data.\"",
+      "parentUuid": "bf2d6939_fe3eb31b",
+      "revId": "fa8b802c07e230925e165b6dcd276c24a6da1ab2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

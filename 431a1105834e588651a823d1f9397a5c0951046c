@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0dab6931_97461d83",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-04-06T04:53:50Z",
+      "side": 1,
+      "message": "I\u0027m still investigating how an empty slot can be modeled and filled in with the necessary data. Once I have a better understanding of the requirements and available options, I will share my findings. In the meantime, please let me know if you have any suggestions or insights.",
+      "parentUuid": "8e1aac41_20c5aeee",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "431a1105834e588651a823d1f9397a5c0951046c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1b3f60de_13866ed6",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 3
@@ -37,6 +61,24 @@
       "writtenOn": "2023-04-03T13:27:32Z",
       "side": 1,
       "message": "Looks like the PCIe slot interface just contains properties of the card/system the slot is on, and the pcieDevice contains properties of the plugged hardware.\n\nSo to be filled in, they\u0027d have to be reported via two different sources.  If for example, entity-manager was used to hold the properties previously on pcie slot, it doesn\u0027t support writeable properties so there is no way to fill in the pcieDevice ones.\n\nI know we\u0027re using PIM for now so that isn\u0027t an issue for IBM, but it will be eventually.\n\nHow is that peci-pcie app going to fill in the slot properties?",
+      "revId": "431a1105834e588651a823d1f9397a5c0951046c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ac71725_e7358f11",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-04-06T04:53:50Z",
+      "side": 1,
+      "message": "Thanks for bringing up those points. You are correct that the PCIe slot interface contains properties of the card/system the slot is on, while the PCIeDevice contains properties of the plugged hardware. As for filling in the slot properties, peci-pcie doesn\u0027t handle that.\n\nI initially started working on adding PCIe Slot information to PCIeDevice, but I found that it would require making significant changes in several repositories. Therefore, I am now exploring the option of adding an association from PCIe Device to PCIe Slot that bmcweb can use to populate the slot information.",
+      "parentUuid": "1b3f60de_13866ed6",
       "revId": "431a1105834e588651a823d1f9397a5c0951046c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

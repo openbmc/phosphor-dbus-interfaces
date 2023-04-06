@@ -16,6 +16,24 @@
       "message": "Do we then expect bmcweb to then put this out at wss://$bmc/host ? Or since the later patch sets removed the websocket name, where does bmcweb put this out at ?",
       "revId": "47026bf8e770d0382104499c75d5040a6221d3c2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0beecca_402450b2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001634
+      },
+      "writtenOn": "2023-04-06T21:31:40Z",
+      "side": 1,
+      "message": "We still need to put this on /console0 for now. In future bmcweb will replace /console0 with /\u003cleaf\u003e (/host in this case).",
+      "parentUuid": "45d566c5_c324395f",
+      "revId": "47026bf8e770d0382104499c75d5040a6221d3c2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

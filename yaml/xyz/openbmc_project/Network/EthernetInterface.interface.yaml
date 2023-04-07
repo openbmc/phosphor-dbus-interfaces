@@ -101,7 +101,16 @@ properties:
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: DefaultGateway6
-      type: string
+      type: array[string]
+      description: >
+          Default IPv6 gateway of the ethernet interface. For supported address
+          formats refer RFC 2373. Refer below man page for both v4 and v6
+          address format details
+          https://man7.org/linux/man-pages/man3/inet_pton.3.html
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: StaticV6Gateways
+      type: array[string]
       description: >
           Default IPv6 gateway of the ethernet interface. For supported address
           formats refer RFC 2373. Refer below man page for both v4 and v6

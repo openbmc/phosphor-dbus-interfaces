@@ -60,6 +60,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('IPv6StaticGateway')
+generated_others += custom_target(
+    'xyz/openbmc_project/Network/IPv6StaticGateway__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Network/IPv6StaticGateway.interface.yaml',  ],
+    output: [ 'IPv6StaticGateway.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Network/IPv6StaticGateway',
+    ],
+)
+
 subdir('MACAddress')
 generated_others += custom_target(
     'xyz/openbmc_project/Network/MACAddress__markdown'.underscorify(),

@@ -1,0 +1,19 @@
+description: >
+    This defines IPv6 gateway address.
+
+properties:
+    - name: Address
+      type: string
+      description: >
+          The value of this property shall be IP address assigned to ethernet
+          interface gateway.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+    - name: PrefixLength
+      type: byte
+      description: >
+          This is the number of network bits in the gateway ipaddress.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+

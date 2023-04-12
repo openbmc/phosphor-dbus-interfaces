@@ -45,6 +45,7 @@ generated_others += custom_target(
 )
 
 subdir('Experimental')
+subdir('Gateway')
 subdir('IP')
 generated_others += custom_target(
     'xyz/openbmc_project/Network/IP__markdown'.underscorify(),

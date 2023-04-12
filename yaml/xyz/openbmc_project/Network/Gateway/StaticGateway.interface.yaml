@@ -1,0 +1,27 @@
+description: >
+    This defines gateway object.
+
+# creatable: true
+
+properties:
+    - name: Address
+      type: string
+      description: >
+          The value of this property shall be IP address assigned to ethernet
+          interface gateway.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+    - name: PrefixLength
+      type: byte
+      description: >
+          This is the number of network bits in the gateway ipaddress.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+    - name: Type
+      type: enum[xyz.openbmc_project.Network.IP.Protocol]
+      description: >
+          protocol type can be IPv4 or IPv6.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed

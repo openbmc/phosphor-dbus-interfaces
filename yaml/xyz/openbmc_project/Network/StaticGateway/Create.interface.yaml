@@ -1,0 +1,25 @@
+description: >
+methods:
+    - name: StaticGateway
+      description: >
+          Create static gateway object.
+      parameters:
+          - name: ProtocolType
+            type: enum[xyz.openbmc_project.Network.IP.Protocol]
+            description: >
+                protocol type can be IPv4 or IPv6 etc.
+          - name: Address
+            type: string
+            description: >
+                IP Address.
+          - name: PrefixLength
+            type: size
+            description: >
+                Prefix Length.
+      returns:
+          - name: Path
+            type: object_path
+            description: >
+                The path for the created gateway object.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument

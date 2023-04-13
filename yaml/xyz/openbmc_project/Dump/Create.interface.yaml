@@ -61,3 +61,26 @@ enumerations:
                 Type of the originator that initiated the respective operation.
                 This property is defined in xyz.openbmc_project.
                 Common.OriginatedBy interface.
+          - name: "DumpType"
+            description: >
+                Type of the BMC dump to be collected
+          - name: "FilePath"
+            description: >
+                The path to a file to create the dump, for example a systemd core-dump.
+
+    - name: DumpType
+      description: >
+          Possible types of BMC Dump.
+      values:
+          - name: "ApplicationCored"
+            description: >
+                Dump triggered due to application core.
+          - name: "UserRequested"
+            description: >
+                Dump triggered by the user.
+          - name: "InternalFailure"
+            description: >
+                Dump triggered due to InternalFailure type error commit.
+          - name: "Ramoops"
+            description: >
+                Dump triggered due to Ramoops type error commit.

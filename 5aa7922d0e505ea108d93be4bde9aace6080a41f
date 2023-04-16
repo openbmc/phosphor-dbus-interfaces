@@ -16,6 +16,41 @@
       "message": "can we add create gateway method for adding static gateway?",
       "revId": "5aa7922d0e505ea108d93be4bde9aace6080a41f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48d61b1e_4372df62",
+        "filename": "yaml/xyz/openbmc_project/Network/IPv6StaticGateway.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-16T22:02:59Z",
+      "side": 1,
+      "message": "Agreed.  I see there a few undocumented \"Create\" interfaces already in phosphor-networkd.  Those should be moved here and one created for this new StaticGateway similar to the Network.Client.Create interface.",
+      "parentUuid": "57b11e37_8ee83867",
+      "revId": "5aa7922d0e505ea108d93be4bde9aace6080a41f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ae43b50_a5e74fee",
+        "filename": "yaml/xyz/openbmc_project/Network/IPv6StaticGateway.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-16T22:02:59Z",
+      "side": 1,
+      "message": "Why are we making a unique one for IPv6?  Network.IP already has a Protocol enumeration.  I don\u0027t see any reason to not include that for the gateway also.",
+      "revId": "5aa7922d0e505ea108d93be4bde9aace6080a41f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

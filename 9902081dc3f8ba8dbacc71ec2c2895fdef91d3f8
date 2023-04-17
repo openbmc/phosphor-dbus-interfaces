@@ -486,6 +486,24 @@
       "parentUuid": "5d7201ae_a1994db2",
       "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5748dbfa_f7735713",
+        "filename": "yaml/xyz/openbmc_project/Network/StaticRoute.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-17T15:05:53Z",
+      "side": 1,
+      "message": "Yes, \u0027size\u0027.  See https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/requirements.md#prefer-size-and-uint64int64-over-explicit-sizes\n\nAlso, for reference, see https://github.com/openbmc/sdbusplus/blob/master/docs/yaml/interface.md#base-types",
+      "parentUuid": "567fe6af_a7d1845b",
+      "revId": "9902081dc3f8ba8dbacc71ec2c2895fdef91d3f8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

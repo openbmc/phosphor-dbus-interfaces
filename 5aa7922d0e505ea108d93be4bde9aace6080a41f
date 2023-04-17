@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b219c0fa_441625eb",
+        "filename": "yaml/xyz/openbmc_project/Network/IPv6StaticGateway.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2023-04-17T04:05:02Z",
+      "side": 1,
+      "message": "Sure. I thought of adding create interface at networkd. But i will make those changes here, and as Patrick mentioned.\nWe can move the networkd repo\u0027s create methods to dbus repo in separate commits.",
+      "parentUuid": "48d61b1e_4372df62",
+      "revId": "5aa7922d0e505ea108d93be4bde9aace6080a41f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9ae43b50_a5e74fee",
         "filename": "yaml/xyz/openbmc_project/Network/IPv6StaticGateway.interface.yaml",
         "patchSetId": 4
@@ -49,6 +67,24 @@
       "writtenOn": "2023-04-16T22:02:59Z",
       "side": 1,
       "message": "Why are we making a unique one for IPv6?  Network.IP already has a Protocol enumeration.  I don\u0027t see any reason to not include that for the gateway also.",
+      "revId": "5aa7922d0e505ea108d93be4bde9aace6080a41f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f072950_7967ffde",
+        "filename": "yaml/xyz/openbmc_project/Network/IPv6StaticGateway.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2023-04-17T04:05:02Z",
+      "side": 1,
+      "message": "IPv6 protocol supports multiple default gateways on single interface. But the same is not supported on IPv4. We can extend this yaml for IPv4 in future, if IPv4 supports multiple static gateways at single interface. \n\nPS: This is an open question at networkd, as how the dynamic and static IPv4 network can co-exist on single interface. This is a scenario where multiple gateways will get set on single interface.  https://discordapp.com/channels/775381525260664832/1088767060919717968",
+      "parentUuid": "9ae43b50_a5e74fee",
       "revId": "5aa7922d0e505ea108d93be4bde9aace6080a41f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

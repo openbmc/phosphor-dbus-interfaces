@@ -87,6 +87,24 @@
       "parentUuid": "9ae43b50_a5e74fee",
       "revId": "5aa7922d0e505ea108d93be4bde9aace6080a41f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b381b4d_d9a84521",
+        "filename": "yaml/xyz/openbmc_project/Network/IPv6StaticGateway.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-17T15:02:28Z",
+      "side": 1,
+      "message": "\u003e IPv6 protocol supports multiple default gateways on single interface. But the same is not supported on IPv4. We can extend this yaml for IPv4 in future, if IPv4 supports multiple static gateways at single interface.\n\nI don\u0027t think anyone is going to extend the IPv4 protocol at this point in time, if that\u0027s what you\u0027re getting at.\n\nI\u0027d rather have a similar / consistent programming API though.  I don\u0027t think we should have interfaces named \"IPv6...\"",
+      "parentUuid": "0f072950_7967ffde",
+      "revId": "5aa7922d0e505ea108d93be4bde9aace6080a41f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -16,6 +16,23 @@
       "message": "I think i should also update https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Network/README.md with this commit.",
       "revId": "649baad860226bc3351c9a6b56ee9c1a4240ed45",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d906fd05_cf14748e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000188
+      },
+      "writtenOn": "2023-04-18T13:13:51Z",
+      "side": 1,
+      "message": "Why add an interface that is just a more specialize StaticRoute? It\u0027s easy enough to iterate over static routes for anything with pfxlen\u003d\u003d0. This would just add redundant objects.",
+      "revId": "649baad860226bc3351c9a6b56ee9c1a4240ed45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

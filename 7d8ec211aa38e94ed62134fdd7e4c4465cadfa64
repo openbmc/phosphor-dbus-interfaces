@@ -46,6 +46,30 @@
       },
       "revId": "7d8ec211aa38e94ed62134fdd7e4c4465cadfa64",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "919a9a20_1c953971",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-20T14:18:35Z",
+      "side": 1,
+      "message": "\u003e When using a generic association, it is possible for multiple objects to have the same association, so it\u0027s important to validate each object and ensure that the correct object is used.\n\nwhy is this a bad thing?  If mapper doesn’t have a query that answers this question for you, we should add a query to mapper. “Get me all the ‘connected’ objects containing a PCIe device interface”. \n\n\u003e Having a new association like \"connected_to\" can provide a more specific representation of the association between PCIe devices and slots.\n\nThe logical conclusion of this argument is that we should encode the endpoint object name in _all_ associations. We’re not doing that.",
+      "parentUuid": "161f74b4_99419417",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 55
+      },
+      "revId": "7d8ec211aa38e94ed62134fdd7e4c4465cadfa64",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

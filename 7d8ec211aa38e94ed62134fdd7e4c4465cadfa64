@@ -22,6 +22,30 @@
       },
       "revId": "7d8ec211aa38e94ed62134fdd7e4c4465cadfa64",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "161f74b4_99419417",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-04-20T14:10:06Z",
+      "side": 1,
+      "message": "It is true that \"contained_by\" and \"containing\" associations can be used to for PCIe devices and PCIe slots. When using a generic association, it is possible for multiple objects to have the same association, so it\u0027s important to validate each object and ensure that the correct object is used. Having a new association like \"connected_to\" can provide a more specific representation of the association between PCIe devices and slots.",
+      "parentUuid": "95181cc3_845fcb7f",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 55
+      },
+      "revId": "7d8ec211aa38e94ed62134fdd7e4c4465cadfa64",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

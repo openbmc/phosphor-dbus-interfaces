@@ -269,3 +269,15 @@ enumerations:
           - name: Die
             description: >
                 A die within a package.
+
+associations:
+    - name: upstream_processor
+      description: >
+          Objects that implement Dimm can optionally implement the
+          upstream_processor association to provide a link back to a CPU or
+          Accelerator.
+      reverse_names:
+          - associated_dimms
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cpu
+          - xyz.openbmc_project.Inventory.Item.Accelerator

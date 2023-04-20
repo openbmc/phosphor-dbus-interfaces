@@ -94,6 +94,30 @@
       },
       "revId": "7d8ec211aa38e94ed62134fdd7e4c4465cadfa64",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63d7b2ca_54523124",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-04-20T16:28:47Z",
+      "side": 1,
+      "message": "I am using the getAssociationEndpoints method to retrieve association endpoints for a PCIeDevice. I am concerned that if more contained_by associations are added to PCIeDevice, it may become complex to validate each object and ensure that the correct object is used.",
+      "parentUuid": "7ac9ad42_7fd5f21c",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 55
+      },
+      "revId": "7d8ec211aa38e94ed62134fdd7e4c4465cadfa64",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

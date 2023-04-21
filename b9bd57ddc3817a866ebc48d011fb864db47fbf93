@@ -141,6 +141,24 @@
       "parentUuid": "7ea7906e_98132f83",
       "revId": "b9bd57ddc3817a866ebc48d011fb864db47fbf93",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a70908b_79239bd7",
+        "filename": "yaml/xyz/openbmc_project/Console/Access.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000900
+      },
+      "writtenOn": "2023-04-21T19:19:14Z",
+      "side": 1,
+      "message": "Should probably also clarify whether the bytearray includes a null terminator. I think in your current implementation it does not. That\u0027s another reason why I agree with Patrick it would be nicer to just publish the string on D-Bus and have consumer code add the null prefix. But I can see the arguments for both approaches.",
+      "parentUuid": "ab327383_45c04f6d",
+      "revId": "b9bd57ddc3817a866ebc48d011fb864db47fbf93",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

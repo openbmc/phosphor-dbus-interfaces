@@ -22,6 +22,30 @@
       },
       "revId": "790b62e2952170447b93d47bf85c1282d253dfca",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "249b3cf4_7d57cdc7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-04-21T20:48:28Z",
+      "side": 1,
+      "message": "I prefer a unique association for PCIe Slot \u003c--\u003e PCIe Device. Using a generic association like {containing, contained_by} does work for bmcweb, but it causes bmcweb to maintain more code. The more code is because with a generic association other inventory items could be using the same assocation (e.g. PCIe Device -contained_by--\u003e Chassis, PCIe Device -contained_by--\u003e PCIe Slot). Bmcweb has to iterate on the list of contained_by inventory items and find the PCIe Slot, not a huge deal but is more code. I don\u0027t see a real downside of using more unique assocations vs reusing the generic ones.",
+      "parentUuid": "383bab68_04b663a8",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 37
+      },
+      "revId": "790b62e2952170447b93d47bf85c1282d253dfca",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

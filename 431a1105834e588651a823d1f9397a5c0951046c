@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2f96f0e2_14f7521e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-04-21T20:48:28Z",
+      "side": 1,
+      "message": "\u003e How do we model an empty slot and the data associated with it?\n\n\nIn Redfish an empty slot will be a PCIeDevice with State of Absent. This follows how Redfish models an empty DIMM or Processor Slot. Redfish is moving away from PCIeSlots being an array at /redfish/v1/Chassis/{ChassisId}/PCIeSlots\n\n(this is from a Redish mockup). \n```\n{\n    \"@odata.type\": \"#PCIeDevice.v1_9_0.PCIeDevice\",\n    \"Id\": \"Slot2\",\n    \"Name\": \"Empty PCIe Slot\",\n    \"Description\": \"Empty PCIe Slot\",\n...\n    \"Status\": {\n        \"State\": \"Absent\",\n        \"Health\": \"OK\"\n    },\n...\n    \"Slot\": {\n        \"PCIeType\": \"Gen4\",\n        \"Lanes\": 4,\n        \"SlotType\": \"FullLength\",\n        \"Location\": {\n            \"PartLocation\": {\n                \"ServiceLabel\": \"Slot 2\",\n                \"LocationOrdinalValue\": 2,\n                \"LocationType\": \"Slot\",\n                \"Orientation\": \"LeftToRight\",\n                \"Reference\": \"Rear\"\n            }\n        }\n    },\n    \"Links\": {\n        \"Chassis\": [\n            {\n                \"@odata.id\": \"/redfish/v1/Chassis/1\"\n            }\n        ],\n...\n    \"@odata.id\": \"/redfish/v1/Chassis/1/PCIeDevices/Slot2\",\n```\n\nA couple of ideas on how to model the D-Bus interfaces for an empty PCIe Slot:\n1) A empty PCIeSlot still has an associated PCIe Device interface, but the PCIe Device is Present \u003d false \n2) bmcweb looks for the PCIe Device and PCIe Slot inventory item interfaces out on D-Bus. Any associated PCIe Device and PCIe Slot are merged as one Redfish object. Any PCIe Slots without an PCIe Device association are put out as an empty slot (PCIe Device with a State of Absent; slot info populated)",
+      "parentUuid": "0dab6931_97461d83",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "431a1105834e588651a823d1f9397a5c0951046c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1b3f60de_13866ed6",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 3

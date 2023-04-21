@@ -87,6 +87,24 @@
       "parentUuid": "51a0b37e_254291c5",
       "revId": "b9bd57ddc3817a866ebc48d011fb864db47fbf93",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d6c0922_f6b47e35",
+        "filename": "yaml/xyz/openbmc_project/Console/Access.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001634
+      },
+      "writtenOn": "2023-04-21T15:14:43Z",
+      "side": 1,
+      "message": "We decided that bmcweb doesn\u0027t need to know how it is formed. No we are not doing any transformation in bmcweb we just take the byte stream and connect to it.\n\nPlease check bmcweb side change: https://gerrit.openbmc.org/c/openbmc/bmcweb/+/62525/8/include/obmc_console.hpp#161",
+      "parentUuid": "ec55d53b_7a474d74",
+      "revId": "b9bd57ddc3817a866ebc48d011fb864db47fbf93",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -2,7 +2,7 @@
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VSBK__cpp'.underscorify(),
     input: [ '../../../../../yaml/com/ibm/ipzvpd/VSBK.interface.yaml',  ],
-    output: [ 'common.hpp', 'server.cpp', 'server.hpp', 'client.hpp',  ],
+    output: [ 'common.hpp', 'server.cpp', 'server.hpp', 'aserver.hpp', 'client.hpp',  ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',

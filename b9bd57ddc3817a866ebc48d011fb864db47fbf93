@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd322256_6195c324",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1001634
+      },
+      "writtenOn": "2023-04-21T14:13:49Z",
+      "side": 1,
+      "message": "This is a abstract socket which starts with null character.\nPlease see the link below for the information.\n\nhttps://man7.org/linux/man-pages/man7/unix.7.html\n       *  abstract: an abstract socket address is distinguished (from a\n          pathname socket) by the fact that sun_path[0] is a null byte\n          (\u0027\\0\u0027).  The socket\u0027s address in this namespace is given by\n          the additional bytes in sun_path that are covered by the\n          specified length of the address structure.  (Null bytes in the\n          name have no special significance.)  The name has no\n          connection with filesystem pathnames.  When the address of an\n          abstract socket is returned, the returned addrlen is greater\n          than sizeof(sa_family_t) (i.e., greater than 2), and the name\n          of the socket is contained in the first (addrlen -\n          sizeof(sa_family_t)) bytes of sun_path.",
+      "parentUuid": "df17f9d1_626d0570",
+      "revId": "b9bd57ddc3817a866ebc48d011fb864db47fbf93",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d7689cf_c3dc45f4",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-04-21T14:01:09Z",
       "side": 1,
       "message": "Why would this not be \u0027string\u0027?",
+      "revId": "b9bd57ddc3817a866ebc48d011fb864db47fbf93",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51a0b37e_254291c5",
+        "filename": "yaml/xyz/openbmc_project/Console/Access.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001634
+      },
+      "writtenOn": "2023-04-21T14:13:49Z",
+      "side": 1,
+      "message": "The string type in SDBUS expect a null terminated character stream. This is a abstract socket which starts with null character hence string doesn\u0027t work.\n\nI tried the string first and it wasn\u0027t working hence moved to byte stream.",
+      "parentUuid": "4d7689cf_c3dc45f4",
       "revId": "b9bd57ddc3817a866ebc48d011fb864db47fbf93",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

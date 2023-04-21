@@ -70,6 +70,24 @@
       "parentUuid": "68c73b82_607fae9e",
       "revId": "62a1b55f2ad0d6a8f00b56971ca956dfd9864269",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a89fd70_d32c1efa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-21T01:43:04Z",
+      "side": 1,
+      "message": "I’ve said this in another commit today, but it sounds like the mapper queries are not sufficient. Please propose enhancements to them. \n\n(This design with inventory associations was discussed about 6 months ago now and the generic associations was the compromise we agreed to with Benjamin. I wanted path hierarchy but agreed to these instead. I identified mapper queries as a weekends when his design was agreed to and he said he would improve them then. I’ve seen no action on that yet.)\n\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/62104 is the other proposed association change from today.",
+      "parentUuid": "6a65bdd5_f9a48384",
+      "revId": "62a1b55f2ad0d6a8f00b56971ca956dfd9864269",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

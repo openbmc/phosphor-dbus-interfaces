@@ -87,6 +87,24 @@
       "parentUuid": "b9fc1d25_10e254ab",
       "revId": "649baad860226bc3351c9a6b56ee9c1a4240ed45",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf406ea7_d9543595",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-21T11:18:09Z",
+      "side": 1,
+      "message": "I’m having trouble understanding the difference.\n\nIt seems your proposal is missing the destination IP, right?  This should always be implied to be a mask of sorts since the prefix length is applied. 0.0.0.0 is the destination you’d use for “everything”.  I must be missing the understanding on how your proposal works without a destination unless it is always implied to be “gateway \u0026 prefix_mask”?  That seems… undocumented and weaker in functionality. \n\nOther than that, what is the difference you see?  What is the expected confusion you envision from one to the other?",
+      "parentUuid": "cb07fd86_2efad838",
+      "revId": "649baad860226bc3351c9a6b56ee9c1a4240ed45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -69,6 +69,24 @@
       "parentUuid": "3e64e794_09efe373",
       "revId": "649baad860226bc3351c9a6b56ee9c1a4240ed45",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb07fd86_2efad838",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2023-04-21T10:25:02Z",
+      "side": 1,
+      "message": "OK. The StaticRoute commit https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/60517\n\nStatic route takes Destination IP address and the Gateway IP in the system which should be used to reach that destination. \nStatic gateway is to create the gateway itself for the interface. This takes the Gateway IP, protocol, and the Prefix length as inputs. \n\nThis dbus interface is to add multiple static gateways for the static IPv6 network setup. \n\nSo I believe combining them may lead to confusions.",
+      "parentUuid": "b9fc1d25_10e254ab",
+      "revId": "649baad860226bc3351c9a6b56ee9c1a4240ed45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

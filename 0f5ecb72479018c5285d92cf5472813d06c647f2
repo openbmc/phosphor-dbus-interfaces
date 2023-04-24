@@ -33,6 +33,24 @@
       "message": "I\u0027m not sure why we\u0027re attempting to go forward with this when I\u0027ve pointed out that the current derivation of Asset-Manufacturer from the PCIe VendorID is wrong.",
       "revId": "0f5ecb72479018c5285d92cf5472813d06c647f2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a98de3a_8fef8d8e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-04-24T21:45:55Z",
+      "side": 1,
+      "message": "As pointed out by Jason, the purpose of PCIeDevice.Manufacturer is to cover the Redfish property, which is the same as Asset.Manufacturer. However, the current implementation in peci-pcie is setting the Manufacturer in the PCIeDevice interface instead of the Asset interface, which has been fixed in the following commit: https://gerrit.openbmc.org/c/openbmc/peci-pcie/+/62256. \n\nThe use of PCIe VendorID for Manufacturer is incorrect and will be fixed separately in peci-pcie. This commit is to remove the Manufacturer from the PCIeDevice interface and set it in the Asset interface instead, while a separate issue will be opened to address the use of the PCIe VendorID for Manufacturer in peci-pcie.",
+      "parentUuid": "47446fa8_a5b3b7f7",
+      "revId": "0f5ecb72479018c5285d92cf5472813d06c647f2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -25,6 +25,7 @@ default. Other interfaces can be enabled by meson options:
 - org/open_power - `-Ddata_org_open_power=true`
 
 Example: `meson builddir -Ddata_com_ibm=true && ninja -C builddir`
+Example: `meson builddir -Ddata_com_ibm=true && ninja -C builddir`
 
 ## References
 

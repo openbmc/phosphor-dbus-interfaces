@@ -69,6 +69,24 @@
       "parentUuid": "3a98de3a_8fef8d8e",
       "revId": "0f5ecb72479018c5285d92cf5472813d06c647f2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1a93458_8e345c53",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-04-25T12:23:14Z",
+      "side": 1,
+      "message": "The vendor ID will be stored in the PCIeFunction schema, which describes the properties of a PCIe function associated with a PCIe device. The Redfish PCIeDevice schema contains a link to the collection of PCIe functions associated with the device. The PCIeFunction method can be used to retrieve information about a particular function, including the VendorId. \n\ncurl -k https://$bmc/redfish/v1/Systems/system/PCIeDevices/pcie_card7/PCIeFunctions/0\n{\n  \"@odata.id\": \"/redfish/v1/Systems/system/PCIeDevices/pcie_card7/PCIeFunctions/0\",\n  \"@odata.type\": \"#PCIeFunction.v1_2_3.PCIeFunction\",\n  \"ClassCode\": \"0x020000\",\n  \"DeviceId\": \"0x1657\",\n  \"FunctionId\": 0,\n  \"Id\": \"0\",\n  \"Links\": {\n    \"PCIeDevice\": {\n      \"@odata.id\": \"/redfish/v1/Systems/system/PCIeDevices/pcie_card7\"\n    }\n  },\n  \"Name\": \"PCIe Function\",\n  \"RevisionId\": \"0x01\",\n  \"SubsystemId\": \"0x0420\",\n  \"SubsystemVendorId\": \"0x1014\",\n  \"VendorId\": \"0x14e4\"\n}",
+      "parentUuid": "2c0bad99_78f6c9bf",
+      "revId": "0f5ecb72479018c5285d92cf5472813d06c647f2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

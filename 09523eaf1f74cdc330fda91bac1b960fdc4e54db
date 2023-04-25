@@ -52,6 +52,24 @@
       "parentUuid": "3dbab9c6_288f0cf5",
       "revId": "09523eaf1f74cdc330fda91bac1b960fdc4e54db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3f4a2b7_1af1f490",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001643
+      },
+      "writtenOn": "2023-04-25T12:55:10Z",
+      "side": 1,
+      "message": "I am not finding the sdbusplus repo inside phosphor-dbus-interfaces/subprojects. phosphor-dbus-interfaces/subprojects has file sdbusplus.wrap. This file has the content (pulling the sdbusplus repo from git) \n\n[wrap-git]\nurl \u003d https://github.com/openbmc/sdbusplus.git\nrevision \u003d HEAD\n\n[provide]\nsdbusplus \u003d sdbusplus_dep\nprogram_names \u003d sdbus++, sdbus++-gen-meson",
+      "parentUuid": "43d91652_9a8c088c",
+      "revId": "09523eaf1f74cdc330fda91bac1b960fdc4e54db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

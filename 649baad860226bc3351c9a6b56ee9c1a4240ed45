@@ -105,6 +105,24 @@
       "parentUuid": "cb07fd86_2efad838",
       "revId": "649baad860226bc3351c9a6b56ee9c1a4240ed45",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1f8f569_c3572f6a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2023-04-25T08:06:42Z",
+      "side": 1,
+      "message": "Thanks Patrick \u0026 William. So the changes would be:\n\n1. Rename the StaticRoute to Route (to get a generic naming at dbus objects).\n2. Add description to \"Destination\" property - to say that all 0 in this value means this is a static gateway.\n3. Add one more property at StaticRoute.interface.yaml - Type which will be the enum [xyz.openbmc_project.Network.IP.Protocol] to cover both IPv4 and IPv6 types.\n4. No need of this commit 62323.\n\neg: IPv6 protocol takes an IPv6 address \u0026 prefix length together to setup the static iPv6 gateway. So, prefix can be a non-zero value as well.\n\nPlease let me know if this approach is fine.\n\n@Ravi - please share your views as well.",
+      "parentUuid": "cf406ea7_d9543595",
+      "revId": "649baad860226bc3351c9a6b56ee9c1a4240ed45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

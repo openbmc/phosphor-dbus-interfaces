@@ -1,0 +1,67 @@
+description: >
+    Implement to represent the VSBK record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VZ
+      type: array[byte]
+      description: >
+          VZ keyword. The record version.
+    - name: BR
+      type: array[byte]
+      description: >
+          The system brand.
+    - name: TM
+      type: array[byte]
+      description: >
+          Machine type model - ipSeries.
+    - name: SE
+      type: array[byte]
+      description: >
+          System serial number - ipSeries.
+    - name: SU
+      type: array[byte]
+      description: >
+          System unique ID.
+    - name: RB
+      type: array[byte]
+      description: >
+          RB keyword.
+    - name: WN
+      type: array[byte]
+      description: >
+          WWPN root.
+    - name: RG
+      type: array[byte]
+      description: >
+          Field core override.
+    - name: FV
+      type: array[byte]
+      description: >
+          Firmware version.
+    - name: FC
+      type: array[byte]
+      description: >
+          System enclosure feature code.
+    - name: ES
+      type: array[byte]
+      description: >
+          ES keyword.
+    - name: LX
+      type: array[byte]
+      description: >
+          LX keyword. The load ID data.
+    - name: D0
+      type: array[byte]
+      description: >
+          D0 keyword.
+    - name: F5
+      type: array[byte]
+      description: >
+          F5 keyword.
+    - name: F6
+      type: array[byte]
+      description: >
+          F6 keyword.

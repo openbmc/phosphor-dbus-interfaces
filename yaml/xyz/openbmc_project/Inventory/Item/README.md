@@ -24,3 +24,4 @@ Document ObjectMapper association forward and reverse names as follows:
 - led and item: `{identifying, identified_by}`
   `{fault_identifying, fault_identified_by}`
 - powerSupply and item: `{powering, powered_by}`
+- item and port: `{connecting, connected_to}`

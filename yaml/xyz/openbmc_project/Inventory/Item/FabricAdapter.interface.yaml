@@ -2,3 +2,12 @@ description: >
     Implement to provide fabric adapter attributes. A physical fabric adapter
     capable of connecting to an interconnect fabric. Examples include but are
     not limited to Ethernet, NVMe over Fabrics, etc.
+
+associations:
+    - name: connecting
+      description: >
+          Objects that implement FabricAdapter can optionally implement the
+          connecting association to  provide links to one or more Ports.
+      reverse_name: connected_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Port

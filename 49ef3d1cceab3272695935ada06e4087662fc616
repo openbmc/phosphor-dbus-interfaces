@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b10c02a9_ccb3dcbb",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Port.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-26T16:20:00Z",
+      "side": 1,
+      "message": "Looks like you didn\u0027t run `regenerate-meson` after adding this file.\n\n```\nopenbmc/phosphor-dbus-interfaces: gen/xyz/openbmc_project/Inventory/Item/meson.build:346:0: ERROR: Non-existent build file \u0027gen/xyz/openbmc_project/Inventory/Item/Port/meson.build\u0027\n```",
+      "revId": "49ef3d1cceab3272695935ada06e4087662fc616",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5de90bd4_ea9617c9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Port.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-26T16:20:00Z",
+      "side": 1,
+      "message": "I think this belongs under Inventory.Connector and not Inventory.Item?",
+      "revId": "49ef3d1cceab3272695935ada06e4087662fc616",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0404c5bf_b2db40ef",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-26T16:20:00Z",
+      "side": 1,
+      "message": "This doesn\u0027t look like you\u0027ve used an arbitrary \"item\" here.  Probably meant FabricAdapter?",
+      "range": {
+        "startLine": 27,
+        "startChar": 2,
+        "endLine": 27,
+        "endChar": 6
+      },
+      "revId": "49ef3d1cceab3272695935ada06e4087662fc616",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

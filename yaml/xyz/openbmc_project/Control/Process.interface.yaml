@@ -1,0 +1,12 @@
+description: >
+    Implement to provide the control to the process object
+
+    Control.Process.Disable is read/write.
+
+properties:
+    - name: Enable
+      type: boolean
+      description: >
+          Whether the object should be in Disabled or Enabled mode.
+      default: true
+

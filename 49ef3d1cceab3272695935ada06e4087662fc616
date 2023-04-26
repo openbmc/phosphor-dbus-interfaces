@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e58b504_1c7ab17e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Port.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001604
+      },
+      "writtenOn": "2023-04-26T16:58:39Z",
+      "side": 1,
+      "message": "Fixed",
+      "parentUuid": "b10c02a9_ccb3dcbb",
+      "revId": "49ef3d1cceab3272695935ada06e4087662fc616",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5de90bd4_ea9617c9",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3cdb824_6f2b7440",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Port.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001604
+      },
+      "writtenOn": "2023-04-26T16:58:39Z",
+      "side": 1,
+      "message": "I modified to Inventory.Connector",
+      "parentUuid": "5de90bd4_ea9617c9",
+      "revId": "49ef3d1cceab3272695935ada06e4087662fc616",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0404c5bf_b2db40ef",
@@ -48,6 +84,30 @@
       "writtenOn": "2023-04-26T16:20:00Z",
       "side": 1,
       "message": "This doesn\u0027t look like you\u0027ve used an arbitrary \"item\" here.  Probably meant FabricAdapter?",
+      "range": {
+        "startLine": 27,
+        "startChar": 2,
+        "endLine": 27,
+        "endChar": 6
+      },
+      "revId": "49ef3d1cceab3272695935ada06e4087662fc616",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ae82c68_cd9cc088",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1001604
+      },
+      "writtenOn": "2023-04-26T16:58:39Z",
+      "side": 1,
+      "message": "Update to FabricAdapter",
+      "parentUuid": "0404c5bf_b2db40ef",
       "range": {
         "startLine": 27,
         "startChar": 2,

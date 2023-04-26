@@ -1,0 +1,11 @@
+description: >
+    This defines a Port of a switch, controller, chassis, or any other device
+    that could be connected to another entity.
+
+association:
+    name: connected_to
+    description: >
+        Objects that are linked at the other end of the link.
+    reverse_name: connecting
+    required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.FabricAdapter

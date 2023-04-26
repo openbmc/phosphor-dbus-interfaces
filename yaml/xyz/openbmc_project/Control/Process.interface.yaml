@@ -1,0 +1,17 @@
+description: >
+    Implement the interface to control any process or thread.
+    Any service implementing Control.Process uses the property 
+    "Enable" to enable/disable the targeted process.
+
+    "Enable" is boolean, read/write, default true
+
+    True : enabled, on, active, ...
+    False : disabled, off, inactive, ...
+
+properties:
+    - name: Enable
+      type: boolean
+      description: >
+          It indicates the controlled state of the process.
+      default: true
+

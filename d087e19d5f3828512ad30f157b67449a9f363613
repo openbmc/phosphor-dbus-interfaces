@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebc11afd_5ff7aa1a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-04-27T08:49:49Z",
+      "side": 1,
+      "message": "This sentence seems rather grandiose. This is just an interface description. It doesn\u0027t affect users or performance or priorities. Perhaps these are aspirational goals for the future. They should be in future commits implementing these features, though, instead of here.",
+      "revId": "d087e19d5f3828512ad30f157b67449a9f363613",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "04238f2a_83130dad",
@@ -14,6 +31,23 @@
       "writtenOn": "2023-04-27T08:21:27Z",
       "side": 1,
       "message": "This is good. It\u0027s a lot of work just to add one boolean, but it\u0027s good to have this generic, because then it can be used in many other places as well.",
+      "revId": "d087e19d5f3828512ad30f157b67449a9f363613",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8867686e_4dc67b4c",
+        "filename": "yaml/xyz/openbmc_project/Control/Process.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-04-27T08:49:49Z",
+      "side": 1,
+      "message": "I thought about the design and intention of this.\nHere\u0027s some suggested wording:\n\nInterface to provide a means for an arbitrary object to have its functionality disabled upon request\n\n\"Enable\" is boolean, read/write, default true\n\nTrue implies enabled, on, active, yes, ...\nFalse implies disabled, off, inactive, no, ...\n\nThis is intended as a means of control, not a status indicator.\nThere are already other interfaces to indicate available, functional, ...\n\nObjects implementing this interface should accept incoming read/write requests.\nObjects implementing this interface should avoid unilaterally changing the value, to avoid race conditions and ambiguity versus an incoming write request.",
       "revId": "d087e19d5f3828512ad30f157b67449a9f363613",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

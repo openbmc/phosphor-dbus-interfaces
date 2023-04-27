@@ -232,6 +232,24 @@
       "parentUuid": "9b07d705_931eaa1f",
       "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16a31be4_994521db",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-04-27T14:22:20Z",
+      "side": 1,
+      "message": "I think we all continue to struggle with this because there\u0027s just not a good fit right now for this type of system design. From a Redfish API, what would this map to? Probably the ForceOff against the system which up at https://grok.openbmc.org/xref/openbmc/bmcweb/redfish-core/lib/systems.hpp?r\u003d797d5dae#2849 is defined to call the chassis power off API. So we\u0027d have to replace that with calling this new host interface you\u0027re defining here, and on 99% of our OpenBMC systems we\u0027d need that to just map to calling the current chassis power off. Unless we have more of these types of systems coming into the community, I\u0027d prefer you find a way to use our existing interfaces to work with your machine (although that may end up being a bit hacky for you).",
+      "parentUuid": "0bae9a66_b52666c9",
+      "revId": "e0ca4b36cd074e9497e5645b81c864ae878dd1d5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

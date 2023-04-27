@@ -25,3 +25,27 @@ properties:
       description: >
           Notifies the PEL handler that the management system acknowledged a
           PEL. The management system can be any system monitoring the hardware.
+    - name: PlatformLogID
+      type: uint32
+      description: >
+          This is the Platform Log ID field in the Private Header section of a
+          PEL.  It is the unique ID for a single event.  Multiple PELs can be
+          linked to the same event by using the same PLID value.
+    - name: Deconfig
+      type: boolean
+      default: false
+      description: >
+          Indicates that one or more resources were deconfigured due to this
+          error.
+    - name: Guard
+      type: boolean
+      default: false
+      description: >
+          Indicates that one or more resources were guarded due to this error.
+    - name: Timestamp
+      type: uint64
+      description: >
+          The creation timestamp of the PEL in milliseconds since the epoch. For
+          PELs created by subsystems other than the BMC, this can be different
+          than the timestamp property on the xyz.openbmc_project.Logging.Entry
+          interface.

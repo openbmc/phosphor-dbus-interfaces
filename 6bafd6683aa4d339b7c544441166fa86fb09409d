@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e40aa926_07bbec08",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-28T01:25:59Z",
+      "side": 1,
+      "message": "\u003e the main reason this doesnt serve our purpose is this xyz.openbmc_project.Object.Enable default \u003d false\n\nThis value should have no bearing here.  The \"default\" value of any property is only the one set up in the constructor if the server object doesn\u0027t have an alternative.  Essentially this is the uninitialized value.  Any implementation can set the default to something more appropriate.\n\n\u003e but from the description of this interface , it aims at boot settings related application , not sure it fits in our situation , please share your idea , thanks\n\nThe \"aims at boot settings\" isn\u0027t really true.  There was simply an example in the interface description.  We put this into Object.Enable so it could be widely applicable.  I think it fits the case you\u0027ve described in your commit message fine.",
+      "parentUuid": "3a68746e_36fa8693",
+      "revId": "6bafd6683aa4d339b7c544441166fa86fb09409d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1dcdc068_baa9b1db",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2

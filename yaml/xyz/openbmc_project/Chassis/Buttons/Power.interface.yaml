@@ -24,6 +24,15 @@ properties:
       errors:
           - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
           - xyz.openbmc_project.Chassis.Common.Error.IOError
+    - name: multiAction
+      type: dict[uint16, string]
+      description: >
+          Map for saving multi-level power behaviors by button pressing duration.
+          key for pressing duration in milliseconds.
+          Value for power control behaviors supported in phosphor-buttons.
+      errors:
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
 
 signals:
     - name: Released

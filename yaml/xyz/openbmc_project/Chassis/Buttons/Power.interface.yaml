@@ -24,6 +24,13 @@ properties:
       errors:
           - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
           - xyz.openbmc_project.Chassis.Common.Error.IOError
+    - name: multiAction
+      type: dict[uint16, string]
+      description: >
+          just for testing
+      errors:
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
 
 signals:
     - name: Released

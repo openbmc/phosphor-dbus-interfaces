@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09431e1d_c86bbb1c",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Throttle.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-05-03T15:47:15Z",
+      "side": 1,
+      "message": "This is a generic interface path, why only processor and not all inventory items (e.g. gpus)?\nIf this is unique to processors, does it make sense to have a this in a processor (I think we use cpu in PDI) path? maybe at https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/Inventory/Item/Cpu?",
+      "revId": "1982dea4e2827e6335a11ec58fd4f2914d81adce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a399d375_9d4ed9a7",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Throttle.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-05-03T15:47:15Z",
+      "side": 1,
+      "message": "So this property is going to be left off in Redfish if Throttled is false?",
+      "revId": "1982dea4e2827e6335a11ec58fd4f2914d81adce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb1878e6_7347bd5e",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Throttle.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-05-03T15:47:15Z",
+      "side": 1,
+      "message": "Want a default here? Unknown ?",
+      "revId": "1982dea4e2827e6335a11ec58fd4f2914d81adce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+description: >
+    This interface provides information related to the throttle status of a
+    processor.
+
+properties:
+    - name: ThrottleCauses
+      type: array[enum[self.ThrottleReasons]]
+      description: >
+          This property shall contain the causes of the processor being
+          throttled when the Throttled property is true.
+    - name: Throttled
+      type: boolean
+      flags:
+          - readonly
+      default: false
+      description: >
+          This property shall indicate whether the processor is throttled.
+
+enumerations:
+    - name: ThrottleReasons
+      description: >
+          The causes of the processor being throttled
+      values:
+          - name: ClockLimit
+            description: >
+                The cause of the processor being throttled is a clock limit.
+          - name: ManagementDetectedFault
+            description: >
+                The cause of the processor being throttled is a fault detected
+                by management hardware or firmware
+          - name: OEM
+            description: >
+                The cause of the processor being throttled is OEM-specific.
+          - name: PowerLimit
+            decription: >
+                The cause of the processor being throttled is a power limit.
+          - name: ThermalLimit
+            description: >
+                The cause of the processor being throttled is a thermal limit.
+          - name: Unknown
+            description: >
+                The cause of the processor being throttled is not known.

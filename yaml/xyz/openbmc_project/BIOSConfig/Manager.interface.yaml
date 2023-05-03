@@ -62,7 +62,7 @@ properties:
     - name: BaseBIOSTable
       type:
           dict[string,struct[enum[self.AttributeType],boolean,string,string,string,variant[int64,string],variant[int64,string],array[struct[enum[self.BoundType],
-          variant[int64, string]]]]]
+          variant[int64, string],string]]]]
       description: >
           map{attributeName,struct{attributeType,readonlyStatus,displayname,
           description,menuPath,current,default,
@@ -74,11 +74,11 @@ properties:
            "Advanced/Memory Configuration/Memory Operating Speed Selection",
            "0x00",
            "0x0B",
-           { {"OneOf", "auto"},
-             {"OneOf", "2133"},
-             {"OneOf", "2400"},
-             {"OneOf", "2664"},
-             {"OneOf", "2933"}
+           { {"OneOf", "auto", "enum0"},
+             {"OneOf", "2133", "enum1"},
+             {"OneOf", "2400", "enum2"},
+             {"OneOf", "2664", "enum3"},
+             {"OneOf", "2933", "enum4"}
            }
           } }
            Example 2:
@@ -90,9 +90,9 @@ properties:
            "Advanced/Debug Feature Selection",
            0x00,
            0x01,
-           { {"MinBound", 0},
-             {"MaxBound", 4},
-             {"ScalarIncrement",1}
+           { {"MinBound", 0, ""},
+             {"MaxBound", 4, ""},
+             {"ScalarIncrement", 1, ""}
            }
           } }
 

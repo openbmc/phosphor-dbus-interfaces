@@ -41,6 +41,9 @@ endif
 if get_option('data_xyz_openbmc_project')
     selected_subdirs += 'xyz/openbmc_project'
 endif
+if get_option('data_com_ampere')
+    selected_subdirs += 'com/ampere'
+endif
 
 # Install the selected YAML files.
 inst_yaml_dir = get_option('datadir') / 'phosphor-dbus-yaml/yaml'

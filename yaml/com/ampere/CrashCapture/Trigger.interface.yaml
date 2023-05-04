@@ -1,0 +1,40 @@
+description: >
+    Catastrophic SoC error scenarios can be caused by fatal firmware errors,
+    hardware faults, or watchdog timer timeouts. These conditions trigger the
+    Ampere crash capture feature, which captures core and system state along
+    with relevant error syndrome information.
+
+    The crash capture feature leverages the ACPI Boot Error Record Table (BERT)
+    to store the crash information in persistent storage before a reboot, making
+    it available in the BERT to UEFI and the OS after the reboot
+
+properties:
+    - name: TriggerActions
+      type: enum[self.TriggerAction]
+      default: None
+      description: >
+          Defines a crash capture trigger action
+
+    - name: TriggerProcess
+      type: boolean
+      default: false
+      description: >
+          The crash information is ready to be read.
+
+enumerations:
+    - name: TriggerAction
+      description: >
+          Type of crash capture trigger.
+      values:
+          - name: "Bert"
+            description: >
+                Bert is triggered
+          - name: "Diagnostic"
+            description: >
+                Diagnostic is triggered
+          - name: "Done"
+            description: >
+                Bert or Diagnostic is completed processed
+          - name: "None"
+            description: >
+                No any crash capture action is triggered

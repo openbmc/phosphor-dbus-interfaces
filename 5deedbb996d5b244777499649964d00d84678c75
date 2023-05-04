@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b30e08c_9999aa59",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Throttle.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2023-05-04T16:47:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "48889527_d7a9fb66",
+      "revId": "5deedbb996d5b244777499649964d00d84678c75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f90856e5_8154ceca",
@@ -31,6 +49,30 @@
       "writtenOn": "2023-05-04T16:23:46Z",
       "side": 1,
       "message": "Do we need to leverage OEM?  I generally try to avoid adding them unless you have a specific reason.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 75
+      },
+      "revId": "5deedbb996d5b244777499649964d00d84678c75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "926bf4fe_75954d93",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Throttle.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2023-05-04T16:47:24Z",
+      "side": 1,
+      "message": "It was defined in the Redfish spec, so I added it here also.  I don\u0027t have plans to use it and can remove if you desire.",
+      "parentUuid": "f90856e5_8154ceca",
       "range": {
         "startLine": 32,
         "startChar": 0,

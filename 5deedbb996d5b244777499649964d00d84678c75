@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48889527_d7a9fb66",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Throttle.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-04T16:23:46Z",
+      "side": 1,
+      "message": "I assume this should also be readonly?",
+      "revId": "5deedbb996d5b244777499649964d00d84678c75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f90856e5_8154ceca",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Throttle.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-04T16:23:46Z",
+      "side": 1,
+      "message": "Do we need to leverage OEM?  I generally try to avoid adding them unless you have a specific reason.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 75
+      },
+      "revId": "5deedbb996d5b244777499649964d00d84678c75",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

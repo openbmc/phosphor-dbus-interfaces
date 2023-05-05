@@ -106,6 +106,24 @@
       "parentUuid": "8667c083_b895e5f7",
       "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63db089a_a92fda64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-05-05T03:43:27Z",
+      "side": 1,
+      "message": "Hi Patrick Williams,\n\nThe Sensor Base Unit in PLDM spec from Gilbert is standards base unit of PLDM interface. The ipmi spec also includes those sensors. Because OpenBMC support PLDM and Ipmi interface, I don\u0027t see any reason to not support those interface.\n\nLet say in the PLDM interface between the MCU and BMC, when BMC want to report number of BERT errors of MCU to BMC it have to use \"Count\" unit in the numeric sensor PDRs, how can we support those kind of sensors in Value interface.",
+      "parentUuid": "12dea170_a16e809c",
+      "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

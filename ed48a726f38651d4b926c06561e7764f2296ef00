@@ -160,6 +160,24 @@
       "parentUuid": "94043620_86638fce",
       "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9dcae8f_bb8fabf9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-06T02:06:33Z",
+      "side": 1,
+      "message": "\u003e So you mean we should create the difference sensor interface xyz/openbmc_project/pldm/sennsors/Value.Interface as we did for xyz/openbmc_project/sennsors/Value.Interface?\n\nNo... I mean if you want to represent some kind of error condition, make an object to represent that error condition and have a property in it which is the count (in some timeframe?).\n\n\u003e As my opinion, Adding more sensors type in Value.Interface is an advantage to sensors model of OpenBMC.\n\nI\u0027m not sure what you perceive as the \"sensor model of OpenBMC\".  Sensor.Value\u0027s have units.  If they don\u0027t, they\u0027re no better than arbitrary strings.\n\nIf all I have is a collection of hundreds of \"counts\", what can I do programmaticly with those?  Not much.",
+      "parentUuid": "0170058d_e01b8f85",
+      "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

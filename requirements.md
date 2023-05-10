@@ -100,5 +100,15 @@ are grammatically correct:
 - The `{secondary element}` is `{secondary association}` the
   `{primary element}`.
 
+These correspond to the mapper D-Bus object paths `{primary element}/{primary
+assocation}` with an endpoints property value of `{secondary element}` and
+`{secondary element}/{secondary association}` with an endpoints property value
+of `{primary element}`.
+
 In some cases it may be required for grammatical correctness to add a
-preposition to the secondary assocation, such as 'by' or 'with'.
+preposition to the secondary association, such as 'by' or 'with'.
+
+Additional information on associations is in the [mapper documentation][].
+
+[mapper documentation]:
+https://github.com/openbmc/docs/blob/master/architecture/object-mapper.md#associations

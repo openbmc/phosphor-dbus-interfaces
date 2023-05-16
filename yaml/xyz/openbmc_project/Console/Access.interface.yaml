@@ -1,16 +1,17 @@
 description: >
-    Provides properties for supported consoles in the system.
+    Provides methods for supported consoles in the system. This interface
+    should be used to retrieve the console data.
 
-properties:
-    - name: SocketName
-      type: array[byte]
+methods:
+    - name: Connect
       description: >
-          Unix socket identifier for a console. This is used by a process like
-          bmcweb to put consoles, most likely host serial consoles, out on
-          WebSocket Secure (wss).
-
-          This attribute provides unix abstract socket name and its first
-          character is always null hence the attribute type is an array of bytes
-          instead of string. The byte array does not include a null terminator.
-      flags:
-          - readonly
+          Returns the unix socket file descriptor. The consumer can user this
+          descriptor to read the console data.
+      returns:
+          - name: fd
+            type: unixfd
+            description: >
+                The file descriptor to the unix socket.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.User.Common.Error.NoResource

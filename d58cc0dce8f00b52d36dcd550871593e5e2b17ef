@@ -193,6 +193,24 @@
       "parentUuid": "2a702f92_654be2f3",
       "revId": "d58cc0dce8f00b52d36dcd550871593e5e2b17ef",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e921b3f5_4da4052f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2023-05-18T06:09:35Z",
+      "side": 1,
+      "message": "\u003e re-using the DHCPConfiguration class\n\nPlease correct me if I am wrong. You suggested we can have two dhcp objects -\u003e /dhcp4 and /dhcp6 which implements DHCPConfiguration interface.\n\nThere is also one more discord discussion regarding this, to pull this /dhcp object to ethernet interface level:\n- /eth0\n  |_ /dhcp4\n  |_ /dhcp6\n- /eth1\n  |_ /dhcp4\n  |_ /dhcp6\n  \nIs the above design good to proceed? - by this we can have dhcp4 \u0026 dhcp6 in the ethernet interface level and that uses the same DHCPConfiguration class.",
+      "parentUuid": "2a702f92_654be2f3",
+      "revId": "d58cc0dce8f00b52d36dcd550871593e5e2b17ef",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

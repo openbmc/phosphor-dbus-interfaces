@@ -178,6 +178,24 @@
       "parentUuid": "0170058d_e01b8f85",
       "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a10bb65_21077594",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-05-20T00:31:44Z",
+      "side": 1,
+      "message": "\u003e \u003e So you mean we should create the difference sensor interface xyz/openbmc_project/pldm/sennsors/Value.Interface as we did for xyz/openbmc_project/sennsors/Value.Interface?\n\u003e \n\u003e No... I mean if you want to represent some kind of error condition, make an object to represent that error condition and have a property in it which is the count (in some timeframe?).\nIt it similar https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Control/Boot/RebootAttempts.interface.yaml?\n\u003e \n\u003e \u003e As my opinion, Adding more sensors type in Value.Interface is an advantage to sensors model of OpenBMC.\n\u003e \n\u003e I\u0027m not sure what you perceive as the \"sensor model of OpenBMC\".  Sensor.Value\u0027s have units.  If they don\u0027t, they\u0027re no better than arbitrary strings.\n\u003e \n\u003e If all I have is a collection of hundreds of \"counts\", what can I do programmaticly with those?  Not much.\n\nI agree that \"counts\" unit has unclear meaning, it can be count of times the thing appears, counts of CE/UE errors. But I think accepting \"CE errors\", \"UE errors\" unit is reasonable. Do you think so?",
+      "parentUuid": "e9dcae8f_bb8fabf9",
+      "revId": "ed48a726f38651d4b926c06561e7764f2296ef00",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

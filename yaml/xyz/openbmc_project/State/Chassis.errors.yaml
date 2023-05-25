@@ -7,3 +7,6 @@
 # xyz.openbmc_project.State.Chassis.Error.PowerCycleFailure
 - name: PowerCycleFailure
   description: The systemd obmc-chassis-powercycle.target failed to complete
+# xyz.openbmc_project.State.Chassis.Error.BMCNotReady
+- name: BMCNotReady
+  description: The BMC is not in a Ready state, no power operations allowed

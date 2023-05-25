@@ -8,6 +8,8 @@ properties:
       description: >
           The desired host transition.  This will be preserved across AC power
           cycles of the BMC.
+      errors:
+          - xyz.openbmc_project.State.Host.Error.BMCNotReady
 
     - name: CurrentHostState
       type: enum[self.HostState]

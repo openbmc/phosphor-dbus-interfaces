@@ -16,3 +16,6 @@
 # xyz.openbmc_project.State.Host.Error.HostRebootFailure
 - name: HostRebootFailure
   description: The systemd obmc-host-reboot.target failed to complete
+# xyz.openbmc_project.State.Host.Error.BMCNotReady
+- name: BMCNotReady
+  description: The BMC is not in a Ready state, no host operations allowed

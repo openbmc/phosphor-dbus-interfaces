@@ -68,6 +68,13 @@ enumerations:
             description: >
                 The path to a file to create the dump, for example a systemd
                 core-dump.
+          - name: "ErrorType"
+            description: >
+                 Specifies the type of the error that triggered the BMC dump
+                 collection. This is a string identifier for the error type.
+                 The type of the error dictates the kind of debug data
+                 collected during the dump process.
+
 
     - name: DumpType
       description: >
@@ -79,9 +86,12 @@ enumerations:
           - name: "UserRequested"
             description: >
                 Dump triggered by the user.
-          - name: "InternalFailure"
+          - name: "ErrorLog"
             description: >
-                Dump triggered due to InternalFailure type error commit.
+                This type of dump is triggered in response to a specific
+                error commit. The error type needs to be specified in
+                the "ErrorType" field. If no parameters are provided,
+                a default dump will be generated.
           - name: "Ramoops"
             description: >
                 Dump triggered due to Ramoops type error commit.

@@ -11,3 +11,11 @@ associations:
     reverse_name: connected_to
     required_endpoint_interfaces:
         - xyz.openbmc_project.Inventory.Connector.Port
+    name: connecting_slot
+    description: >
+         Objects that implement FabricAdapter can optionally implement the
+         connecting_slot association provides links to one or more
+         downstream Slots
+    reverse_name: connected_to_fabric_adapter
+    required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Item.PCIeSlot

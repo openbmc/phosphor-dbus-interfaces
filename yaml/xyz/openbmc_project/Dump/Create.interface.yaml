@@ -74,6 +74,14 @@ enumerations:
                 collection. This is a string identifier for the error type. The
                 type of the error dictates the kind of debug data collected
                 during the dump process.
+          - name: "EventId"
+            description: >
+                The identifier for an event that triggers the BMC dump. When a
+                BMC dump is initiated as a response to a specific system event,
+                this parameter can be supplied with the unique ID associated
+                with that event. By linking the dump to an event ID, the system
+                can collate additional, relevant diagnostic data or add this
+                into the dump to aid in providing a clearer context.
 
     - name: DumpType
       description: >

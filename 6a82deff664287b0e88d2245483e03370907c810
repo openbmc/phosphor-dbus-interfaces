@@ -16,6 +16,24 @@
       "message": "What is the difference between \"spanning\" and \"connecting\"?  I would have expected the FabricAdapter to be connected to multiple PCIeSlots based on your description.  Can we get more information on what you are solving with the distinction?",
       "revId": "6a82deff664287b0e88d2245483e03370907c810",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e552386b_a90cec34",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/FabricAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1001384
+      },
+      "writtenOn": "2023-05-31T19:28:51Z",
+      "side": 1,
+      "message": "The expectation of this commit is Fabric Adapter can be connected to multiple PCIeSlots. As this is new association with required endpoint interface of PCIe slot, created new association name spanning to make it unique.\nAlso fabric adapters are connected to ports as well as slots, using same association ports and slots will be confusing.",
+      "parentUuid": "1e530007_64e47837",
+      "revId": "6a82deff664287b0e88d2245483e03370907c810",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

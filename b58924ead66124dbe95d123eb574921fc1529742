@@ -34,6 +34,24 @@
       "parentUuid": "33250c81_5db43ea0",
       "revId": "b58924ead66124dbe95d123eb574921fc1529742",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a06ccba_1cf0686d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-31T01:02:35Z",
+      "side": 1,
+      "message": "Understood.  Let\u0027s refactor the interface to not use byte instead of adding byte here.  The one property which is byte can just as reasonably be size.  I think most of the uint16 ones can be size also.",
+      "parentUuid": "65afcfbf_715d2b4f",
+      "revId": "b58924ead66124dbe95d123eb574921fc1529742",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

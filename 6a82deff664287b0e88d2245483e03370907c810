@@ -34,6 +34,24 @@
       "parentUuid": "1e530007_64e47837",
       "revId": "6a82deff664287b0e88d2245483e03370907c810",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa873670_569b127d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/FabricAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-31T19:47:59Z",
+      "side": 1,
+      "message": "\"confusing\" in what way?  I explicitly wanted to avoid a huge set of associations and especially ones that encode the type in them.  It seems like you\u0027re just working around that direction and coming up with a different association.\n\nLooking at the other associations we\u0027ve used, I think that the FabricAdapter would be `contained_by` the PCIeSlot?  That is what we\u0027ve tried to use else where for containment association to show the device present in the slot.  Does that work for this situation?",
+      "parentUuid": "e552386b_a90cec34",
+      "revId": "6a82deff664287b0e88d2245483e03370907c810",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

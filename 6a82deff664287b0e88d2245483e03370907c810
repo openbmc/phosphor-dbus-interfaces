@@ -70,6 +70,24 @@
       "parentUuid": "fa873670_569b127d",
       "revId": "6a82deff664287b0e88d2245483e03370907c810",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3d85057_7e9922ba",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/FabricAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-01T22:39:18Z",
+      "side": 1,
+      "message": "I\u0027m hesitant to not use \"contained_by\" here.\n\nDo you generally agree that Devices go *in* a PCIeSlot?\n\nIt sounds like you have an unusual device that is somehow attached to multiple slots.  This is atypical.\n\nMy opinion is we should design the interfaces to be intuitive for the common case and not perfect for the obscure case.\n\nThus, the association between a slot and the device populating that slot would be \"contained_in\" just like a processor would be \"contained_in\" in a socket on a motherboard.",
+      "parentUuid": "88f3d016_f78756d2",
+      "revId": "6a82deff664287b0e88d2245483e03370907c810",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

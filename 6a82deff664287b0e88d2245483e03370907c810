@@ -52,6 +52,24 @@
       "parentUuid": "e552386b_a90cec34",
       "revId": "6a82deff664287b0e88d2245483e03370907c810",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88f3d016_f78756d2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/FabricAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-06-01T17:45:14Z",
+      "side": 1,
+      "message": "To me, contained_by conveys a relationship where the containing object is inside the contained_by object. I think that is not what you are going for here? I think you are going for the logical fabric connection to this fabric adapter?\n\nI think connecting could work here.\nA fabric adapter connected to a pcie slot\nA pcie slot connected to a fabric adapter. \nThat seems reasonable to me if we are trying to reuse associations.",
+      "parentUuid": "fa873670_569b127d",
+      "revId": "6a82deff664287b0e88d2245483e03370907c810",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

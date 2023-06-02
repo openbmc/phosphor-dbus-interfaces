@@ -106,6 +106,24 @@
       "parentUuid": "8fc600c0_58e270a5",
       "revId": "b58924ead66124dbe95d123eb574921fc1529742",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12d444a7_a8a07ca6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-02T00:28:54Z",
+      "side": 1,
+      "message": "I asked you which interface you thought you needed to extend Notify to support byte for and you gave me DIMM. \n\nIn my opinion it should be very rare that we need any bit-sized type on a dbus interface. If you find other interfaces with byte and you want to use those in Notify, let’s first evaluate if they can be similarly refactored.",
+      "parentUuid": "113928a2_5282808b",
+      "revId": "b58924ead66124dbe95d123eb574921fc1529742",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

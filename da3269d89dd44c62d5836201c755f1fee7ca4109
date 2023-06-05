@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b58ce84c_1a1ee288",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2023-06-05T03:49:52Z",
+      "side": 1,
+      "message": "This change is for multi power button implement:\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-buttons/+/59701\n\nTo support multi-level power behavior by pressing duration, service named buttons was designed to parse json conf and set properties on dbus, then another service named button-handler can get properties from dbus and do corresponding handling, string will saved as \"chassis on\", \"chassis off\" or \"chassis cycle\", this design is also updated on README of phosphor-buttons.",
+      "parentUuid": "63607b1d_5449eab2",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 40
+      },
+      "revId": "da3269d89dd44c62d5836201c755f1fee7ca4109",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "58d0f234_37a42d63",

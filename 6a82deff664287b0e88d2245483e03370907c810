@@ -88,6 +88,24 @@
       "parentUuid": "88f3d016_f78756d2",
       "revId": "6a82deff664287b0e88d2245483e03370907c810",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b1da0b6_a164d2c8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/FabricAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1001384
+      },
+      "writtenOn": "2023-06-05T18:55:49Z",
+      "side": 1,
+      "message": "This requirement is for external IO drawer, which gets connected to PCIe slot on CEC via optical cable. Optical cable gets connected to the ports on the fabric adaptor which is present on the external IO drawer.\n \nFabric adapter on external IO drawer spans out to multiple slots which may/may not be directly connected to it. As slots and fabric adapter may/may not be on the same planar, creating an association between them.\n\nOption1: To generalize the association, we can add new association as below:\n         Fabric Adapter -\u003e Item (containing and contained_in) \nOption2: Modify the existing one\n         Fabric Adapter -\u003e Port (connecting, connected_to) to\n         Fabric Adapter -\u003e Item (connecting, connected_to)",
+      "parentUuid": "c3d85057_7e9922ba",
+      "revId": "6a82deff664287b0e88d2245483e03370907c810",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

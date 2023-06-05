@@ -106,6 +106,24 @@
       "parentUuid": "c3d85057_7e9922ba",
       "revId": "6a82deff664287b0e88d2245483e03370907c810",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93ceeb9b_26f9997f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/FabricAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-06-05T19:07:31Z",
+      "side": 1,
+      "message": "\u003e Do you generally agree that Devices go in a PCIeSlot?\n\nI do. and for PCIeSlot \u003c-\u003e PCIeDevice, containing and contained_in makes sense to me.\n\nThe one in review is for FabricAdapter -\u003e PCIeSlot though and there I don\u0027t think containing and contained_in makes sense.\n\n\u003e Option1: To generalize the association, we can add new association as below:\nFabric Adapter -\u003e Item (containing and contained_in)\nOption2: Modify the existing one\nFabric Adapter -\u003e Port (connecting, connected_to) to\nFabric Adapter -\u003e Item (connecting, connected_to)\n\noption2 would work. \n\nI would prefer Fabric Adapter -\u003e Port,PCIeSlot (connecting, connected_to) though. Make the interfaces this is used for be called out, but I\u0027m fine with either and the bmcweb code should be the same either way.",
+      "parentUuid": "4b1da0b6_a164d2c8",
+      "revId": "6a82deff664287b0e88d2245483e03370907c810",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

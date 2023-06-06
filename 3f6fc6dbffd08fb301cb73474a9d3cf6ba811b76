@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ca4e106_23b6f3e7",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2023-06-06T14:09:50Z",
+      "side": 1,
+      "message": "If this is an action like power off, power cycle, etc, it could just be an enum.",
+      "range": {
+        "startLine": 28,
+        "startChar": 25,
+        "endLine": 28,
+        "endChar": 31
+      },
+      "revId": "3f6fc6dbffd08fb301cb73474a9d3cf6ba811b76",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0176d73b_1039303e",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2023-06-06T14:09:50Z",
+      "side": 1,
+      "message": "can you describe what the key and value are in this description, including the units on the duration?",
+      "revId": "3f6fc6dbffd08fb301cb73474a9d3cf6ba811b76",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "89faddda_487becb8",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2023-06-07T02:54:50Z",
+      "side": 1,
+      "message": "There are two benefits for us to use string type as value:\n1. the property can be easy-reading under xyz.openbmc_project.Chassis.Buttons.Power by busctl.\n2. If there\u0027s more power control behaviors need support, we can simply maintain the supported table in button handler. Using enumerations needs additional declaration for values here.\n\nWould you please to remind us if there\u0027s some shortcomings about string value type?\nThank you for the reviewing.",
+      "parentUuid": "2ca4e106_23b6f3e7",
+      "range": {
+        "startLine": 28,
+        "startChar": 25,
+        "endLine": 28,
+        "endChar": 31
+      },
+      "revId": "3f6fc6dbffd08fb301cb73474a9d3cf6ba811b76",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0176d73b_1039303e",

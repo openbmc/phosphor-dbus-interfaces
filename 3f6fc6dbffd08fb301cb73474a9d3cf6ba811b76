@@ -48,6 +48,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "74857cc2_ec4f1f4a",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2023-06-08T14:08:49Z",
+      "side": 1,
+      "message": "I\u0027ll defer to Patrick as a maintainer, but while strings are definitely more convenient, with an enum a typo can be caught by sdbusplus when code tries to read out the value.",
+      "parentUuid": "89faddda_487becb8",
+      "range": {
+        "startLine": 28,
+        "startChar": 25,
+        "endLine": 28,
+        "endChar": 31
+      },
+      "revId": "3f6fc6dbffd08fb301cb73474a9d3cf6ba811b76",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0176d73b_1039303e",

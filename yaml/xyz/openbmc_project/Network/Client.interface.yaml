@@ -16,3 +16,18 @@ properties:
           The value of this property is the network port number.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: TransportProtocol
+      type: enum[self.TransportProtocol]
+      description: >
+          The value of this property is the network IP protocol.
+      default: TCP
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+enumerations:
+    - name: TransportProtocol
+      description: >
+          Possible IP protocol types.
+      values:
+          - name: TCP
+          - name: UDP

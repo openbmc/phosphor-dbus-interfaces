@@ -74,6 +74,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('ComponentIntegrity')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity.interface.yaml',  ],
+    output: [ 'ComponentIntegrity.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity',
+    ],
+)
+
 subdir('CoolingType')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/CoolingType__markdown'.underscorify(),
@@ -119,6 +134,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('IdentityAuthentication')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/IdentityAuthentication__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Decorator/IdentityAuthentication.interface.yaml',  ],
+    output: [ 'IdentityAuthentication.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Decorator/IdentityAuthentication',
+    ],
+)
+
 subdir('LocationCode')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/LocationCode__markdown'.underscorify(),
@@ -146,6 +176,21 @@ generated_others += custom_target(
         '--tool', sdbusplusplus_prog,
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Decorator/ManufacturerExt',
+    ],
+)
+
+subdir('MeasurementSet')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/MeasurementSet__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Decorator/MeasurementSet.interface.yaml',  ],
+    output: [ 'MeasurementSet.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Decorator/MeasurementSet',
     ],
 )
 

@@ -47,6 +47,14 @@ associations:
       reverse_name: authenticated_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+    - name: reporting
+      description: >
+          Objects that implement ComponentIntegrity can implement the
+          "reporting" association to provide a link to the target trusted
+          component whose integrity this resource reports.
+      reverse_name: reported_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.TrustedComponent
 
 enumerations:
     - name: SecurityTechnologyType

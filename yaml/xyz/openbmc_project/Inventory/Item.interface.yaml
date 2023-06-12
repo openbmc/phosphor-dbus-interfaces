@@ -95,3 +95,11 @@ associations:
       reverse_name: authenticating
       required_endpoint_interfaces:
           - xyz.openbmc_project.Attestation.ComponentIntegrity
+    - name: protected_by
+      description: >
+          Objects that implement Item can optionally implement the
+          "protected_by" association to provide a link to the target trusted
+          component object that protects this item.
+      reverse_name: protecting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.TrustedComponent

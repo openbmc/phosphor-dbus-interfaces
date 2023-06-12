@@ -71,3 +71,11 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: protected_by
+      description: >
+          Objects that implement Item can optionally implement the
+          "protected_by" association to provide a link to the target
+          trusted component object that protects this item.
+      reverse_name: protecting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.TrustedComponent

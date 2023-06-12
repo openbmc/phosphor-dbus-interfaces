@@ -1,0 +1,36 @@
+description: >
+    Implement to represent properties related to
+    Identity Authentication using SPDM protocol.
+
+properties:
+    - name: RequesterAuthentication
+      type: object_path
+      description: >
+          Authentication information of the identity of the
+          SPDM Requester. Typically the path of the certificate
+          object of the SPDM Requester.
+
+    - name: ResponderAuthentication
+      type: object_path
+      description: >
+          Authentication information of the identity of the
+          SPDM Responder. Typically the path of the certificate
+          object of the SPDM Responder.
+
+    - name: ResponderVerificationStatus
+      type: enum[self.VerificationStatus]
+      description: >
+          The status of the verification of the identity of the
+          component. 
+
+enumerations:
+    - name: VerificationStatus
+      description: >
+          The possible status of the verification.
+      values:
+          - name: Failed
+            description: >
+                Unsuccessful verification.
+          - name: Success
+            description: >
+                Successful verification.

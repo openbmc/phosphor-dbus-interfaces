@@ -1,0 +1,80 @@
+description: >
+    Interface to query trusted component info.
+
+properties:
+    - name: TrustedComponentType
+      type: enum[self.ComponentAttachType]
+      description: >
+          The type of trusted component, such as any physical distinction
+          about the trusted component.
+
+    - name: CertificatesLocation
+      type: string 
+      description: >
+          Providing path information for a collection of device identity
+          certificates of the trusted component.
+
+          For example, device identity certificates may be put under
+          "/xyz/openbmc_project/certs/systems/{system_id}/", then
+          "system_id" is what gets stored here. 
+
+associations:
+    - name: actively_running
+      description: >
+          Objects that implement TrustedComponent can implement the
+          "actively_running" association to provide a link to the software
+          that actively runs on the trusted component.
+      reverse_name: actively_runs_on
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Software.Version
+
+    - name: runs
+      description: >
+          Objects that implement TrustedComponent can implement the "runs"
+          association to provide a link to the software that runs on or used
+          to run on the trusted component.
+      reverse_name: runs_on 
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Software.Version
+
+    - name: reported_by 
+      description: >
+          Objects that implement TrustedComponent can implement the
+          "reported_by" association to provide a link to component
+          integrity object that the trusted component is reported by.
+      reverse_name: reporting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Decorator.ComponentIntegrity
+
+    - name: protecting
+      description: >
+          Objects that implement TrustedComponent can implement the
+          "protecting" association to provide a link to the target
+          component whose security this resource protects.
+      reverse_name: protected_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+
+    - name: integrated_into
+      description: >
+          Objects that implement TrustedComponent can implement the
+          "integrated_into" association to provide a link to the target
+          component or system that this resource is integrated into.
+      reverse_name: contains 
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+
+enumerations:
+    - name: ComponentAttachType
+      description: >
+          The type of trusted component, such as any physical distinction
+          about the trusted component.
+      values:
+          - name: Discrete
+            description: >
+                A discrete trusted component. It is "discrete"
+                when basic electronic components are connected through a wire
+                or soldered on a printed circuit board (PCB).
+          - name: Integrated
+            description: >
+                An integrated trusted component.

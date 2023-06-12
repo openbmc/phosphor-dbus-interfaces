@@ -1,0 +1,49 @@
+description: >
+    Interface to query trusted component info.
+
+properties:
+    - name: TrustedComponentType
+      type: enum[self.ComponentAttachType]
+      default: Unknown
+      flags:
+          - readonly
+      description: >
+          The type of trusted component, such as any physical distinction about
+          the trusted component.
+
+associations:
+    - name: reported_by
+      description: >
+          Objects that implement TrustedComponent can implement the
+          "reported_by" association to provide a link to component integrity
+          object that the trusted component is reported by.
+      reverse_name: reporting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Attestation.ComponentIntegrity
+
+    - name: protecting
+      description: >
+          Objects that implement TrustedComponent can implement the "protecting"
+          association to provide a link to the target component whose security
+          this resource protects.
+      reverse_name: protected_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+
+enumerations:
+    - name: ComponentAttachType
+      description: >
+          The type of trusted component, such as any physical distinction about
+          the trusted component.
+      values:
+          - name: Discrete
+            description: >
+                A discrete trusted component. It is "discrete" when basic
+                electronic components are connected through a wire or soldered
+                on a printed circuit board (PCB).
+          - name: Integrated
+            description: >
+                An integrated trusted component.
+          - name: Unknown
+            description: >
+                Attach type not known yet.

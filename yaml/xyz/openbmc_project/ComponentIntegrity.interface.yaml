@@ -1,0 +1,71 @@
+description: >
+    Implement to represent component integrity information acquired from
+    a secure authentication or measurement of the protected components.
+
+    A trusted component (e.g., iRoT or TPM) is typically involved to
+    provide the info using a security protocol (e.g., SPDM).
+properties:
+    - name: Enabled
+      type: boolean
+      description: >
+          An indication of whether security protocols are
+          enabled for the component.
+
+    - name: Type
+      type: enum[self.SecurityTechnologyType]
+      description: >
+          The type of security technology for the
+          component.
+
+    - name: TypeVersion
+      type: string
+      description: >
+          The version of the security technology.
+
+    - name: LastUpdated
+      type: string
+      description: >
+          The date and time when information for the
+          component was last updated.
+
+          The date of component update in ISO 8601 format as
+          YYYYMMDDThhmmssZ.  Where 'T' is a literal character
+          to separate date fields from time and 'Z' is a literal character
+          to indicate UTC.
+
+    - name: TargetComponentURI
+      type: object_path
+      description: >
+          The link to the the component whose integrity
+          that this resource reports.
+      errors:
+          # Indicate that the set object_path is not valid.
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          # Indicate that this property is permanently unable to be changed.
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          # Indicate that this property is temporarily unable to be changed.
+          - xyz.openbmc_project.Common.Error.Unavailable
+          # Indicate that this property is temporarily unable to be changed.
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: ComponentsProtected
+      type: array[object_path]
+      description: >
+          An array of objects that the target
+          component protects.
+
+
+enumerations:
+    - name: SecurityTechnologyType
+      description: >
+          The security technology used for the component.
+      values:
+          - name: OEM
+            description: >
+                OEM-specific.
+          - name: SPDM
+            description: >
+                Security Protocol and Data Model (SPDM) protocol.
+          - name: TPM
+            description: >
+                Trusted Platform Module (TPM).

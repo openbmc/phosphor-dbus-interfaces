@@ -1,0 +1,43 @@
+description: >
+    Implement to represent properties related to
+    SPDM Measurements set.
+
+methods:
+    - name: SPDMGetSignedMeasurements
+      description: >
+          This method generates an SPDM cryptographic signed statement over
+          the given nonce and measurements of the SPDM Responder.
+
+      parameters:
+          - name: MeasurementIndices
+            type: array[uint32]
+            description: >
+                An array of indices that identify the measurement blocks to
+                sign.
+
+          - name: Nonce
+            type: string
+            description: >
+                A 32-byte hex-encoded string that is signed with the
+                measurements. The value should be unique.
+
+          - name: SlotId
+            type: uint32
+            description: >
+                The slot identifier for the certificate containing the private
+                key to generate the signature over the measurements.
+
+      returns:
+          - name: MeasurementResponse
+            type: struct[object_path, string, string, string, string, string]
+            description: >
+                The response will contain a struct with following fields:
+                Certificate, HashingAlgorithm, PublicKey, SignedMeasurements,
+                SignedAlgorithm, Version.
+
+                Among them, Certificate refers to certificate object
+                corresponding to the SPDM slot identifier that can be used
+                to validate the signature. 
+
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument

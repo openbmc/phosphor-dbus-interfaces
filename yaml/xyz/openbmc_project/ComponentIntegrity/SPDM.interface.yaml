@@ -1,0 +1,9 @@
+description: >
+    Implement to represent SPDM related properties.
+
+properties:
+    - name: Requester
+      type: object_path
+      description: >
+          The component that is reporting the integrity
+          information of the target component.

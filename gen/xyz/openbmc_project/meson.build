@@ -48,6 +48,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('ComponentIntegrity')
+generated_others += custom_target(
+    'xyz/openbmc_project/ComponentIntegrity__markdown'.underscorify(),
+    input: [ '../../../yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml',  ],
+    output: [ 'ComponentIntegrity.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../yaml',
+        'xyz/openbmc_project/ComponentIntegrity',
+    ],
+)
+
 subdir('Condition')
 subdir('Console')
 subdir('Control')

@@ -30,6 +30,22 @@ methods:
           - xyz.openbmc_project.Common.Error.NotAllowed
           - xyz.openbmc_project.Common.Error.Unavailable
 
+    - name: GetFileHandle
+      description: >
+          This method provides the Unix file handle for the dump entry. The file
+          handle returned can be used by clients to directly read the contents
+          of file in their own context, without relying on additional API calls.
+          The mode of the file descriptor is read-only.
+      returns:
+          - name: fd
+            type: unixfd
+            description: >
+                The file descriptor to the dump file.
+      errors:
+          - xyz.openbmc_project.Common.File.Error.Open
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Unavailable
+
 properties:
     - name: Size
       type: uint64

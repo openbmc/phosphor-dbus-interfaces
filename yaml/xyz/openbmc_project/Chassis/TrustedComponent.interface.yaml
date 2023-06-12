@@ -1,0 +1,83 @@
+description: >
+    Interface to query trusted component info.
+
+properties:
+    - name: Certificates
+      type: object_path
+      description: >
+          Path to a collection of device identity certificates
+          of the trusted component.
+
+    - name: FirmwareVersion
+      type: string
+      description: >
+          The software version of the active software image on the trusted
+          component.
+
+    - name: ActiveSoftwareImage 
+      type: object_path
+      description: >
+          The object path of the software inventory resource that represents
+          the active firmware image for this trusted component.
+
+    - name: ComponentIntegrity
+      type: array[object_path]
+      description: >
+          An array of objects of ComponentIntegrity resources for which the
+          trusted component is responsible.
+
+    - name: ComponentsProtected
+      type: array[object_path]
+      description: >
+          An array of object paths to resources that the target component
+          protects.
+
+    - name: IntegratedInto 
+      type: object_path 
+      description: >
+          An object path to a resource to which this trusted component is
+          integrated.
+
+    - name: SoftwareImages 
+      type: array[object_path] 
+      description: >
+          The images that are associated with this trusted component.
+
+    - name: Manufacturer
+      type: string
+      description: >
+          The manufacturer of this trusted component.
+
+    - name: SerialNumber
+      type: string
+      description: >
+          The serial number of the trusted component.
+
+    - name: SKU
+      type: string
+      description: >
+          The SKU of the trusted component.
+
+    - name: TrustedComponentType
+      type: enum[self.ComponentAttachType]
+      description: >
+          The type of trusted component, such as any physical distinction
+          about the trusted component.
+
+    - name: UUID
+      type: string
+      description: >
+          The UUID for this trusted component.
+
+enumerations:
+    - name: ComponentAttachType
+      description: >
+          The type of trusted component, such as any physical distinction
+          about the trusted component.
+      values:
+          - name: Discrete
+            description: >
+                A discrete trusted component.
+          - name: Integrated
+            description: >
+                An integrated trusted component.

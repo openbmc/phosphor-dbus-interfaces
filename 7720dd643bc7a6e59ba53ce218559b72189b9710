@@ -46,6 +46,30 @@
       },
       "revId": "7720dd643bc7a6e59ba53ce218559b72189b9710",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cdc1f359_2f347b6e",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001303
+      },
+      "writtenOn": "2023-06-13T20:06:10Z",
+      "side": 1,
+      "message": "I think they\u0027re returning the same thing.  They have the same \"returns:\" section\n\n```\n      returns:\n          - name: fd\n            type: unixfd\n            description: \u003e\n                The file descriptor to the Entry file.\n```",
+      "parentUuid": "f7044b64_6ebe69d3",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 25
+      },
+      "revId": "7720dd643bc7a6e59ba53ce218559b72189b9710",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

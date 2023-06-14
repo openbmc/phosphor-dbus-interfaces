@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3b159f77_adf2a0de",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-14T15:30:12Z",
+      "side": 1,
+      "message": "The issue with strings is that there is no programmatic way to know what the acceptable strings are.  With enumerations (which turn into strings at a dbus level) we have compile-time checking for incorrect values.  Someone cannot give an invalid / typo string, we can deprecate support for certain features and tell immediately where the current users are, and it is an obvious documentation as to what supported values are.  We generally do not allow arbitrary strings to be used as interpretation by other software.",
+      "parentUuid": "74857cc2_ec4f1f4a",
+      "range": {
+        "startLine": 28,
+        "startChar": 25,
+        "endLine": 28,
+        "endChar": 31
+      },
+      "revId": "3f6fc6dbffd08fb301cb73474a9d3cf6ba811b76",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0176d73b_1039303e",
         "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
         "patchSetId": 2

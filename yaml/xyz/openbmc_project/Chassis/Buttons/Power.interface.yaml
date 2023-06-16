@@ -24,6 +24,30 @@ properties:
       errors:
           - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
           - xyz.openbmc_project.Chassis.Common.Error.IOError
+    - name: multiAction
+      type: dict[uint16, enum[self.PowerControl]]
+      description: >
+          Map for saving multi-level power behaviors by button pressing
+          duration. key for pressing duration in milliseconds. Value for power
+          control behaviors supported in phosphor-buttons.
+      errors:
+          - xyz.openbmc_project.Chassis.Common.Error.UnsupportedCommand
+          - xyz.openbmc_project.Chassis.Common.Error.IOError
+
+enumerations:
+    - name: PowerControl
+      description: >
+          The type of PowerControl.
+      values:
+          - name: "ChassisOn"
+            description: >
+                Perform a power on of the chassis.
+          - name: "ChassisOff"
+            description: >
+                Perform a power off of the chassis.
+          - name: "ChassisCycle"
+            description: >
+                Perform a power cycle of the chassis.
 
 signals:
     - name: Released

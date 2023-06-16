@@ -124,6 +124,24 @@
       "parentUuid": "4b1da0b6_a164d2c8",
       "revId": "6a82deff664287b0e88d2245483e03370907c810",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b903f426_d147f818",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/FabricAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-16T12:45:31Z",
+      "side": 1,
+      "message": "I don\u0027t understand what this device is.  A PCIeSlot is not connected to something else with a fiber optic cable.  If so, you have a device _in_ the slot that converts PCIe signals into some sort of optical signaling, which is no longer PCIe.  _That_ device is \"contained_in\" the slot.\n\nIf you\u0027re trying to model this FabricAdapter as the thing over in your IO drawer, you\u0027re missing a bunch of pieces in between from a model perspective.\n\nAgain:\n\n\u003e My opinion is we should design the interfaces to be intuitive for the common case and not perfect for the obscure case.\n\nFor most people a \"FabricAdapter\" is a device that plugs into a PCIe slot and gives the server a SAN or Infiniband capability.  You seem to have something unusual and either you\u0027re not describing it and modelling it in a way that others can understand or it is just weird and we shouldn\u0027t bend the model to match your weirdness.",
+      "parentUuid": "93ceeb9b_26f9997f",
+      "revId": "6a82deff664287b0e88d2245483e03370907c810",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -51,6 +51,24 @@
       "parentUuid": "1b80ba79_fd777771",
       "revId": "9d97aa8ca6fb4c3eca58a516e4206b8f535ef6d3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9e41603_4945ec52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2023-06-19T05:04:23Z",
+      "side": 1,
+      "message": "Hi Patrick, SNMP as a protocol uses UDP for Event notification, So we can not make TCP.\nFor SNMP clients this D-bus property default value should be UDP.",
+      "parentUuid": "00b946ff_f2dd2f22",
+      "revId": "9d97aa8ca6fb4c3eca58a516e4206b8f535ef6d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

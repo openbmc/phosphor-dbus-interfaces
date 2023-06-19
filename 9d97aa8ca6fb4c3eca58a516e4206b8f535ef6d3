@@ -123,6 +123,24 @@
       "parentUuid": "75800476_0ce56460",
       "revId": "9d97aa8ca6fb4c3eca58a516e4206b8f535ef6d3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "babed3ca_fd304015",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-19T23:05:19Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t see any, it shouldn\u0027t break anything in current workflow.\n\nIt might not \"break\" anything but it will be wrong.  It is reasonable for the maintainer to raise this concern.\n\n\u003e Sure, I don\u0027t see any problem here. Should I provide it before pushing interface in?\n\nYes, please push up a patch for that even though it will fail to compile (until this one is merged).  That way we know the work is ready to go.",
+      "parentUuid": "1aa36711_2fd8a927",
+      "revId": "9d97aa8ca6fb4c3eca58a516e4206b8f535ef6d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

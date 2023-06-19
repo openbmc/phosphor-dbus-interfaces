@@ -69,6 +69,24 @@
       "parentUuid": "00b946ff_f2dd2f22",
       "revId": "9d97aa8ca6fb4c3eca58a516e4206b8f535ef6d3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a687e17_263de9a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2023-06-19T13:28:28Z",
+      "side": 1,
+      "message": "Ratan, this field have no use at phosphor-snmp for now, it is possible to add it on Client instantiation: \n\nthis-\u003etransportProtocol(NetworkClient::TransportProtocol::UDP);\n\nin snmp-client.cpp. I\u0027ve checked, this changed yaml doesn\u0027t break anything related phosphor-snmp at run-time or compile-time, Client will be TCP by default without any changes in it.",
+      "parentUuid": "d9e41603_4945ec52",
+      "revId": "9d97aa8ca6fb4c3eca58a516e4206b8f535ef6d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

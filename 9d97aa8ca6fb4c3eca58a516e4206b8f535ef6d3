@@ -105,6 +105,24 @@
       "parentUuid": "7a687e17_263de9a0",
       "revId": "9d97aa8ca6fb4c3eca58a516e4206b8f535ef6d3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1aa36711_2fd8a927",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2023-06-19T22:56:29Z",
+      "side": 1,
+      "message": "\u003e Isn\u0027t the concern that the wrong value will then be given for the SNMP daemon?\n\nI don\u0027t see any, it shouldn\u0027t break anything in current workflow.\n\n\u003e Would you be willing to put up a small change to make it UDP in snmp-client.cpp?\n\nSure, I don\u0027t see any problem here. Should I provide it before pushing interface in?",
+      "parentUuid": "75800476_0ce56460",
+      "revId": "9d97aa8ca6fb4c3eca58a516e4206b8f535ef6d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

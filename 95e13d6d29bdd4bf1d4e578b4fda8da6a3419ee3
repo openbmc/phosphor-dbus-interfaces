@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e93a78e_c544e5f5",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-06-21T09:29:50Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "5ba68f0b_c8b74197",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 37
+      },
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f79ca6a3_6c333cc2",
@@ -37,6 +61,24 @@
       "writtenOn": "2023-06-21T01:19:03Z",
       "side": 1,
       "message": "How is this meant to be consumed? Is it something that another component would make decisions with? Or is it \"informational\" (oriented towards debugging)?",
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d72cd4d5_525f159d",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-06-21T09:29:50Z",
+      "side": 1,
+      "message": "Adding more descriptions about this property.",
+      "parentUuid": "f79ca6a3_6c333cc2",
       "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -60,6 +102,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "25504358_bb31a5ae",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-06-21T09:29:50Z",
+      "side": 1,
+      "message": "Adding more descriptions about this property.",
+      "parentUuid": "40a71808_4ef8d571",
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3b9e41a1_76f1bfbe",
         "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
         "patchSetId": 11
@@ -71,6 +131,24 @@
       "writtenOn": "2023-06-21T01:19:03Z",
       "side": 1,
       "message": "What motivation would I have to need to read the output value? What would it mean to me? Is it really so abstract as to not have a specific unit? Is it PWM duty? RPM? I think more needs to be unpacked in this description.",
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "964dadbd_69b06e6f",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-06-21T09:29:50Z",
+      "side": 1,
+      "message": "Adding more descriptions about this property.",
+      "parentUuid": "3b9e41a1_76f1bfbe",
       "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

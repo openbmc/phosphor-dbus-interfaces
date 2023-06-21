@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ba68f0b_c8b74197",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-06-21T01:19:03Z",
+      "side": 1,
+      "message": "As these are described directly in the property schema below, I think we should remove it. It\u0027s redundant and non-functional, and that makes it a maintenance risk wrt inconsistencies if we change the behaviour down the track.",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 37
+      },
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f79ca6a3_6c333cc2",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-06-21T01:19:03Z",
+      "side": 1,
+      "message": "How is this meant to be consumed? Is it something that another component would make decisions with? Or is it \"informational\" (oriented towards debugging)?",
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40a71808_4ef8d571",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-06-21T01:19:03Z",
+      "side": 1,
+      "message": "What motivation would I have to need to read the input value? What would it mean to me? Is it really so abstract as to not have a specific unit? Is it temperature? If it\u0027s temperature, is it degrees Celcius? I think more needs to be unpacked in this description.",
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b9e41a1_76f1bfbe",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-06-21T01:19:03Z",
+      "side": 1,
+      "message": "What motivation would I have to need to read the output value? What would it mean to me? Is it really so abstract as to not have a specific unit? Is it PWM duty? RPM? I think more needs to be unpacked in this description.",
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

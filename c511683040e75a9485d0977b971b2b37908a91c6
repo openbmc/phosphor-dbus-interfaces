@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0568457_6dfe8104",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:30:09Z",
+      "side": 1,
+      "message": "\u003e I\u0027m trying to translate the Redfish spec to DBus spec, so that when dbus daemon collecting properties for redfish request, it will be consistent and no extra work is needed to convert the data.\n\nThis isn\u0027t what we do though.  If we did that, the BMC codebase would just become a big Redfish engine.  AMI tried that with IPMI and their codebase was stuck as a big out-of-date IPMI engine.  We\u0027re not going to make that same mistake with s/IPMI/Redfish/.",
+      "parentUuid": "a8de786c_7b6096a2",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0b5307a7_147221f6",

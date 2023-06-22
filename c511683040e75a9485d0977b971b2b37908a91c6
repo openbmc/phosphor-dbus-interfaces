@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8de786c_7b6096a2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-22T17:19:24Z",
+      "side": 1,
+      "message": "Just wanted to add more context, all the interface and properties added here are based on Redfish Spec https://www.dmtf.org/sites/default/files/standards/documents/DSP2046_2022.3.pdf page 216, ComponentIntegrity schema. \n\nRedfish defined the ComponentIntegrity schema, the properties.\n\nI\u0027m trying to translate the Redfish spec to DBus spec, so that when dbus daemon collecting properties for redfish request, it will be consistent and no extra work is needed to convert the data.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0b5307a7_147221f6",

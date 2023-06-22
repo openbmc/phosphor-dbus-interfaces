@@ -16,6 +16,24 @@
       "message": "For the file name, we generally keep acronyms all capital: ROT.\n\nI\u0027d prefer this to be RootOfTrust though because ROT isn\u0027t a common enough acronym at this time.",
       "revId": "229de71329be817b1b712be65d7af31e3781598b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9700c648_0ac0152d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Rot.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-22T16:58:53Z",
+      "side": 1,
+      "message": "\u003e For the file name, we generally keep acronyms all capital: ROT.\nJust want to double check: I looked into the xyz/openbmc_project/Inventory/Item/ for examples, and saw examples like `Cpu.interface.yaml`, `Bmc.interface.yaml`, `Tpm.interface.yaml` etc. I thought the convention was to Capitalize acronyms like ROT to Rot. \n\nIf RootOfTrust is better, I will change it to RootOfTrust.",
+      "parentUuid": "44aa6714_e192b818",
+      "revId": "229de71329be817b1b712be65d7af31e3781598b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

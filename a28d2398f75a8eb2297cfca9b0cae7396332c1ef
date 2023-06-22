@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1393175_7b6fa2d5",
+        "filename": "yaml/xyz/openbmc_project/Chassis/TrustedComponent.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:05:09Z",
+      "side": 1,
+      "message": "Majority of this looks like duplications of existing interfaces from either Inventory or Software.  Please use those instead.",
+      "revId": "a28d2398f75a8eb2297cfca9b0cae7396332c1ef",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07f33a37_95f705f7",
+        "filename": "yaml/xyz/openbmc_project/Chassis/TrustedComponent.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:05:09Z",
+      "side": 1,
+      "message": "This seems like the only property that isn\u0027t immediately obvious that it is  already covered by another interface.\n\nJust taking this piece in isolation, I\u0027m not sure why this is going into Chassis.",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 38
+      },
+      "revId": "a28d2398f75a8eb2297cfca9b0cae7396332c1ef",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "471e3e8a_466c72e0",
+        "filename": "yaml/xyz/openbmc_project/Chassis/TrustedComponent.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:05:09Z",
+      "side": 1,
+      "message": "Does this come from specific language in a standard?  Otherwise, what is \"discrete\" vs \"integrated\".  Does this mean embedded in a single pieces of silicon?  What about on a single multiple-chip-module?  At what point does one of these cease being \"integrated\"?",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 48
+      },
+      "revId": "a28d2398f75a8eb2297cfca9b0cae7396332c1ef",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

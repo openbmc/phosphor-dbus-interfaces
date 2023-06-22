@@ -1,0 +1,232 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b5307a7_147221f6",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "Definitely don\u0027t want this to be at the top-level.\n\nIs this considered \"Inventory\"?  Maybe \"State\"?",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d6d59a7_030800ad",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "Do any of these properties need a \"readonly\" flag?  I suspect most of them you are _not_ expecting other daemons to modify.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1427dd48_3da4956e",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "What ends up being the utility of this?  We generally don\u0027t like raw strings that might end up being interpreted by other code.  Maybe this is just for humans.\n\nYou might want to document the format here.  Are you expecting something like \"1.3\" for a TPM?",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6e2a0a0_dce3ffbf",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "What does \"updated\" mean in this context?  Some kind of firmware update applied or a state change?  This is ambiguous enough that we at least need more words in the description and potentially a different property name.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 26
+      },
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f42c6406_25e5b3a8",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "Please look at Associations.  You shouldn\u0027t directly hold a object_path like this to a static peer object.",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 37
+      },
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0894185_e53e7d76",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "This probably belongs in an association as well.",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 29
+      },
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0880215f_7532ad15",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "Do you need an \"Unknown\"?\n\nThe result of putting OEM first is that that ends up being the default value for the property (Type).  I\u0027m not sure if that\u0027s what you desire.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29e42971_356eb170",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "What ends up being the utility of this?  We are generally trying to avoid protocol-specifics bleeding out into other applications so when I see an interface named the same as a protocol it stands out.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12820696_4ecea792",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "Looks like this is an association.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6cf76cba_0f35a08a",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM/IdentityAuthentication.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "Lots of SPDM-specific stuff is showing up on dbus.  I haven\u0027t reviewed this  interface because it just looks like associations.\n\nNeed to see a design doc to understand what you\u0027re trying to accomplish by exposing SPDM directly onto dbus.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6284924_bab36c06",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM/MeasurementSet.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "size, not uint32.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da9a11c6_b7e6b568",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM/MeasurementSet.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-22T17:01:18Z",
+      "side": 1,
+      "message": "size, not uint32.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

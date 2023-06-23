@@ -83,6 +83,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "15d4b313_73d5e27d",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-23T02:53:33Z",
+      "side": 1,
+      "message": "Please read https://github.com/openbmc/phosphor-pid-control/issues/27 and it will answer your questions. This interface is informational (intended for help during debugging and thermal tuning).",
+      "parentUuid": "d72cd4d5_525f159d",
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "40a71808_4ef8d571",
@@ -118,6 +136,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5474052_1c96d892",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-23T02:53:33Z",
+      "side": 1,
+      "message": "The PID loop is itself an abstract piece of mathematics; it does not have units. Any units it might have are a matter of human interpretation, beyond the scope of this interface.",
+      "parentUuid": "25504358_bb31a5ae",
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3b9e41a1_76f1bfbe",
@@ -149,6 +185,24 @@
       "side": 1,
       "message": "Adding more descriptions about this property.",
       "parentUuid": "3b9e41a1_76f1bfbe",
+      "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "acb2d085_bdeb0119",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-23T02:53:33Z",
+      "side": 1,
+      "message": "The PID loop is itself an abstract piece of mathematics; it does not have units. Any units it might have are a matter of human interpretation, beyond the scope of this interface.",
+      "parentUuid": "964dadbd_69b06e6f",
       "revId": "95e13d6d29bdd4bf1d4e578b4fda8da6a3419ee3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

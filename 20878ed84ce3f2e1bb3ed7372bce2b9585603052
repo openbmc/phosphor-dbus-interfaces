@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6033f37_03c1b7a4",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-23T02:53:33Z",
+      "side": 1,
+      "message": "Is this interface intended to be used for a thermal zone, or a PID loop, or both? The name \"Zone\" implies thermal zone, but the items described in this interface imply that it is describing a PID loop instead. I believe it would be useful to both.",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c159d0cd_2cd60c74",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-23T02:53:33Z",
+      "side": 1,
+      "message": "If we are exposing `Input` and `Output` values, we should also expose the `Setpoint` value as well, while we have the opportunity. This will be helpful.",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

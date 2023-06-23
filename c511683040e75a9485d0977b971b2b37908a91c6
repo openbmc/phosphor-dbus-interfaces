@@ -36,6 +36,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa88cf51_28960278",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "Thanks a lot for your detailed review, very helpful! I will work on a updated version soon.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0b5307a7_147221f6",
@@ -72,6 +89,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c27fab57_00cbac86",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "Yes, a few of them are read/write, many are read-only. Thanks for the reminder! I will update it:\n- read/write: Enabled\n- read-only:Type, TypeVersion, LastUpdated,ComponentsProtected, TargetComponentURI",
+      "parentUuid": "0d6d59a7_030800ad",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1427dd48_3da4956e",
         "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
         "patchSetId": 1
@@ -83,6 +118,30 @@
       "writtenOn": "2023-06-22T17:01:18Z",
       "side": 1,
       "message": "What ends up being the utility of this?  We generally don\u0027t like raw strings that might end up being interpreted by other code.  Maybe this is just for humans.\n\nYou might want to document the format here.  Are you expecting something like \"1.3\" for a TPM?",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "232a9a77_9b81d76c",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "It is for humans, just like the example you give: \"1.3\" for a TPM, or \"1.1\" for a SPDM-capable device. So should be ok to use string type.",
+      "parentUuid": "1427dd48_3da4956e",
       "range": {
         "startLine": 20,
         "startChar": 0,
@@ -118,6 +177,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d8a83363_8638312f",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "Good point! This could be any component integrity information change, including a firmware update, certificate change, security protocol version update. I will add more description.",
+      "parentUuid": "e6e2a0a0_dce3ffbf",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 26
+      },
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f42c6406_25e5b3a8",
         "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
         "patchSetId": 1
@@ -129,6 +212,30 @@
       "writtenOn": "2023-06-22T17:01:18Z",
       "side": 1,
       "message": "Please look at Associations.  You shouldn\u0027t directly hold a object_path like this to a static peer object.",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 37
+      },
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5473c9fa_694e26a8",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "I took a look at association. I agree it is a better option. Let me test the association based implementation.",
+      "parentUuid": "f42c6406_25e5b3a8",
       "range": {
         "startLine": 36,
         "startChar": 0,
@@ -164,6 +271,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5c84054b_5ac51e74",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "Ack. The same as the above. Let me test the association.",
+      "parentUuid": "a0894185_e53e7d76",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 29
+      },
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0880215f_7532ad15",
         "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
         "patchSetId": 1
@@ -175,6 +306,24 @@
       "writtenOn": "2023-06-22T17:01:18Z",
       "side": 1,
       "message": "Do you need an \"Unknown\"?\n\nThe result of putting OEM first is that that ends up being the default value for the property (Type).  I\u0027m not sure if that\u0027s what you desire.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "018327b9_b741efc3",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "This looks good to me. SPDM and TPM are the well known one. If we don\u0027t know, it could be OEM-specific (similar to unknown), which sounds like a safe assumption to me.",
+      "parentUuid": "0880215f_7532ad15",
       "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -213,6 +362,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "761c6d4b_ee7e7ca6",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "12820696_4ecea792",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6cf76cba_0f35a08a",
@@ -226,6 +393,24 @@
       "writtenOn": "2023-06-22T17:01:18Z",
       "side": 1,
       "message": "Lots of SPDM-specific stuff is showing up on dbus.  I haven\u0027t reviewed this  interface because it just looks like associations.\n\nNeed to see a design doc to understand what you\u0027re trying to accomplish by exposing SPDM directly onto dbus.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37aae33a_c5015041",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM/IdentityAuthentication.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "So the idea is to allow a remote attester to do SPDM-based authentication to a device. It is a very useful feature in data center where remote attestation is needed everywhere to authenticate the device\u0027s firmware integrity or hardware identity. Typically, the BMC will get the attestation request(typically over a redfish request) and then the device dbus agent can handle the attestation request. That\u0027s why we have the properties defined here. We have the requester info, responder, responder\u0027s authentication(which is a certificate object).\n\nSPDMGetMeasurements is a SPDM-specific interface to get measurements (firmware or hardware config) of devices.\n\n Hope this help answer your question.",
+      "parentUuid": "6cf76cba_0f35a08a",
       "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -249,6 +434,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f4880478_8202ae69",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM/MeasurementSet.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "got it, thanks",
+      "parentUuid": "f6284924_bab36c06",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "da9a11c6_b7e6b568",
         "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM/MeasurementSet.interface.yaml",
         "patchSetId": 1
@@ -260,6 +463,24 @@
       "writtenOn": "2023-06-22T17:01:18Z",
       "side": 1,
       "message": "size, not uint32.",
+      "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1509e2b6_4d7aabaa",
+        "filename": "yaml/xyz/openbmc_project/ComponentIntegrity/SPDM/MeasurementSet.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-06-23T21:48:17Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "da9a11c6_b7e6b568",
       "revId": "c511683040e75a9485d0977b971b2b37908a91c6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

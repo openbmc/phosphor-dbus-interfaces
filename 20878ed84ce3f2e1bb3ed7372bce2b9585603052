@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0f7fb0b7_193850ea",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-24T16:44:27Z",
+      "side": 1,
+      "message": "There wouldn\u0027t be a reason for other code to not want to pick it up in the future, though. It is useful information that could be good for status displays or whatever. It\u0027s not intended for merely debugging purposes, although for now, that is its main purpose.",
+      "parentUuid": "1d8642cb_388d7833",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1775f198_3544b7f7",
         "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
         "patchSetId": 12
@@ -55,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b92c5565_9f0351ed",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-24T16:44:27Z",
+      "side": 1,
+      "message": "Agreed. There already seems to be some confusion between a PID loop interface and a thermal zone interface. Let\u0027s have two. One for each purpose. Then there will be no confusion. It is OK (and encouraged) to have similar fields in both interfaces, as needed.",
+      "parentUuid": "1775f198_3544b7f7",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f581420_2e3f9c0c",
         "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
         "patchSetId": 12
@@ -66,6 +102,24 @@
       "writtenOn": "2023-06-23T04:16:50Z",
       "side": 1,
       "message": "As above. We have completely different units depending on the use case, but the unit is not described anywhere. This seems like a recipe for confusion.",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f54ab09b_a77ec40f",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-24T16:44:27Z",
+      "side": 1,
+      "message": "As for units, the interpretation will be up to the user. Adding units to the PID control process is beyond the scope of this change.\n\nHowever, one piece of information we could add, would be a list of the input sensors for each PID loop. Then, if properly cross-referenced, the user can use that information to easily walk back, and learn the original units from there.",
+      "parentUuid": "1f581420_2e3f9c0c",
       "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -100,6 +154,24 @@
       "writtenOn": "2023-06-23T04:16:50Z",
       "side": 1,
       "message": "As above. We have completely different units depending on the use case, but the unit is not described anywhere. This seems like a recipe for confusion.",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c816bc6_26d3e16f",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-24T16:44:27Z",
+      "side": 1,
+      "message": "Agreed, same as other comment.",
+      "parentUuid": "cd1073ca_cdd49a62",
       "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

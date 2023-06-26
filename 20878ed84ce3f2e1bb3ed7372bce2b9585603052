@@ -110,6 +110,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f8b0aca6_4b3f3691",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-06-26T06:05:58Z",
+      "side": 1,
+      "message": "How about name the interface and properties like:\n\nzone \u003d\u003e\n```\nxyz.openbmc_project.Control.Pid.Zone\n\u003d\u003e Leader(readonly): the main PID config name that is output result to fan pid\n                     loop\n```\n\nIf pidClass \u003d temp or margin,\n```\nxyz.openbmc_project.Control.Pid.Thermal\n\u003d\u003e Leader(readonly): the sensor name that has the highest temp in input list\n   Type(readonly): the \"Input\" and \"Setpoint\" data type, \"DegreeC\" or \"Margin\"\n                   according to \"Class\" in EM json setting(refs).\n   Setpoint(readonly): the \"Leader\" setpoint setting\n   Input(readonly): the \"Leader\" input value\n   Output(readonly): this PID result(as \"Setpoint\" data to fan pid loop)\n```\n\nIf pidClass \u003d power or powersum,\n```\nxyz.openbmc_project.Control.Pid.Power\n\u003d\u003e Leader(readonly): the sensor name that has the highest temp in input list\n   Setpoint(readonly): the \"Leader\" setpoint setting\n   Input(readonly): the \"Leader\" input value\n   Output(readonly): this PID result(as \"Setpoint\" data to fan pid loop)\n```\n\nIf pidClass \u003d fan,\n```\nxyz.openbmc_project.Control.Pid.Fan\n\u003d\u003e Leader(readonly): the sensor name that has the highest RPM in input list\n   Input(readonly): the \"Leader\" input value(RPM)\n   Output(readonly): this fan PID result(as final pwm duty to fan)\n```\npidClass refs: https://github.com/openbmc/phosphor-pid-control/blob/master/dbus/dbusconfiguration.cpp#L722-L723\n\n(If implement like this, maybe we can also move the interface Control.Mode to Control.Pid.Mode)",
+      "parentUuid": "c2076729_020b6063",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1775f198_3544b7f7",
         "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
         "patchSetId": 12

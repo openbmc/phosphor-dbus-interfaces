@@ -128,6 +128,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c86e1d5c_5c23de5e",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-26T17:32:52Z",
+      "side": 1,
+      "message": "As for units, I agree. If units are desired, the user can use the provided information here to cross-reference back, and eventually iterate back to the individual sensors, and get the units information from there. That would avoid complicating PID control with units annotations, or proxying repetitive information.\n\nWe should have enough information made available here to enable the user to cross-reference back as desired. I believe a read-only \"Name\" string field would help find the individual PID loop of interest. This would map back to the name of the PID loop, as the user configured it in the JSON file to entity-manager originally (or hardcoded in the old config.json file for phosphor-pid-control).\n\nAs for having the same interface for Power and Fan loops, they really are the same thing. Duplicating interfaces seems too complex and duplicative. Perhaps a read-only \"Type\" or \"Class\" field would help the user distinguish. This would be one of the constants \"Temp\", \"Margin\", \"Power\", \"PowerSum\", \"Fan\", or whatever else phosphor-pid-control (or any equivalent program) adds in the future.\n\nAs for associations, that isn\u0027t a valid D-Bus type. We need strings, doubles, etc. here, as this is a D-Bus interface. Adding any associations could be done at a layer of abstraction above this interface, perhaps, if somebody feels the need for this.",
+      "parentUuid": "f8b0aca6_4b3f3691",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1775f198_3544b7f7",
         "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
         "patchSetId": 12
@@ -198,6 +216,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "04f0e2bf_5423deaa",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-26T17:32:52Z",
+      "side": 1,
+      "message": "This could be added easily, as read-only `Inputs` array of strings, and perhaps also for the fan loops, a similar read-only `Outputs` array of strings. These strings would be sensor names.",
+      "parentUuid": "f54ab09b_a77ec40f",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c159d0cd_2cd60c74",
         "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
         "patchSetId": 12
@@ -209,6 +245,24 @@
       "writtenOn": "2023-06-23T02:53:33Z",
       "side": 1,
       "message": "If we are exposing `Input` and `Output` values, we should also expose the `Setpoint` value as well, while we have the opportunity. This will be helpful.",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0351aec_40a78d65",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-26T17:32:52Z",
+      "side": 1,
+      "message": "The `Setpoint` would also be a double. Although the PID loop treats this as an abstract number, the `Setpoint` represents the same units as the `Input`. Careful, this is not the same units as the `Output`!",
+      "parentUuid": "c159d0cd_2cd60c74",
       "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

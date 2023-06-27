@@ -70,6 +70,30 @@
       },
       "revId": "b3655dff81fe898a65d343f4cd59fc492248f12b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c404a402_ebabc235",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2023-06-27T02:03:18Z",
+      "side": 1,
+      "message": "Yes, bmc on baseboard will detect the gpios with serverboard power buttons, then trigger the slot1~4(chassis1~4) power control by sending request to baseboard cpld.",
+      "parentUuid": "4ecebff5_421615cf",
+      "range": {
+        "startLine": 42,
+        "startChar": 9,
+        "endLine": 42,
+        "endChar": 29
+      },
+      "revId": "b3655dff81fe898a65d343f4cd59fc492248f12b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

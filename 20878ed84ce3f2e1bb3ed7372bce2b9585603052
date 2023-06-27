@@ -162,6 +162,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc5e1f21_fb46bce9",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2023-06-27T23:49:29Z",
+      "side": 1,
+      "message": "I still don\u0027t understand the issue over units. Many things in D-Bus require human interpretation in order to fully understand, and this is no different. We are trying simply to expose some more useful data from within phosphor-pid-control, to help with debugging and thermal tuning. Trying to add units is beyond the scope here. I like allowing enough information to allow interested people to cross-reference exactly what sensor inputs and outputs are involved in the PID loop, and these sensor objects do have defined units for their measurements.\n\nAnd, as for associations, that\u0027s good that it is a separate interface definition. If somebody is interested in adding an association interface to the object, they can do so, without conflicting with this interface.",
+      "parentUuid": "1239e0be_79283a45",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1775f198_3544b7f7",

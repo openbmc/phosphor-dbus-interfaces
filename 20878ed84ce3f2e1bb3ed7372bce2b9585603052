@@ -146,6 +146,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1239e0be_79283a45",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-06-27T00:44:11Z",
+      "side": 1,
+      "message": "\u003e As for having the same interface for Power and Fan loops, they really are the same thing. Duplicating interfaces seems too complex and duplicative.\n\nBut the different PID loop instantiations operate on different input data. That\u0027s my point of contention here. The PID algorithm might not care what the values are and generalises over them, but the _integrator_ (person) of the PID loop _definitely_ cares about the meaning of the inputs and outputs it generates in the context of the system(s) its driving. That is the problem I\u0027m trying to highlight. Programmatically consuming the information exposed by this interface requires context for the values. I\u0027m concerned that by skipping the context we\u0027re defining a DBus interface that is difficult to exploit.\n\n\u003e Perhaps a read-only \"Type\" or \"Class\" field would help the user distinguish. This would be one of the constants \"Temp\", \"Margin\", \"Power\", \"PowerSum\", \"Fan\", or whatever else phosphor-pid-control (or any equivalent program) adds in the future.\n\nYes, this go some way towards helping consume the values. It does require that people infer the unit from the type, but at least that\u0027s feasible.\n\n\u003e As for associations, that isn\u0027t a valid D-Bus type. We need strings, doubles, etc. here, as this is a D-Bus interface.\n\nThis is down in the weeds, but associations are specified in a separate DBus interface on the same object. They are necessarily a DBus type, albeit a container type rather than a basic type. The association interface definition lives here:\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Association/Definitions.interface.yaml\n\nThe behaviour of these associations is documented here:\n\nhttps://github.com/openbmc/docs/blob/master/architecture/object-mapper.md#associations",
+      "parentUuid": "c86e1d5c_5c23de5e",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1775f198_3544b7f7",
         "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
         "patchSetId": 12

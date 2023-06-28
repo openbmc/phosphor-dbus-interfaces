@@ -1,0 +1,27 @@
+description: >
+    Implement to install licenses to unlock host hardware resources
+    like processor, memory 
+    This interface is for user to request install license file
+
+methods:
+    - name: InstallLicense
+      description: >
+          Method to install license 
+      parameters:
+        - name: FileHandle
+          type: unixfd 
+          description: >
+              unix file handle for the license
+      returns:
+        - name: Path
+          type: object_path
+          description: >
+                The object path of the object that implements
+                xyz.openbmc_project.Common.Progress to track the progress
+                of the license install
+      errors:
+        - xyz.openbmc_project.Common.File.Error.Read
+        - xyz.openbmc_project.Common.File.Error.Open
+        - xyz.openbmc_project.Common.Error.NotAllowed
+        - xyz.openbmc_project.Common.Error.InvalidArgument
+        - xyz.openbmc_project.Common.Error.Unavailable

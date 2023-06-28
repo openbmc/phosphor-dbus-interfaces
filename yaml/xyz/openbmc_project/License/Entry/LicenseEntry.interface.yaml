@@ -1,0 +1,64 @@
+description: >
+    Implement to represent a license which enables features on system customer
+    installs license to unlock certain resources or features each object
+    implements xyz.openbmc_project.License.Entry interface which has Name and
+    Status properties and implements xyz.openbmc_project.Object.Delete
+    interface.
+
+properties:
+    - name: Name
+      type: string
+      description: >
+          Name of the license
+    - name: SerialNumber
+      type: string
+      description: >
+          The serial number of the license
+    - name: Type
+      type: enum[self.LicenseType]
+      default: Trial
+      description: >
+          The current type of the license
+    - name: AuthorizationType
+      type: enum[self.AuthorizationType]
+      default: Unlimited
+      description: >
+          The current Authorization type of the license
+    - name: ExpirationTime
+      type: uint64
+      description: >
+          The time when the license expires. The time is the Epoch time, number
+          of seconds since 1 Jan 1970 00::00::00 UTC
+    - name: AuthDeviceNumber
+      type: uint32
+      default: 0
+      description: >
+          The number of devices authorized by the license
+enumerations:
+    - name: LicenseType
+      description: >
+          License type enumerations
+      values:
+          - name: Prototype
+            description: >
+                A prototype version of license
+          - name: Purchased
+            description: >
+                A purchased license
+          - name: Trial
+            description: >
+                A trial license
+    - name: AuthorizationType
+      description: >
+          License authorization type enumerations
+      values:
+          - name: Device
+            description: >
+                The license authorizes the feature per device
+          - name: Capacity
+            description: >
+                The license authorizes the feature to a number of devices, but
+                does not restrict to specific device.
+          - name: Unlimited
+            description: >
+                The license has no limits on the device to use the feature

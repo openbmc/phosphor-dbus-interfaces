@@ -84,6 +84,7 @@ generated_others += custom_target(
 
 subdir('Ipmi')
 subdir('Led')
+subdir('License')
 subdir('Logging')
 subdir('MCTP')
 subdir('Memory')

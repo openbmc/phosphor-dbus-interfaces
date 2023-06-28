@@ -1,0 +1,120 @@
+description: >
+    Implement to represent a license which enables features on system customer
+    installs license to unlock certain resources or features each object
+    implements xyz.openbmc_project.License.Entry interface which has Name and
+    Status properties and implements xyz.openbmc_project.Object.Delete
+    interface.
+
+properties:
+    - name: Name
+      type: string
+      flags:
+          - readonly
+      description: >
+          Name of the license
+
+    - name: Description
+      type: string
+      flags:
+          - readonly
+      description: >
+          Name of the license
+
+    - name: SerialNumber
+      type: string
+      flags:
+          - readonly
+      description: >
+          The serial number of the license
+
+    - name: Manufacturer
+      type: string
+      flags:
+          - readonly
+      description: >
+          The manufacturer of the license
+
+    - name: PartNumber
+      type: string
+      flags:
+          - readonly
+      description: >
+          The part number of the license
+
+    - name: Type
+      type: enum[self.LicenseType]
+      flags:
+          - readonly
+      default: Trial
+      description: >
+          The current type of the license
+    - name: AuthorizationScope
+      type: enum[self.AuthorizationType]
+      flags:
+          - readonly
+      default: Unlimited
+      description: >
+          The authorization scope of the license
+
+    - name: MaxAuthorizedDevices
+      type: size
+      flags:
+          - readonly
+      default: 0
+      description: >
+          The number of devices authorized by the license. This property is used
+          when AuthorizationType is "Capacity".
+
+    - name: ExpirationTime
+      type: uint64
+      flags:
+          - readonly
+      description: >
+          The time when the license expires. The time is the Epoch time, number
+          of micro seconds since 1 Jan 1970 00::00::00 UTC
+
+    - name: GracePeriodDays
+      type: uint64
+      flags:
+          - readonly
+      description: >
+          The grace days of this license.
+
+    - name: RemainingDuration
+      type: string
+      flags:
+          - readonly
+      description: >
+          The remaining usage duration before the license expires.
+
+
+enumerations:
+    - name: LicenseType
+      description: >
+          License type enumerations
+      values:
+          - name: Prototype
+            description: >
+                A prototype version of license This value shall indicate a
+                license that is designed for the development or internal use
+          - name: Production
+            description: >
+                This value shall indicate a license purchased or obtained for
+                use in production environments.
+          - name: Trial
+            description: >
+                This value shall indicate a trial version of a license.
+    - name: AuthorizationType
+      description: >
+          License authorization type enumerations
+      values:
+          - name: Device
+            description: >
+                The license authorizes the feature per device
+          - name: Capacity
+            description: >
+                The license authorizes the feature to a number of devices, but
+                does not restrict to specific device.
+          - name: Unlimited
+            description: >
+                The license has no limits on the device to use the feature

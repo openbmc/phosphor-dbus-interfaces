@@ -59,3 +59,14 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: assembly
+      description: >
+          Objects that implement Chassis can optionally implement the 'assembly'
+          association to provide a link to one or more FRUs.
+      reverse_name: inventory
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Vrm
+          - xyz.openbmc_project.Inventory.Item.Battery
+          - xyz.openbmc_project.Inventory.Item.Tpm
+          - xyz.openbmc_project.Inventory.Item.Panel
+          - xyz.openbmc_project.Inventory.Item.DiskBackplane

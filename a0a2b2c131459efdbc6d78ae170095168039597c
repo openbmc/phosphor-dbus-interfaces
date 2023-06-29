@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "111dd8d7_64479ef6",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-06-29T16:09:59Z",
+      "side": 1,
+      "message": "Maybe something more like? \n\nObjects that implement Chassis can optionally implement the \u0027assembly\u0027 association to provide a link to one or more inventory items. These inventory items will be modeled as Assemblies under the Chassis.",
+      "revId": "a0a2b2c131459efdbc6d78ae170095168039597c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56577622_cb3c3e3b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-06-29T16:09:59Z",
+      "side": 1,
+      "message": "Does an assembly have to be a field replaceable unit ?",
+      "range": {
+        "startLine": 65,
+        "startChar": 55,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "a0a2b2c131459efdbc6d78ae170095168039597c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -15,35 +15,30 @@ management operations.
 
 ### Interface xyz.openbmc_project.BIOSConfigManager
 
-- Object Path: `/xyz/openbmc_project/bios_config/manager0`
+- Object Path: `/xyz/openbmc_project/bios_config/manager`
 
 Methods:
 
 - `SetAttribute` -To set the particular BIOS attribute with new value.
 - `GetAttribute` -To get the bios attribute current and pending values.
-- `GetPendingAttributes` -To get all pending bios Atrributes list.
-- `SetPendingAttributes` -To set all pending bios Atrributes list.
 
 Properites:
 
 - `ResetBIOSSettings` - To reset the BIOS settings based on the Reset Flag.
-- `AllBaseAttributes` - To store all bios attributes details.
-
-Signals:
-
-- `PendingAttributesCreated` - Signal sent out, when Pending attributes list
-  created.
+- `BaseBiosTable` - To store all bios attributes details.
+- `PendingAttributes` - To store pending bios Atrributes list.
 
 ### Interface xyz.openbmc_project.BIOSConfig.Password
 
+- Object Path: `/xyz/openbmc_project/bios_config/password`
+
 Methods:
 
-- `VerifyPassword`
-- `ChangePassword`
+- `ChangePassword` - To change BIOS setup password.
 
 Properities:
 
-- `IsPasswordInitDone` - To indicate BIOS password related details are received
+- `PasswordInitialized` - To indicate BIOS password related details are received
   or not.
 
 [design]:

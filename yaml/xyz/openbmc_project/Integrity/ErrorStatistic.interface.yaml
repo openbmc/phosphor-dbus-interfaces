@@ -1,0 +1,80 @@
+description: >
+    Implement to provide the module ECC attributes.
+properties:
+    - name: isLoggingLimitReached
+      type: boolean
+      description: >
+          ECC logging limit reached.
+    - name: ceCount
+      type: size
+      description: >
+          A correctable ECC event has been detected on a device/module.
+    - name: ueCount
+      type: size
+      description: >
+          An uncorrectable ECC event has been detected on a device/module.
+    - name: state
+      type: enum[self.ECCStatus]
+      default: Ok
+      description: >
+          The state is described in ECC status.
+    - name: sourceClass
+      type: enum[self.sourceClasses]
+      description: >
+          The source of ECC.
+
+enumerations:
+    - name: ECCStatus
+      description: >
+          The device/module statuses.
+      values:
+          - name: Ok
+            description: >
+                No ECC errors have occurred.
+          - name: CE
+            description: >
+                Correctable ECC detected.
+          - name: UE
+            description: >
+                Uncorrectable ECC detected.
+          - name: LogFull
+            description: >
+                ECC logging reach limits.
+
+    - name: sourceClasses
+      description: >
+          The source type of ECC.
+      values:
+          - name: BMC
+            description: >
+                The source of ECC is BMC.
+          - name: Bus
+            description: >
+                The source of ECC is bus(System, I2C, PCIe, USB bus, ...).
+          - name: Chassis
+            description: >
+                The source of ECC is chassis.
+          - name: Core
+            description: >
+                The source of ECC is CPU Cores.
+          - name: CPU
+            description: >
+                The source of ECC is CPU.
+          - name: Drive
+            description: >
+                The source of ECC is Storage device(NVMe, HDD, SSD, ...).
+          - name: DIMM
+            description: >
+                The source of ECC is Memory module.
+          - name: PCIe
+            description: >
+                The source of ECC is PCIe module.
+          - name: PSU
+            description: >
+                The source of ECC is Power supply.
+          - name: OS
+            description: >
+                The source of ECC is Operation System.
+          - name: SysFw
+            description: >
+                The source of ECC is System firmware (BIOS/UEFI).

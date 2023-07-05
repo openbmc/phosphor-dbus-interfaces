@@ -193,6 +193,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b80567ee_d37e528d",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-05T22:56:51Z",
+      "side": 1,
+      "message": "\u003e\u003e If you mean make the uptime (how long the bmc has been booted up) in uint64 of milliseconds/microseconds passed from current time since boot, then I will make the change.\n\nEdward from Patrick\u0027s comment i can deduce he meant what u mentioned above. Probably, he can correct us.\n\nPatrick, i also see time in milliseconds rather than microseconds, for example at https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/State/Watchdog.interface.yaml#L41. Can you please confirm if its fine to use milliseconds?",
+      "parentUuid": "985a7535_aa90228a",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 21,
+        "endChar": 43
+      },
+      "revId": "729009e4d9a1434cc7297d838ebdf8bae5ff10a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "526e08f4_befbad66",
         "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
         "patchSetId": 9

@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "819989b6_e52d189d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-05T22:56:51Z",
+      "side": 1,
+      "message": "Edward, Thanks for posting this review. I am in Meta openBMC team and was starting some work on BMC Health Monitoring from Meta side, when Patrick pointed me to this change-set. Since, you have already started work on this, was wondering if you want to collaborate on the effort? Also, added some comments on the change-set. Thanks",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f1b8697_23fc7594",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-05T22:56:51Z",
+      "side": 1,
+      "message": "The redfish schema has more granular memory representation in terms of available, shmem, cached etc https://github.com/openbmc/bmcweb/blob/master/static/redfish/v1/JsonSchemas/ManagerDiagnosticData/ManagerDiagnosticData.json#L349. Do we need to further break this up?",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59f158b4_4f60a4d7",
+        "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-05T22:56:51Z",
+      "side": 1,
+      "message": "My understanding is you are trying to map this to \"UserTimeSeconds\" in https://github.com/openbmc/bmcweb/blob/master/static/redfish/v1/JsonSchemas/ManagerDiagnosticData/ManagerDiagnosticData.json#L508.\nThis will again follow same semantics for type i.e. uint64 in milliseconds?",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a00eefe_b423fb7d",
+        "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-05T22:56:51Z",
+      "side": 1,
+      "message": "Same as above for type. Use uint64 in milliseconds?",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8721599f_82f89220",
+        "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-05T22:56:51Z",
+      "side": 1,
+      "message": "Since its bytes, better to use integer?",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b345bbd_e2bc7514",
+        "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-05T22:56:51Z",
+      "side": 1,
+      "message": "Do we need a new sdbus interface for this? We already have an sdbus interface defined for an EthernetInterface in https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml\n\nWouldn\u0027t it be better to extend the existing interface with new properties?",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

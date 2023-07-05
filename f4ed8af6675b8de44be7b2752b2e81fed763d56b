@@ -90,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9e604a3a_eeee3b7f",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-05T22:56:51Z",
+      "side": 1,
+      "message": "Edward,\nMy understanding is you are trying to specify the memory utilization for the BMC which the redfish spec also specifies in just bytes https://github.com/openbmc/bmcweb/blob/master/static/redfish/v1/JsonSchemas/ManagerDiagnosticData/ManagerDiagnosticData.json#L400. Also, i see /proc/meminfo shows memory just in kB. So, i can see what Patrick is saying is that size_t might be small for that and its better to use integer instead.",
+      "parentUuid": "621e2cd4_3aa9c65b",
+      "revId": "f4ed8af6675b8de44be7b2752b2e81fed763d56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a0e28782_90264010",
         "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
         "patchSetId": 10

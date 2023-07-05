@@ -1,0 +1,268 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67faf87f_37023242",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "It would be good to add a comment to Memory.MemoryECC that the interface is deprecated as well.",
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d45483ac_3070f80e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "I have trouble understanding how OS and BIOS/UEFI report UE/CE counts in a way that we\u0027d want the BMC to model.  If the OS is reporting an error, it is pertaining to some piece of hardware such as Memory, right?  So wouldn\u0027t it be the responsibility of the BMC to take the memory errors reported by the OS and BIOS and combine them into a single reading?  Errors should be associated with a piece of hardware and not associated with the reporting entity.",
+      "range": {
+        "startLine": 9,
+        "startChar": 6,
+        "endLine": 9,
+        "endChar": 32
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9774c61b_ce377bee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "Does this match your name on the Ampere CCLA?  Please adjust your git-config if necessary.",
+      "range": {
+        "startLine": 16,
+        "startChar": 15,
+        "endLine": 16,
+        "endChar": 26
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c787b19a_691ed556",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "Commit is failing CI because you didn\u0027t run the script in `gen` to regenerate the meson for the new interface.",
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b9eb48c6_cd363133",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "I\u0027d like to see more documentation about how this is intended to be used.  It isn\u0027t obvious from the current documentation and I could see this leading to different opinions / implementations.",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 36
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4bc48a9f_c98d898c",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "size",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 17
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2919ce50_87f588ca",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "size",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 17
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bad68c31_5832cae8",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "I don\u0027t understand the purpose of this.  Can\u0027t you tell it from the earlier properties?  Why duplicate the same information in a different property?",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 47
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "909150c2_542d76a4",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "Generally enums are capitalized.  \"Ok\".",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93f5b9ea_35ce288e",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "No ECC errors have occurred.",
+      "range": {
+        "startLine": 33,
+        "startChar": 15,
+        "endLine": 33,
+        "endChar": 47
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd074dc3_55592bb5",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "Please spell out.",
+      "range": {
+        "startLine": 45,
+        "startChar": 12,
+        "endLine": 45,
+        "endChar": 20
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cafc997_e3e5538d",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T14:56:51Z",
+      "side": 1,
+      "message": "Absolutely not.\n\nPlease add an association to an inventory item.",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 81,
+        "endChar": 65
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+description: >
+    Implement to provide the module ECC attributes.
+
+properties:
+    - name: ceCount
+      type: size
+      description: >
+          A correctable ECC event has been detected on a device/module.
+    - name: ueCount
+      type: size
+      description: >
+          An uncorrectable ECC event has been detected on a device/module.
+
+associations:
+    - name: inventory
+      description: >
+          ErrStatistic may implement an 'inventory' to 'ErrStatistic'
+          association with the inventory item related to it.
+      reverse_name:
+      reverse_names:
+          - errstatistics
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

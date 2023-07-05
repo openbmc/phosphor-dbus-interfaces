@@ -67,6 +67,7 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Integrity')
 subdir('Inventory')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory__markdown'.underscorify(),

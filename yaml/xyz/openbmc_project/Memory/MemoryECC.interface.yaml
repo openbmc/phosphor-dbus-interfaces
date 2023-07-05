@@ -1,5 +1,8 @@
 description: >
-    Implement to provide memory ECC attributes.
+    Implement to provide memory ECC attributes. The generic
+    xyz.openbmc_project.Integrity.ErrorStatistic interface is added to report
+    the ECC for the different device/module such as Memory, CPU, PCIe, Bus... So
+    this xyz.openbmc_project.Memory.MemoryECC interface will be deprecated.
 properties:
     - name: isLoggingLimitReached
       type: boolean

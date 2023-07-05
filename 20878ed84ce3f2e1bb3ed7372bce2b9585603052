@@ -182,6 +182,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6c1785e7_7f054ffb",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T16:07:53Z",
+      "side": 1,
+      "message": "\u003e We are trying simply to expose some more useful data from within phosphor-pid-control, to help with debugging and thermal tuning.\n\nThen why are you opposed to moving this to a Debug namespace?\n\nIt seems pretty simple to me:\n  - You intend this interface to be used by other programs, in which case, the interface needs to be formal and follow the standards we general have for other interfaces.\n  - You intend this interface to be used by humans only, in which case, we can be more loose in the definition but we have to be clear that this should never be used by programs.",
+      "parentUuid": "bc5e1f21_fb46bce9",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1775f198_3544b7f7",
         "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
         "patchSetId": 12

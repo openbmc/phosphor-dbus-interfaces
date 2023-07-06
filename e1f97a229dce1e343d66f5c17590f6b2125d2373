@@ -148,6 +148,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "10f01e71_e22a0350",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-06T14:08:05Z",
+      "side": 1,
+      "message": "https://github.com/search?q\u003dorg%3Aopenbmc%20isLoggingLimitReached\u0026type\u003dcode\n\nConsidering there are no real users of it, we can just deprecate the property and remove it from the new interface.  Just because someone dreamed something up once doesn\u0027t mean we have to support it forever.  It hasn\u0027t found utility in 4 years, so we can remove it.",
+      "parentUuid": "9de4d506_926001e2",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 36
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4bc48a9f_c98d898c",
         "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
         "patchSetId": 1
@@ -465,6 +489,30 @@
       "side": 1,
       "message": "This was my suggestion. I figured it might help filter counters of interest before we go and resolve any associations. I\u0027m not wedded to it though. Associations certainly would carry the at least the same information.",
       "parentUuid": "5cafc997_e3e5538d",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 81,
+        "endChar": 65
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfad7746_c9abe1e7",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-06T14:08:05Z",
+      "side": 1,
+      "message": "The problem is that people will perpetually want to add to it.  Everyone is going to have their custom accelerator card, etc.  Associations are the way to go.",
+      "parentUuid": "a8989055_8cc669f2",
       "range": {
         "startLine": 49,
         "startChar": 0,

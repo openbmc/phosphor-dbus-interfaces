@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6874f941_a0bbc61d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-07-06T21:38:46Z",
+      "side": 1,
+      "message": "Currently we have one daemon containing all of this. I can push this for now and we can refactor it as needed? I am not currently working on the monitoring anymore but I can push the code I have.",
+      "parentUuid": "2a4f838d_466ad6ec",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9f1b8697_23fc7594",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-07-05T22:56:51Z",
       "side": 1,
       "message": "The redfish schema has more granular memory representation in terms of available, shmem, cached etc https://github.com/openbmc/bmcweb/blob/master/static/redfish/v1/JsonSchemas/ManagerDiagnosticData/ManagerDiagnosticData.json#L349. Do we need to further break this up?",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba1d5785_1f728a70",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-07-06T21:38:46Z",
+      "side": 1,
+      "message": "Would this not be usecase dependent? Breaking up is fine with me as well.",
+      "parentUuid": "9f1b8697_23fc7594",
       "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -71,6 +107,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1067db20_ba7758fe",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-07-06T21:38:46Z",
+      "side": 1,
+      "message": "I see what you mean. Would combining the Metric and Inventory object be better instead?",
+      "parentUuid": "fa6bfb71_925c74d3",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "59f158b4_4f60a4d7",
         "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
         "patchSetId": 13
@@ -82,6 +136,24 @@
       "writtenOn": "2023-07-05T22:56:51Z",
       "side": 1,
       "message": "My understanding is you are trying to map this to \"UserTimeSeconds\" in https://github.com/openbmc/bmcweb/blob/master/static/redfish/v1/JsonSchemas/ManagerDiagnosticData/ManagerDiagnosticData.json#L508.\nThis will again follow same semantics for type i.e. uint64 in milliseconds?",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b75033f_8c2e2cad",
+        "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-07-06T21:38:46Z",
+      "side": 1,
+      "message": "Yes the conversion can be done in bmcweb",
+      "parentUuid": "59f158b4_4f60a4d7",
       "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -105,6 +177,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e3c704be_80cf25b9",
+        "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-07-06T21:38:46Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "7a00eefe_b423fb7d",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8721599f_82f89220",
         "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
         "patchSetId": 13
@@ -122,6 +212,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ef7d4f10_e0969448",
+        "filename": "yaml/xyz/openbmc_project/Metric/Daemon.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-07-06T21:38:46Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "8721599f_82f89220",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1b345bbd_e2bc7514",
         "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
         "patchSetId": 13
@@ -133,6 +241,24 @@
       "writtenOn": "2023-07-05T22:56:51Z",
       "side": 1,
       "message": "Do we need a new sdbus interface for this? We already have an sdbus interface defined for an EthernetInterface in https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml\n\nWouldn\u0027t it be better to extend the existing interface with new properties?",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13e51c51_b5974a1b",
+        "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001584
+      },
+      "writtenOn": "2023-07-06T21:38:46Z",
+      "side": 1,
+      "message": "Since Redfish has different schemas for Port and EthernetInterface I have switched them. I personally dont think we should combine them for that reason.",
+      "parentUuid": "1b345bbd_e2bc7514",
       "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

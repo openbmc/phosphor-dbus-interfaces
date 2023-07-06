@@ -217,6 +217,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3d98e246_0364742c",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-06T20:31:40Z",
+      "side": 1,
+      "message": "We\u0027ve been trying to refactor all the time intervals to be in usec.  That\u0027s why I referenced EpochTime as the canonical reference on how to do time.\n\nThere are quite likely existing interfaces that are using a different time unit, but that is just because they\u0027re older and not yet refactored.",
+      "parentUuid": "b80567ee_d37e528d",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 21,
+        "endChar": 43
+      },
+      "revId": "729009e4d9a1434cc7297d838ebdf8bae5ff10a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "526e08f4_befbad66",
         "filename": "yaml/xyz/openbmc_project/Metric/Port.interface.yaml",
         "patchSetId": 9

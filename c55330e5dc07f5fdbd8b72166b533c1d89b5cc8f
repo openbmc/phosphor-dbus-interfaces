@@ -18,6 +18,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a4f838d_466ad6ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-06T20:31:40Z",
+      "side": 1,
+      "message": "I\u0027d prefer if we split this out into 3 commits.  We might want to split the BMC ones into multiple interfaces.  We need to decide if phosphor-health-manager is the right place to hold all of these.  We might want to put BMC memory, BMC cpu, etc. in separate interfaces.  I could see the reboot/crash count being more appropriate to be held by phosphor-debug-collector, in which case it has to be in a separate interface.",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9f1b8697_23fc7594",

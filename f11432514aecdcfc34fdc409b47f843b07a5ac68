@@ -81,6 +81,48 @@
       },
       "revId": "f11432514aecdcfc34fdc409b47f843b07a5ac68",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8704a434_d50b8fa7",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-06T07:45:03Z",
+      "side": 1,
+      "message": "This still feels like kind of a sloppy design. We have one process programming policy into another process just to handle a button?\n\n@Matt - Is this what you want?",
+      "parentUuid": "585654f4_1234a0a6",
+      "revId": "f11432514aecdcfc34fdc409b47f843b07a5ac68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e78c805_9d424631",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-06T07:45:03Z",
+      "side": 1,
+      "message": "How about a variant then?  Then you can add the other enumeration in the future.",
+      "parentUuid": "5e410cb7_84874eb7",
+      "range": {
+        "startLine": 28,
+        "startChar": 30,
+        "endLine": 28,
+        "endChar": 47
+      },
+      "revId": "f11432514aecdcfc34fdc409b47f843b07a5ac68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

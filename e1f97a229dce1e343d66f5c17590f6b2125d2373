@@ -81,6 +81,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94969a53_be190c03",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-06T04:52:42Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "c787b19a_691ed556",
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b9eb48c6_cd363133",
@@ -94,6 +112,30 @@
       "writtenOn": "2023-07-05T14:56:51Z",
       "side": 1,
       "message": "I\u0027d like to see more documentation about how this is intended to be used.  It isn\u0027t obvious from the current documentation and I could see this leading to different opinions / implementations.",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 36
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9de4d506_926001e2",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-06T04:52:42Z",
+      "side": 1,
+      "message": "This field is updated by phosphor-ecc.\nThat repo has one max_log.cfg file, when the number of CE/UE error more than that configuration value. The isLoggingLimitReached will be true. https://github.com/openbmc/phosphor-ecc/tree/master.\nI think it is reasonable to have this field. If there is no max error configuration we can use MAX size value (255).\nWe also need this field for backward compatible if we want to deprecated the memoryECC interface.",
+      "parentUuid": "b9eb48c6_cd363133",
       "range": {
         "startLine": 4,
         "startChar": 0,
@@ -127,6 +169,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4973f468_41732f7a",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-06T04:52:42Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "4bc48a9f_c98d898c",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 17
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2919ce50_87f588ca",
@@ -140,6 +206,30 @@
       "writtenOn": "2023-07-05T14:56:51Z",
       "side": 1,
       "message": "size",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 17
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56f783e2_19e2bc2b",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-06T04:52:42Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "2919ce50_87f588ca",
       "range": {
         "startLine": 13,
         "startChar": 12,
@@ -175,6 +265,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "60a2e9a0_b73769bd",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-06T04:52:42Z",
+      "side": 1,
+      "message": "As my opinion, we don\u0027t need this property.\nWe can remove this field, I think.\nAny comment Andrew?\n\nBut removing this field will require the changing in phosphor-ecc if we want that repo use this interface instead of MemoryECC.",
+      "parentUuid": "bad68c31_5832cae8",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 47
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "909150c2_542d76a4",
         "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
         "patchSetId": 1
@@ -186,6 +300,30 @@
       "writtenOn": "2023-07-05T14:56:51Z",
       "side": 1,
       "message": "Generally enums are capitalized.  \"Ok\".",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72cffbe7_85b8f422",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-06T04:52:42Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "909150c2_542d76a4",
       "range": {
         "startLine": 31,
         "startChar": 18,
@@ -219,6 +357,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "50e2dc70_fd8e3020",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-06T04:52:42Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "93f5b9ea_35ce288e",
+      "range": {
+        "startLine": 33,
+        "startChar": 15,
+        "endLine": 33,
+        "endChar": 47
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dd074dc3_55592bb5",
@@ -232,6 +394,30 @@
       "writtenOn": "2023-07-05T14:56:51Z",
       "side": 1,
       "message": "Please spell out.",
+      "range": {
+        "startLine": 45,
+        "startChar": 12,
+        "endLine": 45,
+        "endChar": 20
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e5f4ee4_a9b05c44",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-06T04:52:42Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "dd074dc3_55592bb5",
       "range": {
         "startLine": 45,
         "startChar": 12,

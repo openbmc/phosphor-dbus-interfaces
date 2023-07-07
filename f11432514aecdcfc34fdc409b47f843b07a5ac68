@@ -165,6 +165,48 @@
       },
       "revId": "f11432514aecdcfc34fdc409b47f843b07a5ac68",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b41381ec_59045b67",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-07T13:52:45Z",
+      "side": 1,
+      "message": "I guess I\u0027m not understanding why there are separate processes in the single button repository and when there are multiple processes why they can\u0027t configure themselves.  Passing configuration/policy over dbus seems like a lot of extra work.",
+      "parentUuid": "b5c7728d_f977fed7",
+      "revId": "f11432514aecdcfc34fdc409b47f843b07a5ac68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b29cc890_496b10f0",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-07T13:52:45Z",
+      "side": 1,
+      "message": "Correct.  If you only need the Chassis.Transition now, you can go ahead and make it a variant so that it is easier to transition in the future.",
+      "parentUuid": "5f98e41d_27dd7d1f",
+      "range": {
+        "startLine": 28,
+        "startChar": 30,
+        "endLine": 28,
+        "endChar": 47
+      },
+      "revId": "f11432514aecdcfc34fdc409b47f843b07a5ac68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b4639c9_11286eed",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-07-07T01:36:43Z",
+      "side": 1,
+      "message": "I\u0027ve revisited my thoughts on the name and figure \"ErrorStatistic\" should probably be plural (ErrorStatistics) as there are multiple counters:\n\n```\nyaml/xyz/openbmc_project/Integrity/ErrorStatistics.interface.yaml\n```",
+      "revId": "d21f16e4ae0234b26692f7444b7715ae4ef2cbec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8029f94_2e9743a2",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-07-07T01:36:43Z",
+      "side": 1,
+      "message": "Is it worth being explicit about how the counts are maintained? Are we counting from when we last applied power to the system? Or since the system was manufactured? Over the last hour?\n\nIt\u0027s not clear as it stands.",
+      "revId": "d21f16e4ae0234b26692f7444b7715ae4ef2cbec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

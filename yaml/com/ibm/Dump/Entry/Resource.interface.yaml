@@ -22,3 +22,9 @@ properties:
       type: string
       description: >
           The password required by host to validate the request.
+    - name: Token
+      type: uint32
+      description: >
+          A token exchanged with an external firmware subsystem when creating a
+          dump outside of the BMC. This token can be used to identify the dump
+          entry once the collection is completed.

@@ -16,3 +16,9 @@ properties:
           and stored in the host memory. All dumps will have a  unique id  but
           when communicating to the source of the dump the SourceDumpId will be
           used.
+    - name: Token
+      type: uint32
+      description: >
+          A token exchanged with an external firmware subsystem when creating a
+          dump outside of the BMC. This token can be used to identify the dump
+          entry once the collection is completed.

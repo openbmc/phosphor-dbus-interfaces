@@ -22,3 +22,28 @@ properties:
           A token exchanged from host while requesting to create a dump, this
           can be used to identify the dump entry once the collection is
           completed.
+    - name: SystemState
+      type: enum [self.SystemState]
+      description: >
+          System dumps can be broadly classified into two types based on their
+          impact on the system state. The first type, known as a 'disruptive'
+          dump, alters the system state. This kind of dump is typically
+          generated during a host crash, although it can also be manually
+          requested by a user. Despite its disruptive nature, this dump is
+          able to collect a lot of data, making it particularly useful
+          for diagnosing system crashes. The second type is a 'non-disruptive'
+          dump. As the name suggests, this dump is created without causing
+          any disruption to the system state.
+
+enumerations:
+    - name: SystemState
+      description: Indicate the type of system dump
+      values:
+          - name: Disruptive
+            description: >
+                The system state will change with this type of dump collection
+          - name: NonDisruptive
+            description: >
+                The system state will not change with the collection
+
+     

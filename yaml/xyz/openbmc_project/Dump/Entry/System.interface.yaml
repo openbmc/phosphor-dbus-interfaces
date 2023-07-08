@@ -16,3 +16,9 @@ properties:
           and stored in the host memory. All dumps will have a  unique id  but
           when communicating to the source of the dump the SourceDumpId will be
           used.
+    - name: Token
+      type: uint32
+      description: >
+          A token exchanged from host while requesting to create a dump, this
+          can be used to identify the dump entry once the collection is
+          completed.

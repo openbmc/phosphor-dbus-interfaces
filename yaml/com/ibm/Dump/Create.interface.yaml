@@ -40,3 +40,11 @@ enumerations:
           - name: "Hardware"
             desription: >
                 Hardware dump is collected during a system checkstop.
+          - name: "System"
+            description: >
+                System Dump: A dump that contains certain hardware register data
+                and host memory.
+          - name: "Resource"
+            description: >
+                Resource Dump: A dump of host resources, created for various
+                host components. The content may vary accordingly.

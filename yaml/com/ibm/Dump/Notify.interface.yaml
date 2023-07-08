@@ -1,0 +1,62 @@
+description: >
+    Implement to notify the creation of new dump. This interface is used when a
+    dump is already created and ready to be offloaded. This interface will
+    update an existing dump object or add a new one with the provided
+    properties. The existing create interface should be used when the data is
+    being collected and the dump needs to be packaged.
+
+    Specifically for IBM OpenPOWER systems, dumps are collected and stored in
+    the host. Post dump completion, the host notifies via PLDM, which calls this
+    interface with dump type, dump source id (an id assigned by the host and
+    used for all communication with the host), and the size of the newly created
+    dump.
+
+    Any OpenBMC implementation must provide exactly one implementation of
+    com.ibm.Dump.Notify on /xyz/openbmc_project/dump.
+methods:
+    - name: NotifyDump
+      description: >
+          Create or update a dump entry based on the parameters and the specific
+          dump type.
+      parameters:
+          - name: SourceDumpId
+            type: uint32
+            description: >
+                The dump id provided by the source of the dump. In IBM OpenPOWER
+                systems, some types of dumps are generated and stored in the
+                host memory. All dumps have a unique id, but when communicating
+                to the source of the dump, the SourceDumpId will be used.
+          - name: Size
+            type: uint64
+            description: >
+                Size of the dump in bytes. On large systems, the size of the
+                dump can be up to 32GB.
+          - name: DumpType
+            type: enum [self.DumpType]
+            description: >
+                The type of the dump.
+          - name: Token
+            type: uint32
+            default: 0
+            description: >
+                Sometimes the dump is created in the host based on the request
+                from the user, such requests come through the BMC first and then
+                get forwaded to host in such cases host will be sending a token
+                to identify the dump request. If the token is not valid it
+                should be defaulted to 0.
+      errors:
+          - xyz.openbmc_project.Dump.Create.Error.Disabled
+
+enumerations:
+    - name: DumpType
+      description: >
+          The type of the host dump to be collected.
+      values:
+          - name: "System"
+            description: >
+                System Dump: A dump that contains certain hardware register data
+                and host memory.
+          - name: "Resource"
+            description: >
+                Resource Dump: A dump of host resources, created for various
+                host components. The content may vary accordingly.

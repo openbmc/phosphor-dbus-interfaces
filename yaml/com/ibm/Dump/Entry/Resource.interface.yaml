@@ -22,3 +22,9 @@ properties:
       type: string
       description: >
           The password required by host to validate the request.
+    - name: Token
+      type: uint32
+      description: >
+          A token exchanged from host while requesting to create a dump, this
+          can be used to identify the dump entry once the collection is
+          completed.

@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a526055f_d5483441",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-10T11:30:01Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem like \"state\".  Is it \"Impact\"?\n\n\"Disruptive\" wasn\u0027t the state of the system at the time the dump was collected.  \"Disruptive\" was the effect of doing this dump on the system.\n\nDespite what the description below says, you could choose to take a disruptive dump while the machine is in a functional state.",
+      "range": {
+        "startLine": 25,
+        "startChar": 18,
+        "endLine": 25,
+        "endChar": 23
+      },
+      "revId": "919796b4a6cc8203993511a30d7a766f98ac9677",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb8c799a_cd22b526",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-10T11:30:01Z",
+      "side": 1,
+      "message": "Is default\u003dDisruptive appropriate?  Do we need an \"Unknown\"?",
+      "revId": "919796b4a6cc8203993511a30d7a766f98ac9677",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

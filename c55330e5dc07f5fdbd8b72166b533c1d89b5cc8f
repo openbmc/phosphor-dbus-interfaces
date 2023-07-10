@@ -53,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e34d7b2_81fe56d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-10T17:04:45Z",
+      "side": 1,
+      "message": "We can discuss in our meeting session and we can do some collaboration on this work item.",
+      "parentUuid": "6874f941_a0bbc61d",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9f1b8697_23fc7594",
@@ -90,6 +108,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a0ec5f85_9689d0ea",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-10T17:04:45Z",
+      "side": 1,
+      "message": "Since, client interface (redfish) needs that granularity in terms of memory metric, some place we would need to host that and since this sdbus interface is exposing this metric so my suggestion is its better to make it granular by adding more memory subitems.",
+      "parentUuid": "ba1d5785_1f728a70",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fa6bfb71_925c74d3",
         "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
         "patchSetId": 13
@@ -119,6 +155,24 @@
       "side": 1,
       "message": "I see what you mean. Would combining the Metric and Inventory object be better instead?",
       "parentUuid": "fa6bfb71_925c74d3",
+      "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20dc7a9c_dac73c34",
+        "filename": "yaml/xyz/openbmc_project/Metric/BMC.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-07-10T17:04:45Z",
+      "side": 1,
+      "message": "Patrick suggested to keep the interfaces as granular as possible. Since, in this case inventory and metric would be hosted by 2 different daemons, so lets keep them separate.",
+      "parentUuid": "1067db20_ba7758fe",
       "revId": "c55330e5dc07f5fdbd8b72166b533c1d89b5cc8f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

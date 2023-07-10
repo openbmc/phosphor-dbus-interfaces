@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "326922ae_c4041d2b",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIChannel.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2023-07-10T08:11:08Z",
+      "side": 1,
+      "message": "no property to show the channel number ?",
+      "revId": "e2cbcedc84af9232048e7c4e275d7625aa016494",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0826b4a_9ef1ccdc",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIPackage.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2023-07-10T08:11:08Z",
+      "side": 1,
+      "message": "the package and channel combined are transported in a byte.  why do we need int16?\n\nyou are not exposing the package UUID ?",
+      "revId": "e2cbcedc84af9232048e7c4e275d7625aa016494",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

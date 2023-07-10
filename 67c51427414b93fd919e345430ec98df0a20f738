@@ -161,6 +161,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d85818f0_13667976",
+        "filename": "yaml/xyz/openbmc_project/Network/NCSIChannel.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2023-07-10T08:11:08Z",
+      "side": 1,
+      "message": "Digging into the source of that data, its put from the \nchannel-\u003emodes[NCSI_MODE_LINK]-\u003edata[2] \nhttps://github.com/openbmc/linux/blob/aa3bee4aa1ff7988e101ed2f7be68b9e89bd3b5b/net/ncsi/ncsi-netlink.c#L68\nwhich is set from either parsing a gls response (get link status) https://github.com/openbmc/linux/blob/aa3bee4aa1ff7988e101ed2f7be68b9e89bd3b5b/net/ncsi/ncsi-rsp.c#L331\nor from parsing aen lsc packet (link status change)\nhttps://github.com/openbmc/linux/blob/aa3bee4aa1ff7988e101ed2f7be68b9e89bd3b5b/net/ncsi/ncsi-aen.c#L71\n\nso its the 32 bit link status parsed from the controller.\n\nThe kernel looks at bit 0 but other bits give the negotiated link speed and auto negotiate parameters of both sides.\n\nso decide if you want to advertise just the link up or make enums from the NCSI specification table 47 in DSP0222_1.1.0.pdf\n\nhttps://www.dmtf.org/sites/default/files/standards/documents/DSP0222_1.1.0.pdf\n\n\nAlso, the status and active can change at any time.  \nwhile they are report only they are also point in time.",
+      "parentUuid": "05f9e453_50beaa4c",
+      "revId": "67c51427414b93fd919e345430ec98df0a20f738",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ed25f84e_97d593a5",
         "filename": "yaml/xyz/openbmc_project/Network/NCSIPackage.interface.yaml",
         "patchSetId": 4

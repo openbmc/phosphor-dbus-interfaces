@@ -34,6 +34,16 @@ properties:
           system crashes. The second type is a 'non-disruptive' dump. As the
           name suggests, this dump is created without causing any disruption to
           the system state.
+    - name: Passphrase
+      type: string
+      description: >
+          The passphrase required by the host to authenticate non-disruptive
+          dump requests. Non-disruptive dumps consume significant host resources
+          and involve the collection of host memory data. To ensure only
+          authorized  personnel initiate these operations, the host validates
+          the provided  passphrase. If the passphrase is incorrect, the host
+          will reject the request.  This field is essential for maintaining the
+          security and integrity of  non-disruptive dump operations.
 
 enumerations:
     - name: SystemState

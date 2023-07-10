@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2f4c9b12_d1286a64",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2023-07-10T11:53:18Z",
+      "side": 1,
+      "message": "This is a 32bit value sent by the host may not be the size of a file, is size better here?",
+      "parentUuid": "2c261e12_f253e058",
+      "range": {
+        "startLine": 20,
+        "startChar": 12,
+        "endLine": 20,
+        "endChar": 18
+      },
+      "revId": "c3ec3c7b8300399e4137352eb303a90987f617dd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a90583b0_45bf463f",
         "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
         "patchSetId": 2
@@ -37,6 +61,30 @@
       "writtenOn": "2023-07-10T11:27:02Z",
       "side": 1,
       "message": "This sounds like an IBM-specific design leaking into the openbmc_project?  Can you get buy-in from Intel / AMD on this property or point to an example from UEFI?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 20
+      },
+      "revId": "c3ec3c7b8300399e4137352eb303a90987f617dd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a534108a_b667b35c",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2023-07-10T11:53:18Z",
+      "side": 1,
+      "message": "Yes this is IBM specific, will ask if this change is needed otherwise create a com.ibm interface?",
+      "parentUuid": "a90583b0_45bf463f",
       "range": {
         "startLine": 22,
         "startChar": 0,

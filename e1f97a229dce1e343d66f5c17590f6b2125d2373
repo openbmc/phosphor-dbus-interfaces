@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "094697c1_25908b3b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-10T09:10:50Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "67faf87f_37023242",
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d45483ac_3070f80e",
@@ -43,6 +61,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fc66229d_489bab3c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-10T09:10:50Z",
+      "side": 1,
+      "message": "As my opinion, beside the hardware, the OS and UEFI also have their CE/UE errors. Maybe we don\u0027t have inventory from them but they still can have the error and it would like to log in BMC to be monitor by admin.",
+      "parentUuid": "d45483ac_3070f80e",
+      "range": {
+        "startLine": 9,
+        "startChar": 6,
+        "endLine": 9,
+        "endChar": 32
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9774c61b_ce377bee",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -54,6 +96,30 @@
       "writtenOn": "2023-07-05T14:56:51Z",
       "side": 1,
       "message": "Does this match your name on the Ampere CCLA?  Please adjust your git-config if necessary.",
+      "range": {
+        "startLine": 16,
+        "startChar": 15,
+        "endLine": 16,
+        "endChar": 26
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c884feda_2970a091",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-10T09:10:50Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "9774c61b_ce377bee",
       "range": {
         "startLine": 16,
         "startChar": 15,
@@ -160,6 +226,30 @@
       "side": 1,
       "message": "https://github.com/search?q\u003dorg%3Aopenbmc%20isLoggingLimitReached\u0026type\u003dcode\n\nConsidering there are no real users of it, we can just deprecate the property and remove it from the new interface.  Just because someone dreamed something up once doesn\u0027t mean we have to support it forever.  It hasn\u0027t found utility in 4 years, so we can remove it.",
       "parentUuid": "9de4d506_926001e2",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 36
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c55a9d5a_83a4d130",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-10T09:10:50Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "10f01e71_e22a0350",
       "range": {
         "startLine": 4,
         "startChar": 0,
@@ -301,6 +391,30 @@
       "side": 1,
       "message": "As my opinion, we don\u0027t need this property.\nWe can remove this field, I think.\nAny comment Andrew?\n\nBut removing this field will require the changing in phosphor-ecc if we want that repo use this interface instead of MemoryECC.",
       "parentUuid": "bad68c31_5832cae8",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 47
+      },
+      "revId": "e1f97a229dce1e343d66f5c17590f6b2125d2373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e102860e_155266d4",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-10T09:10:50Z",
+      "side": 1,
+      "message": "If we remove the isLoggingLimitReached, then we don\u0027t have the state \"Full log\" in that case do we keep this field?",
+      "parentUuid": "60a2e9a0_b73769bd",
       "range": {
         "startLine": 16,
         "startChar": 0,

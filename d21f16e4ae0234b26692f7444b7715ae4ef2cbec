@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f1957e13_d50997ad",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-10T09:10:50Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "0b4639c9_11286eed",
+      "revId": "d21f16e4ae0234b26692f7444b7715ae4ef2cbec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a8029f94_2e9743a2",
         "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
         "patchSetId": 7
@@ -31,6 +49,24 @@
       "writtenOn": "2023-07-07T01:36:43Z",
       "side": 1,
       "message": "Is it worth being explicit about how the counts are maintained? Are we counting from when we last applied power to the system? Or since the system was manufactured? Over the last hour?\n\nIt\u0027s not clear as it stands.",
+      "revId": "d21f16e4ae0234b26692f7444b7715ae4ef2cbec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22b4a8cd_b337e928",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistic.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-10T09:10:50Z",
+      "side": 1,
+      "message": "I think the last power to the system. I think the administrator will much care about that value then the others.",
+      "parentUuid": "a8029f94_2e9743a2",
       "revId": "d21f16e4ae0234b26692f7444b7715ae4ef2cbec",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

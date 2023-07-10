@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89b9d05a_7bf2270e",
+        "filename": "yaml/com/ibm/Dump/Notify.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-10T11:33:43Z",
+      "side": 1,
+      "message": "uint64 or size?\n\nIf the dump can be larger than 4GB, you\u0027ll need uint64, but it\u0027d be good to leave a comment here as to why uint64 was chosen.",
+      "range": {
+        "startLine": 30,
+        "startChar": 18,
+        "endLine": 30,
+        "endChar": 24
+      },
+      "revId": "3e1cfb64a7f789c6ce13fc67ccb0c83fc138db2d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b61f3462_f21736b0",
+        "filename": "yaml/com/ibm/Dump/Notify.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-10T11:33:43Z",
+      "side": 1,
+      "message": "Token",
+      "range": {
+        "startLine": 37,
+        "startChar": 18,
+        "endLine": 37,
+        "endChar": 23
+      },
+      "revId": "3e1cfb64a7f789c6ce13fc67ccb0c83fc138db2d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -34,6 +34,11 @@ properties:
           system crashes. The second type is a 'non-disruptive' dump. As the
           name suggests, this dump is created without causing any disruption to
           the system state.
+    - name: Password
+      type: string
+      description: >
+          The password required by host to validate the non-disruptive dump
+          request.
 
 enumerations:
     - name: SystemState

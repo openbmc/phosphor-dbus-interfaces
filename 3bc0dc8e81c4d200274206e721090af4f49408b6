@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f175280_2ef6a645",
+        "filename": "gen/xyz/openbmc_project/meson.build",
+        "patchSetId": 9
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-10T15:22:01Z",
+      "side": 1,
+      "message": "I think my preference is \"Metrics.Integrity.\" on these.  There are other people working on other metrics and these seem like they belong in the same top-level directory.",
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9cf935f7_1b266ed6",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistics.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-10T15:22:01Z",
+      "side": 1,
+      "message": "nit: CECount",
+      "range": {
+        "startLine": 5,
+        "startChar": 12,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d02e7af_b5a26e4b",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistics.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-10T15:22:01Z",
+      "side": 1,
+      "message": "nit: UECount",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 19
+      },
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5f65e9b_543cdb8a",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistics.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-10T15:22:01Z",
+      "side": 1,
+      "message": "Please look at `requirements.md`.  These associations are not named in accordance with those.",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 46
+      },
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56d4d690_c48eb377",
+        "filename": "yaml/xyz/openbmc_project/Memory/MemoryECC.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-10T15:22:01Z",
+      "side": 1,
+      "message": "I don\u0027t mind if you want to have a boolean like this one in your new interface, but I\u0027d like a more succinct name.",
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

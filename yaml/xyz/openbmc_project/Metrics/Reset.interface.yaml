@@ -1,0 +1,8 @@
+description: >
+    This interface allows to reset persistent metric counters. Applicable to
+    metrics such as RebootCount, RebootWithFailureCount.
+
+methods:
+    - name: Reset
+      description: >
+          Resets the persistent count for the metric.

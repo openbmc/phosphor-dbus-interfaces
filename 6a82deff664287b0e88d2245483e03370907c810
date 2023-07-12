@@ -160,6 +160,24 @@
       "parentUuid": "b903f426_d147f818",
       "revId": "6a82deff664287b0e88d2245483e03370907c810",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1fc98a9_5df042a3",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/FabricAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1001384
+      },
+      "writtenOn": "2023-07-12T10:19:18Z",
+      "side": 1,
+      "message": "On power systems - we have capability to enlarge the IO capacity of the server by attaching an external IO drawers. The external IO drawers have a IO Module (PCIe Switch Module) that extends the CEC PCIe fabric and spans out into multiple PCIe Slots. And we have modelled the PCIeSwitch Module as Fabric Adapters as it is extending the CEC PCIe Fabric. Do you think thats inaccurate representation of hardware ? if so ..what do you think is the right way to model the IO Module ?\n\nNow what are trying to model is the connection between the IO Module and the extended PCIe Slots by that IO Module - so we thought connected_to makes sense?",
+      "parentUuid": "0a6e0826_b528353b",
+      "revId": "6a82deff664287b0e88d2245483e03370907c810",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

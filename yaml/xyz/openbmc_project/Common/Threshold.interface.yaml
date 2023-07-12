@@ -1,0 +1,66 @@
+description: >
+    Provides threshold functionality for Metrics and Sensors. Any object
+    implementing Threshold interface must also implement a Value interface at
+    corresponding path.
+
+properties:
+    - name: Thresholds
+      type: dict[enum[self.Type],array[struct[enum[self.Level],double,boolean]]]
+      description: >
+          This indicates the list of thresholds which are applicable for the
+          corresponding value interface.
+          map{thresholdType,array{struct{thresholdLevel,thresholdValue,alarmAsserted}}
+
+signals:
+    - name: AlarmAsserted
+      description: >
+          This indicates the alarm asserted for a threshold change.
+      properties:
+          - name: Value
+            type: double
+            description: >
+                The value that triggered the alarm change.
+          - name: Status
+            type: boolean
+            description: >
+                This indicates whether the alarm has been asserted or
+                deasserted.
+          - name: ThresholdType
+            type: enum[self.Type]
+            description: >
+                This indicates the threshold type for the alarm.
+          - name: ThresholdLevel
+            type: enum[self.Level]
+            description: >
+                This indicates the threshold level for the alarm.
+
+enumerations:
+    - name: Type
+      description: >
+          This indicates the type of threshold.
+      values:
+          - name: Critical
+            description: >
+                Indicates the critical level.
+          - name: Warning
+            description: >
+                Indicates the warning level.
+          - name: PerformanceLoss
+            description: >
+                Indicates the performance loss level.
+          - name: SoftShutdown
+            description: >
+                Indicates the soft shutdowm level.
+          - name: HardShutdown
+            description: >
+                Indicates the hard shutdown level.
+    - name: Level
+      description: >
+          This indicates the level of threshold.
+      values:
+          - name: High
+            description: >
+                Indicates the upper bound of the threshold.
+          - name: Low
+            description: >
+                Indicates the lower bound of the threshold.

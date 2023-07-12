@@ -1,0 +1,73 @@
+description: >
+    Provides threshold functionality for Metrics and Sensors. Any object
+    implementing Threshold interface must implement a Value interface at
+    corresponding path.
+
+properties:
+    - name: Value
+      type: dict[struct[enum[self.Type],enum[self.Bound]],double]
+      description: >
+          This indicates the threshold ranges applicable for the corresponding
+          Value interface.
+          map{struct{thresholdType,thresholdBound},thresholdValue}
+      flags:
+          - readonly
+    - name: Asserted
+      type: enum[self.Type]
+      description: >
+          This indicates the asserted threshold.
+      flags:
+          - readonly
+
+signals:
+    - name: AssertionChanged
+      description: >
+          This indicates the assertion change for a threshold.
+      properties:
+          - name: Value
+            type: double
+            description: >
+                The value that triggered the assertion change.
+          - name: Status
+            type: boolean
+            description: >
+                This indicates whether the assertion has been asserted or
+                deasserted.
+          - name: ThresholdType
+            type: enum[self.Type]
+            description: >
+                This indicates the threshold type for the assertion.
+
+enumerations:
+    - name: Type
+      description: >
+          This indicates the type of threshold.
+      values:
+          - name: None
+            description: >
+                Indicates none level.
+          - name: Warning
+            description: >
+                Indicates the warning level.
+          - name: Critical
+            description: >
+                Indicates the critical level.
+          - name: PerformanceLoss
+            description: >
+                Indicates the performance loss level.
+          - name: SoftShutdown
+            description: >
+                Indicates the soft shutdowm level.
+          - name: HardShutdown
+            description: >
+                Indicates the hard shutdown level.
+    - name: Bound
+      description: >
+          This indicates the threshold range.
+      values:
+          - name: Upper
+            description: >
+                Indicates the upper bound of the threshold.
+          - name: Lower
+            description: >
+                Indicates the lower bound of the threshold.

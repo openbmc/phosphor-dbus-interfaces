@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b03f74f2_00a42244",
+        "filename": "yaml/xyz/openbmc_project/Chassis/TrustedComponent.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-12T17:30:03Z",
+      "side": 1,
+      "message": "I removed all properties that can be found in existing interfaces.",
+      "parentUuid": "f1393175_7b6fa2d5",
+      "revId": "a28d2398f75a8eb2297cfca9b0cae7396332c1ef",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "07f33a37_95f705f7",
@@ -41,6 +59,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ad3da31_00d87480",
+        "filename": "yaml/xyz/openbmc_project/Chassis/TrustedComponent.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-12T17:30:03Z",
+      "side": 1,
+      "message": "I moved the TrustedComponent to Inventory/Item/.",
+      "parentUuid": "07f33a37_95f705f7",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 38
+      },
+      "revId": "a28d2398f75a8eb2297cfca9b0cae7396332c1ef",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "471e3e8a_466c72e0",
@@ -54,6 +96,30 @@
       "writtenOn": "2023-06-22T17:05:09Z",
       "side": 1,
       "message": "Does this come from specific language in a standard?  Otherwise, what is \"discrete\" vs \"integrated\".  Does this mean embedded in a single pieces of silicon?  What about on a single multiple-chip-module?  At what point does one of these cease being \"integrated\"?",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 48
+      },
+      "revId": "a28d2398f75a8eb2297cfca9b0cae7396332c1ef",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41b09528_d8867462",
+        "filename": "yaml/xyz/openbmc_project/Chassis/TrustedComponent.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-12T17:30:03Z",
+      "side": 1,
+      "message": "It refers two different circuit attachment type. I added explanation for Discrete and Integrated in the updated version.",
+      "parentUuid": "471e3e8a_466c72e0",
       "range": {
         "startLine": 73,
         "startChar": 0,

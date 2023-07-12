@@ -1,0 +1,43 @@
+description: >
+    This interface provides the Board Manager Metric values for resource
+    utilization.
+
+properties:
+    - name: Value
+      type: double
+      description: >
+          This property indicates the metric value.
+      flags:
+          - readonly
+    - name: Unit
+      type: enum[self.Unit]
+      description: >
+          This property indicates the unit for metric value. For example, memory
+          in bytes, CPU in percent, reboots in count.
+      flags:
+          - const
+
+enumerations:
+    - name: Unit
+      description: >
+          Metric value unit.
+      values:
+          - name: Bytes
+            description: >
+                Unit to indicate bytes.
+          - name: Percent
+            description: >
+                Unit to indicate percentage.
+          - name: Count
+            description: >
+                Unit to indicate counts.
+
+associations:
+    - name: measuring
+      description: >
+          Metrics measure the inventory item's resource utilization, therefore
+          implement an association to the inventory item.
+      reverse_names:
+          - measured_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

@@ -1,0 +1,29 @@
+description: >
+    This interface provides CPU utilization for the BMC Manager.
+    All Metrics.BMC.CpuUtiliztion properties are read only.
+
+properties:
+    - name: UserCpuUtilization
+      type: double
+      default: 0.0
+      flags:
+          - readonly
+      description: >
+          CPU percentage utilization in the user space.
+    - name: KernelCpuUtilization
+      type: double
+      default: 0.0
+      flags:
+          - readonly
+      description: >
+          CPU percentage utilization in the kernel space.
+
+associations:
+    - name: BmcInventoryItem
+      description: >
+          CPU utilization metric monitors the BMC's cpu utilization and
+          implement an associatoin to the BMC inventory item.
+      reverse_names:
+          - CpuUtilizationMetric
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Bmc

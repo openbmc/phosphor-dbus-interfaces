@@ -1,0 +1,54 @@
+description: >
+    This interface provides memory utilization for the BMC Manager.
+    All Metrics.BMC.MemoryUtiliztion properties are read only.
+
+properties:
+    - name: TotalMemory
+      type: uint64
+      default: 0
+      flags:
+          - readonly
+      description: >
+          The total amount of BMC memory in bytes.
+    - name: FreeMemory
+      type: uint64
+      default: 0
+      flags:
+          - readonly
+      description: >
+          The amount of free memory in bytes.
+    - name: AvailableMemory
+      type: uint64
+      default: 0
+      flags:
+          - readonly
+      description: >
+          The amount of available memory in bytes to start a new process
+          without swapping. This includes free memory and reclaimable cache
+          & buffers.
+    - name: BuffersAndCachedMemory
+      type: uint64
+      default: 0
+      flags:
+          - readonly
+      description: >
+          The amount of memory used in bytes for kernel buffers, page caches
+          and slabs.
+    - name: SharedMemory
+      type: uint64
+      default: 0
+      flags:
+          - readonly
+      description: >
+          The amount of shared memory in bytes. For example, memory consumed
+          by temporary filesystem.
+
+associations:
+    - name: BmcInventoryItem
+      description: >
+          MemoryUtilization metric monitors the BMC's memory utilization and
+          implement an associatoin to the Bmc inventory item.
+      reverse_names:
+          - MemoryUtilizationMetric
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Bmc

@@ -1,0 +1,55 @@
+description: >
+    This interface provides reboot/restart statistics for the BMC Manager.
+    All Metrics.BMC.RebootStatistics properties are read only.
+
+properties:
+    - name: RebootCount
+      type: size
+      flags:
+          - readonly
+      description: >
+          The number of times the BMC has rebooted.
+    - name: RebootWithFailureCount
+      type: size
+      flags:
+          - readonly
+      description: >
+          The number of times the BMC has unexpectedly rebooted.
+          For example, due to unintentional failure, crash etc.
+
+methods:
+    - name: ResetRebootCounter
+      description: >
+        Resets the presistent count for the specified reboot counter type.
+      parameters:
+          - name: RebootCounter
+            type: enum[self.RebootCounterType]
+            description: >
+                Reboot counter type for which count to be reset.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+enumerations:
+    - name: RebootCounterType
+      description: >
+          The type of reboot counter.
+      values:
+          - name: "None"
+            description: >
+                No counter specified.
+          - name: "RebootCount"
+            description: >
+                Tracks the number of times the BMC has rebooted.
+          - name: "RebootWithFailureCount"
+            description: >
+                Tracks the number of times the BMC has unexpectedly rebooted.
+
+associations:
+    - name: BmcInventoryItem
+      description: >
+          Reboot statistics metric monitors the BMC's reboot stats and
+          implement an associatoin to the BMC inventory item.
+      reverse_names:
+          - RebootStatisticsMetric
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Bmc

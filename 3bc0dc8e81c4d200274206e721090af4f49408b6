@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff7eedf1_f7ef45c6",
+        "filename": "gen/xyz/openbmc_project/meson.build",
+        "patchSetId": 9
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-12T04:47:48Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "3f175280_2ef6a645",
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9cf935f7_1b266ed6",
@@ -41,6 +59,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "42241260_d320bdb5",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistics.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-12T04:47:48Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "9cf935f7_1b266ed6",
+      "range": {
+        "startLine": 5,
+        "startChar": 12,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d02e7af_b5a26e4b",
@@ -54,6 +96,30 @@
       "writtenOn": "2023-07-10T15:22:01Z",
       "side": 1,
       "message": "nit: UECount",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 19
+      },
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e45efc33_43c72e1a",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistics.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-12T04:47:48Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "3d02e7af_b5a26e4b",
       "range": {
         "startLine": 9,
         "startChar": 12,
@@ -89,6 +155,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "73f1c4a9_4a51ff74",
+        "filename": "yaml/xyz/openbmc_project/Integrity/ErrorStatistics.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-12T04:47:48Z",
+      "side": 1,
+      "message": "Updated. Can you take a look.",
+      "parentUuid": "b5f65e9b_543cdb8a",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 46
+      },
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "56d4d690_c48eb377",
         "filename": "yaml/xyz/openbmc_project/Memory/MemoryECC.interface.yaml",
         "patchSetId": 9
@@ -100,6 +190,24 @@
       "writtenOn": "2023-07-10T15:22:01Z",
       "side": 1,
       "message": "I don\u0027t mind if you want to have a boolean like this one in your new interface, but I\u0027d like a more succinct name.",
+      "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab68bea7_fe469d9b",
+        "filename": "yaml/xyz/openbmc_project/Memory/MemoryECC.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2023-07-12T04:47:48Z",
+      "side": 1,
+      "message": "I added CEExceed and UEExceed to identify the state which those error count over the limitation.",
+      "parentUuid": "56d4d690_c48eb377",
       "revId": "3bc0dc8e81c4d200274206e721090af4f49408b6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

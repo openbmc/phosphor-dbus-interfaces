@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32f93ce0_e94e0aab",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T15:25:52Z",
+      "side": 1,
+      "message": "Can you check the random double spaces?",
+      "range": {
+        "startLine": 44,
+        "startChar": 20,
+        "endLine": 44,
+        "endChar": 22
+      },
+      "revId": "e9ac2cec1df15ea5a868846f33a3d4c01fdd3d35",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04116313_215b3c02",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T15:25:52Z",
+      "side": 1,
+      "message": "This paragraph is better than it was.\n\n\u003e The passphrase required by the host\n\n\"On some implementations,\"",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 68
+      },
+      "revId": "e9ac2cec1df15ea5a868846f33a3d4c01fdd3d35",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f93b4cba_a3d00b0c",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-12T15:25:52Z",
+      "side": 1,
+      "message": "What still isn\u0027t clear to me is:\n\n- Does the dump initiation start with the passphrase given by the BMC, or does the host give the passphrase?\n\n- If the dump is already collected (isn\u0027t that what an entry is?), why do we still need the passphrase around?",
+      "revId": "e9ac2cec1df15ea5a868846f33a3d4c01fdd3d35",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

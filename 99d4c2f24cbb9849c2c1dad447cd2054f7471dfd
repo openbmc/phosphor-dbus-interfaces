@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c83999f_c4735f1f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-07-14T13:29:52Z",
+      "side": 1,
+      "message": "nit: if you\u0027re going to surround with quotes then should be the exact string (i.e. Passphrase\"",
+      "range": {
+        "startLine": 9,
+        "startChar": 26,
+        "endLine": 9,
+        "endChar": 36
+      },
+      "revId": "99d4c2f24cbb9849c2c1dad447cd2054f7471dfd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d5acd58_9643d8d9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-07-14T13:29:52Z",
+      "side": 1,
+      "message": "nit: I noticed your commit messages are leaving a lot of empty spaces on the end of the body lines lately. That\u0027s much better then going over the 80 but going out to at least 72 would be nice for readability.",
+      "revId": "99d4c2f24cbb9849c2c1dad447cd2054f7471dfd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aee28c6f_fe4ae641",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-07-14T13:29:52Z",
+      "side": 1,
+      "message": "I think this sentence is confusing things a bit. It implies the passphrase is something \"set by the host\". Although I think what you\u0027re really saying is that the host firmware has a requirement that a passphrase be provided in order to initiate a dump. Maybe rephrase this a bit and be clear that the passphrase is provided by the user and it flows through the BMC and up to the host as a part of the dump request.",
+      "range": {
+        "startLine": 41,
+        "startChar": 10,
+        "endLine": 42,
+        "endChar": 71
+      },
+      "revId": "99d4c2f24cbb9849c2c1dad447cd2054f7471dfd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -25,3 +25,4 @@ Document ObjectMapper association forward and reverse names as follows:
   `{fault_identifying, fault_identified_by}`
 - powerSupply and item: `{powering, powered_by}`
 - FabricAdapter and port: `{connecting, connected_to}`
+- Cpu and PCIeDevice: `{connecting, connected_to}`

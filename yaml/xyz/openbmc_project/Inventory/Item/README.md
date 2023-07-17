@@ -20,9 +20,9 @@ Document ObjectMapper association forward and reverse names as follows:
 
 - Item and Item: `{containing, contained_by}`
 - Sensor.Value and Bmc: `{monitoring, monitored_by}`
-- fan and item: `{cooling, cooled_by}`
-- led and item: `{identifying, identified_by}`
+- Fan and Item: `{cooling, cooled_by}`
+- Led.Group and Item: `{identifying, identified_by}`
   `{fault_identifying, fault_identified_by}`
-- powerSupply and item: `{powering, powered_by}`
-- FabricAdapter and port: `{connecting, connected_to}`
+- PowerSupply and Item: `{powering, powered_by}`
+- FabricAdapter and Connector.Port: `{connecting, connected_to}`
 - Cpu and PCIeSlot: `{connecting, connected_to}`

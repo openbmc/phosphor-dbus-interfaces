@@ -16,6 +16,24 @@
       "message": "There is a review here for using this: https://gerrit.openbmc.org/c/openbmc/bmcweb/+/61509\nWhat should the replacement be ?\nThis is a Redfish link",
       "revId": "86aaf191262eae733cda339f5c3224aa5c2175b3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d5a103e_99a412d4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-17T18:56:07Z",
+      "side": 1,
+      "message": "You\u0027ll need to propose something in https://github.com/openbmc/phosphor-dbus-interfaces/blob/2117deabad40f9ac63815f3338e7ac3e1e3fe397/yaml/xyz/openbmc_project/Inventory/Item/README.md?plain\u003d1#L27 .  The \"connected\" is probably the right relationship for PCIeSlots?",
+      "parentUuid": "25b7b343_cf01f3e7",
+      "revId": "86aaf191262eae733cda339f5c3224aa5c2175b3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -16,6 +16,149 @@
       "message": "Hi Patrick, thank you for your valuable suggestions! I\u0027ve addressed them in the updated version. It has been tested with a example dbus daemon. Could you please help take a look? thank you!",
       "revId": "f61a06a919cbbb2954857e14a871069c5cdc2328",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2967b27_984c61a8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/TrustedComponent.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T20:10:46Z",
+      "side": 1,
+      "message": "Is this an object_path?",
+      "revId": "f61a06a919cbbb2954857e14a871069c5cdc2328",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60aaa99c_da7cef22",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/TrustedComponent.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T20:10:46Z",
+      "side": 1,
+      "message": "readonly?",
+      "revId": "f61a06a919cbbb2954857e14a871069c5cdc2328",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "500e72cb_a8efe79f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/TrustedComponent.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T20:10:46Z",
+      "side": 1,
+      "message": "Generally we don\u0027t put data like this in inventory because it isn\u0027t fixed data that comes from hardware.\n\nWouldn\u0027t this be an association?\n\nHow is this property planning to be used?",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 47
+      },
+      "revId": "f61a06a919cbbb2954857e14a871069c5cdc2328",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae7aaca3_3744943b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/TrustedComponent.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T20:10:46Z",
+      "side": 1,
+      "message": "All associations need to be documented in both interfaces.  I know it is duplicate work.",
+      "revId": "f61a06a919cbbb2954857e14a871069c5cdc2328",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6791dd1b_80cf285c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/TrustedComponent.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T20:10:46Z",
+      "side": 1,
+      "message": "Please see Software.Version readme for how to handle this relationship.  If  what you\u0027re looking for isn\u0027t already covered over there we need to have updates to the Software.Version.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 48
+      },
+      "revId": "f61a06a919cbbb2954857e14a871069c5cdc2328",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a9b8f99_61ce5b66",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/TrustedComponent.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T20:10:46Z",
+      "side": 1,
+      "message": "We already have containment relationship documented on Inventory.Item.  We don\u0027t need a new one here.",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 46
+      },
+      "revId": "f61a06a919cbbb2954857e14a871069c5cdc2328",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e7d2503_a249b3f5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/TrustedComponent.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T20:10:46Z",
+      "side": 1,
+      "message": "We already have Inventory.Connector.Embedded to handle this information.  I don\u0027t think we need an additional enumeration for it.",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 48
+      },
+      "revId": "f61a06a919cbbb2954857e14a871069c5cdc2328",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

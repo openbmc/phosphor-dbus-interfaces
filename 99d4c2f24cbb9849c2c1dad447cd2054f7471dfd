@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c38b2898_7bb1f026",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2023-07-18T16:34:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2c83999f_c4735f1f",
+      "range": {
+        "startLine": 9,
+        "startChar": 26,
+        "endLine": 9,
+        "endChar": 36
+      },
+      "revId": "99d4c2f24cbb9849c2c1dad447cd2054f7471dfd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1d5acd58_9643d8d9",
@@ -59,6 +83,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cf5618c_492a17d8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2023-07-18T16:34:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2dd4a1e5_b9d662d9",
+      "revId": "99d4c2f24cbb9849c2c1dad447cd2054f7471dfd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aee28c6f_fe4ae641",
@@ -72,6 +114,30 @@
       "writtenOn": "2023-07-14T13:29:52Z",
       "side": 1,
       "message": "I think this sentence is confusing things a bit. It implies the passphrase is something \"set by the host\". Although I think what you\u0027re really saying is that the host firmware has a requirement that a passphrase be provided in order to initiate a dump. Maybe rephrase this a bit and be clear that the passphrase is provided by the user and it flows through the BMC and up to the host as a part of the dump request.",
+      "range": {
+        "startLine": 41,
+        "startChar": 10,
+        "endLine": 42,
+        "endChar": 71
+      },
+      "revId": "99d4c2f24cbb9849c2c1dad447cd2054f7471dfd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5990e7d_04fa4328",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2023-07-18T16:34:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aee28c6f_fe4ae641",
       "range": {
         "startLine": 41,
         "startChar": 10,

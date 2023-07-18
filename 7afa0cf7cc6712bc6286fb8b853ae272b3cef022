@@ -33,6 +33,143 @@
       "message": "@patrick@stwcx.xyz Hi Patrick, could you help review this updated version? Thanks!",
       "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3dca74c6_abb6643d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T19:07:13Z",
+      "side": 1,
+      "message": "You\u0027ve called this an Inventory.Decorator, but it isn\u0027t obvious to me which inventory object(s) you expect this to be a decorator for.  You\u0027ve listed associations, but it kind of seems like his would be on one of the two items you\u0027ve listed potential associations to?",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6b68790_9f23037b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T19:07:13Z",
+      "side": 1,
+      "message": "I suspect this should be readonly also?  Do you really want another daemon to be able to write this property?\n\nThere might be some confusion between:\n  * normal\n  * readonly\n  * const\n  \nconst won\u0027t send signals because the implementation is not allowed to change the value once the object is constructed.  readonly means that a dbus-client cannot write to the value.",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 18
+      },
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ab8f8e7_685bb2c7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T19:07:13Z",
+      "side": 1,
+      "message": "Please also add these to the other end for documentation.",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 46
+      },
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e9a4b3c_8762f4cd",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/IdentityAuthentication.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T19:07:13Z",
+      "side": 1,
+      "message": "This isn\u0027t an Inventory.Decorator.  Inventory shouldn\u0027t have state changes like this.  It isn\u0027t obvious to me where you expect this to live in dbus.",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "455ccf3f_5ae75d40",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/IdentityAuthentication.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T19:07:13Z",
+      "side": 1,
+      "message": "Do you want 18 and 27 to be the same?\n\nPlease document the reverse link in the Certs.Certificate.",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5660c4be_57fab3a3",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/IdentityAuthentication.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T19:07:13Z",
+      "side": 1,
+      "message": "Do you need \u0027Unknown\u0027?\n\nThe default for ResponderVerificationStatus is going to end up being Failed, unless you set a default on line 8.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 24
+      },
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "debad9ba_64ca7fff",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/MeasurementSet.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-18T19:07:13Z",
+      "side": 1,
+      "message": "I don\u0027t think this belongs in Inventory.  Inventory should be for static data.",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

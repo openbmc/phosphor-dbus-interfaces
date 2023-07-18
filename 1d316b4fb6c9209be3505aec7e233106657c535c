@@ -22,6 +22,30 @@
       },
       "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c46184e3_853ea6e9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-07-18T16:23:11Z",
+      "side": 1,
+      "message": "There is a trade off here. \nPatch set 2 was PCIeSlot so went back to that for PatchSet 4. \n\nRedfish is adding this new link on the PCIeDevice, so if you want this Link in Redfish from PCIeDevice to Processor, you have to implement and associate a PCIeSlot if OpenBMC does it this way (CPU \u003c-\u003e PCIeSlot)\n\nIf OpenBMC adds this association to the PCIeDevice (CPU \u003c-\u003e PCIeDevice), an empty PCIeSlot isn\u0027t going to be able to have this Redfish Link. Is this worse?\nRedfish is now modeling an empty PCIeSlot as an \"Absent\" PCIeDevice (matches how they model CPUs and DIMMs). \n\n\nFrom discussion on discord on 6/15/23 in the Redfish channel (https://discord.com/channels/775381525260664832/855566794994221117/1118989788981231676) OpenBMC was going to do \"\n2) For Redfish PCIe Devices, look for Inventory.Item.PCIeSlot in addition to  Inventory.Item.PCIeDevice. If you see the association, combine them into one object; if no association, an Inventory.Item.PCIeSlot shows up as an Absent Redfish PCIeDevice\"\n\nThere is a 3rd choice here, we have both an association from PCIeSlot \u003c-\u003e CPU and PCIeDevice \u003c-\u003e CPU but that seems like overkill but I am okay if we want to go that direction. That would support use cases where you have PCIeSlots or PCIeDevices but not both and you want this link.",
+      "parentUuid": "d703a106_10ceb2a6",
+      "range": {
+        "startLine": 28,
+        "startChar": 10,
+        "endLine": 28,
+        "endChar": 20
+      },
+      "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -70,6 +70,30 @@
       },
       "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d16f014_f6386b8d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-07-18T20:10:09Z",
+      "side": 1,
+      "message": "\u003e What happens when we have a \"CPU -\u003e USB Hub\" on the mainboard? PCIeSlot currently has the Lanes property but the MaxLanes/LanesInUse is also supported in PCIeDevice. I suspect the default behavior would be that someone would not create a PCIeSlot in this scenario but would have naively modeled \"CPU -\u003e PCIeDevice\".\n\nAck. The other choice would be we add that 2nd association, CPU \u003c-\u003e PCIeDevice, now and then the modeling in the example above, naively modeled \"CPU -\u003e PCIeDevice\", works. I don\u0027t mind doing that if you think it is better? \n\n\u003e We just need to make sure that this scenario is covered by the bmcweb implementation (and ideally documented somewhere).\n\nyeah, we can try to document something around PCIeSlot, PCIeDevice. \nbmcweb is going to look for Cpu -\u003e Connected_to -\u003e PCIeSlot -\u003e Containing -\u003e PCIeDevice (or the reverse Cpu \u003c- connecting \u003c- PCIeSlot \u003c- contained_by \u003c- PCIeDevice) to model the PCIeDevice-\u003eCpu Link.",
+      "parentUuid": "92d55b26_440df6b6",
+      "range": {
+        "startLine": 28,
+        "startChar": 10,
+        "endLine": 28,
+        "endChar": 20
+      },
+      "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -164,6 +164,24 @@
       "parentUuid": "6ea05fbe_a0b24d51",
       "revId": "e9ac2cec1df15ea5a868846f33a3d4c01fdd3d35",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f7948a9_8ea3d515",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000235
+      },
+      "writtenOn": "2023-07-18T19:15:39Z",
+      "side": 1,
+      "message": "The access and authority model is like this:\n1. The privileged BMC user is provided with the UserChallenge token.\n2. This BMC user provides this UserChallenge token along with the dump request.\n3. The BMC does not interpret the UserChallenge token but simply passes it to the host along with the dump request.\n4. The host validates the dump request and UserChallenge token and either performs the requested dump or declines.\n\nNote: How the BMC user and the host coordinate the UserChallenge is beyond the scope of this change.  (IBM’s use case is explained here https://gerrit.openbmc.org/c/openbmc/docs/+/45201/2/designs/oem/ibm/acf-authentication.md with an extension to the design where the ACF and its password are passed to the host so it can validate independently from the BMC.  With this design, the UserChallenge token is effectively the ACF file\u0027s password.)\n\nI am not aware of any other authority models which control access to initiate host dumps.",
+      "parentUuid": "01b75c5c_9b0a2454",
+      "revId": "e9ac2cec1df15ea5a868846f33a3d4c01fdd3d35",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

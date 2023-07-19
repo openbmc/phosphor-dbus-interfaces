@@ -1,0 +1,83 @@
+description: >
+    Implement to represent component integrity information acquired from
+    a secure authentication or measurement of the protected components.
+
+    A trusted component (e.g., iRoT or TPM) is typically involved to
+    provide the info using a security protocol (e.g., SPDM).
+
+properties:
+    - name: Enabled
+      type: boolean
+      default: false
+      description: >
+          An indication of whether security protocols are
+          enabled for the component.
+
+    - name: Type
+      type: enum[self.SecurityTechnologyType]
+      default: Unknown
+      flags:
+          - readonly
+      description: >
+          The type of security technology for the
+          component.
+
+    - name: TypeVersion
+      type: string
+      flags:
+          - readonly
+      description: >
+          The version of the security technology. Human readable format, e.g.
+          "1.1" for SPDM.
+
+    - name: LastUpdated
+      type: uint64
+      flags:
+          - readonly
+      description: >
+          The date and time when information for the component was last
+          updated. Firmware update, device certificate change or other device
+          state change that leads to component integrity change should update
+          this date.
+
+          When it needs to be converted to string, use format described below. 
+          The date of component update in ISO 8601 format as YYYYMMDDThhmmssZ.
+          Where 'T' is a literal character to separate date fields from time
+          and 'Z' is a literal character to indicate UTC.
+
+associations:
+    - name: reporting
+      description: >
+          Objects that implement ComponentIntegrity can implement the
+          "reporting" association to provide a link to the target
+          trusted component whose integrity this resource reports.
+      reverse_name: reported_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.TrustedComponent
+
+    - name: protecting
+      description: >
+          Objects that implement ComponentIntegrity can implement the
+          "protecting" association to provide a link to the target
+          component whose security this resource protects.
+      reverse_name: protected_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+
+enumerations:
+    - name: SecurityTechnologyType
+      description: >
+          The security technology used for the component.
+      values:
+          - name: OEM
+            description: >
+                OEM-specific. If it is neither SPDM nor TPM, tag it OEM.
+          - name: SPDM
+            description: >
+                Security Protocol and Data Model (SPDM) protocol.
+          - name: TPM
+            description: >
+                Trusted Platform Module (TPM).
+          - name: Unknown
+            description: >
+                Security technology not known yet.

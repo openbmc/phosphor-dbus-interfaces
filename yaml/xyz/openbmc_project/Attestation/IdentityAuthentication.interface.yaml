@@ -1,0 +1,44 @@
+description: >
+    Implement to represent properties related to Identity Authentication using
+    SPDM protocol.
+
+properties:
+    - name: ResponderVerificationStatus
+      type: enum[self.VerificationStatus]
+      default: Unknown
+      description: >
+          The status of the verification of the identity of the component.
+
+associations:
+    - name: requester_identitified_by
+      description: >
+          Objects that implement IdentityAuthentication can implement the
+          "requester_identified_by" association to provide a link to the target
+          certificate that provides the requester's identity.
+      reverse_name: identifying_requester
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Certs.Certificate
+
+    - name: responder_identitified_by
+      description: >
+          Objects that implement IdentityAuthentication can implement the
+          "responder_identified_by" association to provide a link to the target
+          certificate that provides the responder's identity.
+      reverse_name: identifying_responder
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Certs.Certificate
+
+enumerations:
+    - name: VerificationStatus
+      description: >
+          The possible status of the verification.
+      values:
+          - name: Failed
+            description: >
+                Unsuccessful verification.
+          - name: Success
+            description: >
+                Successful verification.
+          - name: Unknown
+            description: >
+                Status not known yet.

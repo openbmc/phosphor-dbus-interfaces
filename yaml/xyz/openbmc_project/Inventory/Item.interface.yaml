@@ -94,6 +94,14 @@ associations:
           - inventory
       required_endpoint_interfaces:
           - xyz.openbmc_project.Sensor.Value
+    - name: authenticated_by
+      description: >
+          Objects that implement Item can optionally implement the
+          "authenticated_by" association to provide a link to the component
+          integrity object that authenticates this item.
+      reverse_name: authenticating
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Attestation.ComponentIntegrity
 
 paths:
     - namespace: /xyz/openbmc_project/inventory

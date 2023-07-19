@@ -52,6 +52,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "65496125_4f35c78b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T21:21:35Z",
+      "side": 1,
+      "message": "Proposing creating a directory Attestation in DBus and put all integrity/identity/measurement related interfaces under it. See details in newly added comment.",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3dca74c6_abb6643d",
@@ -83,6 +100,24 @@
       "side": 1,
       "message": "Initially,I thought \"Integrity\" info seems to be a decorator of an Item. However, it is not like the other decorator info that are static info collected from hardware items.\n\nI did a exhaustive search under /xyz/openbmc_project/ and found no good place for these integrity attestation related interfaces. For example:\n\ntop candidates considered:\nState : it\u0027s for power state management of BMC, HOST, CHASSIS for phosphor-state-manager\nInventory: it is for static inventory information of items\n\ndbus management:\nAssociation \nObject\nTime\nUser\nCommon\nCollection\n\n\nsubsystem management:\nMemory\nNetwork \nMemory\nLed\nChassis \nChannel\nBIOSConfig\nSensor\nSmbios\nCerts\nSoftware\nHardwareIsolation: information of isolated hardware\n\nspecific protocol:\nPLDM\nMCTP\nIpmi \n\nOther:\nPFR: platform firmware resiliency\nCondition: Host firmware condition\nTelemetry\nDump\n\n\nGiven Integrity measurement is a piece of important security information that is orthogonal to other categories defined under /xyz/openbmc_project/. Would it make sense to create a \"Integrity\" directory under /xyz/openbmc_project/ to provide integrity measurement related interfaces and put ComponentIntegrity, IdentityAuthentication, MeasurementSet interface under it. We will have something like below:\n\nyaml/xyz/openbmc_project/Integrity/ComponentIntegrity.interface.yaml\nyaml/xyz/openbmc_project/Integrity/IdentityAuthentication.interface.yaml\nyaml/xyz/openbmc_project/Integrity/MeasurementSet.interface.yaml\n\nWhat do you think?",
       "parentUuid": "3dca74c6_abb6643d",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5184b054_96d7c0d7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T21:21:35Z",
+      "side": 1,
+      "message": "I am thinking about a better name to group these integrity/identity/measurement related interfaces, like Attestation. We can put those interfaces related to attestation management here. For example, attest the component integrity, component identity, or firmware/hardware configuration from secure measurement. \n\nyaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml\nyaml/xyz/openbmc_project/Attestation/IdentityAuthentication.interface.yaml\nyaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml\n\nIn the future, if we have other security protocols that does attestation and need to expose attestation status/results over dbus, they can use existing interfaces or add new interfaces under Attestation/.",
+      "parentUuid": "cf760b2d_cc47d493",
       "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

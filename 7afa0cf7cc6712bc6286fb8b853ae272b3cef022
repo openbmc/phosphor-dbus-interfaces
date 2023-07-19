@@ -35,6 +35,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f274918_99b956b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T18:54:07Z",
+      "side": 1,
+      "message": "Could you help take a look and give feedback on the new proposal of where should all integrity measurement interfaces go? Thanks!",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3dca74c6_abb6643d",
@@ -52,6 +69,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf760b2d_cc47d493",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T18:54:07Z",
+      "side": 1,
+      "message": "Initially,I thought \"Integrity\" info seems to be a decorator of an Item. However, it is not like the other decorator info that are static info collected from hardware items.\n\nI did a exhaustive search under /xyz/openbmc_project/ and found no good place for these integrity attestation related interfaces. For example:\n\ntop candidates considered:\nState : it\u0027s for power state management of BMC, HOST, CHASSIS for phosphor-state-manager\nInventory: it is for static inventory information of items\n\ndbus management:\nAssociation \nObject\nTime\nUser\nCommon\nCollection\n\n\nsubsystem management:\nMemory\nNetwork \nMemory\nLed\nChassis \nChannel\nBIOSConfig\nSensor\nSmbios\nCerts\nSoftware\nHardwareIsolation: information of isolated hardware\n\nspecific protocol:\nPLDM\nMCTP\nIpmi \n\nOther:\nPFR: platform firmware resiliency\nCondition: Host firmware condition\nTelemetry\nDump\n\n\nGiven Integrity measurement is a piece of important security information that is orthogonal to other categories defined under /xyz/openbmc_project/. Would it make sense to create a \"Integrity\" directory under /xyz/openbmc_project/ to provide integrity measurement related interfaces and put ComponentIntegrity, IdentityAuthentication, MeasurementSet interface under it. We will have something like below:\n\nyaml/xyz/openbmc_project/Integrity/ComponentIntegrity.interface.yaml\nyaml/xyz/openbmc_project/Integrity/IdentityAuthentication.interface.yaml\nyaml/xyz/openbmc_project/Integrity/MeasurementSet.interface.yaml\n\nWhat do you think?",
+      "parentUuid": "3dca74c6_abb6643d",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d6b68790_9f23037b",
@@ -65,6 +100,30 @@
       "writtenOn": "2023-07-18T19:07:13Z",
       "side": 1,
       "message": "I suspect this should be readonly also?  Do you really want another daemon to be able to write this property?\n\nThere might be some confusion between:\n  * normal\n  * readonly\n  * const\n  \nconst won\u0027t send signals because the implementation is not allowed to change the value once the object is constructed.  readonly means that a dbus-client cannot write to the value.",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 18
+      },
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46e27bb2_44c8bc8b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T18:54:07Z",
+      "side": 1,
+      "message": "Make sense, Will do. No client should be allowed to update it.",
+      "parentUuid": "d6b68790_9f23037b",
       "range": {
         "startLine": 31,
         "startChar": 0,
@@ -98,6 +157,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c24de24_89497b6b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ComponentIntegrity.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T18:54:07Z",
+      "side": 1,
+      "message": "Will do",
+      "parentUuid": "2ab8f8e7_685bb2c7",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 46
+      },
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5e9a4b3c_8762f4cd",
@@ -115,6 +198,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cceb9279_a1cffbd6",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/IdentityAuthentication.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T18:54:07Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5e9a4b3c_8762f4cd",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "455ccf3f_5ae75d40",
@@ -128,6 +229,24 @@
       "writtenOn": "2023-07-18T19:07:13Z",
       "side": 1,
       "message": "Do you want 18 and 27 to be the same?\n\nPlease document the reverse link in the Certs.Certificate.",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b74e6e51_909deae8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/IdentityAuthentication.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T18:54:07Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "455ccf3f_5ae75d40",
       "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -155,6 +274,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b83fa40e_b0b63a6c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/IdentityAuthentication.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T18:54:07Z",
+      "side": 1,
+      "message": "Make sense, let me add an unknown status here, which will give more info about the attestation status in D-Bus.\n\nTo be noted, this is security authentication, an \"Unknown\" status is almost equal to \"FAILED\" to the authenticator as the authenticator can not trust it. The Redfish spec only have Success and Failed defined, so both the \"Unknow\" and \"Failed\" will be merged and reported as \"Failed\" to the authenticator.",
+      "parentUuid": "5660c4be_57fab3a3",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 24
+      },
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "debad9ba_64ca7fff",
@@ -168,6 +311,24 @@
       "writtenOn": "2023-07-18T19:07:13Z",
       "side": 1,
       "message": "I don\u0027t think this belongs in Inventory.  Inventory should be for static data.",
+      "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff48dae7_21bac1bb",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/MeasurementSet.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-07-19T18:54:07Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "debad9ba_64ca7fff",
       "revId": "7afa0cf7cc6712bc6286fb8b853ae272b3cef022",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

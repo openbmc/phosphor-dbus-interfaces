@@ -92,3 +92,24 @@ properties:
       description: >
           The certificate validity start date and time, in epoch time, in
           milliseconds.
+
+associations:
+    - name: identifying_requester
+      description: >
+          Objects that implement Certificate can optionally implement the
+          "identifying_requester" association to provide a link to the
+          component integrity object whose requester's identity is identified
+          by this certificate.
+      reverse_name: requester_identified_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Attestation.IdentityAuthentication
+
+    - name: identifying_responder
+      description: >
+          Objects that implement Certificate can optionally implement the
+          "identifying_responder" association to provide a link to the
+          component integrity object whose responder's identity is identified
+          by this certificate.
+      reverse_name: responder_identified_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Attestation.IdentityAuthentication

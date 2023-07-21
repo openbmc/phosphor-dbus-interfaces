@@ -16,6 +16,24 @@
       "message": "This is written as if there is a design you are pointing to?  Is it just not up yet?",
       "revId": "8acda84894ab7fbea23a33dd630d4a420cb85ee2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a897af90_51513690",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001853
+      },
+      "writtenOn": "2023-07-21T17:24:08Z",
+      "side": 1,
+      "message": "I have a set of patches for 3 repositories (phosphor-dbus-interfaces, phosphor-logging, bmcweb) to implement an rsyslog filter setup through Redfish.\n\nWhat do you mean by \"design\"? If this is a document describing how \"phosphor-rsyslog-conf\" interacts with the user and \"bmcweb\" via DBus, then I don\u0027t have it.\n\nI added a new feature to \"phosphor-rsyslog-conf\" (no changes related to the number of syslog servers supported, i.e. \"phosphor-rsyslog-conf\" still only supports one syslog server).\nAnd the changes in \"bmcweb\" are made in accordance with the Redfish specification.",
+      "parentUuid": "bb04d1f3_d7f878b7",
+      "revId": "8acda84894ab7fbea23a33dd630d4a420cb85ee2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

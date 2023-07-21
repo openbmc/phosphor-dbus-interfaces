@@ -1,0 +1,146 @@
+description: >
+    Interface for working with rsyslog filters.
+
+properties:
+    - name: Selectors
+      type: array[struct[array[enum[self.Facility]],
+                         enum[self.PriorityModifier],
+                         enum[self.Priority]]]
+      description: >
+          List of rsyslog selectors.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+enumerations:
+    - name: PriorityModifier
+      description: >
+          Syslog priority modifiers ("", "=", "!", "!=").
+      values:
+          - name: NoModifier
+            description: >
+                No syslog priority modifier. Example: "mail.info", which means
+                "all mail-related messages having a priority of info or higher".
+          - name: Equal
+            description: >
+                "=" syslog priority modifier. Example: "mail.=info", which means
+                "all mail-related messages having a priority of info".
+          - name: NotEqual
+            description: >
+                "!=" syslog priority modifier. Example: "mail.!=info", which
+                means "all mail messages except those with the priority info".
+          - name: LowerThan
+            description: >
+                "!" syslog priority modifier. Example: "mail.!info", which means
+                "all mail messages except those with priority of info or higher".
+
+    - name: Facility
+      description: >
+          Syslog facility filters.
+      values:
+          - name: Auth
+            description: >
+                Security/authorization messages.
+          - name: Authpriv
+            description: >
+                Security/authorization messages (private).
+          - name: Cron
+            description: >
+                Clock daemon.
+          - name: Daemon
+            description: >
+                System daemons.
+          - name: Kern
+            description: >
+                Kernel messages.
+          - name: LPR
+            description: >
+                Line printer subsystem.
+          - name: Mail
+            description: >
+                Mail system.
+          - name: News
+            description: >
+                Network news subsystem.
+          - name: NTP
+            description: >
+                Network Time Protocol system process messages.
+          - name: Security
+            description: >
+                The same as Auth.
+          - name: Syslog
+            description: >
+                Messages generated internally by syslogd.
+          - name: User
+            description: >
+                Random user-level messages.
+          - name: UUCP
+            description: >
+                UUCP subsystem.
+          - name: FTP
+            description: >
+                FTP daemon.
+          - name: Console
+            description: >
+                BSD-specific priority.
+          - name: Local0
+            description: >
+                Reserved for local use 0.
+          - name: Local1
+            description: >
+                Reserved for local use 1.
+          - name: Local2
+            description: >
+                Reserved for local use 2.
+          - name: Local3
+            description: >
+                Reserved for local use 3.
+          - name: Local4
+            description: >
+                Reserved for local use 4.
+          - name: Local5
+            description: >
+                Reserved for local use 5.
+          - name: Local6
+            description: >
+                Reserved for local use 6.
+          - name: Local7
+            description: >
+                Reserved for local use 7.
+          - name: All
+            description: >
+                All facilities.
+
+    - name: Priority
+      description: >
+          Possible syslog priority filters.
+      values:
+          - name: Emergency
+            description: >
+                System is unusable.
+          - name: Alert
+            description: >
+                Action must be taken immediately.
+          - name: Critical
+            description: >
+                Critical conditions.
+          - name: Error
+            description: >
+                Error conditions.
+          - name: Warning
+            description: >
+                Warning conditions.
+          - name: Notice
+            description: >
+                Normal but significant condition.
+          - name: Informational
+            description: >
+                Informational.
+          - name: Debug
+            description: >
+                Debug-level messages.
+          - name: All
+            description: >
+                All messages.
+          - name: None
+            description: >
+                No messages.

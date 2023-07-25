@@ -70,6 +70,47 @@
       "parentUuid": "fd71c1c2_124dc605",
       "revId": "8acda84894ab7fbea23a33dd630d4a420cb85ee2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f72467f4_8d2a454b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-07-25T16:29:54Z",
+      "side": 1,
+      "message": "Coroutines have never been supported in bmcweb, so it\u0027s not clear why that patch would stop you or why coroutines were ever enabled for your use case.  Regardless, push your patch as it exists, and it might be able to answer questions faster than review comments.\n\n\u003e Patrick, could you please take a look at these 2 patches? Without the third one for bmcweb (Redfish support).\n\nGiven that Redfish has no rsyslog support, the bmcweb patch is going to be important to determine what these filters are actually used for, so we can make constructive suggestions.  Please get at least your existing coroutine based patch pushed and linked.",
+      "parentUuid": "3e9e88ea_3f791d0a",
+      "revId": "8acda84894ab7fbea23a33dd630d4a420cb85ee2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d0ac6ef_c8cf0af7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-07-25T16:29:54Z",
+      "side": 1,
+      "message": "Redfish has no rsyslog API, so it\u0027s not clear how this would even work.  The DMTF defined schemas are generic, in terms of EventDestination and Message filters, which don\u0027t seem like they would map here.",
+      "range": {
+        "startLine": 10,
+        "startChar": 45,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "8acda84894ab7fbea23a33dd630d4a420cb85ee2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

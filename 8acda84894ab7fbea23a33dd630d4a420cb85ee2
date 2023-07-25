@@ -92,6 +92,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3ee52e3a_1fe020c6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-25T16:30:30Z",
+      "side": 1,
+      "message": "\u003e Patrick, could you please take a look at these 2 patches? Without the third one for bmcweb (Redfish support).\n\nNot really.  You\u0027ve presented exposing all of rsyslog config onto dbus, which I don\u0027t really have an appetite for nor do I understand why you\u0027ve gone this route.  This is what a design document is suppose to elaborate.\n\n- What are you solving?\n- How are you solving it?\n- What were the trade-offs that lead to this design?\n\nEven by giving me all of the code, without any design, you\u0027re asking me to reverse-engineer your requirements from your code.  ie. You\u0027re putting a burden on me (and others), the reviewers / maintainers, for something we likely don\u0027t have any care about.  The more work you put on us, the less likely you are to get your code in.\n\n\u003e The bmcweb patch needs to be reworked as I used boost coroutines to get several DBus properties in sequence and then process them to check if a syslog server is configured or not.\n\nHaving a non-functional patch would at least give me something to look at.  Right now all I see is you\u0027ve exposed the entire config on dbus and I have no idea why.  If I at least had the Redfish code here I could look up what schema you\u0027re trying to populate.\n\nYou do have a Redfish schema for this... right?  What is the schema?  I cannot believe DMTF would have exposed the entirety of rsyslog onto Redfish either.",
+      "parentUuid": "3e9e88ea_3f791d0a",
+      "revId": "8acda84894ab7fbea23a33dd630d4a420cb85ee2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5d0ac6ef_c8cf0af7",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1

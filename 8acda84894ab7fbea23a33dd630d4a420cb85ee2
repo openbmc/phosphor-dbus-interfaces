@@ -110,6 +110,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e4b92f9f_33367bbe",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001853
+      },
+      "writtenOn": "2023-07-26T11:30:21Z",
+      "side": 1,
+      "message": "Okay, let me make this more clear:\n\n1) There is a need to filter syslog messages by facility and priority. First, through Redfish.\n2) At the moment there is no support for this functionality in openbmc.\n3) It is supported to set up a remote rsyslog server via DBus/REST (https://github.com/openbmc/phosphor-logging#remote-logging-via-rsyslog). Rsyslog will send messages to the remote server using the syslog protocol. The default filter \"\\*.\\*\" is applied.\n4) Filter settings and remote server address (IP, port, transport protocol) live in one file (/etc/rsyslog.d/server.conf).\n\nSo, openbmc has a service (phosphor-rsyslog-conf) for setting the address of a remote syslog server by editing the config file. I want to add the ability to configure syslog filters in the same config file with this service. And then interact with the attributes/methods of the service via Redfish.\n\nI use the Redfish \"EventDestination\" schema. Since v1.9 EventDestination adds a \"SyslogFilters\" property.\nhttps://www.dmtf.org/sites/default/files/standards/documents/DSP2046_2022.1.pdf\nhttps://www.dmtf.org/sites/default/files/Remote_and_Local_Syslog_05-2020-WIP.pdf\n\nbmcweb patch (doesn\u0027t compile. Just as an example of what I\u0027m doing):\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/65417",
+      "parentUuid": "3ee52e3a_1fe020c6",
+      "revId": "8acda84894ab7fbea23a33dd630d4a420cb85ee2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5d0ac6ef_c8cf0af7",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -121,6 +139,30 @@
       "writtenOn": "2023-07-25T16:29:54Z",
       "side": 1,
       "message": "Redfish has no rsyslog API, so it\u0027s not clear how this would even work.  The DMTF defined schemas are generic, in terms of EventDestination and Message filters, which don\u0027t seem like they would map here.",
+      "range": {
+        "startLine": 10,
+        "startChar": 45,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "8acda84894ab7fbea23a33dd630d4a420cb85ee2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06cadb0f_9a128c4f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001853
+      },
+      "writtenOn": "2023-07-26T11:30:21Z",
+      "side": 1,
+      "message": "I use the Redfish \"EventDestination\" schema. Since v1.9 EventDestination adds a \"SyslogFilters\" property.\nPlease see comment above.",
+      "parentUuid": "5d0ac6ef_c8cf0af7",
       "range": {
         "startLine": 10,
         "startChar": 45,

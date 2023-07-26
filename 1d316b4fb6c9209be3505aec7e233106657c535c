@@ -142,6 +142,30 @@
       },
       "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79744871_9b412fe8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-07-26T18:52:00Z",
+      "side": 1,
+      "message": "\u003e Is there more documentation outstanding based on this discussion?\n\nI wasn\u0027t thinking so. I was thinking bmcweb would have some documentation about Redfish \u003c-\u003e D-Bus PCIe Device/PCIe Slot modeling, when that support gets added. It would have a sentence about this association. \n\nIf you are looking for something more now, are you looking for that documentation now? Is that here or bmcweb? I don\u0027t think here makes sense if the documentation is about Redfish vs D-Bus modeling. \n\nI feel this change is just replacing, what we are dropping at \nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/64951/2?usp\u003drelated-change\n\n\u003e Neither of them are ideal:\n\u003e\n\u003e    Requiring a PCIeSlot for something that isn\u0027t a slot isn\u0027t obvious.\n\u003e    Having multiple associations / end-points to search through is awkward.\n\nAgreed. I don\u0027t love either option.",
+      "parentUuid": "5cca215c_5fe2842e",
+      "range": {
+        "startLine": 28,
+        "startChar": 10,
+        "endLine": 28,
+        "endChar": 20
+      },
+      "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

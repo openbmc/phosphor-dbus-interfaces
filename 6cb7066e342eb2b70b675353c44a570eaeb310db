@@ -16,6 +16,23 @@
       "message": "Hi Patrick, could you help take a look at this updated version? Thanks!",
       "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d8f0819_2b382eed",
+        "filename": "yaml/xyz/openbmc_project/Certs/Certificate.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2023-07-27T04:46:32Z",
+      "side": 1,
+      "message": "Currently certificates supports X.509 public certificate in PEM format. PEM wiki -\nhttps://en.wikipedia.org/wiki/Privacy-Enhanced_Mail . Is this certificate also comes under the same format?",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

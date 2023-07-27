@@ -20,7 +20,7 @@ format, which includes both private key and signed certificate.
     certificate application handling Https server certificate.
   - The URI /xyz/openbmc_project/certs/client/ldap maps to instance of the
     certificate application handling LDAP client certificate.
-  - The URI /xyz/openbmc_project/certs/authority/ldap maps to instance of the
+  - The URI /xyz/openbmc_project/certs/authority/general maps to instance of the
     certificate application handling Certificate Autohority certificates.
 - REST server should call the install method of the certificate application
   instance.

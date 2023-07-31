@@ -2,7 +2,73 @@ description: >
     Interface to control sending syslog messages via e-mail.
 
 properties:
+    - name: Authentication
+      type: enum[self.AuthenticationMethod]
+      default: None
+      description: >
+          The authentication method for the SMTP server.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.NotAllowed
+    - name: ConnectionProtocol
+      type: enum[self.ConnectionType]
+      default: None
+      description: >
+          The connection type to the outgoing SMTP server.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.NotAllowed
     - name: From
       type: string
       description: >
           Specifies e-mail address from which mails would be sent.
+    - name: Password
+      type: string
+      description: >
+          The password for authentication with the SMTP server.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: Username
+      type: string
+      description: >
+          The username for authentication with the SMTP server.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+enumerations:
+    - name: AuthenticationMethod
+      description: >
+          The authentication method for the SMTP server.
+      values:
+          - name: AutoDetect
+            description: >
+                Auto-Detect.
+          - name: CRAM_MD5
+            description: >
+                CRAM-MD5 authentication.
+          - name: None
+            description: >
+                No authentication.
+          - name: Plain
+            description: >
+                PLAIN authentication.
+    - name: ConnectionType
+      description: >
+          The connection type to the outgoing SMTP server.
+      values:
+          - name: AutoDetect
+            description: >
+                AutoDetect.
+          - name: None
+            description: >
+                Clear text.
+          - name: StartTLS
+            description: >
+                StartTLS.
+          - name: TLS_SSL
+            description: >
+                TLS/SSL.

@@ -173,6 +173,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bdcc5834_04659800",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-08-01T13:26:19Z",
+      "side": 1,
+      "message": "Jayanth\n\nYes, I did not add D-bus properties for all redfish properties.\nthis commit adds D-bus properties which are required to represent common licenses\nintent was to add other properties on need basis.\nI will add D-bus properties for manufacturer details",
+      "parentUuid": "f19cc256_f7557060",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 42
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bef644cd_03171b23",
         "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
         "patchSetId": 8

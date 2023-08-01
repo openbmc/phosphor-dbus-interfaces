@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1e15ebf_7ea9bede",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-08-01T10:26:37Z",
+      "side": 1,
+      "message": "yes, most of these properties populated while creating license and can\u0027t be changed later.",
+      "parentUuid": "e561c5d6_52e20914",
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dd3465c0_eec6d69a",
@@ -48,6 +66,30 @@
       "writtenOn": "2023-07-05T15:29:53Z",
       "side": 1,
       "message": "Is this intended to be used by human-oriented user interfaces or is there some programmatic interpretation of this string?  If there is not any programmatic interpretation, please document.  I\u0027d like to see language matching many other interfaces: see `$ git grep programmatic`.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 29
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bae9458c_cf5475d6",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-08-01T10:26:37Z",
+      "side": 1,
+      "message": "intent of this Name property is to populate license name like Processor,Memory etc.,",
+      "parentUuid": "dd3465c0_eec6d69a",
       "range": {
         "startLine": 9,
         "startChar": 0,
@@ -83,6 +125,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e10feb95_dc27c1bd",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-08-01T10:26:37Z",
+      "side": 1,
+      "message": "I think it may be needed, will get back to you on this.",
+      "parentUuid": "c6eb384f_03cc41ca",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 42
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bef644cd_03171b23",
         "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
         "patchSetId": 8
@@ -94,6 +160,30 @@
       "writtenOn": "2023-07-05T15:29:53Z",
       "side": 1,
       "message": "Please follow Time.EpochTime and use microseconds.",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 52
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d87a6078_efd5ef9e",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-08-01T10:26:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bef644cd_03171b23",
       "range": {
         "startLine": 27,
         "startChar": 0,
@@ -127,6 +217,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b6d00bb_e74d2ff9",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-08-01T10:26:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ca372c99_00fc22ee",
+      "range": {
+        "startLine": 33,
+        "startChar": 12,
+        "endLine": 33,
+        "endChar": 18
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ddc617ac_8310ec15",
@@ -140,6 +254,24 @@
       "writtenOn": "2023-07-05T15:29:53Z",
       "side": 1,
       "message": "This seems to only be applicable to the \"Capacity\" type?  Please document.",
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c9ad78e_b1fb48c8",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-08-01T10:26:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ddc617ac_8310ec15",
       "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -207,6 +339,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f7ecc20_c6245c74",
+        "filename": "yaml/xyz/openbmc_project/License/Install.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-08-01T10:26:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a47eb7d9_16a6d413",
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cca5f84d_ea9468e3",
@@ -220,6 +370,30 @@
       "writtenOn": "2023-07-05T15:29:53Z",
       "side": 1,
       "message": "Generally we\u0027re moving away from file paths and towards an open fd being passed to the daemon.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 55
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1191d582_7a694380",
+        "filename": "yaml/xyz/openbmc_project/License/Install.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-08-01T10:26:37Z",
+      "side": 1,
+      "message": "ok but in this case D-bus app needs file path to download license file from client using TFTP",
+      "parentUuid": "cca5f84d_ea9468e3",
       "range": {
         "startLine": 11,
         "startChar": 0,

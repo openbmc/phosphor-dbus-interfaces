@@ -166,6 +166,30 @@
       },
       "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bcefeb01_42ff9af1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-04T18:03:15Z",
+      "side": 1,
+      "message": "\u003e I wasn\u0027t thinking so. I was thinking bmcweb would have some documentation about Redfish \u003c-\u003e D-Bus PCIe Device/PCIe Slot modeling, when that support gets added. It would have a sentence about this association.\n\nIt seems to me like it would be good if we had a central document on expectations for Inventory.  The Redfish translation is only one piece of it, right?  I don\u0027t think someone should have to dig into the bmcweb documentation to understand \"what is the appropriate EM config relationships\" for a system.",
+      "parentUuid": "79744871_9b412fe8",
+      "range": {
+        "startLine": 28,
+        "startChar": 10,
+        "endLine": 28,
+        "endChar": 20
+      },
+      "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

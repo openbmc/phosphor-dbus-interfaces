@@ -1,0 +1,75 @@
+description: >
+    Interface for performing code update for various firwmare entities.
+
+methods:
+    - name: scheduleUpdate
+      description: >
+          Schedules a firware update to be performed asynchronously.
+      parameters:
+          - name: ImageFD
+            type: unixfd
+            description: >
+                This property indicates the file descriptor of the firmware image.
+          - name: ApplyTime
+            type: enum[self.ApplyTimes]
+            description: >
+                This property indicates when the software image update should be
+                applied.
+          - name: InventoryObjectPath
+            type: string
+            description: >
+                This property indicates the object path to the system inventory item.
+                Useful for multi host platforms to figure out the host for the entity.
+      returns:
+          - name: VersionObjectPath
+            type: string
+            description: >
+                The object path where the Version object is hosted.
+      errors:
+          - Version.Error.AlreadyExists
+          - Version.Error.InvalidSignature
+
+enumerations:
+    - name: ApplyTimes
+      description: >
+          The possible values of this property indicate when the newly updated
+          software image will be activated.
+      values:
+          - name: Immediate
+            description: >
+                Apply immediately.
+          - name: OnReset
+            description: >
+                Apply on a reset.
+
+    - name: UpdateStatus
+      description: >
+          The possible update stats.
+      values:
+          - name: NotReady
+            description: >
+                The system is still analyzing the image and not able
+                to start update.
+          - name: Invalid
+            description: >
+                The image is invalid and failed checks.
+          - name: Ready
+            description: >
+                The image has been processed and is ready for update.
+          - name: Activating
+            description: >
+                The image update has started.
+          - name: Active
+            description: >
+                The image is currently Active.
+          - name: Failed
+            description: >
+                The image update failed.
+          - name: Staged
+            description: >
+                The image is currently in staged flash area. This is moved from staged
+                flash area to active upon reset.
+          - name: Staging
+            description: >
+                The image is currently being staged into the staging
+                flash area.

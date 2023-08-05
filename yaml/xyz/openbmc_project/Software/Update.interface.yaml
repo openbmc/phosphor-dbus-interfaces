@@ -1,0 +1,51 @@
+description: >
+    Interface for performing code update for various firwmare entities.
+
+methods:
+    - name: StartUpdate
+      description: >
+          Start a firware update to be performed asynchronously.
+      parameters:
+          - name: Image
+            type: unixfd
+            description: >
+                This property indicates the file descriptor of the firmware
+                image.
+          - name: ApplyTime
+            type: enum[self.ApplyTimes]
+            description: >
+                This property indicates when the software image update should be
+                applied.
+      returns:
+          - name: ObjectPath
+            type: object_path
+            description: >
+                The object path where the image interfaces will be hosted, for
+                example, required interfaces such as ActivationStatus,
+                ActivationProgress and optional interfaces such as Version.
+      errors:
+          - xyz.openbmc_project.Software.Update.Error.Incompatible
+          - xyz.openbmc_project.Software.Update.Error.InvalidSignature
+          - xyz.openbmc_project.Software.Update.Error.InvalidImage
+          - xyz.openbmc_project.Common.Error.Unavailable
+
+properties:
+    - name: AllowedApplyTimes
+      type: set[enum[self.ApplyTimes]]
+      description: >
+          This property indicates the apply times allowed for this device.
+      flags:
+          - readonly
+
+enumerations:
+    - name: ApplyTimes
+      description: >
+          The possible values of this property indicate when the newly updated
+          software image will be activated.
+      values:
+          - name: Immediate
+            description: >
+                Apply immediately.
+          - name: OnReset
+            description: >
+                Apply on reset of device being updated.

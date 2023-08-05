@@ -42,3 +42,23 @@ enumerations:
           - name: PSU
             description: >
                 The version is a version for a PSU.
+
+associations:
+    - name: functional
+      description: >
+          This indicates the current functional version for the associated
+          inventory item.
+      reverse_names:
+          - software_version
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+    - name: active
+      description: >
+          This indicates the current active version for the associated inventory
+          item. There can be more than one active version associated with the
+          same inventory item. In such a case, RedundancyPriority interface will
+          help to decide the correct priority order.
+      reverse_names:
+          - software_version
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

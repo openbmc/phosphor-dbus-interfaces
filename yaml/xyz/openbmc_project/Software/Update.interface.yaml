@@ -1,0 +1,47 @@
+description: >
+    Interface for performing code update for various firwmare entities.
+
+methods:
+    - name: StartUpdate
+      description: >
+          Start a firware update to be performed asynchronously.
+      parameters:
+          - name: Image
+            type: unixfd
+            description: >
+                This property indicates the file descriptor of the firmware
+                image.
+          - name: ApplyTime
+            type: enum[self.ApplyTimes]
+            description: >
+                This property indicates when the software image update should be
+                applied.
+      returns:
+          - name: VersionObjectPath
+            type: object_path
+            description: >
+                The object path where the Version object is hosted.
+      errors:
+          - xyz.openbmc_project.Software.Update.Error.Incompatible
+          - xyz.openbmc_project.Software.Update.Error.InvalidSignature
+          - xyz.openbmc_project.Software.Update.Error.InvalidImage
+    - name: ApplyStagedImage
+      description: >
+          Apply an image which was staged earlier using StartUpdate with
+          ApplyTime as OnApplyStageImage.
+
+enumerations:
+    - name: ApplyTimes
+      description: >
+          The possible values of this property indicate when the newly updated
+          software image will be activated.
+      values:
+          - name: Immediate
+            description: >
+                Apply immediately.
+          - name: OnReset
+            description: >
+                Apply on a reset.
+          - name: OnApplyStagedImage
+            description: >
+                Stage the image and apply as result of ApplyStagedImage method.

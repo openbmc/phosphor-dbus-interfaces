@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cef2c5de_641066d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-08-07T03:22:50Z",
+      "side": 1,
+      "message": "Sorry for late. I will update this weekend.\nAccording to the current code, pid-control only add zone and thermalPID dbus path, should we still need to add fan PID loop debug interface?\n```\n        |-/xyz/openbmc_project/settings/fanctrl/zone0\n        | |-/xyz/openbmc_project/settings/fanctrl/zone0/CPU0_PID\n        | |-/xyz/openbmc_project/settings/fanctrl/zone0/DIMM_CPU0_PID\n        | |-/xyz/openbmc_project/settings/fanctrl/zone0/cpu0_VR_PID\n        | |-/xyz/openbmc_project/settings/fanctrl/zone0/fleeting0_PID\n        | |-/xyz/openbmc_project/settings/fanctrl/zone0/pch_PID\n        | `-/xyz/openbmc_project/settings/fanctrl/zone0/tray_dt_PID\n```",
+      "parentUuid": "fc27b367_8eb409e8",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a6033f37_03c1b7a4",
         "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
         "patchSetId": 12

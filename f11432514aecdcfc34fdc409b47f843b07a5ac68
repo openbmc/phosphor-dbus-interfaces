@@ -249,6 +249,24 @@
       "parentUuid": "b41381ec_59045b67",
       "revId": "f11432514aecdcfc34fdc409b47f843b07a5ac68",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0735fc7d_ac864619",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2023-08-11T08:03:49Z",
+      "side": 1,
+      "message": "Honestly I\u0027m not sure about what if button-handler also try to parsing the JSON before further surveying, just several concoerns but not fatal:\n1. Both services open file and do paring may also take some duplicated works\n2. Most of properties of power button has been already managed by this yaml.\n\nWould you please to tell that should I change this design or keep it for following platform using, then survey methods to improve in future works?",
+      "parentUuid": "e5535250_21a7e1bc",
+      "revId": "f11432514aecdcfc34fdc409b47f843b07a5ac68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

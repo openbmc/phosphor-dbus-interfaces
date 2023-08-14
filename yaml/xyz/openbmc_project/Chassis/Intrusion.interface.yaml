@@ -3,10 +3,12 @@ description: >
 
 properties:
     - name: Status
-      type: string
+      type: enum[self.Status]
+      default: "Normal"
       description: >
           Status string of chassis intrusion detector. The value is defined in
-          chassis redfish schema. Can be "Normal" or "HardwareIntrusion".
+          chassis redfish schema. Can be "Normal", "HardwareIntrusion" or
+          "TamperingDetected".
     - name: Rearm
       type: enum[self.RearmMode]
       default: "Automatic"
@@ -25,3 +27,17 @@ enumerations:
           - name: "Manual"
             description: >
                 Manual Rearm method.
+    - name: Status
+      description: >
+          The physical security state of the chassis.
+      values:
+          - name: "Normal"
+            description: >
+                No physical security condition is detected at this time.
+          - name: "HardwareIntrusion"
+            description: >
+                Any mechanism protecting the chassis's internal hardwares from
+                being accessed is detected to be in an insecure state.
+          - name: "TamperingDetected"
+            description: >
+                Physical tampering is detected.

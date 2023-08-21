@@ -34,6 +34,23 @@
       "parentUuid": "e434d0f6_534e8f7a",
       "revId": "e6a523c60ae0a03ed8ae0c9f7f4f4275ddd2e4ad",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b42e393a_cd1494d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-08-21T04:12:55Z",
+      "side": 1,
+      "message": "result\u003d\u003e\n```\nroot@gsz:~# busctl introspect xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0\nNAME                                TYPE      SIGNATURE RESULT/VALUE FLAGS\norg.freedesktop.DBus.Introspectable interface -         -            -\n.Introspect                         method    -         s            -\norg.freedesktop.DBus.Peer           interface -         -            -\n.GetMachineId                       method    -         s            -\n.Ping                               method    -         -            -\norg.freedesktop.DBus.Properties     interface -         -            -\n.Get                                method    ss        v            -\n.GetAll                             method    s         a{sv}        -\n.Set                                method    ssv       -            -\n.PropertiesChanged                  signal    sa{sv}as  -            -\nxyz.openbmc_project.Control.Mode    interface -         -            -\n.FailSafe                           property  b         false        emits-change writable\n.Manual                             property  b         false        emits-change writable\nxyz.openbmc_project.Debug.Pid.Zone  interface -         -            -\n.Leader                             property  s         \"CPU0_PID\"   emits-change\nroot@gsz:~# busctl introspect xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0/CPU0_PID\nNAME                                       TYPE      SIGNATURE RESULT/VALUE FLAGS\norg.freedesktop.DBus.Introspectable        interface -         -            -\n.Introspect                                method    -         s            -\norg.freedesktop.DBus.Peer                  interface -         -            -\n.GetMachineId                              method    -         s            -\n.Ping                                      method    -         -            -\norg.freedesktop.DBus.Properties            interface -         -            -\n.Get                                       method    ss        v            -\n.GetAll                                    method    s         a{sv}        -\n.Set                                       method    ssv       -            -\n.PropertiesChanged                         signal    sa{sv}as  -            -\nxyz.openbmc_project.Debug.Pid.ThermalPower interface -         -            -\n.Input                                     property  d         57.438       emits-change\n.Leader                                    property  s         \"Die_CPU0\"   emits-change\n.Output                                    property  d         4000         emits-change\n.Setpoint                                  property  d         70           emits-change\n.Type                                      property  s         \"DegreeC\"    emits-change\nxyz.openbmc_project.Object.Enable          interface -         -            -\n.Enabled                                   property  b         true         emits-change writable\n\n```",
+      "revId": "e6a523c60ae0a03ed8ae0c9f7f4f4275ddd2e4ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

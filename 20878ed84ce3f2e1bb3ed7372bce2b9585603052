@@ -340,6 +340,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3d28899_3a885ecf",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-08-21T04:12:55Z",
+      "side": 1,
+      "message": "I add interface ```xyz.openbmc_project.Debug.Pid.ThermalPower``` and use ```type``` to diff temperature and power.\n\nResult:\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/60152/comments/e434d0f6_534e8f7a",
+      "parentUuid": "b92c5565_9f0351ed",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1f581420_2e3f9c0c",
@@ -393,6 +411,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "670a158b_38575d2e",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-08-21T04:12:55Z",
+      "side": 1,
+      "message": "Done. I only add thermal/power pid loops. Because the current phosphor-pid-control doesn\u0027t add objects related to fan loop on dbus.\nrelated PR:\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-pid-control/+/63214",
+      "parentUuid": "04f0e2bf_5423deaa",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c159d0cd_2cd60c74",
@@ -428,6 +464,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7dd293c_1d33b7ff",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-08-21T04:12:55Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "a0351aec_40a78d65",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cd1073ca_cdd49a62",
@@ -459,6 +513,24 @@
       "side": 1,
       "message": "Agreed, same as other comment.",
       "parentUuid": "cd1073ca_cdd49a62",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "047f833d_b21c1e40",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-08-21T04:12:55Z",
+      "side": 1,
+      "message": "Done. Only adding properties about thermal/power pid loop state currently. And also add ```type``` to describe the ```Input``` unit",
+      "parentUuid": "8c816bc6_26d3e16f",
       "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -551,6 +551,24 @@
       "parentUuid": "047f833d_b21c1e40",
       "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dacf6a54_44d8cc81",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-08-22T10:08:35Z",
+      "side": 1,
+      "message": "The value of `Type` in my implement is from pid config `Class`(https://github.com/openbmc/phosphor-pid-control/blob/master/dbus/dbusconfiguration.cpp#L722).\nIf `Class` \u003d temp, `Type` \u003d `DegreeC`.\nIf \u003d `margin`, `Type` \u003d `Margin`.\nIf \u003d `power` or `powersum`, `Type` \u003d \u0027Watt\u0027.",
+      "parentUuid": "d346dedf_f1f48403",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

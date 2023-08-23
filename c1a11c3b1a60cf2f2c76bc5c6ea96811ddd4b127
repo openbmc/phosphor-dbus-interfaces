@@ -16,6 +16,24 @@
       "message": "I don’t know what this means. can you give more information or a pointer to driver documentation?",
       "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8a61c9f_0a7149f8",
+        "filename": "yaml/xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001311
+      },
+      "writtenOn": "2023-08-23T09:56:55Z",
+      "side": 1,
+      "message": "This is specified in IPMI specification 27.4.2(Set Watchdog Timer Command).\nThe most significant bit of the first byte configures whether to log the event on expiration.",
+      "parentUuid": "f6b69264_fe3179d3",
+      "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

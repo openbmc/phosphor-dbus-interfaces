@@ -28,6 +28,12 @@ properties:
       description: >
           The watchdog is enabled or not.
       default: false
+    - name: LogTimeout
+      type: boolean
+      description: >
+          This property is used for configuring whether an event will be logged
+          on watchdog expiration.
+      default: true
     - name: ExpireAction
       type: enum[self.Action]
       description: >

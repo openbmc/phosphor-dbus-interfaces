@@ -28,6 +28,11 @@ properties:
       description: >
           The watchdog is enabled or not.
       default: false
+    - name: Notlog
+      type: boolean
+      description: >
+          The watchdog log is enabled or not.
+      default: false
     - name: ExpireAction
       type: enum[self.Action]
       description: >

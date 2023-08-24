@@ -641,6 +641,24 @@
       "parentUuid": "0fa7b859_b12ca014",
       "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc1dff4a_3037eba9",
+        "filename": "yaml/xyz/openbmc_project/Control/Zone.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000847
+      },
+      "writtenOn": "2023-08-24T13:13:44Z",
+      "side": 1,
+      "message": "When using `Class` to implement functions in phosphor-pid-control, an error occurs at compile time. So I changed to \"ClassType\".\n```\nST_ALL_NO_LIB -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_COROUTINES_NO_DEPRECATION_WARNING -MD -MQ swampd.p/pid_zone.cpp.o -MF swampd.p/pid_zone.cpp.o.d -o swampd.p/pid_zone.cpp.o -c ../git/pid/zone.cpp\n| ../git/pid/zone.cpp: In member function \u0027void pid_control::DbusPidZone::addPidControlProcess(std::string, std::string, double, sdbusplus::bus_t\u0026, std::string, bool)\u0027:\n| ../git/pid/zone.cpp:543:36: error: expected unqualified-id before \u0027class\u0027\n|   543 |         _pidsControlProcess[name]-\u003eclass(\"Temperature\");\n|       |                                    ^~~~~\n| ../git/pid/zone.cpp:547:36: error: expected unqualified-id before \u0027class\u0027\n|   547 |         _pidsControlProcess[name]-\u003eclass(\"Margin\");\n|       |                                    ^~~~~\n| ../git/pid/zone.cpp:551:36: error: expected unqualified-id before \u0027class\u0027\n|   551 |         _pidsControlProcess[name]-\u003eclass(\"Power\");\n|       |                                    ^~~~~\n| ../git/pid/zone.cpp:555:36: error: expected unqualified-id before \u0027class\u0027\n|   555 |         _pidsControlProcess[name]-\u003eclass(\"PowerSum\");\n|       |                                    ^~~~~\n```",
+      "parentUuid": "db8d8cd2_b367c377",
+      "revId": "20878ed84ce3f2e1bb3ed7372bce2b9585603052",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

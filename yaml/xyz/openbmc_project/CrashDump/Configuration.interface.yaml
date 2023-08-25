@@ -1,0 +1,85 @@
+description: >
+    RAS configuration parameters coming in from user for the crash dump feature.
+
+properties:
+    - name: apmlRetries
+      type: uint16
+      description: >
+          It is used to indicate the maximum APML retry count from BMC.
+    - name: systemRecovery
+      type: uint16
+      description: >
+          System recovery that needs to be done after a fatal error in the
+          system.
+    - name: harvestuCodeVersion
+      type: boolean
+      description: >
+          If this field is true, microcode version will be harvested into the
+          CPER file on fatal errors.
+    - name: harvestPpin
+      type: boolean
+      description: >
+          If this field is true, PPIN will be harvested into the CPER file on
+          fatal errors.
+    - name: sigIDOffset
+      type: array[string]
+      description: >
+          Offset range to calculate Signature ID.
+    - name: P0_DIMM_LABELS
+      type: dict[string, string]
+      description: >
+          Socket 0 array of DIMM labels for DIMM FRU text.
+    - name: P1_DIMM_LABELS
+      type: dict[string, string]
+      description: >
+          Socket 1 array of DIMM labels for DIMM FRU text.
+    - name: McaPollingEn
+      type: boolean
+      description: >
+          If this field is true, MCA correctable errors will be polled.
+    - name: DramCeccPollingEn
+      type: boolean
+      description: >
+          If this field is true, DRAM CECC correctable errors will be polled.
+    - name: PcieAerPollingEn
+      type: boolean
+      description: >
+          If this field is true, PCIE AER correctable errors will be polled.
+    - name: McaThresholdEn
+      type: boolean
+      description: >
+          If this field is true, error thresholding is enable for MCA errors.
+    - name: DramCeccThresholdEn
+      type: boolean
+      description: >
+          If this field is true, error thresholding is enable for DRAM CECC
+          errors.
+    - name: PcieAerThresholdEn
+      type: boolean
+      description: >
+          If this field is true, error thresholding is enable for PCIE AER
+          errors.
+    - name: McaPollingPeriod
+      type: uint16
+      description: >
+          Polling time period for MCA errors.
+    - name: DramCeccPollingPeriod
+      type: uint16
+      description: >
+          Polling time period for DRAM CECC errors.
+    - name: PcieAerPollingPeriod
+      type: uint16
+      description: >
+          Polling time period for DRAM CECC errors.
+    - name: McaErrCounter
+      type: uint16
+      description: >
+          Error threshold value for MCA errors.
+    - name: DramCeccErrCounter
+      type: uint16
+      description: >
+          Error threshold value for DRAM CECC errors.
+    - name: PcieAerErrCounter
+      type: uint16
+      description: >
+          Error threshold value for DRAM CECC errors.

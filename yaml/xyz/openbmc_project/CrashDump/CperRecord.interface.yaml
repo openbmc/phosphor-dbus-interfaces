@@ -1,0 +1,15 @@
+description: >
+    Provides CPER file information in the BMC as CPER Record objects.
+properties:
+    - name: Filename
+      type: string
+      description: >
+          CPER filename in the BMC.
+    - name: Log
+      type: string
+      description: >
+          File path of the CPER file.
+    - name: Timestamp
+      type: string
+      description: >
+         Timestamp when the CPER file is created.

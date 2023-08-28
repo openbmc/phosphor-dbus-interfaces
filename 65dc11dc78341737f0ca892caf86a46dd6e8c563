@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1108a5e1_8ea70f38",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-28T14:07:09Z",
+      "side": 1,
+      "message": "Agreed. Would the generic property name \"Retries\" suffice?",
+      "parentUuid": "213398fc_98b93b5a",
+      "range": {
+        "startLine": 5,
+        "startChar": 12,
+        "endLine": 5,
+        "endChar": 16
+      },
+      "revId": "65dc11dc78341737f0ca892caf86a46dd6e8c563",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "426b0ee9_a6f53720",
         "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
         "patchSetId": 1
@@ -37,6 +61,24 @@
       "writtenOn": "2023-08-28T07:36:45Z",
       "side": 1,
       "message": "CPER can be used in correctable error as well.\nI think it shouldn\u0027t be under `CrashDump` folder",
+      "revId": "65dc11dc78341737f0ca892caf86a46dd6e8c563",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0db9069_57bc3451",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-28T14:07:09Z",
+      "side": 1,
+      "message": "Agreed. Suggest a folder it should be in?",
+      "parentUuid": "426b0ee9_a6f53720",
       "revId": "65dc11dc78341737f0ca892caf86a46dd6e8c563",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

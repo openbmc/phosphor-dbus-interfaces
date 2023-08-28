@@ -57,3 +57,12 @@ properties:
           granted.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: PasswordExpiration
+      type: string
+      description: >
+          Indicates the date when this account password expires. Date should be
+          specified in format "yyyy-mm-dd".
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument

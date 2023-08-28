@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "213398fc_98b93b5a",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000937
+      },
+      "writtenOn": "2023-08-28T07:36:45Z",
+      "side": 1,
+      "message": "This interface should be more generic.\nAPML is specific to AMD which can\u0027t be appled to other CPU vendors.",
+      "range": {
+        "startLine": 5,
+        "startChar": 12,
+        "endLine": 5,
+        "endChar": 16
+      },
+      "revId": "65dc11dc78341737f0ca892caf86a46dd6e8c563",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "426b0ee9_a6f53720",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000937
+      },
+      "writtenOn": "2023-08-28T07:36:45Z",
+      "side": 1,
+      "message": "CPER can be used in correctable error as well.\nI think it shouldn\u0027t be under `CrashDump` folder",
+      "revId": "65dc11dc78341737f0ca892caf86a46dd6e8c563",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

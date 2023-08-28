@@ -57,3 +57,10 @@ properties:
           granted.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: PasswordExpiration
+      type: uint64
+      default: maxint
+      description: >
+          Indicates the date when this account password expires. Date should be
+          specified in EpochTime format.

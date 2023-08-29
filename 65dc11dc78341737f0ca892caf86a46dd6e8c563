@@ -81,6 +81,40 @@
       "parentUuid": "426b0ee9_a6f53720",
       "revId": "65dc11dc78341737f0ca892caf86a46dd6e8c563",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4bf532f1_6f153cf1",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2023-08-29T05:19:01Z",
+      "side": 1,
+      "message": "This is basically dump entry right? is it possible to reuse this existing entry?\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Dump/Entry.interface.yaml\nbut this interface doesnt expose filepath but a getFd is used for getting the fd to offload the file.\n\nand a custom entry can be defined like this\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+      "revId": "65dc11dc78341737f0ca892caf86a46dd6e8c563",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14e39839_1da6885c",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2023-08-29T05:19:01Z",
+      "side": 1,
+      "message": "This interface can be used if stored as epoch",
+      "revId": "65dc11dc78341737f0ca892caf86a46dd6e8c563",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

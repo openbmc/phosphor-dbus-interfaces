@@ -1,0 +1,164 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd236f52_2eea957d",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-29T18:29:22Z",
+      "side": 1,
+      "message": "Let\u0027s break this out into multiple properties.\n\nDoes this need to be read-only?  Are any of them const?\n\nMake the key as \"struct[self.Type, self.Level]\".\n\nMake one property as \"Value\" and one as \"Asserted\".",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 86
+      },
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "034d85e6_4d60f6f6",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-29T18:29:22Z",
+      "side": 1,
+      "message": "Do we want to make this Bound.Upper / Bound.Lower?",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 59
+      },
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aab76dbb_ad0f91a3",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Reset.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-29T18:29:22Z",
+      "side": 1,
+      "message": "What is InternalFailure going to be used for?  What is the client expected to do about it?",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90646feb_7602021d",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-29T18:29:22Z",
+      "side": 1,
+      "message": "Add flags to mark them as read-only, please.",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f76c5b8_5780bcd1",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-29T18:29:22Z",
+      "side": 1,
+      "message": "This one is \u0027const\u0027.",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b84459d_b49b4359",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-29T18:29:22Z",
+      "side": 1,
+      "message": "Drop, because this can be used for any number of counts.",
+      "range": {
+        "startLine": 31,
+        "startChar": 26,
+        "endLine": 31,
+        "endChar": 33
+      },
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3cc51418_4d436c7e",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-29T18:29:22Z",
+      "side": 1,
+      "message": "We should use a different verb.  \u0027measuring\u0027?",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "029dd61b_6dfa774f",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-29T18:29:22Z",
+      "side": 1,
+      "message": "Inventory.Item only.",
+      "range": {
+        "startLine": 41,
+        "startChar": 13,
+        "endLine": 41,
+        "endChar": 50
+      },
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

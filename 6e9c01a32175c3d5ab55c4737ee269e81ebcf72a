@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dff306fc_dcf6d06e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Thanks for the review. Addressed your comments.",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bd236f52_2eea957d",
@@ -14,6 +31,30 @@
       "writtenOn": "2023-08-29T18:29:22Z",
       "side": 1,
       "message": "Let\u0027s break this out into multiple properties.\n\nDoes this need to be read-only?  Are any of them const?\n\nMake the key as \"struct[self.Type, self.Level]\".\n\nMake one property as \"Value\" and one as \"Asserted\".",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 86
+      },
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fca9cb0e_de1e8270",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Sure, as discussed broken this into Value and Asserted properties. For Asserted, my understanding is either any threshold level is asserted or not and if asserted there would be just one threshold type asserted at a time, hence with this thought i think its better to model Asserted type as \"enum[self.Type]\"\n\nMarked Value as const and Asserted as readonly.",
+      "parentUuid": "bd236f52_2eea957d",
       "range": {
         "startLine": 6,
         "startChar": 0,
@@ -41,6 +82,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c6adfa3_84ff3bc4",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Changed it to AssertionChanged with a status property (as boolean) which depicts whether its asserted to deasserted.",
+      "parentUuid": "35748d00_8930a747",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "034d85e6_4d60f6f6",
@@ -54,6 +113,30 @@
       "writtenOn": "2023-08-29T18:29:22Z",
       "side": 1,
       "message": "Do we want to make this Bound.Upper / Bound.Lower?",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 59
+      },
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5db3454e_b87c2a1c",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "034d85e6_4d60f6f6",
       "range": {
         "startLine": 57,
         "startChar": 0,
@@ -81,6 +164,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b8e9b81_0ea77e23",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Reset.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "The intent behind internalerror is to depict that the operation didn\u0027t go through. But as we discussed it won\u0027t be much useful to the end user in terms of action. The main failure in this case can be persistent memory being in-accessible which is a critical problem with the system and shall be handled in other better ways such as process core dump etc. Hence, i am removing this error.",
+      "parentUuid": "aab76dbb_ad0f91a3",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cf8adc01_ab391496",
@@ -94,6 +195,24 @@
       "writtenOn": "2023-08-29T18:50:56Z",
       "side": 1,
       "message": "We should find a way to document the object paths in here so that we can generate them as constants.",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3730d733_f15a6f98",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Sure i will propose additions to the DBus interface. Let\u0027s keep that as a separate activity. Once we have converged on that proposal, i can update this interface as a separate commit to reflect the change.",
+      "parentUuid": "cf8adc01_ab391496",
       "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -115,6 +234,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "378ababe_fbdf7a9f",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "90646feb_7602021d",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5f76c5b8_5780bcd1",
@@ -128,6 +265,24 @@
       "writtenOn": "2023-08-29T18:29:22Z",
       "side": 1,
       "message": "This one is \u0027const\u0027.",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b93da3e5_6d4ee279",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5f76c5b8_5780bcd1",
       "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -155,6 +310,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "072f797a_0742f2ea",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4b84459d_b49b4359",
+      "range": {
+        "startLine": 31,
+        "startChar": 26,
+        "endLine": 31,
+        "endChar": 33
+      },
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3cc51418_4d436c7e",
@@ -172,6 +351,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "27c43378_1360d31e",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3cc51418_4d436c7e",
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "029dd61b_6dfa774f",
@@ -185,6 +382,30 @@
       "writtenOn": "2023-08-29T18:29:22Z",
       "side": 1,
       "message": "Inventory.Item only.",
+      "range": {
+        "startLine": 41,
+        "startChar": 13,
+        "endLine": 41,
+        "endChar": 50
+      },
+      "revId": "6e9c01a32175c3d5ab55c4737ee269e81ebcf72a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd2ae1f6_b6b12b8c",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-08-30T01:01:01Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "029dd61b_6dfa774f",
       "range": {
         "startLine": 41,
         "startChar": 13,

@@ -3,6 +3,159 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "136428da_1f991cd9",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-30T23:49:49Z",
+      "side": 1,
+      "message": "why does this need to be configurable?  why would a user change it?",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc2d04ea_6a2ad59d",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-30T23:49:49Z",
+      "side": 1,
+      "message": "please follow the naming convention.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b508927b_8c249817",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-30T23:49:49Z",
+      "side": 1,
+      "message": "uint16_t?  what does the represent?",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d42ebb2_f5a9a671",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-30T23:49:49Z",
+      "side": 1,
+      "message": "this doesn’t feel like a runtime policy either. should be compile time or in a config file?",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f16c1a2d_1c87908e",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-30T23:49:49Z",
+      "side": 1,
+      "message": "what does this mean?",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7925435a_ea75b7eb",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-30T23:49:49Z",
+      "side": 1,
+      "message": "remove this.  we have dimm inventor items for this already.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8df0fdc3_574256bb",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-30T23:49:49Z",
+      "side": 1,
+      "message": "you’re addding p0 and p1, which should be properties under the relevant processors.  also, there are more than just dual socket systems out there",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd0519f8_5b4f34b8",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-30T23:49:49Z",
+      "side": 1,
+      "message": "units?  applies to all these times.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5a5c032_87ecff63",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-30T23:49:49Z",
+      "side": 1,
+      "message": "overall, this interface is:\n1. ignoring the existing cpu/dimm inventory items, and it’s not clear from a technical perspective why.\n2. adding a bunch of configuration that I would not expect to be available at runtime, and really feels like a configure time parameter.  what are the use cases for changing this at runtime?",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e77eee10_18ac4884",
         "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
         "patchSetId": 2

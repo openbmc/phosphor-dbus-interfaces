@@ -156,6 +156,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1ef913f_96b0e942",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000276
+      },
+      "writtenOn": "2023-08-30T21:26:43Z",
+      "side": 1,
+      "message": "The crashdump interface today provides a file name, file path, and timestamp.  When the `AdditionalDataURI` is requested, bmcweb returns the crashdump file as an attachment.\n\nIf the Dump interface can provide this same capability, then I think it could work, but it may need some changes to make it more generic.",
+      "parentUuid": "047a9f67_e01249da",
+      "revId": "65dc11dc78341737f0ca892caf86a46dd6e8c563",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "14e39839_1da6885c",
         "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
         "patchSetId": 1

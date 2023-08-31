@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "6759c878_b80873c4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "nit, please wrap you commits 50/72.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 49
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "f144e89e_ced145f3",
@@ -14,6 +37,201 @@
       "writtenOn": "2023-08-31T17:48:20Z",
       "side": 1,
       "message": "Addressed your comment. Thanks",
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e00e289_e7bae793",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "nit, Please follow the naming convention of dbus, which is CamelCase.\n\nAlso, I would prefer to call this \"StartUpdate\"?.  Like I mentioned before, Schedule implies some kind of cron ability, that this interface isn\u0027t set up to support.",
+      "range": {
+        "startLine": 5,
+        "startChar": 12,
+        "endLine": 5,
+        "endChar": 26
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c5850b3_55803326",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "nit, can we just call this \"image\". fd is implied by the type.",
+      "range": {
+        "startLine": 9,
+        "startChar": 18,
+        "endLine": 9,
+        "endChar": 25
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bdff19cd_003848fc",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem like it works in your design.  If we\u0027re going to have multiple daemons hosting this interface, then how does bmcweb know that the image for X device goes to Y DBus connection?\n\nI suspect you need some kind of association property back to the inventory item, so bmcweb can look up from target-\u003edbus path, and call the right firmware update daemon.  Or, maybe this object just gets added under the same path?  But either way, I don\u0027t think accepting the path as a method call param works.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 27
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29251749_41c93f63",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "should be a dbus path type.",
+      "range": {
+        "startLine": 27,
+        "startChar": 18,
+        "endLine": 27,
+        "endChar": 24
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b45b51be_3cf9e898",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "What does \"Already Exists\" mean in the context of starting an update?",
+      "range": {
+        "startLine": 31,
+        "startChar": 55,
+        "endLine": 31,
+        "endChar": 68
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9c083d7_e575d4ca",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "Can we also have an error that\u0027s differentiated for something like \"Update Does Not Apply to This device\" so that we can differentiate a signature issue from a corrupt file issue from a support issue?",
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bdc48032_05f52cfd",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "This needs a better description.  Reset of WHAT?  Maybe we need \"OnBMCReset\", \"OnDeviceReset\", and \"OnHostReset\"?  In addition, a property that denotes which of those two this device supports?\n\nFWIW, this issue was debated at DMTF Redfish level quite heavily.",
+      "range": {
+        "startLine": 43,
+        "startChar": 18,
+        "endLine": 43,
+        "endChar": 25
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "784af2e0_da890d94",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "This enum doesn\u0027t look used in this interface?",
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "211a8747_ec5a9156",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-08-31T18:23:48Z",
+      "side": 1,
+      "message": "nit, typo \"status\"",
+      "range": {
+        "startLine": 49,
+        "startChar": 30,
+        "endLine": 49,
+        "endChar": 35
+      },
       "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

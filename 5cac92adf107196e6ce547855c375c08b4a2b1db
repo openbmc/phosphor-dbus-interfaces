@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d108cf07_34c80638",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "This is AMD specific to let the user set the number of retries from BMC to send the AMD processor to get . \nNot sure if other processors have a use for this.",
+      "parentUuid": "136428da_1f991cd9",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dc2d04ea_6a2ad59d",
         "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
         "patchSetId": 2
@@ -31,6 +49,24 @@
       "writtenOn": "2023-08-30T23:49:49Z",
       "side": 1,
       "message": "please follow the naming convention.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d199ff0_b1865194",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "dc2d04ea_6a2ad59d",
       "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -71,6 +107,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6bcffccd_2f6a19fc",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "Good question. Will check why we deemed it as Runtime policy item.",
+      "parentUuid": "7d42ebb2_f5a9a671",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f16c1a2d_1c87908e",
         "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
         "patchSetId": 2
@@ -103,6 +157,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3351143f_74a8ed3d",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7925435a_ea75b7eb",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8df0fdc3_574256bb",
@@ -116,6 +188,24 @@
       "writtenOn": "2023-08-30T23:49:49Z",
       "side": 1,
       "message": "you’re addding p0 and p1, which should be properties under the relevant processors.  also, there are more than just dual socket systems out there",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae93c153_17402357",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "8df0fdc3_574256bb",
       "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -139,6 +229,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "06ef5ebe_65891fae",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "Seconds. Will add that.",
+      "parentUuid": "fd0519f8_5b4f34b8",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c5a5c032_87ecff63",
         "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
         "patchSetId": 2
@@ -156,6 +264,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fca2198b_8f890016",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "1. CPU/DIMM labels will be removed, it does not belong in RAS/CPER interface.\n2. Some of the configuration parameters should be available at Runtime. For e.g., whether we want to monitor correctable errors, at what threshold. DIMM CECC may be common and administrator wants to adjust them at runtime if a particular system exhibits this behavior.",
+      "parentUuid": "c5a5c032_87ecff63",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e77eee10_18ac4884",
         "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
         "patchSetId": 2
@@ -167,6 +293,24 @@
       "writtenOn": "2023-08-30T23:43:08Z",
       "side": 1,
       "message": "cper records are more than just crashdumps.  I suspect this needs to go into a different namespace.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e04dbe9_e1ff842e",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "e77eee10_18ac4884",
       "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -190,6 +334,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "02476e55_6910e0c6",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "It\u0027s actually 10\u0027s of Kilobytes and will depend on the number of errors RAS engine detects on the host.",
+      "parentUuid": "bc2a9e8f_f3e743f9",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7fdf18a1_41ffdac0",
         "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
         "patchSetId": 2
@@ -201,6 +363,24 @@
       "writtenOn": "2023-08-30T23:43:08Z",
       "side": 1,
       "message": "needs to be time since epoch to match everywhere else.  bmcweb has conversion functions already that are well tested.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3577088_417d2528",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7fdf18a1_41ffdac0",
       "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -218,6 +398,24 @@
       "writtenOn": "2023-08-30T23:43:08Z",
       "side": 1,
       "message": "how is it determined which processor complex produced this CPER record?  that will be required for multi host systems.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9de01668_c2e905ec",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000299
+      },
+      "writtenOn": "2023-08-31T01:51:37Z",
+      "side": 1,
+      "message": "CPER record consists of 3 parts\n1. Header\n2. Section descriptor(s) [can be more than 1]\n3. Section (s) [as many as the number of section descriptors]. \nSection descriptors will define whether it\u0027s an error related to P0, P1, P2, etc..",
+      "parentUuid": "0f6f4aef_ab2a9846",
       "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

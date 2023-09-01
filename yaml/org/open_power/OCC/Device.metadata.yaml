@@ -1,0 +1,15 @@
+- name: OpenFailure
+  inherits:
+      - xyz.openbmc_project.Common.Callout.Device
+
+- name: ReadFailure
+  inherits:
+      - xyz.openbmc_project.Common.Callout.Device
+
+- name: WriteFailure
+  inherits:
+      - xyz.openbmc_project.Common.Callout.Device
+
+- name: ConfigFailure
+  inherits:
+      - xyz.openbmc_project.Common.Callout.Device

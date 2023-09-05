@@ -112,6 +112,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1696ad79_5d06f2ee",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-05T22:38:57Z",
+      "side": 1,
+      "message": "Yes.  You got it.",
+      "parentUuid": "b920256e_e5d49f54",
+      "range": {
+        "startLine": 5,
+        "startChar": 12,
+        "endLine": 5,
+        "endChar": 26
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2c5850b3_55803326",
@@ -196,6 +220,30 @@
       "side": 1,
       "message": "I have mentioned this in the design. Please refer to \"Proposed End to End Flow\" diagram. It mentions about a functional association which needs to be created from Inventory Item to Version Object. BMCWeb will map the Redfish URI to inventory object and would get the corresponding DBUS path for the associated version object.\nTo make this explicit i just added this to doc wording and explicitly added the association to the Version interface.\n\nThis InventoryObjectPath param is needed internally in the Update daemon so it can figure out in multi host situations or when there are two devices of same type in single host scenario to figure out which one to update. NOTE: The Update Interface is going to be hosted at /xyz/openbmc_project/Software/\u003cdeviceX\u003e path and not /xyz/openbmc_project/Software/\u003cdeviceX\u003e/\u003cInstanceNum\u003e path.",
       "parentUuid": "bdff19cd_003848fc",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 27
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab4078e9_84dd480e",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-05T22:38:57Z",
+      "side": 1,
+      "message": "\u003e This InventoryObjectPath param is needed internally in the Update daemon so it can figure out in multi host situations.\n\nLets leave out multi-host for the moment.  That\u0027s its own design that needs ownership from someone.  If you\u0027re owning multi-host, then there\u0027s a lot of things missing, and I don\u0027t think it\u0027s beneficial to open that can of worms at this time.\n\n\u003e NOTE: The Update Interface is going to be hosted at /xyz/openbmc_project/Software/\u003cdeviceX\u003e path and not /xyz/openbmc_project/Software/\u003cdeviceX\u003e/\u003cInstanceNum\u003e path.\n\nWhy?  This would be different than we\u0027ve handled other things in the past.  For example, sensors, each one has its own unique path.  There\u0027s no \"sensor manager\" that accepts a path to an individual sensor when you want to interact with it.  I really suspect your \"and not\" example is the right path here.  Although I would make it something like \n\n/xyz/openbmc_project/Software/\u003cdevice unique id\u003e\n\nIn practice, most Device Unique IDs are generated via the entity-manager name, to allow the name to be somewhat useful to a user.",
+      "parentUuid": "3ffc6aef_728afae0",
       "range": {
         "startLine": 19,
         "startChar": 0,
@@ -302,6 +350,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c1701752_f75e224d",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-05T22:38:57Z",
+      "side": 1,
+      "message": "\u003e The version you are trying to update to is the current version of the device, so no update needed.\n\nPlease don\u0027t implement it this way.  There are valid reasons for updating to the same version that the device already has.  Many of them are developer reasons (where a dev might not have a unique version number) but should still be considered.",
+      "parentUuid": "37fe69df_c1f21b3c",
+      "range": {
+        "startLine": 31,
+        "startChar": 55,
+        "endLine": 31,
+        "endChar": 68
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d9c083d7_e575d4ca",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 3
@@ -331,6 +403,24 @@
       "side": 1,
       "message": "So, i suppose its better to define new error types for Update interface rather than using the one from Version then? For next proposal update, i am going to define new one\u0027s, let me know if you think otherwise.\n\nFrom what you are suggesting, we would have -\n\n - xyz.openbmc_project.Software.Update.Error.Incompatible\n - xyz.openbmc_project.Software.Update.Error.AlreadyExists\n - xyz.openbmc_project.Software.Update.Error.InvalidSignature\n - xyz.openbmc_project.Software.Update.Error.InvalidImage",
       "parentUuid": "d9c083d7_e575d4ca",
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8ec7deb_48f9a3c1",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-05T22:38:57Z",
+      "side": 1,
+      "message": "\u003e So, i suppose its better to define new error types for Update interface rather than using the one from Version then?\n\nIf those errors are unique to this interface, yes.\n\nAside from AlreadyExists, which was in the previous paragraph, the rest look good to me.",
+      "parentUuid": "cbe9a2c5_59a0850a",
       "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -372,6 +462,30 @@
       "side": 1,
       "message": "My understanding is that this oneReset represents the reset for the device under update. For general standpoint, this can end up being a BMCReset for BMCUpdate, deviceXReset for deviceXUpdate and so worth. Its upto the implementation to see how they want to interpret the reset and trigger the required reset.\n\nAlso, as you mentioned about DTMF, i don\u0027t see BMCReset and DeviceReset as 2 different options in Redfish UpdateService interface, so not sure how we will represent it there?\n\nhttps://redfish.dmtf.org/schemas/v1/UpdateService.v1_11_3.json",
       "parentUuid": "bdc48032_05f52cfd",
+      "range": {
+        "startLine": 43,
+        "startChar": 18,
+        "endLine": 43,
+        "endChar": 25
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8830df2f_59f9a6ac",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-05T22:38:57Z",
+      "side": 1,
+      "message": "\u003e My understanding is that this oneReset represents the reset for the device under update\n\nI think we need to be more explicit.\n\n\u003e For general standpoint, this can end up being a BMCReset for BMCUpdate, deviceXReset for deviceXUpdate and so worth\n\nHow would I know that from the interface?  How would I generate a correct Redfish tree without knowing that OnReset means device reset?\n\n\nDMTF questions on \"how do I implement X in Redfish\" should generally be directed at the DMTF Redfish Github.  Like the Developing guide states, there are far more Redfish experts there, and then my opinion isn\u0027t the only one rendered for standards questions.",
+      "parentUuid": "d601f535_b076abc4",
       "range": {
         "startLine": 43,
         "startChar": 18,

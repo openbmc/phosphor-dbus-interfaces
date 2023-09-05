@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "a4ae213a_03d7fca6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "6759c878_b80873c4",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 49
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "f144e89e_ced145f3",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 3
@@ -64,6 +88,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b920256e_e5d49f54",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "ohh i suppose you mean pascal case or upper camel case. Sure changed to that.\n\nChanged API to StartUpdate.",
+      "parentUuid": "8e00e289_e7bae793",
+      "range": {
+        "startLine": 5,
+        "startChar": 12,
+        "endLine": 5,
+        "endChar": 26
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2c5850b3_55803326",
@@ -77,6 +125,30 @@
       "writtenOn": "2023-08-31T18:23:48Z",
       "side": 1,
       "message": "nit, can we just call this \"image\". fd is implied by the type.",
+      "range": {
+        "startLine": 9,
+        "startChar": 18,
+        "endLine": 9,
+        "endChar": 25
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "deb36275_1f99b2e1",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2c5850b3_55803326",
       "range": {
         "startLine": 9,
         "startChar": 18,
@@ -110,6 +182,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ffc6aef_728afae0",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "I have mentioned this in the design. Please refer to \"Proposed End to End Flow\" diagram. It mentions about a functional association which needs to be created from Inventory Item to Version Object. BMCWeb will map the Redfish URI to inventory object and would get the corresponding DBUS path for the associated version object.\nTo make this explicit i just added this to doc wording and explicitly added the association to the Version interface.\n\nThis InventoryObjectPath param is needed internally in the Update daemon so it can figure out in multi host situations or when there are two devices of same type in single host scenario to figure out which one to update. NOTE: The Update Interface is going to be hosted at /xyz/openbmc_project/Software/\u003cdeviceX\u003e path and not /xyz/openbmc_project/Software/\u003cdeviceX\u003e/\u003cInstanceNum\u003e path.",
+      "parentUuid": "bdff19cd_003848fc",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 27
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "29251749_41c93f63",
@@ -123,6 +219,30 @@
       "writtenOn": "2023-08-31T18:23:48Z",
       "side": 1,
       "message": "should be a dbus path type.",
+      "range": {
+        "startLine": 27,
+        "startChar": 18,
+        "endLine": 27,
+        "endChar": 24
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c8e2b2a_be811d26",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "29251749_41c93f63",
       "range": {
         "startLine": 27,
         "startChar": 18,
@@ -156,6 +276,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "37fe69df_c1f21b3c",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "The version you are trying to update to is the current version of the device, so no update needed.\n\nFYI: These are the errors from the existing Version interface.",
+      "parentUuid": "b45b51be_3cf9e898",
+      "range": {
+        "startLine": 31,
+        "startChar": 55,
+        "endLine": 31,
+        "endChar": 68
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d9c083d7_e575d4ca",
@@ -169,6 +313,24 @@
       "writtenOn": "2023-08-31T18:23:48Z",
       "side": 1,
       "message": "Can we also have an error that\u0027s differentiated for something like \"Update Does Not Apply to This device\" so that we can differentiate a signature issue from a corrupt file issue from a support issue?",
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbe9a2c5_59a0850a",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "So, i suppose its better to define new error types for Update interface rather than using the one from Version then? For next proposal update, i am going to define new one\u0027s, let me know if you think otherwise.\n\nFrom what you are suggesting, we would have -\n\n - xyz.openbmc_project.Software.Update.Error.Incompatible\n - xyz.openbmc_project.Software.Update.Error.AlreadyExists\n - xyz.openbmc_project.Software.Update.Error.InvalidSignature\n - xyz.openbmc_project.Software.Update.Error.InvalidImage",
+      "parentUuid": "d9c083d7_e575d4ca",
       "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -198,6 +360,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d601f535_b076abc4",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "My understanding is that this oneReset represents the reset for the device under update. For general standpoint, this can end up being a BMCReset for BMCUpdate, deviceXReset for deviceXUpdate and so worth. Its upto the implementation to see how they want to interpret the reset and trigger the required reset.\n\nAlso, as you mentioned about DTMF, i don\u0027t see BMCReset and DeviceReset as 2 different options in Redfish UpdateService interface, so not sure how we will represent it there?\n\nhttps://redfish.dmtf.org/schemas/v1/UpdateService.v1_11_3.json",
+      "parentUuid": "bdc48032_05f52cfd",
+      "range": {
+        "startLine": 43,
+        "startChar": 18,
+        "endLine": 43,
+        "endChar": 25
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "784af2e0_da890d94",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 3
@@ -209,6 +395,24 @@
       "writtenOn": "2023-08-31T18:23:48Z",
       "side": 1,
       "message": "This enum doesn\u0027t look used in this interface?",
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2eacb41_0436b98a",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "My bad, removed it.",
+      "parentUuid": "784af2e0_da890d94",
       "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -226,6 +430,30 @@
       "writtenOn": "2023-08-31T18:23:48Z",
       "side": 1,
       "message": "nit, typo \"status\"",
+      "range": {
+        "startLine": 49,
+        "startChar": 30,
+        "endLine": 49,
+        "endChar": 35
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4762c21_5f65fd2f",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-05T22:26:15Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "211a8747_ec5a9156",
       "range": {
         "startLine": 49,
         "startChar": 30,

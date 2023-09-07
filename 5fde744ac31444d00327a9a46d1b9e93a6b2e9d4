@@ -256,6 +256,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3288ee39_34296fc8",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-07T21:26:58Z",
+      "side": 1,
+      "message": "Done. Dropped the InventoryObjectPath as based on next response we won\u0027t need it since UpdateInterface will reside on specific device path.\n\nMy idea for not tying the Update interface to a specific path instance path(/xyz/openbmc_project/Software/\u003cdeviceX\u003e/\u003cInstanceNum\u003e) was to consider Update interface as a singleton, but i see what you mean from Sensor perspective. Sure, will drop this constraint.\n\nMy understanding is keeping the DBus path as \"/xyz/openbmc_project/Software/\u003cdeviceX\u003e/\u003cInstanceNum\u003e\" will help to make it more readable and hierarchical, for example, /xyz/openbmc_project/Software/cpld/0 rather than /xyz/openbmc_project/Software/1234 where 1234 is \u003cdevice unique id\u003e.\n\n@Patrick, whats your input on this?",
+      "parentUuid": "ab4078e9_84dd480e",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 27
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "29251749_41c93f63",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 3
@@ -372,6 +396,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e30a053b_f79f77ca",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-07T21:26:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c1701752_f75e224d",
+      "range": {
+        "startLine": 31,
+        "startChar": 55,
+        "endLine": 31,
+        "endChar": 68
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d9c083d7_e575d4ca",
@@ -421,6 +469,24 @@
       "side": 1,
       "message": "\u003e So, i suppose its better to define new error types for Update interface rather than using the one from Version then?\n\nIf those errors are unique to this interface, yes.\n\nAside from AlreadyExists, which was in the previous paragraph, the rest look good to me.",
       "parentUuid": "cbe9a2c5_59a0850a",
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7233dad_4bbe1b5d",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-07T21:26:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f8ec7deb_48f9a3c1",
       "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -486,6 +552,30 @@
       "side": 1,
       "message": "\u003e My understanding is that this oneReset represents the reset for the device under update\n\nI think we need to be more explicit.\n\n\u003e For general standpoint, this can end up being a BMCReset for BMCUpdate, deviceXReset for deviceXUpdate and so worth\n\nHow would I know that from the interface?  How would I generate a correct Redfish tree without knowing that OnReset means device reset?\n\n\nDMTF questions on \"how do I implement X in Redfish\" should generally be directed at the DMTF Redfish Github.  Like the Developing guide states, there are far more Redfish experts there, and then my opinion isn\u0027t the only one rendered for standards questions.",
       "parentUuid": "d601f535_b076abc4",
+      "range": {
+        "startLine": 43,
+        "startChar": 18,
+        "endLine": 43,
+        "endChar": 25
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b0ba6e3_ad4421c7",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-07T21:26:58Z",
+      "side": 1,
+      "message": "\"How would I know that from the interface? How would I generate a correct Redfish tree without knowing that OnReset means device reset?\"\n\nBecause the Update interface will reside on the DBUS path for the specific device and onReset will represent the reset for the device the DBus path pertains to.\n\nSure, checking this on DMTF forums https://redfishforum.com/thread/936/onsystemreset-ondevicereset-redfish-updateservi",
+      "parentUuid": "8830df2f_59f9a6ac",
       "range": {
         "startLine": 43,
         "startChar": 18,

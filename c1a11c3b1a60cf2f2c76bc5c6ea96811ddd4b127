@@ -34,6 +34,24 @@
       "parentUuid": "f6b69264_fe3179d3",
       "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba591a2e_e3733ece",
+        "filename": "yaml/xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001311
+      },
+      "writtenOn": "2023-09-11T06:41:57Z",
+      "side": 1,
+      "message": "Friendly ping.\nI created a dbus attribute (Notlog) that will be set when ipmid receives a watchdog set command with notlog.The Phosphor-watchdog will determine whether to send SEL logs based on this dbus property.",
+      "parentUuid": "a8a61c9f_0a7149f8",
+      "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

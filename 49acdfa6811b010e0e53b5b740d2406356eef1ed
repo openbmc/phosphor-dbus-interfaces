@@ -34,6 +34,24 @@
       "parentUuid": "2c6023a3_c15b50eb",
       "revId": "49acdfa6811b010e0e53b5b740d2406356eef1ed",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc187aff_eb082f47",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Integrity/ErrorStatistics.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2023-09-11T15:43:41Z",
+      "side": 1,
+      "message": "this describes a threshold and I\u0027ll suggest we seek patterns from those sensors.\n\nhowever I\u0027ll also state that a practical threshold is likely events within a given time interval.   for example PCIe has a target bit error rate and larger memories expect a rate of correctable errors due to cosmic radiation upsetting a cell.",
+      "parentUuid": "2577f562_b0a104f7",
+      "revId": "49acdfa6811b010e0e53b5b740d2406356eef1ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

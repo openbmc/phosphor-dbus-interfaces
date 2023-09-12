@@ -52,6 +52,24 @@
       "parentUuid": "2577f562_b0a104f7",
       "revId": "49acdfa6811b010e0e53b5b740d2406356eef1ed",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45434564_8144a042",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Integrity/ErrorStatistics.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-09-12T03:54:38Z",
+      "side": 1,
+      "message": "Could we implement that with `[CU]ETimeWindow` properties? If they\u0027re set to 0, then there\u0027s no time window defined and the `[CU]ELimit` is absolute, otherwise if `[CU]ETimeWindow \u003e 0` then `[CU]ELimit` is the upper bound of errors inside `[CU]ETimeWindow`?",
+      "parentUuid": "fc187aff_eb082f47",
+      "revId": "49acdfa6811b010e0e53b5b740d2406356eef1ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

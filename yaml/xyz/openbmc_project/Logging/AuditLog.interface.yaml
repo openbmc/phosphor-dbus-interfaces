@@ -1,0 +1,52 @@
+description: >
+    This interface provides methods to add user space events to the Linux audit
+    log and to extract the Linux audit logged events.
+enumerations:
+    - name: Result
+      description: >
+          Result of operation being logged.
+      values:
+          - name: Success
+            description: >
+                Operation completed successfully.
+          - name: Fail
+            description: >
+                Operation failed to complete.
+methods:
+    - name: GetAuditLog
+      description: >
+          Parses previously recorded log events into JSON format. Returns a
+          read-only file descriptor to the parsed file.
+      returns:
+          - name: logFd
+            type: unixfd
+            description: >
+                The read-only file descriptor of the JSON formatted log events.
+
+    - name: LogEvent
+      description: Record new event in Linux Audit Log
+      parameters:
+          - name: operation
+            type: string
+            description: The operation being performed. E.g. Redfish path
+          - name: username
+            type: string
+            description: The user account name performing the operation.
+          - name: ipAddress
+            type: string
+            description: The network address for the user.
+          - name: hostname
+            type: string
+            description: The hostname of the BMC.
+          - name: result
+            type: enum[self.Result]
+            description: The result of the operation.
+          - name: detailData
+            type: string
+            description: Additional data describing the operation.
+paths:
+    - instance: /xyz/openbmc_project/logging/AuditLog
+      description: Expected path of the instance.
+service_names:
+    - default: xyz.openbmc_project.logging.AuditLog
+      description: Expected service name for the instance.

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05d11add_ce568b38",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2023-09-13T14:58:39Z",
+      "side": 1,
+      "message": "Instead of it at the user level, Can we have the password expiration days at the global level eg:\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml\n\nSo when the account gets created, it will get created with after how many days the account will expire.\n\nDo you have a requirement where you need to control this at the account level?",
+      "revId": "8ddb8176c7479ce007f55ffadcd67b06c701e0c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

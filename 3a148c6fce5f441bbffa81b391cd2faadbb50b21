@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b4978cc_d6de249f",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-19T21:33:01Z",
+      "side": 1,
+      "message": "nit: I\u0027m not positive if we want \u0027const\u0027 or \u0027readonly\u0027 for this.  \u0027const\u0027 means you can\u0027t change the value, even internally, and no signals will be emitted.  I can conceive of implementations that might want to adjust metric thresholds based on other activity.\n\nThis is probably fine to leave as-is for now or change to readonly now.  We can easily change this flag in the future.",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b93eeca6_77827704",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-19T21:33:01Z",
+      "side": 1,
+      "message": "Why is this an array?  We can\u0027t be over the Upper and under the Lower at the same time, right?\n\nSuppose we already had Critical-Upper asserted and we, in one polling interval, switch to Warning-Lower.  I would expect 2 signals: one to deassert the Critical-Upper and one to assert the Warning-Lower.",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3d82769_791e6475",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Reset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-19T21:33:01Z",
+      "side": 1,
+      "message": "nit: I\u0027m not sure if this is interesting information.  It could change in the future.",
+      "range": {
+        "startLine": 2,
+        "startChar": 63,
+        "endLine": 3,
+        "endChar": 56
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7804ff4_639915f0",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-19T21:33:01Z",
+      "side": 1,
+      "message": "Are you going to follow up with the new constants support in a separate commit?",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

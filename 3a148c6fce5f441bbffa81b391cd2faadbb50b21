@@ -108,6 +108,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7da4b683_9d4aae81",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-19T22:31:20Z",
+      "side": 1,
+      "message": "I would suggest changing this to just a Bound property.  If someone needs the ranges they can read that property.  We don’t need to send it along in each signal.",
+      "parentUuid": "e6b08246_f971323c",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b3d82769_791e6475",
         "filename": "yaml/xyz/openbmc_project/Metrics/Reset.interface.yaml",
         "patchSetId": 6

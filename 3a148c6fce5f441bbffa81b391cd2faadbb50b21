@@ -142,6 +142,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0680e1e6_46ef1d8c",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-19T23:00:34Z",
+      "side": 1,
+      "message": "Having this signal param provides the user the upper and lower bound for the threshold assertion. My understanding is it has no special value but just extra info, it was there in original Threshold specification, but yes, user can query the threshold interface to get these bounds.\n\nThe bounds already exist in threshold interface as part of Value property. So, would just drop this.",
+      "parentUuid": "7da4b683_9d4aae81",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b3d82769_791e6475",

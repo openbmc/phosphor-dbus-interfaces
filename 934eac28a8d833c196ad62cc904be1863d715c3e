@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7750e07_15170488",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000235
+      },
+      "writtenOn": "2023-09-19T18:49:48Z",
+      "side": 1,
+      "message": "Looks good to me, but I am not a meson expert.",
+      "revId": "934eac28a8d833c196ad62cc904be1863d715c3e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c83ffd2d_620f5127",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000235
+      },
+      "writtenOn": "2023-09-19T18:49:48Z",
+      "side": 1,
+      "message": "Do I understand this correctly?  An example Redfish operation is the HTTP verb together with the URI, for example: \u0027PATCH /redfish/v1/AccountService\u0027?  And the specific Redfish properties being modified and their values would be in the detailData parameter, for example (json formatted), \u0027{\"AccountLockoutThreshold\": 0}\u0027?  [Background: https://www.dmtf.org/sites/default/files/standards/documents/DSP2046_2023.1.pdf]\nIf so, will you please enhance the yaml descriptions to indicate that?",
+      "revId": "934eac28a8d833c196ad62cc904be1863d715c3e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

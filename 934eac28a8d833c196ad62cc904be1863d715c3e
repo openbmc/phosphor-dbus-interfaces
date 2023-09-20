@@ -33,6 +33,24 @@
       "message": "Do I understand this correctly?  An example Redfish operation is the HTTP verb together with the URI, for example: \u0027PATCH /redfish/v1/AccountService\u0027?  And the specific Redfish properties being modified and their values would be in the detailData parameter, for example (json formatted), \u0027{\"AccountLockoutThreshold\": 0}\u0027?  [Background: https://www.dmtf.org/sites/default/files/standards/documents/DSP2046_2023.1.pdf]\nIf so, will you please enhance the yaml descriptions to indicate that?",
       "revId": "934eac28a8d833c196ad62cc904be1863d715c3e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a9cd361_df141973",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2023-09-20T13:18:34Z",
+      "side": 1,
+      "message": "Good point. Yes you are understanding it correctly. I will add details to the description.",
+      "parentUuid": "c83ffd2d_620f5127",
+      "revId": "934eac28a8d833c196ad62cc904be1863d715c3e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

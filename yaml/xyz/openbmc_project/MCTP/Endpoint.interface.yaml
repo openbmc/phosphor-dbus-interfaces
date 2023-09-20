@@ -7,7 +7,7 @@ description: >
 
 properties:
     - name: NetworkId
-      type: size
+      type: uint32
       description: >
           A locally defined identifier to distinguish each independent MCTP
           network within a platform. The network IDs are used by the MCTP stack
@@ -15,7 +15,7 @@ properties:
           layer protocols to address the destination endpoint.
 
     - name: EID
-      type: size
+      type: byte
       description: >
           The logical address used to route MCTP messages to a specific MCTP
           endpoint. A numeric handle (logical address) that uniquely identifies

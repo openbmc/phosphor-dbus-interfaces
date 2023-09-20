@@ -67,6 +67,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8ed108f9_fce04240",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-20T19:21:59Z",
+      "side": 1,
+      "message": "\u003e We then have to create 10 (now) properties and probably more as someone adds new threshold names.  I suspect most metrics/sensors only use ~4 threshold levels.\n\nI agree, and would really expect most sensors only use 2 levels (warning and critical) because that was all that existed for a long time.\n\nSure, you\u0027d have to add a property for every new level, but in the current method to add an additional level, you still have to add the enum, so it\u0027s not like it saves us a code review/update all the daemons round, or lets us support arbitrary level names as written.  I guess I just don\u0027t see the advantage of making it more complex.\n\n\u003e \n\u003e We also have to define a way to indicate \"this threshold doesn\u0027t exist\".  The current way we do that was using NaN, which we were told that wasn\u0027t desirable...  So, Jagpal went with this explicit dictionary.\n\nThe problem wasn\u0027t directly with NAN it was that it was one of two ways to represent that a property wasn\u0027t filled;  You could represent a non-existent threshold by simply omiting the interface itself, or omitting one of two properties, or setting one of two properties to NAN, or setting both properties to NAN.  Handling all those cases was a pain.  This interface smashes all thresholds into one interface, which solves that problem, regardless of whether a map is used, because NAN can just be used directly, and there\u0027s no other way to represent properties non-existence.\n\nA map in a property is a pain to use because this interface now doesn\u0027t\u0027 look like anything else, so in most code, you end up now having to pull the individual parameters out in custom to thresholds code.  There\u0027s already a lot of code that can pull out an interface of named properties, so making it look like a bunch of properties on one interface means we\u0027re not doing something special for thresholds.\n\nThe other advantage of using properties is that you can have implementations that change thresholds at runtime.  Property.Set can be used to update a single threshold.  As written you\u0027d have a do a read-\u003emodify-\u003ewrite, which isn\u0027t easy to handle in code, and has data races if the data is updated in between a read and a write.",
+      "parentUuid": "4772c4ff_b94b00f2",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 66
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3b4978cc_d6de249f",
         "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
         "patchSetId": 6
@@ -274,6 +298,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b711308b_504701c6",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-20T19:21:59Z",
+      "side": 1,
+      "message": "Why would a threshold level be \"none\"?  At a minimum, the description doesn\u0027t call out what it represents, given it\u0027s non-obvious based on the name. At most, I suspect there\u0027s no reason for this to exist and could be removed.",
+      "parentUuid": "2104d48a_3ba50cf3",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 37
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3d39c995_4b45d6a6",
         "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
         "patchSetId": 6
@@ -413,6 +461,24 @@
       "side": 1,
       "message": "FWIW, I think the purpose of this interface definition is so that we could implement the ManagerDiagnosticData.ResetMetrics action.",
       "parentUuid": "e2ccbc6c_3ef16a21",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21d47fc8_cf274778",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Reset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-20T19:21:59Z",
+      "side": 1,
+      "message": "Do we really want to support that though?  I don\u0027t have context on why DMTF added that action, if I was in the meeting I would\u0027ve argued against it, but from a generalized \"reset all telemetry\" that seems like a bad idea to have?\n\nMy opinion here isn\u0027t that strong if we want to keep it, I just feel like it allows one client to monopolize a set of telemetry, effectively making other callers data useless, which somewhat defeats the open nature of what we\u0027re trying to do.  It might be a difference in requirements between an open bmc stack, and a corporate stack, where there\u0027s likely only one caller into this telemetry.",
+      "parentUuid": "8f06d4f6_c9c80b9c",
       "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

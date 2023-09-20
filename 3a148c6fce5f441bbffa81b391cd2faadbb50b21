@@ -322,6 +322,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6c6d7bee_1b7b0fa0",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-20T19:25:10Z",
+      "side": 1,
+      "message": "Ok, I re-read your comment, and I think I get it.  The Asserted property itself being one property is why this is odd, given that it\u0027s very likely that multiple thresholds are asserted at a time (generally a critical threshold would imply an asserted Warning, but that isnt\u0027 called out or specified);  I suspect when we come to conclusion on the other comment about separating out the properties, this will be solved at the same time.",
+      "parentUuid": "b711308b_504701c6",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 37
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3d39c995_4b45d6a6",
         "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
         "patchSetId": 6

@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a252291_e25be99f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-21T18:32:21Z",
+      "side": 1,
+      "message": "Thanks for reviewing. Addressed \u0026 Replied comments.",
+      "revId": "cded0faf5aeb510eb41a66b9ce72f767a30b1f36",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fa160ae9_8da9f8e2",
@@ -14,6 +31,30 @@
       "writtenOn": "2023-09-20T18:44:36Z",
       "side": 1,
       "message": "Similar to what I mentioned in the signal, missing the Bound here isn\u0027t very helpful.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 20
+      },
+      "revId": "cded0faf5aeb510eb41a66b9ce72f767a30b1f36",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13805d3e_dc26dee3",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-21T18:32:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa160ae9_8da9f8e2",
       "range": {
         "startLine": 15,
         "startChar": 0,

@@ -91,6 +91,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a91f48fc_349768f4",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-21T18:32:21Z",
+      "side": 1,
+      "message": "As i understand the main point of discussion is on having \"named properties vs generic container for properties\" as proposed. \nI would take a step back and try to understand the issues with the existing threshold interface. My understanding - it was something to do with usage of Nan for properties which didn\u0027t exist as interfaces were defining concrete properties. Hence, as solution to that problem we proposed is this generic container type interface rather than concrete properties and moved all those types into one interface. But as i see now above from Ed\u0027s comment he was more concerned about having different methods to define the non-existent properties rather than just not defining them at all. Some of this has been solved through collapsing 5 interface files into one.\n\nNow, if we converge on \"named properties vs generic container for properties\", the next is we can define a standard way to represent non-existent properties.\n\n@Patrick,\nAre you on board with named properties based on easy match expression reasoning given by Ed?\n\n@Ed,\nIs there any other issue/limitations with the existing interface that we need to consider?\nIn relation to data races, these properties are going to set once at start time and shouldn\u0027t change as they are read from platform configuration, unless there is a plan to change that to make them writable at runtime?",
+      "parentUuid": "8ed108f9_fce04240",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 66
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3b4978cc_d6de249f",
         "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
         "patchSetId": 6
@@ -249,6 +273,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "58a65186_be3aff0d",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-21T18:32:21Z",
+      "side": 1,
+      "message": "@Patrick,\nAdded the bounds to signal and changed the order of properties.\n\n@Ed,\nYes, thats what the signal should report. You can refer to latest commit update.\n\nFor having named vs generic properties, we already have another comment above. Once we conclude on that, we can absorb that change at other places as well. So, lets discuss on that comment thread. Resolving this one.",
+      "parentUuid": "c650871b_8e465084",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b51ace8d_f14783bd",
@@ -346,6 +388,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4bd7f9eb_a1bd38c5",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-21T18:32:21Z",
+      "side": 1,
+      "message": "My understanding is that at any particular time we have only one threshold asserted. So, lets say we were in warning and the value increased to critical range. We will de-assert warning and assert critical because now value is out of warning range and falls in critical range. Please correct me if i am wrong?",
+      "parentUuid": "6c6d7bee_1b7b0fa0",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 37
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3d39c995_4b45d6a6",
         "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
         "patchSetId": 6
@@ -357,6 +423,30 @@
       "writtenOn": "2023-09-19T23:15:45Z",
       "side": 1,
       "message": "nit, typo.",
+      "range": {
+        "startLine": 64,
+        "startChar": 35,
+        "endLine": 64,
+        "endChar": 43
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ae93db6_e3b59a46",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-21T18:32:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3d39c995_4b45d6a6",
       "range": {
         "startLine": 64,
         "startChar": 35,
@@ -390,6 +480,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "17ca1ae5_b59e772e",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-21T18:32:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a49a1e2_957bbcf0",
+      "range": {
+        "startLine": 70,
+        "startChar": 39,
+        "endLine": 70,
+        "endChar": 44
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0ac49338_6580ba42",
@@ -403,6 +517,24 @@
       "writtenOn": "2023-09-19T23:15:45Z",
       "side": 1,
       "message": "Do we need to publish the hysteresis on any of these?  I forget if it\u0027s on the old one.  If it\u0027s not in the old one, it\u0027s fine to omit here.",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2b094ef_eb24bfb5",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-21T18:32:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ac49338_6580ba42",
       "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -503,6 +635,24 @@
       "side": 1,
       "message": "Do we really want to support that though?  I don\u0027t have context on why DMTF added that action, if I was in the meeting I would\u0027ve argued against it, but from a generalized \"reset all telemetry\" that seems like a bad idea to have?\n\nMy opinion here isn\u0027t that strong if we want to keep it, I just feel like it allows one client to monopolize a set of telemetry, effectively making other callers data useless, which somewhat defeats the open nature of what we\u0027re trying to do.  It might be a difference in requirements between an open bmc stack, and a corporate stack, where there\u0027s likely only one caller into this telemetry.",
       "parentUuid": "8f06d4f6_c9c80b9c",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b1690d3_3bd62eac",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Reset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-21T18:32:21Z",
+      "side": 1,
+      "message": "I would consider this analogous to configuration data as well which can be set by multiple clients.",
+      "parentUuid": "21d47fc8_cf274778",
       "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

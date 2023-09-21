@@ -115,6 +115,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0e0a0803_9140b56c",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-21T20:00:31Z",
+      "side": 1,
+      "message": "I\u0027m not totally buying the match-ease as the reason to use individual properties.  argN is the match statement for ensuring that specific fields in the signal match a desired value.  It\u0027s not really hard to match { Critical, Upper } if that\u0027s what you want to do.\n\nThis map turns into a map in C++ also.  Doing a lookup is not really any more work than reading an individual property.  It\u0027s also easier to iterate on a map than it is individual properties.  (If someone wants to operate / look through multiple thresholds, they end up having to unroll-the-loop by hand with the individual property method, but they can just do a map-lookup with the map case.)",
+      "parentUuid": "a91f48fc_349768f4",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 66
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3b4978cc_d6de249f",
         "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
         "patchSetId": 6

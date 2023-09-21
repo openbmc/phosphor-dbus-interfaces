@@ -187,6 +187,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "02a56c18_7ef09d47",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-21T21:06:39Z",
+      "side": 1,
+      "message": "\u003e they end up having to unroll-the-loop by hand with the individual property method\n\nGiven that Dbus is its own spec, and invents interfaces in addition to and not exactly matching the Redfish spec, we have to unroll the loop by hand anyway to map X in Dbus means Y in Redfish.",
+      "parentUuid": "8710ca64_3f1d77ba",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 66
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3b4978cc_d6de249f",
         "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
         "patchSetId": 6
@@ -767,6 +791,24 @@
       "side": 1,
       "message": "\u003e I would consider this analogous to configuration data as well which can be set by multiple clients.\n\nBut.... you can\u0027t have multiple clients resetting a single counter.  I\u0027m confused how that would work?  Would each client have its own counter that could be reset?\n\nTo be clear, the problem becomes:\nCounter increments 0 -\u003e 1.\nClient 1 reads counter.  Counter reads 0.\nClient 1 resets counter.\nClient 2 reads counter, counter reads 0.",
       "parentUuid": "1b1690d3_3bd62eac",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "195be028_f8225487",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Reset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-21T21:06:39Z",
+      "side": 1,
+      "message": "Shoot, I typoed.  Corrected is below.\n\n```\nCounter increments 0 -\u003e 1.\nClient 1 reads counter. Counter reads 1.\nClient 1 resets counter.\nClient 2 reads counter, counter reads 0.\nClient 2 never sees counter increment.\n```",
+      "parentUuid": "5af408b7_7220db0b",
       "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

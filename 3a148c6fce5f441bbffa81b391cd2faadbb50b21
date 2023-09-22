@@ -235,6 +235,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5fa5d29a_b047db6b",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2023-09-22T04:31:24Z",
+      "side": 1,
+      "message": "\u003e I\u0027m not sure we should be making arguments about the complexity or lack-there-of for code that goes out of its way to avoid using the generated bindings.\n\n\u003e \n\u003e sdbusplus (and the phosphor-dbus-interface headers) can turn this property into a map of enums, not even strings.\n\u003e \n\u003e This is the generated async client binding:\n\u003e ```\n\u003e     auto value()\n\u003e     {\n\u003e         return proxy.template get_property\u003cstd::map\u003cstd::tuple\u003cType, Bound\u003e, double\u003e\u003e(context(), \"Value\");\n\u003e     }\n\u003e ```\n\u003e \n\u003e As you see, it turns into a `map\u003ctuple\u003cType, Bound\u003e, double\u003e`, which is exactly what you\u0027d expect from the interface definition here.\n\nUnless this proposal is saying that bmcweb should take the generated bindings, or is proposing creating a new webserver that someone is going to maintain, or is going to exclusively use projects that make use of the generated bindings, then I\u0027m not sure who the above helps.  I think the new async bindings are great, and have the potential to make code a lot cleaner with fewer bugs, but I\u0027m not sure how they matter in the context of this review.\n\n\u003e \n\u003e Since the message pack/unpack code is common, I don\u0027t even see any reason why this wouldn\u0027t work with the ASIO unpackPropertiesNoThrow code (ie. the existing unpackProperties can handle either vector/map of the C++ enum values; this works today without even converting to the async co-routines support).\n\n\nThe enums vs strings don\u0027t really end up helping much in my experience, because we have to handle errors where the enum didn\u0027t exist without throwing and exception through the executor that we can\u0027t handle.  You\u0027re right, you can unpack as std::map (which bmcweb used to do heavily) but in practice it didn\u0027t really save code versus just unpacking as a string.\n\n\u003e \n\u003e As far as iteration goes, if you don\u0027t want to use the bindings or map you\u0027d end up with something like this:\n\u003e \n\u003e ```\n\u003e vector\u003ctuple\u003cstring, string\u003e, double\u003e value;\n\u003e sdbusplus::unpackPropertiesNoThrow(... \"Value\", value);\n\u003e \n\u003e constexpr auto jsonMap \u003d { \n\u003e    { \"UpperCritical\", { \"xyz...Critical\", \"xyz...Upper\" } },\n\u003e    { \"UpperWarning\", { \"xyz...Warning\", \"xyz...Upper\" } },\n\u003e };\n\u003e \n\u003e for (auto\u0026 [j, t] : jsonMap)\n\u003e {\n\u003e     if (value.contains(t))\n\u003e     {\n\u003e         json[j] \u003d value[t];\n\u003e     }\n\u003e     else\n\u003e     {\n\u003e         // Handle non-existent property.\n\u003e     }\n\u003e }\n\u003e ```\n\u003e \n\u003e Your unpack-all-the-properties-at-once example doesn\u0027t handle NaN, which is yet another set of loop unrolling and if-conditions.  I don\u0027t see that example as shorter / better / more succinct than this constexpr-loop.\n\nYep, but handling Nan already has to be a branch either way.  I didn\u0027t mean to make them seem different.  Your example still would be more code I think?\n\nI can\u0027t say I agree with the single property, and that\u0027s ok.  We had code that looked a lot like what you have above a while ago, and it caused pretty significant bugs and was hard to maintain.  value.contains() for example lets people typo Enum value namespaces, or ignore the enum namespace.  My preference is still for explicit properties, because the handling is simpler, the tooling and CLIs handles properties already, and you don\u0027t have the read-modify-write problem to cover.",
+      "parentUuid": "a2723f17_6179a9af",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 66
+      },
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3b4978cc_d6de249f",
         "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
         "patchSetId": 6

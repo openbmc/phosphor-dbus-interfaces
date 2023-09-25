@@ -1,0 +1,10 @@
+description: >
+    Implement to indicate the priority level of sensors.
+
+properties:
+    - name: Priority
+      type: byte
+      description: >
+          Indicates the priority of the sensor, with a lower value representing
+          a higher priority (e.g., 0 for primary, 1 for secondary).
+

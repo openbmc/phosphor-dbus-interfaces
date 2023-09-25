@@ -1,0 +1,12 @@
+description: >
+    Implement this interface to indicate the priority level of an entity. Use it
+    as a decorator for other objects to specify their priority. For example, it
+    can be used for fan sensors, but it is versatile and suitable for various
+    entities.
+
+properties:
+    - name: Priority
+      type: size
+      description: >
+          Indicates the priority of the entity, with a lower value representing
+          a higher priority (e.g., 0 for primary, 1 for secondary).

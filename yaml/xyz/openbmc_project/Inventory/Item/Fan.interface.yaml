@@ -9,3 +9,21 @@ associations:
       reverse_name: cooled_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+
+    - name: primaryRPMsensor
+      description: >
+          Fans may implement a 'primaryRPMsensor' association to link to the
+          primary RPM sensor associated with the fan.
+      reverse_names:
+          - sensor_for
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Sensor.Value
+
+    - name: secondaryRPMsensor
+      description: >
+          Fans may implement a 'secondaryRPMsensor' association to link to the
+          secondary RPM sensor associated with the fan.
+      reverse_names:
+          - sensor_for
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Sensor.Value

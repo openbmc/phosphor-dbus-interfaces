@@ -1,0 +1,24 @@
+description: >
+    Implement to indicate the priority level of sensors.
+
+properties:
+    - name: SensorPriority
+      type: enum[self.Priority]
+      default: Unspecified
+      description: >
+          Indicates the priority of the sensor (primary or secondary).
+
+enumerations:
+    - name: Priority
+      description: >
+          Priority levels for sensors.
+      values:
+          - name: Unspecified
+            description: >
+                Priority not specified.
+          - name: Primary
+            description: >
+                Primary sensor.
+          - name: Secondary
+            description: >
+                Secondary sensor.

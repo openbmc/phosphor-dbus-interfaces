@@ -863,6 +863,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "918e0b32_843ffae0",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Reset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-09-26T18:54:20Z",
+      "side": 1,
+      "message": "I think the question here is about how the manageability is being performed. Is device using multiple client interfaces (for example, ipmi, redfish etc) for communication or a single one. In case, we are using multiple, the same issue is going to be there for configuration flow because a device config being set by one client interface can be reset or over-written by the other. What architecture solution do we have on that front?\n\nPS: I have dropped the reset interface for now.",
+      "parentUuid": "195be028_f8225487",
+      "revId": "3a148c6fce5f441bbffa81b391cd2faadbb50b21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b7804ff4_639915f0",
         "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
         "patchSetId": 6

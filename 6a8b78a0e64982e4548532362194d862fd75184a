@@ -570,6 +570,30 @@
       },
       "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0a7935c_0c2d56eb",
+        "filename": "yaml/xyz/openbmc_project/License/Install.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-09-28T02:43:34Z",
+      "side": 1,
+      "message": "Hi Andrew \n\nsure, got it. modified to use file descriptor.\nthinking again its better to use \"xyz.openbmc_project.Software.Download\" to download license file to BMC to specified path, so bmcweb can directly call this D-bus with given file URI to download this file to BMC filesystem and bmcweb can share this file fd to license manager manager while installing license",
+      "parentUuid": "e7d250aa_4fad8294",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 55
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

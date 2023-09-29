@@ -100,6 +100,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "23e7efdd_6b10d404",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-09-29T10:04:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bae9458c_cf5475d6",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 29
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c6eb384f_03cc41ca",
@@ -185,6 +209,30 @@
       "side": 1,
       "message": "Jayanth\n\nYes, I did not add D-bus properties for all redfish properties.\nthis commit adds D-bus properties which are required to represent common licenses\nintent was to add other properties on need basis.\nI will add D-bus properties for manufacturer details",
       "parentUuid": "f19cc256_f7557060",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 42
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97df35b0_a69ff253",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-09-29T10:04:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bdcc5834_04659800",
       "range": {
         "startLine": 13,
         "startChar": 0,
@@ -371,6 +419,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fdc6930_48bcc43f",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-09-29T10:04:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3f64e64e_3008d8ce",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 46
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c960d906_5db52d22",
@@ -408,6 +480,30 @@
       "side": 1,
       "message": "AuthorizedDevices can be listed as Links\n\n License_v1_1_1_Links:\n      additionalProperties: false\n      description: The links to other resources that are related to this resource.\n      properties:\n        AuthorizedDevices:\n          description: An array of links to the devices authorized by the license.",
       "parentUuid": "c960d906_5db52d22",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 61
+      },
+      "revId": "6a8b78a0e64982e4548532362194d862fd75184a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "108a479e_31fd927f",
+        "filename": "yaml/xyz/openbmc_project/License/Entry/LicenseEntry.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2023-09-29T10:04:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f01f393_a14c14a2",
       "range": {
         "startLine": 55,
         "startChar": 0,

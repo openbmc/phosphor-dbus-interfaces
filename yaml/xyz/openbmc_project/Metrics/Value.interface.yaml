@@ -41,3 +41,9 @@ associations:
           - measured_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+
+service_names:
+    - name: BMCHealthMonitor
+      description: >
+          This service monitors the health of the BMC.
+      value: xyz.openbmc_project.bmc_health_monitor

@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85c38379_3609d616",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-10-03T01:28:49Z",
+      "side": 1,
+      "message": "But why? Can you please add some words to establish the motivation.\n\nAlso, please avoid using phrases like \"This commit adds\", it does not provide any information, it is self-evident: We\u0027re not discussing some other change.\n\nBroad expectations of a commit message are outlined here:\n\nhttps://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html",
+      "revId": "ae5c984a524780c4edc1bebbcfe780997062ed27",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8ea7121_982df104",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-10-03T01:28:49Z",
+      "side": 1,
+      "message": "TBH I don\u0027t think this is particularly helpful. CI will demonstrate this for us.",
+      "revId": "ae5c984a524780c4edc1bebbcfe780997062ed27",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dbdee5c2_5de2bd70",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-10-03T01:28:49Z",
+      "side": 1,
+      "message": "Hi Jagpal, thanks for the patch. I have a few of comments inline.",
+      "revId": "ae5c984a524780c4edc1bebbcfe780997062ed27",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e12979d2_40bcd48f",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-10-03T01:28:49Z",
+      "side": 1,
+      "message": "Generally we\u0027ve used camel-case beyond `openbmc_project`. The underscore in `openbmc_project` reflects DBus\u0027 constraints on `-` and the need to use reverse-DNS scoping for the name.",
+      "revId": "ae5c984a524780c4edc1bebbcfe780997062ed27",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

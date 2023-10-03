@@ -70,6 +70,24 @@
       "parentUuid": "ba591a2e_e3733ece",
       "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4890ab7_fb446a02",
+        "filename": "yaml/xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-03T21:46:04Z",
+      "side": 1,
+      "message": "This is not an appropriate property name.  \n\n* \"Notlog\" isn\u0027t a word.\n* \"NotX\" is never acceptable as a property; I\u0027d rather just have \"X\".\n\n\"Log\" is a very overloaded word and it still isn\u0027t documented in this commit.  What are we logging?  Where are we logging?  Why are we logging?  These should all be answered in some combination of the property name and description.",
+      "parentUuid": "5f315d2e_4414f446",
+      "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

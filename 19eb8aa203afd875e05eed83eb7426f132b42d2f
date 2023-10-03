@@ -16,6 +16,24 @@
       "message": "Not sure this quite follows https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/requirements.md#directed-associations-should-be-named-with-participle-verbs but\n\nThe {primary element} is {primary association} the {secondary element}.\nThe {secondary element} is {secondary association} the {primary element}.\n\nThe Sensor is primaryRPMsensor the Fan. \nThe Fan is fan the Sensor. \n\n\nprimaryRPMsensor / sensor_for might be better.",
       "revId": "19eb8aa203afd875e05eed83eb7426f132b42d2f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16093835_a3997f3f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-10-03T19:36:25Z",
+      "side": 1,
+      "message": "Thank you for your feedback! I have updated the association names.",
+      "parentUuid": "3454c2ec_42f7151f",
+      "revId": "19eb8aa203afd875e05eed83eb7426f132b42d2f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

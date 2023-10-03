@@ -54,6 +54,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "242c27fb_99c6ca16",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-03T19:07:08Z",
+      "side": 1,
+      "message": "I think in general we don\u0027t want this commit.  There should be no daemon-to-daemon direct lookup that requires this string.  Everything involved with metrics should go through mapper because any process could be presenting metrics.",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 28
+      },
+      "revId": "ae5c984a524780c4edc1bebbcfe780997062ed27",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e12979d2_40bcd48f",
         "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
         "patchSetId": 1

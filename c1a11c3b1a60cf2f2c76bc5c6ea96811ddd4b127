@@ -124,6 +124,24 @@
       "parentUuid": "1dd4e66a_e559490f",
       "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0118935e_6a1a1ce0",
+        "filename": "yaml/xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-04T17:09:47Z",
+      "side": 1,
+      "message": "Suggestions of acceptable properties:\n\n* Report\n* Log\n* ReportTimeout\n* LogTimeout\n\nIn any case you need to enhance the description to indicate what \"Log\" or \"Report\" means.  This should somehow refer to the xyz.openbmc_project.Logging interfaces (since this is what you\u0027re trying to omit creation of).  This property should **not** be used to omit the signal creation for Timeout.",
+      "parentUuid": "1a403c27_eb496390",
+      "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

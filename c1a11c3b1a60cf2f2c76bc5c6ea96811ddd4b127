@@ -88,6 +88,24 @@
       "parentUuid": "5f315d2e_4414f446",
       "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1dd4e66a_e559490f",
+        "filename": "yaml/xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001311
+      },
+      "writtenOn": "2023-10-04T03:01:25Z",
+      "side": 1,
+      "message": "Thanks for your advice.\nI changed the property name from Notlog to Dontlog to follow IPMI specification V2.0 27.4.2(Set Watchdog Timer Command). Is the property name Dontlog appropriate? I also changed the description of the property to be more detailed.\nThanks!",
+      "parentUuid": "d4890ab7_fb446a02",
+      "revId": "c1a11c3b1a60cf2f2c76bc5c6ea96811ddd4b127",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

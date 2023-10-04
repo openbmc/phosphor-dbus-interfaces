@@ -16,6 +16,24 @@
       "message": "We\u0027re not going to encode information in the association name like this.  If you\u0027d like to encode a priority of information, please propose an interface to hold that.",
       "revId": "40aee5234029ab495090889520dddaa2afc7f7a3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1d4a91a_4aee3e47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-10-04T03:29:16Z",
+      "side": 1,
+      "message": "Why? I am struggling to see why a new interface like below is much better? Do we think this could be used outside of fans? \n\n```\n   - name: SensorPriority\n      description: \u003e\n          Priority levels for sensors.\n      values:\n          - name: Primary\n            description: \u003e\n                Primary sensor.\n          - name: Secondary\n            description: \u003e\n                Secondary sensor.\n```",
+      "parentUuid": "2464b860_c7ddb987",
+      "revId": "40aee5234029ab495090889520dddaa2afc7f7a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

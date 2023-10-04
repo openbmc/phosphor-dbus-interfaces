@@ -34,6 +34,24 @@
       "parentUuid": "2464b860_c7ddb987",
       "revId": "40aee5234029ab495090889520dddaa2afc7f7a3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d92c1368_f43bdd2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-04T11:49:53Z",
+      "side": 1,
+      "message": "For one, I don’t want to see a massive sprawl of association names.  What’s going to happen when someone adds a 3rd and 4th sensor for priority?  It also forced all users of the association to traverse N associations instead of 1, even if they don’t care about this information. If I just want to find the sensors… I’ve got to know about this special fan design and now have all these extra lookups. \n\nI would suggest looking at the software design where there is a redundancy priority. It is effectively the same concept.",
+      "parentUuid": "c1d4a91a_4aee3e47",
+      "revId": "40aee5234029ab495090889520dddaa2afc7f7a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

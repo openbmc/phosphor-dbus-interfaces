@@ -41,3 +41,66 @@ associations:
           - measured_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+
+paths:
+    - namespace: /xyz/openbmc_project/metric
+      description: >
+          The root path for all Metrics.
+      segments:
+          - name: BMC
+            description: >
+                The segment for the BMC metrics.
+            segments:
+                - name: Memory
+                  description: >
+                      BMC memory utilization.
+                  value: memory
+                  segments:
+                      - name: TotalMemory
+                        description: >
+                            BMC total memory.
+                        value: total
+                      - name: FreeMemory
+                        description: >
+                            BMC free memory.
+                        value: total
+                      - name: AvailableMemory
+                        description: >
+                            BMC available memory.
+                        value: total
+                      - name: SharedMemory
+                        description: >
+                            BMC shared memory utilization.
+                        value: shared
+                      - name: BufferedAndCachedMemory
+                        description: >
+                            BMC buffered and cached memory utilization.
+                        value: buffered_and_cached
+                - name: CPU
+                  description: >
+                      BMC CPU utilization.
+                  value: cpu
+                  segments:
+                      - name: KernelCPU
+                        description: >
+                            BMC kernel CPU utilization.
+                        value: kernel
+                      - name: UserCPU
+                        description: >
+                            BMC user CPU utilization.
+                        value: user
+                - name: RebootStatistics
+                  description: >
+                      BMC Reboot statistics.
+                  value: reboot
+                  segments:
+                      - name: RebootCount
+                        description: >
+                            BMC reboot count to track number of times BMC
+                            rebooted without failure.
+                        value: count
+                      - name: RebootCountWithFailure
+                        description: >
+                            BMC reboot count to track number of times BMC
+                            rebooted because of a failure.
+                        value: count_with_failure

@@ -6,14 +6,28 @@ properties:
     - name: Value
       type: double
       description: >
-          This property indicates the metric value.
+          The current metric value.
       flags:
           - readonly
+    - name: MaxValue
+      type: double
+      default: infinity
+      flags:
+          - readonly
+      description: >
+          The maximum supported metric value.
+    - name: MinValue
+      type: double
+      default: -infinity
+      flags:
+          - readonly
+      description: >
+          The minimum supported metric value.
     - name: Unit
       type: enum[self.Unit]
       description: >
-          This property indicates the unit for metric value. For example, memory
-          in bytes, CPU in percent, reboots in count.
+          The unit for metric value. For example, memory in bytes, CPU in
+          percent, reboots in count.
       flags:
           - const
 

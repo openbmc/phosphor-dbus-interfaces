@@ -50,5 +50,9 @@ enumerations:
                 host components. The content may vary accordingly.
           - name: "SBE"
             description: >
-                A dump collected from Self Boot Engine(SBE) when it encounters
-                an error and become unresponsive.
+                A dump collected from Self Boot Engine(SBE) on the processor
+                when it encounters an error and become unresponsive.
+          - name: "MemoryBufferSBE"
+            description: >
+                A dump collected from Self Boot Engine on the memory buffer when
+                it encounters critical failures or unresponsive.

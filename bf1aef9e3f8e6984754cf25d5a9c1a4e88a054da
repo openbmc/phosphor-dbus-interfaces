@@ -70,6 +70,30 @@
       },
       "revId": "bf1aef9e3f8e6984754cf25d5a9c1a4e88a054da",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53d6ba87_fbaade77",
+        "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2023-10-11T05:23:58Z",
+      "side": 1,
+      "message": "Since you are collecting SBE dump with different content. Am not sure about the high level flow follws here to collect dump. Is it some thing running hwp on memory buffer specific HWP on the failing memory buffer or is it some thing different way the implementation works. If it is hwp execution on the failing unit can we use \nFailingUnitId to indicate whether it is processor or memory buffer specific SBE?",
+      "parentUuid": "16b02826_24215c9a",
+      "range": {
+        "startLine": 55,
+        "startChar": 18,
+        "endLine": 55,
+        "endChar": 34
+      },
+      "revId": "bf1aef9e3f8e6984754cf25d5a9c1a4e88a054da",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

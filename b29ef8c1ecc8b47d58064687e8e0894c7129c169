@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "02576ae6_b0433d94",
+        "filename": "yaml/xyz/openbmc_project/Sensor/SensorPriority.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-12T22:24:53Z",
+      "side": 1,
+      "message": "Please use `size`.  `byte` was an over-optimization chosen by the original Software.RedundancyPriority.  If that code were submitted today I\u0027d also give the same feedback.  (If someone is interested in refactoring that code, I\u0027d be all for it.)",
+      "parentUuid": "8d926164_66ed3c7e",
+      "revId": "b29ef8c1ecc8b47d58064687e8e0894c7129c169",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "03e91b8d_b1cba430",
         "filename": "yaml/xyz/openbmc_project/Sensor/SensorPriority.interface.yaml",
         "patchSetId": 3

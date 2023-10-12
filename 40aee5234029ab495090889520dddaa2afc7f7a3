@@ -69,6 +69,24 @@
       "message": "Could you just have the normal fan tach associations, and then have the code make a dumb assumption that if there\u0027s more than 1 then it must have increasing numbering in their name to order them like fanX_0, fanX_1 to define the relationship, otherwise it just picks an order?\n\nI don\u0027t really consider counter rotating rotors as redundant within the FRU, in that we can\u0027t have every fan in the system have a failed rotor.\n\n(just an idea to try to simplify things)",
       "revId": "40aee5234029ab495090889520dddaa2afc7f7a3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbd663e3_a4d5fae7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-10-12T17:22:30Z",
+      "side": 1,
+      "message": "Changed the code to add new \"SensorPriority\" interface.",
+      "parentUuid": "d92c1368_f43bdd2e",
+      "revId": "40aee5234029ab495090889520dddaa2afc7f7a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

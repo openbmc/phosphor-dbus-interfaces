@@ -16,6 +16,23 @@
       "message": "Addressed Comments. Please review.",
       "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3174b00d_59beaf23",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-10-13T20:53:29Z",
+      "side": 1,
+      "message": "InternalError? \n\nThere are a few more at \nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/Version.errors.yaml\n\nand https://github.com/openbmc/phosphor-bmc-code-mgmt/commit/098a6771e26c2c217b359d284fbca4d662e0aa73 had \n\n- name: UnTarFailure\n  description: An error occurred during untar.\n- name: ManifestFileFailure\n  description: An error when reading the Manifest file.\n- name: InternalFailure\n  description: The operation failed internally during processing the image.\n- name: ImageFailure\n  description: An error occured processing the image.\n- name: BusyFailure\n  description: The device is busy during the update.",
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -33,6 +33,40 @@
       "message": "InternalError? \n\nThere are a few more at \nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/Version.errors.yaml\n\nand https://github.com/openbmc/phosphor-bmc-code-mgmt/commit/098a6771e26c2c217b359d284fbca4d662e0aa73 had \n\n- name: UnTarFailure\n  description: An error occurred during untar.\n- name: ManifestFileFailure\n  description: An error when reading the Manifest file.\n- name: InternalFailure\n  description: The operation failed internally during processing the image.\n- name: ImageFailure\n  description: An error occured processing the image.\n- name: BusyFailure\n  description: The device is busy during the update.",
       "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd45b861_e587f3ed",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-10-13T21:08:36Z",
+      "side": 1,
+      "message": "Doesn\u0027t this functional association today go from /xyz/openbmc_project/software/ to \n/xyz/openbmc_project/software/\u003csoftware id\u003e today?\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/5e7bca41c4460abb6f513ae8e0a67c551d6192a5/yaml/xyz/openbmc_project/Software/README.md?plain\u003d1#L260\n\nbusctl get-property --no-pager xyz.openbmc_project.Software.BMC.Updater /xyz/openbmc_project/software xyz.openbmc_project.Association.Definitions  Associations\na(sss) 5 \"active\" \"software_version\" \"/xyz/openbmc_project/software/71d47a18\" \"updateable\" \"software_version\" \"/xyz/openbmc_project/software/71d47a18\" \"functional\" \"software_version\" \"/xyz/openbmc_project/software/bcfb7338\" \"active\" \"software_version\" \"/xyz/openbmc_project/software/bcfb7338\" \"updateable\" \"software_version\" \"/xyz/openbmc_project/software/bcfb7338\"",
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cb37fc3_5215849e",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-10-13T21:08:36Z",
+      "side": 1,
+      "message": "Isn\u0027t there already an Association that does this \n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/5e7bca41c4460abb6f513ae8e0a67c551d6192a5/yaml/xyz/openbmc_project/Software/README.md?plain\u003d1#L265\n\nbusctl get-property --no-pager xyz.openbmc_project.Software.BMC.Updater /xyz/openbmc_project/software/bcfb7338 xyz.openbmc_project.Association.Definitions  Associations\na(sss) 1 \"inventory\" \"activation\" \"/xyz/openbmc_project/inventory/system/chassis/motherboard/ebmc_card_bmc\"",
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

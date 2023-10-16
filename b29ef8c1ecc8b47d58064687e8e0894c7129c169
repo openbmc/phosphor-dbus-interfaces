@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "20cd788d_992ea058",
+        "filename": "yaml/xyz/openbmc_project/Sensor/SensorPriority.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-10-16T16:30:48Z",
+      "side": 1,
+      "message": "@Ed, @Gunnar, @Matt, any feedback on changing the interface to Common.Priority?",
+      "parentUuid": "6538513b_bfda36d2",
+      "revId": "b29ef8c1ecc8b47d58064687e8e0894c7129c169",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4eb60957_49da4c07",
         "filename": "yaml/xyz/openbmc_project/Sensor/SensorPriority.interface.yaml",
         "patchSetId": 3
@@ -85,6 +103,24 @@
       "side": 1,
       "message": "Please use `size`.  `byte` was an over-optimization chosen by the original Software.RedundancyPriority.  If that code were submitted today I\u0027d also give the same feedback.  (If someone is interested in refactoring that code, I\u0027d be all for it.)",
       "parentUuid": "8d926164_66ed3c7e",
+      "revId": "b29ef8c1ecc8b47d58064687e8e0894c7129c169",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2025e149_2c53176f",
+        "filename": "yaml/xyz/openbmc_project/Sensor/SensorPriority.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2023-10-16T16:30:48Z",
+      "side": 1,
+      "message": "Changed the type to size.\nI will look into RedundancyPriority.",
+      "parentUuid": "02576ae6_b0433d94",
       "revId": "b29ef8c1ecc8b47d58064687e8e0894c7129c169",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

@@ -262,6 +262,30 @@
       },
       "revId": "bf1aef9e3f8e6984754cf25d5a9c1a4e88a054da",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57a59a4c_12418516",
+        "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2023-10-17T07:04:02Z",
+      "side": 1,
+      "message": "It is not memory SBE, it is MemoryBufferSBE that is a name of SBE to differentiate from the Processor SBE.\n\n\n\nI will add it is collected from processor under SBE type, and update the commit message saying the data format is different",
+      "parentUuid": "7450e35c_879ce0b1",
+      "range": {
+        "startLine": 55,
+        "startChar": 18,
+        "endLine": 55,
+        "endChar": 34
+      },
+      "revId": "bf1aef9e3f8e6984754cf25d5a9c1a4e88a054da",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

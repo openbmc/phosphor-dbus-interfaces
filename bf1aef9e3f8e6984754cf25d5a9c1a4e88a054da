@@ -238,6 +238,30 @@
       },
       "revId": "bf1aef9e3f8e6984754cf25d5a9c1a4e88a054da",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7450e35c_879ce0b1",
+        "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2023-10-17T06:49:35Z",
+      "side": 1,
+      "message": "Here dump type \"SBE\" \"memorySBE\" name is confusing and hard to understand the use case for adding the new type based on the commit message.That is why i asked questions here. \n\nPlease update commit message with detail like  why introducing new type of sbe dump here  , that will help reviewer  to understand background on introducing new flavor of SBE dump type here. \nAlso you many need to rephrase here to \" A dump collected from Self Boot Engine(SBE) on Processor \" here.",
+      "parentUuid": "a3efcfba_c68d0f94",
+      "range": {
+        "startLine": 55,
+        "startChar": 18,
+        "endLine": 55,
+        "endChar": 34
+      },
+      "revId": "bf1aef9e3f8e6984754cf25d5a9c1a4e88a054da",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

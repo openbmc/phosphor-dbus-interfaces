@@ -18,6 +18,41 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b3d5385_6a313eb7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-17T21:27:04Z",
+      "side": 1,
+      "message": "@Thu,\nI am not sure if i understand the question completely and it doesn\u0027t seem to be related to this PR? If not can you please start a thread on your question in discord and discuss it there for wider community participation. Resolving this comment for now.",
+      "parentUuid": "168d536d_ad895553",
+      "revId": "7b6ba1e97c51c88d6dc4599a21858e8a54281cf3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e97c6b7_afe4bf23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-17T21:27:04Z",
+      "side": 1,
+      "message": "Thanks for reviewing. Addressed  \u0026 replied to the comments.",
+      "revId": "7b6ba1e97c51c88d6dc4599a21858e8a54281cf3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "73e27341_d0eec9d5",
@@ -31,6 +66,24 @@
       "writtenOn": "2023-10-08T22:47:27Z",
       "side": 1,
       "message": "Do we support setting `MaxValue` and `MinValue` in value interface? They are required by phosphor-host-ipmid https://github.com/openbmc/phosphor-host-ipmid/blob/085de48d5c43dccd7c3d5e3aa54250bed8ba741c/dbus-sdr/sensorcommands.cpp#L453",
+      "revId": "7b6ba1e97c51c88d6dc4599a21858e8a54281cf3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cec4fb2f_7bea0dc5",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-17T21:27:04Z",
+      "side": 1,
+      "message": "Done, added the MaxValue and MinValue.",
+      "parentUuid": "73e27341_d0eec9d5",
       "revId": "7b6ba1e97c51c88d6dc4599a21858e8a54281cf3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

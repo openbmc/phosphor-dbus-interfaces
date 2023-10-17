@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee81d313_961c420c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-17T21:57:05Z",
+      "side": 1,
+      "message": "Probably need to reword most of this?  Fan sensor is a fine use case but the interface is intended to be generic now (hence why it is in common).",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 33
+      },
+      "revId": "25f20ed924e34b9c59857506cf73ed678bae16ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a8f1da5_1cd5436d",
+        "filename": "yaml/xyz/openbmc_project/Common/Priority.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-17T21:57:05Z",
+      "side": 1,
+      "message": "\"of an entity\"?\n\nI\u0027d like to see some language added also along the lines of:\n\n\"This interface is intended to be a decorator for another object to indicate\nthe priority of it.\"",
+      "range": {
+        "startLine": 2,
+        "startChar": 45,
+        "endLine": 2,
+        "endChar": 56
+      },
+      "revId": "25f20ed924e34b9c59857506cf73ed678bae16ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b32cf310_fa79c960",
+        "filename": "yaml/xyz/openbmc_project/Common/Priority.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-17T21:57:05Z",
+      "side": 1,
+      "message": "Adjust to remove \"sensor\" word.",
+      "range": {
+        "startLine": 8,
+        "startChar": 40,
+        "endLine": 8,
+        "endChar": 46
+      },
+      "revId": "25f20ed924e34b9c59857506cf73ed678bae16ad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

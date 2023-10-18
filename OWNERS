@@ -38,6 +38,9 @@ reviewers:
 - deepak.kodihalli.83@gmail.com
 
 matchers:
+- partial_regex: yaml/com/ibm
+  owners:
+  - spinler@us.ibm.com
 
 openbmc:
 - name: Deepak Kodihalli
@@ -46,3 +49,6 @@ openbmc:
 - name: Patrick Williams
   email: patrick@stwcx.xyz
   discord: stwcx
+- name: Matt Spinler
+  email: spinler@us.ibm.com
+  discord: mspinler

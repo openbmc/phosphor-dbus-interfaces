@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62d2074b_3650bc8c",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:31:07Z",
+      "side": 1,
+      "message": "While there is potentially some contention around this property, my overall feeling is that we should go with it approximately like this for now and see how it works.  We can refactor it once we see the implementation in phosphor-health-monitor and the corresponding implementation in bmcweb.\n\nWe know how individual properties work.  We know (unfortunately) what multiple interfaces would look like.  This approach seems better in some ways and worse in other ways, but we should get some firmer data by seeing the code.\n\nI don\u0027t know if we want to add anything to the description to indicate that this property is \"experimental\" for the time being.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 66
+      },
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95a0b4f8_a49b35ef",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:31:07Z",
+      "side": 1,
+      "message": "Do we need this to become a set / array?  You can have multiple thresholds asserted.  In the old threshold design you\u0027d see them as independent properties.  We probably shouldn\u0027t eliminate that visibility?",
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebe52bcf_5ff827d1",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:31:07Z",
+      "side": 1,
+      "message": "Is it ok if we split these into two properties?  Doing a \u0027match\u0027 on a struct is a lot more cumbersome I think than a \u0027match\u0027 on two argNs.",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 58
+      },
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8bb63e2_05604998",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:31:07Z",
+      "side": 1,
+      "message": "nit: \"asserted (true) or deasserted (false)\"",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 27
+      },
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4772fb20_e8f31267",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:31:07Z",
+      "side": 1,
+      "message": "nit: Let\u0027s keep these sorted by \u0027name\u0027.",
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f675f65_e89b0822",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:31:07Z",
+      "side": 1,
+      "message": "We should add this association to Inventory.Item also.",
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

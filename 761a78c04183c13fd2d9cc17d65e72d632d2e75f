@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d0e766d_d65e40b1",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:20:17Z",
+      "side": 1,
+      "message": "Do we really want to restrict these metric types to only be part of a BMC?  That\u0027s what you\u0027ve implied here.",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 30
+      },
+      "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cc9391f_1b5a8dcb",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:20:17Z",
+      "side": 1,
+      "message": "Can we avoid specifying \u0027value\u0027 (in most cases) and relying on the generated one from the name?  It is best if these match.",
+      "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73d3aecc_134fad50",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:20:17Z",
+      "side": 1,
+      "message": "Thinking about this, I don\u0027t think we should support segments-of-segments.\n\nLet\u0027s flatten these out for simplicity.",
+      "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2bf4efb_d8c9c744",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-18T12:20:17Z",
+      "side": 1,
+      "message": "You have the same values multiple times.  Is that intentional?",
+      "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

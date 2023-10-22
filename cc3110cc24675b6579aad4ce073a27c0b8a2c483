@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "541190ae_3336a09b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-22T05:58:24Z",
+      "side": 1,
+      "message": "Thanks for the review. Addressed the comments.",
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62d2074b_3650bc8c",
@@ -14,6 +31,30 @@
       "writtenOn": "2023-10-18T12:31:07Z",
       "side": 1,
       "message": "While there is potentially some contention around this property, my overall feeling is that we should go with it approximately like this for now and see how it works.  We can refactor it once we see the implementation in phosphor-health-monitor and the corresponding implementation in bmcweb.\n\nWe know how individual properties work.  We know (unfortunately) what multiple interfaces would look like.  This approach seems better in some ways and worse in other ways, but we should get some firmer data by seeing the code.\n\nI don\u0027t know if we want to add anything to the description to indicate that this property is \"experimental\" for the time being.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 66
+      },
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7783e2f0_1e765e0f",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-22T05:58:24Z",
+      "side": 1,
+      "message": "Sure, we can see how the actual code looks like and make decision on this one accordingly. We can always update the interface.\nWill add experimental to description for now.",
+      "parentUuid": "62d2074b_3650bc8c",
       "range": {
         "startLine": 7,
         "startChar": 0,
@@ -41,6 +82,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "034ffdec_4ffc6ff5",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-22T05:58:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "95a0b4f8_a49b35ef",
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ebe52bcf_5ff827d1",
@@ -54,6 +113,30 @@
       "writtenOn": "2023-10-18T12:31:07Z",
       "side": 1,
       "message": "Is it ok if we split these into two properties?  Doing a \u0027match\u0027 on a struct is a lot more cumbersome I think than a \u0027match\u0027 on two argNs.",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 58
+      },
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26681fd1_e23edda8",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-22T05:58:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ebe52bcf_5ff827d1",
       "range": {
         "startLine": 28,
         "startChar": 0,
@@ -87,6 +170,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "91ba8d67_db1574c3",
+        "filename": "yaml/xyz/openbmc_project/Common/Threshold.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-22T05:58:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c8bb63e2_05604998",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 27
+      },
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4772fb20_e8f31267",
@@ -104,6 +211,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6234b956_0721b9c7",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-22T05:58:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4772fb20_e8f31267",
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6f675f65_e89b0822",
@@ -117,6 +242,24 @@
       "writtenOn": "2023-10-18T12:31:07Z",
       "side": 1,
       "message": "We should add this association to Inventory.Item also.",
+      "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5282491c_33724f19",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-22T05:58:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6f675f65_e89b0822",
       "revId": "cc3110cc24675b6579aad4ce073a27c0b8a2c483",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

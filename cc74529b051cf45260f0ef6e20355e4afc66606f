@@ -18,6 +18,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "849b8bb7_a31ff449",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-23T20:59:21Z",
+      "side": 1,
+      "message": "Thanks for the review. Replied to your comments.",
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3174b00d_59beaf23",
@@ -31,6 +48,24 @@
       "writtenOn": "2023-10-13T20:53:29Z",
       "side": 1,
       "message": "InternalError? \n\nThere are a few more at \nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/Version.errors.yaml\n\nand https://github.com/openbmc/phosphor-bmc-code-mgmt/commit/098a6771e26c2c217b359d284fbca4d662e0aa73 had \n\n- name: UnTarFailure\n  description: An error occurred during untar.\n- name: ManifestFileFailure\n  description: An error when reading the Manifest file.\n- name: InternalFailure\n  description: The operation failed internally during processing the image.\n- name: ImageFailure\n  description: An error occured processing the image.\n- name: BusyFailure\n  description: The device is busy during the update.",
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15da8569_87153ef7",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-23T20:59:21Z",
+      "side": 1,
+      "message": "@Gunnar,\nI have already covered the ones from https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/Version.errors.yaml\nEd don\u0027t want to have AlreadyExists and there was a discussion around this. Ed\u0027s point was that there could be a valid reason to update an existing version on a device. Link to conversation - https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/65738/comment/b45b51be_3cf9e898/\n\nAbout https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/Image.errors.yaml\nUnTarFailure, ManifestFileFailure makes assumption about the image format to be tarred file or have a ManifestFile. The design doesn\u0027t impose any such restriction. Moreover, this option is already covered by InvalidImage failure at a broader level.\n\nInternalFailure - I might be wrong but i think Patrick was not in support of using InternalFailure as it doesn\u0027t help in any way by not providing any useful info.\n\n\nImageFailure has been covered by Incompatible, InvalidSignature, InvalidImage.\n\nBusyFailure cannot be returned from this API as update is a async operation and will happen in backend. Update Daemon can log a valid error message for it. I am not sure if we use these definitions in logging too?",
+      "parentUuid": "3174b00d_59beaf23",
       "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -52,6 +87,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a62ef73a_2f49a665",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-23T20:59:21Z",
+      "side": 1,
+      "message": "Right now, there is just one use case for BMC, so we could have created this association that way. But this design is for Software Update in general for all type of devices. In that case the functional association needs to exist from Software Version to inventory item, so we can figure out what is the current running version for a FW inventory item. \nPlease let me know if you think i misunderstood your question.",
+      "parentUuid": "fd45b861_e587f3ed",
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7cb37fc3_5215849e",
@@ -65,6 +118,24 @@
       "writtenOn": "2023-10-13T21:08:36Z",
       "side": 1,
       "message": "Isn\u0027t there already an Association that does this \n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/5e7bca41c4460abb6f513ae8e0a67c551d6192a5/yaml/xyz/openbmc_project/Software/README.md?plain\u003d1#L265\n\nbusctl get-property --no-pager xyz.openbmc_project.Software.BMC.Updater /xyz/openbmc_project/software/bcfb7338 xyz.openbmc_project.Association.Definitions  Associations\na(sss) 1 \"inventory\" \"activation\" \"/xyz/openbmc_project/inventory/system/chassis/motherboard/ebmc_card_bmc\"",
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb670f5d_0dd587af",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-23T20:59:21Z",
+      "side": 1,
+      "message": "None, of the associations are documented right now in phosphor-dbus-interfaces. So, what i am doing is documenting them to get a consensus for the new design. Also, nomenclature wise \u0027active\u0027 seemed better, so changed it to active.",
+      "parentUuid": "7cb37fc3_5215849e",
       "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

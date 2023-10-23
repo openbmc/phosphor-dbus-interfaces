@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b084aca_673c6b36",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-23T21:50:32Z",
+      "side": 1,
+      "message": "Done, Removed BMC specific details.",
+      "parentUuid": "3d0e766d_d65e40b1",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 30
+      },
+      "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7cc9391f_1b5a8dcb",
@@ -37,6 +61,24 @@
       "writtenOn": "2023-10-18T12:20:17Z",
       "side": 1,
       "message": "Can we avoid specifying \u0027value\u0027 (in most cases) and relying on the generated one from the name?  It is best if these match.",
+      "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "080b0b4c_60deee2c",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-23T21:50:32Z",
+      "side": 1,
+      "message": "I have changed the specification a little. So, with that its better to keep it. Please let me know otherwise.\n\nThe new generated code -\n\n    /** The root path for all Metrics. */\n    struct namespace_path\n    {\n        static constexpr auto value \u003d \"/xyz/openbmc_project/metric\";\n        /** The total memory metric. */\n        static constexpr auto total_memory \u003d \"memory/total\";\n        /** The free memory metric. */\n        static constexpr auto free_memory \u003d \"memory/free\";\n        /** The available memory metric. */\n        static constexpr auto available_memory \u003d \"memory/available\";\n        /** The shared memory utilization. */\n        static constexpr auto shared_memory \u003d \"memory/shared\";\n        /** The buffered and cached memory memory utilization. */\n        static constexpr auto buffered_and_cached_memory \u003d \"memory/buffered_and_cached\";\n        /** The kernel CPU utilization. */\n        static constexpr auto kernel_cpu \u003d \"cpu/kernel\";\n        /** The user CPU utilization. */\n        static constexpr auto user_cpu \u003d \"cpu/user\";\n        /** Reboot statistic to track number of times device rebooted without failure. */\n        static constexpr auto reboot_count \u003d \"reboot/count\";\n        /** Reboot statistic to track number of times device rebooted because of a failure. */\n        static constexpr auto reboot_count_with_failure \u003d \"reboot/count_with_failure\";\n    };",
+      "parentUuid": "7cc9391f_1b5a8dcb",
       "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -58,6 +100,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "31b5cfdc_71b63da0",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-23T21:50:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "73d3aecc_134fad50",
+      "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c2bf4efb_d8c9c744",
@@ -71,6 +131,24 @@
       "writtenOn": "2023-10-18T12:20:17Z",
       "side": 1,
       "message": "You have the same values multiple times.  Is that intentional?",
+      "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7a41c65_dc50d481",
+        "filename": "yaml/xyz/openbmc_project/Metrics/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2023-10-23T21:50:32Z",
+      "side": 1,
+      "message": "Done, fixed it.",
+      "parentUuid": "c2bf4efb_d8c9c744",
       "revId": "761a78c04183c13fd2d9cc17d65e72d632d2e75f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

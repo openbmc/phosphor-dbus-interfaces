@@ -190,6 +190,30 @@
       },
       "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07bc0052_acb584eb",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2023-10-24T20:22:06Z",
+      "side": 1,
+      "message": "I could add a sentence here about Redfish\u0027s mapping? Thoughts?\n\n\"\nMapping to other Interfaces\n\nSuppose an interface (e.g., Redfish) defines inventory differently than in PDI. In that case, multiple inventory items might be combined into the same resource (or vice-versa), or multiple associations might have to be followed. For example, Redfish defines PCIe Slots as empty PCIe Devices, so both PDI PCIeSlot and PCIeDevice are Redfish PCIeDevices. Another example is the association from  Cpu and PCIeSlot: `{connecting, connected_to}` and the Item and Item: `{containing, contained_by}` are both needed for Redfish\u0027s \u0027PCIeDevice\u0027 to \u0027Processor\u0027 link.\"\n\nI just want to replace https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/64951/2 since there was a commit using it in bmcweb",
+      "parentUuid": "bcefeb01_42ff9af1",
+      "range": {
+        "startLine": 28,
+        "startChar": 10,
+        "endLine": 28,
+        "endChar": 20
+      },
+      "revId": "1d316b4fb6c9209be3505aec7e233106657c535c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

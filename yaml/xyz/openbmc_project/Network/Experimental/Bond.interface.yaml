@@ -21,7 +21,7 @@ properties:
     - name: TransmitHashPolicy
       type: enum[self.HashPolicy]
       description:
-          Selects the transmit hash policy to use for slave selection in
+          Selects the transmit hash policy to use for target selection in
           balance-xor, 802.3ad, and tlb modes.
       default: Layer2
 
@@ -33,30 +33,30 @@ enumerations:
           - name: RoundRobin
             description: >
                 It is the default mode,in this mode system transmits packets in
-                sequential order from the first available slave through the
+                sequential order from the first available target through the
                 last.
           - name: ActiveBackup
             description: >
-                In this mode, only one slave in the bond is active. The other
-                one will become active, only when the active slave fails.
+                In this mode, only one target in the bond is active. The other
+                one will become active, only when the active target fails.
           - name: XOR
             description: >
                 Transmit based on selectable hashing algorithm. The default
                 policy is a simple source+destination MAC address algorithm.
           - name: Broadcast
             description: >
-                Transmits everything on all slave interfaces.
+                Transmits everything on all target interfaces.
           - name: Dynamic
             description: >
                 IEEE 802.3ad Dynamic link aggregation.
           - name: TLB
             description: >
                 The outgoing traffic is distributed according to the current
-                load on each slave.
+                load on each target.
           - name: ALB
             description: >
                 Incoming/outgoing traffic is distributed according to the
-                current load on each slave.
+                current load on each target.
 
     - name: HashPolicy
       description: >

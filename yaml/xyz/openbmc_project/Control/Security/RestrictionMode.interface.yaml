@@ -15,19 +15,19 @@ enumerations:
           - name: None
             description: >
                 No restriction.
-          - name: Whitelist
+          - name: Allowlist
             description: >
-                Allow, only if in the whitelist.
-          - name: Blacklist
+                Allow, only if in the allowlist.
+          - name: Blocklist
             description: >
-                Prevent, if in the blacklist.
+                Prevent, if in the blocklist.
           - name: Provisioning
             description: >
                 Indicate that system is in provisioning mode and all commands
                 are allowed in system interface in both pre and post BIOS boot.
-          - name: ProvisionedHostWhitelist
+          - name: ProvisionedHostAllowlist
             description: >
-                Commands in the whitelist will only be executed through system
+                Commands in the allowlist will only be executed through system
                 interface after BIOS POST complete. All KCS commands are
                 supported before POST complete.
           - name: ProvisionedHostDisabled

@@ -16,6 +16,184 @@
       "message": "I\u0027ve updated to remove the hostname from the LogEvent method per the design review comments.",
       "revId": "8ee7a7196b8a5fd7b4e16a1457d3bb55e782754f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78e81198_38fa0141",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:06:18Z",
+      "side": 1,
+      "message": "General convention is for enumerations to be at the end.",
+      "revId": "8ee7a7196b8a5fd7b4e16a1457d3bb55e782754f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b27bc01_11719465",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:06:18Z",
+      "side": 1,
+      "message": "Why are we sending a custom file format across dbus?  If it is interesting to send event logs, define the event log and send it as an array, right?  We should not have various daemons inventing their own file formats.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 79
+      },
+      "revId": "8ee7a7196b8a5fd7b4e16a1457d3bb55e782754f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee9b2bbb_9884e150",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:06:18Z",
+      "side": 1,
+      "message": "I\u0027m really not pleased with arbitrary strings being sent over dbus because it is unusable in any direction.  Nobody can ever look at the contents of these in any programmatic way, since it is quite likely that the next version of bmcweb changes how these are being sent.\n\nI would suggest we look into some kind of message registry for these.",
+      "range": {
+        "startLine": 29,
+        "startChar": 1,
+        "endLine": 35,
+        "endChar": 80
+      },
+      "revId": "8ee7a7196b8a5fd7b4e16a1457d3bb55e782754f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb33c2ea_4fc8d45a",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:06:18Z",
+      "side": 1,
+      "message": "What happens if there is not valid information for this?  Can it be an empty string?  Please specify the desired behavior in the description.",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 58
+      },
+      "revId": "8ee7a7196b8a5fd7b4e16a1457d3bb55e782754f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ddb3f62d_f8bb99f1",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:06:18Z",
+      "side": 1,
+      "message": "Should this just be a boolean?",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 53
+      },
+      "revId": "8ee7a7196b8a5fd7b4e16a1457d3bb55e782754f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d40e0706_bde44334",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:06:18Z",
+      "side": 1,
+      "message": "Is this intended to be human readable or computer readable?  Please specify in the description.",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 66
+      },
+      "revId": "8ee7a7196b8a5fd7b4e16a1457d3bb55e782754f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70e69561_1273e1ac",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:06:18Z",
+      "side": 1,
+      "message": "AuditLog",
+      "range": {
+        "startLine": 50,
+        "startChar": 40,
+        "endLine": 50,
+        "endChar": 48
+      },
+      "revId": "8ee7a7196b8a5fd7b4e16a1457d3bb55e782754f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbf60088_6342e192",
+        "filename": "yaml/xyz/openbmc_project/Logging/AuditLog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:06:18Z",
+      "side": 1,
+      "message": "\"AuditLog service\"?",
+      "range": {
+        "startLine": 53,
+        "startChar": 49,
+        "endLine": 53,
+        "endChar": 57
+      },
+      "revId": "8ee7a7196b8a5fd7b4e16a1457d3bb55e782754f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

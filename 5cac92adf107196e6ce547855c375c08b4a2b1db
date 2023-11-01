@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "082914f3_ad11069e",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:21:24Z",
+      "side": 1,
+      "message": "size not uint16.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "136428da_1f991cd9",
         "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
         "patchSetId": 2
@@ -247,6 +264,58 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "090037b4_52063db9",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:21:24Z",
+      "side": 1,
+      "message": "Seconds are not acceptable.  All time units in dbus should be microseconds.\n\nUse a uint64.",
+      "parentUuid": "06ef5ebe_65891fae",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c566c1bb_8fae0aa1",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:21:24Z",
+      "side": 1,
+      "message": "Counters don\u0027t seem like configuration policy.  Please use a separate Metric if that\u0027s what this is.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ceebf7d_69d83214",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:21:24Z",
+      "side": 1,
+      "message": "Size types should be \u0027size\u0027.  Don\u0027t optimize for your current hardware implementation.",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c5a5c032_87ecff63",
         "filename": "yaml/xyz/openbmc_project/CrashDump/Configuration.interface.yaml",
         "patchSetId": 2
@@ -317,6 +386,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c05600a0_e6ff52e9",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:21:24Z",
+      "side": 1,
+      "message": "FileName",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bc2a9e8f_f3e743f9",
         "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
         "patchSetId": 2
@@ -346,6 +432,41 @@
       "side": 1,
       "message": "It\u0027s actually 10\u0027s of Kilobytes and will depend on the number of errors RAS engine detects on the host.",
       "parentUuid": "bc2a9e8f_f3e743f9",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7794cd9_db644f2a",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:21:24Z",
+      "side": 1,
+      "message": "I don\u0027t think we want file paths sent over dbus anyhow, right?  Do we need a method that returns an `fd`?",
+      "parentUuid": "02476e55_6910e0c6",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cb2189e_ca16354f",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:21:24Z",
+      "side": 1,
+      "message": "What is the difference between \"Filename\" and \"Log\"?  Not obvious from the description.",
       "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -387,6 +508,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "618502a2_55efd586",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:21:24Z",
+      "side": 1,
+      "message": "Not resolved until the code is updated.",
+      "parentUuid": "b3577088_417d2528",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0f6f4aef_ab2a9846",
         "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
         "patchSetId": 2
@@ -416,6 +555,24 @@
       "side": 1,
       "message": "CPER record consists of 3 parts\n1. Header\n2. Section descriptor(s) [can be more than 1]\n3. Section (s) [as many as the number of section descriptors]. \nSection descriptors will define whether it\u0027s an error related to P0, P1, P2, etc..",
       "parentUuid": "0f6f4aef_ab2a9846",
+      "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "384d3357_3cdfd312",
+        "filename": "yaml/xyz/openbmc_project/CrashDump/CperRecord.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-01T14:21:24Z",
+      "side": 1,
+      "message": "Where do these \"section descriptors\" come from?  `P0`, `P1` is maybe an AMD identifier?  These don\u0027t necessarily correlate to silk-screen names various vendors use, do they?",
+      "parentUuid": "9de01668_c2e905ec",
       "revId": "5cac92adf107196e6ce547855c375c08b4a2b1db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

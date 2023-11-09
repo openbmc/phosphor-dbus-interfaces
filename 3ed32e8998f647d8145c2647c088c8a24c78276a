@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "3ed32e8998f647d8145c2647c088c8a24c78276a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "681aba81_e68f8f05",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/RestrictionMode.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-09T12:54:48Z",
+      "side": 1,
+      "message": "There are openbmc/openbmc changes that go along with this that I didn\u0027t see in your commit there.  I would also expect to see IPMI changes for this.  Please make sure these changes are in separate commits so we don\u0027t make a mess of dependencies.  We\u0027re already going to need to merge 3 commits at the same time:\n\n- this one.\n- ipmi for enum name change\n- openbmc/openbmc change for settingsd defaults.\n\nhttps://github.com/search?q\u003dorg%3Aopenbmc%20restrictionmode\u0026type\u003dcode",
+      "revId": "3ed32e8998f647d8145c2647c088c8a24c78276a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

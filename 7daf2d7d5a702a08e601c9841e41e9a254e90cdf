@@ -16,6 +16,24 @@
       "message": "It should still be readonly, right?",
       "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f4f7695_0cf17bde",
+        "filename": "yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2023-11-09T01:08:41Z",
+      "side": 0,
+      "message": "Yes, It can read and write after removing `const`.\n\n```\n~# busctl introspect xyz.openbmc_project.Settings /xyz/openbmc_project/control/power_supply_attributes\nNAME                                              TYPE      SIGNATURE RESULT/VALUE FLAGS\norg.freedesktop.DBus.Introspectable               interface -         -            -\n.Introspect                                       method    -         s            -\norg.freedesktop.DBus.Peer                         interface -         -            -\n.GetMachineId                                     method    -         s            -\n.Ping                                             method    -         -            -\norg.freedesktop.DBus.Properties                   interface -         -            -\n.Get                                              method    ss        v            -\n.GetAll                                           method    s         a{sv}        -\n.Set                                              method    ssv       -            -\n.PropertiesChanged                                signal    sa{sv}as  -            -\nxyz.openbmc_project.Control.PowerSupplyAttributes interface -         -            -\n.DeratingFactor                                   property  u         90           const\n```\n\n```\n~# busctl set-property xyz.openbmc_project.Settings /xyz/openbmc_project/control/power_supply_attributes xyz.openbmc_project.Control.PowerSupplyAttributes DeratingFactor u 80\nFailed to set property DeratingFactor on interface xyz.openbmc_project.Control.PowerSupplyAttributes: Property \u0027DeratingFactor\u0027 is not writable.\n```",
+      "parentUuid": "ed39541f_3031668b",
+      "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

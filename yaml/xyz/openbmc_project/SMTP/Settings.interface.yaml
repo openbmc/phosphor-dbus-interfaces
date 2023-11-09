@@ -1,0 +1,89 @@
+description: >
+    Settings for SMTP event delivery.
+properties:
+    - name: Authentication
+      type: enum[self.Auth]
+      default: "AutoDetect"
+      description: >
+          The authentication method for the SMTP server.
+
+    - name: ConnectionProtocol
+      type: enum[self.Protocols]
+      default: "AutoDetect"
+      description: >
+          The connection type to the outgoing SMTP server.
+
+    - name: FromAddress
+      type: string
+      description: >
+          The 'from' email address of the outgoing email.
+
+    - name: Password
+      type: string
+      description: >
+          The password for authentication with the SMTP server. The value is
+          `null` in responses.
+
+    - name: PasswordSet
+      type: boolean
+      description: >
+          Indicates if the Password property is set.
+
+    - name: Port
+      type: uint16
+      default: 25
+      description: >
+          The destination SMTP port.
+
+    - name: ServerAddress
+      type: string
+      description: >
+          The address of the SMTP server.
+
+    - name: ServiceEnabled
+      type: boolean
+      description: >
+          An indication if SMTP for event delivery is enabled.
+
+    - name: Username
+      type: string
+      description: >
+          The username for authentication with the SMTP server.
+
+enumerations:
+    - name: Auth
+      description: >
+          Possible authentications
+      values:
+          - name: "AutoDetect"
+            description: >
+                Auto-detect.
+          - name: "CRAM_MD5"
+            description: >
+                CRAM-MD5 authentication.
+          - name: "Login"
+            description: >
+                LOGIN authentication.
+          - name: "None"
+            description: >
+                No authentication.
+          - name: "Plain"
+            description: >
+                PLAIN authentication.
+
+    - name: Protocols
+      description: >
+          Possible connection protocol
+      values:
+          - name: "AutoDetect"
+            description: >
+                Auto-detect.
+          - name: "None"
+            description: >
+                Clear text.
+          - name: "StartTLS"
+            description: >
+                StartTLS.
+          - name: "TLS_SSL"
+            description: >
+                TLS/SSL.

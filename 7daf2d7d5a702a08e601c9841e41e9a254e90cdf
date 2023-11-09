@@ -88,6 +88,24 @@
       "parentUuid": "4d2af0cb_ef924af4",
       "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0deee6ad_46a5976c",
+        "filename": "yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2023-11-09T03:32:51Z",
+      "side": 0,
+      "message": "\u003e Why would a caller change DeratingFactor?  That does not seem like a property that should come from other processes.\n\nhttps://github.com/openbmc/openbmc/blob/master/meta-phosphor/recipes-phosphor/settings/phosphor-settings-defaults/defaults.yaml#L17\n\nThis property is configured in settings and defaults to 90.\n\u003e \n\u003e Where is your design proposal?\n\nIn fact, for our power supply, we need to dynamically calculate a new DeratingFactor based on the actual power consumption(power cap) and total power consumption, and then update it to the phosphor-settings.\n\nThen for the occ process, we will dynamically obtain this value from phosphor-settings and participate in the calculation.",
+      "parentUuid": "d5ac825b_8515818f",
+      "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

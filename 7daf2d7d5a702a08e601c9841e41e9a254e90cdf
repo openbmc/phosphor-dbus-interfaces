@@ -52,6 +52,24 @@
       "parentUuid": "9f4f7695_0cf17bde",
       "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d2af0cb_ef924af4",
+        "filename": "yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2023-11-09T03:09:20Z",
+      "side": 0,
+      "message": "Sorry, I am not following why change from const -\u003e readonly?\nBecause for readonly types, the caller still cannot dynamically change the `DeratingFactor` attribute.",
+      "parentUuid": "a6399a28_b7b42424",
+      "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

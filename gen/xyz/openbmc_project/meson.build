@@ -108,6 +108,7 @@ generated_others += custom_target(
 
 subdir('PFR')
 subdir('PLDM')
+subdir('SMTP')
 subdir('ScheduledTime')
 generated_others += custom_target(
     'xyz/openbmc_project/ScheduledTime__markdown'.underscorify(),

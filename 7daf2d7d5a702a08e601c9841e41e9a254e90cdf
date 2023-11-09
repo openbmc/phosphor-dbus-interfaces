@@ -124,6 +124,24 @@
       "parentUuid": "0deee6ad_46a5976c",
       "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b68d8b40_f1d92210",
+        "filename": "yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2023-11-09T04:44:06Z",
+      "side": 0,
+      "message": "\u003e I don\u0027t understand why we are proposing to spread something so simple over 3 daemons.  We really should move away from one daemon pushing state into another daemon.  Why can\u0027t the daemon that is creating this interface do the calculation itself based on sensors and/or settings in other dbus interfaces?\n\nTo be honest, I don’t know what the original intention of the early design was?\nBut we have done some refactoring downstream, and I want to see if can we go upstream?",
+      "parentUuid": "839f4396_d3ea4143",
+      "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

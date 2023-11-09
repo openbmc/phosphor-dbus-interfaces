@@ -106,6 +106,24 @@
       "parentUuid": "d5ac825b_8515818f",
       "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "839f4396_d3ea4143",
+        "filename": "yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-09T03:45:50Z",
+      "side": 0,
+      "message": "I don\u0027t understand why we are proposing to spread something so simple over 3 daemons.  We really should move away from one daemon pushing state into another daemon.  Why can\u0027t the daemon that is creating this interface do the calculation itself based on sensors and/or settings in other dbus interfaces?",
+      "parentUuid": "0deee6ad_46a5976c",
+      "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

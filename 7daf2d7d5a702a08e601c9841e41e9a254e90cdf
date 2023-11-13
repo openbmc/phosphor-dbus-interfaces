@@ -142,6 +142,24 @@
       "parentUuid": "839f4396_d3ea4143",
       "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28c2fb0c_c45c8f33",
+        "filename": "yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2023-11-13T21:28:49Z",
+      "side": 0,
+      "message": "The original intention was to make it read-only by using \u0027const\u0027 at the time when the \u0027readonly\u0027 flag did not exist yet: https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/12036.\n\nAdding Matt who\u0027s more knowledgable about this interface.",
+      "parentUuid": "b68d8b40_f1d92210",
+      "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

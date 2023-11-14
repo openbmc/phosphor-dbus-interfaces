@@ -196,6 +196,24 @@
       "parentUuid": "bcc16868_0d86b521",
       "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67f911f6_e67d420e",
+        "filename": "yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-14T15:28:04Z",
+      "side": 0,
+      "message": "You\u0027re still not being very clear.  The flags here are from a dbus perspective and not from the perspective of your application implementing the dbus interface.\n\nconst - This property cannot change and therefore will never emit signals.\nreadonly - This property cannot be changed by dbus *clients*, but can change by the server (and thus will emit signals).\n\nI can understand the application implementing PowerSupplyAttributes do calculations to dynamically adjust its own DeratingFactor.  This would make it a `readonly` property.  I am not understanding why an external application (ie. dbus client) would calculate the DeratingFactor and push it into the PowerSupplyAttributes application, only for it to then be pulled back out by openpower-occ-control.",
+      "parentUuid": "21c2cbbf_3df675c3",
+      "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

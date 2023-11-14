@@ -106,6 +106,81 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bb55abd5_a2dda102",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2023-11-14T09:09:13Z",
+      "side": 1,
+      "message": "bmcweb could convert the timestamp to human readable strings, but on dbus, uint64 epoch timestamp looks more suitable here, which is also consistent with other interfaces (e.g. dump entry)",
+      "parentUuid": "273f8681_7aa68b03",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4201ab64_c97eebc5",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2023-11-14T09:09:13Z",
+      "side": 1,
+      "message": "Should this be `array[byte]`?",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5b846bc_20ec5187",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2023-11-14T09:09:13Z",
+      "side": 1,
+      "message": "Possibly refer this as Certificate object path, so it is more clear",
+      "range": {
+        "startLine": 35,
+        "startChar": 16,
+        "endLine": 35,
+        "endChar": 27
+      },
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f892df57_5bcd3485",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2023-11-14T09:09:13Z",
+      "side": 1,
+      "message": "Could throw other errors, e.g. internal failure, or some other errors?",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6d8f0819_2b382eed",
         "filename": "yaml/xyz/openbmc_project/Certs/Certificate.interface.yaml",
         "patchSetId": 3

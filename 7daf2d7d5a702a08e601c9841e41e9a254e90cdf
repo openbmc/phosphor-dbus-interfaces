@@ -178,6 +178,24 @@
       "parentUuid": "28c2fb0c_c45c8f33",
       "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21c2cbbf_3df675c3",
+        "filename": "yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2023-11-14T01:19:21Z",
+      "side": 0,
+      "message": "Yes, because this is not a fixed value.\n\nWe have removed const from this value downstream and dynamically calculated the `DeratingFactor` based on the actual input voltage and set power consumption value, and then updated the `DeratingFactor`\n\nIn fact, we have also made some changes in openpower-occ-control, removing the default configuration in meson.options (https://github.com/openbmc/openpower-occ-control/blob/master/meson.options#L29-L35), and using the DeratingFactor in the PowerSupplyAttributes interface synchronously.",
+      "parentUuid": "bcc16868_0d86b521",
+      "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -124,6 +124,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "090d4f98_6d82e1b0",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-11-14T17:49:20Z",
+      "side": 1,
+      "message": "If uint64 epoch for timestamp is the d-bus convention, I\u0027m happy to follow it.",
+      "parentUuid": "bb55abd5_a2dda102",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4201ab64_c97eebc5",
         "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
         "patchSetId": 3
@@ -135,6 +153,24 @@
       "writtenOn": "2023-11-14T09:09:13Z",
       "side": 1,
       "message": "Should this be `array[byte]`?",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "484e110c_249e4f96",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-11-14T17:49:20Z",
+      "side": 1,
+      "message": "`size` here represents the \"size\" of the measurementindices array. `byte` will put a limit on the number of possible measurement blocks(limit to 256). Even though the current SPDM spec does have a limit of 256 max blocks, I\u0027m not sure if we want to have a hard limit here given the spec may change to accept more blocks.",
+      "parentUuid": "4201ab64_c97eebc5",
       "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -162,6 +198,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fe6599c_5e8329f4",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-11-14T17:49:20Z",
+      "side": 1,
+      "message": "make sense, will change the description",
+      "parentUuid": "d5b846bc_20ec5187",
+      "range": {
+        "startLine": 35,
+        "startChar": 16,
+        "endLine": 35,
+        "endChar": 27
+      },
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f892df57_5bcd3485",
@@ -175,6 +235,24 @@
       "writtenOn": "2023-11-14T09:09:13Z",
       "side": 1,
       "message": "Could throw other errors, e.g. internal failure, or some other errors?",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e8e13dd_bcadb9b0",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-11-14T17:49:20Z",
+      "side": 1,
+      "message": "Good point, will add it.",
+      "parentUuid": "f892df57_5bcd3485",
       "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

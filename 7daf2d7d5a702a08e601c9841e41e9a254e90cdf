@@ -232,6 +232,24 @@
       "parentUuid": "67f911f6_e67d420e",
       "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f32a357_e7f1523a",
+        "filename": "yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2023-11-15T00:22:16Z",
+      "side": 0,
+      "message": "Yes, that\u0027s why it\u0027s handled like this (removing const), because now the PowerSupplyAttributes interface is hosted by the phosphor-settings service, otherwise we should get rid of it, that is, PowerSupplyAttributes is hosted by occ-control.\nBut if such a change is made, I\u0027m not sure whether it will affect other companies\u0027 machine?\nBut in any case, DeatingFactor should not be a const. If it is hosted by occ-control, I think readonly is reasonable.",
+      "parentUuid": "a6f17d99_4b2fd898",
+      "revId": "7daf2d7d5a702a08e601c9841e41e9a254e90cdf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

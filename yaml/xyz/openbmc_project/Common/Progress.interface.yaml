@@ -10,9 +10,11 @@ properties:
       type: enum[self.OperationStatus]
       default: InProgress
       description: >
-          Indicate the state of the operation, whether in progress, completed
-          aborted or failed. The default should be InProgress during the
-          implementation if no input is provided.
+          Indicate the state of the operation, whether in progress, completed,
+          aborted, failed, new, starting, running, suspended, interrupted,
+          pending, stopping, exception, service, cancelling or cancelled. The
+          default should be InProgress during the implementation if no input is
+          provided.
     - name: StartTime
       type: uint64
       description: >
@@ -41,3 +43,37 @@ enumerations:
           - name: Aborted
             description: >
                 The operation is aborted.
+          - name: New
+            description: >
+                A new operation.
+          - name: Starting
+            description: >
+                Requested operation is starting.
+          - name: Running
+            description: >
+                The operation is running normally.
+          - name: Suspended
+            description: >
+                Requested operation has been suspended.
+          - name: Interrupted
+            description: >
+                Requested operation has been interrupted.
+          - name: Pending
+            description: >
+                The operation is pending and has not started.
+          - name: Stopping
+            description: >
+                Requested operation is in the process of stopping.
+          - name: Exception
+            description: >
+                The operation has stopped due to an exception condition.
+          - name: Service
+            description: >
+                The operation is running as a service.
+          - name: Cancelling
+            description: >
+                Requested operation is in the process of being cancelled.
+          - name: Cancelled
+            description: >
+                Requested operation has been cancelled by an operator or
+                internal process.

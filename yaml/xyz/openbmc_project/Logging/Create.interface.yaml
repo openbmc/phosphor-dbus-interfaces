@@ -26,6 +26,11 @@ methods:
                   }
                 ends up in AdditionaData like:
                   ["KEY1=value1", "KEY2=value2"]
+      returns:
+          - name: entryID
+            type: uint32
+            description: >
+                The ID of the entry.
 
     - name: CreateWithFFDCFiles
       description: >
@@ -75,6 +80,11 @@ methods:
                 5},
                   {"xyz.openbmc_project.Logging.Create.FFDCFormat.Custom", 1, 2,
                 6} ]
+      returns:
+          - name: entryID
+            type: uint32
+            description: >
+                The ID of the entry.
 
 enumerations:
     - name: FFDCFormat

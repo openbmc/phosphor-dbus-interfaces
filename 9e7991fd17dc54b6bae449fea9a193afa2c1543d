@@ -33,6 +33,24 @@
       "message": "Why not the object_path?",
       "revId": "9e7991fd17dc54b6bae449fea9a193afa2c1543d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9643d8fd_58343b1b",
+        "filename": "yaml/xyz/openbmc_project/Logging/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2023-11-28T22:34:22Z",
+      "side": 1,
+      "message": "yea that seems obvious now that I think about it.  The use case was because the code needed the ID so it could be passed to a dump, but the object path would in general be more useful.\n\nWill redo.",
+      "parentUuid": "b565e77e_cbc47c52",
+      "revId": "9e7991fd17dc54b6bae449fea9a193afa2c1543d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

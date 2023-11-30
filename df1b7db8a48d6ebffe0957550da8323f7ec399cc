@@ -22,6 +22,30 @@
       },
       "revId": "df1b7db8a48d6ebffe0957550da8323f7ec399cc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d933431_cc16c35d",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Intrusion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2023-11-30T14:52:57Z",
+      "side": 1,
+      "message": "Hi, thanks for that. However, there\u0027s currently a monitoring/monitored_by association between Item.Bmc and Sensor.Value. I wonder if it is ok to have it for this purpose also?",
+      "parentUuid": "b1b030fa_cd82617d",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 42
+      },
+      "revId": "df1b7db8a48d6ebffe0957550da8323f7ec399cc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

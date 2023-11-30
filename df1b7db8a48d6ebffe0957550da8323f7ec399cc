@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1b030fa_cd82617d",
+        "filename": "yaml/xyz/openbmc_project/Chassis/Intrusion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-30T14:26:21Z",
+      "side": 1,
+      "message": "Just monitoring/monitored_by.  Adding intrusion violates this requirement:\n\n\u003e The end-point names of an association should not codify the types of the interfaces pointed to by the association.",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 42
+      },
+      "revId": "df1b7db8a48d6ebffe0957550da8323f7ec399cc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

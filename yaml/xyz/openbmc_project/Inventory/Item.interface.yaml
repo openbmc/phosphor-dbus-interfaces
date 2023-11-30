@@ -78,3 +78,12 @@ associations:
       reverse_name: measuring
       required_endpoint_interfaces:
           - xyz.openbmc_project.Metrics
+    - name: intrusion_monitored_by
+      description: >
+          Any inventory Item (usually Boards or Chassis) can optionally
+          implement the 'intrusion_monitored_by' association to provide a link
+          to the chassis intrusion sensor that is monitoring its security state
+          against intrusion events.
+      reverse_name: intrusion_monitoring
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Chassis.Intrusion

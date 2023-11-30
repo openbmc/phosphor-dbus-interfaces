@@ -41,3 +41,13 @@ enumerations:
           - name: "TamperingDetected"
             description: >
                 Physical tampering is detected.
+
+associations:
+    - name: monitoring
+      description: >
+          One chassis intrusion sensor needs to implement the 'monitoring'
+          association to provide links to the inventory items that it is
+          monitoring the security state against intrusion events.
+      reverse_name: monitored_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

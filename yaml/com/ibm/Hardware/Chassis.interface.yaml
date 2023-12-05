@@ -1,0 +1,15 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    enumerations for Compatible strings.
+
+enumerations:
+    - name: Model
+      description: >
+          Possible Chassis models used for compatible strings.
+      values:
+          - name: Bonnell
+          - name: Everest
+          - name: Rainier
+          - name: Rainier1S4U
+          - name: Rainier2U
+          - name: Rainier4U

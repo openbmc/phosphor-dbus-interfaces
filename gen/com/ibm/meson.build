@@ -1,5 +1,6 @@
 # Generated file; do not modify.
 subdir('Dump')
+subdir('Hardware')
 subdir('Logging')
 subdir('VPD')
 generated_others += custom_target(

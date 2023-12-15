@@ -5,12 +5,12 @@ description: >
 
 properties:
     - name: Value
-      type: dict[struct[enum[self.Type],enum[self.Bound]],double]
+      type: dict[enum[self.Type],dict[enum[self.Bound],double]]
       description: >
           This indicates the threshold ranges applicable for the corresponding
           Value interface. This property is experimental and may change based on
           implementation.
-          map{struct{thresholdType,thresholdBound},thresholdValue}
+          map{thresholdType,map{thresholdBound,thresholdValue}}
       flags:
           - readonly
     - name: Asserted

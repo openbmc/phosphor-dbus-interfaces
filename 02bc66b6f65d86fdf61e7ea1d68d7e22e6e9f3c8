@@ -18,6 +18,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d759711_8b273f47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-12-21T22:52:03Z",
+      "side": 1,
+      "message": "Sorry for the late update!\n\nI\u0027ve addressed all the comments, please see the updated patchset. Thanks!",
+      "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "52c52c9c_cbd2c1d7",
@@ -31,6 +48,30 @@
       "writtenOn": "2023-11-29T19:36:00Z",
       "side": 1,
       "message": "Are we expecting anyone to parse this inside the BMC or is this only going to be used externally via Redfish?  Generally we don\u0027t like parsing/matching on arbitrary strings.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 25
+      },
+      "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "483514bd_3360ad38",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-12-21T22:52:03Z",
+      "side": 1,
+      "message": "No parsing needed inside BMC, this TypeVersion will be used externally via Redfish.",
+      "parentUuid": "52c52c9c_cbd2c1d7",
       "range": {
         "startLine": 24,
         "startChar": 0,
@@ -64,6 +105,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8adfee2_e77619fa",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-12-21T22:52:03Z",
+      "side": 1,
+      "message": "Yes, let me add it in the description.",
+      "parentUuid": "251a1ded_46308571",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 80
+      },
+      "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fef4c4db_bd4e1691",
@@ -77,6 +142,30 @@
       "writtenOn": "2023-11-29T19:36:00Z",
       "side": 1,
       "message": "Why does this matter?",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 53
+      },
+      "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21377ac4_30dc405b",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-12-21T22:52:03Z",
+      "side": 1,
+      "message": "It should not matter from d-bus point-of-view. The date format in string is specified by the Redfish spec. let me remove it from here to make the d-bus interface more generic.",
+      "parentUuid": "fef4c4db_bd4e1691",
       "range": {
         "startLine": 42,
         "startChar": 0,
@@ -110,6 +199,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4d09ea7_e470fa32",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-12-21T22:52:03Z",
+      "side": 1,
+      "message": "Make sense. let me move it to next commit.",
+      "parentUuid": "61d6e9e8_9e4b8330",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 63
+      },
+      "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "83c19c55_ed7a9a32",
@@ -123,6 +236,24 @@
       "writtenOn": "2023-11-29T19:36:00Z",
       "side": 1,
       "message": "Do we need to add the reverse to Inventory.Item?",
+      "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93ac1b09_27b94b71",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-12-21T22:52:03Z",
+      "side": 1,
+      "message": "Yes. I actually find a more proprietary name for this association. ComponentIntegrity object authenticates the integrity of the component (e.g., GPU, or other devices). I changed the association name to \"authenticating/authenticated_by\" and add the reverse in Inventory.Item.",
+      "parentUuid": "83c19c55_ed7a9a32",
       "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -150,6 +281,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ca1191a_6f311fc7",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-12-21T22:52:03Z",
+      "side": 1,
+      "message": "Yes, updated. Thanks!",
+      "parentUuid": "752f09bf_0258080d",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 61
+      },
+      "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "268c61d7_1c13efda",
@@ -167,6 +322,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b94e2440_07fb4ec0",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-12-21T22:52:03Z",
+      "side": 1,
+      "message": "My understanding is this error type provide more info for debugging. \nFor example, in the implementation of this dbus method, it will check whether parameters are valid, if not, report InvalidArgument error. \nIf error happens inside the device, e.g., something goes wrong inside the RoT(root of trust) while preparing measurements, by reporting InternalFailure, we know it is an internal error within the device. So it is about providing accurate debug info, not for recovery. Does it make sense?",
+      "parentUuid": "268c61d7_1c13efda",
+      "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f6a4c2f5_72a93b83",
@@ -180,6 +353,24 @@
       "writtenOn": "2023-11-29T19:36:00Z",
       "side": 1,
       "message": "These aren\u0027t the association names you added to IdentityAuthentication.",
+      "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "531b2203_14e2aa3d",
+        "filename": "yaml/xyz/openbmc_project/Certs/Certificate.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2023-12-21T22:52:03Z",
+      "side": 1,
+      "message": "Updated to match the associations added to IdentityAuthentication.",
+      "parentUuid": "f6a4c2f5_72a93b83",
       "revId": "02bc66b6f65d86fdf61e7ea1d68d7e22e6e9f3c8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

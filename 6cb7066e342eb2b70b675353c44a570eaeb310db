@@ -195,6 +195,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ec696a65_642d8ba5",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2023-12-26T12:26:16Z",
+      "side": 1,
+      "message": "The `size` here is the data type in the array, not the size of the array.\nWith `size`, it effectively becomes std::vector\u003csize_t\u003e in C++, but I think it makes more sense for `std::vector\u003cuint8_t\u003e` for this property.",
+      "parentUuid": "484e110c_249e4f96",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5b846bc_20ec5187",
         "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
         "patchSetId": 3

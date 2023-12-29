@@ -89,6 +89,10 @@ paths:
             description: >
                 The user CPU utilization.
             value: cpu/user
+          - name: ReadWriteStorage
+            description: >
+                The available read write storage.
+            value: storage/rw
           - name: RebootCount
             description: >
                 Reboot statistic to track number of times device rebooted

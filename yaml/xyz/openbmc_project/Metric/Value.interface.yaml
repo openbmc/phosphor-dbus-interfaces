@@ -89,6 +89,10 @@ paths:
             description: >
                 The user CPU utilization.
             value: cpu/user
+          - name: TotalCPU
+            description: >
+                The total CPU utilization.
+            value: cpu/total
           - name: ReadWriteStorage
             description: >
                 The available read write storage.

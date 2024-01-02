@@ -682,6 +682,30 @@
       },
       "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79539f0c_7a1d6d21",
+        "filename": "yaml/xyz/openbmc_project/Control/Host/NMI.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-01-02T17:08:36Z",
+      "side": 1,
+      "message": "\u003e This is an option in intel-ipmi-oem that an external user could set for the source, and since we don\u0027t know if there are any external users that still rely on this setting, we would like to keep it, if possible.\n\nWe should be able to handle this in code in intel-ipmi-oem.\n\nI\u0027m not interested in keeping around legacy interfaces to keep downstream code happy.  I think every enumeration is currently available as it use to be.  I would like to deprecate PCH, but I\u0027m fine with not doing that now.  I don\u0027t really see any impact to the existing code base that isn\u0027t being proposed as fixes (and the one I\u0027ve mentioned missing in bmcweb).  If there is upstream code to be fixed, let\u0027s point that out and do it.\n\nIf someone is sshing in and running busctl, there is nothing we can do about that.  Any other external interface should be through managed code that we can fix if we missed something.",
+      "parentUuid": "f8619b5d_d6332b51",
+      "range": {
+        "startLine": 57,
+        "startChar": 16,
+        "endLine": 57,
+        "endChar": 19
+      },
+      "revId": "16dd514d69e860f0158cb56a105fac72efbce2d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

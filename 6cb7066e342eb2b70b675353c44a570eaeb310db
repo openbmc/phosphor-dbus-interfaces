@@ -231,6 +231,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "844ac422_39a1a8a2",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2024-01-05T07:54:41Z",
+      "side": 1,
+      "message": "\u003e  we don\u0027t want to put a hard tight limit on the array size, thus making this interface more stable.\n\nAs indicated in above comment, the size here is not for the array size, but the type of the object in the array.",
+      "parentUuid": "7fb117d2_67d9c410",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5b846bc_20ec5187",
         "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
         "patchSetId": 3

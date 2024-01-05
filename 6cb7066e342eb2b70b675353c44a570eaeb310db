@@ -247,6 +247,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f217d0ff_3361941e",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2024-01-05T17:52:05Z",
+      "side": 1,
+      "message": "I mean if the data type is uint8_t or byte, then the biggest array size is (2**8-1) which is 255. If it is size_t, we don\u0027t have such a limit.",
+      "parentUuid": "844ac422_39a1a8a2",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d5b846bc_20ec5187",

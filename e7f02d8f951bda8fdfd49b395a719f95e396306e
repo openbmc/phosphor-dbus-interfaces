@@ -3,6 +3,46 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "908789fc_28133d30",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2024-01-08T13:07:04Z",
+      "side": 1,
+      "message": "- After discovery of MCTP Endpoints, Create the D-bus object implementing the Attestation.ComponentIntegrity after the SPDM GET Version response???",
+      "revId": "e7f02d8f951bda8fdfd49b395a719f95e396306e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0446a9f_8db1378f",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2024-01-08T13:07:04Z",
+      "side": 1,
+      "message": "Is it end device?\n\nIn the example below we have the ERoT(External RoT) which is protecting the end device\n\nBMC---(SPDM)---ERoT_CPU---CPU\n\nAuthenticating would be pointing to ERoT_CPU or CPU and also what would be the authenticated_by pointing to?",
+      "range": {
+        "startLine": 44,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 53
+      },
+      "revId": "e7f02d8f951bda8fdfd49b395a719f95e396306e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "198a5cca_c5fad27f",
         "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
         "patchSetId": 9

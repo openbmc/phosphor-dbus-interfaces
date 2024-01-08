@@ -267,6 +267,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e900f583_51aa0fe6",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2024-01-08T06:32:09Z",
+      "side": 1,
+      "message": "\u003e I mean if the data type is uint8_t or byte, then the biggest array size is (2**8-1) which is 255. If it is size_t, we don\u0027t have such a limit.\n\nI do not think it\u0027s correct. With `array[size]`, the data type is `size_t` and the array size is `size_t`, effectively becoming `std::vector\u003csize_t\u003e`.\nWith `array[byte]`, the data type is `uint8_t`, and the array size is still `size_t`, becoming `std::vector\u003cuint8_t\u003e`. I think the later is more appropriate for this property.",
+      "parentUuid": "f217d0ff_3361941e",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5b846bc_20ec5187",
         "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
         "patchSetId": 3

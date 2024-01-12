@@ -5,3 +5,5 @@ properties:
       type: string
       description: >
           The value of this property shall be host name of the system.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument

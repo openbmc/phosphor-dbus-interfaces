@@ -3,6 +3,7 @@ description: >
 
     Any OpenBMC implementation must provide exactly one implementation of
     xyz.openbmc_project.ObjectMapper on /xyz/openbmc_project/ObjectMapper.
+
 methods:
     - name: GetObject
       description: >
@@ -152,3 +153,9 @@ methods:
                 An array of paths.
       errors:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
+
+service_names:
+    - default: xyz.openbmc_project.ObjectMapper
+
+paths:
+    - instance: /xyz/openbmc_project/object_mapper

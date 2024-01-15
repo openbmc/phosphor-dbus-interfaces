@@ -10,7 +10,7 @@ methods:
           given path.
       parameters:
           - name: path
-            type: object_path
+            type: string
             description: >
                 The object path for which the result should be fetched.
           - name: interfaces
@@ -31,7 +31,7 @@ methods:
           method.
       parameters:
           - name: path
-            type: object_path
+            type: string
             description: >
                 The path for which the result should be fetched.
           - name: interfaces
@@ -40,7 +40,7 @@ methods:
                 An array of result set constraining interfaces.
       returns:
           - name: ancestors
-            type: dict[object_path,dict[string,array[string]]]
+            type: dict[string,dict[string,array[string]]]
             description: >
                 A dictionary of ancestor -> services.
       errors:
@@ -65,7 +65,7 @@ methods:
                 An array of result set constraining interfaces.
       returns:
           - name: objects
-            type: dict[object_path,dict[string,array[string]]]
+            type: dict[string,dict[string,array[string]]]
             description: >
                 A dictionary of path -> services.
       errors:
@@ -75,7 +75,7 @@ methods:
           Obtain an array of paths where array elements are in subtree.
       parameters:
           - name: subtree
-            type: object_path
+            type: string
             description: >
                 The subtree path for which the result should be fetched.
           - name: depth
@@ -89,7 +89,7 @@ methods:
                 An array of result set constraining interfaces.
       returns:
           - name: paths
-            type: array[object_path]
+            type: array[string]
             description: >
                 An array of paths.
       errors:
@@ -118,7 +118,7 @@ methods:
                 An array of result set constraining interfaces.
       returns:
           - name: objects
-            type: dict[object_path,dict[string,array[string]]]
+            type: dict[string,dict[string,array[string]]]
             description: >
                 A dictionary of path -> services.
       errors:
@@ -129,11 +129,11 @@ methods:
           association endpoint on associatedPath
       parameters:
           - name: associatedPath
-            type: object_path
+            type: string
             description: >
                 The path where the associated endpoint is fetched from.
           - name: subtree
-            type: object_path
+            type: string
             description: >
                 The subtree path for which the result should be fetched.
           - name: depth
@@ -147,7 +147,7 @@ methods:
                 An array of result set constraining interfaces.
       returns:
           - name: paths
-            type: array[object_path]
+            type: array[string]
             description: >
                 An array of paths.
       errors:

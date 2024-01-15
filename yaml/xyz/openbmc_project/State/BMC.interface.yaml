@@ -83,3 +83,11 @@ enumerations:
           - name: "Unknown"
             description: >
                 Last reboot is caused by Unknown
+
+paths:
+    - namespace: /xyz/openbmc_project/state
+      segments:
+          - name: BMC
+            description: >
+                The object representing _this_ BMC is always at bmc0.
+            value: bmc0

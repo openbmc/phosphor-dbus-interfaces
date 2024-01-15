@@ -83,3 +83,9 @@ enumerations:
           - name: "Unknown"
             description: >
                 Last reboot is caused by Unknown
+
+paths:
+    - namespace: /xyz/openbmc_project/state
+      segments:
+          - name: BMC
+            value: bmc

@@ -122,3 +122,9 @@ enumerations:
             description: >
                 The host firmware crashed and the BMC has automatically
                 initiated a restart of the host firmware
+
+paths:
+    - namespace: /xyz/openbmc_project/state
+      segments:
+          - name: Host
+            value: host

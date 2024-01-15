@@ -89,3 +89,9 @@ enumerations:
           - name: "Good"
             description: >
                 Chassis power status is in a good condition
+
+paths:
+    - namespace: /xyz/openbmc_project/state
+      segments:
+          - name: Chassis
+            value: chassis

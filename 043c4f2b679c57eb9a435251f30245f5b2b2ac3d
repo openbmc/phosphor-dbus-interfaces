@@ -16,6 +16,24 @@
       "message": "Was there an email or something on this? I\u0027m not familiar with these or what they\u0027re used for.",
       "revId": "043c4f2b679c57eb9a435251f30245f5b2b2ac3d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f07d5a33_926723e8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-01-16T23:03:15Z",
+      "side": 1,
+      "message": "https://github.com/openbmc/sdbusplus/blob/master/docs/yaml/interface.md#paths\nhttps://github.com/openbmc/sdbusplus/blob/master/docs/yaml/interface.md#service-name\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Metric/Value.interface.yaml#L59\n\nThese paths give me some constants that can be used either in the server or used in mapper calls:\n\n```cpp\n        using ObjectMapper \u003d\n            sdbusplus::client::xyz::openbmc_project::ObjectMapper\u003c\u003e;\n\n        auto mapper \u003d ObjectMapper(ctx)\n                          .service(ObjectMapper::default_service)\n                          .path(ObjectMapper::instance_path);\n\n        using Host \u003d sdbusplus::client::xyz::openbmc_project::state::Host\u003c\u003e;\n        auto hosts \u003d co_await mapper.get_sub_tree(Host::namespace_path::value,\n                                                  0, {Host::interface});\n```\n\nThe generated code in Host/common.hpp is this:\n```cpp\n    struct namespace_path\n    {\n        static constexpr auto value \u003d \"/xyz/openbmc_project/state\";\n        static constexpr auto host \u003d \"host\";\n    };\n```",
+      "parentUuid": "b0232cda_984187dc",
+      "revId": "043c4f2b679c57eb9a435251f30245f5b2b2ac3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

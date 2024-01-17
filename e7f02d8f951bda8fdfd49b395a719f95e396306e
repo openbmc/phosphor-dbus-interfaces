@@ -83,6 +83,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "778adf12_7ab2d50a",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2024-01-17T07:31:32Z",
+      "side": 1,
+      "message": "Sorry, I mixed the association names in the above reply, please ignore it.\n\nTo answer your question, \"authenticating\" is associated with the CPU in your example. ComponentIntegrity object authenticates the integrity of the component (e.g., GPU, CPU, or other devices).\n\n\"reporting\" association, which is added in the following commit, is associated with the EROT, in your example, which means ComponentIntegrity object is reporting the measurement done by the EROT.",
+      "parentUuid": "8005b162_112a0f8d",
+      "range": {
+        "startLine": 44,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 53
+      },
+      "revId": "e7f02d8f951bda8fdfd49b395a719f95e396306e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9d71db23_20d947be",

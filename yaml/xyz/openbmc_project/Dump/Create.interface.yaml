@@ -102,3 +102,12 @@ enumerations:
           - name: "Ramoops"
             description: >
                 Dump triggered due to Ramoops type error commit.
+
+service_names:
+    - default: xyz.openbmc_project.Dump.Manager
+
+paths:
+    - namespace: /xyz/openbmc_project/dump
+      segments:
+          - name: BMC
+            value: bmc

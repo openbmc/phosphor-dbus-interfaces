@@ -301,6 +301,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfb2ffa4_acf47c76",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2024-01-17T07:38:07Z",
+      "side": 1,
+      "message": "I have to take back what I said in my last comment. Here it needs to be array[size]. The reason is this is an array of MeasurementIndices, if each index is of data type uint8_t, that means the index can not be bigger than 255, which means we have a hard limit on how big the index can be. \n\nYou are still right about the array size, which can be bigger than 255, but by setting the index type as byte or uint8_t, we are actually putting a limit on how many measurement blocks can we have( which also tells about how big the measurement block index can be).",
+      "parentUuid": "126fe2ff_f859a438",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d5b846bc_20ec5187",

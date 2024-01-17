@@ -3,8 +3,8 @@ description: >
     instantiated for the phosphor::logging namespace. This interface is a
     collection of objects, therefore it is required to implement
     org.freedesktop.DBus.ObjectManager on the logging namespace root.
-    Optionally, implement org.openbmc.Object.Delete to allow the deletion of
-    individual entries.
+    Optionally, implement xyz.openbmc_project.Object.Delete to allow the
+    deletion of individual entries.
 properties:
     - name: Id
       type: uint32

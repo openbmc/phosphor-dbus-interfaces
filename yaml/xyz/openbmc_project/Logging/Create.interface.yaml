@@ -93,3 +93,9 @@ enumerations:
           - name: Custom
             description: >
                 Something other than the above formats
+
+service_names:
+    - default: xyz.openbmc_project.Logging
+
+paths:
+    - instance: /xyz/openbmc_project/logging

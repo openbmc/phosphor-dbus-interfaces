@@ -28,3 +28,9 @@ properties:
       type: array[string]
       description: >
           Additional information in the form of metadata field strings VAR=val
+
+service_names:
+    - default: xyz.openbmc_project.Logging
+
+paths:
+    - namespace: /xyz/openbmc_project/logging

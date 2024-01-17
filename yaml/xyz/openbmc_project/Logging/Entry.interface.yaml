@@ -117,3 +117,12 @@ methods:
             type: unixfd
             description: >
                 The file descriptor to the Entry file.
+
+service_names:
+    - default: xyz.openbmc_project.Logging
+
+paths:
+    - namespace: /xyz/openbmc_project/logging
+      segments:
+          - name: Entry
+            value: entry

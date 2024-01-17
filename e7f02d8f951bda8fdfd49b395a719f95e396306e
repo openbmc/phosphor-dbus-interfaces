@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbca836a_25e4545c",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2024-01-17T07:18:00Z",
+      "side": 1,
+      "message": "The flow of the SPDM daemon is\n- do endpoint discovery, and find spdm-capable mctp endpoints;\n- set up connection with the each endpoint by exchanging VCA;\n- for each endpoint, create the corresponding dbus objects, including ComponentIntegrity and TrustedComponent;\n\nNote, different endpoints will be associated with different connections.\n\nWhat\u0027s your concern here?",
+      "parentUuid": "908789fc_28133d30",
+      "revId": "e7f02d8f951bda8fdfd49b395a719f95e396306e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d0446a9f_8db1378f",
@@ -31,6 +49,30 @@
       "writtenOn": "2024-01-08T13:07:04Z",
       "side": 1,
       "message": "Is it end device?\n\nIn the example below we have the ERoT(External RoT) which is protecting the end device\n\nBMC---(SPDM)---ERoT_CPU---CPU\n\nAuthenticating would be pointing to ERoT_CPU or CPU and also what would be the authenticated_by pointing to?",
+      "range": {
+        "startLine": 44,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 53
+      },
+      "revId": "e7f02d8f951bda8fdfd49b395a719f95e396306e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8005b162_112a0f8d",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2024-01-17T07:18:00Z",
+      "side": 1,
+      "message": "This needs to be updated. In the newer version, there are two type of associations defined here:\n\n```\n+associations:\n+    - name: reporting\n+      description: \u003e\n+          Objects that implement ComponentIntegrity can implement the\n+          \"reporting\" association to provide a link to the target trusted\n+          component whose integrity this resource reports.\n+      reverse_name: reported_by\n+      required_endpoint_interfaces:\n+          - xyz.openbmc_project.Inventory.Item.TrustedComponent\n+\n+    - name: protecting\n+      description: \u003e\n+          Objects that implement ComponentIntegrity can implement the\n+          \"protecting\" association to provide a link to the target component\n+          whose security this resource protects.\n+      reverse_name: protected_by\n+      required_endpoint_interfaces:\n+          - xyz.openbmc_project.Inventory.Item\n```\n\nFor reporting, it is associated with TrustedComponent, namely EROT in your example;\nFor protecting, it is associated with component, namely CPU in your example.\n\nWill update it, thanks for pointing it out.",
+      "parentUuid": "d0446a9f_8db1378f",
       "range": {
         "startLine": 44,
         "startChar": 6,
@@ -58,6 +100,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "22e8dfa8_2e368e10",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2024-01-17T07:18:00Z",
+      "side": 1,
+      "message": "Actually, this method will be called from bmcweb using \n```\ncrow::connections::systemBus-\u003easync_method_call(\n                    [asyncResp](const boost::system::error_code\u0026 e,\n                                const RespStruct\u0026 resp) {}\n```\n\nDoes it help?",
+      "parentUuid": "9d71db23_20d947be",
+      "revId": "e7f02d8f951bda8fdfd49b395a719f95e396306e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "198a5cca_c5fad27f",
@@ -71,6 +131,30 @@
       "writtenOn": "2024-01-08T12:39:07Z",
       "side": 1,
       "message": "why this is needed when we have the certificate?",
+      "range": {
+        "startLine": 40,
+        "startChar": 10,
+        "endLine": 44,
+        "endChar": 47
+      },
+      "revId": "e7f02d8f951bda8fdfd49b395a719f95e396306e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3b801b2_0c3c8bc7",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2024-01-17T07:18:00Z",
+      "side": 1,
+      "message": "It is actually redundant, the verifier can use the certificate. I kept it to make it compliant with the DMTF/Redfish schema definition for SPDMGetSignedMeasurements action.",
+      "parentUuid": "198a5cca_c5fad27f",
       "range": {
         "startLine": 40,
         "startChar": 10,

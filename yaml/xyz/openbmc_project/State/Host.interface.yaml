@@ -10,6 +10,17 @@ properties:
           cycles of the BMC.
       errors:
           - xyz.openbmc_project.State.Host.Error.BMCNotReady
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+    - name: AllowedHostTransitions
+      type: array[enum[self.Transition]]
+      flags:
+          - const
+      description: >
+          A const property describing the allowed host transitions. Some systems
+          may not support all transitions so this property can be filled in with
+          only the supported transitions. If this property is empty then all are
+          supported. This list is valid from any CurrentHostState.
 
     - name: CurrentHostState
       type: enum[self.HostState]

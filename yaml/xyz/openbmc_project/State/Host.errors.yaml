@@ -19,3 +19,6 @@
 # xyz.openbmc_project.State.Host.Error.BMCNotReady
 - name: BMCNotReady
   description: The BMC is not in a Ready state, no host operations allowed
+# xyz.openbmc_project.State.Host.Error.NotAllowed
+- name: NotAllowed
+  description: The BMC does not support the requested host transition

@@ -12,6 +12,8 @@ properties:
 
     - name: CurrentPowerState
       type: enum[self.PowerState]
+      flags:
+          - readonly
       description: >
           A read-only property describing the current chassis power state. A
           user can determine if a chassis is in transition by comparing the
@@ -19,6 +21,8 @@ properties:
 
     - name: CurrentPowerStatus
       type: enum[self.PowerStatus]
+      flags:
+          - readonly
       description: >
           A read-only property describing the current chassis power status. This
           property aggregates all available information about the status of the

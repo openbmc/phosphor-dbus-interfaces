@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "64eabc4e_46a77664",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-01-19T16:55:08Z",
+      "side": 1,
+      "message": "I think readonly, in that the PSM firmware will come up and then fill in the supported values for the system.",
+      "parentUuid": "5afed865_60b5ddce",
+      "range": {
+        "startLine": 18,
+        "startChar": 12,
+        "endLine": 18,
+        "endChar": 21
+      },
+      "revId": "10c774cbc6597a0b985c7bc98b0912e2182150b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f01d8b29_b6c57782",
@@ -37,6 +61,30 @@
       "writtenOn": "2024-01-19T15:52:33Z",
       "side": 1,
       "message": "We probably should separately fix some of these other ones to be `readonly`, but not in this commit.",
+      "range": {
+        "startLine": 26,
+        "startChar": 12,
+        "endLine": 26,
+        "endChar": 21
+      },
+      "revId": "10c774cbc6597a0b985c7bc98b0912e2182150b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79edbe0c_44ba8bec",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-01-19T16:55:08Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "f01d8b29_b6c57782",
       "range": {
         "startLine": 26,
         "startChar": 12,

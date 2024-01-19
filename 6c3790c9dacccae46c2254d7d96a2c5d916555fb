@@ -139,6 +139,24 @@
       "parentUuid": "170b3c2d_851d8df9",
       "revId": "6c3790c9dacccae46c2254d7d96a2c5d916555fb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "217f0d9d_0a69399b",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-01-19T19:52:33Z",
+      "side": 1,
+      "message": "Understood.  This isn\u0027t just applicable here, but at a project level we should probably think about how to reduce the \"property-set-as-state-update\" behavior.  It seems like it makes our dbus interfaces less intuitive.",
+      "parentUuid": "70d4a29a_5a8709cf",
+      "revId": "6c3790c9dacccae46c2254d7d96a2c5d916555fb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

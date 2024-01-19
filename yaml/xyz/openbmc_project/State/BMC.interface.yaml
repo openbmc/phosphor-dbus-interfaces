@@ -13,17 +13,23 @@ properties:
 
     - name: CurrentBMCState
       type: enum[self.BMCState]
+      flags:
+          - readonly
       description: >
           The current state of the BMC and is a read-only property.
 
     - name: LastRebootTime
       type: uint64
+      flags:
+          - const
       description: >
           The last time at which the BMC came out of a reboot as determined by
           its uptime, in epoch time, in milliseconds.
 
     - name: LastRebootCause
       type: enum[self.RebootCause]
+      flags:
+          - const
       default: "Unknown"
       description: >
           The last BMC reboot cause

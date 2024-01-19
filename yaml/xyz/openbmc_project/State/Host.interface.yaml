@@ -24,6 +24,8 @@ properties:
 
     - name: CurrentHostState
       type: enum[self.HostState]
+      flags:
+          - readonly
       description: >
           A read-only property describing the current state of the host
           firmware. A user can determine if a system is in transition by

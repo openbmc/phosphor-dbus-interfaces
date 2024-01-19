@@ -120,6 +120,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcb79a17_5c072b01",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-01-19T18:04:49Z",
+      "side": 1,
+      "message": "At a dbus level, \u0027const\u0027 basically means \"this property has no need to emit signals because it can\u0027t change\".",
+      "parentUuid": "bbc0d1f3_3213b982",
+      "range": {
+        "startLine": 18,
+        "startChar": 12,
+        "endLine": 18,
+        "endChar": 21
+      },
+      "revId": "10c774cbc6597a0b985c7bc98b0912e2182150b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f01d8b29_b6c57782",

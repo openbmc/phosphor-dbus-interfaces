@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a3e60ed3_dbf2fd1b",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-01-19T16:56:20Z",
+      "side": 1,
+      "message": "Isn\u0027t that const then?  ie. once the object is created the values shouldn\u0027t change.",
+      "parentUuid": "64eabc4e_46a77664",
+      "range": {
+        "startLine": 18,
+        "startChar": 12,
+        "endLine": 18,
+        "endChar": 21
+      },
+      "revId": "10c774cbc6597a0b985c7bc98b0912e2182150b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f01d8b29_b6c57782",
         "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
         "patchSetId": 4

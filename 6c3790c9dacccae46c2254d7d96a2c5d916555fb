@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc6c3f6f_54126e66",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-01-19T19:00:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1dd2ebe1_ac4c5069",
+      "revId": "6c3790c9dacccae46c2254d7d96a2c5d916555fb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8b417ef1_83d12174",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-01-19T18:06:45Z",
       "side": 1,
       "message": "const or readonly?",
+      "revId": "6c3790c9dacccae46c2254d7d96a2c5d916555fb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fb750d0_eb0aa951",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-01-19T19:00:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8b417ef1_83d12174",
       "revId": "6c3790c9dacccae46c2254d7d96a2c5d916555fb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -52,6 +88,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e630f626_7f873854",
+        "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-01-19T19:00:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dd26ff23_614ff9b3",
+      "revId": "6c3790c9dacccae46c2254d7d96a2c5d916555fb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "170b3c2d_851d8df9",
@@ -65,6 +119,24 @@
       "writtenOn": "2024-01-19T18:06:45Z",
       "side": 1,
       "message": "I\u0027m slightly surprised this isn\u0027t readonly or const?",
+      "revId": "6c3790c9dacccae46c2254d7d96a2c5d916555fb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "70d4a29a_5a8709cf",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-01-19T19:00:18Z",
+      "side": 1,
+      "message": "This gets set by a variety of different services depending on which target is getting called so it needs to be writeable.",
+      "parentUuid": "170b3c2d_851d8df9",
       "revId": "6c3790c9dacccae46c2254d7d96a2c5d916555fb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

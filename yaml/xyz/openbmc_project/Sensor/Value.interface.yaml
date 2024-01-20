@@ -105,3 +105,29 @@ associations:
           - monitored_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Bmc
+
+paths:
+    - namespace: /xyz/openbmc_project/sensors
+      segments:
+          - name: Airflow
+            value: airflow
+          - name: Altitude
+            value: altitude
+          - name: Current
+            value: current
+          - name: Energy
+            value: energy
+          - name: FanTach
+            value: fan_tach
+          - name: Humidity
+            value: humidity
+          - name: Power
+            value: power
+          - name: Pressure
+            value: pressure
+          - name: Temperature
+            value: temperature
+          - name: Utilization
+            value: utilization
+          - name: Voltage
+            value: voltage

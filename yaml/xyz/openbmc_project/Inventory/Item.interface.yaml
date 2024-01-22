@@ -87,3 +87,6 @@ associations:
       reverse_name: monitoring
       required_endpoint_interfaces:
           - xyz.openbmc_project.Chassis.Intrusion
+
+paths:
+    - namespace: /xyz/openbmc_project/inventory

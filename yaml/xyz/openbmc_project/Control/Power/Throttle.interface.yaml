@@ -40,3 +40,12 @@ enumerations:
           - name: Unknown
             description: >
                 The cause of the component being throttled is not known.
+
+associations:
+    - name: throttling
+      description: >
+          Objects implementing Throttle can optionally implement the
+          'throttling' association to provide a link to an Item.
+      reverse_name: throttled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

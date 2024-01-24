@@ -89,3 +89,12 @@ enumerations:
           - name: Oem
             decription: >
                 OEM defined action.
+
+associations:
+    - name: capping
+      description: >
+          Objects implementing Power Cap can optionally implement the 'capping'
+          association to provide a link to an Item.
+      reverse_name: capped_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

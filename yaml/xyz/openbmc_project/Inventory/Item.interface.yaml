@@ -17,6 +17,13 @@ properties:
           Whether or not the item is present.
 
 associations:
+    - name: capped_by
+      description: >
+          Objects that implement Chassis can optionally implement the
+          'capped_by' association to provide a link to the power cap.
+      reverse_name: capping
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Control.Power.Cap
     - name: containing
       description: >
           Any inventory Items (usually Boards or Chassis) can optionally

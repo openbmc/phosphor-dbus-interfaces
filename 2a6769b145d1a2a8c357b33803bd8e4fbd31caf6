@@ -16,6 +16,40 @@
       "message": "I want to look at this more.  I think there might be cases where people are manually setting these properties from scripts, which is probably the wrong thing to do, but we need to get them fixed before we disable writing the properties and silently break the scripts.",
       "revId": "2a6769b145d1a2a8c357b33803bd8e4fbd31caf6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc54cf75_8096b485",
+        "filename": "yaml/xyz/openbmc_project/State/Chassis.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-01-24T12:38:29Z",
+      "side": 1,
+      "message": "Doesn\u0027t look like anyone is currently writing this one, but I think there might be some pending code to do so.  For similar reasons to the ones writing to the Host state.\n\nFor the multi-host systems we have \"Chassis0\" represent the whole box (with no Host0) and I think we need to force it to show \"on\" somehow when the BMC comes up (because it is on).  Maybe there is some way to do that with discover-state?",
+      "revId": "2a6769b145d1a2a8c357b33803bd8e4fbd31caf6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "198ebb61_d69893fe",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-01-24T12:38:29Z",
+      "side": 1,
+      "message": "I do see a number of \"set-property\" calls from scripts in meta-facebook.  These might be doing the wrong thing.  Maybe you could give some feedback?",
+      "revId": "2a6769b145d1a2a8c357b33803bd8e4fbd31caf6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

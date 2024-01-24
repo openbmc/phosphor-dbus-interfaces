@@ -79,6 +79,13 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: throttled_by
+      description: >
+          Objects that implement Chassis can optionally implement the
+          'throttled_by' association to provide a link to throttle.
+      reverse_name: throttling
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Control.Power.Throttle
     - name: sensors
       description: >
           Sensors may implement an 'inventory' to 'sensors' association with the

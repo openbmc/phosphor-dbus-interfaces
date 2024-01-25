@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "527b570a_eed7a7ff",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2024-01-25T15:22:34Z",
+      "side": 1,
+      "message": "How about making this more generic and say throttling / throttled_by to map closer to the Throttle interface:\nhttps://github.com/openbmc/phosphor-dbus-interfaces/commit/47709f235791e9872c47b53ada844e5e58042e2a\n\nThere can be multiple reasons for throttle (power cap, thermal, fault, etc)",
+      "revId": "0a703948d7bb56494cd4983c519806b58d1dc16b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

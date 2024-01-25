@@ -33,14 +33,6 @@ associations:
       reverse_name: containing
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
-    - name: sensors
-      description: >
-          Sensors may implement an 'inventory' to 'sensors' association with the
-          inventory item related to it.
-      reverse_names:
-          - inventory
-      required_endpoint_interfaces:
-          - xyz.openbmc_project.Sensor.Value
     - name: cooled_by
       description: >
           Objects that implement Item can optionally implement the 'cooled_by'
@@ -48,14 +40,6 @@ associations:
       reverse_name: cooling
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Fan
-    - name: identified_by
-      description: >
-          Objects that implement Item can optionally implement the
-          'identified_by' association to provide a link to one or more LED
-          Groups.
-      reverse_name: identifying
-      required_endpoint_interfaces:
-          - xyz.openbmc_project.Led.Group
     - name: fault_identified_by
       description: >
           Objects that implement Item can optionally implement the
@@ -64,13 +48,14 @@ associations:
       reverse_name: fault_identifying
       required_endpoint_interfaces:
           - xyz.openbmc_project.Led.Group
-    - name: powered_by
+    - name: identified_by
       description: >
-          Objects that implement Item can optionally implement the 'powered_by'
-          association to provide a link to one or more power supplies.
-      reverse_name: powering
+          Objects that implement Item can optionally implement the
+          'identified_by' association to provide a link to one or more LED
+          Groups.
+      reverse_name: identifying
       required_endpoint_interfaces:
-          - xyz.openbmc_project.Inventory.Item.PowerSupply
+          - xyz.openbmc_project.Led.Group
     - name: measured_by
       description: >
           Objects that implement Item can optionally implement the 'measured_by'
@@ -87,6 +72,21 @@ associations:
       reverse_name: monitoring
       required_endpoint_interfaces:
           - xyz.openbmc_project.Chassis.Intrusion
+    - name: powered_by
+      description: >
+          Objects that implement Item can optionally implement the 'powered_by'
+          association to provide a link to one or more power supplies.
+      reverse_name: powering
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: sensors
+      description: >
+          Sensors may implement an 'inventory' to 'sensors' association with the
+          inventory item related to it.
+      reverse_names:
+          - inventory
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Sensor.Value
 
 paths:
     - namespace: /xyz/openbmc_project/inventory

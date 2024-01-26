@@ -16,6 +16,24 @@
       "message": "How about making this more generic and say throttling / throttled_by to map closer to the Throttle interface:\nhttps://github.com/openbmc/phosphor-dbus-interfaces/commit/47709f235791e9872c47b53ada844e5e58042e2a\n\nThere can be multiple reasons for throttle (power cap, thermal, fault, etc)",
       "revId": "0a703948d7bb56494cd4983c519806b58d1dc16b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62ea9ecc_34c304a7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000397
+      },
+      "writtenOn": "2024-01-26T01:10:16Z",
+      "side": 1,
+      "message": "Thanks Chris.\n\nI think it is unreasonable to use throttle, because this patch only associates `power cap` and `item`, and it has been used in bmcweb\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/68442/4/redfish-core/lib/power_subsystem.hpp#86\n\nThen we will add the following configuration to association.json like this:\n```\n{\n    \"path\": \"system/chassis\",\n    \"endpoints\":\n    [\n        {\n            \"types\":\n            {\n                \"rType\": \"capped_by\",\n                \"fType\": \"capping\"\n            },\n            \"paths\":\n            [\n                \"/xyz/openbmc_project/control/host0/power_cap\"\n            ]\n        }\n    ]\n}\n```\n\nFor thermal, I believe we will have a new commit to associate `power throttle` and `item`",
+      "parentUuid": "527b570a_eed7a7ff",
+      "revId": "0a703948d7bb56494cd4983c519806b58d1dc16b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

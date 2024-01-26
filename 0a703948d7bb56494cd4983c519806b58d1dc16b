@@ -34,6 +34,24 @@
       "parentUuid": "527b570a_eed7a7ff",
       "revId": "0a703948d7bb56494cd4983c519806b58d1dc16b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d17cf4d2_783f5e34",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-01-26T12:49:53Z",
+      "side": 1,
+      "message": "\u003e I think it is unreasonable to use throttle, because this patch only associates power cap and item\n\nI\u0027m not satisfy with this reasoning.  Why can\u0027t the verb be throttle for consistency?\n\nKeep in mind https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/requirements.md#directed-associations-should-not-codify-type ... \"The end-point names of an association should not codify the types of the interfaces pointed to by the association.\"  The purpose of this design statement is to indicate that we _shouldn\u0027t_ have unique per-type association names but that we _should_ use the same verb for things that are roughly equivalent.\n\n\u003e , and it has been used in bmcweb\n\nSo... fix it?",
+      "parentUuid": "62ea9ecc_34c304a7",
+      "revId": "0a703948d7bb56494cd4983c519806b58d1dc16b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

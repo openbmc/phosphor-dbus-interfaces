@@ -50,6 +50,24 @@
       "message": "I do see a number of \"set-property\" calls from scripts in meta-facebook.  These might be doing the wrong thing.  Maybe you could give some feedback?",
       "revId": "2a6769b145d1a2a8c357b33803bd8e4fbd31caf6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95dea2fa_a6aff436",
+        "filename": "yaml/xyz/openbmc_project/State/Host.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-01-26T15:03:50Z",
+      "side": 1,
+      "message": "Yeah, you\u0027re right, this wont work as read-only as we took advantage of it being writeable to get things like the TransitioningTo* stuff to work. PSM struggled to get systemd state from targets for starting/stopping. So I\u0027ll change the text for this to note it\u0027s not actually a read-only prop.",
+      "parentUuid": "198ebb61_d69893fe",
+      "revId": "2a6769b145d1a2a8c357b33803bd8e4fbd31caf6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

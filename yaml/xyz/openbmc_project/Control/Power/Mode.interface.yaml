@@ -22,15 +22,23 @@ enumerations:
       description: >
           Possible Power Mode settings
       values:
-          - name: Static
-            description: >
-                This value shall indicate the system performs at a static base
-                speed.
-          - name: PowerSaving
-            description: >
-                This value shall indicate the system performs at reduced speeds
-                to save power. This mode should be used when power saving is the
-                top priority.
+          - name: BalancedPerformance
+            decription: >
+                The system performs at the highest speeds while utilization is
+                high and performs at reduced speeds when the utilization is low.
+          - name: EfficiencyFavorPerformance
+            decription: >
+                The system performs at reduced speeds at all utilizations to
+                save power while attempting to maintain performance. This mode
+                differs from EfficiencyFavorPower in that more performance is
+                retained but less power is saved.
+          - name: EfficiencyFavorPower
+            decription: >
+                The system performs at reduced speeds at all utilizations to
+                save power at the cost of performance. This mode differs from
+                PowerSaving in that more performance is retained and less power
+                is saved. This mode differs from EfficiencyFavorPerformance in
+                that less performance is retained but more power is saved.
           - name: MaximumPerformance
             decription: >
                 This value shall indicate the system performs at the highest
@@ -40,3 +48,12 @@ enumerations:
             description: >
                 This value shall indicate the system performs at an OEM-defined
                 power mode.
+          - name: PowerSaving
+            description: >
+                This value shall indicate the system performs at reduced speeds
+                to save power. This mode should be used when power saving is the
+                top priority.
+          - name: Static
+            description: >
+                This value shall indicate the system performs at a static base
+                speed.

@@ -4,10 +4,12 @@ description: >
 properties:
     - name: PowerMode
       type: enum[self.PowerMode]
+      default: Static
       description: >
           This property shall contain the computer system power mode setting.
           This defines the processor speed based on the priority of power
           consumption and performance.
+
     - name: SafeMode
       type: boolean
       flags:
@@ -16,6 +18,16 @@ properties:
       description: >
           This property shall indicate whether the System is in Safe Mode. When
           this is true, the system power mode is not being used in the system.
+
+    - name: AllowedPowerModes
+      type: set[enum[self.PowerMode]]
+      flags:
+          - const
+      description: >
+          A const property describing all the allowed power modes. Some systems
+          may not support all modes, so this property can be filled in with only
+          the supported modes. If empty, then any of the PowerMode values can be
+          set.
 
 enumerations:
     - name: PowerMode

@@ -1,17 +1,13 @@
 description: >
 methods:
-    - name: StaticRoute
+    - name: StaticGateway
       description: >
-          Create a static route entry.
+          Create a static gateway entry.
       parameters:
-          - name: Destination
-            type: string
-            description: >
-                Destination Address.
           - name: Gateway
             type: string
             description: >
-                Next hop address to reach destination address
+                Static gateway address
           - name: PrefixLength
             type: size
             description: >
@@ -24,6 +20,6 @@ methods:
           - name: Path
             type: object_path
             description: >
-                The path for the created static route object.
+                The path for the created static gateway object.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument

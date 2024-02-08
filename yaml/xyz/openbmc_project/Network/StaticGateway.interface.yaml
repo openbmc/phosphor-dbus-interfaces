@@ -1,15 +1,7 @@
 description: >
-    This interface defines network static routes
+    This interface defines network static gateway
 
 properties:
-    - name: Destination
-      type: string
-      description: >
-          The value of this property shall be a destination IP address, only
-          destination network IP address allowed. it does not allow hostname.
-      errors:
-          - xyz.openbmc_project.Common.Error.NotAllowed
-
     - name: Gateway
       type: string
       description: >

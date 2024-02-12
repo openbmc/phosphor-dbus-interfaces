@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d32002c_f6e1960c",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2024-02-12T20:31:15Z",
+      "side": 1,
+      "message": "I don\u0027t think it is something we would want to default. If not set, then I would assume they do not support/use a PowerMode. (IBM uses this, but does not use Static by default)",
+      "parentUuid": "72ee6cb9_18aaa562",
+      "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d60661c0_755a6cd7",
@@ -60,6 +78,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6f69d934_ef989ce3",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2024-02-12T20:31:15Z",
+      "side": 1,
+      "message": "Is set replacing array? or is there some distinction? I only see one other use of set (vs others using array)?",
+      "parentUuid": "d60661c0_755a6cd7",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 17
+      },
+      "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ba25fa4d_3cbe2c0d",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
         "patchSetId": 1
@@ -71,6 +113,24 @@
       "writtenOn": "2024-02-12T20:12:21Z",
       "side": 1,
       "message": "Should this have a default value of \"[Static]\"?  I\u0027m not positive if that is even possible for array/sets (in the YAML).",
+      "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbd3c155_560cbdd2",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2024-02-12T20:31:15Z",
+      "side": 1,
+      "message": "I don\u0027t think we need a default. This property is intended for Redfish, so if not defined/set, Redfish would not publish the property.  (Currently the default in bmcweb is MaximumPerformance,Static,PowerSaver)",
+      "parentUuid": "ba25fa4d_3cbe2c0d",
       "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

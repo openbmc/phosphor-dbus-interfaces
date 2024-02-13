@@ -71,6 +71,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "37584456_724a45e0",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2024-02-13T23:39:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44babfcf_1db03bde",
+      "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d60661c0_755a6cd7",
@@ -239,6 +257,24 @@
       "side": 1,
       "message": "There is no such thing as an optional property in dbus.  If you don\u0027t put something here, the default binding implementation will generate a literal empty array as the values.  This doesn\u0027t seem appropriate when every machine should support at least Static (as by definition that means effectively none).\n\nI\u0027m somewhat ok with an empty array based on the comment you added in description, but I am leaving as unresolved for your confirmation.",
       "parentUuid": "cbd3c155_560cbdd2",
+      "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d4e5edc_f00d676e",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2024-02-13T23:39:10Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "a1328b85_05c3b6ab",
       "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

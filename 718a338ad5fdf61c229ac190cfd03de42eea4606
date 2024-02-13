@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "44babfcf_1db03bde",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-02-13T18:32:56Z",
+      "side": 1,
+      "message": "But that is an implementation choice, isn\u0027t it?  Your implementation can use something other than static as a default.  Putting static as the default here just says \"if the implementation doesn\u0027t set this properly, then \u0027static\u0027 because the initial value in the bindings\".",
+      "parentUuid": "5d32002c_f6e1960c",
+      "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d60661c0_755a6cd7",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
         "patchSetId": 1
@@ -148,6 +166,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed933ad5_89400797",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-02-13T18:32:56Z",
+      "side": 1,
+      "message": "\u0027set\u0027 is newer in sdbusplus.  Some of the existing interfaces use \u0027array\u0027 because no one has put in the effort to fix it.\n\nThey both go across dbus the same (as an array) but in generated code you get `std::set` instead of `std::array` which means automatic duplicate removal and easy `foo.contains(bar)` kind of lookup instead of `std::find(...)`.",
+      "parentUuid": "3cf47bbe_f1b792cd",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 17
+      },
+      "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ba25fa4d_3cbe2c0d",
@@ -179,6 +221,24 @@
       "side": 1,
       "message": "I don\u0027t think we need a default. This property is intended for Redfish, so if not defined/set, Redfish would not publish the property.  (Currently the default in bmcweb is MaximumPerformance,Static,PowerSaver)",
       "parentUuid": "ba25fa4d_3cbe2c0d",
+      "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1328b85_05c3b6ab",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-02-13T18:32:56Z",
+      "side": 1,
+      "message": "There is no such thing as an optional property in dbus.  If you don\u0027t put something here, the default binding implementation will generate a literal empty array as the values.  This doesn\u0027t seem appropriate when every machine should support at least Static (as by definition that means effectively none).\n\nI\u0027m somewhat ok with an empty array based on the comment you added in description, but I am leaving as unresolved for your confirmation.",
+      "parentUuid": "cbd3c155_560cbdd2",
       "revId": "718a338ad5fdf61c229ac190cfd03de42eea4606",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

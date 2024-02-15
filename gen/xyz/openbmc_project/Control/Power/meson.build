@@ -74,6 +74,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('PowerRail')
+generated_others += custom_target(
+    'xyz/openbmc_project/Control/Power/PowerRail__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/PowerRail.errors.yaml',  ],
+    output: [ 'PowerRail.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Control/Power/PowerRail',
+    ],
+)
+
 subdir('RestorePolicy')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/RestorePolicy__markdown'.underscorify(),

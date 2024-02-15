@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c0aafae_20c521a5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-02-15T19:46:34Z",
+      "side": 1,
+      "message": "This sound like it should have a power related path instead.\nMaybe like under xyz.openbmc_project.Power",
+      "revId": "916a4521a502f807486d8fef33d139acec8a3a36",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "1d8bc858_2b8ec400",
@@ -14,6 +31,46 @@
       "writtenOn": "2024-02-15T14:06:35Z",
       "side": 1,
       "message": "I don\u0027t think this should be PLDM specific.  Adding some other people with power subsystem experience.",
+      "revId": "916a4521a502f807486d8fef33d139acec8a3a36",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f01cb03_d7d7f46d",
+        "filename": "yaml/xyz/openbmc_project/PLDM/EventOEM.metadata.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-02-15T19:46:34Z",
+      "side": 1,
+      "message": "what does ACT mean?",
+      "range": {
+        "startLine": 8,
+        "startChar": 15,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "916a4521a502f807486d8fef33d139acec8a3a36",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b20cb3a6_c616e29c",
+        "filename": "yaml/xyz/openbmc_project/PLDM/EventOEM.metadata.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-02-15T19:46:34Z",
+      "side": 1,
+      "message": "Also maybe Rail Name?",
       "revId": "916a4521a502f807486d8fef33d139acec8a3a36",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

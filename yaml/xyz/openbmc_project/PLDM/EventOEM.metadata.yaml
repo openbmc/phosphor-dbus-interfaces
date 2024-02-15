@@ -1,0 +1,11 @@
+- name: PowerRailFailure
+  level: ERR
+  meta:
+      - str: "SLOT=%s"
+        type: string
+      - str: "FRU=%s"
+        type: string
+      - str: "ERROR=%s"
+        type: string
+      - str: "ACT=%s"
+        type: string

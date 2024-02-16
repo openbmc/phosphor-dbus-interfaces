@@ -97,6 +97,10 @@ paths:
             description: >
                 The available read write storage.
             value: storage/rw
+          - name: TmpStorage
+            description: >
+                The available temporary storage.
+            value: storage/tmp
           - name: RebootCount
             description: >
                 Reboot statistic to track number of times device rebooted

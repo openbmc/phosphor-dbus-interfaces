@@ -37,6 +37,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "df830b2e_8562abf3",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-02-26T22:34:27Z",
+      "side": 1,
+      "message": "This should be the progress object, right?  The version object very likely won\u0027t be known by the bmc, given the requirement for opaque image binaries, right?",
+      "range": {
+        "startLine": 23,
+        "startChar": 42,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3174b00d_59beaf23",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 8
@@ -107,6 +130,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5302b8f1_3cffdd29",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-02-26T22:34:27Z",
+      "side": 1,
+      "message": "nit, can we name this something better?  Based on my reading here, I can\u0027t differentiate between when I would use functional, and when I would use active, and the description doesn\u0027t help much.",
+      "range": {
+        "startLine": 47,
+        "startChar": 12,
+        "endLine": 47,
+        "endChar": 22
+      },
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7cb37fc3_5215849e",
         "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
         "patchSetId": 8
@@ -136,6 +182,29 @@
       "side": 1,
       "message": "None, of the associations are documented right now in phosphor-dbus-interfaces. So, what i am doing is documenting them to get a consensus for the new design. Also, nomenclature wise \u0027active\u0027 seemed better, so changed it to active.",
       "parentUuid": "7cb37fc3_5215849e",
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93121818_caaf3277",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-02-26T22:34:27Z",
+      "side": 1,
+      "message": "Priority order for... what?  You don\u0027t sepecify, but can there be more than one functional version?",
+      "range": {
+        "startLine": 60,
+        "startChar": 29,
+        "endLine": 60,
+        "endChar": 52
+      },
       "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -52,6 +52,24 @@
       "parentUuid": "9157ae92_94fd261d",
       "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4524cac5_89090e39",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-02-27T16:43:05Z",
+      "side": 1,
+      "message": "In this commit am just following the existing types. See https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/53018/7..13/yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml#b33 for more details related to this.\nAMD packages Host Fault/Non-Fatal error Dumps in CPER format.  and planning to use Faultlog-\u003e CPER type. \n\nDump/Entry/FaultLog -\u003eAdditionalTypeName  is used to suppport Crashdump in custom format. (OEM).",
+      "parentUuid": "d3a63d10_a0301611",
+      "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

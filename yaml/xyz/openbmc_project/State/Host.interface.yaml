@@ -13,7 +13,7 @@ properties:
           - xyz.openbmc_project.Common.Error.NotAllowed
 
     - name: AllowedHostTransitions
-      type: array[enum[self.Transition]]
+      type: set[enum[self.Transition]]
       flags:
           - const
       description: >

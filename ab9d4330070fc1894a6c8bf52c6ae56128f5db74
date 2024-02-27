@@ -16,6 +16,24 @@
       "message": "How is this different from the dump type?  Isn\u0027t the \"fault log type\" simply an artifact of the hardware from which we are collecting the dump?",
       "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9157ae92_94fd261d",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-02-27T15:05:59Z",
+      "side": 1,
+      "message": "This is sub type of Dump under FaultLog type dump.\nLooking further we can re-use DumpType parameter , by extending dump/faultlog/CreateInterface.yaml. I will update this commit with this.",
+      "parentUuid": "f469df26_fdb90383",
+      "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

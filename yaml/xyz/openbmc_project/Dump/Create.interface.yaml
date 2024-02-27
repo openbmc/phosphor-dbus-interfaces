@@ -82,6 +82,10 @@ enumerations:
                 with that event. By linking the dump to an event ID, the system
                 can collate additional, relevant diagnostic data or add this
                 into the dump to aid in providing a clearer context.
+          - name: "FaultLogType"
+            description: >
+                Type of the FaultLog dump to be collected. This enum is defined
+                in xyz.openbmc_project.Common.FaultLogType.FaultLogTypes
 
     - name: DumpType
       description: >

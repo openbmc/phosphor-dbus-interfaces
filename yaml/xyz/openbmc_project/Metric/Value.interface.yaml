@@ -93,14 +93,18 @@ paths:
             description: >
                 The total CPU utilization.
             value: cpu/total
+          - name: Storage
+            description: >
+                The different types of available storage, such as tmp, var etc.
+                Each storage type will have path relative to storage/, for
+                example storage/tmp for temporary storage.
+            value: storage
           - name: ReadWriteStorage
             description: >
-                The available read write storage.
+                The available read write storage. This storage path has been
+                explicity added to the interface file as it gets used in BMCWeb
+                and free storage metric gets exposed via Redfish.
             value: storage/rw
-          - name: TmpStorage
-            description: >
-                The available temporary storage.
-            value: storage/tmp
           - name: RebootCount
             description: >
                 Reboot statistic to track number of times device rebooted

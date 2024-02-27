@@ -93,14 +93,12 @@ paths:
             description: >
                 The total CPU utilization.
             value: cpu/total
-          - name: ReadWriteStorage
+          - name: Storage
             description: >
-                The available read write storage.
-            value: storage/rw
-          - name: TmpStorage
-            description: >
-                The available temporary storage.
-            value: storage/tmp
+                The different types of available storage, such as rw, tmp, var
+                etc. Each storage type will have path relative to storage/, for
+                example storage/rw for read-write storage.
+            value: storage
           - name: RebootCount
             description: >
                 Reboot statistic to track number of times device rebooted

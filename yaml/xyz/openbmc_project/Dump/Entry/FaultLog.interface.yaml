@@ -3,7 +3,7 @@ description: >
 
 properties:
     - name: Type
-      type: enum[self.FaultDataType]
+      type: enum[xyz.openbmc_project.Common.FaultLogType.FaultLogTypes]
       description: >
           Type of fault data in the log indicated by PrimaryLogId.
       flags:
@@ -23,17 +23,3 @@ properties:
           be programatically interpreted (e.g. string parsing)
       flags:
           - const
-
-enumerations:
-    - name: FaultDataType
-      description: >
-          Type of fault data logged.
-      values:
-          - name: CPER
-            description: >
-                UEFI Common Platform Error Record
-          - name: Crashdump
-            description: >
-                Collection of processor and chipset register values typically
-                gathered for debugging purposes at the time of a crash (or
-                sometimes on-demand)

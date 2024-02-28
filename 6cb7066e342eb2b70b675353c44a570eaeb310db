@@ -339,6 +339,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "37c94d0a_083f7856",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-02-28T12:18:40Z",
+      "side": 1,
+      "message": "Since it is an \"array of indices\" it seems like size is appropriate?\n\nMy expectation is that these are similar to PCR indexes.  You ask for a measurement containing PCR0 + PCR8 \u003d [ 0, 8 ].",
+      "parentUuid": "31bca462_6020d0c0",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5b846bc_20ec5187",
         "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
         "patchSetId": 3

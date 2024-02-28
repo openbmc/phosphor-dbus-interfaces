@@ -160,6 +160,24 @@
       "parentUuid": "f45b3e15_7a2d328e",
       "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a4cb2f7_40b8043b",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-02-28T14:29:04Z",
+      "side": 1,
+      "message": "https://github.com/openbmc/docs/blob/master/designs/hw-fault-monitor.md#proposed-design document provides refernce to the PDC flow. \"The new fault log would contain dump files that are collected in a variety of ways in a variety of formats. A new fault log dump entry class (deriving from the \"Entry\" class in dump_entry.hpp) would be defined with an additional \"dump type\" member variable to identify the type of data that a fault log dump entry\u0027s corresponding dump file contains.\" .\n with existing d-bus interfaces is missing support of data format info . am not familiar with various data format collects in each architecture. Entry interface already have support for types. With this commit am trying to enable the create intrefcace to get the same info from the application responsible for generating the faultlog file.",
+      "parentUuid": "213058da_abb4fbe9",
+      "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

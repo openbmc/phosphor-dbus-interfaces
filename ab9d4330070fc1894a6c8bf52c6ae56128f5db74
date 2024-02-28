@@ -124,6 +124,24 @@
       "parentUuid": "9e84f4e8_b77fcbf8",
       "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f45b3e15_7a2d328e",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-02-28T12:38:30Z",
+      "side": 1,
+      "message": "How Phosphor-debug-collector createdump api implmention gets the type information here ?  (https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/53018/7..13/yaml/xyz/openbmc_project/Dump/Entry/FaultLog.interface.yaml#5). This information is required  to create dump Entry required properties.",
+      "parentUuid": "5213681f_13d848d9",
+      "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -355,6 +355,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ea7ca92_88b0b663",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001816
+      },
+      "writtenOn": "2024-02-28T17:54:06Z",
+      "side": 1,
+      "message": "Yes, it is an array of indices. The PCR example is correct.\n\n\u003e So what is the \"data struct\" of each indice? \neach index is just an index used to locate the measurement block. For example, it MeasurementIndices can be [1, 3, 100], which means it ask for measurement block 1, 3, 100 to be reported.",
+      "parentUuid": "37c94d0a_083f7856",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d5b846bc_20ec5187",

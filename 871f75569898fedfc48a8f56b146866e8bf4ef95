@@ -34,6 +34,24 @@
       "parentUuid": "58927234_8699d799",
       "revId": "871f75569898fedfc48a8f56b146866e8bf4ef95",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc6021da_b9734eb6",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-02-28T18:08:25Z",
+      "side": 0,
+      "message": "If we have ones that have explicit meaning, let\u0027s keep them here.  Sounds like `storage/rw` is the only one.\n\nIn phosphor-health-monitor we should explicitly document that there is one that has special meaning in the config because it gets tied into this (and the bmcweb ManagerHealth implementation).",
+      "parentUuid": "58c14dc8_fabf7a74",
+      "revId": "871f75569898fedfc48a8f56b146866e8bf4ef95",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

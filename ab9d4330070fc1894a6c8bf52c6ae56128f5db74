@@ -106,6 +106,24 @@
       "parentUuid": "c5dded23_7b595bd5",
       "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5213681f_13d848d9",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-02-28T12:14:55Z",
+      "side": 1,
+      "message": "\u003e High level in the AMD design BMC RAS application packages data in CPER format.\n\nThis is what is leading me to believe this is a machine/architecture decision and doesn\u0027t need to be a parameter to the dump request.",
+      "parentUuid": "9e84f4e8_b77fcbf8",
+      "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

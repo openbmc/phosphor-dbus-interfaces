@@ -16,6 +16,24 @@
       "message": "Don\u0027t the two of these have \"special meaning\" though from a Redfish perspective?  Why delete the ones that have explicit special meanings?",
       "revId": "871f75569898fedfc48a8f56b146866e8bf4ef95",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58c14dc8_fabf7a74",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-02-28T18:00:41Z",
+      "side": 0,
+      "message": "Redfish only uses the storage/rw.\n\nI deleted this so we can compute the storage paths programmatically via https://gerrit.openbmc.org/c/openbmc/phosphor-health-monitor/+/69733. If you think we should preserve the one\u0027s being used in bmcweb and compute rest programmatically i am fine with that too. Please let me know. Thanks",
+      "parentUuid": "58927234_8699d799",
+      "revId": "871f75569898fedfc48a8f56b146866e8bf4ef95",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

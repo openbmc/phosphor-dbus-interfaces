@@ -321,6 +321,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "31bca462_6020d0c0",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2024-02-28T03:48:18Z",
+      "side": 1,
+      "message": "OK. So what is the \"data struct\" of each indice? If it\u0027s something like integer it\u0027s OK to use `size`. But if we know the length of the data, it\u0027s better to specify the data type. `size` here depends on the BMC architecutre, on ARM32 it\u0027s uint32_t, but in future BMC chips with 64bit arch, it becomes uint64_t.\n\nPlease consider using a more specific type here.",
+      "parentUuid": "cfb2ffa4_acf47c76",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5b846bc_20ec5187",
         "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
         "patchSetId": 3

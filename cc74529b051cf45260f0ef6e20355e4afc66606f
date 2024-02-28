@@ -84,6 +84,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "92f54701_145d5a27",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-02-28T23:23:16Z",
+      "side": 1,
+      "message": "I don\u0027t understand.  If it\u0027s an opaque image, how do you know the version information?  By definition, the data is opaque.\n\nFor BMC, yes, we absolutely know the version.  For anything else, I don\u0027t think we will.\n\n\nAlso, having an API like this hits on a major problem we have today: What if I upload two different images with the same version, as happens in development?  They would get the same version, and get a collision on paths.  If we\u0027re going to rewrite interfaces, we should fix that.  See somewhere else about a unique identifier.  Maybe we just put that in the path somewhere?\n\n\n\nin addition, regardless of the above, there needs to be a progress indicator of some kind returned, so that we can track it in the Redfish::Task schema.",
+      "parentUuid": "73a1e6ce_71f29a5d",
+      "range": {
+        "startLine": 23,
+        "startChar": 42,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3174b00d_59beaf23",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 8

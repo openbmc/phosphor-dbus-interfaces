@@ -16,6 +16,98 @@
       "message": "Replied to the comments. Thanks",
       "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66197825_ae4dd758",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-02-28T23:23:16Z",
+      "side": 1,
+      "message": "This is a method call, not a property.  There is no \"default\".  I\u0027m a little surprised the schema allows this, maybe put it in the description?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 26
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b21c7655_1f981415",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-02-28T23:23:16Z",
+      "side": 1,
+      "message": "Huh?  This seems like something we wouldn\u0027t want in the API, and I\u0027m not really sure what it would map to in anything generic?  Maybe this is a meta-specific policy?  If we really must have this, we should define what \"update policies\" this bypasses, or multiple implementations will pick whatever they feel it like \"update policy\" means.\n\nIf it means \"don\u0027t check the image at all for correctness\" that\u0027s a worrying API to have.  We should probably break that into its own separate method call on an optional interface called \"ForceUpdate\" so that we can omit it separately and implementations can choose to not have it.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 44
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5328e733_fbb0f35f",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-02-28T23:23:16Z",
+      "side": 1,
+      "message": "Should we require that this takes some kind of argument to denote which image to apply?  I could see a race where\n\nClient A and B try to do updates\n\nClient A calls StartUpdate\nClient B calls StartUpdate\nClient A calls ApplyStagedImage, expecting to get image A, but gets image B without any error.\n\nMaybe we need to return a unique identifier as part of StartUpdate that can then be given to this call, to make it at least be able to return an error if the above happens?",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 28
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85d13bbe_5230a844",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-02-28T23:23:16Z",
+      "side": 1,
+      "message": "What\u0027s the use case for this mode?",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 36
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

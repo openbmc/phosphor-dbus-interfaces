@@ -18,6 +18,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f58bd096_719c3c6c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-02-29T04:54:41Z",
+      "side": 1,
+      "message": "Replied to your comments. Thanks",
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "66197825_ae4dd758",
@@ -31,6 +48,30 @@
       "writtenOn": "2024-02-28T23:23:16Z",
       "side": 1,
       "message": "This is a method call, not a property.  There is no \"default\".  I\u0027m a little surprised the schema allows this, maybe put it in the description?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 26
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "292a881a_42d830e9",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-02-29T04:54:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "66197825_ae4dd758",
       "range": {
         "startLine": 21,
         "startChar": 0,
@@ -66,6 +107,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "43ca5898_f0a46b04",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-02-29T04:54:41Z",
+      "side": 1,
+      "message": "\u003e Huh?  This seems like something we wouldn\u0027t want in the API, and I\u0027m not really sure what it would map to in anything generic? Maybe this is a meta-specific policy?\n\nThis parameter already exist in the Redfish Update Service https://grok.openbmc.org/xref/openbmc/bmcweb/static/redfish/v1/schema/UpdateService_v1.xml?r\u003d2ae81db9#127\n\n\u003e If we really must have this, we should define what \"update policies\" this bypasses, or multiple implementations will pick whatever they feel it like \"update policy\" means.\n\nIsn\u0027t that fine that implementation can choose what its own meaning of update policy is? For example, if they want to avoid some version checks or minimum ship level checks etc.\n\n\n\u003e \n\u003e If it means \"don\u0027t check the image at all for correctness\" that\u0027s a worrying API to have.\n  \nI agree we shouldn\u0027t skip the image correctness checks such as CRC etc. I am fine with adding restrictions around that.\n\n\u003e We should probably break that into its own separate method call on an optional interface called \"ForceUpdate\" so that we can omit it separately and implementations can choose to not have it.\n\nIf implementation don\u0027t want to use the Dbus method parameter, it can choose to ignore the parameter and not act on it. Isn\u0027t it?",
+      "parentUuid": "b21c7655_1f981415",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 44
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5328e733_fbb0f35f",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 12
@@ -89,6 +154,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8523f9d4_c72a1449",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-02-29T04:54:41Z",
+      "side": 1,
+      "message": "\u003e Should we require that this takes some kind of argument to denote which image to apply?  I could see a race where\n\u003e \n\u003e Client A and B try to do updates\n\u003e \n\u003e Client A calls StartUpdate\n\u003e Client B calls StartUpdate\n\u003e Client A calls ApplyStagedImage, expecting to get image A, but gets image B without any error.\n\u003e \n\u003e Maybe we need to return a unique identifier as part of StartUpdate that can then be given to this call, to make it at least be able to return an error if the above happens?\n\nhttps://grok.openbmc.org/xref/openbmc/bmcweb/static/redfish/v1/schema/UpdateService_v1.xml?r\u003d2ae81db9#141\n\nThe Redfish StartUpdate API doesn\u0027t seem to be taking any input parameter.\nHence, i don\u0027t see anything which can tell whether to apply ImageA vs ImageB. But what i do see is HttpPushUriOptionsBusy which can help to avoid contention between clients when it comes to update operation.\nNow, where shall we keep this Busy state - bmcWeb or Code-Updater is something we might have to discuss?",
+      "parentUuid": "5328e733_fbb0f35f",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 28
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "85d13bbe_5230a844",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 12
@@ -100,6 +189,30 @@
       "writtenOn": "2024-02-28T23:23:16Z",
       "side": 1,
       "message": "What\u0027s the use case for this mode?",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 36
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a14cb97_8593ca1a",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-02-29T04:54:41Z",
+      "side": 1,
+      "message": "This tells the startUpdate API to only stage the image and not apply it. It will be applied when ApplyStagedImage method will be called (in response to StartUpdate Redfish API call).",
+      "parentUuid": "85d13bbe_5230a844",
       "range": {
         "startLine": 52,
         "startChar": 0,

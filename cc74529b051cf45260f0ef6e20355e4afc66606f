@@ -108,6 +108,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "708a160d_eea76b44",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-02-29T04:54:41Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t understand.  If it\u0027s an opaque image, how do you know the version information?  By definition, the data is opaque.\n\u003e \n\u003e For BMC, yes, we absolutely know the version.  For anything else, I don\u0027t think we will.\n\nThis is a return value from the startUpdate API. The daemon which will implement this interface for a specific type of upgradable entity will know how to parse the image and extract version out of it, but the image is opaque from caller(bmcweb) perspective.\n\n\u003e \n\u003e \n\u003e Also, having an API like this hits on a major problem we have today: What if I upload two different images with the same version, as happens in development?  They would get the same version, and get a collision on paths.  If we\u0027re going to rewrite interfaces, we should fix that.  See somewhere else about a unique identifier.  Maybe we just put that in the path somewhere?\n\nI have mentioned in the design spec that we will apply salt to generate the VersionId https://github.com/openbmc/docs/blob/master/designs/code-update.md. Hence it will be unique.\nVersionId \u003d Version from Image + Salt\n\nPlease let me know if you want me to change something in nomenclature in API interface to depict so.\n\n\u003e \n\u003e \n\u003e \n\u003e in addition, regardless of the above, there needs to be a progress indicator of some kind returned, so that we can track it in the Redfish::Task schema.\n\nCan you please refer to the flow diagram in the design document for progress update flow https://github.com/openbmc/docs/blob/master/designs/code-update.md.",
+      "parentUuid": "92f54701_145d5a27",
+      "range": {
+        "startLine": 23,
+        "startChar": 42,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3174b00d_59beaf23",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 8

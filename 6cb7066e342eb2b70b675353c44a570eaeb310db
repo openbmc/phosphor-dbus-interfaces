@@ -391,6 +391,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "91766c0c_0c4c7b0a",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2024-02-29T01:59:35Z",
+      "side": 1,
+      "message": "Got it. I\u0027m OK here.\n\nBut for the record, we met issues with `size` type in PDI:\n* The the different architectures (32-bit vs 64-bit) produce different types, and if such types are going to be serialized/de-serialized, it\u0027s likely to have issue.\n* Internally we are going to implement the BMC config backup and restores functions. The above issue will cause the backup archive not to work on future 64-bit architectures. (As I know next generation of BMC chips will use 64-bit arch)",
+      "parentUuid": "81df7367_bb9bea76",
+      "revId": "6cb7066e342eb2b70b675353c44a570eaeb310db",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d5b846bc_20ec5187",

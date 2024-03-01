@@ -196,6 +196,24 @@
       "parentUuid": "4a4cb2f7_40b8043b",
       "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee9c933d_847b2136",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-03-01T12:13:13Z",
+      "side": 1,
+      "message": "High level design direction looks good, PDC already have elog watch infrastructure similar to your proposed wip code. Posted comments in PDC review.  CPER type dump object creation is pretty close to existing elog watch based infrastructure code. It will be good to provide input on the design direction you planned for crashdump type dumps. \nWhy the design direction is changed in crashdump type dump?",
+      "parentUuid": "164ba2ad_21b5c5bf",
+      "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

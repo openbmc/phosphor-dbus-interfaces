@@ -178,6 +178,24 @@
       "parentUuid": "213058da_abb4fbe9",
       "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "164ba2ad_21b5c5bf",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1001143
+      },
+      "writtenOn": "2024-03-01T02:53:12Z",
+      "side": 1,
+      "message": "Here is where I left off, https://gerrit.openbmc.org/c/openbmc/phosphor-debug-collector/+/62581 -- apologies, I got pulled onto other projects and didn\u0027t finish the upstreaming yet :(, also I\u0027m OOO for the next 2 weeks. In the code you\u0027ll see there are dbus match rules that determine the dump type (e.g. registerCperLogMatch(), registerCrashdumpMatch()).",
+      "parentUuid": "4a4cb2f7_40b8043b",
+      "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

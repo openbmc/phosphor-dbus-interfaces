@@ -39,3 +39,13 @@ properties:
           DSP0239 specification. A device that supports a given message type may
           not support that message type equally across all buses that connect to
           the device.
+
+associations:
+    - name: configured_by
+      description: >
+            Endpoints exposed by platform configuration should host a
+            configured_by assocation back to the object that drove the
+            endpoint's existence.
+      reverse_name: configures
+      required_endpoint_interfaces:
+            - xyz.openbmc_project.Configuration.MCTPDevice

@@ -1,0 +1,12 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    enumerations for Inventory.Item.Decorator.ManufacturerExt custom fields.
+
+enumerations:
+    - name: Field
+      description: >
+          Possible values for the ManufacturerExt fields.
+      values:
+          - name: FBPN
+            description: >
+                Facebook Part Number

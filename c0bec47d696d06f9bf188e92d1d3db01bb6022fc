@@ -131,6 +131,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9e426ce9_987dc57e",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-03-06T00:10:12Z",
+      "side": 1,
+      "message": "\u003e \u003e Huh?  This seems like something we wouldn\u0027t want in the API, and I\u0027m not really sure what it would map to in anything generic? Maybe this is a meta-specific policy?\n\u003e \n\u003e This parameter already exist in the Redfish Update Service https://grok.openbmc.org/xref/openbmc/bmcweb/static/redfish/v1/schema/UpdateService_v1.xml?r\u003d2ae81db9#127\n\nSure.... and in that, it has a lot better description of what types of policies we\u0027re allowing.  I don\u0027t see any policies in the design doc, so it\u0027s not clear at a dbus level what policies we\u0027re \"forcing\".\n\nIn an effort to keep this patchset to what works, lets just remove the param, and if at such time we can figure out what a \"force update\" definition would be, we can add it back.\n\n\u003e \n\u003e \u003e If we really must have this, we should define what \"update policies\" this bypasses, or multiple implementations will pick whatever they feel it like \"update policy\" means.\n\u003e \n\u003e Isn\u0027t that fine that implementation can choose what its own meaning of update policy is? For example, if they want to avoid some version checks or minimum ship level checks etc.\n\nHow does the client know what checks they\u0027re overriding in that case?  IMO, no, I don\u0027t think it should be an implementation specific detail.  In Redfish it might be, just because I dont\u0027 think a lot of implementations implement that parameter.\n\n\u003e \n\u003e \n\u003e \u003e \n\u003e \u003e If it means \"don\u0027t check the image at all for correctness\" that\u0027s a worrying API to have.\n\u003e   \n\u003e I agree we shouldn\u0027t skip the image correctness checks such as CRC etc. I am fine with adding restrictions around that.\n\nLets just keep it simple.  Keep the force update off, and if we find that we need ways to bypass specific policies in the future, we\u0027ll add them.\n\n\u003e \n\u003e \u003e We should probably break that into its own separate method call on an optional interface called \"ForceUpdate\" so that we can omit it separately and implementations can choose to not have it.\n\u003e \n\u003e If implementation don\u0027t want to use the Dbus method parameter, it can choose to ignore the parameter and not act on it. Isn\u0027t it?\n\nNot according to this, and if we\u0027re ignoring a parameter, that seems like a bad idea.",
+      "parentUuid": "43ca5898_f0a46b04",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 44
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5328e733_fbb0f35f",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 12
@@ -178,6 +202,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "dfc4f4d8_372b4e17",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-03-06T00:10:12Z",
+      "side": 1,
+      "message": "\u003e \u003e Should we require that this takes some kind of argument to denote which image to apply?  I could see a race where\n\u003e \u003e \n\u003e \u003e Client A and B try to do updates\n\u003e \u003e \n\u003e \u003e Client A calls StartUpdate\n\u003e \u003e Client B calls StartUpdate\n\u003e \u003e Client A calls ApplyStagedImage, expecting to get image A, but gets image B without any error.\n\u003e \u003e \n\u003e \u003e Maybe we need to return a unique identifier as part of StartUpdate that can then be given to this call, to make it at least be able to return an error if the above happens?\n\u003e \n\u003e https://grok.openbmc.org/xref/openbmc/bmcweb/static/redfish/v1/schema/UpdateService_v1.xml?r\u003d2ae81db9#141\n\u003e \n\u003e The Redfish StartUpdate API doesn\u0027t seem to be taking any input parameter.\n\u003e Hence, i don\u0027t see anything which can tell whether to apply ImageA vs ImageB.\n\nRight, because the state is built during other commands.\n\n\u003e But what i do see is HttpPushUriOptionsBusy which can help to avoid contention between clients when it comes to update operation.\n\u003e Now, where shall we keep this Busy state - bmcWeb or Code-Updater is something we might have to discuss?\n\nNot bmcweb for sure.  bmcweb should not maintain state.  I could see an argument that before uploading an image, or starting an update, bmcweb would go check to see if any existing updates are in progress, and return HttpPushUriOptionsBusy if anything is currently updating.  That MIGHT be reasonable?  But would prevent parallel updates.\n\nMultipartHttpPushUri is the thing that\u0027s going to be building state up for updates.",
+      "parentUuid": "8523f9d4_c72a1449",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 28
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "85d13bbe_5230a844",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 12
@@ -213,6 +261,30 @@
       "side": 1,
       "message": "This tells the startUpdate API to only stage the image and not apply it. It will be applied when ApplyStagedImage method will be called (in response to StartUpdate Redfish API call).",
       "parentUuid": "85d13bbe_5230a844",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 36
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca28bb4a_45b5d374",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-03-06T00:10:12Z",
+      "side": 1,
+      "message": "\u003e This tells the startUpdate API to only stage the image and not apply it. It will be applied when ApplyStagedImage method will be called (in response to StartUpdate Redfish API call).\n\nRight..... why do we need that?  From other bmc implementations, requiring an implementation of this makes the solution significantly more complicated.",
+      "parentUuid": "9a14cb97_8593ca1a",
       "range": {
         "startLine": 52,
         "startChar": 0,

@@ -132,6 +132,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ba950cac_82e890a7",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-03-06T00:10:12Z",
+      "side": 1,
+      "message": "\u003e The daemon which will implement this interface for a specific type of upgradable entity will know how to parse the image and extract version out of it,\n\nNot necessarily.  Think of the case of a PSU update.  The PSU binary is going to come from a vendor, for which it needs sent to an interface over smbus.  No BMC knows how vendor X implemented their image versioning scheme, nor should it.\n\n\n\u003e Hence it will be unique. VersionId \u003d Version from Image + Salt\n\nACK.\n\n\n\u003e Can you please refer to the flow diagram in the design document for progress update flow\n\n\nYep, and in that doc you document that \"Create Interface\nxyz.openbmc_project.Software.Version\" is going to return {ObjectPath, Success}, \n\nWhich then gets fed into:\ncreate Matcher\n(PropertiesChanged,\nxyz.openbmc_project.Software.ActivationProgress,\nObjectPath)\n\nExcept that you\u0027ve handed back a version object path, not a progress object path.  Unless I\u0027m missing something, your document shows the same error I\u0027ve noted here.\n\nAs a side note, that state diagram shows bmcweb maintaining a lot of state (matchers and loops to monitor progress) that break a lot of the design rules, and do things that cause bugs (I believe I\u0027ve pointed you to the existing firmware update bug).  Business logic for monitoring needs to be done in the firmware update daemon itself, not in bmcweb.",
+      "parentUuid": "708a160d_eea76b44",
+      "range": {
+        "startLine": 23,
+        "startChar": 42,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3174b00d_59beaf23",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 8

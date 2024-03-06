@@ -155,6 +155,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9b968ad8_2383ab60",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T08:58:55Z",
+      "side": 1,
+      "message": "@Patrick,\nYou had asked for this parameter. Please let me know if you are fine with removing this. \n\nI suppose another alternative would be to add some more details on update policies which forceUpdate will bypass as thats what Ed is asking for.\nWhat forceUpdate can allow -\n- Allow a component to be downgraded.\nWhat forceUpdate can\u0027t allow -\n- Bypass minimum version enforcement.",
+      "parentUuid": "9e426ce9_987dc57e",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 44
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5328e733_fbb0f35f",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 12
@@ -226,6 +250,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f6453eba_08e8818f",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T08:58:55Z",
+      "side": 1,
+      "message": "\u003e \u003e \u003e Should we require that this takes some kind of argument to denote which image to apply?  I could see a race where\n\u003e \u003e \u003e \n\u003e \u003e \u003e Client A and B try to do updates\n\u003e \u003e \u003e \n\u003e \u003e \u003e Client A calls StartUpdate\n\u003e \u003e \u003e Client B calls StartUpdate\n\u003e \u003e \u003e Client A calls ApplyStagedImage, expecting to get image A, but gets image B without any error.\n\u003e \u003e \u003e \n\u003e \u003e \u003e Maybe we need to return a unique identifier as part of StartUpdate that can then be given to this call, to make it at least be able to return an error if the above happens?\n\u003e \u003e \n\u003e \u003e https://grok.openbmc.org/xref/openbmc/bmcweb/static/redfish/v1/schema/UpdateService_v1.xml?r\u003d2ae81db9#141\n\u003e \u003e \n\u003e \u003e The Redfish StartUpdate API doesn\u0027t seem to be taking any input parameter.\n\u003e \u003e Hence, i don\u0027t see anything which can tell whether to apply ImageA vs ImageB.\n\u003e \n\u003e Right, because the state is built during other commands.\n\nCan you please elaborate which command sequence will build the state as you mentioned in the example above (same device being upgraded in parallel by two clients). As per my understanding, I don\u0027t see the command flow in the current Redfish interface which can help to achieve this.\n\n\u003e \n\u003e \u003e But what i do see is HttpPushUriOptionsBusy which can help to avoid contention between clients when it comes to update operation.\n\u003e \u003e Now, where shall we keep this Busy state - bmcWeb or Code-Updater is something we might have to discuss?\n\u003e \n\u003e Not bmcweb for sure.  bmcweb should not maintain state.  I could see an argument that before uploading an image, or starting an update, bmcweb would go check to see if any existing updates are in progress, and return HttpPushUriOptionsBusy if anything is currently updating.  \n\nHttpPushUriOptionsBusy is \"readonly\": false, property which as per my understanding client will set on bmcweb to take lock or mutual exclusion for the update operation. As per description -\n\"When a client uses any HttpPushUriOptions properties for software updates, it should set this property to `true`.\"\n\nThat MIGHT be reasonable?  But would prevent parallel updates.\n\u003e \n\nDo we really want to allow parallel upgrades for same device? If yes, then how as i don\u0027t see that support in existing Redfish interface.\n\n\u003e MultipartHttpPushUri is the thing that\u0027s going to be building state up for updates.\n\nIsn\u0027t MultipartHttpPushUri a readonly\u003dtrue property which provides the multipart URI to which the client can post the Multipart image?  As per description -\n\"This property shall contain a URI used to perform a Redfish Specification-defined Multipart HTTP or HTTPS POST of a software image\"\nHow would this help with building state up for updates?",
+      "parentUuid": "dfc4f4d8_372b4e17",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 28
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "85d13bbe_5230a844",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 12
@@ -285,6 +333,30 @@
       "side": 1,
       "message": "\u003e This tells the startUpdate API to only stage the image and not apply it. It will be applied when ApplyStagedImage method will be called (in response to StartUpdate Redfish API call).\n\nRight..... why do we need that?  From other bmc implementations, requiring an implementation of this makes the solution significantly more complicated.",
       "parentUuid": "9a14cb97_8593ca1a",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 36
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ceb5d136_92397723",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T08:58:55Z",
+      "side": 1,
+      "message": "\u003e Right..... why do we need that?  From other bmc implementations, requiring an implementation of this makes the solution significantly more complicated.\n\nThen how do we tell the startUpdate API not to apply the image but only stage it? Do you want to add another API for staging?",
+      "parentUuid": "ca28bb4a_45b5d374",
       "range": {
         "startLine": 52,
         "startChar": 0,

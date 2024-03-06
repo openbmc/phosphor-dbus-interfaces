@@ -156,6 +156,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8001f045_2846edb5",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T08:58:55Z",
+      "side": 1,
+      "message": "\u003e \u003e The daemon which will implement this interface for a specific type of upgradable entity will know how to parse the image and extract version out of it,\n\u003e \n\u003e Not necessarily.  Think of the case of a PSU update.  The PSU binary is going to come from a vendor, for which it needs sent to an interface over smbus.  No BMC knows how vendor X implemented their image versioning scheme, nor should it.\n\nAs discussed over discord, i will change the description to better reflect the intention for generic object path.\n\n\u003e \n\u003e \n\u003e \u003e Hence it will be unique. VersionId \u003d Version from Image + Salt\n\u003e \n\u003e ACK.\n\u003e \n\u003e \n\u003e \u003e Can you please refer to the flow diagram in the design document for progress update flow\n\u003e \n\u003e \n\u003e Yep, and in that doc you document that \"Create Interface\n\u003e xyz.openbmc_project.Software.Version\" is going to return {ObjectPath, Success}, \n\u003e \n\u003e Which then gets fed into:\n\u003e create Matcher\n\u003e (PropertiesChanged,\n\u003e xyz.openbmc_project.Software.ActivationProgress,\n\u003e ObjectPath)\n\u003e \n\u003e Except that you\u0027ve handed back a version object path, not a progress object path.  Unless I\u0027m missing something, your document shows the same error I\u0027ve noted here.\n\nThe same objectPath will host all interfaces (Version, ActivationProgress etc) for the image. As we discussed via discord, i will change the description to reflect a generic object path which can host multiple interfaces.\n\n\u003e \n\u003e As a side note, that state diagram shows bmcweb maintaining a lot of state (matchers and loops to monitor progress) that break a lot of the design rules, and do things that cause bugs (I believe I\u0027ve pointed you to the existing firmware update bug).  Business logic for monitoring needs to be done in the firmware update daemon itself, not in bmcweb.\n\nMatchers are being maintained (in diagram) for ActivationState and ActivationProgress properties. bmcweb can either maintains these matchers (to rely on notifications) or read the interface properties is an implementation choice we can make. For both the flows, Activation and ActivationProgress interfaces will be used which are existing interfaces.",
+      "parentUuid": "ba950cac_82e890a7",
+      "range": {
+        "startLine": 23,
+        "startChar": 42,
+        "endLine": 23,
+        "endChar": 49
+      },
+      "revId": "cc74529b051cf45260f0ef6e20355e4afc66606f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3174b00d_59beaf23",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 8

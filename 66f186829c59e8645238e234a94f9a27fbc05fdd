@@ -16,6 +16,24 @@
       "message": "Overall, I\u0027m having a really tough time understanding how these APIs come together to form a working Redfish solution where bmcweb doesn\u0027t maintain state, multiple updates are supported at a time, and \"delayed\" updates are supported. With that said I\u0027m not sure it\u0027s productive to argue at this high level.\n\nThis APIs are probably close enough to start coding, and I suspect that a lot of the bugs will be apparent once some of the code is written.  If you have code that already implements these, please share it.  It is quite possible that I\u0027m too close to the existing dbus interfaces, and am having trouble seeing what the flow will actually look like.\n\nLets get some code moving, and we can regroup on this patchset after we have some indication that these interfaces work as designed.",
       "revId": "66f186829c59e8645238e234a94f9a27fbc05fdd",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0f030b2_1814d098",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T08:58:55Z",
+      "side": 1,
+      "message": "Sure, i am working on the patchset for changing the Dbus Interface. As we discussed the changes will be applied in phases. My plan -\n\n1. Add the new DBus interface in all repos (multiple repos alongwith bmcweb) with existing features. This will only involve supporting the existing SimpleUpdate flow.\n2. Update phosphor-bmc-code-mgmt to have a single daemon and code refactoring around it.\n2. Add StagedImage support using StartUpdate Redfish flow.\n3. More features as per design.",
+      "parentUuid": "e055529e_ee703a8d",
+      "revId": "66f186829c59e8645238e234a94f9a27fbc05fdd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

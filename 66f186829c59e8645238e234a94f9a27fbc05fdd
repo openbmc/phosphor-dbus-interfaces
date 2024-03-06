@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e055529e_ee703a8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-03-06T00:15:57Z",
+      "side": 1,
+      "message": "Overall, I\u0027m having a really tough time understanding how these APIs come together to form a working Redfish solution where bmcweb doesn\u0027t maintain state, multiple updates are supported at a time, and \"delayed\" updates are supported. With that said I\u0027m not sure it\u0027s productive to argue at this high level.\n\nThis APIs are probably close enough to start coding, and I suspect that a lot of the bugs will be apparent once some of the code is written.  If you have code that already implements these, please share it.  It is quite possible that I\u0027m too close to the existing dbus interfaces, and am having trouble seeing what the flow will actually look like.\n\nLets get some code moving, and we can regroup on this patchset after we have some indication that these interfaces work as designed.",
+      "revId": "66f186829c59e8645238e234a94f9a27fbc05fdd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

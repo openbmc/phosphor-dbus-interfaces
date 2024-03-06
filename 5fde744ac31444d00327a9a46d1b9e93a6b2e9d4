@@ -278,6 +278,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1e0268d_d339932c",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T23:28:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3288ee39_34296fc8",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 27
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "29251749_41c93f63",
@@ -816,6 +840,30 @@
       "side": 1,
       "message": "Specifically, this is to implement the redfish \"@AllowedValues\" property.  You can find an example of this in the git log from Andrew Giessler merged literally this week.",
       "parentUuid": "9d7f4a8c_670be2bf",
+      "range": {
+        "startLine": 43,
+        "startChar": 18,
+        "endLine": 43,
+        "endChar": 25
+      },
+      "revId": "5fde744ac31444d00327a9a46d1b9e93a6b2e9d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4825c28c_7a98e5f0",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T23:28:31Z",
+      "side": 1,
+      "message": "Done added a property named \"AllowedApplyTimes\".",
+      "parentUuid": "600b416b_06e49cb2",
       "range": {
         "startLine": 43,
         "startChar": 18,

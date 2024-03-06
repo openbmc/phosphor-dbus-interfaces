@@ -201,6 +201,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "102bfc9e_692bcfce",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T23:28:31Z",
+      "side": 1,
+      "message": "Removed the ForcedUpdate from this patch.",
+      "parentUuid": "d5b2f611_c3711745",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 44
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5328e733_fbb0f35f",
@@ -320,6 +344,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2be0897a_df789fba",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T23:28:31Z",
+      "side": 1,
+      "message": "Removed the Stage and Apply related changes from the patch.",
+      "parentUuid": "e3b69037_971bce02",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 28
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "85d13bbe_5230a844",
@@ -429,6 +477,30 @@
       "side": 1,
       "message": "\u003e Then how do we tell the startUpdate API not to apply the image but only stage it?\n\nI guess I\u0027m advising that a \"staging\" type interface is complicated, and most BMC stacks that I\u0027ve worked on in the past don\u0027t support \"staging\" multiple updates at once.  Update resets are done once the image has been loaded, to avoid a complex API.\n\n\u003e Do you want to add another API for staging?\n\nWhat I\u0027d really like is to just see the simple, upload an image, image gets applied, device gets reset flow work first, then we can make it more complex incrementally.",
       "parentUuid": "ceb5d136_92397723",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 36
+      },
+      "revId": "c0bec47d696d06f9bf188e92d1d3db01bb6022fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdc46eb6_11594db7",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-06T23:28:31Z",
+      "side": 1,
+      "message": "Sure, removed the Stage and Update flow from the interface.",
+      "parentUuid": "1083d33d_70cfe628",
       "range": {
         "startLine": 52,
         "startChar": 0,

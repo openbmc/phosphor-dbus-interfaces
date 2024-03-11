@@ -50,6 +50,24 @@
       "message": "Doesn\u0027t this need to be a `set[enum[...]]`?\n\nDo we need a default value?",
       "revId": "46dc50db567ef58498b1c54b73cfa86ae967cc02",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ddaa0d4_15ece7d5",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 16
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-03-11T19:18:33Z",
+      "side": 1,
+      "message": "\u003e Do we need a default value?\n\nI\u0027d prefer not.  services exporting this interface should explicitly declare what they support.",
+      "parentUuid": "d2d7139e_67581266",
+      "revId": "46dc50db567ef58498b1c54b73cfa86ae967cc02",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

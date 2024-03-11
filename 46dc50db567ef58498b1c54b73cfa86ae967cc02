@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "38815558_fbe28c44",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 16
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-11T18:26:08Z",
+      "side": 1,
+      "message": "I see there were removals between PS12 and PS16 to address feedback.  Are we going to get follow up commits in this repository so that the result looks like this design?  Can we stack those changes on top of this one so we at least have something to point people at if they ask questions?",
+      "revId": "46dc50db567ef58498b1c54b73cfa86ae967cc02",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "b133fc9e_a4b922df",
@@ -14,6 +31,23 @@
       "writtenOn": "2024-03-06T23:28:31Z",
       "side": 1,
       "message": "Addressed your comments. Thanks",
+      "revId": "46dc50db567ef58498b1c54b73cfa86ae967cc02",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d2d7139e_67581266",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 16
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-11T18:26:08Z",
+      "side": 1,
+      "message": "Doesn\u0027t this need to be a `set[enum[...]]`?\n\nDo we need a default value?",
       "revId": "46dc50db567ef58498b1c54b73cfa86ae967cc02",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

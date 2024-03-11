@@ -20,3 +20,7 @@ enumerations:
           - name: OnReset
             description: >
                 Apply on a reset.
+          - name: OnActivationRequest
+            description:
+                Stage the image and apply on RequestedActivations.Active
+                request.

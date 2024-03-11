@@ -169,6 +169,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9c3f18c2_225e747d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-11T18:13:33Z",
+      "side": 1,
+      "message": "\u003e It almost feels like a case where we would need optional support on dbus to model this correctly.\n\nI don\u0027t have any ideas how to do that at a dbus level though, unfortunately.\n\n\u003e do you have any other ideas ?\n\n`maxint` is fine, it just isn\u0027t ideal.",
+      "parentUuid": "610fa2b6_438d031d",
+      "revId": "d54edc824ff8ed734c11671f319266a95d1545d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8755b321_4d278045",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 1

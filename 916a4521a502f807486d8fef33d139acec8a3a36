@@ -56,6 +56,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "fcf5636b_f6ceab3e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2024-03-11T09:16:14Z",
+      "side": 1,
+      "message": "I have changed the yaml to  Control/Power.",
+      "parentUuid": "be5e5af5_b91f05fe",
+      "revId": "916a4521a502f807486d8fef33d139acec8a3a36",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "1d8bc858_2b8ec400",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 2
@@ -84,6 +102,24 @@
       "writtenOn": "2024-02-27T15:34:38Z",
       "side": 1,
       "message": "What\u0027s an example of a FRU string?",
+      "revId": "916a4521a502f807486d8fef33d139acec8a3a36",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d51817f_b0d4d882",
+        "filename": "yaml/xyz/openbmc_project/PLDM/EventOEM.metadata.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001618
+      },
+      "writtenOn": "2024-03-11T09:16:14Z",
+      "side": 1,
+      "message": "Here is the example \"Yosemite 4 Floating Falls Slot 8\" which we will get this string from EntityManager service.\n\nroot@bmc:~# busctl get-property xyz.openbmc_project.EntityManager /xyz/openbmc_project/inventory/system/board/Yosemite_4_Floating_Falls_Slot_8 xyz.openbmc_project.Inventory.Item.Board Name\ns \"Yosemite 4 Floating Falls Slot 8\"",
+      "parentUuid": "ffa1a0ec_d8cbf801",
       "revId": "916a4521a502f807486d8fef33d139acec8a3a36",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

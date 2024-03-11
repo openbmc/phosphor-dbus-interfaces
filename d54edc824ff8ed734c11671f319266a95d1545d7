@@ -151,6 +151,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "610fa2b6_438d031d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2024-03-11T16:15:05Z",
+      "side": 1,
+      "message": "agree on that.\n\nIt almost feels like a case where we would need `optional` support on dbus to model this correctly.\n\nand on bmcweb (https://github.com/openbmc/bmcweb/blob/master/redfish-core/lib/pcie.hpp#L484)\n\n```\n    // The default value of LanesInUse is 0, and the field will be\n    // left as off if it is a default value.\n    if (lanesInUse !\u003d nullptr \u0026\u0026 *lanesInUse !\u003d 0)\n    {\n        asyncResp-\u003eres.jsonValue[\"PCIeInterface\"][\"LanesInUse\"] \u003d *lanesInUse;\n    }\n```\n\nwhere we don\u0027t show the redfish resource at all if the value is 0 (bug probably), It feels like having the default set to `maxint` would be least bad option to fix this. So that bmcweb could \n\n```\n    if (lanesInUse !\u003d nullptr \u0026\u0026 *lanesInUse !\u003d \u003cMAXINT\u003e)\n    {\n        asyncResp-\u003eres.jsonValue[\"PCIeInterface\"][\"LanesInUse\"] \u003d *lanesInUse;\n    }\n```\nand display value 0(indicating that there are 0 lanes) \u0026 also an absence of this property in redfish could be treated by redfish clients(like webGUI) as `Unknown`\n\ndo you have any other ideas ?",
+      "parentUuid": "15d471e3_c9236054",
+      "revId": "d54edc824ff8ed734c11671f319266a95d1545d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8755b321_4d278045",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 1

@@ -49,3 +49,7 @@ enumerations:
           - name: OnReset
             description: >
                 Apply on reset of device being updated.
+          - name: onActivationRequest
+            description:
+                Stage the image and apply on RequestedActivations.Active
+                request.

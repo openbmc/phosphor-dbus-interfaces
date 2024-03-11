@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "541bb8d0_b6f8bf80",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 16
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-11T20:27:50Z",
+      "side": 1,
+      "message": "Sure, i have raised the patches as stack. But let\u0027s keep them separate and we will revisit, discuss and merge those as we work on those features.",
+      "parentUuid": "38815558_fbe28c44",
+      "revId": "46dc50db567ef58498b1c54b73cfa86ae967cc02",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "b133fc9e_a4b922df",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 16
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "\u003e Do we need a default value?\n\nI\u0027d prefer not.  services exporting this interface should explicitly declare what they support.",
       "parentUuid": "d2d7139e_67581266",
+      "revId": "46dc50db567ef58498b1c54b73cfa86ae967cc02",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad87232f_93ddb527",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 16
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-03-11T20:27:50Z",
+      "side": 1,
+      "message": "Updated the type to be set[enum[self.ApplyTimes]].\n\nAs we discussed skipping the default for now as defaults don\u0027t support providing a set as default. Raised https://github.com/openbmc/sdbusplus/issues/93 for this support.",
+      "parentUuid": "7ddaa0d4_15ece7d5",
       "revId": "46dc50db567ef58498b1c54b73cfa86ae967cc02",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

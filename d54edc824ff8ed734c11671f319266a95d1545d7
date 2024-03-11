@@ -97,6 +97,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "45424e21_e4adac9d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-11T21:22:47Z",
+      "side": 1,
+      "message": "\u003e Are we hooking hardware property reads directly to dbus? \n\nNo... I don\u0027t think so.\n\n\u003e I don\u0027t really want to push work into the clients, but proposing yet another way that things can fail pushes more work into clients to then translate ways in which things can fail.\n\nWe should probably stop talking about this in terms of a failure.  Maybe there is an error of some sort inside the implementation, but effectively this is \"I don\u0027t have an answer to this question\" (from an implementation perspective).  We use magic values all over dbus to express that, when the property isn\u0027t an enumeration.  This is why, for example, sensor and thresholds are NaN.",
+      "parentUuid": "645625e7_3a93ae8f",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "d54edc824ff8ed734c11671f319266a95d1545d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d34c39ae_ce2bffd9",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 1

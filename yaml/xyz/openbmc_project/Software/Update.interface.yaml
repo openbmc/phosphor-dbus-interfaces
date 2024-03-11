@@ -16,6 +16,12 @@ methods:
             description: >
                 This property indicates when the software image update should be
                 applied.
+          - name: ForceUpdate
+            type: boolean
+            description: >
+                This property indicates whether to bypass update policies when
+                applying the provided image. By default this is false which will
+                cause all update policies to be applied.
       returns:
           - name: ObjectPath
             type: object_path
@@ -36,3 +42,11 @@ properties:
           This property indicates the apply times allowed for this device.
       flags:
           - readonly
+    - name: AllowedForceUpdate
+      type: boolean
+      description: >
+          This property indicates where force update is allowed for this
+          firmware or not.
+      flags:
+          - readonly
+      default: false

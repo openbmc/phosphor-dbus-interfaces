@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e3fb268_258781fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000733
+      },
+      "writtenOn": "2024-03-11T20:37:59Z",
+      "side": 1,
+      "message": "Not sure if Andrei is still working on this, but if not since it\u0027s come up recently for me perhaps I\u0027ll try to proceed with this...\n\nIn updating bmcweb to match, what value should we pass as the Source parameter when calling the NMI method to handle a `{\"ResetType\":\"Nmi\"}` POST to the ComputerSystem.Reset endpoint?  It\u0027s not strictly an IPMI chassis command, but it\u0027s sort of the redfish moral equivalent, so should we use that?  Or is the more generic \"BMC\" appropriate?  Without knowing what the information is actually used for it\u0027s a little hard to guess...",
+      "revId": "12215883532367d32c7608d8f3a6d558a262e600",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

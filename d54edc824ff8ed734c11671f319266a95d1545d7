@@ -73,6 +73,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "645625e7_3a93ae8f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-03-11T20:21:50Z",
+      "side": 1,
+      "message": "\u003e Having a hardware error show up in a GetProperty call is really ugly.\n\nWait.... Are we hooking hardware property reads directly to dbus?  So a getProperty does a hardware blocking read of that device?  That\u0027s a generalized anti-pattern, because you don\u0027t get PropertiesChanged events, and you get this \"one failure propagates to clients\" behavior if the bus is ever unreliable.\n\n\u003e  Most dbus object servers don\u0027t have a way to differentiate if one property has a failure.  So you either get all properties or none.\n\nSure, Redfish is similar.  There\u0027s not a good way to return partial data, nor do clients want to see partial data.  I\u0027m not sure this changes that.\n\n\u003e  Having the GetProperty callback fail makes it, typically, so that the whole GetProperties call fails.  That\u0027ll push a lot more work onto clients like bmcweb.\n\nWhy\u0027s that?  Bmcweb just turns that into an error and gives it back to the http client, the same as it would if the bus name didn\u0027t exist, or if there was a general dbus failure.  I agree, I don\u0027t really want to push work into the clients, but proposing yet another way that things can fail pushes more work into clients to then translate ways in which things can fail.  We already have to handle dbus errors regardless;  Handing dbus errors, AND magic values just puts more code in bmcweb, not less.",
+      "parentUuid": "ed3aa70e_cb0741f0",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "d54edc824ff8ed734c11671f319266a95d1545d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d34c39ae_ce2bffd9",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
         "patchSetId": 1

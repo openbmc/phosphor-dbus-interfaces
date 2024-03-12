@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "53f92552_5170d17b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2024-03-12T10:32:17Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "1cbe9dbe_17ef5ee4",
+      "range": {
+        "startLine": 9,
+        "startChar": 48,
+        "endLine": 9,
+        "endChar": 58
+      },
+      "revId": "d54edc824ff8ed734c11671f319266a95d1545d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2fc1c1b0_81c603eb",
@@ -133,6 +157,30 @@
       "side": 1,
       "message": "Right, if this is to support the information going unavailable, lets get that noted in the commit message, like I originally asked.  \"the reason of not getting this value is unknown.\" isn\u0027t very descriptive.  Maybe we should mention that this might be unavailable because the power is off, or the link is down?  Those are the two cases I can think of where we\u0027d want to use this.\n\nI would expect failures to still take the failure path, otherwise outside clients don\u0027t know the difference between \"This has failed\" and \"This info is unavailable in the current state\".",
       "parentUuid": "45424e21_e4adac9d",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "d54edc824ff8ed734c11671f319266a95d1545d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1336d1a9_e2f781cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2024-03-12T10:32:17Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "5f88a881_e73daeec",
       "range": {
         "startLine": 10,
         "startChar": 0,

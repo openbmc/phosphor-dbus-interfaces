@@ -158,9 +158,7 @@ methods:
           Retrieves a dictionary of D-Bus paths -> services of associated
           endpoints with the provided identifier, filtering based on their
           association with specified endpoint interfaces.
-
           Implementation steps:
-
           1. Retrieve the subtree D-Bus paths that implement the
              "subtreeInterfaces" and have the path endpoint "id".
           2. Create an association path by concatenating the subtree path with
@@ -210,9 +208,7 @@ methods:
           Retrieves the D-Bus paths of associated endpoints with the provided
           identifier, filtering based on their association with specified
           endpoint interfaces.
-
           Implementation steps:
-
           1. Retrieve the subtree D-Bus paths that implement the
              "subtreeInterfaces" and have the path endpoint "id".
           2. Create an association path by concatenating the subtree path with

@@ -153,6 +153,100 @@ methods:
                 An array of paths.
       errors:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetAssociatedSubTreeById
+      description: >
+          Retrieves a dictionary of D-Bus paths -> services of associated
+          endpoints with the provided identifier, filtering based on their
+          association with specified endpoint interfaces.
+
+          Implementation steps:
+
+          1. Retrieve the subtree D-Bus paths that implement the
+             "subtreeInterfaces" and have the path endpoint "id".
+          2. Create an association path by concatenating the subtree path with
+             "/" and "association"
+             associationPath = subtreePath + "/" + "association"
+          3. Call getAssociatedSubTree to get the endpoint path -> services of
+             the associationPath that implements the "endpointInterfaces".
+      parameters:
+          - name: id
+            type: string
+            description: >
+                The leaf name of the dbus path, uniquely identifying a specific
+                component or entity within the system. For example, in the path
+                `/xyz/openbmc_project/inventory/system/{ChassisId}/motherboard/{FanId}`,
+                the identifiers would be {FanId}.
+          - name: objectPath
+            type: string
+            description: >
+                The object path for which the result should be fetched.
+          - name: subtreeInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to retrieve dbus paths with the
+                specified identifier.
+          - name: association
+            type: string
+            description: >
+                The endpoint association.
+          - name: endpointInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to filter associated endpoint paths.
+      returns:
+          - name: objects
+            type: dict[string,dict[string,array[string]]]
+            description: >
+                A dictionary of path -> services.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetAssociatedSubTreePathsById
+      description: >
+          Retrieves the D-Bus paths of associated endpoints with the provided
+          identifier, filtering based on their association with specified
+          endpoint interfaces.
+
+          Implementation steps:
+
+          1. Retrieve the subtree D-Bus paths that implement the
+             "subtreeInterfaces" and have the path endpoint "id".
+          2. Create an association path by concatenating the subtree path with
+             "/" and "association"
+             associationPath = subtreePath + "/" + "association"
+          3. Call getAssociatedSubTreePaths to get the endpoint paths of the
+             associationPath that implements the "endpointInterfaces".
+      parameters:
+          - name: id
+            type: string
+            description: >
+                The leaf name of the dbus path, uniquely identifying a specific
+                component or entity within the system. For example, in the path
+                `/xyz/openbmc_project/inventory/system/{ChassisId}/motherboard/{FanId}`,
+                the identifiers would be {FanId}.
+          - name: objectPath
+            type: string
+            description: >
+                The object path for which the result should be fetched.
+          - name: subtreeInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to retrieve dbus paths with the
+                specified identifier.
+          - name: association
+            type: string
+            description: >
+                The endpoint association.
+          - name: endpointInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to filter associated endpoint paths.
+      returns:
+          - name: paths
+            type: array[string]
+            description: >
+                An array of paths.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
 
 service_names:
     - default: xyz.openbmc_project.ObjectMapper

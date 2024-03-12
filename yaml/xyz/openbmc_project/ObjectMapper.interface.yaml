@@ -153,6 +153,94 @@ methods:
                 An array of paths.
       errors:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetAssociatedSubTreeById
+      description: >
+          Same as GetSubTree, but only return the dbus paths that are
+          associated with the provided identifier, filtering based on on their
+          association with the specified endpoint defined by association.
+          The method uses two arrays of interfaces, one for fetching paths
+          with the specified identifier and another for filtering based on
+          their association with the specified endpoint.
+      parameters:
+          - name: id
+            type: string
+            description: >
+                The identifier used to fetch the associated objects.
+          - name: subtree
+            type: string
+            description: >
+                The subtree path for which the result should be fetched.
+          - name: depth
+            type: int32
+            description: >
+                The maximum subtree depth for which results should be fetched.
+                For unconstrained fetches use a depth of zero.
+          - name: subtreeInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to retrieve dbus paths with the
+                specified identifier.
+          - name: association
+            type: string
+            description: >
+                The endpoint association.
+          - name: associationInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used for filtering based on their
+                association with the specified endpoint association,
+                while also having the specified interface
+      returns:
+          - name: objects
+            type: dict[string,dict[string,array[string]]]
+            description: >
+                A dictionary of path -> services.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetAssociatedSubTreePathsById
+      description: >
+          Same as GetSubTreePaths, but only return the dbus paths that are
+          associated with the provided identifier, filtering based on on their
+          association with the specified endpoint defined by associatedPath.
+          The method uses two arrays of interfaces, one for fetching paths
+          with the specified identifier and another for filtering based on
+          their association with the specified endpoint.
+      parameters:
+          - name: id
+            type: string
+            description: >
+                The identifier used to fetch the associated objects.
+          - name: subtree
+            type: string
+            description: >
+                The subtree path for which the result should be fetched.
+          - name: depth
+            type: int32
+            description: >
+                The maximum subtree depth for which results should be fetched.
+                For unconstrained fetches use a depth of zero.
+          - name: subtreeInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to retrieve dbus paths with the
+                specified identifier.
+          - name: association
+            type: string
+            description: >
+                The endpoint association.
+          - name: associationInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used for filtering based on their
+                association with the specified endpoint association,
+                while also having the specified interface
+      returns:
+          - name: paths
+            type: array[string]
+            description: >
+                An array of paths.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
 
 service_names:
     - default: xyz.openbmc_project.ObjectMapper

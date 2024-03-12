@@ -16,6 +16,24 @@
       "message": "Can we get an example?  I\u0027m not sure I understand what an \"identifier\" is.",
       "revId": "b32eecf1e2e6918dc5288f9cb7895f2f1a6f8973",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6eabbbe5_7a401084",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-03-12T15:28:12Z",
+      "side": 1,
+      "message": "This commit addresses one of the issues raised in\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/61097\n\nex:\n\u0027\u0027\u0027busctl call -j  \"xyz.openbmc_project.ObjectMapper\"   \"/xyz/openbmc_project/object_mapper\"   \"xyz.openbmc_project.ObjectMapper\" \"GetAssociatedSubTreePathsById\" ssiassas \"chassis\" \"/xyz/openbmc_project/inventory\" 0 1 \"xyz.openbmc_project.Inventory.Item.Chassis\" \"powered_by\" 1  \"xyz.openbmc_project.Inventory.Item.PowerSupply\"\n{\n        \"type\" : \"as\",\n        \"data\" : [\n                [\n                        \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply0\",\n                        \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply1\",\n                        \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply2\",\n                        \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply3\"\n                ]\n        ]\n}\n\u0027\u0027\u0027",
+      "parentUuid": "94011329_cc8b9ec7",
+      "revId": "b32eecf1e2e6918dc5288f9cb7895f2f1a6f8973",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -153,6 +153,90 @@ methods:
                 An array of paths.
       errors:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetAssociatedSubTreeById
+      description: >
+          Retrieves a dictionary of D-Bus paths -> services of associated
+          endpoints with the provided identifier, filtering based on their
+          association with specified endpoint interfaces.
+      parameters:
+          - name: id
+            type: string
+            description: >
+                The leaf name of the dbus path, uniquely identifying a specific
+                component or entity within the system. For example, in the path
+                `/xyz/openbmc_project/inventory/system/ChassisId/motherboard/FanId`,
+                the identifiers would be `FanId`.
+          - name: object_path
+            type: string
+            description: >
+                The object path for which the result should be fetched.
+          - name: depth
+            type: int32
+            description: >
+                The maximum subtree depth for which results should be fetched.
+                For unconstrained fetches use a depth of zero.
+          - name: subtreeInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to retrieve dbus paths with the
+                specified identifier.
+          - name: association
+            type: string
+            description: >
+                The endpoint association.
+          - name: endpointInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to filter associated endpoint paths.
+      returns:
+          - name: objects
+            type: dict[string,dict[string,array[string]]]
+            description: >
+                A dictionary of path -> services.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetAssociatedSubTreePathsById
+      description: >
+          Retrieves the D-Bus paths of associated endpoints with the provided
+          identifier, filtering based on their association with specified
+          endpoint interfaces.
+      parameters:
+          - name: id
+            type: string
+            description: >
+                The leaf name of the dbus path, uniquely identifying a specific
+                component or entity within the system. For example, in the path
+                `/xyz/openbmc_project/inventory/system/ChassisId/motherboard/FanId`,
+                the identifiers would be `FanId`.
+          - name: object_path
+            type: string
+            description: >
+                The object path for which the result should be fetched.
+          - name: depth
+            type: int32
+            description: >
+                The maximum subtree depth for which results should be fetched.
+                For unconstrained fetches use a depth of zero.
+          - name: subtreeInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to retrieve dbus paths with the
+                specified identifier.
+          - name: association
+            type: string
+            description: >
+                The endpoint association.
+          - name: endpointInterfaces
+            type: array[string]
+            description: >
+                An array of interfaces used to filter associated endpoint paths.
+      returns:
+          - name: paths
+            type: array[string]
+            description: >
+                An array of paths.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
 
 service_names:
     - default: xyz.openbmc_project.ObjectMapper

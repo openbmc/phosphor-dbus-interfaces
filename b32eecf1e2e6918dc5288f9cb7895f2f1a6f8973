@@ -70,6 +70,24 @@
       "parentUuid": "dc20fb3a_7591272e",
       "revId": "b32eecf1e2e6918dc5288f9cb7895f2f1a6f8973",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fd04b1d_32b9c905",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-03-13T04:39:43Z",
+      "side": 1,
+      "message": "GetAssociatedSubTreePathsById and GetAssociatedSubTreeById simplify the process by consolidating multiple mapper calls into a single operation.\n\nTo query the list of ports for a specific adapter:\n\nFirst, we need to obtain the path to the adapterId. This involves using the getSubTree function to retrieve a list of adapters that have the \"xyz.openbmc_project.Inventory.Item.FabricAdapter\" interface. We then iterate through this list to check if the adapterId is present and retrieve its path.\n\nNext, we need to find the ports associated with the fabric adapter by establishing a connection. For each valid adapterId, we use the getAssociatedSubTree function to retrieve the endpoints associated with the adapterIdPath/association.\n\nInstead of making multiple mapper calls, we simplify the process by making a single call to GetAssociatedSubTreePathsById or GetAssociatedSubTreeById to retrieve the list of fabric adapter ports for a specific fabric adapter ID.",
+      "parentUuid": "9146976f_77dacb6c",
+      "revId": "b32eecf1e2e6918dc5288f9cb7895f2f1a6f8973",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,22 @@
+description: >
+    This interface provides details about Common Platform Error Record (CPER)
+    files that are available on the BMC. Each CPER file is represented as a CPER
+    Record object, which holds key attributes of the file.
+properties:
+    - name: Filename
+      type: string
+      description: >
+          The name of the CPER file stored on the BMC. This attribute uniquely
+          identifies the file and can be used to locate or refer to the specific
+          CPER file in the system.
+    - name: Timestamp
+      type: string
+      description: >
+          Indicates the time when the CPER file was generated. This timestamp
+          provides critical information for correlating the error record with
+          system events or logs, aiding in diagnostics and root cause analysis.
+    - name: Log
+      type: string
+      description: >
+          An additional string that gives the file path of the CPER files
+          saved in the BMC.

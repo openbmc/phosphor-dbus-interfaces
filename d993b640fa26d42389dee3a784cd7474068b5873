@@ -16,6 +16,29 @@
       "message": "Only took 2 years for someone to finish this commit...",
       "revId": "d993b640fa26d42389dee3a784cd7474068b5873",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa7bf400_c3c944fe",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-03-14T04:35:21Z",
+      "side": 1,
+      "message": "In Redfish, these need to result in two different behaviors, so putting them under one condition doesn\u0027t help the problem.  Redfish needs a dbus definition for:\n\nWhen the value can\u0027t be gotten because of an error.\nWhen a value can\u0027t be gotten because it\u0027s not supported on this system.\nWhen a value can\u0027t be gotten because it\u0027s unavailable (power is off).\n\nAnd those need to be different from a dbus perspective, otherwise this interface isn\u0027t helpful.\n\nI made my suggestion on https://gerrit.openbmc.org/c/openbmc/bmcweb/+/70008\n\nI suspect LanesInUse needs split into its own optional interface.  MAXINT can denote that the value is supported but unavailable.",
+      "range": {
+        "startLine": 298,
+        "startChar": 59,
+        "endLine": 299,
+        "endChar": 31
+      },
+      "revId": "d993b640fa26d42389dee3a784cd7474068b5873",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ],
   "submitRequirementResults": []

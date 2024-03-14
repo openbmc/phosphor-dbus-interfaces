@@ -34,6 +34,24 @@
       "parentUuid": "012f6aff_02630481",
       "revId": "fa3bd6a63489aee65dc3d8bb913c1d381bb0ccde",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e28d36c4_148c4f56",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2024-03-14T01:38:29Z",
+      "side": 1,
+      "message": "I don\u0027t think adding a regex here really addresses my concern. My concern is the proliferation of the query methods, which your regex proposal would still contribute to. My blue-sky suggestion was more of a singular `Query` method, where we pass it a query written in a DSL. To reach for something that appeared relevant in a quick DDG search, something like Cypher/GQL\n\nhttps://en.wikipedia.org/wiki/Graph_Query_Language\n\nBut that\u0027s really long-term stuff, if anyone has the motivation for it. I\u0027m not sure what we do about immediate solutions. Maybe we let the proliferation continue?",
+      "parentUuid": "68f4d961_2351de1b",
+      "revId": "fa3bd6a63489aee65dc3d8bb913c1d381bb0ccde",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

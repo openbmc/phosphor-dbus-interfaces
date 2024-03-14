@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0bf75bb_ba5ff3a5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-03-14T22:48:14Z",
+      "side": 1,
+      "message": "nit, link, not lane.  This is collection of lanes, which is called a link in PCIe vernacular.\n\nAlso, can we replace \"not used\" with \"not active\".",
+      "range": {
+        "startLine": 299,
+        "startChar": 53,
+        "endLine": 299,
+        "endChar": 57
+      },
+      "revId": "802e148cce95a5f4fda4eddb8f9d3f2dfe20d468",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

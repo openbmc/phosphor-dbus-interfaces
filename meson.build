@@ -20,6 +20,9 @@ endif
 
 # Parse options to determine appropriate subdirectories to support.
 selected_subdirs = []
+if get_option('data_com_amd')
+    selected_subdirs += 'com/amd'
+endif
 if get_option('data_com_google')
     selected_subdirs += 'com/google'
 endif

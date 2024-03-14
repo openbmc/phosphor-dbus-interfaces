@@ -1,0 +1,70 @@
+description: >
+    Configuration parameters used by the AMD BMC RAS application.
+
+methods:
+    - name: SetAttribute
+      description: >
+          To set the new value on existing attribute name.
+      parameters:
+          - name: AttributeName
+            type: string
+            description: >
+                AttributeName which has to be changed.
+          - name: AttributeValue
+            type:
+                variant[boolean,string,int64,array[string],dict[string, string]]
+            description: >
+                New attribute value
+
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: GetAttribute
+      description: >
+          To get the attribute value of existing attributes.
+      parameters:
+          - name: AttributeName
+            type: string
+            description: >
+                To get the RAS configuration attribute current values.
+
+      returns:
+          - name: Value
+            type:
+                variant[boolean,string,int64,array[string],dict[string, string]]
+            description: >
+                The attribute value.
+
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+properties:
+    - name: RasConfigTable
+      type:
+          dict[string,struct[enum[self.AttributeType],string,variant[boolean,string,int64,array[string],dict[string,
+          string]],int64]]
+      description: >
+          map{attributeName,struct{attributeType,description,value,maxboundlimit}
+          Example : {"McaErrCounterOverflow",
+          {com.amd.RAS.Configuration.AttributeType.Integer,
+           "Error counter threshold overflow for MCA errors",10,0xFFF}
+enumerations:
+    - name: AttributeType
+      description: >
+          Attribute Type.
+      values:
+          - name: Boolean
+            description: >
+                Boolean value Type
+          - name: String
+            description: >
+                string value Type.
+          - name: Integer
+            description: >
+                unsigned integer value Type.
+          - name: ArrayOfStrings
+            description: >
+                Array of strings value Type.
+          - name: KeyValueMap
+            description: >
+                key-value pairs value Type.

@@ -17,3 +17,34 @@ properties:
           user interfaces but this field should not be used for programmatic
           interrogation of a cable beyond ignoring the default value of the
           empty string.
+    - name: CableStatus
+      type: enum[self.Status]
+      default: "Unknown"
+      description: >
+          The status of the cable. The default status is unknown.
+enumerations:
+    - name: Status
+      description: >
+          Possible cable status
+      values:
+          - name: "Normal"
+            description: >
+                Cable is operating normally.
+          - name: "Degraded"
+            description: >
+                Cable is degraded.
+          - name: "Failed"
+            description: >
+                Cable has failed.
+          - name: "Testing"
+            description: >
+                Cable is under test.
+          - name: "Disabled"
+            description: >
+                Cable is disabled.
+          - name: "SetByService"
+            description: >
+                Cable status is set by the service.
+          - name: "Unknown"
+            description: >
+                Cable status is unknown.

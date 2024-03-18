@@ -1,0 +1,27 @@
+description: >
+    Implement to describe the state of the cables on the system.
+
+properties:
+    - name: Status
+      type: enum[self.Status]
+      default: "Unknown"
+      description: >
+          The status of the cable. The default status is unknown.
+
+enumerations:
+    - name: Status
+      description: >
+          Possible cable status
+      values:
+          - name: "Normal"
+            description: >
+                Cable is operating normally.
+          - name: "Failed"
+            description: >
+                Cable has failed.
+          - name: "Disabled"
+            description: >
+                Cable is disabled.
+          - name: "Unknown"
+            description: >
+                Cable status is unknown.

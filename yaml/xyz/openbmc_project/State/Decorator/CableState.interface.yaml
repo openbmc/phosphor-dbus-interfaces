@@ -1,0 +1,28 @@
+description: >
+    Implement to describe the state of the  active cables on the system. Active
+    cables are cables that use an electronic circuit and passive cables are
+    those without an electronic circuit.
+properties:
+    - name: Status
+      type: enum[self.Status]
+      default: "Unknown"
+      description: >
+          The status of the cable. The default status is unknown.
+
+enumerations:
+    - name: Status
+      description: >
+          Possible cable status
+      values:
+          - name: "Normal"
+            description: >
+                Cable is operating normally.
+          - name: "Failed"
+            description: >
+                Cable has failed. Cable is connected but no traffic is running.
+          - name: "Disabled"
+            description: >
+                Cable is disabled. Cable is connected to a powered off entity.
+          - name: "Unknown"
+            description: >
+                Cable status is unknown.

@@ -1,0 +1,27 @@
+description: >
+    Implement to describe the status of the FRU on the system.
+
+properties:
+    - name: Status
+      type: enum[self.Status]
+      default: "Unknown"
+      description: >
+          The status of the FRU. The default status is unknown.
+
+enumerations:
+    - name: Status
+      description: >
+          Possible FRU status
+      values:
+          - name: "Normal"
+            description: >
+                FRU is operating normally.
+          - name: "Failed"
+            description: >
+                FRU has failed.
+          - name: "Disabled"
+            description: >
+                FRU is disabled and not available to use.
+          - name: "Unknown"
+            description: >
+                FRU status is unknown.

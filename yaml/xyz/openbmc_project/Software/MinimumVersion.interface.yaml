@@ -1,0 +1,11 @@
+description: >
+    The minimum version string for a xyz.openbmc_project.Software.Version.
+properties:
+    - name: MinimumVersion
+      default: ""
+      type: string
+      description: >
+          The minimum software version that a component must have to operate. An
+          empty value (default) indicates that a minimum software version is not
+          required. The string format is expected to be the same format used for
+          the Version property of the component.

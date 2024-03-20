@@ -35,6 +35,42 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c7bb3ea_9ba84e24",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2024-03-20T20:56:34Z",
+      "side": 1,
+      "message": "Yeah I see your point about this being optional. If we get more of these, we could revisit adding for example a dictionary of key value pairs for \"Optional\" version features such as \"Minimum : string\" etc.\nAdded the default of empty string for now.",
+      "parentUuid": "bf44aff3_85b4e8fe",
+      "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ebf758b_60768b37",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2024-03-20T20:56:34Z",
+      "side": 1,
+      "message": "Yeah, that\u0027d be the SoftwareInventory Redfish property we could map it to. Updated the commit msg with this info.",
+      "parentUuid": "1e2650ee_e60db68b",
+      "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "59285e09_295176fb",
@@ -48,6 +84,24 @@
       "writtenOn": "2024-03-20T17:00:22Z",
       "side": 1,
       "message": "Is an app expected to do this check? Do we want something like \"This string is formatted using the same format used for the Version property\"?",
+      "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7531a2fe_0aa05893",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2024-03-20T20:56:34Z",
+      "side": 1,
+      "message": "Done. Yeah the code update app checks via a provided regex that the min version matches the format of the version. Added the formatting expectation to the description as suggested.",
+      "parentUuid": "59285e09_295176fb",
       "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -82,6 +136,48 @@
       "writtenOn": "2024-03-20T17:00:22Z",
       "side": 1,
       "message": "Is a word like \"component\" more generic and, therefore, could apply to multiple things like bmc, host, and power supplies?\n\nThe minimum software version that a component must have to operate. An empty value means no minimum software version is required. This string is formatted using the same format used for the Version property.",
+      "range": {
+        "startLine": 11,
+        "startChar": 46,
+        "endLine": 11,
+        "endChar": 53
+      },
+      "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a1c0e12_f53556cb",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2024-03-20T20:56:34Z",
+      "side": 1,
+      "message": "Done. Yep, added.",
+      "parentUuid": "b2df1993_e1b10221",
+      "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f4a0795_51a74f7a",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2024-03-20T20:56:34Z",
+      "side": 1,
+      "message": "Done. Yeah i think it makes sense especially given that the Incompatible error has component in its description: \"A system component has a software version that is incompatible...\".",
+      "parentUuid": "0d4ff7d6_79b3ba1e",
       "range": {
         "startLine": 11,
         "startChar": 46,

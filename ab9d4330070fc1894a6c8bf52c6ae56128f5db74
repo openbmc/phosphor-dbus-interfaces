@@ -214,6 +214,24 @@
       "parentUuid": "164ba2ad_21b5c5bf",
       "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5bac72b7_9285fd58",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-03-20T13:04:48Z",
+      "side": 1,
+      "message": "Myself and Claire had a offline discussion on the fault log type dump entry creation flow.\n1. Claire\u0027s proposed approach is to utilize d-bus signal matching approach to avoid the dependency on phosphor-logging dependency for future extension.\n Existing code implementation is tightly tied to downstream path_namespace\u003d\u0027/com/intel/crashdump\u0027.  This need to make it generic to support other processor architecture if possible or recipe driven approach. C\n2. Utilizing existing elog based dump infrastructure, to extend the support for faultlog.\n3. Extending this proposal based on utilizing createDump method.  \n\nClaire is planning to compare , option 1 and 2 to align the design proposal for fault log management.",
+      "parentUuid": "ee9c933d_847b2136",
+      "revId": "ab9d4330070fc1894a6c8bf52c6ae56128f5db74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

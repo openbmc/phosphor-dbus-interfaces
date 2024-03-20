@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e2650ee_e60db68b",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-03-20T17:00:22Z",
+      "side": 1,
+      "message": "I assume this maps to \n\n                \"LowestSupportedVersion\": {\n                    \"description\": \"The lowest supported version of this software.\",\n                    \"longDescription\": \"This property shall represent the lowest supported version of this software.  This string is formatted using the same format used for the Version property.\",\n                    \"readonly\": true,\n\n ?",
+      "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59285e09_295176fb",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-03-20T17:00:22Z",
+      "side": 1,
+      "message": "Is an app expected to do this check? Do we want something like \"This string is formatted using the same format used for the Version property\"?",
+      "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2df1993_e1b10221",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-03-20T17:00:22Z",
+      "side": 1,
+      "message": "Anything about it being empty and that means no check is done?",
+      "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d4ff7d6_79b3ba1e",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-03-20T17:00:22Z",
+      "side": 1,
+      "message": "Is a word like \"component\" more generic and, therefore, could apply to multiple things like bmc, host, and power supplies?\n\nThe minimum software version that a component must have to operate. An empty value means no minimum software version is required. This string is formatted using the same format used for the Version property.",
+      "range": {
+        "startLine": 11,
+        "startChar": 46,
+        "endLine": 11,
+        "endChar": 53
+      },
+      "revId": "64c1a1855b28f6432ebc34f93854906a315f8a7c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

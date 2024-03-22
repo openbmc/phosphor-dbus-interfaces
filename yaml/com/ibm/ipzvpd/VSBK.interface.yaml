@@ -57,6 +57,30 @@ properties:
       type: array[byte]
       description: >
           D0 keyword.
+    - name: D1
+      type: array[byte]
+      description: >
+          D1 keyword.
+    - name: D2
+      type: array[byte]
+      description: >
+          D2 keyword.
+    - name: D3
+      type: array[byte]
+      description: >
+          D3 keyword.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword.
+    - name: F0
+      type: array[byte]
+      description: >
+          F0 keyword.
+    - name: F4
+      type: array[byte]
+      description: >
+          F4 keyword.
     - name: F5
       type: array[byte]
       description: >
@@ -65,7 +89,7 @@ properties:
       type: array[byte]
       description: >
           F6 keyword.
-    - name: D1
+    - name: F7
       type: array[byte]
       description: >
-          D1 keyword.
+          F7 keyword.

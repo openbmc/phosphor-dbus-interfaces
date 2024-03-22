@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa6e8b3a_a428f77c",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-22T20:02:43Z",
+      "side": 1,
+      "message": "I\u0027m still a little uneasy about this being in the ExtendedVersion interface.\n\n1. Not all firmwares have an ExtendedVersion, so now we have to support empty ones of those too.\n2. Some software is \"multi-slot\".  This information is really related to the device and not the particular Version (slot).  Aren\u0027t we going to be repeating this?\n\nShould we get this added to the Software design to make sure everyone involved is on the same page?",
+      "revId": "c340c8e06544d45d4ef9575b25001aaa7a6918b5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "614f78cf_85d3cbec",
@@ -14,6 +31,30 @@
       "writtenOn": "2024-03-20T21:14:09Z",
       "side": 1,
       "message": "I would leave out \"system\" and just go with component, but I am okay with this as well.",
+      "range": {
+        "startLine": 12,
+        "startChar": 46,
+        "endLine": 12,
+        "endChar": 53
+      },
+      "revId": "c340c8e06544d45d4ef9575b25001aaa7a6918b5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb64b281_93391c27",
+        "filename": "yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-22T20:02:43Z",
+      "side": 1,
+      "message": "Agree.",
+      "parentUuid": "614f78cf_85d3cbec",
       "range": {
         "startLine": 12,
         "startChar": 46,

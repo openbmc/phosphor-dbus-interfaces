@@ -16,6 +16,103 @@
       "message": "Could you please review these new methods so that we can utilize them in https://gerrit.openbmc.org/c/openbmc/bmcweb/+/61097. thx",
       "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cd3711f_9b2844bf",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-25T14:19:58Z",
+      "side": 1,
+      "message": "You can already get this information from the GetAssociatedSubTree, correct?  The only thing we\u0027re doing is adding additional filtering of this \"by id\"?  Do we have some example client-side code that this would make life better for?  Can we link to that?",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "665a2bad_41105a89",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-25T14:19:58Z",
+      "side": 1,
+      "message": "This appears contradictory.  The first sentence says \"leaf\" but then the example sentence shows `ChassisId` which is not a leaf.",
+      "range": {
+        "startLine": 168,
+        "startChar": 0,
+        "endLine": 171,
+        "endChar": 65
+      },
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "49d1ed46_a1327eea",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-25T14:19:58Z",
+      "side": 1,
+      "message": "Since these are new interfaces, can we make these object_path, which is what the original ones should have been to begin with?",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1694e17f_0afefd51",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-25T14:19:58Z",
+      "side": 1,
+      "message": "What is an \"association interface\"?  This isn\u0027t clear to me either in name or in the description.",
+      "range": {
+        "startLine": 190,
+        "startChar": 18,
+        "endLine": 190,
+        "endChar": 39
+      },
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80785d0b_8ec357a7",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-25T14:19:58Z",
+      "side": 1,
+      "message": "What good is having just the paths?",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7cd279a_c3794690",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000938
+      },
+      "writtenOn": "2024-03-26T15:14:21Z",
+      "side": 1,
+      "message": "The BMC GUI will display the cable status information to the user.\nyes, The Redfish schema I am following is  https://github.com/openbmc/bmcweb/blob/master/static/redfish/v1/JsonSchemas/Cable/Cable.json#L303",
+      "parentUuid": "cc7040a1_4f4c35f5",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 11
+      },
+      "revId": "e970b81358c9d479af6b1679fc20de2043cf0ff4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e0c522e7_d6a2a32a",
@@ -37,6 +61,30 @@
       "writtenOn": "2024-03-18T13:22:52Z",
       "side": 1,
       "message": "I don\u0027t know what these mean.  How is a cable \"running\"?\n\nWhat is the difference between inactive and off?  Sounds the same to me.",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 37
+      },
+      "revId": "e970b81358c9d479af6b1679fc20de2043cf0ff4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfdecb25_2813e264",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000938
+      },
+      "writtenOn": "2024-03-26T15:14:21Z",
+      "side": 1,
+      "message": "I have modified the enum values based on the redfish schema.",
+      "parentUuid": "e0c522e7_d6a2a32a",
       "range": {
         "startLine": 30,
         "startChar": 0,

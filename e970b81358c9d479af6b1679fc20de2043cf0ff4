@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ced9e941_2ce4d5a7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-26T17:34:40Z",
+      "side": 1,
+      "message": "Please reference the schema in the commit message.  You don\u0027t need the link to it, but at least reference that these enumerations are coming from the Cable schema from Redfish.",
+      "parentUuid": "d7cd279a_c3794690",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 11
+      },
+      "revId": "e970b81358c9d479af6b1679fc20de2043cf0ff4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e0c522e7_d6a2a32a",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
         "patchSetId": 2
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "I have modified the enum values based on the redfish schema.",
       "parentUuid": "e0c522e7_d6a2a32a",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 37
+      },
+      "revId": "e970b81358c9d479af6b1679fc20de2043cf0ff4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "810ca592_339b7cd4",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-26T17:34:40Z",
+      "side": 1,
+      "message": "I generally do not like blindly copying every enumeration that exists in Redfish.  Do you have a pruned down list that your implementation is actually planning to use?  Can we get down to just that list.\n\nIt\u0027s hard to reason about all these enumerations and likely leads to someone picking the wrong one (or a new one that isn\u0027t fully supported across the whole platform).  Additionally, the Redfish schemas can drift from version to version and add new enumerations, which our dbus specs won\u0027t follow.  It\u0027s better to only express what we want to use.",
+      "parentUuid": "cfdecb25_2813e264",
       "range": {
         "startLine": 30,
         "startChar": 0,

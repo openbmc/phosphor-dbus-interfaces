@@ -188,6 +188,10 @@ Some software versions are a collection of images, each with their own version
 identifiers. The `xyz.openbmc_project.Software.ExtendedVersion` interface can be
 added to any `Software.Version` to express the versioning of the aggregation.
 
+In addition, the `xyz.openbmc_project.Software.MinimumVersion` interface can
+communicate the minimum software version that a component must have to operate.
+The minimum version check is an optional software feature of the item updater.
+
 ### Activation Progress
 
 The `xyz.openbmc_project.Software.ActivationProgress` interface is provided to

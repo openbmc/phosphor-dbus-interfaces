@@ -33,6 +33,23 @@
       "message": "Generally, I don\u0027t want to add \"Status\" to inventory objects.  Inventory should be mostly static so that daemons wanting to only know about new inventory items can easily filter those events from events that happen more often.\n\nCan you create a new interface under State (or Control?) to represent the cable state?\n\nIf you look at the interfaces under State/Decorator, most of these are reusable across multiple entities.  Looking at the enumerations you have below, these seem very similar to some of the other Redfish status enumerations (like maybe Health related?).  Could we make something that is not cable-specific?",
       "revId": "c617f5a8ede758190b288214566e0470e91cba90",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cbb60c93_5e2abede",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1001274
+      },
+      "writtenOn": "2024-03-27T10:53:12Z",
+      "side": 1,
+      "message": "Is this new addition to BMC GUI?",
+      "revId": "c617f5a8ede758190b288214566e0470e91cba90",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

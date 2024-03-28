@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "52e0ba7b_2a963d8d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-03-28T19:03:20Z",
+      "side": 1,
+      "message": "Redfish still has Cable \"Status\"\"State\" and \"Status\"\"Health\".  :/ \nWe map Health \u003d Critical when Functional \u003d false. \nMap State \u003d Absent when Present \u003d false. \n\nRedfish\u0027s cable status long description mentions how to tie this in with Cable\u0027s Status State and Status Health. (I don\u0027t think that should be included in the PDI.) (I don\u0027t think bmcweb should enforce that either.) I think we should keep the existing mapping for State/Status, and whatever backend implements this can set this Cable Status, Functional, and Present. \n\nI vote for a new State or Control interface for the cable state. Using only the 3/4 this implementation actually needs.\n\n            \"enumLongDescriptions\": {\n                \"Degraded\": \"This value shall indicate the cable is degraded.  The State property in Status shall contain the value `Enabled` and the Health property in Status shall contain the value `Warning`.\",\n                \"Disabled\": \"This value shall indicate the cable is disabled.  The State property in Status shall contain the value `Disabled`.\",\n                \"Failed\": \"This value shall indicate the cable has failed.  The State property in Status shall contain the value `Enabled` and the Health property in Status shall contain the value `Critical`.\",\n                \"Normal\": \"This value shall indicate the cable is operating normally.  The State property in Status shall contain the value `Enabled` and the Health property in Status shall contain the value `OK`.\",\n                \"SetByService\": \"This value shall indicate the status for the cable is not defined by the user.  If implemented, the service shall determine the value of the State and Health properties in Status.\",\n                \"Testing\": \"This value shall indicate the cable is under test.  The State property in Status shall contain the value `InTest`.\"\n            },",
+      "parentUuid": "4eb7e5d7_4974e3d6",
+      "revId": "c617f5a8ede758190b288214566e0470e91cba90",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cbb60c93_5e2abede",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
         "patchSetId": 3
@@ -48,6 +66,24 @@
       "writtenOn": "2024-03-27T10:53:12Z",
       "side": 1,
       "message": "Is this new addition to BMC GUI?",
+      "revId": "c617f5a8ede758190b288214566e0470e91cba90",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f58a966_a978fcba",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-03-28T19:03:20Z",
+      "side": 1,
+      "message": "Yeah, could be added to webui-vue. \nToday, there isn\u0027t any cable support in webui-vue, but there is no reason that it can\u0027t be added.",
+      "parentUuid": "cbb60c93_5e2abede",
       "revId": "c617f5a8ede758190b288214566e0470e91cba90",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

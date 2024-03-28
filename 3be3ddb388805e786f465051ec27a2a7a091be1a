@@ -233,6 +233,24 @@
       "parentUuid": "44065124_b5aa423a",
       "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24a91f31_c0f7517e",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-03-28T20:38:29Z",
+      "side": 1,
+      "message": "Ex:\nThe dbus call to retrive the power supplies in the system:\n\nbusctl get-property xyz.openbmc_project.ObjectMapper /xyz/openbmc_project/inventory/system/chassis/powered_by xyz.openbmc_project.Association endpoints\n\nas 4 \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply3\" \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply2\" \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply1\" \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply0\"\n\nSteps involved in the dbus call:\n\n1. Retrieve Chassis Path:\n   - Obtain the path of the chassis (ID) in the inventory. Locate the chassis object path that implements the \"xyz.openbmc_project.Inventory.Item.Chassis\" interface, which uniquely identifies the chassis within the system. For example, assume the chassis path is \"/xyz/openbmc_project/inventory/system/chassis\".\n\n2. Construct Associated Path:\n   - Construct the associated path by appending the \"powered_by\" association to the chassis path. This results in the associated path \"/xyz/openbmc_project/inventory/system/chassis/powered_by\".\n\n3. Retrieve Associated Endpoints:\n   - Retrieve the list of associated endpoints using the constructed associated path. These endpoints represent the various power supplies associated with the chassis.\n\n4. Filter Endpoints by Interface:\n   - Filter the list of associated endpoints to include only those paths that implement the \"xyz.openbmc_project.Inventory.Item.PowerSupply\" interface. This ensures that only endpoints representing power supplies are included in the result.\n\nWe don\u0027t need to specify the service name. Each leaf of the path represents a power supply.",
+      "parentUuid": "acd98a52_da21b9ad",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

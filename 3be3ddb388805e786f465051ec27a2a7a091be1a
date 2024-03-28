@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3f1759a4_f1ae5f15",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-03-28T11:48:38Z",
+      "side": 1,
+      "message": "GetAssociatedSubTree takes the input as an associated path (object path + endpoint association) and interface. It returns only the associated paths that have the specified interface.\n\nGetAssociatedSubTree essentially combines the functionalities of GetSubTree (by id) and GetAssociatedSubTree. It first retrieves the object paths for the specified ID, then constructs associated paths, returning only those associated paths that have the specified interface.\n\nHere is the code snippet where we utilize GetAssociatedSubTreePathsById:\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/61097/65..78/redfish-core/lib/fabric_ports.hpp#449\n\nMore discussion:\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/61097/65..78/redfish-core/lib/fabric_ports.hpp#b296",
+      "parentUuid": "7cd3711f_9b2844bf",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "665a2bad_41105a89",
         "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
         "patchSetId": 7
@@ -48,6 +66,30 @@
       "writtenOn": "2024-03-25T14:19:58Z",
       "side": 1,
       "message": "This appears contradictory.  The first sentence says \"leaf\" but then the example sentence shows `ChassisId` which is not a leaf.",
+      "range": {
+        "startLine": 168,
+        "startChar": 0,
+        "endLine": 171,
+        "endChar": 65
+      },
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78513704_868eb680",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-03-28T11:48:38Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "665a2bad_41105a89",
       "range": {
         "startLine": 168,
         "startChar": 0,
@@ -71,6 +113,24 @@
       "writtenOn": "2024-03-25T14:19:58Z",
       "side": 1,
       "message": "Since these are new interfaces, can we make these object_path, which is what the original ones should have been to begin with?",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b8df7ab_82ee4bff",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-03-28T11:48:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "49d1ed46_a1327eea",
       "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -100,6 +160,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1a11877f_927c113d",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-03-28T11:48:38Z",
+      "side": 1,
+      "message": "I named it associationInterfaces because it constructs associated paths by combining the object path and association, returning only those paths that have the specified interface. We use two interfaces, and to differentiate them, I chose the name \u0027associationInterfaces.\u0027 However, I am open to changing the name if there is a more intuitive option.",
+      "parentUuid": "1694e17f_0afefd51",
+      "range": {
+        "startLine": 190,
+        "startChar": 18,
+        "endLine": 190,
+        "endChar": 39
+      },
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "80785d0b_8ec357a7",
         "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
         "patchSetId": 7
@@ -111,6 +195,24 @@
       "writtenOn": "2024-03-25T14:19:58Z",
       "side": 1,
       "message": "What good is having just the paths?",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44065124_b5aa423a",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-03-28T11:48:38Z",
+      "side": 1,
+      "message": "We use the GetAssociatedSubTreePathsById in the getValidFabricAdapterPath:\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/61097/65..78/redfish-core/lib/fabric_ports.hpp#449",
+      "parentUuid": "80785d0b_8ec357a7",
       "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

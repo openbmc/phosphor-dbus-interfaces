@@ -215,6 +215,24 @@
       "parentUuid": "80785d0b_8ec357a7",
       "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "acd98a52_da21b9ad",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-28T17:14:07Z",
+      "side": 1,
+      "message": "But why?  In what cases is only have the path useful?  Don\u0027t you still need to know which service hosts the interface?  \n\n(I\u0027m not going to reverse engineer a half-dozen callback chains from bmcweb code.)",
+      "parentUuid": "44065124_b5aa423a",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

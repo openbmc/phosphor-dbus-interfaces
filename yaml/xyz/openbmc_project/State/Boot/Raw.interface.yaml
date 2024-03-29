@@ -3,6 +3,6 @@ description: >
 
 properties:
     - name: Value
-      type: struct[uint64,array[byte]]
+      type: array[byte]
       description: >
           The POST code value.

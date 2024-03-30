@@ -33,6 +33,24 @@
       "message": "There was a reason why the post codes was changed to the struct.\n\nPlease follow the mailing list trail to understand why : https://lore.kernel.org/openbmc/4795347F-477D-45EF-A145-0C7B163FE01B@getmailspring.com/\n\n\nand also this https://github.com/openbmc/phosphor-dbus-interfaces/commit/9a96970ebb93eb1f495c200801343a4d1c53977c commit message explains the reason why this change was done.",
       "revId": "794dba2db4eb870cedbe745ffdbc85dd3e98e373",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ceb415a_5d951a99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001127
+      },
+      "writtenOn": "2024-03-30T11:00:18Z",
+      "side": 1,
+      "message": "Thank you for sharing the history. I have one question, is uint64_t necessary if the byte array can already accommodate the entire post code? Additionally, there\u0027s a slight drawback to storing postcodes primarily in uint64_t. When displayed in Redfish, some codes might not be clearly distinguishable as 1-byte, 4-byte, or longer codes. For example, 0x00000001 might be displayed as 0x01.\n\nActually, the motivation is to display postcode exceed 8 bytes in Redfish (e.g. 9-byte code used in SBMR):\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/70163\n\nThanks!",
+      "parentUuid": "022be888_41670093",
+      "revId": "794dba2db4eb870cedbe745ffdbc85dd3e98e373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

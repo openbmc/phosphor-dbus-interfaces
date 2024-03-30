@@ -16,6 +16,23 @@
       "message": "I think the concept of a primary and secondary code was introduced by IBM for their architecture.",
       "revId": "794dba2db4eb870cedbe745ffdbc85dd3e98e373",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "022be888_41670093",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2024-03-30T05:39:51Z",
+      "side": 1,
+      "message": "There was a reason why the post codes was changed to the struct.\n\nPlease follow the mailing list trail to understand why : https://lore.kernel.org/openbmc/4795347F-477D-45EF-A145-0C7B163FE01B@getmailspring.com/\n\n\nand also this https://github.com/openbmc/phosphor-dbus-interfaces/commit/9a96970ebb93eb1f495c200801343a4d1c53977c commit message explains the reason why this change was done.",
+      "revId": "794dba2db4eb870cedbe745ffdbc85dd3e98e373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

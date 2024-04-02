@@ -51,6 +51,24 @@
       "parentUuid": "022be888_41670093",
       "revId": "794dba2db4eb870cedbe745ffdbc85dd3e98e373",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d6915b9_8b7481c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2024-04-02T11:12:44Z",
+      "side": 1,
+      "message": "\u003e Thank you for sharing the history. I have one question, is uint64_t necessary if the byte array can already accommodate the entire post code?\n\nYes, that was necessary for IBM to align with the community. IBM post codes aka progress codes are 70 byte long. But some where in those 70 bytes there is an 8byte ascii convertible code that we wanted to display in GUI. Which is why we copied 8 byte content into primary post code and then sticked the entire 70 byte data into the secondary post code, which can be pulled by external client via a redfish attachment on the log resource. Most of the platforms like intel , does not use the secondary post code at all.\n\n\u003e Additionally, there\u0027s a slight drawback to storing postcodes primarily in uint64_t. When displayed in Redfish, some codes might not be clearly distinguishable as 1-byte, 4-byte, or longer codes. For example, 0x00000001 might be displayed as 0x01.\n\u003e \n\nis this a problem ? I guess intel have a byte long post code, where only the Least significant byte gets filled, but redfish still shows 64bit version of it. They don\u0027t seem to have any problem with it. Is this some sort of customer requirement on your platform ?\n\n\u003e Actually, the motivation is to display postcode exceed 8 bytes in Redfish (e.g. 9-byte code used in SBMR):\n\u003e https://gerrit.openbmc.org/c/openbmc/bmcweb/+/70163\n\u003e \n\nYeah, looking at the bmcweb patch. Having a meson option to switch between primary  \u0026 secondary post codes in bmcweb does not seem like the right way to go. bmcweb is just supposed to obtain data from dbus and publish that in redfish. What ever solution that you come up with should be coming from the back end daemons like phosphor-post-code-manager or phosphor-host-postd daemons making sure that none of the other platforms leveraging these repo are broken.\n\n\u003e Thanks!",
+      "parentUuid": "2ceb415a_5d951a99",
+      "revId": "794dba2db4eb870cedbe745ffdbc85dd3e98e373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

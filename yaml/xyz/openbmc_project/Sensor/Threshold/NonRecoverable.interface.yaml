@@ -1,0 +1,84 @@
+description: >
+    Implement to provide performance loss class sensor thresholds.  Objects
+    implementing Sensor.Threshold.NonRecoverable must be instantiated in the
+    correct hierarchy within the sensors namespace.  The following sensor
+    hierarchies are recognized:
+      airflow
+      altitude
+      current
+      energy
+      fan_tach
+      humidity
+      power
+      pressure
+      temperature
+      utilization
+      voltage
+
+    Additionally, any object implementing Sensor.Threshold.NonRecoverable must
+    also implement Sensor.Value.
+
+properties:
+    - name: NonRecoverableHigh
+      type: double
+      default: NaN
+      description: >
+          The upper bound of the warning threshold.  A value of 'NaN' is used
+          to indicate there is no threshold of this type.
+    - name: NonRecoverableLow
+      type: double
+      default: NaN
+      description: >
+          The lower bound of the warning threshold.  A value of 'NaN' is used
+          to indicate there is no threshold of this type.
+    - name: NonRecoverableAlarmHigh
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bound.
+          False if the sensor value has not exceeded the defined bound.
+
+          NonRecoverableAlarmHigh may be set to False to clear an alarm
+          condition. The behavior of setting NonRecoverableAlarmHigh to True
+          is undefined.
+    - name: NonRecoverableAlarmLow
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bound.
+          False if the sensor value has not exceeded the defined bound.
+
+          NonRecoverableAlarmLow may be set to False to clear an alarm
+          condition. The behavior of setting NonRecoverableAlarmLow to True is
+          undefined.
+signals:
+    - name: NonRecoverableHighAlarmAsserted
+      description: >
+          The high threshold alarm asserted.
+      properties:
+         - name: SensorValue
+           type: double
+           description: >
+               The sensor value that triggered the alarm change.
+    - name: NonRecoverableHighAlarmDeasserted
+      description: >
+          The high threshold alarm deasserted.
+      properties:
+         - name: SensorValue
+           type: double
+           description: >
+               The sensor value that triggered the alarm change.
+    - name: NonRecoverableLowAlarmAsserted
+      description: >
+          The low threshold alarm asserted.
+      properties:
+         - name: SensorValue
+           type: double
+           description: >
+               The sensor value that triggered the alarm change.
+    - name: NonRecoverableLowAlarmDeasserted
+      description: >
+          The low threshold alarm deasserted.
+      properties:
+         - name: SensorValue
+           type: double
+           description: >
+               The sensor value that triggered the alarm change.

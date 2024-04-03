@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec31ab38_a86a7646",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-04-03T21:39:11Z",
+      "side": 1,
+      "message": "What is \"SBMR\"?  I think that is an ARM thing?  How did Ampere do the post codes?",
+      "revId": "794dba2db4eb870cedbe745ffdbc85dd3e98e373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "0ef33b4c_83a253aa",
@@ -85,6 +102,24 @@
       "side": 1,
       "message": "To accommodate a 9-byte or longer code, consider adjusting the uint64_t portion, how about modifying the interface to \"struct[array[byte],array[byte]]\". Updates to phosphor-post-code-manager, phosphor-host-postd, and bmcweb would be necessary.",
       "parentUuid": "3d6915b9_8b7481c4",
+      "revId": "794dba2db4eb870cedbe745ffdbc85dd3e98e373",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "708dc2d8_cb24e0ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-04-03T21:39:11Z",
+      "side": 1,
+      "message": "Can we unwind... what are we trying to accomplish at the high level?  I don\u0027t really understand why parsing of what should be a string in the bmcweb LogService implementation for Post Codes matters and why that should affect the dbus interface.",
+      "parentUuid": "c41d4a3c_7be60bd7",
       "revId": "794dba2db4eb870cedbe745ffdbc85dd3e98e373",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

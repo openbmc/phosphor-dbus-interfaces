@@ -118,6 +118,30 @@
       },
       "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c696abea_bccf34a2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-04-03T21:50:59Z",
+      "side": 1,
+      "message": "\u003e I\u0027m not accepting \"upstream\" and \"downstream\" definitions period.\n\nI\u0027m assuming this naming picked because of Redfish.\n\nThis same thing was litigated in DMTF when we did those definitions for cable.  None of the comments here are new arguments, but rehashing of the old.  The TL;DR from what I remember of the discussion in the standard is that:\n\n1. Most cables have a direction.  Upstream and downstream as terms were selected to best match most specifications (USB/PCIe) that use the same terminology in their actual definitions.  \"upstream/downstream\" in Redfish is all in relation to the root complex, but because not all specifications define it as \"root complex\", and a cable might be one of the dozens of different types, there\u0027s not a great way to document that without using terminology that applies to one cable type and not another.\n2. Those cables where the direction doesn\u0027t matter, or there\u0027s no obvious upstream/downstream (the classic example being identical two servers connected together), it\u0027s defined as being arbitrarily assigned, and even though no longer meaningful, picking a second set of properties for \"arbitrary directional connection\" didn\u0027t seem worthwhile to differentiate from directional, especially because it\u0027s definitely a corner case that in industry doesn\u0027t happen very often.\n\nI agree, this commit needs some more documentation in the description.  What would you propose instead for naming of the directionality of a cable?  I\u0027m not normally one for the \"just copy what Redfish did\", but this is a case where even though it might appear to not be a great naming, all other options were worse when a bunch of reasonably smart people talked it through.\n\n\u003e Do we want/need cables to always attach to Chassis? Do we need a specific association for Chassis like this or should we have one for any Inventory.Item?\n\n+1. We should be avoiding using type-specific associations in new definitions.  Technically a cable could be attached to damn near anything.\n\n\u003e Another way is to just have a general association for Resources and let the RedfishServer(BMCweb) to figure out the type.\n\nTechnically it\u0027d be the mapper that\u0027s figuring out the type.  I\u0027ve started pushing back on a lot of the pattern of \"push all the dbus data into bmcweb and then sort through it there\".  That\u0027s what the mapper is for, if we need better APIs into the mapper, lets build them.",
+      "parentUuid": "ecd938f4_0d93e557",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -16,6 +16,40 @@
       "message": "Why is it required to be a FRU?\n\nHow is this different from OpertationalStatus?  Which are intended to be used and when?\n\nWe should probably write some documents that explain this?",
       "revId": "1cfd4d60e52db0ec3edb18348d728d173efe1411",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ad15937_9e23af74",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/FruStatus.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-04-04T20:11:48Z",
+      "side": 1,
+      "message": "How will we map this for other Redfish resources? \nWill this ever be used other than cable? \nI personally think something unique to cable (your patchset 7) is better https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/70087/7/yaml/xyz/openbmc_project/State/Decorator/CableState.interface.yaml",
+      "revId": "1cfd4d60e52db0ec3edb18348d728d173efe1411",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8977ab9a_d16fea76",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/FruStatus.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-04-04T20:11:48Z",
+      "side": 1,
+      "message": "Unknown will map to null?\n\nFrom https://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.20.0.html\n9.5 Common data types\n...\nnull value, which the service uses when it is unable to determine the property\u0027s value due to an error or other temporary condition",
+      "revId": "1cfd4d60e52db0ec3edb18348d728d173efe1411",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

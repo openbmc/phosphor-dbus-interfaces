@@ -53,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "82fa3949_7ee7bd59",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-04-08T13:44:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3f1759a4_f1ae5f15",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "665a2bad_41105a89",
@@ -206,6 +224,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7910e306_47a9063b",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-04-08T13:44:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9769dae1_bca3db44",
+      "range": {
+        "startLine": 190,
+        "startChar": 18,
+        "endLine": 190,
+        "endChar": 39
+      },
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "80785d0b_8ec357a7",
@@ -291,6 +333,24 @@
       "side": 1,
       "message": "Using the GetAssociatedSubTreePathsById to get the list of powersupplies in the system:\n\n\nbusctl call -j  \"xyz.openbmc_project.ObjectMapper\"   \"/xyz/openbmc_project/object_mapper\" \\\n\"xyz.openbmc_project.ObjectMapper\" \"GetAssociatedSubTreePathsById\" ssiassas \"chassis\" \\\n\"/xyz/openbmc_project/inventory\" 0 1 \"xyz.openbmc_project.Inventory.Item.Chassis\" \"powered_by\" \\\n1  \"xyz.openbmc_project.Inventory.Item.PowerSupply\"\n{\n        \"type\" : \"as\",\n        \"data\" : [\n                [\n                        \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply0\",\n                        \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply1\",\n                        \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply2\",\n                        \"/xyz/openbmc_project/inventory/system/chassis/motherboard/powersupply3\"\n                ]\n        ]\n}\n\u0027\u0027\u0027",
       "parentUuid": "24a91f31_c0f7517e",
+      "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7916897a_20a4c639",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-04-08T13:44:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bdd702d9_b1d8e45f",
       "revId": "3be3ddb388805e786f465051ec27a2a7a091be1a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

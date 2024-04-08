@@ -142,6 +142,30 @@
       },
       "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbeb348d_012243f7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000938
+      },
+      "writtenOn": "2024-04-08T07:14:02Z",
+      "side": 1,
+      "message": "\u003e I\u0027m assuming this naming picked because of Redfish.\n\nYes, I did pick the name from the Redfish.\n\n\u003e I\u0027m not accepting \"upstream\" and \"downstream\" definitions period.\n\n@Patrick, Yes I agree that the \"upstream\" and \"downstream\" definitions don\u0027t match the association name requirements.\n\nI feel we could have an association between \"Cable and Chassis\" as \n`connecting and connected_to`.\nWhat do you suggest, it would match the association name requirements as well?",
+      "parentUuid": "c696abea_bccf34a2",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

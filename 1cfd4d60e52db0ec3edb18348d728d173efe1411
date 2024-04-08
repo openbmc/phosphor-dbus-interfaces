@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "38f1de2f_ae3be239",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000938
+      },
+      "writtenOn": "2024-04-08T07:09:46Z",
+      "side": 1,
+      "message": "@Patrick, The Operational Status is a boolean property defining if it\u0027s functional or not. I feel the interface \"FruStatus\" is more granular, giving us an enumeration of different status values FRU can have.\n\n\u003e Why is it required to be a FRU?\n\nI tried to change the interface name to \"Status.interface\"(Patchset 8) but I hit an error \"Property name has the same name as the class in which it is declared\". Is it expected?\n\nI feel with this interface we are trying to provide more granularity to the issue. Can you please suggest how we could name this interface?",
+      "parentUuid": "187df78f_f67d3546",
+      "revId": "1cfd4d60e52db0ec3edb18348d728d173efe1411",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5ad15937_9e23af74",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/FruStatus.interface.yaml",
         "patchSetId": 9
@@ -37,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4ce2400e_c90d2831",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/FruStatus.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000938
+      },
+      "writtenOn": "2024-04-08T07:09:46Z",
+      "side": 1,
+      "message": "\u003e Will this ever be used other than cable?\n@Gunnar, yes we could use these Status values for any other FRUs in future.\n\n\u003e I personally think something unique to cable (your patchset 7) is better https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/70087/7/yaml/xyz/openbmc_project/State/Decorator/CableState.interface.yaml\n\nAcknowledged. We could have a more generic name.",
+      "parentUuid": "5ad15937_9e23af74",
+      "revId": "1cfd4d60e52db0ec3edb18348d728d173efe1411",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8977ab9a_d16fea76",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/FruStatus.interface.yaml",
         "patchSetId": 9
@@ -48,6 +84,24 @@
       "writtenOn": "2024-04-04T20:11:48Z",
       "side": 1,
       "message": "Unknown will map to null?\n\nFrom https://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.20.0.html\n9.5 Common data types\n...\nnull value, which the service uses when it is unable to determine the property\u0027s value due to an error or other temporary condition",
+      "revId": "1cfd4d60e52db0ec3edb18348d728d173efe1411",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ded28a1_67a3c7ba",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/FruStatus.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000938
+      },
+      "writtenOn": "2024-04-08T07:09:46Z",
+      "side": 1,
+      "message": "Yes, correct",
+      "parentUuid": "8977ab9a_d16fea76",
       "revId": "1cfd4d60e52db0ec3edb18348d728d173efe1411",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -1,0 +1,44 @@
+description: >
+    This interface holds redundant BMC related information.  There would be
+    instance of this interface on each BMC.
+
+properties:
+    - name: Role
+      type: enum[self.Role]
+      flags:
+          - readonly
+      default: Unknown
+      description: >
+          The redundancy role of the BMC.
+    - name: RedundancyEnabled
+      type: boolean
+      flags:
+          - readonly
+      default: false
+      description: >
+          If redundancy is currently enabled.  In general, this means that the
+          BMCs are configured as active and passive and that the passive is able
+          to be failed over to.
+
+enumerations:
+    - name: Role
+      description: >
+          Defines the redundancy role of the BMC.
+      values:
+          - name: Unknown
+            description: >
+                The role is unknown.
+          - name: Active
+            description: >
+                The role is for the active BMC.  This is the fully functioning
+                BMC and the main point of contact for external users.
+          - name: Passive
+            description: >
+                The role is for the passive BMC, which is the opposite of the
+                active BMC.  It may not have all services running, and would
+                require a failover to become active.
+
+paths:
+    - instance: /xyz/openbmc_project/state/bmc0
+      description: >
+          The BMC redundancy path.

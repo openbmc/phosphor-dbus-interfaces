@@ -1,0 +1,68 @@
+description: >
+    This interface holds redundant BMC related information.  There would be
+    instance of this interface on each BMC.
+
+properties:
+    - name: Role
+      type: enum[self.Role]
+      flags:
+          - readonly
+      default: Unknown
+      description: >
+          The redundancy role of the BMC.
+    - name: RedundancyEnabled
+      type: boolean
+      flags:
+          - readonly
+      default: false
+      description: >
+          If redundancy is currently enabled.  In general, this means that the
+          BMCs are configured as active and passive and that the passive is able
+          to be failed over to.
+    - name: DisableRedundancyOverride
+      type: boolean
+      default: false
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
+      description: >
+          This is used to immediately and persistently disable redundancy.  The
+          use case is there are test phases where redundancy is not wanted and
+          this is how that is accomplished.
+
+          If set back to true, redundancy will immediately be re-enabled,
+          assuming nothing else is preventing it.
+
+          This can only be changed on the active BMC and when power is off,
+          otherwise it will throw the Unavailable error.
+
+enumerations:
+    - name: Role
+      description: >
+          Defines the redundancy role of the BMC.
+      values:
+          - name: Unknown
+            description: >
+                The role is unknown.
+          - name: Active
+            description: >
+                The role is for the active BMC.  This is the fully functioning
+                BMC and the main point of contact for external users.
+          - name: Passive
+            description: >
+                The role is for the passive BMC, which is the opposite of the
+                active BMC.  It may not have all services running, and would
+                require a failover to become active.
+
+signals:
+    - name: Heartbeat
+      description: >
+          This signal is to be emitted periodically from the management daemon
+          to let the sibling BMC interface daemon know it is alive.
+
+paths:
+    - namespace: /xyz/openbmc_project/state
+      segments:
+          - name: BMC
+            description: >
+                The object representing _this_ BMC is always at bmc0.
+            value: bmc0

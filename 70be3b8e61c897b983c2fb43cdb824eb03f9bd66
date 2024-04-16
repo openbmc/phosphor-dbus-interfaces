@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "04fae468_9f22db1b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-04-16T08:36:50Z",
+      "side": 1,
+      "message": "I feel, we could extend that interface rather than adding some new interface but, you could wait for others.\n\nI don\u0027t have preference on this.",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "27458cd2_e4037e19",
@@ -14,6 +31,69 @@
       "writtenOn": "2024-04-11T19:18:45Z",
       "side": 1,
       "message": "The interface name doesn\u0027t quite match what I have in the design.  After the final name is decided on I can update each as necessary.",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4333f8d_04873f4c",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-04-16T08:36:50Z",
+      "side": 1,
+      "message": "Is there a particular reason why you\u0027re not utilizing https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Object/Enable.interface.yaml?\n\nI believe it\u0027s essential to set it as readonly to prevent a DBus client from enabling/disabling redundancy, as the implementer of this interface will have a method to control the redundancy feature. Is this the rationale behind your decision?",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da8305ed_85d15ebc",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-04-16T08:36:50Z",
+      "side": 1,
+      "message": "It appears that it doesn\u0027t align with the proposed object path outlined in the design document:\n\nhttps://gerrit.openbmc.org/c/openbmc/docs/+/70233/3/designs/redundant-bmc.md#328\n\nI feel, this interface path more readable, shall we update the design doc if you agreed?",
+      "range": {
+        "startLine": 45,
+        "startChar": 44,
+        "endLine": 45,
+        "endChar": 58
+      },
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd48315d_1087538a",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-04-16T08:36:50Z",
+      "side": 1,
+      "message": "Same as mentioned above",
+      "range": {
+        "startLine": 48,
+        "startChar": 43,
+        "endLine": 48,
+        "endChar": 57
+      },
       "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

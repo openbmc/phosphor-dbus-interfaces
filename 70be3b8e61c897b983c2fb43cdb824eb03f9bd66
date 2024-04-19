@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8488021_8d70d98d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-04-19T19:48:02Z",
+      "side": 1,
+      "message": "reading that commit message, it sounds like a whole different type of redundancy so I\u0027d rather not mix uses.",
+      "parentUuid": "04fae468_9f22db1b",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "27458cd2_e4037e19",
@@ -54,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f27b4459_7333c280",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-04-19T19:48:02Z",
+      "side": 1,
+      "message": "Two reasons not to use enable\n1. It isn\u0027t a unique interface in the system, so any code wanting to see if redundancy was enabled what have to know to look at some hard coded object path just for that interface.  The typical way to find an interface is to use the mapper to tell you the object path.\n2. I think these properties belong on the same interface anyway.\n\n\nCorrect, only the application that implements this interface will be able to modify its value.\n\nI believe eventually we\u0027ll need a \u0027redundancyDisabledReason\u0027 property that contains an enum of why system can\u0027t be redundant, so the app would also handle that.",
+      "parentUuid": "f4333f8d_04873f4c",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "da8305ed_85d15ebc",
         "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
         "patchSetId": 1
@@ -65,6 +101,30 @@
       "writtenOn": "2024-04-16T08:36:50Z",
       "side": 1,
       "message": "It appears that it doesn\u0027t align with the proposed object path outlined in the design document:\n\nhttps://gerrit.openbmc.org/c/openbmc/docs/+/70233/3/designs/redundant-bmc.md#328\n\nI feel, this interface path more readable, shall we update the design doc if you agreed?",
+      "range": {
+        "startLine": 45,
+        "startChar": 44,
+        "endLine": 45,
+        "endChar": 58
+      },
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e98cc57f_eac5e486",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-04-19T19:48:02Z",
+      "side": 1,
+      "message": "I also have a comment up above about how they don\u0027t match, but I like this one better. After everyone  agrees on which one is best I will update the other use.",
+      "parentUuid": "da8305ed_85d15ebc",
       "range": {
         "startLine": 45,
         "startChar": 44,

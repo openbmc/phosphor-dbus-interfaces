@@ -38,6 +38,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "cfc74e68_d2622fcd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-04-25T04:03:06Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "c8488021_8d70d98d",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "27458cd2_e4037e19",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -88,6 +106,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "66e36e0b_d22b9fe2",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-04-25T04:03:06Z",
+      "side": 1,
+      "message": "\u003eIt isn\u0027t a unique interface in the system, so any code wanting to see if redundancy was enabled what have to know to look at some hard coded object path just for that interface. The typical way to find an interface is to use the mapper to tell you the object path.\n\nAgree\n\n\u003eI believe eventually we\u0027ll need a \u0027redundancyDisabledReason\u0027 property that contains an enum of why system can\u0027t be redundant, so the app would also handle that.\n\nYeah we need that details anyway to understand why the redundancy is disabled.",
+      "parentUuid": "f27b4459_7333c280",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "da8305ed_85d15ebc",
@@ -125,6 +161,30 @@
       "side": 1,
       "message": "I also have a comment up above about how they don\u0027t match, but I like this one better. After everyone  agrees on which one is best I will update the other use.",
       "parentUuid": "da8305ed_85d15ebc",
+      "range": {
+        "startLine": 45,
+        "startChar": 44,
+        "endLine": 45,
+        "endChar": 58
+      },
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f69346e7_07410453",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-04-25T04:03:06Z",
+      "side": 1,
+      "message": "Ok",
+      "parentUuid": "e98cc57f_eac5e486",
       "range": {
         "startLine": 45,
         "startChar": 44,

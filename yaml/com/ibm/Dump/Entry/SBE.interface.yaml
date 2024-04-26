@@ -11,3 +11,18 @@ description: >
     packaged into the OpenPOWER dump format and which is called as SBE dump.
     There will be one instance of SBE on each processor. Implement this
     interface to add support for managing the SBE dump.
+
+properties:
+    - name: ErrorLogId
+      type: uint32
+      description: >
+          The id of the log associated with the action which triggered the dump.
+          This ID is a reference to an error log entry in the logging system.
+          The value should be a 32-bit unsigned integer.
+
+    - name: FailingUnitId
+      type: uint32
+      description: >
+          A unique id of the failing SBE which is causing the dump. This ID
+          could be used to identify the specific SBE  within the system. The
+          value should be a 32-bit unsigned integer.

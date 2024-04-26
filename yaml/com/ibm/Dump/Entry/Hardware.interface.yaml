@@ -5,3 +5,18 @@ description: >
     registers, and it is used for debugging system checkstop. checkstop is the
     descriptive term for entire system termination by the hardware due to a
     detected error.
+
+properties:
+    - name: ErrorLogId
+      type: uint32
+      description: >
+          The id of the log associated with the action which triggered the dump.
+          This ID is a reference to an error log entry in the logging system.
+          The value should be a 32-bit unsigned integer.
+
+    - name: FailingUnitId
+      type: uint32
+      description: >
+          A unique id of the failing hardware unit which is causing the dump.
+          This ID could be used to identify the specific piece of hardware
+          within the system. The value should be a 32-bit unsigned integer.

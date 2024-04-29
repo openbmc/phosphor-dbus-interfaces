@@ -298,6 +298,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('PCIeSwitch')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Item/PCIeSwitch__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/PCIeSwitch.interface.yaml',  ],
+    output: [ 'PCIeSwitch.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/PCIeSwitch',
+    ],
+)
+
 subdir('Panel')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Item/Panel__markdown'.underscorify(),

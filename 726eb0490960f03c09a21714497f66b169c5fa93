@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa2f9bdc_72523a2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-05-02T23:37:29Z",
+      "side": 1,
+      "message": "Seems reasonable to me. Maps to Redfish\u0027s CableStatus. \nhttp://redfish.dmtf.org/schemas/v1/Cable.v1_2_2.json#/definitions/CableStatus",
+      "revId": "726eb0490960f03c09a21714497f66b169c5fa93",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "403f36ff_e43dee2a",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/CableState.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-05-02T23:37:29Z",
+      "side": 1,
+      "message": "The Functional Property should be false in this case.. But idk if you want to tie them together.",
+      "revId": "726eb0490960f03c09a21714497f66b169c5fa93",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

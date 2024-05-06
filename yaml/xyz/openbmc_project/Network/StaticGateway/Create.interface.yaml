@@ -8,10 +8,6 @@ methods:
             type: string
             description: >
                 Static gateway address
-          - name: PrefixLength
-            type: size
-            description: >
-                Number of network bits in the address
           - name: ProtocolType
             type: enum[xyz.openbmc_project.Network.IP.Protocol]
             description: >

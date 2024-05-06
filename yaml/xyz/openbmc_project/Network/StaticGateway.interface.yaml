@@ -10,13 +10,6 @@ properties:
       errors:
           - xyz.openbmc_project.Common.Error.NotAllowed
 
-    - name: PrefixLength
-      type: size
-      description: >
-          This is the number of network bits in the address.
-      errors:
-          - xyz.openbmc_project.Common.Error.NotAllowed
-
     - name: ProtocolType
       type: enum[xyz.openbmc_project.Network.IP.Protocol]
       description: >

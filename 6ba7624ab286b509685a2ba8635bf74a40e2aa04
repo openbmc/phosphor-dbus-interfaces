@@ -166,6 +166,30 @@
       },
       "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6910d66_652744ac",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-06T15:14:25Z",
+      "side": 1,
+      "message": "Considering this association name is already used for other items, yes, `connecting` and `connected_to` are acceptable.\n\nYou may need a separate interface to identify which is the \"upstream\" and \"downstream\" ends of a cable.  This information should not be part of the association itself, as associations do not hold information (and I don\u0027t want information encoded as part of the association name).",
+      "parentUuid": "dbeb348d_012243f7",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

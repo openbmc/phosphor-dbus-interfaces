@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "93330704_a0eddb32",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-06T15:21:06Z",
+      "side": 1,
+      "message": "I\u0027m partially confused by the utility of this interface vs what I see in Redfish.  Based on the words here, do we actually need a new interface?\n\n```\n            \"enumLongDescriptions\": {\n                \"Degraded\": \"This value shall indicate the cable is degraded.  The State property in Status shall contain the value `Enabled` and the Health property in Status shall contain the value `Warning`.\",\n                \"Disabled\": \"This value shall indicate the cable is disabled.  The State property in Status shall contain the value `Disabled`.\",\n                \"Failed\": \"This value shall indicate the cable has failed.  The State property in Status shall contain the value `Enabled` and the Health property in Status shall contain the value `Critical`.\",\n                \"Normal\": \"This value shall indicate the cable is operating normally.  The State property in Status shall contain the value `Enabled` and the Health property in Status shall contain the value `OK`.\",\n                \"SetByService\": \"This value shall indicate the status for the cable is not defined by the user.  If implemented, the service shall determine the value of the State and Health properties in Status.\",\n                \"Testing\": \"This value shall indicate the cable is under test.  The State property in Status shall contain the value `InTest`.\"\n            },\n```\n\nThe words in `SetByService` imply to me that the values in this property are intended to be set by external users and not represent the \"health\" status of the cable.  The health of the cable seems to be drawn from State/Health properties just like every other object.\n\nUnder what conditions would we want to expose this property using this dbus property?  What service is doing it?  How does it know the cable state?  Why is that different than State/Health?  What happens if the user tries to set one of these (externally via Redfish)?\n\nDo we need a full design on this?",
+      "parentUuid": "fa2f9bdc_72523a2c",
+      "revId": "726eb0490960f03c09a21714497f66b169c5fa93",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7c4b3629_bbd5f838",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/CableState.interface.yaml",
         "patchSetId": 10

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb909cbf_a64de9a2",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/CableState.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-06T15:16:59Z",
+      "side": 1,
+      "message": "None of this information seems specific to cables.  Why is it \"CableState\" and not a more generic status interface?\n\nWe have Availability and OperationalStatus right now, but these are just booleans.  It would not surprise me if we should really be expanding these to have an enumeration rather than a boolean.",
+      "revId": "67a47d2b960d4986ae48886db3f15a708cebb7a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "540297ec_fd92b7da",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/CableState.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-06T15:16:59Z",
+      "side": 1,
+      "message": "nit: we don\u0027t need strings around these.",
+      "revId": "67a47d2b960d4986ae48886db3f15a708cebb7a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20e20b86_4938b4f1",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/CableState.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-06T15:16:59Z",
+      "side": 1,
+      "message": "nit: we don\u0027t need strings around these.",
+      "revId": "67a47d2b960d4986ae48886db3f15a708cebb7a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -18,10 +18,21 @@ properties:
       type: string
       description: >
           The resource selector for generating the dump.
-    - name: Password
+    - name: UserChallenge
       type: string
       description: >
-          The password required by host to validate the request.
+          On some host implementations a user-challenge need to be provided by
+          the user and it flows through BMC and up to the host as a part of the
+          dump request. Non-disruptive dumps consume significant host resources
+          and involve the collection of host memory data. To safeguard these
+          operations and ensure they are initiated only by authorized personnel,
+          the provided passphrase is employed. In some systems, an Access
+          Control List (ACL) file, provided through the Platform Level Data
+          Model (PLDM), is used. The host validates the provided user-challenge
+          against this ACL. If the user-challenge doesn't match any entry in the
+          ACL, the host will reject the dump request. This field is needed so
+          the host can check that only authorized users are allowed to perform
+          certain dump operations.
     - name: Token
       type: uint32
       description: >

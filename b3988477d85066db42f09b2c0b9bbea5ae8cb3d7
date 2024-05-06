@@ -33,6 +33,46 @@
       "message": "@Patrick I was wondering if there is any additional information needed to move this commit forward. Thx",
       "revId": "b3988477d85066db42f09b2c0b9bbea5ae8cb3d7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a29e4849_a4e7180f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-05-06T20:25:51Z",
+      "side": 1,
+      "message": "I see a need for this at commits like https://gerrit.openbmc.org/c/openbmc/bmcweb/+/61097. \nIt seems reasonable to me.",
+      "revId": "b3988477d85066db42f09b2c0b9bbea5ae8cb3d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8b00cfe_a296524d",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-05-06T20:25:51Z",
+      "side": 1,
+      "message": "Nitpick:\nChassisId/FanId are supposed to be the name of the chassis and fan, respectively? I think \n`/xyz/openbmc_project/inventory/system/{ChassisId}/motherboard/{FanId}`\nmakes that more clear\n\nAlso below too:\nthe identifiers would be `{FanId}`.\n\nand in GetAssociatedSubTreePathsById. \n\n\nNot sure this makes as much sense having \"system\" be the identifier but would be simpler.\n For example, in the path\n                `/xyz/openbmc_project/inventory/system`, the identifiers would be `system`.\n\nor \"chassis\" like your commit msg, would simply things.",
+      "range": {
+        "startLine": 167,
+        "startChar": 55,
+        "endLine": 167,
+        "endChar": 64
+      },
+      "revId": "b3988477d85066db42f09b2c0b9bbea5ae8cb3d7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

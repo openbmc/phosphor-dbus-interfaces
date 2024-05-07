@@ -190,6 +190,30 @@
       },
       "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3dcaf97a_1eaf2810",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000938
+      },
+      "writtenOn": "2024-05-07T09:33:25Z",
+      "side": 1,
+      "message": "@Patrick Thank you for the suggestion, yes we would need a separate interface to identify the ends of a cable something like `CableDirection.interface.yaml` ? I will work on putting some interfaces up.\n\nI have updated the patchset with the `connecting` and `connected_to` association names. \nCould you please suggest if this is right?",
+      "parentUuid": "c6910d66_652744ac",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "6ba7624ab286b509685a2ba8635bf74a40e2aa04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

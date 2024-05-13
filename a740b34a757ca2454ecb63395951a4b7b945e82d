@@ -16,6 +16,23 @@
       "message": "Changes lgtm.",
       "revId": "a740b34a757ca2454ecb63395951a4b7b945e82d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4269e990_6d1dd14a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-13T16:56:03Z",
+      "side": 1,
+      "message": "Is there a design document proposal here?  I don\u0027t think we generally want a bunch of one-off interfaces and I\u0027m not sure how this is planned to be consumed within the rest of the code-base (and how does it tie to Redfish if that is relevant?).  AMD is also working on some crashdump support, which is probably related?  Can we consolidate this work?",
+      "revId": "a740b34a757ca2454ecb63395951a4b7b945e82d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

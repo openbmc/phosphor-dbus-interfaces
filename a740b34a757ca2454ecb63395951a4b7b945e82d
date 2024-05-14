@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0841caff_8cbffa53",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2024-05-14T00:06:44Z",
+      "side": 1,
+      "message": "The `com.ampere.CrashCapture.Trigger` is used as the signal between `pldmd` service, `Ampere Crash Capture` service and power services.\nThere is three use cases:\n1. There is PLDM Sensor Event with specific SensorID (Identify that there is BERT), the `pldmd` service will signal `Property Changed` signal in `TriggerActions` property with value `Bert`. `Ampere Crash Capture` service will start the process to get BERT.\nBecause the power action is restricted when BMC is getting BERT so the `TriggerProcess` property will be set to `true`.\n2. When the host power is changed to off (cause Power off, power cycle ...), the `Ampere Crash Capture` service will also be triggered to check BERT. Power action will also be restricted until the getting BERT is done.\n3. There is PLDM Sensor Event with specific SensorID (Identify that there is Diagnostic data), the `Diag` value will be set to `TriggerActions` to notify about the existing of Diagnostic data, the `TriggerProcess` will also be set to `true` in this case.\n\n`Ampere Crash Capture` will create the fault log which can be accessed thru Redfish but Redfish does not consume the properties in the `com.ampere.CrashCapture.Trigger` interface.",
+      "parentUuid": "4269e990_6d1dd14a",
+      "revId": "a740b34a757ca2454ecb63395951a4b7b945e82d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e1ae2b38_604ea7e0",
         "filename": "meson.build",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "writtenOn": "2024-05-13T16:56:50Z",
       "side": 1,
       "message": "Please keep sorted.",
+      "revId": "a740b34a757ca2454ecb63395951a4b7b945e82d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60231dfb_2ec39fd6",
+        "filename": "meson.build",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2024-05-14T00:06:44Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "e1ae2b38_604ea7e0",
       "revId": "a740b34a757ca2454ecb63395951a4b7b945e82d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -65,6 +101,24 @@
       "writtenOn": "2024-05-13T16:56:50Z",
       "side": 1,
       "message": "Please keep sorted.",
+      "revId": "a740b34a757ca2454ecb63395951a4b7b945e82d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2aecb160_9875f396",
+        "filename": "meson.options",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2024-05-14T00:06:44Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "c49c23e2_57f00a83",
       "revId": "a740b34a757ca2454ecb63395951a4b7b945e82d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

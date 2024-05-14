@@ -120,3 +120,15 @@ methods:
     - name: Clear
       description: >
           Clear the SEL entries from their storage location.
+
+    - name: SELDelete
+      description: >
+          Delete a SEL entry from the log.
+      parameters:
+          - name: RecordID
+            type: uint16
+            description: >
+                The Record ID of the SEL entry to be deleted.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.ResourceNotFound

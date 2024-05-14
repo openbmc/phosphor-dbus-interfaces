@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "30721940_338125a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-05-14T06:45:34Z",
+      "side": 1,
+      "message": "AMD design document review link https://gerrit.openbmc.org/c/openbmc/docs/+/68440/16/designs/oem/amd/amd-bmc-ras.md.\nIn this design document we talks about the use case based on AMD RAS application based CPER collection using APML libraries instead of PLDM ( discussed i the reveiw)\nThe proposed interface here helps to manage fault monitoring independently, and can easily plug into PLDM based on any other custom mechanisms. This looks good to me. \n\nAlso looking for review/feedback on below 2 d-bus interfaces in the same area.\n 1.https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/69698 \n    Discussing about link between proprietary collection app to Dump creation. See the review comments for the existing and proposed option as part of review comments.\n2.another generic config interface to manage RAS configurations. https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/69972, which usefull to configure the data collection configurations.",
+      "parentUuid": "0841caff_8cbffa53",
+      "revId": "a740b34a757ca2454ecb63395951a4b7b945e82d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e1ae2b38_604ea7e0",
         "filename": "meson.build",
         "patchSetId": 1

@@ -120,3 +120,20 @@ methods:
     - name: Clear
       description: >
           Clear the SEL entries from their storage location.
+
+    - name: IpmiSelDelete
+      description: >
+          Delete a SEL entry from the log.
+      parameters:
+          - name: RecordID
+            type: uint16
+            description: >
+                The Record ID of the SEL entry to be deleted.
+      returns:
+          - name: RecordID
+            type: uint16
+            description: >
+                The Record ID of the SEL entry that was deleted. Returns 0xFFFF
+                if failed to find the targeted record ID.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure

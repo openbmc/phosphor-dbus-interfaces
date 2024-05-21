@@ -16,6 +16,24 @@
       "message": "I\u0027m still kinda confused too. Can you list the exact steps the code will do?",
       "revId": "28ab7058ffc5679914d8bf554f6be3d77c2a4a12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "faed957a_8cbf319e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001633
+      },
+      "writtenOn": "2024-05-21T17:47:30Z",
+      "side": 1,
+      "message": "objmgr commit:\n\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-objmgr/+/70699/3/src/handler.cpp#410\n\n\n1. Get the subtree D-Bus paths that implement the \"subtreeInterfaces\" and have the path endpoint \"id\".\n\n2. Create an association path by concatenating the subtree path with \"/\" and \"association\":\n   associationPath \u003d subtreePath + \"/\" + \"association\"\n\n3. Call `getAssociatedSubTree` to get the endpoint paths of an associationPath that implements the \"associationInterfaces\".",
+      "parentUuid": "1c95a65b_fa1e38af",
+      "revId": "28ab7058ffc5679914d8bf554f6be3d77c2a4a12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

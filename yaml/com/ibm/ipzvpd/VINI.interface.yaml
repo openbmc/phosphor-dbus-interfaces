@@ -77,5 +77,9 @@ properties:
       type: array[byte]
       description: >
           VN keyword.
+    - name: DI
+      type: array[byte]
+      description: >
+          DI keyword. Contains DRAM manufacturer ID.
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36b34fe7_9f684ca8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2024-05-22T15:46:43Z",
+      "side": 1,
+      "message": "The design doc defines the interface `xyz.openbmc_project.State.Redundancy.BMC.Status`, but talking with Matt, setting it to `xyz.openbmc_project.State.BMC.Redundancy.Status` to align with the other PDI commit https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/70765",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd2884a3_9727760e",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2024-05-22T15:46:43Z",
+      "side": 1,
+      "message": "Depends on https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/70765",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

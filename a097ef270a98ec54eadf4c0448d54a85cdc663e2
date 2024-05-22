@@ -20,6 +20,42 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2b4eb2f3_78d2f319",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001538
+      },
+      "writtenOn": "2024-05-22T21:03:06Z",
+      "side": 1,
+      "message": "Implementing the Delete SEL entry command of the IPMI spec",
+      "parentUuid": "50764a70_b7254da7",
+      "revId": "a097ef270a98ec54eadf4c0448d54a85cdc663e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "984ab373_087b6448",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001538
+      },
+      "writtenOn": "2024-05-22T21:03:06Z",
+      "side": 1,
+      "message": "IMple",
+      "parentUuid": "50764a70_b7254da7",
+      "revId": "a097ef270a98ec54eadf4c0448d54a85cdc663e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a541a481_5f239587",
         "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
         "patchSetId": 2
@@ -43,6 +79,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "62b2ce01_46565545",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1001538
+      },
+      "writtenOn": "2024-05-22T21:03:06Z",
+      "side": 1,
+      "message": "I see it is redundant to have the \u0027Ipmi\u0027 prefix. In that case, don\u0027t we need to refactor the methods \"IpmiSelAdd\" and \"IpmiSelAddOem\" as well as where those methods are called?",
+      "parentUuid": "a541a481_5f239587",
+      "range": {
+        "startLine": 124,
+        "startChar": 12,
+        "endLine": 124,
+        "endChar": 25
+      },
+      "revId": "a097ef270a98ec54eadf4c0448d54a85cdc663e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4f1a393a_7f302595",
         "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
         "patchSetId": 2
@@ -54,6 +114,30 @@
       "writtenOn": "2024-05-15T02:07:19Z",
       "side": 1,
       "message": "No.  There should be no return if the request was successful.  If the request was in error, there should be an error response for that.  Don\u0027t use magic numbers that are only documented in the \u0027description\u0027",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 137,
+        "endChar": 57
+      },
+      "revId": "a097ef270a98ec54eadf4c0448d54a85cdc663e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "280be5b0_152e1b49",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1001538
+      },
+      "writtenOn": "2024-05-22T21:03:06Z",
+      "side": 1,
+      "message": "I will change the function to not return anything.",
+      "parentUuid": "4f1a393a_7f302595",
       "range": {
         "startLine": 132,
         "startChar": 0,

@@ -20,6 +20,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ee3d9ccd_132c6c47",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-05-23T06:34:00Z",
+      "side": 1,
+      "message": "Any plan to host some of the key properties definitions in redfish redundancy schema  like type, replication state/role etc?",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac1acc31_3faec641",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-05-23T06:34:00Z",
+      "side": 1,
+      "message": "string type got more flexibility.",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fd2884a3_9727760e",
         "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
         "patchSetId": 1
@@ -31,6 +65,46 @@
       "writtenOn": "2024-05-22T15:46:43Z",
       "side": 1,
       "message": "Depends on https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/70765",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6682df0_947e62bc",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-05-23T06:34:00Z",
+      "side": 1,
+      "message": "Object which implements this interface can implment this right? instead of duplicating the BMCStae property here?",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 30,
+        "endChar": 56
+      },
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f14a036_0f2e061e",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-05-23T06:34:00Z",
+      "side": 1,
+      "message": "same as comment in line 30.",
       "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

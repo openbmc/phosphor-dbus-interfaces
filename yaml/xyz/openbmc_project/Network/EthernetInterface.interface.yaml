@@ -109,7 +109,14 @@ properties:
           https://man7.org/linux/man-pages/man3/inet_pton.3.html
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
-
+    - name: EmitLLDP
+      type: boolean
+      default: false
+      description: >
+          Boolean for controlling LLDP packet emission on the ethernet
+          interface. The Link Layer Discovery Protocol is a link layer protocol
+          used by network devices for advertising their identity, capabilities,
+          and neighbors on a local area network based on IEEE 802 technology.
 enumerations:
     - name: LinkLocalConf
       description: >

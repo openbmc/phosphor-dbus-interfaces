@@ -109,7 +109,14 @@ properties:
           https://man7.org/linux/man-pages/man3/inet_pton.3.html
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
-
+    - name: LLDP
+      type: boolean
+      description: >
+          Boolean for enabling or disabling LLDP packet reception on the ethernet port
+    - name: EmitLLDP
+      type: boolean
+      description: >
+          Boolean for enabling or disabling LLDP packet emission on the ethernet port
 enumerations:
     - name: LinkLocalConf
       description: >

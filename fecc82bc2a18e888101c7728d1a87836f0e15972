@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2b8ca6f4_a71162cb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-05-28T19:07:39Z",
+      "side": 1,
+      "message": "Could you maybe add something about how this is the API between the BMCs?",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "36b34fe7_9f684ca8",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -37,6 +54,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "85d53a0a_7ee9acb0",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-05-28T19:07:39Z",
+      "side": 1,
+      "message": "We\u0027re going to point Redfish at another interface - https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/70765.\n\nThe interface in this commit is used to communicate status to the sibling BMC, and also read the same status from the sibling (via this interface on a different object path).",
+      "parentUuid": "ee3d9ccd_132c6c47",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ac1acc31_3faec641",
         "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
         "patchSetId": 1
@@ -48,6 +83,24 @@
       "writtenOn": "2024-05-23T06:34:00Z",
       "side": 1,
       "message": "string type got more flexibility.",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f5295039_bd5889e6",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-05-28T19:07:39Z",
+      "side": 1,
+      "message": "We need to be able to compare the version being provided by the reading BMC to the one presented by its sibling, like how Cereal does it, and having it be a number makes that easy.  I suppose it could be a string if semantic versioning was used, but that is harder to enforce.",
+      "parentUuid": "ac1acc31_3faec641",
       "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -82,6 +135,30 @@
       "writtenOn": "2024-05-23T06:34:00Z",
       "side": 1,
       "message": "Object which implements this interface can implment this right? instead of duplicating the BMCStae property here?",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 30,
+        "endChar": 56
+      },
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59ad74fa_2f815986",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-05-28T19:07:39Z",
+      "side": 1,
+      "message": "I think having all of these properties on the same interface is proper since it represents the API between BMCs.  Also, that interface has properties on it that don\u0027t apply here, like RequestedBMCTransition.",
+      "parentUuid": "b6682df0_947e62bc",
       "range": {
         "startLine": 29,
         "startChar": 4,

@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "640b3579_50b084bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-05-29T18:04:03Z",
+      "side": 1,
+      "message": "Thanks for review. Replied to your comments.",
+      "revId": "1f7087c614ecd7ab932a3565d1e138e68761c9ca",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "53784fb4_af5cd532",
@@ -18,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1dbd1666_4713525f",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-05-29T18:04:03Z",
+      "side": 1,
+      "message": "Can you please refer here as @Patrick had a similar question.\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/71623/comment/efee2bb1_22419b54/",
+      "parentUuid": "53784fb4_af5cd532",
+      "revId": "1f7087c614ecd7ab932a3565d1e138e68761c9ca",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "efee2bb1_22419b54",
@@ -31,6 +66,24 @@
       "writtenOn": "2024-05-29T01:59:15Z",
       "side": 1,
       "message": "How is this different from `StartUpdate` with `Immediate`?  It doesn\u0027t seem like we should add a new API just to eliminate a parameter.  Maybe I\u0027m missing something.",
+      "revId": "1f7087c614ecd7ab932a3565d1e138e68761c9ca",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c38cfda_c3c338f6",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-05-29T18:04:03Z",
+      "side": 1,
+      "message": "For Unstructured HTTP push update the sequence is as under -\n1. HTTP Patch ApplyTime Options.\n2. HTTP Post the image for update.\n\nBasically, the Apply Options and Image come as 2 different requests.\n\nFor #1, there is already an existing ApplyTime interface being used.\nFor #2, either we can -\n1. Add a new StartUpdate D-Bus API with only Image in param.\n2. Add a new enum value for Update.ApplyTime (https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/Update.interface.yaml#L41) to depict Unused or Unstructured request.\n3. Not sure if possible but to mark the ApplyTime as optional for existing StartUpdate API?\n\nPlease let me know your inputs.",
+      "parentUuid": "efee2bb1_22419b54",
       "revId": "1f7087c614ecd7ab932a3565d1e138e68761c9ca",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

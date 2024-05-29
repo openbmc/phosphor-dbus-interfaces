@@ -16,6 +16,23 @@
       "message": "This implies the (as yet undefined) existence of `StartUpdateComplex`?\n\nDo we actually need `Basic` in the name?",
       "revId": "1f7087c614ecd7ab932a3565d1e138e68761c9ca",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efee2bb1_22419b54",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-29T01:59:15Z",
+      "side": 1,
+      "message": "How is this different from `StartUpdate` with `Immediate`?  It doesn\u0027t seem like we should add a new API just to eliminate a parameter.  Maybe I\u0027m missing something.",
+      "revId": "1f7087c614ecd7ab932a3565d1e138e68761c9ca",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

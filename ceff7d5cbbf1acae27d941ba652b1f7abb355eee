@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "02f02ca2_455b5cfe",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-05-30T04:04:49Z",
+      "side": 1,
+      "message": "I dont think we need other non-boolean properties supported, those are special modes. Basic LLDP enable/disable only required.\nRedfish schema also supports only LLDP enable/disable\nhttps://redfish.dmtf.org/schemas/v1/Port.v1_12_0.json\n\n\"LLDPEnabled\": {\n                    \"description\": \"Enable/disable LLDP for this port.\",\n                    \"longDescription\": \"This property shall contain the state indicating whether to enable LLDP for a port.  If LLDP is disabled at the adapter level, this property shall be ignored.\",\n                    \"readonly\": false,\n                    \"type\": \"boolean\",\n                    \"versionAdded\": \"v1_4_0\"\n                },",
+      "parentUuid": "e444fe35_0925e59a",
+      "revId": "ceff7d5cbbf1acae27d941ba652b1f7abb355eee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ca7c789f_80b9ccbe",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 7
@@ -31,6 +49,24 @@
       "writtenOn": "2024-05-29T02:35:50Z",
       "side": 1,
       "message": "It seems that both of these have a default in systemd-networkd of \"true\".  Please set default similarly in dbus so we don\u0027t end up with regressions when not configured.",
+      "revId": "ceff7d5cbbf1acae27d941ba652b1f7abb355eee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df34d875_21faa1f0",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-05-30T04:04:49Z",
+      "side": 1,
+      "message": "both of these properties LLDP \u0026 EmitLLDP Default to false in systemd-networkd\nsure, I will set default value to false",
+      "parentUuid": "ca7c789f_80b9ccbe",
       "revId": "ceff7d5cbbf1acae27d941ba652b1f7abb355eee",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

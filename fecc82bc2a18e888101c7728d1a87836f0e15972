@@ -70,6 +70,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2a122c3_2c38c3ad",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-05-30T06:37:49Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "85d53a0a_7ee9acb0",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ac1acc31_3faec641",
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "We need to be able to compare the version being provided by the reading BMC to the one presented by its sibling, like how Cereal does it, and having it be a number makes that easy.  I suppose it could be a string if semantic versioning was used, but that is harder to enforce.",
       "parentUuid": "ac1acc31_3faec641",
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15c90a98_3e4dfd85",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-05-30T06:37:49Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "f5295039_bd5889e6",
       "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -159,6 +195,30 @@
       "side": 1,
       "message": "I think having all of these properties on the same interface is proper since it represents the API between BMCs.  Also, that interface has properties on it that don\u0027t apply here, like RequestedBMCTransition.",
       "parentUuid": "b6682df0_947e62bc",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 30,
+        "endChar": 56
+      },
+      "revId": "fecc82bc2a18e888101c7728d1a87836f0e15972",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb548ebd_478156fb",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Status.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2024-05-30T06:37:49Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "59ad74fa_2f815986",
       "range": {
         "startLine": 29,
         "startChar": 4,

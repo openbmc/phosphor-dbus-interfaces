@@ -140,6 +140,30 @@
       },
       "revId": "4208b7ee24edd59b8bda9e3dd054fc20b02d30c4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "945aa591_f3277efe",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-05-31T12:08:37Z",
+      "side": 1,
+      "message": "You\u0027ve referred to `LLDP` for the documentation on `EmitLLDP`.  The EmitLLDP documentation states:\n\n\u003e Controls support for Ethernet LLDP packet emission.\n\nYou\u0027ve documented both properties with the word \"reception\" but one should have the word \"emission\".",
+      "parentUuid": "5cd77ace_a0f35018",
+      "range": {
+        "startLine": 124,
+        "startChar": 46,
+        "endLine": 124,
+        "endChar": 55
+      },
+      "revId": "4208b7ee24edd59b8bda9e3dd054fc20b02d30c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

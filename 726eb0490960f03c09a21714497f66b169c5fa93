@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "59470100_9ef78647",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-05-31T21:19:06Z",
+      "side": 1,
+      "message": "Taking a step back...\n\nWe want to be able to show the \"status\" of our cable, starting with the cables to this I/O expansion drawer.\n\nSpecifically for this I/O expansion drawer cable (in \"()\" is what we thought the Redfish mapping was using this \"CableStatus\"):\n\nRunning (Normal) -\u003e PCI-E traffic is currently active across the cable.\nInactive (Failed) -\u003e The Cable card it is attached to is powered on, but no traffic is running (the link train failed, the drawer it is connected to failed, or the read from the hardware failed). \nPoweredOff (Disabled) -\u003e The cable card the cable is attached to is powered off. \nUnknown (null) -\u003e We do not know the status. \n\n\n\u003e I\u0027m partially confused by the utility of this interface vs what I see in Redfish. \n\n\u003e The words in SetByService imply to me that the values in this property are intended to be set by external users and not represent the \"health\" status of the cable. \n\n\nThis is readwrite, so I guess Redfish intends for clients to set it.\n  \n                \"CableStatus\": {\n                    \"$ref\": \"#/definitions/CableStatus\",\n                    \"description\": \"The user-reported status of this resource.\",\n                    \"longDescription\": \"This property shall contain the user-reported status of this resource.\",\n                    \"readonly\": false\n                },\n\nI read that SetByService a few times, maybe if we used this property, that would be the value we would use since we don\u0027t allow users to set \"CableStatus\" and it is indeed coming from the service.\n\nCan we just use State/Health..?\nLooking at https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2024.1.html does a mapping like this work?\n\n\n    Running \u003d\u003e Enabled/Ok\n    PoweredOff \u003d\u003e Disabled/Ok\n    Inactive \u003d\u003e StandbyOffline/Critical\n    Unknown \u003d\u003e Quiesced/Critical\n\n\u003e Do we need a full design on this?\n \nMaybe we just need some way to mark the cable as \"Disabled\"/\"StandbyOffline\"/\"Quiesced\" and then we don\u0027t need this new CableStatus interface at all?\n\nOk/Critical is mapped to OperationalStatus today, but bmcweb doesn\u0027t have support for Redfish States Disabled, StandbyOffline, Quisced for inventory. \n\nThere is support today for some of those for Power States. \nhttps://github.com/openbmc/bmcweb/blob/20fa6a2c6cea77a4b411634dfca67eef6c8f430f/redfish-core/lib/systems.hpp#L567\nhttps://github.com/openbmc/bmcweb/blob/20fa6a2c6cea77a4b411634dfca67eef6c8f430f/redfish-core/lib/chassis.hpp#L131",
+      "parentUuid": "93330704_a0eddb32",
+      "revId": "726eb0490960f03c09a21714497f66b169c5fa93",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7c4b3629_bbd5f838",
         "filename": "yaml/xyz/openbmc_project/State/Decorator/CableState.interface.yaml",
         "patchSetId": 10

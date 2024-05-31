@@ -49,6 +49,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a75317e6_77268a58",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-05-31T11:54:18Z",
+      "side": 1,
+      "message": "yes, Default value is false.\n\nEmitLLDP\u003d\nControls support for Ethernet LLDP packet emission. Accepts a boolean parameter or the special values \"nearest-bridge\", \"non-tpmr-bridge\" and \"customer-bridge\". Defaults to false",
+      "parentUuid": "18948ccc_6eef8aeb",
+      "range": {
+        "startLine": 122,
+        "startChar": 15,
+        "endLine": 122,
+        "endChar": 20
+      },
+      "revId": "4208b7ee24edd59b8bda9e3dd054fc20b02d30c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a9705184_94e64db6",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 11
@@ -60,6 +84,30 @@
       "writtenOn": "2024-05-31T11:36:47Z",
       "side": 1,
       "message": "\"reception\" is probably the wrong word here?",
+      "range": {
+        "startLine": 124,
+        "startChar": 46,
+        "endLine": 124,
+        "endChar": 55
+      },
+      "revId": "4208b7ee24edd59b8bda9e3dd054fc20b02d30c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cd77ace_a0f35018",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-05-31T11:54:18Z",
+      "side": 1,
+      "message": "packet reception is word that can be used in this case.\nI see same words used in systemd-network documentation \nhttps://www.freedesktop.org/software/systemd/man/latest/systemd.network.html#LLDP\u003d",
+      "parentUuid": "a9705184_94e64db6",
       "range": {
         "startLine": 124,
         "startChar": 46,

@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "19b2dd73_e64bc089",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-05-31T12:21:12Z",
+      "side": 1,
+      "message": "this LLDP default value is not mentioned in doc, but looks like LLDP defaults to true, I have verified on machine.",
+      "parentUuid": "3de035c0_3318cd6e",
+      "range": {
+        "startLine": 114,
+        "startChar": 15,
+        "endLine": 114,
+        "endChar": 20
+      },
+      "revId": "4208b7ee24edd59b8bda9e3dd054fc20b02d30c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "18948ccc_6eef8aeb",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 11
@@ -156,6 +180,30 @@
       "side": 1,
       "message": "You\u0027ve referred to `LLDP` for the documentation on `EmitLLDP`.  The EmitLLDP documentation states:\n\n\u003e Controls support for Ethernet LLDP packet emission.\n\nYou\u0027ve documented both properties with the word \"reception\" but one should have the word \"emission\".",
       "parentUuid": "5cd77ace_a0f35018",
+      "range": {
+        "startLine": 124,
+        "startChar": 46,
+        "endLine": 124,
+        "endChar": 55
+      },
+      "revId": "4208b7ee24edd59b8bda9e3dd054fc20b02d30c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1354011f_e76e0836",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-05-31T12:21:12Z",
+      "side": 1,
+      "message": "ah ok, sorry did not notice it.",
+      "parentUuid": "945aa591_f3277efe",
       "range": {
         "startLine": 124,
         "startChar": 46,

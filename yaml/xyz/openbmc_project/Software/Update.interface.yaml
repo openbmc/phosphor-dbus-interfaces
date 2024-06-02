@@ -12,7 +12,7 @@ methods:
                 This property indicates the file descriptor of the firmware
                 image.
           - name: ApplyTime
-            type: enum[self.ApplyTimes]
+            type: enum[xyz.openbmc_project.Software.ApplyTime.RequestedApplyTimes]
             description: >
                 This property indicates when the software image update should be
                 applied.
@@ -31,21 +31,8 @@ methods:
 
 properties:
     - name: AllowedApplyTimes
-      type: set[enum[self.ApplyTimes]]
+      type: set[enum[xyz.openbmc_project.Software.ApplyTime.RequestedApplyTimes]]
       description: >
           This property indicates the apply times allowed for this device.
       flags:
           - readonly
-
-enumerations:
-    - name: ApplyTimes
-      description: >
-          The possible values of this property indicate when the newly updated
-          software image will be activated.
-      values:
-          - name: Immediate
-            description: >
-                Apply immediately.
-          - name: OnReset
-            description: >
-                Apply on reset of device being updated.

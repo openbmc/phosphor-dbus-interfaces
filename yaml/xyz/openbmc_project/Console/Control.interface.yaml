@@ -1,0 +1,21 @@
+description: >
+    Provides a method for activating consoles and a property for querying their
+    status.
+
+methods:
+    - name: Activate
+      description: >
+          Activates the console if it's currently inactive.
+      returns:
+          - name: status
+            type: int32
+            description: >
+                Status Code. 0 on success.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+properties:
+    - name: Active
+      type: boolean
+      description: >
+          Can be used to query if this console is currently active.

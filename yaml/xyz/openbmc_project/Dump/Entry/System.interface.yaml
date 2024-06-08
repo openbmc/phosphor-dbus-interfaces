@@ -50,6 +50,13 @@ properties:
           ACL, the host will reject the dump request. This field is needed so
           the host can check that only authorized users are allowed to perform
           certain dump operations.
+    - name: DumpRequestStatus
+      type: enum[self.HostResponse]
+      description: >
+          The host will send a response code for each request to create a
+          resource dump to indicate whether the request is successful or there
+          is an error.
+      default: Requested
 
 enumerations:
     - name: SystemImpact
@@ -61,3 +68,26 @@ enumerations:
           - name: NonDisruptive
             description: >
                 The system state will not change with the collection
+    - name: HostResponse
+      description: >
+          These are the possible response codes from the host's after sending a
+          non-disruptive system dump request.
+      values:
+          - name: Requested
+            description: >
+                Requested for system dump and awaiting the host response
+          - name: Success
+            description: >
+                Successfully validated and accepted the request for a non-disruptive
+                system dump.
+          - name: ACFFileInvalid
+            description: >
+                Invalid Access Control List file, cannot validate the user to start a
+                non-disruptive system dump.
+          - name: UserChallengeInvalid
+            description: >
+                The user challenge provided is not valid
+          - name: PermissionDenied
+            description: >
+                The caller does not have enough privileges to execute the requested
+                non-disruptive system dump.

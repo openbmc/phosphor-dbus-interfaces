@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "15bee05c_0e06e6ca",
+        "filename": "yaml/xyz/openbmc_project/Logging/Event.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-06-10T20:35:18Z",
+      "side": 1,
+      "message": "Does it make sense to use the Levels already defined in \nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Logging/Entry.interface.yaml#L67 ?",
+      "revId": "575fb1d181fec2ff21ccc48a2a207248d6e5fac4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1ac811c1_7273a53f",
         "filename": "yaml/xyz/openbmc_project/Logging/Event.interface.yaml",
         "patchSetId": 5
@@ -37,6 +54,23 @@
         "endLine": 40,
         "endChar": 19
       },
+      "revId": "575fb1d181fec2ff21ccc48a2a207248d6e5fac4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df970631_2b881768",
+        "filename": "yaml/xyz/openbmc_project/Logging/Event.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-06-10T20:35:18Z",
+      "side": 1,
+      "message": "How will Unknown be mapped in Redfish?\n\n                \"Severity\": {\n                    \"anyOf\": [\n                        {\n                            \"$ref\": \"#/definitions/EventSeverity\"\n                        },\n                        {\n                            \"type\": \"null\"\n                        }\n                    ],\n\n            \"enumDescriptions\": {\n                \"Critical\": \"A critical condition that requires immediate attention.\",\n                \"OK\": \"Informational or operating normally.\",\n                \"Warning\": \"A condition that requires attention.\"\n            },\n\nI guess you will map it to null?",
       "revId": "575fb1d181fec2ff21ccc48a2a207248d6e5fac4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

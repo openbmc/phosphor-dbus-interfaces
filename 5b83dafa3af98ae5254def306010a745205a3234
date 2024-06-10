@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd34b099_66dbc49e",
+        "filename": "yaml/xyz/openbmc_project/Console/Control.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-10T21:56:46Z",
+      "side": 1,
+      "message": "It seems like you\u0027re going to add this object onto all of the \"Access\" objects, when switching is allowed?  Or are you always going to have it?  How are you able to determine which set of UARTs are switched with each other (which seems like valuable information).\n\nWould it be useful to have a top-level Console.Manager object, which has an Active property holding an object_path to the active console (of the consoles managed by that manager process)?",
+      "revId": "5b83dafa3af98ae5254def306010a745205a3234",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "945aa8f0_a20e5c52",
+        "filename": "yaml/xyz/openbmc_project/Console/Control.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-10T21:56:46Z",
+      "side": 1,
+      "message": "This isn\u0027t C.  Use a dbus error if you have an error to return.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "5b83dafa3af98ae5254def306010a745205a3234",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -135,6 +135,24 @@
       "parentUuid": "d5ddbe39_503d6ad7",
       "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8659b276_6308ebc1",
+        "filename": "yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-10T23:34:11Z",
+      "side": 1,
+      "message": "Jagpal already proposed a new update method that omitted the apply time and I rejected that also. \n\nI\u0027m not sure what the time-between-setting-and-application has to do with anything.  All of these \"policy\" is related to one particular Redfish flow. If it wasn\u0027t for Redfish I would either not have this policy or I\u0027d at least have the policy related to what we are doing an update to.",
+      "parentUuid": "159e1fa4_5a48e111",
+      "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

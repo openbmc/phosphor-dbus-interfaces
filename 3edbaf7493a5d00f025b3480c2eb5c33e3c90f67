@@ -117,6 +117,24 @@
       "parentUuid": "941d7224_db8f0625",
       "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "159e1fa4_5a48e111",
+        "filename": "yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-06-10T23:07:44Z",
+      "side": 1,
+      "message": "#3 I don\u0027t think was conveyed well.  It\u0027s not about \"a patch followed by a post\".  It\u0027s about setting up a system policy that\u0027s persisted over time that might have happened months or years before the updates are started (and more importantly, is shared across interfaces).  The setting itself is global to the system, and applies to all updates on any interface.\n\nThe problem this exposed is that the new dbus API requires the update time as an argument, and it\u0027s not likely that bmcweb knows it in the request context.\n\nFWIW, I didn\u0027t realize this enum was shared between the two implementations now; If I\u0027d known that, I would\u0027ve recommended we just have an update method that omits the \"apply time\" parameter entirely, rather than adding an enum.",
+      "parentUuid": "d5ddbe39_503d6ad7",
+      "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

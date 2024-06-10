@@ -39,6 +39,24 @@
       "message": "How does bmcweb map this in Redfish ?\n\n        \"ApplyTime\": {\n            \"enum\": [\n                \"Immediate\",\n                \"OnReset\",\n                \"AtMaintenanceWindowStart\",\n                \"InMaintenanceWindowOnReset\",\n                \"OnStartUpdateRequest\",\n                \"OnTargetReset\"\n            ],\n\nhttps://redfish.dmtf.org/schemas/v1/UpdateService.v1_14_0.json\n\nhttps://github.com/openbmc/bmcweb/blob/b7f3a82babf87c7279ebc4cb728497ade1b1d00a/redfish-core/lib/update_service.hpp#L1179",
       "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf395895_70e56579",
+        "filename": "yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-10T21:32:52Z",
+      "side": 1,
+      "message": "Not everything has to map to Redfish. ;)\n\nI\u0027ll let Jagpal describe the use-case he had in mind though.\n\nMy recollection from him was that there are two different paths in Redfish, one of which supplies the parameter and one which does not.",
+      "parentUuid": "520de2c0_94581b81",
+      "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "644d7043_ca17cee4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-06-10T21:57:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a446e46a_a1ea24a2",
+      "range": {
+        "startLine": 9,
+        "startChar": 31,
+        "endLine": 9,
+        "endChar": 41
+      },
+      "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "520de2c0_94581b81",
@@ -55,6 +79,24 @@
       "side": 1,
       "message": "Not everything has to map to Redfish. ;)\n\nI\u0027ll let Jagpal describe the use-case he had in mind though.\n\nMy recollection from him was that there are two different paths in Redfish, one of which supplies the parameter and one which does not.",
       "parentUuid": "520de2c0_94581b81",
+      "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "941d7224_db8f0625",
+        "filename": "yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-06-10T21:57:50Z",
+      "side": 1,
+      "message": "Thanks Patrick. Yes, There 3 different ways of Update in UpdateService.\n\n1. Multipart-form HTTP POST: Both Image and ApplyOptions are part of same request.\n2. SimpleUpdate Action.\n3. HTTP Patch followed by HTTP Image POST: First there is a patch for ApplyOptions and then a subsequent HTTP message for Image Post. Basically, 2 different messages.\n\nThis Default Option is being added for Flow# 3, so BMCWeb can inform the Updater Daemon to use previously set option. For more details, refer to patch and discussion here https://gerrit.openbmc.org/c/openbmc/bmcweb/+/71743/comment/6b903acc_82983f9a/.",
+      "parentUuid": "cf395895_70e56579",
       "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

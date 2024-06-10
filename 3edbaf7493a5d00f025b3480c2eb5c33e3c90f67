@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a446e46a_a1ea24a2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-06-10T20:38:01Z",
+      "side": 1,
+      "message": "spelling",
+      "range": {
+        "startLine": 9,
+        "startChar": 31,
+        "endLine": 9,
+        "endChar": 41
+      },
+      "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "520de2c0_94581b81",
+        "filename": "yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-06-10T20:38:01Z",
+      "side": 1,
+      "message": "How does bmcweb map this in Redfish ?\n\n        \"ApplyTime\": {\n            \"enum\": [\n                \"Immediate\",\n                \"OnReset\",\n                \"AtMaintenanceWindowStart\",\n                \"InMaintenanceWindowOnReset\",\n                \"OnStartUpdateRequest\",\n                \"OnTargetReset\"\n            ],\n\nhttps://redfish.dmtf.org/schemas/v1/UpdateService.v1_14_0.json\n\nhttps://github.com/openbmc/bmcweb/blob/b7f3a82babf87c7279ebc4cb728497ade1b1d00a/redfish-core/lib/update_service.hpp#L1179",
+      "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

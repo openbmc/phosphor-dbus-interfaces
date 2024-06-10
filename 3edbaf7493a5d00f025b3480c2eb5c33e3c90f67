@@ -153,6 +153,24 @@
       "parentUuid": "159e1fa4_5a48e111",
       "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bcc403d7_7f5b9965",
+        "filename": "yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-06-10T23:36:25Z",
+      "side": 1,
+      "message": "\u003e #3 I don\u0027t think was conveyed well.  It\u0027s not about \"a patch followed by a post\".  It\u0027s about setting up a system policy that\u0027s persisted over time that might have happened months or years before the updates are started (and more importantly, is shared across interfaces).  The setting itself is global to the system, and applies to all updates on any interface.\n\nAgree, the property is global to system as its supplied via HttpPushUriOptions which has no info on any specific target URI.\n\n\u003e \n\u003e The problem this exposed is that the new dbus API requires the update time as an argument, and it\u0027s not likely that bmcweb knows it in the request context.\n\u003e \n\u003e FWIW, I didn\u0027t realize this enum was shared between the two implementations now; \n\u003e If I\u0027d known that, I would\u0027ve recommended we just have an update method that omits the \"apply time\" parameter entirely, rather than adding an enum.\n\nThis was already proposed by me earlier but that patch was rejected by @Patrick https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/71623. We could have named the API better but Patrick was not in favor of adding a new DBus interface just for not supplying an extra arg and when we found that set for HttpPushUriOptions is already doing a property set in settingsd, it seemed a better approach to do a get in BMCWeb and then use the same existing D-Bus API. But then that patch was rejected by you 😊. \n\nPS: The Unstructured HTTP Post flow will only be used for BMC upgrades as there is a better flow of Multipart-form HTTP Post and is recommended one.",
+      "parentUuid": "159e1fa4_5a48e111",
+      "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

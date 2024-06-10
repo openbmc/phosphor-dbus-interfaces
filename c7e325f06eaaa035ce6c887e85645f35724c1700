@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9c4aefc_5e7c13b0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-10T19:36:28Z",
+      "side": 1,
+      "message": "You now referenced LLDP but added EmitLLDP.",
+      "revId": "c7e325f06eaaa035ce6c887e85645f35724c1700",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "b897e785_e60dec57",
@@ -14,6 +31,23 @@
       "writtenOn": "2024-06-10T11:50:31Z",
       "side": 1,
       "message": "Hi Patrick/William \n\ncan you please review latest patch set of this commit?",
+      "revId": "c7e325f06eaaa035ce6c887e85645f35724c1700",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7199479_85a96d3c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-10T19:36:28Z",
+      "side": 1,
+      "message": "I seems like we need to know more of the \"why\"... Based on your responses, I\u0027m not convinced you know what you\u0027re trying to accomplish.  If this is simply for completeness of random Redfish properties, I see no reason to approve it.  If you have a feature you have a customer need for, you should be able to define that feature.",
       "revId": "c7e325f06eaaa035ce6c887e85645f35724c1700",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

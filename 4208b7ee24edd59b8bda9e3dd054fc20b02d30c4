@@ -122,6 +122,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "77558a26_bd195461",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-10T19:36:28Z",
+      "side": 1,
+      "message": "Now I don\u0027t know what either you or Redfish are trying to accomplish.\n\nRedfish has 1 property on NetworkAdapter, which is LLDPEnabled.  Redfish has 3 properties on Port which are LLDPEnabled, LLDPReceive, and LLDPTransmit.\n\nAre you simply trying to implement some random Redfish things, or do you have a real intention behind what you\u0027re trying to accomplish?",
+      "parentUuid": "d3ffc749_f28d4e53",
+      "range": {
+        "startLine": 114,
+        "startChar": 15,
+        "endLine": 114,
+        "endChar": 20
+      },
+      "revId": "4208b7ee24edd59b8bda9e3dd054fc20b02d30c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "18948ccc_6eef8aeb",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 11
@@ -181,6 +205,30 @@
       "side": 1,
       "message": "https://www.freedesktop.org/software/systemd/man/latest/systemd.network.html#EmitLLDP\u003d",
       "parentUuid": "a75317e6_77268a58",
+      "range": {
+        "startLine": 122,
+        "startChar": 15,
+        "endLine": 122,
+        "endChar": 20
+      },
+      "revId": "4208b7ee24edd59b8bda9e3dd054fc20b02d30c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1ffae46_ee2bf2f3",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-10T19:36:28Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "ba280e3b_ace45214",
       "range": {
         "startLine": 122,
         "startChar": 15,

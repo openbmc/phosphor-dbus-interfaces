@@ -36,6 +36,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "51646cf3_11e5d032",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-11T16:34:46Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "fd0f2c35_e7173f78",
+      "revId": "4bb55117c7f0248b02dc42f3d76728769e7bc175",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5cd040de_2a9a8122",
@@ -73,6 +91,30 @@
       "side": 1,
       "message": "That looks correct. It could be ACLFileInvalid.\nDo you recommend this as a separate property so the objects which need this property can implement this independently?",
       "parentUuid": "5cd040de_2a9a8122",
+      "range": {
+        "startLine": 83,
+        "startChar": 18,
+        "endLine": 83,
+        "endChar": 25
+      },
+      "revId": "4bb55117c7f0248b02dc42f3d76728769e7bc175",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2802df3c_fe64367b",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-11T16:34:46Z",
+      "side": 1,
+      "message": "\u003e Do you recommend this as a separate property so the objects which need this property can implement this independently?\n\nI don\u0027t understand the question.",
+      "parentUuid": "b30242b8_c9a99eaf",
       "range": {
         "startLine": 83,
         "startChar": 18,

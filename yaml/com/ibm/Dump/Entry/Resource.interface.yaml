@@ -45,7 +45,7 @@ properties:
           The host will send a response code for each request to create a
           resource dump to indicate whether the request is successful or there
           is an error.
-      default: Requested
+      default: Unknown
 
 enumerations:
     - name: HostResponse
@@ -53,22 +53,25 @@ enumerations:
           These are the possible response codes from the host after sending a
           resource dump request.
       values:
+          - name: Unknown
+            description: >
+                The status of the request is unknown, or not initialized
           - name: Requested
             description: >
                 Requested for resource dump and awaiting the host response
           - name: Success
             description: >
                 Resource dump parameters and ACF data are successfully validated
-          - name: ACFFileInvalid
+          - name: ACLFileInvalid
             description: >
-                Invalid ACF file
+                Invalid Access Control List file
           - name: UserChallengeInvalid
             description: >
                 User challenge provided is not valid
           - name: PermissionDenied
             descVSPtion: >
                 Caller does not have enough privileges to execute the requested
-                VSP string
+                resource selector(VSP string)
           - name: ResourceSelectorInvalid
             description: >
                 Resource selector(VSP String) provided is not valid

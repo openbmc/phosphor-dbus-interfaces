@@ -171,6 +171,24 @@
       "parentUuid": "159e1fa4_5a48e111",
       "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b830d64_14b82958",
+        "filename": "yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-06-11T01:14:25Z",
+      "side": 1,
+      "message": "\u003e I would either not have this policy\n\nThat would be my preference as well.  Lets roll Andrew into this discussion;  I think it was IBM that needed this as a use case.  I\u0027ll let him articulate the need.  Maybe we can just dump it entirely (which would be great).\n\n\u003e All of these \"policy\" is related to one particular Redfish flow. \n\nThe policy also applies to updates sent via IPMI is my understanding.\n\nA flow that would now be broken to my understanding that was working before:\nUpdateTime is set via Redfish to update on reboot.\nFirmware update is started in band via IPMI.\n\nMaybe we don\u0027t care about this anymore (or never did), but that deserves some discussion.  Ideally we\u0027d have that discussion outside of implementing the firmware update dbus interfaces, but if we want to combine them, sure, that\u0027s fine.",
+      "parentUuid": "bcc403d7_7f5b9965",
+      "revId": "3edbaf7493a5d00f025b3480c2eb5c33e3c90f67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

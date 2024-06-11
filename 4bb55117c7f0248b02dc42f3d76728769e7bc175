@@ -147,6 +147,30 @@
       },
       "revId": "4bb55117c7f0248b02dc42f3d76728769e7bc175",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b08e9c1_0140f30b",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry/System.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-11T16:50:36Z",
+      "side": 1,
+      "message": "If we did that, I\u0027d think we\u0027d also move UserChallenge and then only create this extra interface when the requested SystemImpact is \"NonDisruptive\"?\n\nI don\u0027t have strong opinions.  I don\u0027t know how much of this design is really useful for anyone outside of the Power architecture (and PowerVM).",
+      "parentUuid": "218262e7_d72ae748",
+      "range": {
+        "startLine": 83,
+        "startChar": 18,
+        "endLine": 83,
+        "endChar": 25
+      },
+      "revId": "4bb55117c7f0248b02dc42f3d76728769e7bc175",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

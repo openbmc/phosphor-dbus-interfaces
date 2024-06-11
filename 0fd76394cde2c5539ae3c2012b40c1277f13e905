@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1aafc5ac_878f594f",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/PostCode.errors.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-11T16:36:05Z",
+      "side": 1,
+      "message": "How did the post code fail?",
+      "revId": "0fd76394cde2c5539ae3c2012b40c1277f13e905",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abc1cb54_d9562c94",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/PostCode.metadata.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-11T16:36:05Z",
+      "side": 1,
+      "message": "We\u0027re going to want separate events for different post codes.  Having users have to parse strings (through Redfish) isn\u0027t entirely helpful.",
+      "revId": "0fd76394cde2c5539ae3c2012b40c1277f13e905",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7c447736_93ea6844",
+        "filename": "yaml/xyz/openbmc_project/Console/Control.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2024-06-11T01:49:06Z",
+      "side": 1,
+      "message": "Using \"Control\" in the interface name seems a bit abstract to me and a bit unconstrained. The functionality we\u0027re caring about is supporting muxed consoles. I feel it would be in improvement to constrain the interface to the problem and name it accordingly. Perhaps something with `.Mux` in it, and have it live on a \"manager\" object?",
+      "parentUuid": "dd34b099_66dbc49e",
+      "revId": "5b83dafa3af98ae5254def306010a745205a3234",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "945aa8f0_a20e5c52",
         "filename": "yaml/xyz/openbmc_project/Console/Control.interface.yaml",
         "patchSetId": 2

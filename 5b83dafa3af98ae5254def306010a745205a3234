@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "52264e47_7b67f969",
+        "filename": "yaml/xyz/openbmc_project/Console/Control.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2024-06-12T02:01:42Z",
+      "side": 1,
+      "message": "\u003e That way there does not have to be a check in other projects that want to use this interface to interact with the console. They can simply assume it to always be there.\n\nIMO it\u0027s self-evident that a console that does not have an interposing mux is active. I think presence of the interface adds some unnecessary confusion in the less complex setups.\n\nThe assumption that the interface is always present might sound like it simplifies things, but I\u0027m not sure that has much impact. You\u0027ll still have to handle errors coming back, and invoking a method on an interface that doesn\u0027t exist just another type of error. I don\u0027t think that argument is overly reductive?\n\nBroadly, the presence of an interface presents the existence of a capability. For instance we already [conditionally expose](https://github.com/openbmc/obmc-console/blob/master/console-dbus.c#L189-L199) the [UART interface](https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Console/UART.interface.yaml), as it\u0027s not meaningful to set a baud rate on a VUART. If setting the active console isn\u0027t meaningful because there\u0027s only one option, then it\u0027s not really the case that there\u0027s a capability to switch.\n\n\u003e For the \u0027xyz.openbmc_project.Console.Control\u0027 name, i chose it intentionally to not refer to a mux. I wanted it to be abstract enough to not expose that implementation detail to other sw.\n\u003e\n\u003e The console could be \"inactive\" due to any number of reasons or states that may be implemented in obmc-console in the future, or it could fail to \"Activate()\" due to these same reasons.\n\nOkay, so considering the future is important. Also important is having the restraint not to implement abstractions that we don\u0027t immediately need so long as we don\u0027t inhibit future development. I\u0027m not saying that the abstraction is unquestionably unnecessary, just I\u0027m not convinced it\u0027s necessary **yet**.\n\nIn the spirit of considering the future, can you enumerate your reasons why the console could be \"inactive\" in support of the `Active` concept and the more abstract `Control` interface?\n\nWhat I\u0027m trying to explore is whether any of them cause a more specific (straw-person) `Mux` interface on some kind of manager object to inhibit the abstraction to a `Control` interface (on a console object) down the track.",
+      "parentUuid": "2b72df04_ebce1c85",
+      "revId": "5b83dafa3af98ae5254def306010a745205a3234",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "945aa8f0_a20e5c52",
         "filename": "yaml/xyz/openbmc_project/Console/Control.interface.yaml",
         "patchSetId": 2

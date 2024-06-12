@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f4d08e1f_8802d92a",
+        "filename": "yaml/xyz/openbmc_project/Console/Control.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2024-06-12T08:48:49Z",
+      "side": 1,
+      "message": "The \u0027Mux\u0027 interface on some manager object just exposes implementation details already by it\u0027s name.\nThen we would need to think about some method of how to switch that mux which could take console id as an argument to switch to that Console.\n\nSince the console id is already part of the bus name, i would assume the manager object needs it\u0027s own bus name. Something like\n\nxyz.openbmc_project.Console.Manager\n\nBut then that is not possible with multiple console servers which each have their own mux.\n\nOne could suggest doing something related to the name of the tty device, like\n\nxyz.openbmc_project.Console.TTYS1Manager\n  /xyz/openbmc_project/console/manager\n     xyz.openbmc_project.Console.Mux\n        method   Select(console_id)\n        property Selected (string)\n\nThis is somewhat inconvenient to use since the name of the tty device is exposed, which is configuration detail, and instead of having to just know the name of the console id, the user now also has to know the name of the tty device to use this concept. However this could be made to work, let me know if you prefer.\n\nIn the case of not having a separate dbus name, the Manager needs to be at the path or interface level for each console.\n\nxyz.openbmc_project.Console.console1\n  /xyz/openbmc_project/console/console1\n  /xyz/openbmc_project/console/Manager\n      xyz.openbmc_project.Console.Mux\n\nIn that case this \u0027Manager\u0027 with it\u0027s \u0027Mux\u0027 interface, independent of it\u0027s object path, is already doing what the \u0027xyz.openbmc_project.Console.Control\u0027 interface was doing, just with another name.\n\n\nI can think of a few reasons why having the \u0027Active\u0027 property might be beneficial.\nIn case of a board with multiple UARTs connected to the BMC, this can help bmcweb SOL select which one to show. \n\nLet\u0027s make an example with CPLD, PCH or BIC.\nWhen the host boots, there may be another controller which is printing on it\u0027s UART and it may be interesting to show the output. That UART is \u0027Active\u0027 while the host UART is \u0027Inactive\u0027 at this point. Then later the host uart becomes \u0027Active\u0027 since it\u0027s UART controller has only recently been powered.\n\nIn some cases the \u0027Active\u0027 state could be detected by e.g. powergood or other gpio.\n\nSo we know that there is multiple states for a console\n- uart controller not powered -\u003e console inactive\n- uart controller powered but uart is disconnected by other chip\n  (someone told me there is atleast 1 such board) -\u003e console inactive\n- uart controller powered, connected -\u003e console active\n\nThen there could be other cases in which there is a mux and several uarts behind it and some of them may be available to be activated, since we know the devices they are connected to are powered (via gpio or other info). In that case there could be \u0027Available\u0027 property to indicate that an \u0027Activate\u0027 call could succeed.\nBut that\u0027s out of scope for this change anyways since this is just about a mux.\n\nWhat i\u0027m trying to demonstrate is that \u0027Active\u0027 can have uses beyond mux. \u0027Activate()\u0027 can also be used in the future for other things, taking steps needed to try and connect that console, if that\u0027s switching a mux or setting some gpio value for another device or whatever.\n\n\n\nI just care about a working dbus interface that can accomplish what i need (switch the mux to some console id).\n\nSo since you have the better idea, please paste the interface and how it should look like, with detailed info on \n\n- dbus name\n - object path\n  - interface name\n   - properties\n   - methods\n\nand if it should be conditionally exposed.\n\nThen i can create the new revision and update the documentation + implementation on the obmc-console patches.",
+      "parentUuid": "52264e47_7b67f969",
+      "revId": "5b83dafa3af98ae5254def306010a745205a3234",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "945aa8f0_a20e5c52",
         "filename": "yaml/xyz/openbmc_project/Console/Control.interface.yaml",
         "patchSetId": 2

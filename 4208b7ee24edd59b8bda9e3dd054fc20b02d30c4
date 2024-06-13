@@ -170,6 +170,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9c289d0c_1931d5ad",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-06-13T18:00:25Z",
+      "side": 1,
+      "message": "redfish modelled \"LLDPReceive\", \"LLDPTransmit\" properties which are not required, \nthese two redfish properties populates all LLDP received data and transmitted data \nwhich is not necessary for protocol like lldp.\n\nso I dont want to use these \"LLDPReceive\", \"LLDPTransmit\" redfish properties.\nonly redfish property required is to enable LLDPEmit on BMC Ethernet interfaces",
+      "parentUuid": "dac2f5ec_d4f322bd",
+      "range": {
+        "startLine": 114,
+        "startChar": 15,
+        "endLine": 114,
+        "endChar": 20
+      },
+      "revId": "4208b7ee24edd59b8bda9e3dd054fc20b02d30c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "18948ccc_6eef8aeb",
         "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
         "patchSetId": 11

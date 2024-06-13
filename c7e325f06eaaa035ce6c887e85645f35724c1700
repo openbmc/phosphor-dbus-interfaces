@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "31fd4349_81a537cb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-06-13T18:00:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9c4aefc_5e7c13b0",
+      "revId": "c7e325f06eaaa035ce6c887e85645f35724c1700",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "b897e785_e60dec57",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 17
@@ -48,6 +66,24 @@
       "writtenOn": "2024-06-10T19:36:28Z",
       "side": 1,
       "message": "I seems like we need to know more of the \"why\"... Based on your responses, I\u0027m not convinced you know what you\u0027re trying to accomplish.  If this is simply for completeness of random Redfish properties, I see no reason to approve it.  If you have a feature you have a customer need for, you should be able to define that feature.",
+      "revId": "c7e325f06eaaa035ce6c887e85645f35724c1700",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b0e4325_0727ec60",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-06-13T18:00:25Z",
+      "side": 1,
+      "message": "Hi Patrick \n\nmy motive to enable LLDP protocol on ethernet interfaces as there customers looking LLDP protocol support on BMC ethernet interfaces. \n\nonce LLDPEmit enabled on Ethernetfaces then LLDP packets will be sent out in regular intervals on the ethernet interface with in the LAN Network, this LLDP data will be used for network debug and monitoring. \n\nI understand that systemd-networkd support LLDP and LLDPEmit properties \nI initially thought to support both properties but later realised that only LLDPEmit property required to emit lldp packet on ethernet interface to meet customer requirement.\n\nI dont want simply for completeness of random Redfish properties.\nActually redfish modelling is not rightly done for LLDP.\nactually all LLDP data will sent on ethernet interfaces in lan network\nBut redfish modelled \"LLDPReceive\", \"LLDPTransmit\" properties which are not required, I have started redfish discussed already on the same.\n\nso here I want to propose only EmitLLDP D-bus property which controls systemd-networkd EmitLLDP configuration.",
+      "parentUuid": "c7199479_85a96d3c",
       "revId": "c7e325f06eaaa035ce6c887e85645f35724c1700",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

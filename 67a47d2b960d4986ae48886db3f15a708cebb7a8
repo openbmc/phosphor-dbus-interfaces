@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "12a44f35_c4472a7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000938
+      },
+      "writtenOn": "2024-06-13T13:02:48Z",
+      "side": 1,
+      "message": "@Ed,\nTaking Patrick’s suggestion into consideration we tried doing a full design on this. If this mapping would work from the bmcweb side then we do not need this interface at all.\n\nAs Gunnar mentioned in the above comment,\nWe had to expose the Cable Status-  Running, PoweredOff, Inactive, Unknown on the Dbus. So we tried mapping these values to the redfish enums, but Patrick suggested we use the existing Status.State and Status.Health interface values and map them to the values we had. So we came up with a design to map as below.\n\nIn bmcweb we map\nStatus.State \u003d\u003d\u003d\u003e uses OperationalStatus (Functional)\nStatus.Health \u003d\u003d\u003d\u003e uses Present Property\nIn addition, we also thought of using the Enabled property and PowerState property to determine the values.\n\nStates that needs a mapping in Redfish\n`Running \u003d\u003e Ok/Enabled\nInactive \u003d\u003e Critical/StandbyOffline\nPoweredOff \u003d\u003e Ok/Disabled\nUnknown \u003d\u003e Critical/UnavailableOffline`\n\nDetailed mapping is as below:\n1. Running\n`Status\n{\n\tHealth \u003d Ok         if \u003d\u003d\u003d\u003e Functional \u003d true (Operational Status)\n\tState \u003d Enabled     if \u003d\u003d\u003d\u003e  Present property  \u003d true , Enabled property \u003d true\n\tPowerState \u003d On     if \u003d\u003d\u003d\u003d\u003e  Powerstate property \u003d On\n}`\n2. Inactive\n`Status\n{\n\tHealth \u003d Critical       if \u003d\u003d\u003d\u003eFunctional \u003d false (Operational Status)\n\tState \u003d StandbyOffline  if \u003d\u003d\u003d\u003e Present property \u003d true , Enabled property \u003d false\n\tPowerState \u003d On         if \u003d\u003d\u003d\u003e Powerstate property \u003d On\n}`\n3. PoweredOff:\n`Status\n{\n\tHealth \u003d Ok       if \u003d\u003d\u003d\u003e Functional \u003d true (Operational Status)\n\tState \u003d Disabled  if\u003d\u003d\u003d\u003e Present property \u003d false , Enabled property\u003d false\n\tPowerState \u003d Off  if \u003d\u003d\u003d\u003e Powerstate property \u003d Off\n}`\n4. Unknown:\n`Status\n{\n\tHealth \u003d Critical             if \u003d\u003d\u003d\u003e Functional \u003d false (Operational Status)\n\tState \u003d  UnavailableOffline   if \u003d\u003d\u003d\u003e Present property \u003d false , Enabled property \u003d false\n\tPowerState \u003d null             if \u003d\u003d\u003d\u003e No Powerstate Interface\n}`\n\nNeed your suggestion if this would be okay to be mapped in bmcweb. Or any other inputs too.\n\nThanks!",
+      "revId": "67a47d2b960d4986ae48886db3f15a708cebb7a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb909cbf_a64de9a2",

@@ -106,6 +106,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f83d8b6_e4c16906",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-06-14T02:09:49Z",
+      "side": 1,
+      "message": "Customers wants to have redfish/GUI interface to control LLDP enable/disable.\nCurrently Redfish Port schema has three properties \"LLDPEnabled\", \"LLDPReceive\",\"LLDPTransmit\".\nas per requirement, we need to support \"LLDPEnabled\" redfish property only which requires this D-bus property and I will continue discussion on \"LLDPReceive\",\"LLDPTransmit\" properties in redfish forum.",
+      "parentUuid": "88bd6b74_3a8ea4f0",
+      "revId": "c7e325f06eaaa035ce6c887e85645f35724c1700",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "28da03a7_0f64374d",

@@ -3,7 +3,7 @@ description: >
 
     System dumps are dump of the host memory and hardware states generated
     during a failure in the host firmware. This can be a huge dump stored in the
-    host memory, the BMC doesnt store this dump but stream this dump to an
+    host memory, the BMC doesn't store this dump but stream this dump to an
     external client based on the offload request. Apart from system generated
     system dump, users can also request for this kind of dump.
 

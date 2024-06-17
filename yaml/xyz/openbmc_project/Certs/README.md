@@ -90,7 +90,7 @@ This section provides the details of the CSR based certificate user flow.
 
 - BMC updates the private key associated to CSR for any new CSR request.
 - BMC upload process automatically appends certificate file with system CSR
-  private key, for the service which requirs certificate and key.
+  private key, for the service which requires certificate and key.
 - CSR based Certificate validation is alway's based on private key in the
   system.
 
@@ -168,7 +168,7 @@ Method: POST
 
 - certificate manager should provide interface to delete the existing
   certificate.
-- Incase of server type certificate deleting a signed certificate will create a
+- In case of server type certificate deleting a signed certificate will create a
   new self signed certificate and will install the same.
 
 ### Boot process
@@ -176,7 +176,7 @@ Method: POST
 - certificate management instances should be created based on the system
   configuration.
 
-- Incase of no Https certificate or invalid Https certificate, certificate
+- In case of no Https certificate or invalid Https certificate, certificate
   manager should update the https certificate with self signed certificate.
 
 ### Repository
@@ -237,22 +237,22 @@ phosphor-certificate-manager
   set with error details, if success response message is set with the replaced
   certificate details.
 
-#### Bootup
+#### Boot up
 
-- During bootup certificate objects created for the existing certificates.
+- During boot up certificate objects created for the existing certificates.
 
 ### Errors thrown by Certificate Manager
 
 - NotAllowed exception thrown if Install method invoked with a certificate
   already existing. At present only one certificate per server and client
   certificate type is allowed.
-- InvalidCertificate excption thrown for validation errors.
+- InvalidCertificate exception thrown for validation errors.
 
 #### Certificate Deletion
 
 - For server and client certificate type the certificate deletion is not
   allowed. In case of authority certificate type the delete option is acceptable
-  and can be done on individial certificates, for example:
+  and can be done on individual certificates, for example:
 
 ```plain
 url: redfish/v1/Managers/bmc/Truststore/Certificates/1

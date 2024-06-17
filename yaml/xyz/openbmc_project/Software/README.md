@@ -103,7 +103,7 @@ Correspondingly, the Inventory Item corresponding to the system element should
 have the same string in its `Inventory.Decorator.Compatible` interface. These
 strings shall be of the following format:
 
-- `<org>.Software.Element.<identifer>.Type.<type>`
+- `<org>.Software.Element.<identifier>.Type.<type>`
 
 Where:
 

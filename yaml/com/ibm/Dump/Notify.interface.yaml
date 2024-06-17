@@ -41,7 +41,7 @@ methods:
             description: >
                 Sometimes the dump is created in the host based on the request
                 from the user, such requests come through the BMC first and then
-                get forwaded to host in such cases host will be sending a token
+                get forwarded to host in such cases host will be sending a token
                 to identify the dump request. If the token is not valid it
                 should be defaulted to 0.
       errors:

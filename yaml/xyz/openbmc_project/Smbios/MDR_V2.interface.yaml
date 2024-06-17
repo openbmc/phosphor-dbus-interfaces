@@ -61,7 +61,7 @@ methods:
           - name: status
             type: boolean
             description: >
-                Need to continue directory transmisson or not.
+                Need to continue directory transmission or not.
       errors:
           - self.Error.InvalidParameter
 
@@ -99,7 +99,7 @@ methods:
           - name: timeStamp
             type: uint32
             description: >
-                Timestamp determinded by the agent.
+                Timestamp determined by the agent.
       returns:
           - name: status
             type: boolean

@@ -102,7 +102,7 @@ paths:
           - name: ReadWriteStorage
             description: >
                 The available read write storage. This storage path has been
-                explicity added to the interface file as it gets used in BMCWeb
+                explicitly added to the interface file as it gets used in BMCWeb
                 and free storage metric gets exposed via Redfish.
             value: storage/rw
           - name: RebootCount

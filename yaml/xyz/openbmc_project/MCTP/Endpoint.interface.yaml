@@ -44,7 +44,7 @@ associations:
     - name: configured_by
       description: >
           Endpoints exposed by platform configuration should host a
-          configured_by assocation back to the object that drove the endpoint's
+          configured_by association back to the object that drove the endpoint's
           existence.
       reverse_name: configures
       required_endpoint_interfaces:

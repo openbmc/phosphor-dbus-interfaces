@@ -41,7 +41,7 @@ properties:
           PowerCap value is normally less than or equal to the MinPowerCapValue.
           When the PowerCap is set to any value between MinSoftPowerCapValue and
           MinPowerCapValue an attempt will be made to maintain the cap but it
-          will not be guaranted.
+          will not be guaranteed.
 
     - name: ExceptionAction
       type: enum[self.ExceptionActions]
@@ -83,9 +83,9 @@ enumerations:
                 Hard Power Off system and log event.
 
           - name: LogEventOnly
-            decription: >
+            description: >
                 Log Event Only.
 
           - name: Oem
-            decription: >
+            description: >
                 OEM defined action.

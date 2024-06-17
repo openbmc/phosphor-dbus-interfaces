@@ -10,7 +10,7 @@ enumerations:
       values:
           - name: "VSPString"
             description: >
-                The resouce dump is collected from various host resources. The
+                The resource dump is collected from various host resources. The
                 resource to collect the dump is indicated by using the resource
                 selector. The resource selector string needs to be passed to
                 host to generate a resource dump.
@@ -38,7 +38,7 @@ enumerations:
                 Hostboot dump is collected during a boot failure during the
                 hostboot booting phase.
           - name: "Hardware"
-            desription: >
+            description: >
                 Hardware dump is collected during a system checkstop.
           - name: "System"
             description: >

@@ -32,7 +32,7 @@ bindings for automatically converting to a C++ enum type.
 In some cases it is useful to have hardware-specific or OEM values for
 enumerations. In those cases a property may be a string, but should specify that
 the values contained within are to be sdbusplus-enumerations of a specific
-pattern. See the [software compatiblity][software-compat] and [dump
+pattern. See the [software compatibility][software-compat] and [dump
 interface][dump-interface] as two current examples of this.
 
 [software-compat]:
@@ -101,7 +101,7 @@ are grammatically correct:
   `{primary element}`.
 
 These correspond to the mapper D-Bus object paths
-`{primary element}/{primary assocation}` with an endpoints property value of
+`{primary element}/{primary association}` with an endpoints property value of
 `{secondary element}` and `{secondary element}/{secondary association}` with an
 endpoints property value of `{primary element}`.
 

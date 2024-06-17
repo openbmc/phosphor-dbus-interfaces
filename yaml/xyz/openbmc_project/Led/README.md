@@ -87,9 +87,9 @@ would result in blinking the front and rear Identify LEDs of the enclosure.
 
 ## Mandatory groups
 
-It is mandatory that all implementations provide definitions of atleast 2 groups
+It is mandatory that all implementations provide definitions of at least 2 groups
 namely; **bmc_booted** and **power_on**. Those would be asserted post reaching
-BMCReady and PowerOn respecively. It is fine to have no LEDs in those groups but
+BMCReady and PowerOn respectively. It is fine to have no LEDs in those groups but
 the group as such is deemed required.
 
 Example: The Group yaml may just be;

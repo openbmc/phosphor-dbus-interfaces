@@ -206,7 +206,7 @@ methods:
     - name: Confirm
       description: >
           Prevents hoth from rolling back and using the previous image. When an
-          image can be comfirmed to be working well, this command is given,
+          image can be confirmed to be working well, this command is given,
           which disarms the hoth watchdog.
       errors:
           - self.Error.CommandFailure

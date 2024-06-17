@@ -1,10 +1,10 @@
 description: >
-    Interface for performing code update for various firwmare entities.
+    Interface for performing code update for various firmware entities.
 
 methods:
     - name: StartUpdate
       description: >
-          Start a firware update to be performed asynchronously.
+          Start a firmware update to be performed asynchronously.
       parameters:
           - name: Image
             type: unixfd

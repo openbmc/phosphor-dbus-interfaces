@@ -22,11 +22,11 @@ Methods:
 - `SetAttribute` -To set the particular BIOS attribute with new value.
 - `GetAttribute` -To get the bios attribute current and pending values.
 
-Properites:
+Properties:
 
 - `ResetBIOSSettings` - To reset the BIOS settings based on the Reset Flag.
 - `BaseBiosTable` - To store all bios attributes details.
-- `PendingAttributes` - To store pending bios Atrributes list.
+- `PendingAttributes` - To store pending bios Attributes list.
 
 ### Interface xyz.openbmc_project.BIOSConfig.Password
 
@@ -36,7 +36,7 @@ Methods:
 
 - `ChangePassword` - To change BIOS setup password.
 
-Properities:
+Properties:
 
 - `PasswordInitialized` - To indicate BIOS password related details are received
   or not.

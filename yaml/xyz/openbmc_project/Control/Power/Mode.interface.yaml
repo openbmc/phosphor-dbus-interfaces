@@ -9,6 +9,9 @@ properties:
           This property shall contain the computer system power mode setting.
           This defines the processor speed based on the priority of power
           consumption and performance.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.NotAllowed
 
     - name: SafeMode
       type: boolean

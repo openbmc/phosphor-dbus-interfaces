@@ -70,6 +70,24 @@
       "parentUuid": "da67c942_56d2bba7",
       "revId": "140bdbdf28dcd6ad15d5f8ee2212ce9977e5edc3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "323d0fff_a5e1f8ea",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ManagedHost.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-06-26T19:25:29Z",
+      "side": 1,
+      "message": "No.\n\n.../inventory/Sentinel_Dome_3\n.../state/host3\n\nDifferent paths and no existing association defined. Right now most of these are hard coded to \"0\" in the design and bmcweb implementation. ideally they\u0027d be an association look up but until we can get a handle around all the missing associations, we\u0027d use this index.",
+      "parentUuid": "d78f6766_384bc9e6",
+      "revId": "140bdbdf28dcd6ad15d5f8ee2212ce9977e5edc3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d3314ef_01d4330b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ManagedHost.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-06-26T18:39:18Z",
+      "side": 1,
+      "message": "I\u0027m not sure bmcweb needs this parameter, it\u0027s going to rely on the dbus path to build unique references similar to how we handle sensors and other inventory, but if it\u0027s useful to other systems, rock on.",
+      "revId": "140bdbdf28dcd6ad15d5f8ee2212ce9977e5edc3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+description: >
+    Implement to define the inventory item as being the embodiment of a managed
+    host computer system.
+properties:
+    - name: HostIndex
+      type: size
+      description:
+          The index / identifier of the managed host computer system.  Many
+          existing designs use an index-based design for representing the
+          host.  This index is used for finding those relationship when an
+          existing association is not defined.

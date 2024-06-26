@@ -134,6 +134,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('ManagedHost')
+generated_others += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/ManagedHost__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Decorator/ManagedHost.interface.yaml',  ],
+    output: [ 'ManagedHost.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Decorator/ManagedHost',
+    ],
+)
+
 subdir('ManufacturerExt')
 generated_others += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/ManufacturerExt__markdown'.underscorify(),

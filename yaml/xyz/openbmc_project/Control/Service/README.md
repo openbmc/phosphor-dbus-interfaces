@@ -12,7 +12,7 @@ The list of services supported are:
 - "obmc-console"`
 - "phosphor-ipmi-kcs"
 - "phosphor-ipmi-net"
-- "start-ipkvm"
+- "obmc-ikvm"
 
 ## Implementation Details
 

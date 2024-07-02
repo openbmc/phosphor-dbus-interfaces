@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43072bbf_d7a59611",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-02T17:55:01Z",
+      "side": 1,
+      "message": "Who is the intended user of this?  I\u0027d like to understand the design intention before we add something like this.",
+      "revId": "c8a1719bfbe2b2cdbf2d0a5921c6b5838e11e4b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7696a9f0_02c3a93c",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-02T17:55:01Z",
+      "side": 1,
+      "message": "size",
+      "range": {
+        "startLine": 140,
+        "startChar": 18,
+        "endLine": 140,
+        "endChar": 24
+      },
+      "revId": "c8a1719bfbe2b2cdbf2d0a5921c6b5838e11e4b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "320f0f06_84434b0f",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-02T17:55:01Z",
+      "side": 1,
+      "message": "uint64?  size?\n\nFree space in what unit?",
+      "range": {
+        "startLine": 144,
+        "startChar": 18,
+        "endLine": 144,
+        "endChar": 24
+      },
+      "revId": "c8a1719bfbe2b2cdbf2d0a5921c6b5838e11e4b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1450b61_2e24dac3",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-02T17:55:01Z",
+      "side": 1,
+      "message": "We use Epoch Time everywhere.  uint64 microseconds since 1970.  Please follow this convention.",
+      "range": {
+        "startLine": 147,
+        "startChar": 0,
+        "endLine": 154,
+        "endChar": 79
+      },
+      "revId": "c8a1719bfbe2b2cdbf2d0a5921c6b5838e11e4b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e5092801_0a67ed3f",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-02T17:55:01Z",
+      "side": 1,
+      "message": "??\n\nExposing a raw byte is not acceptable.  What is this?",
+      "range": {
+        "startLine": 155,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 63
+      },
+      "revId": "c8a1719bfbe2b2cdbf2d0a5921c6b5838e11e4b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

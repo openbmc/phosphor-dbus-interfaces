@@ -132,3 +132,15 @@ methods:
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.ResourceNotFound
+
+    - name: GetSELInfo
+      description: >
+          Retrieve information about the SEL.
+      returns:
+          - name: SelInfo
+            type: struct[uint16,uint16,uint32,uint32,byte]
+            description: >
+                Structure that contains information about the SEL such as the
+                number of entries, amount of free space left, timestamps of the
+                last add and delete operations, and flags indicating supported
+                SEL operations and if an overflow has occurred.

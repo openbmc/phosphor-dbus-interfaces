@@ -132,3 +132,27 @@ methods:
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetSELInfo
+      description: >
+          Retrieve information about the SEL.
+      returns:
+          - name: Entries
+            type: uint16
+            description: >
+                The amount of entries present in the SEL.
+          - name: FreeSpace
+            type: uint16
+            description: >
+                The amount of free space in the SEL.
+          - name: LastAddTime
+            type: uint32
+            description: >
+                The timestamp of the most recent SEL Add operation.
+          - name: LastDelTime
+            type: uint32
+            description: >
+                The timestamp of the most recent SEL Delete or Clear operation.
+          - name: OperationSupport
+            type: byte
+            description: >
+                The operations that the SEL currently supports.

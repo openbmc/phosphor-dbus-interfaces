@@ -1,2 +1,8 @@
 description: >
-    Implement to provide motherboard attributes.
+    The MotherBoard interface under xyz.openbmc_project.Inventory.Item.Board.
+properties:
+    - name: BoardStatus
+      type: string
+      description: >
+          For https://gerrit.openbmc.org/c/openbmc/openbmc/+/71458/, it is used to
+          indicate the current slot status is Empty, Sentinel Dome, or Air Blocker.

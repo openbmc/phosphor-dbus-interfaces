@@ -1,0 +1,25 @@
+description: >
+    This interface defines methods and properties required for Google
+    Authenticator multi-factor authentication at user level. This interface
+    implemented by each user object to support Google Authenticator multi-factor
+    authentication setup for each user.
+
+methods:
+    - name: CreateSecretKey
+      description: >
+          This method setup google-authenticator secret key for the given user
+      returns:
+          - name: fd
+            type: unixfd
+            description: >
+                The file descriptor to the secret key file.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+properties:
+    - name: SecretKeyIsValid
+      type: boolean
+      default: false
+      description: >
+          This property indicates whether google-authenticator secret key setup
+          for the given user

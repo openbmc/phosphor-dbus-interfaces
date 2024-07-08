@@ -1,0 +1,28 @@
+description: >
+    This interface defines methods and properties required for Time-based
+    One-time Password (TOTP) multi-factor authentication at user level. This
+    interface implemented by each user object to support TOTP authenticator
+    multi-factor authentication setup for each user.
+
+methods:
+    - name: CreateSecretKey
+      description: >
+          This method setup Time-based One-time Password (TOTP) authenticator
+          secret key for the given user and returns file descriptor of secret
+          key generated to share secret key string to user.
+      returns:
+          - name: fd
+            type: unixfd
+            description: >
+                The file descriptor to the secret key file which will be used
+                to share secret key string to user.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+properties:
+    - name: SecretKeyIsValid
+      type: boolean
+      default: false
+      description: >
+          This property indicates whether TOTP authenticator secret key setup
+          for the given user

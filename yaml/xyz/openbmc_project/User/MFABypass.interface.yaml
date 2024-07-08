@@ -1,0 +1,10 @@
+description: >
+    Implement to provide multi-factor authentication user bypass settings
+
+properties:
+    - name: BypassedProtocols
+      type: enum[xyz.openbmc_project.User.MultiFactorAuthConfiguration.MultiFactorAuthType]
+      description: >
+          User level multi-factor authentication bypass settings. This interface
+          will be implemented by user D-bus object to support user's MFA bypass
+          configuration.

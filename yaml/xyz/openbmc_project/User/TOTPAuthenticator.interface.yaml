@@ -1,0 +1,51 @@
+description: >
+    This interface defines methods and properties required for Time-based
+    One-time Password (TOTP) multi-factor authentication at user level to
+    support multi-factor authentication secret key setup for each user. This
+    interface implemented by each user object to support TOTP based
+    authenticators like google, microsoft, etc.
+
+methods:
+    - name: CreateSecretKey
+      description: >
+          This method setup Time-based One-time Password (TOTP) authenticator
+          secret key for the given user and returns secret key string to share
+          secret key to user.
+      returns:
+          - name: SecretKey
+            type: string
+            description: >
+                Secret key string which will be shared to user to setup TOTP
+                applications to generate TOTP token.
+
+    - name: VerifyOTP
+      description: >
+          This method verifies OTP with Time-based One-time Password
+          authenticator secret key for the given user and returns weather this
+          OTP is valid or not which make sure user has setup valid secret key
+          for two factor authentication.
+      parameters:
+          - name: OTP
+            type: string
+            description: >
+                One-time password string
+      returns:
+          - name: Status
+            type: boolean
+            description: >
+                Returns true if provided OTP is valid otherwise returns false.
+
+properties:
+    - name: SecretKeyIsValid
+      type: boolean
+      default: false
+      description: >
+          This property indicates whether TOTP authenticator secret key setup
+          for the given user
+
+    - name: BypassedProtocol
+      type: set[enum[xyz.openbmc_project.User.MultiFactorAuthConfiguration.MultiFactorAuthType]]
+      description: >
+          User level multi-factor authentication bypass settings. This interface
+          will be implemented by user D-bus object to support user's MFA bypass
+          configuration.

@@ -1,0 +1,25 @@
+description: >
+    Implement to provide multi-factor authentication user bypass settings
+
+properties:
+    - name: MFABypass
+      type: enum[self.MFABypassType]
+      default: "None"
+      description: >
+          User level multi-factor authentication bypass settings
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+enumerations:
+    - name: MFABypassType
+      description: >
+          Multi-factor authentication bypass type enumeration
+      values:
+          - name: All
+          - name: SecureID
+          - name: GoogleAuthenticator
+          - name: MicrosoftAuthenticator
+          - name: ClientCertificate
+          - name: OneTimePasscode
+          - name: None

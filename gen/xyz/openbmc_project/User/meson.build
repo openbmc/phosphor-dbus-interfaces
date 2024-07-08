@@ -60,6 +60,21 @@ generated_others += custom_target(
 )
 
 subdir('Ldap')
+subdir('MFABypass')
+generated_others += custom_target(
+    'xyz/openbmc_project/User/MFABypass__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/User/MFABypass.interface.yaml',  ],
+    output: [ 'MFABypass.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/User/MFABypass',
+    ],
+)
+
 subdir('Manager')
 generated_others += custom_target(
     'xyz/openbmc_project/User/Manager__markdown'.underscorify(),

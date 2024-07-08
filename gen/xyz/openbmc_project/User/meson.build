@@ -44,6 +44,21 @@ generated_others += custom_target(
     ],
 )
 
+subdir('GoogleAuthenticator')
+generated_others += custom_target(
+    'xyz/openbmc_project/User/GoogleAuthenticator__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml',  ],
+    output: [ 'GoogleAuthenticator.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/User/GoogleAuthenticator',
+    ],
+)
+
 subdir('Ldap')
 subdir('Manager')
 generated_others += custom_target(

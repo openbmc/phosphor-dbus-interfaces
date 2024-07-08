@@ -1,0 +1,24 @@
+description: >
+    Implement to provide multi-factor authentication user bypass settings
+
+properties:
+    - name: MFABypass
+      type: set[enum[self.MFABypassType]]
+      description: >
+          User level multi-factor authentication bypass settings. This interface
+          will be implemented by user D-bus object to support user's MFA bypass
+          configuration.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+enumerations:
+    - name: MFABypassType
+      description: >
+          Multi-factor authentication bypass type enumeration, Types of
+          multi-factor authentication this user account is allowed to bypass.
+      values:
+          - name: SecureID
+          - name: GoogleAuthenticator
+          - name: MicrosoftAuthenticator
+          - name: ClientCertificate
+          - name: OneTimePasscode

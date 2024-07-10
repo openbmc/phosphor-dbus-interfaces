@@ -34,6 +34,24 @@
       "parentUuid": "fcc37f41_88c2d5f3",
       "revId": "694731730b61deb09d3e593b1a0676182d212e70",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56d8e674_42825ec7",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2024-07-10T04:38:27Z",
+      "side": 1,
+      "message": "\u003e while allows us to have MFA code with meson flag.\n\nOK. But is it possible to add the complete feature implementation with the compiler flag ON ?\n\n\u003e I think default value should be \"None\", Will add new enum \"None\"\n\nThe value \u0027None\u0027 will mandate all the multi factor authentications on the user. By default all users should be disabled for multi auth. User can then bypass specific ones as per need.",
+      "parentUuid": "16e3c72d_ee46d7fc",
+      "revId": "694731730b61deb09d3e593b1a0676182d212e70",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

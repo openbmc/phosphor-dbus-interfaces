@@ -52,6 +52,24 @@
       "parentUuid": "16e3c72d_ee46d7fc",
       "revId": "694731730b61deb09d3e593b1a0676182d212e70",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5693d820_aaa8dc13",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-07-11T04:29:10Z",
+      "side": 1,
+      "message": "having this new separate interface will provide flexibility to the implementation.\notherwise I am ok to added this property to Attributes.interface as well.\n\nSuppose if MFAbypass property\u0027s default values is set \"All\" then even though 2 factor Google-authenticator enabled then MFA bypassed for user by default.\nunless user explicitly change mfa bypass settings and what\u0027s the value user needs to set to avoid bypassing google-authenticator (any other specific) MFA?",
+      "parentUuid": "56d8e674_42825ec7",
+      "revId": "694731730b61deb09d3e593b1a0676182d212e70",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

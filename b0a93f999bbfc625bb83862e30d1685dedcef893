@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d26f7b99_9239be71",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2024-07-11T16:48:14Z",
+      "side": 1,
+      "message": "Can you also mention briefly how this will work?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 54
+      },
+      "revId": "b0a93f999bbfc625bb83862e30d1685dedcef893",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f5e3bd4_48752ae6",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2024-07-11T16:48:14Z",
+      "side": 1,
+      "message": "This interface will be implemented by the dbus object specific to a user.\nWhat is the need for having an input parameter \"Username\" here?",
+      "revId": "b0a93f999bbfc625bb83862e30d1685dedcef893",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

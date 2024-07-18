@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0fa487b9_e62da21b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-18T22:12:31Z",
+      "side": 1,
+      "message": "I don\u0027t understand the motivation for a separate interface here.  Nobody is going to code to calling this if it is chip-specific.  We should align with the AMD design work here on how to trigger and collect crash dumps.",
+      "revId": "3dd3d6a12348bfae8c452dc09f65f6a3163e56f1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

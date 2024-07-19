@@ -141,6 +141,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3ca11f2_bcbb5ee8",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-07-19T19:05:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1f13d40c_b62d9a1f",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3491289a_692c4bf2",
@@ -154,6 +172,24 @@
       "writtenOn": "2024-07-18T22:11:03Z",
       "side": 1,
       "message": "Do we need a default service name?  Everyone should use mapper to find this, right?",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8aada4e7_1df54aec",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-07-19T19:05:00Z",
+      "side": 1,
+      "message": "I thought it was so we have a constant that even the server could use when it claims the bus name.  If it\u0027s rather for clients I will remove.",
+      "parentUuid": "3491289a_692c4bf2",
       "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -265,6 +301,24 @@
       "writtenOn": "2024-07-18T22:11:03Z",
       "side": 1,
       "message": "Why\u0027d you end up with both (instance and namespace)?  I\u0027d think you only need a single string.  Usually namespace is used for cases where there is something under it (path segments) but it seems like you just have a singular instance?",
+      "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2f649c2_96940779",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-07-19T19:05:00Z",
+      "side": 1,
+      "message": "I think I just misunderstood the documentation. Will remove the namespace.\n\nAlso, do you think it would be better to put this on /xyz/openbmc_project/state/bmc0 (where bmc state manager is) or have it be on a unique path?",
+      "parentUuid": "41269643_7ec1d08d",
       "revId": "70be3b8e61c897b983c2fb43cdb824eb03f9bd66",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -1,0 +1,32 @@
+description: >
+    This interface defines multi-factor authentication configuration. This
+    interface can be implemented at user manager object to enforce various MFA
+    authentication mechanisms to users on the system
+
+properties:
+    - name: MultiFactorAuth
+      type: set[enum[self.MultiFactorAuthType]]
+      description: >
+          Multi-factor authentication configuration. This interface  will be
+          implemented by user manager D-bus object to support user's MFA
+          configuration on BMC.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: MultiFactorAuthTypesSupported
+      type: set[enum[self.MultiFactorAuthType]]
+      description: >
+          This property is for populating allowed multi-factor authentication
+          types.
+
+enumerations:
+    - name: MultiFactorAuthType
+      description: >
+          Multi-factor authentication type enumeration, Types of multi-factor
+          authentication user account is allowed to configure.
+      values:
+          - name: SecurID
+          - name: GoogleAuthenticator
+          - name: MicrosoftAuthenticator
+          - name: TOTPAuthenticator
+          - name: OneTimePasscode

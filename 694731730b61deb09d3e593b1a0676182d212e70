@@ -70,6 +70,24 @@
       "parentUuid": "56d8e674_42825ec7",
       "revId": "694731730b61deb09d3e593b1a0676182d212e70",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "694ff9a1_77343793",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2024-07-22T08:35:21Z",
+      "side": 1,
+      "message": "Ya makes sense. \nWhen MFABypass \u003d\u003d None implies that - when MFA is enabled at system level - all users are mandated to use MFA unless it\u0027s bypassed for any of these types in the enums.\nShould this \u0027None\u0027 be added to the DMTF schema as well ?",
+      "parentUuid": "5693d820_aaa8dc13",
+      "revId": "694731730b61deb09d3e593b1a0676182d212e70",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

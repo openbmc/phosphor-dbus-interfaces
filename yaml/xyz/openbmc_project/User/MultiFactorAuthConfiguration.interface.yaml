@@ -1,0 +1,50 @@
+description: >
+    This interface defines multi-factor authentication configuration. This
+    interface can be implemented at user manager object to enforce various MFA
+    authentication mechanisms to users on the system
+
+properties:
+    - name: GoogleAuthenticatorEnabled
+      type: boolean
+      default: false
+      description: >
+          This property indicates whether multi-factor authentication with
+          Google Authenticator is enabled
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: MicrosoftAuthenticatorEnabled
+      type: boolean
+      default: false
+      description: >
+          This property indicates whether multi-factor authentication with
+          Microsoft Authenticator is enabled
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: ClientCertificateEnabled
+      type: boolean
+      default: false
+      description: >
+          This property indicates whether client certificate authentication is
+          enabled
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: SecureIdEnabled
+      type: boolean
+      default: false
+      description: >
+          An indication of whether multi-factor authentication with RSA SecurID
+          is enabled.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: OneTimePasscodeEnabled
+      type: boolean
+      default: false
+      description: >
+          This property indicates whether multi-factor authentication with
+          one time passcode is enabled
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure

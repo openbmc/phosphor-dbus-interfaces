@@ -1,0 +1,38 @@
+description: >
+    This interface defines multi-factor authentication configuration. This
+    interface can be implemented at user manager object to enforce various MFA
+    authentication mechanisms to users on the system
+
+properties:
+    - name: MultiFactorAuth
+      type: enum[self.MultiFactorAuthType]
+      default: None
+      description: >
+          Multi-factor authentication configuration. This interface  will be
+          implemented by user manager D-bus object to support user's MFA
+          configuration on BMC.
+
+    - name: MultiFactorAuthTypesSupported
+      type: set[enum[self.MultiFactorAuthType]]
+      flags:
+          - readonly
+      description: >
+          This property is read only for populating allowed multi-factor
+          authentication types. When there are no multi-factor authentication
+          types are supported, this should be an empty set and should never
+          include 'None' enumeration value.
+
+enumerations:
+    - name: MultiFactorAuthType
+      description: >
+          Multi-factor authentication type enumeration, Types of multi-factor
+          authentication user account is allowed to configure.
+      values:
+          - name: GoogleAuthenticator
+            description: >
+                Google Authenticator supports Time-based One-time Password
+                two-factor authentication for logging into servers specified in
+                RFC 6238.
+          - name: None
+            description: >
+                Default value of multi-factor authentication configuration

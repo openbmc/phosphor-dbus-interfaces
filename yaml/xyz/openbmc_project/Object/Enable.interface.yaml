@@ -23,3 +23,19 @@ properties:
       default: false
       errors:
           - xyz.openbmc_project.Common.Error.NotAllowed
+
+associations:
+    - name: detectors_contained_by
+      description: >
+          Leak detectors can optionally implement the 'detectors_contained_by'
+          association with the inventory item related to it.
+      reverse_name: containing_detectors
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+    - name: contained_by
+      description: >
+          Leak detectors can optionally implement the 'contained_by' association
+          with the leak detection zone related to it.
+      reverse_name: containing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.LeakDetection.Zone

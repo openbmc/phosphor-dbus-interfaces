@@ -85,6 +85,7 @@ generated_others += custom_target(
 )
 
 subdir('Ipmi')
+subdir('LeakDetection')
 subdir('Led')
 subdir('Logging')
 generated_others += custom_target(

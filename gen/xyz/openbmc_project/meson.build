@@ -52,6 +52,7 @@ generated_others += custom_target(
 subdir('Condition')
 subdir('Console')
 subdir('Control')
+subdir('Cooling')
 subdir('Debug')
 subdir('Dump')
 subdir('HardwareIsolation')

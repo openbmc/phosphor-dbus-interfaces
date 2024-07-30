@@ -1,0 +1,24 @@
+description: >
+    Implement to provide attributes for cooling zone.
+
+properties:
+    - name: PrettyName
+      type: string
+      description: >
+          The human readable name of the cooling zone.
+
+associations:
+    - name: containing
+      description: >
+          The cooling zones can optionally implement the 'containing'
+          association to provide one or more links to leak detectors which it
+          contains.
+      reverse_name: contained_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Cooling.LeakDetector
+
+paths:
+    - name: Liquid
+      description: >
+          The liquid cooling zones.
+      value: /xyz/openbmc_project/cooling/liquid

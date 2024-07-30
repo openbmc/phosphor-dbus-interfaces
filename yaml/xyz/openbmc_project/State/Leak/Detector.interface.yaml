@@ -1,0 +1,68 @@
+description: >
+    Implement to provide attributes for leak detector.
+
+properties:
+    - name: PrettyName
+      type: string
+      description: >
+          The human readable name of the leak detector.
+      flags:
+          - readonly
+    - name: State
+      type: boolean
+      description: >
+          The state of the detector. The value of true means the leak is
+          detected and false means there is no leak.
+      flags:
+          - readonly
+    - name: Type
+      type: enum[self.DetectorType]
+      description: >
+          The type of leak detector.
+
+enumerations:
+    - name: DetectorType
+      description: >
+          This indicates the type of leak detector as in Redfish LeakDetector
+          schema https://redfish.dmtf.org/schemas/v1/LeakDetector.v1_2_0.json.
+      values:
+          - name: LeakSensingCable
+            description: >
+                A leak sensing cable.
+          - name: Unknown
+            description: >
+                An unknown detector type
+    - name: DetectorState
+      description: >
+          This indicates the state of the leak detector
+      values:
+          - name: Normal
+            description: >
+                The state is normal as no leaks have been detected by the leak
+                detector.
+          - name: Abnormal
+            description: >
+                A leak has been detected by the leak detector, indicating an
+                abnormal leak state.
+          - name: Unknown
+            description: >
+                The state cannot be determined as the detector may be faulty.
+
+associations:
+    - name: monitoring
+      description: >
+          Leak detectors can optionally implement the 'monitoring' association
+          with the inventory item related to it.
+      reverse_name: monitored_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+
+paths:
+    - namespace: /xyz/openbmc_project/state/leak
+      description: >
+          The root path for state of all leak objects.
+      segments:
+          - name: Detector
+            description: >
+                The leak detector.
+            value: detector

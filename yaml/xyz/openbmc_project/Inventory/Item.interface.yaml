@@ -117,6 +117,14 @@ associations:
       reverse_name: connecting
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Cable
+    - name: containing_detectors
+      description: >
+          Objects that implement Item can optionally implement the
+          'containing_detectors' association to provide links to one or more
+          detectors that it contains.
+      reverse_name: detectors_contained_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.LeakDetection.Detector
 
 paths:
     - namespace: /xyz/openbmc_project/inventory

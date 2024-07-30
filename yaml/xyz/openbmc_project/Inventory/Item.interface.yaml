@@ -68,10 +68,13 @@ associations:
           Any inventory Item (usually Boards or Chassis) can optionally
           implement the 'monitored_by' association to provide a link to the
           chassis intrusion sensor that is monitoring its security state against
-          intrusion events.
+          intrusion events. Objects that implement Item can optionally implement
+          the 'monitored_by' association to provide links to one or more
+          detectors that monitors its state.
       reverse_name: monitoring
       required_endpoint_interfaces:
           - xyz.openbmc_project.Chassis.Intrusion
+          - xyz.openbmc_project.State.Leak.Detector
     - name: powered_by
       description: >
           Objects that implement Item can optionally implement the 'powered_by'

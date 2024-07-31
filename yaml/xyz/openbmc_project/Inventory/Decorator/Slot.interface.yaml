@@ -5,3 +5,9 @@ properties:
       type: size
       description: >
           The slot number
+
+    - name: SlotStatus
+      type: string
+      description: >
+          For https://gerrit.openbmc.org/c/openbmc/openbmc/+/71458/, it is used to
+          indicate the current slot status is Empty, Sentinel Dome, or Air Blocker.

@@ -1,0 +1,34 @@
+description: >
+    An example interface originally described as part of the announcement of new
+    sd-bus interfaces at:
+        http://0pointer.net/blog/the-new-sd-bus-api-of-systemd.html
+properties:
+    - name: Model
+      type: string
+      description: >
+          	Specifies a string that uniquely identifies the model of the system
+          board. The recommended format is "manufacturer,model-number".
+    - name: SerialNumber
+      type: string
+      description: >
+          Specifies a string representing the device's serial number.
+    - name: MACAddress
+      type: array[byte]
+      description: >
+          Specifies MAC address that was assigned to the network device
+          described by the node containing this property.
+    - name: LocalMACAddress
+      type: array[byte]
+      description: >
+          	Specifies the MAC address that was last used by the boot program. This
+          property should be used in cases where the MAC address assigned to the
+          device by the boot program is different from the local-mac-address
+          property. This property shall be used only if the value differs from
+          local-mac-address property value.
+paths:
+    - instance: /xyz/openbmc_project/MachineContext
+      description: Expected path of the instance.
+
+service_names:
+    - default: xyz.openbmc_project.MachineContext
+      description: Expected service name for the instance.

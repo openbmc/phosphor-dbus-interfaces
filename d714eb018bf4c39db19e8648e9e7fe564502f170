@@ -16,6 +16,24 @@
       "message": "These are just random things that we already have in other interfaces.  Why would we define a new top-level interface for this?",
       "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71088e5f_31209b9f",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-02T15:20:11Z",
+      "side": 1,
+      "message": "I would say the idea here is to present an interface for HW ID data (VPD) as discovered in well-defined device-tree nodes.\n\nIt\u0027s my understanding that something along these lines is needed for the \u0027device-tree -\u003e dbus (for Entity-Manager probe consumption) daemon.\n\nAs discussed here: https://gerrit.openbmc.org/c/openbmc/phosphor-u-boot-env-mgr/+/71512/comment/e3a2680c_c642e88b/\n\nI am open to suggestions \n\n(sidenote: I\u0027ve noticed the top-level description on my YAML probably should be changed. I\u0027ll aim to fix that along with whatever fixes/changes are needed next)",
+      "parentUuid": "e0226ae4_d7e514dd",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -52,6 +52,24 @@
       "parentUuid": "71088e5f_31209b9f",
       "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d11973ac_da17f42f",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-02T15:46:24Z",
+      "side": 1,
+      "message": "It\u0027s been awhile, and I bet I can find more detail if a deeper dive is needed, but I believe the suggestion to use existing Inventory.Decorator was rejected by the community.\n\nhttps://gerrit.openbmc.org/c/openbmc/docs/+/66369/comment/b7fcf0b3_e571f130/\n(Ed Tanous comments)\n\nhttps://gerrit.openbmc.org/c/openbmc/docs/+/66369/comments/62dc0e29_4dd4207c\n\nhttps://gerrit.openbmc.org/c/openbmc/docs/+/66369/comments/efb4633f_267a3e16\n\nThe \u0027MachineContext\u0027 name we\u0027ve landed on for this is the only interface name so far we didn\u0027t get objections to (so far) across the design doc \u0026 phosphor-u-boot-env-mgr daemon implimentation comments on Gerrit",
+      "parentUuid": "e8b17918_c0afcd8f",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

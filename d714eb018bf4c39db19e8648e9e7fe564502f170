@@ -142,6 +142,24 @@
       "parentUuid": "bb36dc05_97af8b83",
       "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c0d480a_f5e30ff5",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-05T19:13:01Z",
+      "side": 1,
+      "message": "\u003e I suspect that with having decorator assets typically being defined inside EM-config files after a successful EM-probe match, it could cause issues if there\u0027s a service trying to set that same field behind the scenes based on device-tree node data at boot.\n\nThis shouldn\u0027t be an issue.  They wouldn\u0027t be updating the *same* field, because they\u0027d be different instances (both different services and object_paths).\n\nThe device tree stuff can fill in `/xyz/openbmc_project/inventory/device-tree/fru1` with Asset and Compatible.  EM will probe on some combination of those and create `/xyz/openbmc_project/inventory/Board/HPe_G15_Mainboard`.",
+      "parentUuid": "d809e924_b493caf7",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9482e3f_e1fc687e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Slot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2024-08-05T03:09:05Z",
+      "side": 1,
+      "message": "So, is it appropriate to add a new SlotState.interface under yaml/xyz/openbmc_project/State/Decorator? \nOr is it that only the interfaces used by phosphor-state-manager can be defined here?\nThank you.",
+      "parentUuid": "59c60740_51449f75",
+      "revId": "a0a18eb657f0b6dad7a6d23509067af4346fd5ba",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dcc77a78_53994159",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-07-31T14:43:31Z",
       "side": 1,
       "message": "Free-form strings are not acceptable for states.",
+      "revId": "a0a18eb657f0b6dad7a6d23509067af4346fd5ba",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8391fcc0_92953ae1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Slot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2024-08-05T03:09:05Z",
+      "side": 1,
+      "message": "The correct approach should be to define the type as an enum and specify the property name to be used in the values of the enumerations. \nIs this correct? \nThank you.",
+      "parentUuid": "dcc77a78_53994159",
       "revId": "a0a18eb657f0b6dad7a6d23509067af4346fd5ba",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

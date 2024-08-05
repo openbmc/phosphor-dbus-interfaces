@@ -106,6 +106,24 @@
       "parentUuid": "a3a75dc2_7cc0af6d",
       "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb36dc05_97af8b83",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-05T14:59:10Z",
+      "side": 1,
+      "message": "I believe I understand your position. \n\nI\u0027m currently going back over old community discussion on \"where to output device-tree data to dbus\" topic and putting together a \"where we\u0027ve been and where we\u0027re at now\" summary, and help drive further community discussions.\n\nAs far as I understand, there is no interface for device-tree data available to d-bus at this time. We (after much community discussion) landed on the \u0027MachineContext\u0027 name with the idea that it represents data about physical hardware discovered via device-tree to give context for the hardware we\u0027re running on.\n\nI believe Ed\u0027s main objections using to the Decorator assets Compatible fields were largely about that interface not being representative of physical hardware, and him really not liking the idea of tying data about physical hardware to arbitrary paths. I\u0027ll have more on this once I\u0027ve finished putting together a new summary.\n\nEssentially, this is intended as an interface for \u0027device-tree\u0027 (there was plenty of objection to just naming the interface something with \u0027device-tree\u0027 in the name, with the idea that \u0027Device-Tree\u0027 is a concept, not representative of physical hardware that needs an interface) \n\nHPE will be using it to allow Entity-Manager probes to find our HW, but it is not intended to be an HPE-specific interface or daemon.\n\t\nHPE essentially only cares about the \u0027model\u0027 field, the other fields serial-number and the mac address fields are \"low hanging fruit\" - device tree root nodes that were included due to community discussion -- largely because they\u0027re well-defined device-tree nodes (as described @ https://devicetree-specification.readthedocs.io/en/latest/ )",
+      "parentUuid": "3866038e_3ae1896b",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

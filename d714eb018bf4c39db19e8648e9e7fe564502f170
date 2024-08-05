@@ -124,6 +124,24 @@
       "parentUuid": "3866038e_3ae1896b",
       "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d809e924_b493caf7",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-05T18:29:44Z",
+      "side": 1,
+      "message": "Also worth bringing up -- looking at existing Entity-Manager configs, it seems like Decorator properties like model are generally defined by devs in the entity-manager JSON config files for each platform.\n\nhttps://github.com/search?q\u003drepo%3Aopenbmc%2Fentity-manager%20model\u0026type\u003dcode\n\nI suspect that with having decorator assets typically being defined inside EM-config files after a successful EM-probe match, it could cause issues if there\u0027s a service trying to set that same field behind the scenes based on device-tree node data at boot.\n\nAs far as I know, there\u0027s no defined place for device-tree discovered data at the moment. I am continuing my research, and I am still open to any and all suggestions. Thanks for your time!",
+      "parentUuid": "bb36dc05_97af8b83",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

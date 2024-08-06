@@ -214,6 +214,24 @@
       "parentUuid": "8b079d94_f70f622b",
       "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "004c1259_bce27ac1",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-06T18:01:43Z",
+      "side": 1,
+      "message": "Yes, multiple inheritance but... there is an \"object\" class that facilitates wrapping the multiple inheritances.  (Looks like object was the sync name for it; server is the async name for it. https://github.com/openbmc/sdbusplus/blob/5cee91570368554a7fcbbd9418f65efda449fa70/include/sdbusplus/async/server.hpp#L19)\n\nYou can\u0027t \"hide\" properties and that would be a violation of dbus conventions. Dbus doesn\u0027t have \"optional\" properties. If you define an interface to have specific properties it must have all of those properties. \n\nWe usually have conventions to indicate \"unused\" or \"unknown\". For enum-based properties you\u0027ll see \"unknown\". For strings, empty string. For numbers something like 0, max, min, or NaN (depending).",
+      "parentUuid": "c49d3b99_41c7bb94",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

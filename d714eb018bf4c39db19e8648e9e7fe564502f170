@@ -178,6 +178,42 @@
       "parentUuid": "3c0d480a_f5e30ff5",
       "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8032afeb_91937440",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-06T17:29:50Z",
+      "side": 1,
+      "message": "Nevermind the last question - did some experimenting, realized the answer is \u0027multiple inheritance.\u0027\n\nNext question: Am I right to assume there\u0027s no way to \u0027hide\u0027 properties from an inherited interface in the listing that comes up with we introspect on an dbus object? \n\nie there\u0027s no way to tell sdbusplus \"I only want to make these inherited interface properties available, but not those properties\", right?",
+      "parentUuid": "8b079d94_f70f622b",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c49d3b99_41c7bb94",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-06T17:29:50Z",
+      "side": 1,
+      "message": "Ah - the answer to that appears to be multiple inheritance.\n\nNext question: Is there any way to only present specific properties from one of those interfaces?",
+      "parentUuid": "8b079d94_f70f622b",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

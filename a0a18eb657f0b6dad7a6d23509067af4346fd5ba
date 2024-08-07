@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "808dbc82_c7d2ead5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Slot.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2024-08-07T01:46:04Z",
+      "side": 1,
+      "message": "Due to the previous request from the Thermal team to control fan speed based on the slot content status:\n1. Sentinel Dome\n2. Air blocker\n3. Empty\n\nSince the Air blocker does not have an FRU, it can only be determined by the combination of the PRSNT PIN and CARD_TYPE PIN values in the GPIO. \nTherefore, I added a Property to record the slot content status on DBUS. \nEach time the PIN changes, I determine whether the current slot content is Sentinel Dome, Air blocker, or Empty based on the status and the changed PIN.\n\nHowever, as the Thermal team mentioned yesterday, there will be no Air blocker in future Data centers. \nTherefore, there is no need to add an extra Property to record the slot status. \nI will revert this commit to WIP.",
+      "parentUuid": "7c4f8012_cf93dfcc",
+      "revId": "a0a18eb657f0b6dad7a6d23509067af4346fd5ba",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dcc77a78_53994159",

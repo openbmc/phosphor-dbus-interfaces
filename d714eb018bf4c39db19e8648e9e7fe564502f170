@@ -232,6 +232,24 @@
       "parentUuid": "c49d3b99_41c7bb94",
       "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84134d66_6ab02e03",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-07T18:10:44Z",
+      "side": 1,
+      "message": "Thanks for the info.\n\nWould you say it\u0027s important to use a path in the /inventory/ hierarchy if I\u0027m using inventory-related interfaces? \n\nI mostly ask because I have the impression most of that hierarchy is tied to inventory management implementation details (items and properties directly managed by phosphor-inventory-manager, I presume) \n\nWould there be objections to a service using path \u0027/xyz/openbmc_project/MachineContext\u0027 on a bus w/ service name \u0027xyz.openbmc_project.MachineContext\u0027 (also considering \u0027MachineVPDContext\u0027 as a name to make it more clear this is VPD related, like IBM\u0027s Open Power-related VPD handling under \u0027com.ibm.ipzvpd\u0027). \n\t\nAs suggested, this would be making use of the existing inventory.decorator.asset \u0026 inventory.item.NetworkInterface interfaces.",
+      "parentUuid": "004c1259_bce27ac1",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

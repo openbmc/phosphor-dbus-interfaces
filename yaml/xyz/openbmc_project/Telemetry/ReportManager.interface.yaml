@@ -45,7 +45,7 @@ methods:
             description: >
                 Period of time in milliseconds when Report is updated with new
                 readings. Minimal interval is defined in MinInterval property.
-          - name: MetricParams
+          - name: ReadingParameters
             type: array[struct[array[struct[object_path,string]],enum[xyz.openbmc_project.Telemetry.Report.OperationType],string,enum[xyz.openbmc_project.Telemetry.Report.CollectionTimescope],uint64]]
             description: >
                 Array of metric parameters, which are stored in a way specified

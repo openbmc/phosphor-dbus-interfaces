@@ -250,6 +250,24 @@
       "parentUuid": "004c1259_bce27ac1",
       "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f35f5815_cd2e7c70",
+        "filename": "yaml/xyz/openbmc_project/MachineContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-12T21:52:49Z",
+      "side": 1,
+      "message": "Based on our discussion, I\u0027ve gone ahead and updated the HW ID service to use interfaces decorator.asset and inventory.networkinterface via path: /xyz/openbmc_project/machinecontext \n\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-u-boot-env-mgr/+/71512/comment/86b03e06_27daefad/",
+      "parentUuid": "84134d66_6ab02e03",
+      "revId": "d714eb018bf4c39db19e8648e9e7fe564502f170",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

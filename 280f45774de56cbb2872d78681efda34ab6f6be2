@@ -16,6 +16,29 @@
       "message": "Looks good to me. But this can wait until the design document is up for review as per Patricks comment.",
       "revId": "280f45774de56cbb2872d78681efda34ab6f6be2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39509b90_d934506c",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2024-08-13T16:27:30Z",
+      "side": 1,
+      "message": "In redfish, I can see it is an array.\n\nSo, regarding this property under each user, should it also be an array of enums specifying the methods that the user is bypassing?",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 36
+      },
+      "revId": "280f45774de56cbb2872d78681efda34ab6f6be2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

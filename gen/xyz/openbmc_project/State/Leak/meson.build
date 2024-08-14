@@ -2,7 +2,7 @@
 subdir('Detector')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Leak/Detector__markdown'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/State/Leak/Detector.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/State/Leak/Detector.events.yaml', '../../../../../yaml/xyz/openbmc_project/State/Leak/Detector.interface.yaml',  ],
     output: [ 'Detector.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

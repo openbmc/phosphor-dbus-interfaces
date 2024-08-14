@@ -76,6 +76,7 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Leak')
 subdir('OperatingSystem')
 subdir('PowerOnHours')
 generated_others += custom_target(

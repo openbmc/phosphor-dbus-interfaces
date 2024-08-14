@@ -1,0 +1,30 @@
+version: 1.0.0
+
+errors:
+    - name: LeakDetectedCritical
+      severity: critical
+      metadata:
+          - name: DETECTOR_NAME
+            type: string
+            primary: true
+      en:
+          description: A critical level liquid leak has been detected.
+          message:
+              A liquid leak has been detected at a critical level by
+              {DETECTOR_NAME}.
+          resolution: Inspect the resource for leak.
+      errno: EIO
+
+    - name: LeakDetectedWarning
+      severity: warning
+      metadata:
+          - name: DETECTOR_NAME
+            type: string
+            primary: true
+      en:
+          description: A warning level liquid leak has been detected.
+          message:
+              A liquid leak has been detected at a warning level by
+              {DETECTOR_NAME}.
+          resolution: Inspect the resource for leak.
+      errno: EIO

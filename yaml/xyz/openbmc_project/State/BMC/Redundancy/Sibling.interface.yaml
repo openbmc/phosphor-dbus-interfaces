@@ -1,0 +1,99 @@
+description: >
+    This interface describes the API to read information from a sibling BMC in a
+    redundant configuration.
+
+properties:
+    - name: BMCPosition
+      type: size
+      default: 0
+      flags:
+          - readonly
+      description: >
+          The position the sibling BMC thinks it is.  Important on systems where
+          there is an opportunity to plug hardware or cables in wrong.
+
+    - name: FWVersion
+      type: string
+      flags:
+          - readonly
+      description: >
+          The version of the firmware that the sibling is running.
+
+    - name: Provisioned
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          If the sibling has been provisioned.
+
+    - name: RedundancyEnabled
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          If the sibling BMC has redundancy enabled.  This may only make sense
+          if the sibling has the active role.
+
+    - name: FailoversPaused
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          If the sibling has failovers paused.  Redundancy is still considered
+          enabled (syncs are happening). This may need to happen during certain
+          events, for example during a code update. This may only make sense if
+          the sibling has the active role.
+
+    - name: BMCState
+      type: enum[xyz.openbmc_project.State.BMC.BMCState]
+      default: NotReady
+      flags:
+          - readonly
+      description: >
+          The BMC state of the sibling.
+
+    - name: Role
+      type: enum[xyz.openbmc_project.State.BMC.Redundancy.Role]
+      default: Unknown
+      flags:
+          - readonly
+      description: >
+          The redundancy role of the sibling.
+
+    - name: CommunicationOK
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          If the sibling BMC thinks it has good communication with this BMC.
+
+    - name: Heartbeat
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          If the redundancy management software running on the sibling BMC is
+          providing a continous heartbeat indicating that it is up and running.
+
+    - name: FailoverImminent
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          This property is asserted when the sibling BMC is about to start a
+          failover which will reset this BMC. This allows the BMC to do any
+          preparation or tracing.  The grace period is implementation specific.
+
+paths:
+    - namespace: /xyz/openbmc_project/state
+      segments:
+          - name: BMC
+            description: >
+                The object representing the first sibling is at bmc1.
+            value: bmc1

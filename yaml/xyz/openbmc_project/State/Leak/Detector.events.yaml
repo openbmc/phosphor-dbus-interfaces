@@ -1,0 +1,45 @@
+version: 1.0.0
+
+errors:
+    - name: LeakDetectedCritical
+      severity: critical
+      metadata:
+          - name: DetectorName
+            type: object_path
+            primary: true
+            description: The name or identifier of the leak detector.
+      en:
+          description: A critical level liquid leak has been detected.
+          message:
+              A liquid leak has been detected at a critical level by
+              {DetectorName}.
+          resolution: Inspect the resource for leak.
+      errno: EIO
+
+    - name: LeakDetectedWarning
+      severity: warning
+      metadata:
+          - name: DetectorName
+            type: object_path
+            primary: true
+            description: The name or identifier of the leak detector.
+      en:
+          description: A warning level liquid leak has been detected.
+          message:
+              A liquid leak has been detected at a warning level by
+              {DetectorName}.
+          resolution: Inspect the resource for leak.
+      errno: EIO
+
+events:
+    - name: LeakDetectedNormal
+      metadata:
+          - name: DetectorName
+            type: object_path
+            primary: true
+            description: The name or identifier of the leak detector.
+      en:
+          description:
+              The leak detector has returned to its normal operating state.
+          message: The {DetectorName} has returned to normal.
+          resolution: None.

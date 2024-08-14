@@ -1,0 +1,19 @@
+version: 1.0.0
+
+errors:
+    - name: LeakDetected
+      severity: critical
+      metadata:
+          - name: COOLING_ZONE
+            type: string
+            primary: true
+          - name: DETECTOR_NAME
+            type: string
+            primary: true
+      en:
+          description: A liquid cooling leak has been detected.
+          message:
+              A liquid leak detected in cooling zone {COOLING_ZONE} via
+              {DETECTOR_NAME}.
+          resolution: Fix leak.
+      redfish-mapping: OpenBMC.LiquidLeakDetected

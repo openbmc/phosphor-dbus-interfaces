@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "754fee26_945453be",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-16T14:39:11Z",
+      "side": 1,
+      "message": "`set`",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 17
+      },
+      "revId": "a77e6a506d2cfc7bb33b3e1b9c186eb72db62a2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aeacb659_127bdf76",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-16T14:39:11Z",
+      "side": 1,
+      "message": "Please don\u0027t add new InternalFailure responses.  What is a caller suppose to do about this?  If your application is in a bad state, coredump.",
+      "revId": "a77e6a506d2cfc7bb33b3e1b9c186eb72db62a2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4953b50_3f36cd26",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-16T14:39:11Z",
+      "side": 1,
+      "message": "Why add \"All\" when we have this as a set?",
+      "revId": "a77e6a506d2cfc7bb33b3e1b9c186eb72db62a2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

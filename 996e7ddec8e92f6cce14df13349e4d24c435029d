@@ -105,6 +105,30 @@
       },
       "revId": "996e7ddec8e92f6cce14df13349e4d24c435029d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfb83857_da716b8e",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-16T16:53:38Z",
+      "side": 1,
+      "message": "\u003e Why do we need separate properties for each of these? \n\nAgreed.  In OpenBMC, I don\u0027t think we intend to support any of these in parallel (and the user-specific interfaces don\u0027t support that) so lets just make this a \"MFA mode\" enum rather than a bunch of Bools.\n\nIn bmcweb we\u0027ll convert that into the various boolean interfaces.",
+      "parentUuid": "d7bbf676_aef7d49f",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 60
+      },
+      "revId": "996e7ddec8e92f6cce14df13349e4d24c435029d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

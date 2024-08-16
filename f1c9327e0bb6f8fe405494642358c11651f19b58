@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "46c6266e_a7a2b48c",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-16T15:56:33Z",
+      "side": 1,
+      "message": "When MFA disable and user tries to execute this method, then NotAllowed error will be used.",
+      "parentUuid": "c7ddd39d_67c10c5e",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8bb2243b_0aa70596",
         "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
         "patchSetId": 11
@@ -31,6 +49,24 @@
       "writtenOn": "2024-08-16T14:40:53Z",
       "side": 1,
       "message": "What are the conditions where this method would be unavailable??",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ac1cfc4_a2d0de3b",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-16T15:56:33Z",
+      "side": 1,
+      "message": "D-bus implementation invokes google-authenticator to create secret key,\nif this google-authenticator binary is not available as part of build then CreateSecretKey method returns Unavailable error",
+      "parentUuid": "8bb2243b_0aa70596",
       "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -52,6 +88,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b6dd1bd_728e26cb",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-16T15:56:33Z",
+      "side": 1,
+      "message": "when there is a unexpected firmware error, which error needs to be returned?",
+      "parentUuid": "c3f9ad6e_d10994ea",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3898a3d1_44800adf",
@@ -65,6 +119,24 @@
       "writtenOn": "2024-08-16T14:40:53Z",
       "side": 1,
       "message": "Please don\u0027t add new InternalFailures.",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf851813_5898ed0b",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-16T15:56:33Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "3898a3d1_44800adf",
       "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

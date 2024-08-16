@@ -33,6 +33,24 @@
       "message": "Is this waiting on something?",
       "revId": "3422985738480c0389de5a13a63be62ae9fca1fc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f239b535_13d7faec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-16T15:04:16Z",
+      "side": 1,
+      "message": "This is still really complex.  I don\u0027t really like that we\u0027re adding more and more random queries to Mapper that could probably have been done on the client side.  Having said that, at least one owner from mapper needs to +1 this to let me know that they\u0027re on board with accepting this (which I guess is just Matt Spinler).",
+      "parentUuid": "9dd87f4a_2df68b08",
+      "revId": "3422985738480c0389de5a13a63be62ae9fca1fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

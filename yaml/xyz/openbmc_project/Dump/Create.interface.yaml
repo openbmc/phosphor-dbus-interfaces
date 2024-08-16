@@ -82,6 +82,11 @@ enumerations:
                 with that event. By linking the dump to an event ID, the system
                 can collate additional, relevant diagnostic data or add this
                 into the dump to aid in providing a clearer context.
+          - name: "Target"
+            description: >
+                The target instance for the dump. This field is applicable only
+                when multiple instances of the dumping entity exists, for
+                example, multiple hosts, multiple NICs, etc.
 
     - name: DumpType
       description: >

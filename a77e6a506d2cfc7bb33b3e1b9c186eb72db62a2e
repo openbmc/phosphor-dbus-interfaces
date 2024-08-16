@@ -48,6 +48,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e97629a_71fd311b",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-16T16:22:40Z",
+      "side": 1,
+      "message": "You only want a single instance of each enum value, so it is a set.  You don\u0027t want `[OneTimePasscode, OneTimePasscode]` to be a valid value here.",
+      "parentUuid": "d14a5c3f_88b90e08",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 17
+      },
+      "revId": "a77e6a506d2cfc7bb33b3e1b9c186eb72db62a2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aeacb659_127bdf76",
@@ -114,6 +138,24 @@
       "side": 1,
       "message": "redfish has \"All\" to bypass all MFA factors at once.",
       "parentUuid": "e4953b50_3f36cd26",
+      "revId": "a77e6a506d2cfc7bb33b3e1b9c186eb72db62a2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d33ad65c_713fd1e0",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-16T16:22:40Z",
+      "side": 1,
+      "message": "So Redfish can pass all values in, right?\n\nHaving an \"All\" enumeration leads to confusion in two ways:\n\n1. `[All, SecureID]` -- what does this mean?\n2. The server code has more complexity of `if (All or X)` for various branches.",
+      "parentUuid": "0cc6131e_9da035e3",
       "revId": "a77e6a506d2cfc7bb33b3e1b9c186eb72db62a2e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

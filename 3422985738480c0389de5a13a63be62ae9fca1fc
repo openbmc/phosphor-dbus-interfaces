@@ -69,6 +69,24 @@
       "parentUuid": "f239b535_13d7faec",
       "revId": "3422985738480c0389de5a13a63be62ae9fca1fc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9e067b3_9a051c81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-08-16T17:41:35Z",
+      "side": 1,
+      "message": "This commit came from a few bmcweb commits. The desire to make a single mapper call. I support https://gerrit.openbmc.org/c/openbmc/bmcweb/+/72422/\n\n\nFrom  https://gerrit.openbmc.org/c/openbmc/bmcweb/+/61097\nEd Tanous\nIt\u0027s VERY likely we need a new mapper call for this two tiered type of lookup.\n\nMyung Bae\nOk, I\u0027ll try to make a new mapper method separately from this commit.\nLater once we have the new mapper method, we can refactor this part.\n\nEd Tanous\nCool, please mark this commit WIP while that work happens if you don\u0027t intend on doing it right away.",
+      "parentUuid": "36cf724f_22b5c52f",
+      "revId": "3422985738480c0389de5a13a63be62ae9fca1fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e395bf2_b2b2a1c0",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-16T15:56:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "32420370_78b61d1b",
+      "revId": "996e7ddec8e92f6cce14df13349e4d24c435029d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "700c740a_dbe46181",
@@ -31,6 +49,30 @@
       "writtenOn": "2024-08-16T14:42:43Z",
       "side": 1,
       "message": "Why do we need separate properties for each of these?  Reuse the enumerations from Bypass (or maybe move the enumeration here) and add a single property with a set.  I don\u0027t want bmcweb code to have to hard-code unique property names.  We should be able to create a map of Redfish enums to dbus enums.",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 60
+      },
+      "revId": "996e7ddec8e92f6cce14df13349e4d24c435029d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02a467f0_ef5da352",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-16T15:56:54Z",
+      "side": 1,
+      "message": "Here is example Redfish \"MultiFactorAuth\" property \n\n \"MultiFactorAuth\": {\n        \"SecurID\": {\n            \"Enabled\": true,\n            \"ServerURI\": \"https://rsa.internal.contoso.com:5555\",\n            }\n        },\n        \"GoogleAuthenticator\": {\n            \"Enabled\": false,\n        },\n        \"MicrosoftAuthenticator\": {\n            \"Enabled\": false,\n        },\n        \"ClientCertificate\": {\n            \"Enabled\": true,\n            \"CertificateMappingAttribute\": \"CommonName\"\n        }\n}\n\neach multi-factor authentication type has corresponding properties\nso added these separate properties for each type.",
+      "parentUuid": "700c740a_dbe46181",
       "range": {
         "startLine": 5,
         "startChar": 0,

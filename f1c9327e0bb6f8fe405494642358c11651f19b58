@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d630e0e6_59555f81",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-16T16:25:47Z",
+      "side": 1,
+      "message": "Why?  Shouldn\u0027t you be able to create a secret key before you enable the MFA?  Otherwise you can get yourself into a state where you enabled MFA but haven\u0027t set the secret key, right?",
+      "parentUuid": "46c6266e_a7a2b48c",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8bb2243b_0aa70596",
         "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
         "patchSetId": 11
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "D-bus implementation invokes google-authenticator to create secret key,\nif this google-authenticator binary is not available as part of build then CreateSecretKey method returns Unavailable error",
       "parentUuid": "8bb2243b_0aa70596",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "265b0cbf_21982b20",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-16T16:25:47Z",
+      "side": 1,
+      "message": "Why would the interface exist if all the required elements to support it are not installed?  Don\u0027t push this back onto the dbus client; there is no reason they would care and you\u0027re making extra code for them.",
+      "parentUuid": "8ac1cfc4_a2d0de3b",
       "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

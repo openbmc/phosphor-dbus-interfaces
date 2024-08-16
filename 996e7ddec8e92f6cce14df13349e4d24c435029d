@@ -81,6 +81,30 @@
       },
       "revId": "996e7ddec8e92f6cce14df13349e4d24c435029d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7bbf676_aef7d49f",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-16T16:23:54Z",
+      "side": 1,
+      "message": "I don\u0027t care what the Redfish property was.  We don\u0027t want internal code to be just a \"Redfish engine\" and we don\u0027t need all the unique code this causes to have functions needing to be implemented for each property.  Please make this an enabled-status-set.",
+      "parentUuid": "02a467f0_ef5da352",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 60
+      },
+      "revId": "996e7ddec8e92f6cce14df13349e4d24c435029d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

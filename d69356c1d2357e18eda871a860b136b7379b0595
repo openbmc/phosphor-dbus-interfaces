@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ac12b1e_4f0ff3ab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T12:26:58Z",
+      "side": 1,
+      "message": "really? Leak detectors were added in 2023.1 release. \n\nthe webinar says they can describe leak detectors and their state at 15:42 https://youtu.be/UKaLVR3HGSY?feature\u003dshared\n\nThey have defined a custom state schema per webinar. They didn\u0027t provide a message to say they had detected a leak?\n\nwould this be any different from a state change event for `DetectorState`\n\nhttps://github.com/DMTF/Redfish-Publications/blob/bff927ee3cd16e0c059845fba976bf738b0717b2/mockups/public-cooling-unit/ThermalEquipment/CDUs/1/LeakDetection/LeakDetectors/Moisture/index.json#L10\n   \n\ndid you ask the redfish forum for advice?",
+      "revId": "d69356c1d2357e18eda871a860b136b7379b0595",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

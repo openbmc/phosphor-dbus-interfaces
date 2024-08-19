@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7ec80171_160970f3",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2024-08-19T10:28:42Z",
+      "side": 1,
+      "message": "SecretKey at the user\u0027s home directory will indicate the PAM module to look for TOTP to authenticate. So unless MFA is enabled for the system, CreateSecretKey is not relevant. \nWhen MFA is enabled and secret key is not set, the login attempt will get a response (a redfish message registry) saying the MFA is enabled and secret key is not set for this user. This will take the user through the registration process which starts with CreateSecretKey.",
+      "parentUuid": "d630e0e6_59555f81",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8bb2243b_0aa70596",
         "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
         "patchSetId": 11
@@ -103,6 +121,24 @@
       "side": 1,
       "message": "Why would the interface exist if all the required elements to support it are not installed?  Don\u0027t push this back onto the dbus client; there is no reason they would care and you\u0027re making extra code for them.",
       "parentUuid": "8ac1cfc4_a2d0de3b",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98e97b28_43cffc69",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000382
+      },
+      "writtenOn": "2024-08-19T10:28:42Z",
+      "side": 1,
+      "message": "+1\nIf the secret key generation fails for any reason, it can return just a internal failure.",
+      "parentUuid": "265b0cbf_21982b20",
       "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

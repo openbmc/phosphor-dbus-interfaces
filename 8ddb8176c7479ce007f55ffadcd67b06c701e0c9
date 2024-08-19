@@ -161,6 +161,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "86dc6cca_05d59bb8",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-19T14:53:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e4a7ae9_8e6f5eb8",
+      "revId": "8ddb8176c7479ce007f55ffadcd67b06c701e0c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df629bd1_af08d8fe",
@@ -174,6 +192,30 @@
       "writtenOn": "2023-10-18T12:51:04Z",
       "side": 1,
       "message": "Please remove failures.\n\n    - InternalFailure : We should be reducing the number of these across the board.  It doesn\u0027t do anything useful to tell the client this because they have no idea what they can do in response.  I\u0027d rather just see your process core dump because at least we have something useful to debug with.\n    - InvalidArgument : You only have an InvalidArgument possibility because you made this a string.",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 60
+      },
+      "revId": "8ddb8176c7479ce007f55ffadcd67b06c701e0c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8b64285_7e4afe66",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-19T14:53:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df629bd1_af08d8fe",
       "range": {
         "startLine": 66,
         "startChar": 0,

@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c8a3c3f7_1fdb7a01",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-19T10:31:16Z",
+      "side": 1,
+      "message": "yeah User is not allowed to create secret key before enabling MFA\nUser allowed to create secret key after MFA enabled.\nDuring redfish session create with MFA enabled user and no secret key setup then redfish session gets created with ConfigureSelf authority(limited config privilege) and user will be asked to generate secret by using GenerateSecretKeyRequired message registry similar to passwordChangeRequired configuration.",
+      "parentUuid": "d630e0e6_59555f81",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8bb2243b_0aa70596",
         "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
         "patchSetId": 11
@@ -138,6 +156,24 @@
       "writtenOn": "2024-08-19T10:28:42Z",
       "side": 1,
       "message": "+1\nIf the secret key generation fails for any reason, it can return just a internal failure.",
+      "parentUuid": "265b0cbf_21982b20",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "613c7364_1a223284",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-19T10:31:16Z",
+      "side": 1,
+      "message": "Ok",
       "parentUuid": "265b0cbf_21982b20",
       "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"

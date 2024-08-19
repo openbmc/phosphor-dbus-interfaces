@@ -194,6 +194,24 @@
       "parentUuid": "5c731f44_0907868a",
       "revId": "a77e6a506d2cfc7bb33b3e1b9c186eb72db62a2e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd674afd_328d8f78",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-19T10:33:12Z",
+      "side": 1,
+      "message": "I agree that in this example [All, SecureID], \u0027All\u0027 already meant to bypass all authentication factors including SecureID, which does not make sense.\nwill remove \"All\" enum values in D-bus.\n\nI think we need to have other enum values to support all other factors of authentication for future enhancements..",
+      "parentUuid": "845a8121_f3cb9799",
+      "revId": "a77e6a506d2cfc7bb33b3e1b9c186eb72db62a2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

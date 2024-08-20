@@ -1,3 +1,6 @@
 # xyz.openbmc_project.State.BMC.Error.MultiUserTargetFailure
 - name: MultiUserTargetFailure
   description: The systemd multi-user.target failed to complete
+# xyz.openbmc_project.State.BMC.Error.BmcInUpdateMode
+- name: BmcInUpdateMode
+  description: The BMC is in Update Mode, users can not reboot

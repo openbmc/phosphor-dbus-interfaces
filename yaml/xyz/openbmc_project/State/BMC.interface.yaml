@@ -10,6 +10,8 @@ properties:
       default: "None"
       description: >
           The desired BMC transition
+      errors:
+          - xyz.openbmc_project.State.BMC.Error.BmcInUpdateMode
 
     - name: CurrentBMCState
       type: enum[self.BMCState]
@@ -57,9 +59,11 @@ enumerations:
           - name: "UpdateInProgress"
             description: >
                 UpdateInProgress implies BMC is in firmware update mode.
-                CurrentBMCState will be set to "UpdateInProgress" while starting
-                image download and reset to Ready, once activation is done or
-                error case during update process.
+                CurrentBMCState will be set to "UpdateInProgress" while BMC is
+                implementing tasks that releates to update BMC/BIOS/SPI-NOR ...
+                firmwares. The BMC should prevent BMC reboot action during
+                updating phase to protect system. When updating finished, BMC
+                resets CurrentBMCState to previous state.
           - name: "Quiesced"
             description: >
                 BMC firmware is quiesced. The BMC firmware is enabled but either

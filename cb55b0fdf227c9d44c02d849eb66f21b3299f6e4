@@ -81,6 +81,30 @@
       },
       "revId": "cb55b0fdf227c9d44c02d849eb66f21b3299f6e4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e7bb767_624f2e40",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-20T14:22:49Z",
+      "side": 1,
+      "message": "It wasn\u0027t obvious to me why we want to make this change.  Don\u0027t we already have ActivationInProgress associations, if necessary?  Why are we changing the state of the BMC itself?\n\n\u003e Are you saying because on most systems the BIOS is in the BMC image? \n\nNo.  I don\u0027t think most systems have the BIOS code included in the BMC image.",
+      "parentUuid": "add95e46_d96e977d",
+      "range": {
+        "startLine": 61,
+        "startChar": 62,
+        "endLine": 61,
+        "endChar": 68
+      },
+      "revId": "cb55b0fdf227c9d44c02d849eb66f21b3299f6e4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

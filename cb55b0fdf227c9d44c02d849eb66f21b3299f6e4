@@ -105,6 +105,30 @@
       },
       "revId": "cb55b0fdf227c9d44c02d849eb66f21b3299f6e4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8bbf4d4d_8f43652c",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-08-20T14:47:05Z",
+      "side": 1,
+      "message": "\u003e Why are we changing the state of the BMC itself?\n\nThere was some ambiguity on this state. Is it only if the BMC flash itself is being updated, or if the BMC is doing an update to itself or any other device update? There was a lot of discussion over in https://gerrit.openbmc.org/c/openbmc/phosphor-state-manager/+/73456 on how we specifically know when just the BMC flash chip was being updated. But, from a users perspective, I think it would be valuable to know if the BMC is doing any type of firmware update. So the thought was to clarify that UpdateInProgress will be set when the BMC is doing _any_ type of firmware update to _any_ device (including itself).",
+      "parentUuid": "5e7bb767_624f2e40",
+      "range": {
+        "startLine": 61,
+        "startChar": 62,
+        "endLine": 61,
+        "endChar": 68
+      },
+      "revId": "cb55b0fdf227c9d44c02d849eb66f21b3299f6e4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

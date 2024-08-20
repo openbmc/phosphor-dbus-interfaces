@@ -16,6 +16,41 @@
       "message": "@Adrian - opinions?",
       "revId": "e46e2d7c17126d00723b9d88f3d7899f89f3179f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cfa218e_c09a0c9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000534
+      },
+      "writtenOn": "2024-08-20T08:29:35Z",
+      "side": 1,
+      "message": "We\u0027ve discussed this change offline. Name is a leftover from old API was left unnoticed as this is a method parameter, which was not affecting ASIO implementation of TelemetryService backend at all.",
+      "parentUuid": "6fc29f03_27e11e6d",
+      "revId": "e46e2d7c17126d00723b9d88f3d7899f89f3179f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "221032c7_0418c160",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000534
+      },
+      "writtenOn": "2024-08-20T08:29:35Z",
+      "side": 1,
+      "message": "@Michal\n\nChange is OK, I believe we should also prepare equivalent openbmc/telemetry patch.",
+      "revId": "e46e2d7c17126d00723b9d88f3d7899f89f3179f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

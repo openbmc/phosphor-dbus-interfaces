@@ -34,6 +34,24 @@
       "parentUuid": "ac1c865d_d32c6502",
       "revId": "3bbabb5126880685830bb74d2832417b703b90d3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11aeec76_b89bbb22",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-08-21T20:58:51Z",
+      "side": 1,
+      "message": "\u003e \u003e Why wouldn\u0027t we have different URLs for different targets?\n\nBy \"different URLs\" do you mean \"different redfish URLs\"? If yes, then again, we would need to map them to something internally for which target is being added, unless there is a plan to change all related DBus objectpaths to include the slot#/host#/target#.\n\n\u003e \u003e \n\u003e \u003e How do we handle hosts today?\n\u003e \n\u003e Multi host support is not available from systemd unit point now.\n\nYes, as Jayanth mentioned there is no multi host support yet for system crashdumps. That\u0027s why i am changing the \"NICTarget\" parameter (as proposed in ncsi-coredump) to \"Target\" to keep it generic and hence applicable to different types (including system/host crashdumps).",
+      "parentUuid": "5118e62f_c510f6ed",
+      "revId": "3bbabb5126880685830bb74d2832417b703b90d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

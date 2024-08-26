@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ce3b26d1_3fc93553",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2024-08-26T16:14:45Z",
+      "side": 1,
+      "message": "Yes. I also agrees that it is not a permission problem. \nCan we make it as `FaultyHardwareExists` or `FaultyHardwareNotReplaced`? [Example](https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/74019/comment/4235b50e_5a70ecb1/) can explain the usage of \u0027FaultyHardware\u0027 in better.\n\nIf so could you please share your opinion in adding this error in appropriate error yaml file (HardwareIsolation.errors.yaml)?",
+      "parentUuid": "97f231dc_68057139",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 43
+      },
+      "revId": "ad02b6d67f251b5e9f3d5c89ce2996b62d19d053",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4235b50e_5a70ecb1",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -37,6 +61,30 @@
       "writtenOn": "2024-08-26T14:26:03Z",
       "side": 1,
       "message": "Do you have an example of this?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 10
+      },
+      "revId": "ad02b6d67f251b5e9f3d5c89ce2996b62d19d053",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5bc04deb_9b3cd3d9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2024-08-26T16:14:45Z",
+      "side": 1,
+      "message": "One use case is , if the error log is associated with a HardwareIsolation entry (which indicates the faulty hardware) and has not been resolved yet; in this case, we need to prevent setting the resolved flag.",
+      "parentUuid": "4235b50e_5a70ecb1",
       "range": {
         "startLine": 11,
         "startChar": 0,

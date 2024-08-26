@@ -45,6 +45,8 @@ properties:
           this error log has been resolved. This will start out 'false' by
           default. Setting this to 'true' will NOT result in the error log being
           deleted.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
     - name: ServiceProviderNotify
       type: enum[self.Notify]
       default: NotSupported

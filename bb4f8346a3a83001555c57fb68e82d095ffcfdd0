@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04e8b6a2_91e7e570",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-08-27T01:49:48Z",
+      "side": 1,
+      "message": "Just one doubt, otherwise looks good to me.",
+      "revId": "bb4f8346a3a83001555c57fb68e82d095ffcfdd0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1eb7829_1cf5b20b",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-08-27T01:49:48Z",
+      "side": 1,
+      "message": "I’m not quite following this. How are signals sent from one BMC to its sibling BMC over DBus? is it DBus over TCP Or did you mean it’s implementation-specific?",
+      "range": {
+        "startLine": 45,
+        "startChar": 10,
+        "endLine": 45,
+        "endChar": 32
+      },
+      "revId": "bb4f8346a3a83001555c57fb68e82d095ffcfdd0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

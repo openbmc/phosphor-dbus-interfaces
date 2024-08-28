@@ -16,6 +16,24 @@
       "message": "Do we have examples of what another MFA protocol would need for a dbus interface?  I\u0027m not super keen on this being a one-off `GoogleAuthenticator` interface.  What would a `MicrosoftAuthenticator` interface look like?  Can we just make this a `MFAAuthenticator` interface and use paths or enums to model which one is enabled?",
       "revId": "5dbb902d209c1cf5b3d9bd87547786179419e88a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "715dd64b_5a892992",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-28T15:35:57Z",
+      "side": 1,
+      "message": "GoogleAuthenticator or MicrosoftAuthenticator is nothing but TOTP authenticators.\nredfish supports both of them, it make sense to use common name, will use generic name \"TOTPAuthenticator\"",
+      "parentUuid": "feb7d53c_01a57514",
+      "revId": "5dbb902d209c1cf5b3d9bd87547786179419e88a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

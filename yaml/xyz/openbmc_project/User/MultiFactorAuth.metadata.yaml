@@ -1,0 +1,10 @@
+enumerations:
+    - name: MultiFactorAuthType
+      description: >
+          Multi-factor authentication type enumeration, Types of multi-factor
+          authentication user account is allowed to configure.
+      values:
+          - name: SecurID
+          - name: TOTPAuthenticator
+          - name: ClientCertificate
+          - name: OneTimePasscode

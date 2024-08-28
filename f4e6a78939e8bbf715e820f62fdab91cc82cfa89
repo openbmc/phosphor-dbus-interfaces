@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "068f13ab_d4c58344",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-28T20:45:29Z",
+      "side": 1,
+      "message": "Why is this a set?  Can we significantly simplify and just make it so that one authenticator type is allowed at a time?",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 47
+      },
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d327d7cb_e8f18a93",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-28T20:45:29Z",
+      "side": 1,
+      "message": "We need another property here for \"MultiFactorAuthTypesSupported\", so that we can build the Redfish interfaces properly for @AllowedValues",
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d7a75a5_3545fe11",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-28T20:45:29Z",
+      "side": 1,
+      "message": "ClientCertificate isn\u0027t really a multifactor type in the way this interface defines it, it\u0027s an auth type, and something completely transparent to dbus at the moment.\n\nI suspect you don\u0027t need this here.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 35
+      },
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1914ca74_988eb90d",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-28T20:45:29Z",
+      "side": 1,
+      "message": "Do these need to call out the actual OTP implementation in the background?  To my understanding, Microsoft OTP versus Google OTP are completely different protocols on the backend.",
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

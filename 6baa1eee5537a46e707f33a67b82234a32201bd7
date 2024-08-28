@@ -22,6 +22,30 @@
       },
       "revId": "6baa1eee5537a46e707f33a67b82234a32201bd7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50ae74a1_29e77f46",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 24
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-28T20:47:33Z",
+      "side": 1,
+      "message": "secret key is not a big string, but I think sending secret key as a string on D-bus will be security concern, similarly password string was never sent over D-bus.",
+      "parentUuid": "2a02d0c8_ca7754bb",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 59
+      },
+      "revId": "6baa1eee5537a46e707f33a67b82234a32201bd7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

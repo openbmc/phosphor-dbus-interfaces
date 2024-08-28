@@ -92,6 +92,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "689d2248_54010ecf",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-28T13:02:09Z",
+      "side": 1,
+      "message": "\u003e yeah User is not allowed to create secret key before enabling MFA\n\u003e User allowed to create secret key after MFA enabled.\n\nBut why?  Does this impose some security vulnerability?  I\u0027m not understanding why you can\u0027t create a key first.  I could enable, create a key, and then disable and the key is still there, right?",
+      "parentUuid": "c8a3c3f7_1fdb7a01",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8bb2243b_0aa70596",
         "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
         "patchSetId": 11
@@ -246,6 +264,24 @@
       "side": 1,
       "message": "OK. Any reason for not sending out InternalFailure Patrick?",
       "parentUuid": "b924ea24_45545649",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a226425f_ba271cce",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-28T13:02:09Z",
+      "side": 1,
+      "message": "The reason for not using InternalFailure is that your client can\u0027t do anything about it.  They\u0027ve called a dbus interface, you gave them that, and then what?\n\nIf your process is in a bad state, I\u0027d rather you crash so we can collect a coredump and debug the bad state and at least then systemd will restart your process.  Just telling your dbus client \"something went wrong\" makes everyone confused and gives us no data.",
+      "parentUuid": "db617749_56e0c23e",
       "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

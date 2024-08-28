@@ -16,6 +16,24 @@
       "message": "In what cases will we return this now?  You should be failing to parse the dbus message in the binding level and not even get to your daemon code if someone gives a wrong enum value.",
       "revId": "c64d92a9b4492ecfbf8b3e38ff5cb60814b11930",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3b9fe48_ea7b392a",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-28T14:41:02Z",
+      "side": 1,
+      "message": "ok, in that case does it return valid D-bus error?",
+      "parentUuid": "b97eac58_8eb27f43",
+      "revId": "c64d92a9b4492ecfbf8b3e38ff5cb60814b11930",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

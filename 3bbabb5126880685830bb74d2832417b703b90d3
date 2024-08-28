@@ -52,6 +52,24 @@
       "parentUuid": "5118e62f_c510f6ed",
       "revId": "3bbabb5126880685830bb74d2832417b703b90d3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7bad52fc_342e30a7",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-28T12:50:13Z",
+      "side": 1,
+      "message": "\u003e By \"different URLs\" do you mean \"different redfish URLs\"? I\n\nDifferent Redfish URLs and different dbus paths.\n\n\u003e Yes, as Jayanth mentioned there is no multi host support yet for system crashdumps.\n\nHow _would_ this be done for multi-host then?  I don\u0027t think that it is reasonable for a single service to always support core dump for each host.  What if one host slot is ARM and one is x64?  Are you sure it is even possible for the same daemon to handle crashdumps for both?\n\nIn that regard, I\u0027m not convinced we can always support NIC crashdump with the same code.  Maybe we can structure it that way now, but by having it all go through a single daemon + dbus path you\u0027re making it relatively difficult if some new NIC vendor comes along that doesn\u0027t support NC-SI but wants to support NIC crashdump.",
+      "parentUuid": "11aeec76_b89bbb22",
+      "revId": "3bbabb5126880685830bb74d2832417b703b90d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

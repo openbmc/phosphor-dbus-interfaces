@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "dd10937d_7629f1c7",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-29T04:09:02Z",
+      "side": 1,
+      "message": "Should this go in its own interface?  I get that this is what Redfish does, but it would seem like\n\nReady/NotReady\n\nQuiesced/NotQuiesced\n\nUpdating/NotUpdating\n\nAre all independent states that can happen at any time.  For example, a bmc might be running an update while still in the NotReady State.  Obviously in Redfish we have to make a decision on which takes precedence, but I suspect separating out at least the update state into its own property is the right thing to do, rather than add a bunch more implementation details to the description.",
+      "range": {
+        "startLine": 59,
+        "startChar": 19,
+        "endLine": 59,
+        "endChar": 35
+      },
+      "revId": "fc3ae4969dd5206e88703d07e35b663dda9f7c04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "57c610cb_7923a0d1",
         "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
         "patchSetId": 3
@@ -50,6 +73,29 @@
       "side": 1,
       "message": "\"when ActivationBlocksTransition is removed, it recover the BMC state.\".\nThis should be more like when no ActivationBlocksTransition interface exist.",
       "parentUuid": "8aea81de_a47aa3cd",
+      "revId": "fc3ae4969dd5206e88703d07e35b663dda9f7c04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9fc93146_00cb774d",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-29T04:09:02Z",
+      "side": 1,
+      "message": "\u003e The BMC should prevent BMC reboot action during updating phase to protect system.\n\nThis is a weird thing to enforce in the interface.  There\u0027s lots of implementations that don\u0027t need to enforce reboot prevention, and allow reboots (which abort the update process).\n\nI suspect at this interface level, this description should be removed.  The update daemon MIGHT operate that way, but this interface shouldn\u0027t\u0027 really reflect that.",
+      "range": {
+        "startLine": 64,
+        "startChar": 27,
+        "endLine": 65,
+        "endChar": 49
+      },
       "revId": "fc3ae4969dd5206e88703d07e35b663dda9f7c04",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

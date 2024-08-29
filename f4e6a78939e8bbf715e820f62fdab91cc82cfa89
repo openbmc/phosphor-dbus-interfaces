@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7a60579b_d6939c04",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-29T15:35:21Z",
+      "side": 1,
+      "message": "as per redfish, its array of enums specifying the each MFA factor and multiple factor can be enabled at the same time and using same redfish enum names in D-bus as well so that we dont need to do redfish enum to d-bus enum translations \nWe have discussed here to use set.\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/72603/9..17/yaml/xyz/openbmc_project/User/MFABypass.interface.yaml#b6",
+      "parentUuid": "068f13ab_d4c58344",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 47
+      },
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d327d7cb_e8f18a93",
         "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
         "patchSetId": 13
@@ -37,6 +61,24 @@
       "writtenOn": "2024-08-28T20:45:29Z",
       "side": 1,
       "message": "We need another property here for \"MultiFactorAuthTypesSupported\", so that we can build the Redfish interfaces properly for @AllowedValues",
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4ccc1e5_aef3de98",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-29T15:35:21Z",
+      "side": 1,
+      "message": "I have updated MultiFactorAuthType to have all redfish supported enum values.",
+      "parentUuid": "d327d7cb_e8f18a93",
       "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -66,6 +108,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "76c215a2_e47851f6",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-29T15:35:21Z",
+      "side": 1,
+      "message": "ok, there are client certificate schemas under MFA..\nfor now just wanted to keep all redfish supported enum values",
+      "parentUuid": "0d7a75a5_3545fe11",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 35
+      },
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1914ca74_988eb90d",
         "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
         "patchSetId": 13
@@ -77,6 +143,24 @@
       "writtenOn": "2024-08-28T20:45:29Z",
       "side": 1,
       "message": "Do these need to call out the actual OTP implementation in the background?  To my understanding, Microsoft OTP versus Google OTP are completely different protocols on the backend.",
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83f188a5_85be00c3",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-29T15:35:21Z",
+      "side": 1,
+      "message": "yeah google/Microsoft authenticators implements Time-based One-time Password (TOTP)\nRFC. as per redfish this OneTimePassword authentication is different than Google/Microsoft TOTP based authentication.",
+      "parentUuid": "1914ca74_988eb90d",
       "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

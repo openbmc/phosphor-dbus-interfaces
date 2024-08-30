@@ -128,6 +128,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "82170ee8_fdcf5b03",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-30T15:08:20Z",
+      "side": 1,
+      "message": "correction: implementation may check mfa enabled and secret key is not setup then user will be allowed to generate secret key.",
+      "parentUuid": "2c8e11bf_0c536b29",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8bb2243b_0aa70596",
         "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
         "patchSetId": 11

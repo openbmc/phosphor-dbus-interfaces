@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "29363834_28cc891d",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-30T15:28:15Z",
+      "side": 1,
+      "message": "this property is generic property not is specific to TOTP authentication, represents what all factor of authentication factors configured as part of MFA, say if we want to support SecurId in future then we dont need to make any changes to this D-bus configuration.",
+      "parentUuid": "c56d46bc_2239a21b",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 47
+      },
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d327d7cb_e8f18a93",
         "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
         "patchSetId": 13

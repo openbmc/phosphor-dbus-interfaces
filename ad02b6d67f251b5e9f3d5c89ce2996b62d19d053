@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0ea1482e_3022769d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2024-08-30T15:25:29Z",
+      "side": 1,
+      "message": "Adding Resolved.errors.yaml file in this same directory seems fine. \nHere one more thought is, under this same scenario we will prevent the delete operation of a PEL also ( if the PEL associate with a HardwareIsolation entry ), then there also we need to use the same error code instead of NotAllowed.\n\n@Ramesh, Could you please share your thoughts as well?",
+      "parentUuid": "a9157657_1b15beb7",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 43
+      },
+      "revId": "ad02b6d67f251b5e9f3d5c89ce2996b62d19d053",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4235b50e_5a70ecb1",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1

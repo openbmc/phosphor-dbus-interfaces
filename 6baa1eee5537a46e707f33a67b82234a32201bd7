@@ -94,6 +94,30 @@
       },
       "revId": "6baa1eee5537a46e707f33a67b82234a32201bd7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c41ca0d_a2bfd3bb",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 24
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-30T15:16:38Z",
+      "side": 1,
+      "message": "if bmcweb is sending the secret to the user off box, we’ve defeated any sort of security around nefarious processes sniffing the secret.\n\nthis secret is also only shared once at setup time, so it doesn’t have the same requirements as passwords, which might be sent many times.\n\nlet’s do this as a simple return (not an fd) and treat changing it to an fd as something we can document and change once things are working.",
+      "parentUuid": "a2485eb5_b0008217",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 59
+      },
+      "revId": "6baa1eee5537a46e707f33a67b82234a32201bd7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

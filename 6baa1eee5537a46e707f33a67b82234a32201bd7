@@ -118,6 +118,30 @@
       },
       "revId": "6baa1eee5537a46e707f33a67b82234a32201bd7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "477ddf16_3ea59bc8",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 24
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-30T15:42:15Z",
+      "side": 1,
+      "message": "yeah secret key is shared only once during secret key setup.\n\nare you suggesting to change return secret key as  string?\nif its not a security concern, i am ok to change to string type",
+      "parentUuid": "0c41ca0d_a2bfd3bb",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 59
+      },
+      "revId": "6baa1eee5537a46e707f33a67b82234a32201bd7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

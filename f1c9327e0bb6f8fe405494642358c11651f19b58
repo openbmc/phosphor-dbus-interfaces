@@ -164,6 +164,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cdc6cc15_d8e24fce",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-08-30T15:42:15Z",
+      "side": 1,
+      "message": "ok, since we are going to implement redfish spec, i am trying to make sure D-bus interface have all necessary properties and errors..\n\nanyways i removed this NotAllowed error, will discuss more during implementations and add it back if its required.",
+      "parentUuid": "a38785a7_2f14f3cd",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8bb2243b_0aa70596",
         "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
         "patchSetId": 11

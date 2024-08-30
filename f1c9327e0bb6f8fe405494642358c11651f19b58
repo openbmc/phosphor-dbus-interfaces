@@ -146,6 +146,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a38785a7_2f14f3cd",
+        "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-08-30T15:23:38Z",
+      "side": 1,
+      "message": "Are you going to clear the secret key when MFA is disabled?  It doesn\u0027t really seem any different.\n\nI understand the flow as documented.  That flow doesn\u0027t seem to preclude someone from separately setting up a secret key, at least not at a DBus level, so I\u0027m trying to understand why we\u0027re going out of our way to write _more_ code.  it just doesn\u0027t make sense to me.\n\nI\u0027m not convinced we should be enforcing a particular Redfish policy with a DBus implementation.  My view is you\u0027re trying to replicate Redfish policy, property names, etc. directly into DBus.",
+      "parentUuid": "82170ee8_fdcf5b03",
+      "revId": "f1c9327e0bb6f8fe405494642358c11651f19b58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8bb2243b_0aa70596",
         "filename": "yaml/xyz/openbmc_project/User/GoogleAuthenticator.interface.yaml",
         "patchSetId": 11

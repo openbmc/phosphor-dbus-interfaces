@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c56d46bc_2239a21b",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-30T15:13:35Z",
+      "side": 1,
+      "message": "this isn’t Redfish.  we can decide to support a single OTP at a time.\nthe fact that Redfish looks like it supports multiple in parallel I suspect has more to do with how they organize keys and config rather than actually wanting to support multiple at a time.",
+      "parentUuid": "7a60579b_d6939c04",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 47
+      },
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d327d7cb_e8f18a93",
         "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
         "patchSetId": 13
@@ -115,6 +139,24 @@
       "side": 1,
       "message": "yes by default this MultiFactorAuth array will be empty.\n\nare you suggesting to have another property like MultiFactorAuthTypesSupported to populate implementation supported enums?",
       "parentUuid": "c2cabd44_5b8ff434",
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c38eef2e_a8e4c3f4",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-30T15:13:35Z",
+      "side": 1,
+      "message": "yes.  we need a way to know which enums are supported in this build config.",
+      "parentUuid": "2c127b99_223d1a04",
       "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -275,6 +317,30 @@
       "writtenOn": "2024-08-30T15:13:35Z",
       "side": 1,
       "message": "i mean to clarify that clientCertificate is one of Multi-factor authentication factors and will required to expose on D-bus",
+      "parentUuid": "09513b3d_6bbff595",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 35
+      },
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5792186_e0b130e1",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-08-30T15:13:35Z",
+      "side": 1,
+      "message": "MultiFactorAuth in redfish is a namespace/object.  it does not mean that all modes are fulfilled by the same backend.\n\nif you have something in a future design that needs this enum, we can discuss adding it then, but given your design and code that I’ve seen, there’s nothing that implements a client certificate backend.",
       "parentUuid": "09513b3d_6bbff595",
       "range": {
         "startLine": 24,

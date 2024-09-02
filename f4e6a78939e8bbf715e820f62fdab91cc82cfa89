@@ -144,6 +144,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a9bf305_583b8495",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-09-02T08:17:39Z",
+      "side": 1,
+      "message": "actually keeping it as set will be useful in extending to new multi-factor authentication factors in future without impacting TOTP MFA implementation.\n\nsince we wanted to restrict this configuration to only TOTP MFA for now and open to extend in future. i modified this commit to remove set and allow only one MFA type allowed",
+      "parentUuid": "bf02dca5_4fa3621b",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 47
+      },
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d327d7cb_e8f18a93",

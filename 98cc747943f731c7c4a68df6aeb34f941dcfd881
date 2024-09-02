@@ -34,6 +34,24 @@
       "parentUuid": "65da3288_b1eab384",
       "revId": "98cc747943f731c7c4a68df6aeb34f941dcfd881",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4188ae6_f8ac6e0f",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-02T21:26:45Z",
+      "side": 1,
+      "message": "My issue with this interface is you\u0027re now duplicating information.\n\nWhat happens if the system mode is changed from msft authentication to google?  Do all users that had msft authentication bypass automatically get added a google authenticator bypass?\n\nWhat if we add a new protocol type?  Do users get ported forward and bypass the new type?\n\nThere are a lot of questions that need answered when doing it this way (that aren\u0027t currently answered in the interface description).\n\nHaving a simple \"auth is bypassed\" or \"auth isn\u0027t bypassed\" mode meets the same requirements for redfish.  I\u0027d also note that if this MUST match Redfish\n\nMFAIgnored would be equivalent to the Redfish \"All\" setting.\nMFAEnforced would be equivalent to whatever modes are enabled.\n\n\nI understand that Redfish made this more complex, because they probably have to support lots of auth mechanisms in parallel.  In openbmc, we don\u0027t have to support them in parallel, or if we do, lets treat that as a separate track of work.",
+      "parentUuid": "ab41ad7c_861312c9",
+      "revId": "98cc747943f731c7c4a68df6aeb34f941dcfd881",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

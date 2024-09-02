@@ -170,6 +170,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "270f8cfe_ef6c48fc",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-02T17:11:57Z",
+      "side": 1,
+      "message": "Regardless of whether or not that true, lets keep the implementation as simple as we can for the features we intend to support now.  If we need to change in the future we can, and at that time it will be a lot easier to asses whether it makes the code simpler to have this as a set.",
+      "parentUuid": "0a9bf305_583b8495",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 47
+      },
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d327d7cb_e8f18a93",
         "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
         "patchSetId": 13
@@ -563,6 +587,24 @@
       "side": 1,
       "message": "yeah google/Microsoft authenticators implements Time-based One-time Password (TOTP)\nRFC. as per redfish this OneTimePassword authentication is different than Google/Microsoft TOTP based authentication.",
       "parentUuid": "1914ca74_988eb90d",
+      "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d36fab66_ee3b2c4b",
+        "filename": "yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-02T17:11:57Z",
+      "side": 1,
+      "message": "Cool, so lets get descriptions here and pointers to the specs for each of these implementations.  Just because Redfish documents the various types in their spec doesn\u0027t mean we don\u0027t have to document it here.\n\nFor example, based on this patch, I have no idea what TOTPAuthenticator and OneTimePasscode are intended to represent.  I should not have to go to the Redfish spec to go figure that out.\n\nJust to be clear, are you going to implement all 5 of these in the immediate future?  Your design doc only called out one.  If not, I\u0027d rather we keep this enumeration to the ones that we will actually have implementations of, and if we add a new type in the future, we can add enumerations over time.  If you plan to immediately implement these 5, then sure, we can start with this, but this enum implies that at some level we have support for all of these.",
+      "parentUuid": "83f188a5_85be00c3",
       "revId": "f4e6a78939e8bbf715e820f62fdab91cc82cfa89",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

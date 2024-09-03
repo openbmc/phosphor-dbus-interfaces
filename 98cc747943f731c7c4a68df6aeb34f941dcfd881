@@ -52,6 +52,24 @@
       "parentUuid": "ab41ad7c_861312c9",
       "revId": "98cc747943f731c7c4a68df6aeb34f941dcfd881",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1facc2c_9c28d0d6",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2024-09-03T04:43:23Z",
+      "side": 1,
+      "message": "I am not sure if the implementation is that simple of we map Every thing to MFAIgnored and MFAEnforced. Each MF option may have different implementation for by pass. It may be just deleting the .google_authenticator file for google case and  different for Microsoft etc. It all depends on what does each pam module expects for MFA. The problem is not just with parallel support. Even if we don\u0027t have multiple MFA active in parallel, there is a possibility of each organisation enable different kind of MFA. Implementation of pam module athentication and bypass may differ drastically. So in my opinion it is better to follow redfish schema and implementation can report error back to the client if it choses unsupported MFA options.",
+      "parentUuid": "a4188ae6_f8ac6e0f",
+      "revId": "98cc747943f731c7c4a68df6aeb34f941dcfd881",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

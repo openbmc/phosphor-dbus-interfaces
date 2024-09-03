@@ -17,6 +17,18 @@ methods:
                 Secret key string which will be shared to user to setup TOTP
                 applications to generate TOTP token.
 
+    - name: VerifyOTP
+      description: >
+          This method verifies OTP with Time-based One-time Password
+          authenticator secret key for the given user and returns weather this
+          OTP is valid or not which make sure user has setup valid secret key
+          for two factor authentication. 
+      returns:
+          - name: Status
+            type: boolean
+            description: >
+              returns true if provided OTP is valid otherwise returns false.
+
 properties:
     - name: SecretKeyIsValid
       type: boolean

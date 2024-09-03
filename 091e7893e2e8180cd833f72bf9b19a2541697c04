@@ -88,6 +88,24 @@
       "parentUuid": "675fb192_92e53d01",
       "revId": "091e7893e2e8180cd833f72bf9b19a2541697c04",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "195845d8_373f6184",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 25
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-09-03T06:57:57Z",
+      "side": 1,
+      "message": "yes, Google/Microsoft authenticator are TOTP based auth mechanisms.\nsecureID and clientCert are different authentication mechanisms\nThis TOTPAuthenticator interface is generic for TOTP based auth mechanism.",
+      "parentUuid": "99e6c88d_c0e1a72a",
+      "revId": "091e7893e2e8180cd833f72bf9b19a2541697c04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

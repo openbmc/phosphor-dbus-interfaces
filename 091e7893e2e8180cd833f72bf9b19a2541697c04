@@ -106,6 +106,24 @@
       "parentUuid": "99e6c88d_c0e1a72a",
       "revId": "091e7893e2e8180cd833f72bf9b19a2541697c04",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87546d81_66ce65cf",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 25
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-03T19:42:40Z",
+      "side": 1,
+      "message": "You have two options here:\n1. Call out that this exists on the primary user config path and say it applies to whichever setting is enabled (MSFT or Google).\n2. Do what Patrick asked for and call out specific path names for each setting type so we can have separate settings for every mode.\n\n\nI figured 1 was easier for you, but if you really want to do 2, you need to actually implement it in the patchset and add dbus paths.",
+      "parentUuid": "195845d8_373f6184",
+      "revId": "091e7893e2e8180cd833f72bf9b19a2541697c04",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

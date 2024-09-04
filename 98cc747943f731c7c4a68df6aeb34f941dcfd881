@@ -70,6 +70,24 @@
       "parentUuid": "a4188ae6_f8ac6e0f",
       "revId": "98cc747943f731c7c4a68df6aeb34f941dcfd881",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fe79fd1_619332d3",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-04T16:11:21Z",
+      "side": 1,
+      "message": "Everything you\u0027re describing is an internal detail to the service that implements this.  My point is that as much as we can, we should avoid allowing internal details into the dbus API.\n\nFWIW, if you really want to cover the whole range of behavior in the description about how each of those works, feel free to update this patchset, but it doesn\u0027t seem worth it to me.  Just support one OTP at a time, make the bypass use its own enum that\u0027s bypass/not bypass, and make the rest of the behavior handled in the interface.",
+      "parentUuid": "c1facc2c_9c28d0d6",
+      "revId": "98cc747943f731c7c4a68df6aeb34f941dcfd881",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

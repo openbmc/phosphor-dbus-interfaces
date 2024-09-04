@@ -16,6 +16,24 @@
       "message": "Other question, why is this interface separate from https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/72987/20/yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml\n\nAren\u0027t they both required to be implemented for a user?  Can we just combine them?",
       "revId": "c0a5f2ea45c7ecaf5b3829fc8552329ad686d15e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "095e49e1_cd249f94",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 23
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-09-04T17:10:58Z",
+      "side": 1,
+      "message": "this MFA Bypass interface  will be implemented on user\u0027s object since each user can have option to skip mfa.\n\nMultiFactorAuthConfiguration interface will be implemented on User manager D-bus which will be used to enable MFA.",
+      "parentUuid": "eb2bf008_ba596c28",
+      "revId": "c0a5f2ea45c7ecaf5b3829fc8552329ad686d15e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

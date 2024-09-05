@@ -1,0 +1,223 @@
+version: 1.0.1
+
+errors:
+  - name: InvalidSensorReading
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.InvalidSensorReading
+
+  - name: ReadingAboveLowerCriticalThreshold
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingAboveLowerCriticalThreshold
+
+  - name: ReadingAboveLowerFatalThreshold
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingAboveLowerFatalThreshold
+
+  - name: ReadingAboveUpperCautionThreshold
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingAboveUpperCautionThreshold
+
+  - name: ReadingAboveUpperCriticalThreshold
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingAboveUpperCriticalThreshold
+
+  - name: ReadingAboveUpperFatalThreshold
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingAboveUpperFatalThreshold
+
+  - name: ReadingBelowLowerCautionThreshold
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingBelowLowerCautionThreshold
+
+  - name: ReadingBelowLowerCriticalThreshold
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingAboveUpperCriticalThreshold
+
+  - name: ReadingBelowLowerFatalThreshold
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingAboveUpperCriticalThreshold
+
+  - name: ReadingBelowUpperCriticalThreshold
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingAboveUpperCriticalThreshold
+
+  - name: ReadingBelowUpperFatalThreshold
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.ReadingAboveUpperCriticalThreshold
+
+  - name: SensorFailure
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.SensorFailure
+
+events:
+  - name: SensorReadingNormalRange
+    severity: notice
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[Value.interface.Unit]
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.SensorReadingNormalRange
+
+  - name: SensorRestored
+    severity: notice
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+    redfish-mapping: SensorEvent.1.0.1.SensorRestored

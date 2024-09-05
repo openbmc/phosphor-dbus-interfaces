@@ -32,7 +32,7 @@ generated_others += custom_target(
 subdir('Threshold')
 generated_others += custom_target(
     'xyz/openbmc_project/Sensor/Threshold__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Sensor/Threshold.errors.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Sensor/Threshold.errors.yaml', '../../../../yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml',  ],
     output: [ 'Threshold.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

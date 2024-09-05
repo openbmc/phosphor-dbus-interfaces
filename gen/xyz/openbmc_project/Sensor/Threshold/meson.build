@@ -1,8 +1,8 @@
 # Generated file; do not modify.
 generated_sources += custom_target(
     'xyz/openbmc_project/Sensor/Threshold__cpp'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/Sensor/Threshold.errors.yaml',  ],
-    output: [ 'error.cpp', 'error.hpp',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/Sensor/Threshold.errors.yaml', '../../../../../yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml',  ],
+    output: [ 'error.cpp', 'error.hpp', 'event.cpp', 'event.hpp',  ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',

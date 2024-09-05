@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c415f26_18f9480a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000294
+      },
+      "writtenOn": "2024-09-05T02:41:35Z",
+      "side": 1,
+      "message": "Hello Patrick,\n\nCould you help to review and merge this commit? Another commit #74319 got FAILED due to this new member `Software` not in dbus-interfaces. Thanks.\n\n../bmc_state_manager.cpp:294:48: error: ‘Software’ is not a member of ‘sdbusplus::common::xyz::openbmc_project::state::BMC::RebootCause’\n  294 |             this-\u003elastRebootCause(RebootCause::Software);",
+      "revId": "e2427864129eb9e80a3ddf7c2fb4fd12957c2a1d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

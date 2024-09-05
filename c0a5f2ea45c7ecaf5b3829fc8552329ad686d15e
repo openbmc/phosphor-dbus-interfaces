@@ -34,6 +34,24 @@
       "parentUuid": "eb2bf008_ba596c28",
       "revId": "c0a5f2ea45c7ecaf5b3829fc8552329ad686d15e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83f3ea98_bd7ba006",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 23
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-05T14:40:46Z",
+      "side": 1,
+      "message": "\u003e this MFA Bypass interface  will be implemented on user\u0027s object since each user can have option to skip mfa.\n\nSorry, I linked the wrong interface:\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/72602/32/yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml\n\nIs also at user level.  Should they be combined?\n\n\u003e \n\u003e MultiFactorAuthConfiguration interface will be implemented on User manager D-bus which will be used to enable MFA.",
+      "parentUuid": "095e49e1_cd249f94",
+      "revId": "c0a5f2ea45c7ecaf5b3829fc8552329ad686d15e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

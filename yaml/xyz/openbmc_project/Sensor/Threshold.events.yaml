@@ -1,0 +1,399 @@
+version: 1.0.0
+
+errors:
+    - name: InvalidSensorReading
+      severity: warning
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+      redfish-mapping: SensorEvent.InvalidSensorReading
+
+    - name: ReadingAboveLowerCriticalThreshold
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveLowerCriticalThreshold
+
+    - name: ReadingAboveLowerSoftShutdownThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveLowerFatalThreshold
+
+    - name: ReadingAboveLowerHardShutdownThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveLowerFatalThreshold
+
+    - name: ReadingAboveUpperWarningThreshold
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveUpperCautionThreshold
+
+    - name: ReadingAboveUpperPerformanceLossThreshold
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveUpperCautionThreshold
+
+    - name: ReadingAboveUpperCriticalThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveUpperCriticalThreshold
+
+    - name: ReadingAboveUpperSoftShutdownThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveUpperFatalThreshold
+
+    - name: ReadingAboveUpperHardShutdownThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveUpperFatalThreshold
+
+    - name: ReadingBelowLowerWarningThreshold
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowLowerCautionThreshold
+
+    - name: ReadingBelowLowerPerformanceLossThreshold
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowLowerCautionThreshold
+
+    - name: ReadingBelowLowerCriticalThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowLowerCriticalThreshold
+
+    - name: ReadingBelowLowerSoftShutdownThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowLowerFatalThreshold
+
+    - name: ReadingBelowLowerHardShutdownThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowLowerFatalThreshold
+
+    - name: ReadingBelowUpperCriticalThreshold
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowUpperCriticalThreshold
+
+    - name: ReadingBelowUpperSoftShutdownThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowFatalThreshold
+
+    - name: ReadingBelowUpperHardShutdownThreshold
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowFatalThreshold
+
+    - name: SensorFailure
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+      redfish-mapping: SensorEvent.SensorFailure
+
+events:
+    - name: SensorReadingNormalRange
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+      redfish-mapping: SensorEvent.SensorReadingNormalRange
+
+    - name: SensorRestored
+      metadata:
+          - name: SENSOR_NAME
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+      redfish-mapping: SensorEvent.SensorRestored

@@ -52,6 +52,24 @@
       "parentUuid": "095e49e1_cd249f94",
       "revId": "c0a5f2ea45c7ecaf5b3829fc8552329ad686d15e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92b6aa42_da6b00e5",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 23
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-09-05T16:28:51Z",
+      "side": 1,
+      "message": "I think its better have this Bypass interface separately than combined with TOTP authenticator interface, so that it can easily extended for other multi-factor authentications, Becoz bypass configuration applies to other multi factor methods as well and TOTP authenticator interface has properties specific to only TOTP implementation.",
+      "parentUuid": "83f3ea98_bd7ba006",
+      "revId": "c0a5f2ea45c7ecaf5b3829fc8552329ad686d15e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

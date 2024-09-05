@@ -1,0 +1,266 @@
+version: 1.0.0
+
+errors:
+  - name: InvalidSensorReading
+    en:
+      description: Indicates that the service received an invalid reading from a sensor. This message shall indicate that the service received invalid data while attempting to update the value of the
+Reading property in a Sensor resource.
+      message: Invalid reading received from sensor '{SENSOR_NAME}'.
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+    redfish-mapping: SensorEvent.InvalidSensorReading
+
+  - name: ReadingAboveLowerCriticalThreshold
+    en:
+      description: Indicates that a sensor reading is no longer below the lower critical threshold but is still outside of normal operating range. This message shall indicate that the value of the Reading in a Sensor resource, previously below the threshold, is now above the value of the Reading property within the LowerCritical or LowerCriticalUser properties. However, the value of the Reading property is still below at least one Reading property of another lower threshold and is not within the normal operating range.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUEU} ({UNITS}) is now above the {THRESHOLD_VALUE} lower critical threshold but remains outside of normal range.
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingAboveLowerCriticalThreshold
+
+  - name: ReadingAboveLowerHardShutdownThreshold
+    en:
+      description: Indicates that a sensor reading is no longer below the lower fatal threshold but is still outside of normal operating range. This message shall indicate that the value of the Reading in a Sensor resource, previously below the threshold, is now above the value of the Reading property within the LowerFatal property. However, the value of the Reading property is still below at least one Reading property of another lower threshold and is not within the normal operating range.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUE} ({UNITS}) is now above the {THRESHOLD_VALUE} lower fatal threshold but remains outside of normal range.
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingAboveLowerFatalThreshold
+
+  - name: ReadingAboveUpperWarningThreshold
+    en:
+      description: Indicates that a sensor reading is above the upper caution threshold. This message shall indicate that the value of the Reading property in a Sensor resource is above the value of the Reading property within the UpperCaution or UpperCautionUser properties.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUE} ({UNITS}) is above the {THRESHOLD_VALUE} upper caution threshold.
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingAboveUpperCautionThreshold
+
+  - name: ReadingAboveUpperCriticalThreshold
+    en:
+      description: Indicates that a sensor reading is above the upper critical threshold. This message shall indicate that the value of the Reading property in a Sensor resource is above the value of the Reading property within the UpperCritical or UpperCriticalUser properties.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUE} ({UNITS}) is above the {THRESHOLD_VALUE} upper critical threshold.
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingAboveUpperCriticalThreshold
+
+  - name: ReadingAboveUpperHardShutdownThreshold
+    en:
+      description: Indicates that a sensor reading is above the upper fatal threshold. This message shall indicate that the value of the Reading property in a Sensor resource is above the value of the Reading property within the UpperFatal property.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUE} ({UNITS}) is above the {THRESHOLD_VALUE} upper fatal threshold.
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingAboveUpperFatalThreshold
+
+  - name: ReadingBelowLowerWarningThreshold
+    en:
+      description: Indicates that a sensor reading is below the lower caution threshold. This message shall indicate that the value of the Reading property in a Sensor resource is below the value of the Reading property within the LowerCaution or LowerCautionUser properties.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUE} ({UNITS}) is below the {THRESHOLD_VALUE} lower caution threshold.
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingBelowLowerCautionThreshold
+
+  - name: ReadingBelowLowerCriticalThreshold
+    en:
+      description: Indicates that a sensor reading is below the lower critical threshold. This message shall indicate that the value of the Reading property in a Sensor resource is below the value of the Reading property within the LowerCritical or LowerCriticalUser properties.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUE} ({UNITS}) is below the {THRESHOLD_VALUE} lower critical threshold.
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingBelowLowerCriticalThreshold
+
+  - name: ReadingBelowLowerHardShutdownThreshold
+    en:
+      description: Indicates that a sensor reading is below the lower fatal threshold. This message shall indicate that the value of the Reading property in a Sensor resource is below the value of the Reading property within the LowerFatal property.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUE} ({UNITS}) is below the {THRESHOLD_VALUE} lower fatal threshold.
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingBelowLowerFatalThreshold
+
+  - name: ReadingBelowUpperCriticalThreshold
+    en:
+      description: 
+      message: 
+    severity: warning
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingBelowUpperCriticalThreshold
+
+  - name: ReadingBelowUpperHardShutdownThreshold
+    en:
+      description: Indicates that a sensor reading is no longer above the upper critical threshold but is still outside of normal operating range. This message shall indicate that the value of the Reading in a Sensor resource, previously above the threshold, is now below the value of the Reading property within the UpperCritical or UpperCriticalUser properties. However, the value of the Reading property is still above at least one Reading property of another upper threshold and is not within the normal operating range.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUE} ({UNITS}) is now below the {THRESHOLD_VALUE} upper critical threshold but remains outside of normal range.
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+      - name: THRESHOLD_VALUE
+        type: double
+        primary: true
+    redfish-mapping: SensorEvent.ReadingBelowFatalThreshold
+
+  - name: SensorFailure
+    en:
+      description: Indicates that the service cannot communicate with a sensor or has detected a failure. This message shall indicate that the service is unable to communicate with a sensor or has otherwise detected a fault condition with the sensor.
+      message: Sensor '{SENSOR_NAME}' has failed.
+    severity: critical
+    errno: EIO
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+    redfish-mapping: SensorEvent.SensorFailure
+
+events:
+  - name: SensorReadingNormalRange
+    en:
+      description: Indicates that a sensor reading is now within normal operating range. This message shall indicate that the value of the Reading property within a Sensor resource has returned to its normal operating range.
+      message: Sensor '{SENSOR_NAME}' reading of {READING_VALUE} ({UNITS}) is within normal operating range.
+    severity: notice
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+      - name: READING_VALUE
+        type: double
+        primary: true
+      - name: UNITS
+        type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+        primary: true
+    redfish-mapping: SensorEvent.SensorReadingNormalRange
+
+  - name: SensorRestored
+    en:
+      description: Indicates that a sensor was repaired or communications were restored. It may also indicate that the service is receiving valid data from a sensor. This message shall indicate that the service is able to communicate with a sensor that had previously failed, or the sensor was repaired or replaced.
+      message: Sensor '{SENSOR_NAME}' was restored.
+    severity: notice
+    metadata:
+      - name: SENSOR_NAME
+        type: string
+        primary: true
+    redfish-mapping: SensorEvent.SensorRestored

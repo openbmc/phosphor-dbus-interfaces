@@ -1,0 +1,400 @@
+version: 1.0.0
+
+errors:
+    - name: InvalidSensorReading
+      severity: warning
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+      redfish-mapping: SensorEvent.InvalidSensorReading
+
+    - name: ReadingAboveLowerCriticalThreshold
+      severity: warning
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveLowerCriticalThreshold
+
+    - name: ReadingAboveLowerHardShutdownThreshold
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveLowerFatalThreshold
+
+    - name: ReadingAboveLowerSoftShutdownThreshold
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveLowerFatalThreshold
+
+    - name: ReadingAboveUpperWarningThreshold
+      severity: warning
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveUpperCautionThreshold
+
+    - name: ReadingAboveUpperCriticalThreshold
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveUpperCriticalThreshold
+
+    - name: ReadingAboveUpperHardShutdownThreshold
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveUpperFatalThreshold
+
+    - name: ReadingAboveUpperSoftShutdownThreshold
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingAboveUpperFatalThreshold
+
+    - name: ReadingBelowLowerWarningThreshold
+      severity: warning
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowLowerCautionThreshold
+
+    - name: ReadingBelowLowerCriticalThreshold
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowLowerCriticalThreshold
+
+    - name: ReadingBelowLowerHardShutdownThreshold
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowLowerFatalThreshold
+
+    - name: ReadingBelowUpperCriticalThreshold
+      severity: warning
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowUpperCriticalThreshold
+
+    - name: ReadingBelowUpperHardShutdownThreshold
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+          - name: THRESHOLD_VALUE
+            description: The configured threshold value for this sensor.
+            type: double
+            primary: true
+      redfish-mapping: SensorEvent.ReadingBelowFatalThreshold
+
+    - name: SensorFailure
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+      redfish-mapping: SensorEvent.SensorFailure
+
+events:
+    - name: SensorReadingNormalRange
+      severity: notice
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+          - name: READING_VALUE
+            description:
+                The reading of the sensor. This argument shall contain a number
+                that equals the value of the Reading property of the Sensor
+                resource.
+            type: double
+            primary: true
+          - name: UNITS
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+      redfish-mapping: SensorEvent.SensorReadingNormalRange
+
+    - name: SensorRestored
+      severity: notice
+      metadata:
+          - name: SENSOR_NAME
+            description:
+                The name or identifier of the sensor. This argument shall
+                contain a string that identifies or describes the Sensor
+                resource.
+            type: object_path
+            primary: true
+      redfish-mapping: SensorEvent.SensorRestored

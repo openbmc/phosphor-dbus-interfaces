@@ -2,7 +2,17 @@ description: >
     Implement to provide the Power-On Self Test codes from the host.
 
 properties:
-    - name: Value
-      type: struct[uint64,array[byte]]
+    - name: PrimaryStatus
+      type: array[byte]
       description: >
-          The POST code value.
+          The POST code value representing the most descriptive portion of the
+          boot status.  For x86-64, this shall be 8 bytes, matching the 64 bit
+          post code.  For arm this shall be a 9 byte value matching the ARM
+          specification.  For power this shall be 8 bytes representing the boot
+          status code.
+    - name: ExtendedStatus
+      type: array[byte]
+      description: >
+          The POST code value representing the complete boot status code.  If
+          this data is not avaiable on a given architecture, it shall be
+          written as an empty array.

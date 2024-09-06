@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9fe132d2_ae49474f",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-06T01:42:58Z",
+      "side": 1,
+      "message": "See https://gerrit.openbmc.org/c/openbmc/sdbusplus/+/74359.\n\nYou can run the above commit against your schema as follows:\n\n```\n$ tools/sdbus++ -r ../phosphor-dbus-interfaces/yaml event exception-header xyz.openbmc_project.Sensor.Threshold\n```\n\nYour current code at least fails as follows:\n\n```\njsonschema.exceptions.ValidationError: \u0027errno\u0027 is a required property\n```",
+      "revId": "16e5c1629147bfb2c1c788a8f5e90805c73e3aad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6cec162c_97c45efb",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-06T01:42:58Z",
+      "side": 1,
+      "message": "I\u0027m not sure there is a hard requirement that we make these match the Redfish name.  Up to you if you want them to.",
+      "range": {
+        "startLine": 4,
+        "startChar": 10,
+        "endLine": 4,
+        "endChar": 30
+      },
+      "revId": "16e5c1629147bfb2c1c788a8f5e90805c73e3aad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa91aead_8b3f024e",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-06T01:42:58Z",
+      "side": 1,
+      "message": "nit: convention will be for these to all be UPPER_SNAKE_CASE.",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "16e5c1629147bfb2c1c788a8f5e90805c73e3aad",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

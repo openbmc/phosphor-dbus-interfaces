@@ -1,0 +1,27 @@
+version: 1.0.0
+
+errors:
+    - name: CableNotConnected
+      severity: warning
+      metadata:
+          - name: PORT_ID
+            type: string
+            primary: true
+            description: The port where an expected cable is not connected.
+      en:
+          description: An expected cable is not connected.
+          message: An expected cable on port {PORT_ID} is not connected.
+          resolution: Check and fix cable connections.
+      errno: EIO
+
+events:
+    - name: CableConnected
+      severity: notice
+      metadata:
+          - name: PORT_ID
+            type: string
+            primary: true
+            description: The port where an expected cable is connected.
+      en:
+          description: An expected cable is connected.
+          message: An expected cable on port {PORT_ID} is connected.

@@ -16,6 +16,7 @@ generated_others += custom_target(
 
 subdir('Attestation')
 subdir('BIOSConfig')
+subdir('Cable')
 subdir('Certs')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs__markdown'.underscorify(),

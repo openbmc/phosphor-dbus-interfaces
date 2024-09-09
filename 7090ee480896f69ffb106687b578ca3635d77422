@@ -52,6 +52,24 @@
       "parentUuid": "ca86753c_82bbb9fc",
       "revId": "7090ee480896f69ffb106687b578ca3635d77422",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa54bb27_8788c077",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-09T18:23:48Z",
+      "side": 1,
+      "message": "Why does a single PropertiesChanged signal matter?  Clients are going to be looking at one or the other property, right?\n\nAlso, if we want them to signal at the same time, InterfacesAdded gets us that, right?",
+      "parentUuid": "c7e8b205_0db555cb",
+      "revId": "7090ee480896f69ffb106687b578ca3635d77422",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -16,6 +16,24 @@
       "message": "since it is single enum, can we call it BypassedProtocol? For the readability can we call it ActiveMFA?",
       "revId": "6a74552b7e1a1bdbb67462a2123dc6775172b7ee",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "451a5de1_9c65b7ba",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 27
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2024-09-09T07:11:13Z",
+      "side": 1,
+      "message": "Just ignore the ActiveMFA name. Just realised that it is not semantically correct. My suggestion is to change BypassedProtocols -\u003e BypassedProtocol",
+      "parentUuid": "c6e93066_0cdb9929",
+      "revId": "6a74552b7e1a1bdbb67462a2123dc6775172b7ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

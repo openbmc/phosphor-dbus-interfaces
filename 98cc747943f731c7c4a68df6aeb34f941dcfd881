@@ -88,6 +88,24 @@
       "parentUuid": "c1facc2c_9c28d0d6",
       "revId": "98cc747943f731c7c4a68df6aeb34f941dcfd881",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d0f0e6c_c2947b17",
+        "filename": "yaml/xyz/openbmc_project/User/MFABypass.interface.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2024-09-09T06:55:42Z",
+      "side": 1,
+      "message": "What I was saying is that \"just follow the interface\". Redfish has very generic interface to support various MFA. What you are suggesting is to map the generic interface to a constrained internal interface, just because we don\u0027t have support for all of those types now. We can still achieve the same with out any interface mapping code between redfish and DBUS. We can just choose to support enums (None and GoogleAuthenticator). If redfish client send us other values DBus\u0027s default implementation will throw unsupported value error. Which is better than doing all those check in Bmcweb\u0027s conversion code that maps BypasType to  MFAIgnored and MFAEnforced.",
+      "parentUuid": "4fe79fd1_619332d3",
+      "revId": "98cc747943f731c7c4a68df6aeb34f941dcfd881",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

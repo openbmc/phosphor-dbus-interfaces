@@ -88,6 +88,24 @@
       "parentUuid": "fa54bb27_8788c077",
       "revId": "7090ee480896f69ffb106687b578ca3635d77422",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22156820_5736e375",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-09T19:01:15Z",
+      "side": 1,
+      "message": "Ah, that\u0027s fair.  You\u0027re right.  I too had a misunderstanding of how these interfaces worked as well.\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/State/Boot/PostCode.interface.yaml\n\nIs the interface that needs to change.  Will try to solidify that change in the next day or two.",
+      "parentUuid": "88aba4ae_b4247471",
+      "revId": "7090ee480896f69ffb106687b578ca3635d77422",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

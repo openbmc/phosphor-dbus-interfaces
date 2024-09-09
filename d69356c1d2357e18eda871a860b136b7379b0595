@@ -90,6 +90,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "30ec0aa8_9bdc0781",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-09-09T23:39:36Z",
+      "side": 1,
+      "message": "\u003e I see lots of design for converting to a Redfish Message Refistry but didn\u0027t see attribute after Redfish in that document.\n\u003e \n\nredfish-mapping is the attribute name.\n\n\u003e \n\u003e I don\u0027t think the question about should we generate standard events and an OEM was addressed but agree it\u0027s not really germane to adding this interface, more suggesting the question be considered by Redfish or as a quality of implementation topic for bmcweb.\n\nThe description of redfish-mapping explains details on this.",
+      "parentUuid": "52b13b0e_5d3963fa",
+      "revId": "d69356c1d2357e18eda871a860b136b7379b0595",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "d2ac095a_6117baef",

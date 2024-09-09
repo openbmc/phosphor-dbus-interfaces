@@ -34,6 +34,24 @@
       "parentUuid": "868a0507_1a2023bf",
       "revId": "7090ee480896f69ffb106687b578ca3635d77422",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7e8b205_0db555cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-09T15:39:27Z",
+      "side": 1,
+      "message": "I think I was slightly backwards in how this interface is used.  By \"write\" I meant... modify the property value from a client.\n\nAnyhow, it appears that the primary user of this is phosphor-post-code-manager:\n\nhttps://github.com/openbmc/phosphor-post-code-manager/blob/9c2e871da99ce5cb7477ffbe3518ad9c2bc2da8a/inc/post_code.hpp#L81\n\nThe expectation there is that the properties get written at once so that when the signal for PropertyChanged comes in they know that the whole post code is valid.",
+      "parentUuid": "ca86753c_82bbb9fc",
+      "revId": "7090ee480896f69ffb106687b578ca3635d77422",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

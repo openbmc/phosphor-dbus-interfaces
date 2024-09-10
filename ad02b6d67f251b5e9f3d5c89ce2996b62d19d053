@@ -170,6 +170,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "11c98c82_976ec5d9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-10T14:58:29Z",
+      "side": 1,
+      "message": "Comparing with existing code and it seems like `NotAllowed` is typically used for \"the requested state is never allowed\" vs `Unavailable` is used for \"the system is not currently in a state to allow this\".  So, I think I would lean more towards `Unavailable`.",
+      "parentUuid": "19345b93_8ddf28a1",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 43
+      },
+      "revId": "ad02b6d67f251b5e9f3d5c89ce2996b62d19d053",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4235b50e_5a70ecb1",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1

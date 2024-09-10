@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20e3ae8a_f3cc142a",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-09-10T06:28:12Z",
+      "side": 1,
+      "message": "Using the existing xyz/openbmc_project/Software/Version.interface.yaml interface from the OpenBMC project is a good approach if it meets our needs. I think, this interface is designed to provide version information for software components in a standardized way, which can simplify integration and maintenance.\n\nor any specific reason for having own property in this interface itself?",
+      "range": {
+        "startLine": 15,
+        "startChar": 12,
+        "endLine": 15,
+        "endChar": 21
+      },
+      "revId": "af8ece42296f306fa0100c48f742138698e19dc4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1601072_8aad65e4",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-09-10T06:28:12Z",
+      "side": 1,
+      "message": "Does the sibling need to have an active role? Couldn’t the other BMC be active while the sibling remains passive?",
+      "range": {
+        "startLine": 37,
+        "startChar": 10,
+        "endLine": 37,
+        "endChar": 44
+      },
+      "revId": "af8ece42296f306fa0100c48f742138698e19dc4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cee9df55_77ca21f2",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-09-10T06:28:12Z",
+      "side": 1,
+      "message": "During the CU, the BMC will be unavailable, so synchronization will not occur. This situation is similar to a BMC reboot, where synchronization is paused. Therefore, the same logic should apply to the FailoverPaused case, correct?",
+      "range": {
+        "startLine": 47,
+        "startChar": 18,
+        "endLine": 47,
+        "endChar": 50
+      },
+      "revId": "af8ece42296f306fa0100c48f742138698e19dc4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78ffe3ea_b912641a",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-09-10T06:28:12Z",
+      "side": 1,
+      "message": "CommunicationOk?",
+      "range": {
+        "startLine": 66,
+        "startChar": 12,
+        "endLine": 66,
+        "endChar": 19
+      },
+      "revId": "af8ece42296f306fa0100c48f742138698e19dc4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

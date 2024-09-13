@@ -88,6 +88,24 @@
       "parentUuid": "de204038_50f9fa5e",
       "revId": "0dd81c94f113a8de5c713664f690101960f10007",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "707edbc2_44b058a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-09-13T13:01:22Z",
+      "side": 1,
+      "message": "\u003e Do you have thoughts around this? I was partially leaning towards using Informational severity as an \"Event\". It seems like you prefer to have them in a separate Event interface, but I\u0027m not sure the rationale.\n\nI\u0027m not sure I understand. The Event interface will have a severity property, correct? And we could extend it with new severities, like \u0027Informational,\u0027 if needed?\n\nI noticed below from your design: https://gerrit.openbmc.org/c/openbmc/docs/+/71489/10/designs/event-logging.md#558\n\n\u003e By the way, I\u0027m actively working on this code myself (starting with the sdbusplus generators). I plan to have it done by the end of this month.\n\nThanks! I\u0027m planning to use that in my upcoming error cases for BMC redundancy use cases.",
+      "parentUuid": "e7d5e295_548f9458",
+      "revId": "0dd81c94f113a8de5c713664f690101960f10007",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

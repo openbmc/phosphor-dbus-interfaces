@@ -160,6 +160,24 @@
       "parentUuid": "0b48d9b0_88f7c049",
       "revId": "0dd81c94f113a8de5c713664f690101960f10007",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46d3cd02_45ca01f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-13T13:29:03Z",
+      "side": 1,
+      "message": "\u003e BMC tracing events I think we\u0027ll want separate or perhaps turned off.\n\nMy intention is to implement an allow-list/block-list for the events, so you could disable BMC event recording by default if that\u0027s what you would like. Do you want them in an entirely different \"queue\"?",
+      "parentUuid": "fa479e14_62e16970",
+      "revId": "0dd81c94f113a8de5c713664f690101960f10007",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

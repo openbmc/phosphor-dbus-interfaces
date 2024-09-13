@@ -52,6 +52,24 @@
       "parentUuid": "b7eb4009_c6d89dab",
       "revId": "0dd81c94f113a8de5c713664f690101960f10007",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de204038_50f9fa5e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-13T10:34:05Z",
+      "side": 1,
+      "message": "Got it.\n\nI guess I left this TODO in the design document:\n\n```\n\u003e TODO: Should a tracing event be a `Logging.Entry` with severity of\n\u003e `Informational` or should they be a new type, such as `Logging.Event` and\n\u003e managed separately. The `phosphor-logging` default `meson.options` have\n\u003e `error_cap\u003d200` and `error_info_cap\u003d10`. If we increase the total number of\n\u003e events allowed to 10K, the majority of them are likely going to be information\n\u003e / tracing events.\n```\n\nDo you have thoughts around this?  I was partially leaning towards using `Informational` severity as an \"Event\".  It seems like you prefer to have them in a separate `Event` interface, but I\u0027m not sure the rationale.",
+      "parentUuid": "c2ed3b89_5494b573",
+      "revId": "0dd81c94f113a8de5c713664f690101960f10007",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

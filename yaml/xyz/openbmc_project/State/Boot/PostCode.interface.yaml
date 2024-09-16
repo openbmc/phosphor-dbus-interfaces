@@ -28,7 +28,7 @@ methods:
                 the oldest boot cycle.
       returns:
           - name: Codes
-            type: dict[uint64, struct[uint64,array[byte]]]
+            type: dict[uint64, struct[array[byte],array[byte]]]
             description: >
                 An array of post codes and timestamp in microseconds since epoch
     - name: GetPostCodes
@@ -43,7 +43,7 @@ methods:
                 the oldest boot cycle.
       returns:
           - name: Codes
-            type: array[struct[uint64,array[byte]]]
+            type: array[struct[array[byte],array[byte]]]
             description: >
                 An array of post codes of one boot cycle.
 

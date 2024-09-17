@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c006ca47_21c4e49d",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-09-17T14:50:45Z",
+      "side": 1,
+      "message": "If I look at https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/State/BMC.interface.yaml, that has 3 other properties that we don\u0027t care about, one of which is even writeable.\n\nWhat would we do in that case? I guess we could leave them at their default values which would be wrong, or write extra code to have them be correct only because they happen to be on the same interface as another property we want.  Also then if someone adds a property to one of those interfaces, which does happen, we\u0027d be stuck having to update more code.\n\nI suppose we could also get rid of all the properties and just rely on a polling with a D-Bus method that returns a dictionary of properties to get the data.",
+      "parentUuid": "d70672cd_13fa5415",
+      "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "52ce6b44_152e5f62",
         "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
         "patchSetId": 6
@@ -31,6 +49,30 @@
       "writtenOn": "2024-09-17T13:34:49Z",
       "side": 1,
       "message": "I don\u0027t know what to do with this information.",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 27
+      },
+      "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bca679b_dcdf435d",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-09-17T14:50:45Z",
+      "side": 1,
+      "message": "We could use it to not enable redundancy if we can tell the passive BMC can\u0027t even talk to us, among other things.",
+      "parentUuid": "52ce6b44_152e5f62",
       "range": {
         "startLine": 73,
         "startChar": 0,
@@ -107,6 +149,24 @@
       "writtenOn": "2024-09-17T14:30:55Z",
       "side": 1,
       "message": "\u003e No. We only need to document it if we\u0027re expecting clients to go directly to it (such as ObjectMapper). Otherwise the service names are entirely arbitrary and do not need to be documented.\n\nAh ok..I think its not clear to me \"A singleton host service name must have the YAML property default and may optionally have a description. xyz.openbmc_project.ObjectMapper is one such example.\" and confused me.",
+      "parentUuid": "7b86adc6_99e98318",
+      "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79a66490_be219114",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-09-17T14:50:45Z",
+      "side": 1,
+      "message": "I can remove it. I just kinda like being able to use the generated constant when requesting the bus name, since there are already constants for the path and interface.\n\nOr do I just use the interface constant like PSM apps do?",
       "parentUuid": "7b86adc6_99e98318",
       "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"

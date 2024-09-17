@@ -56,6 +56,24 @@
       "message": "Is there any reason to document a service name?  Shouldn\u0027t we be using mapper to find it?",
       "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9e165c5_98fc13c8",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-09-17T13:48:24Z",
+      "side": 1,
+      "message": "We need to document this for use on the server hosting the interface, correct?\n\nI agree that the client could either use a mapper or this approach.\n\n(As far as I\u0027m aware, OpenBMC doesn\u0027t support hosting the same interface across multiple services, correct?)\n\nI believe documenting it here provides flexibility and avoids hardcoding on the server, as it\u0027s specified in the YAML.\n\nOr are you concerned that this might restrict the server\u0027s freedom to choose the service name?\n\nI plan to do the same for my upcoming interfaces (Data sync for BMC redundancy), so I\u0027m trying to understand the rationale behind documenting it in [YAML](https://github.com/openbmc/sdbusplus/blob/master/docs/yaml/interface.md#service-name).",
+      "parentUuid": "f56b7753_41f86057",
+      "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

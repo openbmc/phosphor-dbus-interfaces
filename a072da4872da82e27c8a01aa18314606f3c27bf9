@@ -22,6 +22,30 @@
       },
       "revId": "a072da4872da82e27c8a01aa18314606f3c27bf9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a2829cd_cebb56dc",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-09-17T14:53:48Z",
+      "side": 1,
+      "message": "I mention it in the design doc here https://gerrit.openbmc.org/c/openbmc/docs/+/70233/9/designs/redundant-bmc.md#430.  It\u0027s so the daemon that talks to the sibling can get it.",
+      "parentUuid": "6f3511f5_31888648",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 67
+      },
+      "revId": "a072da4872da82e27c8a01aa18314606f3c27bf9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

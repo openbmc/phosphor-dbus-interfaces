@@ -46,6 +46,30 @@
       },
       "revId": "a072da4872da82e27c8a01aa18314606f3c27bf9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fe81236_99f09364",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-17T21:40:41Z",
+      "side": 1,
+      "message": "I thought the daemon that talks to the sibling creates this interface?  I guess it creates \"Sibling\"?\n\nWhy not just have that application determine its own Heartbeat timer?  Seems a little awkward to have one repository/daemon hold the timer just to send a signal to a different daemon to take action?  What is the advantage of having this be a dbus-signal and not an internal timer in the \"talks to sibling\" daemon?",
+      "parentUuid": "4a2829cd_cebb56dc",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 67
+      },
+      "revId": "a072da4872da82e27c8a01aa18314606f3c27bf9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

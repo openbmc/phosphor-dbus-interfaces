@@ -74,6 +74,24 @@
       "parentUuid": "f56b7753_41f86057",
       "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b86adc6_99e98318",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-17T14:05:59Z",
+      "side": 1,
+      "message": "\u003e We need to document this for use on the server hosting the interface, correct?\n\nNo.  We only need to document it if we\u0027re expecting clients to go directly to it (such as ObjectMapper).  Otherwise the service names are entirely arbitrary and do not need to be documented.\n\n\u003e Or are you concerned that this might restrict the server\u0027s freedom to choose the service name?\n\nI\u0027m concerned that clients will hardcode to it and that will be broken in the future.",
+      "parentUuid": "a9e165c5_98fc13c8",
+      "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

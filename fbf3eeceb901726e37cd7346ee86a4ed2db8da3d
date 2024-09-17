@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d70672cd_13fa5415",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-17T13:34:49Z",
+      "side": 1,
+      "message": "I\u0027m a bit concerned that this is effectively just a random sampling of items that you think are important to exchange today but might not be the full set as time goes on.  Is there any reason we can\u0027t use the existing interfaces that define these properties and place them in a specific object path for BMC redundancy?",
+      "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52ce6b44_152e5f62",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-17T13:34:49Z",
+      "side": 1,
+      "message": "I don\u0027t know what to do with this information.",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 27
+      },
+      "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f56b7753_41f86057",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy/Sibling.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-17T13:34:49Z",
+      "side": 1,
+      "message": "Is there any reason to document a service name?  Shouldn\u0027t we be using mapper to find it?",
+      "revId": "fbf3eeceb901726e37cd7346ee86a4ed2db8da3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

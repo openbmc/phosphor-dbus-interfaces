@@ -1,0 +1,53 @@
+description: >
+    Implement to provide discrete sensor readings.
+
+    Any service implementing Sensor.Discrete.Operational on one or more objects must
+    implement org.freedesktop.DBus.ObjectManager on /xyz/openbmc_project/discrete_sensors.
+
+    All Sensor.Discrete.Operational properties are read-only.
+
+properties:
+    - name: Value
+      type: enum[self.Value]
+      description: >
+          The discrete sensor reading.
+
+enumerations:
+    - name: Value
+      description: >
+          The discrete sensor reported operational state of the monitored object.
+      values:
+          - name: Operational
+            description: >
+                The monitored object is operating normally.
+          - name: Throttled
+            description: >
+                The monitored object is working, but slower than usually.
+          - name: Reset
+            description: >
+                The monitored object is in reset.
+          - name: PowerNotGood
+            description: >
+                The monitored object has no power or the power isn't good.
+          - name: Failed
+            description: >
+                The monitored object encountered an internal error preventing
+                normal operation.
+
+associations:
+    - name: inventory
+      description: >
+          Sensors may implement an 'inventory' to 'discrete_sensors' association with the
+          inventory item related to it.
+      reverse_names:
+          - discrete_sensors
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+    - name: monitoring
+      description: >
+          Sensors may monitor the BMC's resource utilization and implement an
+          associatoin to the Bmc item.
+      reverse_names:
+          - monitored_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Bmc

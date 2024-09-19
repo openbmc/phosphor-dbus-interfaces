@@ -1,0 +1,146 @@
+description: >
+    Implement to provide discrete sensor readings.  Objects implementing
+    Sensor.Discrete.Physical must be instantiated in the correct hierarchy within
+    the sensors namespace.  The following sensor hierarchies are recognized:
+      airflow
+      altitude
+      current
+      energy
+      fan_tach
+      humidity
+      power
+      pressure
+      temperature
+      utilization
+      voltage
+
+    Any service implementing Sensor.Discrete.Physical on one or more objects must
+    implement org.freedesktop.DBus.ObjectManager on /xyz/openbmc_project/discrete_sensors.
+
+    All Sensor.Discrete.Physical properties are read-only.
+
+properties:
+    - name: Value
+      type: enum[self.Value]
+      description: >
+          The discrete sensor reading.
+
+    - name: Threshold
+      type: enum[self.Threshold]
+      description: >
+          The type of alarm that is triggered when the value is not Normal.
+
+    - name: Alarm
+      type: boolean
+      description: >
+          True if the sensor value has exceeded the defined bound. False if the
+          sensor value has not exceeded the defined bound.
+
+          Alarm may be set to False to clear an alarm condition. The
+          behavior of setting Alarm to True is undefined.
+
+    - name: Type
+      type: enum[self.Type]
+      description: >
+          The type of physical force the sensor is monitoring. For objects
+          in the airflow namespace, Type must be "CFM" For objects in the
+          altitude namespace, Type must be "Meters". For objects in the current
+          namespace, Type must be "Amperes". For objects in the energy
+          namespace, Type must be "Joules". For objects in the fan_tach
+          namespace, Type must be "RPMS". For objects in the humidity namespace,
+          Type must be "PercentRH" For objects in the power namespace, Type must
+          be "Watts". For objects in the pressure namespace, Type must be
+          "Pascals" For objects in the temperature namespace, Type must be
+          "DegreesC". For objects in the utilization namespace, Type must be
+          "Percent" For objects in the voltage namespace, Type must be "Volts".
+
+enumerations:
+    - name: Value
+      description: >
+          The discrete sensor reported state of the monitored object.
+      values:
+          - name: Normal
+            description: >
+                The voltage is within an acceptable range.
+          - name: OverLimit
+            description: >
+                The voltage is higher than the acceptable maximum.
+          - name: UnderLimit
+            description: >
+                The voltage is lower than the acceptable minimum.
+
+    - name: Threshold
+      description: >
+          The threshold to use for alarms.
+      values:
+          - name: Disabled
+            description: >
+                The alarm is not being reported.
+          - name: Warning
+            description: >
+                Generate a warning.
+          - name: Critical
+            description: >
+                Require immediate action.
+          - name: SoftShutdown
+            description: >
+                Do a soft shutdown for system protection.
+          - name: HardShutdown
+            description: >
+                Do a hard shutdown for system protection.
+
+    - name: Type
+      description: >
+          The discrete sensor type.
+      values:
+          - name: Amperes
+            description: >
+                Electrical charge flow rate as Amperes.
+          - name: CFM
+            description: >
+                To calculate Air Flow in Cubic Feet per Minute
+          - name: DegreesC
+            description: >
+                Temperature as degrees Celsius.
+          - name: Joules
+            description: >
+                Energy transfer as Joules.
+          - name: Meters
+            description: >
+                Length as meters.
+          - name: Percent
+            description: >
+                Resource utilization as a percentage.
+          - name: PercentRH
+            description: >
+                Relative humidity as a percentage.
+          - name: Pascals
+            description: >
+                Pressure as pascals.
+          - name: RPMS
+            description: >
+                Frequency of rotation as revolutions per minute.
+          - name: Volts
+            description: >
+                Electomotive force as volts.
+          - name: Watts
+            description: >
+                Rate of energy transfer as Watts.
+
+associations:
+    - name: inventory
+      description: >
+          Sensors may implement an 'inventory' to 'discrete_sensors' association with the
+          inventory item related to it.
+      reverse_names:
+          - discrete_sensors
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+    - name: monitoring
+      description: >
+          Sensors may monitor the BMC's resource utilization and implement an
+          associatoin to the Bmc item.
+      reverse_names:
+          - monitored_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Bmc

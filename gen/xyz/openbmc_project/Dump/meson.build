@@ -2,7 +2,7 @@
 subdir('Create')
 generated_others += custom_target(
     'xyz/openbmc_project/Dump/Create__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Dump/Create.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Dump/Create.errors.yaml', '../../../../yaml/xyz/openbmc_project/Dump/Create.interface.yaml',  ],
     output: [ 'Create.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

@@ -2,7 +2,7 @@
 subdir('MemoryECC')
 generated_others += custom_target(
     'xyz/openbmc_project/Memory/MemoryECC__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Memory/MemoryECC.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Memory/MemoryECC.errors.yaml', '../../../../yaml/xyz/openbmc_project/Memory/MemoryECC.interface.yaml',  ],
     output: [ 'MemoryECC.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

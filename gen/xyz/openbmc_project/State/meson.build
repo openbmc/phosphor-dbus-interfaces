@@ -2,7 +2,7 @@
 subdir('BMC')
 generated_others += custom_target(
     'xyz/openbmc_project/State/BMC__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/State/BMC.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/State/BMC.errors.yaml', '../../../../yaml/xyz/openbmc_project/State/BMC.interface.yaml',  ],
     output: [ 'BMC.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -33,7 +33,7 @@ subdir('Boot')
 subdir('Chassis')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Chassis__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/State/Chassis.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/State/Chassis.errors.yaml', '../../../../yaml/xyz/openbmc_project/State/Chassis.interface.yaml',  ],
     output: [ 'Chassis.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -64,7 +64,7 @@ generated_others += custom_target(
 subdir('Host')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Host__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/State/Host.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/State/Host.errors.yaml', '../../../../yaml/xyz/openbmc_project/State/Host.interface.yaml',  ],
     output: [ 'Host.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

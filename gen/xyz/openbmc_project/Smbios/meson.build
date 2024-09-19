@@ -2,7 +2,7 @@
 subdir('MDR_V2')
 generated_others += custom_target(
     'xyz/openbmc_project/Smbios/MDR_V2__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Smbios/MDR_V2.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Smbios/MDR_V2.errors.yaml', '../../../../yaml/xyz/openbmc_project/Smbios/MDR_V2.interface.yaml',  ],
     output: [ 'MDR_V2.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

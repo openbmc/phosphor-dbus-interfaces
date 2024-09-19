@@ -108,7 +108,7 @@ generated_others += custom_target(
 subdir('Host')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Host__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Control/Host.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Control/Host.errors.yaml', '../../../../yaml/xyz/openbmc_project/Control/Host.interface.yaml',  ],
     output: [ 'Host.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

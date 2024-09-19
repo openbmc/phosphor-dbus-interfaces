@@ -167,7 +167,7 @@ generated_others += custom_target(
 subdir('Update')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Update__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Software/Update.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/Update.errors.yaml', '../../../../yaml/xyz/openbmc_project/Software/Update.interface.yaml',  ],
     output: [ 'Update.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -182,7 +182,7 @@ generated_others += custom_target(
 subdir('Version')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Version__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Software/Version.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/Software/Version.errors.yaml', '../../../../yaml/xyz/openbmc_project/Software/Version.interface.yaml',  ],
     output: [ 'Version.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

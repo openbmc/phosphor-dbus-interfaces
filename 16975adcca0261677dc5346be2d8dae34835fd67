@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b761766_d39fabbf",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Operational.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-19T14:57:45Z",
+      "side": 1,
+      "message": "This is not a \"sensor\" but a State.  We already have some of these values modeled there.  Add new interfaces as necessary.",
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a67dbada_d6e58906",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Operational.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-19T14:57:45Z",
+      "side": 1,
+      "message": "Do you have a reference to an external standard / specification for these?  It isn\u0027t immediately obvious that these all belong together.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 33
+      },
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "448b45bb_ed1cdd3e",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Physical.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-19T14:57:45Z",
+      "side": 1,
+      "message": "How is this different than our existing Sensor.Value interface?  Why do we need something new?",
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

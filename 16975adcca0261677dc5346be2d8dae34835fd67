@@ -3,6 +3,46 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1241c2a_c8e85bfb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-19T18:36:01Z",
+      "side": 1,
+      "message": "Lets enumerate at least one of these in how you expect this to work from \n\ngpio read -\u003e daemons -\u003e dbus -\u003e user facing interface.\n\nI suspect a lot of this is already covered by the state namespace, or could be added with pretty minimal additions.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 44
+      },
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e0ed8a8_82bbdcf6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-19T18:36:01Z",
+      "side": 1,
+      "message": "Overall, I suspect there\u0027s some missing documentation about what the end goal is here, and how we expect this to work.  Some key points:\n\nDeclaring an explicit \"discrete\" sensor is less helpful than an explicit type (leak, VR failure, Hot, etc).  There is no way to map a generic interface to DMTF redfish without relying on specific sensor names, which we try to avoid (user facing naming is in the control of the platform owner).\n\nAs written, it\u0027s not clear how this would map to IPMI.  If that\u0027s the intent, we should call it out.\n\nAs written, I suspect this really should just be extensions to the existing state properties, which I\u0027ve called out a couple places below.",
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1b761766_d39fabbf",
         "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Operational.interface.yaml",
         "patchSetId": 1
@@ -32,6 +72,70 @@
       "side": 1,
       "message": "A unit can have multiple discrete sensors, but it doesn\u0027t make sense to have multiple \"states\" on one unit. A unit can only be in one (discrete) state.\n\nA unit would have discrete sensors for:\n- voltage good\n- clock good\n- not in reset\n- throttled\n- catastropic error\n\nThose discrete sensors can then be used to calculate the one state the unit is in.",
       "parentUuid": "1b761766_d39fabbf",
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03149de8_239c69ce",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Operational.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-19T18:36:01Z",
+      "side": 1,
+      "message": "\u003e A unit can have multiple discrete sensors, but it doesn\u0027t make sense to have multiple \"states\" on one unit. A unit can only be in one (discrete) state.\n\u003e \n\u003e A unit would have discrete sensors for:\n\u003e - voltage good\n\u003e - clock good\n\u003e - not in reset\n\u003e - throttled\n\u003e - catastropic error\n\u003e \n\u003e Those discrete sensors can then be used to calculate the one state the unit is in.\n\nI don\u0027t really understand the above.  IPMI defines the above as individual bits, so a \"discrete\" sensor would only be 1 or 0.  Maybe you can provide some examples of how this is helpful?\n\nIf your goal is to implement this in Redfish, there is no such \"discrete\" property in redfish.",
+      "parentUuid": "593a1361_f40781f0",
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a25f009d_adfebb0a",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Operational.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-19T18:36:01Z",
+      "side": 1,
+      "message": "This is overly broad and not descriptive enough. \"discrete sensor\" isn\u0027t a term in openbmc.  Openbmc \"sensors\" are defined as number quantized values of real world things (temps, pressures, speeds, etc).\n\nI can only assume that this terminology is coming from IPMI, in which case I suspect this really ends up in the \"state\" namespace.\n\nRegardless, one sentence of description isn\u0027t enough here.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 50
+      },
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c097344_5832a2b9",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Operational.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-19T18:36:01Z",
+      "side": 1,
+      "message": "This would go in the state namespace.",
+      "range": {
+        "startLine": 5,
+        "startChar": 73,
+        "endLine": 5,
+        "endChar": 89
+      },
       "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -114,6 +218,24 @@
       "side": 1,
       "message": "It\u0027s using a discrete state instead of a floating point value.",
       "parentUuid": "448b45bb_ed1cdd3e",
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76d2590f_44e972af",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Physical.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-19T18:36:01Z",
+      "side": 1,
+      "message": "I\u0027m not following how we would measure \"Amperes\" in a discrete value.",
+      "parentUuid": "1a71174f_8c82d7fe",
       "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

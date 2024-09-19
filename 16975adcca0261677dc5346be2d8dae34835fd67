@@ -238,6 +238,29 @@
       "parentUuid": "1a71174f_8c82d7fe",
       "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da7abc2e_5c9d369f",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Physical.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-19T22:30:02Z",
+      "side": 1,
+      "message": "This says voltage, but the description has a number of different \"units\"",
+      "range": {
+        "startLine": 64,
+        "startChar": 20,
+        "endLine": 64,
+        "endChar": 27
+      },
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

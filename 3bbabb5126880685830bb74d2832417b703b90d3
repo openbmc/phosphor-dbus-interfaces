@@ -70,6 +70,24 @@
       "parentUuid": "11aeec76_b89bbb22",
       "revId": "3bbabb5126880685830bb74d2832417b703b90d3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e34bfd41_4db82293",
+        "filename": "yaml/xyz/openbmc_project/Dump/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-09-20T22:21:13Z",
+      "side": 1,
+      "message": "@Patrick, I\u0027ve had few discussions with Jayanth about this topic. Initially, the phosphor-debug-collector was designed to handle only BMC local dumps (without any separate daemon involved). However, later flow was updated to handle host dumps, but there isn\u0027t a complete story around that.\nThe phosphor-debug-collector\u0027s dreport collection flow for BMC dumps uses a bunch of plugin scripts that are used in a synchronous fashion. Based on this, I think phosphor-debug-collector is best suited for the following use cases:\n1. Collecting BMC dump dreports through plugin scripts.\n2. Handling BMC service/daemon crashdumps.\n3. Collecting user-initiated crashdumps/coredumps without any dependency on a separate daemon.\n\n\n\u003e How would this be done for multi-host then? I don\u0027t think that it is reasonable for a single service to always support core dump for each host. What if one host slot is ARM and one is x64? Are you sure it is even possible for the same daemon to handle crashdumps for both?\n\nGiven my previous explanation, it appears that the system crashdump shouldn\u0027t be triggered through phosphor-debug-collector and is instead handled by CPU RAS daemons. In this scenario, object paths such as /xyz/openbmc\\_project/dump/system/\u003csystemdId\u003e may be implemented by different services responsible for handling host-specific dumps. I have started working on a design document and will have share it once ready.\n\n\n\u003e In that regard, I\u0027m not convinced we can always support NIC crashdump with the same code. Maybe we can structure it that way now, but by having it all go through a single daemon + dbus path you\u0027re making it relatively difficult if some new NIC vendor comes along that doesn\u0027t support NC-SI but wants to support NIC crashdump.\n\nThe NIC crashdump falls under the third category I mentioned earlier and will be collected using the ncsi\\_netlink command. If a new NIC vendor does not support NCSI netlink, they can provide their own version of the ncsi-netlink command in their OEM repository. Moreover, it would have been more convenient if phosphor-networkd had a feature similar to network-util that could select the appropriate stack based on platform capabilities or input arguments. This way, OEM repositories could have provided their own version of network-util, allowing anyone to call it in an abstracted manner.",
+      "parentUuid": "7bad52fc_342e30a7",
+      "revId": "3bbabb5126880685830bb74d2832417b703b90d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -47,3 +47,9 @@ enumerations:
             description: >
                 A user attempted to isolate hardware to proceed with the host to
                 boot.
+          - name: Spare
+            description: >
+                This hardware is isolated and a extra spare hardware available
+                is deployed. The system configuration benefits will be met.
+                There will be no impact on the performance due to this
+                isolation.

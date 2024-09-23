@@ -119,6 +119,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2ac2e030_2bc26c06",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Operational.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001422
+      },
+      "writtenOn": "2024-09-23T10:59:16Z",
+      "side": 1,
+      "message": "How are \"sensor\" and \"state\" defined within OpenBMC? Where\u0027s the difference?",
+      "parentUuid": "a25f009d_adfebb0a",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 50
+      },
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8c097344_5832a2b9",
         "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Operational.interface.yaml",
         "patchSetId": 1
@@ -242,6 +266,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f9955b78_200606a6",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Physical.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001422
+      },
+      "writtenOn": "2024-09-23T10:59:16Z",
+      "side": 1,
+      "message": "The `discrete sensor` that is able to measure current would not report the actual measurement in \"Amperes\". It has an *internal discriminator* and it would report whether or not the value is within an acceptable limit.\n\nAs example: This discrete sensor could be connected to a GPIO where 0 is good and 1 is not good.\n\nSimilar a `discrete sensor` that is able to measure voltage would not report the actual measurement in \"Volt\". It has an *internal discriminator* and it would report whether or not the voltage is within an acceptable limit.",
+      "parentUuid": "76d2590f_44e972af",
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "da7abc2e_5c9d369f",
         "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Physical.interface.yaml",
         "patchSetId": 1
@@ -253,6 +295,30 @@
       "writtenOn": "2024-09-19T22:30:02Z",
       "side": 1,
       "message": "This says voltage, but the description has a number of different \"units\"",
+      "range": {
+        "startLine": 64,
+        "startChar": 20,
+        "endLine": 64,
+        "endChar": 27
+      },
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "596636b0_8388d065",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Discrete/Physical.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1001422
+      },
+      "writtenOn": "2024-09-23T10:59:16Z",
+      "side": 1,
+      "message": "that\u0027s indeed a typo.\nMaybe: \"observed unit\"",
+      "parentUuid": "da7abc2e_5c9d369f",
       "range": {
         "startLine": 64,
         "startChar": 20,

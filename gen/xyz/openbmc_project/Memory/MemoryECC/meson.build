@@ -1,7 +1,7 @@
 # Generated file; do not modify.
 generated_sources += custom_target(
     'xyz/openbmc_project/Memory/MemoryECC__cpp'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/Memory/MemoryECC.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/Memory/MemoryECC.errors.yaml', '../../../../../yaml/xyz/openbmc_project/Memory/MemoryECC.interface.yaml',  ],
     output: [ 'error.cpp', 'error.hpp', 'common.hpp', 'server.cpp', 'server.hpp', 'aserver.hpp', 'client.hpp',  ],
     depend_files: sdbusplusplus_depfiles,
     command: [

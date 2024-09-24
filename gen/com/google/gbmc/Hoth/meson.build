@@ -1,7 +1,7 @@
 # Generated file; do not modify.
 generated_sources += custom_target(
     'com/google/gbmc/Hoth__cpp'.underscorify(),
-    input: [ '../../../../../yaml/com/google/gbmc/Hoth.interface.yaml',  ],
+    input: [ '../../../../../yaml/com/google/gbmc/Hoth.errors.yaml', '../../../../../yaml/com/google/gbmc/Hoth.interface.yaml',  ],
     output: [ 'error.cpp', 'error.hpp', 'common.hpp', 'server.cpp', 'server.hpp', 'aserver.hpp', 'client.hpp',  ],
     depend_files: sdbusplusplus_depfiles,
     command: [

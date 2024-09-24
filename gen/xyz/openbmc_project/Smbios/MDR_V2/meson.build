@@ -1,7 +1,7 @@
 # Generated file; do not modify.
 generated_sources += custom_target(
     'xyz/openbmc_project/Smbios/MDR_V2__cpp'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/Smbios/MDR_V2.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/Smbios/MDR_V2.errors.yaml', '../../../../../yaml/xyz/openbmc_project/Smbios/MDR_V2.interface.yaml',  ],
     output: [ 'error.cpp', 'error.hpp', 'common.hpp', 'server.cpp', 'server.hpp', 'aserver.hpp', 'client.hpp',  ],
     depend_files: sdbusplusplus_depfiles,
     command: [

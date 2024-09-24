@@ -1,7 +1,7 @@
 # Generated file; do not modify.
 generated_sources += custom_target(
     'xyz/openbmc_project/State/Host__cpp'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/State/Host.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/State/Host.errors.yaml', '../../../../../yaml/xyz/openbmc_project/State/Host.interface.yaml',  ],
     output: [ 'error.cpp', 'error.hpp', 'common.hpp', 'server.cpp', 'server.hpp', 'aserver.hpp', 'client.hpp',  ],
     depend_files: sdbusplusplus_depfiles,
     command: [

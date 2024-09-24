@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "96b3e193_9f527b5f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-09-24T11:09:44Z",
+      "side": 1,
+      "message": "my first read was expecting this to be a list of requirements eg and for each clause.    only after reading the list did I realize it was one of possible use cases.   please add something to the introduction.",
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b1241c2a_c8e85bfb",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -37,6 +54,23 @@
       "writtenOn": "2024-09-19T18:36:01Z",
       "side": 1,
       "message": "Overall, I suspect there\u0027s some missing documentation about what the end goal is here, and how we expect this to work.  Some key points:\n\nDeclaring an explicit \"discrete\" sensor is less helpful than an explicit type (leak, VR failure, Hot, etc).  There is no way to map a generic interface to DMTF redfish without relying on specific sensor names, which we try to avoid (user facing naming is in the control of the platform owner).\n\nAs written, it\u0027s not clear how this would map to IPMI.  If that\u0027s the intent, we should call it out.\n\nAs written, I suspect this really should just be extensions to the existing state properties, which I\u0027ve called out a couple places below.",
+      "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8b485d9_2bc32bb0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-09-24T11:09:44Z",
+      "side": 1,
+      "message": "just reading the change log so far",
       "revId": "16975adcca0261677dc5346be2d8dae34835fd67",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

@@ -63,6 +63,15 @@ associations:
           - activated_on
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+    - name: software_version
+      description: >
+          This indicates the updateable software version for the code update
+          service that implements the associated interfaces.
+      reverse_names:
+          - updateable
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.common.FactoryReset
+          - xyz.openbmc_project.control.FieldMode
 
 paths:
     - namespace: /xyz/openbmc_project/software

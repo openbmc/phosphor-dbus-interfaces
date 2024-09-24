@@ -81,6 +81,30 @@
       },
       "revId": "3ae482f05e644ebaa8249a4a8bf8df28d508838a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "380541ea_ff441716",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-24T21:39:34Z",
+      "side": 1,
+      "message": "They\u0027re suppose to be backwards compatible.  There isn\u0027t anything you should need to do here for it.\n\nMaybe we\u0027ll learn that is wrong in the future, but I don\u0027t want to be updating these files every time Redfish makes a new release.",
+      "parentUuid": "fe7ba4e5_1f366eb1",
+      "range": {
+        "startLine": 11,
+        "startChar": 33,
+        "endLine": 11,
+        "endChar": 39
+      },
+      "revId": "3ae482f05e644ebaa8249a4a8bf8df28d508838a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

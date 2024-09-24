@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3dfcade7_c638d0f9",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-24T20:23:04Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "b7dd1543_a70d6024",
+      "revId": "3ae482f05e644ebaa8249a4a8bf8df28d508838a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9e62534a_cb457940",
         "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
         "patchSetId": 5
@@ -31,6 +49,30 @@
       "writtenOn": "2024-09-23T15:49:22Z",
       "side": 1,
       "message": "Looks like I need to do something here to ensure that these are not in here.  I\u0027m not expecting the Redfish version to be in here.",
+      "range": {
+        "startLine": 11,
+        "startChar": 33,
+        "endLine": 11,
+        "endChar": 39
+      },
+      "revId": "3ae482f05e644ebaa8249a4a8bf8df28d508838a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe7ba4e5_1f366eb1",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-24T20:23:04Z",
+      "side": 1,
+      "message": "We would need some way to indicate/document which version of the registry this is conforming to.",
+      "parentUuid": "9e62534a_cb457940",
       "range": {
         "startLine": 11,
         "startChar": 33,

@@ -47,11 +47,12 @@ associations:
     - name: running
       description: >
           This indicates the current running version for the associated
-          inventory item.
+          inventory item or softare collection.
       reverse_names:
           - ran_on
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+          - xyz.openbmc_project.Software.Collection
     - name: activating
       description: >
           This indicates the current activated version for the associated
@@ -63,6 +64,14 @@ associations:
           - activated_on
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+    - name: updating
+      description: >
+          This indicates the updateable software object for the associated
+          software collection.
+      reverse_names:
+          - updated_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Software.Collection
 
 paths:
     - namespace: /xyz/openbmc_project/software

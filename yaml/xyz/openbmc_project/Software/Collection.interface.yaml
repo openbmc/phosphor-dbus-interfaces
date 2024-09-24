@@ -1,0 +1,27 @@
+description: >
+    Implement this interface to represent a collection of software.
+
+associations:
+    - name: updating
+      description: >
+          This indicates the updateable software version in the collection.
+      reverse_names:
+          - updated_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Software.Version
+    - name: ran_on
+      description: >
+          This indicates the associated software version is the one which is in
+          running state from all in the collection.
+      reverse_names:
+          - running
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Software.Version
+
+paths:
+    - namespace: /xyz/openbmc_project/software
+      segments:
+          - name: BMC
+            value: bmc
+          - name: BIOS
+            value: bios

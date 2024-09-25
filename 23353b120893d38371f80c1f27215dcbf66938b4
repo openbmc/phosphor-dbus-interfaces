@@ -16,6 +16,159 @@
       "message": "CI Failure:\n\n```\n    Running commit_gitlint\n-: UC1 Line exceeds max length (111\u003e72).\n    It\u0027s possible you intended to use one of the following exceptions:\n    1. Put logs or shell script in a quoted section with triple quotes (\u0027\u0027\u0027)\n        before and after the section\n    2. Put a long link at the bottom in a footnote.\n        example: [1] https://my_long_link.com\n    Line that was too long:\n: \"https://lore.kernel.org/openbmc/SJ2PR15MB5801EA7FA684D3B21EE32CE3AB8D2@SJ2PR15MB5801.namprd15.prod.outlook.com/\"\n```",
       "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44c8f058_9a00c584",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-25T02:38:04Z",
+      "side": 1,
+      "message": "Rename to ReadingAboveLowerHardShutdownThreshold",
+      "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80e83f0d_7c24f64d",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-25T02:38:04Z",
+      "side": 1,
+      "message": "Rename this to ReadingAboveUpperWarningThreshold to match with OpenBMC limits.",
+      "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ab2106e_3d4cc5e0",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-25T02:38:04Z",
+      "side": 1,
+      "message": "Rename to ReadingAboveUpperHardShutdownThreshold",
+      "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d418630d_e2600a32",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-25T02:38:04Z",
+      "side": 1,
+      "message": "Rename to ReadingBelowLowerWarningThreshold",
+      "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6aa038f2_fc752f87",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-25T02:38:04Z",
+      "side": 1,
+      "message": "Bug rename to SensorEvent.ReadingBelowLowerCriticalThreshold",
+      "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c272b5fc_92950393",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-25T02:38:04Z",
+      "side": 1,
+      "message": "Rename to ReadingBelowLowerHardShutdownThreshold",
+      "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b010294b_b0ae108e",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-25T02:38:04Z",
+      "side": 1,
+      "message": "Bug. Rename to SensorEvent.ReadingBelowLowerFatalThreshold",
+      "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b31030b_8ed7c4cc",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-25T02:38:04Z",
+      "side": 1,
+      "message": "Rename to ReadingBelowUpperHardShutdownThreshold",
+      "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ead394f6_b55ab2fe",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-09-25T02:38:04Z",
+      "side": 1,
+      "message": "Bug. change to SensorEvent.ReadingBelowUpperFatalThreshold",
+      "revId": "23353b120893d38371f80c1f27215dcbf66938b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

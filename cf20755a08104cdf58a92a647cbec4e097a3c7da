@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dbe1b9e7_c7811598",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-25T19:15:47Z",
+      "side": 1,
+      "message": "Overall looks good.  Mostly nits.",
+      "revId": "cf20755a08104cdf58a92a647cbec4e097a3c7da",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91941ec6_7021e71f",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-25T19:15:47Z",
+      "side": 1,
+      "message": "we generally try to avoid adding the type on this side, but I guess this is just documenting what\u0027s already used?",
+      "range": {
+        "startLine": 66,
+        "startChar": 12,
+        "endLine": 66,
+        "endChar": 28
+      },
+      "revId": "cf20755a08104cdf58a92a647cbec4e097a3c7da",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f598ee96_09953bb5",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-09-25T19:15:47Z",
+      "side": 1,
+      "message": "nit, change to \"updatable software object\"\n\nIn theory the update interface might not implement the version interface.",
+      "range": {
+        "startLine": 68,
+        "startChar": 49,
+        "endLine": 68,
+        "endChar": 56
+      },
+      "revId": "cf20755a08104cdf58a92a647cbec4e097a3c7da",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

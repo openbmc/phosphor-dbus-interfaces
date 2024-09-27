@@ -26,6 +26,11 @@ methods:
                   }
                 ends up in AdditionaData like:
                   ["KEY1=value1", "KEY2=value2"]
+      returns:
+          - name: Entry
+            type: object_path
+            description: >
+                The resulting object_path of the newly created Entry
 
     - name: CreateWithFFDCFiles
       description: >

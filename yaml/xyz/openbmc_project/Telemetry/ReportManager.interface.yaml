@@ -61,6 +61,10 @@ methods:
             description: >
                 Path to new report ->
                   /xyz/openbmc_project/Telemetry/Reports/{parameters[Id]}.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.TooManyResources
 
 properties:
     - name: MaxReports

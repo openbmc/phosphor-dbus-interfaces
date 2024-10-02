@@ -24,6 +24,8 @@ methods:
             type: uint64
             description: >
                 Period of time in milliseconds when readings are updated.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
 properties:
     - name: Persistency
@@ -43,6 +45,8 @@ properties:
           mapped to metadata (like Redfish Metric ID). Collection timescope
           specifies type of time scope applied to specific metric. Collection
           duration stores timestamp related with timescope type in milliseconds.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: Readings
       type: struct[uint64,array[struct[string,string,double,uint64]]]
       description: >
@@ -60,6 +64,8 @@ properties:
     - name: ReportUpdates
       type: enum[self.ReportUpdates]
       description: Defines how Readings array is filled.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: AppendLimit
       type: size
       description: Defines the maximum number of entries in 'Readings' property.
@@ -89,6 +95,8 @@ properties:
       description: >
           Contains set of flags indicating additional actions that can be
           triggered after readings' update.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: Triggers
       type: array[object_path]
       description: >

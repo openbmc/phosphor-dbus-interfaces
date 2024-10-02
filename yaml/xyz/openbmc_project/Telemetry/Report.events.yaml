@@ -1,0 +1,17 @@
+version: 1.0.0
+
+errors:
+    - name: SetReadingPropertiesFailed
+      severity: error
+      en:
+          description:
+              SetReadingProperties method has failed due to either of its
+              arguments being incorrect.
+          message:
+              Failed to update report due to invalid value of reporting type or
+              interval.
+          resolution:
+              Verify input parameters. For periodic reporting type, interval
+              must have non-zero value. For other reporting types, interval must
+              be set to zero.
+      errno: EINVAL

@@ -9,6 +9,21 @@ methods:
           The Update method is defined for the on demand metric report update.
           It triggers update of the Readings property. If ReportingType is not
           set to OnRequest then method does nothing.
+    - name: SetReadingProperties
+      description: >
+          Performs safe modification of ReportingType and Interval properties
+          from this interface with additional checking if provided pair of
+          arguments is allowed.
+      parameters:
+          - name: ReportingType
+            type: enum[self.ReportingType]
+            description: >
+                Indicates how readings should be updated. Possible values are
+                listed in details for corresponding enum.
+          - name: Interval
+            type: uint64
+            description: >
+                Period of time in milliseconds when readings are updated.
 
 properties:
     - name: Persistency
@@ -40,6 +55,8 @@ properties:
     - name: ReportingType
       type: enum[self.ReportingType]
       description: Defines how readings are updated.
+      flags:
+          - readonly
     - name: ReportUpdates
       type: enum[self.ReportUpdates]
       description: Defines how Readings array is filled.
@@ -52,6 +69,8 @@ properties:
       type: uint64
       description: >
           Defines period of time in milliseconds when readings are updated.
+      flags:
+          - readonly
     - name: Enabled
       type: boolean
       description: >

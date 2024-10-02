@@ -54,3 +54,7 @@ methods:
             description: >
                 Path to new trigger ->
                 /xyz/openbmc_project/Telemetry/Triggers/{id}.
+      errors:
+          - self.AddTriggerFailed
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.TooManyResources

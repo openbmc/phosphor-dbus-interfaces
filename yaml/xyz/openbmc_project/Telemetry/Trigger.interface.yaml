@@ -26,6 +26,8 @@ properties:
           Collection of Report objects that are updated when threshold
           conditions are met. List is ignored if TriggerActions property does
           not contain 'UpdateReport' action.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: Sensors
       type: array[dict[object_path,string]]
       description: >
@@ -33,6 +35,8 @@ properties:
           used as map's key. Its value is a metadata that is used to store user
           data about sensor. In Redfish, metadata will be set to endpoint
           corresponding to that sensor.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: numericThresholds
       type: array[struct[enum[self.Type],uint64,enum[self.Direction],double]]
       description: >
@@ -40,6 +44,8 @@ properties:
           dwell time, direction and threshold value. Array is limited by Type
           enumeration, only 4 elements are allowed. Dwell time specifies for how
           long condition has to persist to trigger an action.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: discreteThresholds
       type: array[struct[string,enum[self.Severity],uint64,string]]
       description: >
@@ -49,10 +55,14 @@ properties:
           threshold array is empty then every value change is taken into account
           of threshold condition. Dwell time specifies for how long condition
           has to persist to trigger an action.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: Name
       type: string
       description: >
           Defines the name of trigger to be exposed over D-Bus.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
 enumerations:
     - name: TriggerAction

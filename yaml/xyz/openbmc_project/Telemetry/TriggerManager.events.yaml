@@ -1,0 +1,23 @@
+version: 1.0.0
+
+errors:
+    - name: AddTriggerFailed
+      severity: error
+      metadata:
+          - name: Parameter
+            type: string
+            primary: true
+            description: The name of invalid argument that caused failure.
+          - name: Reason
+            type: string
+            primary: true
+            description: Explanation why provided argument was incorrect.
+      en:
+          description:
+              AddTrigger method has failed due to either of its arguments being
+              incorrect.
+          message:
+              Couldn't add trigger due to argument {Parameter} being invalid
+              with reason "{Reason}".
+          resolution: Verify input parameters and try again.
+      errno: EINVAL

@@ -1,0 +1,11 @@
+version: 1.0.0
+
+events:
+    - name: Cleared
+      en:
+          description: Indicate the user cleared all logs.
+          message: Event log cleared by user.
+      metadata:
+          - name: NUMBER_OF_LOGS
+            description: The number of logs present before clearing.
+            type: uint64

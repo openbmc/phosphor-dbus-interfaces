@@ -27,11 +27,11 @@ Images maintained in the file system would be presented as a corresponding
 `xyz.openbmc_project.Common.FilePath` interface would be provided to specify the
 location of the image.
 
-It is assumed that the _ImageManager_ has [at least] a bare minimum amount of parsing
-knowledge, perhaps due to a common image format, to allow it to populate all of the
-properties of `xyz.openbmc_project.Software.Version` and `xyz.openbmc_project.Inventory.Decorator.Compatible`.
-_ItemUpdater_(s) will likely listen for standard D-Bus signals to identify new images
-being created.
+It is assumed that the _ImageManager_ has [at least] a bare minimum amount of
+parsing knowledge, perhaps due to a common image format, to allow it to populate
+all of the properties of `xyz.openbmc_project.Software.Version` and
+`xyz.openbmc_project.Inventory.Decorator.Compatible`._ItemUpdater_(s) will
+likely listen for standard D-Bus signals to identify new images being created.
 
 ### ItemUpdater
 

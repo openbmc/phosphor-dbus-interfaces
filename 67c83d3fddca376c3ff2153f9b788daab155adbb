@@ -16,6 +16,24 @@
       "message": "Why would this be a method and not a property?",
       "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8610eddb_aa392a70",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-10-08T16:17:59Z",
+      "side": 1,
+      "message": "this method needs to check current MFA status and secret key setup or not for a user and other checks and returns right status if generate secret key required at that moment when this method gets called. If its a property then property value needs to maintained correctly and always change property values based of different factors this case.\nso I would prefer to have D-bus method instead for D-bus property",
+      "parentUuid": "996d93ab_cf4c0a48",
+      "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

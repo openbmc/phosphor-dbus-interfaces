@@ -34,6 +34,24 @@
       "parentUuid": "996d93ab_cf4c0a48",
       "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "947c5c11_d01a4d33",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-10-08T16:35:52Z",
+      "side": 1,
+      "message": "Isn\u0027t the calculation of \"the other stuff\" the same no matter if it is a property or a method call?  Can we make it a property with `readonly` and no `emits_change`?  That way you\u0027re only required to figure it out when explicitly requested.",
+      "parentUuid": "8610eddb_aa392a70",
+      "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

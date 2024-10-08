@@ -36,6 +36,16 @@ methods:
                 Returns true if provided OTP is valid otherwise returns false.
 
 properties:
+    - name: IsGenerateSecretKeyRequired
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          This property indicates whether TOTP authenticator secret key setup
+          required for the given user to complete Time-based One-time Password
+          authentication setup
+
     - name: SecretKeyIsValid
       type: boolean
       default: false

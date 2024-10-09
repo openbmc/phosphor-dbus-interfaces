@@ -2,6 +2,13 @@ description: >
     Implement Idle Power Saver capabilities of the system.
 
 properties:
+    - name: Allowed
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          This property shall indicate whether idle power save is allowed.
+
     - name: Enabled
       type: boolean
       description: >

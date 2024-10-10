@@ -34,6 +34,32 @@ methods:
           - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
           - xyz.openbmc_project.User.Common.Error.NoResource
 
+    - name: CreateUser2
+      description: >
+          Creates a new user with set of user properties. Behaves same as
+          CreateUser.
+      parameters:
+          - name: UserName
+            type: string
+            description: >
+                User name which has to be created.
+          - name: UserProperty
+            type: dict[enum[self.UserProperty],variant[string,array[string],boolean,uint64]]
+            description:
+                Dictionary of user properties which can be used for user
+                creation. List of key name and data type of properties below.
+                UserPrivilege -> privilege of the user(string) UserGroups    ->
+                list of groups user belongs to(array[string]) UserEnabled   ->
+                user enabled state(boolean) PasswordExpiration -> user password
+                expiration Epoch
+      errors:
+          - xyz.openbmc_project.Common.Error.InsufficientPermission
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.User.Common.Error.UserNameExists
+          - xyz.openbmc_project.User.Common.Error.UserNameGroupFail
+          - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
+          - xyz.openbmc_project.User.Common.Error.NoResource
+
     - name: RenameUser
       description: >
           Rename's existing user to new one. All other properties of the user
@@ -65,6 +91,7 @@ methods:
              -user enabled state
              -user locked state
              -user password expired state
+             -user password expiration Epoch time
              -remote user flag
           If its ldap user, method returns
              -user privilege
@@ -76,7 +103,7 @@ methods:
                 User name whose properties have to be returned.
       returns:
           - name: UserInfo
-            type: dict[string,variant[string,array[string],boolean]]
+            type: dict[string,variant[string,array[string],boolean,uint64]]
             description: >
                 Dictionary of user properties. List of key name and data type of
                 properties below. UserPrivilege -> privilege of the user(string)
@@ -86,6 +113,8 @@ methods:
                 UserPasswordExpired -> user password expired(boolean)
                 RemoteUser    ->  remote or local user(boolean)
                 TOTPSecretKeyRequired -> TOTP secret key required(boolean)
+                PasswordExpiration -> user password expiration Epoch
+                time(uint64) RemoteUser    ->  remote or local user(boolean)
 
                 For detailed documentation of user properties refer
                 Attributes.interface.yaml examples:
@@ -125,6 +154,26 @@ methods:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.User.Common.Error.GroupNameDoesNotExist
+
+enumerations:
+    - name: UserProperty
+      description: List all available user properties for the user creation.
+      values:
+          - name: GroupNames
+            description: >
+                List of groups to which the user has to be added.
+          - name: Privilege
+            description: >
+                Privilege of the user to be added.
+          - name: Enabled
+            description: >
+                User enabled / disabled.
+          - name: PasswordExpiration
+            description: >
+                Indicates the date time when this account password expires. Date
+                should be specified in EpochTime format. Zero value means that
+                the user password does not expire. Maximum value (default value)
+                means that the user password expiration is not specified.
 
 properties:
     - name: AllPrivileges

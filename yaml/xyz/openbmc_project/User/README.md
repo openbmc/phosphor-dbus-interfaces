@@ -14,6 +14,7 @@ methods, properties and signals.
 ##### methods
 
 - CreateUser - To create new user to the system.
+- CreateUser2 - To create new user with password expiration to the system.
 - RenameUser - To rename existing user to new name in the system.
 
 ##### properties
@@ -52,6 +53,7 @@ will expose following properties and methods.
 - UserGroups - Groups to which the user belongs.
 - UserEnabled - User enabled state.
 - UserLockedForFailedAttempt - Locked or unlocked state of the user account.
+- PasswordExpiration - Epoch time in seconds when the user password expires.
 
 #### xyz.openbmc_project.Object.Delete
 

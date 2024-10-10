@@ -34,6 +34,44 @@ methods:
           - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
           - xyz.openbmc_project.User.Common.Error.NoResource
 
+    - name: CreateUser2
+      description: >
+          Creates a new user with a specified date time of the the user password
+          expiration. If the user already exists, then it will throw an error.
+          Actually, this method does the same as CreateUser method and allows to
+          specify Epoch time when the user password expires.
+      parameters:
+          - name: UserName
+            type: string
+            description: >
+                User name which has to be created.
+          - name: GroupNames
+            type: array[string]
+            description: >
+                List of groups to which the user has to be added.
+          - name: Privilege
+            type: string
+            description: >
+                Privilege of the user to be added.
+          - name: Enabled
+            type: boolean
+            description: >
+                User enabled / disabled.
+          - name: PasswordExpiration
+            type: uint64
+            description: >
+                Indicates the date time when this account password expires. Date
+                should be specified in EpochTime format. Zero value means that
+                the user password does not expire. Maximum value (default value)
+                means that the user password expiration is not specified.
+      errors:
+          - xyz.openbmc_project.Common.Error.InsufficientPermission
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.User.Common.Error.UserNameExists
+          - xyz.openbmc_project.User.Common.Error.UserNameGroupFail
+          - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
+          - xyz.openbmc_project.User.Common.Error.NoResource
+
     - name: RenameUser
       description: >
           Rename's existing user to new one. All other properties of the user
@@ -65,6 +103,7 @@ methods:
              -user enabled state
              -user locked state
              -user password expired state
+             -user password expiration Epoch time
              -remote user flag
           If its ldap user, method returns
              -user privilege
@@ -76,7 +115,7 @@ methods:
                 User name whose properties have to be returned.
       returns:
           - name: UserInfo
-            type: dict[string,variant[string,array[string],boolean]]
+            type: dict[string,variant[string,array[string],boolean,uint64]]
             description: >
                 Dictionary of user properties. List of key name and data type of
                 properties below. UserPrivilege -> privilege of the user(string)
@@ -84,7 +123,8 @@ methods:
                 UserEnabled   -> user enabled state(boolean)
                 UserLockedForFailedAttempt -> user locked state(boolean)
                 UserPasswordExpired -> user password expired(boolean)
-                RemoteUser    ->  remote or local user(boolean)
+                PasswordExpiration -> user password expiration Epoch
+                time(uint64) RemoteUser    ->  remote or local user(boolean)
 
                 For detailed documentation of user properties refer
                 Attributes.interface.yaml examples:

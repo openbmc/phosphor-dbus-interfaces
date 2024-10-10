@@ -62,5 +62,9 @@ properties:
       type: uint64
       default: maxint
       description: >
-          Indicates the date when this account password expires. Date should be
-          specified in EpochTime format.
+          Indicates the date time when this account password expires. Date
+          should be specified in EpochTime format. Maximum value means that the
+          user password does not expire.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument

@@ -34,6 +34,24 @@
       "parentUuid": "26e4ca5b_5ec81110",
       "revId": "dc9a95de3c9768bcf44d1625fdee53deb2a7f15f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f8d5010_23fa351c",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 15
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2024-10-11T17:28:48Z",
+      "side": 1,
+      "message": "Added SoftShutdown and made both HardShutdown and SoftShutdown map to the same redfish event. Patrick mentioned it should be fine for multiple events to map to the same redfish message. One way from the user side would be to use the threshold_value to know that we are dealing with different thresholds here.\n\nCheck if this is ok or if I should leave the redfish mapping out so it shows up as a custom OPENBMC threshold.",
+      "parentUuid": "7b40c04d_fadaccc3",
+      "revId": "dc9a95de3c9768bcf44d1625fdee53deb2a7f15f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

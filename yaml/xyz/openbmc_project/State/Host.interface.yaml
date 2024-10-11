@@ -11,6 +11,7 @@ properties:
       errors:
           - xyz.openbmc_project.State.Host.Error.BMCNotReady
           - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Unavailable
 
     - name: AllowedHostTransitions
       type: set[enum[self.Transition]]

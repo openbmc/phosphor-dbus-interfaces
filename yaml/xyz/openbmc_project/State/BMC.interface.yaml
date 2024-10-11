@@ -10,6 +10,8 @@ properties:
       default: "None"
       description: >
           The desired BMC transition
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
 
     - name: CurrentBMCState
       type: enum[self.BMCState]

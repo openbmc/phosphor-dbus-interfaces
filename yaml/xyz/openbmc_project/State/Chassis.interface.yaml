@@ -9,6 +9,7 @@ properties:
           preserved across AC power cycles of the BMC.
       errors:
           - xyz.openbmc_project.State.Chassis.Error.BMCNotReady
+          - xyz.openbmc_project.Common.Error.Unavailable
 
     - name: CurrentPowerState
       type: enum[self.PowerState]

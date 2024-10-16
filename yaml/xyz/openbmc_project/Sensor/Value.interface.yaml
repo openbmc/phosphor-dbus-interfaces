@@ -13,6 +13,7 @@ description: >
       temperature
       utilization
       voltage
+      volume
 
     Any service implementing Sensor.Value on one or more objects must implement
     org.freedesktop.DBus.ObjectManager on /xyz/openbmc_project/sensors.
@@ -47,7 +48,8 @@ properties:
           be "Watts". For objects in the pressure namespace, Unit must be
           "Pascals" For objects in the temperature namespace, Unit must be
           "DegreesC". For objects in the utilization namespace, Unit must be
-          "Percent" For objects in the voltage namespace, Unit must be "Volts".
+          "Percent" For objects in the voltage namespace, Unit must be "Volts",
+          For objects in the volume namespace, Unit must be "Liters" or "LPM".
 
 enumerations:
     - name: Unit
@@ -66,6 +68,12 @@ enumerations:
           - name: Joules
             description: >
                 Energy transfer as Joules.
+          - name: Liter
+            description: >
+                To calculate the volume in Liters.
+          - name: LPM
+            description: >
+                To calculate the volume in Liters Per Minute.
           - name: Meters
             description: >
                 Length as meters.
@@ -131,3 +139,5 @@ paths:
             value: utilization
           - name: Voltage
             value: voltage
+          - name: Volume
+            value: volume

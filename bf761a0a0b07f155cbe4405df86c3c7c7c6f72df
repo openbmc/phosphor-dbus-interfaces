@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ffd08c57_3ce00463",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000317
+      },
+      "writtenOn": "2024-10-18T13:06:46Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "5171ddfe_7da75a47",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 78
+      },
+      "revId": "bf761a0a0b07f155cbe4405df86c3c7c7c6f72df",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bf3bcc1f_799ed411",
@@ -37,6 +61,30 @@
       "writtenOn": "2024-10-17T17:41:13Z",
       "side": 1,
       "message": "What kind of sensor is a Liter sensor?  I don\u0027t know what kind of sensor we have for that and there is nothing in Redfish that refers to volume.  Can we drop that one until you have a concrete usage?",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 50
+      },
+      "revId": "bf761a0a0b07f155cbe4405df86c3c7c7c6f72df",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00151083_19e4cb6c",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000317
+      },
+      "writtenOn": "2024-10-18T13:06:46Z",
+      "side": 1,
+      "message": "Understood. I have removed the Liter unit.",
+      "parentUuid": "bf3bcc1f_799ed411",
       "range": {
         "startLine": 71,
         "startChar": 0,

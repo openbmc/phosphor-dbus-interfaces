@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7aa3e332_74923c05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-10-22T00:33:36Z",
+      "side": 1,
+      "message": "The current design here is that we put an object on d-bus which will block BMC reboots and power on\u0027s of the system. So we allow the request to go through but the BMC will hold up the transition until the operation is complete. These new error codes seem to run counter to that in that we would now return an error.",
+      "revId": "618085252f35d7f3dd41fef48a24815300951fe0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

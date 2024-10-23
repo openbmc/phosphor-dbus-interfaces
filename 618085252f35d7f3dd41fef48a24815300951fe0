@@ -16,6 +16,24 @@
       "message": "The current design here is that we put an object on d-bus which will block BMC reboots and power on\u0027s of the system. So we allow the request to go through but the BMC will hold up the transition until the operation is complete. These new error codes seem to run counter to that in that we would now return an error.",
       "revId": "618085252f35d7f3dd41fef48a24815300951fe0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "916dfc87_dc40a9b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2024-10-23T04:08:19Z",
+      "side": 1,
+      "message": "I see that the phosphor-state-manager is wating for ActivationBlocksTransition inteface is removed before turns on the power https://github.com/openbmc/phosphor-state-manager/blob/4ab59214a794acaa674069b4af11975442b8055c/target_files/obmc-power-start-pre%40.target#L5 (Host shall be turned on when flashing done). And the phosphor-software-manager is blocking BMC reboot action via https://github.com/openbmc/phosphor-bmc-code-mgmt/blob/master/obmc-flash-bmc#L416 script (BMC is not rebooted when flashing finished).\n\nIn my opinions, When BMC/host being flashed, the transition request should be rejected instead delay until flashing done. If we want to keep the current design, we can add an option build to reject/hold up this transition request. This approach will make this commit satisfy the current design.",
+      "parentUuid": "7aa3e332_74923c05",
+      "revId": "618085252f35d7f3dd41fef48a24815300951fe0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

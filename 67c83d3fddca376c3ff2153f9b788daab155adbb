@@ -106,6 +106,24 @@
       "parentUuid": "df5cc4e6_83e07dd2",
       "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47ac82f8_2a040896",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2024-10-30T11:26:31Z",
+      "side": 1,
+      "message": "ok. In this case, we dont need to store any data, that\u0027s why i wanted to clarify.  this method identifies whether TOTP secret key setup required for a given user at runtime.",
+      "parentUuid": "ee2d0cf5_a203be58",
+      "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

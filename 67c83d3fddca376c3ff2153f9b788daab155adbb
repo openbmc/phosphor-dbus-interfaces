@@ -142,6 +142,24 @@
       "parentUuid": "47ac82f8_2a040896",
       "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ddcf3a32_9d9cb241",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2024-10-31T04:30:00Z",
+      "side": 1,
+      "message": "It depend how you ask the question your self. To me it looks like query made over Dbus to check if a secretKey generation required or not. It is neither a data stored by dbus nor a property that some one going to set or needs notification for its change.  \n\nIf you think about how this  is going to be implemented. You will see an unnecessary override of property getter just to compute the value of it. Needless to say the non useful setter and property emission code generated for the property.",
+      "parentUuid": "a8e0b787_8c809d64",
+      "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

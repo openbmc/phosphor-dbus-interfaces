@@ -1,0 +1,8 @@
+description: >
+    Implement to provide cable monitor attributes.
+
+service_names:
+    - default: xyz.openbmc_project.CableMonitor
+
+paths:
+    - instance: /xyz/openbmc_project/cable_monitor

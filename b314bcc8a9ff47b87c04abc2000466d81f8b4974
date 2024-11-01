@@ -16,6 +16,24 @@
       "message": "I don\u0027t see en section https://grok.openbmc.org/xref/openbmc/docs/designs/event-logging.md?r\u003d9a0248b5#503\n\n@Patrick have you kept this section optional intentionally?",
       "revId": "b314bcc8a9ff47b87c04abc2000466d81f8b4974",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "421ca1d0_e2ee38cc",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T16:56:28Z",
+      "side": 1,
+      "message": "Yes.  I should update the design document.  The way I wrote the schema you can only have `redfish-mapping` OR `en:` section.  The `en` section is what will be used to generate the Redfish registry (for custom events not in the standard).",
+      "parentUuid": "bf079f2d_6ed514a4",
+      "revId": "b314bcc8a9ff47b87c04abc2000466d81f8b4974",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

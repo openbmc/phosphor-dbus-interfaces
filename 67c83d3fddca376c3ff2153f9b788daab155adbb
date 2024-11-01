@@ -160,6 +160,24 @@
       "parentUuid": "a8e0b787_8c809d64",
       "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62fdddf5_f2ed8491",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T15:20:39Z",
+      "side": 1,
+      "message": "\u003e You will see an unnecessary override of property getter just to compute the value of it.\n\nThe amount of code for a method call vs a property getter is roughly equivalent.\n\n\u003e Needless to say the non useful setter and property emission code generated for the property.\n\nSet the property as readonly or const, as appropriate.",
+      "parentUuid": "ddcf3a32_9d9cb241",
+      "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

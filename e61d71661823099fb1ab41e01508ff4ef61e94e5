@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7b66d2c_3a90d9f9",
+        "filename": "yaml/xyz/openbmc_project/Cable/Cable.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T17:32:54Z",
+      "side": 1,
+      "message": "Why not \"Disconnected\"?",
+      "range": {
+        "startLine": 4,
+        "startChar": 17,
+        "endLine": 4,
+        "endChar": 29
+      },
+      "revId": "e61d71661823099fb1ab41e01508ff4ef61e94e5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d915cec1_72f57475",
+        "filename": "yaml/xyz/openbmc_project/Cable/Cable.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T17:32:54Z",
+      "side": 1,
+      "message": "Is the \"PORT\" terminology coming from something that is in the proposed Redfish schema?  I would have expected something more like \"connector\" but I can understand that external cables are usually connected in \"ports\".",
+      "revId": "e61d71661823099fb1ab41e01508ff4ef61e94e5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65b33bc6_433757cc",
+        "filename": "yaml/xyz/openbmc_project/Cable/Cable.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T17:32:54Z",
+      "side": 1,
+      "message": "How about ENXIO or ENODEV?",
+      "range": {
+        "startLine": 15,
+        "startChar": 13,
+        "endLine": 15,
+        "endChar": 16
+      },
+      "revId": "e61d71661823099fb1ab41e01508ff4ef61e94e5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39ae6dd4_7cb2d965",
+        "filename": "yaml/xyz/openbmc_project/Cable/Cable.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T17:32:54Z",
+      "side": 1,
+      "message": "events shouldn\u0027t have severity.\n\nI\u0027ll update the schema to ensure this is precluded.",
+      "revId": "e61d71661823099fb1ab41e01508ff4ef61e94e5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

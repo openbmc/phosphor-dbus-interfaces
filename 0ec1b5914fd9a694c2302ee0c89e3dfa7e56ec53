@@ -1,0 +1,141 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0c11eca_154eed49",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T21:02:53Z",
+      "side": 1,
+      "message": "Just \"containing\".  \"detectors\" is a type.  We preclude using the the type.\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/requirements.md#directed-associations-should-not-codify-type\n\nI think I\u0027d prefer we use monitored_by / monitoring or measured_by / measuring.",
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "922cfadc_365c7a40",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T21:02:53Z",
+      "side": 1,
+      "message": "I\u0027d rather not create new top-level parts of the hierarchy (\"LeakDetection\" in this case).  Can we put this under State, Sensor, Metric, or Condition?",
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "678e6cc5_eadfe934",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T21:02:53Z",
+      "side": 1,
+      "message": "Should we use an enum for this?  Do you have error conditions where this needs to be Unknown?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 52
+      },
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c45fb9f_747ff0d2",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T21:02:53Z",
+      "side": 1,
+      "message": "If these come from a Redfish schema, can we reference that schema here?\n\nIf you\u0027re only planning to implement LeakSensingRope, should we limit it just that one?",
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a91b0260_3f23a725",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T21:02:53Z",
+      "side": 1,
+      "message": "Already made a comment elsewhere on this one.",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 40
+      },
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d28ff43_d453398a",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T21:02:53Z",
+      "side": 1,
+      "message": "Not entirely please with this being a new top-level part of the hierarchy.  See discussion on file name.",
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e369df20_caf0dd04",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Group.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-01T21:02:53Z",
+      "side": 1,
+      "message": "What kind of \"aggregation\"?  I think what you\u0027re saying is that this just reflects the worst case \"leak detected\" state, but let\u0027s make it clear.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 63
+      },
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

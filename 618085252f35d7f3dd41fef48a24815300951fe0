@@ -51,6 +51,24 @@
       "message": "Do you have any comments @Andrew?",
       "revId": "618085252f35d7f3dd41fef48a24815300951fe0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2f6395e_ffdd0198",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-11-04T17:47:26Z",
+      "side": 1,
+      "message": "Yeah, I\u0027m ok if we follow a design like the bmc-not-ready (https://gerrit.openbmc.org/q/topic:%22bmc-ready-check%22). An optional feature people can enable to have the BMC return an error if code update is in progress.",
+      "parentUuid": "916dfc87_dc40a9b6",
+      "revId": "618085252f35d7f3dd41fef48a24815300951fe0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

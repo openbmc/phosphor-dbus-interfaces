@@ -16,6 +16,29 @@
       "message": "Just a friendly reminder that please help review this commit. Thank you.",
       "revId": "0367c150ebe6cd9f1ea4fb0d08f49fafc38ab30b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ae72106_f1bc0235",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/PostCode.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000559
+      },
+      "writtenOn": "2024-11-04T23:27:43Z",
+      "side": 1,
+      "message": "Can you use the existing array[byte] to handle the 9 bytes in your use case?",
+      "range": {
+        "startLine": 31,
+        "startChar": 50,
+        "endLine": 31,
+        "endChar": 61
+      },
+      "revId": "0367c150ebe6cd9f1ea4fb0d08f49fafc38ab30b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -249,6 +249,24 @@
       "parentUuid": "e2a91161_a51bd7a7",
       "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c3a63cb_9972f4f9",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-05T17:06:57Z",
+      "side": 1,
+      "message": "\u003e I believe a property will have have corresponding variable declared in the dbus object. Now we have two things to track the same state(secretkeyGenerationRequried), one in Dbus object and the other is the file present in user\u0027s home directory. \n\nThis seems like a misunderstanding of how the dbus binding generation works.  If you don\u0027t want a variable (for instance if the check is just a fs::exists call) you can overload the method call for the property get and do whatever you want in it.  You don\u0027t need a \"real\" variable to back a dbus property.",
+      "parentUuid": "0b6771fa_61bfc357",
+      "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

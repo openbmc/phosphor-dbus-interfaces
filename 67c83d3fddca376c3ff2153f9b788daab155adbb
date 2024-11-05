@@ -231,6 +231,24 @@
       "parentUuid": "a689999c_b072343c",
       "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b6771fa_61bfc357",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2024-11-05T16:37:07Z",
+      "side": 1,
+      "message": "In any programming context having multiple things to track same state is not a good idea. \nI believe a property will have have  corresponding variable declared in the dbus object. Now we have two things to track the same  state(secretkeyGenerationRequried), one in Dbus object and the other is the file present  in user\u0027s home directory.  If you wanted to give completeness to the implementation then you have to always update the variable based on the file presence. This is an unnecessary complication we need to worry. If you are saying that don\u0027t worry about the variable and if someone make a property query, always return value based on the presence of the file, I am ok with that. \n\nAny way I don\u0027t want to block this commit because I have a disagreement here. I just don\u0027t want to add extra complication to the implementation.",
+      "parentUuid": "e2a91161_a51bd7a7",
+      "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

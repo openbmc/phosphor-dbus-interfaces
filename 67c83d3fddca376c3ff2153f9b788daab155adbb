@@ -267,6 +267,24 @@
       "parentUuid": "0b6771fa_61bfc357",
       "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c5fa0fd_d1a890dc",
+        "filename": "yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2024-11-06T05:04:50Z",
+      "side": 1,
+      "message": "Yes, exactly that is what I did for secretKeyIsValid  property( a different property) . But I could see a bool _secretKeyIsValid \u003d false; variable generated in server class. I felt it is unnecessary for the api.\n\nI don\u0027t mind following conventions. Just wanted to understand it before following the conventions blindly. \n\nI am fine with making this as property instead of a method.",
+      "parentUuid": "8c3a63cb_9972f4f9",
+      "revId": "67c83d3fddca376c3ff2153f9b788daab155adbb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

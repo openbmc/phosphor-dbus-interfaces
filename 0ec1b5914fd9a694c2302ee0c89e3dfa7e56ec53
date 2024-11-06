@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b5dba13_0ada1e8b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-11-06T23:46:15Z",
+      "side": 1,
+      "message": "Sure, dropped the new association and uses the existing monitored_by association in Item interface. Updated description and added detector to \"required_endpoint_interfaces\" for existing monitored_by association.",
+      "parentUuid": "a0c11eca_154eed49",
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "922cfadc_365c7a40",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-11-01T21:02:53Z",
       "side": 1,
       "message": "I\u0027d rather not create new top-level parts of the hierarchy (\"LeakDetection\" in this case).  Can we put this under State, Sensor, Metric, or Condition?",
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e26ff451_ce95b081",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-11-06T23:46:15Z",
+      "side": 1,
+      "message": "State seems to be closest match so move it under State/Leak.",
+      "parentUuid": "922cfadc_365c7a40",
       "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -60,6 +96,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3e6bac3b_b9130643",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-11-06T23:46:15Z",
+      "side": 1,
+      "message": "The state can either be enabled or disabled hence boolean.. Can you provide an example of an error state?",
+      "parentUuid": "678e6cc5_eadfe934",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 52
+      },
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2c45fb9f_747ff0d2",
         "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
         "patchSetId": 8
@@ -71,6 +131,24 @@
       "writtenOn": "2024-11-01T21:02:53Z",
       "side": 1,
       "message": "If these come from a Redfish schema, can we reference that schema here?\n\nIf you\u0027re only planning to implement LeakSensingRope, should we limit it just that one?",
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fa2a2a0_a44d4046",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-11-06T23:46:15Z",
+      "side": 1,
+      "message": "\u003e If these come from a Redfish schema, can we reference that schema here?\n\u003e \nSure, will add the Redfish Schema reference.\nLeakSensingRope is not in Redfish Schema yet. I have requested Redfish Forum to add Rope type to Detector types https://redfishforum.com/thread/1089/extend-leakdetectortype-leak-detection-cable and they are willing for it.\n\n\u003e If you\u0027re only planning to implement LeakSensingRope, should we limit it just that one?\n\nMy implementation is parsing all types coming from EM, so its a generic logic https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/75329/4/src/LeakDetection/LeakDetector.hpp#45. Let me know if you think otherwise?",
+      "parentUuid": "2c45fb9f_747ff0d2",
       "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -98,6 +176,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d66af821_acb2b251",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-11-06T23:46:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a91b0260_3f23a725",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 40
+      },
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0d28ff43_d453398a",
@@ -115,6 +217,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1141c8e6_a867e487",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-11-06T23:46:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0d28ff43_d453398a",
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e369df20_caf0dd04",
@@ -128,6 +248,30 @@
       "writtenOn": "2024-11-01T21:02:53Z",
       "side": 1,
       "message": "What kind of \"aggregation\"?  I think what you\u0027re saying is that this just reflects the worst case \"leak detected\" state, but let\u0027s make it clear.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 63
+      },
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f75929df_aae2694f",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Group.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-11-06T23:46:15Z",
+      "side": 1,
+      "message": "Refer to LeakDetectorGroups Status \n property in https://redfish.dmtf.org/schemas/v1/LeakDetection.v1_1_0.json. \n \n \"longDescription\": \"This object shall contain a group of leak detection equipment that reports a unified status.\"\n \n Also, i have moved DetectorGroup to a different patch, so you can review it there https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/75701. Marking this comment resolved here.",
+      "parentUuid": "e369df20_caf0dd04",
       "range": {
         "startLine": 15,
         "startChar": 0,

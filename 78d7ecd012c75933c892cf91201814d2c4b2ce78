@@ -62,6 +62,30 @@
       },
       "revId": "78d7ecd012c75933c892cf91201814d2c4b2ce78",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "483ca232_869331e8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Source/DevicePresence.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-11-06T16:05:48Z",
+      "side": 1,
+      "message": "In the design doc, is says that the inventory items to create are defined in the same Exposes element as the GPIO definition. Even in that case you\u0027d want EM to have to to specify the fully qualified name?",
+      "parentUuid": "134f07c3_fdc5a248",
+      "range": {
+        "startLine": 11,
+        "startChar": 69,
+        "endLine": 14,
+        "endChar": 0
+      },
+      "revId": "78d7ecd012c75933c892cf91201814d2c4b2ce78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

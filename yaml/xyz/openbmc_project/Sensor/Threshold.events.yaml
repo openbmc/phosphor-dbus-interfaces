@@ -1,11 +1,11 @@
-version: 1.0.0
+version: 1.0.1
 
 errors:
     - name: InvalidSensorReading
       severity: warning
       errno: EIO
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
@@ -15,19 +15,19 @@ errors:
       severity: warning
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -37,19 +37,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -59,19 +59,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -81,19 +81,19 @@ errors:
       severity: warning
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -103,19 +103,19 @@ errors:
       severity: warning
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -125,19 +125,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -147,19 +147,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -169,19 +169,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -191,19 +191,19 @@ errors:
       severity: warning
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -213,19 +213,19 @@ errors:
       severity: warning
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -235,19 +235,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -257,19 +257,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -279,19 +279,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -301,19 +301,19 @@ errors:
       severity: warning
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -323,19 +323,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -345,19 +345,19 @@ errors:
       severity: critical
       errno: ERANGE
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
-          - name: THRESHOLD_VALUE
+          - name: ThresholdValue
             description: The configured threshold value for this sensor.
             type: double
             primary: true
@@ -367,7 +367,7 @@ errors:
       severity: critical
       errno: EIO
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
@@ -376,15 +376,15 @@ errors:
 events:
     - name: SensorReadingNormalRange
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true
-          - name: READING_VALUE
+          - name: ReadingValue
             description: The reading of the sensor.
             type: double
             primary: true
-          - name: UNITS
+          - name: Units
             description: The reading units of measure.
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
@@ -392,7 +392,7 @@ events:
 
     - name: SensorRestored
       metadata:
-          - name: SENSOR_NAME
+          - name: SensorName
             description: The name or identifier of the sensor.
             type: object_path
             primary: true

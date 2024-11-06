@@ -1,0 +1,38 @@
+description: >
+    Implement to provide attributes for leak detector group. This group
+    represents a collection of leak detectors that reports a unified status.
+
+properties:
+    - name: PrettyName
+      type: string
+      description: >
+          The human readable name of the leak detector group.
+      flags:
+          - readonly
+    - name: State
+      type: boolean
+      description: >
+          This is the overall status of the group, which is determined by
+          aggregating the state from all member leak detectors.
+      flags:
+          - readonly
+
+associations:
+    - name: containing
+      description: >
+          The leak detector group can optionally implement the 'containing'
+          association to provide one or more links to leak detectors which it
+          contains.
+      reverse_name: contained_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.State.Leak.Detector
+
+paths:
+    - namespace: /xyz/openbmc_project/state/leak
+      description: >
+          The root path for state of all leak objects.
+      segments:
+          - name: DetectorGroup
+            description: >
+                The leak detector group.
+            value: detectorgroup

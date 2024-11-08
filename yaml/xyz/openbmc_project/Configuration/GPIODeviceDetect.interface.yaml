@@ -1,0 +1,31 @@
+description: >
+    Information to enable a daemon to probe hardware based on gpio values
+properties:
+    - name: Name
+      type: string
+      description: >
+          Used by entity-manager to identify which hw was detected. For internal
+          use by entity-manager. Fictional examples are
+          'com.meta.Hardware.Yv4.cable0', 'com.meta.Hardware.Yv4.Fanboard0',
+          'com.vendorX.Hardware.BoardY.LeakDetector3'. The name should be
+          namespaced with dots to avoid collision, according to documented
+          Hardware enumerations like
+          https://github.com/openbmc/phosphor-dbus-interfaces/blob/6a8507d06e172d8d29c0459f0a0d078553d2ecc7/yaml/com/meta/Hardware/BMC.interface.yaml
+    - name: PresencePinNames
+      type: array[string]
+      description: >
+          Names of the pins for presence detection.
+    - name: PresencePinsPolarities
+      type: array[enum[self.Polarity]]
+      description: >
+          Polarities of the pins for presence detection.
+
+enumerations:
+    - name: Polarity
+      description: >
+          Defines a polarity for a PresencePin
+      values:
+          - name: High
+            description: Pin is defined as pulled up
+          - name: Low
+            description: Pin is defined as pulled down

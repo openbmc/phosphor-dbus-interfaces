@@ -50,6 +50,7 @@ generated_others += custom_target(
 )
 
 subdir('Condition')
+subdir('Configuration')
 subdir('Console')
 subdir('Control')
 subdir('Debug')

@@ -118,6 +118,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c837419_6ae062e3",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-11-08T22:27:46Z",
+      "side": 1,
+      "message": "As we discussed changed this to an enum.",
+      "parentUuid": "3e6bac3b_b9130643",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 52
+      },
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2c45fb9f_747ff0d2",
@@ -149,6 +173,24 @@
       "side": 1,
       "message": "\u003e If these come from a Redfish schema, can we reference that schema here?\n\u003e \nSure, will add the Redfish Schema reference.\nLeakSensingRope is not in Redfish Schema yet. I have requested Redfish Forum to add Rope type to Detector types https://redfishforum.com/thread/1089/extend-leakdetectortype-leak-detection-cable and they are willing for it.\n\n\u003e If you\u0027re only planning to implement LeakSensingRope, should we limit it just that one?\n\nMy implementation is parsing all types coming from EM, so its a generic logic https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/75329/4/src/LeakDetection/LeakDetector.hpp#45. Let me know if you think otherwise?",
       "parentUuid": "2c45fb9f_747ff0d2",
+      "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00f74742_27175e81",
+        "filename": "yaml/xyz/openbmc_project/LeakDetection/Detector.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-11-08T22:27:46Z",
+      "side": 1,
+      "message": "As we discussed changed the wording to LeakSensingCable and removed the FloatSwitch and MositureSensor from enum as they haven\u0027t been implemented yet.",
+      "parentUuid": "2fa2a2a0_a44d4046",
       "revId": "0ec1b5914fd9a694c2302ee0c89e3dfa7e56ec53",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

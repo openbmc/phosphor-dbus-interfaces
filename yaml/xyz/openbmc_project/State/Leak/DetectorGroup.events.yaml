@@ -1,0 +1,41 @@
+version: 1.0.0
+
+errors:
+    - name: DetectorGroupCritical
+      severity: critical
+      metadata:
+          - name: DetectorGroupName
+            type: string
+            primary: true
+            description: The name of the leak detector group.
+      en:
+          description: Detector group has a critical status.
+          message: Detector group {DetectorGroupName} is in a critical state.
+          resolution: Inspect the detectors in the group.
+      errno: EIO
+
+    - name: DetectorGroupWarning
+      severity: warning
+      metadata:
+          - name: DetectorGroupName
+            type: string
+            primary: true
+            description: The name of the leak detector group.
+      en:
+          description: Detector group has a warning status.
+          message: Detector group {DetectorGroupName} is in a warning state.
+          resolution: Inspect the detectors in the group.
+      errno: EIO
+
+events:
+    - name: DetectorGroupNormal
+      metadata:
+          - name: DetectorGroupName
+            type: string
+            primary: true
+            description: The name of the leak detector group.
+      en:
+          description:
+              The detector group has returned to its normal operating state.
+          message: Detector group {DetectorName} is operating normally.
+          resolution: None.

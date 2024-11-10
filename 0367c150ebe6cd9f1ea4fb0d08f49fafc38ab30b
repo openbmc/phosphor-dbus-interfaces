@@ -39,6 +39,30 @@
       },
       "revId": "0367c150ebe6cd9f1ea4fb0d08f49fafc38ab30b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3cf0ed14_b469181e",
+        "filename": "yaml/xyz/openbmc_project/State/Boot/PostCode.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001264
+      },
+      "writtenOn": "2024-11-10T09:27:31Z",
+      "side": 1,
+      "message": "Hi Zhikui, I was fit 9 bytes into the existing array[byte] and try to add some changes in bmcweb in order to display the full postcode from secondary postcode (array[byte]). But I think the discussion is prefer to change the interface at the end.\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/70163\n\nHi Ed, Patrick \u0026 All Reviewers, please kindly help review the patches, thanks.",
+      "parentUuid": "2ae72106_f1bc0235",
+      "range": {
+        "startLine": 31,
+        "startChar": 50,
+        "endLine": 31,
+        "endChar": 61
+      },
+      "revId": "0367c150ebe6cd9f1ea4fb0d08f49fafc38ab30b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

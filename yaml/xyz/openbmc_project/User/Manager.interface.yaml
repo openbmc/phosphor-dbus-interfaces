@@ -85,6 +85,7 @@ methods:
                 UserLockedForFailedAttempt -> user locked state(boolean)
                 UserPasswordExpired -> user password expired(boolean)
                 RemoteUser    ->  remote or local user(boolean)
+                TOTPSecretKeyRequired -> TOTP secret key required(boolean)
 
                 For detailed documentation of user properties refer
                 Attributes.interface.yaml examples:

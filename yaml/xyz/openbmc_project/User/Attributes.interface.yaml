@@ -58,6 +58,12 @@ properties:
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
 
+    - name: TOTPSecretkeyRequired
+      type: boolean
+      description: >
+          True when the user's secret key must be generated before access should
+          be granted.
+
     - name: PasswordExpiration
       type: uint64
       default: maxint

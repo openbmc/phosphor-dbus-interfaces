@@ -59,3 +59,11 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: total_power
+      description: >
+          Objects that implement Chassis can optionally implement the
+          'total_power' association to provide a link to a single sensor to
+          provide the total power consumption of the chassis.
+      reverse_name: chassis
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Sensor.Value

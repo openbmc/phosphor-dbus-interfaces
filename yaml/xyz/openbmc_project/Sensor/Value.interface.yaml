@@ -110,6 +110,15 @@ associations:
           - monitored_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Bmc
+    - name: chassis
+      description: >
+          Sensors which provide the total power consumption may implement a
+          'chassis' to 'total_power' association with the inventory item related
+          to it.
+      reverse_names:
+          - total_power
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Chassis
 
 paths:
     - namespace: /xyz/openbmc_project/sensors

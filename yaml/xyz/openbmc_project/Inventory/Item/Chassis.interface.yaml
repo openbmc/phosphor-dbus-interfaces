@@ -59,3 +59,11 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: monitored_by
+      description: >
+          Objects that implement Chassis can optionally implement the
+          'monitored_by' association to provide a link to a single sensor for a
+          specified special purpose.
+      reverse_name: monitoring
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Sensor.Purpose

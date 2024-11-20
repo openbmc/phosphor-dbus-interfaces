@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3383d89_d90bda3f",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-20T11:41:28Z",
+      "side": 1,
+      "message": "This whole interface seems a little strange to me.  Why are we, effectively, duplicating GetAllProperties (which is built-in to dbus)?",
+      "revId": "bdf128d73a60626c36d87966410dccf4b980bc29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

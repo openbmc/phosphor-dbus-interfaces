@@ -1,0 +1,29 @@
+description: >
+    Implement to provide detail on any special purpose of the sensor. Useful for
+    defining sensors which provide summary information, see enum for defined
+    types.
+
+    Objects implementing Sensor.Purpose must also implement Sensor.Value.
+
+properties:
+    - name: Purpose
+      type: set[enum[self.SensorPurpose]]
+      flags:
+          - readonly
+      description: >
+          Defines the special purposes for the sensor.
+
+enumerations:
+    - name: SensorPurpose
+      description: >
+          The special purposes for a sensor.
+      values:
+          - name: TotalPower
+            description: >
+                Sensor provides total power for the Inventory.Item associated to
+                this sensor. The existing all_sensors/chassis association is
+                used. Future direction is to use the monitoring/monitored_by
+                association instead.
+
+paths:
+    - namespace: /xyz/openbmc_project/sensors

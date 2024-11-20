@@ -17,6 +17,9 @@ methods:
             description: >
                 Secret key string which will be shared to user to setup TOTP
                 applications to generate TOTP token.
+      errors:
+          - xyz.openbmc_project.Common.Error.UnsupportedRequest
+          - xyz.openbmc_project.Common.Error.NotAllowed
 
     - name: VerifyOTP
       description: >
@@ -34,6 +37,9 @@ methods:
             type: boolean
             description: >
                 Returns true if provided OTP is valid otherwise returns false.
+      errors:
+          - xyz.openbmc_project.Common.Error.UnsupportedRequest
+          - xyz.openbmc_project.Common.Error.NotAllowed
 
     - name: ClearSecretKey
       description: >

@@ -16,6 +16,24 @@
       "message": "Association naming requirements are already documented here and this does not conform. https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/requirements.md\n\nI don\u0027t see any reason to make one particular sensor \"special\" in association naming. Why not name the sensor with a specific name instead?",
       "revId": "de4fa38a3fc5a52b950464b777e7328c21ce8baa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3f293fc_121dfecf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2024-11-21T19:44:40Z",
+      "side": 1,
+      "message": "We are brainstorming better names for this association which meet the naming requirements. Would any of these be acceptable? (From the requirements document I see the type is not wanted in the association name. In this case the team thinks it would be clearer.)\n\n- power_consuming/power_consumed_by\n- consuming/consumed_by",
+      "parentUuid": "cfd530ea_e2336d4d",
+      "revId": "de4fa38a3fc5a52b950464b777e7328c21ce8baa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,11 @@
+- name: NumericSensorEvent
+  level: ERR
+  meta:
+      - str: "EVENT_STATE=%u"
+        type: uint8
+      - str: "PREVIOUS_EVENT_STATE=%u"
+        type: uint8
+      - str: "SENSOR_DATA_SIZE=%u"
+        type: uint8
+      - str: "PRESENT_READING=%s"
+        type: string

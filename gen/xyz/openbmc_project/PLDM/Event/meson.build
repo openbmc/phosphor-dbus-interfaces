@@ -1,8 +1,8 @@
 # Generated file; do not modify.
 generated_sources += custom_target(
     'xyz/openbmc_project/PLDM/Event__cpp'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/PLDM/Event.interface.yaml',  ],
-    output: [ 'common.hpp', 'server.cpp', 'server.hpp', 'aserver.hpp', 'client.hpp',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/PLDM/Event.errors.yaml', '../../../../../yaml/xyz/openbmc_project/PLDM/Event.interface.yaml',  ],
+    output: [ 'error.cpp', 'error.hpp', 'common.hpp', 'server.cpp', 'server.hpp', 'aserver.hpp', 'client.hpp',  ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',

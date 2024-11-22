@@ -2,7 +2,7 @@
 subdir('Event')
 generated_others += custom_target(
     'xyz/openbmc_project/PLDM/Event__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/PLDM/Event.interface.yaml',  ],
+    input: [ '../../../../yaml/xyz/openbmc_project/PLDM/Event.errors.yaml', '../../../../yaml/xyz/openbmc_project/PLDM/Event.interface.yaml',  ],
     output: [ 'Event.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

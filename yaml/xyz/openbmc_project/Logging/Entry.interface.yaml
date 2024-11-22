@@ -34,6 +34,10 @@ properties:
       type: array[string]
       description: >
           Additional information in the form of metadata field strings VAR=val
+    - name: AdditionalData2
+      type: dict[string, string]
+      description: >
+          Additional information in the form of metadata field strings {VAR,val}
     - name: Resolution
       type: string
       description: >

@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83fd0934_e5bbc1ae",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GpioLeakDetector.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-22T16:28:26Z",
+      "side": 1,
+      "message": "Please name the file `GPIOLeakDetector`",
+      "revId": "4eddb113268b10fc2ae8152a08b401e48ec21dcc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b3ba11b_18da79c1",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GpioLeakDetector.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-22T16:28:26Z",
+      "side": 1,
+      "message": "Do the entity-manager schema files actually expose these as proper enumerations or are they going to use the short strings (eg. \"ActiveLow\" or \"xyz.openbmc_project.Configuration.GPIOLeakDetector.PinPolarity.ActiveLow\")?  If they\u0027re going to use short-strings, you shouldn\u0027t specify them as enums but as strings because anyone using the generated client-bindings will get enum-parsing exceptions if they try to use this code.",
+      "revId": "4eddb113268b10fc2ae8152a08b401e48ec21dcc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2321ca8_f5231f72",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GpioLeakDetector.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-22T16:28:26Z",
+      "side": 1,
+      "message": "`self.PinPolarity`.",
+      "range": {
+        "startLine": 31,
+        "startChar": 17,
+        "endLine": 31,
+        "endChar": 28
+      },
+      "revId": "4eddb113268b10fc2ae8152a08b401e48ec21dcc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

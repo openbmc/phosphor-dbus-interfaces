@@ -52,6 +52,24 @@
       "parentUuid": "c3f293fc_121dfecf",
       "revId": "de4fa38a3fc5a52b950464b777e7328c21ce8baa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c403ca9e_e23983c1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-11-22T20:54:36Z",
+      "side": 1,
+      "message": "It is trying to fill out this property:\n\n                \"PowerWatts\": { \n\n                 \"longDescription\": \"This property shall contain the total power, in watt units, for this resource.  The value of the `DataSourceUri` property, if present, shall reference a resource of type `Sensor` with the `ReadingType` property containing the value `Power`.\"\n\nI don\u0027t think monitoring is specific enough, I think we need something that can be specific to total power",
+      "parentUuid": "167e7b9a_0bc37314",
+      "revId": "de4fa38a3fc5a52b950464b777e7328c21ce8baa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

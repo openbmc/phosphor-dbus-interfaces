@@ -1,0 +1,63 @@
+description: >
+    Implement to provide entity manager configuration for the gpio based leak
+    detector.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          The type of configuration object.
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: >
+          The name of the leak detector.
+      flags:
+          - readonly
+    - name: SubType
+      type: enum[xyz.openbmc_project.State.Leak.Detector.DetectorType]
+      description: >
+          The type of leak detector from
+          https://redfish.dmtf.org/schemas/v1/LeakDetector.v1_2_0.json.
+      flags:
+          - readonly
+    - name: PinName
+      type: string
+      description: >
+          The GPIO pin name for the leak detector.
+      flags:
+          - readonly
+    - name: Polarity
+      type: enum[xyz.openbmc_project.Configuration.Common.PinPolarity]
+      description: >
+          The GPIO pin polarity depicting leak detector's active status.
+      flags:
+          - readonly
+    - name: Level
+      type: enum[self.DetectorLevel]
+      description: >
+          The severity level associated with the leak detector based on certain
+          attributes such as physical placement of detectors.
+      flags:
+          - readonly
+      default: Critical
+    - name: RunTarget
+      type: boolean
+      description: >
+          The flag to indicate if the leak target action should be run or not.
+      flags:
+          - readonly
+      default: false
+
+enumerations:
+    - name: DetectorLevel
+      description: >
+          This indicates the severity levels for the leak detector.
+      values:
+          - name: Critical
+            description: >
+                The leak detector has a critical severity level.
+          - name: Warning
+            description: >
+                The leak detector has a warning severity level.

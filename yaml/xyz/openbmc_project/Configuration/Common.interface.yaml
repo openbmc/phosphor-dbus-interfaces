@@ -1,0 +1,17 @@
+description: >
+    Provides common definitions to be used across configurations.
+
+enumerations:
+    - name: PinPolarity
+      description: >
+          This indicates the polarity of the GPIO pin.
+      values:
+          - name: ActiveLow
+            description: >
+                The status is active if pin is pulled down.
+          - name: ActiveHigh
+            description: >
+                The status is active if pin is pulled up.
+          - name: Unknown
+            description: >
+                The polarity is not known.

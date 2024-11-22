@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a2a95d5_ee1506c8",
+        "filename": "yaml/xyz/openbmc_project/PLDM/Event.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-22T16:37:33Z",
+      "side": 1,
+      "message": "Please use the new event design.\n\nI don\u0027t see why we would add PLDM-specific events for sensor errors.  We need to be able to map these to Redfish events, which there is already support for.\n\nPlease see `yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml`.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 26
+      },
+      "revId": "d8c2a93cc5dfce79381c5a030fc64222e6a5ca7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

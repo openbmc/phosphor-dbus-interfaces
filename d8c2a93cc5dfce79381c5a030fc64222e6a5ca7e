@@ -22,6 +22,30 @@
       },
       "revId": "d8c2a93cc5dfce79381c5a030fc64222e6a5ca7e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f203ee8a_f5b3f52e",
+        "filename": "yaml/xyz/openbmc_project/PLDM/Event.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2024-11-25T12:02:48Z",
+      "side": 1,
+      "message": "I want to use a Sensor Event to represent the PMBus status word (16-bit). I chose to implement it with a Numeric Sensor rather than a State Sensor because a Numeric Sensor\u0027s PRESENT_READING can support data types larger than 16 bits, allowing me to represent the PMBus status word with a single sensor. On the other hand, a State Sensor is limited to 8 bits (sensorOffset). Additionally, this mechanism does not involve thresholds, which is why it is not included in sensor/threshold.\n\nCould you suggest whether it\u0027s better to implement this using a State Sensor or use  OEM Commands to approach?",
+      "parentUuid": "0a2a95d5_ee1506c8",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 26
+      },
+      "revId": "d8c2a93cc5dfce79381c5a030fc64222e6a5ca7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

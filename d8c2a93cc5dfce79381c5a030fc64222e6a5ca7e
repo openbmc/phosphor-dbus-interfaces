@@ -46,6 +46,30 @@
       },
       "revId": "d8c2a93cc5dfce79381c5a030fc64222e6a5ca7e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f5003615_b7f22188",
+        "filename": "yaml/xyz/openbmc_project/PLDM/Event.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-25T15:06:40Z",
+      "side": 1,
+      "message": "\u003eCould you suggest whether it\u0027s better to implement this using a State Sensor or use OEM Commands to approach?\n\nI don\u0027t know what a \"state sensor\" is.\n\n\"OEM Commands\"?  Do you mean OEM PLDM commands or do you mean OEM dbus interfaces?  If you make OEM dbus interfaces you\u0027ll never be able to upstream any of the related code.",
+      "parentUuid": "f203ee8a_f5b3f52e",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 26
+      },
+      "revId": "d8c2a93cc5dfce79381c5a030fc64222e6a5ca7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

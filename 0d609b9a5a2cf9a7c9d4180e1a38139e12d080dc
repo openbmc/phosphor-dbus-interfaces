@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "35872adf_69a51345",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-11-26T02:35:27Z",
+      "side": 1,
+      "message": "\u003e \u003e New features seem like the wrong place to start broaching the \"EM config should use\" PDI architectural thing\n\u003e \n\u003e I think this is the opposite (and this isn\u0027t the first one that has been proposed in the last few weeks).  This was to allow other daemons to consume EM configs in a type-safe way, not for EM to publish configs.\n\u003e \n\u003e \u003e The reality is that today the EM codebase can\u0027t produce concrete types for a given interface, and can\u0027t produce typed enums. Until it can, we should avoid checking in things like this.\n\u003e \n\u003e I fully expected this to be a concern here and hoped the EM maintainers would weigh in.  EM _can_ create typed enums like this, because a dbus enum is just a string, but it requires the strings to be fully qualified strings and EM typically makes \"short names\".\n\nEnums is one concern.  For that neither of my immediate ideas to fix this seem like a good idea.\n1. Break all existing configs, and require a type be assigned to every string entry representing an enum.  This requires config writers to be dbus experts, which we should avoid if we can.\n2. Add a static entry-\u003etype map of all possible types.  Considering even just getting a concrete accounting of the json configs has been difficult, this seems hard and would make forked-development more difficult, as every new type would require a code change.\n\nAny other options for enums I\u0027m not thinking of?\n\n\nThe other larger concern is integer/string types.  EM will happily publish a string, a float, and a uint64 from the same interface, property name.  It loads everything through a variant to coerce to the type the reactor is looking for.  I\u0027m not really sure how to handle that in a reactor if this file defines things as concrete types.  FWIW, in Jagpals leak detector daemon I see he found the same problem.\n\nYes... this design is insane.  If we have ideas on how to make it better absolutely, I\u0027m in (will probably help), but i haven\u0027t had an idea that didn\u0027t break the world or require a mapping of all possible types.",
+      "parentUuid": "e7bbd653_8e11a32d",
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f05420a_3e4b69cb",
         "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
         "patchSetId": 4

@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "70b0fee6_7c4d301e",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1002219
+      },
+      "writtenOn": "2024-11-26T12:17:39Z",
+      "side": 1,
+      "message": "As present moment InternalFailure is used if either execution of \"/usr/bin/chage\" fails or getspnam_r() call fails. Should I use another exceptions for these fails or even create new onec?",
+      "parentUuid": "15e4aa70_1a1b02ae",
+      "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "544e1d5b_ae65a11f",
         "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
         "patchSetId": 6

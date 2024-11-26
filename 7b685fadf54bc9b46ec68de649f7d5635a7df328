@@ -16,6 +16,23 @@
       "message": "Adding some EM Maintainers here since this is the first Configuration interface being documented in PDI.",
       "revId": "7b685fadf54bc9b46ec68de649f7d5635a7df328",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f18be93d_dd299ebb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-11-26T00:21:34Z",
+      "side": 1,
+      "message": "Just to copy the discussion that was on discord.  This interface doesn\u0027t look like it\u0027s modeled in the way entity-manager would generally handle it (one exposes record per instance of a \"thing\").\n\nThere was a long discussion on discord about what to do that hasn\u0027t been integrated yet.  Adding a status just to keep gerrit up to date.",
+      "revId": "7b685fadf54bc9b46ec68de649f7d5635a7df328",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

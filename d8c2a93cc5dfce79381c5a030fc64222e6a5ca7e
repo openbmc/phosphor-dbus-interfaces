@@ -70,6 +70,30 @@
       },
       "revId": "d8c2a93cc5dfce79381c5a030fc64222e6a5ca7e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8e9eac9_020e9d2c",
+        "filename": "yaml/xyz/openbmc_project/PLDM/Event.errors.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2024-11-26T01:10:07Z",
+      "side": 1,
+      "message": "The scope I want to discuss is about the BMC receiving PLDM PlatformEventMessage from other devices (PLDM Terminus) to enable the BMC to log the device\u0027s VR power fail (PMBus status word). Here, the state sensors refer to PLDM State Sensors:\n\nA PLDM state sensor that returns values from only a single state set is referred to as a simple state sensor.\nA state sensor that returns values from more than one state set is referred to as a composite state sensor.\n\nAlthough this is a standard feature defined in DSP0248, it seems that upstream OpenBMC has not implemented it yet.\n\nThe OEM Commands mentioned here refer to the approach taken by project yv4. Although I haven’t studied it in depth, I’ve heard that it uses an OEM-specific method, and the related yv4 code has indeed not been merged into the upstream.",
+      "parentUuid": "f5003615_b7f22188",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 26
+      },
+      "revId": "d8c2a93cc5dfce79381c5a030fc64222e6a5ca7e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

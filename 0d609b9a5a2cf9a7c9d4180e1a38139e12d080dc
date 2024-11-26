@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e7bbd653_8e11a32d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-26T02:13:09Z",
+      "side": 1,
+      "message": "\u003e New features seem like the wrong place to start broaching the \"EM config should use\" PDI architectural thing\n\nI think this is the opposite (and this isn\u0027t the first one that has been proposed in the last few weeks).  This was to allow other daemons to consume EM configs in a type-safe way, not for EM to publish configs.\n\n\u003e The reality is that today the EM codebase can\u0027t produce concrete types for a given interface, and can\u0027t produce typed enums. Until it can, we should avoid checking in things like this.\n\nI fully expected this to be a concern here and hoped the EM maintainers would weigh in.  EM _can_ create typed enums like this, because a dbus enum is just a string, but it requires the strings to be fully qualified strings and EM typically makes \"short names\".",
+      "parentUuid": "21a1bfb9_04f82e2d",
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f05420a_3e4b69cb",
         "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
         "patchSetId": 4

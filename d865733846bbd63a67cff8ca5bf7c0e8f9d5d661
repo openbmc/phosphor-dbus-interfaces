@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "15e4aa70_1a1b02ae",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1002219
+      },
+      "writtenOn": "2024-11-26T09:57:48Z",
+      "side": 1,
+      "message": "Could you please explain what do you mean by new InternalFailure? From what I see processing of all attributes can throw this exception. Work with PasswordExpiration can do the same for when ,f.e. chage call fails.",
+      "parentUuid": "a843e7cd_b7e209f1",
+      "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "544e1d5b_ae65a11f",
         "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
         "patchSetId": 6
@@ -31,6 +49,24 @@
       "writtenOn": "2024-11-20T16:16:37Z",
       "side": 1,
       "message": "In what cases can you get \"InvalidArgument\"?",
+      "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fd160c4_c58bd497",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1002219
+      },
+      "writtenOn": "2024-11-26T09:57:48Z",
+      "side": 1,
+      "message": "I thought it was not correct to set user password expiration time to the time point before the time point of the last password change. So, I\u0027ve added appropriate check  into https://gerrit.openbmc.org/c/openbmc/phosphor-user-manager/+/75237. From my point of view such configuration would not make any sense.\nMoreover, right now functionality is implemented via chage usage utility, in such situation maximum password age would be negative and chage treated negative maximum days between password changes as never expired password. It seems like a flaw for me, what do you think?",
+      "parentUuid": "544e1d5b_ae65a11f",
       "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

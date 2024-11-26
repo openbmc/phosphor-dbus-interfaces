@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2d06894a_ccdf9926",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-26T17:19:18Z",
+      "side": 1,
+      "message": "\u003e Any other options for enums I\u0027m not thinking of?\n\nYou can use the schema to specify valid values for the strings.  I thought that is what Jagpal attempted to do in the EM repository.\n\njson-schema also supports `enum` so you can just list the allowed values.\nhttps://github.com/openbmc/sdbusplus/blob/2a12ae12455bfa1cdf92dff21c16757b1f126c8f/tools/sdbusplus/schemas/events.schema.yaml#L72\nhttps://json-schema.org/understanding-json-schema/reference/enum\n\n\u003e Break all existing configs, and require a type be assigned to every string entry representing an enum. \n\nI don\u0027t know why we have to break existing configs if we do this for new configs (and backed by the schema in EM).  Existing configs / schemas can be refactored over time.\n\n\u003e This requires config writers to be dbus experts, which we should avoid if we can.\n\nWe already require dbus interface names sprinkled through the configs.  I\u0027m not sure how much of an \"expert\" we need them to be if we use the json-schema to specify \"this property must be one of these values\".  The errors from json-schema are fairly straight-forward.\n\n\u003e The other larger concern is integer/string types. EM will happily publish a string, a float, and a uint64 from the same interface, property name. It loads everything through a variant to coerce to the type the reactor is looking for. I\u0027m not really sure how to handle that in a reactor if this file defines things as concrete types. FWIW, in Jagpals leak detector daemon I see he found the same problem.\n\nYes, I recognize this problem.  What I\u0027ve been trying to do here is to make the dbus type the expected type from entity-manager, but I know that isn\u0027t a solid requirement and can easily be changed by someone slipping in a \".0\" into their config.  I think those configs can just be fixed as we find them until we get a better solution.\n\nI wrote this already in the README under Configuration to make it clear that what is found here is just for EM compatibility and shouldn\u0027t be taken as a best-practices.  https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/Configuration",
+      "parentUuid": "35872adf_69a51345",
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f05420a_3e4b69cb",
         "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
         "patchSetId": 4

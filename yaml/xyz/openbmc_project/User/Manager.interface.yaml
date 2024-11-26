@@ -125,6 +125,18 @@ methods:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.User.Common.Error.GroupNameDoesNotExist
 
+    - name: IsGenerateSecretKeyRequired
+      description: >
+          This method checks whether google-authenticator secret key setup for
+          the given user
+      parameters:
+          - name: UserName
+            type: string
+            description: >
+                This parameter shall be the valid user name
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
 properties:
     - name: AllPrivileges
       type: array[string]

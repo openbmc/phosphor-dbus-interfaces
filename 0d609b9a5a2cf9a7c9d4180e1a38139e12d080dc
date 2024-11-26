@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21a1bfb9_04f82e2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-11-26T00:32:00Z",
+      "side": 1,
+      "message": "New features seem like the wrong place to start broaching the \"EM config should use\" PDI architectural thing.  For leak detection, lets just add it similar to how every other new feature as been handled (including intrusion detection, which is darn close to identical to this) and get it merged.  If we want to then AFTER or treat this patch as aspirational to go chase the PDI stuff down and sort out all the consistency issues, we can, but we shouldn\u0027t treat concrete interfaces as blocking for leak detection.\n\nThe reality is that today the EM codebase can\u0027t produce concrete types for a given interface, and can\u0027t produce typed enums.  Until it can, we should avoid checking in things like this.",
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f05420a_3e4b69cb",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-11-26T00:32:00Z",
+      "side": 1,
+      "message": "EM is not currently capable of producing these style of enums with a namespace.  Not really sure what to do here, but if we\u0027re really going to start modeling the EM configuration namespace here, we shouldn\u0027t start with a new feature, we should start with something that exists.",
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd59482d_450c2032",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-11-26T00:32:00Z",
+      "side": 1,
+      "message": "same here.",
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "386472f6_b2d92b45",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-11-26T00:32:00Z",
+      "side": 1,
+      "message": "This could use some more description.",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 50
+      },
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

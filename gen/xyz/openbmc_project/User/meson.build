@@ -147,3 +147,17 @@ generated_markdown += custom_target(
     build_by_default: should_generate_markdown,
 )
 
+subdir('TOTPAuthenticatorManager')
+generated_others += custom_target(
+    'xyz/openbmc_project/User/TOTPAuthenticatorManager__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/User/TOTPAuthenticatorManager.interface.yaml',  ],
+    output: [ 'TOTPAuthenticatorManager.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/User/TOTPAuthenticatorManager',
+    ],
+)

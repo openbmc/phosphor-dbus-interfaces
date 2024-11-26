@@ -1,0 +1,25 @@
+description: >
+    This interface defines methods and properties required for Time-based
+    One-time Password (TOTP) multi-factor authentication at user manager level
+    to support multi-factor authentication. This interface implemented by each
+    user manager object to support TOTP based authenticators like google,
+    microsoft, etc.
+
+methods:
+    - name: IsGenerateSecretKeyRequired
+      description: >
+          This method checks whether google-authenticator secret key setup
+          required for the given user
+      parameters:
+          - name: UserName
+            type: string
+            description: >
+                This parameter shall be the valid user name
+      returns:
+          - name: Status
+            type: boolean
+            description: >
+                Returns true if given user needs to setup TOTP authenticator
+                secret key otherwise returns false.
+      errors:
+          - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist

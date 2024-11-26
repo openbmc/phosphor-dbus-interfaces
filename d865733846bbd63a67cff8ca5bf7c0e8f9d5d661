@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ab2ab5bd_51409a25",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-26T15:58:32Z",
+      "side": 1,
+      "message": "We have been trying to eliminate all InternalFailure results.  Some are still left in place because the code hasn\u0027t been fixed.\n\nWhat is the caller going to do about those situations?  If there is nothing your caller can do except hope for better results in the future, then we\u0027re better off crashing the daemon than silently telling them \"sorry, this didn\u0027t work and I don\u0027t know why\".  At least with a crash we get debug data.",
+      "parentUuid": "70b0fee6_7c4d301e",
+      "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "544e1d5b_ae65a11f",
         "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
         "patchSetId": 6
@@ -85,6 +103,24 @@
       "side": 1,
       "message": "I thought it was not correct to set user password expiration time to the time point before the time point of the last password change. So, I\u0027ve added appropriate check  into https://gerrit.openbmc.org/c/openbmc/phosphor-user-manager/+/75237. From my point of view such configuration would not make any sense.\nMoreover, right now functionality is implemented via chage usage utility, in such situation maximum password age would be negative and chage treated negative maximum days between password changes as never expired password. It seems like a flaw for me, what do you think?",
       "parentUuid": "544e1d5b_ae65a11f",
+      "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c91b8b76_000b236a",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-26T15:58:32Z",
+      "side": 1,
+      "message": "I have heard of systems explicitly setting password expire time to a point in the pass to force a password change.  I don\u0027t think we should go out of our way to protect the callers from this situation.",
+      "parentUuid": "4fd160c4_c58bd497",
       "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

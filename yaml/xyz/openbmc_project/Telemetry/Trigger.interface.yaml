@@ -33,19 +33,24 @@ properties:
           used as map's key. Its value is a metadata that is used to store user
           data about sensor. In Redfish, metadata will be set to endpoint
           corresponding to that sensor.
-    - name: Thresholds
-      type: variant[array[struct[enum[self.Type],uint64,enum[self.Direction],double]],array[struct[string,enum[self.Severity],uint64,string]]]
+    - name: NumericThresholds
+      type: array[struct[enum[self.Type],uint64,enum[self.Direction],double]]
+          array[struct[string,enum[self.Severity],uint64,string]]]
       description: >
-          First type in variant is a collection of numeric thresholds that has
+          A collection of numeric thresholds that has
           following fields - type, dwell time, direction and threshold value.
-          Second type holded by variant is a collection of discrete thresholds
-          that contains following fields - user id, severity, dwell time and
-          threshold value. Discrete value does not need to be a number. Numeric
-          threshold array is limited by Type enumeration, only 4 elements are
-          allowed. Discrete threshold array size is not limited. If discrete
-          threshold array is empty then every value change is taken into account
-          of threshold condition. Dwell time specifies for how long condition
-          has to persist to trigger an action.
+          Array is limited by Type enumeration, only 4 elements are allowed.
+          Dwell time specifies for how long condition has to persist to trigger
+          an action.
+    - name: DiscreteThresholds
+      type: array[struct[string,enum[self.Severity],uint64,string]]]
+      description: >
+          A collection of discrete thresholds that contains following fields -
+          user id, severity, dwell time and threshold value. Discrete value
+          does not need to be a number. Array size is not limited. If discrete
+          threshold array is empty then every value change is taken into
+          account of threshold condition. Dwell time specifies for how long
+          condition has to persist to trigger an action.
     - name: Name
       type: string
       description: >

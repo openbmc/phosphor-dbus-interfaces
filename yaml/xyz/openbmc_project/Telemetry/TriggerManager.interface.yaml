@@ -43,6 +43,16 @@ methods:
             description: >
                 Contains array of numeric or discrete thresholds that are
                 described in xyz.openbmc_project.Telemetry.Trigger interface.
+          - name: numericthresholds
+            type: array[struct[enum[xyz.openbmc_project.Telemetry.Trigger.Type],uint64,enum[xyz.openbmc_project.Telemetry.Trigger.Direction],double]]
+            description: >
+                Contains array of numeric or discrete thresholds that are
+                described in xyz.openbmc_project.Telemetry.Trigger interface.
+          - name: discretethresholds
+            type: array[struct[string,enum[xyz.openbmc_project.Telemetry.Trigger.Severity],uint64,string]]]
+            description: >
+                Contains array of numeric or discrete thresholds that are
+                described in xyz.openbmc_project.Telemetry.Trigger interface.
       returns:
           - name: triggerPath
             type: object_path

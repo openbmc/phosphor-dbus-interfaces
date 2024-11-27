@@ -38,8 +38,13 @@ methods:
                 Collection of report names that are updated when threshold
                 conditions are met. This parameter is ignored if triggerActions
                 parameter does not contain 'UpdateReport' action.
-          - name: thresholds
-            type: variant[array[struct[enum[xyz.openbmc_project.Telemetry.Trigger.Type],uint64,enum[xyz.openbmc_project.Telemetry.Trigger.Direction],double]],array[struct[string,enum[xyz.openbmc_project.Telemetry.Trigger.Severity],uint64,string]]]
+          - name: numericThresholds
+            type: array[struct[enum[xyz.openbmc_project.Telemetry.Trigger.Type],uint64,enum[xyz.openbmc_project.Telemetry.Trigger.Direction],double]]
+            description: >
+                Contains array of numeric or discrete thresholds that are
+                described in xyz.openbmc_project.Telemetry.Trigger interface.
+          - name: Discretethresholds
+            type: array[struct[string,enum[xyz.openbmc_project.Telemetry.Trigger.Severity],uint64,string]]
             description: >
                 Contains array of numeric or discrete thresholds that are
                 described in xyz.openbmc_project.Telemetry.Trigger interface.

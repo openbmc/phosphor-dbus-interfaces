@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bbbfd1a2_b7961e88",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1002219
+      },
+      "writtenOn": "2024-11-27T15:39:49Z",
+      "side": 1,
+      "message": "Actually, it is no silent, because there is an error in the logs. Though I\u0027m new to openbmc so I do not know where it is better to crash or not in situation like this. Thank you for the explanation.",
+      "parentUuid": "ab2ab5bd_51409a25",
+      "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "544e1d5b_ae65a11f",
         "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
         "patchSetId": 6
@@ -121,6 +139,24 @@
       "side": 1,
       "message": "I have heard of systems explicitly setting password expire time to a point in the pass to force a password change.  I don\u0027t think we should go out of our way to protect the callers from this situation.",
       "parentUuid": "4fd160c4_c58bd497",
+      "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4185593_c3fc0cd9",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1002219
+      },
+      "writtenOn": "2024-11-27T15:39:49Z",
+      "side": 1,
+      "message": "I do realize that an administrator would want to out-date a password in order to make user change password.\nProblem here is the implementation in https://gerrit.openbmc.org/c/openbmc/phosphor-user-manager/+/75237 which uses \u0027chage\u0027 system tool for a user password management. \u0027Chage\u0027 does not operates on time, instead in operates on last password change date and password age (maximum number of days between password changes). So when password expiration is set actually it is converted in number of days in which next password change must happen and set via \u0027chage\u0027 tool.\nWhile it is ok to set password expiration to set time point in the past there is a caveat. If some tries to set password expiration time to happen before last password change date, then this will lead to negative number of days between password changes, which in turn lead to password never to expire.\nHence, password will become unexpirying. Just an example:\n\nchage -l tmp1\nLast password change\t\t\t\t\t: Nov 27, 2024\nPassword expires\t\t\t\t\t: never\nPassword inactive\t\t\t\t\t: never\nAccount expires\t\t\t\t\t\t: never\nMinimum number of days between password change\t\t: 0\nMaximum number of days between password change\t\t: -1\nNumber of days of warning before password expires\t: 7\n\nSo I\u0027ve implemented a check here to avoid such a situation https://gerrit.openbmc.org/plugins/gitiles/openbmc/phosphor-user-manager/+/refs/changes/37/75237/5/user_mgr.cpp#1703.",
+      "parentUuid": "c91b8b76_000b236a",
       "revId": "d865733846bbd63a67cff8ca5bf7c0e8f9d5d661",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

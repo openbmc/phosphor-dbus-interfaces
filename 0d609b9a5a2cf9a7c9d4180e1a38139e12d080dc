@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d4a1d3d9_9f77a86a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-12-04T18:24:47Z",
+      "side": 1,
+      "message": "The proposed schema definition for GPIOLeakDetector uses the fully qualified enum names from PDI. Please refer to https://gerrit.openbmc.org/c/openbmc/entity-manager/+/75734.\n\nAlso, i am updating the PR for LeakDetector to use the PDI auto-generated code for EM configuration get/updates. Change has been pushed, pending testing.",
+      "parentUuid": "2d06894a_ccdf9926",
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f05420a_3e4b69cb",
         "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
         "patchSetId": 4

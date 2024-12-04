@@ -88,6 +88,24 @@
       "parentUuid": "c403ca9e_e23983c1",
       "revId": "de4fa38a3fc5a52b950464b777e7328c21ce8baa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a3e8443_38c0c02c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2024-12-04T17:09:40Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t think monitoring is specific enough, I think we need something that can be specific to total power\n\n`monitoring` is not specific enough. `monitoring` could be used for many sensors for a chassis. E.g. this ambient temperature sensor is monitoring this chassis. \n\nWe want to get the Chassis\u0027s total power usage in watts. We are trying to fill out \"PowerWatts\" in Redfish but this use case could be for IPMI or any other server management spec.\n\n\u003e We\u0027re not going to make a bunch of custom associations.\n\nSure, we could hard code the sensor name, e.g. total_power, but then we end up with a bunch of custom names. I don\u0027t see that as being better but if that is the direction the community wants to take, I don\u0027t care that much. \n\n\u003e  We already have a mechanism for documenting specific names for specific purposes. \n\nWhat is the correct mechanism for documenting specific names for specific purposes ?",
+      "parentUuid": "501780f7_321a6b19",
+      "revId": "de4fa38a3fc5a52b950464b777e7328c21ce8baa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

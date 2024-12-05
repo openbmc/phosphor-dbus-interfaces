@@ -184,6 +184,21 @@ generated_others += custom_target(
 subdir('Processor')
 subdir('Security')
 subdir('Service')
+subdir('SyncBMCData')
+generated_others += custom_target(
+    'xyz/openbmc_project/Control/SyncBMCData__markdown'.underscorify(),
+    input: [ '../../../../yaml/xyz/openbmc_project/Control/SyncBMCData.interface.yaml',  ],
+    output: [ 'SyncBMCData.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Control/SyncBMCData',
+    ],
+)
+
 subdir('TPM')
 subdir('ThermalMode')
 generated_others += custom_target(

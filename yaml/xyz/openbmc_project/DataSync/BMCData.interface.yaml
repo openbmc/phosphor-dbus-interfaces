@@ -1,0 +1,7 @@
+description: >
+  Implement the transfer of BMC application data to redundant BMC.
+
+paths:
+  - namespace: /xyz/openbmc_project/data_sync/bmc_data
+    description: >
+      The root path for data synchronization between BMCs.

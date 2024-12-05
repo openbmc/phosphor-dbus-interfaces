@@ -1,0 +1,20 @@
+description: >
+    Implement the transfer of BMC application data to redundant BMC.
+
+properties:
+    - name: DisableSync
+      type: boolean
+      default: false
+      description: >
+          It can be utilized to disable synchronization when the redundant BMC
+          is in a faulty state.
+
+          It does not interrupt ongoing sync operations. If the redundant BMC
+          network is unstable, the ongoing sync operation will fail and attempt
+          retries. However, it will not proceed if this property value is set to
+          true.
+
+paths:
+    - instance: /xyz/openbmc_project/sync_bmc_data
+      description: >
+          The root path for data synchronization between BMCs.

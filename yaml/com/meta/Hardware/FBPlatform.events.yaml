@@ -1,0 +1,94 @@
+version: 1.0.0
+
+errors:
+    - name: CPUThermTripAsserted
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: Host
+            description: The name or identifier of the host
+            type: uint64
+            primary: true
+          - name: CPU
+            description: The CPU# of a multi-socket server
+            type: uint64
+            primary: true
+      en:
+        description: Assertion of a CPU Therm Trip
+        message: Host{Host} Thermal Trip on CPU {CPU} Asserted.
+
+    - name: CPUProcHotAsserted
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: Host
+            description: The name or identifier of the host
+            type: uint64
+            primary: true
+          - name: CPU
+            description: The CPU# of a multi-socket server
+            type: uint64
+            primary: true
+      en:
+        description: Assertion of a CPU Therm Trip
+        message: Host{Host} PROCHOT on CPU {CPU} Asserted.
+
+
+    - name: HSCOverCurrentAsserted
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: Host
+            description: The name or identifier of the host
+            type: uint64
+            primary: true
+          - name: Identifier
+            description: Location/Identifier of the HSC
+            type: string
+            primary: true
+      en:
+        description: Assertion of Over current from a HSC
+        message: Host{Host} over current on {Identifier} Asserted.
+
+events:
+    - name: CPUThermTripDeasserted
+      metadata:
+          - name: Host
+            description: The name or identifier of the host
+            type: uint64
+            primary: true
+          - name: CPU
+            description: The CPU# of a multi-socket server
+            type: uint64
+            primary: true
+      en:
+        description: Deassertion of a previous CPU Therm Trip
+        message: Host{Host} Thermal Trip on CPU {CPU} Deasserted.
+
+    - name: CPUProcHotDeasserted
+      metadata:
+          - name: Host
+            description: The name or identifier of the host
+            type: uint64
+            primary: true
+          - name: CPU
+            description: The CPU# of a multi-socket server
+            type: uint64
+            primary: true
+      en:
+        description: Deassertion of a previous CPU PROCHOT
+        message: Host{Host} PROCHOT on CPU {CPU} Deasserted.
+
+    - name: HSCOverCurrentDeasserted
+      metadata:
+          - name: Host
+            description: The name or identifier of the host
+            type: uint64
+            primary: true
+          - name: Identifier
+            description: Location/Identifier of the HSC
+            type: string
+            primary: true
+      en:
+        description: Assertion of Over current from a HSC
+        message: Host{Host} over current on {Identifier} Deasserted.

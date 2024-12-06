@@ -1,0 +1,18 @@
+version: 1.0.0
+
+errors:
+    - name: Event
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: Host
+            description: The name or identifier of the host
+            type: uint64
+            primary: true
+          - name: Event
+            description: Describes the event reported from BIOS
+            type: string
+            primary: true
+      en:
+        description: Event reported by BIOS
+        message: Host{Host} {Event}

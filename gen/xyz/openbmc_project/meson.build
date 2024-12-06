@@ -124,6 +124,21 @@ generated_others += custom_target(
 
 subdir('PFR')
 subdir('PLDM')
+subdir('Power')
+generated_others += custom_target(
+    'xyz/openbmc_project/Power__markdown'.underscorify(),
+    input: [ '../../../yaml/xyz/openbmc_project/Power.events.yaml',  ],
+    output: [ 'Power.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../yaml',
+        'xyz/openbmc_project/Power',
+    ],
+)
+
 subdir('ScheduledTime')
 generated_others += custom_target(
     'xyz/openbmc_project/ScheduledTime__markdown'.underscorify(),

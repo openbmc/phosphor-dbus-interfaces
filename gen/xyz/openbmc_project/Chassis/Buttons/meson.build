@@ -2,7 +2,7 @@
 subdir('Button')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/Button__markdown'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml',  ],
+    input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/Button.events.yaml', '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml',  ],
     output: [ 'Button.md' ],
     depend_files: sdbusplusplus_depfiles,
     command: [

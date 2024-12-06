@@ -1,0 +1,26 @@
+version: 1.0.0
+
+errors:
+    - name: PowerFailureDetected
+      severity: critical
+      metadata:
+          - name: PowerMonitorIdentifier
+            type: string
+            primary: true
+            description: The identifier to help locate the point of power failure.
+      en:
+          description: A power monitor or voltage regulator detected a power failure to a critical component
+          message: Power Failure detected on {PowerMonitorIdentifier}.
+          resolution: Component dependent.
+      errno: ENODEV
+
+events:
+    - name: PowerFailureRecovered
+      metadata:
+          - name: PowerMonitorIdentifier
+            type: string
+            primary: true
+            description: The identifier to help locate the point of power failure.
+      en:
+          description: A power monitor or voltage regulator detected recovery of a previous power failure to a critical component
+          message: Power Failure recovered on {PowerMonitorIdentifier}.

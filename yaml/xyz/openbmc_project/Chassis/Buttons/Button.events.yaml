@@ -1,0 +1,12 @@
+version: 1.0.0
+
+events:
+    - name: FrontPanelButtonEngaged
+      metadata:
+          - name: ButtonName
+            description: The name or identifier of the button
+            type: string
+            primary: true
+      en:
+        description: A physical button was engaged at the front panel
+        message: Button {ButtonName} was engaged.

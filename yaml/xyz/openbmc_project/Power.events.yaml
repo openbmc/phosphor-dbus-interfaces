@@ -1,0 +1,96 @@
+version: 1.0.0
+
+errors:
+    - name: BreakerFault
+      severity: critical
+      metadata:
+          - name: CircuitIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier to help locate the point of power failure.
+      redfish-mapping: Power.BreakerFault
+      errno: EIO
+
+    - name: BreakerTripped
+      severity: critical
+      metadata:
+          - name: CircuitIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier to help locate the point of power failure.
+      redfish-mapping: Power.BreakerTripped
+      errno: EIO
+
+    - name: LineInputPowerFault
+      severity: warning
+      metadata:
+          - name: CircuitIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier to help locate the point of power failure.
+      redfish-mapping: Power.LineInputPowerFault
+      errno: EIO
+
+    - name: LossOfInputPower
+      severity: warning
+      metadata:
+          - name: CircuitIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier to help locate the point of power failure.
+      redfish-mapping: Power.LossOfInputPower
+      errno: EIO
+
+events:
+    - name: BreakerReset
+      metadata:
+          - name: CircuitIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier to help locate the point of power failure.
+      redfish-mapping: Power.BreakerReset
+
+    - name: LineInputPowerRestored
+      metadata:
+          - name: CircuitIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier to help locate the point of power failure.
+      redfish-mapping: Power.LineInputPowerRestored
+
+    - name: CircuitPoweredOff
+      metadata:
+          - name: CircuitIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier to help locate the point of power failure.
+      redfish-mapping: Power.CircuitPoweredOff
+
+    - name: CircuitPoweredOn
+      metadata:
+          - name: CircuitIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier to help locate the point of power failure.
+      redfish-mapping: Power.CircuitPoweredOn
+
+    - name: PowerFailureRecovered
+      metadata:
+          - name: PowerMonitorIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier to help locate the point of power failure.
+      en:
+          description:
+              A power monitor or voltage regulator detected recovery of a
+              previous power failure to a critical component
+          message: Power Failure recovered on {PowerMonitorIdentifier}.

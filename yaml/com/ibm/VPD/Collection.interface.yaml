@@ -1,0 +1,23 @@
+description: >
+    Implement to provide VPD collection state management.
+
+properties:
+    - name: CollectionStatus
+      type: enum[self.Status]
+      description: >
+          Property which tells the current status of FRU VPD collection.
+
+enumerations:
+    - name: Status
+      description: >
+          The current status of FRU VPD collection.
+      values:
+          - name: "InProgress"
+            description: >
+                FRU VPD collection is in progress.
+          - name: "Success"
+            description: >
+                FRU VPD collection is successfully completed.
+          - name: "Failure"
+            description: >
+                FRU VPD collection failed.

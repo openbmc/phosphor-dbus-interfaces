@@ -13,6 +13,21 @@ generated_sources += custom_target(
     ],
 )
 
+subdir('Collection')
+generated_others += custom_target(
+    'com/ibm/VPD/Collection__markdown'.underscorify(),
+    input: [ '../../../../yaml/com/ibm/VPD/Collection.interface.yaml',  ],
+    output: [ 'Collection.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'com/ibm/VPD/Collection',
+    ],
+)
+
 subdir('Manager')
 generated_others += custom_target(
     'com/ibm/VPD/Manager__markdown'.underscorify(),
@@ -28,3 +43,17 @@ generated_others += custom_target(
     ],
 )
 
+subdir('Collection')
+generated_others += custom_target(
+    'com/ibm/VPD/Collection__markdown'.underscorify(),
+    input: [ '../../../../yaml/com/ibm/VPD/Collection.interface.yaml',  ],
+    output: [ 'Collection.md' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../yaml',
+        'com/ibm/VPD/Collection',
+    ],
+)

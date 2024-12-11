@@ -41,6 +41,9 @@ matchers:
 - partial_regex: yaml/com/ibm
   owners:
   - spinler@us.ibm.com
+- partial_regex: gen/com/ibm
+  owners:
+  - spinler@us.ibm.com
 
 openbmc:
 - name: Deepak Kodihalli

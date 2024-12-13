@@ -34,6 +34,40 @@
       "parentUuid": "64c4fb9a_ec98b237",
       "revId": "d183bf14f7853e722e29bf3dd449dd6cb5ed967f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de3a00ac_fe9a1cd1",
+        "filename": "yaml/xyz/openbmc_project/DataSync/BMCData.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-12-13T16:21:26Z",
+      "side": 1,
+      "message": "Don\u0027t create a new top-level directory.  Put this under Control perhaps?",
+      "revId": "d183bf14f7853e722e29bf3dd449dd6cb5ed967f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c86b31af_e18b4bfd",
+        "filename": "yaml/xyz/openbmc_project/DataSync/BMCData.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-12-13T16:21:26Z",
+      "side": 1,
+      "message": "Is this really a `namespace` or an `instance`?  It kind of looks like an instance to me.",
+      "revId": "d183bf14f7853e722e29bf3dd449dd6cb5ed967f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

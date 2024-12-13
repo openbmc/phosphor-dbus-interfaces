@@ -1,0 +1,65 @@
+version: 1.0.1
+
+errors:
+    - name: FanFailed
+      severity: warning
+      errno: EIO
+      metadata:
+          - name: Fan
+            description: The name or identifier of the fan.
+            type: string
+            primary: true
+      redfish-mapping: Environmental.FanFailed
+
+    - name: FanGroupCritical
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: Fan
+            description: The name or identifier of the fan group.
+            type: string
+            primary: true
+      redfish-mapping: Environmental.FanGroupCritical
+
+    - name: FanGroupWarning
+      severity: warning
+      errno: EIO
+      metadata:
+          - name: Fan
+            description: The name or identifier of the fan group.
+            type: string
+            primary: true
+      redfish-mapping: Environmental.FanGroupWarning
+
+events:
+    - name: FanRestored
+      metadata:
+          - name: Fan
+            description: The name or identifier of the fan.
+            type: string
+            primary: true
+      redfish-mapping: Environmental.FanRestored
+
+    - name: FanGroupNormal
+      metadata:
+          - name: Fan
+            description: The name or identifier of the fan group.
+            type: string
+            primary: true
+      redfish-mapping: Environmental.FanGroupNormal
+
+    - name: FanInserted
+      metadata:
+          - name: Fan
+            description: The name or identifier of the fan.
+            type: string
+            primary: true
+      redfish-mapping: Environmental.FanInserted
+
+    - name: FanRemoved
+      metadata:
+          - name: Fan
+            description: The name or identifier of the fan.
+            type: string
+            primary: true
+      redfish-mapping: Environmental.FanRemoved

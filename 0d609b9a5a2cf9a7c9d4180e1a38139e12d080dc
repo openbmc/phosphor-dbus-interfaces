@@ -234,6 +234,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d5977dcd_ea58d544",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-12-14T00:45:09Z",
+      "side": 1,
+      "message": "Which is incorrect.  Config files are written by humans not familiar with DBus or PDI, they should not include PDI internals in the config file itself.",
+      "parentUuid": "f9378f5e_7da4f75b",
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "386472f6_b2d92b45",
         "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
         "patchSetId": 4

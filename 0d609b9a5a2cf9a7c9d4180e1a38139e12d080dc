@@ -146,6 +146,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d1a48740_a96354ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2024-12-14T00:42:33Z",
+      "side": 1,
+      "message": "\u003e LeakDetector latest patch uses PDI generated bindings to get EM configuration now.\n\n\n\nTo be clear, this is great progress, now just need to figure out how to get those EM interfaces created properly in EM (not by injecting PDI stuff into config files).",
+      "parentUuid": "8dc3842a_45d07d3a",
+      "revId": "0d609b9a5a2cf9a7c9d4180e1a38139e12d080dc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f05420a_3e4b69cb",
         "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
         "patchSetId": 4

@@ -22,6 +22,30 @@
       },
       "revId": "bd7a6fb93299087a67b4ed87b84f6a2bb35e5a12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6767420_3be2e3f4",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2024-12-16T18:58:04Z",
+      "side": 1,
+      "message": "My patch-set on Dec 13th (in EM and dbus-sensors) was changed to reflect this. The intent is to have two generic services based on severity level which can accept parameterized detector name (https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/75329/31/src/leakdetector/LeakDetector.cpp#18).\nThis change was made in response to @Patrick\u0027s comment \"Why do we have static targets here? Don\u0027t we need them to have some kind of position identifier?\"\nfrom https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/75329/comment/34150a60_aa2379d9/",
+      "parentUuid": "e5c55e02_02781fdd",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 20
+      },
+      "revId": "bd7a6fb93299087a67b4ed87b84f6a2bb35e5a12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

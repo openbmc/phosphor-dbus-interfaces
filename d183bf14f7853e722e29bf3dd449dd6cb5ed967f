@@ -71,6 +71,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8cabca9a_393d64bb",
+        "filename": "yaml/xyz/openbmc_project/DataSync/BMCData.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-12-16T07:04:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "05c392e7_a799860d",
+      "revId": "d183bf14f7853e722e29bf3dd449dd6cb5ed967f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c86b31af_e18b4bfd",
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "As mentioned above, the idea was to keep data synchronization as the root and place the BMC data instance under this root. However, I am considering moving it into the Control directory so that it becomes a single instance, SyncBMCData. Additionally, I plan to switch from using a `namespace` to an `instance`.",
       "parentUuid": "c86b31af_e18b4bfd",
+      "revId": "d183bf14f7853e722e29bf3dd449dd6cb5ed967f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a34bf577_0cffba64",
+        "filename": "yaml/xyz/openbmc_project/DataSync/BMCData.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2024-12-16T07:04:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "40672462_b05c0099",
       "revId": "d183bf14f7853e722e29bf3dd449dd6cb5ed967f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

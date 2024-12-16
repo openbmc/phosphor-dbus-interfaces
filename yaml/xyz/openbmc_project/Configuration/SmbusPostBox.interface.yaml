@@ -1,0 +1,48 @@
+description: An smbus post-box
+
+properties:
+    - name: Address
+      type: uint64
+      description: I2C address
+      flags:
+          - readonly
+    - name: Bus
+      type: uint64
+      description: I2C bus index
+      flags:
+          - readonly
+    - name: Format
+      type: enum[self.Format]
+      description: Post-box data format
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: Post-box name
+      flags:
+          - readonly
+    - name: Offset
+      type: uint64
+      description: Offset of post-box within virtual EEPROM
+      flags:
+          - readonly
+    - name: Type
+      description: Post-box data format
+      type: enum[self.Type]
+      flags:
+          - readonly
+    - name: Units
+      description: Unit type of the sensor data
+      type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+      flags:
+          - readonly
+
+enumerations:
+    - name: Format
+      description: Post-box data format
+      values:
+          - name: I24F8
+    - name: Type
+      description: Object Type
+      values:
+          - name: SmbusPostBox

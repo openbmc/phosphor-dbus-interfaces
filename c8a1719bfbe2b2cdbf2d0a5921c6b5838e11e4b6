@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f003f84d_48cee75d",
+        "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1001538
+      },
+      "writtenOn": "2024-12-20T22:15:39Z",
+      "side": 1,
+      "message": "The phosphor-ipmi-host package will use it to get SEL information. We are shifting the work of implementing and managing the SEL information to the sel-logger package (https://gerrit.openbmc.org/c/openbmc/phosphor-host-ipmid/+/71432)",
+      "parentUuid": "5aee3df7_eb8959f1",
+      "revId": "c8a1719bfbe2b2cdbf2d0a5921c6b5838e11e4b6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7696a9f0_02c3a93c",
         "filename": "yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml",
         "patchSetId": 2

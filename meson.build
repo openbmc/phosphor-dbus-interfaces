@@ -1,4 +1,6 @@
-project('phosphor-dbus-interfaces', 'cpp',
+project(
+    'phosphor-dbus-interfaces',
+    'cpp',
     meson_version: '>=1.1.1',
     default_options: [
         'buildtype=debugoptimized',
@@ -15,7 +17,9 @@ sdbusplusplus_prog = find_program('sdbus++', native: true)
 sdbuspp_gen_meson_prog = find_program('sdbus++-gen-meson', native: true)
 sdbusplusplus_depfiles = files()
 if sdbusplus_dep.type_name() == 'internal'
-    sdbusplusplus_depfiles = subproject('sdbusplus').get_variable('sdbusplusplus_depfiles')
+    sdbusplusplus_depfiles = subproject('sdbusplus').get_variable(
+        'sdbusplusplus_depfiles',
+    )
 endif
 
 # Parse options to determine appropriate subdirectories to support.
@@ -43,7 +47,7 @@ if get_option('data_xyz_openbmc_project')
 endif
 
 # Install the selected YAML files.
-inst_yaml_dir = get_option('datadir') / 'phosphor-dbus-yaml/yaml'
+inst_yaml_dir = get_option('datadir') / 'phosphor-dbus-yaml'
 foreach d : selected_subdirs
     install_subdir(
         'yaml' / d,
@@ -59,68 +63,30 @@ if not get_option('libphosphor_dbus')
 endif
 
 generated_sources = []
-generated_others = []
-yaml_sources = []
+generated_markdown = []
+generated_registry = []
+
+should_generate_cpp = true
+should_generate_markdown = get_option('generate_md')
+should_generate_registry = true
 
 # Source the generated meson files.
 subdir('gen')
 foreach d : selected_subdirs
-  subdir('gen' / d)
+    subdir('gen' / d)
 endforeach
-custom_target(
-    'md',
-    command: 'true',
-    output: 'md',
-    capture: true,
-    depends: generated_others,
-    build_by_default: get_option('generate_md'))
 
 generated_files_headers = []
-generated_files_cpp = []
 foreach s : generated_sources
     foreach f : s.to_list()
-        p = f.full_path()
-        if p.endswith('.hpp')
+        if f.full_path().endswith('.hpp')
             generated_files_headers += f
-        elif p.endswith('.cpp')
-            generated_files_cpp += f
-        else
-            error('Unknown filetype: ' + p)
         endif
     endforeach
 endforeach
 
-generated_root = meson.current_build_dir() / 'gen/'
-exclude_cpp = []
-foreach f : generated_files_cpp
-    exclude_cpp += f.full_path().replace(generated_root, '').strip('/')
-endforeach
-
-# Install the generated header files.
-exclude = exclude_cpp
-foreach o : generated_others
-    foreach f : o.to_list()
-        exclude += f.full_path().replace(generated_root, '').strip('/')
-    endforeach
-endforeach
-install_subdir(
-    generated_root,
-    exclude_files: exclude,
-    install_dir: get_option('includedir'),
-    strip_directory: true,
-)
-
-# Install the generated markdown files.
-exclude = exclude_cpp
-foreach f : generated_files_headers
-    exclude += f.full_path().replace(generated_root, '').strip('/')
-endforeach
-install_subdir(
-    generated_root,
-    exclude_files: exclude,
-    install_dir: get_option('datadir') / 'doc' / meson.project_name(),
-    strip_directory: true,
-)
+# Copy the registry files into a single tree for use when as a subproject.
+subdir('gen/registry')
 
 # Define and build libphosphor_dbus.so from the C++ files.
 libphosphor_dbus = library(
@@ -138,7 +104,10 @@ import('pkgconfig').generate(
     name: meson.project_name(),
     version: meson.project_version(),
     description: 'Generated sdbusplus bindings for phosphor-dbus-interfaces',
-    variables: ['yamldir=' + '${pc_sysrootdir}${prefix}' / inst_yaml_dir],
+    variables: [
+        'yamldir=' + '${pc_sysrootdir}${prefix}' / inst_yaml_dir,
+        'registry_dir=' + '${pc_sysrootdir}${prefix}' / inst_registry_dir,
+    ],
 )
 
 phosphor_dbus_interfaces_dep = declare_dependency(
@@ -146,7 +115,13 @@ phosphor_dbus_interfaces_dep = declare_dependency(
     include_directories: include_directories('gen'),
     link_with: libphosphor_dbus,
     dependencies: sdbusplus_dep,
-    variables: ['yamldir=' + meson.project_source_root() / 'yaml'],
+    variables: [
+        'yamldir=' + meson.project_source_root() / 'yaml',
+        'registry_dir=' + registry_copy_dir,
+    ],
 )
 
-meson.override_dependency('phosphor-dbus-interfaces', phosphor_dbus_interfaces_dep)
+meson.override_dependency(
+    'phosphor-dbus-interfaces',
+    phosphor_dbus_interfaces_dep,
+)

@@ -1,6 +1,11 @@
 # Generated file; do not modify.
 subdir('Create')
-generated_others += custom_target(
+subdir('Entry')
+subdir('NewDump')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Dump'
+
+generated_markdown += custom_target(
     'xyz/openbmc_project/Dump/Create__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Dump/Create.errors.yaml', '../../../../yaml/xyz/openbmc_project/Dump/Create.interface.yaml',  ],
     output: [ 'Create.md' ],
@@ -12,10 +17,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Dump/Create',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Entry')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Dump/Entry__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Dump/Entry.interface.yaml',  ],
     output: [ 'Entry.md' ],
@@ -27,10 +34,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Dump/Entry',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('NewDump')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Dump/NewDump__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Dump/NewDump.interface.yaml',  ],
     output: [ 'NewDump.md' ],
@@ -42,5 +51,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Dump/NewDump',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

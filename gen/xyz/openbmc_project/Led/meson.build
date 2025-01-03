@@ -1,6 +1,10 @@
 # Generated file; do not modify.
 subdir('Group')
-generated_others += custom_target(
+subdir('Physical')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Led'
+
+generated_markdown += custom_target(
     'xyz/openbmc_project/Led/Group__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Led/Group.interface.yaml',  ],
     output: [ 'Group.md' ],
@@ -12,10 +16,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Led/Group',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Physical')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Led/Physical__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Led/Physical.interface.yaml',  ],
     output: [ 'Physical.md' ],
@@ -27,5 +33,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Led/Physical',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

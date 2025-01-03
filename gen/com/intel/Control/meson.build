@@ -1,6 +1,10 @@
 # Generated file; do not modify.
 subdir('NMISource')
-generated_others += custom_target(
+subdir('OCOTShutdownPolicy')
+
+sdbusplus_current_path = 'com/intel/Control'
+
+generated_markdown += custom_target(
     'com/intel/Control/NMISource__markdown'.underscorify(),
     input: [ '../../../../yaml/com/intel/Control/NMISource.interface.yaml',  ],
     output: [ 'NMISource.md' ],
@@ -12,10 +16,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/intel/Control/NMISource',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('OCOTShutdownPolicy')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'com/intel/Control/OCOTShutdownPolicy__markdown'.underscorify(),
     input: [ '../../../../yaml/com/intel/Control/OCOTShutdownPolicy.interface.yaml',  ],
     output: [ 'OCOTShutdownPolicy.md' ],
@@ -27,5 +33,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/intel/Control/OCOTShutdownPolicy',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

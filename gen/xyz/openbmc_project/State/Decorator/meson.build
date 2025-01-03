@@ -1,5 +1,11 @@
 # Generated file; do not modify.
 subdir('Availability')
+subdir('OperationalStatus')
+subdir('PowerState')
+subdir('PowerSystemInputs')
+
+sdbusplus_current_path = 'xyz/openbmc_project/State/Decorator'
+
 generated_others += custom_target(
     'xyz/openbmc_project/State/Decorator/Availability__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/Availability.interface.yaml',  ],
@@ -12,9 +18,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Decorator/Availability',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('OperationalStatus')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Decorator/OperationalStatus__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml',  ],
@@ -27,9 +35,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Decorator/OperationalStatus',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PowerState')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Decorator/PowerState__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/PowerState.interface.yaml',  ],
@@ -42,9 +52,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Decorator/PowerState',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PowerSystemInputs')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Decorator/PowerSystemInputs__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/State/Decorator/PowerSystemInputs.interface.yaml',  ],
@@ -57,5 +69,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Decorator/PowerSystemInputs',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

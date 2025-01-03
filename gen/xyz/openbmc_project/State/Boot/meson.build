@@ -1,5 +1,10 @@
 # Generated file; do not modify.
 subdir('PostCode')
+subdir('Progress')
+subdir('Raw')
+
+sdbusplus_current_path = 'xyz/openbmc_project/State/Boot'
+
 generated_others += custom_target(
     'xyz/openbmc_project/State/Boot/PostCode__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/State/Boot/PostCode.interface.yaml',  ],
@@ -12,9 +17,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Boot/PostCode',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Progress')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Boot/Progress__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/State/Boot/Progress.interface.yaml',  ],
@@ -27,9 +34,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Boot/Progress',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Raw')
 generated_others += custom_target(
     'xyz/openbmc_project/State/Boot/Raw__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/State/Boot/Raw.interface.yaml',  ],
@@ -42,5 +51,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/Boot/Raw',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

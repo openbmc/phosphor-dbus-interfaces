@@ -1,5 +1,9 @@
 # Generated file; do not modify.
 subdir('Host')
+subdir('TPM')
+
+sdbusplus_current_path = 'org/open_power/Control'
+
 generated_others += custom_target(
     'org/open_power/Control/Host__markdown'.underscorify(),
     input: [ '../../../../yaml/org/open_power/Control/Host.interface.yaml',  ],
@@ -12,6 +16,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'org/open_power/Control/Host',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('TPM')

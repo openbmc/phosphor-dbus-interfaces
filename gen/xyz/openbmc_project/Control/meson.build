@@ -1,6 +1,28 @@
 # Generated file; do not modify.
 subdir('Boot')
 subdir('CFMLimit')
+subdir('ChassisCapabilities')
+subdir('Device')
+subdir('FanPwm')
+subdir('FanRedundancy')
+subdir('FanSpeed')
+subdir('FieldMode')
+subdir('Host')
+subdir('MinimumShipLevel')
+subdir('Mode')
+subdir('Power')
+subdir('PowerSupplyAttributes')
+subdir('PowerSupplyRedundancy')
+subdir('Processor')
+subdir('Security')
+subdir('Service')
+subdir('TPM')
+subdir('ThermalMode')
+subdir('VoltageRegulatorControl')
+subdir('VoltageRegulatorMode')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Control'
+
 generated_others += custom_target(
     'xyz/openbmc_project/Control/CFMLimit__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/CFMLimit.interface.yaml',  ],
@@ -13,9 +35,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/CFMLimit',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ChassisCapabilities')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/ChassisCapabilities__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/ChassisCapabilities.interface.yaml',  ],
@@ -28,9 +52,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/ChassisCapabilities',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Device')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Device__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/Device.errors.yaml',  ],
@@ -43,9 +69,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/Device',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('FanPwm')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/FanPwm__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/FanPwm.interface.yaml',  ],
@@ -58,9 +86,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/FanPwm',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('FanRedundancy')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/FanRedundancy__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/FanRedundancy.interface.yaml',  ],
@@ -73,9 +103,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/FanRedundancy',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('FanSpeed')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/FanSpeed__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/FanSpeed.interface.yaml',  ],
@@ -88,9 +120,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/FanSpeed',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('FieldMode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/FieldMode__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/FieldMode.interface.yaml',  ],
@@ -103,9 +137,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/FieldMode',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Host')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Host__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/Host.errors.yaml', '../../../../yaml/xyz/openbmc_project/Control/Host.interface.yaml',  ],
@@ -118,9 +154,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/Host',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('MinimumShipLevel')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/MinimumShipLevel__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/MinimumShipLevel.interface.yaml',  ],
@@ -133,9 +171,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/MinimumShipLevel',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Mode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Mode__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/Mode.interface.yaml',  ],
@@ -148,10 +188,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/Mode',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Power')
-subdir('PowerSupplyAttributes')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/PowerSupplyAttributes__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/PowerSupplyAttributes.interface.yaml',  ],
@@ -164,9 +205,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/PowerSupplyAttributes',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PowerSupplyRedundancy')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/PowerSupplyRedundancy__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/PowerSupplyRedundancy.interface.yaml',  ],
@@ -179,13 +222,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/PowerSupplyRedundancy',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Processor')
-subdir('Security')
-subdir('Service')
-subdir('TPM')
-subdir('ThermalMode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/ThermalMode__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/ThermalMode.interface.yaml',  ],
@@ -198,9 +239,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/ThermalMode',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VoltageRegulatorControl')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/VoltageRegulatorControl__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/VoltageRegulatorControl.interface.yaml',  ],
@@ -213,9 +256,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/VoltageRegulatorControl',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VoltageRegulatorMode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/VoltageRegulatorMode__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Control/VoltageRegulatorMode.interface.yaml',  ],
@@ -228,5 +273,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Control/VoltageRegulatorMode',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

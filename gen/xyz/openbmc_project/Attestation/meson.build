@@ -1,5 +1,10 @@
 # Generated file; do not modify.
 subdir('ComponentIntegrity')
+subdir('IdentityAuthentication')
+subdir('MeasurementSet')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Attestation'
+
 generated_others += custom_target(
     'xyz/openbmc_project/Attestation/ComponentIntegrity__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml',  ],
@@ -12,9 +17,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Attestation/ComponentIntegrity',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('IdentityAuthentication')
 generated_others += custom_target(
     'xyz/openbmc_project/Attestation/IdentityAuthentication__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Attestation/IdentityAuthentication.interface.yaml',  ],
@@ -27,9 +34,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Attestation/IdentityAuthentication',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('MeasurementSet')
 generated_others += custom_target(
     'xyz/openbmc_project/Attestation/MeasurementSet__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml',  ],
@@ -42,5 +51,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Attestation/MeasurementSet',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

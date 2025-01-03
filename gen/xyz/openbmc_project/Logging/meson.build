@@ -1,8 +1,24 @@
 # Generated file; do not modify.
+subdir('Create')
+subdir('Entry')
+subdir('ErrorBlocksTransition')
+subdir('Event')
+subdir('IPMI')
+subdir('SEL')
+subdir('Settings')
+subdir('Syslog')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Logging'
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Logging__cpp'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Logging.events.yaml',  ],
-    output: [ 'event.cpp', 'event.hpp',  ],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Logging.events.yaml',
+    ],
+    output: [
+        'event.cpp',
+        'event.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
@@ -11,9 +27,14 @@ generated_sources += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Logging',
     ],
+    install: should_generate_cpp,
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
+    build_by_default: should_generate_cpp,
 )
 
-subdir('Create')
 generated_others += custom_target(
     'xyz/openbmc_project/Logging/Create__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/Create.interface.yaml',  ],
@@ -26,9 +47,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Logging/Create',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Entry')
 generated_others += custom_target(
     'xyz/openbmc_project/Logging/Entry__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/Entry.interface.yaml',  ],
@@ -41,9 +64,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Logging/Entry',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ErrorBlocksTransition')
 generated_others += custom_target(
     'xyz/openbmc_project/Logging/ErrorBlocksTransition__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/ErrorBlocksTransition.interface.yaml',  ],
@@ -56,9 +81,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Logging/ErrorBlocksTransition',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Event')
 generated_others += custom_target(
     'xyz/openbmc_project/Logging/Event__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/Event.interface.yaml',  ],
@@ -71,9 +98,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Logging/Event',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('IPMI')
 generated_others += custom_target(
     'xyz/openbmc_project/Logging/IPMI__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml',  ],
@@ -86,9 +115,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Logging/IPMI',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('SEL')
 generated_others += custom_target(
     'xyz/openbmc_project/Logging/SEL__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/SEL.errors.yaml',  ],
@@ -101,9 +132,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Logging/SEL',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Settings')
 generated_others += custom_target(
     'xyz/openbmc_project/Logging/Settings__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Logging/Settings.interface.yaml',  ],
@@ -116,6 +149,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Logging/Settings',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Syslog')

@@ -1,5 +1,8 @@
 # Generated file; do not modify.
 subdir('Hoth')
+
+sdbusplus_current_path = 'com/google/gbmc'
+
 generated_others += custom_target(
     'com/google/gbmc/Hoth__markdown'.underscorify(),
     input: [ '../../../../yaml/com/google/gbmc/Hoth.errors.yaml', '../../../../yaml/com/google/gbmc/Hoth.interface.yaml',  ],
@@ -12,5 +15,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/google/gbmc/Hoth',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

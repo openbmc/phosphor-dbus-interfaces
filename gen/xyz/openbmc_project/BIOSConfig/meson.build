@@ -1,5 +1,10 @@
 # Generated file; do not modify.
 subdir('Common')
+subdir('Manager')
+subdir('Password')
+
+sdbusplus_current_path = 'xyz/openbmc_project/BIOSConfig'
+
 generated_others += custom_target(
     'xyz/openbmc_project/BIOSConfig/Common__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/BIOSConfig/Common.errors.yaml',  ],
@@ -12,9 +17,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/BIOSConfig/Common',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Manager')
 generated_others += custom_target(
     'xyz/openbmc_project/BIOSConfig/Manager__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/BIOSConfig/Manager.interface.yaml',  ],
@@ -27,9 +34,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/BIOSConfig/Manager',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Password')
 generated_others += custom_target(
     'xyz/openbmc_project/BIOSConfig/Password__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/BIOSConfig/Password.interface.yaml',  ],
@@ -42,5 +51,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/BIOSConfig/Password',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

@@ -1,5 +1,16 @@
 # Generated file; do not modify.
 subdir('AccountPolicy')
+subdir('Attributes')
+subdir('Common')
+subdir('Ldap')
+subdir('Manager')
+subdir('MultiFactorAuthConfiguration')
+subdir('PrivilegeMapper')
+subdir('PrivilegeMapperEntry')
+subdir('TOTPAuthenticator')
+
+sdbusplus_current_path = 'xyz/openbmc_project/User'
+
 generated_others += custom_target(
     'xyz/openbmc_project/User/AccountPolicy__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml',  ],
@@ -12,9 +23,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/User/AccountPolicy',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Attributes')
 generated_others += custom_target(
     'xyz/openbmc_project/User/Attributes__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/User/Attributes.interface.yaml',  ],
@@ -27,9 +40,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/User/Attributes',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Common')
 generated_others += custom_target(
     'xyz/openbmc_project/User/Common__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/User/Common.errors.yaml',  ],
@@ -42,10 +57,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/User/Common',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Ldap')
-subdir('Manager')
 generated_others += custom_target(
     'xyz/openbmc_project/User/Manager__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/User/Manager.interface.yaml',  ],
@@ -58,9 +74,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/User/Manager',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('MultiFactorAuthConfiguration')
 generated_others += custom_target(
     'xyz/openbmc_project/User/MultiFactorAuthConfiguration__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml',  ],
@@ -73,9 +91,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/User/MultiFactorAuthConfiguration',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PrivilegeMapper')
 generated_others += custom_target(
     'xyz/openbmc_project/User/PrivilegeMapper__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/User/PrivilegeMapper.interface.yaml',  ],
@@ -88,9 +108,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/User/PrivilegeMapper',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PrivilegeMapperEntry')
 generated_others += custom_target(
     'xyz/openbmc_project/User/PrivilegeMapperEntry__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/User/PrivilegeMapperEntry.interface.yaml',  ],
@@ -103,9 +125,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/User/PrivilegeMapperEntry',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('TOTPAuthenticator')
 generated_others += custom_target(
     'xyz/openbmc_project/User/TOTPAuthenticator__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml',  ],
@@ -118,5 +142,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/User/TOTPAuthenticator',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

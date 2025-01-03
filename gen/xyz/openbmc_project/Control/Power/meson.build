@@ -1,5 +1,14 @@
 # Generated file; do not modify.
 subdir('ACPIPowerState')
+subdir('Cap')
+subdir('CapLimits')
+subdir('IdlePowerSaver')
+subdir('Mode')
+subdir('RestorePolicy')
+subdir('Throttle')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Control/Power'
+
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/ACPIPowerState__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/ACPIPowerState.interface.yaml',  ],
@@ -12,9 +21,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Control/Power/ACPIPowerState',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Cap')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/Cap__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml',  ],
@@ -27,9 +38,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Control/Power/Cap',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('CapLimits')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/CapLimits__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/CapLimits.interface.yaml',  ],
@@ -42,9 +55,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Control/Power/CapLimits',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('IdlePowerSaver')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/IdlePowerSaver__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/IdlePowerSaver.interface.yaml',  ],
@@ -57,9 +72,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Control/Power/IdlePowerSaver',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Mode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/Mode__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/Mode.interface.yaml',  ],
@@ -72,9 +89,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Control/Power/Mode',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('RestorePolicy')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/RestorePolicy__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/RestorePolicy.interface.yaml',  ],
@@ -87,9 +106,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Control/Power/RestorePolicy',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Throttle')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Power/Throttle__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Power/Throttle.interface.yaml',  ],
@@ -102,5 +123,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Control/Power/Throttle',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

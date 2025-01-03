@@ -1,5 +1,48 @@
 # Generated file; do not modify.
 subdir('CP00')
+subdir('CRP0')
+subdir('DINF')
+subdir('LRP0')
+subdir('LRP1')
+subdir('LRP2')
+subdir('LRP3')
+subdir('LRP4')
+subdir('LRP5')
+subdir('LRP6')
+subdir('LRP7')
+subdir('LWP0')
+subdir('LWP1')
+subdir('LWP2')
+subdir('LWP3')
+subdir('LWP4')
+subdir('LWP5')
+subdir('LWP6')
+subdir('LWP7')
+subdir('LXR0')
+subdir('Location')
+subdir('MER0')
+subdir('PSPD')
+subdir('UTIL')
+subdir('VCEN')
+subdir('VCFG')
+subdir('VEIR')
+subdir('VER0')
+subdir('VINI')
+subdir('VMPU')
+subdir('VMSC')
+subdir('VPRI')
+subdir('VR10')
+subdir('VRML')
+subdir('VRTN')
+subdir('VSBK')
+subdir('VSBP')
+subdir('VSRC')
+subdir('VSYS')
+subdir('VW10')
+subdir('VWML')
+
+sdbusplus_current_path = 'com/ibm/ipzvpd'
+
 generated_others += custom_target(
     'com/ibm/ipzvpd/CP00__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/CP00.interface.yaml',  ],
@@ -12,9 +55,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/CP00',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('CRP0')
 generated_others += custom_target(
     'com/ibm/ipzvpd/CRP0__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/CRP0.interface.yaml',  ],
@@ -27,9 +72,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/CRP0',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('DINF')
 generated_others += custom_target(
     'com/ibm/ipzvpd/DINF__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/DINF.interface.yaml',  ],
@@ -42,9 +89,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/DINF',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LRP0')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LRP0__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LRP0.interface.yaml',  ],
@@ -57,9 +106,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LRP0',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LRP1')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LRP1__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LRP1.interface.yaml',  ],
@@ -72,9 +123,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LRP1',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LRP2')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LRP2__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LRP2.interface.yaml',  ],
@@ -87,9 +140,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LRP2',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LRP3')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LRP3__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LRP3.interface.yaml',  ],
@@ -102,9 +157,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LRP3',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LRP4')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LRP4__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LRP4.interface.yaml',  ],
@@ -117,9 +174,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LRP4',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LRP5')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LRP5__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LRP5.interface.yaml',  ],
@@ -132,9 +191,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LRP5',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LRP6')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LRP6__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LRP6.interface.yaml',  ],
@@ -147,9 +208,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LRP6',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LRP7')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LRP7__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LRP7.interface.yaml',  ],
@@ -162,9 +225,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LRP7',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LWP0')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LWP0__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LWP0.interface.yaml',  ],
@@ -177,9 +242,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LWP0',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LWP1')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LWP1__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LWP1.interface.yaml',  ],
@@ -192,9 +259,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LWP1',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LWP2')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LWP2__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LWP2.interface.yaml',  ],
@@ -207,9 +276,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LWP2',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LWP3')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LWP3__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LWP3.interface.yaml',  ],
@@ -222,9 +293,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LWP3',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LWP4')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LWP4__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LWP4.interface.yaml',  ],
@@ -237,9 +310,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LWP4',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LWP5')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LWP5__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LWP5.interface.yaml',  ],
@@ -252,9 +327,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LWP5',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LWP6')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LWP6__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LWP6.interface.yaml',  ],
@@ -267,9 +344,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LWP6',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LWP7')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LWP7__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LWP7.interface.yaml',  ],
@@ -282,9 +361,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LWP7',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('LXR0')
 generated_others += custom_target(
     'com/ibm/ipzvpd/LXR0__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/LXR0.interface.yaml',  ],
@@ -297,9 +378,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/LXR0',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Location')
 generated_others += custom_target(
     'com/ibm/ipzvpd/Location__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/Location.interface.yaml',  ],
@@ -312,9 +395,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/Location',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('MER0')
 generated_others += custom_target(
     'com/ibm/ipzvpd/MER0__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/MER0.interface.yaml',  ],
@@ -327,9 +412,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/MER0',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PSPD')
 generated_others += custom_target(
     'com/ibm/ipzvpd/PSPD__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/PSPD.interface.yaml',  ],
@@ -342,9 +429,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/PSPD',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('UTIL')
 generated_others += custom_target(
     'com/ibm/ipzvpd/UTIL__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/UTIL.interface.yaml',  ],
@@ -357,9 +446,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/UTIL',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VCEN')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VCEN__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VCEN.interface.yaml',  ],
@@ -372,9 +463,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VCEN',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VCFG')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VCFG__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VCFG.interface.yaml',  ],
@@ -387,9 +480,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VCFG',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VEIR')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VEIR__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VEIR.interface.yaml',  ],
@@ -402,9 +497,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VEIR',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VER0')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VER0__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VER0.interface.yaml',  ],
@@ -417,9 +514,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VER0',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VINI')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VINI__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VINI.interface.yaml',  ],
@@ -432,9 +531,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VINI',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VMPU')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VMPU__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VMPU.interface.yaml',  ],
@@ -447,9 +548,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VMPU',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VMSC')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VMSC__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VMSC.interface.yaml',  ],
@@ -462,9 +565,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VMSC',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VPRI')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VPRI__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VPRI.interface.yaml',  ],
@@ -477,9 +582,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VPRI',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VR10')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VR10__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VR10.interface.yaml',  ],
@@ -492,9 +599,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VR10',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VRML')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VRML__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VRML.interface.yaml',  ],
@@ -507,9 +616,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VRML',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VRTN')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VRTN__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VRTN.interface.yaml',  ],
@@ -522,9 +633,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VRTN',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VSBK')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VSBK__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VSBK.interface.yaml',  ],
@@ -537,9 +650,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VSBK',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VSBP')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VSBP__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VSBP.interface.yaml',  ],
@@ -552,9 +667,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VSBP',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VSRC')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VSRC__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VSRC.interface.yaml',  ],
@@ -567,9 +684,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VSRC',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VSYS')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VSYS__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VSYS.interface.yaml',  ],
@@ -582,9 +701,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VSYS',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VW10')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VW10__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VW10.interface.yaml',  ],
@@ -597,9 +718,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VW10',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('VWML')
 generated_others += custom_target(
     'com/ibm/ipzvpd/VWML__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/ipzvpd/VWML.interface.yaml',  ],
@@ -612,5 +735,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VWML',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

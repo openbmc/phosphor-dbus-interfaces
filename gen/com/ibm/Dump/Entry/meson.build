@@ -1,5 +1,11 @@
 # Generated file; do not modify.
 subdir('Hardware')
+subdir('Hostboot')
+subdir('Resource')
+subdir('SBE')
+
+sdbusplus_current_path = 'com/ibm/Dump/Entry'
+
 generated_others += custom_target(
     'com/ibm/Dump/Entry/Hardware__markdown'.underscorify(),
     input: [ '../../../../../yaml/com/ibm/Dump/Entry/Hardware.interface.yaml',  ],
@@ -12,9 +18,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'com/ibm/Dump/Entry/Hardware',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Hostboot')
 generated_others += custom_target(
     'com/ibm/Dump/Entry/Hostboot__markdown'.underscorify(),
     input: [ '../../../../../yaml/com/ibm/Dump/Entry/Hostboot.interface.yaml',  ],
@@ -27,9 +35,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'com/ibm/Dump/Entry/Hostboot',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Resource')
 generated_others += custom_target(
     'com/ibm/Dump/Entry/Resource__markdown'.underscorify(),
     input: [ '../../../../../yaml/com/ibm/Dump/Entry/Resource.interface.yaml',  ],
@@ -42,9 +52,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'com/ibm/Dump/Entry/Resource',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('SBE')
 generated_others += custom_target(
     'com/ibm/Dump/Entry/SBE__markdown'.underscorify(),
     input: [ '../../../../../yaml/com/ibm/Dump/Entry/SBE.interface.yaml',  ],
@@ -57,5 +69,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'com/ibm/Dump/Entry/SBE',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

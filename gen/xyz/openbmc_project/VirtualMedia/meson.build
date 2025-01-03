@@ -1,5 +1,12 @@
 # Generated file; do not modify.
 subdir('Legacy')
+subdir('MountPoint')
+subdir('Process')
+subdir('Proxy')
+subdir('Stats')
+
+sdbusplus_current_path = 'xyz/openbmc_project/VirtualMedia'
+
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/Legacy__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/Legacy.interface.yaml',  ],
@@ -12,9 +19,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/Legacy',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('MountPoint')
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/MountPoint__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/MountPoint.interface.yaml',  ],
@@ -27,9 +36,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/MountPoint',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Process')
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/Process__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/Process.interface.yaml',  ],
@@ -42,9 +53,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/Process',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Proxy')
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/Proxy__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/Proxy.interface.yaml',  ],
@@ -57,9 +70,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/Proxy',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Stats')
 generated_others += custom_target(
     'xyz/openbmc_project/VirtualMedia/Stats__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/VirtualMedia/Stats.interface.yaml',  ],
@@ -72,5 +87,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/VirtualMedia/Stats',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

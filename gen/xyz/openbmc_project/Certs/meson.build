@@ -1,8 +1,24 @@
 # Generated file; do not modify.
+subdir('Authority')
+subdir('CSR')
+subdir('Certificate')
+subdir('Entry')
+subdir('Install')
+subdir('InstallAll')
+subdir('Replace')
+subdir('ReplaceAll')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Certs'
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Certs__cpp'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Certs.errors.yaml',  ],
-    output: [ 'error.cpp', 'error.hpp',  ],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Certs.errors.yaml',
+    ],
+    output: [
+        'error.cpp',
+        'error.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
@@ -11,9 +27,14 @@ generated_sources += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs',
     ],
+    install: should_generate_cpp,
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
+    build_by_default: should_generate_cpp,
 )
 
-subdir('Authority')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs/Authority__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Certs/Authority.interface.yaml',  ],
@@ -26,9 +47,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs/Authority',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('CSR')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs/CSR__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Certs/CSR.interface.yaml',  ],
@@ -41,9 +64,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs/CSR',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Certificate')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs/Certificate__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Certs/Certificate.interface.yaml',  ],
@@ -56,9 +81,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs/Certificate',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Entry')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs/Entry__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Certs/Entry.interface.yaml',  ],
@@ -71,9 +98,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs/Entry',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Install')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs/Install__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Certs/Install.interface.yaml',  ],
@@ -86,9 +115,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs/Install',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('InstallAll')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs/InstallAll__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Certs/InstallAll.interface.yaml',  ],
@@ -101,9 +132,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs/InstallAll',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Replace')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs/Replace__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Certs/Replace.interface.yaml',  ],
@@ -116,9 +149,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs/Replace',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ReplaceAll')
 generated_others += custom_target(
     'xyz/openbmc_project/Certs/ReplaceAll__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Certs/ReplaceAll.interface.yaml',  ],
@@ -131,5 +166,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Certs/ReplaceAll',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

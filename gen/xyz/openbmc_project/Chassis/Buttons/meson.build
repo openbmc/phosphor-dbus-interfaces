@@ -1,5 +1,13 @@
 # Generated file; do not modify.
 subdir('Button')
+subdir('HostSelector')
+subdir('ID')
+subdir('NMI')
+subdir('Power')
+subdir('Reset')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Chassis/Buttons'
+
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/Button__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml',  ],
@@ -12,9 +20,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Chassis/Buttons/Button',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('HostSelector')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/HostSelector__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/HostSelector.interface.yaml',  ],
@@ -27,9 +37,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Chassis/Buttons/HostSelector',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ID')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/ID__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/ID.interface.yaml',  ],
@@ -42,9 +54,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Chassis/Buttons/ID',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('NMI')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/NMI__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/NMI.interface.yaml',  ],
@@ -57,9 +71,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Chassis/Buttons/NMI',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Power')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/Power__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/Power.interface.yaml',  ],
@@ -72,9 +88,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Chassis/Buttons/Power',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Reset')
 generated_others += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/Reset__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/Reset.interface.yaml',  ],
@@ -87,5 +105,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Chassis/Buttons/Reset',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

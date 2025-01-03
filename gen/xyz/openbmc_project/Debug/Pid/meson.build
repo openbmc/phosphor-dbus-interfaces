@@ -1,5 +1,9 @@
 # Generated file; do not modify.
 subdir('ThermalPower')
+subdir('Zone')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Debug/Pid'
+
 generated_others += custom_target(
     'xyz/openbmc_project/Debug/Pid/ThermalPower__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Debug/Pid/ThermalPower.interface.yaml',  ],
@@ -12,9 +16,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Debug/Pid/ThermalPower',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Zone')
 generated_others += custom_target(
     'xyz/openbmc_project/Debug/Pid/Zone__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml',  ],
@@ -27,5 +33,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Debug/Pid/Zone',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

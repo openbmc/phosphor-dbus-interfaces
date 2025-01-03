@@ -1,5 +1,20 @@
 # Generated file; do not modify.
 subdir('Activation')
+subdir('ActivationBlocksTransition')
+subdir('ActivationProgress')
+subdir('ApplyOptions')
+subdir('ApplyTime')
+subdir('ExtendedVersion')
+subdir('Image')
+subdir('MinimumVersion')
+subdir('RedundancyPriority')
+subdir('RequestedRedundancyPriority')
+subdir('Settings')
+subdir('Update')
+subdir('Version')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Software'
+
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Activation__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/Activation.interface.yaml',  ],
@@ -12,9 +27,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/Activation',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ActivationBlocksTransition')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ActivationBlocksTransition__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ActivationBlocksTransition.interface.yaml',  ],
@@ -27,9 +44,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ActivationBlocksTransition',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ActivationProgress')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ActivationProgress__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ActivationProgress.interface.yaml',  ],
@@ -42,9 +61,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ActivationProgress',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ApplyOptions')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ApplyOptions__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ApplyOptions.interface.yaml',  ],
@@ -57,9 +78,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ApplyOptions',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ApplyTime')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ApplyTime__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml',  ],
@@ -72,9 +95,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ApplyTime',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ExtendedVersion')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/ExtendedVersion__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/ExtendedVersion.interface.yaml',  ],
@@ -87,9 +112,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/ExtendedVersion',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Image')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Image__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/Image.errors.yaml',  ],
@@ -102,9 +129,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/Image',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('MinimumVersion')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/MinimumVersion__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/MinimumVersion.interface.yaml',  ],
@@ -117,9 +146,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/MinimumVersion',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('RedundancyPriority')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/RedundancyPriority__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/RedundancyPriority.interface.yaml',  ],
@@ -132,9 +163,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/RedundancyPriority',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('RequestedRedundancyPriority')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/RequestedRedundancyPriority__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/RequestedRedundancyPriority.interface.yaml',  ],
@@ -147,9 +180,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/RequestedRedundancyPriority',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Settings')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Settings__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/Settings.interface.yaml',  ],
@@ -162,9 +197,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/Settings',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Update')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Update__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/Update.errors.yaml', '../../../../yaml/xyz/openbmc_project/Software/Update.interface.yaml',  ],
@@ -177,9 +214,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/Update',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Version')
 generated_others += custom_target(
     'xyz/openbmc_project/Software/Version__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Software/Version.errors.yaml', '../../../../yaml/xyz/openbmc_project/Software/Version.interface.yaml',  ],
@@ -192,5 +231,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Software/Version',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

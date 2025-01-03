@@ -1,5 +1,9 @@
 # Generated file; do not modify.
 subdir('Access')
+subdir('UART')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Console'
+
 generated_others += custom_target(
     'xyz/openbmc_project/Console/Access__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Console/Access.interface.yaml',  ],
@@ -12,9 +16,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Console/Access',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('UART')
 generated_others += custom_target(
     'xyz/openbmc_project/Console/UART__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Console/UART.interface.yaml',  ],
@@ -27,5 +33,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Console/UART',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

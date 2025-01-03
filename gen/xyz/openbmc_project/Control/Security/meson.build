@@ -1,5 +1,9 @@
 # Generated file; do not modify.
 subdir('RestrictionMode')
+subdir('SpecialMode')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Control/Security'
+
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Security/RestrictionMode__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Security/RestrictionMode.interface.yaml',  ],
@@ -12,9 +16,11 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Control/Security/RestrictionMode',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('SpecialMode')
 generated_others += custom_target(
     'xyz/openbmc_project/Control/Security/SpecialMode__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Control/Security/SpecialMode.interface.yaml',  ],
@@ -27,5 +33,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Control/Security/SpecialMode',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

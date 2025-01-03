@@ -1,6 +1,10 @@
 # Generated file; do not modify.
 subdir('Bond')
-generated_others += custom_target(
+subdir('Tunnel')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Network/Experimental'
+
+generated_markdown += custom_target(
     'xyz/openbmc_project/Network/Experimental/Bond__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Network/Experimental/Bond.interface.yaml',  ],
     output: [ 'Bond.md' ],
@@ -12,10 +16,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Network/Experimental/Bond',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Tunnel')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Network/Experimental/Tunnel__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Network/Experimental/Tunnel.interface.yaml',  ],
     output: [ 'Tunnel.md' ],
@@ -27,5 +33,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Network/Experimental/Tunnel',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

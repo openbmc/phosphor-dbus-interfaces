@@ -1,8 +1,22 @@
 # Generated file; do not modify.
+
+sdbusplus_current_path = 'xyz/openbmc_project/Software/Update'
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Software/Update__cpp'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/Software/Update.errors.yaml', '../../../../../yaml/xyz/openbmc_project/Software/Update.interface.yaml',  ],
-    output: [ 'error.cpp', 'error.hpp', 'common.hpp', 'server.cpp', 'server.hpp', 'aserver.hpp', 'client.hpp',  ],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/Software/Update.errors.yaml',
+        '../../../../../yaml/xyz/openbmc_project/Software/Update.interface.yaml',
+    ],
+    output: [
+        'error.cpp',
+        'error.hpp',
+        'common.hpp',
+        'server.hpp',
+        'server.cpp',
+        'aserver.hpp',
+        'client.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
@@ -11,5 +25,16 @@ generated_sources += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Software/Update',
     ],
+    install: should_generate_cpp,
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+        get_option('includedir') / sdbusplus_current_path,
+        get_option('includedir') / sdbusplus_current_path,
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
+    build_by_default: should_generate_cpp,
 )
 

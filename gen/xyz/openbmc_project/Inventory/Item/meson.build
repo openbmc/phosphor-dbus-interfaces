@@ -1,8 +1,50 @@
 # Generated file; do not modify.
+subdir('Accelerator')
+subdir('Battery')
+subdir('Bmc')
+subdir('Board')
+subdir('Cable')
+subdir('Chassis')
+subdir('Connector')
+subdir('Cpu')
+subdir('CpuCore')
+subdir('Dimm')
+subdir('DiskBackplane')
+subdir('Drive')
+subdir('Ethernet')
+subdir('FabricAdapter')
+subdir('Fan')
+subdir('Global')
+subdir('NetworkInterface')
+subdir('PCIeDevice')
+subdir('PCIeSlot')
+subdir('PCIeSwitch')
+subdir('Panel')
+subdir('PersistentMemory')
+subdir('PowerSupply')
+subdir('Rotor')
+subdir('Storage')
+subdir('StorageController')
+subdir('System')
+subdir('Tpm')
+subdir('TrustedComponent')
+subdir('Volume')
+subdir('Vrm')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Inventory/Item'
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory/Item__cpp'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item.interface.yaml',  ],
-    output: [ 'common.hpp', 'server.cpp', 'server.hpp', 'aserver.hpp', 'client.hpp',  ],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/Inventory/Item.interface.yaml',
+    ],
+    output: [
+        'common.hpp',
+        'server.hpp',
+        'server.cpp',
+        'aserver.hpp',
+        'client.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
@@ -11,10 +53,18 @@ generated_sources += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item',
     ],
+    install: should_generate_cpp,
+    install_dir: [
+        get_option('includedir') / sdbusplus_current_path,
+        get_option('includedir') / sdbusplus_current_path,
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
+    build_by_default: should_generate_cpp,
 )
 
-subdir('Accelerator')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Accelerator__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml',  ],
     output: [ 'Accelerator.md' ],
@@ -26,10 +76,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Accelerator',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Battery')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Battery__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Battery.interface.yaml',  ],
     output: [ 'Battery.md' ],
@@ -41,10 +93,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Battery',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Bmc')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Bmc__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Bmc.interface.yaml',  ],
     output: [ 'Bmc.md' ],
@@ -56,10 +110,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Bmc',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Board')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Board__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Board.interface.yaml',  ],
     output: [ 'Board.md' ],
@@ -71,10 +127,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Board',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Cable')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Cable__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Cable.interface.yaml',  ],
     output: [ 'Cable.md' ],
@@ -86,10 +144,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Cable',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Chassis')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Chassis__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml',  ],
     output: [ 'Chassis.md' ],
@@ -101,10 +161,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Chassis',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Connector')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Connector__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Connector.interface.yaml',  ],
     output: [ 'Connector.md' ],
@@ -116,10 +178,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Connector',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Cpu')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Cpu__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml',  ],
     output: [ 'Cpu.md' ],
@@ -131,10 +195,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Cpu',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('CpuCore')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/CpuCore__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/CpuCore.interface.yaml',  ],
     output: [ 'CpuCore.md' ],
@@ -146,10 +212,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/CpuCore',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Dimm')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Dimm__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Dimm.interface.yaml',  ],
     output: [ 'Dimm.md' ],
@@ -161,10 +229,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Dimm',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('DiskBackplane')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/DiskBackplane__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/DiskBackplane.interface.yaml',  ],
     output: [ 'DiskBackplane.md' ],
@@ -176,10 +246,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/DiskBackplane',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Drive')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Drive__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Drive.interface.yaml',  ],
     output: [ 'Drive.md' ],
@@ -191,10 +263,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Drive',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Ethernet')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Ethernet__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Ethernet.interface.yaml',  ],
     output: [ 'Ethernet.md' ],
@@ -206,10 +280,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Ethernet',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('FabricAdapter')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/FabricAdapter__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/FabricAdapter.interface.yaml',  ],
     output: [ 'FabricAdapter.md' ],
@@ -221,10 +297,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/FabricAdapter',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Fan')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Fan__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml',  ],
     output: [ 'Fan.md' ],
@@ -236,10 +314,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Fan',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Global')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Global__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Global.interface.yaml',  ],
     output: [ 'Global.md' ],
@@ -251,10 +331,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Global',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('NetworkInterface')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/NetworkInterface__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/NetworkInterface.interface.yaml',  ],
     output: [ 'NetworkInterface.md' ],
@@ -266,10 +348,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/NetworkInterface',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PCIeDevice')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/PCIeDevice__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml',  ],
     output: [ 'PCIeDevice.md' ],
@@ -281,10 +365,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/PCIeDevice',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PCIeSlot')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/PCIeSlot__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/PCIeSlot.interface.yaml',  ],
     output: [ 'PCIeSlot.md' ],
@@ -296,10 +382,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/PCIeSlot',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PCIeSwitch')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/PCIeSwitch__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/PCIeSwitch.interface.yaml',  ],
     output: [ 'PCIeSwitch.md' ],
@@ -311,10 +399,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/PCIeSwitch',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Panel')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Panel__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Panel.interface.yaml',  ],
     output: [ 'Panel.md' ],
@@ -326,10 +416,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Panel',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PersistentMemory')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/PersistentMemory__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/PersistentMemory.interface.yaml',  ],
     output: [ 'PersistentMemory.md' ],
@@ -341,10 +433,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/PersistentMemory',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PowerSupply')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/PowerSupply__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml',  ],
     output: [ 'PowerSupply.md' ],
@@ -356,10 +450,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/PowerSupply',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Rotor')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Rotor__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Rotor.interface.yaml',  ],
     output: [ 'Rotor.md' ],
@@ -371,10 +467,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Rotor',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Storage')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Storage__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Storage.interface.yaml',  ],
     output: [ 'Storage.md' ],
@@ -386,10 +484,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Storage',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('StorageController')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/StorageController__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/StorageController.interface.yaml',  ],
     output: [ 'StorageController.md' ],
@@ -401,10 +501,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/StorageController',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('System')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/System__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/System.interface.yaml',  ],
     output: [ 'System.md' ],
@@ -416,10 +518,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/System',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Tpm')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Tpm__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Tpm.interface.yaml',  ],
     output: [ 'Tpm.md' ],
@@ -431,10 +535,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Tpm',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('TrustedComponent')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/TrustedComponent__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/TrustedComponent.interface.yaml',  ],
     output: [ 'TrustedComponent.md' ],
@@ -446,10 +552,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/TrustedComponent',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Volume')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Volume__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml',  ],
     output: [ 'Volume.md' ],
@@ -461,10 +569,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Volume',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Vrm')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Vrm__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Vrm.interface.yaml',  ],
     output: [ 'Vrm.md' ],
@@ -476,5 +586,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Item/Vrm',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

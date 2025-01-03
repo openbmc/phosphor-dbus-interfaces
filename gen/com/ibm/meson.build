@@ -3,7 +3,11 @@ subdir('Dump')
 subdir('Hardware')
 subdir('Logging')
 subdir('VPD')
-generated_others += custom_target(
+subdir('ipzvpd')
+
+sdbusplus_current_path = 'com/ibm'
+
+generated_markdown += custom_target(
     'com/ibm/VPD__markdown'.underscorify(),
     input: [ '../../../yaml/com/ibm/VPD.errors.yaml',  ],
     output: [ 'VPD.md' ],
@@ -15,6 +19,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'com/ibm/VPD',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ipzvpd')

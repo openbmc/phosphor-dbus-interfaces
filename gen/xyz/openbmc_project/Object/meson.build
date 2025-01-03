@@ -1,6 +1,10 @@
 # Generated file; do not modify.
 subdir('Delete')
-generated_others += custom_target(
+subdir('Enable')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Object'
+
+generated_markdown += custom_target(
     'xyz/openbmc_project/Object/Delete__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Object/Delete.interface.yaml',  ],
     output: [ 'Delete.md' ],
@@ -12,10 +16,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Object/Delete',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Enable')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Object/Enable__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Object/Enable.interface.yaml',  ],
     output: [ 'Enable.md' ],
@@ -27,5 +33,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Object/Enable',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

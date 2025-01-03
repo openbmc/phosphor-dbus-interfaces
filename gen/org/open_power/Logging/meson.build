@@ -1,6 +1,9 @@
 # Generated file; do not modify.
 subdir('PEL')
-generated_others += custom_target(
+
+sdbusplus_current_path = 'org/open_power/Logging'
+
+generated_markdown += custom_target(
     'org/open_power/Logging/PEL__markdown'.underscorify(),
     input: [ '../../../../yaml/org/open_power/Logging/PEL.interface.yaml',  ],
     output: [ 'PEL.md' ],
@@ -12,5 +15,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'org/open_power/Logging/PEL',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

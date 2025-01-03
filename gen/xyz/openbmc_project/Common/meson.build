@@ -1,8 +1,29 @@
 # Generated file; do not modify.
+subdir('Callout')
+subdir('Device')
+subdir('FactoryReset')
+subdir('FaultLogType')
+subdir('File')
+subdir('FilePath')
+subdir('ObjectPath')
+subdir('OriginatedBy')
+subdir('Priority')
+subdir('Progress')
+subdir('TFTP')
+subdir('Threshold')
+subdir('UUID')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Common'
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Common__cpp'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Common.errors.yaml',  ],
-    output: [ 'error.cpp', 'error.hpp',  ],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Common.errors.yaml',
+    ],
+    output: [
+        'error.cpp',
+        'error.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
@@ -11,10 +32,15 @@ generated_sources += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common',
     ],
+    install: should_generate_cpp,
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
+    build_by_default: should_generate_cpp,
 )
 
-subdir('Callout')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/Callout__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/Callout.errors.yaml',  ],
     output: [ 'Callout.md' ],
@@ -26,10 +52,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/Callout',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Device')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/Device__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/Device.errors.yaml',  ],
     output: [ 'Device.md' ],
@@ -41,10 +69,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/Device',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('FactoryReset')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/FactoryReset__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/FactoryReset.interface.yaml',  ],
     output: [ 'FactoryReset.md' ],
@@ -56,10 +86,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/FactoryReset',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('FaultLogType')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/FaultLogType__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/FaultLogType.interface.yaml',  ],
     output: [ 'FaultLogType.md' ],
@@ -71,10 +103,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/FaultLogType',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('File')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/File__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/File.errors.yaml',  ],
     output: [ 'File.md' ],
@@ -86,10 +120,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/File',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('FilePath')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/FilePath__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/FilePath.interface.yaml',  ],
     output: [ 'FilePath.md' ],
@@ -101,10 +137,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/FilePath',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('ObjectPath')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/ObjectPath__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/ObjectPath.interface.yaml',  ],
     output: [ 'ObjectPath.md' ],
@@ -116,10 +154,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/ObjectPath',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('OriginatedBy')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/OriginatedBy__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/OriginatedBy.interface.yaml',  ],
     output: [ 'OriginatedBy.md' ],
@@ -131,10 +171,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/OriginatedBy',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Priority')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/Priority__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/Priority.interface.yaml',  ],
     output: [ 'Priority.md' ],
@@ -146,10 +188,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/Priority',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Progress')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/Progress__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/Progress.interface.yaml',  ],
     output: [ 'Progress.md' ],
@@ -161,10 +205,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/Progress',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('TFTP')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/TFTP__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/TFTP.interface.yaml',  ],
     output: [ 'TFTP.md' ],
@@ -176,10 +222,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/TFTP',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Threshold')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/Threshold__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/Threshold.interface.yaml',  ],
     output: [ 'Threshold.md' ],
@@ -191,10 +239,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/Threshold',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('UUID')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common/UUID__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Common/UUID.interface.yaml',  ],
     output: [ 'UUID.md' ],
@@ -206,5 +256,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Common/UUID',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

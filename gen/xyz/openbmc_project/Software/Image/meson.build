@@ -1,8 +1,16 @@
 # Generated file; do not modify.
+
+sdbusplus_current_path = 'xyz/openbmc_project/Software/Image'
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Software/Image__cpp'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/Software/Image.errors.yaml',  ],
-    output: [ 'error.cpp', 'error.hpp',  ],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/Software/Image.errors.yaml',
+    ],
+    output: [
+        'error.cpp',
+        'error.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
@@ -11,5 +19,11 @@ generated_sources += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Software/Image',
     ],
+    install: should_generate_cpp,
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
+    build_by_default: should_generate_cpp,
 )
 

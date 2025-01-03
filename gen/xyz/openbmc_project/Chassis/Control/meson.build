@@ -1,6 +1,10 @@
 # Generated file; do not modify.
 subdir('NMISource')
-generated_others += custom_target(
+subdir('Power')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Chassis/Control'
+
+generated_markdown += custom_target(
     'xyz/openbmc_project/Chassis/Control/NMISource__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Control/NMISource.interface.yaml',  ],
     output: [ 'NMISource.md' ],
@@ -12,10 +16,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Chassis/Control/NMISource',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Power')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Chassis/Control/Power__markdown'.underscorify(),
     input: [ '../../../../../yaml/xyz/openbmc_project/Chassis/Control/Power.interface.yaml',  ],
     output: [ 'Power.md' ],
@@ -27,5 +33,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Chassis/Control/Power',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

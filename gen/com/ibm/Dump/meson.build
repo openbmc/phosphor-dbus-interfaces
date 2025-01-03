@@ -1,6 +1,11 @@
 # Generated file; do not modify.
 subdir('Create')
-generated_others += custom_target(
+subdir('Entry')
+subdir('Notify')
+
+sdbusplus_current_path = 'com/ibm/Dump'
+
+generated_markdown += custom_target(
     'com/ibm/Dump/Create__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/Dump/Create.interface.yaml',  ],
     output: [ 'Create.md' ],
@@ -12,11 +17,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/Dump/Create',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Entry')
-subdir('Notify')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'com/ibm/Dump/Notify__markdown'.underscorify(),
     input: [ '../../../../yaml/com/ibm/Dump/Notify.interface.yaml',  ],
     output: [ 'Notify.md' ],
@@ -28,5 +34,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'com/ibm/Dump/Notify',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

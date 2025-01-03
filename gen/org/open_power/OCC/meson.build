@@ -1,6 +1,11 @@
 # Generated file; do not modify.
 subdir('Device')
-generated_others += custom_target(
+subdir('PassThrough')
+subdir('Status')
+
+sdbusplus_current_path = 'org/open_power/OCC'
+
+generated_markdown += custom_target(
     'org/open_power/OCC/Device__markdown'.underscorify(),
     input: [ '../../../../yaml/org/open_power/OCC/Device.errors.yaml',  ],
     output: [ 'Device.md' ],
@@ -12,10 +17,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'org/open_power/OCC/Device',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PassThrough')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'org/open_power/OCC/PassThrough__markdown'.underscorify(),
     input: [ '../../../../yaml/org/open_power/OCC/PassThrough.interface.yaml',  ],
     output: [ 'PassThrough.md' ],
@@ -27,10 +34,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'org/open_power/OCC/PassThrough',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Status')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'org/open_power/OCC/Status__markdown'.underscorify(),
     input: [ '../../../../yaml/org/open_power/OCC/Status.interface.yaml',  ],
     output: [ 'Status.md' ],
@@ -42,5 +51,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'org/open_power/OCC/Status',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

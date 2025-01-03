@@ -1,6 +1,9 @@
 # Generated file; do not modify.
 subdir('Mail')
-generated_others += custom_target(
+
+sdbusplus_current_path = 'xyz/openbmc_project/Logging/Syslog/Destination'
+
+generated_markdown += custom_target(
     'xyz/openbmc_project/Logging/Syslog/Destination/Mail__markdown'.underscorify(),
     input: [ '../../../../../../yaml/xyz/openbmc_project/Logging/Syslog/Destination/Mail.interface.yaml',  ],
     output: [ 'Mail.md' ],
@@ -12,5 +15,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../../../yaml',
         'xyz/openbmc_project/Logging/Syslog/Destination/Mail',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

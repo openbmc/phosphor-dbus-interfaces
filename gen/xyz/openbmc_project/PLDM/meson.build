@@ -1,6 +1,12 @@
 # Generated file; do not modify.
 subdir('Event')
-generated_others += custom_target(
+subdir('PDR')
+subdir('Provider')
+subdir('Requester')
+
+sdbusplus_current_path = 'xyz/openbmc_project/PLDM'
+
+generated_markdown += custom_target(
     'xyz/openbmc_project/PLDM/Event__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/PLDM/Event.interface.yaml',  ],
     output: [ 'Event.md' ],
@@ -12,10 +18,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/PLDM/Event',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PDR')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/PLDM/PDR__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/PLDM/PDR.interface.yaml',  ],
     output: [ 'PDR.md' ],
@@ -27,11 +35,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/PLDM/PDR',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Provider')
-subdir('Requester')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/PLDM/Requester__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/PLDM/Requester.interface.yaml',  ],
     output: [ 'Requester.md' ],
@@ -43,5 +52,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/PLDM/Requester',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 

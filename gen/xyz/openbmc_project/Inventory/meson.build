@@ -1,8 +1,21 @@
 # Generated file; do not modify.
+subdir('Connector')
+subdir('Decorator')
+subdir('Item')
+subdir('Manager')
+subdir('Source')
+
+sdbusplus_current_path = 'xyz/openbmc_project/Inventory'
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory__cpp'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Inventory.errors.yaml',  ],
-    output: [ 'error.cpp', 'error.hpp',  ],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Inventory.errors.yaml',
+    ],
+    output: [
+        'error.cpp',
+        'error.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog, '--command', 'cpp',
@@ -11,12 +24,15 @@ generated_sources += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Inventory',
     ],
+    install: should_generate_cpp,
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
+    build_by_default: should_generate_cpp,
 )
 
-subdir('Connector')
-subdir('Decorator')
-subdir('Item')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Inventory/Item.interface.yaml',  ],
     output: [ 'Item.md' ],
@@ -28,10 +44,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Inventory/Item',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Manager')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Manager__markdown'.underscorify(),
     input: [ '../../../../yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml',  ],
     output: [ 'Manager.md' ],
@@ -43,6 +61,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Inventory/Manager',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Source')

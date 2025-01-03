@@ -1,6 +1,44 @@
 # Generated file; do not modify.
 subdir('Association')
-generated_others += custom_target(
+subdir('Attestation')
+subdir('BIOSConfig')
+subdir('Certs')
+subdir('Channel')
+subdir('Chassis')
+subdir('Collection')
+subdir('Common')
+subdir('Condition')
+subdir('Console')
+subdir('Control')
+subdir('Debug')
+subdir('Dump')
+subdir('HardwareIsolation')
+subdir('Inventory')
+subdir('Ipmi')
+subdir('Led')
+subdir('Logging')
+subdir('MCTP')
+subdir('Memory')
+subdir('Metric')
+subdir('Network')
+subdir('Nvme')
+subdir('Object')
+subdir('ObjectMapper')
+subdir('PFR')
+subdir('PLDM')
+subdir('ScheduledTime')
+subdir('Sensor')
+subdir('Smbios')
+subdir('Software')
+subdir('State')
+subdir('Telemetry')
+subdir('Time')
+subdir('User')
+subdir('VirtualMedia')
+
+sdbusplus_current_path = 'xyz/openbmc_project'
+
+generated_markdown += custom_target(
     'xyz/openbmc_project/Association__markdown'.underscorify(),
     input: [ '../../../yaml/xyz/openbmc_project/Association.interface.yaml',  ],
     output: [ 'Association.md' ],
@@ -12,12 +50,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Association',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Attestation')
-subdir('BIOSConfig')
-subdir('Certs')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Certs__markdown'.underscorify(),
     input: [ '../../../yaml/xyz/openbmc_project/Certs.errors.yaml',  ],
     output: [ 'Certs.md' ],
@@ -29,13 +67,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Certs',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Channel')
-subdir('Chassis')
-subdir('Collection')
-subdir('Common')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Common__markdown'.underscorify(),
     input: [ '../../../yaml/xyz/openbmc_project/Common.errors.yaml',  ],
     output: [ 'Common.md' ],
@@ -47,15 +84,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Common',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Condition')
-subdir('Console')
-subdir('Control')
-subdir('Debug')
-subdir('Dump')
-subdir('HardwareIsolation')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/HardwareIsolation__markdown'.underscorify(),
     input: [ '../../../yaml/xyz/openbmc_project/HardwareIsolation.errors.yaml',  ],
     output: [ 'HardwareIsolation.md' ],
@@ -67,10 +101,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/HardwareIsolation',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Inventory')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory__markdown'.underscorify(),
     input: [ '../../../yaml/xyz/openbmc_project/Inventory.errors.yaml',  ],
     output: [ 'Inventory.md' ],
@@ -82,12 +118,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Inventory',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Ipmi')
-subdir('Led')
-subdir('Logging')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Logging__markdown'.underscorify(),
     input: [ '../../../yaml/xyz/openbmc_project/Logging.events.yaml',  ],
     output: [ 'Logging.md' ],
@@ -99,16 +135,29 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Logging',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('MCTP')
-subdir('Memory')
-subdir('Metric')
-subdir('Network')
-subdir('Nvme')
-subdir('Object')
-subdir('ObjectMapper')
-generated_others += custom_target(
+generated_registry += custom_target(
+    'xyz/openbmc_project/Logging__registry'.underscorify(),
+    input: [ '../../../yaml/xyz/openbmc_project/Logging.events.yaml',  ],
+    output: [ 'Logging.json' ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'registry',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../yaml',
+        'xyz/openbmc_project/Logging',
+    ],
+    install: should_generate_registry,
+    install_dir: [inst_registry_dir / sdbusplus_current_path],
+    build_by_default: should_generate_registry,
+)
+
+generated_markdown += custom_target(
     'xyz/openbmc_project/ObjectMapper__markdown'.underscorify(),
     input: [ '../../../yaml/xyz/openbmc_project/ObjectMapper.interface.yaml',  ],
     output: [ 'ObjectMapper.md' ],
@@ -120,12 +169,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/ObjectMapper',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('PFR')
-subdir('PLDM')
-subdir('ScheduledTime')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/ScheduledTime__markdown'.underscorify(),
     input: [ '../../../yaml/xyz/openbmc_project/ScheduledTime.errors.yaml',  ],
     output: [ 'ScheduledTime.md' ],
@@ -137,15 +186,12 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/ScheduledTime',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('Sensor')
-subdir('Smbios')
-subdir('Software')
-subdir('State')
-subdir('Telemetry')
-subdir('Time')
-generated_others += custom_target(
+generated_markdown += custom_target(
     'xyz/openbmc_project/Time__markdown'.underscorify(),
     input: [ '../../../yaml/xyz/openbmc_project/Time.errors.yaml',  ],
     output: [ 'Time.md' ],
@@ -157,7 +203,8 @@ generated_others += custom_target(
         '--directory', meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Time',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
 )
 
-subdir('User')
-subdir('VirtualMedia')

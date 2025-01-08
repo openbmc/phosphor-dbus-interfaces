@@ -1,0 +1,20 @@
+description: >
+    Provides details of CPER (Common Platform Error Record) files available in
+    the BMC, represented as CPER Record objects.
+properties:
+    - name: Filename
+      type: string
+      description: >
+          The name of the CPER file stored in the BMC.
+    - name: Log
+      type: string
+      description: >
+          The file path where the CPER file is located within the BMC.
+    - name: Timestamp
+      type: string
+      description: >
+          The time when the CPER file was generated in the BMC.
+    - name: AdditionalTypeName
+      type: string
+      description: >
+          Additional string to identify the diagnostic type of the CPER file.

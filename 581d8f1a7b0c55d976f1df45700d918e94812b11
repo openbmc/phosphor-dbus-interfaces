@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "78d7d388_fba1711e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-01-13T09:19:13Z",
+      "side": 1,
+      "message": "I appreciate the effort you\u0027ve put into this patch set. However, I believe some of the details included here, particularly regarding testing on downstream forks, might not be entirely relevant in this context since I haven’t seen similar functionality added in the upstream `bios-settings-mgr`, these testing details may not significantly contribute to building confidence for the reviewers.  \n\nTo enhance clarity, I think it would be helpful to include the following details:  \n\n1. Could you provide a brief explanation of what Credential Bootstrap entails and include any relevant links or references to help users better understand the concept?  \n\n2. Why is this functionality placed under the `BIOSConfigManager` namespace? Could it fit better under another interface, and if not, why is this the most appropriate choice?  \n\n3. How do other user-facing daemons, such as `bmcweb` or `ipmi`, consume this property? Additionally, it might be beneficial to involve the maintainers of these applications in this review for their input.  \n\n4. Is this property supported as part of the generic Redfish/IPMI specifications, or do we plan to implement it using OEM-specific endpoints or commands?  \n\nIncluding these points would provide a clearer context for reviewers and help facilitate a more comprehensive understanding of the patchset.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 6
+      },
+      "revId": "581d8f1a7b0c55d976f1df45700d918e94812b11",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "53524ea2_04673aef",
         "filename": "yaml/xyz/openbmc_project/BIOSConfig/Manager.interface.yaml",
         "patchSetId": 2
@@ -50,6 +73,24 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "0ac92570_87c50ab9",
+      "revId": "581d8f1a7b0c55d976f1df45700d918e94812b11",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3824563_f5e1c0a7",
+        "filename": "yaml/xyz/openbmc_project/BIOSConfig/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-01-13T09:19:13Z",
+      "side": 1,
+      "message": "We need to add the relevant spec related details in the commit message \u0026 also details on what CredentialBootstraping even mean ? would help others without much of x86 background understand what you are trying to add and why.",
+      "parentUuid": "4396a24b_11e1eaf5",
       "revId": "581d8f1a7b0c55d976f1df45700d918e94812b11",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

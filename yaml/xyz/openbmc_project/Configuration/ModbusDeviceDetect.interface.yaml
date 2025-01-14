@@ -1,0 +1,54 @@
+description: >
+    This interface exposes the configuration for Modbus devices which will be
+    consumed by relevant daemons that can detect and query inventory information
+    using supplied modbus registers for these devices.
+
+properties:
+    - name: Name
+      type: string
+      description: >
+          The name of the modbus device.
+    - name: AddressRangeStart
+      type: array[uint8]
+      description: >
+          The start address for the address range of the modbus device.
+    - name: AddressRangeEnd
+      type: array[uint8]
+      description: >
+          The end address for the address range of the modbus device.
+    - name: ConnectionType
+      type: string
+      description: >
+          The type of connection based used for this modbus device, either RTU
+          or TCP.
+    - name: RTUBaudRate
+      type: uint64
+      description: >
+          The baud rate supported by the modbus device.
+    - name: DataParity
+      type: string
+      description: >
+          The parity used for data transmission to detect errors, either Odd,
+          Even or None.
+    - name: DataEndianness
+      type: string
+      description: >
+          The byte order supported by the modbus device, either Big or Little
+          Endian.
+    - name: RegisterNames
+      type: array[string]
+      description: >
+          The list of inventory register names of the modbus service.
+    - name: RegisterAddresses
+      type: array[uint16]
+      description: >
+          The register addresses for the corresponding register names.
+    - name: RegisterSizes
+      type: array[uint8]
+      description: >
+          The size of registers in bytes.
+    - name: RegisterFormats
+      type: array[string]
+      description: >
+          The format for interpreting the contents of a register, either String
+          or Integer.

@@ -3,6 +3,69 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "325b8da2_291c73f9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-15T16:49:00Z",
+      "side": 1,
+      "message": "Rather than add a new one, I think we should update the documentation here and in Sensor.Value.  Any `Inventory.Item` should be able to be associated to the sensor in this way.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 58
+      },
+      "revId": "7088d5a06a26d6f24e7fb818d1b4e5c8b2a16934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44295bae_1888ad79",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Purpose.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-15T16:49:00Z",
+      "side": 1,
+      "message": "Should this be a `set[enum[self.SensorPurpose]]`?  I know we only have one purpose right now but it seems likely to have more later.",
+      "revId": "7088d5a06a26d6f24e7fb818d1b4e5c8b2a16934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd8da743_a921ac65",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Purpose.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-15T16:49:00Z",
+      "side": 1,
+      "message": "Should we be more explicit?  Should this be something like \"for the Inventory.Item associated to this sensor by the `monitoring` relationship\"?",
+      "range": {
+        "startLine": 23,
+        "startChar": 59,
+        "endLine": 23,
+        "endChar": 65
+      },
+      "revId": "7088d5a06a26d6f24e7fb818d1b4e5c8b2a16934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "38804b7d_e771f721",
         "filename": "yaml/xyz/openbmc_project/Sensor/Purpose.interface.yaml",
         "patchSetId": 3
@@ -16,6 +79,29 @@
       "message": "Any sensor item could be monitoring this (board would be the other example).",
       "range": {
         "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 54
+      },
+      "revId": "7088d5a06a26d6f24e7fb818d1b4e5c8b2a16934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03492e74_b8795a1e",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Purpose.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-15T16:49:00Z",
+      "side": 1,
+      "message": "The association should go in the sensor and not in this object.  I\u0027m pretty sure we already have an association of this name between any sensor and any Inventory.Item, which is sufficient here.",
+      "range": {
+        "startLine": 26,
         "startChar": 0,
         "endLine": 33,
         "endChar": 54

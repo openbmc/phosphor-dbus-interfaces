@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a04a394_6bddfbce",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-01-15T20:36:36Z",
+      "side": 1,
+      "message": "I\u0027ve removed the addition of this association. Per discord discussion this interface is going to be implemented using the existing all_sensors/chassis association.",
+      "parentUuid": "325b8da2_291c73f9",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 58
+      },
+      "revId": "7088d5a06a26d6f24e7fb818d1b4e5c8b2a16934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44295bae_1888ad79",
@@ -41,6 +65,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c75e22d6_a8c4ccfe",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Purpose.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-01-15T20:36:36Z",
+      "side": 1,
+      "message": "Added and adjusted descriptions to indicate there could be multiple purposes for a single sensor.",
+      "parentUuid": "44295bae_1888ad79",
+      "revId": "7088d5a06a26d6f24e7fb818d1b4e5c8b2a16934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dd8da743_a921ac65",
@@ -54,6 +96,30 @@
       "writtenOn": "2025-01-15T16:49:00Z",
       "side": 1,
       "message": "Should we be more explicit?  Should this be something like \"for the Inventory.Item associated to this sensor by the `monitoring` relationship\"?",
+      "range": {
+        "startLine": 23,
+        "startChar": 59,
+        "endLine": 23,
+        "endChar": 65
+      },
+      "revId": "7088d5a06a26d6f24e7fb818d1b4e5c8b2a16934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfb6af4f_aff79815",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Purpose.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-01-15T20:36:36Z",
+      "side": 1,
+      "message": "Per the discord discussion (https://discord.com/channels/775381525260664832/867820390406422538/1326614993768022087) will actually still be using the existing all_sensors association right now.\n\nFrom that discussion the long-term direction would be to switch to the monitoring/monitored_by association for all_sesnors/chassis connections. But that is technical debt to be worked separately.\n\nI\u0027ll add to this description to indicate the current use with a note on the future direction.",
+      "parentUuid": "dd8da743_a921ac65",
       "range": {
         "startLine": 23,
         "startChar": 59,
@@ -100,6 +166,54 @@
       "writtenOn": "2025-01-15T16:49:00Z",
       "side": 1,
       "message": "The association should go in the sensor and not in this object.  I\u0027m pretty sure we already have an association of this name between any sensor and any Inventory.Item, which is sufficient here.",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 54
+      },
+      "revId": "7088d5a06a26d6f24e7fb818d1b4e5c8b2a16934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4ffe137_a7f6c17e",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Purpose.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-01-15T20:36:36Z",
+      "side": 1,
+      "message": "I\u0027m removing this association definition per Patrick\u0027s comment.",
+      "parentUuid": "38804b7d_e771f721",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 54
+      },
+      "revId": "7088d5a06a26d6f24e7fb818d1b4e5c8b2a16934",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "990945ef_c5d99fd0",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Purpose.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-01-15T20:36:36Z",
+      "side": 1,
+      "message": "I\u0027ve removed this association definition.",
+      "parentUuid": "03492e74_b8795a1e",
       "range": {
         "startLine": 26,
         "startChar": 0,

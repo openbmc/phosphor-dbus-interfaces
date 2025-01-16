@@ -46,6 +46,30 @@
       },
       "revId": "bd7a6fb93299087a67b4ed87b84f6a2bb35e5a12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d44159e6_9d0396ca",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-01-16T23:31:43Z",
+      "side": 1,
+      "message": "he might be right, but the position identifier shouldn\u0027t be in a config file that\u0027s representing the hardware, as this does.  If you knew nothing about OpenBMC dbus/systemd internals, this config file should still make sense.\n\nIn the reactor design, everything is \"reacting\" to things.  a leak detector itself should put the current state of the leak on dbus.  Whatever targets want to do with that information is up to the individual targets.",
+      "parentUuid": "e6767420_3be2e3f4",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 20
+      },
+      "revId": "bd7a6fb93299087a67b4ed87b84f6a2bb35e5a12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

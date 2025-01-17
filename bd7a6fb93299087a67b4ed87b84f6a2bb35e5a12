@@ -70,6 +70,30 @@
       },
       "revId": "bd7a6fb93299087a67b4ed87b84f6a2bb35e5a12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5956b0f4_2768a131",
+        "filename": "yaml/xyz/openbmc_project/Configuration/GPIOLeakDetector.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-01-17T01:32:49Z",
+      "side": 1,
+      "message": "\u003e he might be right, but the position identifier shouldn\u0027t be in a config file that\u0027s representing the hardware, as this does.  If you knew nothing about OpenBMC dbus/systemd internals, this config file should still make sense.\n\u003e \n\u003e In the reactor design, everything is \"reacting\" to things.  a leak detector itself should put the current state of the leak on dbus.  Whatever targets want to do with that information is up to the individual targets.\n\nDefining systemd targets for leaks was already discussed here https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/75329/comment/34150a60_aa2379d9/ and i had given reasoning for that. Now, if you think we shouldn\u0027t put RunTarget in the EM configuration, i can drop them from here and do some appropriate handling for it in the daemon itself.\n\nPlease let me know if there are any concerns, otherwise i will mark this comment as resolved.",
+      "parentUuid": "d44159e6_9d0396ca",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 20
+      },
+      "revId": "bd7a6fb93299087a67b4ed87b84f6a2bb35e5a12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

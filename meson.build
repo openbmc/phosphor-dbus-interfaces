@@ -91,7 +91,7 @@ import('pkgconfig').generate(
     description: 'Generated sdbusplus bindings for phosphor-dbus-interfaces',
     variables: [
         'yamldir=' + '${pc_sysrootdir}${prefix}' / inst_yaml_dir,
-        'registry_dir=' + '${pc_sysrootdir}${prefix}' / inst_registry_dir,
+        'registry_dir=' + '${prefix}' / inst_registry_dir,
     ],
 )
 

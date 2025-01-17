@@ -1,0 +1,71 @@
+description: >
+    This interface exposes the configuration for the modbus device which can be
+    consumed by services to retrieve and display modbus sensor data, status
+    information, and firmware details through D-Bus.
+
+properties:
+    - name: Name
+      type: string
+      description: >
+          The name of the modbus device.
+    - name: Address
+      type: uint16
+      description: >
+          The address of the modbus device.
+    - name: ConnectionType
+      type: string
+      description: >
+          The type of connection based used for this modbus device, either RTU
+          or TCP.
+    - name: LinkTTY
+      type: string
+      description: >
+          The Link TTY on which this device is discovered.
+    - name: RTUBaudRate
+      type: uint64
+      description: >
+          The baud rate supported by the modbus device.
+    - name: DataParity
+      type: string
+      description: >
+          The parity used for data transmission to detect errors, either Odd,
+          Even or None.
+    - name: DataEndianness
+      type: string
+      description: >
+          The byte order supported by the modbus device, either Big or Little
+          Endian.
+    - name: SensorRegisterNames
+      type: array[string]
+      description: >
+          The list of inventory register names of the modbus service.
+    - name: SensorRegisterAddresses
+      type: array[uint16]
+      description: >
+          The register addresses for the corresponding register names.
+    - name: SensorRegisterSizes
+      type: array[uint16]
+      description: >
+          The size of registers in bytes.
+    - name: SensorRegisterFormats
+      type: array[string]
+      description: >
+          The format for interpreting the contents of a register, either Integer
+          or Float.
+    - name: FirmwareVersionRegisterAddress
+      type: uint16
+      description: >
+          The register address for the modbus device firmware version.
+    - name: StatusBitNames
+      type: array[string]
+      description: >
+          The name of the status bits.
+    - name: StatusBitRegisterAddresses
+      type: array[uint16]
+      description: >
+          The register addresses for the corresponding status bits.
+    - name: StatusBitPositions
+      type: array[uint16]
+      description: >
+          The position of the bit in the register representing this specific
+          status.

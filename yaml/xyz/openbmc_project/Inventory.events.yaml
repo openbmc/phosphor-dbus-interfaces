@@ -1,0 +1,22 @@
+version: 1.0.0
+
+events:
+    - name: InventoryRemoved
+      metadata:
+          - name: Identifier
+            type: object_path
+            primary: true
+            description: The name or identifier of the removed inventory.
+      en:
+          description: A inventory has been removed from the system.
+          message: Inventory {Identifier} removed.
+
+    - name: InventoryAdded
+      metadata:
+          - name: Identifier
+            type: object_path
+            primary: true
+            description: The name or identifier of the added inventory.
+      en:
+          description: A new inventory has been added to the system.
+          message: Inventory {Identifier} added.

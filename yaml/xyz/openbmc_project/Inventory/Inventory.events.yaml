@@ -1,0 +1,53 @@
+version: 0.0.1
+
+errors:
+    - name: InventoryRemoved
+      severity: warning
+      errno: ENOENT
+      metadata:
+          - name: Model
+            type: string
+            primary: true
+            description: The Model descriptor of the Inventory.
+          - name: Type
+            type: string
+            primary: true
+            description: The Type of the Inventory.
+          - name: SerialNumber
+            type: string
+            primary: true
+            description: The Serial Number of the inventory.
+          - name: Name
+            type: string
+            description: The OpenBMC Internal inventory identifier.
+      en:
+          description: A inventory has been removed from the system.
+          message:
+              Inventory {Model} of type {Type} and Serial Number {SerialNumber}
+              removed.
+          resolution: None.
+
+events:
+    - name: InventoryAdded
+      metadata:
+          - name: Model
+            type: string
+            primary: true
+            description: The Model descriptor of the added Inventory.
+          - name: Type
+            type: string
+            primary: true
+            description: The Type of the added Inventory.
+          - name: SerialNumber
+            type: string
+            primary: true
+            description: The Serial Number of the added inventory.
+          - name: Name
+            type: string
+            description: The OpenBMC Internal inventory identifier.
+      en:
+          description: A new inventory has been added to the system.
+          message:
+              Inventory {Model} of type {Type} and Serial Number {SerialNumber}
+              added.
+          resolution: None.

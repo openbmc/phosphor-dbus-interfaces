@@ -1,0 +1,51 @@
+description: >
+    This interface displays FRU inventory information for a Modbus device,
+    including specific hardware access details such as address and LinkTTY that
+    were discovered through probing.
+
+properties:
+    - name: Name
+      type: string
+      description: >
+          The name of the modbus device.
+    - name: Address
+      type: uint16
+      description: >
+          The address of the modbus device.
+    - name: LinkTTY
+      type: string
+      description: >
+          The Link TTY on which this device is discovered.
+    - name: PartNumber
+      type: string
+      default: "Unknown"
+      description: >
+          The part number of the modbus device.
+    - name: SparePartNumber
+      type: string
+      default: "Unknown"
+      description: >
+          The additional part number, if any.
+    - name: SerialNumber
+      type: string
+      default: "Unknown"
+      description: >
+          The serial number of the modbus device.
+    - name: BuildDate
+      type: string
+      default: "Unknown"
+      description: >
+          The date this specific modbus device was built or manufactured.
+    - name: Model
+      type: string
+      default: "Unknown"
+      description: >
+          The model of the modbus device.
+    - name: Manufacturer
+      type: string
+      default: "Unknown"
+      description: >
+          The manufacturer name of the modbus device.
+
+paths:
+    - namespace: /xyz/openbmc_project/inventory_source

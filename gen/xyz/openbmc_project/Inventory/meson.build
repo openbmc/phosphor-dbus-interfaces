@@ -11,10 +11,13 @@ generated_sources += custom_target(
     'xyz/openbmc_project/Inventory__cpp'.underscorify(),
     input: [
         '../../../../yaml/xyz/openbmc_project/Inventory.errors.yaml',
+        '../../../../yaml/xyz/openbmc_project/Inventory.events.yaml',
     ],
     output: [
         'error.cpp',
         'error.hpp',
+        'event.cpp',
+        'event.hpp',
     ],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -31,6 +34,8 @@ generated_sources += custom_target(
     ],
     install: should_generate_cpp,
     install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
         false,
         get_option('includedir') / sdbusplus_current_path,
     ],

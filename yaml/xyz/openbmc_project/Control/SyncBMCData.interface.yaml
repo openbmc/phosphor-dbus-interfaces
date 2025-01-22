@@ -1,6 +1,14 @@
 description: >
     Implement the transfer of BMC application data to redundant BMC.
 
+methods:
+    - name: StartFullSync
+      description: >
+          Start a full Sync of all the configured files and directory based on
+          role, to the sibling BMC.
+      errors:
+          - self.Error.SiblingBMCNotAvailable
+
 properties:
     - name: DisableSync
       type: boolean

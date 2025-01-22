@@ -1,0 +1,12 @@
+description: >
+    Implement to provide Valve Train attributes.
+
+associations:
+    - name: monitored_by
+      description: >
+          Objects that implement ValveTrain can optionally implement the
+          'monitored_by' association to provide links to State object monitoring
+          its state.
+      reverse_name: monitoring
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.State.ValveTrain

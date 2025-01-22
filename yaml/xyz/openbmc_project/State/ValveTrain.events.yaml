@@ -1,0 +1,25 @@
+version: 1.0.0
+
+events:
+    - name: ValveTrainOpened
+      metadata:
+          - name: ValveTrainName
+            type: object_path
+            primary: true
+            description: The name or identifier of the valve train.
+      en:
+          description:
+              The valve train has been opened for coolant flow to resume.
+          message: The {ValveTrainName} has been opened for coolant flow.
+          resolution: None.
+
+    - name: ValveTrainClosed
+      metadata:
+          - name: ValveTrainName
+            type: object_path
+            primary: true
+            description: The name or identifier of the valve train.
+      en:
+          description: The valve train has been closed for coolant flow to stop.
+          message: The {ValveTrainName} has been closed for coolant flow.
+          resolution: None.

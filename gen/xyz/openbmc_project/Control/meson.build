@@ -312,6 +312,7 @@ generated_markdown += custom_target(
 generated_markdown += custom_target(
     'xyz/openbmc_project/Control/SyncBMCData__markdown'.underscorify(),
     input: [
+        '../../../../yaml/xyz/openbmc_project/Control/SyncBMCData.errors.yaml',
         '../../../../yaml/xyz/openbmc_project/Control/SyncBMCData.interface.yaml',
     ],
     output: ['SyncBMCData.md'],

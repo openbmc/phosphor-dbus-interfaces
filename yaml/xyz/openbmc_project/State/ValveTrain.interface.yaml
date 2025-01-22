@@ -1,0 +1,38 @@
+description: >
+    Implement to provide attributes for the coolant valve train.
+
+properties:
+    - name: PrettyName
+      type: string
+      description: >
+          The human readable name of the valve train.
+    - name: State
+      type: enum[self.ValveTrainState]
+      description: >
+          The state of the valve train.
+
+enumerations:
+    - name: ValveTrainState
+      description: >
+          This indicates the state of the valve train.
+      values:
+          - name: Open
+            description: >
+                The valve train is open for coolant flow.
+          - name: Closed
+            description: >
+                The valve train is closed with no coolant flow.
+
+associations:
+    - name: monitoring
+      description: >
+          Valve train can optionally implement the 'monitoring' association with
+          the inventory item related to it.
+      reverse_name: monitored_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.ValveTrain
+
+paths:
+    - namespace: /xyz/openbmc_project/state/valve_train
+      description: >
+          The root path for state of all valve trains.

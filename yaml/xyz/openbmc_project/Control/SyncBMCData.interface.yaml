@@ -22,6 +22,32 @@ properties:
           retries. However, it will not proceed if this property value is set to
           true.
 
+    - name: SyncStatus
+      type: enum[self.SyncStatus]
+      default: Unknown
+      description: >
+          This property represents the current status of the full
+          synchronization process.
+
+enumerations:
+    - name: SyncStatus
+      description: >
+          Defines the current Synchronization status of the BMC.
+      values:
+          - name: Unknown
+            description: >
+                The full synchronization status is not yet determined or is in
+                an indeterminate state.
+
+          - name: InProgress
+            description: >
+                The full synchronization is in progress.
+
+          - name: FullSyncCompleted
+            description: >
+                The full Sync of all the configured files and directory based on
+                role is completed.
+
 paths:
     - instance: /xyz/openbmc_project/control/sync_bmc_data
       description: >

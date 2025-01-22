@@ -1,0 +1,22 @@
+version: 1.0.0
+
+events:
+    - name: ValveOpen
+      metadata:
+          - name: ValveName
+            type: object_path
+            primary: true
+            description: The name or identifier of the valve.
+      en:
+          description: The valve is open for coolant flow to resume.
+          message: The {ValveName} is open for coolant flow.
+
+    - name: ValveClose
+      metadata:
+          - name: ValveName
+            type: object_path
+            primary: true
+            description: The name or identifier of the valve.
+      en:
+          description: The valve is closed for coolant flow to stop.
+          message: The {ValveName} is closed for coolant flow.

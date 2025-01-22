@@ -1,0 +1,12 @@
+description: >
+    Implement to provide Valve attributes. A valve helps control the flow of coolant in a liquid cooling system.
+
+properties:
+    - name: Direction
+      type: string
+      description: >
+        The direction of the liquid flow for the value - either Supply, Return or Unknown.
+    - name: Paired
+      type: boolean
+      description: >
+        Whether the valve is paired with another valve to control the flow of liquid.

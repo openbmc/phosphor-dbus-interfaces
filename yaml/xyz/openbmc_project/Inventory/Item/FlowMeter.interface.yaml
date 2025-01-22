@@ -1,0 +1,12 @@
+description: >
+    Implement to provide Flow Meter attributes.
+
+associations:
+    - name: monitored_by
+      description: >
+          Objects that implement Flow Meter can optionally implement the
+          'monitored_by' association to provide links to the Sensor.Value
+          interface monitoring its state.
+      reverse_name: monitoring
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Sensor.Value

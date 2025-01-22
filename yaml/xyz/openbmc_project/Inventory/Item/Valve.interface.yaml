@@ -1,0 +1,33 @@
+description: >
+    Implement to provide Valve attributes. A valve helps control the flow of
+    coolant in a liquid cooling system.
+
+properties:
+    - name: Direction
+      type: string
+      description: >
+          The direction of the liquid flow for the value - either Supply, Return
+          or Unknown.
+    - name: PairName
+      type: string
+      description: >
+          This property specifies the pair name for valves when they form a
+          supply and return valve pair; otherwise, it is set to NA.
+
+associations:
+    - name: pairing
+      description: >
+          A valve inventory item can optionally implement the 'pairing'
+          association to provide link to other valve in case of supply and
+          return valve pairs.
+      reverse_name: paired_with
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Valve
+    - name: paired_with
+      description: >
+          A valve inventory item can optionally implement the 'paired_with'
+          association to provide link to other valve in case of supply and
+          return valve pairs.
+      reverse_name: pairing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Valve

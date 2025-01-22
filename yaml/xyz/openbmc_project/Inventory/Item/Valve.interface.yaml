@@ -1,0 +1,29 @@
+description: >
+    Implement to provide Valve attributes. A valve helps control the flow of
+    coolant in a liquid cooling system.
+
+properties:
+    - name: Direction
+      type: enum[self.Direction]
+      default: Unknown
+      description: >
+          This property specifies the direction of the liquid flow for the
+          value.
+
+enumerations:
+    - name: Direction
+      description: >
+          This indicates the direction of liquid flow for the valve.
+      values:
+          - name: Supply
+            description: >
+                This indicates that the valve functions as the supply valve for
+                liquid flow.
+          - name: Return
+            description: >
+                This indicates that the valve functions as the return valve for
+                liquid flow.
+          - name: Unknown
+            description: >
+                This indicates the direction of liquid flow for valve is not
+                known.

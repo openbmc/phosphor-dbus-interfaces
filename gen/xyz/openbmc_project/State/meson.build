@@ -17,6 +17,7 @@ subdir('ScheduledHostTransition')
 subdir('Shutdown')
 subdir('SystemdTarget')
 subdir('Thermal')
+subdir('Valve')
 subdir('Watchdog')
 
 sdbusplus_current_path = 'xyz/openbmc_project/State'
@@ -451,6 +452,50 @@ generated_registry += custom_target(
         '--directory',
         meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/State/Thermal',
+    ],
+    install: should_generate_registry,
+    install_dir: [inst_registry_dir / sdbusplus_current_path],
+    build_by_default: should_generate_registry,
+)
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/State/Valve__markdown'.underscorify(),
+    input: ['../../../../yaml/xyz/openbmc_project/State/Valve.events.yaml'],
+    output: ['Valve.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/State/Valve',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_registry += custom_target(
+    'xyz/openbmc_project/State/Valve__registry'.underscorify(),
+    input: ['../../../../yaml/xyz/openbmc_project/State/Valve.events.yaml'],
+    output: ['Valve.json'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'registry',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/State/Valve',
     ],
     install: should_generate_registry,
     install_dir: [inst_registry_dir / sdbusplus_current_path],

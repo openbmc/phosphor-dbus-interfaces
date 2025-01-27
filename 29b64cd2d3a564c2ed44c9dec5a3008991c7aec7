@@ -20,6 +20,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1a957bc5_632a4955",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-27T17:35:07Z",
+      "side": 1,
+      "message": "1.0.0, right?",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2a8e723_1ad2c3cc",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-27T17:35:07Z",
+      "side": 1,
+      "message": "Why is \"InventoryRemoved\" a warning?  Hardware can often be plugged and unplugged while a BMC is in some state of running, depending on the system design.  I don\u0027t think this should be an error.\n\nIf we have an error because a _Required_ piece of hardware has been removed, we need to be more explicit on the error defined here.",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8b52de1f_817c83ea",
         "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
         "patchSetId": 1
@@ -31,6 +65,86 @@
       "writtenOn": "2025-01-18T04:42:52Z",
       "side": 1,
       "message": "Technically, EM has both these as events. But I think removed can use a little bump in priority.",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a899f74_0f4c0ed5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-27T17:35:07Z",
+      "side": 1,
+      "message": "It is concerning to me that we\u0027d be exposing an entity-manager \"Type\" string that doesn\u0027t necessarily correlate to anything documented or anything elsewhere in the system.  How would a daemon like PLDM properly fill one of these in?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 25
+      },
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb34d3e1_fc334151",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-27T17:35:07Z",
+      "side": 1,
+      "message": "How do we decide that these are the set required?  Model vs PN vs SparePart Number... I bet people have differing opinions here.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 67
+      },
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3bb1f74d_c17246d2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-27T17:35:07Z",
+      "side": 1,
+      "message": "There is no resolution?  😄  Wouldn\u0027t it be plug it back in?",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8db843c7_1e11ca30",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-27T17:35:07Z",
+      "side": 1,
+      "message": "Leave off the resolution if you don\u0027t need it (or it is \"None\").",
       "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

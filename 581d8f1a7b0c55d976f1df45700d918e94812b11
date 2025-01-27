@@ -93,6 +93,24 @@
       "parentUuid": "4396a24b_11e1eaf5",
       "revId": "581d8f1a7b0c55d976f1df45700d918e94812b11",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "611c1d1e_58d00446",
+        "filename": "yaml/xyz/openbmc_project/BIOSConfig/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-27T17:40:20Z",
+      "side": 1,
+      "message": "I don\u0027t think we should add a new property into this interface for this purpose.\n\n\"BIOSConfig/Manager\" is already fairly well defined and restricted to \"BIOS Settings\".  Not every BIOS implements the concept of a bootstrap.  This probably belongs to be implemented in the IPMI daemon?  Otherwise you\u0027re just using bios-manager as a form of registry.",
+      "parentUuid": "d3824563_f5e1c0a7",
+      "revId": "581d8f1a7b0c55d976f1df45700d918e94812b11",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

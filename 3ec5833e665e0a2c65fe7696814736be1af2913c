@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bab0e54c_ce107627",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-27T17:37:01Z",
+      "side": 1,
+      "message": "Having a new top-level interface called \"CperFile\" is certainly not going to be accepted.\n\nWhy are we passing a filesystem path along dbus?  That isn\u0027t the preference anymore, but instead we typically want a method to get a FD.",
+      "revId": "3ec5833e665e0a2c65fe7696814736be1af2913c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

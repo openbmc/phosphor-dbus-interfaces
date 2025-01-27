@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "786ce8d8_0b69399a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-01-27T19:01:44Z",
+      "side": 1,
+      "message": "Trying to ensure this generates OpenBMC.0.1.InventoryAdded as https://github.com/openbmc/entity-manager/blob/master/src/entity_manager.hpp#L149C22-L149C48.",
+      "parentUuid": "1a957bc5_632a4955",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e2a8e723_1ad2c3cc",
         "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "writtenOn": "2025-01-27T17:35:07Z",
       "side": 1,
       "message": "Why is \"InventoryRemoved\" a warning?  Hardware can often be plugged and unplugged while a BMC is in some state of running, depending on the system design.  I don\u0027t think this should be an error.\n\nIf we have an error because a _Required_ piece of hardware has been removed, we need to be more explicit on the error defined here.",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30663ec7_5ff6c1fc",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-01-27T19:01:44Z",
+      "side": 1,
+      "message": "Yeah, EM always had this as an event. I can bump down the priority of this.",
+      "parentUuid": "e2a8e723_1ad2c3cc",
       "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -134,6 +170,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3a617146_faee8749",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-01-27T19:01:44Z",
+      "side": 1,
+      "message": "😄",
+      "parentUuid": "3bb1f74d_c17246d2",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8db843c7_1e11ca30",
         "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
         "patchSetId": 1
@@ -145,6 +199,24 @@
       "writtenOn": "2025-01-27T17:35:07Z",
       "side": 1,
       "message": "Leave off the resolution if you don\u0027t need it (or it is \"None\").",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5fadf47_8fc8d0c9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-01-27T19:01:44Z",
+      "side": 1,
+      "message": "👍 Did not know it was optional.",
+      "parentUuid": "8db843c7_1e11ca30",
       "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -34,6 +34,24 @@
       "parentUuid": "f3383d89_d90bda3f",
       "revId": "bdf128d73a60626c36d87966410dccf4b980bc29",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0553557e_0f084b11",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-01-27T17:25:42Z",
+      "side": 1,
+      "message": "GetAllProperties does not work to retrieve all attributes as per existing user-manager design, this needs rework and requires changes across multiple repos.\ncan we please continue with this commit as per existing design and take up rework later",
+      "parentUuid": "bd268f68_37696278",
+      "revId": "bdf128d73a60626c36d87966410dccf4b980bc29",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

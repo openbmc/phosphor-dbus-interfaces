@@ -1,0 +1,21 @@
+version: 1.0.0
+
+errors:
+    - name: Failed
+      severity: warning
+      metadata:
+          - name: Fan
+            type: object_path
+            primary: true
+            description: The name or identifier of the fan.
+      errno: EIO
+      redfish-mapping: Environmental.FanFailed
+
+events:
+    - name: Restored
+      metadata:
+          - name: Fan
+            type: object_path
+            primary: true
+            description: The name of identifier of the fan.
+      redfish-mapping: Environmental.FanRestored

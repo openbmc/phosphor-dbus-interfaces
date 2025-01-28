@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc988990_a81f46ef",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-28T15:23:55Z",
+      "side": 1,
+      "message": "Why is this const?  You\u0027re saying it can never change during the runtime of a BMC?  I don\u0027t think that is true.\n```suggestion\n          - readonly\n```",
+      "revId": "fff1ee885c111a868852b1c3b597c43198551b8e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

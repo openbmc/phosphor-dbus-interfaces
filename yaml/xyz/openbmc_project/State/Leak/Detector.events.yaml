@@ -15,6 +15,7 @@ errors:
               {DetectorName}.
           resolution: Inspect the resource for leak.
       errno: EPIPE
+      redfish-mapping: Environmental.LeakDetectedCritical
 
     - name: LeakDetectedWarning
       severity: warning
@@ -30,6 +31,7 @@ errors:
               {DetectorName}.
           resolution: Inspect the resource for leak.
       errno: EPIPE
+      redfish-mapping: Environmental.LeakDetectedWarning
 
 events:
     - name: LeakDetectedNormal
@@ -43,3 +45,4 @@ events:
               The leak detector has returned to its normal operating state.
           message: The {DetectorName} has returned to normal.
           resolution: None.
+      redfish-mapping: Environmental.LeakDetectedNormal

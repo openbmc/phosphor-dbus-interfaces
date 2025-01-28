@@ -51,6 +51,24 @@
       "message": "What if you don\u0027t support this property? How does bmcweb know to tell the user this isn\u0027t supported?",
       "revId": "d6e977f5343ee1990b55aed37ced9d59b26201a1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3714cbec_8b6129de",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-01-28T19:51:20Z",
+      "side": 1,
+      "message": "\u003e What if you don\u0027t support this property? \n\nThats a good question, i think we should extend the Update interface to show this property if this is allowed, just like AllowedApplyTimes https://grok.openbmc.org/xref/openbmc/phosphor-dbus-interfaces/yaml/xyz/openbmc_project/Software/Update.interface.yaml?r\u003d921791c73008a3edfc6507afb5bc15e48963d295#33.\nWill add that support.\n\n\u003e How does bmcweb know to tell the user this isn\u0027t supported?\n\nAs per my understanding, I don\u0027t see there is an explicit way in current schema to show if Redfish UpdateService supports it or not. In all the flows this is being shown as property for update args or properties via \"ForceUpdate\" to be passed in for update operation.\nSo, i suppose this is something which needs to be requested from Redfish DMTF.",
+      "parentUuid": "0dfec259_0295f96e",
+      "revId": "d6e977f5343ee1990b55aed37ced9d59b26201a1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

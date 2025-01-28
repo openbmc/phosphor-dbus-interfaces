@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f1107c9b_9b2fd8db",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-01-28T03:53:21Z",
+      "side": 1,
+      "message": "\u003e How does one use this when the image is a collection of images (like PLDM) with the force update being set on a subset of components? \n\nRedfish has only support for singleton force update. Now why that is so its a question for DMTF Redfish.\n\n\u003e I wonder if this should be in a PDI at the next (version/component?) level?\n\nThis is the property of StartUpdate DBus interface (not the version) which initiates the update . Version interface gets created as effect of StartUpdate flow.",
+      "parentUuid": "53c510ba_ed800ce0",
+      "revId": "d6e977f5343ee1990b55aed37ced9d59b26201a1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0dfec259_0295f96e",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 1

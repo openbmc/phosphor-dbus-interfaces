@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6814643f_4aea09fb",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-01-28T19:30:57Z",
+      "side": 1,
+      "message": "\u003e lowerCamelCase or UpperCamelCase?\n\u003e \n\nDone\n\n\n\u003e This should move to https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/ApplyTime.interface.yaml\n\nDone. This was based on an old patch which was changed later on, so rebased and fixed this.",
+      "parentUuid": "55b7d788_c8d85540",
+      "revId": "4128621ed5a48912519411a0d154da9e3fd33e20",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "021a604b_76572d5b",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-01-23T09:49:55Z",
       "side": 1,
       "message": "Which interface is `RequestedActivations.Active`?",
+      "revId": "4128621ed5a48912519411a0d154da9e3fd33e20",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "deb088da_e849664e",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-01-28T19:30:57Z",
+      "side": 1,
+      "message": "https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/Activation.interface.yaml",
+      "parentUuid": "021a604b_76572d5b",
       "revId": "4128621ed5a48912519411a0d154da9e3fd33e20",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

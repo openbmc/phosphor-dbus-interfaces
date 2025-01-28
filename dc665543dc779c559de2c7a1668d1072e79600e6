@@ -22,6 +22,30 @@
       },
       "revId": "dc665543dc779c559de2c7a1668d1072e79600e6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3dee8d4_5b0680ed",
+        "filename": "yaml/xyz/openbmc_project/State/Leak/DetectorGroup.interface.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-01-28T03:27:34Z",
+      "side": 1,
+      "message": "As mentioned in description the \"the overall status of the group, which is determined by aggregating the state from all member leak detectors.\", so we still need a DetectorGroupState, but let me change the type to use the same enum as same values apply here as well.\n\nPlease let me know if there are still any questions.",
+      "parentUuid": "ee99cc63_400a0614",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 63
+      },
+      "revId": "dc665543dc779c559de2c7a1668d1072e79600e6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

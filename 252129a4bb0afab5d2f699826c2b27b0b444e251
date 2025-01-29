@@ -16,6 +16,24 @@
       "message": "These would be generated from pid control? Does pid-control have a concept of a failed fan?  i thought people just set thresholds to determine when a fan was misbehaving.  or does it watch thresholds",
       "revId": "252129a4bb0afab5d2f699826c2b27b0b444e251",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92bfab0d_e3347b57",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-29T16:39:49Z",
+      "side": 1,
+      "message": "Good question.  Maybe I don\u0027t need this.\n\nWe seem to have a few cases:\n- The fan is spinning below thresholds.  This should be reported by dbus-sensors as a fan threshold issue.\n- The fan isn\u0027t spinning at the speed requested (or is 0).  Maybe this could be handled by thresholds also or maybe pid-control should explicitly monitor for this.\n- There are secondary hardware necessary to get the fan to work, which is raising a failure signal (usually a GPIO).  The two I see right now in our design are:\n    1. The io-expander to the fan controller isn\u0027t working and/or raised an interrupt. (I need to look at this closer because I don\u0027t think this is actually a fan failure)\n    2. There is an \"efuse\" to prevent over-current and it has blown and raised an interrupt.\n\nThe \"efuse\" one I could probably map to the power-rail failures I put in a different diff.",
+      "parentUuid": "4e0eba87_b5493c68",
+      "revId": "252129a4bb0afab5d2f699826c2b27b0b444e251",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

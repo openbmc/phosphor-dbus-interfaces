@@ -92,6 +92,9 @@ enumerations:
           - name: Watts
             description: >
                 Rate of energy transfer as Watts.
+          - name: CM
+            description: >
+                Volume as cubic meters.
 
 associations:
     - name: inventory
@@ -127,7 +130,7 @@ paths:
           - name: Humidity
             value: humidity
           - name: Liquidflow
-            value: liquidflow
+            value: liquid_flow
           - name: Power
             value: power
           - name: Pressure
@@ -138,3 +141,7 @@ paths:
             value: utilization
           - name: Voltage
             value: voltage
+          - name: Volume
+            value: volume
+          - percent: Concentration
+            value: concentration

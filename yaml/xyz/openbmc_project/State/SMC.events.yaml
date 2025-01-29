@@ -1,0 +1,35 @@
+version: 1.0.0
+
+errors:
+    - name: SMCFailed
+      severity: critical
+      metadata:
+          - name: Identifier
+            type: object_path
+            primary: true
+            description: The name or identifier of the SMC.
+          - name: FailureType
+            type: string
+            description: An [optional] identifier of the failure type.
+      en:
+          description:
+              A Satellite Management Controller (SMC) has been detected in
+              failure state.
+          message:
+              The Satellite Management Controller '{Identifier}' is in a failure
+              state.
+      errno: EHOSTUNREACH
+
+events:
+    - name: SMCRestored
+      metadata:
+          - name: Identifier
+            type: object_path
+            primary: true
+            description: The name or identifier of the SMC.
+      en:
+          description:
+              The Satellite Management Controller (SMC) status is restored.
+          message:
+              The Satellite Management Controller '{Identifier}' is in a
+              restored state.

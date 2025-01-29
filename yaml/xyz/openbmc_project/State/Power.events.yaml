@@ -1,0 +1,34 @@
+version: 1.0.0
+
+errors:
+    - name: PowerRailFault
+      severity: error
+      metadata:
+          - name: PowerRail
+            type: object_path
+            primary: true
+            description: The name or identifier of the power rail.
+          - name: FailureData
+            type: string
+            description: An [optional] set of additional failure data.
+      en:
+          description: A fault has been detected on a power rail.
+          message: A fault has been detected on power rail '{Rail}'.
+      errno: EIO
+
+    - name: VoltageRegulatorFault
+      severity: error
+      metadata:
+          - name: VoltageRegulator
+            type: object_path
+            primary: true
+            description: The name or identifier of the voltage regulator.
+          - name: FailureData
+            type: string
+            description: An [optional] set of additional failure data.
+      en:
+          description: A fault has been detected from a voltage regulator.
+          message:
+              A fault has been detected on voltage regulator
+              '{VoltageRegulator}'
+      errno: EIO

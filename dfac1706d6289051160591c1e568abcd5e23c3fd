@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2add5746_0343e36a",
+        "filename": "yaml/xyz/openbmc_project/Control/SyncBMCData.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2025-01-30T08:40:05Z",
+      "side": 1,
+      "message": "I believe we should have an error to indicate when a full sync is in progress. I know you\u0027ve already added a status for this, but we still need an error to be returned if someone attempts to initiate a full sync while one is already in progress.",
+      "revId": "dfac1706d6289051160591c1e568abcd5e23c3fd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7423f213_5a97d440",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-31T20:15:05Z",
+      "side": 1,
+      "message": "Should we add a single field of debug data that you can make an arbitrary string?  You\u0027ve mentioned how it could come from pmbus, but it could also be raw GPIOs, so the specific debug data needs to be specific to the detecting entity.  Doesn\u0027t seem like we can standardize that easily.",
+      "parentUuid": "00eca5a6_cff27e01",
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b0ea545c_17c14103",
         "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
         "patchSetId": 3
@@ -60,6 +78,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "52b8b260_329aff6a",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-31T20:15:05Z",
+      "side": 1,
+      "message": "It needs to be a conforming dbus path but there is nothing that guarantees that it exists.  As long as it has slashes, it will work.\n\nIn the future, we may add code to bmcweb that attempts to translate these object paths into a URI.  We\u0027ll have a fall-back for when there is no dbus resource, so you continue to get something sane.",
+      "parentUuid": "b0ea545c_17c14103",
+      "range": {
+        "startLine": 8,
+        "startChar": 18,
+        "endLine": 8,
+        "endChar": 29
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "29f223e9_6b92d0fc",
         "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
         "patchSetId": 3
@@ -71,6 +113,30 @@
       "writtenOn": "2025-01-31T19:44:32Z",
       "side": 1,
       "message": "I\u0027m not sure what this means?  If we cannot communicate with the power sequencer device, that would fall in this category.  But that would be a different type of error from a pgood failure.",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 16
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "306a79a4_24af9abf",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-31T20:15:05Z",
+      "side": 1,
+      "message": "dbus requires errors to have an errno associated to them.  It really doesn\u0027t have all that much meaning, but the YAML also requires them.  A lot of them don\u0027t have good mapping from what we\u0027re doing to a POSIX (or Linux) errno, so I either did something \"cute\" or EIO.  [The coolant leak events I did as EPIPE]",
+      "parentUuid": "29f223e9_6b92d0fc",
       "range": {
         "startLine": 14,
         "startChar": 13,
@@ -123,6 +189,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "83de23de_6fad5cc3",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-31T20:15:05Z",
+      "side": 1,
+      "message": "Good point.  Let me look at this.  Redfish only has \"Warning\" and \"Critical\", but we have more than that in the phosphor-logging.  Let me see if there is a more appropriate one in this case.",
+      "parentUuid": "e2ae1062_7fd926cb",
+      "range": {
+        "startLine": 17,
+        "startChar": 16,
+        "endLine": 17,
+        "endChar": 24
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1a38f06f_9817abfe",
         "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
         "patchSetId": 3
@@ -134,6 +224,30 @@
       "writtenOn": "2025-01-31T19:44:32Z",
       "side": 1,
       "message": "Same question as above re: does this need to be a real D-Bus object?",
+      "range": {
+        "startLine": 20,
+        "startChar": 18,
+        "endLine": 20,
+        "endChar": 29
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f0b8244_0544ef17",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-31T20:15:05Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "1a38f06f_9817abfe",
       "range": {
         "startLine": 20,
         "startChar": 18,
@@ -157,6 +271,30 @@
       "writtenOn": "2025-01-31T19:44:32Z",
       "side": 1,
       "message": "Similar to my previous comment, this seems appropriate only in one of the error types we use.",
+      "range": {
+        "startLine": 28,
+        "startChar": 13,
+        "endLine": 28,
+        "endChar": 16
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f54ebae3_80f306e2",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-31T20:15:05Z",
+      "side": 1,
+      "message": "Acknowledged.  Feel free to suggest others, but these don\u0027t have a lot of purpose other than completeness.",
+      "parentUuid": "eafa48a6_85b0291b",
       "range": {
         "startLine": 28,
         "startChar": 13,

@@ -17,7 +17,11 @@ if [ ! -x "$SDBUSPP_GEN_MESON" ]; then
     exit 1
 fi
 
+echo "Generating meson files..."
 $SDBUSPP_GEN_MESON \
     --command meson \
     --directory "$REPO_ROOT/yaml" \
     --output "$REPO_ROOT/gen"
+
+echo "Formatting meson files..."
+find "$REPO_ROOT/gen" -name "meson.build" -exec meson format -i {} +

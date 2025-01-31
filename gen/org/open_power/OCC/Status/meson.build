@@ -4,9 +4,7 @@ sdbusplus_current_path = 'org/open_power/OCC/Status'
 
 generated_sources += custom_target(
     'org/open_power/OCC/Status__cpp'.underscorify(),
-    input: [
-        '../../../../../yaml/org/open_power/OCC/Status.interface.yaml',
-    ],
+    input: ['../../../../../yaml/org/open_power/OCC/Status.interface.yaml'],
     output: [
         'common.hpp',
         'server.hpp',
@@ -16,10 +14,15 @@ generated_sources += custom_target(
     ],
     depend_files: sdbusplusplus_depfiles,
     command: [
-        sdbuspp_gen_meson_prog, '--command', 'cpp',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'cpp',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../../yaml',
         'org/open_power/OCC/Status',
     ],
     install: should_generate_cpp,

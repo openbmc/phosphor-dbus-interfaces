@@ -53,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4f56c8a_043e1842",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-31T20:21:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7423f213_5a97d440",
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b0ea545c_17c14103",
@@ -100,6 +118,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce7b480e_19af002f",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-31T20:21:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "52b8b260_329aff6a",
+      "range": {
+        "startLine": 8,
+        "startChar": 18,
+        "endLine": 8,
+        "endChar": 29
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "29f223e9_6b92d0fc",
@@ -137,6 +179,30 @@
       "side": 1,
       "message": "dbus requires errors to have an errno associated to them.  It really doesn\u0027t have all that much meaning, but the YAML also requires them.  A lot of them don\u0027t have good mapping from what we\u0027re doing to a POSIX (or Linux) errno, so I either did something \"cute\" or EIO.  [The coolant leak events I did as EPIPE]",
       "parentUuid": "29f223e9_6b92d0fc",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 16
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79c09ce9_971c6440",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-31T20:21:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "306a79a4_24af9abf",
       "range": {
         "startLine": 14,
         "startChar": 13,

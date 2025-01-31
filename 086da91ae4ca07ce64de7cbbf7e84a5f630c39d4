@@ -159,6 +159,23 @@
       "parentUuid": "d18778e7_30d35713",
       "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d150d38_16cf5ffe",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-01-31T16:23:39Z",
+      "side": 1,
+      "message": "PasswordExpiration parameter is not mandatory while creating user and there is  PasswordExpiration user attribute defined already\nbmcweb can create user first using CreateUser method and then update PasswordExpiration D-bus property of corresponding user with given password expiration input values. we don\u0027t need to create new CreateUser method.",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

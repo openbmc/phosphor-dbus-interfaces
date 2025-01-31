@@ -1,0 +1,21 @@
+version: 1.0.0
+
+events:
+    - name: LockOutEnabled
+      metadata:
+          - name: Identifier
+            type: object_path
+            primary: true
+            description: The name or identifier of the Lock Out device.
+      en:
+          description: A Lock Out device has been enabled.
+          message: The Lock Out device '{Identifier}' has been enabled.
+    - name: LockOutDisabled
+      metadata:
+          - name: Identifier
+            type: object_path
+            primary: true
+            description: The name or identifier of the Lock Out device.
+      en:
+          description: A Lock Out device has been disabled.
+          message: The Lock Out device '{Identifier}' has been disabled.

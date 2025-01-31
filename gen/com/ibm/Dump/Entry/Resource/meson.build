@@ -4,9 +4,7 @@ sdbusplus_current_path = 'com/ibm/Dump/Entry/Resource'
 
 generated_sources += custom_target(
     'com/ibm/Dump/Entry/Resource__cpp'.underscorify(),
-    input: [
-        '../../../../../../yaml/com/ibm/Dump/Entry/Resource.interface.yaml',
-    ],
+    input: ['../../../../../../yaml/com/ibm/Dump/Entry/Resource.interface.yaml'],
     output: [
         'common.hpp',
         'server.hpp',
@@ -16,10 +14,15 @@ generated_sources += custom_target(
     ],
     depend_files: sdbusplusplus_depfiles,
     command: [
-        sdbuspp_gen_meson_prog, '--command', 'cpp',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../../../yaml',
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'cpp',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../../../yaml',
         'com/ibm/Dump/Entry/Resource',
     ],
     install: should_generate_cpp,

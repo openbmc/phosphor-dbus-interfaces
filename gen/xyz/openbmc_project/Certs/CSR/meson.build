@@ -5,9 +5,7 @@ sdbusplus_current_path = 'xyz/openbmc_project/Certs/CSR'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/Certs/CSR__cpp'.underscorify(),
-    input: [
-        '../../../../../yaml/xyz/openbmc_project/Certs/CSR.interface.yaml',
-    ],
+    input: ['../../../../../yaml/xyz/openbmc_project/Certs/CSR.interface.yaml'],
     output: [
         'common.hpp',
         'server.hpp',
@@ -17,10 +15,15 @@ generated_sources += custom_target(
     ],
     depend_files: sdbusplusplus_depfiles,
     command: [
-        sdbuspp_gen_meson_prog, '--command', 'cpp',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'cpp',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Certs/CSR',
     ],
     install: should_generate_cpp,
@@ -36,14 +39,21 @@ generated_sources += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Certs/CSR/Create__markdown'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/Certs/CSR/Create.interface.yaml',  ],
-    output: [ 'Create.md' ],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/Certs/CSR/Create.interface.yaml',
+    ],
+    output: ['Create.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
-        sdbuspp_gen_meson_prog, '--command', 'markdown',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Certs/CSR/Create',
     ],
     install: should_generate_markdown,

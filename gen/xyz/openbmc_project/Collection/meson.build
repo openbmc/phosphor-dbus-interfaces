@@ -5,14 +5,21 @@ sdbusplus_current_path = 'xyz/openbmc_project/Collection'
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Collection/DeleteAll__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Collection/DeleteAll.interface.yaml',  ],
-    output: [ 'DeleteAll.md' ],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Collection/DeleteAll.interface.yaml',
+    ],
+    output: ['DeleteAll.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
-        sdbuspp_gen_meson_prog, '--command', 'markdown',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../yaml',
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Collection/DeleteAll',
     ],
     install: should_generate_markdown,

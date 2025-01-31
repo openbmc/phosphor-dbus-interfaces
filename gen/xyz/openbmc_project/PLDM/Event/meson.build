@@ -4,9 +4,7 @@ sdbusplus_current_path = 'xyz/openbmc_project/PLDM/Event'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/PLDM/Event__cpp'.underscorify(),
-    input: [
-        '../../../../../yaml/xyz/openbmc_project/PLDM/Event.interface.yaml',
-    ],
+    input: ['../../../../../yaml/xyz/openbmc_project/PLDM/Event.interface.yaml'],
     output: [
         'common.hpp',
         'server.hpp',
@@ -16,10 +14,15 @@ generated_sources += custom_target(
     ],
     depend_files: sdbusplusplus_depfiles,
     command: [
-        sdbuspp_gen_meson_prog, '--command', 'cpp',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'cpp',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/PLDM/Event',
     ],
     install: should_generate_cpp,

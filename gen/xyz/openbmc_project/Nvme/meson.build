@@ -5,14 +5,22 @@ sdbusplus_current_path = 'xyz/openbmc_project/Nvme'
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Nvme/Status__markdown'.underscorify(),
-    input: [ '../../../../yaml/xyz/openbmc_project/Nvme/Status.errors.yaml', '../../../../yaml/xyz/openbmc_project/Nvme/Status.interface.yaml',  ],
-    output: [ 'Status.md' ],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Nvme/Status.errors.yaml',
+        '../../../../yaml/xyz/openbmc_project/Nvme/Status.interface.yaml',
+    ],
+    output: ['Status.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
-        sdbuspp_gen_meson_prog, '--command', 'markdown',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../yaml',
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Nvme/Status',
     ],
     install: should_generate_markdown,

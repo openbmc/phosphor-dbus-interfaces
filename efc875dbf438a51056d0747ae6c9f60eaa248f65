@@ -1,0 +1,170 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54278eb4_9076cad3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-01-31T19:44:32Z",
+      "side": 1,
+      "message": "Sorry for the delay in responding.  If you need to merge this for work that you are doing, that is no problem.  We are currently using the PEL extension, so I don\u0027t think it would break us.  I left some comments regarding what we would need if we moved to this in the future.",
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00eca5a6_cff27e01",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-01-31T19:44:32Z",
+      "side": 1,
+      "message": "If this represents a pgood failure, I agree with the severity.\n\nFor metadata, the data my team needs to capture depends on how the failure was found, the power sequencer device type, etc.\n\nWe currently have three methods for isolating which power rail caused a chassis pgood failure.  Each causes us to capture different meta-data.\n* PMBus STATUS_VOUT register\n  * Capture STATUS_VOUT\n* GPIO value\n  * Capture GPIO line number and value\n* PMBus READ_VOUT \u003c\u003d VOUT_UV_FAULT_LIMIT\n  * Capture READ_VOUT and VOUT_UV_FAULT_LIMIT\n\nThe three methods were needed due to way the hardware is connected to the power sequencer and how the sequencer is configured on some systems.\n\nWe also capture the following in all cases:\n* Rail name (probably corresponds to your PowerRail property?)\n* PMBus STATUS_WORD from the power sequencer device (if available)\n* All of the GPIO values provided by the power sequencer device\n* Any relevant manufacturer-specific PMBus registers on the power sequencer device\n\nAll of this data is needed for the hardware team to diagnose field failures so we know which parts to replace.\n\nCurrently we use the PEL extension.  That has an AdditionalData map (string-\u003estring) as part of the error log.  That allows us to capture the right set of debug data depending on the variables above.\n\nIf we move to this new event in the future, I think we\u0027d need something similar to AdditionalData.  It would not be possible to define all possible meta-data in advance, and we wouldn\u0027t use all meta-data fields in all cases.",
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0ea545c_17c14103",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-01-31T19:44:32Z",
+      "side": 1,
+      "message": "Does this mean the rail name would need to be a valid object on D-Bus?  Or does that just mean it is a string, and scoping would be done with \u0027/\u0027 vs. \u0027.\u0027 ?",
+      "range": {
+        "startLine": 8,
+        "startChar": 18,
+        "endLine": 8,
+        "endChar": 29
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29f223e9_6b92d0fc",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-01-31T19:44:32Z",
+      "side": 1,
+      "message": "I\u0027m not sure what this means?  If we cannot communicate with the power sequencer device, that would fall in this category.  But that would be a different type of error from a pgood failure.",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 16
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd8c00ec_b15d1843",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-01-31T19:44:32Z",
+      "side": 1,
+      "message": "The application my team uses currently support several types of voltage regulator faults.  Similar to the case above, each has different meta-data:\n* I2C communication error\n  * Capture bus, address, errno\n* PMBus error (communication worked but data didn\u0027t make sense)\n  * Capture device name and inventory path of part to replace\n* Write verification error (wrote value, read it back, didn\u0027t match)\n  * Capture device name and inventory path of part to replace\n* Redundant phase fault\n  * Capture device-specific register values to allow hardware team to debug\n  * Capture inventory path of part to replace\n\nPerhaps these would be separate event types?  Or there would be a type field or meta-data?\n\nAs noted above, we currently use the PEL extension but would need an AdditionalData concept to capture a varying set of meta-data.",
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2ae1062_7fd926cb",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-01-31T19:44:32Z",
+      "side": 1,
+      "message": "If this severity means the system is going to power off or stop working, that is not the case for the errors I noted above.  Usually the system can continue working, but it would be good to replace the part.",
+      "range": {
+        "startLine": 17,
+        "startChar": 16,
+        "endLine": 17,
+        "endChar": 24
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1a38f06f_9817abfe",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-01-31T19:44:32Z",
+      "side": 1,
+      "message": "Same question as above re: does this need to be a real D-Bus object?",
+      "range": {
+        "startLine": 20,
+        "startChar": 18,
+        "endLine": 20,
+        "endChar": 29
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eafa48a6_85b0291b",
+        "filename": "yaml/xyz/openbmc_project/State/Power.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-01-31T19:44:32Z",
+      "side": 1,
+      "message": "Similar to my previous comment, this seems appropriate only in one of the error types we use.",
+      "range": {
+        "startLine": 28,
+        "startChar": 13,
+        "endLine": 28,
+        "endChar": 16
+      },
+      "revId": "efc875dbf438a51056d0747ae6c9f60eaa248f65",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

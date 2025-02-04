@@ -1,0 +1,30 @@
+description: >
+    Implement to provide physical part location of an inventory item.
+properties:
+    - name: LocationType
+      type: enum[self.LocationTypes]
+      default: Unknown
+      description: >
+          The types of locations for a part within an enclosure.
+
+enumerations:
+    - name: LocationTypes
+      description: >
+          Possible part location types
+      values:
+          - name: Slot
+            description: >
+                It indicates the part is located in a slot.
+          - name: Socket
+            description: >
+                It indicates the part is located in a socket.
+          - name: Backplane
+            description: >
+                It indicates the part is a backplane in an enclosure.
+          - name: Embedded
+            description: >
+                It indicates the part is embedded or otherwise permanently
+                incorporated into a larger part or device.
+          - name: Unknown
+            description: >
+                An unknown location type.

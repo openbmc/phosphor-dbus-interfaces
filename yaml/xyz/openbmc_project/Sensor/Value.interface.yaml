@@ -12,6 +12,7 @@ description: >
       power
       pressure
       temperature
+      unclassified
       utilization
       voltage
 
@@ -38,18 +39,19 @@ properties:
     - name: Unit
       type: enum[self.Unit]
       description: >
-          The unit of the reading.  Immutable once set for a sensor. For objects
-          in the airflow namespace, Unit must be "CFM" For objects in the
+          The unit of the reading. Immutable once set for a sensor. For objects
+          in the airflow namespace, Unit must be "CFM". For objects in the
           altitude namespace, Unit must be "Meters". For objects in the current
           namespace, Unit must be "Amperes". For objects in the energy
           namespace, Unit must be "Joules". For objects in the fan_tach
           namespace, Unit must be "RPMS". For objects in the humidity namespace,
-          Unit must be "PercentRH" For objects in the power namespace, Unit must
-          be "Watts". For objects in the pressure namespace, Unit must be
-          "Pascals" For objects in the temperature namespace, Unit must be
+          Unit must be "PercentRH". For objects in the power namespace, Unit
+          must be "Watts". For objects in the pressure namespace, Unit must be
+          "Pascals". For objects in the temperature namespace, Unit must be
           "DegreesC". For objects in the utilization namespace, Unit must be
-          "Percent" For objects in the voltage namespace, Unit must be "Volts",
-          For objects in the liquidflow namespace, Unit must be "LPM".
+          "Percent". For objects in the voltage namespace, Unit must be "Volts".
+          For objects in the liquidflow namespace, Unit must be "LPM". For
+          objects in the unclassified namespace, Unit must be "Unclassified".
 
 enumerations:
     - name: Unit
@@ -86,6 +88,10 @@ enumerations:
           - name: RPMS
             description: >
                 Frequency of rotation as revolutions per minute.
+          - name: Unclassified
+            description: >
+                Cannot be classified into predefined units, so it is
+                Unclassified.
           - name: Volts
             description: >
                 Electomotive force as volts.
@@ -134,6 +140,8 @@ paths:
             value: pressure
           - name: Temperature
             value: temperature
+          - name: Unclassified
+            value: unclassified
           - name: Utilization
             value: utilization
           - name: Voltage

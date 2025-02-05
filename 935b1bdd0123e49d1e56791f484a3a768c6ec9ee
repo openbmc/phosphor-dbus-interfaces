@@ -46,6 +46,30 @@
       },
       "revId": "935b1bdd0123e49d1e56791f484a3a768c6ec9ee",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5a5d414_26f1f998",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-05T02:16:10Z",
+      "side": 1,
+      "message": "Modbus might call them \"sensors\", IPMI might call them \"sensors\" but they are not a Sensor.Value.  They\u0027re other dbus objects.\n\nRedfish also doesn\u0027t allow unit-less sensors.",
+      "parentUuid": "e4ebf670_01008968",
+      "range": {
+        "startLine": 91,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 29
+      },
+      "revId": "935b1bdd0123e49d1e56791f484a3a768c6ec9ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

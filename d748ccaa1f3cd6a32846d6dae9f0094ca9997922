@@ -67,6 +67,24 @@
       "message": "I\u0027m not too hung up on this but should we consider dropping the \"Mode\" from these?  The enum is already \"ModeType\".",
       "revId": "d748ccaa1f3cd6a32846d6dae9f0094ca9997922",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52e0a35e_d426bcbd",
+        "filename": "yaml/xyz/openbmc_project/BIOSConfig/SecureBoot.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-02-05T07:08:30Z",
+      "side": 1,
+      "message": "I used it as it was defined in redfish SecureBoot schema: https://redfish.dmtf.org/schemas/v1/SecureBoot.v1_1_2.json",
+      "parentUuid": "fc901eb3_59000ad8",
+      "revId": "d748ccaa1f3cd6a32846d6dae9f0094ca9997922",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

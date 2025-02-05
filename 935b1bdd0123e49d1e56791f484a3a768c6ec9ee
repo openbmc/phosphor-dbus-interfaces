@@ -22,6 +22,30 @@
       },
       "revId": "935b1bdd0123e49d1e56791f484a3a768c6ec9ee",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4ebf670_01008968",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1000317
+      },
+      "writtenOn": "2025-02-05T00:06:45Z",
+      "side": 1,
+      "message": "However, when retrieving sensor data via Modbus, we also need to obtain other non-sensor data, such as the device\u0027s serial number, firmware version, and service information. In this case, we can only use unclassified units. Do you have any suggestions?",
+      "parentUuid": "1494349d_cc4a8883",
+      "range": {
+        "startLine": 91,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 29
+      },
+      "revId": "935b1bdd0123e49d1e56791f484a3a768c6ec9ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

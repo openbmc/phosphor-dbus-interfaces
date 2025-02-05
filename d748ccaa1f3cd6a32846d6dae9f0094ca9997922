@@ -72,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "130d07b0_1783f25e",
+        "filename": "yaml/xyz/openbmc_project/BIOSConfig/SecureBoot.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-02-05T08:51:18Z",
+      "side": 1,
+      "message": "Addressed the comment",
+      "parentUuid": "9fe80f14_2ef8bb8a",
+      "revId": "d748ccaa1f3cd6a32846d6dae9f0094ca9997922",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fc901eb3_59000ad8",
         "filename": "yaml/xyz/openbmc_project/BIOSConfig/SecureBoot.interface.yaml",
         "patchSetId": 6
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "I used it as it was defined in redfish SecureBoot schema: https://redfish.dmtf.org/schemas/v1/SecureBoot.v1_1_2.json",
       "parentUuid": "fc901eb3_59000ad8",
+      "revId": "d748ccaa1f3cd6a32846d6dae9f0094ca9997922",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2007b094_49411497",
+        "filename": "yaml/xyz/openbmc_project/BIOSConfig/SecureBoot.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-02-05T08:51:18Z",
+      "side": 1,
+      "message": "Dropped \"Mode\" as suggested",
+      "parentUuid": "52e0a35e_d426bcbd",
       "revId": "d748ccaa1f3cd6a32846d6dae9f0094ca9997922",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

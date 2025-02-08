@@ -199,6 +199,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "61061dd9_bd31eb4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-02-08T22:44:43Z",
+      "side": 1,
+      "message": "\u003e Why Can\u0027t we create the user and set the property after wards?\n\nBecause it adds a significant amount of error handling code in something that should be atomic:\n\n1. Create user\n2. Set password over PAM\nif this fails, delete user?  (note, we have this complexity already because we\u0027ve separated the two APIs).\nfor property in a, b, c, d\n   Set property\n      if this fails, delete user?  Need to delete password separately?\n\nThe idea of atomically creating a user is something that\u0027s required by the Redfish spec/REST semantics, and having bmcweb maintain the atomic nature of a user creation action leads to a lot of complications and state handling that\u0027s MUCH easier handled within PUM, given it can run its pre-checks on the input before any permanent actions (ie, writing config files) are taken.\n\nNote that the existing property (Enabled) has this same requirement that is not \"required\" to be specified and could easily be set later, so if we want to go with the above flow, we\u0027re already in the realm of duplicating APIs, and could remove Enabled and Privilege from the call.",
+      "parentUuid": "7be4e50b_c1193815",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0d150d38_16cf5ffe",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 8
@@ -228,6 +246,24 @@
       "side": 1,
       "message": "Yes, password expiration parameter is optional. That is why I introduced corresponding check in CreateUser2 implementation allowing not to set password expiration for a user in case if password expiration parameter value is equal to password expiration attribute default value (that is, maximum value of uint64_t).\nAnd yes, bmcweb can make a several call to create a user and set password expiration afterwards, though this would make bmcweb responsible for user creation process which seems to be a responsibility of phosphor-user-manager.\nThough to have single call to create a user with all necessary parameters seems to be more convenient alternative.",
       "parentUuid": "0d150d38_16cf5ffe",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e18b93d_322227f2",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-02-08T22:44:43Z",
+      "side": 1,
+      "message": "The \"enabled\" property is also optional, so should it be removed as well to be consistent here?  I\u0027m pretty sure the only parameter that\u0027s required is the username?  Everything else has reasonable defaults (as password expiration does) that can be applied.\n\nIf we wanted to go down the route of \"individual applications are responsible for setting user properties separately\" I\u0027m happy to have that conversation (I think it\u0027s wrong), but we should be internally consistent to one idea or the other.\n\n\u003e  this would make bmcweb responsible for user creation process which seems to be a responsibility of phosphor-user-manager.\n\nExactly.",
+      "parentUuid": "53913069_d8f99c5f",
       "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

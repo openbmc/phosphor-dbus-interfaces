@@ -181,6 +181,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7be4e50b_c1193815",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002219
+      },
+      "writtenOn": "2025-02-08T17:27:40Z",
+      "side": 1,
+      "message": "I think that was the reason why @ed@tanous.net proposed it in https://gerrit.openbmc.org/c/openbmc/bmcweb/+/75372/comment/d35c832d_e769bf9c/.\nWe want to create a user with set parameters and we do not want to have side effects. By side effects I mean that result of the call is either user is created successfully or is not created if there is some failure. This seems to be responsibility of phosphor-user-manager to provide such a call as name of the service suggests.\nAs I understand it, the idea is not only to make a single call but to avoid necessary cleanup in case of a failure. If we made it as a sequence of a few calls in bmcweb (that is, create user, set password, set password expiration), we would need to handle user delete if password expiration update fails. That would make bmcweb code more complex and make it responsible for user create operation. Why REST web server should do such a stuff instead of corresponding phosphor-user-manager service?",
+      "parentUuid": "1cfdd4db_c551bb09",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0d150d38_16cf5ffe",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 8
@@ -192,6 +210,24 @@
       "writtenOn": "2025-01-31T16:23:39Z",
       "side": 1,
       "message": "PasswordExpiration parameter is not mandatory while creating user and there is  PasswordExpiration user attribute defined already\nbmcweb can create user first using CreateUser method and then update PasswordExpiration D-bus property of corresponding user with given password expiration input values. we don\u0027t need to create new CreateUser method.",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53913069_d8f99c5f",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1002219
+      },
+      "writtenOn": "2025-02-08T17:27:40Z",
+      "side": 1,
+      "message": "Yes, password expiration parameter is optional. That is why I introduced corresponding check in CreateUser2 implementation allowing not to set password expiration for a user in case if password expiration parameter value is equal to password expiration attribute default value (that is, maximum value of uint64_t).\nAnd yes, bmcweb can make a several call to create a user and set password expiration afterwards, though this would make bmcweb responsible for user creation process which seems to be a responsibility of phosphor-user-manager.\nThough to have single call to create a user with all necessary parameters seems to be more convenient alternative.",
+      "parentUuid": "0d150d38_16cf5ffe",
       "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

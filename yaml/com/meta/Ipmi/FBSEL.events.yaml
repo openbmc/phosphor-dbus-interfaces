@@ -1,0 +1,21 @@
+version: 1.0.0
+
+errors:
+    - name: SELEntryAdded
+      severity: critical
+      metadata:
+          - name: ErrorLog
+            type: string
+            primary: true
+            description: The event log detected in the host
+          - name: Host
+            type: object_path
+            primary: true
+            description: The Host path where the event was generated.
+          - name: IPMIRaw
+            type: string
+            description: The RAW IPMI message received
+      en:
+          description: System event from the host BIOS
+          message: 'Host: {Host}, {ErrorLog}'
+      errno: EIO

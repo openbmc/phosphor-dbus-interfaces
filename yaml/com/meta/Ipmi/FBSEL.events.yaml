@@ -1,0 +1,17 @@
+version: 1.0.0
+
+errors:
+    - name: SELEntryAdded
+      severity: critical
+      metadata:
+          - name: EventLog
+            type: string
+            primary: true
+            description: The event log detected in the host
+          - name: Host
+            type: object_path
+            description: The Host path where the event was generated.
+      en:
+          description: System event from the host BIOS
+          message: {EventLog}.
+      errno: EIO

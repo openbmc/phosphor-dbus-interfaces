@@ -1,0 +1,21 @@
+version: 1.0.0
+
+errors:
+    - name: UnifiedSELEvent
+      severity: critical
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: The source from where the event was generated.
+          - name: Event
+            type: string
+            primary: true
+            description: The parsed event log contents.
+          - name: RawEvent
+            type: string
+            description: The RAW IPMI data received (as hex).
+      en:
+          description: Unified System Event Log received by the BMC.
+          message: "Unified SEL received from '{Source}': {Event}"
+      errno: EIO

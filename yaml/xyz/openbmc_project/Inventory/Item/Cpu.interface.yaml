@@ -47,6 +47,11 @@ properties:
       type: uint16
       description: >
           The number of cores in the processor.
+    - name: CoreEnable
+      type: uint16
+      description: >
+          The total number of enabled cores that this processor contains.
+      default: 0
     - name: ThreadCount
       type: uint16
       description: >

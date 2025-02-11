@@ -307,3 +307,9 @@ associations:
           - associated_pcie_device
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot
+    - name: connected_to
+      description: >
+          Objects that are connected at the other end of the link.
+      reverse_name: connecting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cpu

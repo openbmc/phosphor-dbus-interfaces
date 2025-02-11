@@ -25,6 +25,7 @@ Document ObjectMapper association forward and reverse names as follows:
   `{fault_identifying, fault_identified_by}`
 - PowerSupply and Item: `{powering, powered_by}`
 - FabricAdapter and Connector.Port: `{connecting, connected_to}`
+- Cpu and PCIeDevice: `{connecting, connected_to}`
 - Cpu and PCIeSlot: `{connecting, connected_to}`
 - PCIeSwitch and PCIeSlot: `{connecting, connected_to}`
 - Control.Throttle and Item: `{throttling, throttled_by}`

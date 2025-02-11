@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a8388286_768c6338",
+        "filename": "yaml/com/meta/Ipmi/FBSEL.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-11T00:10:56Z",
+      "side": 1,
+      "message": "I should reword. Most of IPMI SEL tend to be critical. They arrive when something is wrong.",
+      "parentUuid": "cad1e54b_b9da5f07",
+      "revId": "1bbf414c3ff84f7362b088824d302091b541a93b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bdee5e78_722aee20",
         "filename": "yaml/com/meta/Ipmi/FBSEL.events.yaml",
         "patchSetId": 3
@@ -31,6 +49,24 @@
       "writtenOn": "2025-02-11T00:07:11Z",
       "side": 1,
       "message": "Is this EventId?",
+      "revId": "1bbf414c3ff84f7362b088824d302091b541a93b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b20ac9d_a898e542",
+        "filename": "yaml/com/meta/Ipmi/FBSEL.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-11T00:10:56Z",
+      "side": 1,
+      "message": "Its the whole messages. to replace: https://github.com/openbmc/fb-ipmi-oem/blob/master/src/selcommands.cpp#L1650",
+      "parentUuid": "bdee5e78_722aee20",
       "revId": "1bbf414c3ff84f7362b088824d302091b541a93b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

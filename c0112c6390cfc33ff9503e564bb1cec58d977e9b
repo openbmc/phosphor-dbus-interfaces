@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d65e949d_fbe6af58",
+        "filename": "yaml/xyz/openbmc_project/Configuration/ModbusDeviceDetect.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-02-12T06:40:51Z",
+      "side": 1,
+      "message": "after reading the interface for the inventory source, I\u0027m inferring this is trying to describe how to probe for a modbus server presence, its model, version, and similar?",
+      "revId": "c0112c6390cfc33ff9503e564bb1cec58d977e9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35b4b77f_1789ced4",
+        "filename": "yaml/xyz/openbmc_project/Configuration/ModbusDeviceDetect.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-02-12T06:40:51Z",
+      "side": 1,
+      "message": "so this is probe a range of server adresses (nodes) for a response?  or a range of unit addresses on a tcp",
+      "revId": "c0112c6390cfc33ff9503e564bb1cec58d977e9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "082d6021_b48530e0",
+        "filename": "yaml/xyz/openbmc_project/Configuration/ModbusDeviceDetect.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-02-12T06:40:51Z",
+      "side": 1,
+      "message": "this also implies the number of stop bits (8N2, 8E1 or 8O1)?\n\nBaud rate and parity imply a serial connection.  why mention tcp until you support addressing it?\n\n(there is now mbap-s over tls 1.2 over tcp, and that reqiuires mtls certificates including client role claims).",
+      "revId": "c0112c6390cfc33ff9503e564bb1cec58d977e9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75ee7b2a_a448229d",
+        "filename": "yaml/xyz/openbmc_project/Configuration/ModbusDeviceDetect.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-02-12T06:40:51Z",
+      "side": 1,
+      "message": "why do we care about naming registers when probing?   To provide pretty print logs?\n\nwhy do we more than \"ask the server NN on link ttyXX for these input registers and these holding registers and compare to these values\"?\n\nactually I\u0027d expect to start with read device identification (if we encounter a device that supports that).\n\nshould it be \"here\u0027s a script of transactions to read.  if you get an error go here for the next register to attempt.  if you get this value heres another check (or the declare the device detected)\n\nhaving the detection sequence being an inventory object and specific to the port and other detected inventory makes sense to me;  detectinig one fru can imply hardware connected to a serial bus and expected servers.",
+      "revId": "c0112c6390cfc33ff9503e564bb1cec58d977e9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "107aa258_0d2cedd4",
+        "filename": "yaml/xyz/openbmc_project/Configuration/ModbusDeviceDetect.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-02-12T06:40:51Z",
+      "side": 1,
+      "message": "again modbus registers are defined to be 16 bit words.\n\ndata formats can define how multiple register addresses are combined for a logical value, but the format should include the size and endianess combining the words.",
+      "revId": "c0112c6390cfc33ff9503e564bb1cec58d977e9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

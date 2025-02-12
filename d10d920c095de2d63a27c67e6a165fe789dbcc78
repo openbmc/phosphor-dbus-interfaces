@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2527b65c_15c69fe8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-12T11:49:34Z",
+      "side": 1,
+      "message": "Why??  What daemon is going to implement this?  Why is it different from the \"normal\" factory reset?\n\n\"Company specific dbus interface in a public daemon\" is rarely going to fly.",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 71
+      },
+      "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ded4a92_4f61b940",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-12T11:49:34Z",
+      "side": 1,
+      "message": "Use a name that matches something in the CLA please.",
+      "range": {
+        "startLine": 13,
+        "startChar": 15,
+        "endLine": 13,
+        "endChar": 23
+      },
+      "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "806c8b2a_c539ef75",
+        "filename": "yaml/com/nvidia/Common/CompleteReset.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-12T11:49:34Z",
+      "side": 1,
+      "message": "You didn\u0027t run the scripts in gen to generate the appropriate Meson for this.  That is why CI is failing.",
+      "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9b0e194_b1363011",
+        "filename": "yaml/com/nvidia/Common/CompleteReset.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-12T11:49:34Z",
+      "side": 1,
+      "message": "No new \"InternalFailure\" returns.",
+      "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

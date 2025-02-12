@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf7284c1_f47d6959",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Source/Modbus/FRU.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-02-12T06:16:48Z",
+      "side": 1,
+      "message": "what is the address of the modbus device?\n\nthe unit address in the ADU in mbap?  The IP address of the gateway?\n\ndid you mean the server address?",
+      "revId": "50ebce5d7cb3a0b678aa1274fef967be0856cae9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f8aba75_c03b93d9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Source/Modbus/FRU.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-02-12T06:16:48Z",
+      "side": 1,
+      "message": "how will these be probed?   By the port?  by some fru they are associated with?\n\nshould this be an association to the inventory for the port or the gateway?\n\nguess this should be discussed in the design documentation.",
+      "revId": "50ebce5d7cb3a0b678aa1274fef967be0856cae9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

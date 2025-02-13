@@ -1,0 +1,32 @@
+description: >
+    The BootOption interface reports information about a single boot option in a
+    system. It represents the properties of a bootable device available in the
+    system.
+
+properties:
+    - name: Enabled
+      type: boolean
+      description: >
+          An indication of whether the boot option is enabled.
+      default: true
+
+    - name: PendingEnabled
+      type: boolean
+      description: >
+          A future setting value that is pending to be applied to the enabling
+          of the boot option.
+
+    - name: Description
+      type: string
+      description: >
+          Description of the boot option.
+
+    - name: DisplayName
+      type: string
+      description: >
+          The user-readable display name of the boot option.
+
+    - name: UefiDevicePath
+      type: string
+      description: >
+          The UEFI device path to access the UEFI boot option.

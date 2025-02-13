@@ -1,0 +1,30 @@
+description: >
+    The BootOrder interface provides the Boot Order information for this
+    computer system. This interface also helps manage various UEFI Boot Options
+
+methods:
+    - name: CreateBootOption
+      description: >
+          To create a new DBus object with BootOption DBus interface and using
+          the Id as the object name.
+      parameters:
+          - name: Id
+            type: string
+            description: >
+                The unique boot option ID.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+properties:
+    - name: BootOrder
+      type: array[string]
+      description: >
+          The Boot Order in the current boot cycle. Example: ["Boot0001",
+          "Boot0002", "Boot0003"]
+
+    - name: PendingBootOrder
+      type: array[string]
+      description: >
+          The Pending Boot Order of future settings. Example: ["Boot0003",
+          "Boot0002", "Boot0001"]

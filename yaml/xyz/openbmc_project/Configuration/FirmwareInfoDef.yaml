@@ -1,0 +1,14 @@
+description: This indicates the properties which apply to all firmwares
+properties:
+    - name: VendorIANA
+      type: number
+      description: The IANA Enterprise Id of the hardware vendor
+      flags:
+          - readonly
+    - name: CompatibleHardware
+      type: string
+      description:
+          The compatible hardware with name format com.<vendor>.Hardware.<XXX>
+          specified by vendor in phosphor-dbus-interfaces
+      flags:
+          - readonly

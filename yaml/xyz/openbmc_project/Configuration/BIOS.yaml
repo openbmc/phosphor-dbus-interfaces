@@ -1,0 +1,52 @@
+description: Required information to complete the host fw update process.
+properties:
+    - name: MuxGPIOValues
+      type: array[uint32]
+      description: The values for the mux gpios which toggle the flash to BMC
+      flags:
+          - readonly
+    - name: Layout
+      type: string
+      description:
+          "The layout of the BIOS flash. IFD: Intel Flash Descriptor, Flat: no
+          layout info."
+      flags:
+          - readonly
+    - name: Type
+      type: string
+      description: The type of configuration object
+      flags:
+          - readonly
+    - name: SPIControllerIndex
+      type: number
+      description: The index of the SPI controller
+      flags:
+          - readonly
+    - name: SPIDeviceIndex
+      type: number
+      description: The index of the SPI device connected to that controller
+      flags:
+          - readonly
+    - name: FirmwareInfo
+      type: string
+      description: ""
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: The name of the firmware.
+      flags:
+          - readonly
+    - name: MuxOutputs
+      type: array[string]
+      description: The pin names for the mux which toggles the flash to BMC
+      flags:
+          - readonly
+    - name: HasME
+      type: boolean
+      description:
+          This indicates if the CPU has a Management Engine. If so, it may need
+          a command to prevent it from any access to the spi flash during the
+          update.
+      flags:
+          - readonly

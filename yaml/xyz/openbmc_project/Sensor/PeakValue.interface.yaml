@@ -1,0 +1,13 @@
+description: >
+    Implement to provide max observed value of the Sensor reading (device
+    reports the value based on pre defined sampling interval). Any object
+    implementing Sensor.PeakValue must also implement Sensor.Value.
+
+properties:
+    - name: PeakValue
+      type: double
+      description: >
+          The max observed value of the Sensor reported by the sensor.
+      flags:
+          - readonly
+      default: -infinity

@@ -1,0 +1,40 @@
+description: >
+    Defines an interface for tracking and reporting important telemetry
+    statistics for a device.  This interface maintains  data including peak
+    readings and their timestamps  since the last reset. Any implementing object
+    must also implement a Value interface  (Metrics or Sensors) at the
+    corresponding path to provide current readings as reported by the device.
+
+properties:
+    - name: Value
+      type: dict[enum[self.LimitType],dict[enum[self.LimitDataEnumType],double]]
+      description: >
+          A nested dictionary containing telemetry statistics for the device.
+          The outer dictionary is keyed by LimitType (e.g., PeakReading), while
+          the inner dictionary is keyed by LimitDataEnumType (e.g., LimitValue,
+          OccurrenceTime). Format: map{limitType -> map{limitDataType ->
+          limitValue}}
+      flags:
+          - readonly
+
+enumerations:
+    - name: LimitType
+      description: >
+          Defines the categories of telemetry limits tracked by the device.
+      values:
+          - name: PeakReading
+            description: >
+                The highest value observed for this sensor/metric since the last
+                reset. This value represents the maximum reading recorded by the
+                device.
+    - name: LimitDataEnumType
+      description: >
+          Defines the types of data associated with each telemetry limit.
+      values:
+          - name: LimitValue
+            description: >
+                The numerical value of the recorded limit by the device.
+          - name: OccurrenceTime
+            description: >
+                The timestamp (in epoch time) when the limit value was recorded
+                by the device.

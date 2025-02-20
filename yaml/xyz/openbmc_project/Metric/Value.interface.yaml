@@ -30,6 +30,19 @@ properties:
           percent, reboots in count.
       flags:
           - const
+    - name: PeakValue
+      type: double
+      description: >
+          The max observed value of the Sensor reading.
+      flags:
+          - readonly
+    - name: Timestamp
+      type: uint64
+      description: >
+          The time at which the max value of the Sensor reading is observed. The
+          value unit is time elapsed since the Epoch in microseconds.
+      flags:
+          - readonly
 
 enumerations:
     - name: Unit

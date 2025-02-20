@@ -1,0 +1,39 @@
+description: >
+    Implement to provide an interface to start a failover.  Depending on the
+    implementation, this may reside on the 'from' or 'to' object (or both).  The
+    'Options' method argument provides a mechanism to provide implementation
+    specific options.
+
+methods:
+    - name: StartFailover
+      description: >
+          Starts a failover operation.
+      parameters:
+          - name: Options
+            type: dict[string, variant[boolean]]
+            description: >
+                Additional options. The key is the string version of the
+                FailoverOptions enum, in the form of
+                'xyz.openbmc_project.Control.Failover.Options.X'.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
+
+properties:
+    - name: FailoverInProgress
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          Indicates that a failover is in progress.
+
+enumerations:
+    - name: Options
+      description: >
+          Available options for starting the failover.
+      values:
+          - name: "Force"
+            description: >
+                A boolean option to force the failover when it would normally
+                not be available.  The checks it bypasses are implementation
+                dependent.

@@ -1,0 +1,27 @@
+description: >
+    Defines an interface for tracking and reporting important telemetry
+    statistics for a device's sensors or metrics. This interface maintains
+    statistics like peak readings and their timestamps. Any implementing object
+    must also implement a Value interface  (Metrics or Sensors) at the
+    corresponding path to provide current readings as reported by the device.
+
+properties:
+    - name: Statistic
+      type: dict[enum[self.StatsType],struct[double,uint64]]
+      description: >
+          A dictionary containing telemetry statistics for the device. The
+          Dictionary is keyed by StatsType (e.g., Peak), struct defines tuple of
+          value(double) and timestamp(uint64) indicating when the  value was
+          recorded.
+      flags:
+          - readonly
+
+enumerations:
+    - name: StatsType
+      description: >
+          Defines the categories of telemetry limits tracked by the device.
+      values:
+          - name: Peak
+            description: >
+                The highest value observed for this sensor/metric. This value
+                represents the maximum reading recorded by the device.

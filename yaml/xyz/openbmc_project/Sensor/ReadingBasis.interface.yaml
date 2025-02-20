@@ -1,0 +1,20 @@
+description: >
+    Implement to provide Reading Basis property of the Sensor.
+
+properties:
+    - name: ReadingBasis
+      type: enum[self.ReadingBasisType]
+      description: >
+          The Reading Basis property of the Sensor.
+
+enumerations:
+    - name: ReadingBasisType
+      description: >
+        Reading Basis types of the Sensor.
+      values:
+        - name: Headroom
+          description: >
+            Indicates that reading decreases in value as it approaches the
+            reference point. If the value crosses the reference point, the
+            value may be reported as a negative number, or may report a value
+            of zero.

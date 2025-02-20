@@ -115,6 +115,10 @@ paths:
                 Reboot statistic to track number of times device rebooted
                 because of a failure.
             value: reboot/count_with_failure
+          - name: CapacityUtilization
+            description: >
+                The overall memory capacity utilization
+            value: memory/capacity_utilization
     - name: BMC
       description: >
           The BMC metrics.

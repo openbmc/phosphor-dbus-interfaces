@@ -1,0 +1,15 @@
+description: >
+    Implement to provide max observed value of the Sensor reading.
+
+properties:
+    - name: PeakValue
+      type: double
+      description: >
+          The max observed value of the Sensor reading.
+
+    - name: Timestamp
+      type: uint64
+      description: >
+          The time at which the max value of the Sensor reading is observed. The
+          value unit is time elapsed since the Epoch (1 Jan 1970 00:00:00 UTC),
+          in microseconds.

@@ -1,0 +1,61 @@
+description: >
+    Implement to provide resource area properties. It defines the area or device
+    to which the inventory item belongs too. It can apply to non-inventory item,
+    such as "Exhaust".
+
+properties:
+    - name: PhysicalContext
+      type: enum[self.PhysicalContextType]
+      description: >
+          The area or device to which the resource belongs too.
+
+enumerations:
+    - name: PhysicalContextType
+      description: >
+          Physical context types.
+      values:
+          - name: Back
+            description: >
+                The back of the chassis.
+          - name: Backplane
+            description: >
+                A backplane within the chassis.
+          - name: CPU
+            description: >
+                A Processor (CPU).
+          - name: Fan
+            description: >
+                A fan.
+          - name: Front
+            description: >
+                The front of the chassis.
+          - name: GPU
+            description: >
+                A Graphics Processor (GPU).
+          - name: GPUSubsystem
+            description: >
+                A Graphics Processor (GPU) subsystem.
+          - name: ProcessorModule
+            description: >
+                A processor module.
+          - name: Memory
+            description: >
+                A memory device.
+          - name: NetworkingDevice
+            description: >
+                A networking device.
+          - name: PowerSupply
+            description: >
+                A power supply.
+          - name: StorageDevice
+            description: >
+                A storage device.
+          - name: SystemBoard
+            description: >
+                The system board (PCB).
+          - name: VoltageRegulator
+            description: >
+                A voltage regulator device.
+          - name: Board
+            description: >
+                A circuit board.

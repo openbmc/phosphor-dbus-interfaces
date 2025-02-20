@@ -81,6 +81,10 @@ paths:
             description: >
                 The buffered and cached memory memory utilization.
             value: memory/buffered_and_cached
+          - name: MemoryCapacityUtilization
+            description: >
+                The overall memory capacity utilization
+            value: memory/capacity_utilization
           - name: KernelCPU
             description: >
                 The kernel CPU utilization.

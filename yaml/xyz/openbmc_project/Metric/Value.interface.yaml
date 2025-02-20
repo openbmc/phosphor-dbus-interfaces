@@ -30,6 +30,17 @@ properties:
           percent, reboots in count.
       flags:
           - const
+    - name: PeakValue
+      type: double
+      description: >
+          The max observed value of the Sensor reading. This is supposed to be
+          updated by when the value is greater than the current max value.
+          Optionally implement xyz/openbmc_project/Time/EpochTime.interface to
+          provide the timestamp of the max value on the sensor that  implements
+          this interface
+      flags:
+          - readonly
+      default: -infinity
 
 enumerations:
     - name: Unit

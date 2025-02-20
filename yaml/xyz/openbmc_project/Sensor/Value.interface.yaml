@@ -50,6 +50,18 @@ properties:
           "DegreesC". For objects in the utilization namespace, Unit must be
           "Percent" For objects in the voltage namespace, Unit must be "Volts",
           For objects in the liquidflow namespace, Unit must be "LPM".
+    - name: PeakValue
+      type: double
+      description: >
+          The max observed value of the Sensor reading. This is supposed to be
+          updated by when the value is greater than the current PeakValue.
+          The intention is to provide the maximum observed sensor value
+          Optionally implement xyz/openbmc_project/Time/EpochTime.interface to
+          provide the timestamp of the max value on the sensor that  implements
+          this interface
+      flags:
+          - readonly
+      default: -infinity
 
 enumerations:
     - name: Unit

@@ -1,0 +1,11 @@
+description: >
+    Implement to provide location context of an inventory item.
+properties:
+    - name: LocationContext
+      type: string
+      description:
+          A free form, implementation defined string to provide location context of
+          an Inventory Item. Location context can be used with LocationCode identify
+          specific parts in a system. Although this field should not be used for
+          programmatic interrogation of an inventory object.
+      default: ""

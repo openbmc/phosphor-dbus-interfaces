@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c1e1e08c_11f15e25",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-02-21T17:09:29Z",
+      "side": 1,
+      "message": "Nvidia platforms have additional eMMC storage and we have migrated some log functionality and flight data recorder logs. Customers need any API to clear this logs and currently this is been exposed as Redfish OEM Manager reset API. \nThe backend we are preferring to support this functionality would be in bmc code management repo (https://github.com/openbmc/phosphor-bmc-code-mgmt). A fallback option is keep this support in meta-nvidia layer. \n\nWhat recommendation we need to follow to push an PDI to com/\u003corg\u003e namespace ?",
+      "parentUuid": "2527b65c_15c69fe8",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 71
+      },
+      "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7ded4a92_4f61b940",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -77,6 +101,24 @@
       "writtenOn": "2025-02-12T11:49:34Z",
       "side": 1,
       "message": "No new \"InternalFailure\" returns.",
+      "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fbe81cb_2a26acb2",
+        "filename": "yaml/com/nvidia/Common/CompleteReset.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-02-21T17:09:29Z",
+      "side": 1,
+      "message": "Sorry did not get this. I am reusing existing Common.Error",
+      "parentUuid": "d9b0e194_b1363011",
       "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

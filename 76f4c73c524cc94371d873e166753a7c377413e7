@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0d041caf_d8127caa",
+        "filename": "yaml/xyz/openbmc_project/Control/Failover.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-02-24T20:25:14Z",
+      "side": 1,
+      "message": "I was basing it on https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Dump/Create.interface.yaml#L17.\n\nSome options could have values, such as maybe Target \u003d \u003csome object path\u003e, so that\u0027s why it wouldn\u0027t just be a list of enums.",
+      "parentUuid": "13473210_37900e01",
+      "revId": "76f4c73c524cc94371d873e166753a7c377413e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "99234153_ce70234b",
         "filename": "yaml/xyz/openbmc_project/Control/Failover.interface.yaml",
         "patchSetId": 1
@@ -43,6 +61,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "a1a33535_c4431813",
+        "filename": "yaml/xyz/openbmc_project/Control/Failover.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-02-24T20:25:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "99234153_ce70234b",
+      "range": {
+        "startLine": 16,
+        "startChar": 16,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "76f4c73c524cc94371d873e166753a7c377413e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "a7db47df_0912eeb8",
         "filename": "yaml/xyz/openbmc_project/Control/Failover.interface.yaml",
         "patchSetId": 1
@@ -54,6 +96,24 @@
       "writtenOn": "2025-02-22T05:22:29Z",
       "side": 1,
       "message": "I think we need a clear error message explaining why the failover was rejected so that the caller can decide whether to retry later or implement monitoring to determine when the failover can be triggered again. This could be revisited if a specific use case arises.",
+      "revId": "76f4c73c524cc94371d873e166753a7c377413e7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65adcf13_58f2336e",
+        "filename": "yaml/xyz/openbmc_project/Control/Failover.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-02-24T20:25:14Z",
+      "side": 1,
+      "message": "Was debating that.  Right now I\u0027ve come up with 7 reasons, with possibly more coming.  Some could apply pretty generically to all failovers, like \u0027redundancy isn\u0027t enabled\u0027, but some are more specific to BMC ones like \u0027active BMC isn\u0027t responding but last time it was redundancy wasn\u0027t enabled.\u0027",
+      "parentUuid": "a7db47df_0912eeb8",
       "revId": "76f4c73c524cc94371d873e166753a7c377413e7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

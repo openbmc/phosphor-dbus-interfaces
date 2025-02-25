@@ -89,6 +89,42 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "74e46571_c35c8183",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-25T22:50:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "e832a7e6_35ecc9df",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72e94eef_612e54a5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-25T22:50:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "bd84c1d5_5852c1aa",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e2a8e723_1ad2c3cc",
@@ -124,6 +160,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "160765e5_56310612",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-25T22:50:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "30663ec7_5ff6c1fc",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8b52de1f_817c83ea",
@@ -137,6 +191,24 @@
       "writtenOn": "2025-01-18T04:42:52Z",
       "side": 1,
       "message": "Technically, EM has both these as events. But I think removed can use a little bump in priority.",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa21b432_660a8fc1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-25T22:50:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "8b52de1f_817c83ea",
       "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -164,6 +236,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "093c131d_791497f6",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-25T22:50:39Z",
+      "side": 1,
+      "message": "Removed all of those and used an object_path instead. That would be more usable across all other inventory types.",
+      "parentUuid": "5a899f74_0f4c0ed5",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 25
+      },
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cb34d3e1_fc334151",
@@ -177,6 +273,30 @@
       "writtenOn": "2025-01-27T17:35:07Z",
       "side": 1,
       "message": "How do we decide that these are the set required?  Model vs PN vs SparePart Number... I bet people have differing opinions here.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 67
+      },
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4a7f8ea_a0377f64",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-25T22:50:39Z",
+      "side": 1,
+      "message": "Removed these in favor of object_path.",
+      "parentUuid": "cb34d3e1_fc334151",
       "range": {
         "startLine": 8,
         "startChar": 0,
@@ -222,6 +342,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2418f9b2_50b00bb8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-25T22:50:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "3a617146_faee8749",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8db843c7_1e11ca30",
@@ -253,6 +391,24 @@
       "side": 1,
       "message": "👍 Did not know it was optional.",
       "parentUuid": "8db843c7_1e11ca30",
+      "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2174916_05ce1efa",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Inventory.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-02-25T22:50:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "d5fadf47_8fc8d0c9",
       "revId": "29b64cd2d3a564c2ed44c9dec5a3008991c7aec7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

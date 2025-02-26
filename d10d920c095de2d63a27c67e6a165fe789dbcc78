@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "013736e6_fb0724f9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-26T22:26:21Z",
+      "side": 1,
+      "message": "\u003e Customers need any API to clear this logs and currently this is been exposed as Redfish OEM Manager reset API.\n\nWhy would this be a separate clear and not part of the general BMC clearing?  I don\u0027t think we\u0027re going to allow a one-off OEM manager reset API call in bmcweb.\n\n\u003e The backend we are preferring to support this functionality would be in bmc code management repo\n\nWe need to get to the bottom of the front-end side first.  I don\u0027t think bmcweb is going to accept an OEM interface.  I also don\u0027t think bmcweb should accept an \"if mapper contains com.nvidia interface\" code, otherwise everyone\u0027s going to want to do the same random one-offs and the whole thing is going to quickly devolve.\n\nIf all you want to do is to trigger clearing some special stuff whenever the BMC factory reset is called, you can already do this without any special code.  The BMC factory reset triggers a uboot environment variable.  You can key off this variable in the init scripts, just like the BMC reset does.  An example is this: https://github.com/openbmc/openbmc/blob/ce5037892637c70b313f10f579b3ff8f8afb5e83/meta-phosphor/recipes-phosphor/initrdscripts/phosphor-static-norootfs-init/21-factory-reset#L10 .  It wouldn\u0027t be hard to insert similar scripts to clear additional data like an eMMC device.",
+      "parentUuid": "c1e1e08c_11f15e25",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 71
+      },
+      "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7ded4a92_4f61b940",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2

@@ -52,6 +52,24 @@
       "parentUuid": "4f863322_02298805",
       "revId": "d8907ee2da022709ee9822228a3d2aafc765ba10",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3bbb8fce_d88e9950",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Location.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-26T22:41:47Z",
+      "side": 1,
+      "message": "I don\u0027t know why we would put a location on an element itself when we could put it on the connector.\n\nWe have other connectors than just \u0027Embedded\u0027, which is the only one you responded to.  Other applications already implement these connector types (see estoraged and smbios-mdr).  We\u0027re not going to do it different just because you want to.\n\n\u003e FYI this PDI is required to add support for LocationType property. \n\nNo... it isn\u0027t required to add that functionality.  You\u0027ve chosen a particular implementation and maybe this interface meets _your_ chosen implementation, but that doesn\u0027t mean we\u0027re accepting it as is.\n\nThe BMC is not a Redfish engine.  Just because there is a Redfish property somewhere doesn\u0027t mean we\u0027re going to model it exactly that way.",
+      "parentUuid": "20f71a35_ff31d8ba",
+      "revId": "d8907ee2da022709ee9822228a3d2aafc765ba10",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

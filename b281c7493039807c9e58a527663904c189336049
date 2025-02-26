@@ -51,6 +51,23 @@
       "message": "Hi Patrick \n\ncan you please review this commit",
       "revId": "b281c7493039807c9e58a527663904c189336049",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c0c79c7_4aa45246",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-26T22:35:34Z",
+      "side": 1,
+      "message": "Is this `readonly`?  I don\u0027t think you\u0027re expecting users outside your process to be able to directly change this boolean, are you?\n\nI asked about why it was \u0027const\u0027 before.  I wouldn\u0027t think I have to spell out for you exactly what these should be.",
+      "revId": "b281c7493039807c9e58a527663904c189336049",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

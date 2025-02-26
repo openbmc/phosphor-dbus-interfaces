@@ -9,6 +9,7 @@ methods:
       errors:
           - self.Error.SiblingBMCNotAvailable
           - self.Error.FullSyncInProgress
+          - self.Error.SyncDisabled
 
 properties:
     - name: DisableSync

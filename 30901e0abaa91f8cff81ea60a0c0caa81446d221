@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a9c8c40b_f842d2d1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-02-27T07:29:35Z",
+      "side": 1,
+      "message": "This is memory utilization and can be present per DIMM instance.\n\nLooks like its tracking overall system level utilization for various memory metrics\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Metric/Value.interface.yaml#L59",
+      "parentUuid": "a4a17c4c_6c500eee",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 52
+      },
+      "revId": "30901e0abaa91f8cff81ea60a0c0caa81446d221",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "51b93482_2de386ba",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dimm/MemoryMetrics.interface.yaml",
         "patchSetId": 2
@@ -37,6 +61,24 @@
       "writtenOn": "2025-02-26T22:29:02Z",
       "side": 1,
       "message": "Memory metrics are not inventory.",
+      "revId": "30901e0abaa91f8cff81ea60a0c0caa81446d221",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21df1f6b_daef2859",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dimm/MemoryMetrics.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-02-27T07:29:35Z",
+      "side": 1,
+      "message": "Agree. Should not be on Inventory.\nShall I move it here ?\nhttps://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/Memory",
+      "parentUuid": "51b93482_2de386ba",
       "revId": "30901e0abaa91f8cff81ea60a0c0caa81446d221",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

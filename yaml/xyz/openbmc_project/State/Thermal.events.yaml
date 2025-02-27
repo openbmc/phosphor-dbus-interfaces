@@ -1,0 +1,45 @@
+version: 1.0.0
+
+errors:
+    - name: DeviceOverOperatingTemperature
+      severity: error
+      metadata:
+          - name: Device
+            type: object_path
+            primary: true
+            description: The name or identifier of the device
+          - name: FailureData
+            type: string
+            description:
+                An [Optional] set of additional failure data to identify the
+                cause of thermal overrun.
+      en:
+          description:
+              A event signaling that a device is operating over a set operating
+              temperature has occurred. The device may continue to operate in a
+              potentially performance degraded mode. This is very similar to the
+              PROCHOT signal from some x86 processors.
+          message: Device {Device} is over safe operating temperature.
+      errno: ERANGE
+
+    - name: DeviceOverOperatingTemperatureFault
+      severity: critical
+      metadata:
+          - name: Device
+            type: object_path
+            primary: true
+            description: The name or identifier of the device
+          - name: FailureData
+            type: string
+            description:
+                An [Optional] set of additional failure data to identify the
+                cause of thermal overrun fault.
+      en:
+          description:
+              A event signaling that a device has potentially been powered off
+              due to it being operating significantly in excess of the set
+              operating temperature. This is very similar to the THERMTRIP
+              signal from some x86 processors.
+          message:
+              Device {Device} is over safe operating temperature has tripped.
+      errno: ERANGE

@@ -217,6 +217,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4052bd76_3f6878b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2025-02-28T10:57:39Z",
+      "side": 1,
+      "message": "If the concern is that the client application needs to handle error management—since it first creates the user and then sets the properties—\nhow do we approach future changes?\n\nFor example, today, we might introduce a variation of the API that includes an additional parameter for password expiry. Tomorrow, there could be even more properties that need to be set after calling the createUser2 API. Would we continue creating new APIs for each variation?\n\nDoes this align with the D-Bus API guidelines?",
+      "parentUuid": "61061dd9_bd31eb4e",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0d150d38_16cf5ffe",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 8
@@ -264,6 +282,24 @@
       "side": 1,
       "message": "The \"enabled\" property is also optional, so should it be removed as well to be consistent here?  I\u0027m pretty sure the only parameter that\u0027s required is the username?  Everything else has reasonable defaults (as password expiration does) that can be applied.\n\nIf we wanted to go down the route of \"individual applications are responsible for setting user properties separately\" I\u0027m happy to have that conversation (I think it\u0027s wrong), but we should be internally consistent to one idea or the other.\n\n\u003e  this would make bmcweb responsible for user creation process which seems to be a responsibility of phosphor-user-manager.\n\nExactly.",
       "parentUuid": "53913069_d8f99c5f",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7df322ae_703d8e9b",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2025-02-28T10:57:39Z",
+      "side": 1,
+      "message": "I would suggest that the minimum properties required to craete a user, That should be enough,",
+      "parentUuid": "5e18b93d_322227f2",
       "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -50,6 +50,47 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "180b6e8e_081d644c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-02-28T13:50:23Z",
+      "side": 1,
+      "message": "because of the said reason above that CapacityUtilizationPercent can be tracked at more granular at DIMM level moved to yaml/xyz/openbmc_project/Memory/MemoyMetrics.yaml",
+      "parentUuid": "a9c8c40b_f842d2d1",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 52
+      },
+      "revId": "30901e0abaa91f8cff81ea60a0c0caa81446d221",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4079393c_664274c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-02-28T13:50:23Z",
+      "side": 1,
+      "message": "Addressed review comments",
+      "revId": "30901e0abaa91f8cff81ea60a0c0caa81446d221",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "51b93482_2de386ba",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dimm/MemoryMetrics.interface.yaml",
         "patchSetId": 2
@@ -79,6 +120,24 @@
       "side": 1,
       "message": "Agree. Should not be on Inventory.\nShall I move it here ?\nhttps://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/Memory",
       "parentUuid": "51b93482_2de386ba",
+      "revId": "30901e0abaa91f8cff81ea60a0c0caa81446d221",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3035f162_80a23650",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dimm/MemoryMetrics.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-02-28T13:50:23Z",
+      "side": 1,
+      "message": "Moved to yaml/xyz/openbmc_project/Memory/MemoyMetrics.yaml",
+      "parentUuid": "21df1f6b_daef2859",
       "revId": "30901e0abaa91f8cff81ea60a0c0caa81446d221",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

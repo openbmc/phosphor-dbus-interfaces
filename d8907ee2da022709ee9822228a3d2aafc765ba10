@@ -70,6 +70,24 @@
       "parentUuid": "20f71a35_ff31d8ba",
       "revId": "d8907ee2da022709ee9822228a3d2aafc765ba10",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3d0ca4e_405878c0",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Location.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-01T18:36:47Z",
+      "side": 1,
+      "message": "@aishwaryjoshi31@gmail.com I agree with Patrick - we should make these empty interfaces under Connector as opposed to adding them here. That makes these interfaces more generic/usable/ and also implmentable on a need basis.\n\n@patrick@stwcx.xyz I wonder if we should document guidelines to help new contributors to this repo under https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/requirements.md. I\u0027ve noted several in the past from your reviews and I see some of them as comments on Aishwary\u0027s patches as well. Let me know if that makes sense to you - I can update the documentation to propose guielines (or you could if you have a ready list).",
+      "parentUuid": "3bbb8fce_d88e9950",
+      "revId": "d8907ee2da022709ee9822228a3d2aafc765ba10",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

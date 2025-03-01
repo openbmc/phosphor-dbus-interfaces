@@ -3,6 +3,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f644544b_741c9a18",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-01T19:00:08Z",
+      "side": 1,
+      "message": "same comments as posted on your other patches about the commit message details.",
+      "revId": "08e892b89ca2ebbd75a4c6d9263a119f1e5bfd59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a6d4d85_1f7a9476",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Area.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-01T19:00:08Z",
+      "side": 1,
+      "message": "It is not clear what implements this/on what object? Is it an inventory to inventory association? Might need examples.\n\nLooking at you enums - I don\u0027t understand what inventory item might \"belong\" to, say, the GPU which itself would be an inventory item.",
+      "revId": "08e892b89ca2ebbd75a4c6d9263a119f1e5bfd59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7d52f433_189bc2b7",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Area.interface.yaml",
         "patchSetId": 2

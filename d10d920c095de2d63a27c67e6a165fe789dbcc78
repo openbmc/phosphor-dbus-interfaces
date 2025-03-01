@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "96038c29_25d63c2d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-03-01T06:39:27Z",
+      "side": 1,
+      "message": "There is difference between standard BMC factory reset which clears mainly the rw filesystems vs Nvidia OEM reset where we want to clear system events, dumps and FDR data. We dont want to combine all of this in a single BMC factory reset API because we have customer use case where they want to reset settings but not clear FDR data. Hence the need of OEM reset which clears the additional data on need basis. \n\nI let @ed@tanous.net help here with how we can integrate OEM APIs in bmcweb as we definitely have use case for this. We have MRs in pipeline which allows registration of OEM handles per vendor. https://gerrit.openbmc.org/c/openbmc/bmcweb/+/77056",
+      "parentUuid": "013736e6_fb0724f9",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 71
+      },
+      "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7ded4a92_4f61b940",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -185,6 +209,24 @@
       "side": 1,
       "message": "Sorry did not get this. I am reusing existing Common.Error",
       "parentUuid": "d9b0e194_b1363011",
+      "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3f44707_56cd5b18",
+        "filename": "yaml/com/nvidia/Common/CompleteReset.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-03-01T06:39:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4fbe81cb_2a26acb2",
       "revId": "d10d920c095de2d63a27c67e6a165fe789dbcc78",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

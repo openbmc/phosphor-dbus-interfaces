@@ -37,6 +37,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5b4ee570_073d6585",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Description.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-01T18:56:50Z",
+      "side": 1,
+      "message": "This is not clear - why do we need anything more than the \"type\" of the sensor which basically is in the path segment - such as sensor/temperature?\n\nCan you explain the need for more description - what adds that, what uses it etc?\n\nAlso, why can\u0027t we use https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Inventory/Item.interface.yaml#L10?",
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "113b2fe7_eafcfaf5",
         "filename": "yaml/xyz/openbmc_project/Sensor/Description.interface.yaml",
         "patchSetId": 4
@@ -54,6 +71,57 @@
         "endLine": 8,
         "endChar": 40
       },
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e14227fe_10557c27",
+        "filename": "yaml/xyz/openbmc_project/Sensor/PeakValue.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-01T18:56:50Z",
+      "side": 1,
+      "message": "As commented elsewhere, this is the \"what\" part. How/Why is missing.",
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e420721_841fce3d",
+        "filename": "yaml/xyz/openbmc_project/Sensor/PeakValue.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-01T18:56:50Z",
+      "side": 1,
+      "message": "Why does one have to add this to every interface/property when we have https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Time/EpochTime.interface.yaml?",
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e14218a8_ec6c7233",
+        "filename": "yaml/xyz/openbmc_project/Sensor/ReadingBasis.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-01T18:56:50Z",
+      "side": 1,
+      "message": "Not sure what the reference point is. This may need an example.",
       "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

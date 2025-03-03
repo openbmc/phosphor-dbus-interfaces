@@ -46,14 +46,21 @@ generated_sources += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/BMC/Redundancy__markdown'.underscorify(),
-    input: [ '../../../../../yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml',  ],
-    output: [ 'Redundancy.md' ],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml',
+    ],
+    output: ['Redundancy.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
-        sdbuspp_gen_meson_prog, '--command', 'markdown',
-        '--output', meson.current_build_dir(),
-        '--tool', sdbusplusplus_prog,
-        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/State/BMC/Redundancy',
     ],
     install: should_generate_markdown,

@@ -73,6 +73,13 @@ subdir('gen')
 # can be useful for dependees when we are built as a sub-project.
 subdir('registry')
 
+phosphor_dbus_interfaces_deps = [sdbusplus_dep]
+
+registry_target_dep = declare_dependency(
+  sources: registry_target
+)
+phosphor_dbus_interfaces_deps += registry_target_dep
+
 # Define and build libphosphor_dbus.so from the C++ files.
 libphosphor_dbus = library(
     'phosphor_dbus',
@@ -99,7 +106,7 @@ phosphor_dbus_interfaces_dep = declare_dependency(
     sources: generated_headers,
     include_directories: include_directories('gen'),
     link_with: libphosphor_dbus,
-    dependencies: sdbusplus_dep,
+    dependencies: phosphor_dbus_interfaces_deps,
     variables: [
         'yamldir=' + meson.project_source_root() / 'yaml',
         'registry_dir=' + registry_copy_dir,

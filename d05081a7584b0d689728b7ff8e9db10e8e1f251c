@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ca29998_c9cd4e73",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-04T17:46:53Z",
+      "side": 1,
+      "message": "This is not true.  We have `xyz.openbmc_project.Common.FactoryReset` and there are already multiple paths understood by bmcweb.\n\n```\n$ rg \"Common.FactoryReset\"                                                   \nredfish-core/lib/bios.hpp\n116:        \"xyz.openbmc_project.Common.FactoryReset\", \"Reset\");\n\nredfish-core/lib/managers.hpp\n283:                \"xyz.openbmc_project.Common.FactoryReset\", \"Reset\");\n```\n\nWe should do two things here, rather than define a whole new interface:\n\n1. Document the existing paths in Common.FactoryReset for BMC and BIOS reset.  (See the \"paths:\" section in the interface file.)\n\n2. Add a new path for your additional use case.  Hopefully this can be worded in a way that is not specific to Nvidia (since it seems like you\u0027re generically targeting additional debug data).  I would suggest inquiring with the phosphor-debug-collector maintainers for an appropriate word to describe your collection.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 35
+      },
+      "revId": "d05081a7584b0d689728b7ff8e9db10e8e1f251c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3badbabf_f420de82",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-04T17:46:53Z",
+      "side": 1,
+      "message": "What is the redfish API you intend to use for this?",
+      "range": {
+        "startLine": 17,
+        "startChar": 49,
+        "endLine": 18,
+        "endChar": 53
+      },
+      "revId": "d05081a7584b0d689728b7ff8e9db10e8e1f251c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29d4dd33_81da565b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-04T17:46:53Z",
+      "side": 1,
+      "message": "Please fix your git config.",
+      "range": {
+        "startLine": 27,
+        "startChar": 15,
+        "endLine": 27,
+        "endChar": 23
+      },
+      "revId": "d05081a7584b0d689728b7ff8e9db10e8e1f251c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

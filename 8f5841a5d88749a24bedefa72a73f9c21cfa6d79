@@ -58,6 +58,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d155e1c_d2f64442",
+        "filename": "yaml/xyz/openbmc_project/State/Thermal.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-03-05T21:11:28Z",
+      "side": 1,
+      "message": "Removed it! thanks for catching it.",
+      "parentUuid": "2e3fc1e6_0c205b62",
+      "range": {
+        "startLine": 40,
+        "startChar": 24,
+        "endLine": 40,
+        "endChar": 39
+      },
+      "revId": "8f5841a5d88749a24bedefa72a73f9c21cfa6d79",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f12ff2e2_931fc2be",
@@ -71,6 +95,30 @@
       "writtenOn": "2025-03-05T14:39:10Z",
       "side": 1,
       "message": "Adding \"has tripped\" doesn\u0027t make sense here (to me).  Maybe instead we could say \"Device {Device} is significantly over safe operating temperature and may have been powered off\"?",
+      "range": {
+        "startLine": 44,
+        "startChar": 64,
+        "endLine": 44,
+        "endChar": 76
+      },
+      "revId": "8f5841a5d88749a24bedefa72a73f9c21cfa6d79",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd9498bd_0d76de3a",
+        "filename": "yaml/xyz/openbmc_project/State/Thermal.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-03-05T21:11:28Z",
+      "side": 1,
+      "message": "I liked your wording. Thanks for the suggestion!",
+      "parentUuid": "f12ff2e2_931fc2be",
       "range": {
         "startLine": 44,
         "startChar": 64,

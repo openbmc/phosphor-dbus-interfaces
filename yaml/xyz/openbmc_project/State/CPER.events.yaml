@@ -1,0 +1,34 @@
+version: 1.0.0
+
+errors:
+    - name: GenericCPERWarning
+      severity: warning
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: The name or identifier of the CPER source.
+          - name: CPER
+            type: string
+            primary: true
+            description: The CPER JSON of the event.
+      en:
+          description: A generic CPER warning has been detected.
+          message: A generic CPER warning has been detected on {Source}.
+      errno: EIO
+
+    - name: GenericCPERFault
+      severity: critical
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: The name or identifier of the CPER source.
+          - name: CPER
+            type: string
+            primary: true
+            description: The CPER JSON of the event.
+      en:
+          description: A generic CPER fault has been detected.
+          message: A generic CPER fault has been detected on {Source}.
+      errno: EIO

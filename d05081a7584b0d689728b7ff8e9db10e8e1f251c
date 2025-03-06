@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c45c041d_93d97299",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-03-06T16:54:36Z",
+      "side": 1,
+      "message": "Thanks for the above suggestions. \n\nCurrently we want to use this API for erasing all contents in our additional storage which is dumps, logs. But we could add more things to the same partition. \nIf we consider the existing Factory Reset, its not tied up any specific type of data or backend service. We would like create something generic not tie it up with debug collector or phosphor logs alone. \n\nI can definitely consider if there is a way to make this generic. \nFor erasing dumps alone we have RF APIs. But we would like ease multiple types of data under single API. Would like to consider the same design approach as current factory reset which set the env variable and erase of the partition happens at startup. \n\nPlease let me know if you have further thought on how to make this generic.",
+      "parentUuid": "5ca29998_c9cd4e73",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 35
+      },
+      "revId": "d05081a7584b0d689728b7ff8e9db10e8e1f251c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3badbabf_f420de82",
         "filename": "/COMMIT_MSG",
         "patchSetId": 5

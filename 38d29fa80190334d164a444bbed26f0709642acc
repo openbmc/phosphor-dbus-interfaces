@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c64dadb_86d68cad",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-03-06T07:46:12Z",
+      "side": 1,
+      "message": "the boot option that redfish added is inside the boot object and allows a specific boot option to be displayed and possibly enabled it disabled in addition to selected for next boot.\n\nas pointed out in discord we already have other boot seetings modeled \n\n\nstarting from the webui-vue I located the Boot object in a CV computer system which bmcweb shows are interfaces located in the xyz.ipenbmc_oroject.Control.Boot namespace.\n\nplease move these interfaces to that portion of our model.\n\n\nfurther reflection of the BIOSConfig name space shows it\u0027s to implement the BIOS settings interface which has a separate schema and is disjoint from the boot object.\n\n\n\nhttps://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2024.4.html#computersystem-1231",
+      "revId": "38d29fa80190334d164a444bbed26f0709642acc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fa910f8_a08f55f8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-03-06T07:46:12Z",
+      "side": 1,
+      "message": "why should this be under bios settings? those are to have a definite registry object, whereas an arbitrary number of efi Boot targets can be created by any os running.",
+      "revId": "38d29fa80190334d164a444bbed26f0709642acc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8fd41d1b_9376dfd8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-03-06T07:46:12Z",
+      "side": 1,
+      "message": "As discussed in discord, please review, compare and contrast how this implementation is similar or different to ipmi selection of the boot device by type and ua already supported by bmcweb and webui-vue.\n\nhttps://discord.com/channels/775381525260664832/775381525260664836/1346430018615513160\n\nplease propose how they will integrate.",
+      "revId": "38d29fa80190334d164a444bbed26f0709642acc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

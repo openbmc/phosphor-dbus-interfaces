@@ -127,6 +127,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "528c72fd_981856bc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-03-10T06:53:58Z",
+      "side": 1,
+      "message": "aplease don\u0027t mark resolved unless you make changes to change the patch to address the comment.\n\n\nI was not arguing it should be under phosphor settings manager.   I was simply stating it doesn\u0027t belong under the same interface as BIOS settings manager.   \n\nThe reason it doesn\u0027t belong there is because you can not define a finite set of settings by knowing the BIOS version.  The BIOS Configuration Manager state deals with this interface.   ain the reddish forum they have talked about the settings should be in a registry or similar.\n\nThis interface is interacting with UEFI defined variables that must be obtained before they can be set by the redfish client.\n\nYou also didn\u0027t respond to my suggestion to place these under Control.Boit with the other controls for the same redfish object.",
+      "parentUuid": "99f0afc5_8aefaf90",
+      "revId": "38d29fa80190334d164a444bbed26f0709642acc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8fd41d1b_9376dfd8",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 3

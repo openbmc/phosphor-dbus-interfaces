@@ -107,6 +107,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "99f0afc5_8aefaf90",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-03-10T03:26:52Z",
+      "side": 1,
+      "message": "Currently the interfaces are under phosphor-settings-manager. Adding the proposed interface along the same might not be good idea as it would not help us to manage the life cycle of the object well.\nBios can dynamically send the Boot option information(after each boot the information might change), bmc will have to add/remove dbus objects. Adding these interfaces with phosphor-settings-manager wont help us",
+      "parentUuid": "c4d7e037_368e820d",
+      "revId": "38d29fa80190334d164a444bbed26f0709642acc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8fd41d1b_9376dfd8",
@@ -138,6 +156,24 @@
       "side": 1,
       "message": "yes, will look through it and propose how this can be integrated to existing design",
       "parentUuid": "8fd41d1b_9376dfd8",
+      "revId": "38d29fa80190334d164a444bbed26f0709642acc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06ed4605_216aae75",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-03-10T03:26:52Z",
+      "side": 1,
+      "message": "The issue with ipmi currently is:\n1) ipmi only allows the user to select boot option such as HTTP, CD, Drive. \nThere is no way currently from ipmi to select any particular drive. \n2) ipmi doesn\u0027t show information about the boot option such as Boot Option Name, Description, UEFI Path.",
+      "parentUuid": "456e6e2e_29a3c200",
       "revId": "38d29fa80190334d164a444bbed26f0709642acc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

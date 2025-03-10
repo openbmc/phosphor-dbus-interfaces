@@ -145,6 +145,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6130e9ee_f915cd23",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-03-10T10:41:06Z",
+      "side": 1,
+      "message": "Thanks a lot for taking your time and reviewing my patch-set. \nSorry for marking comments as resolved. \n\nBIOS-BMC communication for managing settings is currently implemented in bios-settings-manager. Since boot option information comes from bios I placed these interfaces under bios config manager.\n\nYes, UEFI settings must be obtained from BIOS before we modify them. \nThe UEFI settings can be obtained by ipmi-oem, pldm, redfish host interface. \n\nCurrently these interfaces(from the patchset) provides the way to view CurrentBootOrder and also provides user to change the BootOrder. The user can patch under /Bios/Settings to change the Bios boot order. The backend will have to store Current and Pending Boot Order persistently. \n\nI feel adding these changes as part of bios-settings-manager would be appropriate as backend code can be implemented in bios-settings-manager. \nBut, if adding the dbus-interfaces to Control.Boot and implementing backend logic in bios-setings-manager is acceptable I can go with that approach.\n\nPlease share your thoughts.",
+      "parentUuid": "528c72fd_981856bc",
+      "revId": "38d29fa80190334d164a444bbed26f0709642acc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8fd41d1b_9376dfd8",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 3

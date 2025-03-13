@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "560af8ed_a5126563",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-13T12:46:01Z",
+      "side": 1,
+      "message": "Please say more here - something similar to https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/78349",
+      "revId": "bf29c9d99bc654804120d75eb30b9cf88cc64d21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e176a255_771dc32a",
+        "filename": "yaml/xyz/openbmc_project/Sensor/PeakValue.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-13T12:46:01Z",
+      "side": 1,
+      "message": "You need to add more detail - what other interfaces does the object implementing this need to also implement? The same things make me wonder (and I would recommend_ adding this as a property to Sensor.Value. The correlation becomes easier.",
+      "revId": "bf29c9d99bc654804120d75eb30b9cf88cc64d21",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

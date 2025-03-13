@@ -265,6 +265,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d12d339_b84efa6b",
+        "filename": "yaml/xyz/openbmc_project/Sensor/PeakValue.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-13T12:46:01Z",
+      "side": 1,
+      "message": "The \"relation\" can exist on the D-Bus object. A lot of properties might have associated timestamps - this doesn\u0027t mean we add that to all those interfaces. I recommend using an existing interface for timestamp.",
+      "parentUuid": "b85b4f92_63905f06",
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e14218a8_ec6c7233",

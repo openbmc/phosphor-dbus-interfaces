@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bec32198_8e0d6573",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-13T09:04:00Z",
+      "side": 1,
+      "message": "I have updated the same in commit message as well https://gerrit.openbmc.org/c/openbmc/docs/+/76686",
+      "parentUuid": "ba05366d_4e7f8950",
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5b4ee570_073d6585",
@@ -52,6 +70,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9191c0c6_c369d5c7",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Description.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-13T09:04:00Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "5b4ee570_073d6585",
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "113b2fe7_eafcfaf5",
@@ -65,6 +101,30 @@
       "writtenOn": "2025-02-26T22:33:55Z",
       "side": 1,
       "message": "Why do we have a random string?",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 40
+      },
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26bdc828_71021fee",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Description.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-13T09:04:00Z",
+      "side": 1,
+      "message": "removed as suggested earlier in the commit from Deepak",
+      "parentUuid": "113b2fe7_eafcfaf5",
       "range": {
         "startLine": 5,
         "startChar": 0,
@@ -111,6 +171,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "696180cb_e4a60065",
+        "filename": "yaml/xyz/openbmc_project/Sensor/PeakValue.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-13T09:04:00Z",
+      "side": 1,
+      "message": "Since the both properties are related and are defined for sensors hence kept in same interface.",
+      "parentUuid": "9e420721_841fce3d",
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e14218a8_ec6c7233",
         "filename": "yaml/xyz/openbmc_project/Sensor/ReadingBasis.interface.yaml",
         "patchSetId": 4
@@ -122,6 +200,24 @@
       "writtenOn": "2025-03-01T18:56:50Z",
       "side": 1,
       "message": "Not sure what the reference point is. This may need an example.",
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3dee3507_e25e2cc5",
+        "filename": "yaml/xyz/openbmc_project/Sensor/ReadingBasis.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-13T09:04:00Z",
+      "side": 1,
+      "message": "removed it from this commit",
+      "parentUuid": "e14218a8_ec6c7233",
       "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

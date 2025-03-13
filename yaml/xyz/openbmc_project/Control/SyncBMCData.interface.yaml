@@ -33,6 +33,17 @@ properties:
           This property represents the current status of the full
           synchronization process and is read-only.
 
+    - name: SyncEventsHealth
+      type: enum[self.SyncEventsHealth]
+      flags:
+          - readonly
+      default: Unknown
+      description: >
+          Sync events run in the background and trigger synchronization when
+          expected events occur, such as file or directory modifications or
+          periodic syncing. This property helps monitor the latest overall
+          health of background sync events.
+
 enumerations:
     - name: FullSyncStatus
       description: >
@@ -56,6 +67,29 @@ enumerations:
             description: >
                 The full synchronization process has failed due to an error or
                 failure in one or more of the configured files or directories.
+
+    - name: SyncEventsHealth
+      description: >
+          Defines the latest Sync events overall health status of the BMC.
+      values:
+          - name: Unknown
+            description: >
+                The overall Sync events health is not yet determined or is in an
+                indeterminate state.
+
+          - name: Ok
+            description: >
+                The overall Sync events are running fine without warnings or
+                error.
+
+          - name: Paused
+            description: >
+                The overall Sync events have been paused and are not processing.
+
+          - name: Critical
+            description: >
+                The overall Sync events health is critical, indicating errors or
+                failures that require immediate attention.
 
 paths:
     - instance: /xyz/openbmc_project/control/sync_bmc_data

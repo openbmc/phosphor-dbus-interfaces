@@ -1,0 +1,21 @@
+description: >
+    Implement this interface for clients to identify the code update manager
+    which will process the multi part image and orchestrate with code updaters
+    for the code update process. This is an optional interface to be implemented
+    if the client needs to delegate the code update process to the code update
+    manager for multi part images. The implementer also needs to implement the
+    xyz.openbmc_project.Software.Update interface for the client to pass the
+    multi part image and update parameters.
+
+properties:
+    - name: Targets
+      type: array[object_path]
+      description: >
+          An array of D-Bus object paths that are in the
+          /xyz/openbmc_project/software/ namespace that indicate the code update
+          targets to be updated. The targets for code update will be the
+          intersection of the Targets property and the software the multi part
+          image will update. If the Targets property is empty, all the software
+          in the multi part image will be updated. Targets should be cleared by
+          the client before StartUpdate if it not applicable for the multi part
+          image.

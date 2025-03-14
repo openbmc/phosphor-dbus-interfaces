@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "833c7050_70569e64",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-14T07:22:39Z",
+      "side": 1,
+      "message": "Add default value? Also state if this is optional/mandatory and when is an implementation typically supposed to update this?",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd3bf0a6_ef281002",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-14T07:22:39Z",
+      "side": 1,
+      "message": "Why is this readonly?",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62eefb0b_cb7e86e4",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-14T07:22:39Z",
+      "side": 1,
+      "message": "As I\u0027ve been commenting elsewhere - we don\u0027t want to add this property here as it the interface for it exists already.",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

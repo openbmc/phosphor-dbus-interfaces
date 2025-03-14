@@ -1,0 +1,12 @@
+description: >
+    Implementing this interface allows clients to identify the MultiPart
+    Manager, which will process a multi part image and orchestrate the code
+    update process. A multi part image is a collection of individual images
+    bundled together using a defined encoding format; the Multipart Manager
+    interprets this format to perform code updates across various firmware
+    entities. Implementing this interface is optional and required only if the
+    client needs to delegate the code update using a multi part image without
+    specifying a particular firmware target. Implementations must also provide
+    the xyz.openbmc_project.Software.Update interface for the client to transfer
+    the multi-part image. Only one instance of the MultiPart Manager exists on
+    the BMC.

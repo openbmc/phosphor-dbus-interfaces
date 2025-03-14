@@ -303,6 +303,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f1ffa20d_bb91ff39",
+        "filename": "yaml/xyz/openbmc_project/Sensor/PeakValue.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-14T08:13:06Z",
+      "side": 1,
+      "message": "As per current design https://github.com/openbmc/docs/blob/master/architecture/sensor-architecture.md\n\nSensor object path can choose to implement other interfaces as well. If we define timestamp through other PDI it becomes difficult to associate it with Sensor.Value specifically and hence the reason its included in the same interface",
+      "parentUuid": "7d14b2ed_bbc0f491",
+      "revId": "db33aa8766797a6f798cd651c0a8c601936e5f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e14218a8_ec6c7233",
         "filename": "yaml/xyz/openbmc_project/Sensor/ReadingBasis.interface.yaml",
         "patchSetId": 4

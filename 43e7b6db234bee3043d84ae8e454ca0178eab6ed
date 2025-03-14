@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "365c57cf_f80b2910",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-14T08:13:06Z",
+      "side": 1,
+      "message": "only server should be able to update the value and client should not be able to modify it. Hence made it read only",
+      "parentUuid": "bd3bf0a6_ef281002",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "62eefb0b_cb7e86e4",
         "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
         "patchSetId": 10
@@ -48,6 +66,24 @@
       "writtenOn": "2025-03-14T07:22:39Z",
       "side": 1,
       "message": "As I\u0027ve been commenting elsewhere - we don\u0027t want to add this property here as it the interface for it exists already.",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a58240d_cf49f67b",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-14T08:13:06Z",
+      "side": 1,
+      "message": "As per current design https://github.com/openbmc/docs/blob/master/architecture/sensor-architecture.md\n\nSensor object path can choose to implement other interfaces as well. If we define timestamp through other PDI it becomes difficult to associate it with Sensor.Value specifically and hence the reason its included in the same interface",
+      "parentUuid": "62eefb0b_cb7e86e4",
       "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

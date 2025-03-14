@@ -1,0 +1,8 @@
+description: >
+    Implement this interface for clients to identify the code update manager
+    which will process the multi part image and orchestrate with code updaters
+    for the code update process. This is an optional interface to be implemented
+    if the client needs to delegate the code update process to the code update
+    manager for multi part images. The implementer also needs to implement the
+    xyz.openbmc_project.Software.Update interface for the client to pass the
+    multi part image and update parameters.

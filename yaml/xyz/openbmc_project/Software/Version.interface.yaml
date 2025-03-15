@@ -19,6 +19,11 @@ properties:
           This property is deprecated in favor of Compatible strings and
           inventory associations.  The enumeration should not be expanded
           further.
+    - name: SoftwareId
+      type: string
+      description: >
+          This property shall represent an implementation-specific label that
+          identifies this software.
 enumerations:
     - name: VersionPurpose
       description: >

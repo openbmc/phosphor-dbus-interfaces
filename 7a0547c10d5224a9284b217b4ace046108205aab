@@ -88,6 +88,24 @@
       "parentUuid": "41634efc_ba19284b",
       "revId": "7a0547c10d5224a9284b217b4ace046108205aab",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc313eda_e4777bc8",
+        "filename": "yaml/xyz/openbmc_project/Software/Version.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-03-16T06:13:27Z",
+      "side": 1,
+      "message": "I was reviewing the Redfish SoftwareInventory schema(https://redfish.dmtf.org/schemas/v1/SoftwareInventory.v1_10_2.json) which includes a SoftwareId property(https://github.com/openbmc/bmcweb/blob/d033fd17ae806365d12bb12bee7663c71e3f3512/redfish-core/schema/dmtf/json-schema/SoftwareInventory.v1_10_2.json#L343).\nI\u0027m considering whether it would be beneficial to map ExtendedVersion with SoftwareId. However, I\u0027m concerned that it might be challenging at the BMCWeb level to determine which ExtendedVersion from the backend should be classified as a SoftwareId and which should not.\n\nCould you please share your thoughts on this approach?",
+      "parentUuid": "76e6be00_4336e87b",
+      "revId": "7a0547c10d5224a9284b217b4ace046108205aab",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

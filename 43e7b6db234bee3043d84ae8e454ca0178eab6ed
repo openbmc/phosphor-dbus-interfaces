@@ -122,6 +122,24 @@
       "parentUuid": "10896ccd_01722645",
       "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1de6ea5d_63bf1158",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-17T03:32:22Z",
+      "side": 1,
+      "message": "It doesn\u0027t have to be ambiguous. You can document the expected behavior in this YAML (see my proposed D-Bus guielines where I\u0027ve given examples where such companion interfaces are clearly documented). I think the most common use of it would be to understand when the sensor was refreshed.",
+      "parentUuid": "7e143ec2_60c0b91a",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

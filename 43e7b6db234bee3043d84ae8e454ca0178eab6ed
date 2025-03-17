@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "726419a9_4dc67036",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-17T03:59:09Z",
+      "side": 1,
+      "message": "Added along with better description.",
+      "parentUuid": "833c7050_70569e64",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bd3bf0a6_ef281002",
         "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
         "patchSetId": 10
@@ -49,6 +67,24 @@
       "side": 1,
       "message": "only server should be able to update the value and client should not be able to modify it. Hence made it read only",
       "parentUuid": "bd3bf0a6_ef281002",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ccff873_376c1c4f",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-17T03:59:09Z",
+      "side": 1,
+      "message": "Hope this clarifiesthe reason to make it read only ?",
+      "parentUuid": "365c57cf_f80b2910",
       "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -138,6 +174,24 @@
       "side": 1,
       "message": "It doesn\u0027t have to be ambiguous. You can document the expected behavior in this YAML (see my proposed D-Bus guielines where I\u0027ve given examples where such companion interfaces are clearly documented). I think the most common use of it would be to understand when the sensor was refreshed.",
       "parentUuid": "7e143ec2_60c0b91a",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d59575a_27f48b48",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-17T03:59:09Z",
+      "side": 1,
+      "message": "Thanks for guidelines. Please check i have updated as per the recommendation.",
+      "parentUuid": "1de6ea5d_63bf1158",
       "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

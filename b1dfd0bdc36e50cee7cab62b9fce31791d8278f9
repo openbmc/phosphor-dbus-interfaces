@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66082494_daf79913",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-17T20:20:06Z",
+      "side": 1,
+      "message": "This is not a great commit title.  Extended it for what purpose?",
+      "revId": "b1dfd0bdc36e50cee7cab62b9fce31791d8278f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8af2c753_126e149b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-17T20:20:06Z",
+      "side": 1,
+      "message": "This is not a workable proposal.\n\n1. We should not add a new property like this for all sensors when it is only relevant to specific implementations (which are rare).\n2. There is no way to communicate if this feature is supported.\n3. Some day someone may want to add a \"TroughValue\" and then you\u0027ll have no idea if the timestamp is for the Peak or the Trough.\n\nMaintaining a peak value does not seem appropriate for an individual sensor.  Isn\u0027t this a telemetry item?  Or is it a separate \"sensor\"?  It seems like there are lots of potential telemetry you might want to capture on a sensor: peak, trough, average [over a period of time], etc.  I do not think we should handle this by adding properties to a sensor one at a time.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 44
+      },
+      "revId": "b1dfd0bdc36e50cee7cab62b9fce31791d8278f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3931af75_d9bdcb73",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-17T20:20:06Z",
+      "side": 1,
+      "message": "I see no reference to \"Peak\" in this design document.  I have no idea how this is relevant.",
+      "revId": "b1dfd0bdc36e50cee7cab62b9fce31791d8278f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fc5c222_42400ec0",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 17
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-17T20:20:06Z",
+      "side": 1,
+      "message": "fix",
+      "range": {
+        "startLine": 60,
+        "startChar": 45,
+        "endLine": 60,
+        "endChar": 47
+      },
+      "revId": "b1dfd0bdc36e50cee7cab62b9fce31791d8278f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6cd4080c_abe1866c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-17T08:52:11Z",
+      "side": 1,
+      "message": "Correct.",
+      "parentUuid": "8132ac07_866379dd",
+      "revId": "cae6f1ffdf841877ace9846e2d271305b541a376",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "67844668_9f2f9cf5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 9
@@ -31,6 +49,24 @@
       "writtenOn": "2025-03-17T07:10:28Z",
       "side": 1,
       "message": "Please update this commit message with example of how would the interface look like. Given we plan to use generic metric interface it make sense to capture the object also.",
+      "revId": "cae6f1ffdf841877ace9846e2d271305b541a376",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "674a8d78_97425d32",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-17T08:52:11Z",
+      "side": 1,
+      "message": "i have captured the example usage in the commit message.",
+      "parentUuid": "67844668_9f2f9cf5",
       "revId": "cae6f1ffdf841877ace9846e2d271305b541a376",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -48,6 +84,24 @@
       "writtenOn": "2025-03-17T07:10:28Z",
       "side": 1,
       "message": "can this be simplified as utilization  ? if yes does this overlap with utilization in sensor namespace ? https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Sensor/Value.interface.yaml#L15.",
+      "revId": "cae6f1ffdf841877ace9846e2d271305b541a376",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8ada969_5c501f96",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-17T08:52:11Z",
+      "side": 1,
+      "message": "This is a device level(DIMM) metric than actual physical sensor on the device.",
+      "parentUuid": "992fb761_ada05917",
       "revId": "cae6f1ffdf841877ace9846e2d271305b541a376",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -104,6 +104,24 @@
       "parentUuid": "7a58240d_cf49f67b",
       "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e143ec2_60c0b91a",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-17T03:18:44Z",
+      "side": 1,
+      "message": "Sensor Object apart from xyz.openbmc_project.Sensor.Value can additionally implement these interfaces\n\nxyz.openbmc_project.Control.FanSpeed\nxyz.openbmc_project.Control.FanPwm\nxyz.openbmc_project.State.Decorator.OperationalStatus\nxyz.openbmc_project.Sensor.*\n\nAdditing xyz.openbmc_project.Time.EpochTime to sensor object would make \"Elapsed\" property ambigous, could be misleading and I think it can be interpretted in many ways for eg the Elapsed time since last sensor value last updated by service hosting the sensor. IMO the generic nature of the Elapsed interface makes it not ideal unless its meaning become more specific for sensors.",
+      "parentUuid": "10896ccd_01722645",
+      "revId": "43e7b6db234bee3043d84ae8e454ca0178eab6ed",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

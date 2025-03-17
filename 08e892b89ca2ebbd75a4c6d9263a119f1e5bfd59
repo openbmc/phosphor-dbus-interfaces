@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ed0ec8ce_3df3098c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-17T11:20:21Z",
+      "side": 1,
+      "message": "Closing the MR as this information can be deduced for sensors through inventory association and then looking for type of inventory (Item.\u003ctype\u003e)",
+      "parentUuid": "f644544b_741c9a18",
+      "revId": "08e892b89ca2ebbd75a4c6d9263a119f1e5bfd59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4a6d4d85_1f7a9476",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Area.interface.yaml",
         "patchSetId": 2
@@ -48,6 +66,30 @@
       "writtenOn": "2025-02-26T22:30:05Z",
       "side": 1,
       "message": "Please give more context as to what you are trying to accomplish.  I have no idea what a \"PhysicalContext\" is.  I have no idea how \"Exhaust\" is related.  The enumeration looks like a random set of computer words.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 63
+      },
+      "revId": "08e892b89ca2ebbd75a4c6d9263a119f1e5bfd59",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c90e261_86223fe3",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Area.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-17T11:20:21Z",
+      "side": 1,
+      "message": "Idea here was to add a generic interface that can be implemented by Sensor to know the specific device / board / chassis its monitoring. \n\nBut Looking at sensor design this information can be deduced by implementing the \n\"sensor\" and \"inventory\" (low level inventory item). I will close this request.\n\nThanks",
+      "parentUuid": "7d52f433_189bc2b7",
       "range": {
         "startLine": 1,
         "startChar": 0,

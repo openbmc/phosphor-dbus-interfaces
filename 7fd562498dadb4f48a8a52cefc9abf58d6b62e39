@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3ec96b7_947117f7",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "The original doc had these as general and had another empty section for Properties. While I don\u0027t disagree with your suggestion, I think we can defer and do this later based on more feedback.",
+      "parentUuid": "df938449_2de5c562",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6885f9f6_dc702d8c",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "83881d98_5d3e59a5",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "That already exists in the docs folder under dev guidelines. I don\u0027t think we need to do that per repo. The overall expectations there are same across the project.",
+      "parentUuid": "6885f9f6_dc702d8c",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "12a50107_f8a7ccca",
@@ -48,6 +84,30 @@
       "writtenOn": "2025-03-18T05:09:33Z",
       "side": 1,
       "message": "These are D-Bus interface general guidelines can be moved to the General Requirements section instead of interface documentation.",
+      "range": {
+        "startLine": 126,
+        "startChar": 2,
+        "endLine": 127,
+        "endChar": 71
+      },
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2776e1e_f9a87a8b",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "Original doc had an empty section called Interfaces, so I\u0027ve filled that up. We can do the movements later once we are ok with the guidelines themselves.",
+      "parentUuid": "12a50107_f8a7ccca",
       "range": {
         "startLine": 126,
         "startChar": 2,
@@ -81,6 +141,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6356ff70_45067b93",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "Original doc had an empty section called Interfaces, so I\u0027ve filled that up. We can do the movements later once we are ok with the guidelines themselves.",
+      "parentUuid": "f30f1636_10273764",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 134,
+        "endChar": 50
+      },
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b6cf55f5_3e12b950",
@@ -98,6 +182,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d021fc6_fa7125a6",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "I didn\u0027t intend this doc to be programatically consumable (not sure if that\u0027s what you meant). Looking at the PDI repo is still very much required for understanding namespaces/existing interfaces. I think we can revisit post further discussion and add a separate doc if need be.",
+      "parentUuid": "b6cf55f5_3e12b950",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "679b6dcd_e3eba127",
@@ -111,6 +213,24 @@
       "writtenOn": "2025-03-18T04:37:52Z",
       "side": 1,
       "message": "Hardware (physical) instead of static ?",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1e68239_7de44aab",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "Maybe I can say FRU?",
+      "parentUuid": "679b6dcd_e3eba127",
       "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -140,6 +260,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f80df4b3_dd06ce7c",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "Will do.",
+      "parentUuid": "dc7281d0_c4aebfb2",
+      "range": {
+        "startLine": 147,
+        "startChar": 0,
+        "endLine": 197,
+        "endChar": 3
+      },
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c84e54b5_b738f364",
         "filename": "requirements.md",
         "patchSetId": 1
@@ -151,6 +295,24 @@
       "writtenOn": "2025-03-18T05:09:33Z",
       "side": 1,
       "message": "- Use `const` for properties that never change during runtime\n\nIs const applicable here?",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f86d1c9_cf89fbb9",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "Will fix.",
+      "parentUuid": "c84e54b5_b738f364",
       "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -174,6 +336,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f59b0f4e_eb2e3ecd",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "Will fix",
+      "parentUuid": "48930adc_3351d765",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8a1f019d_391b1b37",
         "filename": "requirements.md",
         "patchSetId": 1
@@ -185,6 +365,24 @@
       "writtenOn": "2025-03-18T04:37:52Z",
       "side": 1,
       "message": "should all the errors go here https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common.errors.yaml or can they go to each interfaces ?",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44ff3330_890e98a0",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "We have both possibilities. I will add some details here.",
+      "parentUuid": "8a1f019d_391b1b37",
       "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -208,6 +406,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3e571ff4_d8eff785",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "Will fix.",
+      "parentUuid": "bd06aba2_f40a2a2b",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c2ce1efe_819f0bc6",
         "filename": "requirements.md",
         "patchSetId": 1
@@ -219,6 +435,30 @@
       "writtenOn": "2025-03-18T05:09:33Z",
       "side": 1,
       "message": "Can you share a concrete example here?",
+      "range": {
+        "startLine": 341,
+        "startChar": 54,
+        "endLine": 341,
+        "endChar": 69
+      },
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b19fadef_b96a04e8",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "This was in the original doc; will see if I can add some.",
+      "parentUuid": "c2ce1efe_819f0bc6",
       "range": {
         "startLine": 341,
         "startChar": 54,
@@ -266,6 +506,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6b2989d2_2ca270ae",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "Sure, will add that as a guideline.",
+      "parentUuid": "8c768954_37a70b1e",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "24e32a89_4cd3592b",
         "filename": "requirements.md",
         "patchSetId": 1
@@ -277,6 +535,24 @@
       "writtenOn": "2025-03-18T04:37:52Z",
       "side": 1,
       "message": "would it help to document what to use when ? example events vs signals",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fbb050c_eda8753d",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-03-18T16:42:54Z",
+      "side": 1,
+      "message": "Will try to add examples.",
+      "parentUuid": "24e32a89_4cd3592b",
       "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

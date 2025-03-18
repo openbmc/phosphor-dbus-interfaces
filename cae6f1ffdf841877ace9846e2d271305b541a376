@@ -122,6 +122,24 @@
       "parentUuid": "992fb761_ada05917",
       "revId": "cae6f1ffdf841877ace9846e2d271305b541a376",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af251c91_717faf12",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-03-18T07:05:48Z",
+      "side": 1,
+      "message": "Not sure there is a mandate that says all sensors here https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Sensor/Value.interface.yaml#L15 need to physical sensors. Examples for CPU all energy, power data is just what the device provides. It would help to capture the reasoning for have the same utilisation in two places.",
+      "parentUuid": "e8ada969_5c501f96",
+      "revId": "cae6f1ffdf841877ace9846e2d271305b541a376",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

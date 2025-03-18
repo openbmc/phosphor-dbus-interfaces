@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1f25679_781c5177",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-18T20:11:39Z",
+      "side": 1,
+      "message": "1. We should move this nearby the other memory metrics.\n\n2. Right now the only primary path is \"BMC\" (see line 122), but I think you said these are for \"GPUs\".  We also need some sort of path segment to identify the device(s) these are for.\n\n3. I don\u0027t know what \"capacity utilization\" means.  How is that different from `(available/total)`?  Is there any reason why we\u0027re wanting to represent this as a specific piece of math (to create a percentage) rather than give the real underlying numbers, which are already identified here?",
+      "revId": "61b01f89a0a9946dc9fdc1cdc8269f5b1340e08c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

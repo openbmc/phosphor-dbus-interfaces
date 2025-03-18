@@ -3,6 +3,69 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "df938449_2de5c562",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-03-18T05:09:33Z",
+      "side": 1,
+      "message": "1.1, 1.2 \u0026 1.3 will be better fir under the Properties section.",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12a50107_f8a7ccca",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-03-18T05:09:33Z",
+      "side": 1,
+      "message": "These are D-Bus interface general guidelines can be moved to the General Requirements section instead of interface documentation.",
+      "range": {
+        "startLine": 126,
+        "startChar": 2,
+        "endLine": 127,
+        "endChar": 71
+      },
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f30f1636_10273764",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-03-18T05:09:33Z",
+      "side": 1,
+      "message": "These are D-Bus interface general guidelines can be moved to the General Requirements section instead of interface documentation.",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 134,
+        "endChar": 50
+      },
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b6cf55f5_3e12b950",
         "filename": "requirements.md",
         "patchSetId": 1
@@ -37,6 +100,46 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "dc7281d0_c4aebfb2",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-03-18T05:09:33Z",
+      "side": 1,
+      "message": "nit: organize good examples followed by bad examples, instead of random order",
+      "range": {
+        "startLine": 147,
+        "startChar": 0,
+        "endLine": 197,
+        "endChar": 3
+      },
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c84e54b5_b738f364",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-03-18T05:09:33Z",
+      "side": 1,
+      "message": "- Use `const` for properties that never change during runtime\n\nIs const applicable here?",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8a1f019d_391b1b37",
         "filename": "requirements.md",
         "patchSetId": 1
@@ -48,6 +151,46 @@
       "writtenOn": "2025-03-18T04:37:52Z",
       "side": 1,
       "message": "should all the errors go here https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common.errors.yaml or can they go to each interfaces ?",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd06aba2_f40a2a2b",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-03-18T05:09:33Z",
+      "side": 1,
+      "message": "nit: This can be removed or examples are there to be added?",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2ce1efe_819f0bc6",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-03-18T05:09:33Z",
+      "side": 1,
+      "message": "Can you share a concrete example here?",
+      "range": {
+        "startLine": 341,
+        "startChar": 54,
+        "endLine": 341,
+        "endChar": 69
+      },
       "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

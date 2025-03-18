@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6cf55f5_3e12b950",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-03-18T04:37:52Z",
+      "side": 1,
+      "message": "It would help if this document captures standard/well know interfaces like this in a separate section. Separate doc is fine too. Many clients need this info for discovery and there is no one place where it\u0027s documented well.",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "679b6dcd_e3eba127",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-03-18T04:37:52Z",
+      "side": 1,
+      "message": "Hardware (physical) instead of static ?",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a1f019d_391b1b37",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-03-18T04:37:52Z",
+      "side": 1,
+      "message": "should all the errors go here https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common.errors.yaml or can they go to each interfaces ?",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12115595_0cbfbec0",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-03-18T04:37:52Z",
+      "side": 1,
+      "message": "I think it would be good to callout that all associations must be documented because it\u0027s hard to know what associations already exists before we come up with new ones. Also where to capture the the common associations where might applicable to more that one interface.",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24e32a89_4cd3592b",
+        "filename": "requirements.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-03-18T04:37:52Z",
+      "side": 1,
+      "message": "would it help to document what to use when ? example events vs signals",
+      "revId": "7fd562498dadb4f48a8a52cefc9abf58d6b62e39",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

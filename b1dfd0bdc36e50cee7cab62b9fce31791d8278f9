@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d1e5dbf3_d57aa207",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-18T03:20:58Z",
+      "side": 1,
+      "message": "Thanks @patrick@stwcx.xyz for re-review on this one, the PeakValue is captured in the design doc here(Max Observed Power)\nhttps://gerrit.openbmc.org/c/openbmc/docs/+/76686/20/designs/nvidia-gpu.md#57\n\nTo address your concerns\n#1 -\u003e I think its a good idea to separate it out to a new interface(PeakValue.interface)\n\n#2 -\u003e Implementing the interface would be optional and an indiciation whether the feature is supported or not\n\n#3 -\u003e adding a separate interface should address this issue as well. Each specific metric can have its own interface and related properties like you mentioned for average, trough etc..",
+      "parentUuid": "8af2c753_126e149b",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 44
+      },
+      "revId": "b1dfd0bdc36e50cee7cab62b9fce31791d8278f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3931af75_d9bdcb73",
         "filename": "/COMMIT_MSG",
         "patchSetId": 17
@@ -60,6 +84,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "261283f4_05059fb9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-18T03:20:58Z",
+      "side": 1,
+      "message": "Please refer \"Max Observed Power\"  here https://gerrit.openbmc.org/c/openbmc/docs/+/76686/20/designs/nvidia-gpu.md#57",
+      "parentUuid": "3931af75_d9bdcb73",
+      "revId": "b1dfd0bdc36e50cee7cab62b9fce31791d8278f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1fc5c222_42400ec0",
         "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 17
@@ -71,6 +113,30 @@
       "writtenOn": "2025-03-17T20:20:06Z",
       "side": 1,
       "message": "fix",
+      "range": {
+        "startLine": 60,
+        "startChar": 45,
+        "endLine": 60,
+        "endChar": 47
+      },
+      "revId": "b1dfd0bdc36e50cee7cab62b9fce31791d8278f9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "942c26a3_c9ecf909",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 17
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-18T03:20:58Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "1fc5c222_42400ec0",
       "range": {
         "startLine": 60,
         "startChar": 45,

@@ -39,6 +39,24 @@
       "message": "Is this text coming from Redfish schema? If you read this without the context of Redfish, it is hard to understand without examples. Also, please check if something similar exists (Connector?).",
       "revId": "004f8a0b4361bb0b34552150be35b61f185a3cab",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8122eec0_08e28245",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocationContext.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-19T10:02:26Z",
+      "side": 1,
+      "message": "I think the other way to get this information would be through following PDI as you pointed out https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Inventory/Item.interface.yaml#L20",
+      "parentUuid": "d52f1103_e433181f",
+      "revId": "004f8a0b4361bb0b34552150be35b61f185a3cab",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

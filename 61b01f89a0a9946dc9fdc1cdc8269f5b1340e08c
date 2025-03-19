@@ -34,6 +34,24 @@
       "parentUuid": "b1f25679_781c5177",
       "revId": "61b01f89a0a9946dc9fdc1cdc8269f5b1340e08c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e2b0501_1d1affdc",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-19T16:20:18Z",
+      "side": 1,
+      "message": "\u003e We plan to rely on the association that are documented in the PDI like \"measuring\" and \"measured_by\". Dbus path for metrics would be under /xyz/openbmc_project/metrics\n\nHow is anyone suppose to read your mind on this?  You\u0027re doing something different than the existing metric design but we\u0027re just suppose to surmise this?  In any case, you still need a way to name the metrics.  That\u0027s what the path segments represent.\n\n\u003e 3. We will conider the #3 that is suggested.\n\nWhat?  This was not a \"suggestion\".  You\u0027re using Nvidia-internal terminology and expecting everyone else to automatically know what it means.  I don\u0027t know what \"capacity utilization\" means; you haven\u0027t even explained that to me let alone making it clear to people later on reading this YAML file.",
+      "parentUuid": "1d7a41cc_964539ba",
+      "revId": "61b01f89a0a9946dc9fdc1cdc8269f5b1340e08c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

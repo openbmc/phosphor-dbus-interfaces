@@ -7,11 +7,14 @@ generated_sources += custom_target(
     'xyz/openbmc_project/State/BMC__cpp'.underscorify(),
     input: [
         '../../../../../yaml/xyz/openbmc_project/State/BMC.errors.yaml',
+        '../../../../../yaml/xyz/openbmc_project/State/BMC.events.yaml',
         '../../../../../yaml/xyz/openbmc_project/State/BMC.interface.yaml',
     ],
     output: [
         'error.cpp',
         'error.hpp',
+        'event.cpp',
+        'event.hpp',
         'common.hpp',
         'server.hpp',
         'server.cpp',
@@ -33,6 +36,8 @@ generated_sources += custom_target(
     ],
     install: should_generate_cpp,
     install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
         false,
         get_option('includedir') / sdbusplus_current_path,
         get_option('includedir') / sdbusplus_current_path,

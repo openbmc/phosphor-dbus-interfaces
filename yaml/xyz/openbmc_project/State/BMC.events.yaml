@@ -1,0 +1,12 @@
+version: 1.0.0
+
+events:
+    - name: RebootCause
+      metadata:
+          - name: Cause
+            type: enum[xyz.openbmc_project.State.BMC.RebootCause]
+            primary: true
+            description: The detected cause of the last BMC reboot.
+      en:
+          description: The BMC reboot and the cause was identified.
+          message: The last BMC reboot was caused by '{Cause}'.

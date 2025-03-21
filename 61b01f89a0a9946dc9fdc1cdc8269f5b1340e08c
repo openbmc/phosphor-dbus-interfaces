@@ -52,6 +52,24 @@
       "parentUuid": "1d7a41cc_964539ba",
       "revId": "61b01f89a0a9946dc9fdc1cdc8269f5b1340e08c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99b91390_23f18ff3",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-21T11:48:08Z",
+      "side": 1,
+      "message": "HI @patrick@stwcx.xyz, We are aligned with the design \nhttps://grok.openbmc.org/xref/openbmc/docs/designs/bmc-health-monitor.md?r\u003d55c850913157ae07ea6deb02f7c5b1beda4f48be#192\n\nGPU DIMMs will publish the following metrics, dbus path structure would be as per above design. And the capacity utilization is a derived metric from the raw metrics(total-free)/total.\n\n```\n - name: TotalMemory\n            description: \u003e\n                The total memory metric.\n            value: memory/total\n          - name: FreeMemory\n            description: \u003e\n                The free memory metric.\n            value: memory/free\n          - name: AvailableMemory\n            description: \u003e\n                The available memory metric.\n            value: memory/available\n```",
+      "parentUuid": "0e2b0501_1d1affdc",
+      "revId": "61b01f89a0a9946dc9fdc1cdc8269f5b1340e08c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

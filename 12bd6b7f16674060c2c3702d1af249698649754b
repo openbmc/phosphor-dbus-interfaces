@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b3f18ea_f3f6342c",
+        "filename": "yaml/xyz/openbmc_project/State/CPER.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2025-03-21T16:28:13Z",
+      "side": 1,
+      "message": "Based on CPER documenation\n Indicates the severity of the error condition. The severity of the error record corresponds to the most severe error section.\n0 - Recoverable (also called non-fatal uncorrected)\n1 - Fatal\n2 - Corrected\n3 - Informational\nAll other values are reserved.\nNote that severity of “Informational” indicates that the record could be safely ignored by error handling software It will be good to start with these events?",
+      "revId": "12bd6b7f16674060c2c3702d1af249698649754b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

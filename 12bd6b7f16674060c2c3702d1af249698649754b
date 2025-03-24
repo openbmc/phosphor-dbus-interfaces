@@ -16,6 +16,24 @@
       "message": "Based on CPER documenation\n Indicates the severity of the error condition. The severity of the error record corresponds to the most severe error section.\n0 - Recoverable (also called non-fatal uncorrected)\n1 - Fatal\n2 - Corrected\n3 - Informational\nAll other values are reserved.\nNote that severity of “Informational” indicates that the record could be safely ignored by error handling software It will be good to start with these events?",
       "revId": "12bd6b7f16674060c2c3702d1af249698649754b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fdaa92f_caf17201",
+        "filename": "yaml/xyz/openbmc_project/State/CPER.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-03-24T22:21:36Z",
+      "side": 1,
+      "message": "@ojayanth@gmail.com are you indicating that we might need more than 2 event types here one for each error level? \nFatal - GenericCPERFault\nRecoverable - GenericCPERWarning\nCorrected/Informational - need new mapping?",
+      "parentUuid": "6b3f18ea_f3f6342c",
+      "revId": "12bd6b7f16674060c2c3702d1af249698649754b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

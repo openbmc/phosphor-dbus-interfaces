@@ -51,6 +51,29 @@
       "parentUuid": "6b3f18ea_f3f6342c",
       "revId": "12bd6b7f16674060c2c3702d1af249698649754b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b980e42e_d89ec1e3",
+        "filename": "yaml/xyz/openbmc_project/State/CPER.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-03-25T18:12:54Z",
+      "side": 1,
+      "message": "What\u0027s the difference between warning and fault?  I suspect we probably want them the same for this initial example, and differentiate based on severity?",
+      "range": {
+        "startLine": 4,
+        "startChar": 12,
+        "endLine": 4,
+        "endChar": 30
+      },
+      "revId": "12bd6b7f16674060c2c3702d1af249698649754b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -16,6 +16,23 @@
       "message": "@patrick@stwcx.xyz Can I have your review on this one please ?",
       "revId": "43042b96e21ed1f02ee0954e3c6185ac112a9ee4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dec5777c_c18ea54c",
+        "filename": "yaml/xyz/openbmc_project/Sensor/PeakValue.interface.yaml",
+        "patchSetId": 20
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-03-25T20:44:18Z",
+      "side": 1,
+      "message": "You don\u0027t also want a PeakReadingTime? I feel a time makes this a lot more valuable \n\nFrom Redfish \n\n                \"PeakReading\": {\n                    \"description\": \"The peak sensor value.\",\n                    \"longDescription\": \"This property shall contain the peak sensor value since the last `ResetMetrics` action was performed or since the service last reset the time-based property values.\",\n                    \"readonly\": true,\n                    \"type\": [\n                        \"number\",\n                        \"null\"\n                    ]\n                },\n                \"PeakReadingTime\": {\n                    \"description\": \"The time when the peak sensor value occurred.\",\n                    \"format\": \"date-time\",\n                    \"longDescription\": \"This property shall contain the date and time when the peak sensor value was observed, as reported as the value of `PeakReading`.\",\n                    \"readonly\": true,\n                    \"type\": [\n                        \"string\",\n                        \"null\"\n                    ]\n                },",
+      "revId": "43042b96e21ed1f02ee0954e3c6185ac112a9ee4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

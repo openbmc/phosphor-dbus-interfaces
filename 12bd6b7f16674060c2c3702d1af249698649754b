@@ -121,6 +121,30 @@
       },
       "revId": "12bd6b7f16674060c2c3702d1af249698649754b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5242ec4_43893174",
+        "filename": "yaml/xyz/openbmc_project/State/CPER.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-03-26T19:49:15Z",
+      "side": 1,
+      "message": "@ed@tanous.net Looking at https://www.dmtf.org/sites/default/files/standards/documents/DSP2065_2025.1.pdf, the PlatformError and PlatformErrorAtLocation messages have the severity set as `Severity: Warning`. So, using anything other than this is breaking the schema.\n\nThats the reason why we are adding this in order to differentiate between different CPER severity types.",
+      "parentUuid": "b980e42e_d89ec1e3",
+      "range": {
+        "startLine": 4,
+        "startChar": 12,
+        "endLine": 4,
+        "endChar": 30
+      },
+      "revId": "12bd6b7f16674060c2c3702d1af249698649754b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

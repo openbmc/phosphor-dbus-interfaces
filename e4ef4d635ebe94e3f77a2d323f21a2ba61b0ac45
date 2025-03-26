@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "763a8beb_499f8c3a",
+        "filename": "yaml/xyz/openbmc_project/Software/Manager.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-03-26T23:20:05Z",
+      "side": 1,
+      "message": "BMCWeb cannot create any intersection of targets as it cannot process the image, it shall simply map the Redfish URIs to object path and send that as target objectsPaths.",
+      "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b6c9e71_81d90665",
+        "filename": "yaml/xyz/openbmc_project/Software/Manager.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-03-26T23:20:05Z",
+      "side": 1,
+      "message": "How are you planning to plumb this interface for multiple targets back to the BMCWeb? Currently, update interface returns single object path and BMCWeb watches for progress and activation interface on that.",
+      "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

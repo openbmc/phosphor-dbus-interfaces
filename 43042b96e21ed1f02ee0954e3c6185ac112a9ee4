@@ -33,6 +33,24 @@
       "message": "You don\u0027t also want a PeakReadingTime? I feel a time makes this a lot more valuable \n\nFrom Redfish \n\n                \"PeakReading\": {\n                    \"description\": \"The peak sensor value.\",\n                    \"longDescription\": \"This property shall contain the peak sensor value since the last `ResetMetrics` action was performed or since the service last reset the time-based property values.\",\n                    \"readonly\": true,\n                    \"type\": [\n                        \"number\",\n                        \"null\"\n                    ]\n                },\n                \"PeakReadingTime\": {\n                    \"description\": \"The time when the peak sensor value occurred.\",\n                    \"format\": \"date-time\",\n                    \"longDescription\": \"This property shall contain the date and time when the peak sensor value was observed, as reported as the value of `PeakReading`.\",\n                    \"readonly\": true,\n                    \"type\": [\n                        \"string\",\n                        \"null\"\n                    ]\n                },",
       "revId": "43042b96e21ed1f02ee0954e3c6185ac112a9ee4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "723700e8_04fdabfc",
+        "filename": "yaml/xyz/openbmc_project/Sensor/PeakValue.interface.yaml",
+        "patchSetId": 20
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-03-26T04:46:32Z",
+      "side": 1,
+      "message": "Thanks @gunnar@gmills.xyz for reviewing this patch. This was discussed in few of the earlier comment as well and I plan to add it in a separate patch. Since you also find this property useful, if you are ok with this change would appreciate your approval here as well\n\nThanks",
+      "parentUuid": "dec5777c_c18ea54c",
+      "revId": "43042b96e21ed1f02ee0954e3c6185ac112a9ee4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

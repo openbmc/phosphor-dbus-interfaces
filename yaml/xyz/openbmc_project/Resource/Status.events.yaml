@@ -1,0 +1,14 @@
+version: 1.0.0
+
+events:
+    - name: ResourceStateChanged
+      metadata:
+          - name: ResourceName
+            description: The name or identifier of the resource.
+            type: object_path
+            primary: true
+          - name: ResourceState
+            type: string
+            description: The state of the resource.
+            primary: true
+      redfish-mapping: ResourceEvent.ResourceStateChanged

@@ -120,6 +120,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0ab7a91a_09473212",
+        "filename": "yaml/xyz/openbmc_project/State/CPER.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-03-27T18:37:18Z",
+      "side": 1,
+      "message": "FYI, this is not generating CPER events. It is a vehicle to carry CPER events generated externally out of redfish on a well known message ID. The `CPER` string is what\u0027s going to contain the CPER data which will of course be the format you expect it to be in (From [libcper](https://github.com/openbmc/libcper)).",
+      "parentUuid": "193914c9_2740be21",
+      "revId": "12bd6b7f16674060c2c3702d1af249698649754b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b980e42e_d89ec1e3",
         "filename": "yaml/xyz/openbmc_project/State/CPER.events.yaml",
         "patchSetId": 2

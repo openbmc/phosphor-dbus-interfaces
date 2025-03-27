@@ -1,0 +1,17 @@
+version: 1.0.0
+
+events:
+    - name: ResourceStateChanged
+      metadata:
+          - name: ResourceName
+            description: The name or identifier of the resource.
+            type: object_path
+            primary: true
+          - name: ResourceState
+            type: string
+            description: The state of the resource.
+      en:
+          description:
+              Indicates that the state of a resource has changed.
+          message:
+              The resource state has been updated to '{ResourceState}'.

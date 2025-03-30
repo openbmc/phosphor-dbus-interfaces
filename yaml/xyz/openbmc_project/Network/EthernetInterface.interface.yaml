@@ -37,6 +37,8 @@ properties:
       description: >
           Address mode of the ethernet interface. Deprecated in favor of split
           options to avoid combinatorics.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
     - name: DHCP4
       type: boolean
       description: >

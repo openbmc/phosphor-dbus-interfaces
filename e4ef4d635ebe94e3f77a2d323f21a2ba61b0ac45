@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8a7ba493_80ac8a03",
+        "filename": "yaml/xyz/openbmc_project/Software/Manager.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-04-02T04:33:41Z",
+      "side": 1,
+      "message": "\u003eit shall simply map the Redfish URIs to object path and send that as target objectsPaths.\n\nCorrect.\n\nThe description is mentioning that in the case of a multi part image and user passed Targets, the entities that will be updated will be an intersection of (images in the package) ∩ (FW in the Targets property)",
+      "parentUuid": "763a8beb_499f8c3a",
+      "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2b6c9e71_81d90665",
         "filename": "yaml/xyz/openbmc_project/Software/Manager.interface.yaml",
         "patchSetId": 1
@@ -31,6 +49,24 @@
       "writtenOn": "2025-03-26T23:20:05Z",
       "side": 1,
       "message": "How are you planning to plumb this interface for multiple targets back to the BMCWeb? Currently, update interface returns single object path and BMCWeb watches for progress and activation interface on that.",
+      "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1618e9c_dec8f137",
+        "filename": "yaml/xyz/openbmc_project/Software/Manager.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-04-02T04:33:41Z",
+      "side": 1,
+      "message": "code-update-manager will also implement the Software.Update method and return a single object path which will be used by bmcweb to track progress and completion.",
+      "parentUuid": "2b6c9e71_81d90665",
       "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -320,6 +320,24 @@
       "parentUuid": "7df322ae_703d8e9b",
       "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae8dd811_bfb55335",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-04-06T14:44:46Z",
+      "side": 1,
+      "message": "I agree with above Ed\u0027s point as well that only parameter that\u0027s mandatorily required is the username and don\u0027t prefer to remove existing optional parameters which needs  additional in IPMI/BMCWEB which is not right as well.\n\ncurrently all account policy setting properties handled separately, so I was thinking if we can handled same way, since this PasswordExpiration also related to account policy setting and not widely used parameter as well, otherwise I am good with this new interface.",
+      "parentUuid": "93dbd542_1f356bfe",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

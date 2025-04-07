@@ -1,0 +1,11 @@
+description: >
+    Implement to indicate sensor which provides total power for the
+    Inventory.Item associated to this sensor. The existing all_sensors/chassis
+    association is used. Future direction is to use the monitoring/monitored_by
+    association instead.
+
+    Objects implementing Sensor.Purpose.TotalPower must also implement
+    Sensor.Value.
+
+paths:
+    - namespace: /xyz/openbmc_project/sensors

@@ -1,4 +1,4 @@
-version: 1.0.0
+version: 1.0.1
 
 errors:
     - name: PowerRailFault
@@ -13,7 +13,7 @@ errors:
             description: An [optional] set of additional failure data.
       en:
           description: A fault has been detected on a power rail.
-          message: A fault has been detected on power rail '{Rail}'.
+          message: A fault has been detected on power rail '{PowerRail}'.
       errno: EIO
 
     - name: VoltageRegulatorFault

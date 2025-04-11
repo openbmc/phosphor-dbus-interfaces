@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae616cad_8b5aecf9",
+        "filename": "yaml/xyz/openbmc_project/Software/Manager.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-04-11T02:34:44Z",
+      "side": 1,
+      "message": "It will be reported on the RF task, if the Targets are not updated. On the question of how Redfish task will be updated, I have added my suggestion there.",
+      "parentUuid": "15d5a10f_20ae9c69",
+      "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2b6c9e71_81d90665",
@@ -103,6 +121,24 @@
       "side": 1,
       "message": "\u003e code-update-manager will also implement the Software.Update method and return a single object path which will be used by bmcweb to track progress and completion.\n\nYou cannot use a single object path to track the progress and status for all the components in the package. How would you report in task messages on what failed and whats the progress status for each of them?",
       "parentUuid": "b1618e9c_dec8f137",
+      "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3738013f_f1aed7bc",
+        "filename": "yaml/xyz/openbmc_project/Software/Manager.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-04-11T02:34:44Z",
+      "side": 1,
+      "message": "This is a good point. The direction I am thinking is RF task messages will be updated by watching for Software.Collection interface (https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/74853) and the associated Software.Activation interfaces, till the object path returned by code-update-manager marks the update complete.\n\nWe can enhance the D-Bus interfaces so that Redfish messages associated with code update can be added to the RF task. https://github.com/openbmc/bmcweb/blob/177612aaa0633cf9d5aef0b763a43135cf552d9b/redfish-core/include/registries/update_message_registry.hpp\n(Update.1.0.TargetDetermined, Update.1.0.TransferComplete ..)\n\nLet me know your thoughts.",
+      "parentUuid": "4497c292_fab16506",
       "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

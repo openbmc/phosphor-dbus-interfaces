@@ -16,6 +16,24 @@
       "message": "I think we need some discussion on why this is different from telemetry and why we should go this direction.\n\nI\u0027m a little concerned in a few aspects:\n\n1. We already have telemetry, which is hardly used.\n2. There seems to only be one design that is going to take advantage of this, which hasn\u0027t reached consensus yet.  I don\u0027t know how this is going to be used by Redfish since it is not a \"normal\" sensor.\n3. We already had a poor situation with thresholds where we ended up having to create N optional separate interfaces to track them, and we solved this differently with metric thresholds (to reduce the sprawl of optional interfaces).  We might want to go that route here also?\n\n(Regarding #3, the hope is that someone refactors sensor thresholds to use the metric threshold design at some point also.)",
       "revId": "7dedfacea787e7b913b057384b3a9f88989d52bc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "615d04a4_8f9979e9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 22
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-16T07:30:37Z",
+      "side": 1,
+      "message": "To address the concern #1 and #3 have added a common interface to track the various limits for specific sensor or metric. It should make the same interface extensible with various new limits if one wants to add, for eg you pointed out trough value earlier can be done by extending the enum.\n\nFor #2, Sensor schema already defines PeakReading and PeakReadingTime property \nhttps://redfish.dmtf.org/schemas/v1/Sensor.v1_10_1.yaml\n\nHope this addresses the concerns.\n\nThanks,\nAishwary",
+      "parentUuid": "52a42cc4_7ab777c9",
+      "revId": "7dedfacea787e7b913b057384b3a9f88989d52bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

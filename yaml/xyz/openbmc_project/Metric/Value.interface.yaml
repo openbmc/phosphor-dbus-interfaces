@@ -119,3 +119,8 @@ paths:
       description: >
           The BMC metrics.
       value: /xyz/openbmc_project/metric/bmc
+    - name: GPU{G}DIMM{N}
+      description: >
+          The metrics for DIMM instance {N}, where N is DIMM number on GPU
+          instance {G}, where G is GPU number.
+      value: /xyz/openbmc_project/metric/gpu{G}/dimm{N}

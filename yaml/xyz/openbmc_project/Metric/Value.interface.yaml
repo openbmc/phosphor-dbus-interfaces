@@ -119,3 +119,23 @@ paths:
       description: >
           The BMC metrics.
       value: /xyz/openbmc_project/metric/bmc
+    - name: DIMM_0
+      description: >
+          The metrics for DIMM instance 0, it may implement one or more metrics
+          depending on what is supported
+      value: /xyz/openbmc_project/metric/dimm_0
+    - name: DIMM_1
+      description: >
+          The metrics for DIMM instance 1, it may implement one or more metrics
+          depending on what is supported
+      value: /xyz/openbmc_project/metric/dimm_1
+    - name: DIMM_2
+      description: >
+          The metrics for DIMM instance 2, it may implement one or more metrics
+          depending on what is supported
+      value: /xyz/openbmc_project/metric/dimm_2
+    - name: DIMM_3
+      description: >
+          The metrics for DIMM instance 3, it may implement one or more metrics
+          depending on what is supported
+      value: /xyz/openbmc_project/metric/dimm_3

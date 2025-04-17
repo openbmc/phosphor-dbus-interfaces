@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "998b6875_44b45932",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-04-17T04:20:40Z",
+      "side": 1,
+      "message": "share one example of the final data structure.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fda1b353_d11a2482",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-04-17T04:20:40Z",
+      "side": 1,
+      "message": "can we drop limit here as its already part of property name above.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae1ac508_4a2eac58",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-04-17T04:20:40Z",
+      "side": 1,
+      "message": "generally timestamp is uint64. If you think timestamp is common then we can have timestamp outside to avoid to making this data structure bit complex.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

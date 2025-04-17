@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "65a66d8b_18a87f7d",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T08:45:14Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "529587bd_37843e38",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "86c1f4db_20363ec6",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-04-17T07:04:57Z",
       "side": 1,
       "message": "I would call the interface Statistics (as it could include Average as well) and this property as Value.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2fc569a_35f1befd",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T08:45:14Z",
+      "side": 1,
+      "message": "Updated the interface name and property name, please re-review",
+      "parentUuid": "86c1f4db_20363ec6",
       "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -52,6 +88,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aba817c3_69481212",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T08:45:14Z",
+      "side": 1,
+      "message": "that would make timestamp mendatory and timestamp may not make sense for all statistics. Having Timestamp as key makes it optional and more flxible",
+      "parentUuid": "c915b292_6caf024e",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "998b6875_44b45932",
@@ -65,6 +119,24 @@
       "writtenOn": "2025-04-17T04:20:40Z",
       "side": 1,
       "message": "share one example of the final data structure.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2fe9a07_3a453424",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T08:45:14Z",
+      "side": 1,
+      "message": "```\nxyz.openbmc_project.Common.Statistics\n.Statistic \n\n\n{\"Peak\" : { \"Value\": \u003cval\u003e, \"Timestamp\": \u003cts\u003e }}",
+      "parentUuid": "998b6875_44b45932",
       "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -86,6 +158,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "67a73852_7989e78e",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T08:45:14Z",
+      "side": 1,
+      "message": "This is just enum definition",
+      "parentUuid": "fda1b353_d11a2482",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cb2a7e3f_2dd194ce",
@@ -103,6 +193,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c1f0441_8bf65c1f",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T08:45:14Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "cb2a7e3f_2dd194ce",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "96209be6_004f88a6",
@@ -116,6 +224,24 @@
       "writtenOn": "2025-04-17T07:04:57Z",
       "side": 1,
       "message": "I don\u0027t think we need this enum, see comment anove.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4c9c152_e9ce8abb",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T08:45:14Z",
+      "side": 1,
+      "message": "PLease see my response in earlier comment.",
+      "parentUuid": "96209be6_004f88a6",
       "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -151,6 +277,24 @@
       "side": 1,
       "message": "I think the timestamp should be here because there can be multiple statistics each needing a timestamp, so can\u0027t have a common timestamp interface be used multiple times on the same path.",
       "parentUuid": "ae1ac508_4a2eac58",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fccdf50c_390c757b",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T08:45:14Z",
+      "side": 1,
+      "message": "the reason to have double is to have better precision",
+      "parentUuid": "b091ef12_072da67c",
       "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

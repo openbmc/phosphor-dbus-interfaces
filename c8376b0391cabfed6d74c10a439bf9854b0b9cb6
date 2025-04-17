@@ -124,6 +124,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c134b6fd_6c96a5ed",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T10:41:46Z",
+      "side": 1,
+      "message": "I have simplified the structure as per the discussion please have a look again.",
+      "parentUuid": "78728d3d_8650eabd",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "998b6875_44b45932",
@@ -331,6 +349,24 @@
       "side": 1,
       "message": "I agree with Rohit that this should be uint64",
       "parentUuid": "fccdf50c_390c757b",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "094f8391_a6bfa87f",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-17T10:41:46Z",
+      "side": 1,
+      "message": "I would prefer double over uint64 as defining uint64 and then defininng it microseconds makes timestamp property precision as microseconds. \n\nIf there\u0027s strong suggestion to use uint64 because of size then we can reconsider, otherwise would like to keep it as double",
+      "parentUuid": "0c3ce5d5_c16e9014",
       "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -3,6 +3,57 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "529587bd_37843e38",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-17T07:04:57Z",
+      "side": 1,
+      "message": "This needs rephrasing. This is not about a device but about sensors and metrics. Look at https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common/Threshold.interface.yaml.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86c1f4db_20363ec6",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-17T07:04:57Z",
+      "side": 1,
+      "message": "I would call the interface Statistics (as it could include Average as well) and this property as Value.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c915b292_6caf024e",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-17T07:04:57Z",
+      "side": 1,
+      "message": "Can this be dict(Type)-\u003etuple(Value, Timestamp)?",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "998b6875_44b45932",
         "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
         "patchSetId": 29
@@ -37,6 +88,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cb2a7e3f_2dd194ce",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-17T07:04:57Z",
+      "side": 1,
+      "message": "I would just call this Peak.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96209be6_004f88a6",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-17T07:04:57Z",
+      "side": 1,
+      "message": "I don\u0027t think we need this enum, see comment anove.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ae1ac508_4a2eac58",
         "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
         "patchSetId": 29
@@ -48,6 +133,24 @@
       "writtenOn": "2025-04-17T04:20:40Z",
       "side": 1,
       "message": "generally timestamp is uint64. If you think timestamp is common then we can have timestamp outside to avoid to making this data structure bit complex.",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b091ef12_072da67c",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-17T07:04:57Z",
+      "side": 1,
+      "message": "I think the timestamp should be here because there can be multiple statistics each needing a timestamp, so can\u0027t have a common timestamp interface be used multiple times on the same path.",
+      "parentUuid": "ae1ac508_4a2eac58",
       "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

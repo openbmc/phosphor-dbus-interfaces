@@ -108,6 +108,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "78728d3d_8650eabd",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-17T09:53:27Z",
+      "side": 1,
+      "message": "Why would timestamp not make sense? Do you have an example? We can also do default values if need be. The data structure is a bit complex now.",
+      "parentUuid": "aba817c3_69481212",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "998b6875_44b45932",
         "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
         "patchSetId": 29
@@ -295,6 +313,24 @@
       "side": 1,
       "message": "the reason to have double is to have better precision",
       "parentUuid": "b091ef12_072da67c",
+      "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c3ce5d5_c16e9014",
+        "filename": "yaml/xyz/openbmc_project/Common/TelemetryLimits.interface.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-17T09:53:27Z",
+      "side": 1,
+      "message": "I agree with Rohit that this should be uint64",
+      "parentUuid": "fccdf50c_390c757b",
       "revId": "c8376b0391cabfed6d74c10a439bf9854b0b9cb6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

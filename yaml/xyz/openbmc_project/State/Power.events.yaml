@@ -32,3 +32,25 @@ errors:
               A fault has been detected on voltage regulator
               '{VoltageRegulator}'
       errno: EIO
+
+events:
+    - name: PowerRailFaultRecovered
+      metadata:
+          - name: PowerRail
+            type: object_path
+            primary: true
+            description: The name or identifier of the power rail.
+      en:
+          description: A fault detected on a power rail has cleared.
+          message: A fault has cleared on power rail '{PowerRail}'.
+
+    - name: VoltageRegulatorFaultRecovered
+      metadata:
+          - name: VoltageRegulator
+            type: object_path
+            primary: true
+            description: The ane or identifier of the voltage regulator.
+      en:
+          description: A fault detected on a voltage regulator has cleared.
+          message:
+              A fault has cleared on voltage regulator '{VoltageRegulator}'.

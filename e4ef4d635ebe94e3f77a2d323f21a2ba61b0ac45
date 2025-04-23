@@ -141,6 +141,24 @@
       "parentUuid": "4497c292_fab16506",
       "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd155183_9173fbbd",
+        "filename": "yaml/xyz/openbmc_project/Software/Manager.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-04-23T00:48:55Z",
+      "side": 1,
+      "message": "\u003e This is a good point. The direction I am thinking is RF task messages will be updated by watching for Software.Collection interface (https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/74853) and the associated Software.Activation interfaces, till the object path returned by code-update-manager marks the update complete.\n\u003e \n\nThat is not how the intended purpose of the collection interface is as there can be multiple collection interfaces and there is no way explicit way to figure out to which collection interface the update belongs to.\n\n\u003e We can enhance the D-Bus interfaces so that Redfish messages associated with code update can be added to the RF task. https://github.com/openbmc/bmcweb/blob/177612aaa0633cf9d5aef0b763a43135cf552d9b/redfish-core/include/registries/update_message_registry.hpp\n\u003e (Update.1.0.TargetDetermined, Update.1.0.TransferComplete ..)\n\u003e \n\u003e Let me know your thoughts.\n\nAdding the PDI events and errors for Update flow (based on Redfish messages) is in the plan but that is not related to my question. For that, the RF Task would be extended to watch for PDI errors and events matching the objectPath returned from Update interface and then converted to Redfish events and added to RF Task. So, lets leave that conversation to a side.\n\nWhat i am referring to here is the messages being added to Task messages based on the activation status and activation progress interfaces https://grok.openbmc.org/xref/openbmc/bmcweb/redfish-core/lib/update_service.hpp?r\u003d177612aaa0633cf9d5aef0b763a43135cf552d9b#149 . So, i can think of following options -\n\n1. Refer back to the design and lets first conclude if we even need this design enhancement as that conversation is still underway based on the design PR.\n2. Based on conclusion for #1, we can come back and brainstorm more on this interface.",
+      "parentUuid": "3738013f_f1aed7bc",
+      "revId": "e4ef4d635ebe94e3f77a2d323f21a2ba61b0ac45",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

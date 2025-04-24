@@ -88,6 +88,24 @@
       "parentUuid": "ad4ac94c_7dbf9171",
       "revId": "7dedfacea787e7b913b057384b3a9f88989d52bc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "afe0792d_b1c160fa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 22
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-24T05:03:36Z",
+      "side": 1,
+      "message": "Design doc here already covers \"Maximum observered power\" \n under Power Management https://gerrit.openbmc.org/c/openbmc/docs/+/76686/21/designs/nvidia-gpu.md\n\nPlease note that the Maximum Observed Power is being reported by the device itself and bmc is not computing it based on sensor values sampled by the bmc service",
+      "parentUuid": "4c32add8_9351d37b",
+      "revId": "7dedfacea787e7b913b057384b3a9f88989d52bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -106,6 +106,24 @@
       "parentUuid": "4c32add8_9351d37b",
       "revId": "7dedfacea787e7b913b057384b3a9f88989d52bc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d345236a_599c2a69",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 22
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-24T05:15:14Z",
+      "side": 1,
+      "message": "Also like to add that I have also looked at the telemetry design  \nhttps://github.com/openbmc/docs/blob/master/designs/telemetry.md\nand the xyz/openbmc_project/Telemetry/Report.interface.yaml interface may offer similar stats but key difference is that the BMC is sampling the telemetry and interface definition is tied to RF metric report model, while in this case the max observed power is being reported by the device itself.",
+      "parentUuid": "afe0792d_b1c160fa",
+      "revId": "7dedfacea787e7b913b057384b3a9f88989d52bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

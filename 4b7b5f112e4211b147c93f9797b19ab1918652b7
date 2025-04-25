@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd1729bf_359a38d3",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-25T06:54:27Z",
+      "side": 1,
+      "message": "I would just call this Implementation or Source.",
+      "revId": "4b7b5f112e4211b147c93f9797b19ab1918652b7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7de74cf0_6de6e897",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-25T06:54:27Z",
+      "side": 1,
+      "message": "Since this is actually not about the Sensor Value by the Sensor itseld, I wonder if this should be a separate interface (Sensor.Source), but you can wait for more reviews to make this change.",
+      "revId": "4b7b5f112e4211b147c93f9797b19ab1918652b7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ad1d0c3_9cf8a6e8",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-25T06:54:27Z",
+      "side": 1,
+      "message": "We should add default and readonly flags",
+      "revId": "4b7b5f112e4211b147c93f9797b19ab1918652b7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8beddb05_9ec066ad",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-25T06:54:27Z",
+      "side": 1,
+      "message": "nit: just Physical",
+      "revId": "4b7b5f112e4211b147c93f9797b19ab1918652b7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

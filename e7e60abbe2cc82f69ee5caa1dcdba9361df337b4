@@ -168,6 +168,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "889b1a9c_5115bc77",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-04-25T13:34:30Z",
+      "side": 1,
+      "message": "Also what happened to PLDM?  Is this kind of information able to be derived?  Or maybe that’s what “reported” is for. \n\nI know the enum information as presented here is copied from Redfish. I’d like it if we also document how they are intended to be used within OpenBMC.  Redfish is ambiguous; let’s not be here.",
+      "parentUuid": "0a0961f9_e70de1fe",
+      "range": {
+        "startLine": 16,
+        "startChar": 37,
+        "endLine": 18,
+        "endChar": 44
+      },
+      "revId": "e7e60abbe2cc82f69ee5caa1dcdba9361df337b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "99114f7b_19db0987",
         "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 3

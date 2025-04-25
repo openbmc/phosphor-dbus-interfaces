@@ -50,6 +50,14 @@ properties:
           "DegreesC". For objects in the utilization namespace, Unit must be
           "Percent" For objects in the voltage namespace, Unit must be "Volts",
           For objects in the liquidflow namespace, Unit must be "LPM".
+    - name: Implementation
+      type: enum[self.ImplementationType]
+      default: Unknown
+      description: >
+          The type of sensor implementation indicating how the reading is
+          obtained.
+      flags:
+          - readonly
 
 enumerations:
     - name: Unit
@@ -92,6 +100,21 @@ enumerations:
           - name: Watts
             description: >
                 Rate of energy transfer as Watts.
+    - name: ImplementationType
+      description: >
+          The method by which the sensor reading is obtained.
+      values:
+          - name: Physical
+            description: >
+                The sensor reading is acquired from a device for a physical
+                sensor.
+          - name: Synthesized
+            description: >
+                The sensor reading is obtained by applying a calculation on one
+                or more properties or multiple sensors.
+          - name: Unknown
+            description: >
+                The source of the sensor reading is unknown.
 
 associations:
     - name: inventory

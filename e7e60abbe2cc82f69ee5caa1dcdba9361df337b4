@@ -192,6 +192,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "615f732c_d6b544fc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-04-25T14:24:49Z",
+      "side": 1,
+      "message": "Extend the enum to include Unknown.\nTo get the clarification \"Reported\" we already have a thread on DMTF\nhttps://redfishforum.com/thread/1165/enums-on-sensor-implementation-type\n\nHave added only two enums values for implementation type as those had clear definition hence included those two only.\n\nHave added unknown where classification is not possbible",
+      "parentUuid": "889b1a9c_5115bc77",
+      "range": {
+        "startLine": 16,
+        "startChar": 37,
+        "endLine": 18,
+        "endChar": 44
+      },
+      "revId": "e7e60abbe2cc82f69ee5caa1dcdba9361df337b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "99114f7b_19db0987",
         "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 3

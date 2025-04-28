@@ -4,5 +4,6 @@ properties:
     - name: Functional
       type: boolean
       description: >
-          The object is functional or not.
+          The object is functional or not. A "Functional" of false is mapped to
+          a Redfish "Status""Health" of "Critical".
       default: false

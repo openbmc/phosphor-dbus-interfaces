@@ -14,7 +14,8 @@ properties:
     - name: Present
       type: boolean
       description: >
-          Whether or not the item is present.
+          Whether or not the item is present. A "Present" of false is mapped to
+          a Redfish "Status""State" of "Absent".
 
 associations:
     - name: containing

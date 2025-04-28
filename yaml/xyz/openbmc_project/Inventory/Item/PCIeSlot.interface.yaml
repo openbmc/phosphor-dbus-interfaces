@@ -58,6 +58,10 @@ enumerations:
       description: >
           Possible types of a PCIe slot
       values:
+          - name: "FullHeight"
+            description: >
+                Full-Height PCIe slot
+
           - name: "FullLength"
             description: >
                 Full-Length PCIe slot

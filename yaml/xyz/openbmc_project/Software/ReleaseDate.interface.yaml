@@ -1,0 +1,13 @@
+description: >
+    This interface represents the release date of the software.
+properties:
+    - name: ReleaseDate
+      type: string
+      description: >
+          Release date of the software in ISO 8601 format, either as YYYYMMDD or
+          YYYYMMDDThhmmssZ.  Where 'T' is a literal character to separate date
+          fields from time and 'Z' is a literal character to indicate UTC. If the
+          time of day is unknown, the time of day portion of the property shall
+          contain `00:00:00Z`.
+      flags:
+          - readonly

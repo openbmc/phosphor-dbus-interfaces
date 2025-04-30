@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79c813d4_d802094e",
+        "filename": "yaml/xyz/openbmc_project/Software/ReleaseDate.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-30T13:42:30Z",
+      "side": 1,
+      "message": "Same comments as the one you pushed for Manufacturer.",
+      "revId": "05e29f3a63000a351091ba36ffc72270bc917a5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "adbc002f_16ae74e4",
+        "filename": "yaml/xyz/openbmc_project/Software/ReleaseDate.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-30T13:42:30Z",
+      "side": 1,
+      "message": "We have BuildDate in the Asset interface... Any possibility of reuse? Or do we just duplicate all/most properties across physical and SW inventory?",
+      "revId": "05e29f3a63000a351091ba36ffc72270bc917a5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ef8157c_b0df5eb4",
+        "filename": "yaml/xyz/openbmc_project/Software/ReleaseDate.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-30T13:42:30Z",
+      "side": 1,
+      "message": "You should specify an acceptable format for the date. It can\u0027t be an arbitrary string...",
+      "revId": "05e29f3a63000a351091ba36ffc72270bc917a5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5dd5e95_8b1b2604",
+        "filename": "yaml/xyz/openbmc_project/Software/ReleaseDate.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-30T13:42:30Z",
+      "side": 1,
+      "message": "RO flag?",
+      "revId": "05e29f3a63000a351091ba36ffc72270bc917a5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

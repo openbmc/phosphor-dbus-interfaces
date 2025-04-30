@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "76f2ad17_7e00e68b",
+        "filename": "yaml/xyz/openbmc_project/Software/Manufacturer.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-04-30T17:55:32Z",
+      "side": 1,
+      "message": "1) smbios-mdr will be implementing this interface \nDiscussion for raising this MR is https://gerrit.openbmc.org/c/openbmc/bmcweb/+/79207?tab\u003dcomments\n2) Associations are not expected as SMBIOS would send firmware inventory record information with version, build date and manufacturer information.\n3) This will be part of SoftwareInventory schema. This is per Firmware",
+      "parentUuid": "307e1cbf_76786014",
+      "revId": "1dc6999cfa5b1f70f3fed33efe77bb8dc51627ac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a232241c_ee15ca83",
         "filename": "yaml/xyz/openbmc_project/Software/Manufacturer.interface.yaml",
         "patchSetId": 3
@@ -31,6 +49,24 @@
       "writtenOn": "2025-04-30T13:38:40Z",
       "side": 1,
       "message": "I wonder if we should reuse Inventory.Decorator.Asset? This is for SW inventory, right? Do you see issues in doing so?",
+      "revId": "1dc6999cfa5b1f70f3fed33efe77bb8dc51627ac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bfb07eda_84548dbd",
+        "filename": "yaml/xyz/openbmc_project/Software/Manufacturer.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-04-30T17:55:32Z",
+      "side": 1,
+      "message": "I had used Asset Interface but when MR was raised got suggestions to manufacturer and build date information under Software namespace https://gerrit.openbmc.org/c/openbmc/bmcweb/+/79207?tab\u003dcomments",
+      "parentUuid": "a232241c_ee15ca83",
       "revId": "1dc6999cfa5b1f70f3fed33efe77bb8dc51627ac",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "307e1cbf_76786014",
+        "filename": "yaml/xyz/openbmc_project/Software/Manufacturer.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-30T13:38:40Z",
+      "side": 1,
+      "message": "I think this is lacking details. Which object/service is supposed to be implementing this? Are associations expected? How to associate with Version? Is it per Version/Device?",
+      "revId": "1dc6999cfa5b1f70f3fed33efe77bb8dc51627ac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a232241c_ee15ca83",
+        "filename": "yaml/xyz/openbmc_project/Software/Manufacturer.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-30T13:38:40Z",
+      "side": 1,
+      "message": "I wonder if we should reuse Inventory.Decorator.Asset? This is for SW inventory, right? Do you see issues in doing so?",
+      "revId": "1dc6999cfa5b1f70f3fed33efe77bb8dc51627ac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7a08c62_3317c291",
+        "filename": "yaml/xyz/openbmc_project/Software/Manufacturer.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-04-30T13:38:40Z",
+      "side": 1,
+      "message": "Any flags to be added? RO?",
+      "revId": "1dc6999cfa5b1f70f3fed33efe77bb8dc51627ac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d41a09ec_1656980b",
+        "filename": "yaml/xyz/openbmc_project/Software/ReleaseDate.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-04-30T18:22:39Z",
+      "side": 1,
+      "message": "Reference: https://gerrit.openbmc.org/c/openbmc/bmcweb/+/79207?tab\u003dcomments",
+      "parentUuid": "79c813d4_d802094e",
+      "revId": "05e29f3a63000a351091ba36ffc72270bc917a5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "adbc002f_16ae74e4",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-04-30T13:42:30Z",
       "side": 1,
       "message": "We have BuildDate in the Asset interface... Any possibility of reuse? Or do we just duplicate all/most properties across physical and SW inventory?",
+      "revId": "05e29f3a63000a351091ba36ffc72270bc917a5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4a56f0d_39fe0c44",
+        "filename": "yaml/xyz/openbmc_project/Software/ReleaseDate.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-04-30T18:22:39Z",
+      "side": 1,
+      "message": "As per the comments in https://gerrit.openbmc.org/c/openbmc/bmcweb/+/79207?tab\u003dcomments floated this MR",
+      "parentUuid": "adbc002f_16ae74e4",
       "revId": "05e29f3a63000a351091ba36ffc72270bc917a5d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

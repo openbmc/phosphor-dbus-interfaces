@@ -34,6 +34,148 @@
       "parentUuid": "e3ebb786_ba844e2d",
       "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "acb9454e_a2d005a4",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-01T00:03:58Z",
+      "side": 1,
+      "message": "This makes it seem like we\u0027re going to have N of them?  Is there a design to highlight that?\n\nDo you want N of them or do you want one interface with an array of possible ones?  I\u0027m not suggesting one way is better or worse, but it is hard to know with the limited information I have.\n\nHow do new ones get defined?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9ab2887_c412ce91",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-01T00:03:58Z",
+      "side": 1,
+      "message": "Is this suppose to be RO?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3eccfaa6_60a4a08b",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-01T00:03:58Z",
+      "side": 1,
+      "message": "Should this be RO?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a501323_3faef296",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-01T00:03:58Z",
+      "side": 1,
+      "message": "RO?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd70bdcd_cf4eedb3",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-01T00:03:58Z",
+      "side": 1,
+      "message": "UEFIDevicePath",
+      "range": {
+        "startLine": 29,
+        "startChar": 12,
+        "endLine": 29,
+        "endChar": 26
+      },
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d554c5eb_7b5b9a1d",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-01T00:03:58Z",
+      "side": 1,
+      "message": "Does there need to be a method to remove a boot option?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9477e1c7_16067031",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-01T00:03:58Z",
+      "side": 1,
+      "message": "How does anyone know what \"valid\" strings are here?  We generally do not want to have arbitrary computer-used strings.  I see you have InvalidArgument here so that seems especially problematic.\n\nShould these be an enum?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1e20ddd_76f2021f",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-01T00:03:58Z",
+      "side": 1,
+      "message": "Do you really want someone to be able to write to both the boot order and the pending boot order?  Or is one of these intended to be read-only?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

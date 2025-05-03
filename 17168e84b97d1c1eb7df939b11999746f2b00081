@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84f1d172_f813caf5",
+        "filename": "yaml/xyz/openbmc_project/Software/SoftwareAsset.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-05-03T21:08:04Z",
+      "side": 1,
+      "message": "what is manufacturer information?  \n\nis this an invitation to place any free form information desired by the manufacturer?\n (is software manufactured?)\n _ a search says no it\u0027s developed (for now at least) _\n \n or did you intend to identify something about the the supplier",
+      "revId": "17168e84b97d1c1eb7df939b11999746f2b00081",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b846d0c1_c21d2720",
+        "filename": "yaml/xyz/openbmc_project/Software/SoftwareAsset.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-05-03T21:08:04Z",
+      "side": 1,
+      "message": "so I can\u0027t tell if it was produced exactly at midnight or at some unknown time?\n\ncan we instead optionally omit the time portion starting with the T when it\u0027s unknown?\n\nhmm redfish seems to say do it as described. in section 9.5.5\n\n\u003e When the time of day is unknown or serves no purpose, the service shall report 00:00:00Z for the time of day value.\n\nWhile we could be more precise internally it might be of little value.",
+      "revId": "17168e84b97d1c1eb7df939b11999746f2b00081",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

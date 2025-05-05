@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c461516c_2bfa7d5b",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-05T07:37:38Z",
+      "side": 1,
+      "message": "We have 2 interfaces here:\n1) BootOrder\n2) BootOptions\n\nWe can have multiple BootOption. \nBIOS will send us the multiple BootOption\nFor each BootOptions we create a dbus object path. \nThe method to create boot option is defined in BootOrder interface",
+      "parentUuid": "acb9454e_a2d005a4",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f9ab2887_c412ce91",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
         "patchSetId": 4
@@ -66,6 +84,24 @@
       "writtenOn": "2025-05-01T00:03:58Z",
       "side": 1,
       "message": "Is this suppose to be RO?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1353b1e5_56db2f1f",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-05T07:37:38Z",
+      "side": 1,
+      "message": "The value will be set by bmcweb when BIOS sends the value via Redfish Host interface.",
+      "parentUuid": "f9ab2887_c412ce91",
       "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -89,6 +125,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3540102f_e83473db",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-05T07:37:38Z",
+      "side": 1,
+      "message": "The value will be set by bmcweb when BIOS sends the value via Redfish Host interface.",
+      "parentUuid": "3eccfaa6_60a4a08b",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3a501323_3faef296",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
         "patchSetId": 4
@@ -100,6 +154,24 @@
       "writtenOn": "2025-05-01T00:03:58Z",
       "side": 1,
       "message": "RO?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8d4c6c9_fbf7d320",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-05T07:37:38Z",
+      "side": 1,
+      "message": "The value will be set by bmcweb when BIOS sends the value via Redfish Host interface.",
+      "parentUuid": "3a501323_3faef296",
       "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -146,6 +218,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b6ec7ba4_23bf4930",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-05T07:37:38Z",
+      "side": 1,
+      "message": "We can use existing https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Object/Delete.interface.yaml",
+      "parentUuid": "d554c5eb_7b5b9a1d",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9477e1c7_16067031",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
         "patchSetId": 4
@@ -163,6 +253,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "11b52b7a_04e5b7cf",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-05T07:37:38Z",
+      "side": 1,
+      "message": "The values of the BootOption is like Boot0001, Boot0002 etc which should be unique values. \nSo we can say Alphanumeric values. \nI m not sure if we can have enums for this as the number of BootOption is dynamic",
+      "parentUuid": "9477e1c7_16067031",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d1e20ddd_76f2021f",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
         "patchSetId": 4
@@ -174,6 +282,24 @@
       "writtenOn": "2025-05-01T00:03:58Z",
       "side": 1,
       "message": "Do you really want someone to be able to write to both the boot order and the pending boot order?  Or is one of these intended to be read-only?",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a0c2fbc_cd9380d7",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-05T07:37:38Z",
+      "side": 1,
+      "message": "The value will be set by bmcweb when BIOS sends the value via Redfish Host interface.",
+      "parentUuid": "d1e20ddd_76f2021f",
       "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

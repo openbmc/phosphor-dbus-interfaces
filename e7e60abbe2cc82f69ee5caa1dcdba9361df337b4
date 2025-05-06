@@ -240,6 +240,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f2fdbd66_7b7887b8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001278
+      },
+      "writtenOn": "2025-05-06T16:03:27Z",
+      "side": 1,
+      "message": "So a sensor type as \nPhysical: It means the service is monitoring the sensor reading of the local hardware component through its BMC.\n\nReported: It means the service is not directly/actively monitoring the sensor reading but relies on software to monitor the reading\n\nSynthesized: Readings calculated from other properties or sensors",
+      "parentUuid": "d65713de_31e856b5",
+      "range": {
+        "startLine": 16,
+        "startChar": 37,
+        "endLine": 18,
+        "endChar": 44
+      },
+      "revId": "e7e60abbe2cc82f69ee5caa1dcdba9361df337b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "99114f7b_19db0987",
         "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 3

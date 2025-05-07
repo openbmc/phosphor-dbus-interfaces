@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "91b4d9c7_36771c31",
+        "filename": "yaml/xyz/openbmc_project/State/Thermal.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2025-05-07T22:19:13Z",
+      "side": 1,
+      "message": "The flow would be using\n1. PROCHOT asserts. we log DeviceOverOperatingTemperature\n2. THERMTRIP asserts. we log DeviceOverOperatingTemperatureFault\n3. THERMTRIP deasserts (CPU powers back on). we resolve DeviceOverOperatingTemperatureFault. But we need to somehow read the GPIO status of PROCHOT and refrain from printing DeviceOperatingNormalTemperature.\n4. PROCHOT deasserts. We resolve  DeviceOverOperatingTemperature and print DeviceOperatingNormalTemperature\n\nIts a bit awkward that we cannot read GPIOs especially if we are doing this from phosphor-gpio-monitor.",
+      "parentUuid": "10465e20_1338c046",
+      "range": {
+        "startLine": 49,
+        "startChar": 12,
+        "endLine": 49,
+        "endChar": 49
+      },
+      "revId": "fad6e035866470553de02d466bcf18ad6d208d77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d9d355e5_d3baae74",
         "filename": "yaml/xyz/openbmc_project/State/Thermal.events.yaml",
         "patchSetId": 1

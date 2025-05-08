@@ -1,4 +1,4 @@
-version: 1.0.0
+version: 1.0.1
 
 errors:
     - name: DeviceOverOperatingTemperature
@@ -42,5 +42,18 @@ errors:
               some x86 processors.
           message:
               Device {Device} is significantly over safe operating temperature
-              and may have been powered off
+              and may have been powered off.
       errno: ERANGE
+
+events:
+    - name: DeviceOperatingNormalTemperature
+      metadata:
+          - name: Device
+            type: object_path
+            primary: true
+            description: The name or identifier of the device
+      en:
+          description:
+              A event signaling that a device is operating over a set operating
+              temperature has cleared.
+          message: Device {Device} is operating in normal temperature.

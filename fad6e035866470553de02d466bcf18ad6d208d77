@@ -96,6 +96,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "360842bc_8e929591",
+        "filename": "yaml/xyz/openbmc_project/State/Thermal.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1002220
+      },
+      "writtenOn": "2025-05-08T22:19:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "413dd6d2_74d90d32",
+      "range": {
+        "startLine": 49,
+        "startChar": 12,
+        "endLine": 49,
+        "endChar": 49
+      },
+      "revId": "fad6e035866470553de02d466bcf18ad6d208d77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d9d355e5_d3baae74",
@@ -109,6 +133,24 @@
       "writtenOn": "2025-05-07T13:20:41Z",
       "side": 1,
       "message": "Isn\u0027t \"Fault\" a worse of the non-fault?  I don\u0027t think this would ever be cleared on its own.  Either we would be operating entirely in a normal temperature or we would still have the error-level asserted.",
+      "revId": "fad6e035866470553de02d466bcf18ad6d208d77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08b94ea8_4b0bf991",
+        "filename": "yaml/xyz/openbmc_project/State/Thermal.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1002220
+      },
+      "writtenOn": "2025-05-08T22:19:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d9d355e5_d3baae74",
       "revId": "fad6e035866470553de02d466bcf18ad6d208d77",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -29,6 +29,18 @@ properties:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.InvalidArgument
 
+    - name: MaxPasswordLength
+      type: byte
+      description: >
+          Configures the maximum password length. Maximum password length
+          specified in build time is marked as default value. This property
+          cannot be configured below the build time default value but can be set
+          to higher one for security reasons.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
     - name: RememberOldPasswordTimes
       type: byte
       description: >

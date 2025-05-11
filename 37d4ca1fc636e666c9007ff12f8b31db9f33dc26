@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "030c7006_4e323fab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001673
+      },
+      "writtenOn": "2025-05-11T08:51:00Z",
+      "side": 1,
+      "message": "This is not per account basis,but applies to all accounts, this is same as minPasswordLength.",
+      "parentUuid": "ffcde527_48c12d61",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 9
+      },
+      "revId": "37d4ca1fc636e666c9007ff12f8b31db9f33dc26",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "aadf3597_4266e8d0",
         "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
         "patchSetId": 1
@@ -37,6 +61,30 @@
       "writtenOn": "2025-05-09T20:02:30Z",
       "side": 1,
       "message": "Use a size and not a byte.  Someone might want to allow passwords over 256 bytes.",
+      "range": {
+        "startLine": 33,
+        "startChar": 12,
+        "endLine": 33,
+        "endChar": 16
+      },
+      "revId": "37d4ca1fc636e666c9007ff12f8b31db9f33dc26",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b474da9_f6f62a89",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001673
+      },
+      "writtenOn": "2025-05-11T08:51:00Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "aadf3597_4266e8d0",
       "range": {
         "startLine": 33,
         "startChar": 12,

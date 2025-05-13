@@ -1,0 +1,13 @@
+version: 1.0.1
+
+events:
+    - name: ButtonStateChanged
+      metadata:
+          - name: ButtonName
+            description: The name or identifier of the Button
+            type: object_path
+            primary: true
+      en:
+          description: A state change has been detected on a button.
+          message:
+              The state of button '{ButtonName}' has changed'.

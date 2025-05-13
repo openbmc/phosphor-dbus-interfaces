@@ -1,0 +1,16 @@
+version: 1.0.1
+
+events:
+    - name: ButtonPressed
+      metadata:
+          - name: ButtonName
+            description: The name or identifier of the button
+            type: object_path
+            primary: true
+          - name: EngageDuration
+            description: Duration the button was pressed (in milliseconds)
+            type: uint64
+            primary: true
+      en:
+          description: A button has been pressed.
+          message: "Button '{ButtonName}' was pressed for {EngageDuration} ms."

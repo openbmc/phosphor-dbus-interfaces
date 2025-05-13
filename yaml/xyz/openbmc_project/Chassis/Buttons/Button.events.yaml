@@ -1,0 +1,17 @@
+version: 1.0.1
+
+events:
+    - name: ButtonStateChanged
+      metadata:
+          - name: ButtonName
+            description: The name or identifier of the Button
+            type: object_path
+            primary: true
+          - name: ButtonState
+            type: enum[xyz.openbmc_project.Chassis.Buttons.Button.Status]
+            description: The current state of the button. Release or Press.
+            primary: true
+      en:
+          description: A state change has been detected on a button.
+          message:
+              The state of button '{ButtonName}' has changed to '{ButtonState}'.

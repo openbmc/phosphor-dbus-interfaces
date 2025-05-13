@@ -44,3 +44,11 @@ signals:
     - name: PressedLong
       description: >
           Button long pressed signal
+
+enumerations:
+    - name: Status
+      description: >
+          This event indicates a physical button state change.
+      values:
+          - name: "Pressed"
+          - name: "Released"

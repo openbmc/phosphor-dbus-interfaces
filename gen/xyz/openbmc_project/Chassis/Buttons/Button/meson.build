@@ -5,10 +5,13 @@ sdbusplus_current_path = 'xyz/openbmc_project/Chassis/Buttons/Button'
 generated_sources += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/Button__cpp'.underscorify(),
     input: [
+        '../../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/Button.events.yaml',
         '../../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml',
     ],
     output: [
         'common.hpp',
+        'event.cpp',
+        'event.hpp',
         'server.hpp',
         'server.cpp',
         'aserver.hpp',
@@ -29,6 +32,8 @@ generated_sources += custom_target(
     ],
     install: should_generate_cpp,
     install_dir: [
+        get_option('includedir') / sdbusplus_current_path,
+        get_option('includedir') / sdbusplus_current_path,
         get_option('includedir') / sdbusplus_current_path,
         get_option('includedir') / sdbusplus_current_path,
         false,

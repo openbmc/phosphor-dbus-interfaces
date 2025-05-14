@@ -24,10 +24,8 @@ methods:
                 example, required interfaces such as ActivationStatus,
                 ActivationProgress and optional interfaces such as Version.
       errors:
-          - xyz.openbmc_project.Software.Update.Error.Incompatible
-          - xyz.openbmc_project.Software.Update.Error.InvalidSignature
-          - xyz.openbmc_project.Software.Update.Error.InvalidImage
           - xyz.openbmc_project.Common.Error.Unavailable
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
 properties:
     - name: AllowedApplyTimes

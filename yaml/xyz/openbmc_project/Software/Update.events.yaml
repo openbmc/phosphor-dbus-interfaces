@@ -31,6 +31,45 @@ events:
               An update is in progress for {TargetName} with
               {ProgressPercentage} percent complete.
 
+    - name: TransferringToComponent
+      metadata:
+          - name: ImageData
+            type: string
+            primary: true
+            description: The additional image data.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+      redfish-mapping: Update.TransferringToComponent
+
+    - name: VerifyingAtComponent
+      metadata:
+          - name: ImageData
+            type: string
+            primary: true
+            description: The additional image data.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+      redfish-mapping: Update.VerifyingAtComponent
+
+    - name: InstallingOnComponent
+      metadata:
+          - name: ImageData
+            type: string
+            primary: true
+            description: The additional image data.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+      redfish-mapping: Update.InstallingOnComponent
+
     - name: UpdateSuccessful
       metadata:
           - name: TargetName
@@ -72,6 +111,21 @@ errors:
                 The name or identifier of the firmware target or resource.
       errno: EINVAL
       redfish-mapping: Update.VerificationFailed
+
+    - name: TransferFailed
+      severity: critical
+      metadata:
+          - name: ImageData
+            type: string
+            primary: true
+            description: The additional image data.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+      errno: EPIPE
+      redfish-mapping: Update.TransferFailed
 
     - name: ApplyFailed
       severity: critical

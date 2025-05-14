@@ -1,0 +1,101 @@
+version: 1.0.0
+
+errors:
+    - name: VerificationFailed
+      severity: critical
+      metadata:
+          - name: ImageIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier for the image. This shall map to
+                PackageVersionString for a PLDM package and version field for a
+                manifest based image format.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+      errno: EINVAL
+      redfish-mapping: Update.VerificationFailed
+
+    - name: ApplyFailed
+      severity: critical
+      metadata:
+          - name: ImageIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier for the image. This shall map to
+                PackageVersionString for a PLDM package and version field for a
+                manifest based image format.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+      errno: EFAULT
+      redfish-mapping: Update.ApplyFailed
+
+events:
+    - name: TargetDetermined
+      metadata:
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+          - name: ImageIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier for the image. This shall map to
+                PackageVersionString for a PLDM package and version field for a
+                manifest based image format.
+      redfish-mapping: Update.TargetDetermined
+
+    - name: UpdateInProgress
+      metadata:
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+          - name: ProgressPercentage
+            type: size
+            primary: true
+            description: The amount of progress achieved in percentage.
+      en:
+          description: The update is in progress for related target.
+          message:
+              An update is in progress for {TargetName} with
+              {ProgressPercentage} percent complete.
+
+    - name: UpdateSuccessful
+      metadata:
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+          - name: ImageIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier for the image. This shall map to
+                PackageVersionString for a PLDM package and version field for a
+                manifest based image format.
+      redfish-mapping: Update.UpdateSuccessful
+
+    - name: ResetDevice
+      metadata:
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+          - name: ResetType
+            type: enum[xyz.openbmc_project.State.Host.Transition]
+            primary: true
+            description: The type of reset operation to perform.
+      redfish-mapping: Base.ResetRequired

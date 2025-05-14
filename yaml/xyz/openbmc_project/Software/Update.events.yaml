@@ -1,0 +1,69 @@
+version: 1.0.0
+
+events:
+    - name: TargetDetermined
+      metadata:
+          - name: TargetName
+            type: object_path
+            primary: true
+            description: The name or identifier of the target or resource.
+          - name: ImageData
+            type: string
+            description: The additional image data.
+      redfish-mapping: Update.TargetDetermined
+
+    - name: UpdateInProgress
+      metadata:
+          - name: TargetName
+            type: object_path
+            primary: true
+            description: The name or identifier of the target or resource.
+          - name: ProgressPercentage
+            type: string
+            primary: true
+            description: The amount of progress achieved in percentage.
+      en:
+          description: The update is in progress for related target.
+          message:
+              An update is in progress for {TargetName} with
+              {ProgressPercentage} percent complete.
+
+    - name: UpdateSuccessful
+      metadata:
+          - name: TargetName
+            type: object_path
+            primary: true
+            description: The name or identifier of the target or resource.
+          - name: ImageData
+            type: string
+            description: The additional image data.
+      redfish-mapping: Update.UpdateSuccessful
+
+errors:
+    - name: VerificationFailed
+      severity: critical
+      metadata:
+          - name: ImageData
+            type: string
+            primary: true
+            description: The additional image data.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description: The name or identifier of the target or resource.
+      errno: EINVAL
+      redfish-mapping: Update.VerificationFailed
+
+    - name: ApplyFailed
+      severity: critical
+      metadata:
+          - name: ImageData
+            type: string
+            primary: true
+            description: The additional image data.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description: The name or identifier of the target or resource.
+      errno: EPIPE
+      redfish-mapping: Update.ApplyFailed

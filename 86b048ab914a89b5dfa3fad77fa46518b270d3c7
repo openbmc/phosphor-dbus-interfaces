@@ -16,6 +16,24 @@
       "message": "why we need this MaxPasswordLength configurable?\nI think we are good with MAX_PASSWORD_LENGTH meson flag with default value 64",
       "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b87d8bf_062358b0",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001673
+      },
+      "writtenOn": "2025-05-15T18:10:30Z",
+      "side": 1,
+      "message": "NIST https://pages.nist.gov/800-63-4/sp800-63b.html guideline says\nVerifiers and CSPs SHOULD permit a maximum password length of at least 64 characters.\n\nThis indicates 64 is the least number for max password length and security policies must be allowed to configure higher number. Therefore I kept the type as size so that higher number can be configured.",
+      "parentUuid": "c6842241_3d077583",
+      "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -106,6 +106,24 @@
       "parentUuid": "e789d6e3_ffabb984",
       "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3e049df_0615ebbe",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-15T21:44:49Z",
+      "side": 1,
+      "message": "\u003e if user/admin wants to change this limit dynamically, we need to make it configurable.\n\nWhy?  This is not logically connected. We haven’t had it configurable before. Why should we start now?  This seems like low value code to me.\n\nJust because something _could_ be configured doesn’t mean we _have_ allow it to be configured.  We already support 64, which is within the guidelines of NIST. We can extend it with a 1 line change, which is still in the guidelines of NIST. If we allow users to reduce it we both have more code to maintain _and_ we start to violate NISTs guidelines.  This sounds like a lose-lose to me.\n\n\u003e it says it is reasonable to have some limit.\n\n“Reasonable” in the words of the document was “don’t allow it to be so long that hashing speed is noticeable”.  We are talking about 10s of kb at least before this even becomes a concern.  64, 256, 1024; these are all “reasonable” and within the bounds of NIST.",
+      "parentUuid": "44799d68_fa2656d2",
+      "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -52,6 +52,24 @@
       "parentUuid": "7b87d8bf_062358b0",
       "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0dac742a_ad8b87fa",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001673
+      },
+      "writtenOn": "2025-05-15T18:53:11Z",
+      "side": 1,
+      "message": "Making MaxPasswordLength configurable allows system admin to enforce stricter password policies\n\nCan’t we just set the meson flag to 255 or 1024 and be done?\n • Yes, you can raise the Meson build-time default (e.g., --Dmax-password-length\u003d1024). That would increase the default upper bound.\n    However:\n•Without configurability, you force all systems to accept that high limit — which may not be desirable for all platforms.\n•You lose flexibility to tighten policies dynamically.\n\nDoes PAM have a limit?\n  •PAM doesn’t explicitly define a max password length across all modules, but Many PAM modules use standard libc functions, which may impose a limit (commonly 512 bytes or more, sometimes unbounded).\n  \nWhy configure a limit below what PAM supports\n  •Security Policy Enforcement : Some organizations prefer password complexity over length and want to restrict overly long passwords",
+      "parentUuid": "13b1e12c_129e5b08",
+      "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

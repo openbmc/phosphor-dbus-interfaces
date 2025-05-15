@@ -88,6 +88,24 @@
       "parentUuid": "0dac742a_ad8b87fa",
       "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44799d68_fa2656d2",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001673
+      },
+      "writtenOn": "2025-05-15T20:00:08Z",
+      "side": 1,
+      "message": "As you said as per https://pages.nist.gov/800-63-4/sp800-63b.html#length \nit says it is reasonable to have some limit.\n\nif user/admin wants to change this limit dynamically, we need to make it configurable.\n\nThe guidelines no where explicitly says that max password can\u0027t be configured dyanamically.\n\nRight now I don\u0027t have the use case to support this dyanamic configuration but I want to provide the flexibility to admin/organization.",
+      "parentUuid": "e789d6e3_ffabb984",
+      "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

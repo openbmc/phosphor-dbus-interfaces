@@ -70,6 +70,24 @@
       "parentUuid": "13b1e12c_129e5b08",
       "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e789d6e3_ffabb984",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-15T19:03:51Z",
+      "side": 1,
+      "message": "\u003e Security Policy Enforcement : Some organizations prefer password complexity over length and want to restrict overly long passwords\n\nDo you have evidence of this?  Doing so explicitly violates the NIST guidelines you are saying you are trying to improve support for.\n\nThe following statements are present in the linked NIST guidelines:\n\n\u003e Other complexity requirements for passwords SHALL NOT be imposed.\n\n\u003e Verifiers and CSPs SHALL NOT impose other composition rules (e.g., requiring mixtures of different character types) for passwords.\n\n\u003e Users should be encouraged to make their passwords as lengthy as they want, within reason. Since the size of a hashed password is independent of its length, there is no reason to prohibit the use of lengthy passwords (or passphrases) if the user wishes. Extremely long passwords (perhaps megabytes long) could require excessive processing time to hash, so it is reasonable to have some limit.",
+      "parentUuid": "0dac742a_ad8b87fa",
+      "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

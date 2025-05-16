@@ -1,0 +1,59 @@
+description: >
+    This defines a PCIe function to be exposed for system management.  It
+    includes the function properties that are shown in the space configuration.
+
+properties:
+    - name: BusNumber
+      type: byte
+      description: >
+          Indicates the Bus number in the BDF byte.
+    - name: DeviceNumber
+      type: byte
+      description: >
+          Indicates the Device number in the BDF byte.
+    - name: FunctionNumber
+      type: byte
+      description: >
+          Indicates the Function number in the BDF byte.
+    - name: DeviceId
+      type: string
+      description: >
+          The Device ID for this function.
+    - name: RevisionId
+      type: string
+      description: >
+          The Revision ID for this function.
+    - name: SubsystemId
+      type: string
+      description: >
+          The Subsystem ID for this function.
+    - name: SubsystemVendorId
+      type: string
+      description: >
+          The Subsystem Vendor ID for this function.
+    - name: VendorId
+      type: string
+      description: >
+          The Vendor ID for this function.
+    - name: ClassCode
+      type: string
+      description: >
+          The Class Code for this function.
+    - name: DeviceClass
+      type: string
+      description: >
+          The Device Class for this function.
+    - name: FunctionType
+      type: string
+      description: >
+          Indicates if the function is Physical or Virtual
+
+associations:
+    - name: embedded_by
+      description: >
+          Objects that implement PCIeFunction can optionally implement the
+          embedded_by association to provide a link back to a PCIe Device.
+      reverse_names:
+          - embedding
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice

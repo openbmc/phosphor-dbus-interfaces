@@ -1,7 +1,9 @@
 description: >
     This defines a PCIe device to be exposed for system management.  It includes
     the device properties and function properties for all 8 possible functions
-    that are needed for the device identification.
+    that are needed for the device identification. The PCIe function's
+    properties are deprecated, they have been replaced with PCIeFunction
+    interface.
 
 properties:
     - name: DeviceType
@@ -24,266 +26,330 @@ properties:
     - name: Function0ClassCode
       type: string
       description: >
-          The Class Code for this function.
+          The Class Code for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function0DeviceClass
       type: string
       description: >
-          The Device Class for this function.
+          The Device Class for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function0DeviceId
       type: string
       description: >
-          The Device ID for this function.
+          The Device ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function0FunctionType
       type: string
       description: >
-          Indicates if the function is Physical or Virtual
+          Indicates if the function is Physical or Virtual This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function0RevisionId
       type: string
       description: >
-          The Revision ID for this function.
+          The Revision ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function0SubsystemId
       type: string
       description: >
-          The Subsystem ID for this function.
+          The Subsystem ID for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function0SubsystemVendorId
       type: string
       description: >
-          The Subsystem Vendor ID for this function.
+          The Subsystem Vendor ID for this function. This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function0VendorId
       type: string
       description: >
-          The Vendor ID for this function.
+          The Vendor ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
 
     - name: Function1ClassCode
       type: string
       description: >
-          The Class Code for this function.
+          The Class Code for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function1DeviceClass
       type: string
       description: >
-          The Device Class for this function.
+          The Device Class for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function1DeviceId
       type: string
       description: >
-          The Device ID for this function.
+          The Device ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function1FunctionType
       type: string
       description: >
-          Indicates if the function is Physical or Virtual
+          Indicates if the function is Physical or Virtual This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function1RevisionId
       type: string
       description: >
-          The Revision ID for this function.
+          The Revision ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function1SubsystemId
       type: string
       description: >
-          The Subsystem ID for this function.
+          The Subsystem ID for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function1SubsystemVendorId
       type: string
       description: >
-          The Subsystem Vendor ID for this function.
+          The Subsystem Vendor ID for this function. This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function1VendorId
       type: string
       description: >
-          The Vendor ID for this function.
+          The Vendor ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
 
     - name: Function2ClassCode
       type: string
       description: >
-          The Class Code for this function.
+          The Class Code for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function2DeviceClass
       type: string
       description: >
-          The Device Class for this function.
+          The Device Class for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function2DeviceId
       type: string
       description: >
-          The Device ID for this function.
+          The Device ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function2FunctionType
       type: string
       description: >
-          Indicates if the function is Physical or Virtual
+          Indicates if the function is Physical or Virtual This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function2RevisionId
       type: string
       description: >
-          The Revision ID for this function.
+          The Revision ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function2SubsystemId
       type: string
       description: >
-          The Subsystem ID for this function.
+          The Subsystem ID for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function2SubsystemVendorId
       type: string
       description: >
-          The Subsystem Vendor ID for this function.
+          The Subsystem Vendor ID for this function. This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function2VendorId
       type: string
       description: >
-          The Vendor ID for this function.
+          The Vendor ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
 
     - name: Function3ClassCode
       type: string
       description: >
-          The Class Code for this function.
+          The Class Code for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function3DeviceClass
       type: string
       description: >
-          The Device Class for this function.
+          The Device Class for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function3DeviceId
       type: string
       description: >
-          The Device ID for this function.
+          The Device ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function3FunctionType
       type: string
       description: >
-          Indicates if the function is Physical or Virtual
+          Indicates if the function is Physical or Virtual This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function3RevisionId
       type: string
       description: >
-          The Revision ID for this function.
+          The Revision ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function3SubsystemId
       type: string
       description: >
-          The Subsystem ID for this function.
+          The Subsystem ID for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function3SubsystemVendorId
       type: string
       description: >
-          The Subsystem Vendor ID for this function.
+          The Subsystem Vendor ID for this function. This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function3VendorId
       type: string
       description: >
-          The Vendor ID for this function.
+          The Vendor ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
 
     - name: Function4ClassCode
       type: string
       description: >
-          The Class Code for this function.
+          The Class Code for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function4DeviceClass
       type: string
       description: >
-          The Device Class for this function.
+          The Device Class for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function4DeviceId
       type: string
       description: >
-          The Device ID for this function.
+          The Device ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function4FunctionType
       type: string
       description: >
-          Indicates if the function is Physical or Virtual
+          Indicates if the function is Physical or Virtual This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function4RevisionId
       type: string
       description: >
-          The Revision ID for this function.
+          The Revision ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function4SubsystemId
       type: string
       description: >
-          The Subsystem ID for this function.
+          The Subsystem ID for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function4SubsystemVendorId
       type: string
       description: >
-          The Subsystem Vendor ID for this function.
+          The Subsystem Vendor ID for this function. This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function4VendorId
       type: string
       description: >
-          The Vendor ID for this function.
+          The Vendor ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
 
     - name: Function5ClassCode
       type: string
       description: >
-          The Class Code for this function.
+          The Class Code for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function5DeviceClass
       type: string
       description: >
-          The Device Class for this function.
+          The Device Class for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function5DeviceId
       type: string
       description: >
-          The Device ID for this function.
+          The Device ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function5FunctionType
       type: string
       description: >
-          Indicates if the function is Physical or Virtual
+          Indicates if the function is Physical or Virtual This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function5RevisionId
       type: string
       description: >
-          The Revision ID for this function.
+          The Revision ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function5SubsystemId
       type: string
       description: >
-          The Subsystem ID for this function.
+          The Subsystem ID for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function5SubsystemVendorId
       type: string
       description: >
-          The Subsystem Vendor ID for this function.
+          The Subsystem Vendor ID for this function. This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function5VendorId
       type: string
       description: >
-          The Vendor ID for this function.
+          The Vendor ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
 
     - name: Function6ClassCode
       type: string
       description: >
-          The Class Code for this function.
+          The Class Code for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function6DeviceClass
       type: string
       description: >
-          The Device Class for this function.
+          The Device Class for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function6DeviceId
       type: string
       description: >
-          The Device ID for this function.
+          The Device ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function6FunctionType
       type: string
       description: >
-          Indicates if the function is Physical or Virtual
+          Indicates if the function is Physical or Virtual This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function6RevisionId
       type: string
       description: >
-          The Revision ID for this function.
+          The Revision ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function6SubsystemId
       type: string
       description: >
-          The Subsystem ID for this function.
+          The Subsystem ID for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function6SubsystemVendorId
       type: string
       description: >
-          The Subsystem Vendor ID for this function.
+          The Subsystem Vendor ID for this function. This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function6VendorId
       type: string
       description: >
-          The Vendor ID for this function.
+          The Vendor ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
 
     - name: Function7ClassCode
       type: string
       description: >
-          The Class Code for this function.
+          The Class Code for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function7DeviceClass
       type: string
       description: >
-          The Device Class for this function.
+          The Device Class for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function7DeviceId
       type: string
       description: >
-          The Device ID for this function.
+          The Device ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function7FunctionType
       type: string
       description: >
-          Indicates if the function is Physical or Virtual
+          Indicates if the function is Physical or Virtual This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function7RevisionId
       type: string
       description: >
-          The Revision ID for this function.
+          The Revision ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
     - name: Function7SubsystemId
       type: string
       description: >
-          The Subsystem ID for this function.
+          The Subsystem ID for this function. This property is deprecated, it
+          has been replaced with PCIeFunction interface.
     - name: Function7SubsystemVendorId
       type: string
       description: >
-          The Subsystem Vendor ID for this function.
+          The Subsystem Vendor ID for this function. This property is
+          deprecated, it has been replaced with PCIeFunction interface.
     - name: Function7VendorId
       type: string
       description: >
-          The Vendor ID for this function.
+          The Vendor ID for this function. This property is deprecated, it has
+          been replaced with PCIeFunction interface.
 
     - name: MaxLanes
       type: size
@@ -330,3 +396,11 @@ associations:
           - associated_pcie_device
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot
+
+    - name: exposing
+      description: >
+          Objects that implement PCIeDevice can optionally implement the
+          upstexposing association to provide a link back to a PCIe function.
+      reverse_names:
+          - exposed_by
+      required_endpoint_interfaces: xyz.openbmc_project.Inventory.Item.PCIeFunction

@@ -160,6 +160,24 @@
       "parentUuid": "072e243d_c5272c76",
       "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43b38f07_7f501ad9",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001673
+      },
+      "writtenOn": "2025-05-16T19:42:26Z",
+      "side": 1,
+      "message": "I got bug in downstream for IPMI account which has limitation of 20 characters while investigating I realized that the Redfish does not have any MaxPasswordLength limitation therefore tried to add the same.",
+      "parentUuid": "72913789_b1165fd0",
+      "revId": "86b048ab914a89b5dfa3fad77fa46518b270d3c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ],
   "submitRequirementResults": []

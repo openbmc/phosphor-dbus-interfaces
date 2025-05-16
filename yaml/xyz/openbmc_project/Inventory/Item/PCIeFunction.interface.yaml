@@ -1,0 +1,171 @@
+description: >
+    This defines a PCIe function to be exposed for system management.  It
+    includes the function properties that are shown in the space configuration.
+
+properties:
+    - name: BusNumber
+      type: byte
+      description: >
+          Indicates the Bus number in the BDF byte.
+    - name: DeviceNumber
+      type: byte
+      description: >
+          Indicates the Device number in the BDF byte.
+    - name: FunctionNumber
+      type: byte
+      description: >
+          Indicates the Function number in the BDF byte.
+    - name: DeviceId
+      type: uint16
+      description: >
+          The Device ID for this function.
+    - name: RevisionId
+      type: byte
+      description: >
+          The Revision ID for this function.
+    - name: SubsystemId
+      type: uint16
+      description: >
+          The Subsystem ID for this function.
+    - name: SubsystemVendorId
+      type: uint16
+      description: >
+          The Subsystem Vendor ID for this function.
+    - name: VendorId
+      type: uint16
+      description: >
+          The Vendor ID for this function.
+    - name: BaseClassCode
+      type: byte
+      description: >
+          The Base Class Code for this function.
+    - name: SubClassCode
+      type: byte
+      description: >
+          The SubClass for this function.
+    - name: ProgrammingInterface
+      type: byte
+      description: >
+          The PIFClass Code for this function.
+    - name: DeviceClass
+      type: enum[self.DeviceClasses]
+      description: >
+          The class for this PCIe function.
+    - name: FunctionType
+      type: enum[self.FunctionTypes]
+      default: Unknown
+      description: >
+          Indicates if the function is Physical or Virtual
+
+enumerations:
+    - name: DeviceClasses
+      description: >
+          Possible Device Classes
+      values:
+          - name: Unknown
+            description: >
+                An unknown class
+          - name: Bridge
+            description: >
+                A bridge
+          - name: CommunicationController
+            description: >
+                A communication controller
+          - name: Coprocessor
+            description: >
+                A coprocessor
+          - name: DisplayController
+            description: >
+                A display controller
+          - name: DockingStation
+            description: >
+                A docking station
+          - name: EncryptionController
+            description: >
+                An encryption controller
+          - name: GenericSystemPeripheral
+            description: >
+                A generic system peripheral
+          - name: InputDeviceController
+            description: >
+                An input device controller
+          - name: IntelligentController
+            description: >
+                An intelligent controller
+          - name: MassStorageController
+            description: >
+                A mass storage controller
+          - name: MemoryController
+            description: >
+                A memory controller
+          - name: MultimediaController
+            description: >
+                A multimedia controller
+          - name: NetworkController
+            description: >
+                A network controller
+          - name: NonEssentialInstrumentation
+            description: >
+                A non-essential instrumentation
+          - name: Other
+            description: >
+                Other class. The function Class Code needs to be verified
+          - name: ProcessingAccelerators
+            description: >
+                A processing accelerators
+          - name: Processor
+            description: >
+                A processor
+          - name: SatelliteCommunicationsController
+            description: >
+                A satellite communications controller
+          - name: SerialBusController
+            description: >
+                A serial bus controller
+          - name: SignalProcessingController
+            description: >
+                A signal processing controller
+          - name: UnassignedClass
+            description: >
+                An unassigned class
+          - name: UnclassifiedDevice
+            description: >
+                An unclassified device
+          - name: WirelessController
+            description: >
+                A wireless controller
+
+    - name: FunctionTypes
+      description: >
+          Possible Function Type
+      values:
+          - name: Unknown
+            description: >
+                An unknown function type
+          - name: Physical
+            description: >
+                A physical PCIe function
+          - name: Virtual
+            description: >
+                A virtual PCIe function
+
+associations:
+    - name: exposed_by
+      description: >
+          Objects that implement PCIeFunction can optionally implement the
+          exposed_by association to provide a link back to a PCIe Device.
+      reverse_names:
+          - exposing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice
+
+    - name: producing
+      description: >
+          Objects that implement PCIeFunction can optionally implement the
+          producing association to provide a link back to a item.
+      reverse_names:
+          - produced_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.NetworkInterface
+          - xyz.openbmc_project.Inventory.Item.Drive
+          - xyz.openbmc_project.Inventory.Item.StorageController

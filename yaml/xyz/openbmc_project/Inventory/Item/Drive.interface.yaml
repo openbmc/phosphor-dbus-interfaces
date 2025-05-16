@@ -110,3 +110,13 @@ enumerations:
           - name: Unknown
             description: >
                 The locked state of the drive is not known.
+
+associations:
+    - name: produced_by
+      description: >
+          Objects that implement Drive can optionally implement the produced_by
+          association to provide a link back to a PCIe function.
+      reverse_names:
+          - producing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeFunction

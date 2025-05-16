@@ -1,2 +1,12 @@
 description: >
     Implement to provide storage controller attributes.
+
+associations:
+    - name: produced_by
+      description: >
+          Objects that implement StorageController can optionally implement the
+          produced_by association to provide a link back to a PCIe function.
+      reverse_names:
+          - producing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeFunction

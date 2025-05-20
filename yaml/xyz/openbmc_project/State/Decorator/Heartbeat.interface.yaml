@@ -1,0 +1,11 @@
+description: >
+    Implement to show the status of a heartbeat indication, if it's considered
+    active or not.
+properties:
+    - name: Active
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          If the heartbeat is active.

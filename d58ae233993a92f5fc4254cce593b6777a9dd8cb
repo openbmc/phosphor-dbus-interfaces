@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7072581_a66908c1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 35
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-05-20T15:06:08Z",
+      "side": 1,
+      "message": "Please take a look at:\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Telemetry/Report.interface.yaml\n\n\nThis seems like a subset of that interface.  Specifically, this interface would be an offshoot of a report set to OperationType Maximum.  That interface also defines reset behavior.",
+      "revId": "d58ae233993a92f5fc4254cce593b6777a9dd8cb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "feb694f3_f75d3844",
+        "filename": "yaml/xyz/openbmc_project/Common/Statistics.interface.yaml",
+        "patchSetId": 35
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-05-20T15:06:08Z",
+      "side": 1,
+      "message": "Since when?  Ever?  In a time range?",
+      "range": {
+        "startLine": 26,
+        "startChar": 67,
+        "endLine": 27,
+        "endChar": 70
+      },
+      "revId": "d58ae233993a92f5fc4254cce593b6777a9dd8cb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

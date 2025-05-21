@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7dbdcd36_e736ab0b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-05-21T15:15:23Z",
+      "side": 1,
+      "message": "Looks good to me, but I\u0027ll defer to Matt on whether this should be on a separate interface.  Typical tradeoffs probably between making interfaces modular/specific vs. driving additional D-Bus calls that could impact performance.",
+      "revId": "c21d00b8257b74b5d0dc2e44e1eab873ddd6a96b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6bf12b40_1b9b7cad",
@@ -14,6 +31,52 @@
       "writtenOn": "2025-05-21T14:22:52Z",
       "side": 1,
       "message": "For systems that use EM + fru-device, there isn\u0027t really a concept of \u0027VPD collection\u0027, not that EM even puts this iface on its objects though I believe some dbus-sensors apps do.\n\nMaybe it would be better to put this on an Inventory.Decorator interface?",
+      "revId": "c21d00b8257b74b5d0dc2e44e1eab873ddd6a96b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6f71b3a_98f34c2e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-05-21T15:15:23Z",
+      "side": 1,
+      "message": "Nit: inventory item was",
+      "range": {
+        "startLine": 37,
+        "startChar": 39,
+        "endLine": 37,
+        "endChar": 51
+      },
+      "revId": "c21d00b8257b74b5d0dc2e44e1eab873ddd6a96b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b1f3ac4_ddb48fb7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000331
+      },
+      "writtenOn": "2025-05-21T15:15:23Z",
+      "side": 1,
+      "message": "Nit: inventory item",
+      "range": {
+        "startLine": 40,
+        "startChar": 39,
+        "endLine": 40,
+        "endChar": 49
+      },
       "revId": "c21d00b8257b74b5d0dc2e44e1eab873ddd6a96b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

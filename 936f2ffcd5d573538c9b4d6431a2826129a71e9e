@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d12a3af2_b885b7b9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Source/DevicePresence.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-21T19:06:45Z",
+      "side": 1,
+      "message": "Is there utility on this for others or is this just a holding place for the paths?\n\nIt would be nice if we chose something that was more applicable to other daemons.  Maybe `/xyz/openbmc_project/inventory_source`?  We don\u0027t want to use `inventory` directly because there are a lot of daemons that already do mapper queries and dbus-watch on that path and we don\u0027t want them to be confused by these.",
+      "revId": "936f2ffcd5d573538c9b4d6431a2826129a71e9e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

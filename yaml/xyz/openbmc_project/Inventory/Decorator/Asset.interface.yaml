@@ -36,3 +36,26 @@ properties:
           SparePartNumber and instead PartNumber should be used in user
           interfaces.
       default: ""
+    - name: VPDCollectionStatus
+      type: enum[self.Status]
+      description: >
+          Status of VDP collection for the inventory item.
+
+enumerations:
+    - name: Status
+      description: >
+          Reflects VPD collection status of the inventory item.
+      values:
+          - name: NotStarted
+            description: >
+                Default value, stating that VPD collection has not been
+                triggered for the inventory item.
+          - name: InProgress
+            description: >
+                VPD collection for the inventory item is in progress.
+          - name: Completed
+            description: >
+                VPD collection for the inventory is successfully done.
+          - name: Failed
+            description: >
+                VPD collection for the inventory failed.

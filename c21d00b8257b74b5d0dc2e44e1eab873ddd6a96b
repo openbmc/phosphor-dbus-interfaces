@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f930951f_74589b66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2025-05-22T15:15:59Z",
+      "side": 1,
+      "message": "The expectation here is to know if the VPD associated with the FRU is valid and has been successfully collected. \nSince this interface populates properties reflecting attribute of a specific inventory, I thought of adding it here.\nJust like \"present\" which says if the Inventory item is present or not, this property can additionally state whether the VPD for the present FRU is valid or not.\nCurrently, it may look like IBM specific use case but in case not consumed will be defaulted to \"NotStarted\"?\n\nStill if it does not look like a fit here, then as @spinler@us.ibm.com suggested, I can move it to decorator interface as that is ok with all.",
+      "parentUuid": "70f417da_f242bc07",
+      "revId": "c21d00b8257b74b5d0dc2e44e1eab873ddd6a96b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6bf12b40_1b9b7cad",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
         "patchSetId": 1

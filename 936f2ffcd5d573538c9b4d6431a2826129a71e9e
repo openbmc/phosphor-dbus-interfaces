@@ -34,6 +34,24 @@
       "parentUuid": "d12a3af2_b885b7b9",
       "revId": "936f2ffcd5d573538c9b4d6431a2826129a71e9e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c612a37_2b455b1c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Source/DevicePresence.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-05-22T16:11:02Z",
+      "side": 1,
+      "message": "\u003e \u003e Is there utility on this for others or is this just a holding place for the paths?\n\u003e \n\u003e Currently the only planned user i am aware of is the gpio presence sensor.\n\u003e \n\u003e With the suggested adjustment, it will be more broadly usable by other presence daemons.\n\n@patrick@stwcx.xyz I am wondering if it would be better to add a segment under this namespace path for gpio_presence since the intent is broader use.",
+      "parentUuid": "8177ae24_de56492e",
+      "revId": "936f2ffcd5d573538c9b4d6431a2826129a71e9e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

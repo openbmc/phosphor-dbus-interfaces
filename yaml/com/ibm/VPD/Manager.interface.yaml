@@ -21,11 +21,88 @@ methods:
             type: array[byte]
             description: >
                 Value to be updated for the keyword.
+      returns:
+          - name: bytesUpdated
+            type: ssize
+            description: >
+                On success, returns the number of bytes updated. On failure,
+                returns -1.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
-          - com.ibm.VPD.Error.PathNotFound
-          - com.ibm.VPD.Error.RecordNotFound
-          - com.ibm.VPD.Error.KeywordNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: UpdateKeyword
+      description: >
+          Method to update a single keyword's value based on the input
+          parameters.
+      parameters:
+          - name: path
+            type: string
+            description: >
+                Path where the data resides (D-Bus inventory path/EEPROM path
+                etc).
+          - name: paramsToWriteData
+            type:
+                variant[struct[string,string,array[byte]],
+                struct[string,array[byte]]]
+            description: >
+                Parameters in required format to write the keyword's value.
+      returns:
+          - name: bytesUpdated
+            type: ssize
+            description: >
+                On success, returns the number of bytes updated. On failure,
+                returns -1.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: WriteKeywordOnHardware
+      description: >
+          Method to update a single keyword's value on the hardware.
+      parameters:
+          - name: path
+            type: string
+            description: >
+                EEPROM path of the FRU.
+          - name: paramsToWriteData
+            type:
+                variant[struct[string,string,array[byte]],
+                struct[string,array[byte]]]
+            description: >
+                Parameters in required format to write the keyword's value.
+      returns:
+          - name: bytesUpdated
+            type: ssize
+            description: >
+                On success, returns the number of bytes updated. On failure,
+                returns -1.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: ReadKeyword
+      description: >
+          Method to read a single keyword's value based on the input parameters.
+      parameters:
+          - name: path
+            type: string
+            description: >
+                Path where the data resides (D-Bus inventory path/EEPROM path
+                etc).
+          - name: paramsToReadData
+            type: variant[struct[string,string],struct[string]]
+            description: >
+                Parameters in required format to read the keyword's value.
+      returns:
+          - name: keywordValue
+            type: variant[array[byte]]
+            description: >
+                On success, returns the keyword's value. On failure, throws an
+                exception.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
 
     - name: GetFRUsByUnexpandedLocationCode
       description: >
@@ -119,16 +196,7 @@ methods:
 
     - name: CollectFRUVPD
       description: >
-          An api to collect VPD of a given FRU by launching the parser exe
-          asynchronously. It can be used to collect VPD of any given FRU in case
-          of concurrent maintenance. As a pre-requisite for this api,
-          DeleteFRUVPD api needs to be called for that particular FRU. As this
-          api makes async call to the parser, caller needs to register for
-          Present property change signal for that FRU on DBus to ensure
-          successful execution of VPD parser for that FRU. The caller is also
-          suggested to have a timer of around two mins at their end and in case
-          the present property is not set to true in that timeline, can mark the
-          call as failed.
+          An api to collect VPD of a given FRU.
       parameters:
           - name: inventoryPath
             type: object_path
@@ -136,3 +204,36 @@ methods:
                 Dbus path of the FRU whose VPD needs to be collected.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: GetHardwarePath
+      description: >
+          Method to get the hardware path for the corresponding inventory path.
+      parameters:
+          - name: inventoryPath
+            type: object_path
+            description: >
+                Dbus inventory path of the FRU.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+properties:
+    - name: CollectionStatus
+      type: enum[self.Status]
+      default: NotStarted
+      description: >
+          VPD collection status of the system.
+
+enumerations:
+    - name: Status
+      description: >
+          VPD collection status of the system.
+      values:
+          - name: NotStarted
+            description: >
+                VPD collection has not started.
+          - name: InProgress
+            description: >
+                VPD collection is in progress.
+          - name: Completed
+            description: >
+                VPD collection is completed.

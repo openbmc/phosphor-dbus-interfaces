@@ -16,6 +16,57 @@
       "message": "@patrick@stwcx.xyz @paligill@gmail.com @anoo@us.ibm.com could you please review this ?",
       "revId": "d6dee243c9fe6dc7c0840f79592e57425ec750ea",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d2b2f92_4e715254",
+        "filename": "yaml/xyz/openbmc_project/Software/SoftwareAsset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-05-26T17:18:25Z",
+      "side": 1,
+      "message": "Lets rename the file to Asset.interface.yaml instead as Software is already in the path so xyz.openbmc_project.Software.SoftwareAsset seems reduandant, better to change this to just Asset for xyz.openbmc_project.Software.Asset interface name.",
+      "revId": "d6dee243c9fe6dc7c0840f79592e57425ec750ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a33090f_0a9330a0",
+        "filename": "yaml/xyz/openbmc_project/Software/SoftwareAsset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-05-26T17:18:25Z",
+      "side": 1,
+      "message": "nit: Lets leave a new line before properties start.",
+      "revId": "d6dee243c9fe6dc7c0840f79592e57425ec750ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc22de2f_7085eb33",
+        "filename": "yaml/xyz/openbmc_project/Software/SoftwareAsset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-05-26T17:18:25Z",
+      "side": 1,
+      "message": "Whats going to be the source of this information on the BMC? Are you looking at a use case where this can be queried from the device?",
+      "revId": "d6dee243c9fe6dc7c0840f79592e57425ec750ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,17 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    devices for Harma.
+
+enumerations:
+    - name: Retimer
+      description: >
+          The compatible hardware strings for the retimer on Harma.
+      values:
+          - name: "PT5161L"
+
+enumerations:
+    - name: CPLD
+      description: >
+          The compatible hardware strings for the CPLD on Harma.
+      values:
+          - name: "LCMXO3LF_4300C"

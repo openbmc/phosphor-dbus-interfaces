@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "778a8fec_167ddac0",
+        "filename": "yaml/xyz/openbmc_project/Software/SoftwareAsset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-27T04:49:19Z",
+      "side": 1,
+      "message": "Addressed renamed to Asset.interface.yaml",
+      "parentUuid": "8d2b2f92_4e715254",
+      "revId": "d6dee243c9fe6dc7c0840f79592e57425ec750ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9a33090f_0a9330a0",
@@ -52,6 +70,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1c4dcb1_17f24df8",
+        "filename": "yaml/xyz/openbmc_project/Software/SoftwareAsset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-27T04:49:19Z",
+      "side": 1,
+      "message": "Addressed",
+      "parentUuid": "9a33090f_0a9330a0",
+      "revId": "d6dee243c9fe6dc7c0840f79592e57425ec750ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fc22de2f_7085eb33",
@@ -65,6 +101,24 @@
       "writtenOn": "2025-05-26T17:18:25Z",
       "side": 1,
       "message": "Whats going to be the source of this information on the BMC? Are you looking at a use case where this can be queried from the device?",
+      "revId": "d6dee243c9fe6dc7c0840f79592e57425ec750ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a421209f_c9174d46",
+        "filename": "yaml/xyz/openbmc_project/Software/SoftwareAsset.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-05-27T04:49:19Z",
+      "side": 1,
+      "message": "I dont have the use case for the source of information. \nI get these information from smbios-mdr records. If its helpful I can add the information. But, I m not sure if there is any property on redfish for this",
+      "parentUuid": "fc22de2f_7085eb33",
       "revId": "d6dee243c9fe6dc7c0840f79592e57425ec750ea",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

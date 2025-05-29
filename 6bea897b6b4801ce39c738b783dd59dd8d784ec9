@@ -34,6 +34,24 @@
       "parentUuid": "c134b73b_a4919c20",
       "revId": "6bea897b6b4801ce39c738b783dd59dd8d784ec9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50a3341b_a395d080",
+        "filename": "yaml/com/meta/Hardware/Harma.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-05-29T18:10:51Z",
+      "side": 1,
+      "message": "@Kevin.Tung@quantatw.com The whole purpose of compatible strings is to make sure the correct binary gets deployed for the right target device. This will achieved by matching the CompatibleHardware field from EM config with the ASCII Model descriptor from PLDM package. \n\nhttps://github.com/openbmc/docs/blob/master/designs/code-update.md#entity-manager-configuration\n\nSo, based on what you mentioned above it seems better if there is a different enum entry for each XDPE type even though they use same updater (Which will be achieved through EM Config type field XDPE1X2XXFirmware).\n\nvalues:\n...\n    - name: XDPE192C3B\n    - name: XDPE19283B\n...\n\nAlso, please make sure the PLDM images being built for Harma start using these values as their ASCII model.",
+      "parentUuid": "2ffde512_3205a759",
+      "revId": "6bea897b6b4801ce39c738b783dd59dd8d784ec9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

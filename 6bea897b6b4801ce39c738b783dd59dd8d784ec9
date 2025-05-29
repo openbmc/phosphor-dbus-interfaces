@@ -16,6 +16,24 @@
       "message": "Just trying to see which is better - Adding XX or actually adding the specific entry for each XDPE chip. Do you see any specific advantage apart from the fact that there will be less entries with XX ?\nAlso, would the same image/binary be used for all XDPE152XX, if not then we should split these up.",
       "revId": "6bea897b6b4801ce39c738b783dd59dd8d784ec9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ffde512_3205a759",
+        "filename": "yaml/com/meta/Hardware/Harma.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1002253
+      },
+      "writtenOn": "2025-05-29T09:42:25Z",
+      "side": 1,
+      "message": "The actual VR chips used on Harma are the XDPE192C3B (for VR_CPU_Core0 and VR_CPU_Core1) and the XDPE19283B (for VR_PVDD), totaling three VRs.\nThese VRs use different images/binaries due to their differing configurations.\n\nDo you have any suggestions for renaming the compatible strings to reflect these differences better?",
+      "parentUuid": "c134b73b_a4919c20",
+      "revId": "6bea897b6b4801ce39c738b783dd59dd8d784ec9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

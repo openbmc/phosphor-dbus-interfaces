@@ -1,6 +1,5 @@
 description: >
-    This interface holds redundant BMC related information.  There would be
-    instance of this interface on each BMC.
+    This interface holds redundant BMC related information.
 
 properties:
     - name: Role
@@ -34,21 +33,32 @@ properties:
 
           This can only be changed on the active BMC and when power is off,
           otherwise it will throw the Unavailable error.
-    - name: FailoversPaused
+    - name: FailoversAllowed
       type: boolean
       flags:
           - readonly
       default: false
       description: >
-          When redundancy is enabled, there may be periods when either failovers
-          are not allowed, such as in the middle of a code update, or won't work
-          because the passive BMC is temporarily offline, such as when the
-          passive BMC reboots. A timer would be put on how long redundancy could
-          still be considered enabled in this latter case in case the passive
-          BMC never comes back.  Redundancy is left enabled initially so as to
-          not trigger any intervention that could be necessary when redundancy
-          is lost just due to a BMC reboot.  Any time the passive BMC goes
-          offline a full file sync would be necessary when it comes back.
+          States if failovers are currently allowed. Even when redundancy is
+          enabled, a failover may not be allowed because there are periods when
+          doing a failover could cause issues, such as in the middle of a boot
+          or code update.
+    - name: FailoverImminent
+      type: boolean
+      flags:
+          - readonly
+      default: false
+      description: >
+          There can be a grace period between a failover being requested and the
+          failover actually starting where this will be asserted to allow for
+          any preparation or tracing on the other BMC.
+    - name: FailoverInProgress
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          Indicates that a failover is in progress.
     - name: RedundancyMinimum
       type: size
       flags:
@@ -96,3 +106,8 @@ paths:
             description: >
                 The object representing _this_ BMC is always at bmc0.
             value: bmc0
+          - name: SiblingBMC
+            description: >
+                The object representing _the sibling_ BMC is always at bmc1 in a
+                2 BMC system.
+            value: bmc1

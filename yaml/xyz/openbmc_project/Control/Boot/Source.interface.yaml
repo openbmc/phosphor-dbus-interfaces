@@ -6,6 +6,10 @@ properties:
       type: enum[self.Sources]
       description: >
           The desired boot image source.
+    - name: BootSequence
+      type: array[string]
+      description: >
+          The desired boot image source order.
 
 enumerations:
     - name: Sources
@@ -28,5 +32,23 @@ enumerations:
             description: >
                 Boot from floppy/primary removable media (USB).
           - name: HTTP
+            description: >
+                Boot from a remote source over http/https.
+          - name: USB_DEV
+            description: >
+                Boot from USB.
+          - name: NET_IPV4
+            description: >
+                Boot from NET_IPV4.
+          - name: NET_IPV6
+            description: >
+                Boot from NET_IPV6.
+          - name: SATA_CD
+            description: >
+                Boot from SATA_CD.
+          - name: OTHER
+            description: >
+                Boot from SATA_CD.
+          - name: RESERVED
             description: >
                 Boot from a remote source over http/https.

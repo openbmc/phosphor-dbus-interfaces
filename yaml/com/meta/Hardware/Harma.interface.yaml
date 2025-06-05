@@ -25,6 +25,9 @@ enumerations:
       description: >
           The compatible hardware strings for the VR on Harma.
       values:
-          - name: ISL69269
-          - name: XDPE192C3B
-          - name: XDPE19283B
+          - name: ISL69269_vcore0
+          - name: ISL69269_vcore1
+          - name: ISL69269_pvdd11
+          - name: XDPE192C3B_vcore0
+          - name: XDPE192C3B_vcore1
+          - name: XDPE19283B_pvdd11

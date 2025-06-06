@@ -6,6 +6,10 @@ properties:
       type: enum[self.Sources]
       description: >
           The desired boot image source.
+    - name: BootSequence
+      type: array[string]
+      description: >
+          The desired boot image source order.
 
 enumerations:
     - name: Sources

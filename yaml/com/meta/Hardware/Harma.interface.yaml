@@ -13,7 +13,8 @@ enumerations:
       description: >
           The compatible hardware strings for the CPLD on Harma.
       values:
-          - name: "LCMXO3LF_4300C"
+          - name: "LCMXO3LF_4300C_mb"
+          - name: "LCMXO3_2100C_scm"
 
     - name: SPI
       description: >

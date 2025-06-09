@@ -253,6 +253,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "310e2294_db5a7fa3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2025-06-09T19:59:47Z",
+      "side": 1,
+      "message": "So, minimal set for CreateUser2 interface:\nUsername\n\nEvery optional param set to defaults and all other parts goes through PUM(Enable, Disable, Password Expiration, Account Expiration, Groups and etc).\n\n\u003e Tomorrow, there could be even more properties that need to be set after calling the createUser2 API.\n\nPlanning to add Account Expiration also, so createUser2 will be same with one param as \"Username\" and nothing more.",
+      "parentUuid": "200b5968_639d115d",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0d150d38_16cf5ffe",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 8

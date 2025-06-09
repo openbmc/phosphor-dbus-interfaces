@@ -1,0 +1,58 @@
+Description: >
+    Implement to provide entity manager configuration for the usb port.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          The type of configuration object.
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: >
+          The name of the usb port.
+      flags:
+          - readonly
+    - name: Bus
+      type: uint16
+      description: >
+          The USB bus number of the port.
+      flags:
+          - readonly
+    - name: Port
+      type: uint16
+      description: >
+          The port number of the root hub the device is connected to.
+      flags:
+          - readonly
+    - name: Configuration
+      type: uint16
+      description: >
+          The device's configuration number."
+      flags:
+          - readonly
+    - name: USBInterface
+      type: uint16
+      description: >
+          The interface number within the related configuration.
+      flags:
+          - readonly
+    - name: Mode
+      type: string
+      description: >
+          The mode of the serial interface, for example, RS232, RS485.
+      flags:
+          - readonly
+    - name: BaudRate
+      type: uint32
+      description: >
+          The baudrate of the communication channel.
+      flags:
+          - readonly
+    - name: RTSDelay
+      type: uint16
+      description: >
+          The request to send delay in milli-seconds.
+      flags:
+          - readonly

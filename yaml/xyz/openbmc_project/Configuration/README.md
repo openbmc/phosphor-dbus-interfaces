@@ -1,3 +1,5 @@
+# Configuration
+
 Interfaces under this subdirectory are written for compatibility with
 [entity-manager][entity-manager]. Entity-manager currently creates these style
 of objects from a JSON configuration, which doesn't support some of the type

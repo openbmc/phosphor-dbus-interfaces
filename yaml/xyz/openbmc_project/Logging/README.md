@@ -29,10 +29,10 @@
 - Every error defined will have an error YAML file and a corresponding error
   metadata YAML file.
 - The error YAML file contains the error name and a one-line description of the
-  error. An example of an error YAML file can be found [here][error-example].
+  error. An [example][error-example] of an error YAML file is available.
 - The error metadata YAML file captures required data. The format of the data is
-  defined in the error metadata file. An example of an error metadata YAML file
-  can be found [here][metadata-example].
+  defined in the error metadata file. An [example][metadata-example] of an error
+  metadata YAML file is available.
 
 [error-example]:
   https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common/File.errors.yaml

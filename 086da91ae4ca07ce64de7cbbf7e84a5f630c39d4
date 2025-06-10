@@ -271,6 +271,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fce90030_31f8751d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-06-10T22:52:13Z",
+      "side": 1,
+      "message": "I\u0027m not sure I understand the proposal made here?  Can you post it in the form of the actual call?\n\nCreateUser2(username, enable, expiration, groups)\n\nSo long as there\u0027s a way to create a user atomically with all the appropriate properties, that\u0027s the important part.",
+      "parentUuid": "310e2294_db5a7fa3",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0d150d38_16cf5ffe",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 8

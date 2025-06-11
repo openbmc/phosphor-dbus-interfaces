@@ -289,6 +289,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e0a67689_c660ae08",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2025-06-11T05:16:00Z",
+      "side": 1,
+      "message": "Yes, I can, just\nCreateUser2(username)\nsome sort of \"adduser\" in linux, every other option - password/groups/etc goes through passwd/usermod/groupadd, in our case through PUM via Redfish/IPMI.\nAnd it will create it automatically but with defaults which set by something, like /etc/default/useradd or something on dbus via phosphor-settings or yaml/json config.\n\nBtw I don\u0027t mind also about adding new optional parameter like it now:\nCreateUser2(username, enable, expiration, groups, passwordexpiration)\n\nbut as Ratan says, if somebody wants a new param - it will generate another call with additional one parameter. So, as example, if I want AccountExpiration - would it be\nCreateUser3(username, enable, expiration, groups, passwordexpiration, accountexpiration)\nor just as suggested above\nCreateUser2(username)",
+      "parentUuid": "fce90030_31f8751d",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0d150d38_16cf5ffe",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 8

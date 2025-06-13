@@ -10,6 +10,10 @@ properties:
       default: "Unknown"
       description: >
           The type of accelerator.
+    - name: MaxSpeedInMhz
+      type: uint32
+      description: >
+          Max Speed in megahertz the accelerator can support.
 
 enumerations:
     - name: AcceleratorType

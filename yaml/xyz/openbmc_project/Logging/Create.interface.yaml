@@ -26,11 +26,31 @@ methods:
                   }
                 ends up in AdditionaData like:
                   ["KEY1=value1", "KEY2=value2"]
+          - name: UniqueTag
+            type: string
+            description: >
+                Optional tag for the created message. If a logging
+                entry already exists with the unique tag, its object
+                path is returned instead of creating one. Otherwise,
+                a new entry is created.
       returns:
           - name: Entry
             type: object_path
             description: >
                 The resulting object_path of the newly created Entry
+    - name: ResolveByTag
+      description: >
+        Resolve a log entry given just the unique tag of the entry.
+      parameters:
+          - name: UniqueTag
+            type: string
+            description: >
+              The unique tag of the log entry to resolve.
+      returns:
+          - name: Entry
+            type: object_path
+            description: >
+                The object_path of the resolved Entry
 
     - name: CreateWithFFDCFiles
       description: >

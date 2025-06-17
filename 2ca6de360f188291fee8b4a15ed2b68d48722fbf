@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2c48562_89cb0c04",
+        "filename": "yaml/xyz/openbmc_project/Configuration/FirmwareInfoDef.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-06-17T09:01:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54dff2f4_751c8374",
+      "revId": "2ca6de360f188291fee8b4a15ed2b68d48722fbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5044302e_39eb50fc",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2fe25a77_2bab5cdc",
+        "filename": "yaml/xyz/openbmc_project/Configuration/FirmwareInfoDef.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-06-17T09:01:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5044302e_39eb50fc",
+      "revId": "2ca6de360f188291fee8b4a15ed2b68d48722fbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4401466_4ce440cb",
@@ -48,6 +84,24 @@
       "writtenOn": "2025-06-17T07:28:29Z",
       "side": 1,
       "message": "Lets change the file name to FirmwareInfo.yaml instead.",
+      "revId": "2ca6de360f188291fee8b4a15ed2b68d48722fbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "916df121_b9cfff05",
+        "filename": "yaml/xyz/openbmc_project/Configuration/FirmwareInfoDef.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-06-17T09:01:50Z",
+      "side": 1,
+      "message": "Let\u0027s not do that since then we will not have any clear mapping from the schema to the PDI yaml.\n\nIn ```firmware.json``` the schema is defined like\n```\n    \"$defs\": {\n        \"FirmwareInfoDef\": {\n            \"description\": \"This indicates the properties which apply to all firmwares\",\n\n```\n\nSo i would prefer to use the name as already defined in the schema instead of making a new name for the same thing.\n\nLet me know if you would like the name in the schema to be adjusted instead.",
+      "parentUuid": "a4401466_4ce440cb",
       "revId": "2ca6de360f188291fee8b4a15ed2b68d48722fbf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

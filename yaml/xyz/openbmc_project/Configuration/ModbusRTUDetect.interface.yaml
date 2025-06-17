@@ -1,0 +1,29 @@
+description: >
+    Implement to provide the Modbus RTU detection configuration for Modbus
+    devices.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          The type of configuration object.
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: >
+          The name of the Modbus device.
+      flags:
+          - readonly
+    - name: DataParity
+      type: string
+      description: >
+          The data parity of the Modbus device.
+      flags:
+          - readonly
+    - name: BaudRate
+      type: uint64
+      description: >
+          The baud rate of the Modbus device.
+      flags:
+          - readonly

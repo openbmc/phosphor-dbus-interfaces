@@ -1,0 +1,18 @@
+description: >
+    This interface is not meant to be instantiated directly. It defines
+    the supported hardware devices specific to the Yosemite5.
+
+enumerations:
+    - name: SPI
+      description: >
+          The compatible hardware strings for the SPI flash on Yosemite5.
+      values:
+          - name: Host
+
+    - name: CPLD
+      description: >
+          The compatible hardware strings for the CPLD on Yosemite5.
+      values:
+          - name: "LCMXO3D_9400HC_scm"
+          - name: "LCMXO3D_9400HC_mb"
+          - name: "LFMXO5_25_pdb"

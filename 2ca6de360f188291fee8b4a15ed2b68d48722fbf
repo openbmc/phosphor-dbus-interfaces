@@ -1,4 +1,56 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54dff2f4_751c8374",
+        "filename": "yaml/xyz/openbmc_project/Configuration/FirmwareInfoDef.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-06-17T07:28:29Z",
+      "side": 1,
+      "message": "nit: missing new line before properties.",
+      "revId": "2ca6de360f188291fee8b4a15ed2b68d48722fbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5044302e_39eb50fc",
+        "filename": "yaml/xyz/openbmc_project/Configuration/FirmwareInfoDef.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-06-17T07:28:29Z",
+      "side": 1,
+      "message": "Is number a type in PDI? Doesn\u0027t this have to be uint64 ?",
+      "revId": "2ca6de360f188291fee8b4a15ed2b68d48722fbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4401466_4ce440cb",
+        "filename": "yaml/xyz/openbmc_project/Configuration/FirmwareInfoDef.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-06-17T07:28:29Z",
+      "side": 1,
+      "message": "Lets change the file name to FirmwareInfo.yaml instead.",
+      "revId": "2ca6de360f188291fee8b4a15ed2b68d48722fbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ],
   "submitRequirementResults": []
 }

@@ -16,6 +16,57 @@
       "message": "Hi @patrick@stwcx.xyz,\nCould you please help review this Gerrit change?\nThis change adds the necessary interface and property for the OEM meta command get/set boot order.",
       "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "efc8ab87_1a1d73d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-06-17T18:51:16Z",
+      "side": 1,
+      "message": "I need to know more about the intended implementation here in order to make sure we get appropriate level of feedback.\n\nSomeone also previously proposed this: https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/78214\n\nIs this one related?",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98847c3a_4917deb8",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-06-17T18:51:16Z",
+      "side": 1,
+      "message": "Who is going to implement this interface?  Is this something that is typically sent to the BIOS and we should put this in bios-settings-manager or is this something for phosphor-state-manager?  I don\u0027t really know and there isn\u0027t any design here.  I\u0027d like to get the right people to give feedback on this.",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5aa945ee_115a7f11",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/Source.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-06-17T18:51:16Z",
+      "side": 1,
+      "message": "Arbitrary strings are not likely to be acceptable here.  We have the \"Sources\" below as an enumeration.  How is \"Boot Source\" and \"Boot Sequence\" different?",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -90,6 +90,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b82f4fc4_37322cbf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-06-18T04:14:37Z",
+      "side": 1,
+      "message": "And also, is there any plans from meta to use redfish host interface for boot option, boot order.\nThere is a design MR in review https://gerrit.openbmc.org/c/openbmc/docs/+/79327.\nUsing this bios can GET/POST/PATCH boot order to bmc.",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

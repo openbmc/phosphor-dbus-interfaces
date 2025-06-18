@@ -52,6 +52,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "62e3d7c0_a7db94d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-06-18T01:58:16Z",
+      "side": 1,
+      "message": "This implementation is unrelated to  https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/78214.\n\nIt\u0027s intended for the OEM meta IPMI get/set boot order command. \nDuring system boot, the BIOS issues the get/set boot order command to retrieve the boot order stored in the BMC, and then applies it to configure the boot options.\n\nHere, \"CMOS\" is a flag indicating whether to clear CMOS, and \"bootSequence\" represents the boot device order, with values such as \"USB_DEV\", \"NET_IPV6\", or \"SATA_HDD\", etc.",
+      "parentUuid": "efc8ab87_1a1d73d7",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "98847c3a_4917deb8",

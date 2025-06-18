@@ -54,6 +54,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3fbee6ba_8ecd1604",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-06-18T01:26:51Z",
+      "side": 1,
+      "message": "This flag is usually used in `chassis bootparam get 5`. BIOS can directly send this command to GET/SET this param. phosphor-settings-manager can have this. Is there any other thoughts ?",
+      "parentUuid": "98847c3a_4917deb8",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5aa945ee_115a7f11",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/Source.interface.yaml",
         "patchSetId": 2
@@ -65,6 +83,24 @@
       "writtenOn": "2025-06-17T18:51:16Z",
       "side": 1,
       "message": "Arbitrary strings are not likely to be acceptable here.  We have the \"Sources\" below as an enumeration.  How is \"Boot Source\" and \"Boot Sequence\" different?",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a90edeb5_2d83e0a9",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/Source.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-06-18T01:26:51Z",
+      "side": 1,
+      "message": "Currently boot source is implemented as part of phosphor-settings-manager. The boot sequence is obtained from bios run time which is dynamic in nature. And also user has the option to delete the boot option(single option in the sequence). How does settings-manager delete the option ? Should boot option be a separate interface ?",
+      "parentUuid": "5aa945ee_115a7f11",
       "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

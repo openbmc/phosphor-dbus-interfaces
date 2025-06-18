@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8959aa0_e4d2f7ff",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-06-18T01:31:35Z",
+      "side": 1,
+      "message": "CMOS clear is currently part of ipmid(maintained as global variable )\nhttps://github.com/openbmc/phosphor-host-ipmid/blob/master/chassishandler.cpp#L1848 \nIs the plan to use that variable to set the property ?",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "6a1c2c08_904a0357",
@@ -66,6 +83,24 @@
       "side": 1,
       "message": "This flag is usually used in `chassis bootparam get 5`. BIOS can directly send this command to GET/SET this param. phosphor-settings-manager can have this. Is there any other thoughts ?",
       "parentUuid": "98847c3a_4917deb8",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e0d5184_d81976dd",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-06-18T01:31:35Z",
+      "side": 1,
+      "message": "One more thing to consider should we add all the flags under single interface. Example: `yaml/xyz/openbmc_project/Control/Boot/Flags.interface.yaml`\nAll the flags coming in future could go to same interface",
+      "parentUuid": "3fbee6ba_8ecd1604",
       "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

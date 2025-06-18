@@ -156,6 +156,24 @@
       "parentUuid": "5aa945ee_115a7f11",
       "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8eae2413_803bca07",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/Source.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-06-18T02:22:15Z",
+      "side": 1,
+      "message": "The current implementation uses the OEM-meta IPMI command get/set boot order to set the value of the boot sequence. \nThe current approach replaces boot options with the value \"RESERVED\". \nFor example, the sequence changes from {\"USB_DEV\", \"NET_IPV6\", \"SATA_HDD\", \"SATA_CD\", \"RESERVED\"} to {\"USB_DEV\", \"NET_IPV6\", \"RESERVED\", \"RESERVED\", \"RESERVED\"}.\nDo you have any suggestions?",
+      "parentUuid": "a90edeb5_2d83e0a9",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a026a4ec_b379e4de",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Purpose/TotalPower.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-06-18T16:11:16Z",
+      "side": 1,
+      "message": "I don\u0027t think we should go down a direction of having N \"purpose\" interfaces that are one-offs.  There will end up being many of these.\n\nWe already have other methods to handle this, such as the `paths:` support you referenced here to give well-known object paths.  We could also do something like enhance mapper to be able to query on certain properties, rather than just interface names.",
+      "revId": "11f649124478962a5018f7c14edc6ae7dbb9f9df",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

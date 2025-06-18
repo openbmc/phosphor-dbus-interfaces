@@ -227,6 +227,24 @@
       "parentUuid": "8eae2413_803bca07",
       "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4671e40_f9bd3d3e",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/Source.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-06-18T06:08:35Z",
+      "side": 1,
+      "message": "As of now, \"RESERVED\" entries are not cleared. If an entry in the boot sequence is set to \"RESERVED\", the corresponding byte in the response data will be returned as 0xFF.\n\nCurrently, this is not reflected under redfish/v1/Systems/\u003csystem-id\u003e. These properties are only used by OEM IPMI commands in YV4.",
+      "parentUuid": "7c52c4bb_b31f99dd",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -325,6 +325,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "79ed76af_7bef1066",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2025-06-18T06:19:13Z",
+      "side": 1,
+      "message": "Ed, sorry, I was added wrong param in example, per current PUM implementation:\n```\nvoid UserMgr::createUser(std::string userName,\n                         std::vector\u003cstd::string\u003e groupNames, std::string priv,\n                         bool enabled)\n```\nand bmcweb:\n```\n    if (!json_util::readJsonPatch(        //\n            req, asyncResp-\u003eres,          //\n            \"AccountTypes\", accountTypes, //\n            \"Enabled\", enabledJson,       //\n            \"Password\", password,         //\n            \"RoleId\", roleIdJson,         //\n            \"UserName\", username          //\n            ))\n```\nso right now it is:\nCreateUser(username, groups, priv, enabled)\n\nand CreateUser2 will be:\nCreateUser2(username, groups, priv, enabled, passwordexpiration)\n\nit same as CreateUser but it will set explicitly passwordexpiration but with this approach any new param will generate another call as I see, which will be problematic, as example for accountexpiration.\n\nor\nCreateUser2(username) which sets everything to defaults:\n do not set password\n set default groups\n set default privilege\n set user disabled\n set default password expiration\n set default account expiration\n set anything else to defaults\n\nAny other changes goes as additional steps which may not happen at all.\n\nRavi,\n\u003e\u003e as per existing design, bmcweb calls set password D-bus call after CreateUser D-\u003e\u003e bus call. with this CreateUser2(username) call, bmcweb still needs to call D-bus \u003e\u003e to set password right? similarly all optional properties needs to set correct?\nAnd password set may not happen at all. Everything set by defaults.\n\nNeed to choose approach, I don\u0027t have any problems with both of it.",
+      "parentUuid": "cfaa3f14_294598e4",
+      "revId": "086da91ae4ca07ce64de7cbbf7e84a5f630c39d4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0d150d38_16cf5ffe",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 8

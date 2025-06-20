@@ -105,6 +105,30 @@
       },
       "revId": "4d327a6b7f57e8de53dc7b61a596c1f6f4a48eab",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa370c38_130e5de3",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1002514
+      },
+      "writtenOn": "2025-06-20T10:40:19Z",
+      "side": 1,
+      "message": "The data will come from a PLDM device via Numeric Sensors.\nI think, there is already this kind of behaviour for count unit : https://github.com/openbmc/pldm/blob/f357b503aa7197c51e96e3e0946e14cdd964a0d4/platform-mc/numeric_sensor.cpp#L138\n\nSo, I guess we should add it to metrics and not sensors. Do you agree ?",
+      "parentUuid": "34e1690a_ab0013fc",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 47
+      },
+      "revId": "4d327a6b7f57e8de53dc7b61a596c1f6f4a48eab",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

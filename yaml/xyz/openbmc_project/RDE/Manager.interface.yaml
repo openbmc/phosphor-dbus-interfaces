@@ -1,0 +1,150 @@
+description: >
+    Interface for performing RDE operations on Redfish-capable devices. Supports
+    inline or file-based payloads and provides schema and capability discovery
+    services.
+
+service_names:
+    - default: xyz.openbmc_project.RDE.Manager
+
+methods:
+    - name: PerformRedfishOperation
+      description: >
+          Execute a Redfish operation on the target device using either an
+          inline or file-based payload.
+      parameters:
+          - name: RequestId
+            type: uint32
+            description: >
+                Unique identifier for the request.
+          - name: OperationId
+            type: enum[self.OperationType]
+            description: >
+                Type of Redfish operation to perform.
+          - name: TargetURI
+            type: string
+            description: >
+                URI of the target resource or action (e.g.,
+                /Actions/CustomCommand).
+          - name: DeviceId
+            type: string
+            description: >
+                Unique device identifier.
+          - name: Payload
+            type: string
+            description: >
+                Inline JSON/BEJ payload string or a file path/URI. If
+                PayloadFormat is FileLink, this must point to the file.
+          - name: PayloadFormat
+            type: enum[self.PayloadFormatType]
+            default: Inline
+            optional: true
+            description: >
+                Specifies whether Payload is embedded or provided as a file
+                link.
+          - name: EncodingType
+            type: string
+            default: "BEJ"
+            optional: true
+            description: >
+                Payload encoding format. Options include BEJ or JSON.
+          - name: SessionId
+            type: string
+            optional: true
+            description: >
+                Session identifier to correlate related transactions.
+      returns:
+          - name: Response
+            type: string
+            description: >
+                JSON-formatted or encoded response depending on operation.
+          - name: StatusCode
+            type: uint16
+            description: >
+                HTTP-style numeric status code representing execution outcome.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Unavailable
+
+    - name: GetDeviceSchemaInfo
+      description: >
+          Retrieve the schema or URI dictionary for a target device.
+      parameters:
+          - name: DeviceId
+            type: string
+            description: >
+                Unique identifier for the target device.
+          - name: OutputFormat
+            type: enum[self.SchemaOutputFormat]
+            default: FileLink
+            optional: true
+            description: >
+                Format of the schema response: inline or file-based.
+      returns:
+          - name: SchemaInfo
+            type: string
+            description: >
+                Schema content (if inline) or URI/path reference (if FileLink).
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: GetSupportedOperations
+      description: >
+          Return the list of supported Redfish operations and encoding types for
+          a target device.
+      parameters:
+          - name: DeviceId
+            type: string
+            description: >
+                Unique device identifier.
+      returns:
+          - name: SupportedOps
+            type: string
+            description: >
+                JSON array of supported methods and encodings.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+enumerations:
+    - name: OperationType
+      description: >
+          Supported Redfish HTTP verbs available for RDE interaction.
+      values:
+          - name: GET
+            description: Retrieve a resource or resource collection.
+          - name: POST
+            description: Create a new resource or invoke an action.
+          - name: PUT
+            description: Replace an entire resource or collection.
+          - name: PATCH
+            description: Update specific fields within a resource.
+          - name: DELETE
+            description: Remove a resource.
+
+    - name: SchemaOutputFormat
+      description: >
+          Format of schema response content.
+      values:
+          - name: JsonData
+            description: Return the schema as an inline JSON string.
+          - name: FileLink
+            description: Return a URI or file path to the schema.
+
+    - name: PayloadFormatType
+      description: >
+          Format of the payload input.
+      values:
+          - name: Inline
+            description: Payload is embedded inline as a string.
+          - name: FileLink
+            description: Payload is a path or URI to external data.
+
+paths:
+    - namespace: /xyz/openbmc_project/rde
+      segments:
+          - name: BMC
+            value: bmc
+          - name: System
+            value: system

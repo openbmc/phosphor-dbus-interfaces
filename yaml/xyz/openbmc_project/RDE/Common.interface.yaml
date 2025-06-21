@@ -1,0 +1,46 @@
+enumerations:
+    - name: OperationType
+      description: >
+          Individual Redfish operations supported by RDE-capable devices. These
+          map directly to capability bits in the PLDM for RDE spec.
+
+      values:
+          - name: HEAD
+            description: >
+                Check if a resource is accessible without returning content.
+          - name: GET
+            description: >
+                Retrieve a resource or collection (maps to read_supported).
+          - name: CREATE
+            description: >
+                Device supports resource creation (typically maps to POST).
+          - name: UPDATE
+            description: >
+                Device supports partial updates to fields (maps to PATCH).
+          - name: REPLACE
+            description: >
+                Device supports full resource replacement (maps to PUT).
+          - name: DELETE
+            description: >
+                Device supports removal of a resource (maps to DELETE).
+
+    - name: SchemaDescriptorKeys
+      description: >
+          Valid keys used within RedfishSchemaDescriptors to describe schema
+          structure and supported commands.
+
+      values:
+          - name: Schema
+            description: >
+                The resource type name (e.g., "Processor", "Memory").
+          - name: SubURI
+            description: >
+                The relative URI path to the resource (e.g.,
+                "Processors/{ProcessorId}").
+          - name: Version
+            description: >
+                The schema version used to describe the resource (e.g., "1.1").
+          - name: CommandPath
+            description: >
+                The relative path to a supported action or operation (e.g.,
+                "Actions/Reset").

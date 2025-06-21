@@ -1,0 +1,116 @@
+description: >
+    Represents a Redfish Device Enablement (RDE) device discovered and managed
+    by the BMC. This object abstracts the logical representation of a Redfish-
+    accessible device and is created for each such endpoint detected via any
+    supported transport (PLDM, SPDM, etc).
+
+    The object may also optionally implement `xyz.openbmc_project.Common.UUID`
+    to address the requirement for devices with multiple endpoints and for
+    hot-plug devices.
+
+service_names:
+    - default: xyz.openbmc_project.RDE.Device
+
+properties:
+    - name: Name
+      type: string
+      description: >
+          Human-readable device name or alias useful for logging and tooling.
+
+    - name: Id
+      type: string
+      description: >
+          BMC-wide unique identifier usable across protocol layers.
+
+    - name: SupportedOps
+      type: array[enum[xyz.openbmc_project.RDE.Common.OperationType]]
+      description: >
+          Redfish logical operations supported by the device, as determined
+          through capability discovery. These align with operation-specific
+          flags defined in the RDE specification.
+
+    - name: SupportedFeatures
+      type: array[enum[self.FeatureType]]
+      description: >
+          Redfish protocol capabilities supported by this device, including
+          feature-level support like BEJ or eventing.
+
+    - name: RedfishSchemaDescriptors
+      type: array[dict[string, string]]
+      description: >
+          A flat array of Redfish resource descriptors. Each dictionary must
+          include key-value pairs that describe a Redfish resource and its
+          supported command. Valid keys are defined in the SchemaDescriptorKeys
+          enumeration.
+
+    - name: NegotiationStatus
+      type: enum[self.NegotiationStatus]
+      description: >
+          Current state of capability negotiation with the device.
+
+methods:
+    - name: RefreshDeviceInfo
+      description: >
+          Refreshes and updates capability and schema metadata from the device.
+      in: []
+      out: []
+
+signals:
+    - name: DeviceUpdated
+      description: >
+          Emitted when any device property changes due to refresh or other
+          events.
+      args:
+          - name: changed
+            type: dict[string, variant]
+
+associations:
+    - name: binds_to_endpoint
+      description: >
+          Indicates the transport-level MCTP endpoint associated with this
+          device.
+      reverse_name: hosts_rde_device
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.MCTP.Endpoint
+
+enumerations:
+    - name: FeatureType
+      description: >
+          Redfish-level protocol features and auxiliary capabilities supported
+          by the device.
+
+      values:
+          - name: BEJ
+            description: >
+                Supports Binary Encoded JSON (BEJ) v1.1 encoding and decoding.
+          - name: EVENTS
+            description: >
+                Supports Redfish Events or Long-running Tasks.
+          - name: ACTIONS
+            description: >
+                Supports Redfish Actions.
+
+    - name: NegotiationStatus
+      description: >
+          Current state of capability negotiation with the device.
+
+      values:
+          - name: NotStarted
+            description: >
+                Negotiation has not yet been initiated for this device.
+          - name: InProgress
+            description: >
+                Negotiation is currently underway; capability exchange is in
+                progress.
+          - name: Success
+            description: >
+                Negotiation completed successfully; device capabilities are
+                known.
+          - name: Failed
+            description: >
+                Negotiation attempt failed; device capability discovery could
+                not be completed.
+          - name: Partial
+            description: >
+                Negotiation completed with partial success; some device
+                capabilities may be incomplete or limited.

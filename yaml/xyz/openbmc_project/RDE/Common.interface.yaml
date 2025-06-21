@@ -1,0 +1,59 @@
+enumerations:
+    - name: OperationType
+      description: >
+          Represents individual operations that can be performed on system
+          resources. These types align with typical RESTful interface behavior.
+      values:
+          - name: HEAD
+            value: 0
+            description: >
+                Check if a resource is accessible without retrieving its
+                content.
+          - name: READ
+            value: 1
+            description: >
+                Retrieve a resource or collection (commonly associated with HTTP
+                GET).
+          - name: CREATE
+            value: 2
+            description: >
+                Create a new resource (commonly associated with HTTP POST).
+          - name: DELETE
+            value: 3
+            description: >
+                Remove an existing resource.
+          - name: UPDATE
+            value: 4
+            description: >
+                Apply partial modifications to a resource (commonly associated
+                with HTTP PATCH).
+          - name: REPLACE
+            value: 5
+            description: >
+                Fully replace an existing resource with a new version (commonly
+                associated with HTTP PUT).
+          - name: ACTION
+            value: 6
+            description: >
+                Perform a defined operation on a resource, typically involving
+                custom or parameterized behavior.
+
+    - name: SchemaDescriptorKeys
+      description: >
+          Valid keys used within RedfishSchemaDescriptors to describe schema
+          structure and supported commands.
+      values:
+          - name: Schema
+            description: >
+                The resource type name (e.g., "Processor", "Memory").
+          - name: SubURI
+            description: >
+                The relative URI path to the resource (e.g.,
+                "Processors/{ProcessorId}").
+          - name: Version
+            description: >
+                The schema version used to describe the resource (e.g., "1.1").
+          - name: CommandPath
+            description: >
+                The relative path to a supported action or operation (e.g.,
+                "Actions/Reset").

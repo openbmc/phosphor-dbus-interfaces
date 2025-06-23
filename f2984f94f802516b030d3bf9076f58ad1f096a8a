@@ -34,6 +34,24 @@
       "parentUuid": "609ec387_44765e12",
       "revId": "f2984f94f802516b030d3bf9076f58ad1f096a8a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fcf1b8bb_7af77748",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2025-06-23T14:20:22Z",
+      "side": 1,
+      "message": "Well instead of IBM, I would say this concept is more PIM specific. PIM has the concept of persisting the data and pull that back to Dbus in case it restarts or BMC reboots and this property helps in establishing the validity of that data.\n\nMay not be applicable to EM specific implementations but then PIM is also part of phosphor application group.",
+      "parentUuid": "55a165dd_090221a9",
+      "revId": "f2984f94f802516b030d3bf9076f58ad1f096a8a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

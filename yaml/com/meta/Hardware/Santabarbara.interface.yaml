@@ -1,0 +1,18 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    devices for Santabarbara.
+
+enumerations:
+    - name: CPLD
+      description: >
+          The compatible hardware strings for the CPLD on Santabarbara.
+      values:
+          - name: "LCMXO3D_9400_scm"
+          - name: "LCMXO3D_9400_swb"
+          - name: "LCMXO3LF_2100C_sitv3"
+
+    - name: SPI
+      description: >
+          The compatible hardware strings for the SPI flash on Santabarbara.
+      values:
+          - name: Host

@@ -126,6 +126,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea0878b7_f86a39f1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-06-30T13:50:33Z",
+      "side": 1,
+      "message": "Right here https://github.com/openbmc/phosphor-buttons/blob/master/src/power_button.cpp#L86  is where the code emits a signal saying a button was released, with the press time in the payload.  I was thinking the event could mirror that.  Just a single event with the press time in it.",
+      "parentUuid": "bf7f18e4_db9dd108",
+      "revId": "85d11ff3ddaa9db1842d1cb8339bb9d22966017d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5da6ae09_f0c36254",

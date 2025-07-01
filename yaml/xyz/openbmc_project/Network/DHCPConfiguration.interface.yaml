@@ -28,3 +28,33 @@ properties:
       description: >
           if true then DHCP option 12 is enabled i.e machine`s hostname will be
           sent to the DHCP server.
+    - name: DUIDType
+      type: enum[self.DUIDType]
+      description: >
+          Specifies the DHCPv6 DUID type used to identify the client to the DHCP
+          server.
+      default: LinkLayer
+    - name: IAID
+      type: uint32
+      description: >
+          Identity Association Identifier (IAID) used in DHCPv6.
+      default: 0
+
+enumerations:
+    - name: DUIDType
+      description: >
+          Possible DUID types.
+      values:
+          - name: Vendor
+            description: >
+                The DUID is generated based on the machine ID.
+          - name: UUID
+            description: >
+                The DUID is the UUID of the product.
+          - name: LinkLayer
+            description: >
+                The DUID is the MAC address of the interface.
+          - name: LinkLayerTime
+            description: >
+                The DUID is based on the MAC address of the interface combined
+                with a time value.

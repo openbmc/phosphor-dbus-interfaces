@@ -1,0 +1,22 @@
+description: >
+    The BootOrder interface provides the Boot Order information for this
+    computer system. This interface also helps manage various UEFI Boot Options
+
+properties:
+    - name: BootOrder
+      type: array[string]
+      description: >
+          The Boot Order in the current boot cycle. Example: ["Boot000*",
+          "DISK", "RESERVED", "NETWORK", "USB", "HTTP", "IPv4", "IPv6",
+          "DEFAULT", "ExternalMedia", "RemovableMedia", "HTTP"]
+      flags:
+          - readonly
+
+    - name: PendingBootOrder
+      type: array[string]
+      description: >
+          The Pending Boot Order of future settings. Example: ["Boot000*",
+          "DISK", "RESERVED", "NETWORK", "USB", "HTTP", "IPv4", "IPv6",
+          "DEFAULT", "ExternalMedia", "RemovableMedia", "HTTP"]
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument

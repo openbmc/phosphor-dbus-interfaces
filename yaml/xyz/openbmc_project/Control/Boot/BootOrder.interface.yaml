@@ -1,0 +1,23 @@
+description: >
+    The BootOrder interface provides the Boot Order information for this
+    computer system. This interface also helps manage various UEFI Boot Options
+
+properties:
+    - name: BootOrder
+      type: array[string]
+      description: >
+          The Boot Order in the current boot cycle, as reported by the host
+          firmware and not interpreted by the BMC. Persisted. Example:
+          ["Boot0014", "Boot000E", "Boot0013"]
+
+    - name: PendingBootOrder
+      type: array[string]
+      description: >
+          The Pending Boot Order of future settings. Every entry must be present
+          in BootOrder and must appear only once, otherwise InvalidArgument is
+          raised; no pending order can be set while BootOrder is empty.
+          Persisted until the host applies it and reports the new BootOrder.
+          Example, to boot "Boot000E" first: ["Boot000E", "Boot0014",
+          "Boot0013"]
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument

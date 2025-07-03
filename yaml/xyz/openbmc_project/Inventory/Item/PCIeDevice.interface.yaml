@@ -5,9 +5,11 @@ description: >
 
 properties:
     - name: DeviceType
-      type: string
+      type: enum[self.DeviceTypes]
+      default: "Unknown"
       description: >
-          Indicates if the device is MultiFunction or SingleFunction.
+          Indicates if the device type is MultiFunction/Retimer/Simulated or
+          SingleFunction.
     - name: GenerationInUse
       type: enum[xyz.openbmc_project.Inventory.Item.PCIeSlot.Generations]
       default: "Unknown"
@@ -297,6 +299,27 @@ properties:
           maxint is to accommodate the situation where the value of this
           property is not known due to some unknown reason, like hardware
           failure. The value of 0 indicates that the link is not active.
+
+enumerations:
+    - name: DeviceTypes
+      description: >
+          Possible Device Type
+      values:
+          - name: "MultiFunction"
+            description: >
+                Indicates if the device is MultiFunction
+          - name: "Retimer"
+            description: >
+                Indicate if the device is Retimer
+          - name: "Simulated"
+            description: >
+                Indicates if the device is Simulated
+          - name: "SingleFunction"
+            description: >
+                Indicates if the device is Single Function
+          - name: "Unknown"
+            description: >
+                Indicates if the device is Unknown
 
 associations:
     - name: upstream_pcie_slot

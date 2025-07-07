@@ -1,0 +1,53 @@
+description: >
+    Implement to provide detail on type of the sensor. Each property in the
+    interface maps to a distinct group of sensor subtypes.
+
+    Objects implementing Sensor.Type must also implement Sensor.Value.
+
+properties:
+    - name: ReadingBasis
+      type: enum[self.ReadingBasisType]
+      flags:
+          - readonly
+      description: >
+          Defines the type of the sensor based on how the sensor reading is
+          determined.
+
+    - name: Implementation
+      type: enum[self.ImplementationType]
+      flags:
+          - readonly
+      description: >
+          Defines the type of the sensor based on how the sensor reading is
+          obtained.
+
+enumerations:
+    - name: ReadingBasisType
+      description: >
+          Types of the sensors based on how their reading is determined.
+      values:
+          - name: Headroom
+            description: >
+                Indicates that the reading decreases in value as it approaches
+                the reference point. If the value crosses the reference point,
+                the value may be reported as a negative number, or may report a
+                value of zero.
+
+    - name: ImplementationType
+      description: >
+          Types of the sensors based on how their reading is obtained.
+      values:
+          - name: PhysicalSensor
+            description: >
+                Indicates that the reading is obtained from a physical sensor.
+          - name: Synthesized
+            description: >
+                Indicates that the reading is obtained by applying a calculation
+                on one or more properties of multiple sensors.
+          - name: Reported
+            description: >
+                Indicates that the reading is reported to the management
+                controller by a managed device.
+
+paths:
+    - namespace: /xyz/openbmc_project/sensors

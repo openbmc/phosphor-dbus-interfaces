@@ -6,6 +6,10 @@ properties:
       type: enum[self.Sources]
       description: >
           The desired boot image source.
+    - name: BootOrder
+      type: array[enum[self.Sources]]
+      description: >
+          The desired boot image source order.
 
 enumerations:
     - name: Sources
@@ -30,3 +34,12 @@ enumerations:
           - name: HTTP
             description: >
                 Boot from a remote source over http/https.
+          - name: IPv4
+            description: >
+                Boot from a remote source over IPv4 network.
+          - name: IPv6
+            description: >
+                Boot from a remote source over IPv6 network.
+          - name: USB
+            description: >
+                Boot from a USB device.

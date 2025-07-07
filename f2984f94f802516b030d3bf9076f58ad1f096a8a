@@ -124,6 +124,24 @@
       "parentUuid": "f174ccb3_c8940d1f",
       "revId": "f2984f94f802516b030d3bf9076f58ad1f096a8a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ded47b1d_24dc5eec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2025-07-07T16:04:32Z",
+      "side": 1,
+      "message": "On a very high level, my idea behind proposing this property was to establish the validity of data hosted under PIM.\n\nPIM is used to host the data where as it does not collect that data itself. So always there will be another application which will collect the data and will use PIM to host that.\n\nNow, PIM has the feature of persisting the data hosted under it.\nSo, in case where BMC reboots, PIM will simply republish the data that it persisted in the previous boot, where as, there is be a possibility that some configuration changed between the reboots or the collection did not took place correctly in the next boot.\nGoing by the current design, there is no way to establish validity of data being published under PIM.\n\nThis property would help in establishing that.(I can rename the property to be more generic, if required.)\n\nAnyways, for now, I will try to see if the interface pointed to caters our use case, else will take this forward as suggested.\nThanks All.",
+      "parentUuid": "98387870_7611371c",
+      "revId": "f2984f94f802516b030d3bf9076f58ad1f096a8a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

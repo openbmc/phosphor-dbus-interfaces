@@ -33,6 +33,24 @@
       "message": "@Fred.Chen@quantatw.com Which EM type would be used to update LCMXO3D_9400 CPLD type? I only see these in EM https://github.com/openbmc/entity-manager/blob/master/schemas/cpld.json#L25. Are you planning to extend the EM type?",
       "revId": "81412a52b0c0d8326b96b3f0fb0da15a2e0ea58e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c13f7d9b_d264fd19",
+        "filename": "yaml/com/meta/Hardware/Santabarbara.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002296
+      },
+      "writtenOn": "2025-07-08T14:46:12Z",
+      "side": 1,
+      "message": "Yes, LCMXO3D_9400 is a new CPLD type, which is also used in yosemite5. We are planning to push the code for LCMXO3D_9400 support to phosphor-software-manager and EM this week.",
+      "parentUuid": "44648d23_7b967b6f",
+      "revId": "81412a52b0c0d8326b96b3f0fb0da15a2e0ea58e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

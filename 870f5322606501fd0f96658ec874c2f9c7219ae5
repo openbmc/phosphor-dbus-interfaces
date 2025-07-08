@@ -529,6 +529,24 @@
       "parentUuid": "c4671e40_f9bd3d3e",
       "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39156df1_52aae54f",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/Source.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-07-08T18:44:28Z",
+      "side": 1,
+      "message": "This is still pending feedback.  I\u0027m not allowing arbitrary strings here, especially when we have `Sources` already enumerated.\n\nIf we need to add RESERVED fields, add them?  Strings are problematic because users never know if they were correct.",
+      "parentUuid": "98235780_43cf59c8",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,98 @@
+version: 1.0.0
+
+errors:
+    - name: ProcesserBootFailed
+      severity: critical
+      metadata:
+          - name: BootStage
+            type: string
+            primary: true
+            description: The stage where the boot progress is failed.
+      en:
+          description: Processer booting failed.
+          message: "Processer booting failed at stage {BootStage}"
+      errno: EHOSTDOWN
+
+    - name: ProcesserTrainDDRFailed
+      severity: critical
+      metadata:
+          - name: SocketIndex
+            type: size
+            primary: true
+            description: The socket index where DDR training stage is failed.
+          - name: DIMMList
+            type: string
+            primary: true
+            description: The failed DIMM list.
+      en:
+          description: A socket failed in DDR training stage.
+          message:
+              "Socket {SocketIndex} failed in DDR training stage at DIMMs:
+              {DIMMList}"
+      errno: EHOSTDOWN
+
+events:
+    - name: BootStageStatusUpdate
+      metadata:
+          - name: BootStage
+            type: string
+            primary: true
+            description: The stage where processor is in.
+          - name: Status
+            type: enum[com.ampere.AmpereOne.BootProgress.BootStatus]
+            primary: true
+            description: The boot status.
+      en:
+          description: The status of boot stage.
+          message: "The Processer boot status: {BootStage} is {Status}"
+
+    - name: DDRTrainingStatusUpdate
+      metadata:
+          - name: Status
+            type: enum[com.ampere.AmpereOne.BootProgress.DDRTrainingStatus]
+            primary: true
+            description: The DDR training status.
+      en:
+          description: Notify that DDR Training stage is started.
+          message: "DDR Training stage is {Status}"
+
+    - name: DDRTrainingIsInProgress
+      metadata:
+          - name: Percent
+            type: size
+            primary: true
+            description: The stage where processor is in.
+      en:
+          description: Notify that DDR Training stage is in-progress.
+          message: "DDR Training stage is in-progress at {Percent}%"
+
+    - name: UEFIBootStatus
+      metadata:
+          - name: RawData
+            type: string
+            primary: true
+            description: 4 bytes in hex format of Raw data from PLDM to BMC.
+          - name: ClassCode
+            type: string
+            primary: true
+            description:
+                1 byte in hex format. The Byte 3 of Raw data. It indicates the
+                Class code
+          - name: SubClassCode
+            type: string
+            primary: true
+            description:
+                1 byte in hex format. The Byte 2 of Raw data. It indicates
+                Sub-Class code
+          - name: OperationCode
+            type: string
+            primary: true
+            description:
+                2 bytes in hex format. The Bytes 1/0 of Raw data. It indicates
+                the Operation code
+      en:
+          description: Report UEFI boot codes.
+          message:
+              "ATF BL33 (UEFI) boot status code: Segment (0x{RawData}); Class
+              Code (0x{ClassCode}); Sub-class code (0x{SubClassCode}; Operation
+              Code (0x{OperationCode})"

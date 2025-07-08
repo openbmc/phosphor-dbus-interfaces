@@ -36,6 +36,9 @@ endif
 if get_option('data_com_meta')
     yaml_selected_subdirs += 'com/meta'
 endif
+if get_option('data_com_ampere')
+    yaml_selected_subdirs += 'com/ampere'
+endif
 if get_option('data_org_freedesktop')
     yaml_selected_subdirs += 'org/freedesktop'
 endif

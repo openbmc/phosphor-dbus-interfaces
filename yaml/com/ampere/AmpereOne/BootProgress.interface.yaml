@@ -1,0 +1,25 @@
+description: >
+    This is used to define enumerations for Boot progress in the AmpereOne CPU
+
+enumerations:
+    - name: BootStatus
+      description: >
+          The status of Processer Boot Status
+      values:
+          - name: "Booting"
+            description: >
+                The Boot Stage is booting
+          - name: "Completed"
+            description: >
+                The Boot Stage is completed
+
+    - name: DDRTrainingStatus
+      description: >
+          The status of DDR training stage
+      values:
+          - name: "Started"
+            description: >
+                DDR training stage is started
+          - name: "Completed"
+            description: >
+                DDR training stage is completed

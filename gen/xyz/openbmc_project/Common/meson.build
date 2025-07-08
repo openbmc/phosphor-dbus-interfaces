@@ -131,7 +131,10 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Common/File__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Common/File.errors.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Common/File.errors.yaml',
+        '../../../../yaml/xyz/openbmc_project/Common/File.interface.yaml',
+    ],
     output: ['File.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

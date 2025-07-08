@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3e809efd_3ebf107d",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2025-07-08T16:26:33Z",
+      "side": 1,
+      "message": "Since there are several properties that essentially indicate which category a sensor belongs to, we can group those properties and put them into the separate interface (Sensor.Type). I have a proposal for that here - https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/81658. @patrick@stwcx.xyz what do you suggest we should keep `Implementation` property here or move it to `Sensor.Type`?",
+      "parentUuid": "7de74cf0_6de6e897",
+      "revId": "4b7b5f112e4211b147c93f9797b19ab1918652b7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5ad1d0c3_9cf8a6e8",
         "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 1

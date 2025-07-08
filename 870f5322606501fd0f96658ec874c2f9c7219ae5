@@ -319,6 +319,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f250d11e_46b5d0a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-07-08T07:05:40Z",
+      "side": 1,
+      "message": "Hi @prithvi24pai@gmail.com\nI added the bootOrder property mainly for use with the YV4 OEM-meta IPMI command get/set boot order. The BIOS will interact with boot-related properties through IPMI commands to retrieve or configure boot settings. At present, we do not process boot order changes via Redfish; all handling is done through IPMI commands only.",
+      "parentUuid": "85abcecb_9e7f5e0e",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

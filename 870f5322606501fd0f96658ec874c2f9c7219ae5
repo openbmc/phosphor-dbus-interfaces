@@ -337,6 +337,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bffd2b1b_0313412e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-07-08T07:27:20Z",
+      "side": 1,
+      "message": "The oem meta command will get or set boot-related properties (such as CMOS clear, boot mode, and boot type...), not just retrieve the boot order property.",
+      "parentUuid": "f250d11e_46b5d0a6",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

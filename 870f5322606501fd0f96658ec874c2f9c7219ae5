@@ -391,6 +391,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2fdadf72_ecc80040",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-07-09T09:15:01Z",
+      "side": 1,
+      "message": "Yes, I completely agree to aim for a common and scalable solution.\n\nThe BIOS provides a boot order, which includes a list of various boot options. Each BootOption can contain several additional properties(https://redfish.dmtf.org/schemas/v1/BootOption.v1_0_6.yaml). \nCurrently, the approach is to model this interface within phosphor-settingsd. While this may be suitable for static entries like maintaining the overall BootOrder, it may not be the best fit for dynamic or runtime BootOption entries, especially considering scalability. \nHappy to proceed with phosphor-settingsd if that’s considered the best fit.",
+      "parentUuid": "5b284401_4827ff57",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

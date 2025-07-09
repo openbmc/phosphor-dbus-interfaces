@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "706ed09f_f38b214e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-07-09T04:19:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fb05fb9c_560fd5e0",
+      "revId": "a4fdfdd24e7de88defc03a8ddc6059037237805c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "add76c25_72cee2e5",
@@ -31,6 +49,30 @@
       "writtenOn": "2025-07-08T14:36:50Z",
       "side": 1,
       "message": "If this is true, add the appropriate namespace paths to the YAML.  Don\u0027t expect humans to read commit messages forever.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 0
+      },
+      "revId": "a4fdfdd24e7de88defc03a8ddc6059037237805c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "adf91048_c91508ad",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-07-09T04:19:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "add76c25_72cee2e5",
       "range": {
         "startLine": 17,
         "startChar": 0,
@@ -66,6 +108,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3b4f68af_03add0b1",
+        "filename": "yaml/xyz/openbmc_project/File/Object.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-07-09T04:19:54Z",
+      "side": 1,
+      "message": "A file may allow multiple sessions opened to it. An exclusive session preserves consistent file content (avoid modification from other sessions or the host of the file) while this session is open. This can be released when Read() returns (if the implementation returns a memfd), or after the server side finishes writing to the fd it returned to the clients through Read() (in case of streaming data through a normal unix socket or socketpair).",
+      "parentUuid": "36c2ddc4_09246298",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 53
+      },
+      "revId": "a4fdfdd24e7de88defc03a8ddc6059037237805c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b528add9_84033033",
         "filename": "yaml/xyz/openbmc_project/File/Object.interface.yaml",
         "patchSetId": 2
@@ -89,6 +155,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "183bb9c3_521c077e",
+        "filename": "yaml/xyz/openbmc_project/File/Object.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-07-09T04:19:54Z",
+      "side": 1,
+      "message": "It\u0027s initially from PLDM spec which classifies File Descriptor PDR. We want to use this file interface to retrieve computer system diagnostic data via Redfish `LogServices/Dump/CollectDiagnosticData` action so there needs to be a scheme to tell that this is a diagnostic data on D-Bus and its type is \u003cPurpose\u003e.\n\nHowever, `DiagnosticDataType` property passed into `CollectDiagnosticData` action only has {CPER, CPERSection, Manager, OEM, OS, PreOS}, so the `OEMDiagnosticDataType` can be filled in to specify what kind of OEM diagnostic data users want to collect and it can be then mapped to \u003cPurpose\u003e.\n\nMaybe I named it wrongly and it should be under another PLDM.File.Classification interface instead...\n\nDo you have any suggestion?",
+      "parentUuid": "b528add9_84033033",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 38
+      },
+      "revId": "a4fdfdd24e7de88defc03a8ddc6059037237805c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "12af41ca_96f1deeb",
         "filename": "yaml/xyz/openbmc_project/File/Object.interface.yaml",
         "patchSetId": 2
@@ -100,6 +190,30 @@
       "writtenOn": "2025-07-08T14:36:50Z",
       "side": 1,
       "message": "What does \"the system\" mean?",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 56
+      },
+      "revId": "a4fdfdd24e7de88defc03a8ddc6059037237805c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ee23e29_3c720f60",
+        "filename": "yaml/xyz/openbmc_project/File/Object.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-07-09T04:19:54Z",
+      "side": 1,
+      "message": "It means the file is introduced by and has info about the computer system.",
+      "parentUuid": "12af41ca_96f1deeb",
       "range": {
         "startLine": 100,
         "startChar": 0,

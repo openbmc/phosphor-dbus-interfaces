@@ -427,6 +427,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "df48ab7a_ce017255",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-07-10T07:37:08Z",
+      "side": 1,
+      "message": "Hi @patrick@stwcx.xyz,\n\nWe have tried removing the method from this interface (https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/81554) and placing the \"BootOrder\" property in phosphor-settingsd, and it works as expected.\n\nIn that case, for the next step, should we kindly ask @prithvi24pai@gmail.com to remove the method and merge his changes in his Gerrit, or should we proceed to make the changes and merge them in our Gerrit?",
+      "parentUuid": "23e2d474_c1449dd7",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

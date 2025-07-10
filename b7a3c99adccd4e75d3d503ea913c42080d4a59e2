@@ -16,6 +16,52 @@
       "message": "FWIW, there were previous proposals that didn\u0027t go anywhere:\n\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/21964\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-networkd/+/21966\n\nI added the phosphor-networkd maintainers here to give feedback.",
       "revId": "b7a3c99adccd4e75d3d503ea913c42080d4a59e2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13a50ca2_c5cf300e",
+        "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-07-10T12:21:22Z",
+      "side": 1,
+      "message": "The systemd-networkd default is \"Vendor\" and not \"LinkLayer\".  Are we explicitly changing this with this proposal?  Will this affect anyone with machines already in production?  I suspect we\u0027re going to want this to match the DUIDType defaulted in systemd-networkd, since, until the code is implemented to manipulate the DUIDType that is the \"default\".\n\nWhen we get the the phosphor-networkd implementation we\u0027ll want to think about how people override the default-by-default here.  I suspect some system maintainers are going to want all of their machines to use X by default where X might not be the same as the default we\u0027ve put into the dbus interface.",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 24
+      },
+      "revId": "b7a3c99adccd4e75d3d503ea913c42080d4a59e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2cef099e_f0be3e48",
+        "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-07-10T12:21:22Z",
+      "side": 1,
+      "message": "nit: add a new line here.",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 13
+      },
+      "revId": "b7a3c99adccd4e75d3d503ea913c42080d4a59e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

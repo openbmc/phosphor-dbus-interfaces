@@ -463,6 +463,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c7fac0b6_da4c9a19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-07-11T01:24:55Z",
+      "side": 1,
+      "message": "Yes, as long as the method in 81554 is removed, we can use it.\n\nAlternatively, if we want to modify this Gerrit to use the enum definition from \"Source\" interface directly, we may need to add \"IPv4\", \"IPv6\", \"USB\", and \"RESERVED\" to distinguish between different boot sources in order to meet our requirements. For example, if there is only a \"network\" option, we would not be able to tell whether it is IPv4 or IPv6.\n\nDo you have any suggestions?",
+      "parentUuid": "55e52786_d77bc35d",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

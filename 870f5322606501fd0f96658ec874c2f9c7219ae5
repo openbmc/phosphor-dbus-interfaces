@@ -481,6 +481,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d8a3d7df_eb9b4c43",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-07-11T01:33:51Z",
+      "side": 1,
+      "message": "Additionally, our current implementation uses IPMI commands to get/set boot order, following the tables defined in the IPMI specification. We do not use direct string input.",
+      "parentUuid": "c7fac0b6_da4c9a19",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

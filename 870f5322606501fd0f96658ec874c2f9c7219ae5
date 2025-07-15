@@ -499,6 +499,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6ca6519d_0ce7ec11",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-07-15T03:06:07Z",
+      "side": 1,
+      "message": "Hi @patrick@stwcx.xyz,\nI tried to define a property using array[enum] and attempted to configure it through phosphor-settingsd. However, the current issue is that phosphor-settings doesn\u0027t seem to support the array[enum] data type, which results in a build failure.\n\nIf that\u0027s the case, would it be possible to temporarily use array[string] instead? Alternatively, I might need to store the value persistently using a local file on my side.",
+      "parentUuid": "d8a3d7df_eb9b4c43",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

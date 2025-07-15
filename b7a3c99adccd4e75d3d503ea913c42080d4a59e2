@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "aa6ee7aa_d09b154a",
+        "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1002506
+      },
+      "writtenOn": "2025-07-15T12:53:33Z",
+      "side": 1,
+      "message": "Thanks for the feedback, Patrick.\n\nI initially considered setting \"link-layer\" as the default DUIDType based on the discussion in https://github.com/openbmc/openbmc/issues/1280. However, I understand your point, and I agree that \"vendor\" is a more appropriate default — it aligns with systemd-networkd\u0027s default behavior and offers better consistency.\n\nIf there are no further concerns, I’d suggest proceeding with \"vendor\" as the default DUIDType — would that work for you?\n\nRegarding configuration, we plan to support changing DUIDType and IAID via `set-property` (just like other properties) or by editing the `.network` file (e.g., `00-bmc-eth0.network`). To minimize potential impact, the DUIDType/IAID logic is wrapped in a build-time flag (e.g., `#ifdef ENABLE_IPV6_DUID_IAID`) and can be explicitly disabled in the bbfile if not needed.",
+      "parentUuid": "13a50ca2_c5cf300e",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 24
+      },
+      "revId": "b7a3c99adccd4e75d3d503ea913c42080d4a59e2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2cef099e_f0be3e48",
         "filename": "yaml/xyz/openbmc_project/Network/DHCPConfiguration.interface.yaml",
         "patchSetId": 3

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d839ad5_72207c15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2025-07-17T05:18:58Z",
+      "side": 1,
+      "message": "Just doubts:\n\nI was under the impression that the Failover interface was intended to be generic and could be used in different contexts as needed. So, wouldn\u0027t it make sense for FailoverInProgress to be part of that generic interface? Or is the intention to keep the failover progress status within the specific implementation, like the Redundancy interface?",
+      "revId": "c75c853c965f38cce7e81e66d706a84dbe216759",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

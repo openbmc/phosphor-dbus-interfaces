@@ -28,6 +28,12 @@ enumerations:
             description: >
                 A unique id of failing hardware unit which is causing the dump.
                 The value should be a 32 bit unsigned integer.
+          - name: "ACFPath"
+            description: >
+                The absolute path to a targeted Access Control File (ACF)
+                used to trigger a specific host operation like resource
+                dump. The file is parsed by the BMC and sent to the host
+                via PLDM.
 
     - name: DumpType
       description: >

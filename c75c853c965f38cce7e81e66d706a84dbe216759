@@ -34,6 +34,24 @@
       "parentUuid": "1d839ad5_72207c15",
       "revId": "c75c853c965f38cce7e81e66d706a84dbe216759",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0de7cea_a2814694",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2025-07-18T05:44:34Z",
+      "side": 1,
+      "message": "Hmm, I don\u0027t have a strong preference. In my opinion, everything should ideally fall under the Failover interface.\n\nHowever, I understand that the SiblingService also needs to represent certain states, as you mentioned above. The challenge is that this approach forces us to define the Failover methods in SiblingService, and since Failover has pure virtual functions, we would need to return errors indicating that these methods are unsupported in the SiblingService and should be supported only RBMC service.\n\nI am ok with it by considering current limitation.",
+      "parentUuid": "74e8a38c_024a83af",
+      "revId": "c75c853c965f38cce7e81e66d706a84dbe216759",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

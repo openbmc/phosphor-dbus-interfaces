@@ -46,6 +46,14 @@ properties:
           resource dump to indicate whether the request is successful or there
           is an error.
       default: Unknown
+    - name: ACFPath
+      type: string
+      description: >
+          The full path to the targeted Access Control File (ACF) used for
+          privileged operations such as resource dumps. The ACF content is sent
+          to the host via PLDM to trigger the intended operation. This file is
+          passed during the create request and retained in the D-Bus entry so
+          the PLDM responder can pick it up.
 
 enumerations:
     - name: HostResponse

@@ -18,7 +18,9 @@ description: >
     Any service implementing Sensor.Value on one or more objects must implement
     org.freedesktop.DBus.ObjectManager on /xyz/openbmc_project/sensors.
 
-    All Sensor.Value properties are read-only.
+    All Sensor.Value properties are read-only, unless the
+    xyz.openbmc_project.Sensor.ValueMutability interface is present on the same
+    object path. In that case, refer to the docs for ValueMutability interface.
 
 properties:
     - name: Value

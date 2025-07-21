@@ -16,6 +16,24 @@
       "message": "Not only must it be present, but the value of it must be `True`. If it is present but `False`, it is not mutable (the default).",
       "revId": "0d2af5d89e3a9e061c685490d5d0951c24e7bd03",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cd7eb60_9fa4d3a0",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-07-21T08:19:50Z",
+      "side": 1,
+      "message": "Thanks for pointing that out, i assumed the interface would have no properties 😊\n\nAdjusted the description to point to the relevant docs instead of duplicating the information here.",
+      "parentUuid": "09d413c9_9bae05bd",
+      "revId": "0d2af5d89e3a9e061c685490d5d0951c24e7bd03",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

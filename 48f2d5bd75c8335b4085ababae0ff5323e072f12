@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "05f075ae_ff9a7f8e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-07-22T19:48:55Z",
+      "side": 1,
+      "message": "Is being deprecated by Redfish? \n\nI think it is reasonable to have a PCIeDevice -\u003e connected_to -\u003e Cpu \nIMO, this should be rewrote to not include Redfish and just state this is a connected_to association just like the PCIeSlot can be connected_to",
+      "range": {
+        "startLine": 15,
+        "startChar": 30,
+        "endLine": 15,
+        "endChar": 40
+      },
+      "revId": "48f2d5bd75c8335b4085ababae0ff5323e072f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "38682a3f_55d51b2f",
@@ -14,6 +37,23 @@
       "writtenOn": "2025-07-11T22:09:51Z",
       "side": 1,
       "message": "Related commits are:\n\n- https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/81914\n- https://gerrit.openbmc.org/c/openbmc/openbmc/+/81919\n- https://gerrit.openbmc.org/c/openbmc/bmcweb/+/69050",
+      "revId": "48f2d5bd75c8335b4085ababae0ff5323e072f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "801cfa8a_208a1ce7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-07-22T19:48:55Z",
+      "side": 1,
+      "message": "I am good with this association/code but would like to see the commit msg updated",
       "revId": "48f2d5bd75c8335b4085ababae0ff5323e072f12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

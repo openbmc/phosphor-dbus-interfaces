@@ -1,0 +1,66 @@
+description: >
+    Interface representing the provisioning state and peer connectivity status
+    of the BMC. It provides properties to indicate whether the BMC has been
+    provisioned and the current connection state with the peer BMC, along with a
+    method to initiate peer provisioning and a signal to report its result.
+
+properties:
+    - name: Provisioned
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          True means the BMC is in a provisioned state.
+    - name: PeerConnected
+      type: enum[self.PeerConnectionStatus]
+      flags:
+          - readonly
+      default: NotDetermined
+      description: >
+          Represents the connection status with the peer BMC.
+
+methods:
+    - name: ProvisionPeer
+      description: >
+          Starts the provisioning process on the peerBmc .
+      parameters:
+          - name: bmcId
+            type: string
+            description: >
+                Identifier of the peer BMC to be provisioned.
+
+signals:
+    - name: PeerProvisioned
+      description: >
+          Emitted when the ProvisionPeer method completes. The signal carries a
+          boolean indicating whether provisioning on the peer succeeded or
+          failed.
+      properties:
+          - type: boolean
+            description: >
+                True if provisioning on the peer BMC succeeded, false if it
+                failed.
+
+enumerations:
+    - name: PeerConnectionStatus
+      description: >
+          Enumerates the possible states of peer BMC connectivity.
+      values:
+          - name: NotDetermined
+            description: >
+                The peer connection status has not been determined yet.
+          - name: InProgress
+            description: >
+                The system is currently attempting to determine the connection
+                status with the peer BMC.
+          - name: Connected
+            description: >
+                The peer BMC is detected and reachable.
+          - name: NotConnected
+            description: >
+                Peer BMC connection failed.
+
+paths:
+    - instance: /xyz/openbmc_project/Provisioning
+      description: >
+          Expected path of the Provisioning interface instance.

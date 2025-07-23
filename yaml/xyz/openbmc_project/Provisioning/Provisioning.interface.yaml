@@ -1,0 +1,41 @@
+description: >
+    Interface to represent the provisioning status of the BMC. Provides a
+    property to indicate whether the BMC is provisioned, and methods to initiate
+    provisioning and check the peer BMC connection.
+properties:
+    - name: Provisioned
+      type: boolean
+      flags:
+          - readonly
+      default: false
+      description: >
+          True means the BMC is in a provisioned state.
+    - name: PeerConnected
+      type: boolean
+      flags:
+          - readonly
+      default: false
+      description: >
+          True if a peer BMC is present and detected on the network. False if no
+          peer BMC is present or not connected.
+methods:
+    - name: ProvisionPeer
+      description: >
+          Starts the provisioning process on the peerBmc .
+
+    - name: InitiatePeerConnectionTest
+      description: >
+          Initiates a mutual TLS (mTLS) handshake with the peer BMC to verify
+          connectivity. The outcome of the attempt (success or failure) is
+          reflected in the PeerConnected property.
+signals:
+    - name: PeerProvisioned
+      description: >
+          Emitted when the ProvisionPeer method completes. The signal carries a
+          boolean indicating whether provisioning on the peer succeeded or
+          failed.
+      args:
+          - type: boolean
+            description: >
+                True if provisioning on the peer BMC succeeded, false if it
+                failed.

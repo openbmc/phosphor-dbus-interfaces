@@ -48,6 +48,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "11c2ccf2_8e5f5267",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001604
+      },
+      "writtenOn": "2025-07-23T12:45:45Z",
+      "side": 1,
+      "message": "https://www.dmtf.org/sites/default/files/standards/documents/DSP2046_2024.2.html#pcieslots-161-deprecated says that PCIeSlots is deprecated from v1.6.1.\n\n\u003eIMO, this should be rewrote to not include Redfish and just state this is a connected_to association just like the PCIeSlot can be connected_to\nI rephrased it.",
+      "parentUuid": "a25a0316_b9144814",
+      "range": {
+        "startLine": 15,
+        "startChar": 30,
+        "endLine": 15,
+        "endChar": 40
+      },
+      "revId": "48f2d5bd75c8335b4085ababae0ff5323e072f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "38682a3f_55d51b2f",

@@ -16,6 +16,16 @@ methods:
             description: >
                 This property indicates when the software image update should be
                 applied.
+          - name: Targets
+            type: array[object_path]
+            description: >
+                An array of D-Bus object paths that are in the
+                /xyz/openbmc_project/software/ namespace that indicate the
+                firmware targets to be updated. The targets for firmware update
+                will be the intersection of the Targets property and the
+                firmware inventory the package is intended to update. If the
+                Targets property is empty, the targets intended to be updated by
+                package will be updated.
       returns:
           - name: ObjectPath
             type: object_path
@@ -36,3 +46,12 @@ properties:
           This property indicates the apply times allowed for this device.
       flags:
           - readonly
+    - name: AllowedTargets
+      type: boolean
+      description: >
+          This property indicates whether the device supports targeted component
+          updates. When true, the Targets parameter in StartUpdate method is
+          accepted.
+      flags:
+          - readonly
+      default: false

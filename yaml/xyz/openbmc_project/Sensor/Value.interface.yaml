@@ -13,6 +13,7 @@ description: >
       pressure
       temperature
       utilization
+      valve_open
       voltage
 
     Any service implementing Sensor.Value on one or more objects must implement
@@ -49,7 +50,8 @@ properties:
           "Pascals" For objects in the temperature namespace, Unit must be
           "DegreesC". For objects in the utilization namespace, Unit must be
           "Percent" For objects in the voltage namespace, Unit must be "Volts",
-          For objects in the liquidflow namespace, Unit must be "LPM".
+          For objects in the liquidflow namespace, Unit must be "LPM". For
+          objects in the valve_open namespace, Unit must be "Percent".
 
 enumerations:
     - name: Unit
@@ -136,5 +138,7 @@ paths:
             value: temperature
           - name: Utilization
             value: utilization
+          - name: ValveOpen
+            value: valve_open
           - name: Voltage
             value: voltage

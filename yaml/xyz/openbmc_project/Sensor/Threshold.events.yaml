@@ -1,16 +1,6 @@
-version: 1.0.2
+version: 1.0.3
 
 errors:
-    - name: InvalidSensorReading
-      severity: warning
-      errno: EIO
-      metadata:
-          - name: SensorName
-            description: The name or identifier of the sensor.
-            type: object_path
-            primary: true
-      redfish-mapping: SensorEvent.InvalidSensorReading
-
     - name: ReadingAboveLowerCriticalThreshold
       severity: warning
       errno: ERANGE
@@ -417,16 +407,6 @@ errors:
             primary: true
       redfish-mapping: SensorEvent.ReadingNoLongerCritical
 
-    - name: SensorFailure
-      severity: critical
-      errno: EIO
-      metadata:
-          - name: SensorName
-            description: The name or identifier of the sensor.
-            type: object_path
-            primary: true
-      redfish-mapping: SensorEvent.SensorFailure
-
 events:
     - name: SensorReadingNormalRange
       metadata:
@@ -443,11 +423,3 @@ events:
             type: enum[xyz.openbmc_project.Sensor.Value.Unit]
             primary: true
       redfish-mapping: SensorEvent.SensorReadingNormalRange
-
-    - name: SensorRestored
-      metadata:
-          - name: SensorName
-            description: The name or identifier of the sensor.
-            type: object_path
-            primary: true
-      redfish-mapping: SensorEvent.SensorRestored

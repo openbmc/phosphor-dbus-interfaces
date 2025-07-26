@@ -1,4 +1,4 @@
-version: 1.0.1
+version: 1.1.0
 
 errors:
     - name: InvalidSensorReading
@@ -362,6 +362,60 @@ errors:
             type: double
             primary: true
       redfish-mapping: SensorEvent.ReadingBelowFatalThreshold
+
+    - name: ReadingWarning
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: SensorName
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+      redfish-mapping: SensorEvent.ReadingWarning
+
+    - name: ReadingCritical
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: SensorName
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+      redfish-mapping: SensorEvent.ReadingCritical
+
+    - name: ReadingNoLongerCritical
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: SensorName
+            description: The name or identifier of the sensor.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The reading of the sensor.
+            type: double
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Sensor.Value.Unit]
+            primary: true
+      redfish-mapping: SensorEvent.ReadingNoLongerCritical
 
     - name: SensorFailure
       severity: critical

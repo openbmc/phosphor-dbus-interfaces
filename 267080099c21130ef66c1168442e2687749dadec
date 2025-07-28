@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "932f1222_38c3aeed",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Pair.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-07-28T20:19:14Z",
+      "side": 1,
+      "message": "\u003e So there would be another Valve interface on D-Bus with this name?  \n\nThe name would be different but this property tells whats the name of the other item in the pair. For example, \nName: SupplyValve1 is paired with ReturnValve1 by using this decorator. The pair decorator for one needs to have other one\u0027s in its value. So, the consumer can lookup this name for that inventory item type and figure out whats it is paired with.\n\n\u003e If so, would an association work better?\n\nFirst i had thought about associations too. Can entity manager create associations based on name between 2 such items?",
+      "parentUuid": "ae01660d_1e31e68d",
+      "revId": "267080099c21130ef66c1168442e2687749dadec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d80be379_634271e4",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
         "patchSetId": 3
@@ -31,6 +49,30 @@
       "writtenOn": "2025-07-28T20:02:43Z",
       "side": 1,
       "message": "Can thsi just be an enum?",
+      "range": {
+        "startLine": 9,
+        "startChar": 66,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "267080099c21130ef66c1168442e2687749dadec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "347edc4b_e1010176",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-07-28T20:19:14Z",
+      "side": 1,
+      "message": "Right now i have made this as enum in EM schema https://gerrit.openbmc.org/c/openbmc/entity-manager/+/77415/13/schemas/openbmc-dbus.json and made it string here because defining as enum in PDI will prepend it with xyz.openbmc_project.X and i was asked to not use xyz.openbmc_project.X enum values in EM schemas.",
+      "parentUuid": "d80be379_634271e4",
       "range": {
         "startLine": 9,
         "startChar": 66,

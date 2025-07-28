@@ -1,0 +1,28 @@
+description: >
+    Implement to provide entity manager configuration for the gpio based valve.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          The type of configuration object.
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: >
+          The name of the valve.
+      flags:
+          - readonly
+    - name: PinName
+      type: string
+      description: >
+          The name of the GPIO pin that shows the valve's open status.
+      flags:
+          - readonly
+    - name: Polarity
+      type: string
+      description: >
+          The GPIO polarity depicting valve's open status.
+      flags:
+          - readonly

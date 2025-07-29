@@ -106,6 +106,10 @@ phosphor_dbus_interfaces_dep = declare_dependency(
     ],
 )
 
+if meson.is_subproject()
+    phosphor_dbus_interfaces_dep = phosphor_dbus_interfaces_dep.as_system()
+endif
+
 meson.override_dependency(
     'phosphor-dbus-interfaces',
     phosphor_dbus_interfaces_dep,

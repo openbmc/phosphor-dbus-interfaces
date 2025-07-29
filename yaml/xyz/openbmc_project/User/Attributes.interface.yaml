@@ -4,6 +4,17 @@ description: >
     validation for the both.
 
 properties:
+    - name: BootStrapAccount
+      type: boolean
+      default: false
+      description: >
+          Indicates whether this account was created by the Redfish Host
+          Interface credential bootstrapping mechanism described in DSP0270.
+          Such accounts are created on request from the host through the IPMI
+          (Get bootstrap account credentials) command, and are removed when the
+          service handling them or the host is reset. False for accounts created
+          by any other means.
+
     - name: UserGroups
       type: array[string]
       description: >

@@ -4,6 +4,12 @@ description: >
     validation for the both.
 
 properties:
+    - name: BootStrapAccount
+      type: boolean
+      description: >
+          True for bootStrap users.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
     - name: UserGroups
       type: array[string]
       description: >

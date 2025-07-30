@@ -49,6 +49,21 @@ properties:
           not trigger any intervention that could be necessary when redundancy
           is lost just due to a BMC reboot.  Any time the passive BMC goes
           offline a full file sync would be necessary when it comes back.
+    - name: RedundancyMinimum
+      type: size
+      flags:
+          - readonly
+      default: false
+      description: >
+          The minimum number of BMC objects needed for redundancy to be enabled.
+    - name: RedundancyMaximum
+      type: size
+      flags:
+          - readonly
+      default: false
+      description: >
+          The maximum number of BMC objects allowed to be part of the redundancy
+          group.
 
 enumerations:
     - name: Role

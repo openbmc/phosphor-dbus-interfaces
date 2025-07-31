@@ -9,3 +9,19 @@ properties:
       description: >
           This means the name of the thermal/Power PID config that is driving
           the fans.
+    - name: FailSafeSensors
+      type: dict[string,string]
+      flags:
+        - readonly
+      description: >
+          A mapping from sensor name to a string describing the reason for that sensor's
+          current fail-safe state within this zone.
+          Sensors are added to this map when they are detected as failed, due to reasons such as:
+            - "Sensor reading bad"
+            - "Margin hot"
+            - "Sensor threshold asserted"
+            - "Sensor unavailable"
+            - "Sensor not functional"
+            - "Sensor timeout"
+          Sensors are removed from the map automatically when they recover.
+          An empty map indicates that all sensors are currently healthy.

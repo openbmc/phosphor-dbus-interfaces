@@ -9,3 +9,35 @@ properties:
       description: >
           This means the name of the thermal/Power PID config that is driving
           the fans.
+    - name: FailSafeSensors
+      type: dict[string,enum[self.FailureReason]]
+      flags:
+          - readonly
+      description: >
+        A mapping from sensor name to the canonical enum reason for that
+        sensor's current fail-safe state within this zone. Sensors are added
+        to this map when they are detected as failed, and removed automatically
+        when they recover. An empty map indicates that all sensors are
+        currently healthy.
+
+enumerations:
+    - name: FailureReason
+      description: >
+          Canonical fail-safe reasons for sensors
+      values:
+          - name: MissingSensor
+            description: Sensor D-Bus object missing.
+          - name: Timeout
+            description: Sensor timed out waiting for data.
+          - name: BadReading
+            description: Sensor returned non-finite reading.
+          - name: MarginHot
+            description: Thermal margin at or below zero.
+          - name: ThresholdAsserted
+            description: Critical (or warning, if enabled) threshold asserted.
+          - name: Unavailable
+            description: Sensor is unavailable.
+          - name: NotFunctional
+            description: Sensor is not functional.
+          - name: Unknown
+            description: Unknown or unspecified failure reason.

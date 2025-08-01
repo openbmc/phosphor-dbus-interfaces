@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5c9c3e8_6d31ed5e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2025-08-01T03:49:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa6c8968_0ce24ef1",
+      "revId": "12ad4d0114b52f75c1f077e046dd116eb0054a55",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d1826abc_00c9adf0",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "00657311_26c6b7c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2025-08-01T03:49:49Z",
+      "side": 1,
+      "message": "I think the commit message already mention about this\n```\nCheck the Redfish HostInterface schema [2], there are three properties\n`EnableAfterReset`, `Enabled` and `RoleId`. These properties are used to\nresponse for Redfish HostInterface requests. This properties are hosted\nby phopshor-user-manager. The values of the properties in the interface\nare updated by phosphor-ipmi-host when handling ipmi command `Get\nbootstrap account credentials (NetFn 2Ch, Command 02h)`.\n\n```",
+      "parentUuid": "d1826abc_00c9adf0",
+      "revId": "12ad4d0114b52f75c1f077e046dd116eb0054a55",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "633f3446_1b79796d",
@@ -48,6 +84,24 @@
       "writtenOn": "2025-07-23T03:55:03Z",
       "side": 1,
       "message": "Should this not be readonly ?",
+      "revId": "12ad4d0114b52f75c1f077e046dd116eb0054a55",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33ac95f9_90eda558",
+        "filename": "yaml/xyz/openbmc_project/HostInterface/CredentialBootstrapping.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2025-08-01T03:49:49Z",
+      "side": 1,
+      "message": "No, the enabled will be updated to false when user call `Get bootstrap account credentials` with `credential bootstrapping control:` is not 0xA5 as DSP0270 spec.",
+      "parentUuid": "633f3446_1b79796d",
       "revId": "12ad4d0114b52f75c1f077e046dd116eb0054a55",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

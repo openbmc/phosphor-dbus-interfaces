@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "540b5012_67f04d3a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-08-01T14:18:09Z",
+      "side": 1,
+      "message": "These are mapping to https://redfish.dmtf.org/schemas/v1/Redundancy.v1_5_0.json from \n\n                \"MaxSupportedInGroup\": {\n                    \"description\": \"The maximum number of devices supported in this redundancy group.\",\n                    \"longDescription\": \"This property shall contain the maximum number of devices allowed in the redundancy group.\",\n                    \"readonly\": true,\n                    \"type\": [\n                        \"integer\",\n                        \"null\"\n                    ],\n                    \"versionAdded\": \"v1_4_0\"\n                },\n                \"MinNeededInGroup\": {\n                    \"description\": \"The minimum number of devices needed for this group to be redundant.\",\n                    \"longDescription\": \"This property shall contain the minimum number of functional devices needed in the redundancy group for the current redundancy mode to be fault tolerant.\",\n                    \"readonly\": true,\n                    \"type\": [\n                        \"integer\",\n                        \"null\"\n                    ],\n                    \"versionAdded\": \"v1_4_0\"\n                },\n\nI assume?\n\nIn a simple Active and Backup design, is 2 and 2 what these values will be?",
+      "revId": "6b2d7cd923b6f59a760ead1dcea7c7e16776bc47",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

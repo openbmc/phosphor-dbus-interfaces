@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f9f6f1a4_6e80e9ed",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-08-04T13:20:37Z",
+      "side": 1,
+      "message": "From the Redfish mockup of this case I expect this would be minimum:1; maximum:2.\n\nhttps://redfish.dmtf.org/redfish/mockups/v1/1590\n(See Managers-\u003eSwitch1)",
+      "parentUuid": "540b5012_67f04d3a",
+      "revId": "6b2d7cd923b6f59a760ead1dcea7c7e16776bc47",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "19e089d4_5eb96152",
         "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
         "patchSetId": 1
@@ -31,6 +49,30 @@
       "writtenOn": "2025-08-01T14:22:17Z",
       "side": 1,
       "message": "While it may just get converted to zero here, \u0027false\u0027 probably isn\u0027t the ideal default value for a property of type \u0027size\u0027.",
+      "range": {
+        "startLine": 56,
+        "startChar": 15,
+        "endLine": 56,
+        "endChar": 20
+      },
+      "revId": "6b2d7cd923b6f59a760ead1dcea7c7e16776bc47",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "572de1df_12bd0273",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-08-04T13:20:37Z",
+      "side": 1,
+      "message": "Good catch! I meant to remove the default values. I\u0027ve removed them now.",
+      "parentUuid": "19e089d4_5eb96152",
       "range": {
         "startLine": 56,
         "startChar": 15,

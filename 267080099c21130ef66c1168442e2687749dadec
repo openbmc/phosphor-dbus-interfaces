@@ -36,6 +36,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a843639_9f1b8fe4",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Pair.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-08-04T20:01:18Z",
+      "side": 1,
+      "message": "It kinda sounds like EM\u0027s \u0027physical topology\u0027 associations, which creates associations between its own objects.  It would take some invention to figure out how to get the code to do that for this case, so this way would certainly be easier.  I\u0027m sure @patrick@stwcx.xyz will have an opinion here so I\u0027ll defer to him.",
+      "parentUuid": "932f1222_38c3aeed",
+      "revId": "267080099c21130ef66c1168442e2687749dadec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d80be379_634271e4",
@@ -73,6 +91,30 @@
       "side": 1,
       "message": "Right now i have made this as enum in EM schema https://gerrit.openbmc.org/c/openbmc/entity-manager/+/77415/13/schemas/openbmc-dbus.json and made it string here because defining as enum in PDI will prepend it with xyz.openbmc_project.X and i was asked to not use xyz.openbmc_project.X enum values in EM schemas.",
       "parentUuid": "d80be379_634271e4",
+      "range": {
+        "startLine": 9,
+        "startChar": 66,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "267080099c21130ef66c1168442e2687749dadec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "163bc00e_b2b59839",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-08-04T20:01:18Z",
+      "side": 1,
+      "message": "Makes sense to me.",
+      "parentUuid": "347edc4b_e1010176",
       "range": {
         "startLine": 9,
         "startChar": 66,

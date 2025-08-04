@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de3c471c_845a6642",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-04T12:03:32Z",
+      "side": 1,
+      "message": "Don\u0027t think this is a \"must\".",
+      "revId": "512be00b4d1fafa7b27ef6f8fa2d4308c683f1bb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0739a50_4ec9ddb5",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-04T12:03:32Z",
+      "side": 1,
+      "message": "There are 2 more in Redfish. Why not add them here?",
+      "revId": "512be00b4d1fafa7b27ef6f8fa2d4308c683f1bb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c46617d_0704ad7b",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-04T12:03:32Z",
+      "side": 1,
+      "message": "I dont think \"device\" is applicable here. This is an on-board physical sensor.",
+      "revId": "512be00b4d1fafa7b27ef6f8fa2d4308c683f1bb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d658c2d_f4d320b9",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-04T12:03:32Z",
+      "side": 1,
+      "message": "Local device is a bit ambigious. Does this restrict to hwmon/adc type sensors? What about PLDM/IPMB sensors for eg?",
+      "range": {
+        "startLine": 50,
+        "startChar": 16,
+        "endLine": 50,
+        "endChar": 28
+      },
+      "revId": "512be00b4d1fafa7b27ef6f8fa2d4308c683f1bb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4a6beff_f8edf5b8",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-04T12:03:32Z",
+      "side": 1,
+      "message": "By other BMC do you mean a multi-BMC case? Is PLDM an example here? If so, we can call it out.",
+      "revId": "512be00b4d1fafa7b27ef6f8fa2d4308c683f1bb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -85,6 +85,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "370a036b_8ae018db",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-04T12:03:32Z",
+      "side": 1,
+      "message": "I don\u0027t have a very string opinion about adding these here vs in Sensor.Value. With the approach in this commit, I see the benefit of bmcweb acting if it finds the new interface implemented.",
+      "parentUuid": "97719fc5_33183147",
+      "revId": "aba26e17c37eb1392838358d8fb3f367d9abdaef",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "57ba1c61_5293c40a",
         "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
         "patchSetId": 1

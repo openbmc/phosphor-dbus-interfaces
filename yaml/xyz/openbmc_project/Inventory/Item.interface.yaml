@@ -120,6 +120,14 @@ associations:
       reverse_name: connecting
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Cable
+    - name: controlled_by
+      description:
+          Object that implements Item can optionally implement the
+          'controlled_by' association to provide a link to the control
+          interface.
+      reverse_name: controlling
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Control.Valve
 
 paths:
     - namespace: /xyz/openbmc_project/inventory

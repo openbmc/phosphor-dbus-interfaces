@@ -1,0 +1,37 @@
+description: >
+    Implement to provide a valve control interface to open/close a valve.
+
+    Any service implementing this interface must also implement
+    the  xyz.openbmc_project.Sensors.Value interface to show valve's open status
+    in percentage units.
+
+properties:
+    - name: State
+      type: enum[self.State]
+      description: >
+          This indicates the property used to open or close the valve.
+
+enumerations:
+    - name: State
+      description: >
+          This indicates which status should be configured for the valve.
+      values:
+          - name: Open
+            description: >
+                This indicates the valve should be opened.
+          - name: Close
+            description: >
+                This indicates the valve should be closed.
+
+associations:
+    - name: controlling
+      description: >
+          A valve control interface can optionally implement the 'controlling'
+          association to provide link to the inventory item being controlled by
+          it.
+      reverse_name: controlled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Valve
+
+paths:
+    - namespace: /xyz/openbmc_project/control/valve

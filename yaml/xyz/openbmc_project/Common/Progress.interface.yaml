@@ -8,7 +8,7 @@ description: >
 properties:
     - name: Status
       type: enum[self.OperationStatus]
-      default: InProgress
+      default: NotStarted
       description: >
           Indicate the state of the operation, whether in progress, completed
           aborted or failed. The default should be InProgress during the
@@ -29,6 +29,9 @@ enumerations:
       description: >
           Status of the activity
       values:
+          - name: NotStarted
+            description: >
+                Requested operation is not started.
           - name: InProgress
             description: >
                 Requested operation is in progress.

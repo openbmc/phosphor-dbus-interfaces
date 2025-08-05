@@ -1,0 +1,19 @@
+description: >
+    Implement to provide a valve control interface to open/close a valve.
+
+    Any service implementing this interface must also implement
+    the  xyz.openbmc_project.Sensors.Value interface on the same object path to
+    show valve's open status in percentage units.
+
+properties:
+    - name: OpenValve
+      type: boolean
+      description: >
+          The target open status of the valve. If the value is true, the valve
+          will be opened. If the value is false, the valve will be closed.
+
+paths:
+    - namespace: /xyz/openbmc_project/control
+      segments:
+          - name: ValveOpen
+            value: valve_open

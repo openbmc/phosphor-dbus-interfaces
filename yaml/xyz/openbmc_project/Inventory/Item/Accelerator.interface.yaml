@@ -20,6 +20,14 @@ associations:
       reverse_name: contained_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Dimm
+    - name: contained_by
+      description: >
+          Accelerators can optionally implement the 'contained_by' association
+          to provide a link to the chassis or board that contains this
+          accelerator.
+      reverse_name: containing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
 
 enumerations:
     - name: AcceleratorType

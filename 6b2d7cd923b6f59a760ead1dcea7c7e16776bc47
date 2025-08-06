@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c4a0630_193ddafc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-08-06T20:36:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c748f51b_7e68b882",
+      "revId": "6b2d7cd923b6f59a760ead1dcea7c7e16776bc47",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "19e089d4_5eb96152",
@@ -91,6 +109,30 @@
       "side": 1,
       "message": "Good catch! I meant to remove the default values. I\u0027ve removed them now.",
       "parentUuid": "19e089d4_5eb96152",
+      "range": {
+        "startLine": 56,
+        "startChar": 15,
+        "endLine": 56,
+        "endChar": 20
+      },
+      "revId": "6b2d7cd923b6f59a760ead1dcea7c7e16776bc47",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f78da729_5f351682",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-08-06T20:36:51Z",
+      "side": 1,
+      "message": "In latest patch set I added back default for the RedundancyMinimum property since it is a required property. (I added it using an integer though!)",
+      "parentUuid": "572de1df_12bd0273",
       "range": {
         "startLine": 56,
         "startChar": 15,

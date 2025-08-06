@@ -11,6 +11,16 @@ properties:
       description: >
           The type of accelerator.
 
+associations:
+    - name: all_memory
+      description: >
+          Accelerators can optionally implement the 'all_memory' association to
+          provide links to one or more memory modules (DIMMs) that are
+          associated with this accelerator.
+      reverse_name: parent_processor
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Dimm
+
 enumerations:
     - name: AcceleratorType
       description: >

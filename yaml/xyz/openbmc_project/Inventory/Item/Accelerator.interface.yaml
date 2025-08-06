@@ -20,7 +20,13 @@ associations:
       reverse_name: parent_processor
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Dimm
-
+    - name: parent_chassis
+      description: >
+          Accelerators can optionally implement the 'parent_chassis' association to
+          provide a link to the chassis or board that contains this accelerator.
+      reverse_name: all_processor
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
 enumerations:
     - name: AcceleratorType
       description: >

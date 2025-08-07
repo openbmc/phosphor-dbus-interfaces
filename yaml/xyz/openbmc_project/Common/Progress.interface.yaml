@@ -29,6 +29,9 @@ enumerations:
       description: >
           Status of the activity
       values:
+          - name: NotStarted
+            description: >
+                Requested operation is not yet started.
           - name: InProgress
             description: >
                 Requested operation is in progress.

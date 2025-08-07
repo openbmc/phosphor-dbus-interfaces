@@ -535,6 +535,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b3b12523_3525ce9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-08-07T01:51:18Z",
+      "side": 1,
+      "message": "Hi @zoey.yj.chung.wiwynn@gmail.com\nCould this be PDI be part of new file ? \nHaving it part of Control/Boot/Source.interface.yaml restricts this to be part of settingsd only. \nI have a use case to implement this as part of biosconfig-manager. \nThe reason I think it should be implemented there is as the BootOrder and BootOption changes every boot removing the objects would be difficult as part of settingsd. \nPlease share your thoughts.",
+      "parentUuid": "c5fe2fb6_c756cc5e",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

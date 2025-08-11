@@ -8,3 +8,10 @@
 - name: InvalidImage
   description: >
       The supplied firmware image is invalid or corrupt.
+- name: InvalidApplyTime
+  description: >
+      The update cannot be applied at the specified time, but could be
+      applicable at another time.
+- name: InProgress
+  description: >
+      The device is currently being updated.

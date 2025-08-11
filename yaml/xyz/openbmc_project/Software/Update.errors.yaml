@@ -8,3 +8,7 @@
 - name: InvalidImage
   description: >
       The supplied firmware image is invalid or corrupt.
+- name: UnsupportedApplyTime
+  description: >
+      The supplied apply time is not supported by the update service for the
+      target device.

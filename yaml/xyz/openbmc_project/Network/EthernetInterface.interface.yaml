@@ -72,6 +72,8 @@ properties:
           This property describes statically defined NTPServers on the
           interface. This property supports read/write operation. Configure the
           NTP servers on the system during write operation.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
     - name: LinkLocalAutoConf
       type: enum[self.LinkLocalConf]
       description: >

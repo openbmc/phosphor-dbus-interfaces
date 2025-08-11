@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f24c7ca_1f6a5ba6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-08-11T05:59:00Z",
+      "side": 1,
+      "message": "Hi @prithvi24pai@gmail.com\n\nWould your implementation be able to work with it if I define \"BootOrder\" as a separate interface (like in https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/81554), register only the property (without registering a method, as that would prevent settingsd from using it), and continue using the current definition of \"BootOrder\" as an array of enums? I believe using an array[string] approach for \"BootOrder\" is unlikely to be accepted.\n\nI think if this works, it would allow us to configure the property via settingsd, while still enabling your use case as well.",
+      "revId": "8bddd7cf1197e4437995adc1a917072c2ee848b4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

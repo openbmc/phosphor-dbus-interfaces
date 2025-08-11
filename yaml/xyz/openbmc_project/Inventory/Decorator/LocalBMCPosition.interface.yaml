@@ -1,0 +1,14 @@
+description: >
+    Holds the local BMC's position. Relevant when there can be multiple BMCs in
+    the system.
+properties:
+    - name: Position
+      type: size
+      description: >
+          The position of the local BMC.
+    - name: Valid
+      type: boolean
+      default: false
+      description: >
+          If the position value is valid.  It wouldn't be if it hasn't been
+          determined yet or there was an error obtaining it.

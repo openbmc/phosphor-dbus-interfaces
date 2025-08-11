@@ -1,0 +1,13 @@
+description: >
+    Holds the position of an inventory item when it's necessary to distinguish
+    it from other inventory items of the same type.
+
+    Use this interface when the the object in question does not represent a
+    literal slot (a narrow opening) or plug into one. If it does, then prefer
+    the slot decorator interface.
+properties:
+    - name: Position
+      type: size
+      default: maxint
+      description: >
+          The position.

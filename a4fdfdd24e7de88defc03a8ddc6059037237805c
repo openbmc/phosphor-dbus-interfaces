@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "32545400_f4eb6dba",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-08-12T07:16:59Z",
+      "side": 1,
+      "message": "Indeed, PLDM is the only current target in my mind to host this interface. I\u0027m Okay with either placing it in Common/ or PLDM/.\n\nPutting it under PLDM/ will require future consumers of this interface to be aware that they are retrieving files via PLDM. However, as the intended purpose for this interface is for BMC to retrieve system dump and the interaction between BMC and Host/remote entities might need to be OEM-defined, that awareness can inevitably be involved.",
+      "parentUuid": "05a47617_06671a64",
+      "revId": "a4fdfdd24e7de88defc03a8ddc6059037237805c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "add76c25_72cee2e5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2

@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "af78f411_1825d0b4",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-08-12T13:57:13Z",
+      "side": 1,
+      "message": "There is code that needs to know which BMC it is running on, i.e. 0 or 1, which we can get from a GPIO.\n\nIf it is a generic position interface, it would have to go somewhere unique like \u0027inventory/system\u0027 so that code could find it.",
+      "parentUuid": "38c89532_a6d55c8b",
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cc33415d_05f8d457",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
         "patchSetId": 2
@@ -43,6 +61,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "33016ab2_a95c92ca",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-08-12T13:57:13Z",
+      "side": 1,
+      "message": "Yea, probably should be, thanks.",
+      "parentUuid": "cc33415d_05f8d457",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 40
+      },
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8a4c16e7_0319a298",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
         "patchSetId": 2
@@ -54,6 +96,30 @@
       "writtenOn": "2025-08-12T13:19:00Z",
       "side": 1,
       "message": "I don\u0027t think this is appropriate on an inventory item.  If it isn\u0027t valid or can\u0027t be determined, don\u0027t create the interface.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 60
+      },
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4659a827_ce610128",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-08-12T13:57:13Z",
+      "side": 1,
+      "message": "Will fix.",
+      "parentUuid": "8a4c16e7_0319a298",
       "range": {
         "startLine": 9,
         "startChar": 0,

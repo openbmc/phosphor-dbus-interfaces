@@ -60,3 +60,8 @@ methods:
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.Common.Error.InternalFailure
+
+service_names:
+    - default: xyz.openbmc_project.Attestation
+paths:
+    - instance: /xyz/openbmc_project/ComponentIntegrity

@@ -42,3 +42,8 @@ enumerations:
           - name: Unknown
             description: >
                 Status not known yet.
+
+service_names:
+    - default: xyz.openbmc_project.Attestation
+paths:
+    - instance: /xyz/openbmc_project/ComponentIntegrity

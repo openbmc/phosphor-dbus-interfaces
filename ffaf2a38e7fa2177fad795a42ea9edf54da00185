@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2dc30f02_b0208994",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-08-12T06:29:23Z",
+      "side": 1,
+      "message": "i don\u0027t understand what do you mean by parent path here ? Can\u0027t it be just `xyz/openbmc_project/file/1` ?",
+      "range": {
+        "startLine": 4,
+        "startChar": 36,
+        "endLine": 4,
+        "endChar": 49
+      },
+      "revId": "ffaf2a38e7fa2177fad795a42ea9edf54da00185",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60c975a7_209c87b6",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-08-12T06:29:23Z",
+      "side": 1,
+      "message": "\"system\" - is rather a confusing word - do you mean it as a remote entity here which is connected to BMC via a hardware bus ? ideally, this interface should be a way for clients to obtain a remote file over PLDM.",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 56
+      },
+      "revId": "ffaf2a38e7fa2177fad795a42ea9edf54da00185",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb558367_fe06b1d5",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-08-12T06:29:23Z",
+      "side": 1,
+      "message": "If it is already in BMC, why do we even need to use this bus interface to access it ? is this a future-proof statement that, this interface can be used to stream BMC files over dbus ?",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 105,
+        "endChar": 53
+      },
+      "revId": "ffaf2a38e7fa2177fad795a42ea9edf54da00185",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "05a47617_06671a64",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-08-12T06:29:23Z",
+      "side": 1,
+      "message": "This interface appears to capture details specific to the PLDM specification, while also attempting to generalize its usage for any file on the BMC. This is problematic, as we currently lack documentation or a design that explains how applications other than PLDM could leverage this interface to expose arbitrary files over D-Bus.\n\nFor example, the concept of exclusivity in the context of `DfOpen()` is clear within PLDM, but its applicability to generic files on the BMC is unclear. Similarly, the `PurposeType` field does not seem to align well when applied to arbitrary files outside PLDM’s scope.\n\nIn my view, it would be better to scope this as an interface within the PLDM namespace for now. Once we have a well-defined design that addresses how other applications could use this interface, we can revisit making it more broadly applicable.",
+      "parentUuid": "706ed09f_f38b214e",
+      "revId": "a4fdfdd24e7de88defc03a8ddc6059037237805c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "add76c25_72cee2e5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2

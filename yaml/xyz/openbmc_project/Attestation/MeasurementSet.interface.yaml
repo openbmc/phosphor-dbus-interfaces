@@ -60,3 +60,9 @@ methods:
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.Common.Error.InternalFailure
+
+paths:
+    - namespace: /xyz/openbmc_project
+      segments:
+          - name: ComponentIntegrity
+            value: component_integrity

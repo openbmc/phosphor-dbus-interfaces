@@ -42,3 +42,9 @@ enumerations:
           - name: Unknown
             description: >
                 Status not known yet.
+
+paths:
+    - namespace: /xyz/openbmc_project
+      segments:
+          - name: ComponentIntegrity
+            value: component_integrity

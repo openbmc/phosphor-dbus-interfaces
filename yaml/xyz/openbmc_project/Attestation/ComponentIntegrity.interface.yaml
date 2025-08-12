@@ -73,3 +73,9 @@ enumerations:
           - name: Unknown
             description: >
                 Security technology not known yet.
+
+paths:
+    - namespace: /xyz/openbmc_project
+      segments:
+          - name: ComponentIntegrity
+            value: component_integrity

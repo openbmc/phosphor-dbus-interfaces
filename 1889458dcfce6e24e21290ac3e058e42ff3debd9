@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38c89532_a6d55c8b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-12T13:19:00Z",
+      "side": 1,
+      "message": "What does \"Local\" signify here?  I\u0027m having trouble determining if \"local\" and \"bmc\" are actually necessary in the interface name here or we just use \"position\".",
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc33415d_05f8d457",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-12T13:19:00Z",
+      "side": 1,
+      "message": "read-only flag?",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 40
+      },
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a4c16e7_0319a298",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-12T13:19:00Z",
+      "side": 1,
+      "message": "I don\u0027t think this is appropriate on an inventory item.  If it isn\u0027t valid or can\u0027t be determined, don\u0027t create the interface.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 60
+      },
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

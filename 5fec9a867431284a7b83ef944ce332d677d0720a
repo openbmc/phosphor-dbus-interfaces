@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bcefde90_066ee56e",
+        "filename": "yaml/xyz/openbmc_project/Common/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2025-08-13T10:05:05Z",
+      "side": 1,
+      "message": "@deepak.kodihalli.83@gmail.com Initial thought was to default it as NotStarted to capture scenario where the operation has not yet started.\nEventually we figured out that this will break some of the existing users hence we will revert back the default value to \"InProgress\".\n\nHaving said that, as the description of the interface suggests, we also wanted to capture state of operation where it has not yet started. Eg: VPD collection of any specific FRU.\nSo from our use case we are ok with just adding a value (NotStarted) in the enumeration list.",
+      "parentUuid": "ff590515_35f48021",
+      "revId": "5fec9a867431284a7b83ef944ce332d677d0720a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c5f29a28_11940fc4",
         "filename": "yaml/xyz/openbmc_project/Common/Progress.interface.yaml",
         "patchSetId": 1

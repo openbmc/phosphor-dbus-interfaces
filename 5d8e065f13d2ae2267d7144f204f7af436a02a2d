@@ -33,6 +33,24 @@
       "message": "Why not use https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common.metadata.yaml#L5?",
       "revId": "5d8e065f13d2ae2267d7144f204f7af436a02a2d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47ffaf2f_c0e62e84",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-08-13T09:27:38Z",
+      "side": 1,
+      "message": "Thanks for looking into this patch 😊\n\nInvalid argument is a parameterized error, so\n\nif i were to use `InvalidArgument`, i would have to then do string parsing in BMCWeb to see what the actual error is, or just pipe it through which defeats the purpose of message registry.\n\n\nThis is the bmcweb patch https://gerrit.openbmc.org/c/openbmc/bmcweb/+/82746\n\nwhere i can just go by the name of the error without any additional parsing.",
+      "parentUuid": "540a1706_10917f06",
+      "revId": "5d8e065f13d2ae2267d7144f204f7af436a02a2d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

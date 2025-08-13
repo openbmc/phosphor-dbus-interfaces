@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "437b8d85_9fd1079f",
+        "filename": "yaml/xyz/openbmc_project/Common/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001932
+      },
+      "writtenOn": "2025-08-13T09:54:59Z",
+      "side": 1,
+      "message": "reverting back to \u0027InProgress\u0027 as default state. notStarted will be\nused by the openpower-vpd-praser as one of the collection status indicator.",
+      "parentUuid": "ff590515_35f48021",
+      "revId": "5fec9a867431284a7b83ef944ce332d677d0720a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c5f29a28_11940fc4",
@@ -71,6 +89,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b36b476b_fcde788a",
+        "filename": "yaml/xyz/openbmc_project/Common/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001932
+      },
+      "writtenOn": "2025-08-13T09:54:59Z",
+      "side": 1,
+      "message": "as I reverted the changes back, so this is not relevant any more.",
+      "parentUuid": "c5f29a28_11940fc4",
+      "revId": "5fec9a867431284a7b83ef944ce332d677d0720a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f37ac1c4_84896f7c",
@@ -84,6 +120,24 @@
       "writtenOn": "2025-08-13T07:43:27Z",
       "side": 1,
       "message": "I\u0027d like to underatand why is this beneficial over InProgress. What are your usecases?",
+      "revId": "5fec9a867431284a7b83ef944ce332d677d0720a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3def6ba5_748ed850",
+        "filename": "yaml/xyz/openbmc_project/Common/Progress.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1001932
+      },
+      "writtenOn": "2025-08-13T09:54:59Z",
+      "side": 1,
+      "message": "For VPD, inventory items are published with status \u0027NotStarted\u0027\n \nStatus will be updated as InProgress -\u003e later to Completed/Failed while collecting FRU VPD.",
+      "parentUuid": "f37ac1c4_84896f7c",
       "revId": "5fec9a867431284a7b83ef944ce332d677d0720a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -1,0 +1,15 @@
+description: >
+    Provides the position of this BMC on /xyz/openbmc_projec/state/bmc0 when
+    there is more than one possible.
+properties:
+    - name: Position
+      type: size
+      description: >
+          The position of this BMC.
+paths:
+    - namespace: /xyz/openbmc_project/state
+      segments:
+          - name: BMC
+            description: >
+                The object representing _this_ BMC is always at bmc0.
+            value: bmc0

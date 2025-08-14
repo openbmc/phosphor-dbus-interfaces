@@ -571,6 +571,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fbc50511_ed889bac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-08-14T04:15:31Z",
+      "side": 1,
+      "message": "My use case is BIOS would send us the BootOption via Redfish Host Interface. BMC would form the BootOption object for each bootoptions. \nWe required method for this. So I wanted to check with you on this. Do you see any better way of handling this ? If you have any suggestion I would be happy to incorporate it",
+      "parentUuid": "8e8726f1_c2a25cd0",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

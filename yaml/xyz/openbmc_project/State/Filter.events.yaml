@@ -1,0 +1,21 @@
+version: 1.0.0
+
+errors:
+    - name: FilterRequiresService
+      severity: warning
+      metadata:
+          - name: FilterName
+            type: object_path
+            primary: true
+            description: The name or identifier of the filter.
+      errno: EBADSLT
+      redfish-mapping: Environmental.FilterRequiresService
+
+events:
+    - name: FilterRestored
+      metadata:
+          - name: FilterName
+            type: object_path
+            primary: true
+            description: The name or identifier of the filter.
+      redfish-mapping: Environmental.FilterRestored

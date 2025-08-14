@@ -1,0 +1,21 @@
+version: 1.0.0
+
+errors:
+    - name: PumpFailed
+      severity: critical
+      metadata:
+          - name: PumpName
+            description: The name or identifier of the pump.
+            type: object_path
+            primary: true
+      errno: EIO
+      redfish-mapping: Environmental.PumpFailed
+
+events:
+    - name: PumpRestored
+      metadata:
+          - name: PumpName
+            description: The name or identifier of the pump.
+            type: object_path
+            primary: true
+      redfish-mapping: Environmental.PumpRestored

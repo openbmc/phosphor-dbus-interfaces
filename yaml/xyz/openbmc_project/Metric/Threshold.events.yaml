@@ -1,0 +1,57 @@
+version: 1.0.0
+
+errors:
+    - name: ExceedThreshold
+      severity: informational
+      errno: ERANGE
+      metadata:
+          - name: ConfigName
+            type: string
+            primary: true
+            description: The metric type.
+          - name: CurrentValue
+            type: double
+            primary: true
+            description: The current value.
+          - name: ThresholdValue
+            type: double
+            primary: true
+            description: The threshold for monitoring.
+          - name: ThresholdType
+            type: enum[xyz.openbmc_project.Common.Threshold.Type]
+            primary: true
+            description: The threshold type.
+      en:
+          description:
+              Triggered when a monitored metric exceeds its configured
+              threshold, as detected by phosphor-health-monitor.
+          message:
+              BMC {ConfigName} ({CurrentValue}) exceed the {ThresholdType}
+              threshold ({ThresholdValue}).
+    - name: BelowThreshold
+      severity: informational
+      errno: ERANGE
+      metadata:
+          - name: ConfigName
+            type: string
+            primary: true
+            description: The metric type.
+          - name: CurrentValue
+            type: double
+            primary: true
+            description: The current value.
+          - name: ThresholdValue
+            type: double
+            primary: true
+            description: The threshold for monitoring.
+          - name: ThresholdType
+            type: enum[xyz.openbmc_project.Common.Threshold.Type]
+            primary: true
+            description: The threshold type.
+      en:
+          description:
+              Triggered when a monitored metric falls below its configured
+              threshold, as detected by phosphor-health-monitor.
+          message:
+              BMC {ConfigName} ({CurrentValue}) below the {ThresholdType}
+              threshold ({ThresholdValue}).

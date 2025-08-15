@@ -1,0 +1,27 @@
+description: >
+    An interface that allows an application to reload its configuration and
+    persisted DBus data without requiring a process restart.
+
+methods:
+    - name: ReloadAll
+      description: >
+          Reloads the entire configuration and persisted data of the
+          application.
+      errors:
+          - xyz.openbmc_project.Common.Error.UnsupportedRequest
+          - self.Error.Failure
+
+    - name: Reload
+      description: >
+          Reloads only the specified configuration or persisted data files
+          provided as input argument list. This is efficient when only a subset
+          of settings or data needs to be updated, reducing potential overhead.
+      parameters:
+          - name: paths
+            description: >
+                List of absolute file paths to reload.
+            type: array[string]
+      errors:
+          - xyz.openbmc_project.Common.Error.UnsupportedRequest
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - self.Error.Failure

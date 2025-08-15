@@ -1,0 +1,58 @@
+version: 1.0.0
+
+errors:
+    - name: ReportedSELCritical
+      severity: critical
+      metadata:
+          - name: Source
+            type: string
+            description:
+                The source which reports error. The source can be PLDM's
+                sensors, GPIO, IPMI, CPLD …
+          - name: Message
+            type: string
+            description: The reported error.
+          - name: RawData
+            type: string
+            description: The Raw data received.
+      en:
+          description: Critical System Event Log received by the BMC.
+          message: "The {Source} reports an error: {Message}"
+      errno: EIO
+
+    - name: ReportedSELWarning
+      severity: warning
+      metadata:
+          - name: Source
+            type: string
+            description:
+                The source which reports warning. The source can be PLDM's
+                sensors, GPIO, IPMI, CPLD …
+          - name: Message
+            type: string
+            description: The reported warning.
+          - name: RawData
+            type: string
+            description: The Raw data received.
+      en:
+          description: Warning System Event Log received by the BMC.
+          message: "The {Source} reports a warning: {Message}"
+      errno: EIO
+
+events:
+    - name: ReportedSELInfo
+      metadata:
+          - name: Source
+            type: string
+            description:
+                The source which reports event. The source can be PLDM's
+                sensors, GPIO, IPMI, CPLD …
+          - name: Message
+            type: string
+            description: The reported event.
+          - name: RawData
+            type: string
+            description: The Raw data received.
+      en:
+          description: Information System Event Log received by the BMC.
+          message: "The {Source} reports an event: {Message}"

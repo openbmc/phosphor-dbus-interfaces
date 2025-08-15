@@ -1,0 +1,52 @@
+version: 1.0.0
+
+errors:
+    - name: ReportedSELCritical
+      severity: critical
+      metadata:
+          - name: Source
+            type: string
+            description: The source which reports error.
+          - name: Message
+            type: string
+            description: The reported error message.
+          - name: RawData
+            type: string
+            description: The Raw data received.
+      en:
+          description: Critical System Event Log received by the BMC.
+          message: "Error SEL reported by '{Source}': '{Message}'"
+      errno: EIO
+
+    - name: ReportedSELWarning
+      severity: warning
+      metadata:
+          - name: Source
+            type: string
+            description: The source which reports warning.
+          - name: Message
+            type: string
+            description: The reported warning message.
+          - name: RawData
+            type: string
+            description: The Raw data received.
+      en:
+          description: Warning System Event Log received by the BMC.
+          message: "Warning SEL reported by '{Source}': '{Message}'"
+      errno: EIO
+
+events:
+    - name: ReportedSELInfo
+      metadata:
+          - name: Source
+            type: string
+            description: The source which reports event.
+          - name: Message
+            type: string
+            description: The reported event message.
+          - name: RawData
+            type: string
+            description: The Raw data received.
+      en:
+          description: Information System Event Log received by the BMC.
+          message: "Information SEL reported by '{Source}': '{Message}'"

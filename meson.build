@@ -24,6 +24,9 @@ endif
 
 # Parse options to determine appropriate subdirectories to support.
 yaml_selected_subdirs = []
+if get_option('data_com_ampere')
+    yaml_selected_subdirs += 'com/ampere'
+endif
 if get_option('data_com_google')
     yaml_selected_subdirs += 'com/google'
 endif

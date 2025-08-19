@@ -48,6 +48,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "da208b3f_8997510d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Position.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-08-19T13:57:23Z",
+      "side": 1,
+      "message": "IBM has a very specific use for location code already, and it\u0027s different than this.\n\nIf we have a freestanding chassis that is cabled to another chassis, does it have a slot or position?  It feels more like a \u0027position\u0027, though the existing slot interface would still work and if this is deemed too similar that\u0027s fine.",
+      "parentUuid": "5a17b41c_469314c5",
+      "range": {
+        "startLine": 2,
+        "startChar": 14,
+        "endLine": 2,
+        "endChar": 22
+      },
+      "revId": "b79b344ac6117a60eea6d86f02b4b1863888431c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a3bb2967_8ccf4352",
@@ -61,6 +85,24 @@
       "writtenOn": "2025-08-19T13:02:58Z",
       "side": 1,
       "message": "Is this 0-based? Or implementation defined?",
+      "revId": "b79b344ac6117a60eea6d86f02b4b1863888431c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba06c924_d385d416",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Position.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-08-19T13:57:23Z",
+      "side": 1,
+      "message": "I would say implementation defined.  let me know if you think that needs  to go into the YAML.",
+      "parentUuid": "a3bb2967_8ccf4352",
       "revId": "b79b344ac6117a60eea6d86f02b4b1863888431c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

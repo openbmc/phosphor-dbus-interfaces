@@ -589,6 +589,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "42eb2b15_a53d3b71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002117
+      },
+      "writtenOn": "2025-08-19T07:23:52Z",
+      "side": 1,
+      "message": "Hi @prithvi24pai@gmail.com\n\nFor our use case, we can store the data in a local file and not add the “BootOrder” property to the PDI. That should allow your side to implement it with your current Gerrit change: https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/81554. Would that work for you? How does that sound?",
+      "parentUuid": "fbc50511_ed889bac",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

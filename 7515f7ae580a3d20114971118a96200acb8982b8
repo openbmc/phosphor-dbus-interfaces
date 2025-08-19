@@ -20,6 +20,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7014d4c1_751f500c",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-19T12:08:58Z",
+      "side": 1,
+      "message": "service name should not be used since this is not necessarily a singleton.  Nobody should be doing direct lookups to this service name.",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 46
+      },
+      "revId": "7515f7ae580a3d20114971118a96200acb8982b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d2cdc2b5_4120c63c",
         "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
         "patchSetId": 3
@@ -67,6 +90,53 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5d7eefda_497d9dab",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-19T12:08:58Z",
+      "side": 1,
+      "message": "Why isn\u0027t it \"Attestation\"?  I\u0027m not saying one is right or wrong but I\u0027m trying to figure out what the purpose/intention is before I weigh in.",
+      "parentUuid": "cbebfed9_6b96e829",
+      "range": {
+        "startLine": 81,
+        "startChar": 16,
+        "endLine": 81,
+        "endChar": 55
+      },
+      "revId": "7515f7ae580a3d20114971118a96200acb8982b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d37d8469_9f50ec20",
+        "filename": "yaml/xyz/openbmc_project/Attestation/IdentityAuthentication.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-19T12:08:58Z",
+      "side": 1,
+      "message": "Remove.",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 46
+      },
+      "revId": "7515f7ae580a3d20114971118a96200acb8982b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2285ef12_64106743",
         "filename": "yaml/xyz/openbmc_project/Attestation/IdentityAuthentication.interface.yaml",
         "patchSetId": 3
@@ -78,6 +148,29 @@
       "writtenOn": "2025-08-14T07:16:41Z",
       "side": 1,
       "message": "good to have a new line.",
+      "revId": "7515f7ae580a3d20114971118a96200acb8982b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfffa4ff_08ba0582",
+        "filename": "yaml/xyz/openbmc_project/Attestation/MeasurementSet.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-19T12:08:58Z",
+      "side": 1,
+      "message": "Remove.",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 46
+      },
       "revId": "7515f7ae580a3d20114971118a96200acb8982b8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

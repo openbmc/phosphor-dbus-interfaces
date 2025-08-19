@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "37c26613_9ef8dfdc",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-08-19T21:20:40Z",
+      "side": 1,
+      "message": "The Update interface resides on the specific device path. It cannot accept the Targets arg. There is already a proposal to add Targets as an additional interface to code-update-manager by @rushtotom@gmail.com. Please follow that design.",
+      "revId": "69eaa33f08eab714d7945b3e113fc94226058807",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f8b492cb_2d053bf1",
         "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
         "patchSetId": 2

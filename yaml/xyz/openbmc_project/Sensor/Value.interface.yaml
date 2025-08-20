@@ -7,6 +7,7 @@ description: >
       current
       energy
       fan_tach
+      frequency
       humidity
       liquidflow
       power
@@ -51,7 +52,8 @@ properties:
           "Pascals" For objects in the temperature namespace, Unit must be
           "DegreesC". For objects in the utilization namespace, Unit must be
           "Percent" For objects in the voltage namespace, Unit must be "Volts",
-          For objects in the liquidflow namespace, Unit must be "LPM".
+          For objects in the liquidflow namespace, Unit must be "LPM". For
+          objects in the frequency namespace, Unit must be "Hertz".
 
 enumerations:
     - name: Unit
@@ -67,6 +69,9 @@ enumerations:
           - name: DegreesC
             description: >
                 Temperature as degrees Celsius.
+          - name: Hertz
+            description: >
+                Frequency in Hertz
           - name: Joules
             description: >
                 Energy transfer as Joules.
@@ -126,6 +131,8 @@ paths:
             value: energy
           - name: FanTach
             value: fan_tach
+          - name: Frequency
+            value: frequency
           - name: Humidity
             value: humidity
           - name: Liquidflow

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "478530c3_1fe68082",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/Position.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2025-08-20T06:19:09Z",
+      "side": 1,
+      "message": "I feel that state represents something changeable, whereas position is always fixed, right? So I’m not sure if having the Position interface under state is appropriate.\n\nI do understand there could be scenarios where the BMC is swapped, which would change its position. In that case, the persisted properties of the _this_ BMC state object should correctly reference the updated BMC position?",
+      "revId": "ab381ef704e6ae7b0a55686820dd02092f25d44f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

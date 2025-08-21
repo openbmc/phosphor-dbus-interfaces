@@ -607,6 +607,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "46b53af9_1a16bbb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-08-21T09:10:03Z",
+      "side": 1,
+      "message": "@patrick@stwcx.xyz @zoey.yj.chung.wiwynn@gmail.com \nAfter reviewing the actual BIOS boot menu structure, I recommend using array[string] as the data structure for representing boot order rather than the current approach. Here\u0027s the technical justification:\n\nThe current implementation would produce a Redfish boot order representation like\n[\"Default\", \"Disk\", \"Disk\", \"Disk\"...]\n\nThis generic categorization fails to provide meaningful boot order information to clients consuming the Redfish API.\n\nUsing array[string] would enable accurate representation:\n[ \"Ubuntu\", \"DGX OS\",... ]\n\n\nReference:\n\u003cImage to text converted from BIOS Boot Menu\u003e\n```\n┌─────────────────────────────────────────────────────────────────────────────────┐\n│                                Boot Manager                                     │\n└─────────────────────────────────────────────────────────────────────────────────┘\n\n                                                    Device Path :\nBoot Manager Menu                                   HD(1,GPT,5C40DFFB-F54D\n                                                   -45C2-9EBB-504B6C02811\nUbuntu                                             4,0x800,0x100000)/\\EFI\nDGX OS                                             \\ubuntu\\shimaa64.efi\nUEFI SAMSUNG MZIL21T0HCLS-00A07 S666NN0X400619 1\nUEFI PXEv4 (MAC:D0F405608B76)\nUEFI PXEv6 (MAC:D0F405608B76)\nUEFI Shell\nUEFI HTTP\nUEFI HTTP\nUEFI HTTPv4 (MAC:D0F405608B76)\nUEFI SAMSUNG MZTL63T8HFLT-00AW7 S7UTNG0Y103308 1\nUEFI SAMSUNG MZTL63T8HFLT-00AW7 S7UTNG0Y103307 1\nUEFI SAMSUNG MZTL63T8HFLT-00AW7 S7UTNG0Y102594 1\n\n\n\n\n┌─────────────────────────────────────────────────────────────────────────────────┐\n│ ^v\u003dMove Highlight        \u003cEnter\u003e\u003dSelect Entry        Esc\u003dExit                  │\n└─────────────────────────────────────────────────────────────────────────────────┘\n\n```\n\nPlease share your opinion",
+      "parentUuid": "42eb2b15_a53d3b71",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

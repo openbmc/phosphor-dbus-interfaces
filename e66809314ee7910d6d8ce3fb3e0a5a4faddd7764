@@ -59,6 +59,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "991cae8a_97f9b791",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2025-08-21T06:54:46Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "26dbfdb6_1f74c724",
+      "revId": "e66809314ee7910d6d8ce3fb3e0a5a4faddd7764",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8020fa81_ad31d554",
@@ -76,6 +94,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2397f8eb_18f10ae3",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2025-08-21T06:54:46Z",
+      "side": 1,
+      "message": "This DMTF property ReadingBasis can be used to indicate that the sensor value is not zero-based. \n\nExample -\nNvidia datacenter GPUs has a temperature sensor for the Thermal Limit (TLIMIT) temperature. It is a countdown in degrees Celsius to the threshold at which the closest software slowdown mechanism will engage. The reported TLIMIT temperature can be greater than 0 degrees Celsius if the current temperature is beyond a software slowdown threshold. The TLIMIT value can be a negative value during the period when a slowdown is engaged. The DMTF property ReadingBasis can be set to Headroom for this sensor.",
+      "parentUuid": "8020fa81_ad31d554",
+      "revId": "e66809314ee7910d6d8ce3fb3e0a5a4faddd7764",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "03bf6175_cbe90254",
@@ -89,6 +125,30 @@
       "writtenOn": "2025-08-18T15:48:38Z",
       "side": 1,
       "message": "Please keep these in alphabetical order or \"intuitively used\" order.\n\nUnknown, Zero, Delta, Headroom",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 22
+      },
+      "revId": "e66809314ee7910d6d8ce3fb3e0a5a4faddd7764",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9daa84a1_46feb49d",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Type.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2025-08-21T06:54:46Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "03bf6175_cbe90254",
       "range": {
         "startLine": 31,
         "startChar": 0,

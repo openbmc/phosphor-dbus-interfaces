@@ -182,6 +182,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d9c8f279_2f237c46",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001906
+      },
+      "writtenOn": "2025-08-21T02:44:04Z",
+      "side": 1,
+      "message": "Phosphor-buttons can obtain the press time in the release function, but the time is not recorded in the log. Would it be possible to determine the press duration simply by checking the timestamp? Alternatively, we could set the resolved field to true, and then compare the timestamp with the updated_timestamp to determine the press time.",
+      "parentUuid": "b3b4f17f_01cff0e1",
+      "revId": "85d11ff3ddaa9db1842d1cb8339bb9d22966017d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5da6ae09_f0c36254",
         "filename": "yaml/xyz/openbmc_project/Chassis/Buttons/Button.events.yaml",
         "patchSetId": 1

@@ -67,6 +67,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ba3e5a92_3584ae39",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-21T14:27:12Z",
+      "side": 1,
+      "message": "\u003e Are you suspecting that this interface will be implemnted by other Dbus service apart from spdmd - Hence you are suggesting to remove it?\n\nI suspect other daemons _could_ implement this interface, yes.  Even if they won\u0027t, we don\u0027t want users to go directly to your service to find attestation records; they should use mapper.\n\n`service_names` is intended to be used for singletons services where, as part of the design, applications need to go to a specific daemon.  That is the case with the two you referenced.",
+      "parentUuid": "ac1632c6_53a6e09a",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 46
+      },
+      "revId": "7515f7ae580a3d20114971118a96200acb8982b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d2cdc2b5_4120c63c",
         "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
         "patchSetId": 3
@@ -150,6 +174,30 @@
       "side": 1,
       "message": "This is as per the design - https://github.com/openbmc/docs/blob/master/designs/redfish-spdm-attestation.md",
       "parentUuid": "5d7eefda_497d9dab",
+      "range": {
+        "startLine": 81,
+        "startChar": 16,
+        "endLine": 81,
+        "endChar": 55
+      },
+      "revId": "7515f7ae580a3d20114971118a96200acb8982b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a823a1c_00654d55",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-21T14:27:12Z",
+      "side": 1,
+      "message": "We can change the design.  Do you have another preference if you weren\u0027t following the design as-written exactly?\n\nI generally don\u0027t want UpperCamelCase on path names.",
+      "parentUuid": "3fc3570d_bc931c4a",
       "range": {
         "startLine": 81,
         "startChar": 16,

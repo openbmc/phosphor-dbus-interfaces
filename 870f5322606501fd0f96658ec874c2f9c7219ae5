@@ -625,6 +625,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c93ef353_3e8d832a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-21T14:33:58Z",
+      "side": 1,
+      "message": "This information is going to be bi-directional?  From the BIOS and from the user?  Or is it just from the user?\n\nWe generally prohibit arbitrary strings because we do not have a way to confirm correctness.  If you allow a user to put in an arbitrary string over Redfish, we have to accept it (return success) but then it fails later on when they try to actually boot their system.  This isn\u0027t a great experience.\n\nIf we get a set of all the valid options from the BIOS, save that, and only allow users to set ones from a \"valid options list\" this seems more reasonable.\n\nAlternatively, I think you could use some kind of position identifier in addition to \"Disk\" or \"Network\".  The UEFI BootOrder variable is numbered (something like \"Boot0001\" by my recollection).",
+      "parentUuid": "46b53af9_1a16bbb2",
+      "revId": "870f5322606501fd0f96658ec874c2f9c7219ae5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "98847c3a_4917deb8",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/CMOS.interface.yaml",
         "patchSetId": 2

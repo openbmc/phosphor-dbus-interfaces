@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ac1632c6_53a6e09a",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2025-08-21T10:50:44Z",
+      "side": 1,
+      "message": "Are you suspecting that this interface will be implemnted by other Dbus service apart from spdmd - Hence you are suggesting to remove it?\n\n\nI checked it other places too.\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Logging/Entry.interface.yaml#L124\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Dump/Create.interface.yaml#L107",
+      "parentUuid": "7014d4c1_751f500c",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 46
+      },
+      "revId": "7515f7ae580a3d20114971118a96200acb8982b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d2cdc2b5_4120c63c",
         "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
         "patchSetId": 3
@@ -102,6 +126,30 @@
       "side": 1,
       "message": "Why isn\u0027t it \"Attestation\"?  I\u0027m not saying one is right or wrong but I\u0027m trying to figure out what the purpose/intention is before I weigh in.",
       "parentUuid": "cbebfed9_6b96e829",
+      "range": {
+        "startLine": 81,
+        "startChar": 16,
+        "endLine": 81,
+        "endChar": 55
+      },
+      "revId": "7515f7ae580a3d20114971118a96200acb8982b8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fc3570d_bc931c4a",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2025-08-21T10:50:44Z",
+      "side": 1,
+      "message": "This is as per the design - https://github.com/openbmc/docs/blob/master/designs/redfish-spdm-attestation.md",
+      "parentUuid": "5d7eefda_497d9dab",
       "range": {
         "startLine": 81,
         "startChar": 16,

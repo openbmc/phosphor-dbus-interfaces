@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9712ef6_02d29154",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-21T14:20:47Z",
+      "side": 1,
+      "message": "Let\u0027s clean this up a lot.\n\n1. Set the title to something like \u0027Common.Progress: add OperationStatus enum\u0027\n\n2. Avoid spelling mistakes.\n\n3. Give me a \"why\" not a \"what\".  The commit message title tells me what, the code tells me what, don\u0027t also tell me what in the commit message body.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 12
+      },
+      "revId": "21d852a5249f98f984332329243189d35977f413",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "f7742221_c034f226",
@@ -14,6 +37,23 @@
       "writtenOn": "2025-08-21T13:20:31Z",
       "side": 1,
       "message": "Sounds like a reasonable default to me.",
+      "revId": "21d852a5249f98f984332329243189d35977f413",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "711e6fb8_ff6294fa",
+        "filename": "yaml/xyz/openbmc_project/Common/Progress.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-21T14:20:47Z",
+      "side": 1,
+      "message": "It seems safe to set the default to NotStarted.  The only users of this are phosphor-debug-collector and openpower-debug-collector as best I can tell and both of them explicitly set the status.\n\nIs there a reason for the hesitation to change it on your part?",
       "revId": "21d852a5249f98f984332329243189d35977f413",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

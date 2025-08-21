@@ -56,6 +56,24 @@
       "message": "It seems safe to set the default to NotStarted.  The only users of this are phosphor-debug-collector and openpower-debug-collector as best I can tell and both of them explicitly set the status.\n\nIs there a reason for the hesitation to change it on your part?",
       "revId": "21d852a5249f98f984332329243189d35977f413",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9130134_e47f820d",
+        "filename": "yaml/xyz/openbmc_project/Common/Progress.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000084
+      },
+      "writtenOn": "2025-08-21T14:53:03Z",
+      "side": 1,
+      "message": "dump-collectors always setting a default",
+      "parentUuid": "711e6fb8_ff6294fa",
+      "revId": "21d852a5249f98f984332329243189d35977f413",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

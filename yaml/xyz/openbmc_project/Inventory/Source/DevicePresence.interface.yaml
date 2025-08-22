@@ -8,6 +8,11 @@ properties:
       description: >
           Used by entity-manager to identify which hw was detected. For internal
           use by entity-manager.
+    - name: Compatible
+      type: string
+      description: >
+          Used by entity-manager to identify which hw was detected. For internal
+          use by entity-manager. Can be empty.
 
 paths:
     - namespace: /xyz/openbmc_project/inventory_source

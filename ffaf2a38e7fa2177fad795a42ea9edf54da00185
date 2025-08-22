@@ -170,6 +170,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ff8e7d3d_4ee52d66",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-08-22T10:22:43Z",
+      "side": 1,
+      "message": "I don\u0027t know which is better. I was just thinking that the file can be in some hierarchy, and \u003cFileName\u003e is not enough to hold this information. Do you think `/xyz/openbmc_project/file/\u003cFileName\u003e` is enough to cover all cases, including a file object from PLDM that can be `/xyz/openbmc_project/file/\u003cterminus_name\u003e/\u003cSome_folder_name\u003e/\u003cFileName\u003e` ?",
+      "parentUuid": "bd68bdad_c0dcc537",
+      "range": {
+        "startLine": 4,
+        "startChar": 36,
+        "endLine": 4,
+        "endChar": 49
+      },
+      "revId": "ffaf2a38e7fa2177fad795a42ea9edf54da00185",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "60c975a7_209c87b6",
         "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
         "patchSetId": 3

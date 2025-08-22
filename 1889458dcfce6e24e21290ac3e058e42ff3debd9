@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3b5f827d_e524fba2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000348
+      },
+      "writtenOn": "2025-08-22T03:41:13Z",
+      "side": 1,
+      "message": "This can also be used to know the position of the chassis as to which chassis it is in multi-chassis systems. just using the position will allow it to be used either under the system as to which chassis is the manager where the code is executing or under chassis as to which position this chassis has as well as under cards if needed like to the the BMC cards to know what position the inventory object is.",
+      "parentUuid": "f8b30271_62585c64",
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cc33415d_05f8d457",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
         "patchSetId": 2
@@ -155,6 +173,30 @@
       "side": 1,
       "message": "Will fix.",
       "parentUuid": "8a4c16e7_0319a298",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 60
+      },
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04ed90ad_5f0184c8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000348
+      },
+      "writtenOn": "2025-08-22T03:41:13Z",
+      "side": 1,
+      "message": "we may not need a flag we could use the position itself to determine if the position can be determined just that the type needs to be changed to a signed type.",
+      "parentUuid": "4659a827_ce610128",
       "range": {
         "startLine": 9,
         "startChar": 0,

@@ -98,6 +98,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5d7c0648_d06d0dea",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-08-22T09:19:04Z",
+      "side": 1,
+      "message": "but then this again is not generic - this depends on PLDM.",
+      "parentUuid": "089f428d_a98a12b8",
+      "range": {
+        "startLine": 4,
+        "startChar": 36,
+        "endLine": 4,
+        "endChar": 49
+      },
+      "revId": "ffaf2a38e7fa2177fad795a42ea9edf54da00185",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "60c975a7_209c87b6",
         "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
         "patchSetId": 3
@@ -181,6 +205,30 @@
       "side": 1,
       "message": "Since I don\u0027t want this property to be PLDM specific, can it be ComputerSystem? Like the one used in Redfish schema?",
       "parentUuid": "ff8d06a7_d62908bf",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 56
+      },
+      "revId": "ffaf2a38e7fa2177fad795a42ea9edf54da00185",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41559d85_b8576f66",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-08-22T09:19:04Z",
+      "side": 1,
+      "message": "sure `computersystem` sounds better.",
+      "parentUuid": "5db6ce50_0eecac56",
       "range": {
         "startLine": 100,
         "startChar": 0,

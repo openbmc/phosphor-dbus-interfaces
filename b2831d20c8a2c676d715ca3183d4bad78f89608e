@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0713b5f0_018edc8a",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-25T06:26:21Z",
+      "side": 1,
+      "message": "Is parent path same as PLDM terminus or same as directory? How are duplicate filenames to be handled? Is there a restriction on the length of the filename - is this the actual filename or some other ID? Not all typical file name characters may be allowed on a D-Bus pathname.",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 47
+      },
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c89fff0_1b5d4efa",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-25T06:26:21Z",
+      "side": 1,
+      "message": "It seems like this is slightly different than the design doc. Will pldmd call dfopen, dfread and dfclose all as part of this method call? Will the call block until that is done?",
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2b348cc_91d14a5a",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-25T06:26:21Z",
+      "side": 1,
+      "message": "size_t for this and length?",
+      "range": {
+        "startLine": 12,
+        "startChar": 18,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfc81411_6a6836a0",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-25T06:26:21Z",
+      "side": 1,
+      "message": "Is this for pldmd/BMC or the file host?",
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e784aa2a_cb486d72",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-25T06:26:21Z",
+      "side": 1,
+      "message": "When is this closed?",
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "338fb1cb_8a0099b6",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-08-25T06:26:21Z",
+      "side": 1,
+      "message": "size_t?",
+      "range": {
+        "startLine": 50,
+        "startChar": 12,
+        "endLine": 50,
+        "endChar": 18
+      },
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

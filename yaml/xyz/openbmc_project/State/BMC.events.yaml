@@ -1,4 +1,4 @@
-version: 1.0.0
+version: 1.1.0
 
 events:
     - name: RebootCause
@@ -10,3 +10,11 @@ events:
       en:
           description: The BMC reboot and the cause was identified.
           message: The last BMC reboot was caused by '{Cause}'.
+    - name: PrimaryFlashBoot
+      en:
+          description: Record the BMC boot from primary flash.
+          message: The BMC boot from primary flash.
+    - name: SecondaryFlashBoot
+      en:
+          description: Record the BMC boot from secondary flash.
+          message: The BMC boot from secondary flash.

@@ -16,6 +16,75 @@
       "message": "Hi @patrick@stwcx.xyz, Could you help me to review this commit? I define common events for Ampere platform instead specific events as https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/81890.\n\nI also abandoned https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/81890.",
       "revId": "f9d1504f3f646637dc8a45d581d534a9040e944b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "586d1d2d_0161d93b",
+        "filename": "yaml/com/ampere/Event/ReportedSEL.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-08-26T04:03:07Z",
+      "side": 1,
+      "message": "\u003d\u003e The reported error message.\n\nPlease update through-out.",
+      "range": {
+        "startLine": 14,
+        "startChar": 25,
+        "endLine": 14,
+        "endChar": 43
+      },
+      "revId": "f9d1504f3f646637dc8a45d581d534a9040e944b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9ea945e_51c843ac",
+        "filename": "yaml/com/ampere/Event/ReportedSEL.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-08-26T04:03:07Z",
+      "side": 1,
+      "message": "\u003d\u003e \"**Error** SEL reported by {Source}: {Message}\".\n\nPlease update through-out.",
+      "range": {
+        "startLine": 20,
+        "startChar": 19,
+        "endLine": 20,
+        "endChar": 61
+      },
+      "revId": "f9d1504f3f646637dc8a45d581d534a9040e944b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d200f4c1_5f777d75",
+        "filename": "yaml/com/ampere/Event/ReportedSEL.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-08-26T04:03:07Z",
+      "side": 1,
+      "message": "We can omit examples of \"Source\".",
+      "range": {
+        "startLine": 48,
+        "startChar": 16,
+        "endLine": 49,
+        "endChar": 43
+      },
+      "revId": "f9d1504f3f646637dc8a45d581d534a9040e944b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

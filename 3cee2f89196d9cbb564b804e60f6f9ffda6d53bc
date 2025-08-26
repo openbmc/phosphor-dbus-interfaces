@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2e2abec6_49fc4d88",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-26T20:25:48Z",
+      "side": 1,
+      "message": "\u003e Any application which has the use case of dynamic update on its configuration can consume the latest/updated configuration data without restarting the application by make use of this interface.\n\nThis doesn\u0027t tell me who the _clients_ of the interface are.  Who are you expecting to call this?\n\n\u003e Systemd provides the application configuration reload option by enabling ExecReload\u003d in service file.\n\nThere are some daemons which already support this via signals.  Why is this approach not good?\n\nsystemd also now includes support for `Type\u003dnotify-reload` which will use `sd_notify` to signal the daemon.  Is that something that could be leveraged?",
+      "parentUuid": "2ced8f52_48e1d245",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b406360e_f82b9caf",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2

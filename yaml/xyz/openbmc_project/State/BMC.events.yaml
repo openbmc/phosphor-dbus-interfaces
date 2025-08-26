@@ -10,3 +10,7 @@ events:
       en:
           description: The BMC reboot and the cause was identified.
           message: The last BMC reboot was caused by '{Cause}'.
+    - name: SecondaryFlashBoot
+      en:
+          description: Record the BMC boot from secondary flash.
+          message: The BMC boot from secondary flash.

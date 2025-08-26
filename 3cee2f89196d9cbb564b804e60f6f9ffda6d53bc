@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2ced8f52_48e1d245",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2025-08-26T13:20:52Z",
+      "side": 1,
+      "message": "\u003eWho are the user(s) of this?\n\nAny application which has the use case of dynamic update on its configuration can consume the latest/updated configuration data without restarting the application by make use of this interface.\n\n\u003eIsn\u0027t there a systemd D-Bus API for the same purpose?\n\nSystemd provides the application configuration reload option by enabling `ExecReload\u003d` in service file. The `ExecReload\u003d` can be configured as enqueuing a signal or by set `ExecReload\u003d` to a command(DBus command) that triggers a configuration reload of the daemon. And the command based approach is advised by systemd itself as it synchronous. \n\nDetails information on `ExecReload\u003d`: https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#ExecReload\u003d\n\nThe proposed DBus API can be invoked as mentioned above or the client application can invoke directly if the implementing application is not interested in modifying the application\u0027s service file.",
+      "parentUuid": "8d30a460_bec4451f",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b406360e_f82b9caf",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2
@@ -31,6 +49,24 @@
       "writtenOn": "2025-08-22T14:47:54Z",
       "side": 1,
       "message": "What needs to happen prior to calling this/Reload API?",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d4d948d_8995be4f",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2025-08-26T13:20:52Z",
+      "side": 1,
+      "message": "As mentioned above, whenever the application\u0027s config/data is modified then the proposed API could be invoked so that the application could load with the latest config/data.",
+      "parentUuid": "b406360e_f82b9caf",
       "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -60,6 +96,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f0486a80_2a6e20bf",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2025-08-26T13:20:52Z",
+      "side": 1,
+      "message": "The caller application will be aware of the owner of the updated data/config. Thereby caller will be able to get the service name via GetObject of the object mapper using the respective application manager interfaces(something similar) along with the proposed Reload Interface name.",
+      "parentUuid": "b02e0136_76a33285",
+      "range": {
+        "startLine": 9,
+        "startChar": 10,
+        "endLine": 9,
+        "endChar": 21
+      },
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "18fbbf36_cff36fe6",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2
@@ -77,6 +137,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "56197cfc_46d81f1c",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2025-08-26T13:20:52Z",
+      "side": 1,
+      "message": "Since this will be a DBus call, the progress/completion can be tracked by waiting for the API to be completed. \n- In case of reload failure, we could define error codes that can be returned from this API. I will define in my next patch set.\n- In case of long running reload, it can be extended to track the progress by utilizing the common [Progress interface](https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/83048/comment/18fbbf36_cff36fe6/).",
+      "parentUuid": "18fbbf36_cff36fe6",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "63670a87_ac777ca7",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2
@@ -88,6 +166,24 @@
       "writtenOn": "2025-08-22T14:47:54Z",
       "side": 1,
       "message": "What error handling needs to happen on these paths? Anything to be thrown as a D-Bus exception?",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "355df41b_bd49ea12",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2025-08-26T13:20:52Z",
+      "side": 1,
+      "message": "Yes. agree. The errors when invalid paths are given as argument, can be handled by throwing the exception `xyz.openbmc_project.Common.Error.InvalidArgument`.\n\nThanks for pointing out.",
+      "parentUuid": "63670a87_ac777ca7",
       "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

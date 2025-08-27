@@ -10,3 +10,12 @@ events:
       en:
           description: The BMC reboot and the cause was identified.
           message: The last BMC reboot was caused by '{Cause}'.
+    - name: RebootCommandExecute
+      metadata:
+          - name: Command
+            type: string
+            primary: true
+            description: The command that triggered the BMC reboot.
+      en:
+          description: A BMC reboot command was executed and the triggering source was recorded.
+          message: BMC reboot command executed by '{Command}'.

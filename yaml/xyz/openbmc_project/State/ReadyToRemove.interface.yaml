@@ -1,0 +1,10 @@
+description: >
+    Implement to indicate whether the item is prepared by the system for
+    removal. Setting the value to true shall cause the service to perform
+    appropriate actions to quiesce the item.
+properties:
+    - name: ReadyToRemove
+      type: boolean
+      description: >
+          An indication of whether the item is prepared by the system for
+          removal.

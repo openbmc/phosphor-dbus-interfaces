@@ -1,0 +1,30 @@
+description: >
+    Implement to indicate whether the item is prepared by the system for
+    removal. Setting the value to true shall cause the service to perform
+    appropriate actions to quiesce the item. Applications monitor this
+    property and perform appropriate actions. After successful removal, the
+    inventory item should be deleted or the Present property should be set to
+    false.  Setting ReadyToRemove=false cancels the removal preparation. If
+    quiesce fails, property remains at previous value. Errors are communicated
+    via D-Bus error responses. Applications should implement timeout and retry
+    logic.
+properties:
+    - name: ReadyToRemove
+      type: boolean
+      default: false
+      description: >
+          Indicates whether the item is prepared by the system for removal. true
+          - Item has been quiesced and is safe to remove. false - Item is in
+          active use and should not be removed.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+associations:
+    - name: removable
+      description: >
+          Objects that implement ReadyToRemove can implement the
+          "removable" association to provide a link to an item to be removed.
+      reverse_name: removing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item
+paths:
+    - namespace: /xyz/openbmc_project/state

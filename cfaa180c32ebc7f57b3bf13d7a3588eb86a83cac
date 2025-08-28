@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfe3b9bd_8b194f58",
+        "filename": "yaml/xyz/openbmc_project/Software/MultipartManager.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-08-28T22:39:17Z",
+      "side": 1,
+      "message": "Lets rename the interface to MultipartUpdate instead to bring it in sync with other interfaces as they action based rather than noun.\n\nLets update the description based on above.",
+      "revId": "cfaa180c32ebc7f57b3bf13d7a3588eb86a83cac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac96aae0_90f45269",
+        "filename": "yaml/xyz/openbmc_project/Software/MultipartManager.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-08-28T22:39:17Z",
+      "side": 1,
+      "message": "@rushtotom@gmail.com JFYI: Since your design doesn\u0027t define the flow for multi target for Multipart images, this interface is bound to change in future depending on how multi-target flow gets designed.",
+      "revId": "cfaa180c32ebc7f57b3bf13d7a3588eb86a83cac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

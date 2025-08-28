@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15ced8b0_9ecf7dc3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-28T17:24:40Z",
+      "side": 1,
+      "message": "Please reference some spec you\u0027re trying to implement.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "d07fb63ee33a8047d5f654ede43cd93f4c858abc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0380c510_852db9b9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/DeviceMemory.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-08-28T17:24:40Z",
+      "side": 1,
+      "message": "If this is embedded in an accelerator does that mean it shares the path?  If so, why is this not a Decorator (and instead it is its own Inventory item).\n\nWhy aren\u0027t we using `Inventory.Dimm`?  That already has the HBM enums and `FormFactor\u003dDie` sounds like what you\u0027re describing.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 56
+      },
+      "revId": "d07fb63ee33a8047d5f654ede43cd93f4c858abc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+description: >
+    Implement to provide device memory attributes for memory embedded in 
+    device components. For example, HBM memory on accelerators.
+properties:
+    - name: Manufacturer
+      type: string
+      description: >
+          Manufacturer of the device memory.
+    - name: MemoryConfiguredSpeedInMhz
+      type: uint16
+      description: >
+          Configured clock speed of the device memory, in megahertz.
+    - name: MemoryType
+      type: enum[self.MemoryType]
+      description: >
+          Type of device memory.
+
+enumerations:
+    - name: MemoryType
+      description: >
+          This property shall contain the type of device memory.
+      values:
+          - name: HBM
+            description: >
+                High Bandwidth Memory.
+          - name: HBM2
+            description: >
+                High Bandwidth Memory Generation 2.
+          - name: HBM3
+            description: >
+                High Bandwidth Memory Generation 3.
+          - name: Unknown
+            description: >
+                Unknown memory type.

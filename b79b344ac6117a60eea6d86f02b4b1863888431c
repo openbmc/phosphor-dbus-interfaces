@@ -122,6 +122,24 @@
       "message": "To deal with the situation where position could not be determined due to some unknown reason, is it fine if we move away from type \"size\" to accommodate value like \"-1\" denoting that the value is invalid?",
       "revId": "b79b344ac6117a60eea6d86f02b4b1863888431c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8f6abf3_66afc999",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Position.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-08-29T11:04:28Z",
+      "side": 1,
+      "message": "yes, we need a value like \"-1\" denoting that value is not determined.",
+      "parentUuid": "008e3633_5154ea01",
+      "revId": "b79b344ac6117a60eea6d86f02b4b1863888431c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "93f0bb9a_cb473b3d",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2025-08-29T07:08:32Z",
+      "side": 1,
+      "message": "\u003eWho are you expecting to call this?\n\nExpected callers:\nAs per the recent IBM proposal on redundant BMC, this interface can be used to update the sibling BMCs data in sync with the current running BMC(active BMC).\n\nFor example, when the active BMC updates data/config and is synced to its sibling BMC, the application responsible for syncing the data could notify the application owner to reload with the updated data by make use of the proposed interface.\n\nWhile considering the design, I thought of making the interface generic so that it can also be used when applications need to reload their configuration dynamically. Today, users typically update configuration files and then restart the service to apply the changes. A reload mechanism would avoid costly restarts — for instance, updating message_registry.json currently requires restarting phosphor-logging, which is expensive when many PELs exist. Reloading instead would apply the updates much more efficiently.\n\nAt the moment, my examples mainly point to cases where the user updates configuration, in addition to the redundant BMC use case where the system updates the config dynamically.\n\nRelated discussion on systemd reload happened [here also](https://gerrit.openbmc.org/c/openbmc/docs/+/70233/9..18/designs/redundant-bmc.md#b607).\n\n\u003e Why is this approach not good?\n\nYes, signal-based approach could also work. Initially, when referring to the systemd documentation on `ExecReload\u003d`, I overlooked the notify-reload option. My concern with signals was that reloading via `ExecReload\u003d` is asynchronous, making it difficult to track completion or enforce ordering.\n\n\u003e Is that something that could be leveraged?\n\n--\u003e Yes, `Type\u003dnotify-reload` could be leveraged to improve reload handling, since it allows daemons to send signals back to systemd during reload start and upon completion. Currently most of the daemons configures `Type\u003ddbus` and can\u0027t configure both modes in `Type\u003d` together. Switching from `dbus` to `notify-reload` would change how systemd tracks readiness, since it would no longer wait for bus name acquisition automatically. One option would be for the application to send sd_notify(\"READY\u003d1\") after the D-Bus name has been acquired. Could you please share your views on this in light of openbmc guildelines?\n\n--\u003e As mentioned above, suppose if other application wants to reload, the application could invoke the systemd\u0027s Reload D-Bus API. However, the proposed interface can still useful, as it allows reloading a specific configuration (via proposed method called `Reload`) by passing the configuration path as an argument. Since systemd’s reload handling does not support passing arguments, such targeted reloads would need to be invoked through the application’s own API rather than via systemd.\n\nI could add these details in commit message also as next patch along with addressing other review comments.",
+      "parentUuid": "2e2abec6_49fc4d88",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b406360e_f82b9caf",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2

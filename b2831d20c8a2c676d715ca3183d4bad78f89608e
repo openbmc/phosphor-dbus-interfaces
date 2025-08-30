@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "33c38173_4283f6b6",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2025-08-30T00:40:05Z",
+      "side": 1,
+      "message": "\u003e Is parent path same as PLDM terminus or same as directory?\n\n\u003cParentPath\u003e is the director name from the PLDM File PDRs.\n\n\u003e How are duplicate filenames to be handled?\n\nIn the other thread we are discussing about using:\n`xyz/openbmc_project/file/\u003cterminus_name\u003e/\u003cSome_folder_name\u003e/\u003cFileName\u003e` or `/xyz/openbmc_project/file/[\u003cParentPath\u003e]/\u003cFileName\u003e`.\n\nI think adding \u003cterminus_name\u003e as root path of one terminus will be better solution. This approach will handle the duplication of filenames.\n\n\u003e Is there a restriction on the length of the filename - is this the actual filename or some other ID?\n\nFile name is just file name from PDRs. As the sensors name we don\u0027t expect to use `ID` in the file name.\nBecause the file name completely from the File PDRs, as the define of `FileName` field in the File PDRs, the filename is string ASCII `characters are\nencoded using the 8-bit ISO8859-1 \"ASCII + Latin1\" character set encoding` and max length is 256. \n\n\u003e Not all typical file name characters may be allowed on a D-Bus pathname.\n\nYes, it just the same as sensor name object paths.",
+      "parentUuid": "0713b5f0_018edc8a",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 47
+      },
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1c89fff0_1b5d4efa",
         "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
         "patchSetId": 4

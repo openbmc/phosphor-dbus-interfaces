@@ -1,0 +1,21 @@
+version: 1.0.0
+
+errors:
+    - name: FanFailed
+      severity: critical
+      metadata:
+          - name: FanName
+            type: object_path
+            primary: true
+            description: The name or identifier of the fan.
+      errno: EIO
+      redfish-mapping: Environmental.FanFailed
+
+events:
+    - name: FanRestored
+      metadata:
+          - name: FanName
+            type: object_path
+            primary: true
+            description: The name or identifier of the fan.
+      redfish-mapping: Environmental.FanRestored

@@ -1,0 +1,42 @@
+version: 1.0.0
+
+events:
+  - name: DeviceInserted
+    metadata:
+      - name: Device
+        description: The DBus object path of the inventory item that appeared/present.
+        type: object_path
+        primary: true
+    en:
+      description: A device presence was detected in the inventory.
+      message: Device {Device} was inserted.
+
+  - name: DeviceRemoved
+    metadata:
+      - name: Device
+        description: The DBus object path of the inventory item that was removed/no longer present.
+        type: object_path
+        primary: true
+    en:
+      description: A device removal was detected from the inventory.
+      message: Device {Device} was removed.
+
+  - name: DevicePoweredOn
+    metadata:
+      - name: Device
+        type: object_path
+        primary: true
+        description: The DBus object path of the inventory item that powered on.
+    en:
+      description: A device was powered on.
+      message: Device {Device} powered on.
+
+  - name: DevicePoweredOff
+    metadata:
+      - name: Device
+        type: object_path
+        primary: true
+        description: The DBus object path of the inventory item that powered off.
+    en:
+      description: A device was powered off.
+      message: Device {Device} powered off.

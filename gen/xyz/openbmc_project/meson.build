@@ -129,7 +129,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory__markdown'.underscorify(),
-    input: ['../../../yaml/xyz/openbmc_project/Inventory.errors.yaml'],
+    input: [
+        '../../../yaml/xyz/openbmc_project/Inventory.errors.yaml',
+    ],
     output: ['Inventory.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

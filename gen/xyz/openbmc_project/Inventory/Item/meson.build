@@ -36,9 +36,12 @@ sdbusplus_current_path = 'xyz/openbmc_project/Inventory/Item'
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory/Item__cpp'.underscorify(),
     input: [
+        '../../../../../yaml/xyz/openbmc_project/Inventory/Item.events.yaml',
         '../../../../../yaml/xyz/openbmc_project/Inventory/Item.interface.yaml',
     ],
     output: [
+        'event.hpp',
+        'event.cpp',
         'common.hpp',
         'server.hpp',
         'server.cpp',
@@ -60,6 +63,8 @@ generated_sources += custom_target(
     ],
     install: should_generate_cpp,
     install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
         get_option('includedir') / sdbusplus_current_path,
         get_option('includedir') / sdbusplus_current_path,
         false,

@@ -8,6 +8,28 @@ subdir('Source')
 sdbusplus_current_path = 'xyz/openbmc_project/Inventory'
 
 generated_sources += custom_target(
+    'xyz/openbmc_project/Inventory__events_cpp'.underscorify(),
+    input: ['../../../../yaml/xyz/openbmc_project/Inventory.events.yaml'],
+    output: ['event.cpp', 'event.hpp'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'cpp',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Inventory',
+    ],
+    install: should_generate_cpp,
+    install_dir: [false, get_option('includedir') / sdbusplus_current_path],
+    build_by_default: should_generate_cpp,
+)
+
+generated_sources += custom_target(
     'xyz/openbmc_project/Inventory__cpp'.underscorify(),
     input: ['../../../../yaml/xyz/openbmc_project/Inventory.errors.yaml'],
     output: ['error.cpp', 'error.hpp'],

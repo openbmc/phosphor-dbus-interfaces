@@ -54,3 +54,31 @@ events:
           description: A fault detected on a voltage regulator has cleared.
           message:
               A fault has cleared on voltage regulator '{VoltageRegulator}'.
+
+    - name: ChassisPowerStateChanged
+      metadata:
+          - name: Chassis
+            description: The DBus object path of the chassis state instance.
+            type: object_path
+            primary: true
+          - name: NewState
+            description: New chassis power state.
+            type: enum[xyz.openbmc_project.State.Chassis.PowerState]
+            primary: true
+      en:
+          description: A chassis power state transition was detected.
+          message: Chassis {Chassis} changed power state to {NewState}.
+
+    - name: HostPowerStateChanged
+      metadata:
+          - name: Host
+            description: The DBus object path of the host state instance.
+            type: object_path
+            primary: true
+          - name: NewState
+            description: New host state.
+            type: enum[xyz.openbmc_project.State.Host.HostState]
+            primary: true
+      en:
+          description: A host state transition was detected.
+          message: Host {Host} changed state to {NewState}.

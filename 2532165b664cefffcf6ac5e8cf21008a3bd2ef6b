@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3aebf92c_be688930",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002547
+      },
+      "writtenOn": "2025-09-02T07:22:25Z",
+      "side": 1,
+      "message": "Want to use a generic SEL format to describe device inserted/removed and device power on/off events.\nHowever, I don’t see any existing events.yaml definitions for these cases in phosphor-dbus-interfaces, so I’m planning to define new SEL entries for them under xyz.openbmc_project.Inventory.\n\nIn addition, since chassis and host can have multiple power states, I designed this as a powerStateChange event, with the specific state passed in as a parameter for flexibility.",
+      "revId": "2532165b664cefffcf6ac5e8cf21008a3bd2ef6b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

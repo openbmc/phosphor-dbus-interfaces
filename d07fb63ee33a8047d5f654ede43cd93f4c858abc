@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc029495_1e1d5f28",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-09-02T05:50:38Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "15ced8b0_9ecf7dc3",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "d07fb63ee33a8047d5f654ede43cd93f4c858abc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0380c510_852db9b9",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-08-28T17:24:40Z",
       "side": 1,
       "message": "If this is embedded in an accelerator does that mean it shares the path?  If so, why is this not a Decorator (and instead it is its own Inventory item).\n\nWhy aren\u0027t we using `Inventory.Dimm`?  That already has the HBM enums and `FormFactor\u003dDie` sounds like what you\u0027re describing.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 56
+      },
+      "revId": "d07fb63ee33a8047d5f654ede43cd93f4c858abc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4ee527b_4ebf0af5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/DeviceMemory.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1001486
+      },
+      "writtenOn": "2025-09-02T05:50:38Z",
+      "side": 1,
+      "message": "Yes I have moved it to decorator as its not new inventory item. \nI had feedback from @deepak.kodihalli.83@gmail.com and @ed@tanous.net not to re-use Dimm interface and create a new PDI. Since its not DIMM memory may be its not appropriate to use Inventory.Dimm",
+      "parentUuid": "0380c510_852db9b9",
       "range": {
         "startLine": 2,
         "startChar": 0,

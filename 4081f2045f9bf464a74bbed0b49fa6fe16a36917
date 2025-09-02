@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9c79047a_8756c55f",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-02T17:24:36Z",
+      "side": 1,
+      "message": "We also have to consider dbus conventions here though.  \"CM\" is an acronym and not a unit.  We can debate if it should be \"CubicMeters\" or \"CM\", but `cm` would not follow the dbus style conventions we have for enumerations.",
+      "parentUuid": "a054d3e6_dd412d76",
+      "revId": "4081f2045f9bf464a74bbed0b49fa6fe16a36917",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "29389d49_2b910e93",
         "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 2

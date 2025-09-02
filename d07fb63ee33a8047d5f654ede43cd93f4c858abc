@@ -93,6 +93,30 @@
       },
       "revId": "d07fb63ee33a8047d5f654ede43cd93f4c858abc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14d6917b_8e1257e0",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/DeviceMemory.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-02T20:22:57Z",
+      "side": 1,
+      "message": "\u003e I had feedback from @deepak.kodihalli.83@gmail.com and @ed@tanous.net not to re-use Dimm interface and create a new PDI. Since its not DIMM memory may be its not appropriate to use Inventory.Dimm\n\nThis seems like an assertion and not a discussion.  Can you have those people give their feedback in public?",
+      "parentUuid": "d4ee527b_4ebf0af5",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 56
+      },
+      "revId": "d07fb63ee33a8047d5f654ede43cd93f4c858abc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

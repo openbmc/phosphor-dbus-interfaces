@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ace21d2_9da93666",
+        "filename": "yaml/xyz/openbmc_project/Inventory.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-02T15:13:17Z",
+      "side": 1,
+      "message": "Based on your commit message\n\n\u003e In order for broad application, the log contains just\nthe object path since not all inventory information would\nbe available across all inventory structures/entities.\n\nit\u0027s the object path, so maybe rename to `Path` or similar?",
+      "revId": "97dc6d4b8395d87bc39a754d9f760e8aa2cc6f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85fe3430_9991ef9a",
+        "filename": "yaml/xyz/openbmc_project/Inventory.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-02T15:13:17Z",
+      "side": 1,
+      "message": "An example would be helpful for which string could go here.",
+      "revId": "97dc6d4b8395d87bc39a754d9f760e8aa2cc6f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ebd2d60_b898dd02",
+        "filename": "yaml/xyz/openbmc_project/Inventory.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-02T15:13:17Z",
+      "side": 1,
+      "message": "If it can be just the name, then we have to use `type: string`, right?",
+      "revId": "97dc6d4b8395d87bc39a754d9f760e8aa2cc6f1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

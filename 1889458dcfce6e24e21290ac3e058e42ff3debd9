@@ -89,6 +89,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "db1219df_e63371df",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-09-02T21:55:29Z",
+      "side": 1,
+      "message": "I\u0027ve seen changed it to be a more generic position.",
+      "parentUuid": "3b5f827d_e524fba2",
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc33415d_05f8d457",
@@ -126,6 +144,30 @@
       "side": 1,
       "message": "Yea, probably should be, thanks.",
       "parentUuid": "cc33415d_05f8d457",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 40
+      },
+      "revId": "1889458dcfce6e24e21290ac3e058e42ff3debd9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34fbc91f_48176540",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/LocalBMCPosition.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-09-02T21:55:29Z",
+      "side": 1,
+      "message": "Since the desire is for this to go into phosphor-inventory-manager, it can\u0027t be read only after all.",
+      "parentUuid": "33016ab2_a95c92ca",
       "range": {
         "startLine": 5,
         "startChar": 0,

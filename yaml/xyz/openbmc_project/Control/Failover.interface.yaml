@@ -9,6 +9,10 @@ methods:
       description: >
           Starts a failover operation.
       parameters:
+          - name: Requester
+            type: enum[self.Requester]
+            description: >
+                Identifies who's requesting the failover
           - name: Options
             type: dict[string, variant[boolean]]
             description: >
@@ -19,6 +23,22 @@ methods:
           - xyz.openbmc_project.Common.Error.Unavailable
 
 enumerations:
+    - name: Requester
+      description: >
+          Who is requesting the failover.
+      values:
+          - name: Host
+            description: >
+                The host is requesting the failover.
+          - name: Redfish
+            description: >
+                A Redfish client is requesting the failover.
+          - name: SystemConfig
+            description: >
+                A system config checker on the BMC is requesting the failover.
+          - name: Tool
+            description: >
+                A command line tool is requesting the failover.
     - name: Options
       description: >
           Available options for starting the failover.

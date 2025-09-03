@@ -9,6 +9,10 @@ methods:
       description: >
           Starts a failover operation.
       parameters:
+          - name: Requester
+            type: string
+            description: >
+                Identifies who's requesting the failover
           - name: Options
             type: dict[string, variant[boolean]]
             description: >

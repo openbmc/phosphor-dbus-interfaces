@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "639dd228_5a1c90ab",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-09-03T15:01:23Z",
+      "side": 1,
+      "message": "\u003e Is parent path same as PLDM terminus or same as directory\n\nIt\u0027s a generic term to cover any directory name ahead of this file if exists.\n\n\u003e How are duplicate filenames to be handled? Is there a restriction on the length of the filename - is this the actual filename or some other ID? Not all typical file name characters may be allowed on a D-Bus pathname.\n\nIf we talk about PLDM File Transfer, the \u003cFileName\u003e is a trimmed version from FileName field in File Descriptor PDR. The spec says `This shall be a unique file name (for the device)`, so for PLDM File Transfer, the topmost parent directory of any file will be its terminus name. Therefore, it\u0027s guaranteed from the spec perspective that no duplication is encountered. Please search for \"Proposed file object path hierarchy\" in https://gerrit.openbmc.org/c/openbmc/docs/+/76960.\n\nAnd as it\u0027s a trimmed version, all invalid characters in the FileName field will be replaced by underscores just like how other apps do.",
+      "parentUuid": "33c38173_4283f6b6",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 47
+      },
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1c89fff0_1b5d4efa",
         "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
         "patchSetId": 4
@@ -67,6 +91,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9523cc00_8560bae2",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-09-03T15:01:23Z",
+      "side": 1,
+      "message": "Initially, I planned this Common.File interface to not be specific to PLDM, so I don\u0027t want to restrict the Read call to streaming only, which returns an fd and requires clients to start polling/reading from it. I planned to let the interface be common enough that it depends on the application which host the interface to choose which behavior should be implemented for this method, whether using memfd or socketpair.\n\nIf it should be moved to under PLDM/, how about another name like GetStreamingFD()?",
+      "parentUuid": "1c89fff0_1b5d4efa",
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f2b348cc_91d14a5a",
         "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
         "patchSetId": 4
@@ -78,6 +120,30 @@
       "writtenOn": "2025-08-25T06:26:21Z",
       "side": 1,
       "message": "size_t for this and length?",
+      "range": {
+        "startLine": 12,
+        "startChar": 18,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce6f2375_814cd395",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-09-03T15:01:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2b348cc_91d14a5a",
       "range": {
         "startLine": 12,
         "startChar": 18,
@@ -107,6 +173,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "52baf942_bd11b4b0",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-09-03T15:01:23Z",
+      "side": 1,
+      "message": "This is for pldmd to tell the file host to open an exclusive session on the file, so technically for the file host. Should I add something here?",
+      "parentUuid": "dfc81411_6a6836a0",
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e784aa2a_cb486d72",
         "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
         "patchSetId": 4
@@ -118,6 +202,24 @@
       "writtenOn": "2025-08-25T06:26:21Z",
       "side": 1,
       "message": "When is this closed?",
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ca0948b_8b4be7e4",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-09-03T15:01:23Z",
+      "side": 1,
+      "message": "Updated. `Callers are responsible for closing the fd` as now a caller hold its own copy of the fd, and is required to close it after reading out all the data from it.",
+      "parentUuid": "e784aa2a_cb486d72",
       "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -135,6 +237,30 @@
       "writtenOn": "2025-08-25T06:26:21Z",
       "side": 1,
       "message": "size_t?",
+      "range": {
+        "startLine": 50,
+        "startChar": 12,
+        "endLine": 50,
+        "endChar": 18
+      },
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "074befef_875fb84a",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-09-03T15:01:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "338fb1cb_8a0099b6",
       "range": {
         "startLine": 50,
         "startChar": 12,

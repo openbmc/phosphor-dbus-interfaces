@@ -15,6 +15,10 @@ methods:
                 Additional options. The key is the string version of the Options
                 enum, in the form of
                 'xyz.openbmc_project.Control.Failover.Options.X'.
+          - name: Initiator
+            type: string
+            description: >
+                Identifies who initiated the failover.
       errors:
           - xyz.openbmc_project.Common.Error.Unavailable
 

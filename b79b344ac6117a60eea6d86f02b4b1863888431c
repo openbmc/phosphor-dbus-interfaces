@@ -98,6 +98,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9d87dace_02346801",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Position.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-09-04T22:15:12Z",
+      "side": 1,
+      "message": "\u003e If we are going to make this interface, can we add to the description how it is different from the Decorator.Slot interface.\n\nWill do.  When I created the Slot interface a few years ago, it was to distinguish PCIe slots.\n\n\u003e In this example, which Position do you assign to each one? Is there a main chassis which manages the other one? Does it then get Position 0.\n\n\nI already have:\n\"when it\u0027s necessary to distinguish it from other inventory items of the same type.\"\n\nI would say it\u0027s implied that a super chassis is not the same type as a sub chassis, though I will try to think of a way to enhance what I have.\n\n\u003e I would prefer if you could use the existing interface, if at all possible\n\nIt\u0027s one of those things, do we want to be stuck with a term just because it was first.  I go back and forth.",
+      "parentUuid": "5f8b1cf8_e1bf2c91",
+      "range": {
+        "startLine": 2,
+        "startChar": 14,
+        "endLine": 2,
+        "endChar": 22
+      },
+      "revId": "b79b344ac6117a60eea6d86f02b4b1863888431c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a3bb2967_8ccf4352",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Position.interface.yaml",
         "patchSetId": 3

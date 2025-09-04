@@ -122,6 +122,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "44677b4f_d592518c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Position.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-04T22:41:29Z",
+      "side": 1,
+      "message": "\u003e \"when it\u0027s necessary to distinguish it from other inventory items of the same type.\"\n\nThe Slot interface has description\n`Implement to provide a slot number for an inventory item.`\n\nLet\u0027s say i have an inventory item,\nhow would i choose one or both of those interfaces to put on it?\n\nI\u0027m all for having this interface if it\u0027s meaningfully different and we know when to use which one.\n\nSomething else i want to understand here, can we have multiple inventory items with same inventory dbus interface and  same `SlotNumber`?\n\nAnd can we have multiple inventory items present with same inventory dbus interface and same `Position`?\n\n\u003e If we have a freestanding chassis that is cabled to another chassis, does it have a slot or position? It feels more like a \u0027position\u0027, though the existing slot interface would still work and if this is deemed too similar that\u0027s fine.\n\nI believe i have similar use case for supporting multi-host systems.\n\nWhat do you think of this description\n\n```\nHolds the position of an inventory item\nwhen there are multiple instances of an inventory item with the same \nxyz.openbmc_project.Inventory.Decorator.Slot::SlotNumber\nsuch as in multi-host, blade server, or multi-chassis systems.\n\nIn such cases,\nthe xyz.openbmc_project.Inventory.Decorator::Position\nproperty will be same as \n`xyz.openbmc_project.Inventory.Decorator.ManagedHost::HostIndex\nproperty, if managed host interface is present.\n\nIn case of having only one instance of an inventory item with a given \nxyz.openbmc_project.Inventory.Decorator::Position, \n\nxyz.openbmc_project.Inventory.Decorator.Position\ndoes not imply existence of \nxyz.openbmc_project.Inventory.Decorator.Slot\n```\n\nThat would allow me to have some kind of workaround for multi-host hardware inventories in redfish while the associations are still being worked on.\n\nSorry for the text dump 😊",
+      "parentUuid": "9d87dace_02346801",
+      "range": {
+        "startLine": 2,
+        "startChar": 14,
+        "endLine": 2,
+        "endChar": 22
+      },
+      "revId": "b79b344ac6117a60eea6d86f02b4b1863888431c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a3bb2967_8ccf4352",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Position.interface.yaml",
         "patchSetId": 3

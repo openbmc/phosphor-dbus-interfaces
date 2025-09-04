@@ -16,6 +16,46 @@
       "message": "The related EM patch for this change has been merged https://gerrit.openbmc.org/c/openbmc/entity-manager/+/77415.",
       "revId": "5f9777b97dcdd8c4954853f32760f396d0926817",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "baa30f7d_b44b479d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-04T20:17:55Z",
+      "side": 1,
+      "message": "If we have the pairing, why do we need this?  Can you be clearer what the purpose of this is.  I don\u0027t know why we need a \"pair name\".",
+      "revId": "5f9777b97dcdd8c4954853f32760f396d0926817",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "51ef1930_f46b1ddd",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-04T20:17:55Z",
+      "side": 1,
+      "message": "No.  Set it to an empty string.  Arbitary values that hold meaning are not something that should be documented in the description of a dbus interface.",
+      "range": {
+        "startLine": 15,
+        "startChar": 40,
+        "endLine": 15,
+        "endChar": 67
+      },
+      "revId": "5f9777b97dcdd8c4954853f32760f396d0926817",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

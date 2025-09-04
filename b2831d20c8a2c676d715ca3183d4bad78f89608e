@@ -107,6 +107,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1417d9ce_2abaa992",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-09-04T08:41:46Z",
+      "side": 1,
+      "message": "Read() has been renamed to Open() to better adhere to the behaviors of this method. Please help re-check the design doc.",
+      "parentUuid": "9523cc00_8560bae2",
+      "revId": "b2831d20c8a2c676d715ca3183d4bad78f89608e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f2b348cc_91d14a5a",

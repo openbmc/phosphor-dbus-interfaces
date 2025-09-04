@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4ee7c942_9833d6e6",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-09-04T07:38:57Z",
+      "side": 1,
+      "message": "I wonder if we leave Type\u003ddbus and just remove the object from d-bus when we get the Reload would work? Then the service wont report itself as \"Started\" until it has reloaded the data files AND put itself back on d-bus. Or just moving to notify-reload and putting an extra line of code (to notify systemd) after adding the object to dbus would be ok too.\n\nThe ability to tell an application to only reload specific pieces of its data has some merit, but do we really have any valid use cases for that? For simplicity, I think it\u0027s going to be much cleaner (and testable) if we just have applications reload all of their data in which case a \"ExecReload\u003d/bin/kill -HUP $MAINPID\" should be fine.",
+      "parentUuid": "93f0bb9a_cb473b3d",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b406360e_f82b9caf",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2

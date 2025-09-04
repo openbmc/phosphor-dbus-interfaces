@@ -41,17 +41,29 @@ matchers:
 - partial_regex: yaml/com/ibm
   owners:
   - spinler@us.ibm.com
+- partial_regex: yaml/xyz/openbmc_project/Inventory
+  reviewers:
+  - alexander.hansen@9elements.com
+- partial_regex: yaml/xyz/openbmc_project/Sensor
+  reviewers:
+  - alexander.hansen@9elements.com
+- partial_regex: yaml/xyz/openbmc_project/Software
+  reviewers:
+  - alexander.hansen@9elements.com
 - partial_regex: gen/com/ibm
   owners:
   - spinler@us.ibm.com
 
 openbmc:
+- name: Alexander Hansen
+  email: alexander.hansen@9elements.com
+  discord: Alexander
 - name: Deepak Kodihalli
   email: deepak.kodihalli.83@gmail.com
   discord: dkodihal
-- name: Patrick Williams
-  email: patrick@stwcx.xyz
-  discord: stwcx
 - name: Matt Spinler
   email: spinler@us.ibm.com
   discord: mspinler
+- name: Patrick Williams
+  email: patrick@stwcx.xyz
+  discord: stwcx

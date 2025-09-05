@@ -54,3 +54,23 @@ events:
           description: A fault detected on a voltage regulator has cleared.
           message:
               A fault has cleared on voltage regulator '{VoltageRegulator}'.
+
+    - name: InventoryPowerOn
+      metadata:
+          - name: IdentifierPath
+            type: object_path
+            primary: true
+            description: The object path of the inventory item powered on.
+      en:
+          description: An inventory item has been powered on.
+          message: Inventory '{IdentifierPath}' powered on.
+
+    - name: InventoryPowerOff
+      metadata:
+          - name: IdentifierPath
+            type: object_path
+            primary: true
+            description: The object path of the inventory item powered off.
+      en:
+          description: An inventory item has been powered off.
+          message: Inventory '{IdentifierPath}' powered off.

@@ -22,6 +22,30 @@
       },
       "revId": "456f068340b2081c7a89f32099cef5aa53bdd889",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20b34457_d17d12f5",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-09-05T02:14:38Z",
+      "side": 1,
+      "message": "The reason i defined it as a different namespace because Redfish is also defining a new reading type for Valve (https://github.com/openbmc/bmcweb/blob/master/redfish-core/schema/dmtf/json-schema/Sensor.v1_11_0.json#L234)\n\nLooks like Utilization maps to Percent in terms of Redfish as that defines the generic reading in percentage units.\n\n\"Percent\": \"This value shall indicate a percentage measurement, in percent units.  The `Reading` value, while typically `0` to `100`, may exceed `100` for rate-of-change or similar readings.  The `ReadingUnits` property shall contain `%`.\",\n\nhttps://github.com/openbmc/bmcweb/blob/master/redfish-core/schema/dmtf/json-schema/Sensor.v1_11_0.json#L224C17-L225C17",
+      "parentUuid": "528a7524_fdcff660",
+      "range": {
+        "startLine": 55,
+        "startChar": 71,
+        "endLine": 57,
+        "endChar": 0
+      },
+      "revId": "456f068340b2081c7a89f32099cef5aa53bdd889",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

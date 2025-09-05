@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d912799f_94d71c8a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-05T02:08:26Z",
+      "side": 1,
+      "message": "But you have the association already... I\u0027m not following why we need an arbitrary string name.\n\nWith a property, you can\u0027t \"find the other end of the pair\" anyhow without looking at every single instance.  Generally that\u0027s fairly bad for performance... so what are you trying to accomplish with this?  I\u0027m not understanding what daemon is the consumer.",
+      "parentUuid": "b1020c36_29bb7da9",
+      "revId": "5f9777b97dcdd8c4954853f32760f396d0926817",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "51ef1930_f46b1ddd",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
         "patchSetId": 7

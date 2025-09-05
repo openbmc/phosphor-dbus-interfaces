@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1020c36_29bb7da9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-09-05T01:59:29Z",
+      "side": 1,
+      "message": "There is no pairing as such, as Supply and Return valves are 2 different inventory items. The only thing which can make them a pair is this PairName property. Initially i had created a pair decorator but in one of our discussions you had mentioned that it will create a general use for that decorator outside of Valve as well, hence i dropped that idea and just added this PairName property.\n\nI have updated the description for property to add more details on the purpose. Marking this as resolved for now, please let me know if there are any further questions on this.",
+      "parentUuid": "baa30f7d_b44b479d",
+      "revId": "5f9777b97dcdd8c4954853f32760f396d0926817",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "51ef1930_f46b1ddd",
@@ -48,6 +66,30 @@
       "writtenOn": "2025-09-04T20:17:55Z",
       "side": 1,
       "message": "No.  Set it to an empty string.  Arbitary values that hold meaning are not something that should be documented in the description of a dbus interface.",
+      "range": {
+        "startLine": 15,
+        "startChar": 40,
+        "endLine": 15,
+        "endChar": 67
+      },
+      "revId": "5f9777b97dcdd8c4954853f32760f396d0926817",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72855373_d363d84e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-09-05T01:59:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "51ef1930_f46b1ddd",
       "range": {
         "startLine": 15,
         "startChar": 40,

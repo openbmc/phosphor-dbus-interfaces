@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3b42ea6e_984ee865",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-09-05T07:34:03Z",
+      "side": 1,
+      "message": "\u003e Information which originates from entity-manager for consumption by other processes should be in the Configuration space, right?  The PairName sounds like a new Configuration object then.\n\nI was also intending to use the PairName as CoolantLoop Name in the Redfish https://github.com/openbmc/bmcweb/blob/master/redfish-core/schema/dmtf/json-schema/CoolantConnector.v1_2_0.json#L88 as that seems more of an inventory data instead.",
+      "parentUuid": "e350caf9_bc229ee8",
+      "revId": "5f9777b97dcdd8c4954853f32760f396d0926817",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "51ef1930_f46b1ddd",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
         "patchSetId": 7

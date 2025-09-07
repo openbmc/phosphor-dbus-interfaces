@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8865fdb0_6500bd08",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-07T14:29:33Z",
+      "side": 1,
+      "message": "I\u0027m not too deep into PCIe device inventories or how those are used in redfish, listing a concrete use-case\n\ne.g. \"for implementing redfish resource X this change is needed because... \"\n\ncould make a stronger case for this change.",
+      "range": {
+        "startLine": 10,
+        "startChar": 16,
+        "endLine": 11,
+        "endChar": 44
+      },
+      "revId": "44b9022f97af52d7f4e0eed2fac1c88eae0f85d0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c702e9ee_4702c168",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-07T14:29:33Z",
+      "side": 1,
+      "message": "Showing a object tree layout could be helpful here.\nSince there\u0027s multiple functions, the `PCIeDevice` interface would likely go on multiple object paths, right?",
+      "range": {
+        "startLine": 12,
+        "startChar": 32,
+        "endLine": 13,
+        "endChar": 35
+      },
+      "revId": "44b9022f97af52d7f4e0eed2fac1c88eae0f85d0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d03eb634_9c32fc69",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-07T14:29:33Z",
+      "side": 1,
+      "message": "Are there patches up for updating other applications to\nexpose / consume the newly defined interface.\n\nIMO it would make sense to link to those or make a `TODO` section here in case this change is in design phase. Or making a topic with those changes.\n\nTo give some idea of all the things that need changing before the deprecated properties can be removed.",
+      "range": {
+        "startLine": 14,
+        "startChar": 38,
+        "endLine": 15,
+        "endChar": 8
+      },
+      "revId": "44b9022f97af52d7f4e0eed2fac1c88eae0f85d0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

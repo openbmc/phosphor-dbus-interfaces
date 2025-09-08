@@ -134,6 +134,24 @@
       "parentUuid": "11c044f5_fdc68977",
       "revId": "21d852a5249f98f984332329243189d35977f413",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ecbc4144_4ed15ef4",
+        "filename": "yaml/xyz/openbmc_project/Common/Progress.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2025-09-08T13:32:25Z",
+      "side": 1,
+      "message": "As confirmed bu @dhruvaraj@gmail.com, default is being set explicitly by dump-collector and changing the default to \"Not Started\" is not going to break them.\nHence as majority suggests, default value will be updated to \"Not Started\".",
+      "parentUuid": "7973cc80_e8df8194",
+      "revId": "21d852a5249f98f984332329243189d35977f413",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

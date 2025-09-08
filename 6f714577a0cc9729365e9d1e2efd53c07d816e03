@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "97f2eb65_6c433ced",
+        "filename": "yaml/xyz/openbmc_project/HostInterface/CredentialBootstrapping.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2025-09-08T09:55:35Z",
+      "side": 1,
+      "message": "Are you taking about https://github.com/openbmc/phosphor-dbus-interfaces/blob/0c07b1352dff2f53861f5513c44eca8766e0cc21/yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml#L7\nThese are two different interfaces, I don\u0027t see any reason to avoid to use the same property names.\nIf you worry about phosphor-user-manger code, then I already cover that in the code.",
+      "parentUuid": "021cbbd4_aa04844c",
+      "revId": "6f714577a0cc9729365e9d1e2efd53c07d816e03",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1677d277_e7c99052",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-08-21T15:57:11Z",
       "side": 1,
       "message": "Should this be enum ?",
+      "revId": "6f714577a0cc9729365e9d1e2efd53c07d816e03",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f7ebcc9_6dc0e699",
+        "filename": "yaml/xyz/openbmc_project/HostInterface/CredentialBootstrapping.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000945
+      },
+      "writtenOn": "2025-09-08T09:55:35Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "1677d277_e7c99052",
       "revId": "6f714577a0cc9729365e9d1e2efd53c07d816e03",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

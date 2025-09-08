@@ -47,6 +47,54 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2965b381_c90efab2",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-09-08T19:06:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "470f2135_e0cbc769",
+      "range": {
+        "startLine": 59,
+        "startChar": 10,
+        "endLine": 59,
+        "endChar": 26
+      },
+      "revId": "c4e2297cc67f842c2b7815f265db204a223f3281",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1bbafb6_d47927a8",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-09-08T19:06:36Z",
+      "side": 1,
+      "message": "Good point, I\u0027ve adjusted default to 2.",
+      "parentUuid": "5579656c_8cb48136",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 26
+      },
+      "revId": "c4e2297cc67f842c2b7815f265db204a223f3281",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "74edf0c2_64d624e4",
@@ -60,6 +108,30 @@
       "writtenOn": "2025-09-04T16:37:31Z",
       "side": 1,
       "message": "I suggest setting default to `intmax` to indicate \"unknown value\".  This way there is something clear to key off in bmcweb to know to omit this property.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 34
+      },
+      "revId": "c4e2297cc67f842c2b7815f265db204a223f3281",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f70df30b_fdc7fe35",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2025-09-08T19:06:36Z",
+      "side": 1,
+      "message": "Good idea, I\u0027ve added the default value.",
+      "parentUuid": "74edf0c2_64d624e4",
       "range": {
         "startLine": 60,
         "startChar": 0,

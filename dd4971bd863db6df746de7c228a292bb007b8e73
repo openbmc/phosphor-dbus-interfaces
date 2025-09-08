@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b28691af_b81fff9a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-08T20:48:13Z",
+      "side": 1,
+      "message": "Disclaimer: never did anything with liquid cooling\n\nIMO Valves and pipes can form a directed graph for liquid flow, right?\n\nMy main concern, how do we communicate this.\n\nIf there is a valve A, then a distribution block, then 3 valves {B,C,D},\nthen a return valve E,\nhow do we configure these connections with associations?\n\n```\nA (supply) --\u003e block\n               | | |\n               B C D\n               | | |\nE (return) \u003c-- block\n```\n\n\nWhat do you think about having `connecting`/ `connected_with` association to configure this.\n\nMaybe we can have a boolean for `isSupplyValve` and `isReturnValve`, to mark supply and return valves for the whole system.\n\nThen by walking the graph between those 2 one could figure out which supply can be paired with which return.\n\nIf we name the association `paired_with`, it sounds to me like there are only 2 valves (because of the word `pair`).",
+      "revId": "dd4971bd863db6df746de7c228a292bb007b8e73",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

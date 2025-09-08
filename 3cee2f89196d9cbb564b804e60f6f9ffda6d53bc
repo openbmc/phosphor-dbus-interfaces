@@ -92,6 +92,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1ee3201_eefb8833",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2025-09-08T10:49:51Z",
+      "side": 1,
+      "message": "My understanding is that `Type\u003ddbus` ensures that the service name specified via BusName in the unit file matches the requested D-Bus name, allowing systemd to confirm that the service has successfully started.\nIn our current OpenBMC project, we claim the name only after restoring persisted D-Bus data during start up, so interface-added/removed signals are not emitted at that stage.\n\nHowever, during a reload, subscriber applications may already be running. In such cases, we need to emit the appropriate update signals (e.g., interface added/removed or properties changed) to reflect the reloaded data for the subscribers. I believe the interface implementation already provides support for this.\n\nIf we adopt `Type\u003dnotify-reload` with the necessary `sd_notify` calls and ExecReload with SIGHUP to handle both the D-Bus service startup and the reload scenario, we could avoid proposed `ReloadAll` API. \n\nHowever, we would still need a mechanism to reload only a specific file (or a list of files). For instance, updating an error log property could otherwise trigger the reloading of thousands of PELs (IBM currently has ~3000, and this number is expected to grow), which would be an expensive operation.\n\nIs it ok to update the proposed interface with a Reload(paths) method?",
+      "parentUuid": "4ee7c942_9833d6e6",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b406360e_f82b9caf",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2

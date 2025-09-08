@@ -110,6 +110,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2e550811_485ec275",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2025-09-08T12:12:47Z",
+      "side": 1,
+      "message": "If we are fine with updating the application to use Type\u003dnotify-reload, then we could remove the need for ReloadAll. However, we should also consider modifying the application so that it sends sd_notify only after the D-Bus service name has been successfully claimed (as it currently does during startup) and again after all configuration and persisted data have been reloaded.\n\nHaving the ability to reload a specific file (or a set of files) would still be beneficial.",
+      "parentUuid": "b1ee3201_eefb8833",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b406360e_f82b9caf",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2

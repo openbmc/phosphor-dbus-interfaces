@@ -125,6 +125,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ea8b5a9_8a3f703f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-09-08T20:01:45Z",
+      "side": 1,
+      "message": "I gave this one a second thought and i think you are right and its better if we have this as part of configuration. The CoolantLoop by itself will be an inventory object to which Valves can connect. So, having pairName/LoopName in Valve configuration will be better. I have dropped PairName from valve inventory item.",
+      "parentUuid": "3b42ea6e_984ee865",
+      "revId": "5f9777b97dcdd8c4954853f32760f396d0926817",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "51ef1930_f46b1ddd",

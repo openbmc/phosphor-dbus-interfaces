@@ -1,0 +1,58 @@
+description: >
+    Defines read/write LLDP properties for a network interface. Includes TLVs
+    (Type-Length-Value).
+
+properties:
+    - name: ChassisId
+      type: string
+      default: ""
+      description: >
+          The Chassis ID of the device. This is a unique identifier for the
+          chassis of the device, which can be a MAC address, network address, or
+          other identifier.
+
+    - name: ChassisIdSubtype
+      type: enum[self.IEEE802IdSubtype]
+      default: NotTransmitted
+      description: >
+          The format or type of the Chassis ID. This indicates the type of
+          identifier used for the Chassis ID, such as MAC address, network
+          address, or locally assigned.
+
+    - name: PortId
+      type: string
+      default: ""
+      description: >
+          The Port ID of the device. This is a unique identifier for the port of
+          the device, which can be an interface name, MAC address, or other
+          identifier.
+
+    - name: PortIdSubtype
+      type: enum[self.IEEE802IdSubtype]
+      default: NotTransmitted
+      description: >
+          The format or type of the Port ID. This indicates the type of
+          identifier used for the Port ID, such as interface alias, port
+          component, or locally assigned.
+
+    - name: SystemDescription
+      type: string
+      default: ""
+      description: >
+          Textual description of the system. This provides detailed information
+          about the system, including hardware, software, and firmware versions.
+
+enumerations:
+    - name: IEEE802IdSubtype
+      description: >
+          The format or type of the Chassis ID/Port ID.
+      values:
+          - name: ChassisComp
+          - name: IfAlias
+          - name: PortComp
+          - name: MacAddr
+          - name: NetworkAddr
+          - name: IfName
+          - name: AgentId
+          - name: LocalAssign
+          - name: NotTransmitted

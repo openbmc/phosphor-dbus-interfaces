@@ -1,0 +1,105 @@
+description: >
+    Defines LLDP properties for a network interface. Includes TLVs (Type-Length-Value).
+
+properties:
+    - name: ChassisId
+      type: string
+      default: ""
+      description: >
+          The Chassis ID of the device. This is a unique identifier for the chassis
+          of the device, which can be a MAC address, network address, or other identifier.
+
+    - name: ChassisIdSubtype
+      type: enum[self.IEEE802IdSubtype]
+      default: NotTransmitted
+      description: >
+          The format or type of the Chassis ID. This indicates the type of identifier
+          used for the Chassis ID, such as MAC address, network address, or locally assigned.
+
+    - name: PortId
+      type: string
+      default: ""
+      description: >
+          The Port ID of the device. This is a unique identifier for the port of the device,
+          which can be an interface name, MAC address, or other identifier.
+
+    - name: PortIdSubtype
+      type: enum[self.IEEE802IdSubtype]
+      default: NotTransmitted
+      description: >
+          The format or type of the Port ID. This indicates the type of identifier
+          used for the Port ID, such as interface alias, port component, or locally assigned.
+
+    - name: SystemName
+      type: string
+      default: ""
+      description: >
+          System name of the device. This is a human-readable name for the system,
+          typically assigned by the network administrator.
+
+    - name: SystemDescription
+      type: string
+      default: ""
+      description: >
+          Textual description of the system. This provides detailed information about
+          the system, including hardware, software, and firmware versions.
+
+    - name: SystemCapabilities
+      type: array[enum[self.SystemCapabilities]]
+      description: >
+          Primary functions of the device. This indicates the capabilities of the device,
+          such as whether it functions as a bridge, router, or other network component.
+
+    - name: ManagementAddressIPv4
+      type: string
+      default: ""
+      description: >
+          IPv4 management address of the device. This is the IPv4 address used for managing the device.
+
+    - name: ManagementAddressIPv6
+      type: string
+      default: ""
+      description: >
+          IPv6 management address of the device. This is the IPv6 address used for managing the device.
+
+    - name: ManagementAddressMAC
+      type: string
+      default: ""
+      description: >
+          MAC address used for managing the device. This is the MAC address used for management purposes.
+
+    - name: ManagementVlanId
+      type: uint16
+      default: 0
+      description: >
+          VLAN ID used for management traffic. This is the VLAN ID used for managing the device.
+
+
+enumerations:
+    - name: IEEE802IdSubtype
+      description: >
+          The format or type of the Chassis ID/Port ID.
+      values:
+          - name: ChassisComp
+          - name: IfAlias
+          - name: PortComp
+          - name: MacAddr
+          - name: NetworkAddr
+          - name: IfName
+          - name: AgentId
+          - name: LocalAssign
+          - name: NotTransmitted
+          
+    - name: SystemCapabilities
+      description: >
+          The capabilities of the System.
+      values:
+          - name: None
+          - name: Bridge
+          - name: DOCSISCableDevice
+          - name: Other
+          - name: Repeater
+          - name: Router
+          - name: Station
+          - name: Telephone
+          - name: WLANAccessPoint

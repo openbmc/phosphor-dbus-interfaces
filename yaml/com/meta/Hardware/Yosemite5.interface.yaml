@@ -16,3 +16,21 @@ enumerations:
           - name: "LCMXO3D_9400HC_scm"
           - name: "LCMXO3D_9400HC_mb"
           - name: "LFMXO5_25_pdb"
+
+    - name: VR
+      description: >
+          The compatible hardware strings for the VR on Yosemite5.
+      values:
+          - name: "MP2869A_pvddcr_cpu0"
+          - name: "MP29612A_pvddcr_cpu1"
+          - name: "MP29612A_pvddcr_soc"
+          - name: "MP9945_pvdd18_s5"
+          - name: "RAA228244_pvdd_core"
+          - name: "RAA228244_p1v2_vdd_ddr_ch02"
+          - name: "RAA228244_p1v2_vdd_ddr_ch13"
+
+    - name: TPM
+      description: >
+          The compatible hardware strings for the TPM on Yosemite5.
+      values:
+          - name: "BMC"

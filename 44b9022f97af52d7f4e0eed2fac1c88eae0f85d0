@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "bbc2bd59_5c7999d1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-09-09T04:54:17Z",
+      "side": 1,
+      "message": "I updated as your suggestion.",
+      "parentUuid": "8865fdb0_6500bd08",
+      "range": {
+        "startLine": 10,
+        "startChar": 16,
+        "endLine": 11,
+        "endChar": 44
+      },
+      "revId": "44b9022f97af52d7f4e0eed2fac1c88eae0f85d0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "c702e9ee_4702c168",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -49,6 +73,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "2b77dce3_b355742d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-09-09T04:54:17Z",
+      "side": 1,
+      "message": "I added the object tree layout. \n\n\u003eSince there\u0027s multiple functions, the PCIeDevice interface would likely go on multiple object paths, right?\n\nThe PCIe device object has only 1 PCIeDevice interface. But other dbus object paths that includes PCIeFunction interface are created to show PCIe functions\u0027s properties. If this PCIe device is multiple function, multiple object paths that inlcude PCIeFunction interface will be created",
+      "parentUuid": "c702e9ee_4702c168",
+      "range": {
+        "startLine": 12,
+        "startChar": 32,
+        "endLine": 13,
+        "endChar": 35
+      },
+      "revId": "44b9022f97af52d7f4e0eed2fac1c88eae0f85d0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "d03eb634_9c32fc69",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -60,6 +108,30 @@
       "writtenOn": "2025-09-07T14:29:33Z",
       "side": 1,
       "message": "Are there patches up for updating other applications to\nexpose / consume the newly defined interface.\n\nIMO it would make sense to link to those or make a `TODO` section here in case this change is in design phase. Or making a topic with those changes.\n\nTo give some idea of all the things that need changing before the deprecated properties can be removed.",
+      "range": {
+        "startLine": 14,
+        "startChar": 38,
+        "endLine": 15,
+        "endChar": 8
+      },
+      "revId": "44b9022f97af52d7f4e0eed2fac1c88eae0f85d0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61000494_0083e0bd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-09-09T04:54:17Z",
+      "side": 1,
+      "message": "I added the link to the source code need to be updated and move to `TODO` section.",
+      "parentUuid": "d03eb634_9c32fc69",
       "range": {
         "startLine": 14,
         "startChar": 38,

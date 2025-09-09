@@ -1,0 +1,10 @@
+description: >
+    Interface to manage LLDP settings, to enable or disable LLDP packet
+    transmission for all interfaces.
+
+properties:
+    - name: EnableLLDP
+      type: boolean
+      default: false
+      description: >
+          Enables or disables LLDP packet transmission for all interfaces.

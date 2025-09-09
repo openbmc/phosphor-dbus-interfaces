@@ -1,0 +1,63 @@
+description: >
+    Defines read-only LLDP properties for a network interface. Includes TLVs
+    (Type-Length-Value).
+
+properties:
+    - name: SystemName
+      type: string
+      default: ""
+      description: >
+          System name of the device. This is a human-readable name for the
+          system, typically assigned by the network administrator.
+
+    - name: SystemCapabilities
+      type: array[enum[self.SystemCapabilities]]
+      description: >
+          Primary functions of the device. This indicates the capabilities of
+          the device, such as whether it functions as a bridge, router, or other
+          network component.
+
+    - name: ManagementAddressIPv4
+      type: string
+      default: ""
+      description: >
+          IPv4 management address of the device. This is the IPv4 address used
+          for managing the device.
+
+    - name: ManagementAddressIPv6
+      type: string
+      default: ""
+      description: >
+          IPv6 management address of the device. This is the IPv6 address used
+          for managing the device.
+
+    - name: ManagementAddressMAC
+      type: string
+      default: ""
+      description: >
+          MAC address used for managing the device. This is the MAC address used
+          for management purposes.
+
+    - name: ManagementVlanId
+      type: uint16
+      default: 0
+      description: >
+          VLAN ID used for management traffic. This is the VLAN ID used for
+          managing the device.
+      flags:
+          - const
+
+enumerations:
+    - name: SystemCapabilities
+      description: >
+          The capabilities of the System.
+      values:
+          - name: None
+          - name: Bridge
+          - name: DOCSISCableDevice
+          - name: Other
+          - name: Repeater
+          - name: Router
+          - name: Station
+          - name: Telephone
+          - name: WLANAccessPoint

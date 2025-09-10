@@ -5,10 +5,13 @@ sdbusplus_current_path = 'xyz/openbmc_project/Software/Update'
 generated_sources += custom_target(
     'xyz/openbmc_project/Software/Update__cpp'.underscorify(),
     input: [
+        '../../../../../yaml/xyz/openbmc_project/Software/Update.events.yaml',
         '../../../../../yaml/xyz/openbmc_project/Software/Update.errors.yaml',
         '../../../../../yaml/xyz/openbmc_project/Software/Update.interface.yaml',
     ],
     output: [
+        'event.cpp',
+        'event.hpp',
         'error.cpp',
         'error.hpp',
         'common.hpp',
@@ -32,6 +35,8 @@ generated_sources += custom_target(
     ],
     install: should_generate_cpp,
     install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
         false,
         get_option('includedir') / sdbusplus_current_path,
         get_option('includedir') / sdbusplus_current_path,

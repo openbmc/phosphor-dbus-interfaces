@@ -1,0 +1,34 @@
+version: 1.0.0
+
+events:
+  - name: UpgradeInitiated
+    metadata:
+      - name: DEVICE
+        description: Device name
+        type: string
+        primary: true
+      - name: FILE
+        description: File name of the firmware image
+        type: string
+        primary: true
+      - name: INFO
+        description: Additional information
+        type: string
+        primary: true
+    en:
+      description: Firmware upgrade was initiated for a device.
+      message: "{DEVICE} upgrade initiated, File: {FILE}, additional info: {INFO}"
+
+  - name: UpgradeCompleted
+    metadata:
+      - name: DEVICE
+        description: Device name
+        type: string
+        primary: true
+      - name: RESULT
+        description: The result of the upgrade
+        type: string
+        primary: true
+    en:
+      description: Firmware upgrade finished for a device.
+      message: "{DEVICE} upgrade completed. Result: {RESULT}"

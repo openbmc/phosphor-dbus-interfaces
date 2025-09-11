@@ -1,0 +1,13 @@
+version: 1.0.1
+
+events:
+    - name: ResetActivated
+      metadata:
+          - name: ResetName
+            type: object_path
+            primary: true
+            description:
+                The inventory D-Bus object path of the device that was reset.
+      en:
+          description: A reset signal has been activated.
+          message: Reset '{ResetName}' has been activated

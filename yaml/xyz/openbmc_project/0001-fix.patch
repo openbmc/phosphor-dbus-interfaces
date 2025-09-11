@@ -1,0 +1,60 @@
+From 986b46b96ada4244c27f6159c006c57058d29bd0 Mon Sep 17 00:00:00 2001
+From: Peter Yin <peter.yin@quantatw.com>
+Date: Wed, 15 Oct 2025 11:15:51 +0800
+Subject: [PATCH 1/1] fix
+
+Change-Id: I370b7afd5f5b844a5e9bb75b6063b826250cc574
+---
+ .../Chassis/Buttons/Button.events.yaml        | 22 +++++++++++--------
+ .../Chassis/Buttons/Button.interface.yaml     |  8 -------
+ 2 files changed, 13 insertions(+), 17 deletions(-)
+
+diff --git a/yaml/xyz/openbmc_project/Chassis/Buttons/Button.events.yaml b/yaml/xyz/openbmc_project/Chassis/Buttons/Button.events.yaml
+index 72e6c23..a677fd5 100644
+--- a/yaml/xyz/openbmc_project/Chassis/Buttons/Button.events.yaml
++++ b/yaml/xyz/openbmc_project/Chassis/Buttons/Button.events.yaml
+@@ -1,12 +1,16 @@
+ version: 1.0.1
+ 
+ events:
+-    - name: ButtonStateChanged
+-      metadata:
+-          - name: ButtonName
+-            description: The name or identifier of the Button
+-            type: object_path
+-            primary: true
+-      en:
+-          description: A state change has been detected on a button.
+-          message: The state of button '{ButtonName}' has changed'.
++  - name: ButtonPressed
++    metadata:
++      - name: ButtonName
++        description: The name or identifier of the button
++        type: object_path
++        primary: true
++      - name: EngageDuration
++        description: Duration the button was pressed (in milliseconds)
++        type: uint32
++    en:
++      description: A button has been pressed.
++      message: "Button '{ButtonName}' was pressed for {EngageDuration} ms."
++
+diff --git a/yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml b/yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml
+index 4ffd34c..f5f4704 100644
+--- a/yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml
++++ b/yaml/xyz/openbmc_project/Chassis/Buttons/Button.interface.yaml
+@@ -44,11 +44,3 @@ signals:
+     - name: PressedLong
+       description: >
+           Button long pressed signal
+-
+-enumerations:
+-    - name: Status
+-      description: >
+-          This event indicates a physical button state change.
+-      values:
+-          - name: "Pressed"
+-          - name: "Released"
+-- 
+2.43.0
+

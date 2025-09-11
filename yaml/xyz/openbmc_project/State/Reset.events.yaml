@@ -1,0 +1,22 @@
+version: 1.0.1
+
+events:
+    - name: ResetActivated
+      metadata:
+          - name: ResetName
+            type: object_path
+            primary: true
+            description: The name or identifier of the Reset signal
+      en:
+          description: A reset signal has been activated.
+          message: Reset '{ResetName}' has been activated
+
+    - name: ResetDeactivated
+      metadata:
+          - name: ResetName
+            type: object_path
+            primary: true
+            description: The name or identifier of the Reset signal
+      en:
+          description: A reset signal has been deactivated.
+          message: Reset '{ResetName}' has been deactivated.

@@ -16,6 +16,24 @@
       "message": "Disclaimer: never did anything with liquid cooling\n\nIMO Valves and pipes can form a directed graph for liquid flow, right?\n\nMy main concern, how do we communicate this.\n\nIf there is a valve A, then a distribution block, then 3 valves {B,C,D},\nthen a return valve E,\nhow do we configure these connections with associations?\n\n```\nA (supply) --\u003e block\n               | | |\n               B C D\n               | | |\nE (return) \u003c-- block\n```\n\n\nWhat do you think about having `connecting`/ `connected_with` association to configure this.\n\nMaybe we can have a boolean for `isSupplyValve` and `isReturnValve`, to mark supply and return valves for the whole system.\n\nThen by walking the graph between those 2 one could figure out which supply can be paired with which return.\n\nIf we name the association `paired_with`, it sounds to me like there are only 2 valves (because of the word `pair`).",
       "revId": "dd4971bd863db6df746de7c228a292bb007b8e73",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f90a6b02_acbc25b7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Valve.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-09-11T23:26:33Z",
+      "side": 1,
+      "message": "\u003e Disclaimer: never did anything with liquid cooling\n\u003e \n\u003e IMO Valves and pipes can form a directed graph for liquid flow, right?\n\u003e \n\u003e My main concern, how do we communicate this.\n\u003e \n\u003e If there is a valve A, then a distribution block, then 3 valves {B,C,D},\n\u003e then a return valve E,\n\u003e how do we configure these connections with associations?\n\u003e \n\u003e ```\n\u003e A (supply) --\u003e block\n\u003e                | | |\n\u003e                B C D\n\u003e                | | |\n\u003e E (return) \u003c-- block\n\u003e ```\n\u003e \n\u003e \n\u003e What do you think about having `connecting`/ `connected_with` association to configure this.\n\u003e \n\u003e Maybe we can have a boolean for `isSupplyValve` and `isReturnValve`, to mark supply and return valves for the whole system.\n\u003e \n\u003e Then by walking the graph between those 2 one could figure out which supply can be paired with which return.\n\u003e \n\u003e If we name the association `paired_with`, it sounds to me like there are only 2 valves (because of the word `pair`).\n\nSorry, I had missed dropping the pairing association from my last patch as i don\u0027t need this anymore.\n\nThere is one return and supply valve for a coolant loop, thats how the Redfish spec defines it and thats how i have seen the liquid cooling loops in general. I would be implementing a CoolantLoop inventory item which will have Supply and Return valves as its two ends. And yes, for that i am going to use the connected_to/connecting association as that makes sense.",
+      "parentUuid": "b28691af_b81fff9a",
+      "revId": "dd4971bd863db6df746de7c228a292bb007b8e73",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

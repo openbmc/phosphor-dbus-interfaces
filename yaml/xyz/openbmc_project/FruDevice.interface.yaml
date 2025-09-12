@@ -1,0 +1,13 @@
+description: >
+    Implement to represent a field replaceable unit (FRU)
+
+    There are no properties listed here as the properties exposed on this
+    interface unfortunately depend on eeprom contents.
+
+    Independently from this fact, defining the interface is useful to provide
+    the interface name and namespace literals.
+
+service_names:
+    - default: xyz.openbmc_project.FruDevice
+paths:
+    - namespace: /xyz/openbmc_project/FruDevice

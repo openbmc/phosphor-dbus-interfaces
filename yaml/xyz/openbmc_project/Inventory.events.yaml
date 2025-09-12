@@ -20,3 +20,23 @@ events:
       en:
           description: A new inventory entity has been added to the system.
           message: Inventory {IdentifierPath} added.
+
+    - name: InventoryPowerOn
+      metadata:
+          - name: IdentifierPath
+            type: object_path
+            primary: true
+            description: The object path of the inventory item powered on.
+      en:
+          description: An inventory item has been powered on.
+          message: Inventory {IdentifierPath} powered on.
+
+    - name: InventoryPowerOff
+      metadata:
+          - name: IdentifierPath
+            type: object_path
+            primary: true
+            description: The object path of the inventory item powered off.
+      en:
+          description: An inventory item has been powered off.
+          message: Inventory {IdentifierPath} powered off.

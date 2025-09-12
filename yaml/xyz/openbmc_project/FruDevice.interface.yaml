@@ -1,0 +1,29 @@
+description: >
+    Implement to represent a field replaceable unit (FRU)
+
+    There are no properties listed here as the properties exposed on this
+    interface unfortunately depend on eeprom contents.
+
+method:
+    - name: UpdateFruField
+      description: >
+          Update or Add a single field to ipmi FRU contents
+      parameters:
+          - name: fieldName
+            type: string
+            description: >
+                The field name. Must be valid.
+          - name: fieldValue
+            type: string
+            description: >
+                The field value
+      returns:
+          - name: success
+            type: boolean
+            description: >
+                false on error
+
+service_names:
+    - default: xyz.openbmc_project.FruDevice
+paths:
+    - namespace: /xyz/openbmc_project/FruDevice

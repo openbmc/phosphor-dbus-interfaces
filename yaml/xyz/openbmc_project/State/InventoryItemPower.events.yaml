@@ -1,0 +1,29 @@
+version: 1.0.0
+
+events:
+    - name: InventoryItemPowerGood
+      metadata:
+          - name: Item
+            type: object_path
+            primary: true
+            description:
+                D-Bus inventory object path of the item (e.g. a NIC card).
+      en:
+          description:
+              The inventory item has reached its runtime power-good condition
+              (all required operational rails asserted).
+          message:
+              Inventory item '{Item}' runtime power-good condition asserted.
+
+    - name: InventoryItemPowerLost
+      metadata:
+          - name: Item
+            type: object_path
+            primary: true
+            description:
+                D-Bus inventory object path of the item (e.g. a NIC card).
+      en:
+          description:
+              The inventory item no longer satisfies its runtime power-good
+              condition.
+          message: Inventory item '{Item}' runtime power-good condition lost.

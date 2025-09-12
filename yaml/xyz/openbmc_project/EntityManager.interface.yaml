@@ -1,0 +1,13 @@
+description: >
+    Implement to provide dynamic configuration and inventory.
+
+methods:
+    - name: ReScan
+      description: >
+          Re-scan interfaces and re-probe configuration.
+
+service_names:
+    - default: xyz.openbmc_project.EntityManager
+
+paths:
+    - instance: /xyz/openbmc_project/EntityManager

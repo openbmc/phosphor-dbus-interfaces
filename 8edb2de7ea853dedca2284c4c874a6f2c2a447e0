@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "71e6bd97_2014e980",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/Settings.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2025-09-13T04:50:40Z",
+      "side": 1,
+      "message": "We have the LLDPEnabled Property defined in Port schema that is \"per\" interface.\n```\n        LLDPEnabled:\n          description: Enable/disable LLDP for this port.\n          readOnly: false\n          type: boolean\n          x-longDescription: This property shall contain the state indicating whether\n            to enable LLDP for a port.  If LLDP is disabled at the adapter level,\n            this property shall be ignored.\n```\n\nThere is no redfish property that can be set by the user to entirely enable/disable LLDP. So, I would suggest we use this same interface for enabling lldp, but implement it under each interface.\n\nLike, /xyz/openbmc_project/network/lldp/eth[01] can implement xyz.openbmc_project.Network.LLDP.Settings.",
+      "parentUuid": "182d71ed_011d74dd",
+      "revId": "8edb2de7ea853dedca2284c4c874a6f2c2a447e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "979d4fc2_5947c3ff",
         "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
         "patchSetId": 7

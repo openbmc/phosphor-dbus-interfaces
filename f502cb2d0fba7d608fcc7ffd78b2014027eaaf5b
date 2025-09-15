@@ -16,6 +16,24 @@
       "message": "I dont think adding this property under TLVs interface is appropriate. \n\nTwo suggestions here:\n1. Since in this interface\u0027s description you have mentioned as \"Includes TLVs\", renaming this interface to something like \"*.Network.LLDP.Properties\" might help.\n\n-- or --\n\n2. Have this property in a new interface that can be implemented under each ethernet object.",
       "revId": "f502cb2d0fba7d608fcc7ffd78b2014027eaaf5b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c71f274e_985addf2",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1002604
+      },
+      "writtenOn": "2025-09-15T15:37:09Z",
+      "side": 1,
+      "message": "I think the renaming the interface is better than creating an additional interface.",
+      "parentUuid": "a9d5e5eb_f47be724",
+      "revId": "f502cb2d0fba7d608fcc7ffd78b2014027eaaf5b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -5,6 +5,7 @@ description: >
       airflow
       altitude
       current
+      duration
       energy
       fan_tach
       frequency
@@ -55,7 +56,8 @@ properties:
           "Percent" For objects in the voltage namespace, Unit must be "Volts",
           For objects in the liquidflow namespace, Unit must be "LPM". For
           objects in the frequency namespace, Unit must be "Hertz". For objects
-          in the valve namespace, Unit must be "Percent".
+          in the valve namespace, Unit must be "Percent". For objects in the
+          duration namespace, Unit must be "Seconds".
 
 enumerations:
     - name: Unit
@@ -95,6 +97,9 @@ enumerations:
           - name: RPMS
             description: >
                 Frequency of rotation as revolutions per minute.
+          - name: Seconds
+            description: >
+                Time since something occurred.
           - name: Volts
             description: >
                 Electromotive force as volts.
@@ -129,6 +134,8 @@ paths:
             value: altitude
           - name: Current
             value: current
+          - name: Duration
+            value: duration
           - name: Energy
             value: energy
           - name: FanTach

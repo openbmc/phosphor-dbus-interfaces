@@ -4,6 +4,7 @@ description: >
     namespace.  The following sensor hierarchies are recognized:
       airflow
       altitude
+      charge_capacity
       current
       duration
       energy
@@ -57,7 +58,8 @@ properties:
           For objects in the liquidflow namespace, Unit must be "LPM". For
           objects in the frequency namespace, Unit must be "Hertz". For objects
           in the valve namespace, Unit must be "Percent". For objects in the
-          duration namespace, Unit must be "Seconds".
+          duration namespace, Unit must be "Seconds". For objects in the
+          charge_capacity namespace, Unit must be "mAh".
 
 enumerations:
     - name: Unit
@@ -82,6 +84,9 @@ enumerations:
           - name: LPM
             description: >
                 To calculate the liquid flow in Liters Per Minute.
+          - name: mAh
+            description: >
+                Electrical charge capacity in milli ampere hours.
           - name: Meters
             description: >
                 Length as meters.
@@ -132,6 +137,8 @@ paths:
             value: airflow
           - name: Altitude
             value: altitude
+          - name: ChargeCapacity
+            value: charge_capacity
           - name: Current
             value: current
           - name: Duration

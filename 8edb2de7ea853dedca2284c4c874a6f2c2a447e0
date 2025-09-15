@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "54d091d3_58f59d59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2025-09-15T08:40:15Z",
+      "side": 1,
+      "message": "b",
+      "revId": "8edb2de7ea853dedca2284c4c874a6f2c2a447e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "106ac4cf_516db8a3",
@@ -103,6 +120,24 @@
       "writtenOn": "2025-09-15T08:37:33Z",
       "side": 1,
       "message": "I added enable/disable LLDP to TLVs.interface.yaml",
+      "parentUuid": "3d1e5adf_f4ea0c6c",
+      "revId": "8edb2de7ea853dedca2284c4c874a6f2c2a447e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88df6474_2148137a",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/Settings.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2025-09-15T08:40:15Z",
+      "side": 1,
+      "message": "Yes, but that\u0027s for each ethernet interface.\nhttps://github.com/openbmc/phosphor-networkd/commit/f7116de80882b7edad729e7d8747639eff600b08\n\nThat\u0027s the reason i suggested if we can have this interface implemented by each Ethernet interface dbus object",
       "parentUuid": "3d1e5adf_f4ea0c6c",
       "revId": "8edb2de7ea853dedca2284c4c874a6f2c2a447e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"

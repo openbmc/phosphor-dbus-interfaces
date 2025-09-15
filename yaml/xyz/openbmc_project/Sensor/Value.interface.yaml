@@ -4,6 +4,7 @@ description: >
     namespace.  The following sensor hierarchies are recognized:
       airflow
       altitude
+      charge
       current
       energy
       fan_tach
@@ -55,7 +56,8 @@ properties:
           "Percent" For objects in the voltage namespace, Unit must be "Volts",
           For objects in the liquidflow namespace, Unit must be "LPM". For
           objects in the frequency namespace, Unit must be "Hertz". For objects
-          in the valve namespace, Unit must be "Percent".
+          in the valve namespace, Unit must be "Percent". For objects in the
+          charge namespace, Unit must be "AmpereHours".
 
 enumerations:
     - name: Unit
@@ -80,6 +82,9 @@ enumerations:
           - name: LPM
             description: >
                 To calculate the liquid flow in Liters Per Minute.
+          - name: AmpereHours
+            description: >
+                Electrical charge held.
           - name: Meters
             description: >
                 Length as meters.
@@ -127,6 +132,8 @@ paths:
             value: airflow
           - name: Altitude
             value: altitude
+          - name: Charge
+            value: charge
           - name: Current
             value: current
           - name: Energy

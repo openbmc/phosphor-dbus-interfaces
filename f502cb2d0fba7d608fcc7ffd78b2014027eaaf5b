@@ -34,6 +34,24 @@
       "parentUuid": "a9d5e5eb_f47be724",
       "revId": "f502cb2d0fba7d608fcc7ffd78b2014027eaaf5b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ae676b7_4acb43c9",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1002604
+      },
+      "writtenOn": "2025-09-15T15:56:49Z",
+      "side": 1,
+      "message": "Actually, to be fully Complient to Redfish we need enable/disable per interface.\nPutting with a the TLV, we will have separate enable/disable for the receive and transmit object, and Redfish doesn\u0027t support that.",
+      "parentUuid": "c71f274e_985addf2",
+      "revId": "f502cb2d0fba7d608fcc7ffd78b2014027eaaf5b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

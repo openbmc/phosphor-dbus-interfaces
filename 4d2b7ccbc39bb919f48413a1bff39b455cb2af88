@@ -57,6 +57,30 @@
       },
       "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f75e69c_3195ac96",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-09-16T17:20:59Z",
+      "side": 1,
+      "message": "As per the feedback, added a WIP to throw Invalid Arguments when unacceptable values are SET https://gerrit.openbmc.org/c/openbmc/bios-settings-mgr/+/83749\nAs per UEFI Spec, BootOrder values can range from Boot0000-BootFFFF\nhttps://uefi.org/specs/UEFI/2.10/03_Boot_Manager.html\n```\nEach load option entry resides in a Boot####, Driver####, SysPrep####, OsRecovery#### or PlatformRecovery#### variable where #### is replaced by a unique option number in printable hexadecimal representation using the digits 0-9, and the upper case versions of the characters A-F (0000-FFFF)\n```",
+      "parentUuid": "73e8f6e3_47f7aad4",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 63
+      },
+      "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

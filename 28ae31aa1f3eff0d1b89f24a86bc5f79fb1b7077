@@ -36,6 +36,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "653e6bc2_d1abcf7e",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002303
+      },
+      "writtenOn": "2025-09-18T21:14:12Z",
+      "side": 1,
+      "message": "Changed to charge",
+      "parentUuid": "dae483ba_3e62f175",
+      "revId": "28ae31aa1f3eff0d1b89f24a86bc5f79fb1b7077",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1d4771e4_2679309d",
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "The reasoning here is that most devices monitored by the BMC aren\u0027t connected to huge batteries so this prevents us from doing a lot of unnecessary division and decimal points. \n\nWe can change to Ah if that\u0027s better for the community",
       "parentUuid": "1d4771e4_2679309d",
+      "revId": "28ae31aa1f3eff0d1b89f24a86bc5f79fb1b7077",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77dd0a15_81a0e95b",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1002303
+      },
+      "writtenOn": "2025-09-18T21:14:12Z",
+      "side": 1,
+      "message": "changed to charge",
+      "parentUuid": "6dfa9eec_5cc1777f",
       "revId": "28ae31aa1f3eff0d1b89f24a86bc5f79fb1b7077",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

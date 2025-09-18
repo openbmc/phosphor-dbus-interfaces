@@ -1,0 +1,115 @@
+description: >
+    Implemented to represent a PLDM File Descriptor object on D-Bus. pldm should
+    provide one implementation of xyz.openbmc_project.PLDM.File under each
+    /xyz/openbmc_project/pldm/file/<TerminusName>/[<ParentPath>]/<FileName>
+    object.
+
+methods:
+    - name: Open
+      description: >
+          Get the fd from which the file data can be read.
+      parameters:
+          - name: Offset
+            type: size
+            default: 0
+            description: >
+                Offset to read from.
+          - name: Length
+            type: size
+            default: 0
+            description: >
+                Data length to read.
+          - name: Exclusivity
+            type: boolean
+            default: false
+            description: >
+                Whether to open the file exclusively.
+      returns:
+          - name: Fd
+            type: unixfd
+            description: >
+                The fd from which the file data can be read. Callers are
+                responsible for closing the fd.
+      errors:
+          - xyz.openbmc_project.Common.File.Error.Open
+          - xyz.openbmc_project.Common.File.Error.Seek
+
+properties:
+    - name: Name
+      type: string
+      description: Name string of the file.
+    - name: Purpose
+      type: enum[self.PurposeType]
+      default: Unknown
+      description: Purpose of the file.
+    - name: Source
+      type: enum[self.SourceType]
+      default: Unknown
+      description: >
+          Source name of the file.
+    - name: Size
+      type: size
+      description: The current size of the file.
+    - name: UniqueFileID
+      type: uint32
+      description: The unique ID of the file.
+
+enumerations:
+    - name: PurposeType
+      description: >
+          Purposes that a file object can serve.
+      values:
+          - name: BootLog
+            description: >
+                This file provides boot log.
+          - name: SerialTxFIFO
+            description: >
+                This streaming file data is not retained after being transmitted
+                to the receiver or upon FIFO queue overflow.
+          - name: SerialRxFIFO
+            description: >
+                This file is for streaming data back to its host device.
+          - name: DiagnosticLog
+            description: >
+                This file provides log for diagnostic purpose.
+          - name: CrashDump
+            description: >
+                This file provides data upon crash events
+          - name: Security
+            description: >
+                This file provides log for security purpose.
+          - name: FRU
+            description: >
+                This file stores Field Replaceable Unit (FRU) data.
+          - name: TelemetryDataFile
+            description: >
+                This file provides telemetry data.
+          - name: TelemetryDataLog
+            description: >
+                This file provides telemetry log.
+          - name: Directory
+            description: >
+                This is a directory.
+          - name: OEM
+            description: >
+                This file serves OEM purpose.
+          - name: Unknown
+            description: >
+                Purpose not known yet.
+
+    - name: SourceType
+      description: >
+          The origin of a file.
+      values:
+          - name: ComputerSystem
+            description: >
+                This file is originated from outside of BMC.
+          - name: BMC
+            description: >
+                This file is originated from the BMC.
+          - name: Unknown
+            description: >
+                Source not known yet.
+
+paths:
+    - namespace: /xyz/openbmc_project/pldm/file

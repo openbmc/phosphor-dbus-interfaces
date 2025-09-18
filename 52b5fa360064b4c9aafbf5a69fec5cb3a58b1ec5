@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f9bac59_a81d9bc0",
+        "filename": "yaml/xyz/openbmc_project/Inventory.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-18T15:42:53Z",
+      "side": 1,
+      "message": "We\u0027d at least need to change the version to 1.1.0 if we add new events.",
+      "revId": "52b5fa360064b4c9aafbf5a69fec5cb3a58b1ec5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1466eeee_def7a564",
+        "filename": "yaml/xyz/openbmc_project/Inventory.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-18T15:42:53Z",
+      "side": 1,
+      "message": "This seems like a \"State\" event and not an \"Inventory\" event.  Was someone already looking at adding these to states?\n\nWho is expected to generate this event?  What code?\n\nWhy is it interesting to track the power state of individual FRUs (if you even have such a thing)?  Do you need to emit events for child FRUs also?  (For instance a CPU that plugs into a mainboard, when you turn the power on to the mainboard).\n\nWhat does it mean to be \"powered on\"?  We should be clearer in the definition here because individual FRUs often have multiple voltage domain/rails, which might be individually controlled.  The Yosemite4 compute cards, for example, can have standby power to the BIC and FRU-EEPROM, but not have runtime power to the CPU complex.",
+      "revId": "52b5fa360064b4c9aafbf5a69fec5cb3a58b1ec5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

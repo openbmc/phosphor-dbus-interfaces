@@ -33,6 +33,24 @@
       "message": "This seems like a \"State\" event and not an \"Inventory\" event.  Was someone already looking at adding these to states?\n\nWho is expected to generate this event?  What code?\n\nWhy is it interesting to track the power state of individual FRUs (if you even have such a thing)?  Do you need to emit events for child FRUs also?  (For instance a CPU that plugs into a mainboard, when you turn the power on to the mainboard).\n\nWhat does it mean to be \"powered on\"?  We should be clearer in the definition here because individual FRUs often have multiple voltage domain/rails, which might be individually controlled.  The Yosemite4 compute cards, for example, can have standby power to the BIC and FRU-EEPROM, but not have runtime power to the CPU complex.",
       "revId": "52b5fa360064b4c9aafbf5a69fec5cb3a58b1ec5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1da04244_236d46ad",
+        "filename": "yaml/xyz/openbmc_project/Inventory.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1002547
+      },
+      "writtenOn": "2025-09-19T06:52:46Z",
+      "side": 1,
+      "message": "I was asked whether I could improve the Yosemite 4 NIC power-cycle script (https://github.com/openbmc/openbmc/blob/master/meta-facebook/meta-yosemite4/recipes-phosphor/pldm/files/nic-powercycle) so that after it performs an AC-style power off/on of the NIC card it (a) verifies the NIC’s power state and (b) records a structured log event indicating whether the NIC ended up powered on or powered off. \n\nOn this platform we can read CPLD bits that reflect the NIC card’s 12V and 3.3V rails.\n\nThe events I’m proposing are intended to represent whether a FRU has entered a “runtime power good” (operational) condition, rather than reporting the status of each individual rail, and do not consider child FRUs. \n\nIn the Yosemite 4 NIC power-cycle script I plan to emit the event only after confirming— via the CPLD—that all rails required for the NIC to be functionally usable are asserted.\n\nI agree these are operational power state transitions and thus belong in the State namespace. To keep this semantic (component runtime availability) distinct from the existing rail fault / recovery semantics in State/Power.events.yaml, I would like to introduce a new file: State/ComponentPower.events.yaml.\n\nDo you think this approach is appropriate?",
+      "parentUuid": "1466eeee_def7a564",
+      "revId": "52b5fa360064b4c9aafbf5a69fec5cb3a58b1ec5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

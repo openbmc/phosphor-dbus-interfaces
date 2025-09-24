@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd10cd2e_f47c7edb",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Source/Modbus/FRU.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-24T20:18:06Z",
+      "side": 1,
+      "message": "You might want to drop modbus off here?  I\u0027m not sure where you plan to put the object_manager.  DevicePresence just uses `inventory_source`.  Sometimes people will, in code, attempt to use this constant as the place to put their object_manager, but that means the modbus one will be at a different location than the DevicePresence one.",
+      "range": {
+        "startLine": 51,
+        "startChar": 55,
+        "endLine": 51,
+        "endChar": 61
+      },
+      "revId": "b9c611e17a7854b1c79685f6be46a0dda94e25ac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

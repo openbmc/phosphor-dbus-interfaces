@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e6c8056_d9f1ae30",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ReadyToRemove.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-09-25T13:37:25Z",
+      "side": 1,
+      "message": "The way this reads, something in the system would prepare the FRU to be removed and then set this to true.  Is that what the flow is?\n\nI thought it was that a Redfish request will come in to ask that a FRU be prepared for removal, and bmcweb would set this and other code would watch it and prepare it.\n\nI could just be overthinking it.",
+      "range": {
+        "startLine": 2,
+        "startChar": 48,
+        "endLine": 3,
+        "endChar": 16
+      },
+      "revId": "d76a4693050aba931021cecb7185ac5134d3f335",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

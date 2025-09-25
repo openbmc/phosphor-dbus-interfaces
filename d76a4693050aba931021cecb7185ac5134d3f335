@@ -70,6 +70,30 @@
       },
       "revId": "d76a4693050aba931021cecb7185ac5134d3f335",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3440a852_bd2a6b51",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ReadyToRemove.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2025-09-25T22:07:37Z",
+      "side": 1,
+      "message": "The version 1.10+ description of ReadyToRemove doesn\u0027t have the extra information. The version 1.7+ has the extra information about setting...\n1.10+ is a more recent version, so should I go with 1.10+",
+      "parentUuid": "567348b7_b6969e34",
+      "range": {
+        "startLine": 2,
+        "startChar": 48,
+        "endLine": 3,
+        "endChar": 16
+      },
+      "revId": "d76a4693050aba931021cecb7185ac5134d3f335",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

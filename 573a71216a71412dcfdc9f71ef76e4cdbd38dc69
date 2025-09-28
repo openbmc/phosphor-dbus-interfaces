@@ -68,6 +68,24 @@
       "parentUuid": "8bb93c4d_8cb2230e",
       "revId": "573a71216a71412dcfdc9f71ef76e4cdbd38dc69",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2604f5a3_6c6a11df",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2025-09-28T11:37:32Z",
+      "side": 1,
+      "message": "Yes, I did, there is just one transition from 1 to 2 (which means SecondaryFlashBoot), not from 2 to 1  plus I\u0027m trying to say it will get it post factum, not in the time or before of transition, what happens if it doesn\u0027t load to linux rootfs/stuck at uboot or somewhere early in code? You just will not know if this transition succeeded or ever happens. And if happens switch back from 2 to 1, does it \"PrimaryFlashBoot\" or maybe enum \"FlashBootSource\" with \"Primary\" and \"Secondary\"? And what I see from 82793 that on write happens only on boot, if manual/auto switch happens from 1 to 2 and it won\u0027t back - nobody will see this message.",
+      "parentUuid": "7a91527b_71691131",
+      "revId": "573a71216a71412dcfdc9f71ef76e4cdbd38dc69",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

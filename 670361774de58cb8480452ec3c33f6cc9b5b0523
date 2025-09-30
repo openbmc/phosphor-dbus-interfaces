@@ -52,6 +52,24 @@
       "parentUuid": "3984ec7e_3898082f",
       "revId": "670361774de58cb8480452ec3c33f6cc9b5b0523",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "583f989c_f300890d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-30T15:59:53Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t see how \"person B\" is the one to blame in this? Alternatively if I just let whatever in, why bother with having reviews here? Why bother with having any process? Doesn\u0027t that just encourage people to do their own thing?\n\nI do not want to blame anyone here, but if the point of PDI is to interact with dbus interfaces then it does not work if some interfaces are somehow exempt from it for non technical reason.\nLet\u0027s not make life hard for person C.\n\nThat\u0027s just another argument people then use to say they do not want the PDI in their repo since it does not even support my_special_interface.\n\n#### ongoing works\n\n\u003e Alternatively if I just let whatever in, why bother with having reviews here?\n\nCurrently the `WriteFruFromFile` method is in review and already got two +1.\nhttps://gerrit.openbmc.org/c/openbmc/entity-manager/+/83992\n\nThe review about the interface should happen when the interface is added, right?\n\n#### halfsies\n\nHaving the review at a later point makes it so that there are two reviews and then we end up with half-way support of something.\n\nNow where the interface is added first, PDI or in the reactor, that\u0027s a question between maintainers. That\u0027s something to clear in ToF.\n\n\n#### process\n\n\u003e We also reinforce a pattern of not following process.\n\nIf maintainers are not capable to follow project design intent then project is already doomed. Since project is not (yet) doomed i hope they can follow. \n\nMaintainers are *in their own category* and *should be aware of project design intent*.\n\nBut with help and support for existing interfaces it should be easier to follow,\nespecially for people new to the project who base their contributions around existing code.\n\n\u003e We also reinforce a pattern of not following process.\n\nMost people who go around the PDI are not usually the ones who push for PDI adoption. They do not necessarily have something to gain from this support since they do not use the PDI anyways.\n\n#### no intent to re-design a working interface\n\n\u003e Are you willing to do the interface definition and refactoring?\n\nI want to support the existing interfaces in PDI, to the extent that they can be supported (may be limitations due to usage of variant).\n\nIf the existing interfaces cannot be supported in PDI then it will be hard to introduce PDI into existing asio reactors as the maintainers will not see a use-case in adding a dependency and refactoring external interfaces just to add such dependency.\n\nI do *NOT* want to refactor dbus methods with 10s of upstream and probably 100s of downstream callers just for a re-design of a method which is already functional and working today.\n\nI\u0027m aware it is probably in the wrong namespace and should likely not be toplevel interface.\n\nBut that\u0027s how it is defined.\n\n#### PDI role in refactoring\n\nWithout PDI, dependency of a repo on a specific interface is only discovered at runtime, if you are lucky, you can grep for it.\n\nWith PDI, the refactoring and estimating scope of work becomes easier.\n\nSo if anyone in the future wants to refactor `xyz.openbmc_project.FruDeviceManager` into something else, it will be easier to have all the callers use PDI since\na simple build will expose what will break.\n\nBreaking the build is also a good way to communicate any interface changes to downstream.\n\nSo if the project goes \n\npdi interface -\u003e refactoring -\u003e solution\n\nit should be less breakage than\n\nrefactoring -\u003e pdi interface -\u003e solution",
+      "parentUuid": "039a957e_9f70b89a",
+      "revId": "670361774de58cb8480452ec3c33f6cc9b5b0523",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

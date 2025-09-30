@@ -122,6 +122,24 @@
       "parentUuid": "2604f5a3_6c6a11df",
       "revId": "573a71216a71412dcfdc9f71ef76e4cdbd38dc69",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "429038e3_695f3fad",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2025-09-30T06:19:47Z",
+      "side": 1,
+      "message": "Let me keep it straight: \n\nSystem have two possible outcomes from boot source: primary and secondary. You adding just one of it. Would be much more better if you add \"PrimaryFlashBoot\" or make your option as enum like \"FlashBootSource\"/\"SourceFlashBooted\" with two elements in it as \"Primary\" and \"Secondary\".\n\nAbout your implementation:\n\u003e However, the result is not directly recorded in the SEL for the user to understand more explicitly, but instead recorded in the system file.\n\nThat\u0027s not deterministic, you just \"assume\" that you on that side.\n\n\u003e Therefore, if the system is manually switched from flash 2 back to flash 1, as long as the SEL is not cleared, the user can still identify that the system had previously booted from secondary flash.\n\nif you switched back you\u0027ll see explicitly that your last boot is switch from 1 to 2, not from 2 to 1. You may have problems with understanding chain of boots, I assume you\u0027re switching by touching WDT directly from 1 side, you may add event about transition from 1 to 2, like \"System rebooting to secondary side\" from primary side before transition, same for secondary.",
+      "parentUuid": "a2b127fb_20545f45",
+      "revId": "573a71216a71412dcfdc9f71ef76e4cdbd38dc69",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

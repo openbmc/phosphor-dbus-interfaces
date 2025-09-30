@@ -140,6 +140,24 @@
       "parentUuid": "a2b127fb_20545f45",
       "revId": "573a71216a71412dcfdc9f71ef76e4cdbd38dc69",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bc84377_a7567663",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002558
+      },
+      "writtenOn": "2025-09-30T07:30:12Z",
+      "side": 1,
+      "message": "OK.\nDo you mean that the current \"SecondaryFlashBoot\" event is not sufficient to cover both boot sources(\"Primary\" and \"Secondary\"), and that I should record events for both boot source? \nJust to confirm, did I understand your point correctly?\nIf I add a PrimaryFlashBoot event, as you suggested, then regardless of whether the system boots from 1 or 2, it will be clear which boot source was used after each boot or reboot. Would that address your concern?",
+      "parentUuid": "429038e3_695f3fad",
+      "revId": "573a71216a71412dcfdc9f71ef76e4cdbd38dc69",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

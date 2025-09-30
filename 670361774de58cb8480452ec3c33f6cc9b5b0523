@@ -16,6 +16,24 @@
       "message": "Why? Fru-device is an internal interface within entity-manager. \n\nIf we’re going to make this public, by documenting it here, we have to also be willing to make changes to align with the rest of the interfaces. I gave a top level “configuration” tree for unchanged entity-manager interfaces that don’t conform because there are a lot of users and baggage and hoped that we could refactor them. I’ve generally not accepted “well we did this thing outside of the process and now we want to document it” interface proposals otherwise.",
       "revId": "670361774de58cb8480452ec3c33f6cc9b5b0523",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3984ec7e_3898082f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-09-30T14:35:31Z",
+      "side": 1,
+      "message": "\u003e Why? Fru-device is an internal interface within entity-manager. \n\nWrong. `ipmid`, `intel-ipmi-oem`, `fb-ipmi-oem`, `ampere-ipmi-oem` all use the `GetRawFru` method.\n\nhttps://github.com/search?q\u003dorg%3Aopenbmc+%22GetRawFru%22\u0026type\u003dcode\n\nFor `ReScanBus` it is mostly meta platforms who use it as part of scripts\n\nhttps://github.com/search?q\u003dorg%3Aopenbmc+%22ReScanBus%22\u0026type\u003dcode\n\n\u003e I’ve generally not accepted “well we did this thing outside of the process and now we want to document it” interface proposals otherwise.\n\nIf you do not review ongoing works then of course people will be free-wheeling their way through your design intent.\n\nIf it\u0027s merged, it\u0027s part of openbmc. It\u0027s not a proposal. It\u0027s an existing interface.\n\nAnd if we do not document it, how are folks going to consume it with PDI.\n\nSo person A worked outside the process, person B refuses to document existing interfaces, \n\nand now person C is stuck without the tooling support and must hand-code everything without a generated client.\n\n#### precedence and guiding examples\n\nYou can also think about it this way. People usually find some code which registers a method on an interface and then they copy that to define a new method.\n\nIf we establish a pattern whereby we at least get the interface name, object path namespace and such from PDI, it becomes clear that interfaces and their methods and properties are defined in the PDI.\n\nIf we refuse to document existing stuff, we reinforce the pattern of folks doing things outside of PDI because that\u0027s what they find in the code.",
+      "parentUuid": "bee31ba4_925f94c4",
+      "revId": "670361774de58cb8480452ec3c33f6cc9b5b0523",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

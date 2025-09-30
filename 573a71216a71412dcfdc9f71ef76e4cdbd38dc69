@@ -86,6 +86,24 @@
       "parentUuid": "7a91527b_71691131",
       "revId": "573a71216a71412dcfdc9f71ef76e4cdbd38dc69",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2b127fb_20545f45",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002558
+      },
+      "writtenOn": "2025-09-30T01:09:47Z",
+      "side": 1,
+      "message": "Hi @patrick@stwcx.xyz,\nI’ve updated the code based on your feedback.\nCould you please help review it again when you have time?\nThank you!\n\nHi @fr0st61te@gmail.com,\nThe recording of the SecondaryFlashBoot SEL is based on the result determined in this code\n`meta-facebook/meta-yosemite4/recipes-phosphor/initrdscripts/phosphor-static-norootfs-init/99-platform-init`, which allows the user to know from which flash the current boot was started. However, the result is not directly recorded in the SEL for the user to understand more explicitly, but instead recorded in the system file.\nTherefore, if the system is manually switched from flash 2 back to flash 1, as long as the SEL is not cleared, the user can still identify that the system had previously booted from secondary flash.",
+      "parentUuid": "2604f5a3_6c6a11df",
+      "revId": "573a71216a71412dcfdc9f71ef76e4cdbd38dc69",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

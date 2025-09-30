@@ -128,6 +128,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d1019061_ce1fedde",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-09-30T18:24:02Z",
+      "side": 1,
+      "message": "I\u0027m still not sure I\u0027ve heard a concrete reason that the Type\u003ddbus and the ExecReload just sending a signal doesn\u0027t work? The application can control how they handle that signal (sending dbus events, being smart about which files it reloads in the case of error logging). It feels like we need to prove that using the standard systemd methods really doesn\u0027t work before creating our own dbus methods for it.",
+      "parentUuid": "2e550811_485ec275",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b406360e_f82b9caf",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2

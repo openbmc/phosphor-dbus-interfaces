@@ -1,0 +1,57 @@
+description: >
+    Implemented as part of FruDevice
+
+methods:
+    - name: GetRawFru
+      description: >
+          Get the raw fru contents
+      parameters:
+          - name: bus
+            type: uint16
+            description: >
+                The bus number
+          - name: address
+            type: byte
+            description: >
+                The address
+      returns:
+          - name: fruContents
+            type: array[byte]
+            description: >
+                The raw fru contents
+
+    - name: ReScan
+      description: >
+          re-scan all buses
+
+    - name: ReScanBus
+      description: >
+          re-scan a specific bus
+      parameters:
+          - name: bus
+            type: uint16
+            description: >
+                The bus number
+
+    - name: WriteFru
+      description: >
+          Write the raw fru contents
+      parameters:
+          - name: bus
+            type: uint16
+            description: >
+                The bus number
+          - name: address
+            type: byte
+            description: >
+                The address
+          - name: content
+            type: array[byte]
+            description: >
+                The fru contents to write
+
+service_names:
+    - default: xyz.openbmc_project.FruDevice
+
+paths:
+    - instance: /xyz/openbmc_project/FruDevice

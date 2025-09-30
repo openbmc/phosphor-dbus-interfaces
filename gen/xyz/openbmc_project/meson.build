@@ -13,6 +13,7 @@ subdir('Console')
 subdir('Control')
 subdir('Debug')
 subdir('Dump')
+subdir('FruDeviceManager')
 subdir('HardwareIsolation')
 subdir('Inventory')
 subdir('Ipmi')
@@ -99,6 +100,28 @@ generated_markdown += custom_target(
         '--directory',
         meson.current_source_dir() / '../../../yaml',
         'xyz/openbmc_project/Common',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/FruDeviceManager__markdown'.underscorify(),
+    input: ['../../../yaml/xyz/openbmc_project/FruDeviceManager.interface.yaml'],
+    output: ['FruDeviceManager.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../yaml',
+        'xyz/openbmc_project/FruDeviceManager',
     ],
     install: should_generate_markdown,
     install_dir: [inst_markdown_dir / sdbusplus_current_path],

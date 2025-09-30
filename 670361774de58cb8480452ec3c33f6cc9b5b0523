@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bee31ba4_925f94c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-30T13:52:23Z",
+      "side": 1,
+      "message": "Why? Fru-device is an internal interface within entity-manager. \n\nIf we’re going to make this public, by documenting it here, we have to also be willing to make changes to align with the rest of the interfaces. I gave a top level “configuration” tree for unchanged entity-manager interfaces that don’t conform because there are a lot of users and baggage and hoped that we could refactor them. I’ve generally not accepted “well we did this thing outside of the process and now we want to document it” interface proposals otherwise.",
+      "revId": "670361774de58cb8480452ec3c33f6cc9b5b0523",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

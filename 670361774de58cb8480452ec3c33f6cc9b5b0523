@@ -34,6 +34,24 @@
       "parentUuid": "bee31ba4_925f94c4",
       "revId": "670361774de58cb8480452ec3c33f6cc9b5b0523",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "039a957e_9f70b89a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-09-30T15:07:17Z",
+      "side": 1,
+      "message": "\u003e If you do not review ongoing works then of course people will be free-wheeling their way through your design intent.\n\nIs there a problem you\u0027re alluding to?  fru-device was written long ago now when a whole company did a lot of \"freewheeling\".\n\n\u003e So person A worked outside the process, person B refuses to document existing interfaces, and now person C is stuck without the tooling support and must hand-code everything without a generated client.\n\nI don\u0027t see how \"person B\" is the one to blame in this?  Alternatively if I just let whatever in, why bother with having reviews here?  Why bother with having any process?  Doesn\u0027t that just encourage people to do their own thing?\n\nUltimately \"Person A\" is the one to blame; unfortunately they\u0027re not around any more.  That means \"Person B\" and \"Person C\" have to clean up the mess.  Are you willing to do the interface definition and refactoring?\n\n\u003e If we refuse to document existing stuff, we reinforce the pattern of folks doing things outside of PDI because that\u0027s what they find in the code.\n\nWe also reinforce a pattern of not following process.",
+      "parentUuid": "3984ec7e_3898082f",
+      "revId": "670361774de58cb8480452ec3c33f6cc9b5b0523",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

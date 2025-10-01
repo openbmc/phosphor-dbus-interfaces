@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ad89304_4b26e0d1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-10-01T07:14:02Z",
+      "side": 1,
+      "message": "Those deprecated properties are being used by bmcweb and peci-pcie, therefore, \nthey shall be removed when bmcweb and peci-pcie are updated as mentioned in the commit messages.",
+      "parentUuid": "4eb4033e_62e37bf2",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7f3c9a8e_21db5294",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-10-01T05:33:25Z",
       "side": 1,
       "message": "can a function belong to more than one class?\n\nor was it plural because it was listing all functions?",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "964dcc97_fe8f660e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-10-01T07:14:02Z",
+      "side": 1,
+      "message": "\u003e can a function belong to more than one class?\n\u003e\n\u003e or was it plural because it was listing all functions?\n\n\nIt is plural b/c it is enumeration. you can refer to other enumerations in PDIs like https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Common/OriginatedBy.interface.yaml#L20",
+      "parentUuid": "7f3c9a8e_21db5294",
       "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -69,6 +105,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b7dbeff_f4b694f9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-10-01T07:14:02Z",
+      "side": 1,
+      "message": "Please check my answer at above",
+      "parentUuid": "a463dabc_ed6ae34c",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8f8824ad_129920b3",
@@ -82,6 +136,24 @@
       "writtenOn": "2025-10-01T05:33:25Z",
       "side": 1,
       "message": "why should this be optional?",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58b9dcd3_5247cd61",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-10-01T07:14:02Z",
+      "side": 1,
+      "message": "As mentioned in the https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/Inventory/Item#inventory-association - `DBus objects with xyz.opebmc_project.Inventory.Item.${ItemType} interface might be associated with other inventory objects`, the associations should be optionally",
+      "parentUuid": "8f8824ad_129920b3",
       "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

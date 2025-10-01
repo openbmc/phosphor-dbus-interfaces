@@ -16,6 +16,74 @@
       "message": "@patrick@stwcx.xyz Could you take your time to help me review this commit?",
       "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4eb4033e_62e37bf2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-10-01T05:33:25Z",
+      "side": 1,
+      "message": "if we were using versioning we\u0027d remove these duplicate properties in the new revision and catch up.   but alas we haven\u0027t been.",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f3c9a8e_21db5294",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-10-01T05:33:25Z",
+      "side": 1,
+      "message": "can a function belong to more than one class?\n\nor was it plural because it was listing all functions?",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a463dabc_ed6ae34c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-10-01T05:33:25Z",
+      "side": 1,
+      "message": "again, plural?",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f8824ad_129920b3",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-10-01T05:33:25Z",
+      "side": 1,
+      "message": "why should this be optional?",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

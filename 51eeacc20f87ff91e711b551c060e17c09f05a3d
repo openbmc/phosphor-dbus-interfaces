@@ -88,6 +88,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "10ff37fb_2210e6f8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-10-01T07:39:13Z",
+      "side": 1,
+      "message": "so the plural is the enumerated values not the property . .... ok I guess",
+      "parentUuid": "964dcc97_fe8f660e",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a463dabc_ed6ae34c",
@@ -154,6 +172,24 @@
       "side": 1,
       "message": "As mentioned in the https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/Inventory/Item#inventory-association - `DBus objects with xyz.opebmc_project.Inventory.Item.${ItemType} interface might be associated with other inventory objects`, the associations should be optionally",
       "parentUuid": "8f8824ad_129920b3",
+      "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49edc181_baeeeb6c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2025-10-01T07:39:13Z",
+      "side": 1,
+      "message": "I\u0027m not aware of any PCI function outside of a PCI device, either virtual or physical.",
+      "parentUuid": "58b9dcd3_5247cd61",
       "revId": "51eeacc20f87ff91e711b551c060e17c09f05a3d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

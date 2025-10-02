@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "27ba6221_0f75295e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-10-02T03:01:33Z",
+      "side": 1,
+      "message": "I considered about `contained`, but when I check the Redfish specification, the description of PCIeFunctions property in PCIeDevice is `An array of links to PCIe functions exposed by this device`, refer to https://redfish.dmtf.org/schemas/v1/PCIeDevice.v1_19_0.json. That why I use `exposed_by`.\n\n\nNote: Even this property has been deprecated and replaced with `PCIeFunctionCollection`, but I think the association between PCIeDevice and PCIeFunction should be `exposing - exposed_by`",
+      "parentUuid": "f3d6d318_f511c2f2",
+      "range": {
+        "startLine": 154,
+        "startChar": 0,
+        "endLine": 159,
+        "endChar": 20
+      },
+      "revId": "55bb46f840e2f82bd7e214454f51e61d763e026a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fe3b3076_58fb2496",
@@ -47,6 +71,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94f9dad0_5c2bb4af",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-10-02T03:01:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fe3b3076_58fb2496",
+      "range": {
+        "startLine": 160,
+        "startChar": 0,
+        "endLine": 161,
+        "endChar": 57
+      },
+      "revId": "55bb46f840e2f82bd7e214454f51e61d763e026a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4feb31a1_6338224f",
@@ -60,6 +108,30 @@
       "writtenOn": "2025-10-01T16:43:39Z",
       "side": 1,
       "message": "Please add the reverse direction.",
+      "range": {
+        "startLine": 169,
+        "startChar": 0,
+        "endLine": 172,
+        "endChar": 64
+      },
+      "revId": "55bb46f840e2f82bd7e214454f51e61d763e026a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "006e4ac2_795c94ed",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1001198
+      },
+      "writtenOn": "2025-10-02T03:01:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4feb31a1_6338224f",
       "range": {
         "startLine": 169,
         "startChar": 0,

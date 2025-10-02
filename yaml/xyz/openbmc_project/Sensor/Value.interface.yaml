@@ -39,6 +39,17 @@ properties:
       default: -infinity
       description: >
           The Minimum supported sensor reading.
+    - name: ValueUpdatedTime
+      type: uint64
+      default: infinity
+      description: >
+          The Epoch time when the Value property on D-Bus was last updated.
+          Services are expected to update this property with the current Epoch
+          time after updating the `Value` property. If a service fails to set
+          this, it defaults to infinity which clients of this property may read
+          as "unsupported".
+      flags:
+          - readonly
     - name: Unit
       type: enum[self.Unit]
       description: >

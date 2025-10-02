@@ -39,6 +39,11 @@ properties:
       default: -infinity
       description: >
           The Minimum supported sensor reading.
+    - name: ValueUpdatedTime
+      type: uint64
+      default: 0
+      description: >
+          The Epoch time when the Value was last updated.
     - name: Unit
       type: enum[self.Unit]
       description: >

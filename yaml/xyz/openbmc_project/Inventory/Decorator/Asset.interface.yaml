@@ -1,5 +1,9 @@
 description: >
-    Implement to provide item physical asset attributes.
+    Implement to provide item physical asset attributes. For all fields in this
+    schema, if not possible to obtain on this system, the property string shall
+    be populated with UNAVAILABLE.  If this property is available for a
+    component but unpopulated, properties should be populated with an empty
+    string.
 properties:
     - name: PartNumber
       type: string

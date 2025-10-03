@@ -26,6 +26,47 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f16161d0_9864f364",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-03T19:35:39Z",
+      "side": 1,
+      "message": "I don\u0027t have a bmcweb change ready yet, but lets not wait.   Worst case you see \"UNAVAILABLE\" show up in an API for a moment until we (I) fix it.",
+      "parentUuid": "04e0c8e4_7766efb8",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 35
+      },
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "284fe86a_33411640",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-03T19:35:39Z",
+      "side": 1,
+      "message": "FWIW, I typed this up quickly.  I\u0027m wondering if \"NOT_SUPPORTED\" might be a better tombstone value.  UNAVAILBLE might imply temporarily unavailable and get accidentally used.\n\nStill thinking about it.  will ping discord for more input.",
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0822c321_c81cadbe",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
         "patchSetId": 1
@@ -49,6 +90,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9f7f50af_bd4c489b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-03T19:35:39Z",
+      "side": 1,
+      "message": "That\u0027s probably a better idea than whats here.",
+      "parentUuid": "0822c321_c81cadbe",
+      "range": {
+        "startLine": 2,
+        "startChar": 57,
+        "endLine": 4,
+        "endChar": 34
+      },
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "82e6eaef_80f4db0e",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
         "patchSetId": 1
@@ -60,6 +125,24 @@
       "writtenOn": "2025-10-03T19:22:56Z",
       "side": 1,
       "message": "Interestingly in some cases we already have \"default\" values like this empty string here.  I guess we should probably change all the default values to UNAVAILABLE for every single string?",
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f81ef8b0_7b8eb6d7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-03T19:35:39Z",
+      "side": 1,
+      "message": "That\u0027s probably a good idea.",
+      "parentUuid": "82e6eaef_80f4db0e",
       "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

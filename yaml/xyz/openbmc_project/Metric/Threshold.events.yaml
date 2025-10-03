@@ -1,0 +1,190 @@
+version: 1.0.0
+
+errors:
+    - name: TriggerDiscreteConditionMet
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: MetricName
+            description: The metric name.
+            type: object_path
+            primary: true
+          - name: ConditionValue
+            description: The discrete value of the metric.
+            type: string
+            primary: true
+          - name: TriggerName
+            description: The telemetry trigger name.
+            type: string
+            primary: true
+      redfish-mapping: Telemetry.TriggerDiscreteConditionMet
+
+    - name: TriggerNumericAboveLowerCritical
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: MetricName
+            description: The metric name.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The value of the metric.
+            type: double
+            primary: true
+          - name: ThresholdValue
+            description: The threshold value.
+            type: double
+            primary: true
+          - name: TriggerName
+            description: The telemetry trigger name.
+            type: string
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Metric.Value.Unit]
+      redfish-mapping: Telemetry.TriggerNumericAboveLowerCritical
+
+    - name: TriggerNumericAboveUpperCritical
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: MetricName
+            description: The metric name.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The value of the metric.
+            type: double
+            primary: true
+          - name: ThresholdValue
+            description: The threshold value.
+            type: double
+            primary: true
+          - name: TriggerName
+            description: The telemetry trigger name.
+            type: string
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Metric.Value.Unit]
+      redfish-mapping: Telemetry.TriggerNumericAboveUpperCritical
+
+    - name: TriggerNumericAboveUpperWarning
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: MetricName
+            description: The metric name.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The value of the metric.
+            type: double
+            primary: true
+          - name: ThresholdValue
+            description: The threshold value.
+            type: double
+            primary: true
+          - name: TriggerName
+            description: The telemetry trigger name.
+            type: string
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Metric.Value.Unit]
+      redfish-mapping: Telemetry.TriggerNumericAboveUpperWarning
+
+    - name: TriggerNumericBelowLowerCritical
+      severity: critical
+      errno: ERANGE
+      metadata:
+          - name: MetricName
+            description: The metric name.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The value of the metric.
+            type: double
+            primary: true
+          - name: ThresholdValue
+            description: The threshold value.
+            type: double
+            primary: true
+          - name: TriggerName
+            description: The telemetry trigger name.
+            type: string
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Metric.Value.Unit]
+      redfish-mapping: Telemetry.TriggerNumericBelowLowerCritical
+
+    - name: TriggerNumericBelowLowerWarning
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: MetricName
+            description: The metric name.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The value of the metric.
+            type: double
+            primary: true
+          - name: ThresholdValue
+            description: The threshold value.
+            type: double
+            primary: true
+          - name: TriggerName
+            description: The telemetry trigger name.
+            type: string
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Metric.Value.Unit]
+      redfish-mapping: Telemetry.TriggerNumericBelowLowerWarning
+
+    - name: TriggerNumericBelowUpperCritical
+      severity: warning
+      errno: ERANGE
+      metadata:
+          - name: MetricName
+            description: The metric name.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The value of the metric.
+            type: double
+            primary: true
+          - name: ThresholdValue
+            description: The threshold value.
+            type: double
+            primary: true
+          - name: TriggerName
+            description: The telemetry trigger name.
+            type: string
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Metric.Value.Unit]
+      redfish-mapping: Telemetry.TriggerNumericBelowUpperCritical
+
+events:
+    - name: TriggerNumericReadingNormal
+      metadata:
+          - name: MetricName
+            description: The metric name.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The value of the metric.
+            type: double
+            primary: true
+          - name: TriggerName
+            description: The telemetry trigger name.
+            type: string
+            primary: true
+          - name: Units
+            description: The reading units of measure.
+            type: enum[xyz.openbmc_project.Metric.Value.Unit]
+      redfish-mapping: Telemetry.TriggerNumericReadingNormal

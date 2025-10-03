@@ -1,0 +1,308 @@
+From a3ba696b849c2701184cc492c8bd965513a6dcee Mon Sep 17 00:00:00 2001
+From: Ryan <ryan.hsu.wiwynn@gmail.com>
+Date: Fri, 3 Oct 2025 01:07:47 +0000
+Subject: [PATCH] Metric Event phosphor-dbus-interfaces
+
+---
+ .../Metric/Threshold/meson.build              |  28 +++
+ gen/xyz/openbmc_project/Metric/meson.build    |  45 +++++
+ .../Metric/Threshold.events.yaml              | 190 ++++++++++++++++++
+ 3 files changed, 263 insertions(+)
+ create mode 100644 gen/xyz/openbmc_project/Metric/Threshold/meson.build
+ create mode 100644 yaml/xyz/openbmc_project/Metric/Threshold.events.yaml
+
+diff --git a/gen/xyz/openbmc_project/Metric/Threshold/meson.build b/gen/xyz/openbmc_project/Metric/Threshold/meson.build
+new file mode 100644
+index 0000000..9c6732a
+--- /dev/null
++++ b/gen/xyz/openbmc_project/Metric/Threshold/meson.build
+@@ -0,0 +1,28 @@
++# Generated file; do not modify.
++
++sdbusplus_current_path = 'xyz/openbmc_project/Metric/Threshold'
++
++generated_sources += custom_target(
++    'xyz/openbmc_project/Metric/Threshold__cpp'.underscorify(),
++    input: ['../../../../../yaml/xyz/openbmc_project/Metric/Threshold.events.yaml'],
++    output: ['event.cpp', 'event.hpp'],
++    depend_files: sdbusplusplus_depfiles,
++    command: [
++        sdbuspp_gen_meson_prog,
++        '--command',
++        'cpp',
++        '--output',
++        meson.current_build_dir(),
++        '--tool',
++        sdbusplusplus_prog,
++        '--directory',
++        meson.current_source_dir() / '../../../../../yaml',
++        'xyz/openbmc_project/Metric/Threshold',
++    ],
++    install: should_generate_cpp,
++    install_dir: [
++        false,
++        get_option('includedir') / sdbusplus_current_path,
++    ],
++    build_by_default: should_generate_cpp,
++)
+diff --git a/gen/xyz/openbmc_project/Metric/meson.build b/gen/xyz/openbmc_project/Metric/meson.build
+index 687fa92..e0e9d4e 100644
+--- a/gen/xyz/openbmc_project/Metric/meson.build
++++ b/gen/xyz/openbmc_project/Metric/meson.build
+@@ -1,5 +1,6 @@
+ # Generated file; do not modify.
+ subdir('Reset')
++subdir('Threshold')
+ subdir('Value')
+ 
+ sdbusplus_current_path = 'xyz/openbmc_project/Metric'
+@@ -26,6 +27,50 @@ generated_markdown += custom_target(
+     build_by_default: should_generate_markdown,
+ )
+ 
++generated_markdown += custom_target(
++    'xyz/openbmc_project/Metric/Threshold__markdown'.underscorify(),
++    input: ['../../../../yaml/xyz/openbmc_project/Metric/Threshold.events.yaml'],
++    output: ['Threshold.md'],
++    depend_files: sdbusplusplus_depfiles,
++    command: [
++        sdbuspp_gen_meson_prog,
++        '--command',
++        'markdown',
++        '--output',
++        meson.current_build_dir(),
++        '--tool',
++        sdbusplusplus_prog,
++        '--directory',
++        meson.current_source_dir() / '../../../../yaml',
++        'xyz/openbmc_project/Metric/Threshold',
++    ],
++    install: should_generate_markdown,
++    install_dir: [inst_markdown_dir / sdbusplus_current_path],
++    build_by_default: should_generate_markdown,
++)
++
++generated_registry += custom_target(
++    'xyz/openbmc_project/Metric/Threshold__registry'.underscorify(),
++    input: ['../../../../yaml/xyz/openbmc_project/Metric/Threshold.events.yaml'],
++    output: ['Threshold.json'],
++    depend_files: sdbusplusplus_depfiles,
++    command: [
++        sdbuspp_gen_meson_prog,
++        '--command',
++        'registry',
++        '--output',
++        meson.current_build_dir(),
++        '--tool',
++        sdbusplusplus_prog,
++        '--directory',
++        meson.current_source_dir() / '../../../../yaml',
++        'xyz/openbmc_project/Metric/Threshold',
++    ],
++    install: should_generate_registry,
++    install_dir: [inst_registry_dir / sdbusplus_current_path],
++    build_by_default: should_generate_registry,
++)
++
+ generated_markdown += custom_target(
+     'xyz/openbmc_project/Metric/Value__markdown'.underscorify(),
+     input: ['../../../../yaml/xyz/openbmc_project/Metric/Value.interface.yaml'],
+diff --git a/yaml/xyz/openbmc_project/Metric/Threshold.events.yaml b/yaml/xyz/openbmc_project/Metric/Threshold.events.yaml
+new file mode 100644
+index 0000000..2f5ea6e
+--- /dev/null
++++ b/yaml/xyz/openbmc_project/Metric/Threshold.events.yaml
+@@ -0,0 +1,190 @@
++version: 1.0.1
++
++errors:
++    - name: TriggerDiscreteConditionMet
++      severity: warning
++      errno: ERANGE
++      metadata:
++          - name: MetricName
++            description: The metric name.
++            type: object_path
++            primary: true
++          - name: ConditionValue
++            description: The discrete value of the metric.
++            type: string
++            primary: true
++          - name: TriggerName
++            description: The telemetry trigger name.
++            type: string
++            primary: true
++      redfish-mapping: Telemetry.TriggerNumericAboveLowerCritical
++
++    - name: TriggerNumericAboveLowerCritical
++      severity: warning
++      errno: ERANGE
++      metadata:
++          - name: MetricName
++            description: The metric name.
++            type: object_path
++            primary: true
++          - name: ReadingValue
++            description: The value of the metric.
++            type: double
++            primary: true
++          - name: ThresholdValue
++            description: The threshold value.
++            type: double
++            primary: true
++          - name: TriggerName
++            description: The telemetry trigger name.
++            type: string
++            primary: true
++          - name: Units
++            description: The reading units of measure.
++            type: enum[xyz.openbmc_project.Metric.Value.Unit]
++      redfish-mapping: Telemetry.TriggerNumericAboveLowerCritical
++
++    - name: TriggerNumericAboveUpperCritical
++      severity: critical
++      errno: ERANGE
++      metadata:
++          - name: MetricName
++            description: The metric name.
++            type: object_path
++            primary: true
++          - name: ReadingValue
++            description: The value of the metric.
++            type: double
++            primary: true
++          - name: ThresholdValue
++            description: The threshold value.
++            type: double
++            primary: true
++          - name: TriggerName
++            description: The telemetry trigger name.
++            type: string
++            primary: true
++          - name: Units
++            description: The reading units of measure.
++            type: enum[xyz.openbmc_project.Metric.Value.Unit]
++      redfish-mapping: Telemetry.TriggerNumericAboveUpperCritical
++
++    - name: TriggerNumericAboveUpperWarning
++      severity: warning
++      errno: ERANGE
++      metadata:
++          - name: MetricName
++            description: The metric name.
++            type: object_path
++            primary: true
++          - name: ReadingValue
++            description: The value of the metric.
++            type: double
++            primary: true
++          - name: ThresholdValue
++            description: The threshold value.
++            type: double
++            primary: true
++          - name: TriggerName
++            description: The telemetry trigger name.
++            type: string
++            primary: true
++          - name: Units
++            description: The reading units of measure.
++            type: enum[xyz.openbmc_project.Metric.Value.Unit]
++      redfish-mapping: Telemetry.TriggerNumericAboveUpperWarning
++
++    - name: TriggerNumericBelowLowerCritical
++      severity: critical
++      errno: ERANGE
++      metadata:
++          - name: MetricName
++            description: The metric name.
++            type: object_path
++            primary: true
++          - name: ReadingValue
++            description: The value of the metric.
++            type: double
++            primary: true
++          - name: ThresholdValue
++            description: The threshold value.
++            type: double
++            primary: true
++          - name: TriggerName
++            description: The telemetry trigger name.
++            type: string
++            primary: true
++          - name: Units
++            description: The reading units of measure.
++            type: enum[xyz.openbmc_project.Metric.Value.Unit]
++      redfish-mapping: Telemetry.TriggerNumericBelowLowerCritical
++
++    - name: TriggerNumericBelowLowerWarning
++      severity: warning
++      errno: ERANGE
++      metadata:
++          - name: MetricName
++            description: The metric name.
++            type: object_path
++            primary: true
++          - name: ReadingValue
++            description: The value of the metric.
++            type: double
++            primary: true
++          - name: ThresholdValue
++            description: The threshold value.
++            type: double
++            primary: true
++          - name: TriggerName
++            description: The telemetry trigger name.
++            type: string
++            primary: true
++          - name: Units
++            description: The reading units of measure.
++            type: enum[xyz.openbmc_project.Metric.Value.Unit]
++      redfish-mapping: Telemetry.TriggerNumericBelowLowerWarning
++
++    - name: TriggerNumericBelowUpperCritical
++      severity: warning
++      errno: ERANGE
++      metadata:
++          - name: MetricName
++            description: The metric name.
++            type: object_path
++            primary: true
++          - name: ReadingValue
++            description: The value of the metric.
++            type: double
++            primary: true
++          - name: ThresholdValue
++            description: The threshold value.
++            type: double
++            primary: true
++          - name: TriggerName
++            description: The telemetry trigger name.
++            type: string
++            primary: true
++          - name: Units
++            description: The reading units of measure.
++            type: enum[xyz.openbmc_project.Metric.Value.Unit]
++      redfish-mapping: Telemetry.TriggerNumericBelowUpperCritical
++
++events:
++    - name: TriggerNumericReadingNormal
++      metadata:
++          - name: MetricName
++            description: The metric name.
++            type: object_path
++            primary: true
++          - name: ReadingValue
++            description: The value of the metric.
++            type: double
++            primary: true
++          - name: TriggerName
++            description: The telemetry trigger name.
++            type: string
++            primary: true
++          - name: Units
++            description: The reading units of measure.
++            type: enum[xyz.openbmc_project.Metric.Value.Unit]
++      redfish-mapping: Telemetry.TriggerNumericReadingNormal
+-- 
+2.43.0
+

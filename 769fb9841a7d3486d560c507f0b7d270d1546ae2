@@ -20,6 +20,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7181bfba_da39087b",
+        "filename": "yaml/xyz/openbmc_project/HostInterface/CredentialBootstrapping.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-10-03T16:08:57Z",
+      "side": 1,
+      "message": "what do you mean by \"reset for this service handle the interface\"?",
+      "range": {
+        "startLine": 12,
+        "startChar": 29,
+        "endLine": 12,
+        "endChar": 34
+      },
+      "revId": "769fb9841a7d3486d560c507f0b7d270d1546ae2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7998313b_f07e46a9",
         "filename": "yaml/xyz/openbmc_project/HostInterface/CredentialBootstrapping.interface.yaml",
         "patchSetId": 8
@@ -37,6 +60,57 @@
         "endLine": 15,
         "endChar": 19
       },
+      "revId": "769fb9841a7d3486d560c507f0b7d270d1546ae2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "377e1009_efa2a699",
+        "filename": "yaml/xyz/openbmc_project/HostInterface/CredentialBootstrapping.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-10-03T16:08:57Z",
+      "side": 1,
+      "message": "set default value?",
+      "revId": "769fb9841a7d3486d560c507f0b7d270d1546ae2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4395259_e40217d9",
+        "filename": "yaml/xyz/openbmc_project/HostInterface/CredentialBootstrapping.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-10-03T16:08:57Z",
+      "side": 1,
+      "message": "user manager supports these privilege, can we use same privileges roles here as well?\nhttps://github.com/openbmc/docs/blob/master/architecture/user-management.md?plain\u003d1#L56",
+      "revId": "769fb9841a7d3486d560c507f0b7d270d1546ae2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc7176a3_383c13f6",
+        "filename": "yaml/xyz/openbmc_project/HostInterface/CredentialBootstrapping.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-10-03T16:08:57Z",
+      "side": 1,
+      "message": "these are redfish privilege values which can be mapped to user-manager privileges \nhttps://github.com/openbmc/bmcweb/blob/master/redfish-core/lib/account_service.hpp#L92",
       "revId": "769fb9841a7d3486d560c507f0b7d270d1546ae2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

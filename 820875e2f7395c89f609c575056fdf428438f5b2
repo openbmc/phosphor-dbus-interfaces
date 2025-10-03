@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04e0c8e4_7766efb8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-03T19:22:56Z",
+      "side": 1,
+      "message": "Is this something you want the bmcweb change to go first for?",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 35
+      },
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0822c321_c81cadbe",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-03T19:22:56Z",
+      "side": 1,
+      "message": "I assume we should just apply this to everything in Inventory?  Should we put it in a README.md under yaml/xyz/openbmc_project/Inventory?",
+      "range": {
+        "startLine": 2,
+        "startChar": 57,
+        "endLine": 4,
+        "endChar": 34
+      },
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82e6eaef_80f4db0e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-03T19:22:56Z",
+      "side": 1,
+      "message": "Interestingly in some cases we already have \"default\" values like this empty string here.  I guess we should probably change all the default values to UNAVAILABLE for every single string?",
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

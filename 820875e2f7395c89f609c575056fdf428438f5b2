@@ -145,6 +145,24 @@
       "parentUuid": "82e6eaef_80f4db0e",
       "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f9facaf_1c906ee3",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2025-10-06T14:56:32Z",
+      "side": 1,
+      "message": "Should the default be left as empty string, so that from the code end a property read can be simply checked for empty() to detect if the value is available or not instead of going for a string comparison with \"UNAVAILABLE\", also it will not affect any existing code if there is a check for empty string to detect unavailability of value. And explicit handling in code can be done to check for property value \"UNPOPULATED\"?",
+      "parentUuid": "f81ef8b0_7b8eb6d7",
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

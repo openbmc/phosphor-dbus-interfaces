@@ -34,3 +34,10 @@ enumerations:
           The compatible hardware strings for the TPM on Yosemite5.
       values:
           - name: "BMC"
+
+    - name: HSC
+      description: >
+          The compatible hardware strings for the HSC on Yosemite5.
+      values:
+          - name: "TPS25990_p12v_aux"
+          - name: "MP5998_p12v_aux"

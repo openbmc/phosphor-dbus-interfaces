@@ -217,6 +217,24 @@
       "parentUuid": "aa86e366_0f9b0a5c",
       "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c3bb69e_6dc6de36",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-07T21:24:41Z",
+      "side": 1,
+      "message": "\u003e It seems like we either get the EEPROM or we don\u0027t\n\nIf only the world were that simple 😊. If we limit ourselves to only IPMI FRU a field might be present, but empty string (sub types might be all zeros or length 0, the former is common but not in the spec), not present, or populated.\n\n\u003e An \"unpopulated\" field is one where the EEPROM is empty (or doesn\u0027t provide that information).\n\nThis is the problem, we need to differentiate those two cases, because a field that\u0027s empty can be written or updated, and needs to be shown as empty string or null in Redfish (to denote its writability)  A field that\u0027s not present at all can\u0027t be written, and can\u0027t be included in Redfish.\n\nExpanding out to things that aren\u0027t IPMI FRUs like pirom, custom fru formats, or devices that directly support commands to identify themselves (like Intel ME) these fields might not exist at all, and shouldn\u0027t be populated as empty string in Redfish.",
+      "parentUuid": "219ca3fe_f60d99eb",
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -199,6 +199,24 @@
       "parentUuid": "b34aab18_a7fd8249",
       "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "219ca3fe_f60d99eb",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2025-10-07T06:27:59Z",
+      "side": 1,
+      "message": "\u003e I\u0027m having trouble understanding the differentiation between \"unpopulated\" and \"unavailable\" in this case. \n\nMy point was to not replace the default(which is empty string currently) with \"unavailable\" as proposed in the chain above to avoid any code breaks, instead have value set as \"unpopulated\" to reflect the state where there is an access error or error in fetching these values. \nHaving said that, I agree with what @ed@tanous.net has mentioned here.\n\n\u003e if we don\u0027t have it, the whole device is going to not show up\n\nTrue but we have some use cases where we publish inventory paths even for FRUs which are not present with \"Present\u003dfalse\" and rest of the interfaces with default values.\nAnyways those are specific use cases so we can skip that here.",
+      "parentUuid": "aa86e366_0f9b0a5c",
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

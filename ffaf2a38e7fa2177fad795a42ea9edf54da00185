@@ -240,6 +240,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b36e78c_10dc18d2",
+        "filename": "yaml/xyz/openbmc_project/Common/File.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001526
+      },
+      "writtenOn": "2025-10-07T08:47:08Z",
+      "side": 1,
+      "message": "As this interface is now under PLDM/ so \u003cdeviceName\u003e can be \u003cTerminusName\u003e directly. For \u003cSome_folder_name\u003e, I still want it to be [\u003cParentPath\u003e] because it\u0027s the parent path of the file, not a random folder.",
+      "parentUuid": "33422bfb_548824fc",
+      "range": {
+        "startLine": 4,
+        "startChar": 36,
+        "endLine": 4,
+        "endChar": 49
+      },
+      "revId": "ffaf2a38e7fa2177fad795a42ea9edf54da00185",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "60c975a7_209c87b6",

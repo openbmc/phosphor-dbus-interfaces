@@ -181,6 +181,24 @@
       "parentUuid": "0f9facaf_1c906ee3",
       "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa86e366_0f9b0a5c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/Asset.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-07T01:07:19Z",
+      "side": 1,
+      "message": "I\u0027m having trouble understanding the differentiation between \"unpopulated\" and \"unavailable\" in this case.  It seems like we either get the EEPROM or we don\u0027t; if we don\u0027t have it, the whole device is going to not show up.  An \"unpopulated\" field is one where the EEPROM is empty (or doesn\u0027t provide that information).\n\nIs there some additional case of \"unavailable\" that I\u0027m missing?",
+      "parentUuid": "b34aab18_a7fd8249",
+      "revId": "820875e2f7395c89f609c575056fdf428438f5b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

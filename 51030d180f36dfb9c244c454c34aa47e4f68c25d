@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "555b1494_43def459",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002547
+      },
+      "writtenOn": "2025-10-08T03:12:34Z",
+      "side": 1,
+      "message": "Summary of my intent\n- Record NIC power state events in the NIC card power-cycle script for OpenBMC Yosemite4.\n\n\nChanges in this version\n\nNamespace:\n- Moved to State/InventoryItemPower.events.yaml\n\nEvents renamed:\n- InventoryItemPowerGood / InventoryItemPowerLost\n(emphasizes the runtime aggregated \"power-good\" condition)\n\nEvents consumers:\n- Platform scripts in my case, (e.g., Yosemite4 NIC power-cycle: https://github.com/openbmc/openbmc/blob/master/meta-facebook/meta-yosemite4/recipes-phosphor/pldm/files/nic-powercycle).\n- The script will validate the aggregated rail status (via CPLD bits for 12V and 3.3V) and emit InventoryItemPowerGood or InventoryItemPowerLost.\n\nSemantics clarified:\n- \"Power-good\" means all platform-defined operational (non-standby) rails for the item are asserted and stable.\n- This is distinct from State/Power fault or recovery events (those represent errors).\n- No automatic child FRU cascade for the NIC card power-cycle in this case.\n\n\nIs script-based log events after hardware validation the acceptable pattern?",
+      "revId": "51030d180f36dfb9c244c454c34aa47e4f68c25d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

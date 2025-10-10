@@ -74,6 +74,13 @@ properties:
       description: >
           The maximum number of BMC objects allowed to be part of the redundancy
           group.
+    - name: DisabledRedundancyReasons
+      type: set[enum[self.DisabledRedundancyReason]]
+      flags:
+          - readonly
+      description: >
+          If redundancy cannot be enabled and RedundancyEnabled is false, this
+          contains the reasons why.
 
 enumerations:
     - name: Role
@@ -92,6 +99,48 @@ enumerations:
                 The role is for the passive BMC, which is the opposite of the
                 active BMC.  It may not have all services running, and would
                 require a failover to become active.
+
+    - name: DisabledRedundancyReason
+      description: >
+          The possible reasons why redundancy is disabled.
+      values:
+          - name: BMCNotActive
+            description: >
+                The BMC doesn't have the Active role.
+          - name: ManuallyDisabled
+            description: >
+                Redundancy has been manually disabled.
+          - name: SiblingMissing
+            description: >
+                The sibling BMC is missing.
+          - name: SiblingNotAlive
+            description: >
+                The sibling BMC is not alive.
+          - name: SiblingNotProvisioned
+            description: >
+                The sibling BMC is not provisioned.
+          - name: SiblingNotPassive
+            description: >
+                The sibling BMC does not have the Passive role.
+          - name: SiblingNotAtReady
+            description: >
+                The sibling BMC is not at the Ready state.
+          - name: CodeVersionMismatch
+            description: >
+                The BMCs have different versions of code.
+          - name: SystemHWConfigIssue
+            description: >
+                The non-BMC hardware configuration does not allow redundancy.
+                Something is missing, broken, or deconfigured.
+          - name: RedundancyOffAtRuntimeStart
+            description: >
+                Redundancy wasn't already enabled at the start of host runtime.
+          - name: NetworkError
+            description: >
+                There is a network error between the BMCs.
+          - name: DataSyncFailed
+            description: >
+                Data sync between the BMCs is failing.
 
 signals:
     - name: Heartbeat

@@ -16,6 +16,69 @@
       "message": "gentle reminder",
       "revId": "487f15b2a4d3465944ad865066f1f3937e408ba3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb819123_52e632ca",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2025-10-13T11:11:35Z",
+      "side": 1,
+      "message": "Among the keys in the UserProperty, which ones are mandatory and which are optional or all are Mandatory? \nIt would be helpful to add documentation clarifying this.",
+      "revId": "487f15b2a4d3465944ad865066f1f3937e408ba3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a615395_5d3c0559",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2025-10-13T11:11:35Z",
+      "side": 1,
+      "message": "Do we need to add Internal failure too?",
+      "range": {
+        "startLine": 56,
+        "startChar": 12,
+        "endLine": 56,
+        "endChar": 67
+      },
+      "revId": "487f15b2a4d3465944ad865066f1f3937e408ba3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a674656_5a09e560",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2025-10-13T11:11:35Z",
+      "side": 1,
+      "message": "Remote User is alreday there at line no 114.",
+      "range": {
+        "startLine": 117,
+        "startChar": 16,
+        "endLine": 117,
+        "endChar": 59
+      },
+      "revId": "487f15b2a4d3465944ad865066f1f3937e408ba3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

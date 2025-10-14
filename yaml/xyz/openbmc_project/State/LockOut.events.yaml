@@ -1,4 +1,4 @@
-version: 1.0.0
+version: 1.1.0
 
 events:
     - name: LockOutEnabled
@@ -10,7 +10,10 @@ events:
       en:
           description: A Lock Out device has been enabled.
           message: The Lock Out device '{Identifier}' has been enabled.
+
+errors:
     - name: LockOutDisabled
+      severity: warning
       metadata:
           - name: Identifier
             type: object_path
@@ -19,3 +22,4 @@ events:
       en:
           description: A Lock Out device has been disabled.
           message: The Lock Out device '{Identifier}' has been disabled.
+      errno: ENODEV

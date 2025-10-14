@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "79ec7266_4955cef7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-10-14T07:57:04Z",
+      "side": 1,
+      "message": "- it\u0027s a commonly used interface with many usages [1]\n\n- it\u0027s used as part of new code [2], so we cannot make any argument that it\u0027s somehow deprecated\n\n- it\u0027s an actively developed interface with new methods like `UpdateFruField` being added [3].\n\n- openbmc documentation [4] states that\n\n \u003e D-Bus interfaces are defined in the `phosphor-dbus-interfaces` repository\n\n\n\u003e Is there something you\u0027re trying to get done by putting this here?\n\nI want to enable existing compatible interfaces to be usable via PDI generated bindings. So we can get them documented as either\n\n- acitively used and developed\n- deprecated and no new usages to be added because of some issue with the interface\n- legacy interface, ok to use but not actively developed\n\nFor a deprecated interface we could then point people to another interface to be used instead as replacement. Without proper documentation in PDI i don\u0027t see how that\u0027s to be done.\n\nReferences:\n[1] https://github.com/search?q\u003dorg%3Aopenbmc+%2F%28%3F-i%29ReScan%2F\u0026type\u003dcode\n[2] https://github.com/openbmc/platform-init/blob/c9c8612b9cdccc232311ca12ebd25b9f4a08491f/nvidia/nvl32.cpp#L334\n[3] https://gerrit.openbmc.org/c/openbmc/entity-manager/+/80889\n[4] https://github.com/openbmc/docs/blob/41d0c7a722d6bd05baaf49d37647942559b42c50/CONTRIBUTING.md?plain\u003d1#L385",
+      "parentUuid": "6a56b3e9_c9398c9b",
+      "revId": "670361774de58cb8480452ec3c33f6cc9b5b0523",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "bee31ba4_925f94c4",

@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "75aeda2e_d54dda4c",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2025-10-15T11:33:54Z",
+      "side": 1,
+      "message": "This is a good idea, probably better to change README text and change interface fields with (optional) marks if it\u0027s not mandatory. Could you please look to PUM implementation if you have no any other questions and you think this interface is ok for you?",
+      "parentUuid": "cb819123_52e632ca",
+      "revId": "487f15b2a4d3465944ad865066f1f3937e408ba3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7a615395_5d3c0559",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 18
@@ -48,6 +66,30 @@
       "writtenOn": "2025-10-13T11:11:35Z",
       "side": 1,
       "message": "Do we need to add Internal failure too?",
+      "range": {
+        "startLine": 56,
+        "startChar": 12,
+        "endLine": 56,
+        "endChar": 67
+      },
+      "revId": "487f15b2a4d3465944ad865066f1f3937e408ba3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a4a9a48_b90c1807",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2025-10-15T11:33:54Z",
+      "side": 1,
+      "message": "https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/75236/comment/a843e7cd_b7e209f1/\nPatrick says that no need to add that Failure, don\u0027t think that we need to add it.",
+      "parentUuid": "7a615395_5d3c0559",
       "range": {
         "startLine": 56,
         "startChar": 12,
@@ -71,6 +113,30 @@
       "writtenOn": "2025-10-13T11:11:35Z",
       "side": 1,
       "message": "Remote User is alreday there at line no 114.",
+      "range": {
+        "startLine": 117,
+        "startChar": 16,
+        "endLine": 117,
+        "endChar": 59
+      },
+      "revId": "487f15b2a4d3465944ad865066f1f3937e408ba3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6706a9a_b039c5ac",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1000182
+      },
+      "writtenOn": "2025-10-15T11:33:54Z",
+      "side": 1,
+      "message": "good catch, thanks!",
+      "parentUuid": "5a674656_5a09e560",
       "range": {
         "startLine": 117,
         "startChar": 16,

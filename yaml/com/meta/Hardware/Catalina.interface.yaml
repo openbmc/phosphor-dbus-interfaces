@@ -1,0 +1,19 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    devices for Catalina.
+
+enumerations:
+    - name: CPLD
+      description: >
+          The compatible hardware strings for the CPLD on Catalina.
+      values:
+          - name: "LCMXO2_4000HC_hdd"
+          - name: "LCMXO3LF_4300C_pdb"
+
+    - name: VR
+      description: >
+          The compatible hardware strings for the VR on Catalina.
+      values:
+          - name: RAA228004_n1
+          - name: RAA228004_n2
+          - name: RAA228004_aux

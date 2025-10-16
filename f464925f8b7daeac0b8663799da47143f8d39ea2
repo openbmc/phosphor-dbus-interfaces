@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8e3762d_7b010cc3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-10-16T13:51:31Z",
+      "side": 1,
+      "message": "I don\u0027t think there\u0027s a way to have a default specified when the property is a set or vector.\nI went back and forth on if I should had a \u0027NotCheckedYet\u0027 enum value and then set it right away in the code,  but decided not to unless it turns out to be necessary.",
+      "parentUuid": "0754ced7_f6d29a31",
+      "revId": "f464925f8b7daeac0b8663799da47143f8d39ea2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e8087943_87d1d9cd",
@@ -31,6 +49,30 @@
       "writtenOn": "2025-10-16T02:29:31Z",
       "side": 1,
       "message": "Suggestion: ReasonsForNoRedundancy",
+      "range": {
+        "startLine": 77,
+        "startChar": 12,
+        "endLine": 77,
+        "endChar": 31
+      },
+      "revId": "f464925f8b7daeac0b8663799da47143f8d39ea2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f07809d3_f92c628c",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-10-16T13:51:31Z",
+      "side": 1,
+      "message": "Sure, will update.",
+      "parentUuid": "e8087943_87d1d9cd",
       "range": {
         "startLine": 77,
         "startChar": 12,

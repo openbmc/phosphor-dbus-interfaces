@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20fd203a_00b2ada8",
+        "filename": "yaml/xyz/openbmc_project/State/LockOut.events.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-10-17T18:19:15Z",
+      "side": 1,
+      "message": "Why are you changing the severity for LockOutDisabled to warning? This is a positive ack that device is not locked out anymore and can operate normally now. As per my understanding the current definition of these events is as expected.",
+      "revId": "2ed99b2b68a490d36a00da111d1e3e427e322b1e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

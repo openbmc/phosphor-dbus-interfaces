@@ -179,6 +179,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4b38e85_284be3c8",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/Settings.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002604
+      },
+      "writtenOn": "2025-10-19T13:04:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "72ea43d1_74635902",
+      "revId": "8edb2de7ea853dedca2284c4c874a6f2c2a447e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "979d4fc2_5947c3ff",
@@ -228,6 +246,24 @@
       "side": 1,
       "message": "It is possible for one interface to advertise IP on all ethernet interfaces by configuring it in lldpd.conf\n\nhttps://redfishforum.com/thread/1216/request-change-managementaddressipv-types-arrays?page\u003d1\u0026scrollTo\u003d4691\nstarted this thread to discuss on the same.",
       "parentUuid": "41f97a32_69a99ddc",
+      "revId": "8edb2de7ea853dedca2284c4c874a6f2c2a447e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "517cd310_b9c71f7a",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1002604
+      },
+      "writtenOn": "2025-10-19T13:04:45Z",
+      "side": 1,
+      "message": "Sure, it is possible to advertise multiply IP addresses in one interface. I can change the specification. \nHowever, if Redfish rejects the change request, it is probably best to keep it like it is now.",
+      "parentUuid": "62f35865_59c91fac",
       "revId": "8edb2de7ea853dedca2284c4c874a6f2c2a447e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

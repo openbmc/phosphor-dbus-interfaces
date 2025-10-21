@@ -1,0 +1,46 @@
+description: >
+    Provides an interface for getting arbitrary counters from a system or
+    device.  This interface shall be implemented on the same object path as an
+    xyz.openbmc_project.Item.* interface, to represent the counters for that
+    item.
+methods:
+    - name: GetMeasurements
+      description: >
+          Get the measurements of the metric.
+      output:
+          - name: Counts
+            type: array[tuple[string,array[byte]]]
+            description: |
+                The array of measurements.  Each measurement is a combination of a name, and a byte array representing the value.  The byte array shall represent the current count such that the length of the array represents the underlying counter size. For example, if the counter is a 32-bit counter, the value byte array shall be 4 bytes long in MSB-first order.  The intent of this interface is to expose a counter that may be sampled at the time of reading.  Implementations may choose to poll the counter at regular intervals, or on demand.  Any sample-interval specific properties are not exposed by this interface.  Implementers shall ensure that the counters do not decrease in value, unless intentionally reset to zero through a reset or other method.  If a specific counter is not supported, it shall not be included in the response.  If a specific counter is suported but is not currently available due to power state or other temporary conditions, an array of all 0xFF bytes shall be returned.
+                Well known names of counters are:
+                - HostRebootCount
+                - EthernetPhyReceivedBytes
+                - EthernetPhyTransmittedBytes
+                - EthernetPhySymbolErrorReceiveBytes
+                - EthernetPhyCorrectedBitErrors (units in bits)
+                - EthernetPhyReceiveErrors
+                - EthernetPhyReceiveForwardErrorCorrectedErrors
+                - EthernetPhyReceiveCorrectedErrors
+                - EthernetPhyReceiveUncorrectedErrors
+                - EthernetProtocolNAKsSent
+                - EthernetProtocolNAKsReceived
+                - EthernetProtocolReplays
+                - PCIeProtocolAERUncorrectableErrors
+                - PCIeProtocolAERCorrectableErrors
+                - PCIeProtocolTransmittedBytes
+                - PCIeProtocolReceivedBytes
+                - PCIePhyReceivedBytes
+                - PCIePhyTransmittedBytes
+                - TCPBytesSent
+                - TCPBytesReceived
+                - TCPRetransmissions
+                - TCPConnectionsOpened
+                - TCPConnectionsClosed
+                - TLSSessionsStarted
+                - TLSSessionsClosed
+    - name: AvailableCounts
+      description: >
+          Get the array of available counters without retrieving the current values.
+      output:
+          - name: AvailableCounts
+            type: array[string]

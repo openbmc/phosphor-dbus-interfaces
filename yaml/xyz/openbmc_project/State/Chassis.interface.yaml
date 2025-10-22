@@ -91,6 +91,9 @@ enumerations:
             description: >
                 Chassis power status is in a good condition
 
+service_names:
+    - default: xyz.openbmc_project.State.Chassis
+
 paths:
     - namespace: /xyz/openbmc_project/state
       segments:

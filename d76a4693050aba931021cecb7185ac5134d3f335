@@ -91,6 +91,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "dcaf21d5_6c4ba2ab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-10-23T14:59:38Z",
+      "side": 1,
+      "message": "ReadyToRemove was added to Redfish in 2025.3 for the BMC, Redfish assembly, and Redfish Chassis (It was already in Drive and PCIeDevice)\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/84402/2/redfish-core/schema/dmtf/csdl/Manager_v1.xml\n\nIBM plans to use ReadyToRemove for redundant BMCs with the backend implemented most likely in the proposed BMC App  \nhttps://gerrit.openbmc.org/c/openbmc/docs/+/70233\n\nThis ReadyToRemove is part of IBM\u0027s Concurrent maintenance \n\nI do know ReadyToRemove is used by other Redfish implementations today on PCIeDevice and Drive, although I haven\u0027t seen anything in Redfish \nhttps://github.com/search?q\u003drepo%3Aopenbmc%2Fbmcweb%20ReadyToRemove\u0026type\u003dcode\nhttps://github.com/ODIM-Project/ODIM/blob/81c02da794c25446817e363da87956d18b0c28dd/lib-dmtf/model/storage.go#L201",
+      "parentUuid": "1f89737d_f94d8b98",
+      "revId": "d76a4693050aba931021cecb7185ac5134d3f335",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2e6c8056_d9f1ae30",
         "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ReadyToRemove.interface.yaml",
         "patchSetId": 1

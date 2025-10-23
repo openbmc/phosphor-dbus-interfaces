@@ -16,6 +16,24 @@
       "message": "This is not the \"default service name\" from an implementation perspective.  This is actually the _deprecated_ service name.  There is not a default service name used anywhere because they\u0027re all numbered services (HostN).",
       "revId": "da617015aa340032ce7eb0a60e161be93524e0ec",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5f34772_7e39d549",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-10-23T10:51:17Z",
+      "side": 1,
+      "message": "changed to define it as `indexed_prefix` service name.\n\nThere is an sdbusplus patch as part of the topic to make this possible.\n\nSince other interface descriptions in PDI define the service name, IMO it makes sense for us to also define it for indexed service names.\n\nNow that introduces an issue where implementations could simply grab the prefix from the header and forget to append the index, but that\u0027s a topic for the sdbusplus review.",
+      "parentUuid": "fb12f0ee_1904bf7c",
+      "revId": "da617015aa340032ce7eb0a60e161be93524e0ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

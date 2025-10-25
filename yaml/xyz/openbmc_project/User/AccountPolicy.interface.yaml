@@ -1,6 +1,27 @@
 description: >
     Provides global user account policy related management.
 
+methods:
+    - name: GetPAMOrder
+      description: >
+          Retrieves the currently configured PAM module order.
+      returns:
+          - name: PamOrder
+            type: array[byte]
+
+    - name: SetPAMOrder
+      description: >
+          Configures the PAM order used for authentication.
+      parameters:
+          - name: PamOrder
+            type: array[byte]
+      returns:
+          - name: SetPamOrderStatus
+            type: boolean
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
 properties:
     - name: MaxLoginAttemptBeforeLockout
       type: uint16

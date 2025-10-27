@@ -2,6 +2,43 @@ description: >
     This defines a Port of a switch, controller, chassis, or any other device
     that could be connected to another entity.
 
+properties:
+    - name: PortProtocol
+      type: enum[self.PortProtocol]
+      default: Unknown
+      description: >
+          The protocol being sent over this port.
+    - name: PortType
+      type: enum[self.PortType]
+      default: Unknown
+      description: >
+          The type of this port.
+
+enumerations:
+    - name: PortProtocol
+      description: >
+          Possible port protocol type.
+      values:
+          - name: PCIe
+            description: >
+                Protocol is PCI Express.
+          - name: Unknown
+            description: >
+                Protocol is unknown.
+    - name: PortType
+      description: >
+          Possible port type.
+      values:
+          - name: Downstream
+            description: >
+                Type is downstream - this port connects to a target device.
+          - name: Upstream
+            description: >
+                Type is upstream - this port connects to a host device.
+          - name: Unknown
+            description: >
+                Type is unknown.
+
 association:
     name: connected_to
     description: >

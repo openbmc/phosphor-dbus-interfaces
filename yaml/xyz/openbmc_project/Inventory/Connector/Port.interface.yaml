@@ -3,6 +3,13 @@ description: >
     that could be connected to another entity.
 
 properties:
+    - name: Width
+      type: size
+      default: maxint
+      description: >
+          The number of lanes, phys, or other physical transport links that this port contains.
+          The default value indicates the value is unknown or not applicable, or the port is
+          not active.
     - name: PortProtocol
       type: enum[self.PortProtocol]
       default: Unknown
@@ -13,6 +20,12 @@ properties:
       default: Unknown
       description: >
           The type of this port.
+    - name: Speed
+      type: size
+      default: maxint
+      description: >
+          The current speed of the port. The default value indicates that the
+          port is not active.
 
 enumerations:
     - name: PortProtocol

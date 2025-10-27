@@ -43,6 +43,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c11ac610_ea023c08",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-27T17:13:03Z",
+      "side": 1,
+      "message": "Metric.Value requires:\n\n1. A path per metric\n2. A PropertiesChanged event on every update\n3. To select some kind of polling interval.\n\n\nThe proposed interface has all that, and the advantages (without comparison) are listed in the description for this.",
+      "parentUuid": "d1a75850_aedeb22b",
+      "revId": "2e7aaa116a0ee6e7fafbbedaa54efcf45cde6cf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3b549bc9_f0f16712",
         "filename": "yaml/xyz/openbmc_project/Metric/Count.interface.yaml",
         "patchSetId": 1
@@ -54,6 +72,30 @@
       "writtenOn": "2025-10-27T12:46:13Z",
       "side": 1,
       "message": "Is this arbitrary or well-known?",
+      "range": {
+        "startLine": 2,
+        "startChar": 38,
+        "endLine": 2,
+        "endChar": 47
+      },
+      "revId": "2e7aaa116a0ee6e7fafbbedaa54efcf45cde6cf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9600cb21_b2cf04ea",
+        "filename": "yaml/xyz/openbmc_project/Metric/Count.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-27T17:13:03Z",
+      "side": 1,
+      "message": "Arbitrary.  Where there\u0027s agreement on a counter name (like for PCIe, etc) we will document them here, but the goal is that this can include any counter without imposing limits in documentation.",
+      "parentUuid": "3b549bc9_f0f16712",
       "range": {
         "startLine": 2,
         "startChar": 38,
@@ -148,6 +190,30 @@
       "writtenOn": "2025-10-27T12:46:13Z",
       "side": 1,
       "message": "Can this be a dict instead?",
+      "range": {
+        "startLine": 12,
+        "startChar": 18,
+        "endLine": 12,
+        "endChar": 23
+      },
+      "revId": "2e7aaa116a0ee6e7fafbbedaa54efcf45cde6cf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ae77957_2784de3e",
+        "filename": "yaml/xyz/openbmc_project/Metric/Count.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-27T17:13:03Z",
+      "side": 1,
+      "message": "I intentionally didn\u0027t want it to be a dict, because the general usage is to enumerate and populate.  It could be a dict if we wanted (they\u0027re the same), but I didn\u0027t want to imply that there was an expected order/lookupability.",
+      "parentUuid": "5925275d_2c46cda2",
       "range": {
         "startLine": 12,
         "startChar": 18,

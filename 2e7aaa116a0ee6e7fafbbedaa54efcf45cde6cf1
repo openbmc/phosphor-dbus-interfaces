@@ -90,6 +90,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d6585779_e919b770",
+        "filename": "yaml/xyz/openbmc_project/Metric/Count.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-27T17:06:05Z",
+      "side": 1,
+      "message": "The goal here was to avoid needing to do a complex mapper lookup to get the counters for a given path.  If we have, say, 100 counters for a given inventory item, that\u0027s now a lot of lookups.\n\n\u003e regularly changing things \n\nThese intentionally have no properties, so they\u0027re not \"changing\".  Is there a concern about other signals where this would change?",
+      "parentUuid": "e3d7758a_1ecd3c16",
+      "range": {
+        "startLine": 3,
+        "startChar": 56,
+        "endLine": 3,
+        "endChar": 72
+      },
+      "revId": "2e7aaa116a0ee6e7fafbbedaa54efcf45cde6cf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5925275d_2c46cda2",
         "filename": "yaml/xyz/openbmc_project/Metric/Count.interface.yaml",
         "patchSetId": 1
@@ -141,6 +165,24 @@
       "writtenOn": "2025-10-27T15:32:42Z",
       "side": 1,
       "message": "Why aren\u0027t these enumerations?",
+      "revId": "2e7aaa116a0ee6e7fafbbedaa54efcf45cde6cf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26adf83d_3675f882",
+        "filename": "yaml/xyz/openbmc_project/Metric/Count.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-27T17:06:05Z",
+      "side": 1,
+      "message": "So that additional newly added properties do not cause failures.  Not all services will require all values.",
+      "parentUuid": "422087e2_5ec8dd03",
       "revId": "2e7aaa116a0ee6e7fafbbedaa54efcf45cde6cf1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -185,6 +185,24 @@
       "parentUuid": "422087e2_5ec8dd03",
       "revId": "2e7aaa116a0ee6e7fafbbedaa54efcf45cde6cf1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e2b7b82_35d4f827",
+        "filename": "yaml/xyz/openbmc_project/Metric/Count.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-27T17:08:00Z",
+      "side": 1,
+      "message": "\u003e So that additional newly added properties do not cause failures. Not all services will require all values.\n\nCan you elaborate?  I don\u0027t know what kind of failures you\u0027re envisioning being caused.\n\nGenerally we\u0027ve made a big push to \"no arbitrary strings that isn\u0027t used exclusively by humans\" in PDI.  It isn\u0027t clear to me what is special about these ones.",
+      "parentUuid": "26adf83d_3675f882",
+      "revId": "2e7aaa116a0ee6e7fafbbedaa54efcf45cde6cf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

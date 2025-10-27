@@ -16,6 +16,69 @@
       "message": "Since the patch has been pending for a while, just a friendly ping as a reminder for review.",
       "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3f470f4_02860712",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-27T06:40:52Z",
+      "side": 1,
+      "message": "Does the sensor name match to (par of) a D-Bus sensor object?",
+      "range": {
+        "startLine": 13,
+        "startChar": 17,
+        "endLine": 13,
+        "endChar": 23
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a6b544b_68705b71",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-27T06:40:52Z",
+      "side": 1,
+      "message": "Why is string better than en enum here? Several existing PDIs use enums to expose failure states.",
+      "range": {
+        "startLine": 20,
+        "startChar": 54,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18395e4c_240d6e36",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-27T06:40:52Z",
+      "side": 1,
+      "message": "What is expected to happen in case of a BMC reboot?",
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

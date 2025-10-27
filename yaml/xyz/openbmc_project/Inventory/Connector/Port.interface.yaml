@@ -13,6 +13,23 @@ properties:
       default: Unknown
       description: >
           The type of this port.
+    - name: Speed
+      type: uint64
+      default: maxint
+      description: >
+          The current speed of the port, in bits per second. The default value
+          indicates the property is not supported by this port. A value of 0
+          indicates that the value for this property is not known at this time
+          (because, for example, the port is inactive).
+    - name: Width
+      type: size
+      default: maxint
+      description: >
+          The number of lanes, phys, or other physical transport links that this
+          port contains. The default value indicates the property is not
+          supported by this port. A value of 0 indicates that the value for this
+          property is not known at this time (because, for example, the port is
+          inactive).
 
 enumerations:
     - name: PortProtocol

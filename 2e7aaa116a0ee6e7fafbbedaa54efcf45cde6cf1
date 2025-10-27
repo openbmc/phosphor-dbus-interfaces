@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6ef4504c_3e731292",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-10-27T17:23:38Z",
+      "side": 1,
+      "message": "For counters I would argue that this should always be used unless you need backward compatibility.  There\u0027s 2 counters noted in the existing API, RebootCount, RebootCountWithFailure.  Neither of those will see a fast-changing count to where this interface would be a solution, so we could decide if those should be moved in the future.",
+      "parentUuid": "c8a1b873_074c20ac",
+      "range": {
+        "startLine": 10,
+        "startChar": 32,
+        "endLine": 14,
+        "endChar": 52
+      },
+      "revId": "2e7aaa116a0ee6e7fafbbedaa54efcf45cde6cf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d1a75850_aedeb22b",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1

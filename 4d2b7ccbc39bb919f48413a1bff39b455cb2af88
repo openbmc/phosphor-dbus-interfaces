@@ -129,6 +129,64 @@
       },
       "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ad7ea4c_e9af8414",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-27T06:43:55Z",
+      "side": 1,
+      "message": "I don\u0027t think the comment about string usage has been addressed. Why not make these enuma?",
+      "parentUuid": "7afaf2b3_cf95a2f9",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 63
+      },
+      "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c73d524_79e09b43",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-27T06:43:55Z",
+      "side": 1,
+      "message": "Is this expected to be preserved?",
+      "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c505b92_73446afc",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-27T06:43:55Z",
+      "side": 1,
+      "message": "How is validation supposed to be done?",
+      "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

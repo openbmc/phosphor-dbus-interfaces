@@ -58,6 +58,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a590321_138d8ccd",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2025-10-28T12:44:09Z",
+      "side": 1,
+      "message": "For example, in the case of a PLDM sensor, if the object in the PLDM tree is `/xyz/openbmc_project/sensors/temperature/SENTINEL_DOME_SLOT_5_DIMM_A0_TEMP_C`, \nthen it should display the sensor name as `SENTINEL_DOME_SLOT_5_DIMM_A0_TEMP_C`.\nOn our platform, in conjunction with [Gerrit 82447] for `phosphor-pid-control`, the demo would look like this:\n```\nroot@bmc:~# busctl get-property xyz.openbmc_project.State.FanCtrl \n/xyz/openbmc_project/settings/fanctrl/zone0 xyz.openbmc_project.Debug.Pid.Zone \nFailSafeSensorsa{ss} 18 \"SENTINEL_DOME_SLOT_5_DIMM_A0_TEMP_C\" \"Sensor reading bad\" \n\"SENTINEL_DOME_SLOT_5_DIMM_A10_TEMP_C\" \"Sensor reading bad\"...\n```\nThis output shows a list of sensor names such as \"SENTINEL_DOME_SLOT_5_DIMM_A0_TEMP_C\", each associated with a status like \"Sensor reading bad\".\n\n[Gerrit 82447]: https://gerrit.openbmc.org/c/openbmc/phosphor-pid-control/+/82447",
+      "parentUuid": "c3f470f4_02860712",
+      "range": {
+        "startLine": 13,
+        "startChar": 17,
+        "endLine": 13,
+        "endChar": 23
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3a6b544b_68705b71",
@@ -81,6 +105,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3a9a734_9ef3aa12",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2025-10-28T12:44:09Z",
+      "side": 1,
+      "message": "Since sensor names may vary across platforms, it\u0027s not suitable to predefine them using enums. However, using enums for failure reasons should be acceptable. I can first try to see if it\u0027s possible to convert just the reason part to an enum while still displaying both the sensor name and reason in a dictionary type.",
+      "parentUuid": "3a6b544b_68705b71",
+      "range": {
+        "startLine": 20,
+        "startChar": 54,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "18395e4c_240d6e36",
@@ -94,6 +142,24 @@
       "writtenOn": "2025-10-27T06:40:52Z",
       "side": 1,
       "message": "What is expected to happen in case of a BMC reboot?",
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3344e8fd_71c7ae30",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2025-10-28T12:44:09Z",
+      "side": 1,
+      "message": "I expect that regardless of whether it\u0027s a BMC reboot or any other operation, the `xyz.openbmc_project.Debug.Pid.Zone` interface and its `FailSafeSensors` property will only be created after phosphor-pid-control has completed building the zone and created the object `/xyz/openbmc_project/settings/fanctrl/zone\u003cid\u003e`",
+      "parentUuid": "18395e4c_240d6e36",
       "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

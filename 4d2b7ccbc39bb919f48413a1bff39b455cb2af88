@@ -157,6 +157,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ad48b753_d13f2351",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-10-28T06:14:01Z",
+      "side": 1,
+      "message": "As per UEFI Spec, BootOrder values can range from Boot0000-BootFFFF\nhttps://uefi.org/specs/UEFI/2.10/03_Boot_Manager.html\nSo having enums is not feasible in this case. Have addressed the issue mentioned by Patrick https://gerrit.openbmc.org/c/openbmc/bios-settings-mgr/+/83749",
+      "parentUuid": "7ad7ea4c_e9af8414",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 63
+      },
+      "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5c73d524_79e09b43",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
         "patchSetId": 9
@@ -174,6 +198,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a4f8cbdb_5eca34c4",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-10-28T06:14:01Z",
+      "side": 1,
+      "message": "Yes, it is expected to be preserved. The values change when host applies the pending values during the upcoming boot",
+      "parentUuid": "5c73d524_79e09b43",
+      "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9c505b92_73446afc",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
         "patchSetId": 9
@@ -185,6 +227,24 @@
       "writtenOn": "2025-10-27T06:43:55Z",
       "side": 1,
       "message": "How is validation supposed to be done?",
+      "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b371809_fcd66d61",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1002307
+      },
+      "writtenOn": "2025-10-28T06:14:01Z",
+      "side": 1,
+      "message": "https://gerrit.openbmc.org/c/openbmc/bios-settings-mgr/+/83749 Added example here",
+      "parentUuid": "9c505b92_73446afc",
       "revId": "4d2b7ccbc39bb919f48413a1bff39b455cb2af88",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

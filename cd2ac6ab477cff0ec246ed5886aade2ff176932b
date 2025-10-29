@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "276a2b0e_d8ff2d82",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-29T15:02:30Z",
+      "side": 1,
+      "message": "Does this interface require other (inventory?) interfaces to be implemented by the object?",
+      "range": {
+        "startLine": 2,
+        "startChar": 4,
+        "endLine": 2,
+        "endChar": 13
+      },
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66c36922_24c505e5",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-29T15:02:30Z",
+      "side": 1,
+      "message": "I find this a bit confusing. Does setting this to true imply the item has been quiesced and ready to be removed, or, setting this to true kicks off the quisce process? This and the previous statement seem a bit contradictory.",
+      "range": {
+        "startLine": 3,
+        "startChar": 13,
+        "endLine": 4,
+        "endChar": 43
+      },
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5274e727_8d73e6df",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-29T15:02:30Z",
+      "side": 1,
+      "message": "Does there need to be a default value?",
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d04ff77_2d22693a",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-10-29T15:02:30Z",
+      "side": 1,
+      "message": "Should the value persist across system/bmc reboots, once a user has set it?",
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -179,6 +179,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cada16c7_a9ac94c0",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2025-10-30T12:04:02Z",
+      "side": 1,
+      "message": "To ensure I implement this exactly as you expect, could you please confirm the desired for FailureReason?\n\nOption 1 (enum): keep enum; busctl shows fully-qualified enum names (e.g., xyz.openbmc_project.Debug.Pid.Zone.FailureReason.Timeout).\nOption 2 (strings): return Common errors directly (e.g., xyz.openbmc_project.Common.Error.Timeout).\n\nFor domain-specific reasons without a direct Common error (MarginHot, ThresholdAsserted, BadReading), should we:\nkeep them as enum values (and, if a string is needed, map to Common.Error.Unknown), or remap to the closest Common errors (e.g., InvalidArgument / InternalFailure)?\n\nAlso, should we rename enum values to match Common terms (ObjectMissing→ResourceNotFound, NotFunctional→InternalFailure)?\n\nOr is the intention to define these errors in a newly created Zone.error.yaml? I’d really appreciate it if you could share more detailed thoughts to help clarify.\n\nThank you for your guidance.",
+      "parentUuid": "d13545f4_dd12fbfc",
+      "range": {
+        "startLine": 20,
+        "startChar": 54,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "18395e4c_240d6e36",
         "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
         "patchSetId": 8

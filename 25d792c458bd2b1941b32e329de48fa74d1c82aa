@@ -131,6 +131,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2583d452_3f107c61",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2025-10-30T09:25:44Z",
+      "side": 1,
+      "message": "I’ve already tried converting the property to use enums. The output looks like this:\n```\nroot@bmc:~# busctl get-property xyz.openbmc_project.State.FanCtrl \n/xyz/openbmc_project/settings/fanctrl/zone0 \nxyz.openbmc_project.Debug.Pid.Zone \nFailSafeSensors\na{ss} 95 \"MEDUSA_MB8_HSC_12V_TEMP_C\" \n\"xyz.openbmc_project.Debug.Pid.Zone.FailureReason.MissingSensor\" \n...\nSENTINEL_DOME_SLOT_7_MB_X8_RTM_TEMP_C\" \n\"xyz.openbmc_project.Debug.Pid.Zone.FailureReason.BadReading\"\n...\n```\nHowever, this approach no longer directly displays the human-readable reason strings like those used in `phosphor-pid-control`. May I ask which format you would prefer to see?",
+      "parentUuid": "e3a9a734_9ef3aa12",
+      "range": {
+        "startLine": 20,
+        "startChar": 54,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "18395e4c_240d6e36",
         "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
         "patchSetId": 8

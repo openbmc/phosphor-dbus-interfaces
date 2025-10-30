@@ -1,0 +1,153 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f794b776_5235e2b0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-30T13:27:59Z",
+      "side": 1,
+      "message": "I don\u0027t see any reference to a Redfish schema, nor a reference in the design document to bmcweb.  Please fix this.  If this is an OEM schema spell that out.",
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31b8b6e9_52a8ef87",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-30T13:27:59Z",
+      "side": 1,
+      "message": "A new top-level \"provisioning\" directory is not acceptable.  Place this under Control maybe?  State?",
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d8e06a7_6ae2a4dd",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-30T13:27:59Z",
+      "side": 1,
+      "message": "That means ... this BMC is \"provisioned\"?  What does it mean to be provisioned?",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 55
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3a6e03a_594b2c11",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-30T13:27:59Z",
+      "side": 1,
+      "message": "This implies there is only 1 peer.  Why are we doing that?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 61
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6d0f224_893cef81",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-30T13:27:59Z",
+      "side": 1,
+      "message": "what is an \"identifier\"?  We generally do not want arbitrary strings.  Is there some format of these?  Is it an IP address?",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 61
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37be551b_fb8eb96b",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-30T13:27:59Z",
+      "side": 1,
+      "message": "Add an identifier of the peer?",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 23
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "102a2b01_96378d87",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-10-30T13:27:59Z",
+      "side": 1,
+      "message": "Lower case.\n\nPlace this under control or state also.",
+      "range": {
+        "startLine": 64,
+        "startChar": 37,
+        "endLine": 64,
+        "endChar": 49
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

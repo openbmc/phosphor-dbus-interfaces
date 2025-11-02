@@ -106,6 +106,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6419f6dc_55ddf121",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Connector/Port.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-11-02T14:13:31Z",
+      "side": 1,
+      "message": "Thinking more about this, it doesn\u0027t have to be just Lanes. Port width is not a concept restricted to PCIe, so changed this to width. There still is a default value where this is unknown, so apps can always check. Resolving, let me know if you\u0027re expecting a different solution.",
+      "parentUuid": "1aa384bc_65888d08",
+      "revId": "426d31dc927e9e673ad34a6ec5e8d78a2a721f0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0e9b8399_f6d3f787",

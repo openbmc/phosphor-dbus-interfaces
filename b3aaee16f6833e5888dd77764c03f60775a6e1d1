@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46fcff54_ddbb8fe1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-02T12:16:26Z",
+      "side": 1,
+      "message": "Please fix your git config for the author and signed off by.",
+      "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57522177_53c594c6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-02T12:16:26Z",
+      "side": 1,
+      "message": "Can you add more “why” here?  What is the design?  Who is the consumer?  Is there a corresponding Redfish profile to use?",
+      "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb12d431_0002c9fe",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-02T12:16:26Z",
+      "side": 1,
+      "message": "What do these bytes represent?  If this is an index of some sort, use size and not byte. Please add documentation.",
+      "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40048b88_5a19eddb",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-02T12:16:26Z",
+      "side": 1,
+      "message": "Why internal failure. We should not be adding new ones of these.",
+      "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

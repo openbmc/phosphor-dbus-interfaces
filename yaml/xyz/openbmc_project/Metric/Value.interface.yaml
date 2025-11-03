@@ -114,7 +114,63 @@ paths:
                 Reboot statistic to track number of times device rebooted
                 because of a failure.
             value: reboot/count_with_failure
+          - name: CorrectableErrorCount
+            description: >
+                The total number of correctable errors for a device.
+            value: correctable_error_count
+          - name: NonFatalErrorCount
+            description: >
+                The total number of non-fatal errors for a device.
+            value: non_fatal_error_count
+          - name: FatalErrorCount
+            description: >
+                The total number of fatal errors for a device.
+            value: fatal_error_count
+    - namespace: /xyz/openbmc_project/metric/pcie
+      description: >
+          The root path for all PCIe Port Metrics.
+      segments:
+          - name: L0ToRecoveryCount
+            description: >
+                The total number of times the PCIe link states transitioned from
+                L0 to the recovery state for a device.
+            value: l0_to_recovery_count
+          - name: ReplayCount
+            description: >
+                The total number of PCIe replays issued by a device. A replay is
+                a retransmission of a TLP and occurs because the ACK timer is
+                expired, which means that the receiver did not send the ACK or
+                this device did not properly decode the ACK.
+            value: replay_count
+          - name: ReplayRolloverCount
+            description: >
+                The total number of PCIe replay rollovers issued by a device. A
+                replay rollover occurs when consecutive replays failed to
+                resolve the errors on the link, which means that this device
+                forced the link into the recovery state.
+            value: replay_rollover_count
+          - name: NAKSentCount
+            description: >
+                The total number of Negative Acks issued on the PCIe link by a
+                device.
+            value: nak_sent_count
+          - name: NAKReceivedCount
+            description: >
+                The total number of Negative Acks issued on the PCIe link by a
+                receiver.
+            value: nak_received_count
+          - name: UnsupportedRequestCount
+            description: >
+                The total number of PCIe unsupported requests received by a
+                device.
+            value: unsupported_request_count
     - name: BMC
       description: >
           The BMC metrics.
       value: /xyz/openbmc_project/metric/bmc
+    - name: Port
+      description: >
+          A Port's metrics. The inventory item associated with the port metrics
+          object is expected to implement Connector.Port. "PORTID" indicates the
+          port ID (index/name/etc).
+      value: /xyz/openbmc_project/metric/port_PORTID

@@ -115,6 +115,44 @@ paths:
                 Reboot statistic to track number of times device rebooted
                 because of a failure.
             value: reboot/count_with_failure
+          - name: PCIeCorrectableErrorCount
+            description: >
+                The total number of PCIe correctable errors for a device.
+            value: pcie/correctable_error_count
+          - name: PCIeNonFatalErrorCount
+            description: >
+                The total number of PCIe non-fatal errors for a device.
+            value: pcie/non_fatal_error_count
+          - name: PCIeFatalErrorCount
+            description: >
+                The total number of PCIe fatal errors for a device.
+            value: pcie/fatal_error_count
+          - name: PCIeL0ToRecoveryCount
+            description: >
+                The total number of times the PCIe link states transitioned
+                from L0 to the recovery state for a device.
+            value: pcie/l0_to_recovery_count
+          - name: PCIeReplayCount
+            description: >
+                The total number of PCIe replays issued by a device.
+            value: pcie/replay_count
+          - name: PCIeReplayRolloverCount
+            description: >
+                The total number of PCIe replay rollovers issued by a device.
+            value: pcie/replay_rollover_count
+          - name: PCIeNAKSentCount
+            description: >
+                The total number of NAKs issued on the PCIe link by a device.
+            value: pcie/nak_sent_count
+          - name: PCIeNAKReceivedCount
+            description: >
+                The total number of NAKs issued on the PCIe link by a receiver.
+            value: pcie/nak_received_count
+          - name: PCIeUnsupportedRequestCount
+            description: >
+                The total number of PCIe unsupported requests received by a
+                device.
+            value: pcie/unsupported_request_count
     - name: BMC
       description: >
           The BMC metrics.

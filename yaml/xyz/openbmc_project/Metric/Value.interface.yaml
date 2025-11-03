@@ -160,6 +160,105 @@ paths:
                 The total number of PCIe unsupported requests received by a
                 device.
             value: pcie/unsupported_request_count
+          - name: NICTXBytes
+            description: >
+                The total number of bytes transmitted on a port since reset.
+            value: nic/tx_bytes
+          - name: NICRXBytes
+            description: >
+                The total number of bytes received on a port since reset.
+            value: nic/rx_bytes
+          - name: NICTXMulticastFrames
+            description: >
+                The total number of good multicast frames transmitted on a port
+                since reset.
+            value: nic/tx_multicast_frames
+          - name: NICRXMulticastFrames
+            description: >
+                The total number of valid multicast frames received on a port
+                since reset.
+            value: nic/rx_multicast_frames
+          - name: NICTXUnicastFrames
+            description: >
+                The total number of good unicast frames transmitted on a port
+                since reset.
+            value: nic/tx_unicast_frames
+          - name: NICRXUnicastFrames
+            description: >
+                The total number of valid unicast frames received on a port
+                since reset.
+            value: nic/rx_unicast_frames
+          - name: NICTXBroadcastFrames
+            description: >
+                The total number of good broadcast frames transmitted on a port
+                since reset.
+            value: nic/tx_broadcast_frames
+          - name: NICRXBroadcastFrames
+            description: >
+                The total number of valid broadcast frames received on a port
+                since reset.
+            value: nic/rx_broadcast_frames
+          - name: NICRXFCSErrors
+            description: >
+                The total number of frames received with frame check sequence
+                (FCS) errors on a port since reset.
+            value: nic/rx_fcs_errors
+          - name: NICRXFrameAlignmentErrors
+            description: >
+                The total number of frames received with alignment errors on a
+                port since reset.
+            value: nic/rx_frame_alignment_errors
+          - name: NICRXFalseCarrierErrors
+            description: >
+                The total number of false carrier errors received from phy on a
+                port since reset.
+            value: nic/rx_false_carrier_errors
+          - name: NICRXUndersizeFrames
+            description: >
+                The total number of frames that are smaller than the minimum
+                frame size of 64 bytes.
+            value: nic/rx_undersize_frames
+          - name: NICRXOversizeFrames
+            description: >
+                The total number of frames that exceed the maximum frame size.
+            value: nic/rx_oversize_frames
+          - name: NICTXPauseXONFrames
+            description: >
+                The total number of XON frames transmitted to the nic.
+            value: nic/tx_pause_xon_frames
+          - name: NICRXPauseXONFrames
+            description: >
+                The total number of flow control frames from the nic to resume
+                transmission.
+            value: nic/rx_pause_xon_frames
+          - name: NICTXPauseXOFFFrames
+            description: >
+                The total number of XOFF frames transmitted to the nic.
+            value: nic/tx_pause_xoff_frames
+          - name: NICRXPauseXOFFFrames
+            description: >
+                The total number of flow control frames from the nic to pause
+                transmission.
+            value: nic/rx_pause_xoff_frames
+          - name: NICTXSingleCollisions
+            description: >
+                The times that a successfully transmitted frame encountered a
+                single collision.
+            value: nic/tx_single_collisions
+          - name: NICTXMultipleCollisions
+            description: >
+                The times that a transmitted frame encountered 2-15 collisions.
+            value: nic/tx_multiple_collisions
+          - name: NICTXExcessiveCollisions
+            description: >
+                The number of times a single transmitted frame encountered more
+                than 15 collisions.
+            value: nic/tx_excessive_collisions
+          - name: NICTXLateCollisions
+            description: >
+                The total number of collisions that occurred after one slot time
+                as defined by IEEE 802.3.
+            value: nic/tx_late_collisions
     - name: BMC
       description: >
           The BMC metrics.

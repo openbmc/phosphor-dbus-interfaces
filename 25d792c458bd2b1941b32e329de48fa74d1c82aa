@@ -227,6 +227,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cf04696b_ac245f40",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000520
+      },
+      "writtenOn": "2025-11-03T08:58:27Z",
+      "side": 1,
+      "message": "I also vote for defining errors here in `Debug.Pid.Zone.FailureReason`, to avoid loss of information by trying to map errors to their `Common` equivalents (which are not always adequate to express the richness of information we need to convey here). I like the idea of printing the fully qualified enum name. Localization to more human-readable text should be done in the UI/presentation layer.",
+      "parentUuid": "c74fdd77_17d735f6",
+      "range": {
+        "startLine": 20,
+        "startChar": 54,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "18395e4c_240d6e36",
         "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
         "patchSetId": 8

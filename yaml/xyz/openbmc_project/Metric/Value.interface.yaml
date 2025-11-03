@@ -129,8 +129,8 @@ paths:
             value: pcie/fatal_error_count
           - name: PCIeL0ToRecoveryCount
             description: >
-                The total number of times the PCIe link states transitioned
-                from L0 to the recovery state for a device.
+                The total number of times the PCIe link states transitioned from
+                L0 to the recovery state for a device.
             value: pcie/l0_to_recovery_count
           - name: PCIeReplayCount
             description: >
@@ -153,6 +153,105 @@ paths:
                 The total number of PCIe unsupported requests received by a
                 device.
             value: pcie/unsupported_request_count
+          - name: NetworkTXBytes
+            description: >
+                The total number of bytes transmitted on a port since reset.
+            value: network/tx_bytes
+          - name: NetworkRXBytes
+            description: >
+                The total number of bytes received on a port since reset.
+            value: network/rx_bytes
+          - name: NetworkTXMulticastFrames
+            description: >
+                The total number of good multicast frames transmitted on a port
+                since reset.
+            value: network/tx_multicast_frames
+          - name: NetworkRXMulticastFrames
+            description: >
+                The total number of valid multicast frames received on a port
+                since reset.
+            value: network/rx_multicast_frames
+          - name: NetworkTXUnicastFrames
+            description: >
+                The total number of good unicast frames transmitted on a port
+                since reset.
+            value: network/tx_unicast_frames
+          - name: NetworkRXUnicastFrames
+            description: >
+                The total number of valid unicast frames received on a port
+                since reset.
+            value: network/rx_unicast_frames
+          - name: NetworkTXBroadcastFrames
+            description: >
+                The total number of good broadcast frames transmitted on a port
+                since reset.
+            value: network/tx_broadcast_frames
+          - name: NetworkRXBroadcastFrames
+            description: >
+                The total number of valid broadcast frames received on a port
+                since reset.
+            value: network/rx_broadcast_frames
+          - name: NetworkRXFCSErrors
+            description: >
+                The total number of frames received with frame check sequence
+                (FCS) errors on a port since reset.
+            value: network/rx_fcs_errors
+          - name: NetworkRXFrameAlignmentErrors
+            description: >
+                The total number of frames received with alignment errors on a
+                port since reset.
+            value: network/rx_frame_alignment_errors
+          - name: NetworkRXFalseCarrierErrors
+            description: >
+                The total number of false carrier errors received from phy on a
+                port since reset.
+            value: network/rx_false_carrier_errors
+          - name: NetworkRXUndersizeFrames
+            description: >
+                The total number of frames that are smaller than the minimum
+                frame size of 64 bytes.
+            value: network/rx_undersize_frames
+          - name: NetworkRXOversizeFrames
+            description: >
+                The total number of frames that exceed the maximum frame size.
+            value: network/rx_oversize_frames
+          - name: NetworkTXPauseXONFrames
+            description: >
+                The total number of XON frames transmitted to the network.
+            value: network/tx_pause_xon_frames
+          - name: NetworkRXPauseXONFrames
+            description: >
+                The total number of flow control frames from the network to
+                resume transmission.
+            value: network/rx_pause_xon_frames
+          - name: NetworkTXPauseXOFFFrames
+            description: >
+                The total number of XOFF frames transmitted to the network.
+            value: network/tx_pause_xoff_frames
+          - name: NetworkRXPauseXOFFFrames
+            description: >
+                The total number of flow control frames from the network to
+                pause transmission.
+            value: network/rx_pause_xoff_frames
+          - name: NetworkTXSingleCollisions
+            description: >
+                The times that a successfully transmitted frame encountered a
+                single collision.
+            value: network/tx_single_collisions
+          - name: NetworkTXMultipleCollisions
+            description: >
+                The times that a transmitted frame encountered 2-15 collisions.
+            value: network/tx_multiple_collisions
+          - name: NetworkTXExcessiveCollisions
+            description: >
+                The number of times a single transmitted frame encountered more
+                than 15 collisions.
+            value: network/tx_excessive_collisions
+          - name: NetworkTXLateCollisions
+            description: >
+                The total number of collisions that occurred after one slot time
+                as defined by IEEE 802.3.
+            value: network/tx_late_collisions
     - name: BMC
       description: >
           The BMC metrics.

@@ -16,6 +16,74 @@
       "message": "Hi @patrick@stwcx.xyz,\ncould you help review this change? Thanks!",
       "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c0c0ddf6_908e56f3",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-11-03T09:30:40Z",
+      "side": 1,
+      "message": "It\u0027s not very clear to me what data this is about the image.",
+      "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36912e94_6fc1ecdf",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-11-03T09:30:40Z",
+      "side": 1,
+      "message": "Why does this need to be a string?",
+      "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b33b23e_773d0af3",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-11-03T09:30:40Z",
+      "side": 1,
+      "message": "Why is this not added to other events/errors?",
+      "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b67ce2f_bdeb9c22",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-11-03T09:30:40Z",
+      "side": 1,
+      "message": "How is this helpful for resetting a device?",
+      "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -203,6 +203,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c74fdd77_17d735f6",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-11-03T06:48:56Z",
+      "side": 1,
+      "message": "I would vote for defining errors in the Zone.error.yaml (for the ones that don\u0027t map clearly to existing errors). Enum to string mapping can be done by consuming apps. Bmcweb does this, for eg, where it converts the PDI enums to Redfish messages.",
+      "parentUuid": "cada16c7_a9ac94c0",
+      "range": {
+        "startLine": 20,
+        "startChar": 54,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "18395e4c_240d6e36",
         "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
         "patchSetId": 8

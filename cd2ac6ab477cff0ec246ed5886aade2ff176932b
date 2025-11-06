@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b764b900_084dbab1",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2025-11-06T14:31:40Z",
+      "side": 1,
+      "message": "Theree are apps that will be invoked when ReadyToRemove is set to true and false, respectively which are supposed to handle the inventory updates associated with the Concurrent Maintenance process. The details of this have not been completely flushed out.",
+      "parentUuid": "276a2b0e_d8ff2d82",
+      "range": {
+        "startLine": 2,
+        "startChar": 4,
+        "endLine": 2,
+        "endChar": 13
+      },
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "66c36922_24c505e5",
         "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
         "patchSetId": 6
@@ -37,6 +61,30 @@
       "writtenOn": "2025-10-29T15:02:30Z",
       "side": 1,
       "message": "I find this a bit confusing. Does setting this to true imply the item has been quiesced and ready to be removed, or, setting this to true kicks off the quisce process? This and the previous statement seem a bit contradictory.",
+      "range": {
+        "startLine": 3,
+        "startChar": 13,
+        "endLine": 4,
+        "endChar": 43
+      },
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71bf8375_49e3d09e",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2025-11-06T14:31:40Z",
+      "side": 1,
+      "message": "Setting ReadyToRemove to \"True\"  kicks off the quiesce process and conversely setting it to \"False\" begins the process of resuming activity to the part that was just replaced.",
+      "parentUuid": "66c36922_24c505e5",
       "range": {
         "startLine": 3,
         "startChar": 13,
@@ -77,6 +125,24 @@
       "writtenOn": "2025-10-29T15:02:30Z",
       "side": 1,
       "message": "Should the value persist across system/bmc reboots, once a user has set it?",
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20ad1b28_058cddaf",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2025-11-06T14:31:40Z",
+      "side": 1,
+      "message": "If the active BMC reboots then the value would not persist: the user would need to redo the Concurrent Maintenance operation.",
+      "parentUuid": "0d04ff77_2d22693a",
       "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

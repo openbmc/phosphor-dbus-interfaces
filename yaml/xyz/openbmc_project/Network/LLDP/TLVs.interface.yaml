@@ -63,12 +63,24 @@ properties:
           IPv4 management address of the device. This is the IPv4 address used
           for managing the device.
 
+    - name: ManagementAddressIPv4Array
+      type: array[string]
+      description: >
+          Contains additional IPv4 management addresses transmitted or received
+          on this link.
+
     - name: ManagementAddressIPv6
       type: string
       default: ""
       description: >
           IPv6 management address of the device. This is the IPv6 address used
           for managing the device.
+
+    - name: ManagementAddressIPv6Array
+      type: array[string]
+      description: >
+          Contains additional IPv6 management addresses transmitted or received
+          on this link.
 
     - name: ManagementAddressMAC
       type: string
@@ -83,6 +95,13 @@ properties:
       description: >
           VLAN ID used for management traffic. This is the VLAN ID used for
           managing the device.
+
+    - name: ExchangeType
+      type: enum[self.LLDPExchangeType]
+      default: Unknown
+      description: >
+          Indicates whether this LLDP TLVs object represents transmitted or
+          received LLDP information.
 
 enumerations:
     - name: IEEE802IdSubtype
@@ -112,3 +131,11 @@ enumerations:
           - name: Station
           - name: Telephone
           - name: WLANAccessPoint
+
+    - name: LLDPExchangeType
+      description: >
+          The direction of LLDP TLVs.
+      values:
+          - name: Transmit
+          - name: Receive
+          - name: Unknown

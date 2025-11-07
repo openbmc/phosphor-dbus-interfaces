@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fa6ffb9_3785a389",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2025-11-07T06:11:51Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "46fcff54_ddbb8fe1",
+      "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "57522177_53c594c6",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-11-02T12:16:26Z",
       "side": 1,
       "message": "Can you add more “why” here?  What is the design?  Who is the consumer?  Is there a corresponding Redfish profile to use?",
+      "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36bc8806_1049558c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2025-11-07T06:11:51Z",
+      "side": 1,
+      "message": "In environments where both local and LDAP users are supported, administrators often need to control which authentication method takes precedence.\n\nThe GetPAMOrder and SetPAMOrder methods provide a programmatic way to inspect and modify the sequence of PAM modules in /etc/pam.d/common-auth,\nallowing administrators to prioritize local (pam_unix.so) or LDAP (pam_ldap.so) authentication without manually editing configuration files.\n\nThis is a backend implementation intended to support internal configuration.\nThe D-Bus methods for GetPAMOrder and SetPAMOrder are not yet mapped to any Redfish interfaces.\nWe plan to evaluate redfish integration in a future update once the backend changes are reviewed and merged.",
+      "parentUuid": "57522177_53c594c6",
       "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -52,6 +88,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f9a37e4_0f0d8212",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2025-11-07T06:11:51Z",
+      "side": 1,
+      "message": "Bytes represented the pam indices, Modified according to the comment. \nI\u0027ll add the document once updated here. https://github.com/openbmc/docs/blob/master/architecture/user-management.md",
+      "parentUuid": "fb12d431_0002c9fe",
+      "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "40048b88_5a19eddb",
@@ -65,6 +119,24 @@
       "writtenOn": "2025-11-02T12:16:26Z",
       "side": 1,
       "message": "Why internal failure. We should not be adding new ones of these.",
+      "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f53cef46_739d87b3",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2025-11-07T06:11:51Z",
+      "side": 1,
+      "message": "Removed InternalFailure error.",
+      "parentUuid": "40048b88_5a19eddb",
       "revId": "b3aaee16f6833e5888dd77764c03f60775a6e1d1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

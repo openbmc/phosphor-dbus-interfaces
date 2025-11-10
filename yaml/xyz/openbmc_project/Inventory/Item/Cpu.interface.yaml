@@ -96,3 +96,10 @@ associations:
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot
           - xyz.openbmc_project.Inventory.Item.PCIeDevice
+    - name: contained_by
+      description: >
+          Objects that implement Cpu can optionally implement the contained_by
+          association to provide links to ManagedHost.
+      reverse_name: containing
+      reqiuired_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Decorator.ManagedHost

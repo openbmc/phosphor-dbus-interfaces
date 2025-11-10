@@ -9,3 +9,11 @@ properties:
           existing designs use an index-based design for representing the
           host.  This index is used for finding those relationship when an
           existing association is not defined.
+associations:
+    - name: containing
+      description: >
+          Optionally implement the contained_by association to provide links to
+          other inventory items like Dimm and Cpu, but not limited to.:
+      reverse_name: contained_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

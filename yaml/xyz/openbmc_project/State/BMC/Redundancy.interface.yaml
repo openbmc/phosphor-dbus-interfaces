@@ -81,6 +81,13 @@ properties:
       description: >
           If redundancy cannot be enabled and RedundancyEnabled is false, this
           contains the reasons why.
+    - name: FailoversNotAllowedReasons
+      type: set[enum[self.FailoversNotAllowedReason]]
+      flags:
+          - readonly
+      description: >
+          If failovers aren't allowed and FailoversAllowed is false, this
+          contains the reasons why.
 
 enumerations:
     - name: Role
@@ -145,6 +152,24 @@ enumerations:
           - name: DataSyncFailed
             description: >
                 Data sync between the BMCs is failing.
+
+    - name: FailoversNotAllowedReason
+      description: >
+          The possible reasons why failovers aren't allowed.
+      values:
+          - name: NoRedundancy
+            description: >
+                Redundancy is not enabled.
+          - name: FailoverInProgress
+            description: >
+                A failover is already in progress.
+          - name: FullSyncNotComplete
+            description: >
+                A full data sync is not complete.
+          - name: WrongSystemState
+            description: >
+                The system is not in the proper state, e.g. not off or at
+                runtime.
 
 signals:
     - name: Heartbeat

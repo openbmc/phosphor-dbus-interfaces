@@ -269,3 +269,13 @@ enumerations:
           - name: Die
             description: >
                 A die within a package.
+associations:
+    name: contained_by
+    description: >
+        In a multi host environment Dimm must be contained the system. The
+        system is determined by the component which implements the
+        Inventory.Decorator.ManagedHost interface and must be of type
+        Inventory.Item.Board or Inventory.Item.Chassis.
+    reverse_name: containing
+    required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Decorator.ManagedHost

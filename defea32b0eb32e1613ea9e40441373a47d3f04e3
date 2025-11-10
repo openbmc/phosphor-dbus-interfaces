@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b7968f0c_5a7fa122",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-10T19:26:56Z",
+      "side": 1,
+      "message": "How?  Is there something in a schema this maps to?",
+      "revId": "defea32b0eb32e1613ea9e40441373a47d3f04e3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e26da5d0_4206cf32",
         "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
         "patchSetId": 1
@@ -14,6 +31,30 @@
       "writtenOn": "2025-11-10T19:23:45Z",
       "side": 1,
       "message": "Other options could be:\n* ReasonsForNoFailovers\n* FailoversNotAllowedReasons",
+      "range": {
+        "startLine": 84,
+        "startChar": 12,
+        "endLine": 84,
+        "endChar": 32
+      },
+      "revId": "defea32b0eb32e1613ea9e40441373a47d3f04e3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a58a0aa_746fc50b",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-10T19:26:56Z",
+      "side": 1,
+      "message": "\u003e FailoversNotAllowedReasons\n\nI think this is slightly better?",
+      "parentUuid": "e26da5d0_4206cf32",
       "range": {
         "startLine": 84,
         "startChar": 12,

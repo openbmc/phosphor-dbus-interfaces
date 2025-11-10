@@ -16,6 +16,24 @@
       "message": "Why do we need that? we already have different D-BUS objects for Transmit and Receive",
       "revId": "54faf79f023ff80f1bf26ff2c125076e65c74329",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01d0142f_70d73fab",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-11-10T07:38:04Z",
+      "side": 1,
+      "message": "Since both transmit \u0026 receive objects host same TLVs interface, bmcweb or any other client using this interface. this D-bus property  needed to differentiate between\ntransmit \u0026 receive",
+      "parentUuid": "a7731f0c_7b3c3334",
+      "revId": "54faf79f023ff80f1bf26ff2c125076e65c74329",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

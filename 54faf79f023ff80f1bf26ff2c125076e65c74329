@@ -34,6 +34,24 @@
       "parentUuid": "a7731f0c_7b3c3334",
       "revId": "54faf79f023ff80f1bf26ff2c125076e65c74329",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66331d4a_43482956",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000401
+      },
+      "writtenOn": "2025-11-10T08:30:47Z",
+      "side": 1,
+      "message": "Correct. \n\nExample: When bmcweb tries to populate the redfish response with \"LLDPReceive\" and \"LLDPTransmit\", it does a mapper call to get objects implementing TLVs interface, but there is no way for bmcweb to determine which object is transmit and which one is receive, unless the object name is hardcoded (which is not advisable). So having a property in TLVs would be better in this case.",
+      "parentUuid": "01d0142f_70d73fab",
+      "revId": "54faf79f023ff80f1bf26ff2c125076e65c74329",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -88,11 +88,18 @@ enumerations:
                 Support power/performance control.
 
 associations:
-    name: connecting
-    description: >
-        Objects that implement Cpu can optionally implement the connecting
-        association to  provide links to one or more PCIeSlot or PCIeDevices.
-    reverse_name: connected_to
-    required_endpoint_interfaces:
-        - xyz.openbmc_project.Inventory.Item.PCIeSlot
-        - xyz.openbmc_project.Inventory.Item.PCIeDevice
+    - name: connecting
+      description: >
+          Objects that implement Cpu can optionally implement the connecting
+          association to  provide links to one or more PCIeSlot or PCIeDevices.
+      reverse_name: connected_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeSlot
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice
+    - name: contained_by
+      description: >
+          Objects that implement Cpu can optionally implement the contained_by
+          association to provide links to ManagedHost.
+      reverse_name: containing
+      reqiuired_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Decorator.ManagedHost

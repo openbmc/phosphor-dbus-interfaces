@@ -9,3 +9,13 @@ properties:
           existing designs use an index-based design for representing the
           host.  This index is used for finding those relationship when an
           existing association is not defined.
+associations:
+    - name: containing
+      description: >
+          Optionally implement the contained_by association to provide links to
+          Cpus and Dimms. These associations are used for finding Dimms and Cpus
+          of the managed host computer system.
+      reverse_name: contained_by
+      required_endpoint_interface:
+          - xyz.openbmc_project.Inventory.Item.Cpu
+          - xyz.openbmc_project.Inventory.Item.Dimm

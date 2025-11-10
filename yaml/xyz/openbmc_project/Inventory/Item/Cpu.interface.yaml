@@ -88,11 +88,19 @@ enumerations:
                 Support power/performance control.
 
 associations:
-    name: connecting
-    description: >
-        Objects that implement Cpu can optionally implement the connecting
-        association to  provide links to one or more PCIeSlot or PCIeDevices.
-    reverse_name: connected_to
-    required_endpoint_interfaces:
-        - xyz.openbmc_project.Inventory.Item.PCIeSlot
-        - xyz.openbmc_project.Inventory.Item.PCIeDevice
+    - name: connecting
+      description: >
+          Objects that implement Cpu can optionally implement the connecting
+          association to  provide links to one or more PCIeSlot or PCIeDevices.
+      reverse_name: connected_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeSlot
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice
+    - name: containing
+      description: >
+          In a multi host environment the Cpu is required to have an association
+          to the component which represents the system in redfish. The component
+          should be of type Inventory.Item.Board or Inventory.Item.Chassis.
+      reverse_name: contained_by
+      reqiuired_endpoint_interface:
+          - xyz.openbmc_project.Inventory.Decorator.ManagedHost

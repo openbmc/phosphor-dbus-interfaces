@@ -269,3 +269,11 @@ enumerations:
           - name: Die
             description: >
                 A die within a package.
+associations:
+    name: contained_by
+    description: >
+        Objects that implement Dimm can optionally implement the contained_by
+        association to provide links to ManagedHost.
+    reverse_name: containing
+    required_endpoint_interfaces:
+        - xyz.openbmc_project.Inventory.Decorator.ManagedHost

@@ -96,3 +96,11 @@ associations:
     required_endpoint_interfaces:
         - xyz.openbmc_project.Inventory.Item.PCIeSlot
         - xyz.openbmc_project.Inventory.Item.PCIeDevice
+    name: containing
+    description: >
+        In a multi host environment the Cpu is required to have an association
+        to the component which represents the system in redfish. The component
+        should be of type Inventory.Item.Board or Inventory.Item.Chassis.
+    reverse_name: contained_by
+    reqiuired_endpoint_interface:
+        - xyz.openbmc_project.Inventory.Decorator.ManagedHost

@@ -9,3 +9,14 @@ properties:
           existing designs use an index-based design for representing the
           host.  This index is used for finding those relationship when an
           existing association is not defined.
+associations:
+    - name: containing
+      description: >
+          For bmcweb to properly querying DBus information about hardware, it is
+          mandatory to associate the various hardware components to the system,
+          defined by placing the ManagedHost interface on a Inventory.Item.Board
+          or Inventory.Item.Chassis.
+      reverse_name: contained_by
+      required_endpoint_interface:
+          - xyz.openbmc_project.Inventory.Item.Cpu
+          - xyz.openbmc_project.Inventory.Item.Dimm

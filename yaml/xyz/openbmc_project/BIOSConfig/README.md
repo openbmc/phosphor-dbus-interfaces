@@ -13,7 +13,7 @@ management operations.
 
 ## RBC Manager Interface
 
-### Interface xyz.openbmc_project.BIOSConfigManager
+### Interface xyz.openbmc_project.BIOSConfig.Manager
 
 - Object Path: `/xyz/openbmc_project/bios_config/manager`
 

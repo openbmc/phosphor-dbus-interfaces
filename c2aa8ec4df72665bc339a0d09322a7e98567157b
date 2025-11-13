@@ -3,6 +3,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d448f099_4068ced6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-13T20:25:45Z",
+      "side": 1,
+      "message": "Could include a link to https://redfish.dmtf.org/schemas/v1/PCIeDevice.v1_20_0.json#/definitions/PCIeErrors",
+      "revId": "c2aa8ec4df72665bc339a0d09322a7e98567157b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f661693c_df1f73b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-13T20:25:45Z",
+      "side": 1,
+      "message": "Seems reasonable to me",
+      "revId": "c2aa8ec4df72665bc339a0d09322a7e98567157b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fadec26a_faf91f58",
         "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
         "patchSetId": 2
@@ -50,6 +84,63 @@
       "side": 1,
       "message": "I don\u0027t think so. Instead, we should add Inventory.Item to the inventory object that implements Port. Inventory associations are collectively documented in Inventory.Item.",
       "parentUuid": "63afcc05_3169c5de",
+      "revId": "c2aa8ec4df72665bc339a0d09322a7e98567157b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fc920ca_e20e40cc",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-13T20:25:45Z",
+      "side": 1,
+      "message": "Some more explaining what a reply is, might be helpful. \" A replay is a retransmission of a TLP and occurs because the ACK timer is expired, which means that the receiver did not send the ACK or this device did not properly decode the ACK.\"",
+      "revId": "c2aa8ec4df72665bc339a0d09322a7e98567157b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8f55a51_e58df30d",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-13T20:25:45Z",
+      "side": 1,
+      "message": "Might be good to expand on what this is. From https://redfish.dmtf.org/schemas/v1/PCIeDevice.v1_20_0.json#/definitions/PCIeErrors \n\nA replay rollover occurs when consecutive replays failed to resolve the errors on the link, which means that this device forced the link into the recovery state.",
+      "revId": "c2aa8ec4df72665bc339a0d09322a7e98567157b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0bc90f4c_44bd1065",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-13T20:25:45Z",
+      "side": 1,
+      "message": "Might be good to spell out Negative Acknowledgement in the description",
+      "range": {
+        "startLine": 145,
+        "startChar": 36,
+        "endLine": 145,
+        "endChar": 41
+      },
       "revId": "c2aa8ec4df72665bc339a0d09322a7e98567157b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d972139e_8428bd0f",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-13T21:12:48Z",
+      "side": 1,
+      "message": "This is image identifier, changed it to reflect so.",
+      "parentUuid": "c0c0ddf6_908e56f3",
+      "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "36912e94_6fc1ecdf",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-11-03T09:30:40Z",
       "side": 1,
       "message": "Why does this need to be a string?",
+      "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17de62e7_7031f3f4",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-13T21:12:48Z",
+      "side": 1,
+      "message": "Changed to uint64",
+      "parentUuid": "36912e94_6fc1ecdf",
       "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -69,6 +105,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7585e7c6_cec7bda8",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-13T21:12:48Z",
+      "side": 1,
+      "message": "Because this event is not available in Redfish spec, so it has been added to openBMC namespace and for such events we need to define the message format as for Redfish one\u0027s it will come from Redfish definitions.",
+      "parentUuid": "0b33b23e_773d0af3",
+      "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6b67ce2f_bdeb9c22",
@@ -82,6 +136,24 @@
       "writtenOn": "2025-11-03T09:30:40Z",
       "side": 1,
       "message": "How is this helpful for resetting a device?",
+      "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad4d11db_f2b6c1b8",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-13T21:12:48Z",
+      "side": 1,
+      "message": "This represents ResetType in redfish, i have changed the type and nomenclature to better reflect the intent.",
+      "parentUuid": "6b67ce2f_bdeb9c22",
       "revId": "5e87e61035eb6924e524667786137dfb40cf4b07",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

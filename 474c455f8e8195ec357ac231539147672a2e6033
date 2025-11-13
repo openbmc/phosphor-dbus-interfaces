@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5331a51_e3d5b96f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-11-13T19:18:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19974bdf_6a92d0d2",
+      "revId": "474c455f8e8195ec357ac231539147672a2e6033",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "25169150_0c4386c2",
@@ -41,6 +59,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4b2aa5f_7ee09e57",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-11-13T19:18:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "25169150_0c4386c2",
+      "range": {
+        "startLine": 76,
+        "startChar": 16,
+        "endLine": 77,
+        "endChar": 22
+      },
+      "revId": "474c455f8e8195ec357ac231539147672a2e6033",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "39528b30_cc18f8c8",
@@ -54,6 +96,30 @@
       "writtenOn": "2025-11-10T19:31:17Z",
       "side": 1,
       "message": "What is the reason for two different properties then?  Wouldn\u0027t an empty-set imply \"redundancy is enabled\"?",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 35
+      },
+      "revId": "474c455f8e8195ec357ac231539147672a2e6033",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab28714f_0c854bb9",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-11-13T19:18:01Z",
+      "side": 1,
+      "message": "I think that most users of it won\u0027t care about reasons and a boolean makes more sense for something that is either on or off. This property is just available for extra detail in Redfish and debug.\n\nWill resolve this unless you really don\u0027t like it.",
+      "parentUuid": "39528b30_cc18f8c8",
       "range": {
         "startLine": 82,
         "startChar": 0,

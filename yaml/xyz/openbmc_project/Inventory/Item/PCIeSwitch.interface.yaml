@@ -6,7 +6,8 @@ associations:
     name: connecting
     description: >
         Objects that implement Switch interface can optionally implement the
-        connecting association to provide links to one or more Slots.
+        connecting association to provide links to one or more Slots or Ports.
     reverse_name: connected_to
     required_endpoint_interfaces:
         - xyz.openbmc_project.Inventory.Item.PCIeSlot
+        - xyz.openbmc_project.Inventory.Connector.Port

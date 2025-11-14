@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55a3f06d_a17a2294",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-11-14T10:26:22Z",
+      "side": 1,
+      "message": "same concern about `ImageIdentifier` as on https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/80300/3\n\nWe may need to document exactly how this identifier is derived to prevent inconsistency between updaters in different repositories.",
+      "range": {
+        "startLine": 36,
+        "startChar": 10,
+        "endLine": 39,
+        "endChar": 54
+      },
+      "revId": "f64d33fab9116d674c27a93afb1d43e801e0ee35",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b596f012_ea9a82ed",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-11-14T10:26:22Z",
+      "side": 1,
+      "message": "same concern as on https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/80300/3\n\nfor the description we can just say we need the object path there. No need to talk about a name or identifier in the abstract since we need to map back to redfish.\n\nSame for the other places where `type: object_path` is required and we need to map to redfish.",
+      "range": {
+        "startLine": 56,
+        "startChar": 12,
+        "endLine": 57,
+        "endChar": 74
+      },
+      "revId": "f64d33fab9116d674c27a93afb1d43e801e0ee35",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    devices for Anacapa.
+
+enumerations:
+    - name: CPLD
+      description: >
+          The compatible hardware strings for the CPLD on Anacapa.
+      values:
+          - name: LCMXO3D_9400_scm
+          - name: LFMXO5_15D_mb
+          - name: LFMXO5_15D_lbb
+          - name: LFMXO5_15D_rbb
+
+    - name: SPI
+      description: >
+          The compatible hardware strings for the SPI flash on Santabarbara.
+      values:
+          - name: Host
+
+

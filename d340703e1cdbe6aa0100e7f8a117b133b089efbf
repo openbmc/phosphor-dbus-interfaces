@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4edc063e_4e298a73",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ManagedHost.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-14T16:54:04Z",
+      "side": 1,
+      "message": "Not sure you need bmcweb, I don\u0027t understand why these are mandatory? \nNot sure what the Item.Board / Item.Chassis is about? \n\nDoes soemthing like below work ?\n\nOptionally implement the contained_by association to provide links to Cpus and Dimms. These associations are used for finding Dimms and Cpus of the managed host computer system.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 36
+      },
+      "revId": "d340703e1cdbe6aa0100e7f8a117b133b089efbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12792abf_94695ea0",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-14T16:54:04Z",
+      "side": 1,
+      "message": "Why is it required? If you want your processors out on Redfish, etc. Yep, you need this association. Does something like below work for a start?\n\n   Objects that implement Cpu can optionally implement the contained_by association to provide links to ManagedHost.",
+      "range": {
+        "startLine": 101,
+        "startChar": 41,
+        "endLine": 101,
+        "endChar": 57
+      },
+      "revId": "d340703e1cdbe6aa0100e7f8a117b133b089efbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f18abd5a_12ffc83f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-14T16:54:04Z",
+      "side": 1,
+      "message": "Huh? Why shouldn\u0027t this be of type Inventory.Decorator.ManagedHost? \nWhat does Item.Board or Item.Chassis have to do with this?",
+      "range": {
+        "startLine": 102,
+        "startChar": 66,
+        "endLine": 103,
+        "endChar": 75
+      },
+      "revId": "d340703e1cdbe6aa0100e7f8a117b133b089efbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2442e687_6e999911",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dimm.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-14T16:54:04Z",
+      "side": 1,
+      "message": "I don\u0027t understand the Item.Board or Item.Chassis thing here?",
+      "range": {
+        "startLine": 278,
+        "startChar": 8,
+        "endLine": 278,
+        "endChar": 55
+      },
+      "revId": "d340703e1cdbe6aa0100e7f8a117b133b089efbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

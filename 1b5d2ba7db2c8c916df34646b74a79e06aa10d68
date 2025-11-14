@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45455a54_4ac0e2e6",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-11-14T10:11:15Z",
+      "side": 1,
+      "message": "How do you plan to populate this `ImageIdentifier`?\n\nCurrent firmware update flow receives a file descriptor, and a hash of the image was not considered acceptable in bmcweb reviews. (https://gerrit.openbmc.org/c/openbmc/bmcweb/+/82746/comment/e09bd1f4_edcad216/)\n\nIf we define a redfish mapping, we need to be able to put a property value,\nand it should probably be consistent between various update daemons in different repositories.\n\nSo we may need to document here how exactly we compute the value for this property.\n\nSame for all the other places where `ImageIdentifier` is used.",
+      "range": {
+        "startLine": 14,
+        "startChar": 12,
+        "endLine": 14,
+        "endChar": 54
+      },
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "276fc829_be44791f",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-11-14T10:11:15Z",
+      "side": 1,
+      "message": "Can we use `uint8_t` for progress percentage?\n\nprogress percentage only goes up to 100",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 2
+      },
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00923de4_ad0ba5be",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-11-14T10:11:15Z",
+      "side": 1,
+      "message": "The `type: object_path` does not really match up with the description here.\n\nIf we want to be able to do the redfish mapping, we need the object path of the firmware target.\n\nSo we might as well put that into the description here, right?\n\nSomething like `description: The object path of the firmware target.`\n\nSame for all the other `description` fields in the other event messages where we need to form a URI.",
+      "range": {
+        "startLine": 39,
+        "startChar": 12,
+        "endLine": 40,
+        "endChar": 74
+      },
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

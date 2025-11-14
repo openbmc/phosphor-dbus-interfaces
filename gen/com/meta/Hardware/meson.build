@@ -1,4 +1,5 @@
 # Generated file; do not modify.
+subdir('Anacapa')
 subdir('BMC')
 subdir('Catalina')
 subdir('Harma')
@@ -7,6 +8,28 @@ subdir('Santabarbara')
 subdir('Yosemite5')
 
 sdbusplus_current_path = 'com/meta/Hardware'
+
+generated_markdown += custom_target(
+    'com/meta/Hardware/Anacapa__markdown'.underscorify(),
+    input: ['../../../../yaml/com/meta/Hardware/Anacapa.interface.yaml'],
+    output: ['Anacapa.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'com/meta/Hardware/Anacapa',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
 
 generated_markdown += custom_target(
     'com/meta/Hardware/BMC__markdown'.underscorify(),

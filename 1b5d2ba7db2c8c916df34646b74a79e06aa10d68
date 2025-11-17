@@ -49,6 +49,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f94fb9db_c975d3c2",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-17T15:08:22Z",
+      "side": 1,
+      "message": "This should be `size` and not `uint64`.\n\nWe don\u0027t support uint8 and there is no need for optimization like that.  It all turns into an integer over JSON anyhow when bmcweb emits it.\n\n```\n                        type:\n                            type: string\n                            pattern: \"(string)|(size)|(u?int64)|(double)|(object_path)|(enum\\\\[.*\\\\])\"\n                            description: The type of the metadata field.\n```",
+      "parentUuid": "276fc829_be44791f",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 2
+      },
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "00923de4_ad0ba5be",
         "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
         "patchSetId": 3
@@ -66,6 +90,23 @@
         "endLine": 40,
         "endChar": 74
       },
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8605a1f1_1e8915d4",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-17T15:08:22Z",
+      "side": 1,
+      "message": "Please put errors first in the file.",
       "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

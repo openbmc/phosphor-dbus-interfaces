@@ -1,0 +1,10 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    enumerations for Compatible strings.
+
+enumerations:
+    - name: Model
+      description: >
+          Possible BMC types used for compatible strings.
+      values:
+          - name: BMC-AST2600

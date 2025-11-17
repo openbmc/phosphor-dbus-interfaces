@@ -71,6 +71,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "efe12b98_8f2b72ce",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-11-17T15:19:42Z",
+      "side": 1,
+      "message": "Optimization is one component (would probably not make a difference here). The other one is making invalid state harder to represent. \n\nLikely it\u0027s not worth the inconsistency / additional `type` though. Marking as resolved.",
+      "parentUuid": "f94fb9db_c975d3c2",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 2
+      },
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "00923de4_ad0ba5be",

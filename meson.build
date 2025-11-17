@@ -39,6 +39,9 @@ endif
 if get_option('data_com_meta')
     yaml_selected_subdirs += 'com/meta'
 endif
+if get_option('data_com_qualcomm')
+    yaml_selected_subdirs += 'com/qualcomm'
+endif
 if get_option('data_org_freedesktop')
     yaml_selected_subdirs += 'org/freedesktop'
 endif

@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4087420a_911fce92",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-17T18:27:46Z",
+      "side": 1,
+      "message": "Refer to my response on https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/80300/comment/45455a54_4ac0e2e6/. Marking this as resolved.",
+      "parentUuid": "55a3f06d_a17a2294",
+      "range": {
+        "startLine": 36,
+        "startChar": 10,
+        "endLine": 39,
+        "endChar": 54
+      },
+      "revId": "f64d33fab9116d674c27a93afb1d43e801e0ee35",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b596f012_ea9a82ed",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-11-14T10:26:22Z",
       "side": 1,
       "message": "same concern as on https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/80300/3\n\nfor the description we can just say we need the object path there. No need to talk about a name or identifier in the abstract since we need to map back to redfish.\n\nSame for the other places where `type: object_path` is required and we need to map to redfish.",
+      "range": {
+        "startLine": 56,
+        "startChar": 12,
+        "endLine": 57,
+        "endChar": 74
+      },
+      "revId": "f64d33fab9116d674c27a93afb1d43e801e0ee35",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "152aaede_ed351249",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-17T18:27:46Z",
+      "side": 1,
+      "message": "https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/80300/comment/00923de4_ad0ba5be/. Marking this as resolved.",
+      "parentUuid": "b596f012_ea9a82ed",
       "range": {
         "startLine": 56,
         "startChar": 12,

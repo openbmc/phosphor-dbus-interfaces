@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b196d170_f7f0ba3d",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-17T18:27:39Z",
+      "side": 1,
+      "message": "\u003e How do you plan to populate this `ImageIdentifier`?\n\u003e \n\u003e Current firmware update flow receives a file descriptor, and a hash of the image was not considered acceptable in bmcweb reviews. (https://gerrit.openbmc.org/c/openbmc/bmcweb/+/82746/comment/e09bd1f4_edcad216/)\n\u003e \n\nI looked at the comment from BMCWeb maintainer and the comment is about the updater/backend adding the relevant information into this field. These events will be generated from Updater/backend and BMCWeb has no context on image package format, so this shall be populated by the backend. So, i agree with the reasoning there.\n\n\u003e If we define a redfish mapping, we need to be able to put a property value,\n\u003e and it should probably be consistent between various update daemons in different repositories.\n\u003e \n\u003e So we may need to document here how exactly we compute the value for this property.\n\u003e \n\u003e Same for all the other places where `ImageIdentifier` is used.\n\nHaving said above, i also agree with your comment that there should be some indication about what should go into this field, so i have updated the description to reflect this which shall address your concern. Marking this as resolved.",
+      "parentUuid": "45455a54_4ac0e2e6",
+      "range": {
+        "startLine": 14,
+        "startChar": 12,
+        "endLine": 14,
+        "endChar": 54
+      },
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "276fc829_be44791f",
@@ -95,6 +119,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f81adf77_59428ee2",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-17T18:27:39Z",
+      "side": 1,
+      "message": "Done, changed this to size instead.",
+      "parentUuid": "efe12b98_8f2b72ce",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 2
+      },
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "00923de4_ad0ba5be",
@@ -118,6 +166,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2256c925_d8f5d6f6",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-17T18:27:39Z",
+      "side": 1,
+      "message": "\u003e The `type: object_path` does not really match up with the description here.\n\u003e \n\u003e If we want to be able to do the redfish mapping, we need the object path of the firmware target.\n\u003e \n\u003e So we might as well put that into the description here, right?\n\u003e \n\u003e Something like `description: The object path of the firmware target.`\n\u003e \n\u003e Same for all the other `description` fields in the other event messages where we need to form a URI.\n\n\nI don\u0027t think we need to put the data types into the description. The description states that its an identifier (as well) which in case of D-Bus is an object path of the target resource. The Type also get auto-generated in the event json definition so it already evident in there, hence i would prefer to leave it as such. Marking this as resolved with this reasoning.",
+      "parentUuid": "00923de4_ad0ba5be",
+      "range": {
+        "startLine": 39,
+        "startChar": 12,
+        "endLine": 40,
+        "endChar": 74
+      },
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8605a1f1_1e8915d4",
@@ -131,6 +203,24 @@
       "writtenOn": "2025-11-17T15:08:22Z",
       "side": 1,
       "message": "Please put errors first in the file.",
+      "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "883fbb66_6711ab22",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-11-17T18:27:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8605a1f1_1e8915d4",
       "revId": "1b5d2ba7db2c8c916df34646b74a79e06aa10d68",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

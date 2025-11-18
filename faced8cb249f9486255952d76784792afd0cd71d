@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f487bdf2_5f181b13",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Connector/Port.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2025-11-18T19:14:31Z",
+      "side": 1,
+      "message": "I think without the - is more common to what I see elsewhere in PDI: \n\n      Type is downstream, meaning this port connects to a target device.\n\n\nOr \n\n      Type is downstream, and this port connects to a target device.\n\nOr \n\n      Type is downstream. This port connects to a target device.\n\nOh well. Change if you like one of those more.",
+      "revId": "faced8cb249f9486255952d76784792afd0cd71d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

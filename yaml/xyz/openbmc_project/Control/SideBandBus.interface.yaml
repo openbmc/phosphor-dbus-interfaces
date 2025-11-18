@@ -1,0 +1,38 @@
+description: >
+    Interface for controlling ownership of a hardware sideband bus from the BMC.
+    In redundant BMC systems, the service processor accesses devices via a
+    shared sideband bus that only one BMC can drive at a time, this interface
+    lets BMC software acquire and release that ownership and it's concrete
+    implementation can be system architecture specific.
+
+methods:
+    - name: Acquire
+      description: >
+          Acquire ownership of the sideband bus.
+      parameters:
+          - name: Options
+            type: dict[string, variant[boolean]]
+            description: >
+                Additional options. The key is the string version of the
+                Options.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure
+
+properties:
+    - name: Owned
+      type: boolean
+      description: >
+          True if this BMC currently owns the bus.
+      default: false
+      flags:
+          - readonly
+
+enumerations:
+    - name: AcquireOptions
+      description: >
+          Available options to acquire ownership of the bus.
+      values:
+          - name: Force
+            description: >
+                A boolean option to force the bus ownership.

@@ -33,6 +33,24 @@
       "message": "Is there anything more to explain what makes a Port downstream vs upstream ?\n\nI know Redfish has like \n\n\n                \"UpstreamPort\": \"This port connects to a host device.\"\n\nand \n\n\n                \"DownstreamPort\": \"This port connects to a target device.\",",
       "revId": "f47b7607e74ee331510b1f2cc832d5f0e9393336",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4489f94d_f12bc755",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Connector/Port.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-11-18T18:58:31Z",
+      "side": 1,
+      "message": "Addressed this comment. Please re-review and @gunnar@gmills.xyz can you review the child commit in the chain as well? Thanks.",
+      "parentUuid": "7dd57ff2_a310a535",
+      "revId": "f47b7607e74ee331510b1f2cc832d5f0e9393336",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,5 +1,6 @@
 # Generated file; do not modify.
 subdir('RestrictionMode')
+subdir('SPDM')
 subdir('SpecialMode')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Control/Security'

@@ -1,0 +1,49 @@
+description: >
+    Used to configure policies for TLS, SPDM, and overall security enforcement.
+
+properties:
+    - name: SPDMEnabled
+      type: boolean
+      description: >
+          Indicates whether SPDM communication is enabled.
+
+    - name: SPDMSecureSessionEnabled
+      type: boolean
+      description: >
+          Indicates whether SPDM secure sessions with devices are enabled.
+
+    - name: SPDMVerifyCertificate
+      type: boolean
+      description: >
+          Indicates if certificate verification of SPDM endpoints is enabled.
+
+    - name: SPDMAllowExtendedAlgorithms
+      type: boolean
+      description: >
+          Allow extended algorithms as defined in DSP0274.
+
+    - name: SPDMAllowedVersions
+      type: array[string]
+      description: >
+          Allowed SPDM protocol versions. Acceptable values: ALL, NONE, or
+          version formatted as major.minor.
+
+    - name: SPDMDeniedVersions
+      type: array[string]
+      description: >
+          Denied SPDM protocol versions.
+
+    - name: SPDMAllowedAlgorithmsAEAD
+      type: array[string]
+      description: >
+          Allowed AEAD algorithms.
+
+    - name: SPDMAllowedAlgorithmsBaseHash
+      type: array[string]
+      description: >
+          Allowed hash algorithms.
+
+    - name: SPDMAllowedAlgorithmsBaseAsym
+      type: array[string]
+      description: >
+          Allowed asymmetric signature algorithms.

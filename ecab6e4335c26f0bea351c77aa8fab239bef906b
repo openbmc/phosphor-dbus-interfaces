@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75c0e0b4_4a5dc67c",
+        "filename": "yaml/xyz/openbmc_project/Control/SideBandBus.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2025-11-19T10:14:15Z",
+      "side": 1,
+      "message": "Do you mean, redundant BMC system?",
+      "range": {
+        "startLine": 3,
+        "startChar": 4,
+        "endLine": 3,
+        "endChar": 24
+      },
+      "revId": "ecab6e4335c26f0bea351c77aa8fab239bef906b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb66595b_925ce298",
+        "filename": "yaml/xyz/openbmc_project/Control/SideBandBus.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2025-11-19T10:14:15Z",
+      "side": 1,
+      "message": "I think you need to mention that this interface implementation could be an system architecture-specific.",
+      "revId": "ecab6e4335c26f0bea351c77aa8fab239bef906b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7dbbe038_78862c44",
+        "filename": "yaml/xyz/openbmc_project/Control/SideBandBus.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2025-11-19T10:14:15Z",
+      "side": 1,
+      "message": "Do we need to handle the failure case? For example, how does the caller of the Acquire method know that acquiring ownership has failed?\n\n\nxyz.openbmc_project.Common.Device.WriteFailure?",
+      "range": {
+        "startLine": 17,
+        "startChar": 6,
+        "endLine": 17,
+        "endChar": 13
+      },
+      "revId": "ecab6e4335c26f0bea351c77aa8fab239bef906b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

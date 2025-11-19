@@ -1,0 +1,70 @@
+description: >
+    Used to configure security policies related to the SPDM protocol and its
+    supported versions, features, and algorithms.
+
+properties:
+    - name: Enabled
+      type: boolean
+      default: false
+      description: >
+          Indicates whether SPDM communication is enabled.
+
+    - name: SecureSessionEnabled
+      type: boolean
+      default: false
+      description: >
+          Indicates whether SPDM secure sessions with devices are enabled.
+
+    - name: VerifyCertificate
+      type: boolean
+      default: false
+      description: >
+          Indicates whether certificate verification of SPDM endpoints is
+          enabled.
+
+    - name: AllowExtendedAlgorithms
+      type: boolean
+      default: false
+      description: >
+          Allows the use of extended SPDM algorithms as defined in DSP0274.
+
+    - name: AllowedVersions
+      type: array[variant[enum[self.SpecialSetValues], string]]
+      description: >
+          Allowed SPDM protocol versions. Acceptable special values: ALL, NONE,
+          or explicit SPDM version numbers in the required "major.minor" format
+          (e.g., "1.2", "1.1").
+
+    - name: AllowedAlgorithmsAEAD
+      type: array[variant[enum[self.SpecialSetValues], string]]
+      description: >
+          Allowed AEAD algorithms for SPDM operations. Valid values are the AEAD
+          algorithm names defined in the 'AlgSupported' field of the AEAD
+          structure in DSP0274, "ALL" and "NONE".
+
+    - name: AllowedAlgorithmsBaseHash
+      type: array[variant[enum[self.SpecialSetValues], string]]
+      description: >
+          Allowed base hash algorithms for SPDM operations. Valid values are the
+          hash algorithm names defined in the 'BaseHashAlgo' field of the
+          NEGOTIATE_ALGORITHMS request in DSP0274, "ALL" and "NONE".
+
+    - name: AllowedAlgorithmsBaseAsym
+      type: array[variant[enum[self.SpecialSetValues], string]]
+      description: >
+          Allowed asymmetric signature algorithms for SPDM operations. Valid
+          values are the asymmetric signature algorithm names defined in the
+          'BaseAsymAlgo' field of the NEGOTIATE_ALGORITHMS request in DSP0274,
+          "ALL" and "NONE".
+
+enumerations:
+    - name: SpecialSetValues
+      description: >
+          Defines special set-selection values for SPDM versions or algorithms.
+      values:
+          - name: ALL
+            description: >
+                All supported SPDM versions or algorithms are permitted.
+          - name: NONE
+            description: >
+                No SPDM versions or algorithms are permitted.

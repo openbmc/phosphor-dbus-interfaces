@@ -108,6 +108,30 @@ endpoints property value of `{primary element}`.
 In some cases it may be required for grammatical correctness to add a
 preposition to the secondary association, such as 'by' or 'with'.
 
+### Example for documenting Associations
+
+```yaml
+association:
+  name: connected_to
+  description: >
+    Objects that are connected at the other end of the link.
+  reverse_name: connecting
+  required_endpoint_interfaces:
+    - xyz.openbmc_project.Inventory.Item.Cpu
+    - xyz.openbmc_project.Inventory.Item.PCIeSwitch
+```
+
+In this example the DBus object with
+`xyz.openbmc_project.Inventory.Item.PCIeSlot` interface may have a
+`connected_to` associtation to another DBus object holding at least ONE OF these
+required endpoint interfaces.
+
+### Documenting at both ends of an association
+
+If a DBus interface A is documented to may have an association to a DBus object
+holding interface B, interface B must document the reverse association to
+interface A.
+
 Additional information on associations is in the [mapper documentation][].
 
 [mapper documentation]:

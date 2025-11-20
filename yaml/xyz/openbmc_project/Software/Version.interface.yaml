@@ -48,8 +48,7 @@ associations:
       description: >
           This indicates the current running version for the associated
           inventory item.
-      reverse_names:
-          - ran_on
+      reverse_name: ran_on
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
     - name: activating
@@ -59,8 +58,7 @@ associations:
           with the same inventory item. In such a case, RedundancyPriority
           interface will help to decide the correct priority order for the
           active version transition to running.
-      reverse_names:
-          - activated_on
+      reverse_name: activated_on
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
 

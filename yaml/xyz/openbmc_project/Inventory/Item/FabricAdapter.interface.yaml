@@ -4,10 +4,10 @@ description: >
     not limited to Ethernet, NVMe over Fabrics, etc.
 
 associations:
-    name: connecting
-    description: >
-        Objects that implement FabricAdapter can optionally implement the
-        connecting association to  provide links to one or more Ports.
-    reverse_name: connected_to
-    required_endpoint_interfaces:
-        - xyz.openbmc_project.Inventory.Connector.Port
+    - name: connecting
+      description: >
+          Objects that implement FabricAdapter can optionally implement the
+          connecting association to  provide links to one or more Ports.
+      reverse_name: connected_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Connector.Port

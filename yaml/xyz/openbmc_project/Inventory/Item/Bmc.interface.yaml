@@ -8,6 +8,6 @@ associations:
           Objects that implement Bmc can implement the 'monitored_by'
           association to link to utilization sensors for indicating the
           utilization sensors are for the BMC and not the host.
-      reverse_names: monitoring
+      reverse_name: monitoring
       required_endpoint_interfaces:
           - xyz.openbmc_project.Sensor.Value

@@ -392,8 +392,7 @@ associations:
       description: >
           Objects that implement PCIeDevice can optionally implement the
           upstream_pcie_slot association to provide a link back to a PCIe slot.
-      reverse_names:
-          - associated_pcie_device
+      reverse_name: associated_pcie_device
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot
 
@@ -401,8 +400,7 @@ associations:
       description: >
           Objects that implement PCIeDevice can optionally implement the
           upstexposing association to provide a link back to a PCIe function.
-      reverse_names:
-          - exposed_by
+      reverse_name: exposed_by
       required_endpoint_interfaces: xyz.openbmc_project.Inventory.Item.PCIeFunction
     - name: connected_to
       description: >

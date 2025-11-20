@@ -103,10 +103,10 @@ enumerations:
                 Type of the PCIe slot is unknown
 
 associations:
-    name: connected_to
-    description: >
-        Objects that are connected at the other end of the link.
-    reverse_name: connecting
-    required_endpoint_interfaces:
-        - xyz.openbmc_project.Inventory.Item.Cpu
-        - xyz.openbmc_project.Inventory.Item.PCIeSwitch
+    - name: connected_to
+      description: >
+          Objects that are connected at the other end of the link.
+      reverse_name: connecting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cpu
+          - xyz.openbmc_project.Inventory.Item.PCIeSwitch

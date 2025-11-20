@@ -155,8 +155,7 @@ associations:
       description: >
           Objects that implement PCIeFunction can implement the exposed_by
           association to provide a link back to a PCIe Device.
-      reverse_names:
-          - exposing
+      reverse_name: exposing
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeDevice
 
@@ -164,8 +163,7 @@ associations:
       description: >
           Objects that implement PCIeFunction can optionally implement the
           producing association to provide a link back to an item.
-      reverse_names:
-          - produced_by
+      reverse_name: produced_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.NetworkInterface
           - xyz.openbmc_project.Inventory.Item.Drive

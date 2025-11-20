@@ -11,7 +11,6 @@ associations:
       description: >
           Objects that implement NetworkInterface can optionally implement the
           produced_by association to provide a link back to a PCIe function.
-      reverse_names:
-          - producing
+      reverse_name: producing
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeFunction

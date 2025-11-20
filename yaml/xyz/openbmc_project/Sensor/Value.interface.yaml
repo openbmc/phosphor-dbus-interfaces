@@ -107,16 +107,14 @@ associations:
       description: >
           Sensors may implement an 'inventory' to 'sensors' association with the
           inventory item related to it.
-      reverse_names:
-          - sensors
+      reverse_name: sensors
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
     - name: monitoring
       description: >
           Sensors may monitor the BMC's resource utilization and implement an
           association to the Bmc item.
-      reverse_names:
-          - monitored_by
+      reverse_name: monitored_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Bmc
 

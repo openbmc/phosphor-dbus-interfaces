@@ -51,8 +51,7 @@ associations:
       description: >
           Metrics measure the inventory item's resource utilization, therefore
           implement an association to the inventory item.
-      reverse_names:
-          - measured_by
+      reverse_name: measured_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
 

@@ -146,6 +146,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7b149fa9_080a633f",
+        "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001993
+      },
+      "writtenOn": "2025-11-25T13:59:25Z",
+      "side": 1,
+      "message": "Yes, I agree. Unless we specifically need applications to reload synchronously — for example, reloading Application B only after Application A completes its reload — and the applications are capable of detecting changes in their dependent services, it’s reasonable to stick with a simple `Type\u003ddbus` setup and trigger a reload signal via `ExecReload\u003d` to refresh the entire application configuration.\n\nAlso even though `Type\u003dnotify-reload` is an option, but the approach will bring additional changes into the existing framework as we are changing the type of service itself. (currently majority of the OpenBMC applications are of `Type\u003dDBus`).\n\nHowever, we may still need to consider the performance implications of reloading the full configuration in response to a single configuration change. In such cases, having a dedicated D-Bus method to pass the changed data path and reload only the relevant configuration would be more efficient. Especially important in systems with a large number of event logs, where reloading everything can be costly.\n\nWe will simulate the event log scenario on actual hardware and prepare a performance report. Until then, we\u0027ll keep this patch marked as WIP.",
+      "parentUuid": "d1019061_ce1fedde",
+      "revId": "3cee2f89196d9cbb564b804e60f6f9ffda6d53bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b406360e_f82b9caf",
         "filename": "yaml/xyz/openbmc_project/Control/Reload.interface.yaml",
         "patchSetId": 2

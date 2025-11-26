@@ -38,6 +38,16 @@ properties:
           change that leads to component integrity change should update this
           date. It is represented in milliseconds since the UNIX epoch.
 
+    - name: SecureSessionInfo
+      type: array[struct[uint32, enum[self.SecureSessionType]]]
+      flags:
+          - readonly
+      description: >
+          A read-only collection of secure session records. Each record contains
+          a 32-bit session identifier (session ID) and the corresponding session
+          type. Together, these entries describe all active communication
+          sessions between BMC and the SPDM device.
+
 associations:
     - name: authenticating
       description: >
@@ -73,6 +83,24 @@ enumerations:
           - name: Unknown
             description: >
                 Security technology not known yet.
+    - name: SecureSessionType
+      description: >
+          The type of session or communication channel between two components.
+      values:
+          - name: Plain
+            description: >
+                A plain text session without any protection.
+          - name: AuthenticatedOnly
+            description: >
+                An established session where only authentication is protecting
+                the communication.
+          - name: EncryptedAuthenticated
+            description: >
+                An established session where both encryption and authentication
+                are protecting the communication.
+          - name: Unknown
+            description: >
+                Secure session tupe is not known yet.
 
 paths:
     - namespace: /xyz/openbmc_project/component_integrity

@@ -7,7 +7,7 @@ description: >
     Endpoints property, with the association type defined as the name of the
     object implementing Association.
 properties:
-    - name: Endpoints
+    - name: endpoints
       type: array[object_path]
       description: >
           An array of association endpoints.

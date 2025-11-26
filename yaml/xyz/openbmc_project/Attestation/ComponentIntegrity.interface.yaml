@@ -37,6 +37,20 @@ properties:
           Firmware update, device certificate change or other device state
           change that leads to component integrity change should update this
           date. It is represented in milliseconds since the UNIX epoch.
+    - name: SecureSessionType
+      type: enum[self.SecureSessionType]
+      default: Unknown
+      flags:
+          - readonly
+      description: >
+          The type of session or communication channel between two components.
+    - name: SessionId
+      type: uint32
+      flags:
+          - readonly
+      description: >
+          The identifier for an active session or communication channel between
+          two components.
 
 associations:
     - name: authenticating
@@ -73,3 +87,21 @@ enumerations:
           - name: Unknown
             description: >
                 Security technology not known yet.
+    - name: SecureSessionType
+      description: >
+          The type of session or communication channel between two components.
+      values:
+          - name: Plain
+            description: >
+                A plain text session without any protection.
+          - name: AuthenticatedOnly
+            description: >
+                An established session where only authentication is protecting
+                the communication.
+          - name: EncryptedAuthenticated
+            description: >
+                An established session where both encryption and authentication
+                are protecting the communication.
+          - name: Unknown
+            description: >
+                Secure session tupe is not known yet.

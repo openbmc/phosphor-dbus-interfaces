@@ -1,6 +1,39 @@
 description: >
     Provides global user account policy related management.
 
+methods:
+    - name: GetPAMOrder
+      description: >
+          Retrieves the currently configured PAM module order used during
+          authentication.
+      returns:
+          - name: PamOrder
+            type: array[size]
+            description: >
+                Ordered list of PAM module indices. Each index corresponds to a
+                module defined in the system's PAM configuration registry. The
+                order reflects the sequence in which modules are invoked during
+                authentication.
+
+    - name: SetPAMOrder
+      description: >
+          Configures the PAM module order used for authentication. This method
+          allows administrators to explicitly define the evaluation sequence of
+          PAM modules, which affects how authentication decisions are made. The
+          method validates the input order against system constraints and
+          updates the configuration if valid.
+      parameters:
+          - name: PamOrder
+            type: array[size]
+      returns:
+          - name: SetPamOrderStatus
+            type: boolean
+            description: >
+                True if the PAM order was successfully updated, False if the
+                update was rejected or failed validation.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
 properties:
     - name: MaxLoginAttemptBeforeLockout
       type: uint16

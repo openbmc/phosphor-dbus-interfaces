@@ -37,3 +37,26 @@ properties:
           feature is not enforced.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+    - name: LoginPriority
+      type: enum[self.LoginPriority]
+      default: LocalFirst
+      description: >
+          Configures the login priority order between local and
+          remote (LDAP) accounts.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+enumerations:
+    - name: LoginPriority
+      description: >
+          Defines the login priority between local and remote accounts.
+      values:
+          - name: LocalFirst
+            description: >
+                Local accounts are authenticated before remote LDAP accounts.
+                This is the default behavior.
+          - name: RemoteFirst
+            description: >
+                Remote LDAP accounts are authenticated before local accounts.
+                Local accounts used as fallback if LDAP authentication fails.

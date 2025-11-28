@@ -46,6 +46,30 @@
       },
       "revId": "9550834b1b17b91598819a36c9bf3befac999030",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c01eb480_97e267fd",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ManagedHost.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2025-11-28T11:05:53Z",
+      "side": 1,
+      "message": "\u003e Is there a strong reason why we want to be explicit of {Cpu, Dimm} in this case or can we put this on the generic association?\n\nNot sure if that counts as a strong reason, but\n\nIf we were to put\n```\nrequired_endpoint_interfaces:\n          - xyz.openbmc_project.Inventory.Item\n```\n\nwe are effectively saying that \n\n```\nxyz.openbmc_project.Inventory.Item.PCIeFunction\nxyz.openbmc_project.Inventory.Item.Chassis\nxyz.openbmc_project.Inventory.Item.CpuCore\nxyz.openbmc_project.Inventory.Item.NetworkInterface\n...\n```\n\ncan be `contained_by` a ManagedHost, right?\n\nOtherwise we are documenting an association which will not even be used or implemented.\n\n### Ambiguity in querying\n\nSomething like bmcweb needs to know which associations can and should be used to query things on DBus.\n\nWith how the associations are currently documented on `xyz.openbmc_project.Inventory.Item`\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/900af2c70e9c045508f60c029583b6cc30eb596a/yaml/xyz/openbmc_project/Inventory/Item.interface.yaml\n\nit may not be entirely clear. How do we find the powersupplies for a chassis?\nDo we go with `contained_by` and look for `Inventory.Item.PowerSupply`?\n\nDo we go with `powered_by` instead?\n\nFor powersupplies this is solved since `Inventory.Item.Chassis` documents a `powered_by` association **specifically** to `Inventory.Item.PowerSupply`.\n\n### PDI should be source of truth for how to query associations\n\nIf we do not document these associations in a fine grained manner in PDI, bmcweb will effectively take over this role and the associations will have to be created in such a way that it aligns with how bmcweb is querying them.\n\nDo we want that?\n\n### In terms of the concrete example\n\nHow do we find `Inventory.Item.Dimm` when starting from a ManagedHost?\n\nIf we specify `containing` `Inventory.Item` then it may be unclear if that is directly leading us to `Inventory.Item.Dimm` or if there is another inventory item in-between that must be queried.\n\nMaybe the `oontaining` for `Inventory.Item` there is meant for `Inventory.Item.Cpu` and `Inventory.Item.Dimm` is queried in some other way?\n\nAll these questions may pop up.\n\nReactors and external interfaces may need the fine grained documentation there to know which associations to create where and how to query.",
+      "parentUuid": "41e831a1_c21113f4",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 51
+      },
+      "revId": "9550834b1b17b91598819a36c9bf3befac999030",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

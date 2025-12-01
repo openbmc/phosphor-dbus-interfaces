@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a17cabe_8ca28077",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-12-01T08:10:20Z",
+      "side": 1,
+      "message": "I understand that there is a single SecurityPolicy schema in Redfish, but in all likelihood, the internal implementation is going to have this content spread across mulitple repositories.  The current properties you are proposing are SPDM-specific and should be hosted by the SPDM daemon, right?  I think we should have a separate SPDM \"SecurityPolicy\" interface then.  Later on when we add TLS-Policy, that would go elsewhere.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 22
+      },
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56b6824d_827cd7e0",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SecurityPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-12-01T08:10:20Z",
+      "side": 1,
+      "message": "Can this be an enumeration then?",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 43
+      },
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "758a6e1c_df0b833e",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SecurityPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-12-01T08:10:20Z",
+      "side": 1,
+      "message": "These need to be enumerations.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 50
+      },
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

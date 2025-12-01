@@ -26,6 +26,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cbe546e7_97ebb370",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SecurityPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000350
+      },
+      "writtenOn": "2025-12-01T09:35:38Z",
+      "side": 1,
+      "message": "are there any specific D-bus errors returned if SPDMEnabled fails to set?\nenabling SPDM communication can be failed for different reasons on the system which can cause failure while setting this property value right",
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "56b6824d_827cd7e0",
         "filename": "yaml/xyz/openbmc_project/Control/Security/SecurityPolicy.interface.yaml",
         "patchSetId": 2

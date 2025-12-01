@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc56cce7_45545a8a",
+        "filename": "yaml/com/meta/Hardware/Minerva.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-12-01T07:26:23Z",
+      "side": 1,
+      "message": "Do we actually have 6 different images, one for each fan board?  I would have expected there to only be a single image, but with 6 different targets.  If that is the case, we should not create this many enumerations.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 37
+      },
+      "revId": "8ab8a8e5e5248077b4f9f2ebf2c8e7715567bc11",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

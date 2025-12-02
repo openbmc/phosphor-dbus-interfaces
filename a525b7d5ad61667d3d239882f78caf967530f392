@@ -60,6 +60,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a776ac8b_682a81d8",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2025-12-02T05:35:33Z",
+      "side": 1,
+      "message": "The term \"provisioned\" in this context signifies an operational status where:\n 1) The BMC has been successfully authenticated and securely integrated into the trusted management network.\n 2) This specific BMC is now able to  provision other (un-provisioned) BMCs.",
+      "parentUuid": "9d8e06a7_6ae2a4dd",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 55
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d3a6e03a_594b2c11",
         "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
         "patchSetId": 3
@@ -71,6 +95,30 @@
       "writtenOn": "2025-10-30T13:27:59Z",
       "side": 1,
       "message": "This implies there is only 1 peer.  Why are we doing that?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 61
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98c67809_8502bf10",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2025-12-02T05:35:33Z",
+      "side": 1,
+      "message": "Yes now it assumes single peer. Ideally PeerConnected,ProvisionPeer, and PeerProvisioned should go under Peer object.",
+      "parentUuid": "d3a6e03a_594b2c11",
       "range": {
         "startLine": 14,
         "startChar": 0,
@@ -106,6 +154,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "884f7a73_04b34fd7",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2025-12-02T05:35:33Z",
+      "side": 1,
+      "message": "The current plan is to use component integrity ID exposed by SPDMd.",
+      "parentUuid": "f6d0f224_893cef81",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 61
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "37be551b_fb8eb96b",
         "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
         "patchSetId": 3
@@ -117,6 +189,30 @@
       "writtenOn": "2025-10-30T13:27:59Z",
       "side": 1,
       "message": "Add an identifier of the peer?",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 23
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90fa00fc_49938128",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2025-12-02T05:35:33Z",
+      "side": 1,
+      "message": "Yes that is one way to support multiple peers. Another way is to put this under Peer interface. And this interface can host list of peers.",
+      "parentUuid": "37be551b_fb8eb96b",
       "range": {
         "startLine": 33,
         "startChar": 0,

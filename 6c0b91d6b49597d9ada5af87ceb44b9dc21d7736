@@ -22,6 +22,30 @@
       },
       "revId": "6c0b91d6b49597d9ada5af87ceb44b9dc21d7736",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd8069d6_06166d7e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-12-02T06:20:22Z",
+      "side": 1,
+      "message": "It looks like when this is generated, the bindings do the expected / correct thing, which is to use whatever property name is here for the dbus registration but use the appropriate camelCase or snake_case for the function / overload names.  So I think this is good to go.",
+      "parentUuid": "182792bb_7fa307cc",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 9
+      },
+      "revId": "6c0b91d6b49597d9ada5af87ceb44b9dc21d7736",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

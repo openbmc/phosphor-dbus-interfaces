@@ -70,6 +70,30 @@
       },
       "revId": "9550834b1b17b91598819a36c9bf3befac999030",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "973ab6c9_f27e080a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ManagedHost.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002065
+      },
+      "writtenOn": "2025-12-02T16:02:47Z",
+      "side": 1,
+      "message": "We also could go with `xyz.openbmc_project.Inventory.Item.System` rather than `xyz.openbmc_project.Inventory.Decorator.ManagedHost`. \n \n`Inventory.Item.System` is also used to identify objects as computer systems and not specific to multi-host. Ideally we use interfaces, that are configured on both single- and multi-host, considering that long term we should use associations for both platform types.\n\nIn that case we would need to make some smaller adjustments in EM and bmcweb for multi-host, like adding `Inventory.Item.System` to the multi-host configs, as well as including the interface in our dbus queries in bmcweb.",
+      "parentUuid": "c01eb480_97e267fd",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 51
+      },
+      "revId": "9550834b1b17b91598819a36c9bf3befac999030",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

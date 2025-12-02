@@ -1,0 +1,35 @@
+description: >
+    Implement to represent properties related to Session Tracking, used for
+    encrypted and authenticated communication channels.
+
+properties:
+    - name: SessionId
+      type: uint32
+      flags:
+          - readonly
+      description: >
+          A unique identifier for an active session or communication channel
+          between two components
+
+    - name: SecureSessionType
+      type: enum[self.SessionType]
+      description: >
+          Indicates the type of session or communication channel between two
+          components.
+
+enumerations:
+    - name: SessionType
+      description: >
+          The type of session or communication channel between two components.
+      values:
+          - name: Plain
+            description: >
+                A plain text session without any protection.
+          - name: AuthenticatedOnly
+            description: >
+                An established session where only authentication is protecting
+                the communication.
+          - name: EncryptedAuthenticated
+            description: >
+                An established session where both encryption and authentication
+                are protecting the communication.

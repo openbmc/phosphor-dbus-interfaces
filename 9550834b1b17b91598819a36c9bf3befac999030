@@ -94,6 +94,30 @@
       },
       "revId": "9550834b1b17b91598819a36c9bf3befac999030",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff1b5c1a_f1b8d8f7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ManagedHost.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-12-03T03:36:49Z",
+      "side": 1,
+      "message": "\u003e it may not be entirely clear. How do we find the powersupplies for a chassis? Do we go with contained_by and look for Inventory.Item.PowerSupply? Do we go with powered_by instead?  For powersupplies this is solved since Inventory.Item.Chassis documents a powered_by association specifically to Inventory.Item.PowerSupply.\n\n1. It entirely depends on what you\u0027re trying to deduce.  Are you looking for the power supply *in* a chassis or a power supply *powering* a chassis?  These are two different associations because they\u0027re two different inquiries.\n\n2. If you are suggesting we also change powered_by to be on Item, feel free to go for it.\n\n\u003e PDI should be source of truth for how to query associations.\n\u003e If we do not document these associations in a fine grained manner in PDI, bmcweb will effectively take over this role and the associations will have to be created in such a way that it aligns with how bmcweb is querying them.\n\nPDI being a source of truth does not imply a requirement on it documenting fine grained associations.\n\nPDI is being truthful: any Item may be \"contained in\" a Chassis.  Just because bmcweb, entity-manager, etc. do not **implement** a complete set does not mean it isn\u0027t a **reasonable** association; one which might be leveraged in the future without any further design discussion.\n\n\u003e How do we find Inventory.Item.Dimm when starting from a ManagedHost?\n\nThis same question has been posed when I wrote the association requirements that we would not accept associations like \"dimm_contained_in_chassis\".  Anytime you have two potential interfaces using the same association you may need to further deduce which ones are what.  There\u0027s fundamentally nothing in PDI that prevents you from formulating a \"GPU Card\" as an { Item, Asset, Board, CPU, and DIMM } all in one dbus path.\n\nIf you want these kinds of queries to be more efficient, I would suggest we improve the mapper query APIs.\n\n\u003e We also could go with xyz.openbmc_project.Inventory.Item.System rather than xyz.openbmc_project.Inventory.Decorator.ManagedHost.\n\nI\u0027m fine with this also.  Do we have `Item.System` implemented everywhere necessary though?  It doesn\u0027t appear that any Meta configs currently expose `Item.System`.",
+      "parentUuid": "973ab6c9_f27e080a",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 51
+      },
+      "revId": "9550834b1b17b91598819a36c9bf3befac999030",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

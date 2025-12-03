@@ -83,6 +83,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9abbf26_4bd872ce",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SecurityPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001762
+      },
+      "writtenOn": "2025-12-03T15:32:05Z",
+      "side": 1,
+      "message": "Are we recommending SPDMEnabled as the trigger for starting spdm device discovery? We need to confirm the system\u0027s behavior upon a reboot where SPDMEnabled is already set to true. Does the SPDM daemon (SPDMd) automatically identify and authenticate previously known devices immediately upon device detection/boot completion, or does a manual trigger via Redfish still need to be sent? If manual trigger needed how do we do it?",
+      "parentUuid": "887da035_113a6087",
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "56b6824d_827cd7e0",

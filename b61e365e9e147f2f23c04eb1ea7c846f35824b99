@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "457d4e5c_ddf70af8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-12-03T12:59:12Z",
+      "side": 1,
+      "message": "\u003e  The current properties you are proposing are SPDM-specific and should be hosted by the SPDM daemon, right? \n\nYes thats correct.\n\n\u003e I think we should have a separate SPDM \"SecurityPolicy\" interface then.  Later on when we add TLS-Policy, that would go elsewhere.\n\nDone, I have moved this to `yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml` would that work ?",
+      "parentUuid": "9a17cabe_8ca28077",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 22
+      },
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cbe546e7_97ebb370",
@@ -37,6 +61,24 @@
       "writtenOn": "2025-12-01T09:35:38Z",
       "side": 1,
       "message": "are there any specific D-bus errors returned if SPDMEnabled fails to set?\nenabling SPDM communication can be failed for different reasons on the system which can cause failure while setting this property value right",
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "887da035_113a6087",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SecurityPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-12-03T12:59:12Z",
+      "side": 1,
+      "message": "IMO, SPDMEnabled is purely a global policy flag. If its default value is false, switching it to true should simply indicate that SPDM communication is permitted. The system may then initiate SPDM sessions with any already-discovered SPDM capable devices (whether over Network, PCIe, or MCTP).\n\nBecause this property only expresses policy and does not perform device communication directly, setting it should not fail. Any operational issues such as connectivity failures, negotiation errors, or device-specific problems would arise later, during actual SPDM exchanges. Those conditions would be surfaced through the individual ComponentIntegrity objects hosted by spdm daemon that represent each SPDM endpoint. So, while SPDM operations may fail for various reasons, those failures should not be reported as errors when setting SPDMEnabled itself.",
+      "parentUuid": "cbe546e7_97ebb370",
       "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -64,6 +106,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "598714af_fe007ea0",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SecurityPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-12-03T12:59:12Z",
+      "side": 1,
+      "message": "Sure, i did give that a try.\n\nRedfish spec allows either `{\"ALL\"} (all versions)` or `{\"NONE\"} (no versions)` or `array[string] (which captures specific versions to be allowed)`. So i made this a variant[enum,array[string]] - where the enum captures ALL or NONE \u0026 the array captures the specific versions - does this look okay ?",
+      "parentUuid": "56b6824d_827cd7e0",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 43
+      },
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "758a6e1c_df0b833e",
@@ -77,6 +143,30 @@
       "writtenOn": "2025-12-01T08:10:20Z",
       "side": 1,
       "message": "These need to be enumerations.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 50
+      },
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ed75732_204f0df3",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SecurityPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-12-03T12:59:12Z",
+      "side": 1,
+      "message": "I tried to apply the same approach as above — let me know if anything looks incorrect.",
+      "parentUuid": "758a6e1c_df0b833e",
       "range": {
         "startLine": 35,
         "startChar": 0,

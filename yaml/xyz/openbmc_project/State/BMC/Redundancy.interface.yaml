@@ -125,6 +125,10 @@ enumerations:
           - name: SiblingNotAtReady
             description: >
                 The sibling BMC is not at the Ready state.
+          - name: SiblingCannotBeActive
+            description: >
+                There is something wrong with the sibling BMC such that it can
+                never be active.
           - name: CodeVersionMismatch
             description: >
                 The BMCs have different versions of code.

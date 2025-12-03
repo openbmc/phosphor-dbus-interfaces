@@ -101,6 +101,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5a45224_7863136b",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SecurityPolicy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2025-12-03T17:21:25Z",
+      "side": 1,
+      "message": "\u003e Are we recommending SPDMEnabled as the trigger for starting spdm device discovery?\n\nNot really, discovery has nothing to do with this policy. As per the description, this policy dictates/describes whether SPDM communication to SPDM capable devices is enabled/disabled.\n\n\u003e We need to confirm the system\u0027s behavior upon a reboot where SPDMEnabled is already set to true. \n\nPersistency of a policy setting across reboots is not really an interface question - it\u0027s an implementation detail, and not relevant for this commit. We can discuss it in the implementation commit when we reach there. \n\n\u003e Does the SPDM daemon (SPDMd) automatically identify and authenticate previously known devices immediately upon device detection/boot completion, or does a manual trigger via Redfish still need to be sent?\n\nWhether automatic or manual - It totally depends on what the client sets this policy to be.  \n\n\u003e If manual trigger needed how do we do it?\n\nThis property is mapped to redfish Security Policy schema. Redfish clients can use that to set the policy. I have already documented the redfish mapping to this interface in my commit message.",
+      "parentUuid": "b9abbf26_4bd872ce",
+      "revId": "b61e365e9e147f2f23c04eb1ea7c846f35824b99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "56b6824d_827cd7e0",

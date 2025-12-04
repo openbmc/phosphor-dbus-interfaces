@@ -118,6 +118,30 @@
       },
       "revId": "9550834b1b17b91598819a36c9bf3befac999030",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67f5c679_8b75c12b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ManagedHost.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002222
+      },
+      "writtenOn": "2025-12-04T07:00:49Z",
+      "side": 1,
+      "message": "I removed the specific Item type from ManagedHost interface in accordance to your first comment. No need to broaden the discussion about the use of `Item.System` in place of `ManagedHost`. \n\n@patrick@stwcx.xyz let me know if there is anything else. My roadmap is to resolve this so I can get the bmcweb changes host hw-inventory in until chistmas.",
+      "parentUuid": "ff1b5c1a_f1b8d8f7",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 51
+      },
+      "revId": "9550834b1b17b91598819a36c9bf3befac999030",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

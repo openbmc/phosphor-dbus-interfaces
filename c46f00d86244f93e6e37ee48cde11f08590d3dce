@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7193a95_22cdff91",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Connector/Port.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-12-04T21:16:42Z",
+      "side": 1,
+      "message": "Generally we don\u0027t put units on these kinds of things.  It\u0027s pretty likely we would have a 10mbps port, which wouldn\u0027t be able to be represented by this cleanly.\n\nAlso, using a float here causes some level of division issues if you want to convert to bits/bytes per second, so we should just avoid those.\n\nLets just convert this to a uint64, measured in bits per second.  We can treat 0 as the \"not available\" number.",
+      "range": {
+        "startLine": 20,
+        "startChar": 44,
+        "endLine": 20,
+        "endChar": 48
+      },
+      "revId": "c46f00d86244f93e6e37ee48cde11f08590d3dce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30d6972f_da94e786",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Connector/Port.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2025-12-04T21:16:42Z",
+      "side": 1,
+      "message": "We need to differentiate these two.  Lets say\n\nmaxint indicates this value is not supported\n0 indicates this value is not available at this time.",
+      "range": {
+        "startLine": 27,
+        "startChar": 25,
+        "endLine": 28,
+        "endChar": 48
+      },
+      "revId": "c46f00d86244f93e6e37ee48cde11f08590d3dce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

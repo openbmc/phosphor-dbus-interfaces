@@ -1,4 +1,4 @@
-version: 1.0.0
+version: 1.1.0
 
 events:
     - name: RebootCause
@@ -10,3 +10,13 @@ events:
       en:
           description: The BMC reboot and the cause was identified.
           message: The last BMC reboot was caused by '{Cause}'.
+
+    - name: StateChanged
+      metadata:
+          - name: State
+            type: enum[xyz.openbmc_project.State.BMC.BMCState]
+            primary: true
+            description: The current BMC state.
+      en:
+          description: The BMC state changed.
+          message: The BMC state is now '{State}'.

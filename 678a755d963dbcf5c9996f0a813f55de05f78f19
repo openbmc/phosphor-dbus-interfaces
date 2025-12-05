@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67db5d21_8c2cf4e4",
+        "filename": "yaml/xyz/openbmc_project/Metric/Threshold.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-12-05T07:30:02Z",
+      "side": 1,
+      "message": "This is an event and not an error as per Redfish specification https://github.com/DMTF/Redfish-Publications/blob/main/registries/Telemetry.1.1.1.json#L203, so lets change this to an event.",
+      "revId": "678a755d963dbcf5c9996f0a813f55de05f78f19",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56520553_5f5e2853",
+        "filename": "yaml/xyz/openbmc_project/Metric/Threshold.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-12-05T07:30:02Z",
+      "side": 1,
+      "message": "Lets name this ReadingValue as this is the reading value which became equal to the expected internal value (As per https://github.com/DMTF/Redfish-Publications/blob/main/registries/Telemetry.1.1.1.json#L202C24-L202C109). This will also keep it consistent with other messages.",
+      "revId": "678a755d963dbcf5c9996f0a813f55de05f78f19",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "470dc7fe_1b14af57",
+        "filename": "yaml/xyz/openbmc_project/Metric/Threshold.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2025-12-05T07:30:02Z",
+      "side": 1,
+      "message": "What would the TriggerName property hold? Its better to make this explicit to keep it consistent.",
+      "revId": "678a755d963dbcf5c9996f0a813f55de05f78f19",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

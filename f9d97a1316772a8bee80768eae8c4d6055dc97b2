@@ -16,6 +16,24 @@
       "message": "Do we need to specify the exact state separately? HostOff, HostRunning?",
       "revId": "f9d97a1316772a8bee80768eae8c4d6055dc97b2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cad3b51d_4f3db772",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2025-12-08T16:57:22Z",
+      "side": 1,
+      "message": "That adds a lot of complexity for the underlying code to have to track all that. Just checking that it isn\u0027t off or runtime is more stable and won\u0027t have to deal with corner cases.",
+      "parentUuid": "a86824df_3f6441fc",
+      "revId": "f9d97a1316772a8bee80768eae8c4d6055dc97b2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

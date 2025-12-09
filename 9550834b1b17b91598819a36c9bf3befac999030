@@ -166,6 +166,30 @@
       },
       "revId": "9550834b1b17b91598819a36c9bf3befac999030",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7707c97b_54e8d475",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/ManagedHost.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002065
+      },
+      "writtenOn": "2025-12-09T16:19:51Z",
+      "side": 1,
+      "message": "@christopher.meis@9elements.com as we have discussed I have pushed a change [1] so we can use Item.System, which seems more suitable. I have provided reasoning in the change. \n\n@patrick@stwcx.xyz I have followed-up on updating the configs to implement the interface [1].\n\nI feel like this is a fair middleground for now and might help out in other discussions aswell [2][3].\n\n[1] https://gerrit.openbmc.org/c/openbmc/entity-manager/+/85875\n[2] https://discord.com/channels/775381525260664832/1385306077188460545\n[3] https://gerrit.openbmc.org/c/openbmc/bmcweb/+/60793",
+      "parentUuid": "c5910f4e_4c18ac5a",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 51
+      },
+      "revId": "9550834b1b17b91598819a36c9bf3befac999030",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

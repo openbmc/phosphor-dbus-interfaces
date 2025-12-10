@@ -275,6 +275,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bda61d74_5dc20986",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2025-12-10T10:06:34Z",
+      "side": 1,
+      "message": "So, my understanding is that for this patch, I should keep the current changes, and then add a commit in `phosphor-pid-control` to update all fail sensor reasons to use the defined `FailureReason` enum instead of strings. After that, I would adjust patch [82447] accordingly to align with the new approach.\n\nIf I’ve misunderstood, please let me know. Thank you!\n\n[82447]: https://gerrit.openbmc.org/c/openbmc/phosphor-pid-control/+/82447",
+      "parentUuid": "1b0c63a8_1e759a43",
+      "range": {
+        "startLine": 20,
+        "startChar": 54,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "18395e4c_240d6e36",
         "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
         "patchSetId": 8

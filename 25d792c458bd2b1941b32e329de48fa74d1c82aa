@@ -297,6 +297,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f6003cd_cb41d5c9",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/Zone.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2025-12-11T11:50:32Z",
+      "side": 1,
+      "message": "In [85920], I’ve already updated `phosphor-pid-control`’s internal fail reason handling to rely on the `FailureReason` enum defined in this patch, and made the corresponding changes in [82447].\n\nIf there’s anything else that needs to be corrected, please let me know.\n\n[85920]: https://gerrit.openbmc.org/c/openbmc/phosphor-pid-control/+/85920\n[82447]: https://gerrit.openbmc.org/c/openbmc/phosphor-pid-control/+/82447",
+      "parentUuid": "bda61d74_5dc20986",
+      "range": {
+        "startLine": 20,
+        "startChar": 54,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "25d792c458bd2b1941b32e329de48fa74d1c82aa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "18395e4c_240d6e36",

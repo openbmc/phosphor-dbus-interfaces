@@ -16,6 +16,24 @@
       "message": "Likely have similar discussion points to the PCIe commit.",
       "revId": "defb97d7bdbde9e0dc374d621feeeb4514ce2f00",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45c9335e_a5bfa2b4",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-12-15T08:44:50Z",
+      "side": 1,
+      "message": "The metrics defined here are relevant to a NIC port. If some of these are applicable to, say, NCSI or RDMA ports then they can be added with those segments (similar to the cpu/total vs memory/total example).\n\nI\u0027ve already added a device to help associate the pcie/NIC metrics to a port on a PCIe/NIC device.",
+      "parentUuid": "75e541aa_ef66c821",
+      "revId": "defb97d7bdbde9e0dc374d621feeeb4514ce2f00",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

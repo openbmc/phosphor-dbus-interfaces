@@ -34,6 +34,74 @@
       "parentUuid": "1d390c30_7b39c4a6",
       "revId": "05701981b99e0519162d5d1b2541c76e7c15a404",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce9f5f2d_6e9a6c7c",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-12-15T10:02:47Z",
+      "side": 1,
+      "message": "Is this supposed to be atomically updated alongwith Value?",
+      "revId": "05701981b99e0519162d5d1b2541c76e7c15a404",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a7976e3_b2996778",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-12-15T10:02:47Z",
+      "side": 1,
+      "message": "Should we set any flags? Readonly?",
+      "revId": "05701981b99e0519162d5d1b2541c76e7c15a404",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "062ad175_88143716",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-12-15T10:02:47Z",
+      "side": 1,
+      "message": "What does this indicate?",
+      "revId": "05701981b99e0519162d5d1b2541c76e7c15a404",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa2ef05c_16264eaa",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-12-15T10:02:47Z",
+      "side": 1,
+      "message": "Updated to D-Bus or updated in, say, cache/memory of a sensor service?",
+      "revId": "05701981b99e0519162d5d1b2541c76e7c15a404",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

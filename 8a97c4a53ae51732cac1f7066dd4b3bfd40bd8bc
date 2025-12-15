@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5c01cc10_2f34ce43",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-12-15T06:48:14Z",
+      "side": 1,
+      "message": "Separated out PCIe vs generic metrics.\n\nAdded namespace for PCIe.",
+      "parentUuid": "9beef04b_26c04a79",
+      "range": {
+        "startLine": 121,
+        "startChar": 19,
+        "endLine": 121,
+        "endChar": 47
+      },
+      "revId": "8a97c4a53ae51732cac1f7066dd4b3bfd40bd8bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3bd12a3a_a69ff02d",
         "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
         "patchSetId": 3
@@ -54,6 +78,24 @@
       "writtenOn": "2025-12-11T16:51:23Z",
       "side": 1,
       "message": "This one does sound PCIe-specific because it is talking about a particular training procedure that is unique to PCIe.  So maybe PCIe is still appropriate on this one.  We\u0027re still needing to define how we map a particular PCIe device to a metric path.",
+      "revId": "8a97c4a53ae51732cac1f7066dd4b3bfd40bd8bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f08dfd8_cb8e4029",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-12-15T06:48:14Z",
+      "side": 1,
+      "message": "Will add a device path for the relevant device here (which is actually a port).",
+      "parentUuid": "3bd12a3a_a69ff02d",
       "revId": "8a97c4a53ae51732cac1f7066dd4b3bfd40bd8bc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

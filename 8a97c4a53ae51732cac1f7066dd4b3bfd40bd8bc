@@ -65,6 +65,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c9da830_18a8f7da",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-12-15T08:32:30Z",
+      "side": 1,
+      "message": "Actually only a single namespace is allowed (which makes sense, say to avoid conflicts in namespaces). For things like total memory vs total cpu, I see both cpu/total and memory/total defined - that is, we didn\u0027t define cpu and memory as namespaces and total as the metric. I\u0027ve followed the same for PCIe metrics, and once could add a subset of these with memory/\u003cmetric\u003e when there\u0027s a need.",
+      "parentUuid": "5c01cc10_2f34ce43",
+      "range": {
+        "startLine": 121,
+        "startChar": 19,
+        "endLine": 121,
+        "endChar": 47
+      },
+      "revId": "8a97c4a53ae51732cac1f7066dd4b3bfd40bd8bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3bd12a3a_a69ff02d",
@@ -96,6 +120,24 @@
       "side": 1,
       "message": "Will add a device path for the relevant device here (which is actually a port).",
       "parentUuid": "3bd12a3a_a69ff02d",
+      "revId": "8a97c4a53ae51732cac1f7066dd4b3bfd40bd8bc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59845e2a_0ad44f93",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2025-12-15T08:32:30Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "8f08dfd8_cb8e4029",
       "revId": "8a97c4a53ae51732cac1f7066dd4b3bfd40bd8bc",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

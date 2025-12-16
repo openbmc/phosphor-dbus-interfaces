@@ -84,6 +84,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8407232b_803aa347",
+        "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001516
+      },
+      "writtenOn": "2025-12-16T10:14:58Z",
+      "side": 1,
+      "message": "Are you planning to use SPDM 1.2 Certificate provisioning from primary BMC to peer BMC for provisioning?. If it\u0027s just for attestation then should we call this as attestation instead where primary BMC is acting as a verifier?",
+      "parentUuid": "a776ac8b_682a81d8",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 55
+      },
+      "revId": "a525b7d5ad61667d3d239882f78caf967530f392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d3a6e03a_594b2c11",
         "filename": "yaml/xyz/openbmc_project/Provisioning/Provisioning.interface.yaml",
         "patchSetId": 3

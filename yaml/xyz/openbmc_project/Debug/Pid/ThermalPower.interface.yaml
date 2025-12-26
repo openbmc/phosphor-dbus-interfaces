@@ -1,5 +1,6 @@
 description: >
-    Implement to show the states of the first PID control loop(thermal/power).
+    Provides the status and state information for the primary PID or Stepwise
+    control loop (thermal/power).
 
 properties:
     - name: Leader
@@ -10,7 +11,7 @@ properties:
           This means the name of the thermal sensor that is the highest temp in
           input sensor list.
 
-    - name: ClassType
+    - name: Class
       type: string
       flags:
           - readonly
@@ -18,12 +19,20 @@ properties:
           The class of this PID loop. It can be "Temperature", "Margin", "Power"
           or "PowerSum".
 
+    - name: Type
+      type: string
+      flags:
+          - readonly
+      description: >
+          The controller type of this loop. It can be "PID" or "Stepwise".
+
     - name: Setpoint
       type: double
       flags:
           - readonly
       description: >
-          This pid config's setpoint.
+          The target setpoint for the PID controller. For Stepwise controllers,
+          this value is nan.
 
     - name: Input
       type: double
@@ -37,5 +46,6 @@ properties:
       flags:
           - readonly
       description: >
-          This property is the thermal PID loop result. This data doesn't have
-          static unit, it can be RPM or PWM depending on PID parameter settings.
+          This property is the thermal PID/Stepwise control loop result. This
+          data doesn't have static unit, it can be RPM or PWM depending on
+          PID/Stepwise parameter settings.

@@ -50,6 +50,24 @@
       "message": "Do we need a default value?",
       "revId": "263ae330e3fbb517ed6f43ed227d086f723caec5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41d1e521_b89dfe07",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/ThermalPower.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001843
+      },
+      "writtenOn": "2025-12-26T19:38:26Z",
+      "side": 1,
+      "message": "If the user configures the fan table correctly, the PID will have a setpoint. It seems there was no default value provided in the past.",
+      "parentUuid": "d5e80c1e_aa33a6a0",
+      "revId": "263ae330e3fbb517ed6f43ed227d086f723caec5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

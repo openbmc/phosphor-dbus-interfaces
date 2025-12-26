@@ -1,0 +1,31 @@
+description: >
+    Implement to show the states of the Stepwise control loop.
+
+properties:
+    - name: Leader
+      type: string
+      flags:
+          - readonly
+      description: >
+          The name of the sensor that is the leader of this stepwise controller.
+
+    - name: ClassType
+      type: string
+      flags:
+          - readonly
+      description: >
+          The class of this Stepwise loop. It can be "Temperature".
+
+    - name: Input
+      type: double
+      flags:
+          - readonly
+      description: >
+          The "Leader" sensor reading.
+
+    - name: Output
+      type: double
+      flags:
+          - readonly
+      description: >
+          This property is the stepwise loop result.

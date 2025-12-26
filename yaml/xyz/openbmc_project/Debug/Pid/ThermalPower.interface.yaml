@@ -1,5 +1,6 @@
 description: >
-    Implement to show the states of the first PID control loop(thermal/power).
+    Provides the status and state information for the primary PID or Stepwise
+    control loop (thermal/power).
 
 properties:
     - name: Leader
@@ -7,35 +8,60 @@ properties:
       flags:
           - readonly
       description: >
-          This means the name of the thermal sensor that is the highest temp in
-          input sensor list.
+          The name of the thermal sensor currently providing the highest
+          temperature in the input sensor list.
 
-    - name: ClassType
-      type: string
+    - name: Class
+      type: enum[self.ClassType]
       flags:
           - readonly
       description: >
-          The class of this PID loop. It can be "Temperature", "Margin", "Power"
-          or "PowerSum".
+          The domain or class of this control loop.
+
+    - name: Type
+      type: enum[self.ControllerType]
+      flags:
+          - readonly
+      description: >
+          The algorithm type used by this control loop.
 
     - name: Setpoint
       type: double
       flags:
           - readonly
+      default: NaN
       description: >
-          This pid config's setpoint.
+          The target setpoint for the PID controller. For Stepwise controllers,
+          this value is NaN.
 
     - name: Input
       type: double
       flags:
           - readonly
       description: >
-          The "Leader" sensor reading.
+          The reading from the "Leader" sensor.
 
     - name: Output
       type: double
       flags:
           - readonly
       description: >
-          This property is the thermal PID loop result. This data doesn't have
-          static unit, it can be RPM or PWM depending on PID parameter settings.
+          The result of the thermal control loop. Units (e.g., RPM or PWM)
+          depend on parameter settings.
+
+enumerations:
+    - name: ClassType
+      description: >
+          Supported control domains.
+      values:
+          - name: Temperature
+          - name: Margin
+          - name: Power
+          - name: PowerSum
+
+    - name: ControllerType
+      description: >
+          Supported control algorithms.
+      values:
+          - name: PID
+          - name: Stepwise

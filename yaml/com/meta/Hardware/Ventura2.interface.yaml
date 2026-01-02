@@ -1,0 +1,16 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    devices for Ventura2.
+
+enumerations:
+    - name: CPLD
+      description: >
+          The compatible hardware strings for the CPLD on Ventura2.
+      values:
+          - name: "LCMXO3D_9400_scm"
+
+    - name: TPM
+      description: >
+          The compatible hardware strings for the TPM on Santabarbara.
+      values:
+          - name: BMC

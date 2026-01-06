@@ -36,6 +36,7 @@ owners:
 
 reviewers:
 - deepak.kodihalli.83@gmail.com
+- raviteja28031990@gmail.com
 
 matchers:
 - partial_regex: yaml/com/ibm
@@ -53,6 +54,15 @@ matchers:
 - partial_regex: gen/com/ibm
   owners:
   - spinler@us.ibm.com
+- partial_regex: yaml/xyz/openbmc_project/User
+  reviewers:
+  - raviteja28031990@gmail.com
+- partial_regex: yaml/xyz/openbmc_project/Network
+  reviewers:
+  - raviteja28031990@gmail.com
+- partial_regex: yaml/xyz/openbmc_project/Certs
+  reviewers:
+  - raviteja28031990@gmail.com
 
 openbmc:
 - name: Alexander Hansen
@@ -67,3 +77,6 @@ openbmc:
 - name: Patrick Williams
   email: patrick@stwcx.xyz
   discord: stwcx
+- name: Ravi Teja
+  email: raviteja28031990@gmail.com
+  discord: raviteja

@@ -120,6 +120,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "226d8b74_c60bae29",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/ThermalPower.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-06T23:44:41Z",
+      "side": 1,
+      "message": "Acknowledged.  I see now that what you\u0027ve done is eliminate the \"Class\" property which was going to be an enum.  It looks like there aren\u0027t any string properties except for the \"Leader\" itself.",
+      "parentUuid": "777b7436_f459c767",
+      "range": {
+        "startLine": 15,
+        "startChar": 22,
+        "endLine": 15,
+        "endChar": 31
+      },
+      "revId": "9b2b82acc8b4b8be313c696283464e8c918e6320",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "367c8c29_c7bf586f",

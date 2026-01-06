@@ -48,6 +48,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "794a3913_cf75fb51",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/ThermalPower.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001843
+      },
+      "writtenOn": "2026-01-06T18:19:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b4467253_d7e7f6b9",
+      "range": {
+        "startLine": 15,
+        "startChar": 22,
+        "endLine": 15,
+        "endChar": 31
+      },
+      "revId": "9b2b82acc8b4b8be313c696283464e8c918e6320",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "367c8c29_c7bf586f",
@@ -61,6 +85,24 @@
       "writtenOn": "2026-01-05T23:36:46Z",
       "side": 1,
       "message": "Because these are two controllers that implement almost orthogonal interfaces, I suspect this would be a case where we should split and have a Debug.Stepwise.ThermalPower interface.\n\nAs written, this is still in the PID namespace.",
+      "revId": "9b2b82acc8b4b8be313c696283464e8c918e6320",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8e1f487_39e4baa2",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/ThermalPower.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001843
+      },
+      "writtenOn": "2026-01-06T18:19:24Z",
+      "side": 1,
+      "message": "I have updated the code, commit message, and validation logs.\n\nI’ve implemented xyz.openbmc_project.Debug.Stepwise.ThermalPower to ensure there is no impact on the existing xyz.openbmc_project.Debug.Pid.ThermalPower interface.\n\nPlease note that the Setpoint property is not applicable to Stepwise controllers, but the other properties align with the standard PID controller interface.\n\nPlease review. Thanks.",
+      "parentUuid": "367c8c29_c7bf586f",
       "revId": "9b2b82acc8b4b8be313c696283464e8c918e6320",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

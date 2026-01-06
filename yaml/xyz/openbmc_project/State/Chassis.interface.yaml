@@ -34,6 +34,25 @@ properties:
           the CurrentPowerState property, in epoch time, in milliseconds.  This
           can be used to tell when the chassis was last powered on or off.
 
+    - name: Available
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          Indicates whether the chassis is accessible for applications to
+          interact with. On a single-chassis system, this will be immediately
+          set to true upon application start. On a multi-chassis system, the
+          availability will be based on a variety of factors such as cable
+          status between the BMC and chassis, and whether there are any ongoing
+          maintenance operations that could be affecting the availability of the
+          chassis. As some system designs run the SMP and power via separate
+          cables, there are situations where a chassis will have power and be in
+          use by the host operating system but not be accessible by the BMC.
+          This property can be subscribed to by power, LED, and other
+          applications to know when the chassis is available and avoid
+          unnecessary errors against the chassis.
+
 enumerations:
     - name: Transition
       description: >

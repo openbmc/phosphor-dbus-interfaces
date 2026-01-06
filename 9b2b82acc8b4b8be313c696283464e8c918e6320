@@ -98,6 +98,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "777b7436_f459c767",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/ThermalPower.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001843
+      },
+      "writtenOn": "2026-01-06T23:02:09Z",
+      "side": 1,
+      "message": "At that time, my thinking was that the control system can be divided into open-loop control (stepwise controller) and closed-loop control (PID controller).\nFrom that perspective, putting open-loop–related behavior into the Pid.ThermalPower interface felt conceptually a bit odd to me, which is why I hesitated and reverted the change.",
+      "parentUuid": "359301a3_6670de13",
+      "range": {
+        "startLine": 15,
+        "startChar": 22,
+        "endLine": 15,
+        "endChar": 31
+      },
+      "revId": "9b2b82acc8b4b8be313c696283464e8c918e6320",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "367c8c29_c7bf586f",
         "filename": "yaml/xyz/openbmc_project/Debug/Pid/ThermalPower.interface.yaml",
         "patchSetId": 3

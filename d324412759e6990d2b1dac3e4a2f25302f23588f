@@ -16,6 +16,24 @@
       "message": "I think we need this on Item.interface.yaml instead of {Dimm,Cpu}.interface.yaml then.",
       "revId": "d324412759e6990d2b1dac3e4a2f25302f23588f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d828cb91_d0c740bd",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/System.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-01-07T17:14:57Z",
+      "side": 1,
+      "message": "`...Inventory.Item.interface.yaml` already documents both \n`contains` and `contained_by` `Inventory.Item`.\n\n```\nassociations:\n    - name: containing\n      description: \u003e\n          Any inventory Items (usually Boards or Chassis) can optionally\n          implement the \u0027containing\u0027 association to provide one or more links to\n          Items which it physically contains.\n      reverse_name: contained_by\n      required_endpoint_interfaces:\n          - xyz.openbmc_project.Inventory.Item\n    - name: contained_by\n      description: \u003e\n          Any inventory Items can optionally implement the \u0027contained_by\u0027\n          association to provide a link to exactly one Item (usually a Board or\n          Chassis) which physically contains it.\n      reverse_name: containing\n      required_endpoint_interfaces:\n          - xyz.openbmc_project.Inventory.Item\n```\n\nI am confused, what do we need to change? If we do not document fine-grained associations, and `Inventory.Item` already documents these self associations, should we abandon this change?\n\nSince these associations are fairly quick to declare, can you push the next revision since you already know what you want to see here.\n\nThat should go quicker than me trying to grasp it, and unblock some of Christopher\u0027s bmcweb changes.\n\nThere is a comment which says this change is required:\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/83773/comments/402a9152_1f0935e4",
+      "parentUuid": "15e02c52_ff8031f8",
+      "revId": "d324412759e6990d2b1dac3e4a2f25302f23588f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

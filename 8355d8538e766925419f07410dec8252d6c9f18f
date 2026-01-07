@@ -16,6 +16,24 @@
       "message": "There\u0027s already an Available property on the Availability interface.  Could you explain the reasoning why you\u0027d still prefer adding the new property on this interface?",
       "revId": "8355d8538e766925419f07410dec8252d6c9f18f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f016cc9a_cb62e271",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2026-01-07T15:57:47Z",
+      "side": 1,
+      "message": "I have been show the error of my ways. The main message being that in using the standard Availability interface it allows other apps to generically look for it via mapper for all objects (not just the chassis). Will abandon this review.",
+      "parentUuid": "cc68613d_311cf7c3",
+      "revId": "8355d8538e766925419f07410dec8252d6c9f18f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

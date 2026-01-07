@@ -144,6 +144,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "213146ca_7219b710",
+        "filename": "yaml/xyz/openbmc_project/Debug/Pid/ThermalPower.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001843
+      },
+      "writtenOn": "2026-01-07T00:00:28Z",
+      "side": 1,
+      "message": "Yes — before this patch, the real-time monitoring in phosphor-pid-control only supported PID (closed-loop) control, and ClassType was used to distinguish the sensor class (e.g. temperature).\n\nLater on, I refactored this by separating Class and Type into two independent concepts:\n\t•\tClass represents the sensor category\n\t•\tType represents the control method (stepwise or PID)\n\nIn the current design, the control method (Type) is now distinguished by using different interfaces, so ClassType is only needed to identify the sensor class.\nHowever, since stepwise currently only supports temperature sensors, the ClassType property is temporarily unused. This was discussed in the PID Discord channel as well.",
+      "parentUuid": "226d8b74_c60bae29",
+      "range": {
+        "startLine": 15,
+        "startChar": 22,
+        "endLine": 15,
+        "endChar": 31
+      },
+      "revId": "9b2b82acc8b4b8be313c696283464e8c918e6320",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "367c8c29_c7bf586f",

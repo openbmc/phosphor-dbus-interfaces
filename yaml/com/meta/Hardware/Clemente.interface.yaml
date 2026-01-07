@@ -1,0 +1,12 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    devices for Clemente.
+
+enumerations:
+    - name: CPLD
+      description: >
+          The compatible hardware strings for the CPLD on Clemente.
+      values:
+          - name: LCMXO2_4000HC_hdd
+          - name: LCMXO3LF_4300C_interposer
+

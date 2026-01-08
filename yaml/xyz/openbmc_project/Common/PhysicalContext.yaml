@@ -1,0 +1,26 @@
+description: >
+    Implement to indicate what chassis area or device the object implementing
+    this interface applies to. For instance, this could indicate what a sensor
+    reading applies to (examples are "GPU", "Back of the Chassis", etc.) by
+    having this implemented on the object that implements Sensor.Value.
+
+properties:
+    - name: Type
+      type: self.PhysicalContextType
+      flags:
+          - readonly
+      description: >
+          A device type or an area of the Chassis.
+
+enumerations:
+    - name: PhysicalContextType
+      description: >
+          Values representing a device type or an area of the Chassis.
+      values:
+          - name: Accelerator
+            description: >
+                An accelerator.
+
+paths:
+    - name: Sensors
+      value: /xyz/openbmc_project/sensors

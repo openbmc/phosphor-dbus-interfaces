@@ -1,0 +1,190 @@
+description: >
+    Implement to indicate what chassis area or device the object implementing
+    this interface applies to. For instance, this could indicate what a sensor
+    reading applies to (examples are "GPU", "Back of the Chassis", etc.) by
+    having this implemented on the object that implements Sensor.Value.
+
+properties:
+    - name: Type
+      type: self.PhysicalContextType
+      flags:
+          - readonly
+      description: >
+          A device type or an area of the Chassis.
+
+enumerations:
+    - name: PhysicalContextType
+      description: >
+          Values representing a device type or an area of the Chassis.
+      values:
+          - name: Accelerator
+            description: >
+                An accelerator.
+          - name: ACInput
+            description: >
+                An AC electrical input or input-related circuit.
+          - name: ACMaintenanceBypassInput
+            description: >
+                An AC electrical maintenance bypass input.
+          - name: ACOutput
+            description: >
+                An AC electrical output or output-related circuit.
+          - name: ACStaticBypassInput
+            description: >
+                An AC electrical static bypass input.
+          - name: ACUtilityInput
+            description: >
+                An AC electrical utility input.
+          - name: ASIC
+            description: >
+                An ASIC device, such as a networking chip or chipset component.
+          - name: Back
+            description: >
+                The back of the chassis.
+          - name: Backplane
+            description: >
+                A backplane within the chassis.
+          - name: Battery
+            description: >
+                A battery.
+          - name: Board
+            description: >
+                A circuit board.
+          - name: Chassis
+            description: >
+                The entire chassis.
+          - name: ComputeBay
+            description: >
+                A compute bay.
+          - name: CoolingSubsystem
+            description: >
+                The entire cooling, or air and liquid, subsystem.
+          - name: CPU
+            description: >
+                A processor (CPU).
+          - name: CPUSubsystem
+            description: >
+                The entire processor (CPU) subsystem.
+          - name: DCBus
+            description: >
+                A DC electrical bus.
+          - name: Exhaust
+            description: >
+                The air exhaust point or points or region of the chassis.
+          - name: ExpansionBay
+            description: >
+                An expansion bay.
+          - name: ExpansionSubsystem
+            description: >
+                A group of expansion bays.
+          - name: Fan
+            description: >
+                A fan.
+          - name: Filter
+            description: >
+                A filter.
+          - name: FPGA
+            description: >
+                An FPGA.
+          - name: Front
+            description: >
+                The front of the chassis.
+          - name: GPU
+            description: >
+                A graphics processor (GPU).
+          - name: GPUSubsystem
+            description: >
+                The entire graphics processor (GPU) subsystem.
+          - name: Intake
+            description: >
+                The air intake point or points or region of the chassis.
+          - name: LiquidInlet
+            description: >
+                The liquid inlet point of the chassis.
+          - name: LiquidOutlet
+            description: >
+                The liquid outlet point of the chassis.
+          - name: Lower
+            description: >
+                The lower portion of the chassis.
+          - name: Manager
+            description: >
+                A management controller, such as a BMC (baseboard management
+                controller).
+          - name: Memory
+            description: >
+                A memory device.
+          - name: MemorySubsystem
+            description: >
+                The entire memory subsystem.
+          - name: Motor
+            description: >
+                A motor.
+          - name: NetworkBay
+            description: >
+                A networking bay.
+          - name: NetworkingDevice
+            description: >
+                A networking device.
+          - name: PowerOutlet
+            description: >
+                An electrical outlet.
+          - name: PowerSubsystem
+            description: >
+                The entire power subsystem.
+          - name: PowerSupply
+            description: >
+                A power supply.
+          - name: PowerSupplyBay
+            description: >
+                A power supply bay.
+          - name: Pump
+            description: >
+                A pump.
+          - name: Rectifier
+            description: >
+                A rectifier device.
+          - name: Reservoir
+            description: >
+                A reservoir.
+          - name: Room
+            description: >
+                The room.
+          - name: StorageBay
+            description: >
+                A storage bay.
+          - name: StorageDevice
+            description: >
+                A storage device.
+          - name: StorageSubsystem
+            description: >
+                A storage subsystem.
+          - name: Switch
+            description: >
+                A switch device.
+          - name: SystemBoard
+            description: >
+                The system board (PCB).
+          - name: Transceiver
+            description: >
+                A transceiver.
+          - name: Transformer
+            description: >
+                A transformer.
+          - name: TrustedModule
+            description: >
+                A trusted module.
+          - name: Upper
+            description: >
+                The upper portion of the chassis.
+          - name: VoltageRegulator
+            description: >
+                A voltage regulator device.
+
+paths:
+    - name: Sensors
+      value: /xyz/openbmc_project/sensors
+    - name: Metrics
+      value: /xyz/openbmc_project/metric
+    - name: Software
+      value: /xyz/openbmc_project/software

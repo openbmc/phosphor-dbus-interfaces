@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4205776_43ad15dc",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-09T07:57:34Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "e8d4a292_cd9ef204",
+      "range": {
+        "startLine": 8,
+        "startChar": 12,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "56ce5762adda47daae51f187079c283cc312daf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c9aa65dc_ca4f8be8",
@@ -47,6 +71,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c6f1166_85f1de15",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-09T07:57:34Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "c9aa65dc_ca4f8be8",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 46
+      },
+      "revId": "56ce5762adda47daae51f187079c283cc312daf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e7100d37_41f82db8",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-01-09T07:52:02Z",
       "side": 1,
       "message": "```suggestion\n    - name: MaxClockFrequency\n```\n\nSame thing, i would suggest to simply represent this in Hertz instead of Mhz.",
+      "range": {
+        "startLine": 14,
+        "startChar": 12,
+        "endLine": 14,
+        "endChar": 25
+      },
+      "revId": "56ce5762adda47daae51f187079c283cc312daf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "677e46ee_3a00614b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-09T07:57:34Z",
+      "side": 1,
+      "message": "I\u0027ll do this in a separate commit as it is unrelated to this commit.",
+      "parentUuid": "e7100d37_41f82db8",
       "range": {
         "startLine": 14,
         "startChar": 12,

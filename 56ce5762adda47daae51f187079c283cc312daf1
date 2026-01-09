@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8d4a292_cd9ef204",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-01-09T07:52:02Z",
+      "side": 1,
+      "message": "```suggestion\n    - name: BoostClockFrequency\n```\n\nI would suggest using the base unit (Hertz).",
+      "range": {
+        "startLine": 8,
+        "startChar": 12,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "56ce5762adda47daae51f187079c283cc312daf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9aa65dc_ca4f8be8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-01-09T07:52:02Z",
+      "side": 1,
+      "message": "```suggestion\n          Default accelerator boost clock speed in megahertz. If the property is not\n          supported, the value will be maxint.\n```",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 46
+      },
+      "revId": "56ce5762adda47daae51f187079c283cc312daf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7100d37_41f82db8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-01-09T07:52:02Z",
+      "side": 1,
+      "message": "```suggestion\n    - name: MaxClockFrequency\n```\n\nSame thing, i would suggest to simply represent this in Hertz instead of Mhz.",
+      "range": {
+        "startLine": 14,
+        "startChar": 12,
+        "endLine": 14,
+        "endChar": 25
+      },
+      "revId": "56ce5762adda47daae51f187079c283cc312daf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

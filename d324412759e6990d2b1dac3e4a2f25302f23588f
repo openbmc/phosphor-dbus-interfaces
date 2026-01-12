@@ -34,6 +34,24 @@
       "parentUuid": "15e02c52_ff8031f8",
       "revId": "d324412759e6990d2b1dac3e4a2f25302f23588f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "656a6432_2a74a680",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/System.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002222
+      },
+      "writtenOn": "2026-01-12T09:35:59Z",
+      "side": 1,
+      "message": "As stated in the design document \n(https://github.com/openbmc/docs/blob/master/designs/physical-topology.md#phosphor-dbus-interfaces):\n\n```\nIn the interface definition for Inventory/Item or the more specific subtypes, we\nadd an association definition for each of the relationship types listed above\nand corresponding association definitions linking back to that item.\n\n```\n\n@patrick@stwcx.xyz\nI think in this specific case we can make the assumption that every system has a CPU and DIMMs and we can safely map this into the specific Item.\u003ctype\u003e.interface files without taking away the liberty of others to design their own physical topology, but maybe I dont understand your reasoning behind your comment. So please share your thoughts on it, so I can understand your train of thought on this.",
+      "parentUuid": "d828cb91_d0c740bd",
+      "revId": "d324412759e6990d2b1dac3e4a2f25302f23588f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

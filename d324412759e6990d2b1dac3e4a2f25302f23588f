@@ -52,6 +52,24 @@
       "parentUuid": "d828cb91_d0c740bd",
       "revId": "d324412759e6990d2b1dac3e4a2f25302f23588f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54a421c5_346d7c8a",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/System.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002222
+      },
+      "writtenOn": "2026-01-12T12:01:26Z",
+      "side": 1,
+      "message": "After reading the older comments again, I think we\u0027re running in circles here. You made your point clear to place the associations in Inventory.Item.\n\nAs Inventory.Iten already has the containing and contained_by associations of type Inventory.Item, which covers Cpu, Dimm and System, I only have to abandon this change, correct? Let me know.",
+      "parentUuid": "656a6432_2a74a680",
+      "revId": "d324412759e6990d2b1dac3e4a2f25302f23588f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

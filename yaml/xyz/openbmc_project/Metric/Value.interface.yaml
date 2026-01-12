@@ -45,6 +45,10 @@ enumerations:
           - name: Percent
             description: >
                 Unit to indicate percentage.
+          - name: None
+            description: >
+                No unit.
+
 
 associations:
     - name: measuring
@@ -114,6 +118,11 @@ paths:
                 Reboot statistic to track number of times device rebooted
                 because of a failure.
             value: reboot/count_with_failure
+          - name: None/Unspecified
+            description: >
+                Path to to expose inventory information such as 
+                CPU model number, Number of cores, firmware version numbers etc.
+            value: none
     - name: BMC
       description: >
           The BMC metrics.

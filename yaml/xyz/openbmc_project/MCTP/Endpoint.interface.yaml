@@ -40,6 +40,34 @@ properties:
           not support that message type equally across all buses that connect to
           the device.
 
+    - name: VendorDefinedMessageTypes
+      type:
+          array[struct[enum[self.VendorIdFormat],variant[uint16,
+          uint32],uint16]]
+      description: >
+          List of vendor defined MCTP message types supported by the MCTP
+          endpoint. Each entry is a structure containing: Vendor ID Format
+          (enum), Vendor ID (variant), and Command Set (uint16). The Vendor ID
+          Format indicates whether the Vendor ID is a PCI Vendor ID (uint16) or
+          IANA Enterprise Number (uint32). The Vendor ID variant holds either a
+          uint16 (PCI format) or uint32 (IANA format) identifying the vendor or
+          organization that defined the message capability set. The Command Set
+          is a 16-bit numeric value or bit field specified by the vendor to
+          identify a particular command set type or major version under the
+          given vendor ID.
+
+enumerations:
+    - name: VendorIdFormat
+      description: >
+          Format of the Vendor ID in vendor defined message types.
+      values:
+          - name: PCIVendorId
+            description: >
+                PCI Vendor ID format (uint16).
+          - name: IANAEnterpriseNumber
+            description: >
+                IANA Enterprise Number format (uint32).
+
 associations:
     - name: configured_by
       description: >

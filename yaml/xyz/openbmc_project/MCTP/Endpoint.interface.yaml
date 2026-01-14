@@ -40,6 +40,23 @@ properties:
           not support that message type equally across all buses that connect to
           the device.
 
+    - name: VendorDefinedMessageTypes
+      type: array[struct[byte,variant[uint16, uint32],uint16]]
+      description: >
+          List of vendor defined MCTP message types supported by the MCTP
+          endpoint. Each entry is a structure containing: Vendor ID Format
+          (byte), Vendor ID (variant), and Command Set (uint16). The Vendor ID
+          Format and associated PCIe/IANA formats are defined by DSP0236. Vendor
+          ID Format 0x00 indicates PCI Vendor ID (uint16) or 0x01 indicates IANA
+          Enterprise Number (uint32). The Vendor ID variant holds either a
+          uint16 (PCI format) or uint32 (IANA format) identifying the vendor or
+          organization that defined the message capability set. The Command Set
+          is a 16-bit numeric value or bit field specified by the vendor to
+          identify a particular command set type or major version under the
+          given vendor ID. Implementations should gracefully handle Vendor ID
+          Format values they don't recognize, as DSP0236 may define additional
+          formats in future revisions.
+
 associations:
     - name: configured_by
       description: >

@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f8068aa_3fccc1cf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-15T17:25:50Z",
+      "side": 1,
+      "message": "When I look at the implementation, I see that only GPU is currently used.  This seems like a perfect use of associations on first read.\n\nWhy should we take on the internal baggage of this gigantic enum just because maybe someone would want to use a random enum in the future?  It seems to me like association to the GPU inventory for the sensor fits our implementation model way better and the PhysicalContext could be derived from the association.  We already have sensor associations to inventory for other reasons, so if someone wanted to extend the implementation of Redfish-PhysicalContext they could already do that today.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 63
+      },
+      "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "7e965c9d_6c695c96",

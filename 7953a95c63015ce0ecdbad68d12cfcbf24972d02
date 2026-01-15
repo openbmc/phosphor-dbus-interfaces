@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e1a7a64_76d1c571",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1000276
+      },
+      "writtenOn": "2026-01-15T15:19:48Z",
+      "side": 1,
+      "message": "It looks like the verification failure is probably caused by the `/` in the name.  Please try changing the name to something without a slash (e.g. `NoneOrUnspecified`) to see if it fixes the verification.",
+      "revId": "7953a95c63015ce0ecdbad68d12cfcbf24972d02",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -15,6 +15,7 @@ properties:
 
     - name: CurrentBMCState
       type: enum[self.BMCState]
+      default: "NotReady"
       description: >
           The current state of the BMC and is a read-only property.
 

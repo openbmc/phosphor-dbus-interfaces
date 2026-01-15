@@ -16,6 +16,46 @@
       "message": "Looks good to me",
       "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d26f2c6_f3f05377",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-15T17:22:44Z",
+      "side": 1,
+      "message": "This enum is ridiculously long, which I understand the same one from Redfish is also this long.\n\nAre we certain that any sensor could represent any of these?  Are there any restrictions we should put in place?  Are there any of these we have no intention of using right now?\n\n1. If there are restrictions where you wouldn\u0027t use some values for a specific sensor type, we should probably break it out into enums that can be obviously related to the use case.\n\n2. I am 100% certain we do not have intended uses for all of these right now.  What we\u0027ve almost always said was that even if Redfish defines a large enum space, we should only define the ones that are expected to be used (in the near term) and if people want to add new ones later on they can add them as they show need/use.",
+      "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14c836b8_0326638f",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-15T17:22:44Z",
+      "side": 1,
+      "message": "What is the purpose of these here?",
+      "range": {
+        "startLine": 184,
+        "startChar": 0,
+        "endLine": 190,
+        "endChar": 42
+      },
+      "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

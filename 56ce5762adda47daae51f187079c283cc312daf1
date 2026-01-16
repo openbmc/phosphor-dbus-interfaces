@@ -96,6 +96,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e45968c_070ace26",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-16T18:46:56Z",
+      "side": 1,
+      "message": "Thinking more about this, Mhz is a better option I think as it is a more realiatic unit (or easily converted to Ghz) than the base unit. This API is not too generic. We also have a CPU clock in a different interface which is also Mhz",
+      "parentUuid": "fd99d93d_945fec36",
+      "range": {
+        "startLine": 8,
+        "startChar": 12,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "56ce5762adda47daae51f187079c283cc312daf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "52a6cd95_6075c801",
@@ -167,6 +191,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "323f7e2c_45904371",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-16T18:46:56Z",
+      "side": 1,
+      "message": "Resolving this.",
+      "parentUuid": "9142cfa7_f120757c",
+      "revId": "56ce5762adda47daae51f187079c283cc312daf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c9aa65dc_ca4f8be8",
@@ -204,6 +246,30 @@
       "side": 1,
       "message": "Acknowledged",
       "parentUuid": "c9aa65dc_ca4f8be8",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 46
+      },
+      "revId": "56ce5762adda47daae51f187079c283cc312daf1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ecf7b161_06a8e456",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-16T18:46:56Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "6c6f1166_85f1de15",
       "range": {
         "startLine": 12,
         "startChar": 10,

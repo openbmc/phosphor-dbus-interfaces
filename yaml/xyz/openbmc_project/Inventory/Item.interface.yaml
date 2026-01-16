@@ -122,11 +122,12 @@ associations:
     - name: controlled_by
       description:
           Object that implements Item can optionally implement the
-          'controlled_by' association to provide a link to the control
-          interface.
+          'controlled_by' association to provide a link to one or more control
+          interfaces.
       reverse_name: controlling
       required_endpoint_interfaces:
           - xyz.openbmc_project.Control.Valve
+          - xyz.openbmc_project.Control.Power.Cap
 
 paths:
     - namespace: /xyz/openbmc_project/inventory

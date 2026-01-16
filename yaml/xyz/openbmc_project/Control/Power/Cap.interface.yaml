@@ -89,3 +89,13 @@ enumerations:
           - name: Oem
             description: >
                 OEM defined action.
+
+associations:
+    - name: controlling
+      description: >
+          Objects implementing Power.Cap can optionally implement the
+          'controlling' association to provide a link to the chassis item whose
+          power is being controlled.
+      reverse_name: controlled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Chassis

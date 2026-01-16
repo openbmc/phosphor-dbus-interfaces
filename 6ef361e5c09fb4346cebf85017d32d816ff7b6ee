@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "8aa75df7_aec9a03d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-16T16:00:52Z",
+      "side": 1,
+      "message": "I could be misremembering, but on a different patch a while back there was a comment on adding all Redfish enum values when we had added just one which was relevant to the implementation. Of course there were only 4-5 enum values in Redfish in that scenario.\n\nI did consider associations but didn\u0027t go that route for a couple reasons:\n1. Today the association is between a sensor and a chassis/board item, not something like a CPU or accelerator. It is also not mandatory that this chassis/board object is the one that also implements CPU or accelerator.\n\n2. I didn\u0027t think inventing a new association for this is a better option overall for physical context as not all of those context items map to inventory items.\n\n\nI see a couple of options now:\n1. Modify this to reduce the enum to map to only what the implementation uses, which is GPU.\n\n2. Pursue an association based solution. It could be workable for inventory items like GPU but not for \"area\" items like front/back.\n\nI would prefer 1, but I will think about 2 if you are unwilling to accept a D-Bus interface for this.",
+      "parentUuid": "0f8068aa_3fccc1cf",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 63
+      },
+      "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "7e965c9d_6c695c96",
@@ -60,6 +84,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "179c89b7_1ced8d16",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-16T16:00:52Z",
+      "side": 1,
+      "message": "Yes, we don\u0027t have intended uses for all except 1 in the implementation patch (please also see my response to the comment in the commit message).\n\n1. The only intended use now was GPU. I think we can document path segements that can implement the enum.\n2. ACK",
+      "parentUuid": "9d26f2c6_f3f05377",
+      "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "14c836b8_0326638f",
         "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.yaml",
         "patchSetId": 1
@@ -71,6 +113,30 @@
       "writtenOn": "2026-01-15T17:22:44Z",
       "side": 1,
       "message": "What is the purpose of these here?",
+      "range": {
+        "startLine": 184,
+        "startChar": 0,
+        "endLine": 190,
+        "endChar": 42
+      },
+      "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99f65df3_1bfd3d34",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-16T16:00:52Z",
+      "side": 1,
+      "message": "Document which objects can implement PhysicalConext. If you see the deacription, I provided Sensor as an example but Redfish has PhysicalContext for Metrics and Software resources as well. That is the reason I put this in Common.",
+      "parentUuid": "14c836b8_0326638f",
       "range": {
         "startLine": 184,
         "startChar": 0,

@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1f71fa4d_5e83998a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-16T20:01:43Z",
+      "side": 1,
+      "message": "\u003e How should these sensors typically be mapped to D‑Bus properties?\n\nYou\u0027re asking a general question for something that requires a specific answer.\n\nFor example, firmware inventory, PLDM would create `xyz.openbmc_project.Software.Verson` instances.\n\n\u003e How should we handle scenarios where the D‑Bus interface is owned by another service?\n\nThis question is fundamentally mistaken.  There is no such thing as a dbus interface being \"owned\" by a specific service.  The whole point of the architecture is that _any_ daemon can create any of the interfaces.\n\nIf PLDM has information, PLDM hosts the instances for this information.\n\n\u003e My initial thought was to let PLDM expose these as generic sensors and allow interested services to consume them based on the object path or sensor name.\n\nNo, this is fundamentally contrary to the software architecture.  We don\u0027t want _any_ daemons to know about PLDM or IPMI or any other external protocol; they should only know dbus interfaces.  We don\u0027t want every daemon to have to interface with one set of PLDM objects and then another set of IPMI objects and then another set of SPDM objects ...",
+      "parentUuid": "758694a1_29c3b3c6",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "7953a95c63015ce0ecdbad68d12cfcbf24972d02",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "60b3cbc0_9eb0f219",
         "filename": "/COMMIT_MSG",
         "patchSetId": 9

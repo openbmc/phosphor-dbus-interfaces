@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "758694a1_29c3b3c6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000479
+      },
+      "writtenOn": "2026-01-16T08:44:49Z",
+      "side": 1,
+      "message": "I understand. However, I do have couple of points I’d like clarification on:\n\n1. How should these sensors typically be mapped to D‑Bus properties?\nWould it make sense to use a static configuration and map them based on sensor names, or any other preferred ideas?\n2. How should we handle scenarios where the D‑Bus interface is owned by another service, and only certain properties are sourced from PLDM sensor readings? Should changes in sensor values trigger SetProperty calls to those services, or is there a recommended flow to coordinate this?\n\nMy initial thought was to let PLDM expose these as generic sensors and allow interested services to consume them based on the object path or sensor name.",
+      "parentUuid": "087d0010_6d2544f1",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "7953a95c63015ce0ecdbad68d12cfcbf24972d02",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "60b3cbc0_9eb0f219",
         "filename": "/COMMIT_MSG",
         "patchSetId": 9

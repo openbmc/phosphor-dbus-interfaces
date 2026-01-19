@@ -176,6 +176,30 @@
       },
       "revId": "2528ced5e1843fe33d092076b42c75c44fe66303",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85a9cd86_aace8045",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2026-01-19T05:17:51Z",
+      "side": 1,
+      "message": "and we already have the (uint8, variant, uint16) format (`yvq`) for the VDM type registration: https://github.com/CodeConstruct/mctp/blob/main/docs/mctpd.md#registervdmtypesupport-yvq - of which this is somewhat symmetrical.",
+      "parentUuid": "4f81a35b_59b0c8c5",
+      "range": {
+        "startLine": 50,
+        "startChar": 38,
+        "endLine": 52,
+        "endChar": 63
+      },
+      "revId": "2528ced5e1843fe33d092076b42c75c44fe66303",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

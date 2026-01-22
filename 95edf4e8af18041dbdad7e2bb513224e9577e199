@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8681104a_7d815588",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-22T21:04:47Z",
+      "side": 1,
+      "message": "It\u0027s unfortunate that this is a uint32 and not a uint64, but it looks a little painful to change at this point?",
+      "revId": "95edf4e8af18041dbdad7e2bb513224e9577e199",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a16737c_50e98402",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-22T21:04:47Z",
+      "side": 1,
+      "message": "Can we get units added here if we\u0027re going to start using this outside the OCC code?",
+      "range": {
+        "startLine": 9,
+        "startChar": 10,
+        "endLine": 9,
+        "endChar": 64
+      },
+      "revId": "95edf4e8af18041dbdad7e2bb513224e9577e199",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

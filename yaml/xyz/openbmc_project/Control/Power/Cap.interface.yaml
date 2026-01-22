@@ -4,10 +4,12 @@ description: >
 properties:
     - name: PowerCap
       type: uint32
+      default: maxint
       description: >
           Power cap value. This is the user specified power cap.  When enabled
-          the power usage of the system will be limited to keep the power at or
-          below this cap.  This value is in Watts.
+          the power usage of the associated item will be limited to keep the
+          power at or below this cap.  This value is in Watts. If this has not
+          been set by the user, the value will be maxint.
 
     - name: PowerCapEnable
       type: boolean

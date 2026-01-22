@@ -50,6 +50,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "c9ea24aa_d753fadb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-22T18:47:02Z",
+      "side": 1,
+      "message": "I\u0027ve done:\n\nModify this to reduce the enum to map to only what the implementation uses, which is GPU.\n\nThis addresses the concern around carrying a large enum without existing usecases.",
+      "parentUuid": "8aa75df7_aec9a03d",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 63
+      },
+      "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "7e965c9d_6c695c96",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -100,6 +124,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7011072_522c5d02",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-22T18:47:02Z",
+      "side": 1,
+      "message": "Have retained only accelerator in the enum.",
+      "parentUuid": "179c89b7_1ced8d16",
+      "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "14c836b8_0326638f",
@@ -137,6 +179,30 @@
       "side": 1,
       "message": "Document which objects can implement PhysicalConext. If you see the deacription, I provided Sensor as an example but Redfish has PhysicalContext for Metrics and Software resources as well. That is the reason I put this in Common.",
       "parentUuid": "14c836b8_0326638f",
+      "range": {
+        "startLine": 184,
+        "startChar": 0,
+        "endLine": 190,
+        "endChar": 42
+      },
+      "revId": "6ef361e5c09fb4346cebf85017d32d816ff7b6ee",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa1c0f06_1bcf06ad",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-22T18:47:02Z",
+      "side": 1,
+      "message": "Have retained xyz/openbmc_project/sensors.",
+      "parentUuid": "99f65df3_1bfd3d34",
       "range": {
         "startLine": 184,
         "startChar": 0,

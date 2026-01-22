@@ -2,6 +2,18 @@ description: >
     Implement to specify the power consumption cap and bounds
 
 properties:
+    - name: DefaultPowerCap
+      type: uint32
+      flags:
+          - readonly
+      default: maxint
+      description: >
+          This is the default cap value, when a user hasn't set PowerCap, that
+          the power usage of the associated item will be limited to. This value
+          is in Watts. If such a default doesn't exist , the value will be
+          maxint. A user specified value for PowerCap may override the
+          DefaultPowerCap value.
+
     - name: PowerCap
       type: uint32
       default: maxint

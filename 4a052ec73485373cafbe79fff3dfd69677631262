@@ -51,6 +51,24 @@
       "parentUuid": "881f9501_47f3192f",
       "revId": "4a052ec73485373cafbe79fff3dfd69677631262",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b57015f5_4661ba2f",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-22T17:12:46Z",
+      "side": 1,
+      "message": "I\u0027m going to drop the \u0027PORTID\u0027 off this.  We don\u0027t do string replacement fields here but just expect appending.",
+      "parentUuid": "e6bf1d6c_bd7f71f9",
+      "revId": "4a052ec73485373cafbe79fff3dfd69677631262",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

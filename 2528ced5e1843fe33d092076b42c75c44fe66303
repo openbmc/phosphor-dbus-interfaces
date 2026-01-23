@@ -248,6 +248,30 @@
       },
       "revId": "2528ced5e1843fe33d092076b42c75c44fe66303",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52f6fe39_4c82f063",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2026-01-23T01:16:07Z",
+      "side": 1,
+      "message": "`mctpd` publishes this, for consumption by other applications that may want to discover an endpoint that advertises support for a particular upper-layer protocol (in this case, a vendor-defined one). I assume the reactors would also consume this, but perhaps not in the case of VDM types?\n\nMy preference here would be for that protocol-type representation to closely match the representation described in the MCTP Base spec, in using the uint8 for the format, and variant for the type data.",
+      "parentUuid": "5edeafe3_5db1a4e1",
+      "range": {
+        "startLine": 50,
+        "startChar": 38,
+        "endLine": 52,
+        "endChar": 63
+      },
+      "revId": "2528ced5e1843fe33d092076b42c75c44fe66303",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

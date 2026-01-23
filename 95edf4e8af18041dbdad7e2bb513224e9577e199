@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f120ce6c_ab0cf0d6",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-23T01:21:26Z",
+      "side": 1,
+      "message": "I will look at the usage and follow up, if not too painful, with separate commits.",
+      "parentUuid": "8681104a_7d815588",
+      "revId": "95edf4e8af18041dbdad7e2bb513224e9577e199",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0a16737c_50e98402",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-01-22T21:04:47Z",
       "side": 1,
       "message": "Can we get units added here if we\u0027re going to start using this outside the OCC code?",
+      "range": {
+        "startLine": 9,
+        "startChar": 10,
+        "endLine": 9,
+        "endChar": 64
+      },
+      "revId": "95edf4e8af18041dbdad7e2bb513224e9577e199",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19838430_0dbe09d8",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-23T01:21:26Z",
+      "side": 1,
+      "message": "It does say this is Watts in the description below. Did you mean this or something else?",
+      "parentUuid": "0a16737c_50e98402",
       "range": {
         "startLine": 9,
         "startChar": 10,

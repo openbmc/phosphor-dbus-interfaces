@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ece94bc3_125d1671",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-01-23T20:54:42Z",
+      "side": 1,
+      "message": "This policy exists so that SPDM behaviour can be controlled via Redfish at runtime. Even if SPDM support is present in the BMC image, a Redfish client can explicitly enable or disable it using the [SecurityPolicy](https://redfish.dmtf.org/schemas/v1/SecurityPolicy.v1_0_3.json) resource.\n\nThis avoids the need for multiple BMC images and allows platforms or customers to decide their SPDM posture through configuration, including enabling it later or disabling it for compatibility or security reasons.",
+      "parentUuid": "7c737be7_692f8fc4",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ead1861d_da093429",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-01-23T13:37:31Z",
       "side": 1,
       "message": "In which scenario None should be set?",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99f28098_b2c1a1e8",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-01-23T20:54:42Z",
+      "side": 1,
+      "message": "IMO, based on the redfish security policy spec, Setting the versions or algorithms to `NONE` is used to explicitly say instances like “SPDM is enabled, but no versions or algorithms are allowed to be used at the moment” This makes the policy unambiguous and prevents SPDM negotiation even if defaults exist or support is added later.",
+      "parentUuid": "ead1861d_da093429",
       "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

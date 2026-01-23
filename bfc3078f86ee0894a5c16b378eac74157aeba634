@@ -16,6 +16,24 @@
       "message": "Since secure session is optional some platforms may choose not to support secure session. In that case this will be empty. Can we please add this to description?",
       "revId": "bfc3078f86ee0894a5c16b378eac74157aeba634",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd3d92c3_6eb1a8ed",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-01-23T21:17:45Z",
+      "side": 1,
+      "message": "Thanks for pointing that out! I was under the impression that it was implicit, but I’ve added the clarification to make it explicit in the description.",
+      "parentUuid": "602c8c29_4896bcf8",
+      "revId": "bfc3078f86ee0894a5c16b378eac74157aeba634",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -72,6 +72,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "69c0e5de_45be8d3a",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2026-01-26T21:05:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15d026c9_a263e67c",
+      "range": {
+        "startLine": 2,
+        "startChar": 4,
+        "endLine": 2,
+        "endChar": 13
+      },
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "66c36922_24c505e5",
@@ -109,6 +133,30 @@
       "side": 1,
       "message": "Setting ReadyToRemove to \"True\"  kicks off the quiesce process and conversely setting it to \"False\" begins the process of resuming activity to the part that was just replaced.",
       "parentUuid": "66c36922_24c505e5",
+      "range": {
+        "startLine": 3,
+        "startChar": 13,
+        "endLine": 4,
+        "endChar": 43
+      },
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "673242e8_dd2ec901",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2026-01-26T21:05:01Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "71bf8375_49e3d09e",
       "range": {
         "startLine": 3,
         "startChar": 13,
@@ -221,6 +269,24 @@
       "side": 1,
       "message": "I thought it would persist until an app or client changes it?? Same as other state properties. Although, booting the system / rebooting the bmc during an operation like this, seems odd.",
       "parentUuid": "20ad1b28_058cddaf",
+      "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc8ff7e1_baa590c6",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2026-01-26T21:05:01Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "10e91c0a_888143c1",
       "revId": "cd2ac6ab477cff0ec246ed5886aade2ff176932b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

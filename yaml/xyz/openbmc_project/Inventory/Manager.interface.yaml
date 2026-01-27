@@ -15,3 +15,16 @@ methods:
             type: dict[object_path,dict[string,dict[string,variant[boolean,size,int64,uint16,string,array[byte],array[string]]]]]
             description: >
                 A dictionary of fully enumerated items to be managed.
+    - name: DeleteObject
+      description: >
+          Deletes the specified inventory object path and all child objects
+          under that path, and removes the persisted inventory data associated
+          with them.
+      parameters:
+          - name: path
+            type: object_path
+            description: >
+                Object path to be removed.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure

@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/meta/Hardware/Ventura2'
 
 generated_sources += custom_target(
     'com/meta/Hardware/Ventura2__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/meta/Hardware/Ventura2.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/meta/Hardware/Ventura2.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

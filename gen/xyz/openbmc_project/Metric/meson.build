@@ -6,7 +6,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/Metric'
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Metric/Reset__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Metric/Reset.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Metric/Reset.interface.yaml',
+    ],
     output: ['Reset.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -28,7 +30,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Metric/Value__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Metric/Value.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Metric/Value.interface.yaml',
+    ],
     output: ['Value.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

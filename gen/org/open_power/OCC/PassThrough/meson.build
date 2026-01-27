@@ -4,7 +4,9 @@ sdbusplus_current_path = 'org/open_power/OCC/PassThrough'
 
 generated_sources += custom_target(
     'org/open_power/OCC/PassThrough__cpp'.underscorify(),
-    input: ['../../../../../yaml/org/open_power/OCC/PassThrough.interface.yaml'],
+    input: [
+        '../../../../../yaml/org/open_power/OCC/PassThrough.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

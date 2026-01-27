@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/meta/Hardware/Minerva'
 
 generated_sources += custom_target(
     'com/meta/Hardware/Minerva__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/meta/Hardware/Minerva.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/meta/Hardware/Minerva.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

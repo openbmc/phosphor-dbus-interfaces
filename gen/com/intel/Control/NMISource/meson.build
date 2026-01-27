@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/intel/Control/NMISource'
 
 generated_sources += custom_target(
     'com/intel/Control/NMISource__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/intel/Control/NMISource.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/intel/Control/NMISource.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

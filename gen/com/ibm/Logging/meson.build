@@ -5,7 +5,9 @@ sdbusplus_current_path = 'com/ibm/Logging'
 
 generated_markdown += custom_target(
     'com/ibm/Logging/Policy__markdown'.underscorify(),
-    input: ['../../../../yaml/com/ibm/Logging/Policy.interface.yaml'],
+    input: [
+        '../../../../yaml/com/ibm/Logging/Policy.interface.yaml',
+    ],
     output: ['Policy.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

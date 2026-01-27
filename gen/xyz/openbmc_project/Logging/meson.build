@@ -12,8 +12,13 @@ sdbusplus_current_path = 'xyz/openbmc_project/Logging'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/Logging__cpp'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Logging.events.yaml'],
-    output: ['event.cpp', 'event.hpp'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Logging.events.yaml',
+    ],
+    output: [
+        'event.cpp',
+        'event.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog,
@@ -28,7 +33,10 @@ generated_sources += custom_target(
         'xyz/openbmc_project/Logging',
     ],
     install: should_generate_cpp,
-    install_dir: [false, get_option('includedir') / sdbusplus_current_path],
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
     build_by_default: should_generate_cpp,
 )
 
@@ -58,7 +66,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Logging/Entry__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Logging/Entry.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Logging/Entry.interface.yaml',
+    ],
     output: ['Entry.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -104,7 +114,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Logging/Event__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Logging/Event.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Logging/Event.interface.yaml',
+    ],
     output: ['Event.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -126,7 +138,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Logging/IPMI__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Logging/IPMI.interface.yaml',
+    ],
     output: ['IPMI.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -148,7 +162,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Logging/SEL__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Logging/SEL.errors.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Logging/SEL.errors.yaml',
+    ],
     output: ['SEL.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

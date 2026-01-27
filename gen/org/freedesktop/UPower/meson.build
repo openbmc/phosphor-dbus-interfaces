@@ -5,7 +5,9 @@ sdbusplus_current_path = 'org/freedesktop/UPower'
 
 generated_markdown += custom_target(
     'org/freedesktop/UPower/Device__markdown'.underscorify(),
-    input: ['../../../../yaml/org/freedesktop/UPower/Device.interface.yaml'],
+    input: [
+        '../../../../yaml/org/freedesktop/UPower/Device.interface.yaml',
+    ],
     output: ['Device.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

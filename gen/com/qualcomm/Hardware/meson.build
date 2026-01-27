@@ -5,7 +5,9 @@ sdbusplus_current_path = 'com/qualcomm/Hardware'
 
 generated_markdown += custom_target(
     'com/qualcomm/Hardware/BMC__markdown'.underscorify(),
-    input: ['../../../../yaml/com/qualcomm/Hardware/BMC.interface.yaml'],
+    input: [
+        '../../../../yaml/com/qualcomm/Hardware/BMC.interface.yaml',
+    ],
     output: ['BMC.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

@@ -5,7 +5,9 @@ sdbusplus_current_path = 'org/open_power/Common'
 
 generated_markdown += custom_target(
     'org/open_power/Common/Callout__markdown'.underscorify(),
-    input: ['../../../../yaml/org/open_power/Common/Callout.errors.yaml'],
+    input: [
+        '../../../../yaml/org/open_power/Common/Callout.errors.yaml',
+    ],
     output: ['Callout.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

@@ -15,3 +15,13 @@ methods:
             type: dict[object_path,dict[string,dict[string,variant[boolean,size,int64,uint16,string,array[byte],array[string]]]]]
             description: >
                 A dictionary of fully enumerated items to be managed.
+    - name: DeleteObject
+      description: >
+          Delete an inventory object and remove its persisted data. This removes
+          the object from the D-Bus inventory subtree and deletes any stored
+          state associated with the object path.
+      parameters:
+          - name: path
+            type: object_path
+            description: >
+                Object path to be removed.

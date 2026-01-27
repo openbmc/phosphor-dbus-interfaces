@@ -7,7 +7,9 @@ sdbusplus_current_path = 'org/open_power/OCC'
 
 generated_markdown += custom_target(
     'org/open_power/OCC/Device__markdown'.underscorify(),
-    input: ['../../../../yaml/org/open_power/OCC/Device.errors.yaml'],
+    input: [
+        '../../../../yaml/org/open_power/OCC/Device.errors.yaml',
+    ],
     output: ['Device.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -29,7 +31,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'org/open_power/OCC/PassThrough__markdown'.underscorify(),
-    input: ['../../../../yaml/org/open_power/OCC/PassThrough.interface.yaml'],
+    input: [
+        '../../../../yaml/org/open_power/OCC/PassThrough.interface.yaml',
+    ],
     output: ['PassThrough.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -51,7 +55,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'org/open_power/OCC/Status__markdown'.underscorify(),
-    input: ['../../../../yaml/org/open_power/OCC/Status.interface.yaml'],
+    input: [
+        '../../../../yaml/org/open_power/OCC/Status.interface.yaml',
+    ],
     output: ['Status.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

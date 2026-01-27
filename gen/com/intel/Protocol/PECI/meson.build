@@ -5,7 +5,9 @@ sdbusplus_current_path = 'com/intel/Protocol/PECI'
 
 generated_markdown += custom_target(
     'com/intel/Protocol/PECI/Raw__markdown'.underscorify(),
-    input: ['../../../../../yaml/com/intel/Protocol/PECI/Raw.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/intel/Protocol/PECI/Raw.interface.yaml',
+    ],
     output: ['Raw.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

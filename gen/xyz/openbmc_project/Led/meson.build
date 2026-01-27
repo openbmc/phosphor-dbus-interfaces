@@ -6,7 +6,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/Led'
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Led/Group__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Led/Group.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Led/Group.interface.yaml',
+    ],
     output: ['Group.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -28,7 +30,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Led/Physical__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Led/Physical.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Led/Physical.interface.yaml',
+    ],
     output: ['Physical.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

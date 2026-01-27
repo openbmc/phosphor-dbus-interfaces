@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/meta/Hardware/Yosemite5'
 
 generated_sources += custom_target(
     'com/meta/Hardware/Yosemite5__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/meta/Hardware/Yosemite5.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/meta/Hardware/Yosemite5.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

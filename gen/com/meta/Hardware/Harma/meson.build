@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/meta/Hardware/Harma'
 
 generated_sources += custom_target(
     'com/meta/Hardware/Harma__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/meta/Hardware/Harma.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/meta/Hardware/Harma.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

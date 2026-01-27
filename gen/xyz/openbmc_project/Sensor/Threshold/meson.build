@@ -13,7 +13,12 @@ generated_sources += custom_target(
         '../../../../../yaml/xyz/openbmc_project/Sensor/Threshold.errors.yaml',
         '../../../../../yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml',
     ],
-    output: ['error.cpp', 'error.hpp', 'event.cpp', 'event.hpp'],
+    output: [
+        'error.cpp',
+        'error.hpp',
+        'event.cpp',
+        'event.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog,

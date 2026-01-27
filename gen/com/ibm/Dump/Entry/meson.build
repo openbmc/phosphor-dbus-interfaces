@@ -8,7 +8,9 @@ sdbusplus_current_path = 'com/ibm/Dump/Entry'
 
 generated_markdown += custom_target(
     'com/ibm/Dump/Entry/Hardware__markdown'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/Dump/Entry/Hardware.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/Dump/Entry/Hardware.interface.yaml',
+    ],
     output: ['Hardware.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -30,7 +32,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/ibm/Dump/Entry/Hostboot__markdown'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/Dump/Entry/Hostboot.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/Dump/Entry/Hostboot.interface.yaml',
+    ],
     output: ['Hostboot.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -52,7 +56,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/ibm/Dump/Entry/Resource__markdown'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/Dump/Entry/Resource.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/Dump/Entry/Resource.interface.yaml',
+    ],
     output: ['Resource.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -74,7 +80,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/ibm/Dump/Entry/SBE__markdown'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/Dump/Entry/SBE.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/Dump/Entry/SBE.interface.yaml',
+    ],
     output: ['SBE.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

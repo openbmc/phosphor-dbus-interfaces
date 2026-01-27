@@ -4,8 +4,13 @@ sdbusplus_current_path = 'com/meta/IPMI/UnifiedSEL'
 
 generated_sources += custom_target(
     'com/meta/IPMI/UnifiedSEL__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/meta/IPMI/UnifiedSEL.events.yaml'],
-    output: ['event.cpp', 'event.hpp'],
+    input: [
+        '../../../../../yaml/com/meta/IPMI/UnifiedSEL.events.yaml',
+    ],
+    output: [
+        'event.cpp',
+        'event.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog,
@@ -20,7 +25,10 @@ generated_sources += custom_target(
         'com/meta/IPMI/UnifiedSEL',
     ],
     install: should_generate_cpp,
-    install_dir: [false, get_option('includedir') / sdbusplus_current_path],
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
     build_by_default: should_generate_cpp,
 )
 

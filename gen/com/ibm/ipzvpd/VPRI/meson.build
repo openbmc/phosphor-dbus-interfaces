@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/ibm/ipzvpd/VPRI'
 
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VPRI__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/ipzvpd/VPRI.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/ipzvpd/VPRI.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

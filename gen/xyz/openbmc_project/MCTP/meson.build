@@ -5,7 +5,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/MCTP'
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/MCTP/Endpoint__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml',
+    ],
     output: ['Endpoint.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

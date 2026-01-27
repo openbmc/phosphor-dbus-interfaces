@@ -8,7 +8,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/Chassis'
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Chassis/Common__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Chassis/Common.errors.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Chassis/Common.errors.yaml',
+    ],
     output: ['Common.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

@@ -75,7 +75,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Control/Device__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Control/Device.errors.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Control/Device.errors.yaml',
+    ],
     output: ['Device.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -266,7 +268,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Control/Mode__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Control/Mode.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Control/Mode.interface.yaml',
+    ],
     output: ['Mode.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -360,7 +364,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Control/Valve__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Control/Valve.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Control/Valve.interface.yaml',
+    ],
     output: ['Valve.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

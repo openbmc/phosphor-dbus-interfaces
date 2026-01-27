@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/ibm/ipzvpd/VINI'
 
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VINI__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/ipzvpd/VINI.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/ipzvpd/VINI.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

@@ -13,7 +13,9 @@ sdbusplus_current_path = 'com/meta/Hardware'
 
 generated_markdown += custom_target(
     'com/meta/Hardware/Anacapa__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/Hardware/Anacapa.interface.yaml'],
+    input: [
+        '../../../../yaml/com/meta/Hardware/Anacapa.interface.yaml',
+    ],
     output: ['Anacapa.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -35,7 +37,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/meta/Hardware/BMC__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/Hardware/BMC.interface.yaml'],
+    input: [
+        '../../../../yaml/com/meta/Hardware/BMC.interface.yaml',
+    ],
     output: ['BMC.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -57,7 +61,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/meta/Hardware/Catalina__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/Hardware/Catalina.interface.yaml'],
+    input: [
+        '../../../../yaml/com/meta/Hardware/Catalina.interface.yaml',
+    ],
     output: ['Catalina.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -79,7 +85,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/meta/Hardware/Clemente__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/Hardware/Clemente.interface.yaml'],
+    input: [
+        '../../../../yaml/com/meta/Hardware/Clemente.interface.yaml',
+    ],
     output: ['Clemente.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -101,7 +109,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/meta/Hardware/Harma__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/Hardware/Harma.interface.yaml'],
+    input: [
+        '../../../../yaml/com/meta/Hardware/Harma.interface.yaml',
+    ],
     output: ['Harma.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -123,7 +133,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/meta/Hardware/Minerva__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/Hardware/Minerva.interface.yaml'],
+    input: [
+        '../../../../yaml/com/meta/Hardware/Minerva.interface.yaml',
+    ],
     output: ['Minerva.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -145,7 +157,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/meta/Hardware/Santabarbara__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/Hardware/Santabarbara.interface.yaml'],
+    input: [
+        '../../../../yaml/com/meta/Hardware/Santabarbara.interface.yaml',
+    ],
     output: ['Santabarbara.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -167,7 +181,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/meta/Hardware/Ventura2__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/Hardware/Ventura2.interface.yaml'],
+    input: [
+        '../../../../yaml/com/meta/Hardware/Ventura2.interface.yaml',
+    ],
     output: ['Ventura2.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -189,7 +205,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/meta/Hardware/Yosemite5__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/Hardware/Yosemite5.interface.yaml'],
+    input: [
+        '../../../../yaml/com/meta/Hardware/Yosemite5.interface.yaml',
+    ],
     output: ['Yosemite5.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

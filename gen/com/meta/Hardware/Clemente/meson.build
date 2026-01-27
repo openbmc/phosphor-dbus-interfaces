@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/meta/Hardware/Clemente'
 
 generated_sources += custom_target(
     'com/meta/Hardware/Clemente__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/meta/Hardware/Clemente.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/meta/Hardware/Clemente.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

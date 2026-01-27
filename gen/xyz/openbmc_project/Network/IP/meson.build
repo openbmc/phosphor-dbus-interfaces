@@ -4,7 +4,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/Network/IP'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/Network/IP__cpp'.underscorify(),
-    input: ['../../../../../yaml/xyz/openbmc_project/Network/IP.interface.yaml'],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/Network/IP.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

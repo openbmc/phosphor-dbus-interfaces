@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/meta/Hardware/Anacapa'
 
 generated_sources += custom_target(
     'com/meta/Hardware/Anacapa__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/meta/Hardware/Anacapa.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/meta/Hardware/Anacapa.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

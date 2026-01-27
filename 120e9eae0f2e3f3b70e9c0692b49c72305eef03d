@@ -16,6 +16,24 @@
       "message": "This doesn\u0027t look like patchset 2 though?",
       "revId": "120e9eae0f2e3f3b70e9c0692b49c72305eef03d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44a6d431_337d1a85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000928
+      },
+      "writtenOn": "2026-01-27T02:56:03Z",
+      "side": 1,
+      "message": "Hi @jk@ozlabs.org \n\nI changed type def from patchset 2\n\narray[struct[byte,variant[uint16, uint32],uint16]]\nto\narray[struct[enum[self.VendorIdFormat],variant[uint16, uint32],uint16]]\n\nOnly diff I tried to make is the enum. Is that what you meant ?",
+      "parentUuid": "768d08b4_46fddc1b",
+      "revId": "120e9eae0f2e3f3b70e9c0692b49c72305eef03d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -56,6 +56,46 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5f215299_46f1c99e",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2026-01-28T09:40:13Z",
+      "side": 1,
+      "message": "None should not be included in the Special SET values for SPDMAllowedVersions, as it does not make sense.\nSPDM is present in the image and enabled, but if no versions are supported, it makes SPDM effectively unusable.",
+      "range": {
+        "startLine": 32,
+        "startChar": 30,
+        "endLine": 32,
+        "endChar": 46
+      },
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7367d61f_f09b2af6",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2026-01-28T09:40:13Z",
+      "side": 1,
+      "message": "Do we need all these algorithms on Dbus? It should be build time configurations.",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ead1861d_da093429",
         "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
         "patchSetId": 3

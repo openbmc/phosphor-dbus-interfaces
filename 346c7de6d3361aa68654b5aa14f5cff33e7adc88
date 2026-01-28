@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b960868_f2e28bc3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-01-28T10:16:23Z",
+      "side": 1,
+      "message": "Updated",
+      "parentUuid": "e2aea884_e8abe65b",
+      "range": {
+        "startLine": 10,
+        "startChar": 29,
+        "endLine": 10,
+        "endChar": 32
+      },
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9005adc7_56ac0439",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-01-27T11:07:22Z",
       "side": 1,
       "message": "Can you provide an example?",
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a5537ad_b05c1910",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-01-28T10:16:23Z",
+      "side": 1,
+      "message": "One of the use case can be that a PCIe slot may support multiple types of cards and depending  on the type of card present it may expose different child objects, such as connector/ports. So, when a card is replaced with a different type, depending upon the connector/ports exposed by the replaced card the subtree can change. Existing inventory objects and their persisted data must be removed to prevent stale entries from remaining in the D-Bus inventory tree.",
+      "parentUuid": "9005adc7_56ac0439",
       "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -146,6 +188,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea1dcf23_25d5ed3f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-01-28T10:16:23Z",
+      "side": 1,
+      "message": "Yes updated the description.",
+      "parentUuid": "6fab9a6e_6a46c415",
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d46faa24_5a2451d8",
@@ -159,6 +219,24 @@
       "writtenOn": "2026-01-27T11:07:22Z",
       "side": 1,
       "message": "ResourceNotFound?",
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "418e3a8b_4180199b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-01-28T10:16:23Z",
+      "side": 1,
+      "message": "Updated",
+      "parentUuid": "d46faa24_5a2451d8",
       "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

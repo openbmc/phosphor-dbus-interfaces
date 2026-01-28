@@ -269,3 +269,15 @@ paths:
           object is expected to implement Connector.Port. The port ID
           (index/name/etc) is appended to the path.
       value: /xyz/openbmc_project/metric/port_
+    - name: CPU
+      description: >
+          A CPU's metrics. The inventory item associated with the CPU metrics
+          object is expected to implement Item.Cpu. The CPU ID (index/name/etc)
+          is appended to the metrics object path value below.
+      value: /xyz/openbmc_project/metric/cpu_
+    - name: GPU
+      description: >
+          A GPU's metrics. The inventory item associated with the GPU metrics
+          object is expected to implement Item.Accelerator. The GPU ID
+          (index/name/etc) is appended to the metrics object path value below.
+      value: /xyz/openbmc_project/metric/gpu_

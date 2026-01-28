@@ -22,6 +22,30 @@
       },
       "revId": "0ef809ef9a613b61b571b228d5451c86f294a9c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb2c3647_7b7742c6",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-01-28T15:21:06Z",
+      "side": 1,
+      "message": "Per the SPDM specification, secure sessions are created internally by the SPDM protocol flow itself if both the requester and responder supports the mutual authentication. Once attestation is complete and mutual trust is established, the requester and responder may use key-exchange commands(if the security policy has `SecureSessionEnabled` enabled) to create a secure session.\n\n\u003e The responder assigns a Session ID\n\n\nNo, Per SPDM specification during the KEY_EXCHANGE or PSK_EXCHANGE sequence, both endpoints contribute to the Session ID: the Requester provides a 2-byte ReqSessionID, the Responder provides a 2-byte RspSessionID, and the final 4-byte Session ID is formed by concatenating the two. Session creation, uniqueness, and teardown are therefore fully owned by the SPDM state machine and not by D-Bus or management clients - hence it is marked as readonly in this patch. \n\n\n\u003e Are we expecting the initiator(PLDM, SPDM, or a proprietary protocol \nover MCTP) to create, update, and delete the secure session via the \nD-Bus object hosted by the SPDM service?\n\n\n\nNope, The application data carried over an SPDM secure session is intentionally out of scope for this change. As defined by the SPDM specification, application data exchanged within a secure session can be arbitrary and vendor-specific, and may include PLDM or other protocols layered on top of SPDM.This change does not introduce any design or mechanism for handling, routing, or interpreting application data over the secure session. It is purely an informational update that exposes the existence of active SPDM secure sessions (session ID and type) for visibility purposes to redfish clients.Any discussion around using secure sessions for PLDM or other application data would be a separate design and change.\n\n\u003e Do we need to show it through OOB that how many secure sessions are active?\n\nWell, that\u0027s a specification question . Redfish supports exposing it. External redfish clients would need to know if there is a secure channel created \u0026 if so how many \u0026 what was the type of authentication used to create the session. That\u0027s what this patch set enables us to do.",
+      "parentUuid": "219a29b5_c985c6d1",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 19
+      },
+      "revId": "0ef809ef9a613b61b571b228d5451c86f294a9c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

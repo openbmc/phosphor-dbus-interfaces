@@ -14,6 +14,24 @@ properties:
       type: uint64
       description: >
           Max Speed in megahertz the accelerator can support.
+    - name: PowerLimitThrottleDuration
+      type: uint64
+      flags:
+          - readonly
+      default: maxint
+      description: >
+          The total duration, in nanoseconds, of throttling caused by a power
+          limit of the accelerator since reset. The default value indicates this
+          property is not supported.
+    - name: ThermalLimitThrottleDuration
+      type: uint64
+      flags:
+          - readonly
+      default: maxint
+      description: >
+          The total duration, in nanoseconds, of throttling caused by a thermal
+          limit of the accelerator since reset. The default value indicates this
+          property is not supported.
 
 enumerations:
     - name: AcceleratorType

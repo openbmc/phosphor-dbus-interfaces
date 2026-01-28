@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "30bda1ad_64abad44",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001516
+      },
+      "writtenOn": "2026-01-28T05:24:32Z",
+      "side": 1,
+      "message": "When this policy is disabled through redfish expectation in spdmd service is not to perform SPDM discovery and attestation? or we will have the control in BMC to disable spdm service this at run time",
+      "parentUuid": "ece94bc3_125d1671",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ead1861d_da093429",
         "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
         "patchSetId": 3
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "IMO, based on the redfish security policy spec, Setting the versions or algorithms to `NONE` is used to explicitly say instances like “SPDM is enabled, but no versions or algorithms are allowed to be used at the moment” This makes the policy unambiguous and prevents SPDM negotiation even if defaults exist or support is added later.",
       "parentUuid": "ead1861d_da093429",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd5f76f1_3fd819a8",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1001516
+      },
+      "writtenOn": "2026-01-28T05:24:32Z",
+      "side": 1,
+      "message": "We have Allowed and disabled field in policy setting. How are we planning to support this?. Also these values can be set.\n\n```\nSPDM {\n  Allowed {\n    Versions [ ]\n  },\n  Denied {\n    Versions [ ]\n}\n}\n\n```\n\nhttps://www.dmtf.org/sites/default/files/standards/documents/DSP2046_2025.1.pdf\n\nOr by using None, we are not going to support those policy settings?",
+      "parentUuid": "99f28098_b2c1a1e8",
       "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

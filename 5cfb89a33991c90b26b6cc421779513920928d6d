@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be7e6576_2d1cfaf9",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-28T07:17:23Z",
+      "side": 1,
+      "message": "How do we know what item this is? Does this need to have associations to other object(s) or other expectations (path/service) documented here?",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e0a46d9_a5169d04",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-28T07:17:23Z",
+      "side": 1,
+      "message": "If the quiesce fails, what is the property expected to hold? How are errors communicated?",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "419ebe8b_02952873",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-28T07:17:23Z",
+      "side": 1,
+      "message": "It\u0027s not very clear if this is State or Control. At the moment it\u0027s in the State namespace but offers Control.",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71c61d81_c50a2f67",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-01-28T07:17:23Z",
+      "side": 1,
+      "message": "What is the expectation post removal? The object implementing this is deleted?",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

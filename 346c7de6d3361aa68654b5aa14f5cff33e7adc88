@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e2aea884_e8abe65b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2026-01-28T10:04:12Z",
+      "side": 1,
+      "message": "The change should be applicable to all the services implementing the interface, not restricted to PIM?",
+      "range": {
+        "startLine": 10,
+        "startChar": 29,
+        "endLine": 10,
+        "endChar": 32
+      },
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9005adc7_56ac0439",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -49,6 +72,24 @@
       "side": 1,
       "message": "Then that interface would have to be on every single path in the tree, which there can be a ton of.",
       "parentUuid": "148d8132_5d7c9f7c",
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e87fe2ca_a37f90a1",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2026-01-28T10:04:12Z",
+      "side": 1,
+      "message": "@spinler@us.ibm.com +1, Every object will have to implement that interface, with this API in place the manager hosting the object can be directly requested to remove the required Object.",
+      "parentUuid": "d9487871_fa690b89",
       "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

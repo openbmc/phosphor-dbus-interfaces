@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cadf6e03_a0830981",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-01-28T11:54:49Z",
+      "side": 1,
+      "message": "\u003e spdmd service is not to perform SPDM discovery and attestation?\n\nThe expectation is not do SPDM communication to capable/discovered endpoints.The discovery happens usually at a different layer like mctp/tcp/pcie e.t.c - and this policy does not effect that, so SPDM daemon is free to do any discovery irrespective of this policy setting.\n\n\u003e or we will have the control in BMC to disable spdm service this at run time\n\nNo, spdm daemon can be running, it justs sit idle (waiting for discovery events or caches the discovered endpoints and sit idle if this policy is disabled).",
+      "parentUuid": "30bda1ad_64abad44",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5f215299_46f1c99e",
@@ -77,6 +95,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a257b8be_8db975ff",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-01-28T11:54:49Z",
+      "side": 1,
+      "message": "But I think that needs to be decided by the admin, Its a patchable property in redfish and the rationale comes from how redfish models *policy intent*, not *operational usability*.\n\nAlthough setting `SPDMAllowedVersions \u003d NONE` makes SPDM unusable, redfish intentionally allows this because the property expresses administrative security policy, not protocol capability. A patchable policy allows an operator or external policy authority to explicitly state “SPDM must not be used”, even if the feature is present and enabled in the implementation.\n\nThis supports valid scenarios such as security lockdowns, vulnerability mitigation, regulatory compliance, or staged provisioning, where SPDM must be temporarily or intentionally disabled without removing the feature itself. \n\nI think that redfish does not guarantee that a policy configuration results in a usable protocol; it guarantees that *policy intent* can be expressed and enforced deterministically. So including `NONE` as a valid, patchable value is intentional and consistent with other Redfish security policies (for example, TLS cipher policies in the secure policy schema), even if it results in SPDM being effectively disabled.",
+      "parentUuid": "5f215299_46f1c99e",
+      "range": {
+        "startLine": 32,
+        "startChar": 30,
+        "endLine": 32,
+        "endChar": 46
+      },
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7367d61f_f09b2af6",
@@ -90,6 +132,24 @@
       "writtenOn": "2026-01-28T09:40:13Z",
       "side": 1,
       "message": "Do we need all these algorithms on Dbus? It should be build time configurations.",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9045d136_bd90c068",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-01-28T11:54:49Z",
+      "side": 1,
+      "message": "I think we should not decide that in code - This is again a patchable property from admins \u0026 they get to decide what are the allowed algorithms at the SPDM level, rationale is similar to the response above.",
+      "parentUuid": "7367d61f_f09b2af6",
       "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -161,6 +221,24 @@
       "side": 1,
       "message": "Can you please clarify the same for other allowed and denied properties like Algorithms",
       "parentUuid": "fd5f76f1_3fd819a8",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "091a2e76_2d6d532f",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-01-28T11:54:49Z",
+      "side": 1,
+      "message": "Although, the redfish spec is not really clear on the SPDM Policy parameters - they did document some guidance on how we can resolve this type of conflicting requirement from users (Its documented in TLSParameterSet).\n\nPer spec:\n```If a value conflicts for the same property between the `Allowed` and `Denied` object, the value of the same property in the `Denied` object shall take precedence.```",
+      "parentUuid": "426f9352_ad6ce0dd",
       "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "219a29b5_c985c6d1",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2026-01-28T09:59:57Z",
+      "side": 1,
+      "message": "Could you clarify how this is expected to be updated and what the flow will be for creating a secure session?\n\nMy understanding is as follows:\n- Any application on the BMC that requires a secure MCTP session:\n\n- The initiator (PLDM, SPDM, or a proprietary protocol over MCTP) initiates the secure session setup\n\n- The responder assigns a Session ID\n\n- The secure session becomes active\n\nAre we expecting the initiator(PLDM, SPDM, or a proprietary protocol over MCTP) to create, update, and delete the secure session via the D-Bus object hosted by the SPDM service?\n\nWhat exactly do we gain by hosting this information in the SPDM D-Bus object?\n\nDo we need to show it through OOB that how many secure sessions are active?",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 19
+      },
+      "revId": "0ef809ef9a613b61b571b228d5451c86f294a9c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

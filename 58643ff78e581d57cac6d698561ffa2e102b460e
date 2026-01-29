@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ea8ef13_2fb2b962",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2026-01-29T04:46:33Z",
+      "side": 1,
+      "message": "Looks good to me - one comment inline for a potential improvement in the description, but that would also seem fine as a later change if you prefer.",
+      "revId": "58643ff78e581d57cac6d698561ffa2e102b460e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15a345db_302e028b",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2026-01-29T04:46:33Z",
+      "side": 1,
+      "message": "the property definition looks good to me.\n\nI would also suggest indicating that the format specifier and PCIe/IANA format are defined by DSP0236, and so may be augmented if that specification is updated.\n\nThe aim here would be to indicate that implementers should gracefully handle format specifiers that they don\u0027t understand (ie, the description is non-exhaustive), and therefore the variant types associated.\n\nHowever, that would be fine as a later change if you have no other need to re-roll this patch.",
+      "revId": "58643ff78e581d57cac6d698561ffa2e102b460e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

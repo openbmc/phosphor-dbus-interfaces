@@ -174,6 +174,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "06d169ee_27119bde",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2026-01-29T09:26:55Z",
+      "side": 1,
+      "message": "\u003e  Why does every object have to impleement it if PIM already knows for which objects this is applicable?\n\n\na) The interface description says that it deletes the object that implements delete. \nb) There are multiple objects hosted under PIM, if only certain object(s) needs to be deleted, how PIM can be notified by the caller which object(s) to delete? \n\nHaving a DeleteObject method exposed at PIM level gives the flexibility to call that API with specific object path(s) that needs to be removed.\n\nI am sorry if I am missing something but I am not able to join to dots how the interface suggested above can help here.\nCould you please elaborate more on that part.",
+      "parentUuid": "5eb84dde_2376fd14",
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "25e4e5f8_740e084a",
         "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
         "patchSetId": 2
@@ -221,6 +239,24 @@
       "side": 1,
       "message": "\u003e Which service(s) are the users of API?\n\n\u003e It can be used by service(s) which can detect presence/absence of any \ngiven inventory item and needs to update the inventory accordingly.\n\nI don\u0027t think you answered Deepak\u0027s question here.",
       "parentUuid": "6c3a1048_e313c206",
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32defc08_369ca31b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2026-01-29T09:26:55Z",
+      "side": 1,
+      "message": "@alexander.hansen@9elements.com At this moment it is difficult to list down all the service(s) that can be user(s) of this API.\n\nAs stated above, this can be used by any service which intend to modify the listed object paths managed by PIM.\nIf there is an API to add an object, there should also be an API to remove the same else addition becomes a one time irrevocable action.",
+      "parentUuid": "bf810d96_30a5335b",
       "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

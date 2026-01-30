@@ -22,3 +22,6 @@ associations:
       reverse_name: fault_identified_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+
+paths:
+    - namespace: /xyz/openbmc_project/led/groups

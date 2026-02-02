@@ -45,6 +45,9 @@ enumerations:
           - name: Percent
             description: >
                 Unit to indicate percentage.
+          - name: Seconds
+            description: >
+                Unit to indicate duration in seconds.
 
 associations:
     - name: measuring
@@ -259,6 +262,16 @@ paths:
                 The total number of collisions that occurred after one slot time
                 as defined by IEEE 802.3.
             value: nic/tx_late_collisions
+          - name: PowerLimitThrottleDuration
+            description: >
+                The total duration of throttling caused by a power limit of the
+                device since reset.
+            value: power_limit_throttle_duration
+          - name: ThermalLimitThrottleDuration
+            description: >
+                The total duration of throttling caused by a thermal limit of
+                the device since reset.
+            value: thermal_limit_throttle_duration
     - name: BMC
       description: >
           The BMC metrics.

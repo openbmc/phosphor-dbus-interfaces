@@ -9,8 +9,8 @@ enumerations:
       values:
           - name: LCMXO3D_9400_scm
           - name: LFMXO5_15D_mb
-          - name: LFMXO5_15D_lbb
-          - name: LFMXO5_15D_rbb
+          - name: LFMXO5_15D_t16_bb
+          - name: LFMXO5_15D_t20_bb
 
     - name: SPI
       description: >
@@ -20,7 +20,25 @@ enumerations:
 
     - name: PCIeSwitch
       description: >
-          The compatible hardware strings for the PCIe switch flash on Anacapa.
+          The compatible hardware strings for the PCIe switch flash on Anacapa
+          T16 bridge board.
       values:
           - name: PEX90080_lbb
           - name: PEX90080_rbb
+
+    - name: Retimer
+      description: >
+          The compatible hardware strings for the retimer on Anacapa T20 bridge
+          board.
+      values:
+          - name: PT5081L
+
+    - name: VR
+      description: >
+          The compatible hardware strings for the VR on Anacapa.
+      values:
+          - name: MP29612_pvddcr_soc_p0
+          - name: MP29612_pvddcr_cpu1_p0
+          - name: MP2869_pvddcr_cpu0_p0
+          - name: MPQ8785_pvdd18_s5_p0
+          - name: MPQ8786_pvdd33_s5_p0

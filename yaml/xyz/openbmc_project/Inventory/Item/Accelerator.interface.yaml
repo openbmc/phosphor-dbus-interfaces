@@ -17,10 +17,12 @@ properties:
       description: >
           Default accelerator boost clock speed in hertz. If the property is not
           supported, the value will be maxint.
-    - name: MaxSpeedInMhz
+    - name: MaxSpeedInHz
       type: uint64
+      default: maxint
       description: >
-          Max Speed in megahertz the accelerator can support.
+          Maximum clock speed the accelerator can support, in hertz. If the
+          property is not supported, the value will be maxint.
     - name: MinSpeedInHz
       type: uint64
       default: maxint

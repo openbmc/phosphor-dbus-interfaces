@@ -143,6 +143,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2911495a_21dbe9ed",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-02-02T17:03:37Z",
+      "side": 1,
+      "message": "This is a one-time PATCH operation. Policies are generally persistent across reboots, so it’s unclear why this would be particularly difficult. If a Redfish client is already verifying the signed SPDM measurements on its own via redfish, then configuring these policies should not be that challenging. If there are concerns about the reasonableness of the defaults, I’m open to discussing them, I don’t believe they should be removed entirely as it gives flexibility.",
+      "parentUuid": "eb411b8c_6b54e0a7",
+      "range": {
+        "startLine": 32,
+        "startChar": 30,
+        "endLine": 32,
+        "endChar": 46
+      },
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7367d61f_f09b2af6",

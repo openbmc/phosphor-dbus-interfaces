@@ -5,6 +5,12 @@ description: >
     include: GPUs, FPGAs, and ASICs.
 
 properties:
+    - name: BaseSpeedInHz
+      type: uint64
+      default: maxint
+      description: >
+          Base/nominal clock speed of the accelerator, in hertz. If the property
+          is not supported, the value will be maxint.
     - name: BoostSpeedInHz
       type: uint64
       default: maxint
@@ -15,6 +21,12 @@ properties:
       type: uint64
       description: >
           Max Speed in megahertz the accelerator can support.
+    - name: MinSpeedInHz
+      type: uint64
+      default: maxint
+      description: >
+          Minimum clock speed the accelerator can support, in hertz. If the
+          property is not supported, the value will be maxint.
     - name: Type
       type: enum[self.AcceleratorType]
       default: "Unknown"

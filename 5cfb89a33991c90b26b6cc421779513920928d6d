@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3f4b64b0_c24be00f",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2026-02-02T23:27:10Z",
+      "side": 1,
+      "message": "There are apps that will be invoked when ReadyToRemove is set to true \nand false, respectively which are supposed to handle the inventory \nupdates associated with the Concurrent Maintenance process. The details \nof this have not been completely flushed out.",
+      "parentUuid": "be7e6576_2d1cfaf9",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2e0a46d9_a5169d04",
         "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
         "patchSetId": 8
@@ -31,6 +49,24 @@
       "writtenOn": "2026-01-28T07:17:23Z",
       "side": 1,
       "message": "If the quiesce fails, what is the property expected to hold? How are errors communicated?",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "749d450a_20d72319",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2026-02-02T23:27:10Z",
+      "side": 1,
+      "message": "The Concurrent Maintenance will take the appropriate actions. The details\nof this have not been completely flushed out.",
+      "parentUuid": "2e0a46d9_a5169d04",
       "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -54,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e54aa898_bed71253",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2026-02-02T23:27:10Z",
+      "side": 1,
+      "message": "It is a State and the setting of this to true or false will cause the service to perform appropriate actions related to an item.",
+      "parentUuid": "419ebe8b_02952873",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "71c61d81_c50a2f67",
         "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
         "patchSetId": 8
@@ -65,6 +119,24 @@
       "writtenOn": "2026-01-28T07:17:23Z",
       "side": 1,
       "message": "What is the expectation post removal? The object implementing this is deleted?",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb1d2de4_d35b9553",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002328
+      },
+      "writtenOn": "2026-02-02T23:27:10Z",
+      "side": 1,
+      "message": "Yes, in the case of ReadyToRemove set to true and item is removed.",
+      "parentUuid": "71c61d81_c50a2f67",
       "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

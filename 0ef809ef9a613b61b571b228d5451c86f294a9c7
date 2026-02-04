@@ -46,6 +46,30 @@
       },
       "revId": "0ef809ef9a613b61b571b228d5451c86f294a9c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb1165c6_45a554d8",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2026-02-04T07:30:59Z",
+      "side": 1,
+      "message": "\u003eWell, that\u0027s a specification question . Redfish supports exposing it. External redfish clients would need to know if there is a secure channel created \u0026 if so how many \u0026 what was the type of authentication used to create the session. That\u0027s what this patch set enables us to do.\n\nCurrent use case which you are putting is to create the secure session from spdm client(bmc)and get the attesttaion data over secure session that works fine, Let\u0027s go one step down\n\nMy question is about how secure sessions are represented when multiple daemons use MCTP Type 6 communication.\n\nIf, in the future, any daemon communicating over MCTP requires Type 6 and therefore establishes an SPDM secure session, and if that session is created by the SPDM daemon, will the object implementing the Component Integrity interface (provided by spdmd) maintain and expose all active secure sessions? \n\nAlternatively, is this interface expected to be implemented by each individual application (for example, PLDM, MCTP VDM, or NSM – NVIDIA proprietary protocol), with Redfish aggregating session information from all services that implement this interface?\n\nThis property is being defined as read-only, which means other clients cannot update it with their own session information. This implies that the expected design is either:\n\nEach client D-Bus service (for example, PLDM, MCTP VDM, NSM, etc.) implements the Component Integrity interface and exposes its own secure session information, or\n\nwe should have seprate interface to host the secure seeion realted info.",
+      "parentUuid": "cb2c3647_7b7742c6",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 19
+      },
+      "revId": "0ef809ef9a613b61b571b228d5451c86f294a9c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

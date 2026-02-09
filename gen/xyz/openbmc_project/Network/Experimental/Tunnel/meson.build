@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Network/Experimental/Tunnel'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Network/Experimental/Tunnel.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Network/Experimental/Tunnel__cpp'.underscorify(),
     input: [

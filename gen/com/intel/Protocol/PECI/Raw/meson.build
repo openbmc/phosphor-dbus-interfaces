@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/intel/Protocol/PECI/Raw'
 
+all_yaml_files += files(
+    '../../../../../../yaml/com/intel/Protocol/PECI/Raw.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/intel/Protocol/PECI/Raw__cpp'.underscorify(),
     input: [

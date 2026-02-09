@@ -4,6 +4,10 @@ subdir('Entry')
 
 sdbusplus_current_path = 'xyz/openbmc_project/HardwareIsolation'
 
+all_yaml_files += files(
+    '../../../../yaml/xyz/openbmc_project/HardwareIsolation.errors.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/HardwareIsolation__cpp'.underscorify(),
     input: [

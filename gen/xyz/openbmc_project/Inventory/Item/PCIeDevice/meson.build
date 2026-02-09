@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Inventory/Item/PCIeDevice'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory/Item/PCIeDevice__cpp'.underscorify(),
     input: [

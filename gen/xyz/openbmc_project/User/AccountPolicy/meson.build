@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/User/AccountPolicy'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/User/AccountPolicy__cpp'.underscorify(),
     input: [

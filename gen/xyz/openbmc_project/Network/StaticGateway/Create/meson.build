@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Network/StaticGateway/Create'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Network/StaticGateway/Create.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Network/StaticGateway/Create__cpp'.underscorify(),
     input: [

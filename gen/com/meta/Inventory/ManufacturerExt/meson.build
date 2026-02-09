@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/meta/Inventory/ManufacturerExt'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/meta/Inventory/ManufacturerExt.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/meta/Inventory/ManufacturerExt__cpp'.underscorify(),
     input: [

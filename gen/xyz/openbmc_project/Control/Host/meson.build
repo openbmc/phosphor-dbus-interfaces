@@ -4,6 +4,11 @@ subdir('TurboAllowed')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Control/Host'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Control/Host.errors.yaml',
+    '../../../../../yaml/xyz/openbmc_project/Control/Host.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Control/Host__cpp'.underscorify(),
     input: [

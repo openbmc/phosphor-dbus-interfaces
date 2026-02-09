@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/Hardware/Chassis'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/Hardware/Chassis.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/Hardware/Chassis__cpp'.underscorify(),
     input: [

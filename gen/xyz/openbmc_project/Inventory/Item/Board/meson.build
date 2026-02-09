@@ -4,6 +4,10 @@ subdir('Motherboard')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Inventory/Item/Board'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Inventory/Item/Board.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory/Item/Board__cpp'.underscorify(),
     input: [

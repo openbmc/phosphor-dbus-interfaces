@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Control/FieldMode'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Control/FieldMode.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Control/FieldMode__cpp'.underscorify(),
     input: [

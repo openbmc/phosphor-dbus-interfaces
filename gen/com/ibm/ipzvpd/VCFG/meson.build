@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/VCFG'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/VCFG.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VCFG__cpp'.underscorify(),
     input: [

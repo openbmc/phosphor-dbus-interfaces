@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/LWP5'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/LWP5.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/LWP5__cpp'.underscorify(),
     input: [

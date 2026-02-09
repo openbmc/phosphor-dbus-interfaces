@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Control/FanRedundancy'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Control/FanRedundancy.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Control/FanRedundancy__cpp'.underscorify(),
     input: [

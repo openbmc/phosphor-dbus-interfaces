@@ -2,6 +2,11 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/State/Leak/Detector'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/State/Leak/Detector.events.yaml',
+    '../../../../../../yaml/xyz/openbmc_project/State/Leak/Detector.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/State/Leak/Detector__cpp'.underscorify(),
     input: [

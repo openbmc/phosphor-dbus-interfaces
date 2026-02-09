@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Configuration/ModbusRTUDetect'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Configuration/ModbusRTUDetect.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Configuration/ModbusRTUDetect__cpp'.underscorify(),
     input: [

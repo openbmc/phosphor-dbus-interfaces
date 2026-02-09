@@ -2,6 +2,11 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Memory/MemoryECC'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Memory/MemoryECC.errors.yaml',
+    '../../../../../yaml/xyz/openbmc_project/Memory/MemoryECC.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Memory/MemoryECC__cpp'.underscorify(),
     input: [

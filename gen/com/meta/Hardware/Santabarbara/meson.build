@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/meta/Hardware/Santabarbara'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/meta/Hardware/Santabarbara.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/meta/Hardware/Santabarbara__cpp'.underscorify(),
     input: [

@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/VPRI'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/VPRI.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VPRI__cpp'.underscorify(),
     input: [

@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Common/Threshold'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Common/Threshold.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Common/Threshold__cpp'.underscorify(),
     input: [

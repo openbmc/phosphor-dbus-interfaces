@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/VCEN'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/VCEN.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VCEN__cpp'.underscorify(),
     input: [

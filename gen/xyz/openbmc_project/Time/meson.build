@@ -4,6 +4,10 @@ subdir('Synchronization')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Time'
 
+all_yaml_files += files(
+    '../../../../yaml/xyz/openbmc_project/Time.errors.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Time__cpp'.underscorify(),
     input: [

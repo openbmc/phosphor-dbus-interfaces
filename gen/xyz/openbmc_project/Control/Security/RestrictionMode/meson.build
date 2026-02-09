@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Control/Security/RestrictionMode'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Control/Security/RestrictionMode.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Control/Security/RestrictionMode__cpp'.underscorify(),
     input: [

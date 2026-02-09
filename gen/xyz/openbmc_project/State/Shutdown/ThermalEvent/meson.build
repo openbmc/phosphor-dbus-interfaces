@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/State/Shutdown/ThermalEvent'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/State/Shutdown/ThermalEvent.errors.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/State/Shutdown/ThermalEvent__cpp'.underscorify(),
     input: [

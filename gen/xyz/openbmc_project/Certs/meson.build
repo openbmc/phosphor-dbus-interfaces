@@ -10,6 +10,10 @@ subdir('ReplaceAll')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Certs'
 
+all_yaml_files += files(
+    '../../../../yaml/xyz/openbmc_project/Certs.errors.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Certs__cpp'.underscorify(),
     input: [

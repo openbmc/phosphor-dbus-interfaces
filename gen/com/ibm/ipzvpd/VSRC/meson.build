@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/VSRC'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/VSRC.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VSRC__cpp'.underscorify(),
     input: [

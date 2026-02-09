@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/State/Valve'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/State/Valve.events.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/State/Valve__cpp'.underscorify(),
     input: [

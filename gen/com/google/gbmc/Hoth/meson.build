@@ -2,6 +2,11 @@
 
 sdbusplus_current_path = 'com/google/gbmc/Hoth'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/google/gbmc/Hoth.errors.yaml',
+    '../../../../../yaml/com/google/gbmc/Hoth.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/google/gbmc/Hoth__cpp'.underscorify(),
     input: [

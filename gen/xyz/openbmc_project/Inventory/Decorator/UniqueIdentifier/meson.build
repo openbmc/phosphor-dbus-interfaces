@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Inventory/Decorator/UniqueIdentifier'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Inventory/Decorator/UniqueIdentifier.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory/Decorator/UniqueIdentifier__cpp'.underscorify(),
     input: [

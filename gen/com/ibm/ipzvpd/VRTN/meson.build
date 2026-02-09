@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/VRTN'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/VRTN.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VRTN__cpp'.underscorify(),
     input: [

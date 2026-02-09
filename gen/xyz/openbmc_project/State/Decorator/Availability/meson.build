@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/State/Decorator/Availability'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/State/Decorator/Availability.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/State/Decorator/Availability__cpp'.underscorify(),
     input: [

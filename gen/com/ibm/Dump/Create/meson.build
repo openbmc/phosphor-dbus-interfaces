@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/Dump/Create'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/Dump/Create.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/Dump/Create__cpp'.underscorify(),
     input: [

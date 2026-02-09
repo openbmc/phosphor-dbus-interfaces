@@ -3,6 +3,12 @@ subdir('Redundancy')
 
 sdbusplus_current_path = 'xyz/openbmc_project/State/BMC'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/State/BMC.errors.yaml',
+    '../../../../../yaml/xyz/openbmc_project/State/BMC.events.yaml',
+    '../../../../../yaml/xyz/openbmc_project/State/BMC.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/State/BMC__cpp'.underscorify(),
     input: [

@@ -3,6 +3,10 @@ subdir('OperatingConfig')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Inventory/Item/Cpu'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Inventory/Item/Cpu.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory/Item/Cpu__cpp'.underscorify(),
     input: [

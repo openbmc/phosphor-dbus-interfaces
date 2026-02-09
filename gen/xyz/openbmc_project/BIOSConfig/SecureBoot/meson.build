@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/BIOSConfig/SecureBoot'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/BIOSConfig/SecureBoot.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/BIOSConfig/SecureBoot__cpp'.underscorify(),
     input: [

@@ -15,6 +15,10 @@ subdir('UUID')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Common'
 
+all_yaml_files += files(
+    '../../../../yaml/xyz/openbmc_project/Common.errors.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Common__cpp'.underscorify(),
     input: [

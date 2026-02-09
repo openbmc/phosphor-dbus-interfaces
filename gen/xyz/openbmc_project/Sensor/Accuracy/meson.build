@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Sensor/Accuracy'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Sensor/Accuracy.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Sensor/Accuracy__cpp'.underscorify(),
     input: [

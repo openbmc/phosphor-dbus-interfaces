@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/intel/Control/OCOTShutdownPolicy'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/intel/Control/OCOTShutdownPolicy.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/intel/Control/OCOTShutdownPolicy__cpp'.underscorify(),
     input: [

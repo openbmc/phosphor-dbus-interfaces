@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/State/BMC/Redundancy'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/State/BMC/Redundancy__cpp'.underscorify(),
     input: [

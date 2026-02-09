@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Telemetry/TriggerManager'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Telemetry/TriggerManager.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Telemetry/TriggerManager__cpp'.underscorify(),
     input: [

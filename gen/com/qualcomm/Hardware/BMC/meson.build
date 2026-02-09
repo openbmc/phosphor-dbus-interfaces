@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/qualcomm/Hardware/BMC'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/qualcomm/Hardware/BMC.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/qualcomm/Hardware/BMC__cpp'.underscorify(),
     input: [

@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/meta/IPMI/UnifiedSEL'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/meta/IPMI/UnifiedSEL.events.yaml',
+)
+
 generated_sources += custom_target(
     'com/meta/IPMI/UnifiedSEL__cpp'.underscorify(),
     input: [

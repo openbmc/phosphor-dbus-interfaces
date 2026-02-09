@@ -4,6 +4,10 @@ subdir('Boot')
 
 sdbusplus_current_path = 'org/open_power/Host'
 
+all_yaml_files += files(
+    '../../../../yaml/org/open_power/Host.errors.yaml',
+)
+
 generated_sources += custom_target(
     'org/open_power/Host__cpp'.underscorify(),
     input: [

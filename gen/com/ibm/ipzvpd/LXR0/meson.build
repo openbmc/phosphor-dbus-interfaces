@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/LXR0'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/LXR0.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/LXR0__cpp'.underscorify(),
     input: [

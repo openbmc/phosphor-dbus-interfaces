@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/Dump/Entry/Hostboot'
 
+all_yaml_files += files(
+    '../../../../../../yaml/com/ibm/Dump/Entry/Hostboot.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/Dump/Entry/Hostboot__cpp'.underscorify(),
     input: [

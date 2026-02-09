@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/User/TOTPState'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/User/TOTPState.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/User/TOTPState__cpp'.underscorify(),
     input: [

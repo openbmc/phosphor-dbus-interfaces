@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'org/open_power/Control/Host'
 
+all_yaml_files += files(
+    '../../../../../yaml/org/open_power/Control/Host.interface.yaml',
+)
+
 generated_sources += custom_target(
     'org/open_power/Control/Host__cpp'.underscorify(),
     input: [

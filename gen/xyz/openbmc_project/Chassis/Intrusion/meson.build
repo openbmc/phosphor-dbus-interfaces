@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Chassis/Intrusion'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Chassis/Intrusion.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Chassis/Intrusion__cpp'.underscorify(),
     input: [

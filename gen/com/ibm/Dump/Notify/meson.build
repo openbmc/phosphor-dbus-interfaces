@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/Dump/Notify'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/Dump/Notify.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/Dump/Notify__cpp'.underscorify(),
     input: [

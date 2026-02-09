@@ -4,6 +4,10 @@ subdir('Manager')
 
 sdbusplus_current_path = 'com/ibm/VPD'
 
+all_yaml_files += files(
+    '../../../../yaml/com/ibm/VPD.errors.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/VPD__cpp'.underscorify(),
     input: [

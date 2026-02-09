@@ -5,6 +5,10 @@ subdir('SecurityCapabilities')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Inventory/Item/PersistentMemory'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Inventory/Item/PersistentMemory.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory/Item/PersistentMemory__cpp'.underscorify(),
     input: [

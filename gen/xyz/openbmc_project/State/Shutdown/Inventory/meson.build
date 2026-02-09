@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/State/Shutdown/Inventory'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/State/Shutdown/Inventory.errors.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/State/Shutdown/Inventory__cpp'.underscorify(),
     input: [

@@ -2,6 +2,11 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Software/Version'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Software/Version.errors.yaml',
+    '../../../../../yaml/xyz/openbmc_project/Software/Version.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Software/Version__cpp'.underscorify(),
     input: [

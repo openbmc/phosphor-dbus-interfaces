@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'org/open_power/Proc/FSI'
 
+all_yaml_files += files(
+    '../../../../../yaml/org/open_power/Proc/FSI.errors.yaml',
+)
+
 generated_sources += custom_target(
     'org/open_power/Proc/FSI__cpp'.underscorify(),
     input: [

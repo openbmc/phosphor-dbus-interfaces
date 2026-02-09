@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Telemetry/ReportManager'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Telemetry/ReportManager.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Telemetry/ReportManager__cpp'.underscorify(),
     input: [

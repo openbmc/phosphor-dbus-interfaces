@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Sensor/Threshold/SoftShutdown'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Sensor/Threshold/SoftShutdown.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Sensor/Threshold/SoftShutdown__cpp'.underscorify(),
     input: [

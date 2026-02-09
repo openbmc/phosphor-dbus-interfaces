@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/Dump/Entry/Hardware'
 
+all_yaml_files += files(
+    '../../../../../../yaml/com/ibm/Dump/Entry/Hardware.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/Dump/Entry/Hardware__cpp'.underscorify(),
     input: [

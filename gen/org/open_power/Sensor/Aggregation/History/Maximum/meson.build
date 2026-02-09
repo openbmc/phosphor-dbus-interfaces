@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'org/open_power/Sensor/Aggregation/History/Maximum'
 
+all_yaml_files += files(
+    '../../../../../../../yaml/org/open_power/Sensor/Aggregation/History/Maximum.interface.yaml',
+)
+
 generated_sources += custom_target(
     'org/open_power/Sensor/Aggregation/History/Maximum__cpp'.underscorify(),
     input: [

@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/BIOSConfig/Password'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/BIOSConfig/Password.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/BIOSConfig/Password__cpp'.underscorify(),
     input: [

@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Metric/Value'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Metric/Value.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Metric/Value__cpp'.underscorify(),
     input: [

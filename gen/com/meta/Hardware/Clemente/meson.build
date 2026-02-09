@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/meta/Hardware/Clemente'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/meta/Hardware/Clemente.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/meta/Hardware/Clemente__cpp'.underscorify(),
     input: [

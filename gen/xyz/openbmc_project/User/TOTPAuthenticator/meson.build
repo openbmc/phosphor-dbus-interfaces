@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/User/TOTPAuthenticator'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/User/TOTPAuthenticator.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/User/TOTPAuthenticator__cpp'.underscorify(),
     input: [

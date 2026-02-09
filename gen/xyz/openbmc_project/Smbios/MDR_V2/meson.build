@@ -2,6 +2,11 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Smbios/MDR_V2'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Smbios/MDR_V2.errors.yaml',
+    '../../../../../yaml/xyz/openbmc_project/Smbios/MDR_V2.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Smbios/MDR_V2__cpp'.underscorify(),
     input: [

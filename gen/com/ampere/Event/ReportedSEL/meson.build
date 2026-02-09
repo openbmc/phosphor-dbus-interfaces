@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ampere/Event/ReportedSEL'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ampere/Event/ReportedSEL.events.yaml',
+)
+
 generated_sources += custom_target(
     'com/ampere/Event/ReportedSEL__cpp'.underscorify(),
     input: [

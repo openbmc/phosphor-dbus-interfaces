@@ -9,6 +9,10 @@ subdir('ValueMutability')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Sensor'
 
+all_yaml_files += files(
+    '../../../../yaml/xyz/openbmc_project/Sensor.events.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Sensor__cpp'.underscorify(),
     input: [

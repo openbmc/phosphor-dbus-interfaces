@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'org/open_power/Inventory/Decorator/Asset'
 
+all_yaml_files += files(
+    '../../../../../../yaml/org/open_power/Inventory/Decorator/Asset.interface.yaml',
+)
+
 generated_sources += custom_target(
     'org/open_power/Inventory/Decorator/Asset__cpp'.underscorify(),
     input: [

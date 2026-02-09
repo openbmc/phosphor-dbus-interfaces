@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'org/open_power/Sensor/Aggregation/History/Average'
 
+all_yaml_files += files(
+    '../../../../../../../yaml/org/open_power/Sensor/Aggregation/History/Average.interface.yaml',
+)
+
 generated_sources += custom_target(
     'org/open_power/Sensor/Aggregation/History/Average__cpp'.underscorify(),
     input: [

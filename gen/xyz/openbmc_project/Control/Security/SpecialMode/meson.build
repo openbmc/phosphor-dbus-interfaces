@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Control/Security/SpecialMode'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Control/Security/SpecialMode.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Control/Security/SpecialMode__cpp'.underscorify(),
     input: [

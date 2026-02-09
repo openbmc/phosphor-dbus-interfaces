@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Control/TPM/Policy'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Control/TPM/Policy.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Control/TPM/Policy__cpp'.underscorify(),
     input: [

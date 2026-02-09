@@ -7,6 +7,11 @@ subdir('Warning')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Sensor/Threshold'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Sensor/Threshold.errors.yaml',
+    '../../../../../yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Sensor/Threshold__cpp'.underscorify(),
     input: [

@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'org/open_power/Common/Callout'
 
+all_yaml_files += files(
+    '../../../../../yaml/org/open_power/Common/Callout.errors.yaml',
+)
+
 generated_sources += custom_target(
     'org/open_power/Common/Callout__cpp'.underscorify(),
     input: [

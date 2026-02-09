@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Control/PowerSupplyRedundancy'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Control/PowerSupplyRedundancy.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Control/PowerSupplyRedundancy__cpp'.underscorify(),
     input: [

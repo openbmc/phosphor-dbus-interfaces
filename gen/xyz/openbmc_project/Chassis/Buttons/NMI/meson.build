@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Chassis/Buttons/NMI'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Chassis/Buttons/NMI.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Chassis/Buttons/NMI__cpp'.underscorify(),
     input: [

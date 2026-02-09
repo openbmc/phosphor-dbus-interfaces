@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Led/Group'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Led/Group.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Led/Group__cpp'.underscorify(),
     input: [

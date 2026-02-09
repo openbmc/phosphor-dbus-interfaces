@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'org/open_power/OCC/Status'
 
+all_yaml_files += files(
+    '../../../../../yaml/org/open_power/OCC/Status.interface.yaml',
+)
+
 generated_sources += custom_target(
     'org/open_power/OCC/Status__cpp'.underscorify(),
     input: [

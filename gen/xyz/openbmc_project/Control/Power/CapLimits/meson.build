@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Control/Power/CapLimits'
 
+all_yaml_files += files(
+    '../../../../../../yaml/xyz/openbmc_project/Control/Power/CapLimits.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Control/Power/CapLimits__cpp'.underscorify(),
     input: [

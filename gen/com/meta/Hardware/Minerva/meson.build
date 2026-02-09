@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/meta/Hardware/Minerva'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/meta/Hardware/Minerva.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/meta/Hardware/Minerva__cpp'.underscorify(),
     input: [

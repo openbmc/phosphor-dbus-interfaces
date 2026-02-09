@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/VirtualMedia/Legacy'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/VirtualMedia/Legacy.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/VirtualMedia/Legacy__cpp'.underscorify(),
     input: [

@@ -35,6 +35,10 @@ subdir('Vrm')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Inventory/Item'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Inventory/Item.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Inventory/Item__cpp'.underscorify(),
     input: [

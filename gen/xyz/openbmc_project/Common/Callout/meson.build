@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/Common/Callout'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/Common/Callout.errors.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/Common/Callout__cpp'.underscorify(),
     input: [

@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/VMPU'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/VMPU.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VMPU__cpp'.underscorify(),
     input: [

@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/Dump/Entry/SBE'
 
+all_yaml_files += files(
+    '../../../../../../yaml/com/ibm/Dump/Entry/SBE.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/Dump/Entry/SBE__cpp'.underscorify(),
     input: [

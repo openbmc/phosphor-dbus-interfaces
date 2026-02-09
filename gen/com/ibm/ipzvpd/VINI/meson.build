@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/VINI'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/VINI.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VINI__cpp'.underscorify(),
     input: [

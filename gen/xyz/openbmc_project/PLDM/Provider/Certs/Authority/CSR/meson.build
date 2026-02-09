@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/PLDM/Provider/Certs/Authority/CSR'
 
+all_yaml_files += files(
+    '../../../../../../../../yaml/xyz/openbmc_project/PLDM/Provider/Certs/Authority/CSR.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/PLDM/Provider/Certs/Authority/CSR__cpp'.underscorify(),
     input: [

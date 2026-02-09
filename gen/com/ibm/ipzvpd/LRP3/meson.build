@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'com/ibm/ipzvpd/LRP3'
 
+all_yaml_files += files(
+    '../../../../../yaml/com/ibm/ipzvpd/LRP3.interface.yaml',
+)
+
 generated_sources += custom_target(
     'com/ibm/ipzvpd/LRP3__cpp'.underscorify(),
     input: [

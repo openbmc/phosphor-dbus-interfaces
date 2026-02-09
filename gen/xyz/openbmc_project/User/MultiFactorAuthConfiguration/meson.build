@@ -2,6 +2,10 @@
 
 sdbusplus_current_path = 'xyz/openbmc_project/User/MultiFactorAuthConfiguration'
 
+all_yaml_files += files(
+    '../../../../../yaml/xyz/openbmc_project/User/MultiFactorAuthConfiguration.interface.yaml',
+)
+
 generated_sources += custom_target(
     'xyz/openbmc_project/User/MultiFactorAuthConfiguration__cpp'.underscorify(),
     input: [

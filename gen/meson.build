@@ -25,6 +25,35 @@ foreach d : yaml_selected_subdirs
 endforeach
 
 generated_headers = []
+
+generated_headers += custom_target(
+    'common/full_tree'.underscorify(),
+    # TODO: this should depend on all the yaml files.
+    # need to get a list of those
+    input: generated_sources,
+    output: [
+        'full_tree.hpp',
+    ],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'tree',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../yaml',
+        'xyz',
+    ],
+    install: should_generate_cpp,
+    install_dir: [
+        get_option('includedir') / sdbusplus_current_path,
+    ],
+    build_by_default: should_generate_cpp,
+)
+
 foreach s : generated_sources
     foreach f : s.to_list()
         if f.full_path().endswith('.hpp')

@@ -205,6 +205,10 @@ methods:
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
 
+    - name: DeleteAllFRUVPD
+      description: >
+          Clears all FRU VPD other than the system VPD from the persisted path.
+
 properties:
     - name: CollectionStatus
       type: enum[self.Status]

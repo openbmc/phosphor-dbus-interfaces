@@ -210,6 +210,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f9e6328d_95d3c5c6",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000348
+      },
+      "writtenOn": "2026-02-11T03:58:30Z",
+      "side": 1,
+      "message": "I do not see any issue of having a DeleteObject. But just curious as to, why do we not go for a dict , so that multiple paths can be deleted at a shot instead of calling it singly multiple time ?",
+      "parentUuid": "26dfbda1_1fb9899c",
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "25e4e5f8_740e084a",
         "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
         "patchSetId": 2

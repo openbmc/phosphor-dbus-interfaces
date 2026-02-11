@@ -210,6 +210,21 @@ methods:
           Method to clear all FRU VPD other than the system VPD from PIM
           persisted path.
 
+    - name: ValidateRedundantEEPROM
+      description: >
+          Check whether the given EEPROM's VPD matches that of its redundant
+          EEPROM.
+      parameters:
+          - name: path
+            type: string
+            description: >
+                EEPROM path of the FRU.
+      returns:
+          - name: sameVPD
+            type: boolean
+            description: >
+                True if both EEPROMs contain identical VPD.
+
 properties:
     - name: CollectionStatus
       type: enum[self.Status]

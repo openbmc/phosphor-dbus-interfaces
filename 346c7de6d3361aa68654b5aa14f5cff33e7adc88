@@ -228,6 +228,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9c4a8d8c_5358546b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-02-12T20:38:49Z",
+      "side": 1,
+      "message": "This seems to be the fundamental discussion here:\n\n---\n\nDeepak:\n\u003e Can [xyz.openbmc_project.Object.Delete] be used instead.\n\nMatt:\n\u003e Then that interface would have to be on every single path in the tree, which there can be a ton of.\n\n---\n\n@spinler@us.ibm.com - It isn\u0027t obvious to me why \"there can be a ton of\" is a problem.  You can have a lot of inventory objects, perhaps, but adding the Object.Delete interface is as simple as changing the inherit for the base class, right?\n\nAre we trying to pursue a memory optimization?  If so, do we have numbers on what the savings is?\n\nGenerally we have Common interfaces so ... people use them.  I\u0027m not saying we can\u0027t have a new function here but I\u0027m just trying to understand what the engineering constraint is that we\u0027re solving by adding it.",
+      "parentUuid": "f9e6328d_95d3c5c6",
+      "revId": "346c7de6d3361aa68654b5aa14f5cff33e7adc88",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "25e4e5f8_740e084a",
         "filename": "yaml/xyz/openbmc_project/Inventory/Manager.interface.yaml",
         "patchSetId": 2

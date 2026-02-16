@@ -16,6 +16,24 @@
       "message": "This not the right place to add these. we already have there as part of metric interface. https://github.com/openbmc/phosphor-dbus-interfaces/blob/a0a9eaa040b8ae632e771ad9a0c7a4daad3a17b5/yaml/xyz/openbmc_project/Metric/Value.interface.yaml#L38",
       "revId": "600c8b5870f570bc6db13e6f215f2bb640232a1f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b4e7175_81b311c4",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1002607
+      },
+      "writtenOn": "2026-02-16T08:01:17Z",
+      "side": 1,
+      "message": "The units defined in the Metric interface serve a different purpose, as metrics typically derive their values from software sources rather than hardware, unlike sensors.\n\nhttps://github.com/openbmc/docs/blob/master/designs/bmc-health-monitor.md#:~:text\u003dSensor%20data%20originate%20from%20hardware%2C%20while%20most%20metrics%20may%20be%20obtained%20through%20software\n\nSince we are adding units specifically for Sensors, reusing the Metric interface’s unit definitions would not align with the intended design. That interface was created for software‑derived metrics, not hardware‑originated sensor data.",
+      "parentUuid": "fbfbb94d_6870ffe9",
+      "revId": "600c8b5870f570bc6db13e6f215f2bb640232a1f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

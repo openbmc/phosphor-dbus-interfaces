@@ -70,6 +70,30 @@
       },
       "revId": "0ef809ef9a613b61b571b228d5451c86f294a9c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f21b6cdc_339c48ac",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-02-18T09:07:54Z",
+      "side": 1,
+      "message": "\u003e My question is about how secure sessions are represented when multiple daemons use MCTP Type 6 communication.\n\n\u003e \n\nI guess this needs a design document of its own since its much bigger topic than what this commit is trying to do.\n\n\u003e If, in the future, any daemon communicating over MCTP requires Type 6 and therefore establishes an SPDM secure session, and if that session is created by the SPDM daemon, will the object implementing the Component Integrity interface (provided by spdmd) maintain and expose all active secure sessions? \n\n\u003e \n\nYes, I think so. Since the secure sessions are handled by the SPDM daemon, it should be hosting the session information irrespective of who is sending data across that channel. \n\n\u003e Alternatively, is this interface expected to be implemented by each individual application (for example, PLDM, MCTP VDM, or NSM – NVIDIA proprietary protocol), with Redfish aggregating session information from all services that implement this interface?\n\n\u003e \n\nNo , i would not expect any other daemon to be hosting the component Integrity information. Rather I expect the SPDM daemon probably should have additonal interface(s) exposed through which pldm/mctp vdm/nsm daemon would route their packets via the secure channel (if need be).\n\n\u003e This property is being defined as read-only, which means other clients cannot update it with their own session information. This implies that the expected design is either:\n\u003e \n\u003e Each client D-Bus service (for example, PLDM, MCTP VDM, NSM, etc.) implements the Component Integrity interface and exposes its own secure session information, or\n\u003e \n\n\u003e we should have seprate interface to host the secure session related info.\n\n\nIMO (this is just a raw thought) -  I don\u0027t think any other daemon in the BMC should be hosting the component Integrity since that is purely tied to the SPDM protocol semantics internally. Rather SPDM should have additional interfaces through which it can route the traffic of other daemons, so spdm daemon will purely be acting as a conduit for other communication daemons.",
+      "parentUuid": "fb1165c6_45a554d8",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 19
+      },
+      "revId": "0ef809ef9a613b61b571b228d5451c86f294a9c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

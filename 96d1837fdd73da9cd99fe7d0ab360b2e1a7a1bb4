@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "04e261c4_832c6f7a",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-02-19T05:15:47Z",
+      "side": 1,
+      "message": "Why default to disabled for all of these properties?",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7c737be7_692f8fc4",
         "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
         "patchSetId": 3
@@ -163,6 +180,40 @@
         "endLine": 32,
         "endChar": 46
       },
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8baad65_f1df5872",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-02-19T05:15:47Z",
+      "side": 1,
+      "message": "Redfish says this will be an array of string with potentially a single value of ALL/NONE.  Is it easier on ourselves if we do what you have here or: `array[variant[enum[self.SpecialSetValues], string]]`?  I\u0027m not sure which ends up being easier for us from an implementation stand-point.",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98e3f7ba_d5304699",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-02-19T05:15:47Z",
+      "side": 1,
+      "message": "Redfish has this pattern:\n```\n                    \"pattern\": \"^\\\\d+\\\\.\\\\d+$|^NONE$|^ALL$\",\n```\n\nDoesn\u0027t that mean they are dropping the `update` field in the version?  Why are we using it here?",
       "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

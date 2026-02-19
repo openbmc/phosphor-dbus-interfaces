@@ -33,6 +33,69 @@
       "message": "Hi @patrick@stwcx.xyz\nCan this be merged?",
       "revId": "5097f9ce14a5c54d7753087fdd0863efb2964b9b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "011a8f50_08dc5051",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-02-19T05:22:43Z",
+      "side": 1,
+      "message": "We need to get the design document approved before the interfaces go in.  I don\u0027t really know why I\u0027m being pinged on approving the interface.",
+      "revId": "5097f9ce14a5c54d7753087fdd0863efb2964b9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6ac2cdf_fb7ad8f1",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-02-19T05:22:43Z",
+      "side": 1,
+      "message": "Why are we having yet another way to configure the hostname?  Can\u0027t we just use the hostname?",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 66
+      },
+      "revId": "5097f9ce14a5c54d7753087fdd0863efb2964b9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5ae364b_f1978536",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-02-19T05:22:43Z",
+      "side": 1,
+      "message": "Why are these being exposed in a dbus object?  What is the purpose of this?  Shouldn\u0027t we be able to figure these things out in phosphor-networkd and advertise them automatically?",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 30
+      },
+      "revId": "5097f9ce14a5c54d7753087fdd0863efb2964b9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

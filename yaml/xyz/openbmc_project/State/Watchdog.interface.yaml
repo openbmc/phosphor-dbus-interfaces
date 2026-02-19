@@ -39,6 +39,11 @@ properties:
       description: >
           The action the watchdog should perform when it expires.
       default: "HardReset"
+    - name: PreTimeoutInterrupt
+      type: enum[self.PreTimeoutInterruptAction]
+      description: >
+          The BMC generates the selected interrupt before the timer expires.
+      default: "None"
     - name: Interval
       type: uint64
       description: >
@@ -78,6 +83,23 @@ enumerations:
           - name: "PowerCycle"
             description: >
                 Perform a power cycle of the system.
+
+    - name: PreTimeoutInterruptAction
+      description: >
+          The type of PreTimeout Interrupt.
+      values:
+          - name: "None"
+            description: >
+                Do nothing.
+          - name: "SMI"
+            description: >
+                SMI.
+          - name: "NMI"
+            description: >
+                NMI / Diagnostic Interrupt.
+          - name: "MI"
+            description: >
+                Messaging Interrupt.
 
     - name: TimerUse
       description: >

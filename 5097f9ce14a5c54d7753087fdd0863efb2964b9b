@@ -101,6 +101,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "78a05391_372f6b7c",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-02-20T14:37:10Z",
+      "side": 1,
+      "message": "We can already read the BMC hostname another way and control it another way.\n\nI really see very little benefit to \"the BMC has a hostname but we\u0027re going to lie in LLDP advertisement\".  That\u0027s just added complexity.\n\nMaybe it would be easier to do this review if you made two separate interfaces:\n\n1. These are the properties we are allowing configuration of for LLDP transmit.\n\n2. These are the values obtained from an LLDP receive (all read-only).\n\nThere might even be overlap on many of these properties, but I\u0027d like that clarity rather than leaving it up for \"implementation choice\".",
+      "parentUuid": "fe98736e_403dbacb",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 66
+      },
+      "revId": "5097f9ce14a5c54d7753087fdd0863efb2964b9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5ae364b_f1978536",
         "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
         "patchSetId": 10
@@ -136,6 +160,30 @@
       "side": 1,
       "message": "The purpose this interface is to be ultimately integrated with Redfish.\n\nhttps://github.com/openbmc/bmcweb/blob/master/redfish-core/schema/dmtf/csdl/Port_v1.xml defines what properties will be readable and writable by Redfish.   \n\nThe most common use case is to read the properties of the bmc and the LLDP neighbors.\nThe user may choose to override some of these properties in the LLDP advertisement. For instance, override SystemDescription in case it contains sensitive information.",
       "parentUuid": "d5ae364b_f1978536",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 30
+      },
+      "revId": "5097f9ce14a5c54d7753087fdd0863efb2964b9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ec9f580_058f2994",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-02-20T14:37:10Z",
+      "side": 1,
+      "message": "We absolutely should not be lying about MAC in LLDP advertisement.  This should not even be a design consideration.",
+      "parentUuid": "9cef3d14_87d86a62",
       "range": {
         "startLine": 59,
         "startChar": 0,

@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "def25816_d26ccf1c",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-02-20T13:39:44Z",
+      "side": 1,
+      "message": "`SPDMEnabled`: SPDMEnabled is not just a feature toggle. Enabling this changes the trust model of the platform. So IMO, SPDM must be explicitly enabled by the platform owner or provisioning authority(it can be BIOS/TEE or an external verifier like HMC), as initiating SPDM exchanges affects device trust establishment. Hence disabled this by default.\n\n`SPDMSecureSessionEnabled`: Establishing SPDM secure sessions is usually downstream device-dependent and must be explicitly enabled where encrypted device communication is required. In general many SPDM deployments utilize SPDM solely for authentication and measurement retrieval not for secure communication. Hence disabled this by default as well.\n\n`SPDMVerifyCertificate`: In general , certificate validation is performed by an external attestation. The BMC can operate as a conduit for SPDM evidence without acting as the root of trust. So BMC itself acting as a verifier is less typical. Hence made it disabled by default.\n\n`SPDMAllowExtendedAlgorithms`: The requester advertises only the baseline SPDM algorithm set required for interoperability.Extended algorithms may be explicitly enabled to satisfy platform-specific cryptographic or regulatory requirements. Enabling this option expands the negotiated cryptographic surface. Hence made this disabled by default as well.",
+      "parentUuid": "04e261c4_832c6f7a",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7c737be7_692f8fc4",
@@ -201,6 +219,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8500e1af_5bdbe892",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-02-20T13:39:44Z",
+      "side": 1,
+      "message": "I think yours was better , since bmcweb can processes both ALL/NONE or array of versions both the same way. Modified it.",
+      "parentUuid": "b8baad65_f1df5872",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "98e3f7ba_d5304699",
@@ -214,6 +250,24 @@
       "writtenOn": "2026-02-19T05:15:47Z",
       "side": 1,
       "message": "Redfish has this pattern:\n```\n                    \"pattern\": \"^\\\\d+\\\\.\\\\d+$|^NONE$|^ALL$\",\n```\n\nDoesn\u0027t that mean they are dropping the `update` field in the version?  Why are we using it here?",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2d78b92_66889158",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-02-20T13:39:44Z",
+      "side": 1,
+      "message": "I did not really pay much attention to the pattern. You are right. \n\nI defined this as per the SPDM spec numbers per https://www.dmtf.org/dsp/DSP0274. But to me this looks like redfish spec bug. Let me reach out to DMTF for clarity.",
+      "parentUuid": "98e3f7ba_d5304699",
       "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

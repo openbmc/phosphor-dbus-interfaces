@@ -272,6 +272,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d435ddf_97f94b80",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-02-20T15:12:51Z",
+      "side": 1,
+      "message": "I take it back, I think the redfish spec is probably correct. I re-looked at the SPDM spec and it states that `UpdateVersionNumber` : Shall be the version of the specification with editorial updates and errata fixes. Informational; `ignore when checking versions for interoperability.`\n\n\nThe redfish mockup https://redfish.dmtf.org/redfish/mockups/v1/1773 also points to having just the major \u0026 minor number alone.",
+      "parentUuid": "f2d78b92_66889158",
+      "revId": "96d1837fdd73da9cd99fe7d0ab360b2e1a7a1bb4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7367d61f_f09b2af6",

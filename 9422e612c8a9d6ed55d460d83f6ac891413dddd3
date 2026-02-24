@@ -51,6 +51,24 @@
       "message": "How does this get replicated to Redfish?  I don\u0027t see any mention of the word \"Boost\" in the standard.",
       "revId": "9422e612c8a9d6ed55d460d83f6ac891413dddd3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a952901_55b506c8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-02-24T17:08:47Z",
+      "side": 1,
+      "message": "This isn\u0027t in standard Redfish, yet and is currently OEM Nvidia (https://gerrit.openbmc.org/c/openbmc/bmcweb/+/86375).\n\nI didn\u0027t add this as OEM as the feature is not OEM-specific. However, I think it\u0027s best to WIP/abandon this now as the suggestions are to work with DMTF to get this in, if possible.",
+      "parentUuid": "4b97ca35_1c733bf6",
+      "revId": "9422e612c8a9d6ed55d460d83f6ac891413dddd3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

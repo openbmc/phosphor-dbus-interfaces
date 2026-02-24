@@ -76,7 +76,7 @@ should_generate_registry = true
 subdir('gen')
 
 # Source the extra target to copy registry files into a separate tree so they
-# can be useful for dependees when we are built as a sub-project.
+# can be useful for dependencies when we are built as a sub-project.
 subdir('registry')
 
 # Define and build libphosphor_dbus.so from the C++ files.

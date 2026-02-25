@@ -125,6 +125,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b49cbcbf_012aa55d",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1002604
+      },
+      "writtenOn": "2026-02-25T09:09:18Z",
+      "side": 1,
+      "message": "I suggest that networking related properties be read only, and description type properties be read write:\n \nread write:\t\nChassisId\t\nChassisIdSubtype\t\nPortId\t\nPortIdSubtype\t\nSystemDescription\t\n \t\nread only:\nSystemName\nSystemCapabilities\nManagementAddressIPv4\nManagementAddressIPv6\nManagementAddressMAC\nManagementVlanId\n\nI think we can use one interface file and add the readonly flag to the read only capabilities. The implementation will treat all the LLDP receive properties as read only.\n\n \nIf we separate to 2 different interface files, LLDP receive will have readonly flags for all the properties. It will have the same properties as LLDP transmit according to DMTF specification. Do you prefer to go in this direction?",
+      "parentUuid": "78a05391_372f6b7c",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 66
+      },
+      "revId": "5097f9ce14a5c54d7753087fdd0863efb2964b9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5ae364b_f1978536",
         "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
         "patchSetId": 10

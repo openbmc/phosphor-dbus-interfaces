@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd1cf661_67a13e74",
+        "filename": "yaml/xyz/openbmc_project/Logging/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-02-26T20:54:48Z",
+      "side": 1,
+      "message": "Created a new method. CreateEntry instead of modifying an existing one as per the design.",
+      "parentUuid": "aa5814db_564c7e6f",
+      "revId": "b8861a64fdba72019da1ebc0abaeb305b49eabe8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c941dcfa_382d6430",
@@ -49,6 +67,24 @@
       "side": 1,
       "message": "Yes, prefer find, if we even need that? I thought the original design had an easy way to find them already?",
       "parentUuid": "c941dcfa_382d6430",
+      "revId": "b8861a64fdba72019da1ebc0abaeb305b49eabe8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7bb10f9c_a3c6c22d",
+        "filename": "yaml/xyz/openbmc_project/Logging/Create.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-02-26T20:54:48Z",
+      "side": 1,
+      "message": "Added a find method.",
+      "parentUuid": "9d8ccee4_3b67a8f6",
       "revId": "b8861a64fdba72019da1ebc0abaeb305b49eabe8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

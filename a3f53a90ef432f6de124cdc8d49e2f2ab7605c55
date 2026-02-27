@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4cd26f3_1c65a6a8",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2026-02-27T23:08:57Z",
+      "side": 1,
+      "message": "With this just returning 1 path, does that imply that an error with the same hint (a overtemp or fan fault or pgood fault or whatever) should be resolved before another one can be created?  Or will code just keep calling this until it doesn\u0027t get anything back?",
+      "range": {
+        "startLine": 16,
+        "startChar": 5,
+        "endLine": 20,
+        "endChar": 68
+      },
+      "revId": "a3f53a90ef432f6de124cdc8d49e2f2ab7605c55",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

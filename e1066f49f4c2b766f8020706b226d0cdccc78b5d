@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "80d2cef8_3961b51c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1002649
+      },
+      "writtenOn": "2026-02-27T09:31:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9dd52069_29563273",
+      "revId": "e1066f49f4c2b766f8020706b226d0cdccc78b5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e4842961_ab25e41a",
@@ -64,6 +82,54 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "89407d10_ecc0a3eb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002649
+      },
+      "writtenOn": "2026-02-27T09:31:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2a598184_b6d2c535",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 100
+      },
+      "revId": "e1066f49f4c2b766f8020706b226d0cdccc78b5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa18e8ea_6b1707b9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002649
+      },
+      "writtenOn": "2026-02-27T09:31:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e4842961_ab25e41a",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 100
+      },
+      "revId": "e1066f49f4c2b766f8020706b226d0cdccc78b5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f38e0d11_1a97f5ec",
@@ -77,6 +143,24 @@
       "writtenOn": "2026-02-23T21:39:40Z",
       "side": 1,
       "message": "I don\u0027t see any code that actually uses these.  How does this get leveraged other than just stored as a dbus value?",
+      "revId": "e1066f49f4c2b766f8020706b226d0cdccc78b5d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "488b4893_490b9652",
+        "filename": "yaml/xyz/openbmc_project/State/Watchdog.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1002649
+      },
+      "writtenOn": "2026-02-27T09:31:55Z",
+      "side": 1,
+      "message": "The PreTimeoutInterruptAction enum is consumed in the related ipmid patch.\n\nPR:\n\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-host-ipmid/+/84295\n\nThe Set Watchdog Timer handler converts the IPMI pre-timeout bits into this enum and updates the D‑Bus property, while Get Watchdog Timer reads the same property to return the correct value back to the host.\n\nThis makes the enum part of the shared D‑Bus contract between ipmid and the watchdog service, not just stored data.",
+      "parentUuid": "f38e0d11_1a97f5ec",
       "revId": "e1066f49f4c2b766f8020706b226d0cdccc78b5d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

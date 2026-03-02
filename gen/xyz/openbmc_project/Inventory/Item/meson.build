@@ -1,6 +1,7 @@
 # Generated file; do not modify.
 subdir('Accelerator')
 subdir('Battery')
+subdir('Bios')
 subdir('Bmc')
 subdir('Board')
 subdir('Cable')
@@ -118,6 +119,20 @@ generated_markdown += custom_target(
     install_dir: [inst_markdown_dir / sdbusplus_current_path],
     build_by_default: should_generate_markdown,
 )
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/Inventory/Item/Bios__markdown'.underscorify(),
+    input: [ '../../../../../yaml/xyz/openbmc_project/Inventory/Item/Bios.interface.yaml',  ],
+    output: [ 'Bios.md' ],
+    command: [
+        sdbuspp_gen_meson_prog, '--command', 'markdown',
+        '--output', meson.current_build_dir(),
+        '--tool', sdbusplusplus_prog,
+        '--directory', meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Item/Bios',
+    ],
+)
+
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Inventory/Item/Bmc__markdown'.underscorify(),

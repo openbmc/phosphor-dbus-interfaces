@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d472cb7_869e2e5d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Bios.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-03-02T13:30:21Z",
+      "side": 1,
+      "message": "Hi, is it possible to use existing `Software.Version` interface for your use-case?\n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Software/Version.interface.yaml\n\nThat one also has a version string.",
+      "revId": "040aaea944fae7bbdaa8ab4540e1e6ccb5b59065",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

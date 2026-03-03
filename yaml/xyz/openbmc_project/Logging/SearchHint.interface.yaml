@@ -1,0 +1,13 @@
+description: >
+    Implement to provide search-hint attributes. This interface should be
+    instantiated for the phosphor::logging namespace. This interface should be
+    instantiated at the same object path as the Logging.Entry interface.
+
+properties:
+    - name: Hint
+      type: string
+      description: >
+          The Hint parameter is used for daemons to be able to query for their
+          previously recorded error, for marking as resolved. These strings need
+          to be globally unique and are suggested to be of the format
+          "<service_name>:<key>"

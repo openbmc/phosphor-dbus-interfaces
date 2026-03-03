@@ -32,6 +32,14 @@ properties:
           The physical port of the serial device within that interface.
       flags:
           - readonly
+    - name: HubPort
+      type: uint64
+      description: >
+          The port number of the USB Hub on which the serial device is
+          connected. A value of 0 indicates an absence of a hub and a direct
+          connection.
+      flags:
+          - readonly
     - name: Mode
       type: string
       description: >

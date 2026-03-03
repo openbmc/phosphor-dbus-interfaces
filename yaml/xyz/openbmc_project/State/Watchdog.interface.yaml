@@ -60,6 +60,11 @@ properties:
       description: >
           The timer user at the time of expiration.
       default: "Reserved"
+    - name: PreTimeoutInterruptOccurFlag
+      type: boolean
+      description: >
+          PreTimeoutInterruptOccurFlag that preTimeoutInterrupt action occurred.
+      default: false
 
 enumerations:
     - name: Action

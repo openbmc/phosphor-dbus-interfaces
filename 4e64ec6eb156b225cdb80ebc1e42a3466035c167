@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "033dd672_d355095a",
+        "filename": "yaml/com/meta/Hardware/Santabarbara.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-03-03T16:37:09Z",
+      "side": 1,
+      "message": "Is there a need for the SCM here?  We should already have `com.meta.Hardware.BMC.Model.Santabarbara`.  The SCM is the BMC board.",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 21
+      },
+      "revId": "4e64ec6eb156b225cdb80ebc1e42a3466035c167",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

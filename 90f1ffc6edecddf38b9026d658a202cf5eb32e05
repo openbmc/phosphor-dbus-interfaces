@@ -16,6 +16,23 @@
       "message": "friendly ping for review",
       "revId": "90f1ffc6edecddf38b9026d658a202cf5eb32e05",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7933bfc_5d841cb1",
+        "filename": "yaml/xyz/openbmc_project/Led/Group.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-03-04T21:08:35Z",
+      "side": 1,
+      "message": "default service names should be rare.  Why should anyone go directly to this service and not via mapper?",
+      "revId": "90f1ffc6edecddf38b9026d658a202cf5eb32e05",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

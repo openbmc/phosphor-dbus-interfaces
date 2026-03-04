@@ -262,6 +262,11 @@ paths:
                 The total number of collisions that occurred after one slot time
                 as defined by IEEE 802.3.
             value: nic/tx_late_collisions
+          - name: Count
+            description: >
+                Generic counter metrics used by services such as PLDM.
+                Each counter will have a path relative to count/.
+            value: count
           - name: PowerLimitThrottleDuration
             description: >
                 The total duration of throttling caused by a power limit of the

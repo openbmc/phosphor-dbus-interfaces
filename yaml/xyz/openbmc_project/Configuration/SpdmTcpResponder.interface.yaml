@@ -1,0 +1,18 @@
+description: >
+    Configuration interface for SPDM TCP Responder. This interface is used by
+    Entity Manager to configure SPDM devices that communicate over TCP/IP.
+
+properties:
+    - name: Hostname
+      type: string
+      description: >
+          The hostname or IP address of the SPDM TCP responder.
+      flags:
+          - readonly
+
+    - name: Port
+      type: uint64
+      description: >
+          The TCP port number for the SPDM responder.
+      flags:
+          - readonly

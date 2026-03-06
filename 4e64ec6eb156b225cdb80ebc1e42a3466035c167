@@ -22,6 +22,30 @@
       },
       "revId": "4e64ec6eb156b225cdb80ebc1e42a3466035c167",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e53e7a5f_cf155427",
+        "filename": "yaml/com/meta/Hardware/Santabarbara.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1002872
+      },
+      "writtenOn": "2026-03-06T19:21:58Z",
+      "side": 1,
+      "message": "Took a bit of grepping but think I got it. `com.meta.Hardware.BMC.Santabarbara` doesn\u0027t exist here but it is in the generated hpp, and seems to come from /phosphor-dbus-interfaces/yaml/com/meta/Hardware/BMC.interface.yaml - so I can drop this one and use the one that\u0027s defined in the other yaml.",
+      "parentUuid": "033dd672_d355095a",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 21
+      },
+      "revId": "4e64ec6eb156b225cdb80ebc1e42a3466035c167",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

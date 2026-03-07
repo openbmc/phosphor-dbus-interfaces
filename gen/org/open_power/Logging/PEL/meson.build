@@ -5,7 +5,9 @@ sdbusplus_current_path = 'org/open_power/Logging/PEL'
 
 generated_sources += custom_target(
     'org/open_power/Logging/PEL__cpp'.underscorify(),
-    input: ['../../../../../yaml/org/open_power/Logging/PEL.interface.yaml'],
+    input: [
+        '../../../../../yaml/org/open_power/Logging/PEL.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

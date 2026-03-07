@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/meta/Hardware/Catalina'
 
 generated_sources += custom_target(
     'com/meta/Hardware/Catalina__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/meta/Hardware/Catalina.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/meta/Hardware/Catalina.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

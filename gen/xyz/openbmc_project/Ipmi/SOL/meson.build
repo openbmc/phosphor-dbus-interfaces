@@ -4,7 +4,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/Ipmi/SOL'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/Ipmi/SOL__cpp'.underscorify(),
-    input: ['../../../../../yaml/xyz/openbmc_project/Ipmi/SOL.interface.yaml'],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/Ipmi/SOL.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

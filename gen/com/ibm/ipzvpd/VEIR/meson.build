@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/ibm/ipzvpd/VEIR'
 
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VEIR__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/ipzvpd/VEIR.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/ipzvpd/VEIR.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

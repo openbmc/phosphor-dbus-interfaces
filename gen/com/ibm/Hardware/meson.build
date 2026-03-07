@@ -5,7 +5,9 @@ sdbusplus_current_path = 'com/ibm/Hardware'
 
 generated_markdown += custom_target(
     'com/ibm/Hardware/Chassis__markdown'.underscorify(),
-    input: ['../../../../yaml/com/ibm/Hardware/Chassis.interface.yaml'],
+    input: [
+        '../../../../yaml/com/ibm/Hardware/Chassis.interface.yaml',
+    ],
     output: ['Chassis.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/ibm/ipzvpd/UTIL'
 
 generated_sources += custom_target(
     'com/ibm/ipzvpd/UTIL__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/ipzvpd/UTIL.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/ipzvpd/UTIL.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

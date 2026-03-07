@@ -6,7 +6,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/Ipmi'
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Ipmi/SOL__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Ipmi/SOL.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Ipmi/SOL.interface.yaml',
+    ],
     output: ['SOL.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

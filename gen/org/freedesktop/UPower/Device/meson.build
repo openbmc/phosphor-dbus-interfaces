@@ -4,7 +4,9 @@ sdbusplus_current_path = 'org/freedesktop/UPower/Device'
 
 generated_sources += custom_target(
     'org/freedesktop/UPower/Device__cpp'.underscorify(),
-    input: ['../../../../../yaml/org/freedesktop/UPower/Device.interface.yaml'],
+    input: [
+        '../../../../../yaml/org/freedesktop/UPower/Device.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

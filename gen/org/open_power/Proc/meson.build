@@ -5,7 +5,9 @@ sdbusplus_current_path = 'org/open_power/Proc'
 
 generated_markdown += custom_target(
     'org/open_power/Proc/FSI__markdown'.underscorify(),
-    input: ['../../../../yaml/org/open_power/Proc/FSI.errors.yaml'],
+    input: [
+        '../../../../yaml/org/open_power/Proc/FSI.errors.yaml',
+    ],
     output: ['FSI.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

@@ -5,7 +5,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/Certs/CSR'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/Certs/CSR__cpp'.underscorify(),
-    input: ['../../../../../yaml/xyz/openbmc_project/Certs/CSR.interface.yaml'],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/Certs/CSR.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

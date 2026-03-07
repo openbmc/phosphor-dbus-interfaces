@@ -7,7 +7,9 @@ sdbusplus_current_path = 'com/ibm/Dump'
 
 generated_markdown += custom_target(
     'com/ibm/Dump/Create__markdown'.underscorify(),
-    input: ['../../../../yaml/com/ibm/Dump/Create.interface.yaml'],
+    input: [
+        '../../../../yaml/com/ibm/Dump/Create.interface.yaml',
+    ],
     output: ['Create.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -29,7 +31,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'com/ibm/Dump/Notify__markdown'.underscorify(),
-    input: ['../../../../yaml/com/ibm/Dump/Notify.interface.yaml'],
+    input: [
+        '../../../../yaml/com/ibm/Dump/Notify.interface.yaml',
+    ],
     output: ['Notify.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

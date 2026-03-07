@@ -5,7 +5,9 @@ sdbusplus_current_path = 'com/meta/IPMI'
 
 generated_markdown += custom_target(
     'com/meta/IPMI/UnifiedSEL__markdown'.underscorify(),
-    input: ['../../../../yaml/com/meta/IPMI/UnifiedSEL.events.yaml'],
+    input: [
+        '../../../../yaml/com/meta/IPMI/UnifiedSEL.events.yaml',
+    ],
     output: ['UnifiedSEL.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -27,7 +29,9 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'com/meta/IPMI/UnifiedSEL__registry'.underscorify(),
-    input: ['../../../../yaml/com/meta/IPMI/UnifiedSEL.events.yaml'],
+    input: [
+        '../../../../yaml/com/meta/IPMI/UnifiedSEL.events.yaml',
+    ],
     output: ['UnifiedSEL.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [

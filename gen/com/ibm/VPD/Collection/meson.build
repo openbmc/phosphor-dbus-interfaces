@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/ibm/VPD/Collection'
 
 generated_sources += custom_target(
     'com/ibm/VPD/Collection__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/VPD/Collection.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/VPD/Collection.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

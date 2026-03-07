@@ -5,7 +5,9 @@ sdbusplus_current_path = 'com/ampere/Event'
 
 generated_markdown += custom_target(
     'com/ampere/Event/ReportedSEL__markdown'.underscorify(),
-    input: ['../../../../yaml/com/ampere/Event/ReportedSEL.events.yaml'],
+    input: [
+        '../../../../yaml/com/ampere/Event/ReportedSEL.events.yaml',
+    ],
     output: ['ReportedSEL.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -27,7 +29,9 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'com/ampere/Event/ReportedSEL__registry'.underscorify(),
-    input: ['../../../../yaml/com/ampere/Event/ReportedSEL.events.yaml'],
+    input: [
+        '../../../../yaml/com/ampere/Event/ReportedSEL.events.yaml',
+    ],
     output: ['ReportedSEL.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [

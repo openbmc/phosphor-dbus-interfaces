@@ -4,7 +4,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/Led/Group'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/Led/Group__cpp'.underscorify(),
-    input: ['../../../../../yaml/xyz/openbmc_project/Led/Group.interface.yaml'],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/Led/Group.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

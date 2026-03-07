@@ -4,7 +4,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/PLDM/PDR'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/PLDM/PDR__cpp'.underscorify(),
-    input: ['../../../../../yaml/xyz/openbmc_project/PLDM/PDR.interface.yaml'],
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/PLDM/PDR.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

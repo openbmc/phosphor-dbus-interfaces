@@ -30,7 +30,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Console/UART__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Console/UART.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Console/UART.interface.yaml',
+    ],
     output: ['UART.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

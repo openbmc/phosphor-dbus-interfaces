@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/ibm/ipzvpd/VMSC'
 
 generated_sources += custom_target(
     'com/ibm/ipzvpd/VMSC__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/ipzvpd/VMSC.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/ipzvpd/VMSC.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

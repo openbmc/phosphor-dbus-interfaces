@@ -7,7 +7,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/PLDM'
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/PLDM/Event__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/PLDM/Event.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/PLDM/Event.interface.yaml',
+    ],
     output: ['Event.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -29,7 +31,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/PLDM/PDR__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/PLDM/PDR.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/PLDM/PDR.interface.yaml',
+    ],
     output: ['PDR.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

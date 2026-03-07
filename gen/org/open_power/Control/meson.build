@@ -6,7 +6,9 @@ sdbusplus_current_path = 'org/open_power/Control'
 
 generated_markdown += custom_target(
     'org/open_power/Control/Host__markdown'.underscorify(),
-    input: ['../../../../yaml/org/open_power/Control/Host.interface.yaml'],
+    input: [
+        '../../../../yaml/org/open_power/Control/Host.interface.yaml',
+    ],
     output: ['Host.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

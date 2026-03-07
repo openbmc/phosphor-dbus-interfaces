@@ -5,7 +5,9 @@ sdbusplus_current_path = 'org/open_power/Logging'
 
 generated_markdown += custom_target(
     'org/open_power/Logging/PEL__markdown'.underscorify(),
-    input: ['../../../../yaml/org/open_power/Logging/PEL.interface.yaml'],
+    input: [
+        '../../../../yaml/org/open_power/Logging/PEL.interface.yaml',
+    ],
     output: ['PEL.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

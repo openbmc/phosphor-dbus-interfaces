@@ -6,7 +6,9 @@ sdbusplus_current_path = 'xyz/openbmc_project/Object'
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Object/Delete__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Object/Delete.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Object/Delete.interface.yaml',
+    ],
     output: ['Delete.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -28,7 +30,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Object/Enable__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Object/Enable.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Object/Enable.interface.yaml',
+    ],
     output: ['Enable.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

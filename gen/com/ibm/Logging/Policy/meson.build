@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/ibm/Logging/Policy'
 
 generated_sources += custom_target(
     'com/ibm/Logging/Policy__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/ibm/Logging/Policy.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/ibm/Logging/Policy.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

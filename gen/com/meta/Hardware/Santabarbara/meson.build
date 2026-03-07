@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/meta/Hardware/Santabarbara'
 
 generated_sources += custom_target(
     'com/meta/Hardware/Santabarbara__cpp'.underscorify(),
-    input: ['../../../../../yaml/com/meta/Hardware/Santabarbara.interface.yaml'],
+    input: [
+        '../../../../../yaml/com/meta/Hardware/Santabarbara.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

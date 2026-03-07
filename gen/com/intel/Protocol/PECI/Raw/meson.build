@@ -4,7 +4,9 @@ sdbusplus_current_path = 'com/intel/Protocol/PECI/Raw'
 
 generated_sources += custom_target(
     'com/intel/Protocol/PECI/Raw__cpp'.underscorify(),
-    input: ['../../../../../../yaml/com/intel/Protocol/PECI/Raw.interface.yaml'],
+    input: [
+        '../../../../../../yaml/com/intel/Protocol/PECI/Raw.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

@@ -6,7 +6,9 @@ sdbusplus_current_path = 'com/intel/Control'
 
 generated_markdown += custom_target(
     'com/intel/Control/NMISource__markdown'.underscorify(),
-    input: ['../../../../yaml/com/intel/Control/NMISource.interface.yaml'],
+    input: [
+        '../../../../yaml/com/intel/Control/NMISource.interface.yaml',
+    ],
     output: ['NMISource.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

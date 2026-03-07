@@ -9,7 +9,9 @@ sdbusplus_current_path = 'com/ibm'
 
 generated_markdown += custom_target(
     'com/ibm/VPD__markdown'.underscorify(),
-    input: ['../../../yaml/com/ibm/VPD.errors.yaml'],
+    input: [
+        '../../../yaml/com/ibm/VPD.errors.yaml',
+    ],
     output: ['VPD.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

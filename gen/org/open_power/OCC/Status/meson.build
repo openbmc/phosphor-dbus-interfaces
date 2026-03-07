@@ -4,7 +4,9 @@ sdbusplus_current_path = 'org/open_power/OCC/Status'
 
 generated_sources += custom_target(
     'org/open_power/OCC/Status__cpp'.underscorify(),
-    input: ['../../../../../yaml/org/open_power/OCC/Status.interface.yaml'],
+    input: [
+        '../../../../../yaml/org/open_power/OCC/Status.interface.yaml',
+    ],
     output: [
         'common.hpp',
         'server.hpp',

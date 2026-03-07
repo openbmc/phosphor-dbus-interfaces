@@ -10,8 +10,13 @@ sdbusplus_current_path = 'xyz/openbmc_project/Sensor'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/Sensor__cpp'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Sensor.events.yaml'],
-    output: ['event.cpp', 'event.hpp'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Sensor.events.yaml',
+    ],
+    output: [
+        'event.cpp',
+        'event.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog,
@@ -26,7 +31,10 @@ generated_sources += custom_target(
         'xyz/openbmc_project/Sensor',
     ],
     install: should_generate_cpp,
-    install_dir: [false, get_option('includedir') / sdbusplus_current_path],
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
     build_by_default: should_generate_cpp,
 )
 
@@ -56,7 +64,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Sensor/Device__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Sensor/Device.errors.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Sensor/Device.errors.yaml',
+    ],
     output: ['Device.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -127,7 +137,9 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/Sensor/Threshold__registry'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Sensor/Threshold.events.yaml',
+    ],
     output: ['Threshold.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -149,7 +161,9 @@ generated_registry += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Sensor/Value__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Sensor/Value.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Sensor/Value.interface.yaml',
+    ],
     output: ['Value.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

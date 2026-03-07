@@ -12,8 +12,13 @@ sdbusplus_current_path = 'xyz/openbmc_project/Certs'
 
 generated_sources += custom_target(
     'xyz/openbmc_project/Certs__cpp'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Certs.errors.yaml'],
-    output: ['error.cpp', 'error.hpp'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Certs.errors.yaml',
+    ],
+    output: [
+        'error.cpp',
+        'error.hpp',
+    ],
     depend_files: sdbusplusplus_depfiles,
     command: [
         sdbuspp_gen_meson_prog,
@@ -28,7 +33,10 @@ generated_sources += custom_target(
         'xyz/openbmc_project/Certs',
     ],
     install: should_generate_cpp,
-    install_dir: [false, get_option('includedir') / sdbusplus_current_path],
+    install_dir: [
+        false,
+        get_option('includedir') / sdbusplus_current_path,
+    ],
     build_by_default: should_generate_cpp,
 )
 
@@ -58,7 +66,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Certs/CSR__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Certs/CSR.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Certs/CSR.interface.yaml',
+    ],
     output: ['CSR.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -104,7 +114,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Certs/Entry__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Certs/Entry.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Certs/Entry.interface.yaml',
+    ],
     output: ['Entry.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -126,7 +138,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Certs/Install__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Certs/Install.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Certs/Install.interface.yaml',
+    ],
     output: ['Install.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -172,7 +186,9 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/Certs/Replace__markdown'.underscorify(),
-    input: ['../../../../yaml/xyz/openbmc_project/Certs/Replace.interface.yaml'],
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Certs/Replace.interface.yaml',
+    ],
     output: ['Replace.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [

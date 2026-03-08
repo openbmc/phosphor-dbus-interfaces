@@ -5,6 +5,7 @@ subdir('Catalina')
 subdir('Clemente')
 subdir('Harma')
 subdir('Minerva')
+subdir('SanMiguel')
 subdir('Santabarbara')
 subdir('Ventura2')
 subdir('Yosemite5')
@@ -149,6 +150,30 @@ generated_markdown += custom_target(
         '--directory',
         meson.current_source_dir() / '../../../../yaml',
         'com/meta/Hardware/Minerva',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_markdown += custom_target(
+    'com/meta/Hardware/SanMiguel__markdown'.underscorify(),
+    input: [
+        '../../../../yaml/com/meta/Hardware/SanMiguel.interface.yaml',
+    ],
+    output: ['SanMiguel.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'com/meta/Hardware/SanMiguel',
     ],
     install: should_generate_markdown,
     install_dir: [inst_markdown_dir / sdbusplus_current_path],

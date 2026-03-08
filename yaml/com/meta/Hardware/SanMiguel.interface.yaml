@@ -1,0 +1,10 @@
+description: >
+    This interface is never intended to be instantiated, but is used to define
+    devices for SanMiguel.
+
+enumerations:
+    - name: TPM
+      description: >
+          The compatible hardware strings for the TPM on SanMiguel.
+      values:
+          - name: BMC

@@ -33,6 +33,24 @@
       "message": "default service names should be rare.  Why should anyone go directly to this service and not via mapper?",
       "revId": "90f1ffc6edecddf38b9026d658a202cf5eb32e05",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3c86c1b_8a5db7d4",
+        "filename": "yaml/xyz/openbmc_project/Led/Group.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-03-09T14:30:00Z",
+      "side": 1,
+      "message": "These properties are not only used on client but also on server side.\n\nFor example the implementation can use this constant to request it\u0027s bus name.\n\nIs it the intent, that documenting the service name here implies clients should not use the mapper?",
+      "parentUuid": "f7933bfc_5d841cb1",
+      "revId": "90f1ffc6edecddf38b9026d658a202cf5eb32e05",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

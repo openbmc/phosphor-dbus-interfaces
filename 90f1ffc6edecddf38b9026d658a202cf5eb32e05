@@ -51,6 +51,24 @@
       "parentUuid": "f7933bfc_5d841cb1",
       "revId": "90f1ffc6edecddf38b9026d658a202cf5eb32e05",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6ef9141_a8d25cb3",
+        "filename": "yaml/xyz/openbmc_project/Led/Group.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-03-10T13:41:15Z",
+      "side": 1,
+      "message": "\u003e Is it the intent, that documenting the service name here implies clients should not use the mapper?\n\nYes, effectively.  It means there is only and will only ever be one service that provides this interface.  That is very rare in my opinion.\n\n\u003e These properties are not only used on client but also on server side.\n\nClients using this are, to me, a bug.\nServers shouldn\u0027t care what their busname is because it is irrelevant (as long as it is unique).  It should be treated as a local private constant.",
+      "parentUuid": "f3c86c1b_8a5db7d4",
+      "revId": "90f1ffc6edecddf38b9026d658a202cf5eb32e05",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

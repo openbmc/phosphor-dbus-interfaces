@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b68433fe_82384546",
+        "filename": "yaml/xyz/openbmc_project/Logging/Create.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-03-11T05:46:09Z",
+      "side": 1,
+      "message": "Could this have been a special key in AdditionalData? Create likely doesn\u0027t change often, but if it does we have to remember to change this as well.",
+      "revId": "7bf2bbeff953e860143a6e3dd9d576cc278e561e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6cd8fb27_893b507b",
+        "filename": "yaml/xyz/openbmc_project/Logging/Create.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-03-11T05:46:09Z",
+      "side": 1,
+      "message": "Should any errors be thrown? What, for example, ig a GUID is not used by the caller? Or if the key is an unexpected format?",
+      "revId": "7bf2bbeff953e860143a6e3dd9d576cc278e561e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5284154c_45ad736c",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-03-11T05:46:09Z",
+      "side": 1,
+      "message": "nit: rephrase? Is the Hint contained in the manager?",
+      "revId": "7bf2bbeff953e860143a6e3dd9d576cc278e561e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21d801af_b130ea74",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-03-11T05:46:09Z",
+      "side": 1,
+      "message": "Why can\u0027t logging users perform this find themselves?",
+      "revId": "7bf2bbeff953e860143a6e3dd9d576cc278e561e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb67f170_6959b508",
+        "filename": "yaml/xyz/openbmc_project/Logging/SearchHint.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-03-11T05:46:09Z",
+      "side": 1,
+      "message": "Do we want to restrict search use to resolving logs?",
+      "revId": "7bf2bbeff953e860143a6e3dd9d576cc278e561e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

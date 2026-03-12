@@ -59,3 +59,12 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: containing
+      description: >
+          Objects that implement Chassis can optionally implement the
+          'containing' association to provide a link to one or more fans. This
+          determines Fan Resource placement in the Redfish implementation,
+          meaning only one Chassis can contain a given fan.
+      reverse_name: contained_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Fan

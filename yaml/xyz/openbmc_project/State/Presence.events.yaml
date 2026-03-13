@@ -1,0 +1,24 @@
+version: 1.0.0
+
+events:
+    - name: DevicePresent
+      metadata:
+          - name: DeviceName
+            type: string
+            primary: true
+            description: The name of the device whose presence was detected.
+      en:
+          description:
+              A device presence event indicating that the device is present.
+          message: Device {DeviceName} is present.
+
+    - name: DeviceAbsent
+      metadata:
+          - name: DeviceName
+            type: string
+            primary: true
+            description: The name of the device whose absence was detected.
+      en:
+          description:
+              A device presence event indicating that the device is absent.
+          message: Device {DeviceName} is absent.

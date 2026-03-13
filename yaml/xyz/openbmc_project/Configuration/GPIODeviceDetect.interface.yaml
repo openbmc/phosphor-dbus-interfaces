@@ -16,3 +16,9 @@ properties:
           Values of the gpio lines for which a device is considered present.
           Choosing 'uint64' instead of 'bool' here for compatibility with how EM
           exposes configuration on dbus.
+    - name: LogPresenceChange
+      type: boolean
+      default: false
+      description: >
+          Whether presence state transitions for this GPIODeviceDetect entry
+          should generate an event log.

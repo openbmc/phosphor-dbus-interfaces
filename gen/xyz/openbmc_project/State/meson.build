@@ -14,6 +14,7 @@ subdir('LockOut')
 subdir('OperatingSystem')
 subdir('Power')
 subdir('PowerOnHours')
+subdir('Presence')
 subdir('Pump')
 subdir('SMC')
 subdir('ScheduledHostTransition')
@@ -53,9 +54,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/BMC__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/BMC.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/BMC.events.yaml'],
     output: ['BMC.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -101,9 +100,7 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/Cable__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Cable.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Cable.events.yaml'],
     output: ['Cable.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -125,9 +122,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/Cable__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Cable.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Cable.events.yaml'],
     output: ['Cable.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -174,9 +169,7 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/Drive__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Drive.interface.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Drive.interface.yaml'],
     output: ['Drive.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -198,9 +191,7 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/Fan__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Fan.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Fan.events.yaml'],
     output: ['Fan.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -222,9 +213,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/Fan__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Fan.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Fan.events.yaml'],
     output: ['Fan.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -246,9 +235,7 @@ generated_registry += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/Filter__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Filter.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Filter.events.yaml'],
     output: ['Filter.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -270,9 +257,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/Filter__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Filter.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Filter.events.yaml'],
     output: ['Filter.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -319,9 +304,7 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/LockOut__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/LockOut.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/LockOut.events.yaml'],
     output: ['LockOut.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -343,9 +326,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/LockOut__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/LockOut.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/LockOut.events.yaml'],
     output: ['LockOut.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -367,9 +348,7 @@ generated_registry += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/Power__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Power.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Power.events.yaml'],
     output: ['Power.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -391,9 +370,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/Power__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Power.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Power.events.yaml'],
     output: ['Power.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -438,10 +415,52 @@ generated_markdown += custom_target(
 )
 
 generated_markdown += custom_target(
-    'xyz/openbmc_project/State/Pump__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Pump.events.yaml',
+    'xyz/openbmc_project/State/Presence__markdown'.underscorify(),
+    input: ['../../../../yaml/xyz/openbmc_project/State/Presence.events.yaml'],
+    output: ['Presence.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/State/Presence',
     ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_registry += custom_target(
+    'xyz/openbmc_project/State/Presence__registry'.underscorify(),
+    input: ['../../../../yaml/xyz/openbmc_project/State/Presence.events.yaml'],
+    output: ['Presence.json'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'registry',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/State/Presence',
+    ],
+    install: should_generate_registry,
+    install_dir: [inst_registry_dir / sdbusplus_current_path],
+    build_by_default: should_generate_registry,
+)
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/State/Pump__markdown'.underscorify(),
+    input: ['../../../../yaml/xyz/openbmc_project/State/Pump.events.yaml'],
     output: ['Pump.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -463,9 +482,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/Pump__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Pump.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Pump.events.yaml'],
     output: ['Pump.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -487,9 +504,7 @@ generated_registry += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/SMC__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/SMC.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/SMC.events.yaml'],
     output: ['SMC.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -511,9 +526,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/SMC__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/SMC.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/SMC.events.yaml'],
     output: ['SMC.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -583,9 +596,7 @@ generated_markdown += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/Thermal__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Thermal.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Thermal.events.yaml'],
     output: ['Thermal.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -607,9 +618,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/Thermal__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Thermal.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Thermal.events.yaml'],
     output: ['Thermal.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -631,9 +640,7 @@ generated_registry += custom_target(
 
 generated_markdown += custom_target(
     'xyz/openbmc_project/State/Valve__markdown'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Valve.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Valve.events.yaml'],
     output: ['Valve.md'],
     depend_files: sdbusplusplus_depfiles,
     command: [
@@ -655,9 +662,7 @@ generated_markdown += custom_target(
 
 generated_registry += custom_target(
     'xyz/openbmc_project/State/Valve__registry'.underscorify(),
-    input: [
-        '../../../../yaml/xyz/openbmc_project/State/Valve.events.yaml',
-    ],
+    input: ['../../../../yaml/xyz/openbmc_project/State/Valve.events.yaml'],
     output: ['Valve.json'],
     depend_files: sdbusplusplus_depfiles,
     command: [

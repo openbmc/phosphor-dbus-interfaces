@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5d634962_1ce75215",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-03-19T20:55:11Z",
+      "side": 1,
+      "message": "Will do.",
+      "parentUuid": "642dae59_3c12c2a5",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 16
+      },
+      "revId": "acbf706e79fb9e2046c55c89ce382c36816a0753",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cf99852f_ac687ed1",
         "filename": "yaml/xyz/openbmc_project/Configuration/USBPort.interface.yaml",
         "patchSetId": 1
@@ -37,6 +61,30 @@
       "writtenOn": "2026-03-06T15:13:40Z",
       "side": 1,
       "message": "Why is zero absence of a port?  Why are ports a 1-based numbering?  Is this something that comes from the USB standard?",
+      "range": {
+        "startLine": 39,
+        "startChar": 21,
+        "endLine": 40,
+        "endChar": 21
+      },
+      "revId": "acbf706e79fb9e2046c55c89ce382c36816a0753",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43bc1600_690d9d9e",
+        "filename": "yaml/xyz/openbmc_project/Configuration/USBPort.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-03-19T20:55:11Z",
+      "side": 1,
+      "message": "I went off of https://unix.stackexchange.com/questions/297178/how-usb-bus-number-and-device-number-been-assigned \n```\nDevice numbers are simply counters: the first device connected gets a 1, the next gets a 2, and so on. But there is a little more: USB was designed to be hot-pluggable; \n```\n\nFrom reading through https://superuser.com/questions/1711806/the-naming-convention-of-folders-in-sys-bus-usb-devices it looks like the port#0 is reserved for the hub itself which get the .0. and the downstream ports get numbered from 1.",
+      "parentUuid": "cf99852f_ac687ed1",
       "range": {
         "startLine": 39,
         "startChar": 21,

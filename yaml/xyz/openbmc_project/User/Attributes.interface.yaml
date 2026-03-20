@@ -76,3 +76,11 @@ properties:
           that the user password expiration is not specified.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+    - name: UserType
+      type: enum[xyz.openbmc_project.User.Manager.UserType]
+      flags:
+          - const
+      description: >
+          Indicates the authentication backend of the user. Internal for locally
+          managed users, LDAP for OpenLDAP authenticated users, and AD for
+          Active Directory authenticated users.

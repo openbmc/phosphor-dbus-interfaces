@@ -42,6 +42,9 @@ enumerations:
           - name: Count
             description: >
                 Unit to indicate counts.
+          - name: Frequency
+            description: >
+                Unit to indicate frequency in hertz.
           - name: Percent
             description: >
                 Unit to indicate percentage.
@@ -272,6 +275,11 @@ paths:
                 The total duration of throttling caused by a thermal limit of
                 the device since reset.
             value: thermal_limit_throttle_duration
+          - name: OperatingFrequency
+            description: >
+                The operating frequency of a device. Examples are operating
+                frequency of a processor/memory/etc. Measured in hertz.
+            value: operating_frequency
     - name: BMC
       description: >
           The BMC metrics.

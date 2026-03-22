@@ -1,0 +1,33 @@
+description: >
+    Implement to provide a control interface on a processor.
+
+properties:
+    - name: SpeedLimitHz
+      type: uint64
+      default: maxint
+      description: >
+          Speed limit setting on this processor. A value of 0 indicates no limit
+          has been set. If the property is not supported, the value will be
+          maxint.
+
+    - name: SpeedLimitLocked
+      type: boolean
+      default: false
+      description: >
+          Setting this to true indicates that the proceesor speed will be fixed
+          at the value of SpeedLimitHz; false indicates otherwise. This property
+          must be implemented if SpeedLimitHz is implemented. If the default
+          value can't be changed, then a set on this can result in the
+          UnsupportedRequest error.
+      errors:
+          - xyz.openbmc_project.Common.Error.UnsupportedRequest
+
+associations:
+    - name: controlling
+      description: >
+          Objects implementing Control.Processor must implement the
+          'controlling' association to provide a link to the processor inventory
+          item that is being controlled.
+      reverse_name: controlled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Accelerator

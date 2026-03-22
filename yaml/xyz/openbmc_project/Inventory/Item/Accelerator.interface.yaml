@@ -32,3 +32,13 @@ enumerations:
           - name: "Unknown"
             description: >
                 An unknown type.
+
+associations:
+    - name: controlled_by
+      description:
+          Objects implementing Item.Accelerator may implement the
+          'controlled_by' association to provide a link to one or more control
+          interfaces.
+      reverse_name: controlling
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Control.Processor

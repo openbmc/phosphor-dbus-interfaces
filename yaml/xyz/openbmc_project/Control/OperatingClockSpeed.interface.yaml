@@ -1,0 +1,58 @@
+description: >
+    Direct runtime control of operating clock speed limits for a device with
+    configurable clock speed, such as a processor or memory. Both Requested and
+    Present property pairs are provided because on some devices a requested
+    speed limit only takes effect after a device reset or host driver load.
+
+properties:
+    - name: PresentSpeedLimitMaxHz
+      type: uint64
+      flags:
+          - readonly
+      default: maxint
+      description: >
+          The currently enforced maximum speed limit, in hertz. Maps to the
+          SpeedLimitMHz property in the Redfish Processor schema and to the
+          SetPoint property in the Redfish Control schema.
+
+    - name: PresentSpeedLimitMinHz
+      type: uint64
+      flags:
+          - readonly
+      default: 0
+      description: >
+          The currently enforced minimum speed limit, in hertz.
+
+    - name: RequestedSpeedLimitMaxHz
+      type: uint64
+      default: maxint
+      description: >
+          The maximum speed limit requested on this device, in hertz. Maps to
+          the SettingMax attribute of OperatingSpeedRangeMHz in the Redfish
+          Processor and Memory schemas, and to the SettingMax property in the
+          Redfish Control schema.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure
+
+    - name: RequestedSpeedLimitMinHz
+      type: uint64
+      default: maxint
+      description: >
+          The minimum speed limit requested on this device, in hertz. Maps to
+          the SettingMin attribute of OperatingSpeedRangeMHz in the Redfish
+          Processor and Memory schemas, and to the SettingMin property in the
+          Redfish Control schema.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure
+
+associations:
+    - name: controlling
+      description: >
+          Objects implementing Control.OperatingClockSpeed must implement the
+          'controlling' association to provide a link to the inventory item
+          whose clock speed is being controlled.
+      reverse_name: controlled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Accelerator

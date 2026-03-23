@@ -75,6 +75,17 @@ properties:
       default: false
       description: >
           Indicates whether the LUKS volume is locked.
+    - name: Capacity
+      default: 0
+      type: uint64
+      description: >
+          The size in bytes of the Volume. `0` if cannot be determined.
+    - name: BytesErased
+      default: 0
+      type: uint64
+      description: >
+          The number of bytes that were erased. This property gets set by the
+          Erase method.
 
 enumerations:
     - name: EraseMethod

@@ -33,6 +33,36 @@ methods:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.ResourceNotFound
 
+    - name: EraseByteRange
+      description: >
+          Erase the specified byte range. This method only supports those erase
+          methods where a byte range makes sense, namely LogicalOverWrite,
+          LogicalVerify, ZeroOverWrite, and ZeroVerify. The other erase methods
+          can only operate on the entire volume, and must be initiated with the
+          other dbus method above.
+      parameters:
+          - name: EraseType
+            type: enum[self.EraseMethod]
+            description: >
+                Describes what type of erase is done.
+          - name: Offset
+            type: uint64
+            description: >
+                The offset (in bytes) where the erase should start.
+          - name: NumBytes
+            type: uint64
+            description: >
+                The number of bytes to erase.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+      returns:
+          - name: NumBytesErased
+            type: uint64
+            description: >
+                The number of bytes that were erased. Note that if there was an
+                error, this could be a smaller number than was indicated with
+                the NumBytes input parameter.
+
     - name: Lock
       description: >
           Unmount the filesystem, lock the volume, and remove sensitive data
@@ -75,6 +105,11 @@ properties:
       default: false
       description: >
           Indicates whether the LUKS volume is locked.
+    - name: Capacity
+      default: 0
+      type: uint64
+      description: >
+          The size in bytes of the Volume. `0` if cannot be determined.
 
 enumerations:
     - name: EraseMethod

@@ -22,6 +22,30 @@
       },
       "revId": "cacd183efbc90fce16fb4950bc3cfb7eba6b1c6f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "806a2c3d_d6a76cc6",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Volume.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1001202
+      },
+      "writtenOn": "2026-03-24T23:08:27Z",
+      "side": 1,
+      "message": "I added a new method called EraseByteRange(), which returns the number of bytes that got erased. It would only support those erase types where a byte range makes sense. Let me know what you think.",
+      "parentUuid": "9e53afff_ccd4bea8",
+      "range": {
+        "startLine": 83,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 23
+      },
+      "revId": "cacd183efbc90fce16fb4950bc3cfb7eba6b1c6f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

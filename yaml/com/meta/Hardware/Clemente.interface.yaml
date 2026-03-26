@@ -15,3 +15,11 @@ enumerations:
           The compatible hardware strings for the TPM on Clemente.
       values:
           - name: BMC
+
+    - name: VR
+      description: >
+          The compatible hardware strings for the VR on Clemente.
+      values:
+          - name: RAA228004_n1
+          - name: RAA228004_n2
+          - name: RAA228004_aux

@@ -28,3 +28,42 @@ properties:
       description: >
           if true then DHCP option 12 is enabled i.e machine`s hostname will be
           sent to the DHCP server.
+
+          sent to the DHCP server.
+    - name: VendorClassIdentifier
+      type: string
+      description: >
+          The vendor class identifier used to identify vendor type and configuration.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+methods:
+    - name: SetVendorOption
+      parameters:
+        - name: option
+          type: uint32
+        - name: value
+          type: string
+      returns:
+        - name: result
+          type: int16
+      description: >
+          Set vendor DHCP vendor option and value
+    - name: GetVendorOption
+      parameters:
+        - name: option
+          type: uint32
+      returns:
+        - name: result
+          type: string
+      description: >
+          Get vendor DHCP vendor value by option
+    - name: DelVendorOption
+      parameters:
+        - name: option
+          type: uint32
+      returns:
+        - name: result
+          type: int16
+      description: >
+          Delete vendor DHCP vendor value by option

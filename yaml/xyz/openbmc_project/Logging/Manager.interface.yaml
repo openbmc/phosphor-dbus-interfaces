@@ -1,0 +1,39 @@
+description: >
+    This interface contains a FindEntry method, which can be implemented to
+    allow query of xyz.openbmc_project.Logging.Entry objects contained in a
+    logging manager. The query parametrs can be any key stored as additional
+    data for each logging entries.
+
+methods:
+    - name: FindEntry
+      description: >
+          Find the log entry matching the requested additional data key/value
+          pair. The search is expected to proceed starting from the latest and
+          to the oldest.
+      parameters:
+          - name: AdditionalDataKey
+            type: string
+            description: >
+                The key of the additional data of the log entry we are searching
+                for.
+          - name: AdditionalDataValue
+            type: string
+            description: >
+                The value of above key in the additional data of the log entry
+          - name: MaxCount
+            type: uint64
+            default: 1
+            description: >
+                The maximum number of entries required
+          - name: IncludeResolved
+            type: boolean
+            default: false
+            description: >
+                By default only object paths of log entries which have the
+                'resolved' property set to false are returned. Users can set
+                this to true to allow all log entires.
+      returns:
+          - name: Entry
+            type: array[object_path]
+            description: >
+                The list of object_path which matches the requested query.

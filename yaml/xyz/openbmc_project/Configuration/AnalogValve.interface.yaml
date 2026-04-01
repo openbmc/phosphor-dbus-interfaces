@@ -1,0 +1,42 @@
+description: >
+    Implement to provide entity manager configuration for an analog valve used
+    in liquid cooling.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          The type of configuration object.
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: >
+          The name of the analog valve.
+      flags:
+          - readonly
+    - name: MaxFlowRate
+      type: double
+      description: >
+          The maximum flow rate supported by the analog valve.
+      flags:
+          - readonly
+    - name: SetPointVoltageRange
+      type: array[double]
+      description: >
+          The voltage range [min, max] for the valve setpoint.
+      flags:
+          - readonly
+    - name: Tolerance
+      type: double
+      description: >
+          The acceptable voltage deviation between setpoint and feedback before
+          the valve is considered out of position.
+      flags:
+          - readonly
+    - name: OpenThreshold
+      type: double
+      description: >
+          The threshold voltage above which the valve is considered open.
+      flags:
+          - readonly

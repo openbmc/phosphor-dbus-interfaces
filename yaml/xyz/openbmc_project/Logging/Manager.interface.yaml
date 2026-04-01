@@ -1,0 +1,30 @@
+description: >
+    This interface contains a FindEntry method, which can be implemented to
+    allow query of xyz.openbmc_project.Logging.Entry objects contained in a
+    logging manager of a specific log entry with a Hint used during log
+    creation.
+
+methods:
+    - name: FindEntry
+      description: >
+          Find the most recent unresolved log entry matching the requested
+          `Hint` key which was used to extend the log entry during the creation
+          time.
+      parameters:
+          - name: Hint
+            type: string
+            description: >
+                The hint associated with the given unresolved log entry
+      returns:
+          - name: Entry
+            type: object_path
+            description: >
+                The object_path which matches the requested query.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+
+service_names:
+    - default: xyz.openbmc_project.Logging
+
+paths:
+    - instance: /xyz/openbmc_project/logging

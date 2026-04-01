@@ -1,0 +1,47 @@
+description: >
+    Implement to provide entity manager configuration for a digital to analog
+    converter (DAC) device.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          The type of configuration object.
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: >
+          The name of the DAC device.
+      flags:
+          - readonly
+    - name: Bus
+      type: uint64
+      description: >
+          The I2C bus number.
+      flags:
+          - readonly
+    - name: Address
+      type: uint64
+      description: >
+          The I2C address of the DAC device.
+      flags:
+          - readonly
+    - name: Index
+      type: uint64
+      description: >
+          The channel index of the DAC device.
+      flags:
+          - readonly
+    - name: Offset
+      type: double
+      description: >
+          The voltage offset for DAC raw value conversion.
+      flags:
+          - readonly
+    - name: ScaleFactor
+      type: double
+      description: >
+          The scale factor for DAC raw value conversion.
+      flags:
+          - readonly

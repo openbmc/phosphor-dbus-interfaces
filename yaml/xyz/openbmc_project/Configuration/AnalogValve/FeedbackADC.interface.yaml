@@ -1,0 +1,29 @@
+description: >
+    Implement to provide entity manager configuration for an analog to digital
+    converter (ADC) device used for valve position feedback.
+
+properties:
+    - name: Name
+      type: string
+      description: >
+          The name of the ADC device.
+      flags:
+          - readonly
+    - name: Type
+      type: string
+      description: >
+          The type of configuration object.
+      flags:
+          - readonly
+    - name: Index
+      type: uint64
+      description: >
+          The channel index of the ADC device.
+      flags:
+          - readonly
+    - name: ScaleFactor
+      type: double
+      description: >
+          The scale factor for ADC raw value conversion.
+      flags:
+          - readonly

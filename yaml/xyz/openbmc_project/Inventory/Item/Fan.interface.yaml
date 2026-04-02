@@ -1,6 +1,15 @@
 description: >
     Implement to provide Fan attributes.
 
+properties:
+    - name: MaxRatedRPM
+      type: int32
+      default: 0
+      description: >
+          Max RPM that the fan is rated for. A value of 0 implies the max RPM is unknown or unavailable.
+      flags:
+          - readonly
+
 associations:
     - name: cooling
       description: >

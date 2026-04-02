@@ -1,6 +1,15 @@
 description: >
     Implement to provide Fan attributes.
 
+properties:
+    - name: MaxRatedRPM
+      type: int32
+      default: NaN
+      description: >
+          Max RPM that the fan is rated for.
+      flags:
+          - readonly
+
 associations:
     - name: cooling
       description: >

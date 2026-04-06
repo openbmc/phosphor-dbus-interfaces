@@ -1,0 +1,121 @@
+description: >
+    This is manipulate firewall rules
+
+enumerations:
+      - name: Protocol
+        values:
+            - name: TCP
+              description: >
+                    Define the rules over TCP
+            - name: UDP
+              description: >
+                    Define the rules over UDP
+            - name: ICMP
+              description: >
+                    Define the rules over ICMP
+            - name: ALL
+              description: >
+                    Define the rules over TCP, UDP and ICMP
+      - name: Target
+        values:
+            - name: ACCEPT
+              description: >
+                    Accept packets if the content fit the rule
+            - name: DROP
+              description: >
+                    Drop packets if the content fit the rule
+      - name: IP
+        values:
+            - name: IPV4
+            - name: IPV6
+            - name: BOTH
+
+methods:
+      - name: AddRule
+        description: >
+              Add the rule with incoming parameters
+        parameters:
+            - name: Target
+              type: enum[self.Target]
+            - name: Control
+              type: byte
+            - name: Protocol
+              type: enum[self.Protocol]
+            - name: StartIPAddress
+              type: string
+            - name: EndIPAddress
+              type: string
+            - name: StartPort
+              type: uint16
+            - name: EndPort
+              type: uint16
+            - name: MACAddress
+              type: string
+            - name: StartTime
+              type: string
+            - name: Stop
+              type: string
+            - name: IPver
+              type: enum[self.IP]
+        returns:
+            - name: result
+              type: int16
+      - name: DelRule
+        description: >
+              Delete the rule with incoming parameters
+        parameters:
+            - name: Target
+              type: enum[self.Target]
+            - name: Control
+              type: byte
+            - name: Protocol
+              type: enum[self.Protocol]
+            - name: StartIPAddress
+              type: string
+            - name: EndIPAddress
+              type: string
+            - name: StartPort
+              type: uint16
+            - name: EndPort
+              type: uint16
+            - name: MACAddress
+              type: string
+            - name: StartTime
+              type: string
+            - name: StopTime
+              type: string
+            - name: IPver
+              type: enum[self.IP]
+        returns:
+            - name: Result
+              type: int16
+      - name: FlushAll
+        description: >
+              Delete all the rules according to IPv4, IPv6 or both
+        parameters:
+            - name: IP
+              type: enum[self.IP]
+        returns:
+            - name: result
+              type: int16
+      - name: GetRules
+        description: >
+              Get all the rules
+        parameters:
+            - name: IP
+              type: enum[self.IP]
+        returns:
+            - name: Rules
+              type: array[struct[boolean, enum[self.Target], byte, enum[self.Protocol], string, string, uint16, uint16, string, string, string]]
+      - name: ReorderRules
+        description: >
+              Reorder the rules
+        parameters:
+            - name: IP
+              type: enum[self.IP]
+            - name: rules
+              type: array[struct[boolean, enum[self.Target], byte, enum[self.Protocol], string, string, uint16, uint16, string, string, string]]
+        returns:
+            - name: result
+              type: int16
+

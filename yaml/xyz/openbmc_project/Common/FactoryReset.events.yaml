@@ -1,0 +1,27 @@
+version: 1.0.0
+
+errors:
+    - name: ResetFailure
+      severity: error
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: The source of the failed reset.
+      en:
+          description: An error occured during factory reset.
+          message: An error occured at {Source} during factory reset.
+          resolution: Retry reset.
+      errno: EIO
+
+events:
+    - name: ResetSuccess
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: The source of the successful reset.
+      en:
+          description: The FactoryReset was successful.
+          message: Factory reset at '{Source}' was successful.
+          resolution: None.

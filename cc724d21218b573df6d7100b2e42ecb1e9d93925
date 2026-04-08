@@ -46,6 +46,30 @@
       },
       "revId": "cc724d21218b573df6d7100b2e42ecb1e9d93925",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "031fc391_0a984d7b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-04-08T16:00:12Z",
+      "side": 1,
+      "message": "0 seems reasonable.  The alternative is `maxint`.\n\nWhatever you have as the default here you\u0027ll need code in bmcweb to recognize this and treat is as null.",
+      "parentUuid": "5e6aa408_c2d894ce",
+      "range": {
+        "startLine": 6,
+        "startChar": 6,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "cc724d21218b573df6d7100b2e42ecb1e9d93925",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

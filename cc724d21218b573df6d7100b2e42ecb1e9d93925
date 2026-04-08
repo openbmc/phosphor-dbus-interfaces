@@ -22,6 +22,30 @@
       },
       "revId": "cc724d21218b573df6d7100b2e42ecb1e9d93925",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e6aa408_c2d894ce",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002248
+      },
+      "writtenOn": "2026-04-08T15:29:26Z",
+      "side": 1,
+      "message": "I was currious about this. What would be the right \"default\" to show that the MaxRatedRPM is unknown? We use 0 at HP, but not sure what OpenBMC would like to see as a whole.",
+      "parentUuid": "8e051b2b_c6981960",
+      "range": {
+        "startLine": 6,
+        "startChar": 6,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "cc724d21218b573df6d7100b2e42ecb1e9d93925",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

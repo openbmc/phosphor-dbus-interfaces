@@ -5,6 +5,7 @@ description: >
       airflow
       altitude
       current
+      charge
       energy
       fan_tach
       frequency
@@ -55,7 +56,8 @@ properties:
           "Percent" For objects in the voltage namespace, Unit must be "Volts",
           For objects in the liquidflow namespace, Unit must be "LPM". For
           objects in the frequency namespace, Unit must be "Hertz". For objects
-          in the valve namespace, Unit must be "Percent".
+          in the valve namespace, Unit must be "Percent". For objects in the
+          charge namespace, Unit must be "ChargeAh".
 
 enumerations:
     - name: Unit
@@ -68,6 +70,9 @@ enumerations:
           - name: CFM
             description: >
                 To calculate Air Flow in Cubic Feet per Minute
+          - name: ChargeAh
+            description: >
+                Charge capacity in units of Ampere hours.
           - name: DegreesC
             description: >
                 Temperature as degrees Celsius.
@@ -127,6 +132,8 @@ paths:
             value: altitude
           - name: Current
             value: current
+          - name: ChargeAh
+            value: charge
           - name: Energy
             value: energy
           - name: FanTach

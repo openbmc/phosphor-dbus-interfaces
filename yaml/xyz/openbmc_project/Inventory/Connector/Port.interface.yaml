@@ -36,6 +36,9 @@ enumerations:
       description: >
           Possible port protocol type.
       values:
+          - name: Ethernet
+            description: >
+                Protocol is Ethernet.
           - name: PCIe
             description: >
                 Protocol is PCI Express.

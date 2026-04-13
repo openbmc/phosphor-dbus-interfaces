@@ -1,0 +1,50 @@
+description: >
+    Implement to provide DRAM attributes for embedded memory devices such as HBM
+    on GPU accelerators.
+
+properties:
+    - name: MemorySizeInKB
+      type: size
+      description: >
+          Memory capacity in kilobytes.
+    - name: MemoryType
+      type: enum[self.DeviceType]
+      description: >
+          The memory device type.
+    - name: ECC
+      type: enum[self.Ecc]
+      description: >
+          Error-Correcting Code capability.
+    - name: MemoryConfiguredSpeedInMhz
+      type: uint16
+      description: >
+          Configured clock speed of the memory in megahertz.
+    - name: AllowedSpeedsMT
+      type: array[uint16]
+      description: >
+          Speeds supported by this memory in megatransfers.
+
+enumerations:
+    - name: DeviceType
+      description: >
+          Possible memory device types.
+      values:
+          - name: HBM
+            description: >
+                High Bandwidth Memory.
+          - name: Unknown
+            description: >
+                Unknown memory device type.
+    - name: Ecc
+      description: >
+          Possible error-correcting code schemes.
+      values:
+          - name: SingleBitECC
+            description: >
+                Single-bit error correcting code.
+          - name: MultiBitECC
+            description: >
+                Multi-bit error correcting code.
+          - name: Unknown
+            description: >
+                Unknown ECC capability.

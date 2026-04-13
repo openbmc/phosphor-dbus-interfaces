@@ -1,2 +1,7 @@
 description: >
     Implement to provide Ethernet card attributes.
+
+    This interface is deprecated in favor of
+    xyz.openbmc_project.Inventory.Item.NetworkAdapter, which covers all physical
+    network adapter types (Ethernet NICs, converged network adapters, etc.). New
+    implementations should use Item.NetworkAdapter.

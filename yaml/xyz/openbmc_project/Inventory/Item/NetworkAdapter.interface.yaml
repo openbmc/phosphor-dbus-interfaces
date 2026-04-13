@@ -1,0 +1,13 @@
+description: >
+    Implement to provide network adapter attributes. A physical network adapter
+    capable of connecting to a network. Examples include but are not limited to
+    Ethernet NICs and converged network adapters.
+
+associations:
+    - name: connecting
+      description: >
+          Objects that implement NetworkAdapter can optionally implement the
+          connecting association to provide links to one or more Ports.
+      reverse_name: connected_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Connector.Port

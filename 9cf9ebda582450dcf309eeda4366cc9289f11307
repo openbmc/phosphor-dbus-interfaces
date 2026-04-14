@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "45b66b22_b2f6a539",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dram.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-14T05:57:50Z",
+      "side": 1,
+      "message": "Thanks! The current Item.Dram properties are a subset of Item.Dimm. The reason for creating a separate interface comes from the discussion on change 87221 (https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/87221/comment/f2d528d4_a14a51b0, where Ed Tanous pointed out:\n\n\u003e \"DIMM isn\u0027t appropriate here. DIMM is a connector that fits into a slot. We\u0027d need to come up with a dram inventory item.\"\n\nDeepak Kodihalli responded (https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/87221/comment/cb786d82_50fa6199/) suggesting that Item.Dimm is already used as Item.Memory in practice, and proposed renaming Item.Dimm to Item.Memory instead of creating a new interface.\n\n\n\nGiven that all 5 properties and 2 enums in Item.Dram are already defined in Item.Dimm, I agree the duplication should be resolved. I see two possible directions:\n\n1. Drop Item.Dram and rename Item.Dimm to Item.Memory (as Deepak suggested)\n2. Keep Item.Dram with the common properties and update Item.Dimm to remove the overlap\n\nHowever, both options would require updating existing Item.Dimm consumers (e.g. phosphor-host-ipmid, smbios-mdr, bmcweb). What is the recommended approach for handling this kind of PDI refactoring without breaking existing consumers? Thanks!",
+      "parentUuid": "dfb7decc_c70719ce",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 1
+      },
+      "revId": "9cf9ebda582450dcf309eeda4366cc9289f11307",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "466e910e_05f575e3",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-04-13T06:11:25Z",
       "side": 1,
       "message": "Both of the enums are also defined in Item.Dimm. Can we de-duplicate them.",
+      "revId": "9cf9ebda582450dcf309eeda4366cc9289f11307",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddf5bbb9_3a2faae9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dram.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-14T05:57:50Z",
+      "side": 1,
+      "message": "Thanks Harshit, I reply at below comment.",
+      "parentUuid": "466e910e_05f575e3",
       "revId": "9cf9ebda582450dcf309eeda4366cc9289f11307",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

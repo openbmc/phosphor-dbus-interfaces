@@ -4,6 +4,30 @@ description: >
     profiles.
 
 properties:
+    - name: RequestedSpeedLimitMaxHz
+      type: uint64
+      default: 0
+      description: >
+          Maximum speed limit that can be requested on this processor, in hertz.
+          Maps to the SettingMax attribute of OperatingSpeedRangeMHz in the
+          Redfish Processor schema. If the property is not supported, the value
+          will be maxint.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure
+
+    - name: RequestedSpeedLimitMinHz
+      type: uint64
+      default: 0
+      description: >
+          Minimum speed limit that can be requested on this processor, in hertz.
+          Maps to the SettingMin attribute of OperatingSpeedRangeMHz in the
+          Redfish Processor schema. A value of 0 indicates there is no minimum
+          limit.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure
+
     - name: SpeedLimitHz
       type: uint64
       default: maxint

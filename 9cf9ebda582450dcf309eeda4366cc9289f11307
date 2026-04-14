@@ -144,6 +144,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a88c02c0_1e665513",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dram.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-04-14T13:23:40Z",
+      "side": 1,
+      "message": "A rename from Item.Dimm to Item.Memory doesn\u0027t look like an insignificant refactor.  Are you planning on making the change to all the corresponding repositories?\n\nIf we really are hung up on the name I\u0027m ok with deprecating Dimm and transitioning to Memory while someone goes and fixes up all the existing uses.  You\u0027d need to make bmcweb support both for a time.\n\nI don\u0027t think this rename is necessary but I\u0027m also fine if we chose to go that route.",
+      "parentUuid": "841cc079_67968165",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 1
+      },
+      "revId": "9cf9ebda582450dcf309eeda4366cc9289f11307",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "466e910e_05f575e3",

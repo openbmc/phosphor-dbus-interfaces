@@ -96,6 +96,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "63e176dd_63a22212",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dram.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-14T12:54:40Z",
+      "side": 1,
+      "message": "Hi @alexander.hansen@9elements.com , thanks for feedback.\nHi @patrick@stwcx.xyz, thanks for the feedback. Should we continue using Item.Dimm as-is for GPU embedded memory (HBM), or should we rename Item.Dimm to Item.Memory(or Item.Dram) as Deepak suggested in https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/87221/comment/cb786d82_50fa6199/? Thanks!",
+      "parentUuid": "2848497d_5a0c4f5a",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 1
+      },
+      "revId": "9cf9ebda582450dcf309eeda4366cc9289f11307",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "466e910e_05f575e3",

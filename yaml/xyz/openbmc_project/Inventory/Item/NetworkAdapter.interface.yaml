@@ -7,7 +7,9 @@ associations:
     - name: connecting
       description: >
           Objects that implement NetworkAdapter can optionally implement the
-          connecting association to provide links to one or more Ports.
+          connecting association to provide links to one or more Ports or to
+          an associated PCIeDevice.
       reverse_name: connected_to
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Connector.Port
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice

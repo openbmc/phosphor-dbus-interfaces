@@ -402,6 +402,14 @@ associations:
           upstexposing association to provide a link back to a PCIe function.
       reverse_name: exposed_by
       required_endpoint_interfaces: xyz.openbmc_project.Inventory.Item.PCIeFunction
+    - name: network_adapter
+      description: >
+          Objects that implement PCIeDevice can optionally implement the
+          network_adapter association to provide a link to a NetworkAdapter.
+      reverse_name: pcie_device
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.NetworkAdapter
+
     - name: connected_to
       description: >
           Objects that are connected at the other end of the link.

@@ -168,6 +168,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3b17e98_2232036e",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dram.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-15T01:27:11Z",
+      "side": 1,
+      "message": "Hi @patrick@stwcx.xyz\nThanks for your reply.\nI agree that renaming would have a significant impact — it touches all repos using this interface, involves multiple owners, and requires their help to update and verify.\n\nFor context, the original Item.Dram proposal was based on Ed Tanous\u0027s discussion in https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/87221/comment/f2d528d4_a14a51b0/ about the conceptual difference between DIMM and DRAM.\n\nHowever, I noticed that Item.Dimm already includes HBM/HBM2/HBM3 in its DeviceType enum (https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Inventory/Item/Dimm.interface.yaml#L214-L222). Would it be appropriate to use Item.Dimm directly for GPU embedded memory (HBM)? Because rename could potentially have a very large impact.Thanks.",
+      "parentUuid": "a88c02c0_1e665513",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 1
+      },
+      "revId": "9cf9ebda582450dcf309eeda4366cc9289f11307",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "466e910e_05f575e3",

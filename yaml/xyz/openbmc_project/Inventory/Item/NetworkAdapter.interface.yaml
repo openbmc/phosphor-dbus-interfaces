@@ -11,3 +11,12 @@ associations:
       reverse_name: connected_to
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Connector.Port
+
+    - name: pcie_device
+      description: >
+          Objects that implement NetworkAdapter can optionally implement the
+          pcie_device association to provide a link to the associated
+          PCIeDevice.
+      reverse_name: network_adapter
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice

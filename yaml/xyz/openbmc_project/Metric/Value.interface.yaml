@@ -280,6 +280,11 @@ paths:
                 The operating frequency of a device. Examples are operating
                 frequency of a processor/memory/etc. Measured in hertz.
             value: operating_frequency
+          - name: ProcessorBandwidth
+            description: >
+                Bandwidth usage of the processor as a percentage of total
+                processor bandwidth.
+            value: processor_bandwidth
     - name: BMC
       description: >
           The BMC metrics.

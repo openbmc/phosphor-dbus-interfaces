@@ -22,6 +22,30 @@
       },
       "revId": "048bef805a241ec12d543ca9643531016b94f84e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bffc8dd_458dadad",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-16T13:14:04Z",
+      "side": 1,
+      "message": "Thanks for your help!\nLooking at Item.Ethernet, its description is \"Ethernet card attributes\", which seems to be scoped to Ethernet.\n\nNetwork adapters like the NVIDIA ConnectX series(ConnectX-7, ConnectX-8) support both Ethernet and InfiniBand protocol modes, so Item.Ethernet may not be the best fit. Item.NetworkAdapter represents physical network adapter hardware without being tied to a specific protocol, which seems more appropriate for this use case.\n\nIndeed, Item.NetworkAdapter semantically covers Item.Ethernet, so marking Item.Ethernet as deprecated would make sense. I\u0027ll follow whatever approach upstream prefers — please let me know how you\u0027d like to handle this and I\u0027ll get it done.\nIf my understanding is incorrect, please feel free to correct me. Thanks!",
+      "parentUuid": "dc629acb_3a0d7d5d",
+      "range": {
+        "startLine": 14,
+        "startChar": 46,
+        "endLine": 15,
+        "endChar": 39
+      },
+      "revId": "048bef805a241ec12d543ca9643531016b94f84e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -22,6 +22,30 @@
       },
       "revId": "33fa4abb9df74a54e76ee78899e50aad8446c249",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c365721a_18fdabde",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-16T06:05:21Z",
+      "side": 1,
+      "message": "Thanks!\nNetworkAdapter represents a physical network adapter\nhardware (e.g. Ethernet NICs, converged network\nadapters), mapping to the Redfish NetworkAdapter\nresource.\n\nbmcweb uses Item.NetworkAdapter as a D-Bus mapper\nfilter to expose the Redfish NetworkAdapter resource\ntree.\n\nExisting interfaces cannot substitute:\n- NetworkInterface is a logical network interface\n  (maps to Redfish EthernetInterface), not physical\n  network adapter hardware.\n- Board is too generic for bmcweb to distinguish\n  which objects are network adapters.\n- PCIeDevice describes PCIe identity — GPUs are also\n  PCIeDevice, so bmcweb cannot use it to distinguish\n  network adapters from other PCIe devices.\n\nThis interface follows the same pattern as\nFabricAdapter: an empty interface (no properties)\nwith a connecting association to Connector.Port.\n\nHow it is used:\n- dbus-sensors creates Item.NetworkAdapter on the\n  network adapter object and sets up a connecting\n  association to its Port objects.\n- bmcweb discovers all objects with\n  Item.NetworkAdapter via mapper query to expose\n  the Redfish NetworkAdapter collection, then follows\n  the connecting association to find Port objects.\n\nFull implementation:\nhttps://gerrit.openbmc.org/q/topic:\"CX_NetworkDeviceFunctions\"",
+      "parentUuid": "1b9baf98_3a4c7bf8",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 51
+      },
+      "revId": "33fa4abb9df74a54e76ee78899e50aad8446c249",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

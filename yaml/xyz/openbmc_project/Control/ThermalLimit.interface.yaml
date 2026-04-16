@@ -1,0 +1,37 @@
+description: >
+    Implement to provide DCMI Thermal Limit parameters.
+
+properties:
+    - name: ExceptionAction
+      type: enum[self.ExceptionActions]
+      default: NoAction
+      description: >
+          The exception action to take when the thermal limit is exceeded.
+    - name: TemparatureLimit
+      type: byte
+      default: 0
+      description: >
+          The temperature limit threshold value.
+    - name: ExceptionTime
+      type: uint16
+      default: 0
+      description: >
+          The exception time in seconds.
+
+enumerations:
+    - name: ExceptionActions
+      description: >
+          Possible exception actions when the thermal limit is exceeded.
+      values:
+          - name: NoAction
+            description: >
+                No action taken.
+          - name: LoggingSEL
+            description: >
+                Log event to SEL.
+          - name: HardPowerOff
+            description: >
+                Hard power off the system.
+          - name: HardPowerOffAndLoggingSEL
+            description: >
+                Hard power off the system and log event to SEL.

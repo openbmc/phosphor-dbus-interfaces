@@ -192,6 +192,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "196959c8_d3170438",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dram.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-16T08:50:08Z",
+      "side": 1,
+      "message": "I\u0027ve summarized four possible options from the\ndiscussion so far:\n\nOption 1: Use Item.Dimm as-is for GPU HBM\n- No PDI change needed\n- Item.Dimm already has HBM/HBM2/HBM3 in DeviceType\n  enum\n- Simplest approach, no impact on existing consumers\n\nOption 2: Create Item.Memory, deprecate Item.Dimm(Thanks Harshit suggestion)\n- Copy Item.Dimm to Item.Memory\n- Mark Item.Dimm as deprecated\n- bmcweb supports both during the transition period\n- Other consumers can migrate at their own pace\n\nOption 3: Rename Item.Dimm to Item.Memory\n- Cleanest long-term\n- Requires updating all consumers at once\n  (phosphor-host-ipmid, smbios-mdr, bmcweb, etc.)\n- Can use a Gerrit topic to coordinate the change\n- Risk: involves multiple repos and owners, modifying\n  code maintained by others may introduce unexpected\n  issues\n\nOption 4: Keep Item.Dram with common properties,\n  update Item.Dimm to remove the overlap\n  (Thanks Alexander\u0027s suggestion)\n- Existing Item.Dimm consumers would expose both\n  Item.Dimm and Item.Dram\n- Item.Dimm only holds properties not in Item.Dram\n- Risk: requires updating all existing Item.Dimm\n  consumers to expose both interfaces, involves\n  multiple repos and owners, modifying code maintained\n  by others may introduce unexpected issues",
+      "parentUuid": "c3b17e98_2232036e",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 1
+      },
+      "revId": "9cf9ebda582450dcf309eeda4366cc9289f11307",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "466e910e_05f575e3",

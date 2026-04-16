@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dee58b2e_d3c2964d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-04-16T01:46:19Z",
+      "side": 1,
+      "message": "Done. Switched to reusing the existing connecting/connected_to associations — added PCIeDevice as an additional endpoint in NetworkAdapter\u0027s connecting, and NetworkAdapter as an additional endpoint in PCIeDevice\u0027s connected_to.",
+      "parentUuid": "c72750a4_00a01891",
+      "revId": "73e85e11f18093736e2263a9cf1abaa86266070f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "adcac214_6b1230e0",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-04-15T08:03:19Z",
       "side": 1,
       "message": "dumb question: why can\u0027t we use `connecting`/`connected_to` here?\n\nWhy do we need a new association?",
+      "range": {
+        "startLine": 15,
+        "startChar": 12,
+        "endLine": 15,
+        "endChar": 23
+      },
+      "revId": "73e85e11f18093736e2263a9cf1abaa86266070f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3fae4afb_1c379ec7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkAdapter.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-04-16T01:46:19Z",
+      "side": 1,
+      "message": "Good point. Both interfaces already had connecting/connected_to for other relationships, so I just added the new endpoint to each existing association instead of creating a new one.",
+      "parentUuid": "adcac214_6b1230e0",
       "range": {
         "startLine": 15,
         "startChar": 12,

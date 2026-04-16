@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc629acb_3a0d7d5d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-04-16T07:59:46Z",
+      "side": 1,
+      "message": "Did you consider renaming `Item.Ethernet` for this purpose\n\n```\ncat yaml/xyz/openbmc_project/Inventory/Item/Ethernet.interface.yaml \ndescription: \u003e\n    Implement to provide Ethernet card attributes.\n```\n\nFrom a quick search it does not look like it\u0027s used much\n\nhttps://github.com/search?q\u003dorg%3Aopenbmc%20xyz.openbmc_project.Inventory.Item.Ethernet\u0026type\u003dcode\n\nand its description is kind of similar to what\u0027s being proposed.\n\nIf you don\u0027t want to re-use/re-name it, should it be documented as deprecated? Or should one implement both interfaces?",
+      "range": {
+        "startLine": 14,
+        "startChar": 46,
+        "endLine": 15,
+        "endChar": 39
+      },
+      "revId": "048bef805a241ec12d543ca9643531016b94f84e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

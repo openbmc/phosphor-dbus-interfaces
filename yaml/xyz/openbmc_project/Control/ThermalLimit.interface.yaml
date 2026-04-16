@@ -1,0 +1,19 @@
+description: >
+    Implement to provide DCMI Thermal Limit parameters.
+
+properties:
+    - name: ExceptionAction
+      type: string
+      default: '""'
+      description: >
+          The exception action to take when the thermal limit is exceeded.
+    - name: TemparatureLimit
+      type: byte
+      default: 0
+      description: >
+          The temperature limit threshold value.
+    - name: ExceptionTime
+      type: uint16
+      default: 0
+      description: >
+          The exception time in seconds.

@@ -1,0 +1,131 @@
+description: >
+    Implement to provide attributes for embedded memory such as High
+    Bandwidth Memory (HBM) or on-package LPDDR. For traditional pluggable
+    DIMM modules, use Inventory.Item.Dimm instead.
+properties:
+    - name: MemoryDataWidth
+      type: uint16
+      description: >
+          Data width of the memory, in bits.
+    - name: MemorySizeInKB
+      type: size
+      description: >
+          Memory size in Kilobytes.
+    - name: MemoryDeviceLocator
+      type: string
+      description: >
+          Location of the embedded memory relative to its host device,
+          for example GPU_0_0_HBM_0.
+    - name: MemoryType
+      type: enum[self.DeviceType]
+      default: Unknown
+      description: >
+          Type of memory.
+    - name: MemoryTypeDetail
+      type: string
+      description: >
+          Additional detail on the memory, such as Synchronous, etc.
+    - name: MaxMemorySpeedInMhz
+      type: uint16
+      description: >
+          The maximum capable clock speed of the memory, in megahertz.
+    - name: MemoryAttributes
+      type: size
+      description: >
+          Internal structural attribute of the memory. Implementations
+          that do not have an applicable structural grouping may set
+          this to 0.
+    - name: MemoryConfiguredSpeedInMhz
+      type: uint16
+      description: >
+          Configured clock speed of the memory, in megahertz.
+    - name: ECC
+      type: enum[self.Ecc]
+      default: NoECC
+      description: >
+          Error-Correcting Code capability.
+    - name: RevisionCode
+      type: uint16
+      description: >
+          Revision code provided by the individual manufacturer.
+    - name: FormFactor
+      type: enum[self.FormFactor]
+      description: >
+          The form factor of the embedded memory.
+    - name: MemoryTotalWidth
+      type: uint16
+      description: >
+          The total bus width, in bits, including ECC bits when present.
+    - name: AllowedSpeedsMT
+      type: array[uint16]
+      description: >
+          Speeds supported by this memory in megatransfers per second.
+    - name: MemoryMedia
+      type: enum[self.MemoryTech]
+      default: Unknown
+      description: >
+          Memory technology type.
+
+enumerations:
+    - name: Ecc
+      description: >
+          Error-Correcting Code capability.
+      values:
+          - name: NoECC
+            description: >
+                No ECC support.
+          - name: SingleBitECC
+            description: >
+                Single bit data errors can be corrected by ECC.
+          - name: MultiBitECC
+            description: >
+                Multibit data errors can be corrected by ECC.
+          - name: AddressParity
+            description: >
+                Address parity errors can be corrected.
+    - name: MemoryTech
+      description: >
+          Memory technology type of the embedded memory.
+      values:
+          - name: Other
+            description: >
+                Other memory technology not defined in this enum.
+          - name: Unknown
+            description: >
+                Unknown memory technology.
+          - name: DRAM
+            description: >
+                The memory is comprised of volatile DRAM.
+    - name: DeviceType
+      description: >
+          Device type of the embedded memory.
+      values:
+          - name: Other
+            description: >
+                Other device type not defined in this enum.
+          - name: Unknown
+            description: >
+                Unknown device type.
+          - name: HBM
+            description: >
+                High Bandwidth Memory.
+          - name: HBM2
+            description: >
+                High Bandwidth Memory Generation 2.
+          - name: HBM3
+            description: >
+                High Bandwidth Memory Generation 3.
+          - name: LPDDR4_SDRAM
+            description: >
+                Low-Power Double Data Rate 4 SDRAM.
+          - name: LPDDR5_SDRAM
+            description: >
+                Low-Power Double Data Rate 5 SDRAM.
+    - name: FormFactor
+      description: >
+          Form factor of the embedded memory.
+      values:
+          - name: Embedded
+            description: >
+                On-package embedded memory (e.g., die-stacked HBM or
+                soldered on-package LPDDR).

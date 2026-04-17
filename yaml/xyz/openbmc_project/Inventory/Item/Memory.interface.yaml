@@ -1,7 +1,7 @@
 description: >
-    Implement to provide DIMM attributes. This interface is deprecated in favor
-    of Item.Memory, which covers all memory device types (DIMMs, on-package
-    memory such as HBM, etc.). New implementations should use Item.Memory.
+    Implement to provide memory device attributes, including DIMMs, on-package
+    memory such as HBM, and other memory technologies. This replaces the
+    Item.Dimm interface which has been deprecated.
 properties:
     - name: MemoryDataWidth
       type: uint16

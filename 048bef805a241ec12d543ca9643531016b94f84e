@@ -46,6 +46,47 @@
       },
       "revId": "048bef805a241ec12d543ca9643531016b94f84e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3952be4_c8fe8b62",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-04-17T09:48:32Z",
+      "side": 1,
+      "message": "Thanks for the detailed explanation 😊\n\nI would be fine with adding a small note to `yaml/xyz/openbmc_project/Inventory/Item/Ethernet.interface.yaml`, something like:\n\n\"This interface is deprecated, use `xyz.openbmc_project.Inventory.Item.NetworkAdapter` instead.\"\n\nSince bmcweb only seems to use the `NetworkAdapter` interface anyways\n\n```\n[alexander@alexanderarchlinux bmcweb]$ rg -i \"Item.Ethernet\"\n[alexander@alexanderarchlinux bmcweb]$ rg -i \"Item.NetworkAdapter\"\nredfish-core/lib/network_adapter.hpp\n28:    \"xyz.openbmc_project.Inventory.Item.NetworkAdapter\"};\n```\n\nNot sure what @patrick@stwcx.xyz thinks is right here or what\u0027s the history on the `Item.Ethernet`.",
+      "parentUuid": "5bffc8dd_458dadad",
+      "range": {
+        "startLine": 14,
+        "startChar": 46,
+        "endLine": 15,
+        "endChar": 39
+      },
+      "revId": "048bef805a241ec12d543ca9643531016b94f84e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41c19f95_875978aa",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-04-17T09:48:32Z",
+      "side": 1,
+      "message": "Since it maps to Redfish NetworkAdapter resource, should we document that here?\n\nIt would clarify why anyone would create this interface beyond just modeling things on D-Bus.",
+      "revId": "048bef805a241ec12d543ca9643531016b94f84e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

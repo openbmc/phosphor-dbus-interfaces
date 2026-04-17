@@ -11,8 +11,8 @@ reboot the BMC and hosts, and turn on and off power to the chassis. The
 interfaces are designed in a way to support a many to many mappings of each
 interface.
 
-There are three states to track and control on a BMC based server. The states
-below in () represent the actual parameter name as found in
+There are three primary states to track and control on a BMC based server. The
+states below in () represent the actual parameter name as found in
 `/xyz/openbmc_project/state/`+`/bmcX,/hostY,/chassisZ` where X,Y,Z are the
 instances (in most cases 0). For all three states, the software tracks a current
 state, and a requested transition.
@@ -36,6 +36,11 @@ state, and a requested transition.
 
 A simple system design would be to include a single _BMC_, _Host_, and
 _Chassis_.
+
+In addition to the primary platform states above, component-level state
+interfaces can also be implemented when a platform supports independent control
+of a specific component. For drives, this is represented by
+`xyz.openbmc_project.State.Drive`.
 
 Details of the properties and their valid settings can be found in the state
 manager dbus interface [specification][2].
@@ -62,6 +67,13 @@ This is an instance under _Chassis_ and provide interface at
 Instance 0 (chassis_system0) will be treated as a complete chassis system which
 will include BMC, host and chassis. This will support hard power cycle of
 complete system.
+
+### _Drive_
+
+The _Drive_ interface provides per-drive transition requests (`On`, `Off`,
+`Reboot`, `HardReboot`, `Powercycle`) and state reporting (`CurrentDriveState`). Drive
+instances use string identifiers (e.g. `nvme0`) and are hosted under
+`/xyz/openbmc_project/state/drive/<instance>`.
 
 In multi-host or multi-chassis system, instance number can be used from 1-N, as
 0 is reserved for complete system. In multi chassis system this can be named as

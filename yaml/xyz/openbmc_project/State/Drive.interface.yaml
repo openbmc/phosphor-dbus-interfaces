@@ -34,6 +34,12 @@ enumerations:
       description: >
           The desired transition for the Drive
       values:
+          - name: "On"
+            description: >
+                The Drive should be powered on.
+          - name: "Off"
+            description: >
+                The Drive should be powered off.
           - name: "Reboot"
             description: >
                 The Drive should be rebooted.
@@ -77,3 +83,9 @@ enumerations:
                 Current DriveState will be set to "UpdateInProgress" while
                 starting firmware download and reset to "Ready", once activation
                 is done or error occurs during update process.
+
+paths:
+    - namespace: /xyz/openbmc_project/state
+      segments:
+          - name: Drive
+            value: drive

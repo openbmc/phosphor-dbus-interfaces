@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0a30495_3159f101",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dimm.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-04-17T10:10:30Z",
+      "side": 1,
+      "message": "```suggestion\n    memory such as HBM, etc.). New implementations should use Item.Memory.\n  \n    Eric Liu (liuer@nvidia.com) will migrate existing code to use `Item.Memory` and\n    `Item.Dimm` can be removed once migration is complete.\n```\n\nAs currently written it is ambiguous what \u0027deprecated\u0027 means here.\n\nWorst case outcome is we get to keep both interfaces indefinitely. Which is worse than what was there before.\n\nSo if we want to migrate over time i would prefer to document who is going to do the follow-up work of migrating all the code using the old interface.",
+      "revId": "58e6c56c5e4119eec76ecc4172eda99ad5dd1e2a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

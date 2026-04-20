@@ -1,0 +1,25 @@
+description: >
+    Reset the writable control settings of an object to their manufacturer
+    default values. The interface is implemented on the same object as the
+    control interfaces whose settings it resets, and the reset applies only to
+    that object.
+
+methods:
+    - name: ResetToDefault
+      description: >
+          Reset the writable properties of the control interfaces on this object
+          to their manufacturer default values. The method returns once the
+          device has applied the defaults.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
+
+properties:
+    - name: DefaultSetPoint
+      type: double
+      flags:
+          - readonly
+      default: NaN
+      description: >
+          The set point the control returns to after ResetToDefault, in the
+          units of the control interface on this object. NaN when the default is
+          not known.

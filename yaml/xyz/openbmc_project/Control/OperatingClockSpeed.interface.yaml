@@ -4,6 +4,14 @@ description: >
     Present property pairs are provided because on some devices a requested
     speed limit only takes effect after a device reset or host driver load.
 
+methods:
+    - name: ResetToDefaults
+      description: >
+          Reset the operating clock speed limits to factory defaults.
+      errors:
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure
+          - xyz.openbmc_project.Common.Error.Unavailable
+
 properties:
     - name: PresentSpeedLimitMaxHz
       type: uint64

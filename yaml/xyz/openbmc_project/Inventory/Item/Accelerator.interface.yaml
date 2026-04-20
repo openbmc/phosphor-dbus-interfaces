@@ -54,3 +54,13 @@ enumerations:
           - name: "Unknown"
             description: >
                 An unknown type.
+
+associations:
+    - name: controlled_by
+      description: >
+          Objects that implement Accelerator can optionally implement the
+          controlled_by association to provide a link to a Control interface
+          such as Control.Reset.
+      reverse_name: controlling
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Control.Reset

@@ -15,3 +15,12 @@ associations:
       reverse_name: connected_to
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Connector.Port
+
+    - name: controlled_by
+      description: >
+          Objects that implement NetworkAdapter can optionally implement the
+          controlled_by association to provide a link to a Control interface
+          such as Control.Reset.
+      reverse_name: controlling
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Control.Reset

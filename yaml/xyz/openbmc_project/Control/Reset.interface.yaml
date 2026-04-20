@@ -1,0 +1,52 @@
+description: >
+    Implement to provide reset control for an inventory device. This differs
+    from xyz.openbmc_project.State.Host, which manages host firmware power
+    transitions, and from xyz.openbmc_project.Common.FactoryReset, which
+    restores a service to its factory defaults. The 'controlling' association
+    links a Control.Reset object to the inventory item being reset. The
+    ResetType property reports which reset type the device supports, and is
+    mapped by bmcweb to the AllowableValues of the corresponding Redfish reset
+    action.
+
+methods:
+    - name: Reset
+      description: >
+          Trigger a reset on the controlled device using the type reported by
+          the ResetType property.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Timeout
+          - xyz.openbmc_project.Common.Error.Unavailable
+
+properties:
+    - name: ResetType
+      type: enum[self.ResetTypes]
+      flags:
+          - readonly
+      description: >
+          The reset type supported by the controlled device. Maps to the value
+          advertised in the Redfish action's ResetType@Redfish.AllowableValues.
+
+enumerations:
+    - name: ResetTypes
+      description: >
+          Supported reset types. Each value corresponds to the same-named member
+          of the Redfish Resource ResetType enumeration.
+      values:
+          - name: ForceRestart
+            description: >
+                Shut down the device immediately and non-gracefully and restart
+                it.
+
+associations:
+    - name: controlling
+      description: >
+          Objects implementing Control.Reset must implement the 'controlling'
+          association to provide a link to the inventory item that is being
+          reset.
+      reverse_name: controlled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Accelerator
+          - xyz.openbmc_project.Inventory.Item.NetworkAdapter
+          - xyz.openbmc_project.Inventory.Item.PCIeSwitch

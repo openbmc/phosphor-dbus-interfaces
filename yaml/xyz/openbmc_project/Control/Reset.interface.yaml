@@ -1,0 +1,68 @@
+description: >
+    Implement to provide reset control for an inventory item. This differs from
+    xyz.openbmc_project.State.Host, which manages host firmware power
+    transitions, and from xyz.openbmc_project.Common.FactoryReset, which
+    restores a service to its factory defaults. The 'controlling' association
+    links a Control.Reset object to the inventory item being reset. The
+    SupportedResetTypes property reports the set of reset types supported by the
+    device, which maps to the corresponding Redfish reset action's
+    ResetType@Redfish.AllowableValues.
+
+properties:
+    - name: SupportedResetTypes
+      type: array[enum[self.ResetTypes]]
+      flags:
+          - readonly
+      description: >
+          The set of reset types supported by the controlled device, as reported
+          by the device firmware. Maps to the values advertised in the
+          corresponding Redfish action's ResetType@Redfish.AllowableValues. The
+          "None" value is never included in this set.
+
+    - name: PendingReset
+      type: enum[self.ResetTypes]
+      default: "None"
+      description: >
+          Writing a value from SupportedResetTypes to this property requests a
+          reset of the controlled device. The daemon performs the reset and
+          writes the property back to "None" when the operation completes.
+          Subscribers can track completion via the standard
+          org.freedesktop.DBus.Properties.PropertiesChanged signal.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Unavailable
+
+enumerations:
+    - name: ResetTypes
+      description: >
+          Possible reset types. Each non-None value corresponds to the
+          same-named member of the Redfish Resource ResetType enumeration.
+      values:
+          - name: "None"
+            description: >
+                No reset is pending. Used only as the cleared state of
+                PendingReset; not a valid value to write to PendingReset and not
+                advertised in SupportedResetTypes.
+          - name: ForceRestart
+            description: >
+                Shut down the device immediately and non-gracefully and restart
+                it.
+          - name: GracefulRestart
+            description: >
+                Shut down gracefully and restart the device.
+          - name: PowerCycle
+            description: >
+                Power cycle the device immediately (non-graceful). Equivalent to
+                cutting power to the device and then restoring it; all hardware
+                state is lost and the device performs a full initialisation
+                sequence on restart.
+
+associations:
+    - name: controlling
+      description: >
+          Objects implementing Control.Reset must implement the 'controlling'
+          association to provide a link to the inventory item that is being
+          reset.
+      reverse_name: controlled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

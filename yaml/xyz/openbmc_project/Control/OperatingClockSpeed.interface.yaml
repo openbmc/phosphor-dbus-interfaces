@@ -4,6 +4,14 @@ description: >
     Present property pairs are provided because on some devices a requested
     speed limit only takes effect after a device reset or host driver load.
 
+methods:
+    - name: Reset
+      description: >
+          Reset the operating clock speed limits to factory defaults.
+      errors:
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure
+          - xyz.openbmc_project.Common.Error.Unavailable
+
 properties:
     - name: PresentSpeedLimitMaxHz
       type: uint64
@@ -46,6 +54,35 @@ properties:
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.Common.Device.Error.WriteFailure
+
+signals:
+    - name: ResetComplete
+      description: >
+          Emitted when an asynchronous Reset() operation finishes. bmcweb
+          subscribes to this signal to report completion back to the Redfish
+          caller without blocking the D-Bus reply while the hardware operation
+          is in progress.
+      properties:
+          - name: Result
+            type: enum[self.ResetResult]
+            description: >
+                The outcome of the background reset operation.
+
+enumerations:
+    - name: ResetResult
+      description: >
+          Possible outcomes of an asynchronous Reset() operation.
+      values:
+          - name: Success
+            description: >
+                The reset completed successfully.
+          - name: Failure
+            description: >
+                The device reported a failure while applying the reset.
+          - name: Timeout
+            description: >
+                The device did not acknowledge the reset within the expected
+                time.
 
 associations:
     - name: controlling

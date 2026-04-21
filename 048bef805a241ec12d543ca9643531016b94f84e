@@ -72,6 +72,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ebc1caf_4518cfde",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-21T04:58:13Z",
+      "side": 1,
+      "message": "I\u0027ve updated in PS6 — marked Item.Ethernet as deprecated and pointed to Item.NetworkAdapter (see lines 4-7):\n\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/89247/6/yaml/xyz/openbmc_project/Inventory/Item/Ethernet.interface.yaml#4\n\nIf the direction changes after further discussion, I will adjust accordingly.\n\nThanks for help!",
+      "parentUuid": "a3952be4_c8fe8b62",
+      "range": {
+        "startLine": 14,
+        "startChar": 46,
+        "endLine": 15,
+        "endChar": 39
+      },
+      "revId": "048bef805a241ec12d543ca9643531016b94f84e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "41c19f95_875978aa",
@@ -85,6 +109,24 @@
       "writtenOn": "2026-04-17T09:48:32Z",
       "side": 1,
       "message": "Since it maps to Redfish NetworkAdapter resource, should we document that here?\n\nIt would clarify why anyone would create this interface beyond just modeling things on D-Bus.",
+      "revId": "048bef805a241ec12d543ca9643531016b94f84e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcc46fb6_099e2572",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkAdapter.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-21T04:58:13Z",
+      "side": 1,
+      "message": "I\u0027ve updated in PS6\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/89247/6/yaml/xyz/openbmc_project/Inventory/Item/NetworkAdapter.interface.yaml#6\nThanks for advice.",
+      "parentUuid": "41c19f95_875978aa",
       "revId": "048bef805a241ec12d543ca9643531016b94f84e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -14,3 +14,26 @@ associations:
       reverse_name: producing
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeFunction
+
+    - name: exposed_by
+      description: >
+          Objects that implement NetworkInterface can optionally implement the
+          exposed_by association to provide a link back to the physical
+          NetworkAdapter (an object implementing Item.NetworkAdapter, such as an
+          Ethernet NIC) that exposes this logical network function.
+      reverse_name: exposing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.NetworkAdapter
+
+    - name: assignable_physical_network_ports
+      description: >
+          Objects that implement NetworkInterface can optionally implement the
+          assignable_physical_network_ports association to list the physical
+          port connectors (objects implementing Connector.Port, e.g. an Ethernet
+          socket) on which this logical network function operates. A function is
+          typically bound to a single Port, but adapters that support failover
+          or multi-homing may expose multiple Ports here. Mirrors the Redfish
+          NetworkDeviceFunction AssignablePhysicalNetworkPorts property.
+      reverse_name: assigned_network_device_function
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Connector.Port

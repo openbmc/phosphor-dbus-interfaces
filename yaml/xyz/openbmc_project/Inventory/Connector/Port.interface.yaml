@@ -65,3 +65,12 @@ associations:
           - xyz.openbmc_project.Inventory.Item.FabricAdapter
           - xyz.openbmc_project.Inventory.Item.PCIeSwitch
           - xyz.openbmc_project.Inventory.Item.NetworkAdapter
+
+    - name: assigning
+      description: >
+          Objects that implement Port can optionally implement the assigning
+          association to provide links to the logical network functions that
+          operate on this port connector.
+      reverse_name: assigned_to
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.NetworkInterface

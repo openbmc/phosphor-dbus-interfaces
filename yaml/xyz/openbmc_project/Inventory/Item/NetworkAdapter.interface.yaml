@@ -16,3 +16,12 @@ associations:
       reverse_name: connected_to
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Connector.Port
+
+    - name: exposing
+      description: >
+          Objects that implement NetworkAdapter can optionally implement the
+          exposing association to provide links to the logical network functions
+          exposed by this physical network adapter.
+      reverse_name: exposed_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.NetworkInterface

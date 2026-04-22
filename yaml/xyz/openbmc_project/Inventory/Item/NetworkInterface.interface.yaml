@@ -14,3 +14,21 @@ associations:
       reverse_name: producing
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeFunction
+
+    - name: exposed_by
+      description: >
+          Objects that implement NetworkInterface can optionally implement the
+          exposed_by association to provide a link back to the physical
+          NetworkAdapter that exposes this logical network function.
+      reverse_name: exposing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.NetworkAdapter
+
+    - name: assigned_to
+      description: >
+          Objects that implement NetworkInterface can optionally implement the
+          assigned_to association to list the physical port connectors on which
+          this logical network function operates.
+      reverse_name: assigning
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Connector.Port

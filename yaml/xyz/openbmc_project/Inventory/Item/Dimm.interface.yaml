@@ -1,5 +1,7 @@
 description: >
-    Implement to provide DIMM attributes.
+    Implement to provide attributes for memory devices, including pluggable DIMM
+    modules and embedded memory such as High Bandwidth Memory (HBM) or
+    on-package LPDDR.
 properties:
     - name: MemoryDataWidth
       type: uint16
@@ -8,11 +10,14 @@ properties:
     - name: MemorySizeInKB
       type: size
       description: >
-          Memory size of DIMM in Kilobyte.
+          Memory size in Kilobytes.
     - name: MemoryDeviceLocator
       type: string
       description: >
-          Socket on base board where Memory located, for example CPU1_DIMM_B1.
+          Location of the memory device. For pluggable DIMM modules, this is the
+          socket label on the base board (e.g., CPU1_DIMM_B1). For embedded
+          memory, this is the location relative to the host device (e.g.,
+          GPU_0_HBM_0).
     - name: MemoryType
       type: enum[self.DeviceType]
       description: >
@@ -27,9 +32,11 @@ properties:
           The maximum capable clock speed of Memory, in megahertz.
     - name: MemoryAttributes
       type: size
+      default: 0
       description: >
           Rank attributes of Memory. Means how many groups of memory chips on
-          the dimm.
+          the dimm. A value of 0 means rank structure is not applicable (e.g.,
+          embedded memory such as HBM).
     - name: MemoryConfiguredSpeedInMhz
       type: uint16
       description: >
@@ -40,11 +47,14 @@ properties:
           Error-Correcting Code.
     - name: CASLatencies
       type: uint16
+      default: 0
       description: >
           CAS Latency (CL) values are supported. The CAS latency is the delay
           between the time at which the column address and the column address
           strobe signal are presented to the memory module and the time at which
-          the corresponding data is made available by the memory module.
+          the corresponding data is made available by the memory module. A value
+          of 0 means CAS latency is not applicable (e.g., embedded memory such
+          as HBM).
     - name: RevisionCode
       type: uint16
       description: >
@@ -269,3 +279,7 @@ enumerations:
           - name: Die
             description: >
                 A die within a package.
+          - name: Embedded
+            description: >
+                On-package embedded memory (e.g., die-stacked HBM or soldered
+                on-package LPDDR).

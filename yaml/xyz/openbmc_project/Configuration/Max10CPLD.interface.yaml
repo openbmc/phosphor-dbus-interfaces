@@ -1,0 +1,16 @@
+description: >
+    Configuration for Max10 CPLD devices.
+    Typically populated by entity-manager.
+properties:
+    - name: Bus
+      type: uint64
+      description: >
+          The I2C bus number the CPLD is on.
+    - name: Address
+      type: uint64
+      description: >
+          The I2C address of the CPLD.
+    - name: UpdateGpio
+      type: string
+      description: >
+          The GPIO line name used to trigger firmware update mode.

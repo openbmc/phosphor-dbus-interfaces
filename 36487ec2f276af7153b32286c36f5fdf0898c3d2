@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a135efe_0f5debed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-04-28T03:17:53Z",
+      "side": 1,
+      "message": "Patch Set 5 summary:\n\nIn-place extension of Item.Dimm instead of introducing a separate\nItem.Memory. PS5 reworks the patch in that direction; Item.Dimm is\nupdated rather than deprecated, and Item.Memory is no longer added.\n\nChanges:\n\n- Generalize DIMM-specific property descriptions (interface\n  description, MemorySizeInKB, MemoryDeviceLocator).\n\n- Add defaults for properties that do not apply to embedded memory\n  (CASLatencies, MemoryAttributes), with a clarifying note in the\n  description that 0 means \"not applicable\".\n\n- Add an Embedded value to the FormFactor enum, since the existing\n  values are either DIMM-specific or describe a single die only.\n\nExisting Item.Dimm producers and consumers are unaffected.\n\nReviews and feedback are appreciated.Thanks.",
+      "revId": "36487ec2f276af7153b32286c36f5fdf0898c3d2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

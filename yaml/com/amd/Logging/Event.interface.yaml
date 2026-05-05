@@ -1,0 +1,39 @@
+description: >
+    Represents an AMD-specific Event derived from system activity.
+
+    An Event represents a single AMD-defined incident or condition exposed
+    through OEM D-Bus interfaces. It serves as a semantic anchor for
+    consumer-facing interfaces and may aggregate additional context through
+    optional child Section objects.
+
+    The Event object provides identity, severity, and causal context. Detailed
+    semantics and diagnostics are expressed through associated Section objects
+    rather than Event properties.
+
+    Objects implementing this interface must also implement
+    xyz.openbmc_project.Time.EpochTime to provide the Event creation timestamp.
+
+properties:
+    - name: Id
+      type: string
+      description: >
+          AMD-defined identifier for this Event.
+
+          This value provides the stable, machine-readable identity of the Event
+          and is defined by AMD-specific registries.
+
+    - name: Source
+      type: string
+      description: >
+          Identifier of the upstream BMC source that caused this Event to be
+          created.
+
+          This value provides causal context, such as a triggering BMC log
+          entry, signal, or other upstream source. It does not describe the
+          semantic classification of the condition
+
+service_names:
+    - default: com.amd.Event
+
+paths:
+    - namespace: /com/amd/event

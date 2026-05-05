@@ -1,0 +1,52 @@
+description: >
+    Represents an AMD Field Identifier (AFID) associated with an Event.
+
+    An AFID is an AMD-defined identifier that represents a specific class of
+    event or error condition as defined in AMD-maintained Field ID
+    specifications. Each AFID corresponds to a well-defined semantic condition
+    with associated classification and severity meaning.
+
+    Additional details on AMD Field Identifiers can be found in the AMD Field ID
+    specification:
+    https://docs.amd.com/r/en-US/AMD_Field_ID_70122_v1.0/Introduction
+
+    AFID objects are created as children of an Event under the logging
+    hierarchy. An AFID object describes the diagnosed condition and its impact
+    scope in terms of affected Field Replaceable Units (FRUs).
+
+    A single Event may contain one or more AFID objects, depending on the number
+    of distinct conditions identified. Diagnostic evidence supporting an AFID
+    (for example, CPER records) is represented through additional child objects
+    and is not embedded directly in the AFID object.
+
+properties:
+    - name: Id
+      type: string
+      description: >
+          AMD-defined Field Identifier.
+
+          This value uniquely identifies the diagnosed condition and is defined
+          by AMD Field ID registries.
+
+    - name: Severity
+      type: string
+      description: >
+          Normalized severity associated with this AFID.
+
+          This severity reflects the assessed impact of the diagnosed condition
+          and may differ from the overall Event severity.
+
+    - name: FRUs
+      type: array[string]
+      description: >
+          List of affected Field Replaceable Units (FRUs).
+
+          Each entry identifies a hardware or logical component impacted by the
+          condition represented by this AFID. The representation of FRU
+          identifiers is platform-defined.
+
+service_names:
+    - default: com.amd.Event
+
+paths:
+    - namespace: /com/amd/event/logging/afids

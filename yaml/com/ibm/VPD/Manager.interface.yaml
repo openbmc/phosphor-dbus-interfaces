@@ -196,14 +196,24 @@ methods:
 
     - name: GetHardwarePath
       description: >
-          Method to get the hardware path for the corresponding inventory path.
+          Method to get the hardware path(s) for the corresponding inventory
+          path.
       parameters:
           - name: inventoryPath
             type: object_path
             description: >
                 Dbus inventory path of the FRU.
+      returns:
+          - name: hardwarePaths
+            type: array[string]
+            description: >
+                An array containing hardware paths corresponding to given D-Bus
+                object path. The first entry represents the primary hardware
+                path and the second entry(if any) represents the redundant
+                hardware path.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - com.ibm.VPD.Error.PathNotFound
 
     - name: DeleteAllFRUVPD
       description: >

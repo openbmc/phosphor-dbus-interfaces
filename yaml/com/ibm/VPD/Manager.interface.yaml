@@ -110,6 +110,7 @@ methods:
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.Common.Device.Error.ReadFailure
+          - com.ibm.VPD.Error.PathNotFound
 
     - name: GetFRUsByUnexpandedLocationCode
       description: >

@@ -239,6 +239,17 @@ methods:
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
 
+    - name: CollectAllFRUVPD
+      description: >
+          Method to collect VPD of all FRUs in the system configuration JSON.
+      returns:
+          - name: result
+            type: boolean
+            description: >
+                True if collection was successfully initiated, false otherwise.
+                Note: This return value just indicates if the collection has
+                been successfully initiated. It doesn't indicate VPD collection
+                status of the system.
 properties:
     - name: CollectionStatus
       type: enum[self.Status]

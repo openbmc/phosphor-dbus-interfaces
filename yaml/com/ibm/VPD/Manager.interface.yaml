@@ -29,6 +29,10 @@ methods:
                 returns -1.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - com.ibm.VPD.Error.FirmwareError
+          - com.ibm.VPD.Error.PathNotFound
+          - com.ibm.VPD.Error.RecordNotFound
+          - com.ibm.VPD.Error.KeywordNotFound
 
     - name: UpdateKeyword
       description: >

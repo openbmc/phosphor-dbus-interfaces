@@ -55,6 +55,7 @@ methods:
                 returns -1.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - com.ibm.VPD.Error.PathNotFound
 
     - name: WriteKeywordOnHardware
       description: >

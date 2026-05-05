@@ -203,6 +203,11 @@ methods:
             type: object_path
             description: >
                 Dbus inventory path of the FRU.
+      returns:
+          - name: hardwarePath
+            type: string
+            description: >
+              Hardware path corresponding to given D-Bus object path.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
 

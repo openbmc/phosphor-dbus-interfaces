@@ -16,6 +16,24 @@
       "message": "The current implementation in redfish-core/lib/memory.hpp expects a 1:1 mapping of these enums to Redfish enums, it appears, but the latest Redfish schema does not have \"Embedded\" as a type.  What do we plan to do?",
       "revId": "0a681503df455c45ef49fbea1f5c54184cbad65d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8653e9c4_aa70175d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Dimm.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-05-06T08:29:10Z",
+      "side": 1,
+      "message": "Thank you for the feedback.\n\nAfter further investigation: HBM and on-package LPDDR are both memory dies co-packaged with the host compute die in the same package. This matches the DMTF Memory schema [1] definition of BaseModuleType \"Die\": \"A die within a package\".\n\nPS7 removes the proposed \"Embedded\" enum value and uses the existing \"Die\" value instead. Please review the updated patch set, and let me know if there are any further concerns.\n\nMany thanks.",
+      "parentUuid": "a42fa686_522dcb9d",
+      "revId": "0a681503df455c45ef49fbea1f5c54184cbad65d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

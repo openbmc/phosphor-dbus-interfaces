@@ -20,6 +20,7 @@ methods:
                 New attribute value
 
       errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeReadOnly
           - xyz.openbmc_project.BIOSConfig.Common.Error.AttributeNotFound

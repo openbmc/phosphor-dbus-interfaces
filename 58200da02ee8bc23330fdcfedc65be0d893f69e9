@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8607fa3b_79fdb7c8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Ethernet.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-07T11:39:07Z",
+      "side": 1,
+      "message": "It looks like this is currently only used by `openpower-vpd-parser`.  Are they ok with this deprecation note?  Can we rename all the uses there and  remove it to?  What is the actual deprecation plan?",
+      "revId": "58200da02ee8bc23330fdcfedc65be0d893f69e9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "920aee0d_7cd982b9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkAdapter.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-07T11:39:07Z",
+      "side": 1,
+      "message": "Does this include an embedded PHY?  I\u0027m trying to understand how the BMC\u0027s direct-attach PHYs would be represented by your proposal.  That seems to be the primary use in openpower-vpd-parser.",
+      "range": {
+        "startLine": 3,
+        "startChar": 40,
+        "endLine": 4,
+        "endChar": 49
+      },
+      "revId": "58200da02ee8bc23330fdcfedc65be0d893f69e9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

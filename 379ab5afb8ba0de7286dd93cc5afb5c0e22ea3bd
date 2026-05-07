@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcfea007_a3d3d136",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-07T17:15:29Z",
+      "side": 1,
+      "message": "My original thinking was that having a distinct error would help debugging — for example, if the daemon hits an unexpected internal state during reset, the caller would know it\u0027s a daemon-side issue rather than a device or permission issue. \nBut I see your point that the caller can\u0027t really act differently on it. I\u0027ll remove InternalFailure and rely on journal logs for daemon-side debugging.",
+      "parentUuid": "226bd515_f797e1f3",
+      "revId": "379ab5afb8ba0de7286dd93cc5afb5c0e22ea3bd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f772c3e_db1593fd",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-05-07T11:42:20Z",
       "side": 1,
       "message": "What is a caller supposed to do about a \"Timeout\"?",
+      "revId": "379ab5afb8ba0de7286dd93cc5afb5c0e22ea3bd",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d3ecd9d_4b5cb54d",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-07T17:15:29Z",
+      "side": 1,
+      "message": "My intent was to express \"the device didn\u0027t respond in time, possibly because it\u0027s busy\" so the caller could retry.",
+      "parentUuid": "2f772c3e_db1593fd",
       "revId": "379ab5afb8ba0de7286dd93cc5afb5c0e22ea3bd",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

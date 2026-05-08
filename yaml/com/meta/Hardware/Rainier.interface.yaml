@@ -1,0 +1,44 @@
+description: >
+    This interface is not meant to be instantiated directly. It defines the
+    supported hardware devices specific to the Rainier.
+
+enumerations:
+    - name: SPI
+      description: >
+          The compatible hardware strings for the SPI flash on Rainier.
+      values:
+          - name: Host
+
+    - name: CPLD
+      description: >
+          The compatible hardware strings for the CPLD on Rainier.
+      values:
+          - name: LCMXO3D_9400HC_scm
+          - name: LCMXO3D_9400HC_hpm
+          - name: LFMXO5_25_pdb
+
+    - name: VR
+      description: >
+          The compatible hardware strings for the VR on Rainier.
+      values:
+          - name: RAA228246_vcpu_vcpum_c0
+          - name: RAA228244_vsys_vsoc_c0
+          - name: RAA228246_vcpu_vcpum_c1
+          - name: RAA228244_vsys_vsoc_c1
+          - name: RAA228244_v0p75_pcie_vddq
+          - name: MP9945_v1p2
+
+    - name: TPM
+      description: >
+          The compatible hardware strings for the TPM on Rainier.
+      values:
+          - name: BMC
+
+    - name: Boards
+      description: >
+          The compatible hardware strings for the Boards on Rainier.
+      values:
+          - name: CXL_Board
+          - name: MB
+          - name: Medusa_Board
+          - name: Paddle_Board

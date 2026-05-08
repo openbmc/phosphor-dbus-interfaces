@@ -1,0 +1,16 @@
+description: >
+    Provides the SNMP community string configuration for the BMC. The community
+    string is used for SNMP v1/v2c authentication.
+
+properties:
+    - name: CommunityString
+      type: string
+      default: "public"
+      description: >
+          The SNMP community string used to fill the Community String field in
+          PET (Platform Event Trap) packets. This is a printable ASCII string
+          with a maximum length of 18 characters as defined by IPMI
+          specification LAN parameter 16. Default is "public".
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure

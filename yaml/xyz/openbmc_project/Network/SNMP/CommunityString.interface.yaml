@@ -1,0 +1,14 @@
+description: >
+    Provides the SNMP community string configuration for the BMC. The community
+    string is used for SNMP v1/v2c authentication.
+
+properties:
+    - name: CommunityString
+      type: string
+      description: >
+          The SNMP community string value used for read/write access control in
+          SNMP v1/v2c protocol. Maximum length is 18 characters as defined by
+          IPMI specification for LAN parameter 16.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure

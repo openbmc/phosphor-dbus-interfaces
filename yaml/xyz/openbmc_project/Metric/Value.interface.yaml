@@ -265,6 +265,14 @@ paths:
                 The total number of collisions that occurred after one slot time
                 as defined by IEEE 802.3.
             value: nic/tx_late_collisions
+          - name: ValveClosedDuration
+            description: >
+                The duration since the valve was fully closed.
+            value: valve/closed_duration
+          - name: ValveOpenDuration
+            description: >
+                The duration since the valve was fully open.
+            value: valve/open_duration
           - name: PowerLimitThrottleDuration
             description: >
                 The total duration of throttling caused by a power limit of the

@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b34829f_120c8d69",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Ethernet.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-05-11T08:45:59Z",
+      "side": 1,
+      "message": "Thanks for the reminder, I will discuss the situation with them and then reply.",
+      "parentUuid": "8607fa3b_79fdb7c8",
+      "revId": "58200da02ee8bc23330fdcfedc65be0d893f69e9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "920aee0d_7cd982b9",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-05-07T11:39:07Z",
       "side": 1,
       "message": "Does this include an embedded PHY?  I\u0027m trying to understand how the BMC\u0027s direct-attach PHYs would be represented by your proposal.  That seems to be the primary use in openpower-vpd-parser.",
+      "range": {
+        "startLine": 3,
+        "startChar": 40,
+        "endLine": 4,
+        "endChar": 49
+      },
+      "revId": "58200da02ee8bc23330fdcfedc65be0d893f69e9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "835eb428_1dc6cb41",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkAdapter.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-05-11T08:45:59Z",
+      "side": 1,
+      "message": "Thank you for review. The current description of Item.Ethernet is \"Implement to provide Ethernet card attributes.\", which does not explicitly describe\nembedded PHY semantics. So I\u0027m not sure if I need to add any more descriptions.\n\nBut in PS7, I have extended NetworkAdapter\u0027s description to include an example explicitly covering \"embedded network controllers such as BMC direct-attach PHYs\". If the openpower-vpd-parser maintainers feel further detail would be helpful, I would be glad to extend it further -- please let me know.",
+      "parentUuid": "920aee0d_7cd982b9",
       "range": {
         "startLine": 3,
         "startChar": 40,

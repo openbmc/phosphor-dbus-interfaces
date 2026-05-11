@@ -14,7 +14,9 @@ methods:
             description: >
                 Identifies who's requesting the failover
           - name: Options
-            type: dict[string, variant[boolean]]
+            type:
+                dict[string, variant[boolean,
+                enum[xyz.openbmc_project.State.BMC.Redundancy.RedundancyInput]]]
             description: >
                 Additional options. The key is the string version of the Options
                 enum, in the form of
@@ -48,3 +50,8 @@ enumerations:
                 A boolean option to force the failover when it would normally
                 not be available.  The checks it bypasses are implementation
                 dependent.
+          - name: UseRedundancyInput
+            description: >
+                When redundancy is re-calculated after the failover, use the
+                provided redundancy input. This will cause redundancy to be
+                disabled for that reason.

@@ -48,3 +48,8 @@ enumerations:
                 A boolean option to force the failover when it would normally
                 not be available.  The checks it bypasses are implementation
                 dependent.
+          - name: UsePassiveHWProblemRedInput
+            description: >
+                When redundancy is re-calculated after the failover, use the
+                'PassiveHardwareProblem' redundancy input which will cause
+                redundancy to be disabled.

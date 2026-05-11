@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "be718537_ccfb29c8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-05-11T07:20:07Z",
+      "side": 1,
+      "message": "Thanks for the question. `exposed_by` / `exposing` follows the\nexisting PDI convention used between PCIeFunction and PCIeDevice\n[1][2]: a logical function and the physical device that exposes\nit.\n\nSome context on the related verbs:\n\n- `produced_by` / `producing`: the producer creates the function\n  (e.g., a PCIe function produces this network function).\n- `contained_by` / `containing`: physical containment (e.g., a\n  chassis containing items).\n- `exposed_by` / `exposing`: a physical device exposes a logical\n  function -- the case we have here for NetworkAdapter and\n  NetworkInterface.\n\nPlease let me know if a different verb is preferred and I will\nupdate accordingly. Thanks.\n\n[1] yaml/xyz/openbmc_project/Inventory/Item/PCIeFunction.interface.yaml\n[2] yaml/xyz/openbmc_project/Inventory/Item/PCIeDevice.interface.yaml",
+      "parentUuid": "453dd306_d3465b6e",
+      "revId": "79106fd0f7c4f11bab836c319ea0aed36112e4bf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "16e4639e_849f07b2",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-05-07T11:34:13Z",
       "side": 1,
       "message": "Please read requirements.md for naming conventions on associations.",
+      "revId": "79106fd0f7c4f11bab836c319ea0aed36112e4bf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ad35b24_ae20a734",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-05-11T07:20:07Z",
+      "side": 1,
+      "message": "Thanks for the pointer. Renamed in PS3 to follow requirements.md:\n\n- `assignable_physical_network_ports` -\u003e `assigned_to`\n- `assigned_network_device_function` -\u003e `assigning`\n\nSentence test:\n- NetworkInterface is `assigned_to` the Port.\n- Port is `assigning` the NetworkInterface.\n\nFor context, the existing `connecting` / `connected_to` uses in\nPDI describe physical hardware connections (FabricAdapter,\nNetworkAdapter, Cpu, Cable, PCIeSwitch, etc.). Since\nNetworkInterface is a logical MAC/function rather than a physical\nentity, a new participle pair seemed clearer than reusing\n`connecting` here.\n\nPlease let me know if different naming is preferred and I will\nupdate accordingly. Thanks.",
+      "parentUuid": "16e4639e_849f07b2",
       "revId": "79106fd0f7c4f11bab836c319ea0aed36112e4bf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

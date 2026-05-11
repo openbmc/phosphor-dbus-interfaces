@@ -1,6 +1,26 @@
 description: >
     This interface holds redundant BMC related information.
 
+methods:
+    - name: SetRedundancyInput
+      description: >
+          Passes an external redundancy input to the application, which is an
+          input used to calculate redundancy that the app can't figure out for
+          itself. It can be cleared by calling the method again with a value of
+          'false', though the redundant BMC application may also know when to
+          clear it.
+      parameters:
+          - name: input
+            type: enum[self.RedundancyInput]
+            description: >
+                The input type to set.
+          - name: value
+            type: boolean
+            description: >
+                The value to set.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
 properties:
     - name: Role
       type: enum[self.Role]
@@ -183,6 +203,23 @@ enumerations:
                 The system is not in the proper state, e.g. not off or at
                 runtime.
 
+    - name: RedundancyInput
+      description: >
+          An input used in the redundancy determination code passed in from an
+          external application.
+      values:
+          - name: PassiveBMCHostProcessorProblem
+            description: >
+                There is a hardware problem related to the passive BMC's
+                attached host processor preventing that BMC from becoming
+                active, so redundancy can't be enabled. An example is its
+                connected host processor is deconfigured.
+          - name: PassiveBMCHardwareProblem
+            description: >
+                There is a hardware problem with the passive BMC preventing it
+                from becoming active, so redundancy can't be enabled. An example
+                is it can't talk to its host processor. Replacing the BMC should
+                fix the issue.
 signals:
     - name: Heartbeat
       description: >

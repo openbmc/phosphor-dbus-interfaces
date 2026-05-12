@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f75bbf8_24242a20",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-05-12T21:39:14Z",
+      "side": 1,
+      "message": "\u003e Why are we adding this when it isn\u0027t in the Redfish spec?  There is a zero-Arg UpdateInProgress there that doesn\u0027t seem very useful.  What is the anticipated frequency this will be emitted?  Why do we need this event separate from TargetDetermined (which means the update is starting) and the conclusion events?\n\n\nI had discussed with Redfish maintainers on DMTF and they don\u0027t want to provide a new message with the targetName, hence i had added this message to openBMC Namespace. Their reasoning was around the fact that percentage progress is already covered in task and there are other messages which provides lower level details per targetName, hence this new message will seem redundant. \n\nFrom usability perspective it could probably be useful for long running upgrades but we always have task progress percentage for same purpose too. Hence, for now i am going to skip this message from the list and will revisit it later when there are more concrete usecases/needs.",
+      "parentUuid": "1961c110_f1af7515",
+      "revId": "58f1ca029f2d9c5f0282fef726fd889eeffd64a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7d256777_cf7ea6f8",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-05-12T18:12:08Z",
       "side": 1,
       "message": "Why is this one not ResetRequired?  \"ResetDevice\" is ambiguous if the device did reset or the device needs a reset.",
+      "range": {
+        "startLine": 90,
+        "startChar": 17,
+        "endLine": 90,
+        "endChar": 23
+      },
+      "revId": "58f1ca029f2d9c5f0282fef726fd889eeffd64a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e43fa93f_8c9099c1",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-05-12T21:39:14Z",
+      "side": 1,
+      "message": "Done, changed to ResetRequired.",
+      "parentUuid": "7d256777_cf7ea6f8",
       "range": {
         "startLine": 90,
         "startChar": 17,

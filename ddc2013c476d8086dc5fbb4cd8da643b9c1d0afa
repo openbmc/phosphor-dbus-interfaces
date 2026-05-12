@@ -56,6 +56,30 @@
       },
       "revId": "ddc2013c476d8086dc5fbb4cd8da643b9c1d0afa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65cbc6f1_af127225",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-05-12T14:26:31Z",
+      "side": 1,
+      "message": "Documenting fine grained associations was requested by bmcweb maintainers\n\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/87061/comment/e84ddcd4_2aa8b2b7/\n\nwhich was the reason for opening this patch in the first place.\n\n\u003e We already have line 21 and line 25 that cover this.\n\nThe mapper does not understand `Item`. The mapper (and redfish/ipmi implementations) work in terms of concrete things like `Item.Chassis`, `Item.Fan`, `Item.Drive`, ...\n\nNone of these can understand generic `Item`.\n\nIt may be useful conceptually or as documentation to talk about `Item` but it is not sufficient to actually implement anything.",
+      "parentUuid": "0fc00b9c_23f20266",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 41
+      },
+      "revId": "ddc2013c476d8086dc5fbb4cd8da643b9c1d0afa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -69,6 +69,24 @@
       "parentUuid": "dae94e2f_15a81b7f",
       "revId": "761946d22f42b06deeab58691f9375b14b1feb44",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85ae5933_3fc90b3d",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-12T15:02:54Z",
+      "side": 1,
+      "message": "btw, I didn\u0027t write this before because it seemed like a relatively simple change.  Ideally we should be transitioning away from errors.yaml and using events.yaml.  Events have a very clear way to specify which argument and then a programmatic way for something like bmcweb to match on it.  We could start creating a Common.Events for this one so that we have something to start transitioning to.",
+      "parentUuid": "6857fcce_e6352ade",
+      "revId": "761946d22f42b06deeab58691f9375b14b1feb44",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

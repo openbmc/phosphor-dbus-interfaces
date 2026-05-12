@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c2fbab44_a6829b34",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002762
+      },
+      "writtenOn": "2026-05-12T12:39:32Z",
+      "side": 1,
+      "message": "The community string is fundamentally an SNMP v1/v2c concept — it\u0027s the authentication credential in every SNMP packet. PET (Platform Event Trap) is defined as a \"specific format of SNMP Trap used for system management alerting\" (IPMI glossary). The IPMI spec (LAN Parameter 16) states this string is \"Used to fill in the \u0027Community String\u0027 field in a PET Trap.\" So yes, it is published in SNMP traps — the BMC places this value directly into the SNMP community string field of every PET packet it sends. IPMI just provides the configuration mechanism; the actual consumer is the SNMP protocol stack. That\u0027s why the D-Bus interface lives under xyz.openbmc_project.Network.SNMP.\n\n\nRequesting you to check the IPMI 2.0 Doc Table 23-4 and 1-1.Thanks",
+      "parentUuid": "7714543f_acca4887",
+      "revId": "4678c18be6de96381d90eae3c528674e7ad892fe",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0f539018_6f62ac8f",
         "filename": "yaml/xyz/openbmc_project/Network/SNMP/CommunityString.interface.yaml",
         "patchSetId": 4
@@ -31,6 +49,24 @@
       "writtenOn": "2026-05-08T14:51:18Z",
       "side": 1,
       "message": "Is there any sane default we should use like \"public\"?",
+      "revId": "4678c18be6de96381d90eae3c528674e7ad892fe",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ecae72a_2e31562a",
+        "filename": "yaml/xyz/openbmc_project/Network/SNMP/CommunityString.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002762
+      },
+      "writtenOn": "2026-05-12T12:39:32Z",
+      "side": 1,
+      "message": "Yes, \"public\" is the standard default per the IPMI specification (Table 23-4, LAN Parameter 16). I\u0027ve added default: \"public\" to the interface YAML.",
+      "parentUuid": "0f539018_6f62ac8f",
       "revId": "4678c18be6de96381d90eae3c528674e7ad892fe",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

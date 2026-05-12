@@ -28,6 +28,7 @@ methods:
           - xyz.openbmc_project.Software.Update.Error.InvalidSignature
           - xyz.openbmc_project.Software.Update.Error.InvalidImage
           - xyz.openbmc_project.Common.Error.Unavailable
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
 properties:
     - name: AllowedApplyTimes

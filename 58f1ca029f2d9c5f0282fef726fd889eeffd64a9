@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1961c110_f1af7515",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-12T18:12:08Z",
+      "side": 1,
+      "message": "Why are we adding this when it isn\u0027t in the Redfish spec?  There is a zero-Arg UpdateInProgress there that doesn\u0027t seem very useful.  What is the anticipated frequency this will be emitted?  Why do we need this event separate from TargetDetermined (which means the update is starting) and the conclusion events?",
+      "revId": "58f1ca029f2d9c5f0282fef726fd889eeffd64a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d256777_cf7ea6f8",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-12T18:12:08Z",
+      "side": 1,
+      "message": "Why is this one not ResetRequired?  \"ResetDevice\" is ambiguous if the device did reset or the device needs a reset.",
+      "range": {
+        "startLine": 90,
+        "startChar": 17,
+        "endLine": 90,
+        "endChar": 23
+      },
+      "revId": "58f1ca029f2d9c5f0282fef726fd889eeffd64a9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

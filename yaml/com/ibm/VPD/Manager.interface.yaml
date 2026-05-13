@@ -85,8 +85,7 @@ methods:
           - name: path
             type: string
             description: >
-                Path from where to read the data (D-Bus inventory path/EEPROM
-                path etc).
+                EEPROM path of the FRU.
           - name: paramsToReadData
             type: variant[struct[string,string],string]
             description: >

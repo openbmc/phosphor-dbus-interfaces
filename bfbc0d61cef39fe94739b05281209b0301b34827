@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "510c3aed_aa998f94",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2026-05-13T12:46:55Z",
+      "side": 1,
+      "message": "For more clarity, could you please add that the return value of this API does not represent the status if VPD collection for the system and should not be interpreted accordingly.\nIt just reflect if the call to initiate the collection was successful or not.",
+      "revId": "bfbc0d61cef39fe94739b05281209b0301b34827",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

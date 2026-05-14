@@ -1,0 +1,8 @@
+description: >
+    Configuration for CPLD firmware devices.
+properties:
+    - name: UpdateGpio
+      type: string
+      description: >
+          The GPIO line name used to enable CPLD update mode.
+      default: ""

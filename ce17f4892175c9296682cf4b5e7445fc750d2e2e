@@ -141,6 +141,24 @@
       "parentUuid": "3bf310d4_a9d40512",
       "revId": "ce17f4892175c9296682cf4b5e7445fc750d2e2e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e6558c5_65f02e67",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1002558
+      },
+      "writtenOn": "2026-05-15T01:57:26Z",
+      "side": 1,
+      "message": "Hi @patrick@stwcx.xyz @amithash@meta.com,\nI want to make sure I haven\u0027t misunderstood.\nI will remove both `PrimaryFlashBoot` and `SecondaryFlashBoot` events.\nThen I will add two enumerations under the `RebootCause` event to record the BMC boot source, matching `boot from first flash` and `boot from secondary flash`, am I right?\nThank you!",
+      "parentUuid": "a4b27e88_c218aee4",
+      "revId": "ce17f4892175c9296682cf4b5e7445fc750d2e2e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

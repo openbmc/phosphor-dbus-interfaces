@@ -1,0 +1,47 @@
+version: 1.0.0
+
+description: >
+    Events indicating that a Common Platform Error Record (CPER) has been
+    reported by a platform component.
+
+    These events provide lightweight notification to the logging service and are
+    intentionally not used to transport CPER diagnostic content.
+
+    A Source object may be provided to associate the resulting log entry with a
+    platform component.
+
+    CPER-specific diagnostic information should be exposed through the
+    associated log entry and referenced diagnostic data.
+
+    Implementations may additionally expose decoded or summarized CPER metadata
+    through associated log-entry extension interfaces.
+
+    Event classification is intentionally limited to support log-entry
+    lifecycle, prioritization, and retention behavior.
+
+errors:
+    - name: Error
+      severity: error
+      errno: EIO
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: >
+                The inventory object associated with the CPER source.
+
+      redfish-mapping: Platform.PlatformErrorAtLocation
+
+    - name: Information
+      severity: informational
+      errno: EIO
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: >
+                The inventory object associated with the CPER source.
+
+      redfish-mapping: Platform.PlatformErrorAtLocation

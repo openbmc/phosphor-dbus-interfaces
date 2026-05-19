@@ -1,0 +1,68 @@
+version: "1.0.0"
+
+description: >
+    Events indicating that a Common Platform Error Record (CPER) has been
+    reported.
+
+    The CPER payload is treated as opaque binary data and is provided via an
+    external file reference. Consumers are expected to retrieve and process the
+    payload independently.
+
+    Optionally, a processed or decoded representation of the CPER payload may
+    also be provided via a separate reference for convenience.
+
+events:
+    - name: CperReported
+
+      metadata:
+          - name: ObjectPath
+            type: string
+            primary: true
+            description: >
+                D-Bus object path associated with the component or context of
+                the CPER event.
+
+          - name: Message
+            type: string
+            primary: true
+            description: >
+                Human-readable summary of the CPER event. This string is
+                informational only and does not represent a full or
+                authoritative decoding of the CPER payload.
+
+          - name: Path
+            type: string
+            primary: true
+            description: >
+                Path to a file containing the CPER payload. The payload is
+                stored as opaque binary data and represents the canonical source
+                of the event record.
+
+                Consumers are expected to retrieve this file and perform any
+                required transformations such as decoding or encoding.
+
+          - name: ProcessedDataURI
+            type: string
+            description: >
+                Optional URI referencing a processed or decoded representation
+                of the CPER payload.
+
+                This may point to a file containing structured data (for
+                example, JSON) derived from the original CPER binary. The format
+                of the processed data is implementation-defined.
+
+          - name: Severity
+            type: string
+            description: >
+                Severity derived from the CPER record as defined by the UEFI
+                Common Platform Error Record specification.
+
+                Allowed values:
+                  - Fatal
+                  - Recoverable
+                  - Corrected
+                  - Informational
+
+      en:
+          description: CPER event reported.
+          message: "CPER reported for {ObjectPath}: {Message}"

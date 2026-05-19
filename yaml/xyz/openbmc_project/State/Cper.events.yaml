@@ -1,0 +1,54 @@
+version: 1.0.0
+
+description: >
+    Events indicating that a Common Platform Error Record (CPER) has been
+    reported by a platform component.
+
+    These events provide lightweight notification to the logging service and are
+    intentionally not used to transport CPER diagnostic content.
+
+    A Source object may be provided to associate the resulting log entry with a
+    platform component.
+
+    CPER-specific diagnostic information should be exposed through log-entry
+    extension interfaces associated with the resulting log entry.
+
+    Such extensions may expose summarized diagnostic information, decoded CPER
+    content, references to supplemental diagnostic artifacts, inventory
+    associations, serviceability information, and vendor-specific metadata.
+
+    Event classification is intentionally limited to support log-entry
+    lifecycle, prioritization, and retention behavior. Detailed CPER severity
+    and diagnostic information should be obtained from the associated log-entry
+    extensions.
+
+errors:
+    - name: Error
+      severity: error
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: The name or identifier of the CPER source.
+
+      en:
+          description: A CPER error condition has been detected.
+          message: A CPER error condition has been detected on {Source}.
+
+      errno: EIO
+
+    - name: Information
+      severity: informational
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: The name or identifier of the CPER source.
+
+      en:
+          description: A CPER informational condition has been detected.
+          message: A CPER informational condition has been detected on {Source}.
+
+      errno: EIO

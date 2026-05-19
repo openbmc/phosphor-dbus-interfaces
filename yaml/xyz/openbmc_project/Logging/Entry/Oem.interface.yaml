@@ -1,0 +1,35 @@
+# xyz/openbmc_project/Logging/Entry/Oem.interface.yaml
+
+description: >
+    Generic OEM extension interface for log entries.
+
+    This interface augments the base xyz.openbmc_project.Logging.Entry interface
+    by attaching lightweight, processed metadata to a persisted log entry.
+
+    Event-related data may be provided during log creation and handled
+    internally by the system. This interface does not expose transport or
+    storage details, and instead provides selected classification and derived
+    information for higher-level consumers.
+
+interface: xyz.openbmc_project.Logging.Entry.Oem
+
+properties:
+    - name: ServiceCode
+      type: string
+      description: >
+          Platform-defined identifier associated with the event. This value is
+          opaque and may be used for classification, filtering, analytics, or
+          policy decisions by consumers.
+
+    - name: OemAdditionalData
+      type: dict[string, string]
+      description: >
+          Optional key-value metadata containing OEM-specific processed or
+          derived information associated with the log entry.
+
+          This may include classification hints or additional context intended
+          for consumption by external services such as bmcweb.
+
+          Implementations may include references to related data if appropriate.
+
+          Keys and values are implementation-specific.

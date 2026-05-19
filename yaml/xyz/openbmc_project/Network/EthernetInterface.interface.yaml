@@ -93,6 +93,11 @@ properties:
       type: boolean
       description: >
           Boolean for to enabling or disabling the ethernet port
+    - name: NumofDestination
+      type: byte
+      default: 15
+      description: >
+          Number of alert destinations supported for LAN alerting.
     - name: LinkUp
       type: boolean
       flags:

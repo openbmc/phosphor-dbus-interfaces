@@ -1,0 +1,45 @@
+description: >
+    Events indicating that a Common Platform Error Record (CPER) has been
+    reported. The CPER payload is provided as an opaque binary via a file
+    descriptor and is not interpreted at this layer.
+
+events:
+    - name: CperReported
+      description: >
+          A CPER record has been received from a platform component. This event
+          acts as a notification only. Consumers may decode and process the CPER
+          payload independently.
+
+      metadata:
+          - name: ObjectPath
+            type: string
+            primary: true
+            description: >
+                D-Bus object path associated with the component or context of
+                the CPER event.
+
+          - name: Message
+            type: string
+            primary: true
+            description: >
+                Human-readable summary of the CPER event. This string is
+                informational only and does not represent a full or
+                authoritative decoding of the CPER payload.
+
+          - name: Path
+            type: string
+            primary: true
+            description: >
+                Path to a file containing the associated payload. The content
+                may be binary or structured data and is treated as opaque by
+                this interface.
+
+          - name: Severity
+            type: string
+            description: >
+                Optional severity hint derived from the CPER record (for
+                example: Recoverable, Fatal, Corrected, Informational).
+
+      en:
+          description: CPER event reported.
+          message: "CPER reported for {ObjectPath}: {Message}"

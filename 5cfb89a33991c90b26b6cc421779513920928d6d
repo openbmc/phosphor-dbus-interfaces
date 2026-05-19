@@ -125,6 +125,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa93446c_062563d7",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-05-19T07:06:08Z",
+      "side": 1,
+      "message": "Its odd that redfish specification choose a boolean to do this rather an action. But since this is already supported in redfish , the proposed dbus mapping seems reasonable to me.\n\nAs per Redfish spec, a PATCH operation can result in either synchronous or asynchronous responses. Although this is a boolean and not an action, it seems like its still valid to return a task back for error propagation.",
+      "parentUuid": "df48582b_5683bca4",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "419ebe8b_02952873",

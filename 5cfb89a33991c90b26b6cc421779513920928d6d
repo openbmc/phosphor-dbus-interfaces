@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "92513afb_5139af91",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-05-19T17:45:55Z",
+      "side": 1,
+      "message": "Should we update what Gunnar said above in the description?",
+      "parentUuid": "f6ca221e_d7a2a6b4",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2e0a46d9_a5169d04",
         "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
         "patchSetId": 8
@@ -139,6 +157,24 @@
       "side": 1,
       "message": "Its odd that redfish specification choose a boolean to do this rather an action. But since this is already supported in redfish , the proposed dbus mapping seems reasonable to me.\n\nAs per Redfish spec, a PATCH operation can result in either synchronous or asynchronous responses. Although this is a boolean and not an action, it seems like its still valid to return a task back for error propagation.",
       "parentUuid": "df48582b_5683bca4",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cdefd7f9_1925daf2",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-05-19T17:45:55Z",
+      "side": 1,
+      "message": "I don\u0027t see details about error handling.",
+      "parentUuid": "fa93446c_062563d7",
       "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -263,6 +299,24 @@
       "side": 1,
       "message": "The expectation post removal, might be a state of Present \u003d False \n\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Inventory/Item.interface.yaml#L14",
       "parentUuid": "f2a6c9de_0193922e",
+      "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff842032_72f9aee0",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-05-19T17:45:55Z",
+      "side": 1,
+      "message": "Don\u0027t see details either way (value set to false or object removed) documented.",
+      "parentUuid": "aaa9d83d_39b6724c",
       "revId": "5cfb89a33991c90b26b6cc421779513920928d6d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

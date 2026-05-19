@@ -61,3 +61,42 @@
 
 [deleteall]:
   https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Collection/DeleteAll.interface.yaml
+
+## OEM Extension Metadata for Log Entries
+
+The interface `xyz.openbmc_project.Logging.Entry.Oem` provides a generic
+mechanism to attach platform-specific metadata to log entries.
+
+This interface is optional and is intended for cases where additional
+information needs to be associated with a log entry beyond the base logging
+schema, without modifying or overloading the core interface.
+
+---
+
+### Usage
+
+A component may attach the `Entry.Oem` interface to a log entry object to
+provide:
+
+- **OemAdditionalData**
+
+  A dictionary (`dict<string, string>`) containing implementation-defined
+  metadata associated with the log entry.
+
+  This acts as a flexible container for structured, namespaced key-value data.
+
+---
+
+### Design Guidelines
+
+- Use this interface as a structured OEM extension, not as a replacement for the
+  base logging interface.
+
+- `OemAdditionalData` should contain lightweight metadata only. Large or complex
+  data should not be stored inline.
+
+- Keys should follow consistent namespaced conventions (for example,
+  `<NAMESPACE>.<KEY>`).
+
+- The content is implementation-specific. Consumers should interpret known keys
+  and safely ignore unknown ones.

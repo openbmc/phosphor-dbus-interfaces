@@ -1,0 +1,39 @@
+description: >
+    Generic OEM extension interface for log entries.
+
+    This interface augments the base xyz.openbmc_project.Logging.Entry interface
+    by providing a dedicated mechanism for OEM-defined metadata.
+
+    While the base Logging.Entry interface includes generic AdditionalData for
+    simple key-value annotations, this interface enables OEMs to define
+    structured and extensible metadata using their own conventions without
+    impacting or overloading the core logging model.
+
+    This separation allows platform-specific data models to evolve independently
+    while preserving consistency and stability of the base interface
+
+properties:
+    - name: OemAdditionalData
+      type: dict[string, string]
+      description: >
+          Optional key-value metadata containing OEM-specific information
+          associated with the log entry.
+
+          This property provides a flexible container for implementation-defined
+          metadata using namespaced key conventions.
+
+          It enables OEMs to represent custom data models, classifications, and
+          references to related data without modifying or overloading the core
+          logging metadata.
+
+          Keys and values are implementation-specific. Consumers are expected to
+          interpret known keys while safely ignoring unknown entries.
+
+service_names:
+    - default: xyz.openbmc_project.Logging
+
+paths:
+    - namespace: /xyz/openbmc_project/logging
+      segments:
+          - name: Entry
+            value: entry

@@ -16,6 +16,24 @@
       "message": "Shall we add an argument to indicate who is attempting to set the redundancy input? That would help identify who detected the Passive hardware issue, and we could use the redundancy setter logs for further analysis.\n\nThe parameter could be either a free-form string or an enum.",
       "revId": "5dac916a0b413ffad2427a40d15e675639c33da2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0d2dae9_caf7e531",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2026-05-20T04:32:46Z",
+      "side": 1,
+      "message": "I believe we should be able to get the caller service name from the D-Bus message itself, but I am not sure whether the sdbusplus async infrastructure provides a way to access that information from the D-Bus message. @patrick@stwcx.xyz could share his view.",
+      "parentUuid": "217f0fb7_0f8485e6",
+      "revId": "5dac916a0b413ffad2427a40d15e675639c33da2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

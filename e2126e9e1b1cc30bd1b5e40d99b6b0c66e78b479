@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "12607030_cecda708",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry/Oem.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-05-20T08:01:31Z",
+      "side": 1,
+      "message": "Log entry is already persisted , will update this wording to avaoid confusion.",
+      "parentUuid": "bd4e0da7_785d1414",
+      "revId": "e2126e9e1b1cc30bd1b5e40d99b6b0c66e78b479",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "21f6faa9_bdba34ef",
         "filename": "yaml/xyz/openbmc_project/Logging/Entry/Oem.interface.yaml",
         "patchSetId": 1
@@ -31,6 +49,24 @@
       "writtenOn": "2026-05-19T13:27:45Z",
       "side": 1,
       "message": "Do we have corresponding changes in bmcweb?",
+      "revId": "e2126e9e1b1cc30bd1b5e40d99b6b0c66e78b479",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfb5ccd8_c1064712",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry/Oem.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-05-20T08:01:31Z",
+      "side": 1,
+      "message": "This interface enables OEM plugin–based data enrichment, which can be utilized by BMCWeb OEM implementations to expose extended log information. used BMCweb as example , tpo avoid confusion will repharse this .",
+      "parentUuid": "21f6faa9_bdba34ef",
       "revId": "e2126e9e1b1cc30bd1b5e40d99b6b0c66e78b479",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -54,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "619a8bfe_3c3d6f48",
+        "filename": "yaml/xyz/openbmc_project/Logging/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-05-20T08:01:31Z",
+      "side": 1,
+      "message": "Agreed , will remove this filed.",
+      "parentUuid": "f759b237_00587ea4",
+      "revId": "e2126e9e1b1cc30bd1b5e40d99b6b0c66e78b479",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "453b21d6_7269b21b",
         "filename": "yaml/xyz/openbmc_project/Logging/README.md",
         "patchSetId": 1
@@ -65,6 +119,24 @@
       "writtenOn": "2026-05-19T13:27:45Z",
       "side": 1,
       "message": "Why can\u0027t these be added to the existing AdditionalData property?",
+      "revId": "e2126e9e1b1cc30bd1b5e40d99b6b0c66e78b479",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b0dc996_b712a751",
+        "filename": "yaml/xyz/openbmc_project/Logging/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-05-20T08:01:31Z",
+      "side": 1,
+      "message": "Using OemAdditionalData avoids introducing custom data structures into the core logging model, reducing consumer complexity and keeping oem-specific logic optional and isolated.",
+      "parentUuid": "453b21d6_7269b21b",
       "revId": "e2126e9e1b1cc30bd1b5e40d99b6b0c66e78b479",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -17,3 +17,11 @@ properties:
       type: array[byte]
       description: >
           Second base MAC address.
+    - name: Z2
+      type: array[byte]
+      description: >
+          Third base MAC address.
+    - name: PF
+      type: array[byte]
+      description: >
+          Pad fill.

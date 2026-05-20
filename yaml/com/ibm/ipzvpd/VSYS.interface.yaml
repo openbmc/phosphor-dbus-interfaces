@@ -61,3 +61,31 @@ properties:
       type: array[byte]
       description: >
           Firmware version.
+    - name: AA
+      type: array[byte]
+      description: >
+          ACF Replay ID for BMCA.
+    - name: AB
+      type: array[byte]
+      description: >
+          ACF Replay ID for BMCB.
+    - name: AK
+      type: array[byte]
+      description: >
+          Access Key.
+    - name: AT
+      type: array[byte]
+      description: >
+          Asset Tag.
+    - name: BA
+      type: array[byte]
+      description: >
+          BA keyword.
+    - name: BN
+      type: array[byte]
+      description: >
+          System brand name.
+    - name: MM
+      type: array[byte]
+      description: >
+          Memory mirror setting.

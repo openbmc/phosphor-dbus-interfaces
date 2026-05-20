@@ -34,6 +34,29 @@
       "parentUuid": "217f0fb7_0f8485e6",
       "revId": "5dac916a0b413ffad2427a40d15e675639c33da2",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a935f6bb_f36ec585",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2026-05-20T07:58:47Z",
+      "side": 1,
+      "message": "Let’s say the faulty BMC is replaced and redundancy is redetermined while the system is running. In that scenario, redundancy would be disabled, so when should it be enabled again?\n\nWould redundancy only be re-enabled after a system power off/on, or would the setter update the state to indicate that the Passive BMC is healthy again so redundancy can be enabled?\n\nAlso, how would the setter represent that state transition/reset? Currently, we have only defined the `PassiveHardwareProblem` enum.",
+      "range": {
+        "startLine": 9,
+        "startChar": 53,
+        "endLine": 10,
+        "endChar": 32
+      },
+      "revId": "5dac916a0b413ffad2427a40d15e675639c33da2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

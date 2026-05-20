@@ -1,0 +1,58 @@
+description: >
+    This defines network bonding parameters.
+
+# TODO Fix it through https://github.com/openbmc/openbmc/issues/1438
+# creatable: true
+
+properties:
+    - name: Mode
+      type: enum[self.BondingMode]
+      description: >
+          Network interface bonding modes.
+      default: ActiveBackup
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+    - name: MIIMonitor
+      type: byte
+      description: >
+          Specifies the frequency that Media Independent Interface link monitoring will occur.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+      default: 0
+    - name: ActiveSlave
+      type: string
+      description: >
+          Name of Active Slave Interface
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
+enumerations:
+    - name: BondingMode
+      description: >
+          Possible bonding mode types.
+      values:
+          - name: RoundRobin
+            description: >
+                It is the default mode,in this mode system transmits packets in
+                sequential order from the first available slave through the last.
+          - name: ActiveBackup
+            description: >
+                In this mode, only one slave in the bond is active.
+                The other one will become active, only when the active slave fails.
+          - name: XOR
+            description: >
+                Transmit based on selectable hashing algorithm.
+                The default policy is a simple source+destination MAC address algorithm.
+          - name: Broadcast
+            description: >
+                Transmits everything on all slave interfaces.
+          - name: Dynamic
+            description: >
+                IEEE 802.3ad Dynamic link aggregation.
+          - name: TLB
+            description: >
+                The outgoing traffic is distributed according to the current load on each slave.
+          - name: ALB
+            description: >
+                Incoming/outgoing traffic is distributed according to the current load on each slave.
+

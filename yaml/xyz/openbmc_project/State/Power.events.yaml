@@ -40,6 +40,9 @@ events:
             type: object_path
             primary: true
             description: The name or identifier of the power rail.
+          - name: FailureData
+            type: string
+            description: An [optional] set of additional failure data.
       en:
           description: A fault detected on a power rail has cleared.
           message: A fault has cleared on power rail '{PowerRail}'.
@@ -50,6 +53,9 @@ events:
             type: object_path
             primary: true
             description: The name or identifier of the voltage regulator.
+          - name: FailureData
+            type: string
+            description: An [optional] set of additional failure data.
       en:
           description: A fault detected on a voltage regulator has cleared.
           message:

@@ -52,6 +52,11 @@ events:
             type: object_path
             primary: true
             description: The name or identifier of the device
+          - name: FailureData
+            type: string
+            description:
+                An [Optional] set of additional failure data to identify the
+                cause of the thermal fault that has cleared.
       en:
           description:
               A event signaling that a device is operating over a set operating

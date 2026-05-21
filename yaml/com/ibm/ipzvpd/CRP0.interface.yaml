@@ -69,3 +69,11 @@ properties:
       type: array[byte]
       description: >
           CI keyword.Processor Chip ID.
+    - name: VZ
+      type: array[byte]
+      description: >
+          VZ keyword.Record Version ID.
+    - name: SA
+      type: array[byte]
+      description: >
+          SA keyword.Spare core deploy algorithm.

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fcf5957_a5dc29eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-05-21T02:19:34Z",
+      "side": 1,
+      "message": "Please add a ResetComplete signal to this interface as my following patch set requires them.\n\n1. dbus-sensors: https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/89318\n2. bmcweb: https://gerrit.openbmc.org/c/openbmc/bmcweb/+/89357\n\nThanks for your helping though!",
+      "revId": "4d2a19b98db95ea0accd7beb3bb0decce30040c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "251b08b8_10f74fba",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-05-21T02:19:34Z",
+      "side": 1,
+      "message": "@andhsieh@nvidia.com\n\nPlease add a signals block here Named as ResetComplete,\nas my current implementation requires this signal to performs the reset asynchronously.\nAdding signal(also with timeout) allows bmcweb to received completion report without locking the D-Bus reply to the hardware round-trip.\n\nThanks!",
+      "revId": "4d2a19b98db95ea0accd7beb3bb0decce30040c4",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

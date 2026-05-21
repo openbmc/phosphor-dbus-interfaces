@@ -69,3 +69,19 @@ properties:
       type: array[byte]
       description: >
           CI keyword.Processor Chip ID.
+    - name: VZ
+      type: array[byte]
+      description: >
+          VZ keyword.Record Version ID.
+    - name: TE
+      type: array[byte]
+      description: >
+          TE keyword.Module final test EC.
+    - name: TA
+      type: array[byte]
+      description: >
+          TA keyword.System level test EC.
+    - name: SA
+      type: array[byte]
+      description: >
+          SA keyword.Spare core deploy algorithm.

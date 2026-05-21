@@ -1,0 +1,43 @@
+description: >
+    Implement to represent the VRSP record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VZ
+      type: array[byte]
+      description: >
+          VZ keyword. Record version ID.
+    - name: DD
+      type: array[byte]
+      description: >
+          DD keyword.Chip version.
+    - name: ED
+      type: array[byte]
+      description: >
+          ED keyword.Mesh Chip ECID.
+    - name: CI
+      type: array[byte]
+      description: >
+          CI keyword.Processor Chip ID(CFAM ID).
+    - name: PG
+      type: array[byte]
+      description: >
+          Partial Good keyword.
+    - name: MG
+      type: array[byte]
+      description: >
+           Reserve keyword for additional PG info.
+    - name: TG
+      type: array[byte]
+      description: >
+          TG keyword. Tap Gate functionality.
+    - name: DN
+      type: array[byte]
+      description: >
+          DN keyword. PSRO, MCHRO readings.
+    - name: PD_V
+      type: array[byte]
+      description: >
+          "#V" keyword. Power and Frequency setting.

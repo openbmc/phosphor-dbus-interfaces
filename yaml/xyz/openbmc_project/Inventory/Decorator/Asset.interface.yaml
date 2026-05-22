@@ -36,3 +36,9 @@ properties:
           SparePartNumber and instead PartNumber should be used in user
           interfaces.
       default: ""
+    - name: SKU
+      type: string
+      description: >
+          The stock-keeping unit of the item. Maps to the Redfish 'SKU'
+          property.
+      default: ""

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e33bb0a5_5e98ad1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2026-05-22T00:31:18Z",
+      "side": 1,
+      "message": "This seems we\u0027re shoehorning an IPMI concept into the (management-interface-independent) network configuration with this change. An ethernet interface itself has no concept of the LAN Alert mechanism specified by IPMI.\n\nDo we have a more appropriate object to host this? The channel definitions within the IPMI-specific code may be a more suitable.\n\nI understand that this may be the first of a series of changes to implement LAN alerts, but seems poorly sequenced; we can only validly indicate support for 0 destinations without the full alert capability defined. Do you have an implementation planned? I don\u0027t see any design docs for alerting at present.\n\nOn a naming item: you have used `NumofDestination` everywhere; capitalistion-wise, this should be `NumOfDestination`. However, in the scope of an ethernet interface, this doesn\u0027t specify enough context. Perhaps `SupportedAlertChannels` ?",
+      "revId": "001148e6cd43bc752e6144032356807b8188d754",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "498595da_1244f129",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2026-05-22T00:31:18Z",
+      "side": 1,
+      "message": "Why defaulting to 15 when we don\u0027t support LAN Alerts?",
+      "revId": "001148e6cd43bc752e6144032356807b8188d754",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

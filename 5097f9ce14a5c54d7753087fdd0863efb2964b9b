@@ -173,6 +173,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bfdb7f30_86b52cbc",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1002604
+      },
+      "writtenOn": "2026-05-24T07:42:36Z",
+      "side": 1,
+      "message": "I split to 2 interfaces, ROTLVs.interface.yaml  for read only properties and RWTLVs.interface.yaml for read write properties",
+      "parentUuid": "e934f557_2153c492",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 66
+      },
+      "revId": "5097f9ce14a5c54d7753087fdd0863efb2964b9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d5ae364b_f1978536",
         "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
         "patchSetId": 10
@@ -232,6 +256,30 @@
       "side": 1,
       "message": "We absolutely should not be lying about MAC in LLDP advertisement.  This should not even be a design consideration.",
       "parentUuid": "9cef3d14_87d86a62",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 30
+      },
+      "revId": "5097f9ce14a5c54d7753087fdd0863efb2964b9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74020115_eade9507",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/TLVs.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1002604
+      },
+      "writtenOn": "2026-05-24T07:42:36Z",
+      "side": 1,
+      "message": "moved the MAC to  ROTLVs.interface.yaml",
+      "parentUuid": "6ec9f580_058f2994",
       "range": {
         "startLine": 59,
         "startChar": 0,

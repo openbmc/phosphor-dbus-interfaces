@@ -16,6 +16,24 @@
       "message": "what does BA represent ?",
       "revId": "6910a30cf82358db7c1c5424115419719717bc4f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b8ae0f5_233df4bf",
+        "filename": "yaml/com/ibm/ipzvpd/VSYS.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1002186
+      },
+      "writtenOn": "2026-05-25T04:58:21Z",
+      "side": 1,
+      "message": "BA is the replacement of UTIL:D1. Its used to backup two BIOS attributes (`pvm_keep_and_clear` and `pvm_create_default_lpar`).",
+      "parentUuid": "95030814_878b04d7",
+      "revId": "6910a30cf82358db7c1c5424115419719717bc4f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cde4d2d5_7c0f6548",
+        "filename": "yaml/xyz/openbmc_project/State/BMC/Redundancy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2026-05-25T04:39:42Z",
+      "side": 1,
+      "message": "\u003e While the sdbusplus message object does provide that info, that isn\u0027t exposed to the method call.\n\nOK..\n\n\u003e Unless you feel strongly, I\u0027m not too concerned about having it as a param since for us one call happens during the boot, and the other at runtime, so it will be easy to know where it came from if we did want to know. Also, there would be errors logs for the root cause providing more info.\n\nIt would be nice to have but yes, we could look at the logs to decide who set/reset the redundancy input.",
+      "parentUuid": "1f37bbe0_a944091f",
+      "revId": "5dac916a0b413ffad2427a40d15e675639c33da2",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a935f6bb_f36ec585",

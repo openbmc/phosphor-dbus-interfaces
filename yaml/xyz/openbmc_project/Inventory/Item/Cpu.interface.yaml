@@ -96,3 +96,11 @@ associations:
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PCIeSlot
           - xyz.openbmc_project.Inventory.Item.PCIeDevice
+    - name: controlled_by
+      description: >
+          Objects that implement Cpu can optionally implement the
+          'controlled_by' association to provide a link to one or more control
+          interfaces.
+      reverse_name: controlling
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Control.Processor.EccMode

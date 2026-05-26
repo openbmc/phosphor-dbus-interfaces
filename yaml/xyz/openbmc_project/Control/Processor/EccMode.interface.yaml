@@ -1,0 +1,24 @@
+description: >
+    Processor ECC (Error Correcting Code) mode control.
+
+properties:
+    - name: Enabled
+      type: boolean
+      description: >
+          The requested ECC mode for the processor. May not take effect on
+          hardware immediately; refer to Active for the mode currently in
+          effect.
+      default: false
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.Unavailable
+          - xyz.openbmc_project.Common.Device.Error.WriteFailure
+
+    - name: Active
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          Whether ECC is currently active on the processor. May differ from
+          Enabled.
+      default: false

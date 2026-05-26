@@ -1,0 +1,43 @@
+description: >
+    Memory ECC (Error Correcting Code) mode control for a processor.
+
+    Maps to the ECCModeEnabled property of MemorySummary in the Redfish
+    Processor schema, which covers all memory associated with the processor
+    collectively rather than an individual memory, bus or cache. It does not
+    affect system memory ECC mode.
+
+properties:
+    - name: Enabled
+      type: boolean
+      description: >
+          The requested memory ECC mode for the processor. May not take effect
+          on hardware immediately; refer to Active for the mode currently in
+          effect.
+
+          Unavailable is returned when an earlier request is still in progress;
+          the caller may retry once it completes.
+      default: false
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
+
+    - name: Active
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          Whether memory ECC is currently active on the processor.
+      default: false
+
+associations:
+    - name: controlling
+      description: >
+          Objects implementing Control.Processor.EccMode can optionally
+          implement the 'controlling' association to provide a link to the
+          processor inventory item whose memory ECC mode is being controlled.
+      reverse_name: controlled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cpu
+          - xyz.openbmc_project.Inventory.Item.Accelerator
+
+paths:
+    - namespace: /xyz/openbmc_project/control/processor

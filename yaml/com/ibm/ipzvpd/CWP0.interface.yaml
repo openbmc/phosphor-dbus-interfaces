@@ -1,0 +1,97 @@
+description: >
+    Implement to represent the CWP0 record in IPZ VPD. The properties within
+    contain updatable data related to a chip. Currently, the record is used to
+    store the spare keywords.
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VZ
+      type: array[byte]
+      description: >
+          VZ keyword. Record version.
+    - name: D0
+      type: array[byte]
+      description: >
+          D0 keyword. Spare 0.
+    - name: D1
+      type: array[byte]
+      description: >
+          D1 keyword. Spare 1.
+    - name: D2
+      type: array[byte]
+      description: >
+          D2 keyword. Spare 2.
+    - name: D3
+      type: array[byte]
+      description: >
+          D3 keyword. Spare 3.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword. Spare 4.
+    - name: D5
+      type: array[byte]
+      description: >
+          D5 keyword. Spare 5.
+    - name: D6
+      type: array[byte]
+      description: >
+          D6 keyword. Spare 6.
+    - name: D7
+      type: array[byte]
+      description: >
+          D7 keyword. Spare 7.
+    - name: D8
+      type: array[byte]
+      description: >
+          D8 keyword. Spare 8.
+    - name: D9
+      type: array[byte]
+      description: >
+          D9 keyword. Spare 9.
+    - name: F0
+      type: array[byte]
+      description: >
+          F0 keyword. Spare 10.
+    - name: F1
+      type: array[byte]
+      description: >
+          F1 keyword. Spare 11.
+    - name: F2
+      type: array[byte]
+      description: >
+          F2 keyword. Spare 12.
+    - name: F3
+      type: array[byte]
+      description: >
+          F3 keyword. Spare 13.
+    - name: F4
+      type: array[byte]
+      description: >
+          F4 keyword. Spare 14.
+    - name: F5
+      type: array[byte]
+      description: >
+          F5 keyword. Spare 15.
+    - name: F6
+      type: array[byte]
+      description: >
+          F6 keyword. Spare 16.
+    - name: F7
+      type: array[byte]
+      description: >
+          F7 keyword. Spare 17.
+    - name: F8
+      type: array[byte]
+      description: >
+          F8 keyword. Spare 18.
+    - name: F9
+      type: array[byte]
+      description: >
+          F9 keyword. Spare 19.
+    - name: PD_0
+      type: array[byte]
+      description: >
+          "#0" keyword. Spare 20.

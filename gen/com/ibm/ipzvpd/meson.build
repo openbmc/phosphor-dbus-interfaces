@@ -37,6 +37,8 @@ subdir('VRSP')
 subdir('VRSV')
 subdir('VRT0')
 subdir('VRT1')
+subdir('VRT2')
+subdir('VRT3')
 subdir('VRTN')
 subdir('VSBK')
 subdir('VSBP')
@@ -953,6 +955,54 @@ generated_markdown += custom_target(
         '--directory',
         meson.current_source_dir() / '../../../../yaml',
         'com/ibm/ipzvpd/VRT1',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_markdown += custom_target(
+    'com/ibm/ipzvpd/VRT2__markdown'.underscorify(),
+    input: [
+        '../../../../yaml/com/ibm/ipzvpd/VRT2.interface.yaml',
+    ],
+    output: ['VRT2.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'com/ibm/ipzvpd/VRT2',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_markdown += custom_target(
+    'com/ibm/ipzvpd/VRT3__markdown'.underscorify(),
+    input: [
+        '../../../../yaml/com/ibm/ipzvpd/VRT3.interface.yaml',
+    ],
+    output: ['VRT3.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'com/ibm/ipzvpd/VRT3',
     ],
     install: should_generate_markdown,
     install_dir: [inst_markdown_dir / sdbusplus_current_path],

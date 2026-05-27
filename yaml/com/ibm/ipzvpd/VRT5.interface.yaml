@@ -1,0 +1,63 @@
+description: >
+    Implement to represent the VRT5 record in IPZ VPD
+properties:
+    - name: RT
+      type: array[byte]
+      description: >
+          RT keyword. Contains the record name.
+    - name: VZ
+      type: array[byte]
+      description: >
+          VZ keyword. Record version ID.
+    - name: DD
+      type: array[byte]
+      description: >
+          DD keyword.Chip version.
+    - name: ED
+      type: array[byte]
+      description: >
+          ED keyword.Mesh Chip ECID.
+    - name: CI
+      type: array[byte]
+      description: >
+          CI keyword.Processor Chip ID(CFAM ID).
+    - name: PG
+      type: array[byte]
+      description: >
+          Partial Good keyword.
+    - name: DN
+      type: array[byte]
+      description: >
+          DN keyword. PSRO, MCHRO readings.
+    - name: TC
+      type: array[byte]
+      description: >
+          TC keyword. Thermal Control.
+    - name: PZ
+      type: array[byte]
+      description: >
+          PZ keyword. On Chip Precision Voltage Reference.
+    - name: PD_V
+      type: array[byte]
+      description: >
+          "#V" keyword. Power and Frequency setting.
+    - name: IQ
+      type: array[byte]
+      description: >
+          PZ keyword. On Chip Precision Voltage Reference.
+    - name: PD_W
+      type: array[byte]
+      description: >
+          "#W" keyword. VDM & WOF data.
+    - name: D4
+      type: array[byte]
+      description: >
+          D4 keyword. Reserved.
+    - name: D8
+      type: array[byte]
+      description: >
+          D8 keyword. Reserved.
+    - name: F5
+      type: array[byte]
+      description: >
+          F5 keyword. Reserved.

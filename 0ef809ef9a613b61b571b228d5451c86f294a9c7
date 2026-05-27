@@ -111,6 +111,30 @@
       },
       "revId": "0ef809ef9a613b61b571b228d5451c86f294a9c7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1dbcf4a_02f8f61c",
+        "filename": "yaml/xyz/openbmc_project/Attestation/ComponentIntegrity.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2026-05-27T10:09:41Z",
+      "side": 1,
+      "message": "\u003eI guess this needs a design document of its own since its much bigger topic than what this commit is trying to do.\n\nBased on the description of the secure session info property:\n“these entries describe all active communication sessions between BMC and the SPDM device”\n\nI think the description can be updated to clarify that this property is limited only to the sessions created by spdmd.",
+      "parentUuid": "f21b6cdc_339c48ac",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 19
+      },
+      "revId": "0ef809ef9a613b61b571b228d5451c86f294a9c7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

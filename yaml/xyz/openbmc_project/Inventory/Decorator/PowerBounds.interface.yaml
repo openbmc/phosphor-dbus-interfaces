@@ -1,0 +1,23 @@
+description: >
+    Static device-rated bounds of the total power an inventory item consumes, in
+    watts, such as a chassis, processor, or accelerator.
+
+properties:
+    - name: MaxPowerWatts
+      type: uint32
+      flags:
+          - readonly
+      default: maxint
+      description: >
+          The upper bound of the total power consumed by the inventory item, in
+          watts. If the property is not supported, the value is maxint. Maps to
+          the MaxPowerWatts property in the Redfish Chassis schema.
+    - name: MinPowerWatts
+      type: uint32
+      flags:
+          - readonly
+      default: maxint
+      description: >
+          The lower bound of the total power consumed by the inventory item, in
+          watts. If the property is not supported, the value is maxint. Maps to
+          the MinPowerWatts property in the Redfish Chassis schema.

@@ -10,6 +10,7 @@ subdir('I2CDevice')
 subdir('LocationCode')
 subdir('ManagedHost')
 subdir('ManufacturerExt')
+subdir('PowerBounds')
 subdir('Replaceable')
 subdir('Revision')
 subdir('Slot')
@@ -278,6 +279,30 @@ generated_markdown += custom_target(
         '--directory',
         meson.current_source_dir() / '../../../../../yaml',
         'xyz/openbmc_project/Inventory/Decorator/ManufacturerExt',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/Inventory/Decorator/PowerBounds__markdown'.underscorify(),
+    input: [
+        '../../../../../yaml/xyz/openbmc_project/Inventory/Decorator/PowerBounds.interface.yaml',
+    ],
+    output: ['PowerBounds.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../../yaml',
+        'xyz/openbmc_project/Inventory/Decorator/PowerBounds',
     ],
     install: should_generate_markdown,
     install_dir: [inst_markdown_dir / sdbusplus_current_path],

@@ -155,6 +155,30 @@ methods:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.User.Common.Error.GroupNameDoesNotExist
 
+    - name: SetPasswordExpired
+      description: >
+          Sets the password expiration state for an existing user. If IsExpired
+          is true, the password last changed date is set to epoch day 0, forcing
+          a password change on next login. If false, the last changed date is
+          reset to today.
+      parameters:
+          - name: UserName
+            type: string
+            description: >
+                Name of the user whose password expiration state has to be
+                updated.
+          - name: IsExpired
+            type: boolean
+            description: >
+                If true, marks the user's password as expired forcing a password
+                change on next login. If false, resets the expiration by setting
+                the last changed date to today.
+      errors:
+          - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.NotAllowed
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
+
 enumerations:
     - name: UserProperty
       description: List all available user properties for the user creation.

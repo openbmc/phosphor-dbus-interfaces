@@ -53,6 +53,34 @@ properties:
       type: array[byte]
       description: >
           LX keyword. The load ID data.
+    - name: AA
+      type: array[byte]
+      description: >
+          AA keyword. ACF replay ID for BMC A.
+    - name: AB
+      type: array[byte]
+      description: >
+          AB keyword. ACF replay ID for BMC B.
+    - name: AK
+      type: array[byte]
+      description: >
+          AK keyword. Update access key.
+    - name: AT
+      type: array[byte]
+      description: >
+          AT keyword. Asset tag.
+    - name: BN
+      type: array[byte]
+      description: >
+          BN keyword. Brand name.
+    - name: BA
+      type: array[byte]
+      description: >
+          BA keyword. Bios attribute backup.
+    - name: MM
+      type: array[byte]
+      description: >
+          MM keyword. Active memory mirror setting.
     - name: D0
       type: array[byte]
       description: >

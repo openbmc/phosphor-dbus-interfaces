@@ -1,0 +1,82 @@
+version: 1.2.0
+
+description: >
+    Events received from external or internal producers and forwarded into the
+    system logging pipeline. These events are normalized before being translated
+    into platform-specific logging metadata and committed via the logging
+    framework.
+
+events:
+    - name: ForwardedEvent
+      description: >
+          A generic event received from an external or internal producer. This
+          event acts as an ingress point for non-native events entering the
+          logging pipeline.
+
+          This event does NOT represent a final semantic log entry. Instead, it
+          serves as an envelope carrying event data that will be normalized into
+          a standard logging format.
+      severity: informational
+      metadata:
+          - name: BmcEventId
+            type: string
+            primary: true
+            description: >
+                Canonical identifier used to map this ingress event to a target
+                MessageId during normalization. This value determines the final
+                event type emitted by the logging framework.
+
+          - name: Payload
+            type: string
+            primary: true
+            description: >
+                Serialized JSON payload carrying event data from the source.
+
+                Expected structure:
+
+                    {
+                        "MessageId": "string",
+                        "MessageArgs": [string, ...],
+                        "Severity": "OK | Warning | Critical",
+                        "Message": "optional human readable text",
+                        "OriginOfCondition": "optional resource reference",
+                        "Context": "optional correlation identifier",
+                        "Oem": {
+                            "AMD": {
+                                "Source": "optional producer identifier",
+                                "Origin": "optional classification
+                (internal|external)",
+                                "Version": "optional schema version",
+                                "<key>": "<value>"
+                            }
+                        }
+                    }
+
+                Semantics:
+
+                    MessageId:
+                        Identifier of the source event
+
+                    MessageArgs:
+                        Ordered arguments for message formatting
+
+                    Severity:
+                        Event severity used during normalization
+
+                    Message:
+                        Optional human-readable message
+
+                    OriginOfCondition:
+                        Reference to affected resource
+
+                    Context:
+                        Optional correlation identifier
+
+                    Oem.AMD:
+                        Container for vendor-specific metadata
+
+                Notes:
+                    - Payload MUST be valid JSON
+                    - Redfish-compatible structure is preserved
+                    - Additional fields MUST be placed under Oem.AMD
+                    - Invalid payload SHOULD result in fallback handling

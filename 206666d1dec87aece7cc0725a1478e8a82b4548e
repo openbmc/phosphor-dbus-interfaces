@@ -16,6 +16,24 @@
       "message": "@paligill@gmail.com - can you take a look?  This interface feels light.  I\u0027m surprised there isn\u0027t more to it.",
       "revId": "206666d1dec87aece7cc0725a1478e8a82b4548e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e97506c9_59332cc6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-05-28T06:34:54Z",
+      "side": 1,
+      "message": "@patrick@stwcx.xyz This is not the correct interface name exposed by EM. The last suffix in the interface name is suppose to be the Type as per EM configuration. As we discussed earlier, lets hold on to documenting these configuration interfaces in PDI for now or lets say if we are doing it then same file will get duplicated for all Types, for example, in this case for all Types of CPLD (LatticeLCMXO2_4000HCFirmware, LatticeLCMXO3D_4300Firmware etc).\nThe other issue has been with enum types in EM which cannot be easily mapped to PDI enum types.\nComplex Types or references to another type cannot be easily mapped.\nCan\u0027t remember on the top of my head but i think there were more items to this list.",
+      "parentUuid": "5b86bd5f_5e9d4e6c",
+      "revId": "206666d1dec87aece7cc0725a1478e8a82b4548e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

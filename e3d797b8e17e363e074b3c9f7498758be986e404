@@ -16,6 +16,40 @@
       "message": "@patrick@stwcx.xyz could you re-review please?",
       "revId": "e3d797b8e17e363e074b3c9f7498758be986e404",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ecd6824_916aa665",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-28T17:06:37Z",
+      "side": 1,
+      "message": "Right now \"WriteFailure\" is only used by one interface.  I\u0027m not sure if I like us adding that more often.  It seems like all of your commits you\u0027re starting to add this.\n\nWhat is a caller supposed to do with a WriteFailure?  If we can\u0027t define the expected caller action, or we can\u0027t map this cleanly back to some expected Redfish response, I\u0027d rather we eat this in your daemon.",
+      "revId": "e3d797b8e17e363e074b3c9f7498758be986e404",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a30a8e63_56a377aa",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-28T17:06:37Z",
+      "side": 1,
+      "message": "Is there a reason to restricted it to Accelerator?  Should we allow any Inventory.Item?  Should we allow Cpu and/or CpuCore and/or Dimm?",
+      "revId": "e3d797b8e17e363e074b3c9f7498758be986e404",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

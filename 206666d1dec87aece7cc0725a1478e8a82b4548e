@@ -34,6 +34,24 @@
       "parentUuid": "5b86bd5f_5e9d4e6c",
       "revId": "206666d1dec87aece7cc0725a1478e8a82b4548e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08c9f690_af06650d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002479
+      },
+      "writtenOn": "2026-05-28T09:40:01Z",
+      "side": 1,
+      "message": "@paligill@gmail.com Thanks for the explanation.\n\nSince we will be switching to the existing MuxOutputs interface for this use case in entity-manager, would it be OK to drop this phosphor-dbus-interfaces patch?\n\nFrom the discussion, it seems this new EM configuration interface is no longer needed if we rely on MuxOutputs instead.\nhttps://gerrit.openbmc.org/c/openbmc/entity-manager/+/89594/comment/e37781b0_ba252706/",
+      "parentUuid": "e97506c9_59332cc6",
+      "revId": "206666d1dec87aece7cc0725a1478e8a82b4548e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

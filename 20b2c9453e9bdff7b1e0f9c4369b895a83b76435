@@ -16,6 +16,29 @@
       "message": "LGTM",
       "revId": "20b2c9453e9bdff7b1e0f9c4369b895a83b76435",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8adfd9af_b16bd9ae",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-28T16:58:32Z",
+      "side": 1,
+      "message": "It isn\u0027t documented that Reset is asynchronous.  Why do we have WriteFailure if it is async?\n\n\nWhat are you anticipating the time to complete the reset to be?  Is it really longer than the dbus-reply timeout?",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 67
+      },
+      "revId": "20b2c9453e9bdff7b1e0f9c4369b895a83b76435",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,79 @@
+description: >
+    Events received from external components or interfaces and forwarded into
+    the system logging infrastructure. These events are normalized before being
+    translated into AEL (AMD Event Logging) metadata and committed via the
+    logging framework.
+
+events:
+    - name: ForwardedEvent
+      description: >
+          A normalized event received from an external producer. This event acts
+          as an ingress point for external events. Payload data MUST be
+          referenced via URI and MUST NOT be embedded inline.
+
+      metadata:
+          - name: EventId
+            type: string
+            primary: true
+            description: >
+                Canonical identifier assigned by the logging framework. This
+                value uniquely identifies the event type within the system and
+                is used for consistent processing and identification of events.
+
+          - name: SourceEventId
+            type: string
+            description: >
+                Optional identifier provided by the originating source of the
+                event. This value is preserved for reference and traceability.
+
+          - name: Message
+            type: string
+            description: >
+                Human-readable summary of the event. This field is optional and
+                intended for informational purposes only.
+
+          - name: Severity
+            type: string
+            description: >
+                Indicates the priority associated with the event within the
+                logging framework.
+
+                Expected values (SHOULD) follow commonly used logging severity
+                levels:
+                  - Critical
+                  - Warning
+                  - Informational
+
+          - name: SubType
+            type: string
+            description: >
+                Defines how the associated payload should be interpreted.
+
+                Allowed values (MUST):
+                  - None
+                  - CPER
+                  - RedfishEvent
+                  - Vendor
+                  - Opaque
+
+                Consumers MUST use this field to determine how to process the
+                payload.
+
+          - name: Origin
+            type: string
+            description: >
+                Identifier representing the source component or subsystem that
+                generated the event. The format is implementation-specific and
+                should provide enough information to trace the origin of the
+                event.
+
+          - name: DataURI
+            type: string
+            description: >
+                URI pointing to externally stored payload data. The payload is
+                treated as opaque at this layer and MUST be retrieved and
+                decoded by consumers as required.
+
+      en:
+          description: Forwarded event received from external source.
+          message: "Forwarded event {EventId}: {Message}"

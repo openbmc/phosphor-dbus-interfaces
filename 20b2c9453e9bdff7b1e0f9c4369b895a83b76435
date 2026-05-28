@@ -39,6 +39,30 @@
       },
       "revId": "20b2c9453e9bdff7b1e0f9c4369b895a83b76435",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf30b7d4_6f3b7ebd",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-28T18:46:32Z",
+      "side": 1,
+      "message": "Thanks for the review. Confirmed the reset completes in ~1-2 seconds, well within the D-Bus reply timeout, so making the caller deal with the async + signal complexity isn\u0027t justified. \nReverted to a synchronous Reset method and removed the ResetComplete signal, ResetResult enum, and WriteFailure error. Will use Unavailable for retryable conditions.",
+      "parentUuid": "8adfd9af_b16bd9ae",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 67
+      },
+      "revId": "20b2c9453e9bdff7b1e0f9c4369b895a83b76435",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

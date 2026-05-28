@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8641d26_62b55c6e",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-28T18:46:29Z",
+      "side": 1,
+      "message": "Thanks for the feedback. I understand now — D-Bus errors are for the caller\u0027s code path, not for debug-level distinctions. I\u0027ll remove WriteFailure from both the property setters and the Reset method, and have the daemon swallow hardware write failures (logged to journal).",
+      "parentUuid": "5ecd6824_916aa665",
+      "revId": "e3d797b8e17e363e074b3c9f7498758be986e404",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a30a8e63_56a377aa",
@@ -48,6 +66,24 @@
       "writtenOn": "2026-05-28T17:06:37Z",
       "side": 1,
       "message": "Is there a reason to restricted it to Accelerator?  Should we allow any Inventory.Item?  Should we allow Cpu and/or CpuCore and/or Dimm?",
+      "revId": "e3d797b8e17e363e074b3c9f7498758be986e404",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61e2e339_5491b9b9",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-28T18:46:29Z",
+      "side": 1,
+      "message": "Yes, thanks for the remind.",
+      "parentUuid": "a30a8e63_56a377aa",
       "revId": "e3d797b8e17e363e074b3c9f7498758be986e404",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

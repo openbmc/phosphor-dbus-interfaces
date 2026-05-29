@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "84f116f9_09692ef8",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry/Oem.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-05-29T09:00:07Z",
+      "side": 1,
+      "message": "1. The OEM data is currently modeled as a key-value map (dict\u003cstring, string\u003e), not as a native JSON-structured object. example AEL REadme  is https://gerrit.openbmc.org/c/openbmc/phosphor-logging/+/90626/1/extensions/amd-event-log/README.md. \n\n2. Agreed, the current approach works well for single OEM usage and fits cleanly into the existing phosphor-logging create flow.\nSupporting multiple OEMs within the same interface using namespaced keys is possible, but it introduces a few concerns:\n\nOwnership becomes convention-based, not structurally enforced\nIt can complicate the extension (create) handling, especially if this flow becomes multi-threaded in future (even though it is effectively sequential today)\nIt adds extra validation and coordination overhead between different contributors\n\nAlso looked at the alternative of creating OEM-specific DBus objects (e.g., /oem/\u003cvendor\u003e). While this gives better ownership separation, it does not align with the single InterfacesAdded signal expectation during log entry creation. Since DBus emits signals per object, this would result in multiple signals and break the atomic behavior expected by current consumers.\nBecause of this, using the current interface for multiple independent OEMs may not scale cleanly.\nIf multi-OEM support is a strong requirement, it might be better to revisit the idea of placing OEM extensions under a separate OEM namespace (e.g., /com/\u003cvendor\u003e), instead of overloading the logging entry interface.\n\nPlease let me know if you see a better approach to handle the multi-OEM use case while preserving atomic entry creation.",
+      "parentUuid": "762a1e64_2fa48eb5",
+      "range": {
+        "startLine": 14,
+        "startChar": 25,
+        "endLine": 14,
+        "endChar": 32
+      },
+      "revId": "67fcea985d17403d9414fcf637f462fb6cb4bce0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4682abc8_b477f117",
         "filename": "yaml/xyz/openbmc_project/Logging/Entry/Oem.interface.yaml",
         "patchSetId": 3
@@ -37,6 +61,30 @@
       "writtenOn": "2026-05-28T21:02:04Z",
       "side": 1,
       "message": "I don\u0027t think this is necessary.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 24
+      },
+      "revId": "67fcea985d17403d9414fcf637f462fb6cb4bce0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa2b4fb7_60f27c16",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry/Oem.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-05-29T09:00:07Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "4682abc8_b477f117",
       "range": {
         "startLine": 25,
         "startChar": 0,

@@ -16,6 +16,24 @@
       "message": "I\u0027m not really understanding why this is needed instead of writing the properties to `maxint`.",
       "revId": "2a8fa3fbdb225a8ef46c7ed4637f8b111031f457",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33acc8d0_22010fd0",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-29T03:31:23Z",
+      "side": 1,
+      "message": "The Reset method and a property write to maxint are not semantically equivalent at the hardware layer:\n\n- Writing maxint to RequestedSpeedLimit*Hz is a value write — the daemon forwards the actual integer (2^64 - 1) to the device firmware as a clock limit. The firmware doesn\u0027t know about the PDI maxint convention; many devices either reject the out-of-range value or interpret it as a literal limit.\n\n- The Redfish Control.ResetToDefaults action also expresses this \"remove the setting\" semantic rather than \"write a sentinel\".\n\nSeparating the two keeps the caller\u0027s intent explicit and matches both the Redfish action model and the underlying device command. Happy to revisit if you\u0027d prefer a different approach.",
+      "parentUuid": "bb83b669_fb29169e",
+      "revId": "2a8fa3fbdb225a8ef46c7ed4637f8b111031f457",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

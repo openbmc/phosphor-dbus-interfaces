@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c92d785c_3c73a2c6",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-29T04:50:02Z",
+      "side": 1,
+      "message": "I like this cleaner approach too — thanks for the suggestion. Redesigned with PendingReset property; the daemon clears it to \"None\" on completion so subscribers can track progress via the standard PropertiesChanged signal.",
+      "parentUuid": "6738e3f4_00224f75",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 17
+      },
+      "revId": "7518a9bdca31e063f01a4258506abdf87aeb59a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "14f81b86_17139ad8",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-05-29T01:39:29Z",
       "side": 1,
       "message": "How would you end up with an InvalidArgument from an enum type?",
+      "revId": "7518a9bdca31e063f01a4258506abdf87aeb59a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23e2e507_7c3e6285",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-29T04:50:02Z",
+      "side": 1,
+      "message": "Thanks for catching this. My original intent was to guard against callers passing a value not in the enum, but you\u0027re right — the D-Bus binding layer already rejects those before the handler is called, so InvalidArgument isn\u0027t reachable here. \nI\u0027ll drop it.",
+      "parentUuid": "14f81b86_17139ad8",
       "revId": "7518a9bdca31e063f01a4258506abdf87aeb59a8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -66,6 +108,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d6c4ffc4_9eef579e",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-29T04:50:02Z",
+      "side": 1,
+      "message": "Agreed, removed the ordering convention. The default reset type when bmcweb receives a request without ResetType is now an implementation-specific decision on the daemon side. \nOr do you think we also need a separate property (e.g. DefaultResetType) to express this explicitly, or is leaving it as a daemon-side detail OK?",
+      "parentUuid": "5bd6146d_e0da0085",
+      "range": {
+        "startLine": 33,
+        "startChar": 12,
+        "endLine": 33,
+        "endChar": 17
+      },
+      "revId": "7518a9bdca31e063f01a4258506abdf87aeb59a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e494eaa0_96124484",
         "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
         "patchSetId": 10
@@ -77,6 +143,30 @@
       "writtenOn": "2026-05-29T01:39:29Z",
       "side": 1,
       "message": "We should not refer to specific applications.",
+      "range": {
+        "startLine": 45,
+        "startChar": 67,
+        "endLine": 45,
+        "endChar": 73
+      },
+      "revId": "7518a9bdca31e063f01a4258506abdf87aeb59a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81d73745_b272221b",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-05-29T04:50:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e494eaa0_96124484",
       "range": {
         "startLine": 45,
         "startChar": 67,

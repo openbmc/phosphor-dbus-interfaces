@@ -22,6 +22,30 @@
       },
       "revId": "d23a326daead1ec493085ee9e0ae27b1ebfe4e9b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "162c5876_02525e29",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-05-29T09:09:31Z",
+      "side": 1,
+      "message": "Thanks for the question — the wording “external transport formats” in the commit message is a bit misleading.\nIn this case, the intent is to refer to events originating from external hardware components (e.g., AMC or other device/firmware sources) that are forwarded to the BMC and exposed through the logging framework.\nThe ForwardedEvent is meant to provide a generic normalization layer for such forwarded events so they can be handled consistently within the existing logging infrastructure.\nI will update the commit message to clarify this and avoid confusion.",
+      "parentUuid": "60d40b79_463e1ff5",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 15
+      },
+      "revId": "d23a326daead1ec493085ee9e0ae27b1ebfe4e9b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

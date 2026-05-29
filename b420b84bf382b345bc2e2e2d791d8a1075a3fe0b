@@ -16,6 +16,24 @@
       "message": "\"When IsExpired is true, password change on the user\u0027s next login\" this is expected behavior and by default IsExpired is false.\ni did not understand why do we need this new method?? do we have redfish interface supporting this?",
       "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2bc506b_617054f8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-05-29T06:02:33Z",
+      "side": 1,
+      "message": "\"i did not understand why do we need this new method??\"\n\nA newly created user has IsExpired \u003d false by default, and there is an existing setPasswordExpiration method that sets the maximum password age.\nHowever, there is currently no D-Bus method to immediately mark an existing user\u0027s password as expired on demand.\nFor example, after an administrator resets a user\u0027s password and wants to force them to change it on their next login.\n\nThe SetPasswordExpired method fills this gap by manipulating the --lastday field via chage:\n- IsExpired \u003d true → sets last changed date to epoch day 0, which forces a password change on the very next login regardless of the max age policy.\n- IsExpired \u003d false → resets the last changed date to today, clearing any forced expiration.\n\nThis is distinct from the password aging policy (max days) — it is an immediate, manual trigger.\n\n\n\n\"do we have redfish interface supporting this?\"\n\nyes, we do https://gerrit.openbmc.org/c/openbmc/bmcweb/+/90598",
+      "parentUuid": "a71d5976_f3943331",
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -12,6 +12,8 @@ properties:
       default: "NotSupported"
       description: >
           The desired Drive transition
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
     - name: CurrentDriveState
       type: enum[self.DriveState]
       default: "Unknown"

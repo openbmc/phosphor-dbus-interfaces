@@ -247,6 +247,44 @@ methods:
                 An array of paths.
       errors:
           - xyz.openbmc_project.Common.Error.ResourceNotFound
+    - name: GetPathsByAssociation
+      description: >
+          Retrieves the D-Bus paths of associated endpoints with the name of the
+          association connecting them. Filter for depth and namespace paths.
+
+      parameters:
+          - name: reqPath1
+            type: string
+            description: >
+                Base path to search for interfaces from 1st list
+          - name: interfaces1
+            type: array[string]
+            description: >
+                Interface filter list 1
+          - name: associations
+            type: array[string]
+            description: >
+                The associations to query
+          - name: reqPath2
+            type: string
+            description: >
+                Base path to search for interfaces from 2nd list
+          - name: interfaces2
+            type: array[string]
+            description: >
+                Interface filter list 2
+          - name: depth
+            type: int32
+            description: >
+                The maximum subtree depth for which results should be fetched.
+                For unconstrained fetches use a depth of zero.
+      returns:
+          - name: paths
+            type: array[struct[string,string,string]]
+            description: >
+                An array of {object path, string, object path}
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
 
 service_names:
     - default: xyz.openbmc_project.ObjectMapper

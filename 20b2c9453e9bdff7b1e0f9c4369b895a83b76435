@@ -63,6 +63,30 @@
       },
       "revId": "20b2c9453e9bdff7b1e0f9c4369b895a83b76435",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f37af79_e1b9f248",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-05-29T05:02:10Z",
+      "side": 1,
+      "message": "@andhsieh@nvidia.com I think we are trying to implementing this feature in synchronous way so that the request to the daemon will waits until the response from the device return.\nIn this way, a `ResetComplete` signal is necessary otherwise we can only hardcode a fixed waiting time on bmcweb then.",
+      "parentUuid": "bf30b7d4_6f3b7ebd",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 67
+      },
+      "revId": "20b2c9453e9bdff7b1e0f9c4369b895a83b76435",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

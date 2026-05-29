@@ -20,6 +20,14 @@ properties:
           The address of the USB device.
       flags:
           - readonly
+    - name: DeviceLocation
+      type: string
+      description: >
+          The location of the USB device in the USB topology. For example, "1"
+          means the device is connected to root hub port 1, and "1.2" means the
+          device is connected to port 2 of a USB hub on root hub port 1.
+      flags:
+          - readonly
     - name: DeviceInterface
       type: uint64
       description: >

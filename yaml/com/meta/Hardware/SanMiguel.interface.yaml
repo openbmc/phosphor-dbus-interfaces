@@ -8,3 +8,13 @@ enumerations:
           The compatible hardware strings for the TPM on SanMiguel.
       values:
           - name: BMC
+
+    - name: Boards
+      description: >
+          The compatible hardware strings for the Boards on SanMiguel.
+      values:
+          - name: SCM
+          - name: PDB
+          - name: FIO
+          - name: SMM_Carrier
+          - name: SMM_Extender

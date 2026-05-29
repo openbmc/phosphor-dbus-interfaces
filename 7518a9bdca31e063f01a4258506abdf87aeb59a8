@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6738e3f4_00224f75",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-29T01:39:29Z",
+      "side": 1,
+      "message": "RequestReset then?\n\nShould this be a PendingReset property instead that you write to?  Then we don\u0027t need a custom ResetComplete signal either because the property will already emit a PropertiesChanged signal.",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 17
+      },
+      "revId": "7518a9bdca31e063f01a4258506abdf87aeb59a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14f81b86_17139ad8",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-29T01:39:29Z",
+      "side": 1,
+      "message": "How would you end up with an InvalidArgument from an enum type?",
+      "revId": "7518a9bdca31e063f01a4258506abdf87aeb59a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5bd6146d_e0da0085",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-29T01:39:29Z",
+      "side": 1,
+      "message": "`set`",
+      "range": {
+        "startLine": 33,
+        "startChar": 12,
+        "endLine": 33,
+        "endChar": 17
+      },
+      "revId": "7518a9bdca31e063f01a4258506abdf87aeb59a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e494eaa0_96124484",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-29T01:39:29Z",
+      "side": 1,
+      "message": "We should not refer to specific applications.",
+      "range": {
+        "startLine": 45,
+        "startChar": 67,
+        "endLine": 45,
+        "endChar": 73
+      },
+      "revId": "7518a9bdca31e063f01a4258506abdf87aeb59a8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

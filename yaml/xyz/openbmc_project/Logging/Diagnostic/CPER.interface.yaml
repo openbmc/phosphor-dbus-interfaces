@@ -1,0 +1,109 @@
+description: >
+    This interface provides structured diagnostic information for log entries
+    associated with Common Platform Error Record (CPER) events.
+
+    It is intended to be optionally implemented on log entry objects that
+    represent CPER-related errors, augmenting the base
+    xyz.openbmc_project.Logging.Entry interface with CPER-specific diagnostic
+    content.
+
+    CPER records may contain complex and deeply nested data structures that are
+    not efficiently represented using traditional key/value log metadata. This
+    interface provides a mechanism for exposing both a compact summary view and
+    a decoded representation of CPER data while allowing access to complete
+    diagnostic artifacts when necessary.
+
+properties:
+    - name: Summary
+      type: string
+      description: >
+          JSON-formatted summary of the diagnostic information associated with
+          the event.
+
+          Provides a compact, consumption-oriented view of the event for common
+          analysis, serviceability, and management workflows.
+
+          Implementations should include key classification and diagnostic
+          metadata relevant to the event. For CPER record diagnostics, the
+          summary should include the CPER notification type when available. For
+          CPER section diagnostics, the summary should include the CPER section
+          type when available.
+
+          Additional implementation-defined information may also be included.
+
+          This property shall always be populated.
+
+    - name: DecodedData
+      type: string
+      description: >
+          JSON-formatted decoded representation of the CPER record.
+
+          This property may contain either a complete decoded representation of
+          the CPER record or a reduced representation derived from the CPER
+          data.
+
+          The content may include nested objects, arrays, and other structures
+          originating from the CPER record.
+
+          Implementations should provide a complete decoded representation
+          whenever practical for transport over D-Bus.
+
+          When a complete decoded representation is not suitable for D-Bus
+          transport, implementations may provide a reduced representation and
+          expose access to complete diagnostic content through the
+          DiagnosticDataObject property.
+
+    - name: DiagnosticDataObject
+      type: object_path
+      description: >
+          Optional reference to an object providing access to diagnostic data
+          associated with the CPER event.
+
+          This property may expose complete decoded CPER content, raw CPER
+          payloads, or other diagnostic artifacts that are not suitable for
+          inclusion in DecodedData.
+
+          The referenced object and associated retrieval mechanism are
+          implementation-defined.
+
+          Consumers may use this reference to access complete diagnostic
+          information associated with the event.
+
+    - name: Oem
+      type: dict[string, dict[string, string]]
+      default: {}
+      description: >
+          Vendor-specific extension data associated with the CPER event.
+
+          Data is organized using a vendor namespace model:
+
+              {
+                  "<Vendor>": {
+                      "<Property>": "<Value>"
+                  }
+              }
+
+          The first-level key identifies a vendor or implementation namespace.
+          The nested dictionary contains metadata defined by that vendor.
+
+          This property may contain additional vendor-defined information
+          relevant to event analysis, diagnosis, serviceability, correlation,
+          platform integration, or other implementation-defined use cases.
+
+          Guidelines:
+
+          - Contains only vendor-specific or implementation-defined
+            metadata.
+
+          - Must not duplicate information represented by standard
+            Logging.Entry properties.
+
+          - Must not duplicate information represented by other properties
+            defined by this interface.
+
+          - Structure and semantics are defined by the originating vendor
+            or platform.
+
+          The logging service owns this property as part of the log entry
+          lifecycle. Platform components may populate vendor namespaces through
+          implementation-defined extension mechanisms.

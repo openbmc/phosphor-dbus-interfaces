@@ -1,0 +1,109 @@
+description: >
+    Provides structured diagnostic information associated with Common Platform
+    Error Record (CPER) log entries.
+
+    This interface augments xyz.openbmc_project.Logging.Entry with CPER-specific
+    diagnostic information and access to implementation-defined diagnostic
+    artifacts.
+
+properties:
+    - name: Summary
+      type: string
+      description: >
+          JSON-formatted summary of the CPER diagnostic information.
+
+          This property provides a compact representation intended for common
+          analysis, serviceability, and management workflows.
+
+          Implementations should include key classification and diagnostic
+          metadata relevant to the event.
+
+          For CPER record diagnostics, the summary should include the CPER
+          notification type when available.
+
+          For CPER section diagnostics, the summary should include the CPER
+          section type when available.
+
+          Additional implementation-defined information may also be included.
+
+          This property shall always be populated.
+
+    - name: DecodedData
+      type: string
+      description: >
+          JSON-formatted decoded representation of the CPER record.
+
+          Implementations may provide either a complete or reduced
+          representation of the diagnostic data.
+
+    - name: DiagnosticDataURI
+      type: string
+      description: >
+          Optional URI referencing raw diagnostic data associated with the CPER
+          event.
+
+          Consumers may use this URI to access the original diagnostic artifact
+          when available.
+
+    - name: Oem
+      type: dict[string, dict[string, string]]
+      default: {}
+      description: >
+          Vendor-specific extension data associated with the CPER event.
+
+          Data is organized using a vendor namespace model:
+
+              {
+                  "<Vendor>": {
+                      "<Property>": "<Value>"
+                  }
+              }
+
+          The first-level key identifies a vendor or implementation namespace.
+          The nested dictionary contains metadata defined by that vendor.
+
+          This property may contain additional vendor-defined information
+          relevant to event analysis, diagnosis, serviceability, correlation,
+          platform integration, or other implementation-defined use cases.
+
+          Guidelines:
+
+          - Contains only vendor-specific or implementation-defined
+            metadata.
+
+          - Must not duplicate information represented by standard
+            Logging.Entry properties.
+
+          - Must not duplicate information represented by other
+            properties defined by this interface.
+
+          - Structure and semantics are defined by the originating
+            vendor or platform.
+
+          The logging service owns this property as part of the log entry
+          lifecycle. Platform components may populate vendor namespaces through
+          implementation-defined extension mechanisms.
+
+methods:
+    - name: GetDiagnosticData
+      description: >
+          Returns the file descriptor to diagnostic data associated with the
+          CPER event. The mode of the file descriptor is read-only.
+
+          The returned data provides a complete representation of the CPER
+          diagnostic information managed by this interface.
+
+      returns:
+          - name: fd
+            type: unixfd
+            description: >
+                The file descriptor to the diagnostic data.
+
+service_names:
+    - default: xyz.openbmc_project.Logging
+
+paths:
+    - namespace: /xyz/openbmc_project/logging
+      segments:
+          - name: Entry
+            value: entry

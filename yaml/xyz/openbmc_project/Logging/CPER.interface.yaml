@@ -1,0 +1,59 @@
+description: >
+    This interface provides additional diagnostic information for log entries
+    associated with Common Platform Error Record (CPER) events.
+
+    It is intended to be optionally implemented on log entry objects that
+    represent CPER-related errors, augmenting the base
+    xyz.openbmc_project.Logging.Entry interface with structured diagnostic data.
+
+properties:
+    - name: Type
+      type: enum[self.Type]
+      description: >
+          Identifies the type of CPER diagnostic data associated with this log
+          entry.
+
+          This provides context for interpreting the diagnostic information
+          contained in this interface.
+
+    - name: DiagnosticInfo
+      type: dict[string, variant[string, uint64, boolean]]
+      default: {}
+      description: >
+          Structured diagnostic summary information derived from the CPER
+          record.
+
+          This property contains a reduced set of key attributes intended for
+          quick inspection, such as section identifiers, severity indicators, or
+          other relevant decoded fields.
+
+          This property MUST remain lightweight and is not intended to carry
+          full or large CPER payloads.
+
+          Consumers MUST NOT assume that this represents the complete CPER
+          record.
+
+    - name: AdditionalDataObject
+      type: object_path
+      description: >
+          Optional reference to an object that provides access to additional
+          diagnostic data associated with this log entry.
+
+          This should be used when full CPER content or extended diagnostic
+          information cannot be included in the DiagnosticInfo property.
+
+          Implementations should reference OpenBMC-managed objects (for example,
+          dump entries under /xyz/openbmc_project/dump/entry/...) when such data
+          is available.
+
+enumerations:
+    - name: Type
+      description: >
+          Type of CPER diagnostic data represented by this interface.
+      values:
+          - name: CPER
+            description: >
+                The diagnostic data represents a full CPER record summary.
+          - name: CPERSection
+            description: >
+                The diagnostic data represents a specific CPER section

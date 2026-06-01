@@ -101,6 +101,59 @@ properties:
           contributing metadata through extension mechanisms (for example,
           registered callbacks invoked during log creation).
 
+    - name: DiagnosticType
+      type: enum[self.DiagnosticType]
+      description: >
+          Identifies the category of diagnostic information associated with this
+          log entry.
+
+          This property provides a hint to consumers on how any associated
+          diagnostic data should be interpreted.
+
+          This field is optional and may be absent for entries that do not carry
+          diagnostic information.
+
+    - name: DiagnosticInfo
+      type: dict[string, variant[string, uint64, boolean]]
+      default: {}
+      description: >
+          Structured diagnostic summary information associated with the log
+          entry.
+
+          This property is intended to carry a small set of key diagnostic
+          attributes for quick inspection.
+
+          For example, when DiagnosticType is CPER or CPERSection, this may
+          include selected decoded fields such as section identifiers, severity
+          indicators, or similar metadata.
+
+          This property should remain lightweight. It is not intended to carry
+          large or complete diagnostic payloads.
+
+          Detailed or large diagnostic data (for example, full CPER records or
+          binary content) should be referenced via AdditionalDataURI.
+
+          This property complements AdditionalData by providing structured
+          representation instead of flat key-value pairs.
+
+    - name: AdditionalDataURI
+      type: string
+      description: >
+          Optional URI referencing additional diagnostic data associated with
+          this log entry.
+
+          This may point to externally stored or large diagnostic content such
+          as raw records or binary payloads managed outside the logging service.
+
+          The logging service stores this reference but does not manage the
+          lifecycle, availability, or validity of the referenced data.
+
+          The ownership and lifecycle of the referenced data are the
+          responsibility of the producing component.
+
+          Consumers may use this URI to retrieve extended diagnostic information
+          when supported.
+
 enumerations:
     - name: Level
       description: >
@@ -144,6 +197,19 @@ enumerations:
           - name: Inhibit
             description: >
                 The service provider should not be notified about the event log.
+
+    - name: DiagnosticType
+      description: >
+          Supported diagnostic data categories that may be associated with log
+          entries.
+      values:
+          - name: CPER
+            description: >
+                A complete Common Platform Error Record.
+
+          - name: CPERSection
+            description: >
+                A section of a Common Platform Error Record.
 
 methods:
     - name: GetEntry

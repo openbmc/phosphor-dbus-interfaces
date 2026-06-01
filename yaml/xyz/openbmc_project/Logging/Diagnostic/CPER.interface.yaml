@@ -1,0 +1,98 @@
+description: >
+    This interface provides additional diagnostic information for log entries
+    associated with Common Platform Error Record (CPER) events.
+
+    It is intended to be optionally implemented on log entry objects that
+    represent CPER-related errors, augmenting the base
+    xyz.openbmc_project.Logging.Entry interface with structured diagnostic data.
+
+    CPER data is inherently complex and may contain nested structures, arrays,
+    and vendor-specific extensions. This interface preserves that information
+    while maintaining a clear separation between summary and extended data.
+
+properties:
+    - name: Type
+      type: enum[self.Type]
+      description: >
+          Identifies the type of CPER diagnostic data associated with this log
+          entry.
+
+          This provides context for interpreting how the diagnostic information
+          should be parsed and consumed.
+
+    - name: DiagnosticInfo
+      type: string
+      description: >
+          JSON-formatted diagnostic information derived from the CPER record.
+
+          This property contains structured diagnostic data encoded as a JSON
+          string. The JSON content may include nested objects, arrays, and
+          vendor-specific extensions depending on the CPER record format.
+
+          Consumers are expected to parse this JSON content to extract relevant
+          diagnostic attributes.
+
+          Implementations should ensure that this property remains reasonably
+          sized and suitable for inline transport over D-Bus. Large CPER
+          payloads should instead be exposed via the AdditionalDataObject
+          property.
+
+    - name: AdditionalDataObject
+      type: object_path
+      description: >
+          Optional reference to an object that provides access to additional
+          diagnostic data associated with this log entry.
+
+          This should be used when full CPER content or extended diagnostic
+          information cannot be included directly in the DiagnosticInfo property
+          due to size or complexity constraints.
+
+          Implementations should reference OpenBMC-managed objects (for example,
+          dump entries under /xyz/openbmc_project/dump/entry/...) when such data
+          is available.
+
+enumerations:
+    - name: Type
+      description: >
+          Type of diagnostic data represented by this interface.
+
+          Each log entry corresponds to a single CPER event. The Type property
+          defines how the DiagnosticInfo JSON content should be interpreted by
+          consumers.
+
+          Depending on size constraints, DiagnosticInfo may contain either a
+          full decoded CPER record or a reduced representation (for example, a
+          summary). When the complete CPER payload cannot be included inline,
+          AdditionalDataObject should be used to provide access to the full
+          data.
+
+      values:
+          - name: CPER
+            description: >
+                Diagnostic data represents a complete CPER record for a single
+                error event.
+
+                The JSON content may contain the full decoded CPER structure
+                when size permits, or a reduced representation if the full
+                record is provided via AdditionalDataObject.
+
+                Consumers should interpret this data using standard CPER
+                definitions.
+
+          - name: CPERSection
+            description: >
+                Diagnostic data represents a specific section of a CPER record.
+
+                This may be used when only a subset of the CPER information is
+                relevant or available. The content follows CPER section
+                semantics and may be a partial view of the overall record.
+
+          - name: OEM
+            description: >
+                Diagnostic data represents a vendor-specific format for a single
+                event.
+
+                The structure and interpretation of the JSON content are
+                implementation-defined. Full data may be provided inline or via
+                AdditionalDataObject depending on size and platform
+                requirements.

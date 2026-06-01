@@ -65,6 +65,42 @@ properties:
           Timestamp property's value (which indicates when the log was created)
           would indicate that Resolved was changed.
 
+    - name: Oem
+      type: dict[string, dict[string, variant[string, uint64]]]
+      default: {}
+      description: >
+          Container for vendor-specific extension data associated with the log
+          entry.
+
+          This property provides a structured and extensible mechanism for
+          platform or vendor-defined metadata that is not represented by the
+          standard Logging.Entry properties.
+
+          The data is organized using a vendor-namespace model:
+
+              {
+                  "<Vendor>": {
+                      "<Property>": <Value>
+                  }
+              }
+
+          The first-level key denotes the vendor or implementation namespace,
+          and the nested dictionary contains properties defined by that vendor.
+
+          Design guidelines: - This property must only contain vendor-specific
+          or derived metadata. - It must not duplicate or override standard
+          Logging.Entry properties
+            such as Message, Severity, Timestamp, or Id.
+          - The structure and semantics of the contained data are defined
+            by the originating vendor or platform.
+
+          The logging service owns this property, including its storage and
+          lifecycle as part of the log entry.
+
+          OEM or platform-specific components may populate this property by
+          contributing metadata through extension mechanisms (for example,
+          registered callbacks invoked during log creation).
+
 enumerations:
     - name: Level
       description: >

@@ -128,6 +128,30 @@
       },
       "revId": "ddc2013c476d8086dc5fbb4cd8da643b9c1d0afa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c64cdf4_9781eca2",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-01T20:34:01Z",
+      "side": 1,
+      "message": "You\u0027re right.  PDI should not be precise about an implementation decision like that.  Like I said, we already have it covered by line 21 and 25 because a Fan and a Chassis is also an Item.  You added the clarifying comment to Fan; I don\u0027t know why we need it in README also.\n\nAny Item can be cooled_by a fan; you just have a special relationship between Chassis and Fans, which you\u0027ve already documented.  Adding it to the README doesn\u0027t yield extra information but it adds extra characters.",
+      "parentUuid": "4d3feb51_184d1797",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 41
+      },
+      "revId": "ddc2013c476d8086dc5fbb4cd8da643b9c1d0afa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

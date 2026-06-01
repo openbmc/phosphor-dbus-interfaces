@@ -1,5 +1,6 @@
 # Generated file; do not modify.
 subdir('Create')
+subdir('Diagnostic')
 subdir('Entry')
 subdir('ErrorBlocksTransition')
 subdir('Event')

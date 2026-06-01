@@ -1,0 +1,57 @@
+description: >
+    Provides processed Common Platform Error Record (CPER) metadata associated
+    with a log entry.
+
+    This interface extends a logging entry with CPER information for use by
+    consumers such as Redfish LogEntry and Event representations.
+
+    The interface exposes metadata describing a CPER record or CPER section. The
+    associated CPER binary remains the authoritative error artifact and is
+    exposed through a separate raw CPER extension interface.
+
+    Implementations may expose decoded, summarized, or vendor-specific CPER
+    information through OEM namespaces.
+
+    This interface is intended to provide lightweight metadata associated with a
+    log entry and is not intended to transport or duplicate full CPER content.
+
+properties:
+    - name: DiagnosticDataType
+      type: enum[xyz.openbmc_project.CPER.Types.ContentType]
+      description: >
+          Identifies whether the associated CPER content represents a complete
+          CPER record or an individual CPER section.
+
+    - name: NotificationType
+      type: string
+      description: >
+          The CPER Notification Type GUID associated with the CPER content.
+
+          This property is applicable when DiagnosticDataType is CPER.
+
+    - name: SectionType
+      type: string
+      description: >
+          The CPER Section Type GUID associated with the CPER content.
+
+          This property is applicable when DiagnosticDataType is CPERSection.
+
+    - name: Oem
+      type: dict[string, string]
+      default: {}
+      description: >
+          OEM extension data associated with the CPER log entry.
+
+          The key identifies a vendor or implementation namespace.
+
+          The value shall contain a Redfish-compliant JSON object encoded as a
+          string, including a valid @odata.type reference to an installed
+          Redfish schema.
+
+          Implementations may expose decoded CPER information, serviceability
+          information, inventory correlation data, or other vendor-specific
+          metadata through this property.
+
+          This property is intended for lightweight, summarized information and
+          should not duplicate data represented by other properties of this
+          interface.

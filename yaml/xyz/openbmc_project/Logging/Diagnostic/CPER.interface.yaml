@@ -1,0 +1,102 @@
+description: >
+    Provides Common Platform Error Record (CPER) metadata associated with a log
+    entry.
+
+    This interface augments xyz.openbmc_project.Logging.Entry with CPER-specific
+    information corresponding to the diagnostic data associated with the log
+    entry.
+
+    The interface exposes metadata describing a CPER record or CPER section and
+    provides access to the associated CPER diagnostic artifact.
+
+    Vendor-specific extensions and decoded diagnostic information may be exposed
+    through OEM namespaces.
+
+properties:
+    - name: DiagnosticDataType
+      type: enum[self.DiagnosticDataType]
+      description: >
+          The type of diagnostic data associated with the log entry.
+
+          This property identifies whether the associated diagnostic data
+          represents a complete CPER record or an individual CPER section.
+
+    - name: NotificationType
+      type: string
+      description: >
+          The CPER Notification Type GUID associated with the diagnostic data.
+
+          This property is applicable when DiagnosticDataType is CPER.
+
+    - name: SectionType
+      type: string
+      description: >
+          The CPER Section Type GUID associated with the diagnostic data.
+
+          This property is applicable when DiagnosticDataType is CPERSection.
+
+    - name: Oem
+      type: dict[string, string]
+      default: {}
+      description: >
+          OEM extension data associated with the CPER log entry.
+
+          The key identifies a vendor or implementation namespace.
+
+          The value shall contain a JSON-formatted string whose structure and
+          semantics are defined by the originating vendor or implementation.
+
+          Implementations may expose decoded CPER information, supplemental
+          analysis, serviceability information, inventory correlation
+          information, or other vendor-specific metadata through this property.
+
+          Decoded representations of CPER diagnostic data should be exposed
+          through OEM namespaces rather than standard interface properties.
+
+          Implementations should expose only lightweight, summarized decoded
+          information through this property.
+
+          Large decoded payloads should instead be exposed through
+          implementation-defined diagnostic artifact mechanisms.
+
+          This property shall contain only OEM-specific information and should
+          not duplicate data represented by other properties defined by this
+          interface.
+
+methods:
+    - name: GetCPERBinary
+      description: >
+          Returns a read-only file descriptor containing the CPER binary data
+          associated with the log entry.
+
+          The CPER artifact is maintained by the underlying implementation and
+          is not transported through D-Bus properties.
+
+          Consumers should treat the returned binary as the authoritative
+          diagnostic artifact associated with the log entry.
+
+      returns:
+          - name: fd
+            type: unixfd
+            description: >
+                Read-only file descriptor to the CPER binary data.
+
+enumerations:
+    - name: DiagnosticDataType
+      values:
+          - name: CPER
+            description: >
+                A complete Common Platform Error Record.
+
+          - name: CPERSection
+            description: >
+                A Common Platform Error Record section.
+
+service_names:
+    - default: xyz.openbmc_project.Logging
+
+paths:
+    - namespace: /xyz/openbmc_project/logging
+      segments:
+          - name: Entry
+            value: entry

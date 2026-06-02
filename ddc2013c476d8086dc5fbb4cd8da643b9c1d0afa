@@ -152,6 +152,30 @@
       },
       "revId": "ddc2013c476d8086dc5fbb4cd8da643b9c1d0afa",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9a2153b_3f1657a9",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-06-02T08:44:48Z",
+      "side": 1,
+      "message": "\u003e You\u0027re right.  PDI should not be precise about an implementation decision like that.  \n\nThat\u0027s something you should probably discuss with Gunnar in the relevant bmcweb change where precise documentation in PDI was requested.\n\n\u003e PDI should not be precise about an implementation decision like that. \n\nSee lines 25 through 35 where the intended associations are documented for *specific* inventory items. Also line 15 through 17 mention that documenting these associations is the design intent.\n\n\n\u003e DBus objects with `xyz.opebmc_project.Inventory.Item.${ItemType}` interface\nmight be associated with other inventory objects. Such association can be\ntranslated to Redfish schemas and then indicate the system topology.\n\n\n\u003e You added the clarifying comment to Fan; I don\u0027t know why we need it in README also.\n\nMentioning specific items here in `README.md` is the existing pattern, see lines 25 through 34. While the comments have some overlap, the diff for `README.md` covers the associations between inventory items while the diff in `Fan.interface.yaml` goes more into detail as to which Redfish properties can be filled.\n\nIf we want to change the existing pattern here, that would probably be a separate and unrelated change.",
+      "parentUuid": "2c64cdf4_9781eca2",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 41
+      },
+      "revId": "ddc2013c476d8086dc5fbb4cd8da643b9c1d0afa",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

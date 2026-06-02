@@ -16,6 +16,24 @@
       "message": "Are the associations documented in Inventory.Item \"generic\" in the sense they could apply to other inventory interfaces? For eg it has the controlled_by association which required xyz.openbmc_project.Control.Valve. Should this association be documented in Inventory.Item and in Inventory.Valve, or does one of them suffice?",
       "revId": "979726c0b7b03ffd94279b9b5322073c0ab488b7",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af69e4dc_3f2ff879",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-02T13:17:55Z",
+      "side": 1,
+      "message": "If something is documented in Item it does not need to be documented in sub-items.\n\nI do not know why we ended up with Control.Valve referencing Item.Valve but Item referencing Control.Valve.  This should be fixed by @paligill@gmail.com (outside the scope of this change).",
+      "parentUuid": "a73e48ac_8a7ca5f1",
+      "revId": "979726c0b7b03ffd94279b9b5322073c0ab488b7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -42,3 +42,13 @@ enumerations:
           - name: MP2869_pvddcr_cpu0_p0
           - name: MPQ8785_pvdd18_s5_p0
           - name: MPQ8786_pvdd33_s5_p0
+
+    - name: Boards
+      description: >
+          The compatible hardware strings for the Boards on Anacapa.
+      values:
+          - name: MB
+          - name: LBB
+          - name: RBB
+          - name: LPDB
+          - name: RPDB

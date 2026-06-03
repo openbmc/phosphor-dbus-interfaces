@@ -1,4 +1,4 @@
-version: 1.1.0
+version: 1.2.0
 
 errors:
     - name: VerificationFailed
@@ -54,6 +54,24 @@ errors:
                 The name or identifier of the firmware target or resource.
       errno: EFAULT
       redfish-mapping: Update.ApplyFailed
+
+    - name: UpdateNotApplicable
+      severity: warning
+      metadata:
+          - name: ImageIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier for the image. This shall map to
+                PackageVersionString for a PLDM package and version field for a
+                manifest based image format.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+      errno: ENOTSUP
+      redfish-mapping: Update.UpdateNotApplicable
 
 events:
     - name: TargetDetermined

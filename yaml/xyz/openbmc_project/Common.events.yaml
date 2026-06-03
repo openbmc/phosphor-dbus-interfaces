@@ -1,0 +1,14 @@
+version: 1.0.0
+
+errors:
+    - name: ObjectAlreadyExists
+      severity: warning
+      errno: EEXIST
+      metadata:
+          - name: ObjectPath
+            description: The path of the existing object that conflicts with the requested creation.
+            type: object_path
+            primary: true
+      en:
+          description: The object already exists under the given object manager.
+          message: "Object already exists at '{ObjectPath}'."

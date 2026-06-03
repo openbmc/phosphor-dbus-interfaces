@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8a5c762_828fc932",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-06-03T09:12:53Z",
+      "side": 1,
+      "message": "I think we should create this interface under the /xyz/openbmc_project/control/\u003ccategory\u003e/\u003cname\u003e object path",
+      "range": {
+        "startLine": 27,
+        "startChar": 7,
+        "endLine": 27,
+        "endChar": 52
+      },
+      "revId": "742dd6bd56b0c2762af6a7527707dba3068efc9f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "0e527e6c_5942b4f7",
@@ -32,6 +55,23 @@
       "side": 1,
       "message": "Add a topic to link them. Thanks for review!\nhttps://gerrit.openbmc.org/q/topic:%22GPU_ECC_MODE%22",
       "parentUuid": "0e527e6c_5942b4f7",
+      "revId": "742dd6bd56b0c2762af6a7527707dba3068efc9f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af7012a7_da6c309f",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-06-03T09:12:53Z",
+      "side": 1,
+      "message": "We could add association `controlled_by/controlling` for inventory.item.Cpu \u0026 inventory.item.Accelerator",
       "revId": "742dd6bd56b0c2762af6a7527707dba3068efc9f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

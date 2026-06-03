@@ -31,3 +31,8 @@
   meta:
       - str: "REASON=%s"
         type: string
+- name: ObjectAlreadyExists
+  level: INFO
+  meta:
+      - str: "OBJECT_PATH=%s"
+        type: string

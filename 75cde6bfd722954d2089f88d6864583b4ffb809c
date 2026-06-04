@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e7ee250_b73136dd",
+        "filename": "yaml/xyz/openbmc_project/Software/Update.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-04T19:01:21Z",
+      "side": 1,
+      "message": "We are removing ApplyFailed from our message registry, so we should be changing this to 2.0.0.  Realistically we\u0027re not changing any actual generated message registry entries though, since the resulting registry that this comes from is a Redfish one (which we copy wholesale from the upstream schema).  Going to merge this as is.",
+      "revId": "75cde6bfd722954d2089f88d6864583b4ffb809c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

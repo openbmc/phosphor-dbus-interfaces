@@ -13,9 +13,12 @@ methods, properties and signals.
 
 ##### methods
 
+- CreateGroup - To create a new group in the system.
 - CreateUser - To create new user to the system.
 - CreateUser2 - To create new user with set of mandatory and optional
   properties.
+- DeleteGroup - To delete an existing group from the system.
+- GetUserInfo - To retrieve information about an existing user.
 - RenameUser - To rename existing user to new name in the system.
 
 ##### properties
@@ -54,6 +57,8 @@ will expose following properties and methods.
 - UserGroups - Groups to which the user belongs.
 - UserEnabled - User enabled state.
 - UserLockedForFailedAttempt - Locked or unlocked state of the user account.
+- UserPasswordExpired - Indicates whether the user password has expired.
+- RemoteUser - Indicates whether the user is a remote user.
 - PasswordExpiration - Epoch time in seconds when the user password expires.
 
 #### xyz.openbmc_project.Object.Delete

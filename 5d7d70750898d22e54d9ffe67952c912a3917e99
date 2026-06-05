@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "527c9bba_fdd61960",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-05T17:42:17Z",
+      "side": 1,
+      "message": "Where is this requirement coming from?  Can we provide the rationale here for future readers?  If it MUST be bounded, we MUST have an actual bound, not a recommendation I think.",
+      "range": {
+        "startLine": 15,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 33
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2aff513_9d591c04",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-05T17:42:17Z",
+      "side": 1,
+      "message": "Are applications other than bmcweb going to use this field?  How will they use it?  If it is just bmcweb, why not just have bmcweb do the decoding with libcper?",
+      "range": {
+        "startLine": 38,
+        "startChar": 15,
+        "endLine": 38,
+        "endChar": 75
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fcffad88_b35088d9",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-05T17:42:17Z",
+      "side": 1,
+      "message": "above you have must...these should be consistent I think.",
+      "range": {
+        "startLine": 40,
+        "startChar": 21,
+        "endLine": 40,
+        "endChar": 28
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ab5d767_60392568",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-05T17:42:17Z",
+      "side": 1,
+      "message": "Can more be said about this property?  Is always just the path to a CPU?  How will it be used?",
+      "range": {
+        "startLine": 54,
+        "startChar": 18,
+        "endLine": 54,
+        "endChar": 24
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

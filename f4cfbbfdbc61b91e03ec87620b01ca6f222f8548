@@ -70,6 +70,30 @@
       },
       "revId": "f4cfbbfdbc61b91e03ec87620b01ca6f222f8548",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56f35fff_0f7ad02a",
+        "filename": "yaml/com/amd/Event/Cper.events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-05T17:34:29Z",
+      "side": 1,
+      "message": "Suggest changing this back?  AFAIK PDI handles this type fine.  Passing around file paths is bug prone and really should be added to anti-patterns.md.",
+      "parentUuid": "546f35c2_f081bd5c",
+      "range": {
+        "startLine": 30,
+        "startChar": 18,
+        "endLine": 30,
+        "endChar": 24
+      },
+      "revId": "f4cfbbfdbc61b91e03ec87620b01ca6f222f8548",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

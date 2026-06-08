@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab22e7b4_59e89658",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-06-08T03:44:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "527c9bba_fdd61960",
+      "range": {
+        "startLine": 15,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 33
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f2aff513_9d591c04",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-06-05T17:42:17Z",
       "side": 1,
       "message": "Are applications other than bmcweb going to use this field?  How will they use it?  If it is just bmcweb, why not just have bmcweb do the decoding with libcper?",
+      "range": {
+        "startLine": 38,
+        "startChar": 15,
+        "endLine": 38,
+        "endChar": 75
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "890a7453_347a9987",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-06-08T03:44:04Z",
+      "side": 1,
+      "message": "This field exists to provide a shared, lightweight, structured CPER view at the DBus layer, avoiding duplicated decoding logic and enabling multiple consumers beyond bmcweb. While today the primary consumer is bmcweb, defining it here allows other applications to easily leverage it in the future without introducing new dependencies or duplicate parsing logic.",
+      "parentUuid": "f2aff513_9d591c04",
       "range": {
         "startLine": 38,
         "startChar": 15,
@@ -70,6 +118,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c90c28e_3a3716f6",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-06-08T03:44:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fcffad88_b35088d9",
+      "range": {
+        "startLine": 40,
+        "startChar": 21,
+        "endLine": 40,
+        "endChar": 28
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4ab5d767_60392568",
@@ -83,6 +155,30 @@
       "writtenOn": "2026-06-05T17:42:17Z",
       "side": 1,
       "message": "Can more be said about this property?  Is always just the path to a CPU?  How will it be used?",
+      "range": {
+        "startLine": 54,
+        "startChar": 18,
+        "endLine": 54,
+        "endChar": 24
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee2545a2_612c7701",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-06-08T03:44:04Z",
+      "side": 1,
+      "message": "Yes.\nNot limited to CPU—this points to the originating component (CPU, GPU etc.) and can be used to correlate with inventory/FRU for diagnostics.",
+      "parentUuid": "4ab5d767_60392568",
       "range": {
         "startLine": 54,
         "startChar": 18,

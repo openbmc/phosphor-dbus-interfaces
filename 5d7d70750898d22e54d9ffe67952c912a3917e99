@@ -95,6 +95,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94c62d9a_8a9ac4f7",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-08T12:42:37Z",
+      "side": 1,
+      "message": "The decoding logic is all in libcper so I don\u0027t think there is any duplication?\n\nIf you really need CPER fields for other application logic (although I have no idea what those would be), those could just be first class dbus properties.  If you are just passing the JSON so that a client application can forward it on, the client application could just use libcper.",
+      "parentUuid": "890a7453_347a9987",
+      "range": {
+        "startLine": 38,
+        "startChar": 15,
+        "endLine": 38,
+        "endChar": 75
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fcffad88_b35088d9",
@@ -179,6 +203,30 @@
       "side": 1,
       "message": "Yes.\nNot limited to CPU—this points to the originating component (CPU, GPU etc.) and can be used to correlate with inventory/FRU for diagnostics.",
       "parentUuid": "4ab5d767_60392568",
+      "range": {
+        "startLine": 54,
+        "startChar": 18,
+        "endLine": 54,
+        "endChar": 24
+      },
+      "revId": "5d7d70750898d22e54d9ffe67952c912a3917e99",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17108ec6_bef0dda1",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-08T12:42:37Z",
+      "side": 1,
+      "message": "The only use I can think of for this is the OriginOfCondition property in the Redfish LogEntry, which is optional.  If I were you, I\u0027d leave this out of the initial implementation to keep it focused and as small/simple as possible.",
+      "parentUuid": "ee2545a2_612c7701",
       "range": {
         "startLine": 54,
         "startChar": 18,

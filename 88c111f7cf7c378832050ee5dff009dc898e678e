@@ -71,6 +71,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "419e9aa2_3340a48f",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2026-06-08T16:31:01Z",
+      "side": 1,
+      "message": "I feel like a separate interface may be better.  That way, it could only be created if necessary.  We also wouldn\u0027t have to worry about what DiagnosticType should be set to for non CPER-type logs.",
+      "parentUuid": "36c3ee85_53eaf168",
+      "range": {
+        "startLine": 113,
+        "startChar": 9,
+        "endLine": 114,
+        "endChar": 33
+      },
+      "revId": "88c111f7cf7c378832050ee5dff009dc898e678e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "4426f32f_0dd9aa47",
@@ -84,6 +108,24 @@
       "writtenOn": "2026-06-08T14:10:09Z",
       "side": 1,
       "message": "Are we leaking HTTP into our abstraction layer?  It seems like this should be a file descriptor.",
+      "revId": "88c111f7cf7c378832050ee5dff009dc898e678e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fda6ec8_365e7afc",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2026-06-08T16:31:01Z",
+      "side": 1,
+      "message": "The busctl tool has some issue with file descriptors, though I can\u0027t remember exactly what it is.  It\u0027s possible that it won\u0027t display them, and if that\u0027s the case I think we would need to talk about if we\u0027d want to end busctl support for logging, which I don\u0027t think we do.",
+      "parentUuid": "4426f32f_0dd9aa47",
       "revId": "88c111f7cf7c378832050ee5dff009dc898e678e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

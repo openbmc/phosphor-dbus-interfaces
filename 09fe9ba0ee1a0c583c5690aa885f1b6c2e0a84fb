@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16b4572f_bfa829e3",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-06-08T06:36:22Z",
+      "side": 1,
+      "message": "I think we should add the associations at these two interface yaml file not the item yaml file",
+      "range": {
+        "startLine": 33,
+        "startChar": 6,
+        "endLine": 35,
+        "endChar": 58
+      },
+      "revId": "09fe9ba0ee1a0c583c5690aa885f1b6c2e0a84fb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c2677a3_4a89e36b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-06-08T06:36:22Z",
+      "side": 1,
+      "message": "Why do we need Control.OperatingClockSpeed at this patch?\nIs it the rebase problem?",
+      "range": {
+        "startLine": 132,
+        "startChar": 12,
+        "endLine": 132,
+        "endChar": 59
+      },
+      "revId": "09fe9ba0ee1a0c583c5690aa885f1b6c2e0a84fb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

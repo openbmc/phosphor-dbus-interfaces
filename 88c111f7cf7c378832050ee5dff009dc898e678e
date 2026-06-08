@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e206c558_a2f41991",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-08T14:10:09Z",
+      "side": 1,
+      "message": "I don\u0027t think these can be simultaneously true?\n\nI\u0027m of the opinion that CPERs should have their own interface.  I don\u0027t understand what we get by muxing every concieveable logging format into a single DBus interface, other than a complex, confusing implementation.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 59
+      },
+      "revId": "88c111f7cf7c378832050ee5dff009dc898e678e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b761912_496c9414",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-08T14:10:09Z",
+      "side": 1,
+      "message": "The proposed scheme here seems to be, read this property to decide how to interpret the reset of the interface.  Why not just make a new interface?",
+      "range": {
+        "startLine": 113,
+        "startChar": 9,
+        "endLine": 114,
+        "endChar": 33
+      },
+      "revId": "88c111f7cf7c378832050ee5dff009dc898e678e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4426f32f_0dd9aa47",
+        "filename": "yaml/xyz/openbmc_project/Logging/Entry.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2026-06-08T14:10:09Z",
+      "side": 1,
+      "message": "Are we leaking HTTP into our abstraction layer?  It seems like this should be a file descriptor.",
+      "revId": "88c111f7cf7c378832050ee5dff009dc898e678e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+version: 1.0.0
+
+events:
+    - name: HostPostStatus
+      metadata:
+          - name: Host
+            type: object_path
+            primary: true
+            description: The host slot whose POST status changed.
+          - name: Phase
+            type: enum[com.meta.State.Host.PostPhase]
+            description: The host POST phase (machine-readable).
+          - name: Event
+            type: string
+            primary: true
+            description: The full event string as recorded by the BMC.
+      en:
+          description: Host POST status changed.
+          message: "Host POST on '{Host}': {Event}"
+
+    - name: PlatformResetAsserted
+      metadata:
+          - name: Host
+            type: object_path
+            primary: true
+            description: The host slot whose platform reset was asserted.
+          - name: Event
+            type: string
+            primary: true
+            description: The full event string as recorded by the BMC.
+      en:
+          description: Platform reset (PLTRST) was asserted.
+          message: "Platform reset asserted on '{Host}': {Event}"

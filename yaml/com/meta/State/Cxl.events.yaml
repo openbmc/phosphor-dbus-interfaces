@@ -1,0 +1,34 @@
+version: 1.0.0
+
+errors:
+    - name: CxlHeartbeatLost
+      severity: error
+      metadata:
+          - name: Cxl
+            type: object_path
+            primary: true
+            description: The CXL device path (host slot and CXL index).
+          - name: Event
+            type: string
+            primary: true
+            description: The full event string as recorded by the BMC.
+      en:
+          description: CXL device heartbeat is no longer detected.
+          message: "CXL heartbeat lost on '{Cxl}': {Event}"
+          resolution: Check CXL device health and connectivity.
+      errno: EIO
+
+events:
+    - name: CxlHeartbeatNormal
+      metadata:
+          - name: Cxl
+            type: object_path
+            primary: true
+            description: The CXL device path (host slot and CXL index).
+          - name: Event
+            type: string
+            primary: true
+            description: The full event string as recorded by the BMC.
+      en:
+          description: CXL device heartbeat is detected and normal.
+          message: "CXL heartbeat normal on '{Cxl}': {Event}"

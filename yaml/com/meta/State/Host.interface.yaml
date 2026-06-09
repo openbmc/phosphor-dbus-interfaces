@@ -1,0 +1,14 @@
+description: >
+    OEM Meta host state types consumed by the pldm OEM event log responder.
+
+enumerations:
+    - name: PostPhase
+      description: >
+          The phase of host POST as reported by the BIC.
+      values:
+          - name: Started
+            description: >
+                Host POST has started.
+          - name: Ended
+            description: >
+                Host POST has ended.

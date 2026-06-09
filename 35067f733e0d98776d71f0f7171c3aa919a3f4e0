@@ -16,6 +16,24 @@
       "message": "Any reason we wouldn\u0027t add this to the Asset?  How is a SKU different from a \"PartNumber\" which also says \"...typically a stocking number\".",
       "revId": "35067f733e0d98776d71f0f7171c3aa919a3f4e0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10b6f75f_fbf93848",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/SKU.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-06-09T10:31:44Z",
+      "side": 1,
+      "message": "Thanks, I move SKU into Inventory.Decorator.Asset as a new property rather than a standalone interface.\n\nOn how SKU differs from PartNumber, DMTF defines them as two separate, co-existing properties on the same resource. Quoting the Chassis schema verbatim:\n\n  1.PartNumber: \"This property shall contain a part number assigned by the\n               organization that is responsible for producing or\n               manufacturing the chassis.\"\n               \n  2.SKU:        \"This property shall contain the stock-keeping unit number\n               for this chassis.\"\n\nSo PartNumber is tied to the producing/manufacturing organization, while SKU is the stock-keeping unit number. Since DMTF models them as distinct properties, SKU is added as its own property rather than reusing PartNumber.\n\nhttps://redfish.dmtf.org/schemas/v1/Chassis_v1.xml\n\nPlease correct me if my understanding is off. Thanks!",
+      "parentUuid": "6c4f9168_3c60d970",
+      "revId": "35067f733e0d98776d71f0f7171c3aa919a3f4e0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

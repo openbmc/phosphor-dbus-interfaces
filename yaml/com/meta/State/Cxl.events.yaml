@@ -1,0 +1,26 @@
+version: 1.0.0
+
+errors:
+    - name: CxlHeartbeatLost
+      severity: error
+      metadata:
+          - name: Event
+            type: string
+            primary: true
+            description: The full event string as recorded by the BMC.
+      en:
+          description: CXL device heartbeat is no longer detected.
+          message: "{Event}"
+          resolution: Check CXL device health and connectivity.
+      errno: EIO
+
+events:
+    - name: CxlHeartbeatNormal
+      metadata:
+          - name: Event
+            type: string
+            primary: true
+            description: The full event string as recorded by the BMC.
+      en:
+          description: CXL device heartbeat is detected and normal.
+          message: "{Event}"

@@ -1,0 +1,22 @@
+version: 1.0.0
+
+events:
+    - name: HostPostStatus
+      metadata:
+          - name: Event
+            type: string
+            primary: true
+            description: The full event string as recorded by the BMC.
+      en:
+          description: Host POST status changed.
+          message: "{Event}"
+
+    - name: PlatformResetAsserted
+      metadata:
+          - name: Event
+            type: string
+            primary: true
+            description: The full event string as recorded by the BMC.
+      en:
+          description: Platform reset (PLTRST) was asserted.
+          message: "{Event}"

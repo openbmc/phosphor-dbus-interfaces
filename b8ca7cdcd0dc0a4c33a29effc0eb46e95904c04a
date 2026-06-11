@@ -70,6 +70,30 @@
       },
       "revId": "b8ca7cdcd0dc0a4c33a29effc0eb46e95904c04a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12061fa2_a79adeb4",
+        "filename": "yaml/xyz/openbmc_project/Control/Failover.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2026-06-11T20:33:14Z",
+      "side": 1,
+      "message": "I tried again, and it works with the variant. I guess before I just couldn\u0027t get the busctl incantation right.  \n\nWhen passing enums as strings, like with busctl, it definitely does crash the server (also seen with setRedundancyInput) if the string doesn\u0027t match the enum.  I opened https://github.com/openbmc/sdbusplus/issues/114 for that.\n\nI can change this to an enum.\n\nI\u0027m not personally in need of a fix for the problem that shows up when using lists of 2 different enums on the same interface since I ended up changing the interface.  I do have https://gerrit.openbmc.org/c/openbmc/sdbusplus/+/85107 that illustrates the problem so I can still open an issue with that.",
+      "parentUuid": "ede68328_aac8357b",
+      "range": {
+        "startLine": 55,
+        "startChar": 42,
+        "endLine": 57,
+        "endChar": 0
+      },
+      "revId": "b8ca7cdcd0dc0a4c33a29effc0eb46e95904c04a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

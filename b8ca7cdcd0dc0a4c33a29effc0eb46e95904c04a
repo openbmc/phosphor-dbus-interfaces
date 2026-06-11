@@ -22,6 +22,30 @@
       },
       "revId": "b8ca7cdcd0dc0a4c33a29effc0eb46e95904c04a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fcb96e32_dd0ca3ad",
+        "filename": "yaml/xyz/openbmc_project/Control/Failover.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2026-06-11T15:29:54Z",
+      "side": 1,
+      "message": "I couldn\u0027t even get that to work when I was trying to call with busctl, I can try again.\n\nOne thing I noticed is that if someone has a typo in the enum string, it will crash the server before it even calls method_call() because of a convertXFromString() function that throws in the generated aserver code, and I couldn\u0027t think of what a better expected behavior would be, so chose to avoid it.",
+      "parentUuid": "8c5b5671_1454b905",
+      "range": {
+        "startLine": 55,
+        "startChar": 42,
+        "endLine": 57,
+        "endChar": 0
+      },
+      "revId": "b8ca7cdcd0dc0a4c33a29effc0eb46e95904c04a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

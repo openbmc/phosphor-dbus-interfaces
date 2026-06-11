@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0150a408_2dac47e8",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-11T15:37:46Z",
+      "side": 1,
+      "message": "Yes, exactly.  It should be \"moved to state\".  But that isn\u0027t just an Interface naming statement... that is also a \"how is this hosted in dbus statement\".  That\u0027s the part that you\u0027ve given no words on.\n\nChanging an interface name was the trivial part.  Now you need to do the design work of what moving to the state namespace means from a dbus path perspective.",
+      "parentUuid": "f5a267db_7c15024e",
+      "revId": "5211093b8f379383a04b4aca824032e016f4dcb8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f22b56b3_306f7daf",
         "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
         "patchSetId": 13

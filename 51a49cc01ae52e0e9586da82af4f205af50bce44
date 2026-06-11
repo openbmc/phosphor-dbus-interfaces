@@ -33,6 +33,24 @@
       "message": "Kind of feels like an enum vs. a raw string would be better in that if we have something standard, we can write code that reacts to the values (booted on wrong side, do something type code) but I don\u0027t feel that strongly on it as IBM systems don\u0027t really have a concept of a \"wrong\" side. It just switches back and forth as code updates are done to the BMC.",
       "revId": "51a49cc01ae52e0e9586da82af4f205af50bce44",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b8e39fe_68cc3729",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-11T14:56:43Z",
+      "side": 1,
+      "message": "Yeah, I thought about an enum but I know it is hard to standardize when the \"boot device\" might be a partition in an UBI or LVM volume, which can be arbitrarily named.",
+      "parentUuid": "de742160_b8d5b9c4",
+      "revId": "51a49cc01ae52e0e9586da82af4f205af50bce44",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

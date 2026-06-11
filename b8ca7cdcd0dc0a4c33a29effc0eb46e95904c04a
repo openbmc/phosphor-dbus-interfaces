@@ -46,6 +46,30 @@
       },
       "revId": "b8ca7cdcd0dc0a4c33a29effc0eb46e95904c04a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ede68328_aac8357b",
+        "filename": "yaml/xyz/openbmc_project/Control/Failover.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-11T15:40:01Z",
+      "side": 1,
+      "message": "I knew you had the issue with dual enums in a variant.  I wasn\u0027t aware that a single one wouldn\u0027t work either.\n\nWould you mind opening a few issues on sdbusplus to track both of these issues?\n\nSolving the first one is hard and the current code would make it almost impossible.  I tried to do a bunch of refactoring in order to prep for doing it but then I ran into some compatibility issues between GCC 15.1, GCC 15.2, and GCC 16.x that I\u0027m kind of in a holding pattern waiting for us to get GCC 16.x rolled out in Yocto before we can move forward.",
+      "parentUuid": "fcb96e32_dd0ca3ad",
+      "range": {
+        "startLine": 55,
+        "startChar": 42,
+        "endLine": 57,
+        "endChar": 0
+      },
+      "revId": "b8ca7cdcd0dc0a4c33a29effc0eb46e95904c04a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

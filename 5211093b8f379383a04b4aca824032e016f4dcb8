@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3eacc8e1_cd7d7259",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-11T14:46:08Z",
+      "side": 1,
+      "message": "Why did you (1) markdown escape a link to the (2) entire Redfish specification?\n\n1. Don\u0027t markdown escape things you want formatted as markdown.\n2. Link to specific schema files (ie. JSON or XML) you are referring to.  Nobody wants to try to search through a thousand page PDF for whatever you are referencing.",
+      "revId": "5211093b8f379383a04b4aca824032e016f4dcb8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fe26768_8194a955",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-11T14:46:08Z",
+      "side": 1,
+      "message": "It seems like this is intended to be part of an Inventory object, but we should not \"attach\" state to objects in the /xyz/openbmc_project/inventory namespace.  I want to limit signals from there to actual inventory changes.\n\nI think you need to document more how this is supposed to be used, what is the dbus URIs you expect this to live under (we have YAML directives for documenting that), what associations you expect to see, etc. before this can be accepted.",
+      "revId": "5211093b8f379383a04b4aca824032e016f4dcb8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f22b56b3_306f7daf",
+        "filename": "yaml/xyz/openbmc_project/State/ReadyToRemove.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-11T14:46:08Z",
+      "side": 1,
+      "message": "We should not be adding InternalFailure on new interfaces.  Your caller has no idea what they can do about this.",
+      "revId": "5211093b8f379383a04b4aca824032e016f4dcb8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

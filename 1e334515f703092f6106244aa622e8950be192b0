@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "f5f484bb_fa6fa87f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-06-15T06:29:01Z",
+      "side": 1,
+      "message": "from what I can see, systemd/sd-bus does throw org.freedesktop.DBus.Error.ObjectPathInUse when a vtable is registered at an already-taken D-Bus path. \nBut in phosphor-snmp, the object paths use an incrementing ID (lastClientId++), not something derived from address+port, so even duplicate clients would end up with different paths like /xyz/.../1, /xyz/.../2, and sd-bus would never detect the conflict.\n\nThe duplicate detection here is application-level logic (same address+port already configured), which sd-bus has no way to enforce on its own. That\u0027s the gap this error is meant to fill.",
+      "parentUuid": "a0cda23c_26229b0d",
+      "revId": "1e334515f703092f6106244aa622e8950be192b0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "63f86e0a_ac9ce2ff",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1

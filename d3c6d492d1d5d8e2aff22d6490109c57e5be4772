@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e79a2d01_2f55dcce",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-06-16T01:23:06Z",
+      "side": 1,
+      "message": "This can also be done by users by introspecting the objects under the logging manager, right? Why do we need this API then?",
+      "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a412bf17_9200eaaa",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-06-16T01:23:06Z",
+      "side": 1,
+      "message": "Would we want to pass an array of these as tuples?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 78
+      },
+      "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c777685_ae041fe1",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-06-16T01:23:06Z",
+      "side": 1,
+      "message": "Would the caller need to make more D-Bus calls to get further information related to these log objects?",
+      "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

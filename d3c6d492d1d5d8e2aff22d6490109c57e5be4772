@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5873f489_11a6adfa",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-06-16T22:34:44Z",
+      "side": 1,
+      "message": "It can get really expensive, especially if there are a lot of log entries.",
+      "parentUuid": "e79a2d01_2f55dcce",
+      "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a412bf17_9200eaaa",
         "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
         "patchSetId": 5
@@ -43,6 +61,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4398507c_7e00e0f4",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-06-16T22:34:44Z",
+      "side": 1,
+      "message": "I did not need it in my case, but I can see if someone wants CALLOUT_INVENTORY_PATH/CALLOUT_DEVICE_PATH etc it might be useful. Do you envision such a case?",
+      "parentUuid": "a412bf17_9200eaaa",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 78
+      },
+      "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1c777685_ae041fe1",
         "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
         "patchSetId": 5
@@ -54,6 +96,24 @@
       "writtenOn": "2026-06-16T01:23:06Z",
       "side": 1,
       "message": "Would the caller need to make more D-Bus calls to get further information related to these log objects?",
+      "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c08e0ac9_21d7d080",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-06-16T22:34:44Z",
+      "side": 1,
+      "message": "Hopefully not. I am expecting the caller needs only a few. The primary use case was for search hint which associates a threshold event log to a unique hint. So, in that case we expect only one. But I can see things like, CALLOUT_INVENTORY_PATH etc, where we would need to go through all of them. In that case, yes, if the user is expecting more than a few to just go through all the object paths exposed by the service rather than try to optimize the number of calls.",
+      "parentUuid": "1c777685_ae041fe1",
       "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

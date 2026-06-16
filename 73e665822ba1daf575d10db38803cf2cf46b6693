@@ -16,6 +16,24 @@
       "message": "Can this be string type similar to \"Data\" property at https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/90374/10/yaml/xyz/openbmc_project/State/Cper.events.yaml\n? \nIf there are any sections that doesn\u0027t fit dict[string, variant[string, uint64, boolean]] structure, then additional handling has to be done both in phosphor logging and in bmcweb.",
       "revId": "73e665822ba1daf575d10db38803cf2cf46b6693",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19472375_17b3d4dc",
+        "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-06-16T02:07:14Z",
+      "side": 1,
+      "message": "This is a valid concern with the current dict\u003cstring, variant\u003cstring, uint64, boolean\u003e\u003e approach, especially for CPER where the data is inherently nested and not always representable within this limited type set.\nI\u0027ve initiated a discussion here to get broader feedback:\nhttps://discord.com/channels/775381525260664832/1511793585127690340/1516262010696892416\nOne possible direction is to align with the Data property pattern used in Cper.events.yaml, i.e., represent this as a JSON string, which avoids lossy transformations and preserves full CPER structure.\nOtherwise, as mentioned, any sections that don’t fit the current dictionary model would require custom handling in both phosphor-logging and bmcweb, which could increase complexity and maintenance overhead.\nBased on  feedback from the discussion and update the approach accordingly.",
+      "parentUuid": "10669d43_8c70bf37",
+      "revId": "73e665822ba1daf575d10db38803cf2cf46b6693",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

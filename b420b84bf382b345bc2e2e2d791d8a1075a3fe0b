@@ -73,6 +73,63 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4f58343d_7decf95a",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-18T16:52:00Z",
+      "side": 1,
+      "message": "I really dislike any method called \"Set...\".  That doesn\u0027t sound like a method; it sounds like a property.\n\nI\u0027ve left a few other comments that hopefully as we resolve that discussion we\u0027ll come up with a more appropriate method name (if it is even required).",
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a5d0ce8_8caad3c6",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-18T16:52:00Z",
+      "side": 1,
+      "message": "Why aren\u0027t we changing it directly on the User.Attributes interface?\n\nThe UserPasswordExpired property is currently listed as \u0027const\u0027, so we shouldn\u0027t even allow changing this.  Maybe we could make it \u0027readonly\u0027?  Const means it should never change, readonly means dbus clients can\u0027t change it.\n\nIt seems like the read side of PasswordChangeRequired in bmcweb uses the UserPasswordExpired property.  Can we make the property read/write and directly write to it?",
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9b2ceee_67d11f0b",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-18T16:52:00Z",
+      "side": 1,
+      "message": "Why are we allowing this?  There is no requirement from Redfish to allow that.\n\nI\u0027d strongly prefer that whatever we come up with can only allow us to set a password expired and not \"unexpire\" a password.  That\u0027s not really a typical / standard operation and is almost 100% certainty that it is worse from a security perspective.",
+      "range": {
+        "startLine": 174,
+        "startChar": 38,
+        "endLine": 175,
+        "endChar": 47
+      },
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cbc29a32_600b117b",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 6
@@ -120,6 +177,24 @@
       "side": 1,
       "message": "ya i understand, we can remove later once backend fixed",
       "parentUuid": "5dbca0e9_189af0b5",
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a71b793_3e432e3a",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-18T16:52:00Z",
+      "side": 1,
+      "message": "Is there a plan to get this fixed?  We shouldn\u0027t be adding new InternalFailure exceptions.",
+      "parentUuid": "477857bb_82b186e1",
       "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

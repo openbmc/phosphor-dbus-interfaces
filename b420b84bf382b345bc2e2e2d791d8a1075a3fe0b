@@ -143,6 +143,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6cd89c50_13aefd68",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-19T11:36:19Z",
+      "side": 1,
+      "message": "You have to restrict the implementation.  I would probably add a comment to the description when you update the property to be R/W indicating that only setting to true is allowed and it will return an InvalidArgument or NotAllowed or UnsupportedRequest if a \u0027false\u0027 is given.",
+      "parentUuid": "6803c2b3_cc87846f",
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c9b2ceee_67d11f0b",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 6

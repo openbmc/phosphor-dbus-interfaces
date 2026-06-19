@@ -90,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "91778b86_54335ac6",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-06-19T07:59:10Z",
+      "side": 1,
+      "message": "Agree to use the existing property(UserPasswordExpired) once got a clarification on the Boolean value(false).",
+      "parentUuid": "4f58343d_7decf95a",
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4a5d0ce8_8caad3c6",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 6
@@ -107,6 +125,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6803c2b3_cc87846f",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-06-19T07:59:10Z",
+      "side": 1,
+      "message": "we can make the property (UserPasswordExpired) read/write and directly write to it.\n\nthe PasswordChangeRequired property is a valid boolean property here,\nhttps://github.com/openbmc/bmcweb/blob/5bc5930418c65d31a125ae33f5056a26d5fa2a49/redfish-core/schema/dmtf/json-schema/ManagerAccount.v1_14_1.json#L412\n\ncan we restrict this property to only accept true?",
+      "parentUuid": "4a5d0ce8_8caad3c6",
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c9b2ceee_67d11f0b",
         "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
         "patchSetId": 6
@@ -118,6 +154,30 @@
       "writtenOn": "2026-06-18T16:52:00Z",
       "side": 1,
       "message": "Why are we allowing this?  There is no requirement from Redfish to allow that.\n\nI\u0027d strongly prefer that whatever we come up with can only allow us to set a password expired and not \"unexpire\" a password.  That\u0027s not really a typical / standard operation and is almost 100% certainty that it is worse from a security perspective.",
+      "range": {
+        "startLine": 174,
+        "startChar": 38,
+        "endLine": 175,
+        "endChar": 47
+      },
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11a4cd75_903f1465",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-06-19T07:59:10Z",
+      "side": 1,
+      "message": "Agreed on dropping the false case. Should we restrict the method/property to only accept true?",
+      "parentUuid": "c9b2ceee_67d11f0b",
       "range": {
         "startLine": 174,
         "startChar": 38,
@@ -195,6 +255,24 @@
       "side": 1,
       "message": "Is there a plan to get this fixed?  We shouldn\u0027t be adding new InternalFailure exceptions.",
       "parentUuid": "477857bb_82b186e1",
+      "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81ce9ee7_359a55f1",
+        "filename": "yaml/xyz/openbmc_project/User/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-06-19T07:59:10Z",
+      "side": 1,
+      "message": "As far I checked no better-fit error exists in the current pool for this case. Should we define a new specific error in Common.errors.yaml, or could you suggest preferred alternative?",
+      "parentUuid": "0a71b793_3e432e3a",
       "revId": "b420b84bf382b345bc2e2e2d791d8a1075a3fe0b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

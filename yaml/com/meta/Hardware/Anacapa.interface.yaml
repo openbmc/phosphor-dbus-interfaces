@@ -44,6 +44,12 @@ enumerations:
           - name: MPQ8785_pvdd18_s5_p0
           - name: MPQ8786_pvdd33_s5_p0
 
+    - name: TPM
+      description: >
+          The compatible hardware strings for the TPM on Anacapa.
+      values:
+          - name: "BMC"
+
     - name: Boards
       description: >
           The compatible hardware strings for the Boards on Anacapa.

@@ -24,10 +24,12 @@ properties:
           been set by the user, the value will be maxint.
 
     - name: PowerCapEnable
-      type: boolean
+      type: enum[self.PowerCapEnableState]
+      default: Unknown
       description: >
-          Power cap enable.  Set to true to enable the PowerCap, false to
-          disable it.
+          Power cap enable state.  Set to Enabled to enable the PowerCap,
+          Disabled to disable it.  Unknown indicates the state has not yet
+          been determined (e.g. the device has not yet responded).
 
     #TODO: These following bounds are currently owned by Settings but need to be
     #      written by OCC.Control service so must be writable for now.
@@ -83,6 +85,21 @@ properties:
           Management application Statistics Sampling period in microseconds.
 
 enumerations:
+    - name: PowerCapEnableState
+      description: >
+          Possible states for the PowerCapEnable property.
+      values:
+          - name: Enabled
+            description: >
+                Power cap is active and enforced.
+          - name: Disabled
+            description: >
+                Power cap is explicitly disabled.
+          - name: Unknown
+            description: >
+                Power cap enable state has not yet been determined.
+                Published at object creation before the device responds.
+
     - name: ExceptionActions
       description: >
           Exception actions, taken if the Power Limit is exceeded and cannot be

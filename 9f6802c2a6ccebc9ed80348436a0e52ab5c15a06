@@ -33,6 +33,23 @@
       "message": "@patrick@stwcx.xyz Based on https://gerrit.openbmc.org/c/openbmc/docs/+/61256",
       "revId": "9f6802c2a6ccebc9ed80348436a0e52ab5c15a06",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a657ec5_7b0b8504",
+        "filename": "yaml/xyz/openbmc_project/RDE/Manager.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000926
+      },
+      "writtenOn": "2026-06-24T15:45:45Z",
+      "side": 1,
+      "message": "RDE device can have many Redfish Resource PDR that report `ContainingResourceID\u003d0`  (0 in this case means \"EXTERNAL: This value is used to identify the logical root of a device component’s management topology\"). For example SmartNIC device can simultaniously report Redfish Resources that should be added to the different \"root\" collections on the server side:\n- `NetworkAdapterCollecion`\n- `NetworkIntefaceCollection`\n- `PCIeDeviceCollection`\n- `EthernetInterfaceCollecion`\n\nSo in other words just `TargetURI` is not enough, since all these resources will have \"/\" URI in this case.",
+      "revId": "9f6802c2a6ccebc9ed80348436a0e52ab5c15a06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

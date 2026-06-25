@@ -67,6 +67,24 @@
       "message": "RDE device can have many Redfish Resource PDR that report `ContainingResourceID\u003d0`  (0 in this case means \"EXTERNAL: This value is used to identify the logical root of a device component’s management topology\"). For example SmartNIC device can simultaniously report Redfish Resources that should be added to the different \"root\" collections on the server side:\n- `NetworkAdapterCollecion`\n- `NetworkIntefaceCollection`\n- `PCIeDeviceCollection`\n- `EthernetInterfaceCollecion`\n\nSo in other words just `TargetURI` is not enough, since all these resources will have \"/\" URI in this case.",
       "revId": "9f6802c2a6ccebc9ed80348436a0e52ab5c15a06",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83a80fec_e129b5e8",
+        "filename": "yaml/xyz/openbmc_project/RDE/Manager.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000926
+      },
+      "writtenOn": "2026-06-25T14:46:06Z",
+      "side": 1,
+      "message": "One more observation. There can be many URIs with `\"ContainingResourceID\": 0` for the same schema.\n\nFor example:\n```\n{\n    \"nextRecordHandle\": 4600,\n    \"responseCount\": 180,\n    \"recordHandle\": 4400,\n    \"PDRHeaderVersion\": 1,\n    \"PDRType\": \"Redfish Resource PDR\",\n    \"recordChangeNumber\": 0,\n    \"dataLength\": 170,\n    \"ResourceID\": 400,\n    \"ResourceFlags\": \"Device Root(1)\",\n    \"ContainingResourceID\": 0,\n    \"ProposedContainingResourceLengthBytes\": 56,\n    \"ProposedContainingResourceName\": \"EthernetInterfaceCollection.EthernetInterfaceCollection\",\n    \"SubURILengthBytes\": 1,\n    \"SubURI\": \"\",\n    \"AdditionalResourceIDCount\": 7,\n    \"AdditionalResourceID[0]\": 401,\n    \"AdditionalResourceSubURILengthBytes[0]\": 1,\n    \"AdditionalResourceSubURI[0]\": \"\",\n    \"AdditionalResourceID[1]\": 402,\n    \"AdditionalResourceSubURILengthBytes[1]\": 1,\n    \"AdditionalResourceSubURI[1]\": \"\",\n    \"AdditionalResourceID[2]\": 403,\n    \"AdditionalResourceSubURILengthBytes[2]\": 1,\n    \"AdditionalResourceSubURI[2]\": \"\",\n    \"AdditionalResourceID[3]\": 404,\n    \"AdditionalResourceSubURILengthBytes[3]\": 1,\n    \"AdditionalResourceSubURI[3]\": \"\",\n    \"AdditionalResourceID[4]\": 405,\n    \"AdditionalResourceSubURILengthBytes[4]\": 1,\n    \"AdditionalResourceSubURI[4]\": \"\",\n    \"AdditionalResourceID[5]\": 406,\n    \"AdditionalResourceSubURILengthBytes[5]\": 1,\n    \"AdditionalResourceSubURI[5]\": \"\",\n    \"AdditionalResourceID[6]\": 407,\n    \"AdditionalResourceSubURILengthBytes[6]\": 1,\n    \"AdditionalResourceSubURI[6]\": \"\",\n    \"MajorSchemaVersion\": \"1.11.0\",\n    \"MajorSchemaDictionaryLengthBytes\": 688,\n    \"MajorSchemaDictionarySignature\": 3988139394,\n    \"MajorSchemaNameLength\": 36,\n    \"MajorSchemaName\": \"EthernetInterface.EthernetInterface\",\n    \"OEMCount\": 0\n}\n```\nThis PDR encodes the resources 400..407 that all have empty URI \"\" and should be linked to the same schema.",
+      "parentUuid": "8a657ec5_7b0b8504",
+      "revId": "9f6802c2a6ccebc9ed80348436a0e52ab5c15a06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

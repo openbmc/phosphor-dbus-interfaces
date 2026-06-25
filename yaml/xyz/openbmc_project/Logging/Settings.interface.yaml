@@ -8,3 +8,22 @@ properties:
       description: >
           If true, a hardware failure within the system will result in a Quiesce
           of the BMC state. If false, no action is taken.
+    - name: Policy
+      type: enum[self.Policy]
+      default: Circular
+      description: >
+          Log retention policy for when the entry capacity is reached. Linear:
+          Reject new entries when capacity is full. Circular: Remove oldest
+          entries when capacity is full (default).
+
+enumerations:
+    - name: Policy
+      description: >
+          Log retention policies for entry capacity management.
+      values:
+          - name: Linear
+            description: >
+                Reject new entries when log capacity is reached.
+          - name: Circular
+            description: >
+                Remove oldest entries when log capacity is reached.

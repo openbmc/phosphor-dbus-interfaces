@@ -37,6 +37,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "09a0cd53_a5836dda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000926
+      },
+      "writtenOn": "2026-06-25T07:31:16Z",
+      "side": 1,
+      "message": "How the deferred binding are supposed to be covered with the proposed interfaces?\n\nIt looks like RDE device somehow need to get absolute links for its root (EXTERNAL) resources.\n\nFor example for SmartNIC these resources can be points to enter:\n- `NetworkAdapterCollecion`\n- `NetworkIntefaceCollection`\n- `PCIeDeviceCollection`\n- `EthernetInterfaceCollecion`\nand for each of these resources RDE Device need to get full `/redfish/v1/...` strings, so they can be used in the deferred binding substitution, when method `PerformRedfishOperation` is invoked\n\nSee `91082: bej: add deferred binding substitution support` | https://gerrit.openbmc.org/c/openbmc/libbej/+/91082",
+      "revId": "9f6802c2a6ccebc9ed80348436a0e52ab5c15a06",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8a657ec5_7b0b8504",
         "filename": "yaml/xyz/openbmc_project/RDE/Manager.interface.yaml",
         "patchSetId": 4

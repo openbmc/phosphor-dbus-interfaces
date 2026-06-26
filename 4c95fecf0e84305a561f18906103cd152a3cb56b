@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "47a58542_eeabedf6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-06-26T10:05:49Z",
+      "side": 1,
+      "message": "Updated. I have removed the unnecessary wording from the commit message.",
+      "parentUuid": "7589a6a6_1b047b3c",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "4c95fecf0e84305a561f18906103cd152a3cb56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b978e5b3_db0c361a",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-25T14:09:51Z",
       "side": 1,
       "message": "If this maps to a redfish function, may as well mention it here.",
+      "revId": "4c95fecf0e84305a561f18906103cd152a3cb56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ebf92d1_224d5088",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-06-26T10:05:49Z",
+      "side": 1,
+      "message": "The setting is defined as an internal D-Bus logging policy in Settings.interface. yaml, and phosphor-logging consumes it directly in log_manager.cpp to choose between the linear and circular log-capacity behaviors. Therefore, no explicit mapping to a Redfish function/property is present.",
+      "parentUuid": "b978e5b3_db0c361a",
       "revId": "4c95fecf0e84305a561f18906103cd152a3cb56b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -64,6 +106,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3fa465ab_4ba1ef7b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-06-26T10:05:49Z",
+      "side": 1,
+      "message": "Done, Removed as requested.",
+      "parentUuid": "56e3e3b2_570b7e54",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 15
+      },
+      "revId": "4c95fecf0e84305a561f18906103cd152a3cb56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "30154775_b486857c",
@@ -81,6 +147,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8eca64d_3d586ddc",
+        "filename": "yaml/xyz/openbmc_project/Logging/Settings.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-06-26T10:05:49Z",
+      "side": 1,
+      "message": "Done. Renamed the enum from Policy to RetentionPolicy and updated the property type reference accordingly.",
+      "parentUuid": "30154775_b486857c",
+      "revId": "4c95fecf0e84305a561f18906103cd152a3cb56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "84016644_55af4457",
@@ -94,6 +178,30 @@
       "writtenOn": "2026-06-25T14:09:51Z",
       "side": 1,
       "message": "RetentionPolicy?",
+      "range": {
+        "startLine": 20,
+        "startChar": 12,
+        "endLine": 20,
+        "endChar": 18
+      },
+      "revId": "4c95fecf0e84305a561f18906103cd152a3cb56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65f66331_13332ede",
+        "filename": "yaml/xyz/openbmc_project/Logging/Settings.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-06-26T10:05:49Z",
+      "side": 1,
+      "message": "Updated the enumeration name to RetentionPolicy in the interface YAML.",
+      "parentUuid": "84016644_55af4457",
       "range": {
         "startLine": 20,
         "startChar": 12,

@@ -31,3 +31,8 @@
   meta:
       - str: "REASON=%s"
         type: string
+- name: QuotaExceeded
+  level: INFO
+  meta:
+      - str: "REASON=%s"
+        type: string

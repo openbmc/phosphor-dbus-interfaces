@@ -1,3 +1,8 @@
 # xyz.openbmc_project.Certs.Error.InvalidCertificate
 - name: InvalidCertificate
   description: Invalid certificate file.
+# xyz.openbmc_project.Certs.Error.InvalidCommonName
+- name: InvalidCommonName
+  description: >
+      The CommonName provided for the CSR is invalid (for example, empty when a
+      value is required).

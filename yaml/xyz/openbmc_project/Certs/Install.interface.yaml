@@ -5,6 +5,8 @@ methods:
       description: >
           Install the certificate and restart the associated services.
           NotAllowed error thrown if certificate already exists.
+          QuotaExceeded error thrown if the maximum number of
+          certificates is already installed.
       parameters:
           - name: Path
             type: string
@@ -23,3 +25,4 @@ methods:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.NotAllowed
           - xyz.openbmc_project.Certs.Error.InvalidCertificate
+          - xyz.openbmc_project.Common.Error.QuotaExceeded

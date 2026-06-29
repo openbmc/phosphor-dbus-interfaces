@@ -22,6 +22,30 @@
       },
       "revId": "f2560c1caf12b9b709eaf4da0f67ca1c6039d61f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "610fbb12_ae1f0de1",
+        "filename": "yaml/xyz/openbmc_project/Logging/Settings.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-06-29T06:58:27Z",
+      "side": 1,
+      "message": "Agreed, Policy was too generic.\nI renamed the property to LogRetentionPolicy so the intent is explicit: it controls log retention behavior when capacity is reached (Linear vs Circular).\nThis also aligns the naming with the Redfish mapping now documented in the interface description.",
+      "parentUuid": "683d0dd5_abea7aed",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 18
+      },
+      "revId": "f2560c1caf12b9b709eaf4da0f67ca1c6039d61f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

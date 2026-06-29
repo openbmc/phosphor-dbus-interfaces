@@ -101,6 +101,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd8726bd_2aa03ca7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-06-29T06:58:27Z",
+      "side": 1,
+      "message": "Thanks for pointing this out. My earlier statement was inaccurate.\nI have now made the Redfish mapping explicit in the interface description and renamed the property to LogRetentionPolicy for clarity.\nMapping documented is:\nLinear -\u003e LogService.OverWritePolicy \u003d NeverOverWrites\nCircular -\u003e LogService.OverWritePolicy \u003d WrapsWhenFull\nI have also updated phosphor-logging to consume the renamed property.",
+      "parentUuid": "5a8195dc_2cb5893f",
+      "revId": "4c95fecf0e84305a561f18906103cd152a3cb56b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "56e3e3b2_570b7e54",

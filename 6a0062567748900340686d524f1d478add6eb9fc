@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a2d28b0_ae4bdc17",
+        "filename": "yaml/xyz/openbmc_project/Certs.errors.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-06-29T02:13:31Z",
+      "side": 1,
+      "message": "Instead of introducing a service-specific error (xyz.openbmc_project.Certs.Error.CertificateLimitReached), can we consider adding a generic reusable error under a common namespace (similar to Dump errors)?\nReference:\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/e5cafef0032e7b7e93624ea8642f06a56b14bf35/yaml/xyz/openbmc_project/Dump/Create.errors.yaml#L5\nThe condition here is not certificate-specific but represents a generic resource limit/quota exhaustion scenario, which can apply to multiple services (certificates, dumps etc.).  something like xyz.openbmc_project.Common.Error.QuotaExceeded",
+      "revId": "6a0062567748900340686d524f1d478add6eb9fc",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

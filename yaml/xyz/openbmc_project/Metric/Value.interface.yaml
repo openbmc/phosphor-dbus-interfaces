@@ -298,6 +298,11 @@ paths:
                 Bandwidth usage of the memory as a percentage of total memory
                 bandwidth.
             value: memory_bandwidth
+          - name: MemoryCapacityUtilization
+            description: >
+                Memory capacity utilization as a percentage of total memory
+                capacity.
+            value: memory_capacity_utilization
     - name: BMC
       description: >
           The BMC metrics.

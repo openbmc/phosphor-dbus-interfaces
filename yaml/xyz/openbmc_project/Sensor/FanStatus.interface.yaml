@@ -1,0 +1,39 @@
+description: >
+    Implement to provide the running state of a fan tach sensor.
+
+    Objects implementing Sensor.FanStatus must be instantiated in the correct
+    hierarchy within the sensors namespace.  The following sensor hierarchy is
+    recognized:
+      fan_tach
+
+    Objects implementing Sensor.FanStatus must also implement Sensor.Value on
+    the same object path.  For example:
+      /xyz/openbmc_project/sensors/fan_tach/Fan0_Tach
+
+    The Running property reflects a derived boolean state from the tach sensor
+    RPM reading, so consumers do not need to interpret the raw floating-point
+    Sensor.Value themselves.
+
+    Running is updated only on actual state transitions.  Consumers can
+    subscribe to org.freedesktop.DBus.Properties.PropertiesChanged on the
+    fan_tach object path to receive notifications.
+
+properties:
+    - name: Running
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          Indicates whether the fan is currently running.  Set to true when
+          Sensor.Value reports RPM > 0.  Set to false when RPM == 0, the fan is
+          absent, or a sensor read error occurs.
+
+paths:
+    - namespace: /xyz/openbmc_project/sensors
+      segments:
+          - name: FanTach
+            value: fan_tach
+            description: >
+                Fan tach sensors expose Sensor.FanStatus alongside Sensor.Value
+                on the same object path.

@@ -16,6 +16,23 @@
       "message": "There is a bunch of backend apps who use this and this is a breaking change \nhttps://github.com/search?q\u003dorg%3Aopenbmc%20PowerCapEnable\u0026type\u003dcode",
       "revId": "e04d279227ab0a3673b7bc2f142d612d4ffe9aa5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b1fa132_b81755a7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000238
+      },
+      "writtenOn": "2026-07-01T15:12:43Z",
+      "side": 1,
+      "message": "It seems like you are trying to use this as a way to know if a device is available. I do not think it makes sense to do that for one specific parameter. I would expect the backend/object owner would be the one handling the ownership of the setting and not rely on a remote device to report if it has a cap enabled/disabled.\nAs Gunnar points out, this property is used in quite a few places and this change would require all of that code to get updated and re-tested.",
+      "revId": "e04d279227ab0a3673b7bc2f142d612d4ffe9aa5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

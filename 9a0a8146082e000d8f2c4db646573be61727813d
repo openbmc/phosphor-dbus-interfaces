@@ -16,6 +16,57 @@
       "message": "my query:\n\nWho is expected to consume this signal?",
       "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e69c834_263a71b2",
+        "filename": "yaml/xyz/openbmc_project/Sensor/FanStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-07-01T13:01:57Z",
+      "side": 1,
+      "message": "Would this be the fan_tach sensor object or something else?",
+      "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a42589f_234de8b3",
+        "filename": "yaml/xyz/openbmc_project/Sensor/FanStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-07-01T13:01:57Z",
+      "side": 1,
+      "message": "Why a signal and not a property - also see next comment.",
+      "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6bc064ff_69ebc35c",
+        "filename": "yaml/xyz/openbmc_project/Sensor/FanStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-07-01T13:01:57Z",
+      "side": 1,
+      "message": "If this is based on fan RPM, isn\u0027t that part of another property/sensor already which users can determine based on property changes?",
+      "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

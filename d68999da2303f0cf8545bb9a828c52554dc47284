@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ebf1e74_cb6725d4",
+        "filename": "yaml/xyz/openbmc_project/State/Reset.events.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2026-07-01T19:04:49Z",
+      "side": 1,
+      "message": "The type is an object_path.  Does that mean it literally can only be a D-Bus object?  Would just being a string be sufficient so it can be anything?",
+      "range": {
+        "startLine": 9,
+        "startChar": 24,
+        "endLine": 9,
+        "endChar": 67
+      },
+      "revId": "d68999da2303f0cf8545bb9a828c52554dc47284",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

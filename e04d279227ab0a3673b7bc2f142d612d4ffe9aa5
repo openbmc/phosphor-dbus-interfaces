@@ -51,6 +51,24 @@
       "message": "It seems like you are trying to use this as a way to know if a device is available. I do not think it makes sense to do that for one specific parameter. I would expect the backend/object owner would be the one handling the ownership of the setting and not rely on a remote device to report if it has a cap enabled/disabled.\nAs Gunnar points out, this property is used in quite a few places and this change would require all of that code to get updated and re-tested.",
       "revId": "e04d279227ab0a3673b7bc2f142d612d4ffe9aa5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c865354_826a2dad",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1002758
+      },
+      "writtenOn": "2026-07-02T07:59:44Z",
+      "side": 1,
+      "message": "Could you elaborate on \"the backend/object owner handling the ownership\"? And by \"not rely on remote device\" - are you assuming the BMC is the one that sets PowerCapEnable and therefore already knows the state?\n \nFor example, dbus-sensors is reading the GPU\u0027s actual current power cap state via MCTP, not setting it. The GPU may have a pre-existing state from firmware. There is no way to know the value without querying the device first.\n \nWhy the change is needed:\nThe property PowerCapEnable on the dbus-sensors GPU object is populated by querying the GPU over MCTP. Before the first successful MCTP response, the service genuinely does not know whether power cap is enabled or disabled on the device. The current default false is incorrect — it tells callers \"cap is disabled\" when the real answer is \"the device has not been queried yet.\"\n \nThis causes a correctness problem in the Redfish response: a GET request that arrives before the first poll returns wrong data (cap appears disabled) instead of omitting the field until the value is known.\n \nAcknowledged that changing the PDI type globally affects many consumers. The intent is that those consumers update their side after this PDI merges.",
+      "parentUuid": "1b1fa132_b81755a7",
+      "revId": "e04d279227ab0a3673b7bc2f142d612d4ffe9aa5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

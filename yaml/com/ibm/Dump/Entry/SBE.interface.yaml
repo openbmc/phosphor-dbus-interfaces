@@ -26,3 +26,16 @@ properties:
           A unique id of the failing SBE which is causing the dump. This ID
           could be used to identify the specific SBE  within the system. The
           value should be a 32-bit unsigned integer.
+
+    - name: SBEDumpType
+      type: enum[com.ibm.Dump.Create.SBEDumpType]
+      description: >
+          The type of the SBE dump indicating the condition that triggered the
+          dump collection. Possible values are Timeout, BootFailure, and
+          Downstream.
+
+    - name: DumpFilesPath
+      type: string
+      description: >
+          The relative or absolute path to a directory containing dump files to be
+          processed as part of the dump collection.

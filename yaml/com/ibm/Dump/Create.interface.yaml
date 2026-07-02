@@ -33,6 +33,31 @@ enumerations:
                 The absolute path to a targeted Access Control File (ACF) used
                 to trigger a specific host operation like resource dump. The
                 file is parsed by the BMC and sent to the host via PLDM.
+          - name: "SBEDumpType"
+            description: >
+                The type of SBE dump to be collected. Indicates the condition
+                that triggered the SBE dump collection.
+          - name: "DumpFilesPath"
+            description: >
+                The relative or absolute path to a directory containing dump files to be
+                processed as part of the dump collection.
+
+    - name: SBEDumpType
+      description: >
+          Type of the SBE dump indicating the condition that triggered the dump
+          collection.
+      values:
+          - name: "Timeout"
+            description: >
+                SBE dump collected due to an SBE timeout, where the SBE became
+                unresponsive within the expected time.
+          - name: "BootFailure"
+            description: >
+                SBE dump collected due to a boot failure encountered by the SBE
+                during the SBE boot phase.
+          - name: "Downstream"
+            description: >
+                SBE dump requested for a chip-internal downstream SBE.
 
     - name: DumpType
       description: >

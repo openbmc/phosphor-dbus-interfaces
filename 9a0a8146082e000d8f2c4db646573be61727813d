@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e2e2af8_050dd479",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-07-03T06:55:21Z",
+      "side": 1,
+      "message": "Expected consumers are D-Bus clients that only need binary running\nstate and want normal property reads plus PropertiesChanged on the same\nfan_tach object, instead of deriving from floating-point RPM.",
+      "parentUuid": "960e2ca1_ec7d1e11",
+      "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8e69c834_263a71b2",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-07-01T13:01:57Z",
       "side": 1,
       "message": "Would this be the fan_tach sensor object or something else?",
+      "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3dd7ee89_631e6f38",
+        "filename": "yaml/xyz/openbmc_project/Sensor/FanStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-07-03T06:55:21Z",
+      "side": 1,
+      "message": "Implemented on the same fan_tach sensor object as Sensor.Value, not a\nseparate object. FanStatus is now explicitly documented and implemented\non /xyz/openbmc_project/sensors/fan_tach/\u003cname\u003e.",
+      "parentUuid": "8e69c834_263a71b2",
       "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -52,6 +88,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa1a0718_64fa908b",
+        "filename": "yaml/xyz/openbmc_project/Sensor/FanStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-07-03T06:55:21Z",
+      "side": 1,
+      "message": "Agreed. I changed from FanRunning signal to Running property in\nSensor.FanStatus. This follows normal OpenBMC D-Bus modeling and uses\nstandard PropertiesChanged updates.",
+      "parentUuid": "5a42589f_234de8b3",
+      "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6bc064ff_69ebc35c",
@@ -65,6 +119,24 @@
       "writtenOn": "2026-07-01T13:01:57Z",
       "side": 1,
       "message": "If this is based on fan RPM, isn\u0027t that part of another property/sensor already which users can determine based on property changes?",
+      "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80639309_38a5bfb3",
+        "filename": "yaml/xyz/openbmc_project/Sensor/FanStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-07-03T06:55:21Z",
+      "side": 1,
+      "message": "Agree that Running is derived from RPM \u003e 0. The goal is to standardize\nthat derived binary state in one producer-side property so clients do\nnot duplicate RPM parsing and transition logic.",
+      "parentUuid": "6bc064ff_69ebc35c",
       "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

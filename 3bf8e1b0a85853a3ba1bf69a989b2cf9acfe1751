@@ -22,6 +22,30 @@
       },
       "revId": "3bf8e1b0a85853a3ba1bf69a989b2cf9acfe1751",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd3f6741_bba94478",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-07-06T08:59:08Z",
+      "side": 1,
+      "message": "Agreed, that wording was inaccurate. I removed the compile-against claim and updated the change description to focus on the real contract and usage: dbus-sensors publishes FanStatus.Running, and phosphor-pid-control consumes it for fail-safe behavior.",
+      "parentUuid": "d6f995b9_7f88cdd6",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 2
+      },
+      "revId": "3bf8e1b0a85853a3ba1bf69a989b2cf9acfe1751",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

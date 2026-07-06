@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4aeedf9f_011610fc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-07-06T08:59:08Z",
+      "side": 1,
+      "message": "Thanks for the clarification. This is now backed by a concrete consumer, not a hypothetical one.\nIn phosphor-pid-control, DbusPassive now consumes xyz.openbmc_project.Sensor.FanStatus.Running from PropertiesChanged on the same fan tach object path and uses it for fan fail-safe decisions.\nSo, this interface is now producer + consumer validated end-to-end (dbus-sensors produces Running, phosphor-pid-control consumes it).",
+      "parentUuid": "cc29310e_5a5c3533",
+      "revId": "9a0a8146082e000d8f2c4db646573be61727813d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8e69c834_263a71b2",

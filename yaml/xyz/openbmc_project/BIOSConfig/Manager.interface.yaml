@@ -15,7 +15,7 @@ methods:
             description: >
                 AttributeName which has to be changed.
           - name: AttributeValue
-            type: variant[int64,string]
+            type: variant[int64,string,boolean]
             description: >
                 New attribute value
 
@@ -41,11 +41,11 @@ methods:
             description: >
                 PLDM attribute Type present in PLDM spec
           - name: CurrentValue
-            type: variant[int64,string]
+            type: variant[int64,string,boolean]
             description: >
                 The attribute current value.
           - name: PendingValue
-            type: variant[int64,string]
+            type: variant[int64,string,boolean]
             description: >
                 The pending attribute value if its available.
       errors:
@@ -62,8 +62,8 @@ properties:
 
     - name: BaseBIOSTable
       type:
-          dict[string,struct[enum[self.AttributeType],boolean,string,string,string,variant[int64,string],variant[int64,string],array[struct[enum[self.BoundType],
-          variant[int64, string],string]]]]
+          dict[string,struct[enum[self.AttributeType],boolean,string,string,string,variant[int64,string,boolean],variant[int64,string,boolean],array[struct[enum[self.BoundType],
+          variant[int64, string, boolean],string]]]]
       description: >
           map{attributeName,struct{attributeType,readonlyStatus,displayname,
           description,menuPath,current,default,
@@ -98,7 +98,7 @@ properties:
           } }
 
     - name: PendingAttributes
-      type: dict[string,struct[enum[self.AttributeType],variant[int64,string]]]
+      type: dict[string,struct[enum[self.AttributeType],variant[int64,string,boolean]]]
       description: >
           The Pending attribute name and new value. ex- {
           {"QuietBoot",Type.Integer, 0x1},

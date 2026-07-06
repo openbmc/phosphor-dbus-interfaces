@@ -92,6 +92,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "aed7d423_d362fece",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-07-06T11:11:13Z",
+      "side": 1,
+      "message": "You\u0027re right,\nthe current implementation throws an InvalidArgument error when a duplicate client is detected, and proposed change is to return ObjectAlreadyExists as mentioned in the TODO.\nhttps://github.com/openbmc/phosphor-snmp/blob/d6c5bef671991809ddd37089aeb47f68590fb09f/snmp_conf_manager.cpp#L83\n\nI mentioned the incrementing ID detail while explaining the distinction from systemd\u0027s ObjectPathInUse and it came across wrong.",
+      "parentUuid": "411791bc_3a4acd74",
+      "revId": "1e334515f703092f6106244aa622e8950be192b0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "63f86e0a_ac9ce2ff",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1

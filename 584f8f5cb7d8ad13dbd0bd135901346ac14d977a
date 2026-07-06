@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe6e0b55_afef670b",
+        "filename": "yaml/com/ibm/Dump/Create.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-07-06T04:00:18Z",
+      "side": 1,
+      "message": "NIT: \nThe current design puts all dump-specific parameters into a single\n`CreateParameters` enum. As a result, the interface does not clearly express\nwhich parameters are applicable to which dump types.\n\nFor example, it is not obvious from the interface definition whether:\n\n- `SBEDumpType` is only valid when `DumpType\u003dSBE`\n- `VSPString` is only applicable to `Resource` dumps\n- `FailingUnitId` is only applicable to ?? dumps\n\nThese relationships currently exist only in the implementation and are not\nvisible in the interface definition.\n\nWould it make sense to organize parameters by dump category instead of placing\nall of them under `CreateParameters`?\n\nFor example:\n\n- Top-level/common parameters\n\n  - CreateParameters\n    - DumpType\n    - ErrorLogId\n    - DumpFilesPath\n\n- SBE-specific parameters\n\n  - SBEDumpParameters\n    - TriggerType\n\n  - SBEDumpTriggerType\n    - Timeout\n    - BootFailure\n    - Downstream\n\nThis would make parameter ownership and applicability more obvious and make the\ninterface easier to extend in the future.\n\nExample:\n\n{\n  \"com.ibm.Dump.Create.CreateParameters.DumpType\":\n      \"com.ibm.Dump.Create.DumpType.SBE\",\n\n  \"com.ibm.Dump.Create.SBEDumpParameters.TriggerType\":\n      \"com.ibm.Dump.Create.SBEDumpTriggerType.Timeout\"\n}\n\nThis makes the relationship between `DumpType\u003dSBE` and its associated\nparameters explicit in the interface rather than relying on implementation\ndetails.\nOrganizing parameters by dump category improves clarity, simplifies future extensions, and makes it easier to reuse or standardize common enums and parameter groups across OEMs.",
+      "revId": "584f8f5cb7d8ad13dbd0bd135901346ac14d977a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

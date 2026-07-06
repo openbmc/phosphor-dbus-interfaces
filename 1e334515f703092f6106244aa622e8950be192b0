@@ -74,6 +74,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "411791bc_3a4acd74",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000022
+      },
+      "writtenOn": "2026-07-06T10:58:16Z",
+      "side": 1,
+      "message": "\u003eso even duplicate clients would end up with different paths like /xyz/.../1, /xyz/.../2, and sd-bus would never detect the conflict.\n\nThat is not correct. Please check the implementation here:\nhttps://github.com/openbmc/phosphor-snmp/blob/master/snmp_conf_manager.cpp#L37C5-L37C26\n\nThe code already checks for duplicate clients before creating a new object, so the scenario of duplicate clients ending up with different object paths does not apply.\n\nInstead, you could say that the current implementation throws an InvalidArgument error when a duplicate client is detected, and your proposed change is to return ObjectAlreadyExists",
+      "parentUuid": "e0253da3_8f9056f4",
+      "revId": "1e334515f703092f6106244aa622e8950be192b0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "63f86e0a_ac9ce2ff",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1

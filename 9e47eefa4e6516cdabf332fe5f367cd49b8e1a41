@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "26e50b00_50909655",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-07T16:14:55Z",
+      "side": 1,
+      "message": "Do you have a use-case?\n\nIs there a code that can handle any interface?\n\nCurrently i don\u0027t think it\u0027s implemented that way but we could easily treat the empty list as \u0027all interfaces\u0027.\n\nrequesting feedback from mapper maintainers on this one.",
+      "parentUuid": "4e5ea2fd_a1411b89",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0c2a1b0c_8ff28edc",
         "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
         "patchSetId": 3
@@ -37,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9b226ff9_d0a719df",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-07T16:14:55Z",
+      "side": 1,
+      "message": "For my use-case of multi-chassis fan inventory the service name was not needed.\n\nDo we have a use-case involving indexed services where it would help to know the service name as well? \n\nIt\u0027s not much more work to pass the service name as well. returning a tuple of 5 elements instead of 3.\n\nrequesting feedback from mapper maintainers on if it is acceptable to over-query or return unused data to make the call more flexible for future use-cases.",
+      "parentUuid": "0c2a1b0c_8ff28edc",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f51dacf0_4e12be2d",
         "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
         "patchSetId": 3
@@ -48,6 +84,24 @@
       "writtenOn": "2026-07-07T14:39:16Z",
       "side": 1,
       "message": "In what cases should we return ResourceNotFound vs just an empty list?  I don\u0027t really like this existing ambiguity in the mapper results.  Can we avoid errors?  Are the errors useful?",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e972c25e_5fa7887b",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-07T16:14:55Z",
+      "side": 1,
+      "message": "The existing mapper calls look like they return that error if a nonexistent object path is passed in.\n\nIt could be implemented similarly for this new mapper call since we pass 2 object path parameters.\n\n\u003e Can we avoid errors?  Are the errors useful?\n\ni would like to leave this to mapper maintainers, but in my use-case i do not see a benefit from extra error handling over just having an empty list.",
+      "parentUuid": "f51dacf0_4e12be2d",
       "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

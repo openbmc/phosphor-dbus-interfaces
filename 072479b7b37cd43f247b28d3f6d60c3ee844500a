@@ -16,6 +16,47 @@
       "message": "Is there any more discussion needed for this to be approved?",
       "revId": "072479b7b37cd43f247b28d3f6d60c3ee844500a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d14c0f0a_22797a09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-07T09:47:06Z",
+      "side": 1,
+      "message": "my query:\n\nDid you implement this new property into all the code which is producing `xyz.openbmc_project.Inventory.Item.Fan` interface currently ?\n\nOtherwise when generating a client from the interface definition, the client would crash at runtime trying to fetch nonexistent property if any of the producers of this interface did not implement the property.\n\n\nAlso, do you have a patch consuming this property in bmcweb? It would help to see how this would be used and have a user code ready.",
+      "parentUuid": "6334a78a_7dbd41b0",
+      "revId": "072479b7b37cd43f247b28d3f6d60c3ee844500a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f1d5fc4_beae71a7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Fan.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-07T09:47:06Z",
+      "side": 1,
+      "message": "nit:\n\nThis is only my own perspective but maybe it would be useful to write down where this would show up in Redfish, which schema.\n\ne.g. \"This property can be used to fill `RatedSpeedRPM` in Redfish Fan schema\"\n\nThat way we can then grep the code (not the git log) to see if a given property is already provided through PDI interfaces.",
+      "range": {
+        "startLine": 8,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 33
+      },
+      "revId": "072479b7b37cd43f247b28d3f6d60c3ee844500a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

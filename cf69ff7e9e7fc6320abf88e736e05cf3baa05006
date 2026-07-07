@@ -33,6 +33,24 @@
       "message": "Please create Common.events.yaml instead for new errors.  This is the newer architecture and is 100% compatible with the throw/catch architecture.",
       "revId": "cf69ff7e9e7fc6320abf88e736e05cf3baa05006",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85c8695a_9aa91f00",
+        "filename": "yaml/xyz/openbmc_project/Common.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-07-07T11:18:24Z",
+      "side": 1,
+      "message": "yaml/xyz/openbmc_project/Common.events.yaml\nversion: 1.0.0\nerrors:\n     name: ObjectAlreadyExists\n      severity: warning\n      errno: EEXIST\n      metadata:\n           name: ObjectPath\n            description: The path of the existing object that conflicts with the requested creation.\n            type: object_path\n            primary: true\n      en:\n          description: The object already exists under the given object manager.\n          message: \"Object already exists at \u0027{ObjectPath}\u0027.\"\n\nI\u0027ve moved the new error over to Common.events.yaml as suggested.\n\nFor context, here\u0027s what changed on the generation side to support that:\ngen/xyz/openbmc_project/Common/meson.build: the existing Common__cpp custom_target now also takes Common.events.yaml as an input, alongside Common.errors.yaml, and emits event.cpp/event.hpp in addition to error.cpp/error.hpp.\ngen/xyz/openbmc_project/meson.build: added Common.events.yaml as an input to the markdown target, and added a new Common__registry custom_target that runs the registry command against Common.events.yaml to produce Common.json, installed under inst_registry_dir.\n\nCould you point me to how this event/error should be wired up to the Client interface\n(https://github.com/openbmc/phosphor-dbus-interfaces/blob/e5cafef0032e7b7e93624ea8642f06a56b14bf35/yaml/xyz/openbmc_project/Network/Client/Create.interface.yaml#L15)\nso it\u0027s actually caught and returned as a D-Bus error reply?\n\nIs it declared under the errors: list of the specific method (Create) that throws it, same as with Common.errors.yaml-based errors, or does the events/registry path expect something different?",
+      "parentUuid": "e953d561_0a4e858b",
+      "revId": "cf69ff7e9e7fc6320abf88e736e05cf3baa05006",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

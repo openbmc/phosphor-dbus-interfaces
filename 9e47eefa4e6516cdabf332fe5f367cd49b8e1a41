@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a6381a10_bf6dd310",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-07-07T19:06:56Z",
+      "side": 1,
+      "message": "How do you interact with the instance you get from the query if you don\u0027t have the service name?  You get a path but ... then what?  You have to make another mapper query to get the service that hosts that path.",
+      "parentUuid": "9b226ff9_d0a719df",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f51dacf0_4e12be2d",
         "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
         "patchSetId": 3

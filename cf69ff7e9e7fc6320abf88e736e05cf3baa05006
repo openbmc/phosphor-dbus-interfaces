@@ -51,6 +51,24 @@
       "parentUuid": "e953d561_0a4e858b",
       "revId": "cf69ff7e9e7fc6320abf88e736e05cf3baa05006",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2dea163e_011ded1e",
+        "filename": "yaml/xyz/openbmc_project/Common.errors.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-07-07T12:35:17Z",
+      "side": 1,
+      "message": "Yes, it is added to the errors list in the same way.  The dot-paths for them are slightly different.  Namely the \"Errors\" part is dropped.  You might add `xyz.openbmc_project.State.Leak.Detector.LeakDetectedCritical` to point to yaml/xyz/openbmc_project/State/Leak/Detector.events.yaml\u0027s LeakDetectedCritical event.",
+      "parentUuid": "85c8695a_9aa91f00",
+      "revId": "cf69ff7e9e7fc6320abf88e736e05cf3baa05006",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

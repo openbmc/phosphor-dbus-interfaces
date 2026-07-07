@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e5ea2fd_a1411b89",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-07-07T14:39:16Z",
+      "side": 1,
+      "message": "Is there a way to say \"all\"?",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c2a1b0c_8ff28edc",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-07-07T14:39:16Z",
+      "side": 1,
+      "message": "Do you need the service names?",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f51dacf0_4e12be2d",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-07-07T14:39:16Z",
+      "side": 1,
+      "message": "In what cases should we return ResourceNotFound vs just an empty list?  I don\u0027t really like this existing ambiguity in the mapper results.  Can we avoid errors?  Are the errors useful?",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d26307ca_8b731f64",
+        "filename": "yaml/xyz/openbmc_project/Control/Security/SPDM/Policy.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001516
+      },
+      "writtenOn": "2026-07-08T15:33:01Z",
+      "side": 1,
+      "message": "Do we need to enabled AEAD by default?. BaseAsym \u0026 BaseHash algorithm are required at minimum. Like extended algorithm can we make AEAD to user or platform configurable since its main use case is for secure session.",
+      "revId": "8abbe1478574371e48eb41678cbc47ece6bfe34e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ],
   "submitRequirementResults": []
 }

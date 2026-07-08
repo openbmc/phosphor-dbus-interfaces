@@ -5,7 +5,7 @@ description: >
 properties:
     - name: Enabled
       type: boolean
-      default: false
+      default: true
       description: >
           Indicates whether SPDM communication is enabled.
 
@@ -17,7 +17,7 @@ properties:
 
     - name: VerifyCertificate
       type: boolean
-      default: false
+      default: true
       description: >
           Indicates whether certificate verification of SPDM endpoints is
           enabled.
@@ -30,6 +30,7 @@ properties:
 
     - name: AllowedVersions
       type: array[variant[enum[self.SpecialSetValues], string]]
+      default: '{"ALL"}'
       description: >
           Allowed SPDM protocol versions. Acceptable special values: ALL, NONE,
           or explicit SPDM version numbers in the required "major.minor" format
@@ -37,6 +38,7 @@ properties:
 
     - name: AllowedAlgorithmsAEAD
       type: array[variant[enum[self.SpecialSetValues], string]]
+      default: '{"ALL"}'
       description: >
           Allowed AEAD algorithms for SPDM operations. Valid values are the AEAD
           algorithm names defined in the 'AlgSupported' field of the AEAD
@@ -44,6 +46,7 @@ properties:
 
     - name: AllowedAlgorithmsBaseHash
       type: array[variant[enum[self.SpecialSetValues], string]]
+      default: '{"ALL"}'
       description: >
           Allowed base hash algorithms for SPDM operations. Valid values are the
           hash algorithm names defined in the 'BaseHashAlgo' field of the
@@ -51,6 +54,7 @@ properties:
 
     - name: AllowedAlgorithmsBaseAsym
       type: array[variant[enum[self.SpecialSetValues], string]]
+      default: '{"ALL"}'
       description: >
           Allowed asymmetric signature algorithms for SPDM operations. Valid
           values are the asymmetric signature algorithm names defined in the

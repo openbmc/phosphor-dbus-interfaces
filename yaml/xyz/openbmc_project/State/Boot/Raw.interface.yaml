@@ -6,3 +6,11 @@ properties:
       type: struct[array[byte],array[byte]]
       description: >
           The POST code value.
+
+    - name: CaptureEnabled
+      type: boolean
+      default: true
+      description: >
+          Controls whether POST code capture is active. Set to false to
+          pause capture (e.g. after BIOS POST complete to avoid noise),
+          and back to true to resume (e.g. on next host power-on).

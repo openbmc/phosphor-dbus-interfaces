@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "44f2b052_11955d60",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-09T14:05:55Z",
+      "side": 1,
+      "message": "did not implement this yet as i did not find a use-case.",
+      "parentUuid": "26e50b00_50909655",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0c2a1b0c_8ff28edc",
         "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
         "patchSetId": 3
@@ -85,6 +103,24 @@
       "side": 1,
       "message": "How do you interact with the instance you get from the query if you don\u0027t have the service name?  You get a path but ... then what?  You have to make another mapper query to get the service that hosts that path.",
       "parentUuid": "9b226ff9_d0a719df",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75491cc7_3187161b",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-09T14:05:55Z",
+      "side": 1,
+      "message": "\u003e How do you interact with the instance you get from the query if you don\u0027t have the service name?  \n\nIn my use-case there were other mapper calls involved while this one only figured out the overall layout.\n\nAdjusted it to also return service names to make it more widely usable.",
+      "parentUuid": "a6381a10_bf6dd310",
       "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -138,6 +174,24 @@
       "side": 1,
       "message": "Since this is a completely new function, I\u0027m OK with getting rid of the error and just having it return empty results.",
       "parentUuid": "e972c25e_5fa7887b",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "052d5eb3_c5dc37d1",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-09T14:05:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "02d0ff93_2beb049c",
       "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

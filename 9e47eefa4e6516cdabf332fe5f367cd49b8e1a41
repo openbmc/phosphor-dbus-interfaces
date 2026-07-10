@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f85dbb18_033fa931",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-10T09:30:09Z",
+      "side": 1,
+      "message": "closing this for now as no concrete use-case has been found. I don\u0027t think any caller will pass empty list of interfaces, so it remains possible to implement the suggested behavior in the future if we end up needing it.",
+      "parentUuid": "44f2b052_11955d60",
+      "revId": "9e47eefa4e6516cdabf332fe5f367cd49b8e1a41",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0c2a1b0c_8ff28edc",

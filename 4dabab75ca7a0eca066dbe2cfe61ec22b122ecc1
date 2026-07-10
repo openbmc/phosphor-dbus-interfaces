@@ -22,6 +22,30 @@
       },
       "revId": "4dabab75ca7a0eca066dbe2cfe61ec22b122ecc1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "506198d4_a13588d7",
+        "filename": "yaml/xyz/openbmc_project/ObjectMapper.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-10T09:30:09Z",
+      "side": 1,
+      "message": "Agree the naming `reqPath1` is weird and probably needs changed.\n\nI don\u0027t want to introduce new terminology into the mapper as we already have \u0027forward\u0027, \u0027reverse\u0027, association owner, association definition, subtree, subtree paths, depth, endpoints, ...\n\nwhich has been sufficient for me to discuss these things without introducing \u0027source\u0027 and \u0027target\u0027 concept.\n\nended up renaming it to `subtreePath1`, to be somewhat in line with how the other mapper calls named it. (noticing that we also have alias subtree path for namespace paths in PDI)",
+      "parentUuid": "511729b7_d72c6b97",
+      "range": {
+        "startLine": 256,
+        "startChar": 18,
+        "endLine": 256,
+        "endChar": 26
+      },
+      "revId": "4dabab75ca7a0eca066dbe2cfe61ec22b122ecc1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

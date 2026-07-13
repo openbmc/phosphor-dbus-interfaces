@@ -1,0 +1,14 @@
+description: >
+    Control actions for a serial port.
+
+paths:
+    - namespace: /xyz/openbmc_project/control/port
+
+properties:
+    - name: MonitoringEnabled
+      type: boolean
+      description: >
+          Whether the devices on the port are monitored. Setting this false
+          reserves the port so no other traffic occurs on it; setting it true
+          resumes normal monitoring.
+      default: true

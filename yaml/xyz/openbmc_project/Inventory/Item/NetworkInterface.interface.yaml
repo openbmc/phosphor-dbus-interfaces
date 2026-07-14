@@ -1,10 +1,25 @@
 description: >
     Implement to provide network interface attributes.
+
+    In InfiniBand mode this interface corresponds to the InfiniBand object of
+    the Redfish NetworkDeviceFunction resource.
 properties:
     - name: MACAddress
       type: string
       description: >
           MAC address of the item
+    - name: PermanentNodeGUID
+      type: string
+      description: >
+          The permanent node GUID assigned to this network interface in four
+          groups of four hexadecimal digits separated by hyphens, most
+          significant group first. Example: 0002-C903-00AB-CDEF
+    - name: PermanentPortGUID
+      type: string
+      description: >
+          The permanent port GUID assigned to this network interface in four
+          groups of four hexadecimal digits separated by hyphens, most
+          significant group first. Example: 0002-C903-00AB-CDEF
 
 associations:
     - name: produced_by

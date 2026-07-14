@@ -5,6 +5,18 @@ properties:
       type: string
       description: >
           MAC address of the item
+    - name: PermanentNodeGUID
+      type: string
+      description: >
+          The permanent node GUID assigned to this network interface. Maps to
+          InfiniBand.PermanentNodeGUID in the Redfish NetworkDeviceFunction
+          schema.
+    - name: PermanentPortGUID
+      type: string
+      description: >
+          The permanent port GUID assigned to this network interface. Maps to
+          InfiniBand.PermanentPortGUID in the Redfish NetworkDeviceFunction
+          schema.
 
 associations:
     - name: produced_by

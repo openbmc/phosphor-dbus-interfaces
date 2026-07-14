@@ -1,0 +1,31 @@
+version: 1.0.0
+
+errors:
+  - name: AMCBootFailure
+    severity: error
+    metadata:
+      - name: AMC
+        type: object_path
+        primary: true
+        description: The name or identifier of the AMC.
+      - name: Signal
+        type: string
+        description: The hardware signal that indicated the AMC boot failure condition.
+      - name: FailureData
+        type: string
+        description: An [optional] set of additional failure data.
+    en:
+      description: An AMC has been detected in a boot failure state.
+      message: The AMC '{AMC}' is in a boot failure state.
+    errno: EIO
+
+events:
+  - name: AMCBootFailureRecovered
+    metadata:
+      - name: AMC
+        type: object_path
+        primary: true
+        description: The name or identifier of the AMC.
+    en:
+      description: The AMC boot failure state is restored.
+      message: The AMC '{AMC}' is in a restored state.

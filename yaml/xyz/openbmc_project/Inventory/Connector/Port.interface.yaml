@@ -30,6 +30,30 @@ properties:
           supported by this port. A value of 0 indicates that the value for this
           property is not known at this time (because, for example, the port is
           inactive).
+    - name: MaxSpeed
+      type: uint64
+      default: maxint
+      description: >
+          The maximum speed the port is capable of, in bits per second. Unlike
+          Speed, which reports the port's current speed, this reports the port's
+          rated capability. The default value indicates the property is not
+          supported by this port.
+    - name: LinkState
+      type: enum[self.LinkState]
+      default: Unknown
+      description: >
+          The administrative state of the port's link, indicating whether the
+          link is enabled or disabled. This reflects intent (whether the link is
+          configured to be active) rather than the observed condition reported
+          by LinkStatus. Maps to the Redfish Port "LinkState" property.
+    - name: LinkStatus
+      type: enum[self.LinkStatus]
+      default: NoLink
+      description: >
+          The observed status of the port's link, indicating whether a physical
+          connection is established and able to carry traffic. This reflects the
+          current condition rather than the configured intent reported by
+          LinkState. Maps to the Redfish Port "LinkStatus" property.
 
 enumerations:
     - name: PortProtocol
@@ -39,6 +63,9 @@ enumerations:
           - name: PCIe
             description: >
                 Protocol is PCI Express.
+          - name: NVLink
+            description: >
+                Protocol is NVIDIA NVLink.
           - name: Unknown
             description: >
                 Protocol is unknown.
@@ -52,9 +79,46 @@ enumerations:
           - name: Upstream
             description: >
                 Type is upstream - this port connects to a host device.
+          - name: Bidirectional
+            description: >
+                Type is bidirectional - this port can connect to any type of
+                device.
           - name: Unknown
             description: >
                 Type is unknown.
+    - name: LinkState
+      description: >
+          Possible administrative states of a port's link.
+      values:
+          - name: Enabled
+            description: >
+                The link is enabled.
+          - name: Disabled
+            description: >
+                The link is disabled.
+          - name: Unknown
+            description: >
+                The link state is not known.
+    - name: LinkStatus
+      description: >
+          Possible observed statuses of a port's link.
+      values:
+          - name: LinkUp
+            description: >
+                A link is established on this port and is able to carry traffic.
+          - name: LinkDown
+            description: >
+                The link on this port is down.
+          - name: NoLink
+            description: >
+                No physical link is detected on this port.
+          - name: Starting
+            description: >
+                A physical link has been established but the port is not yet
+                able to transfer data.
+          - name: Training
+            description: >
+                The physical link on this port is training.
 
 associations:
     - name: connected_to
@@ -64,3 +128,4 @@ associations:
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.FabricAdapter
           - xyz.openbmc_project.Inventory.Item.PCIeSwitch
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice

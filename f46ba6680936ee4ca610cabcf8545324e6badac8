@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "a76ce7e6_c5f109dc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002522
+      },
+      "writtenOn": "2026-07-15T08:17:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d13a9d4_72cfd6e7",
+      "revId": "f46ba6680936ee4ca610cabcf8545324e6badac8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "ee800d63_81119a12",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 4
@@ -31,6 +49,24 @@
       "writtenOn": "2026-07-09T20:19:03Z",
       "side": 1,
       "message": "My opinion is that we should not spread state like this across processes.  If there is a reason to stop post codes, let\u0027s teach phosphor-host-postd what that is.\n\nBut, I\u0027ve added the maintainers of phosphor-host-postd here in case they disagree.",
+      "revId": "f46ba6680936ee4ca610cabcf8545324e6badac8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db513f62_50c3d2aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002522
+      },
+      "writtenOn": "2026-07-15T08:17:07Z",
+      "side": 1,
+      "message": "changed the approach. added `PostComplete` to `xyz.openbmc_project.State.Boot.Progress::ProgressStages`. \n\n`phosphor-host-postd` now watches the `BootProgress` property and stops capturing POST codes when it transitions to `PostComplete`.",
+      "parentUuid": "ee800d63_81119a12",
       "revId": "f46ba6680936ee4ca610cabcf8545324e6badac8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

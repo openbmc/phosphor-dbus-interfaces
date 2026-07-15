@@ -16,6 +16,24 @@
       "message": "Can you elaborate on when InvalidArgument would be returned (in documentation)?  I can\u0027t figure it out since there are only 2 values and they are both enums.",
       "revId": "b74b6b7ea953a0431a773dc5c489002fce7c4f20",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3e25217_cef9e1c5",
+        "filename": "yaml/xyz/openbmc_project/User/AccountPolicy.interface.yaml",
+        "patchSetId": 16
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-07-15T06:02:01Z",
+      "side": 1,
+      "message": "That was carried over from the previous PS, where it was valid, caller could pass arbitrary bytes. With the enum property, it\u0027s no longer applicable, Removed it.",
+      "parentUuid": "d236d466_658dee15",
+      "revId": "b74b6b7ea953a0431a773dc5c489002fce7c4f20",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

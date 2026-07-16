@@ -265,6 +265,23 @@ paths:
                 The total number of collisions that occurred after one slot time
                 as defined by IEEE 802.3.
             value: nic/tx_late_collisions
+          - name: NICRXErrors
+            description: >
+                The total number of received errors on a port since reset.
+            value: nic/rx_errors
+          - name: NICRXFrames
+            description: >
+                The total number of frames received on a port since reset.
+            value: nic/rx_frames
+          - name: NICTXFrames
+            description: >
+                The total number of frames transmitted on a port since reset.
+            value: nic/tx_frames
+          - name: NICTXDiscards
+            description: >
+                The total number of transmitted frames that were discarded on a
+                port since reset.
+            value: nic/tx_discards
           - name: ValveClosedDuration
             description: >
                 The duration since the valve was fully closed.

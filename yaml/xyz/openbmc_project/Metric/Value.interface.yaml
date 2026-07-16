@@ -265,6 +265,36 @@ paths:
                 The total number of collisions that occurred after one slot time
                 as defined by IEEE 802.3.
             value: nic/tx_late_collisions
+          - name: NVLinkRXBytes
+            description: >
+                The total number of bytes received on an NVLink port since
+                reset.
+            value: nvlink/rx_bytes
+          - name: NVLinkTXBytes
+            description: >
+                The total number of bytes transmitted on an NVLink port since
+                reset.
+            value: nvlink/tx_bytes
+          - name: NVLinkRXErrors
+            description: >
+                The total number of received errors on an NVLink port since
+                reset.
+            value: nvlink/rx_errors
+          - name: NVLinkRXFrames
+            description: >
+                The total number of frames received on an NVLink port since
+                reset.
+            value: nvlink/rx_frames
+          - name: NVLinkTXFrames
+            description: >
+                The total number of frames transmitted on an NVLink port since
+                reset.
+            value: nvlink/tx_frames
+          - name: NVLinkTXDiscards
+            description: >
+                The total number of transmitted frames that were discarded on
+                an NVLink port since reset.
+            value: nvlink/tx_discards
           - name: ValveClosedDuration
             description: >
                 The duration since the valve was fully closed.

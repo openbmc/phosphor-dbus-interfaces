@@ -1,4 +1,4 @@
-version: 1.0.0
+version: 1.1.0
 
 errors:
     - name: FanFailed
@@ -19,3 +19,17 @@ events:
             type: object_path
             primary: true
       redfish-mapping: Environmental.FanRestored
+    - name: FanRemoved
+      metadata:
+          - name: FanName
+            description: The name or identifier of the fan.
+            type: object_path
+            primary: true
+      redfish-mapping: Environmental.FanRemoved
+    - name: FanInserted
+      metadata:
+          - name: FanName
+            description: The name or identifier of the fan.
+            type: object_path
+            primary: true
+      redfish-mapping: Environmental.FanInserted

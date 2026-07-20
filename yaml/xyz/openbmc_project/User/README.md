@@ -57,9 +57,14 @@ will expose following properties and methods.
 - UserGroups - Groups to which the user belongs.
 - UserEnabled - User enabled state.
 - UserLockedForFailedAttempt - Locked or unlocked state of the user account.
-- UserPasswordExpired - Indicates whether the user password has expired.
+- UserPasswordExpired - True when the user's password must be changed before
+  access should be granted. Setting to true forces password expiry; false is not
+  allowed.
 - RemoteUser - Indicates whether the user is a remote user.
 - PasswordExpiration - Epoch time in seconds when the user password expires.
+- UserType - Indicates the authentication backend of the user. Internal for
+  locally managed users, LDAP for OpenLDAP authenticated users, and AD for
+  Active Directory authenticated users.
 
 #### xyz.openbmc_project.Object.Delete
 

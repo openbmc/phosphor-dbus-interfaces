@@ -1,0 +1,49 @@
+description: >
+    A single Platform Event Filter table entry, published by the PEF provider
+    for each populated filter slot. The implementing service exposes one object
+    of this interface per active filter, beneath the PefManager object path (for
+    example /xyz/openbmc_project/inventory/pef/Filter3).
+
+    Consumers such as a SEL event matcher read RawData to decide whether a
+    logged event matches this filter and, if so, which action to take. The
+    matcher discovers and tracks these objects through the ObjectManager hosted
+    by the PefManager service.
+
+properties:
+    - name: RawData
+      type: array[byte]
+      description: >
+          The verbatim 20-byte IPMI 2.0 Event Filter Table entry (section 17.7,
+          Table 17-2). The byte layout (0-based) is:
+
+            [0]  Filter Configuration      (bit 7 = enable;
+                                            bit 6 = software-configurable)
+            [1]  Event Filter Action       (bit 4 = OEM action)
+            [2]  Alert Policy Number        (bits [6:4] = group control
+                                            selector, bits [3:0] = policy)
+            [3]  Event Severity
+            [4]  Generator ID byte 1        (slave/SW address; 0xFF = any)
+            [5]  Generator ID byte 2        (channel | LUN; 0xFF = any)
+            [6]  Sensor Type                (0xFF = match any)
+            [7]  Sensor Number              (0xFF = match any)
+            [8]  Event/Reading Type         (event trigger; 0xFF = any)
+            [9]  Event Data 1 Offset Mask   [LS byte]
+            [10] Event Data 1 Offset Mask   [MS byte]
+            [11] Event Data 1 AND Mask
+            [12] Event Data 1 Compare 1
+            [13] Event Data 1 Compare 2
+            [14] Event Data 2 AND Mask
+            [15] Event Data 2 Compare 1
+            [16] Event Data 2 Compare 2
+            [17] Event Data 3 AND Mask
+            [18] Event Data 3 Compare 1
+            [19] Event Data 3 Compare 2
+
+          Must be exactly 20 bytes.
+
+    - name: FilterId
+      type: byte
+      flags:
+          - const
+      description: >
+          1-based filter slot number this object represents.

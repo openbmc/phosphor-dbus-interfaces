@@ -1,4 +1,5 @@
 # Generated file; do not modify.
+subdir('Cable')
 subdir('Connector')
 subdir('Decorator')
 subdir('Item')

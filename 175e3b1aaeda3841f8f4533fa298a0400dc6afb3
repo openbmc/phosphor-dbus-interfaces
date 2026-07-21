@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "487b65e7_e55f3210",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-07-21T06:35:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ed5457af_30d62af3",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "175e3b1aaeda3841f8f4533fa298a0400dc6afb3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cb36aa4a_15626f7b",
@@ -47,6 +71,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c85bf176_683cbe8c",
+        "filename": "yaml/xyz/openbmc_project/Metric/Threshold.events.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-07-21T06:35:39Z",
+      "side": 1,
+      "message": "\u003e Doesn\u0027t this need to be an object_path?  It looks like Redfish requires this to map to a \"Trigger\" resource.\n\nAs per example given here https://github.com/DMTF/Redfish-Publications/blob/main/registries/Telemetry.1.2.0.json#L17, it doesn\u0027t seem like a actual resource but the condition name which triggered it.\n\nI am marking this as resolved, please let me know if you think otherwise.",
+      "parentUuid": "cb36aa4a_15626f7b",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 24
+      },
+      "revId": "175e3b1aaeda3841f8f4533fa298a0400dc6afb3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e5ee7e99_3dfd2699",
@@ -60,6 +108,24 @@
       "writtenOn": "2026-07-20T21:01:32Z",
       "side": 1,
       "message": "Do we have plans to use this one?",
+      "revId": "175e3b1aaeda3841f8f4533fa298a0400dc6afb3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34ff74d0_55249cb3",
+        "filename": "yaml/xyz/openbmc_project/Metric/Threshold.events.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-07-21T06:35:39Z",
+      "side": 1,
+      "message": "\u003e Do we have plans to use this one?\n\nI don\u0027t see it being used (in the implementation) at the moment though. So, dropped it from this patch and added to https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/92535/1 and marked that patch as WIP.",
+      "parentUuid": "e5ee7e99_3dfd2699",
       "revId": "175e3b1aaeda3841f8f4533fa298a0400dc6afb3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -17,6 +17,26 @@ properties:
           user interfaces but this field should not be used for programmatic
           interrogation of a cable beyond ignoring the default value of the
           empty string.
+    - name: CableClass
+      type: enum[self.CableClass]
+      default: Unknown
+      flags:
+          - readonly
+      description: >
+          The functional class of the cable based on the type of resource to
+          which the cable connects. The default value of Unknown indicates that
+          the cable class cannot be determined.
+enumerations:
+    - name: CableClass
+      description: >
+          Possible cable classes.
+      values:
+          - name: Fabric
+            description: >
+                The cable is used to connect to a fabric.
+          - name: Unknown
+            description: >
+                The cable class is unknown.
 associations:
     - name: connecting
       description: >

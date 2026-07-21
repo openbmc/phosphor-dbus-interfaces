@@ -1,0 +1,89 @@
+description: >
+    Global Platform Event Filtering (PEF) configuration and the management
+    entry point for the BMC's event filter table, as defined by the IPMI 2.0
+    specification sections 17 and 30.
+
+    A single object implementing this interface owns the PEF global controls
+    and brokers read/write access to the numbered event filter table entries.
+    The implementing service is expected to host an
+    org.freedesktop.DBus.ObjectManager at or above this object's path so that
+    consumers (for example a SEL event matcher) receive InterfacesAdded and
+    InterfacesRemoved signals as filter slots are populated or cleared.
+
+properties:
+    - name: Enabled
+      type: boolean
+      description: >
+          Master enable for Platform Event Filtering. Maps to the PEF Control
+          configuration parameter (IPMI 2.0 Table 30-6, parameter 1) bit 0. When
+          false, no filter actions are taken.
+
+    - name: EventMessagesEnabled
+      type: boolean
+      description: >
+          Enable PEF event messages. Maps to the PEF Control configuration
+          parameter (parameter 1) bit 1.
+
+    - name: ActionGlobalControl
+      type: byte
+      description: >
+          PEF Action global control bitmask (IPMI 2.0 Table 30-6, parameter 2). Each
+          bit globally enables one action class (alert, power down, reset,
+          power cycle, OEM action, diagnostic interrupt). A bit may only be set
+          if the corresponding action is advertised by Get PEF Capabilities.
+
+    - name: StartupDelaySeconds
+      type: byte
+      description: >
+          PEF startup delay in seconds (IPMI 2.0 Table 30-6, parameter 3). Delay
+          after BMC start-up before PEF post-processing begins.
+
+    - name: AlertStartupDelaySeconds
+      type: byte
+      description: >
+          PEF alert startup delay in seconds (IPMI 2.0 Table 30-6, parameter 4).
+
+    - name: FilterCount
+      type: byte
+      flags:
+          - const
+      description: >
+          Number of event filter table slots supported by this implementation
+          (1-based filter numbers run from 1 to FilterCount).
+
+methods:
+    - name: SetFilter
+      description: >
+          Write a single 20-byte Event Filter Table entry to the given slot,
+          replacing any existing entry. The entry layout is IPMI 2.0 Table
+          17-2 and is stored verbatim.
+      parameters:
+          - name: FilterId
+            type: byte
+            description: >
+                1-based filter slot number (1 .. FilterCount).
+          - name: Entry
+            type: array[byte]
+            description: >
+                The 20-byte Event Filter Table entry (IPMI 2.0 Table 17-2).
+                Must be exactly 20 bytes.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: GetFilter
+      description: >
+          Read the 20-byte Event Filter Table entry from the given slot.
+      parameters:
+          - name: FilterId
+            type: byte
+            description: >
+                1-based filter slot number (1 .. FilterCount).
+      returns:
+          - name: Entry
+            type: array[byte]
+            description: >
+                The 20-byte Event Filter Table entry (IPMI 2.0 Table 17-2).
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure

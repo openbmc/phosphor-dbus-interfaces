@@ -249,6 +249,27 @@ methods:
                 Note: This return value just indicates if the collection has
                 been successfully initiated. It doesn't indicate VPD collection
                 status of the system.
+
+    - name: GetParsedVPDData
+      description: >
+          Method to get the fully parsed VPD data for a given FRU.
+      parameters:
+          - name: fruPath
+            type: string
+            description: >
+                FRU path (EEPROM path) of the FRU whose parsed VPD data is
+                requested.
+      returns:
+          - name: parsedVPDData
+            type: dict[string,dict[string,variant[array[byte],string,boolean]]]
+            description: >
+                A map of VPD record names to their keyword-value pairs.
+                Each key is a record name (e.g. "VINI") and its value is a
+                map of keyword names (e.g. "SN") to the corresponding values.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - com.ibm.VPD.Error.PathNotFound
+
 properties:
     - name: CollectionStatus
       type: enum[self.Status]

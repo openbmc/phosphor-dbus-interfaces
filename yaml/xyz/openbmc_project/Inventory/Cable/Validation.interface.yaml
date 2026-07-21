@@ -1,0 +1,21 @@
+description: >
+    An interface for checking observed cable connectivity against the cable
+    configuration expected by the implementing service. Implement this interface
+    on an object that provides validation for a collection of cable inventory
+    objects, not on an individual cable inventory object.
+methods:
+    - name: ValidateAll
+      description: >
+          Start asynchronous validation of every cable known to the implementing
+          service whose CableClass property matches the CableClass parameter. A
+          successful method reply indicates that the request was accepted, not
+          that validation has completed. If the service cannot start validation,
+          it returns xyz.openbmc_project.Common.Error.Unavailable.
+      parameters:
+          - name: CableClass
+            type: enum[xyz.openbmc_project.Inventory.Item.Cable.CableClass]
+            description: >
+                The class of cables to validate. Unknown selects cables
+                classified as Unknown; it does not select every cable class.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable

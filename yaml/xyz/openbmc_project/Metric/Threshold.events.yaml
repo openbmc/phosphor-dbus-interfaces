@@ -152,6 +152,22 @@ errors:
       redfish-mapping: Telemetry.TriggerNumericBelowUpperCritical
 
 events:
+    - name: TriggerDiscreteConditionMet
+      metadata:
+          - name: MetricName
+            description: The metric name.
+            type: object_path
+            primary: true
+          - name: ReadingValue
+            description: The discrete value of the metric.
+            type: string
+            primary: true
+          - name: TriggerName
+            description: The telemetry trigger name.
+            type: string
+            primary: true
+      redfish-mapping: Telemetry.TriggerDiscreteConditionMet
+
     - name: TriggerNumericReadingNormal
       metadata:
           - name: MetricName

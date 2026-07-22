@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d514351c_26feda7a",
+        "filename": "yaml/xyz/openbmc_project/Control/Failover.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2026-07-22T18:25:48Z",
+      "side": 1,
+      "message": "Just a general note, one thing that confuses me a bit is we called the parameter \"Options\" and I feel like the general pattern is that if you then have an Enum with the same name, that\u0027s the type (like Requester above). It always takes me a bit of thinking to figure out that this enum is actually defined in a different PDI yaml all together.",
+      "revId": "50cacbf5444cf771f61325b21e0341dfc0fe16ec",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

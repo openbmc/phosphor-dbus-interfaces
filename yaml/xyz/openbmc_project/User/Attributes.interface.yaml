@@ -76,6 +76,18 @@ properties:
           that the user password expiration is not specified.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+
+    - name: AccountExpiration
+      type: uint64
+      default: maxint
+      description: >
+          Indicates the date time when this account expires. Date should be
+          specified in EpochTime format. Zero value means that the account does
+          not expire. Maximum value (default value) means that the account
+          expiration is not specified.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+
     - name: UserType
       type: enum[xyz.openbmc_project.User.Manager.UserType]
       flags:

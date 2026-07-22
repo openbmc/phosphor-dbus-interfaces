@@ -62,6 +62,7 @@ will expose following properties and methods.
   allowed.
 - RemoteUser - Indicates whether the user is a remote user.
 - PasswordExpiration - Epoch time in seconds when the user password expires.
+- AccountExpiration - Epoch time in seconds when the user account expires.
 - UserType - Indicates the authentication backend of the user. Internal for
   locally managed users, LDAP for OpenLDAP authenticated users, and AD for
   Active Directory authenticated users.

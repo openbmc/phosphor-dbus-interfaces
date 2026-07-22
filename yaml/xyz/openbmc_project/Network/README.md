@@ -39,19 +39,23 @@ E.g. `/xyz/openbmc_project/network/<interfacename>`
 There can be multiple IP address objects under an interface object. These
 objects can be deleted by the delete function.
 
-IPv4 objects will have the following D-Bus object path:
+IP address objects (both IPv4 and IPv6) reside directly under the interface
+object path, with the IP address and prefix length encoded using sdbusplus
+path escaping.
 
-`/xyz/openbmc_project/network/<interface>/ipv4/<id>`
+Example IPv4: `/xyz/openbmc_project/network/eth0/_3192_2e168_2e1_2e1_2f24`
+(for address `192.168.1.1/24`)
 
-IPv6 objects will have the following D-Bus object path:
+Example IPv6: `/xyz/openbmc_project/network/eth0/_32001_3adb8_3a1_3a_3a1_2f64`
+(for address `2001:db8:1::1/64`)
 
-`/xyz/openbmc_project/network/<interface>/ipv6/<id>`
+Use `busctl tree xyz.openbmc_project.Network` to list all current IP objects.
 
 ### Network Configuration Object
 
 The network configuration object will have system configuration parameters:
 
-`/xyz/openbmc_project/network/conf`
+`/xyz/openbmc_project/network/config`
 
 ## Commands
 
@@ -94,15 +98,19 @@ curl -c cjar -b cjar -k -H "Content-Type: application/json" -X POST \
 ```
 
 Note: After creating the IP address object enumerate the network interface
-object to get the IPv4 id.
+object to get the exact object path.
 
-### Delete IPv4 Address
+### Delete IP Address
 
 ```sh
 busctl call xyz.openbmc_project.Network \
-    /xyz/openbmc_project/network/<interface>/ipv4/<id> \
+    /xyz/openbmc_project/network/<interface>/<encoded-ip-prefix> \
     xyz.openbmc_project.Object.Delete Delete
 ```
+
+NOTE: The path component encodes the IP address and prefix length (e.g.
+`192.168.1.1/24` -> `_3192_2e168_2e1_2e1_2f24`). Use
+`busctl tree xyz.openbmc_project.Network` to list the exact object paths.
 
 ```sh
 curl -c cjar -b cjar -k -H "Content-Type: application/json" -X DELETE \
@@ -115,8 +123,8 @@ curl -c cjar -b cjar -k -H "Content-Type: application/json" -X DELETE \
 
 ```sh
 busctl get-property xyz.openbmc_project.Network \
-    /xyz/openbmc_project/network/config \
-    xyz.openbmc_project.Network.SystemConfiguration DefaultGateway
+    /xyz/openbmc_project/network/<interface> \
+    xyz.openbmc_project.Network.EthernetInterface DefaultGateway
 ```
 
 ```sh
@@ -128,8 +136,8 @@ curl -c cjar -b cjar -k -H "Content-Type: application/json" \
 
 ```sh
 busctl set-property xyz.openbmc_project.Network \
-    /xyz/openbmc_project/network/config \
-    xyz.openbmc_project.Network.SystemConfiguration \
+    /xyz/openbmc_project/network/<interface> \
+    xyz.openbmc_project.Network.EthernetInterface \
     DefaultGateway s "<DefaultGateway>"
 ```
 
@@ -176,7 +184,7 @@ curl -c cjar -b cjar -k -H "Content-Type: application/json" -X PUT \
 
 ```sh
 busctl get-property xyz.openbmc_project.Network \
-    /xyz/openbmc_project/network/eth0 \
+    /xyz/openbmc_project/network/<interface> \
     xyz.openbmc_project.Network.EthernetInterface DHCPEnabled
 ```
 
@@ -185,12 +193,13 @@ curl -c cjar -b cjar -k -H "Content-Type: application/json" \
     https://${bmc}/xyz/openbmc_project/network/eth0/attr/DHCPEnabled
 ```
 
-#### Enable
+#### Set
 
 ```sh
 busctl set-property xyz.openbmc_project.Network \
-    /xyz/openbmc_project/network/eth0 \
-    xyz.openbmc_project.Network.EthernetInterface DHCPEnabled b 1
+    /xyz/openbmc_project/network/<interface> \
+    xyz.openbmc_project.Network.EthernetInterface DHCPEnabled s \
+    "<DHCP State>"
 ```
 
 ```sh

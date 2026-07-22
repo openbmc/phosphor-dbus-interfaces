@@ -38,7 +38,7 @@ methods:
       description: >
           Creates a new user with set of mandatory and optional user properties.
           UserName, UserPrivilege, UserGroups, UserEnabled are mandatory and
-          PasswordExpiration is optional property.
+          PasswordExpiration, AccountExpiration are optional properties.
       parameters:
           - name: UserName
             type: string
@@ -53,6 +53,7 @@ methods:
                 UserGroups -> list of groups user belongs to(array[string])
                 UserEnabled              -> user enabled state(boolean)
                 PasswordExpiration -> password expiration Epoch time(uint64)
+                AccountExpiration -> account expiration Epoch time(uint64)
       errors:
           - xyz.openbmc_project.Common.Error.InsufficientPermission
           - xyz.openbmc_project.Common.Error.InvalidArgument
@@ -93,6 +94,7 @@ methods:
              -user locked state
              -user password expired state
              -user password expiration Epoch time
+             -user account expiration Epoch time
              -remote user flag
              -user type
           If its ldap user, method returns
@@ -117,6 +119,7 @@ methods:
                 RemoteUser    ->  remote or local user(boolean)
                 TOTPSecretKeyRequired -> TOTP secret key required(boolean)
                 PasswordExpiration -> password expiration Epoch time(uint64)
+                AccountExpiration -> account expiration Epoch time(uint64)
                 UserType -> authentication backend of the
                     user (enum[self.UserType])
 
@@ -178,6 +181,13 @@ enumerations:
                 should be specified in EpochTime format. Zero value means that
                 the user password does not expire. Maximum value (default value)
                 means that the user password expiration is not specified. This
+                property is optional.
+          - name: AccountExpiration
+            description: >
+                Indicates the date time when this account expires. Date
+                should be specified in EpochTime format. Zero value means that
+                the account does not expire. Maximum value (default value)
+                means that the account expiration is not specified. This
                 property is optional.
     - name: UserType
       description: Indicates the authentication backend of the user.

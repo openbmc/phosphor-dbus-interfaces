@@ -71,11 +71,13 @@ associations:
           chassis intrusion sensor that is monitoring its security state against
           intrusion events. Objects that implement Item can optionally implement
           the 'monitored_by' association to provide links to one or more
-          detectors that monitors its state.
+          detectors that monitors its state, or to the objects that report its
+          operational status.
       reverse_name: monitoring
       required_endpoint_interfaces:
           - xyz.openbmc_project.Chassis.Intrusion
           - xyz.openbmc_project.State.Leak.Detector
+          - xyz.openbmc_project.State.Decorator.OperationalStatus
     - name: powered_by
       description: >
           Objects that implement Item can optionally implement the 'powered_by'

@@ -1,0 +1,48 @@
+description: >
+    Implement to report the health of an entity as a discrete state. The health
+    is exposed as its own object and associated to the inventory item whose
+    health it reports.
+
+properties:
+    - name: Health
+      type: enum[self.HealthType]
+      default: Unknown
+      flags:
+          - readonly
+      description: >
+          The current health of the associated inventory item.
+
+enumerations:
+    - name: HealthType
+      description: >
+          The possible health states. The values map to the Redfish
+          "Status""Health" property.
+      values:
+          - name: Unknown
+            description: >
+                The health cannot be determined; reported before the state has
+                been read or while the source is unreachable.
+          - name: OK
+            description: >
+                Operating at a normal state of health.
+          - name: Warning
+            description: >
+                A condition requires attention, but the entity is still
+                operational.
+          - name: Critical
+            description: >
+                A critical condition requires immediate attention.
+
+associations:
+    - name: possessed_by
+      description: >
+          A health object implements the 'possessed_by' association with the
+          inventory item whose health it reports.
+      reverse_name: possessing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cpu
+          - xyz.openbmc_project.Inventory.Item.Accelerator
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice
+
+paths:
+    - namespace: /xyz/openbmc_project/state

@@ -7,3 +7,16 @@ properties:
           The object is functional or not. A "Functional" of false is mapped to
           a Redfish "Status""Health" of "Critical".
       default: false
+
+associations:
+    - name: possessed_by
+      description: >
+          When the operational status reports the health of a separate
+          inventory item, the object may implement a 'possessed_by' association
+          with that inventory item. The endpoint is restricted to inventory
+          items whose Redfish resource exposes the "Status""Health" property.
+      reverse_name: possessing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Cpu
+          - xyz.openbmc_project.Inventory.Item.Accelerator
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice

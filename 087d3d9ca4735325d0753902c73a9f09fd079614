@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f36bf769_4c8e4bb6",
+        "filename": "yaml/xyz/openbmc_project/State/Health.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2026-07-23T14:56:35Z",
+      "side": 1,
+      "message": "How does this work with existing functional interface that is mapped to Redfish Health ?",
+      "revId": "087d3d9ca4735325d0753902c73a9f09fd079614",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aefdd42c_f721c777",
+        "filename": "yaml/xyz/openbmc_project/State/Health.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2026-07-23T14:56:35Z",
+      "side": 1,
+      "message": "Why do you need the associations ? \nWhy can\u0027t it just sit at the same path like https://github.com/openbmc/phosphor-dbus-interfaces/blob/341308f4b6e8fcb962a572d274153ca269703ba2/yaml/xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml#L4",
+      "revId": "087d3d9ca4735325d0753902c73a9f09fd079614",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

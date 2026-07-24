@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b8857c9_e3cf59a0",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1000353
+      },
+      "writtenOn": "2026-07-24T12:54:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "afe80e82_09476db4",
+      "revId": "8e61fe594c17d6ddd9ec7f2f0a176263cd318662",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "06a8b057_9e025960",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-07-24T12:50:34Z",
       "side": 1,
       "message": "Why the PathNotFound error is also removed?",
+      "revId": "8e61fe594c17d6ddd9ec7f2f0a176263cd318662",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f0bc4eb_546f8527",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1000353
+      },
+      "writtenOn": "2026-07-24T12:54:42Z",
+      "side": 1,
+      "message": "I will log the error message and throw same error InvalidArgument.\nbecause it it is not present it is one way Invalid argument only.",
+      "parentUuid": "06a8b057_9e025960",
       "revId": "8e61fe594c17d6ddd9ec7f2f0a176263cd318662",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

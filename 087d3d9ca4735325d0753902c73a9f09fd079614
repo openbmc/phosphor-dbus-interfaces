@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f35c933_61cc220a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-07-24T03:40:08Z",
+      "side": 1,
+      "message": "@gunnar@gmills.xyz \nThanks for reviewing this!\n\nPerhaps we can consider another approach(without creating new PDI for health property).\nBy adding association to `operationalStatus` interface, and then use this dbus-interface to indicate whether the sensor is enabled. I think we can achieve probably the same thing.\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Object/Enable.interface.yaml\n\nHowever, this approach requires modification on the legacy code in PLDM, which might requires further discussion with PLDM folks.",
+      "revId": "087d3d9ca4735325d0753902c73a9f09fd079614",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f36bf769_4c8e4bb6",
@@ -18,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cd85b8c_b1a381cc",
+        "filename": "yaml/xyz/openbmc_project/State/Health.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-07-24T03:40:08Z",
+      "side": 1,
+      "message": "That is one of the main concerns I am having right now.\n\nThe idea was to implement another health property fetching path(through association with the state object), and then add it after the legacy path.\n\nWhenever a legacy path found the inventory item didn\u0027t have the `operationalStatus` dbus interface implemented, it then switches to the second path and look for any associated object implemented with this interface.",
+      "parentUuid": "f36bf769_4c8e4bb6",
+      "revId": "087d3d9ca4735325d0753902c73a9f09fd079614",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aefdd42c_f721c777",
@@ -31,6 +66,24 @@
       "writtenOn": "2026-07-23T14:56:35Z",
       "side": 1,
       "message": "Why do you need the associations ? \nWhy can\u0027t it just sit at the same path like https://github.com/openbmc/phosphor-dbus-interfaces/blob/341308f4b6e8fcb962a572d274153ca269703ba2/yaml/xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml#L4",
+      "revId": "087d3d9ca4735325d0753902c73a9f09fd079614",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0edc84ab_4ec91a03",
+        "filename": "yaml/xyz/openbmc_project/State/Health.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-07-24T03:40:08Z",
+      "side": 1,
+      "message": "That was a tricky part.\nI was trying to enable PLDM state sensor feature.\n\nOne of the state the state sensor exposes is the health state, which indicate the health state of the object it is currently monitoring.\n\nHowever, the state sensor is allowed to be turned off and the previous design in the following link used this `operationalStatus` interface and its property to represent whether the sensor has been turned on.\nhttps://github.com/openbmc/docs/blob/cf706722293b681fbcbb852eee05a9ae045ac635/designs/pldm-stack.md?plain\u003d1#L514\n\nThis act makes the sensor unable to publishes the health state of the monitoring object, using the same PDI. Also, the current PDI of `operationalStatus` has no association to link the state object with the monitoring inventory item such as processor, PCIeDevice, etc.",
+      "parentUuid": "aefdd42c_f721c777",
       "revId": "087d3d9ca4735325d0753902c73a9f09fd079614",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

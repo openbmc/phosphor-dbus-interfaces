@@ -174,6 +174,22 @@ paths:
             description: >
                 The total number of bytes received on a port since reset.
             value: nic/rx_bytes
+          - name: NICRXErrors
+            description: >
+                The total number of receive errors on a port since reset.
+            value: nic/rx_errors
+          - name: NICRXFrames
+            description: >
+                The total number of frames received on a port since reset.
+            value: nic/rx_frames
+          - name: NICTXFrames
+            description: >
+                The total number of frames transmitted on a port since reset.
+            value: nic/tx_frames
+          - name: NICTXDiscards
+            description: >
+                The total number of transmit discards on a port since reset.
+            value: nic/tx_discards
           - name: NICTXMulticastFrames
             description: >
                 The total number of good multicast frames transmitted on a port

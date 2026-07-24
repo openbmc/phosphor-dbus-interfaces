@@ -69,6 +69,24 @@
       "parentUuid": "06a8b057_9e025960",
       "revId": "8e61fe594c17d6ddd9ec7f2f0a176263cd318662",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7dd9d6aa_474908cd",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-07-24T13:03:29Z",
+      "side": 1,
+      "message": "Will an empty map is returned incase of internal failures or InternalFailure error is thrown? \n\nIf empty map is returned then should it be mentioned in the description?\nIf error is thrown then it should be mentioned in the errors",
+      "parentUuid": "8f0bc4eb_546f8527",
+      "revId": "8e61fe594c17d6ddd9ec7f2f0a176263cd318662",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

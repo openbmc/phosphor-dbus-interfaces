@@ -3,6 +3,57 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d528ab40_50ce4bb1",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-07-24T08:51:51Z",
+      "side": 1,
+      "message": "nit: Since VPD stands for Vital Product Data, \"data\" is redundant here. GetParsedVPDMap?",
+      "revId": "bbd735bc3bee7366b5285c40c893f815f1846509",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1a54416_3b36aaff",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-07-24T08:51:51Z",
+      "side": 1,
+      "message": "nit:Since VPD stands for Vital Product Data, \"data\" is redundant here.",
+      "revId": "bbd735bc3bee7366b5285c40c893f815f1846509",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2f74a29_50a231a0",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-07-24T08:51:51Z",
+      "side": 1,
+      "message": "same here VPD",
+      "revId": "bbd735bc3bee7366b5285c40c893f815f1846509",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7dd404ee_4b34c72d",
         "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
         "patchSetId": 2
@@ -32,6 +83,40 @@
       "side": 1,
       "message": "Acknowledged",
       "parentUuid": "7dd404ee_4b34c72d",
+      "revId": "bbd735bc3bee7366b5285c40c893f815f1846509",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad1b7f5b_75ccc7ce",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-07-24T08:51:51Z",
+      "side": 1,
+      "message": "Can the keyword value be boolean?",
+      "revId": "bbd735bc3bee7366b5285c40c893f815f1846509",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e60ab2c_81a65749",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 1001845
+      },
+      "writtenOn": "2026-07-24T08:51:51Z",
+      "side": 1,
+      "message": "parsing can fail due to ECC exception, so should we throw EccCheckFailed error?\nAnd for  internal failures -\u003e InternalFailure error?",
       "revId": "bbd735bc3bee7366b5285c40c893f815f1846509",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

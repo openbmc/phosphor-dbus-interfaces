@@ -1,0 +1,38 @@
+version: 1.0.0
+
+errors:
+    - name: BiosFrb2PostCodeCaptured
+      severity: critical
+      metadata:
+          - name: DeviceIdentifier
+            type: string
+            primary: true
+            description: The name or identifier of the device.
+          - name: EventType
+            primary: true
+            type: string
+            description: The FRB2 watchdog event type that was reported.
+          - name: PostCodeCount
+            type: size
+            primary: true
+            description: Number of recent POST codes captured for this event.
+          - name: LatestPostCode
+            type: string
+            primary: true
+            description:
+                The latest POST code captured before the FRB2 watchdog event.
+          - name: PostCodesCsv
+            type: string
+            primary: true
+            description:
+                Comma-separated recent POST codes captured before the FRB2
+                watchdog event.
+      en:
+          description:
+              A vendor BIOS FRB2 watchdog event occurred and recent POST codes
+              were captured.
+          message:
+              "BIOS FRB2 event '{EventType}' occurred for '{DeviceIdentifier}'
+              with {PostCodeCount} POST codes. Latest POST code is
+              '{LatestPostCode}'. POST codes: {PostCodesCsv}"
+      errno: EIO

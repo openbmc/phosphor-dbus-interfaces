@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4805950e_c3ec9917",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-07-27T18:48:46Z",
+      "side": 1,
+      "message": "It feels like you invented a use of the word just to avoid a verb that is already used by some other association.  Don\u0027t do that.  Just use the natural existing word.",
+      "revId": "70edbce574d33a9f73f6bca0181a2fe7f6e2b61c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf14b865_b6525d1d",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-07-27T18:48:46Z",
+      "side": 1,
+      "message": "I see no reason why these specific Inventory.Items are valid and not all Inventory.Items.  Use Item directly.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 57
+      },
+      "revId": "70edbce574d33a9f73f6bca0181a2fe7f6e2b61c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

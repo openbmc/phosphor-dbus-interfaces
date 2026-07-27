@@ -10,12 +10,18 @@ properties:
       type: enum[self.State]
       description: >
           This indicates the property used to open or close the valve.
+      errors:
+          - xyz.openbmc_project.Common.Error.NotAllowed
 
 enumerations:
     - name: State
       description: >
           This indicates which status should be configured for the valve.
       values:
+          - name: Unknown
+            description: >
+                This indicates the valve state to be configured has not yet been
+                determined.
           - name: Open
             description: >
                 This indicates the valve should be opened.

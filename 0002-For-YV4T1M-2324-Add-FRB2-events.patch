@@ -1,0 +1,163 @@
+From 16b217b0660329ec6682cde19a13c0d4d92a5c6a Mon Sep 17 00:00:00 2001
+From: Andy Hsu <andy.hsu.wiwynn@gmail.com>
+Date: Mon, 27 Jul 2026 05:47:02 +0000
+Subject: [PATCH] For YV4T1M-2324, Add FRB2 events
+
+---
+ gen/com/meta/State/Watchdog/meson.build  | 33 +++++++++++++++
+ gen/com/meta/State/meson.build           | 52 ++++++++++++++++++++++++
+ gen/com/meta/meson.build                 |  1 +
+ yaml/com/meta/State/Watchdog.events.yaml | 30 ++++++++++++++
+ 4 files changed, 116 insertions(+)
+ create mode 100644 gen/com/meta/State/Watchdog/meson.build
+ create mode 100644 gen/com/meta/State/meson.build
+ create mode 100644 yaml/com/meta/State/Watchdog.events.yaml
+
+diff --git a/gen/com/meta/State/Watchdog/meson.build b/gen/com/meta/State/Watchdog/meson.build
+new file mode 100644
+index 0000000..80cb7af
+--- /dev/null
++++ b/gen/com/meta/State/Watchdog/meson.build
+@@ -0,0 +1,33 @@
++# Generated file; do not modify.
++
++sdbusplus_current_path = 'com/meta/State/Watchdog'
++
++generated_sources += custom_target(
++    'com/meta/State/Watchdog__cpp'.underscorify(),
++    input: [
++        '../../../../../yaml/com/meta/State/Watchdog.events.yaml',
++    ],
++    output: [
++        'event.cpp',
++        'event.hpp',
++    ],
++    depend_files: sdbusplusplus_depfiles,
++    command: [
++        sdbuspp_gen_meson_prog,
++        '--command',
++        'cpp',
++        '--output',
++        meson.current_build_dir(),
++        '--tool',
++        sdbusplusplus_prog,
++        '--directory',
++        meson.current_source_dir() / '../../../../../yaml',
++        'com/meta/State/Watchdog',
++    ],
++    install: should_generate_cpp,
++    install_dir: [
++        false,
++        get_option('includedir') / sdbusplus_current_path,
++    ],
++    build_by_default: should_generate_cpp,
++)
+\ No newline at end of file
+diff --git a/gen/com/meta/State/meson.build b/gen/com/meta/State/meson.build
+new file mode 100644
+index 0000000..900587c
+--- /dev/null
++++ b/gen/com/meta/State/meson.build
+@@ -0,0 +1,52 @@
++# Generated file; do not modify.
++subdir('Watchdog')
++
++sdbusplus_current_path = 'com/meta/State'
++
++generated_markdown += custom_target(
++    'com/meta/State/Watchdog__markdown'.underscorify(),
++    input: [
++        '../../../../yaml/com/meta/State/Watchdog.events.yaml',
++    ],
++    output: ['Watchdog.md'],
++    depend_files: sdbusplusplus_depfiles,
++    command: [
++        sdbuspp_gen_meson_prog,
++        '--command',
++        'markdown',
++        '--output',
++        meson.current_build_dir(),
++        '--tool',
++        sdbusplusplus_prog,
++        '--directory',
++        meson.current_source_dir() / '../../../../yaml',
++        'com/meta/State/Watchdog',
++    ],
++    install: should_generate_markdown,
++    install_dir: [inst_markdown_dir / sdbusplus_current_path],
++    build_by_default: should_generate_markdown,
++)
++
++generated_registry += custom_target(
++    'com/meta/State/Watchdog__registry'.underscorify(),
++    input: [
++        '../../../../yaml/com/meta/State/Watchdog.events.yaml',
++    ],
++    output: ['Watchdog.json'],
++    depend_files: sdbusplusplus_depfiles,
++    command: [
++        sdbuspp_gen_meson_prog,
++        '--command',
++        'registry',
++        '--output',
++        meson.current_build_dir(),
++        '--tool',
++        sdbusplusplus_prog,
++        '--directory',
++        meson.current_source_dir() / '../../../../yaml',
++        'com/meta/State/Watchdog',
++    ],
++    install: should_generate_registry,
++    install_dir: [inst_registry_dir / sdbusplus_current_path],
++    build_by_default: should_generate_registry,
++)
+\ No newline at end of file
+diff --git a/gen/com/meta/meson.build b/gen/com/meta/meson.build
+index 36df8d2..bd63acb 100644
+--- a/gen/com/meta/meson.build
++++ b/gen/com/meta/meson.build
+@@ -2,3 +2,4 @@
+ subdir('Hardware')
+ subdir('IPMI')
+ subdir('Inventory')
++subdir('State')
+diff --git a/yaml/com/meta/State/Watchdog.events.yaml b/yaml/com/meta/State/Watchdog.events.yaml
+new file mode 100644
+index 0000000..d1ad987
+--- /dev/null
++++ b/yaml/com/meta/State/Watchdog.events.yaml
+@@ -0,0 +1,30 @@
++version: 1.0.0
++
++errors:
++    - name: BiosFrb2PostCodeCaptured
++      severity: critical
++      metadata:
++          - name: DeviceIdentifier
++            type: string
++            primary: true
++            description: The name or identifier of the device.
++          - name: EventType
++            primary: true
++            type: string
++            description: The FRB2 watchdog event type that was reported.
++          - name: PostCodeCount
++            type: size
++            primary: true
++            description: Number of recent POST codes captured for this event.
++          - name: LatestPostCode
++            type: string
++            primary: true
++            description: The latest POST code captured before the FRB2 watchdog event.
++          - name: PostCodesCsv
++            type: string
++            primary: true
++            description: Comma-separated recent POST codes captured before the FRB2 watchdog event.
++      en:
++          description: A vendor BIOS FRB2 watchdog event occurred and recent POST codes were captured.
++          message: "BIOS FRB2 event '{EventType}' occurred for '{DeviceIdentifier}' with {PostCodeCount} POST codes. Latest POST code is '{LatestPostCode}'. POST codes: {PostCodesCsv}"
++      errno: EIO
+\ No newline at end of file
+-- 
+2.43.0
+

@@ -2,3 +2,4 @@
 subdir('Hardware')
 subdir('IPMI')
 subdir('Inventory')
+subdir('State')

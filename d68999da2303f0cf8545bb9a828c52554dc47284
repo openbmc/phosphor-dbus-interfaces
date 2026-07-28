@@ -63,6 +63,48 @@
       },
       "revId": "d68999da2303f0cf8545bb9a828c52554dc47284",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a774f9e_a0545f10",
+        "filename": "yaml/xyz/openbmc_project/State/Reset.events.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-07-28T22:02:23Z",
+      "side": 1,
+      "message": "@peter.yin@quantatw.com Even i have the same comment at https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/83605/comment/dca865c4_a1d10105/ , I think we should make this clear. Is this going to be Inventory Object Path for the device ? If yes, then lets clearly state this.",
+      "parentUuid": "c8ed7f9b_03e525e4",
+      "range": {
+        "startLine": 9,
+        "startChar": 24,
+        "endLine": 9,
+        "endChar": 67
+      },
+      "revId": "d68999da2303f0cf8545bb9a828c52554dc47284",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4d2cda0_9539f47a",
+        "filename": "yaml/xyz/openbmc_project/State/Reset.events.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-07-28T22:02:23Z",
+      "side": 1,
+      "message": "Marking this as resolved as its already been discussed here https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/83605/comment/6ebf1e74_cb6725d4/ .",
+      "parentUuid": "dca865c4_a1d10105",
+      "revId": "d68999da2303f0cf8545bb9a828c52554dc47284",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

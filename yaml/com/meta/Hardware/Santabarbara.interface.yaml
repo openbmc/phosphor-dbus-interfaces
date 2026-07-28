@@ -27,6 +27,9 @@ enumerations:
       description: >
           The compatible hardware strings for the VR on Santabarbara.
       values:
+          - name: MAX20912_pvddcr_soc_p0
+          - name: MAX20912_pvddcr_cpu1_p0
+          - name: MAX20916_pvddcr_cpu0_p0
           - name: MP29612_pvddcr_soc_p0
           - name: MP29612_pvddcr_cpu1_p0
           - name: MP2869_pvddcr_cpu0_p0
@@ -40,6 +43,7 @@ enumerations:
           - name: RAA229640_pvddcr_cpu1_p0
           - name: RAA229640_pvddcr_soc_p0
           - name: TDA38640A_pvdd18_s5
+          - name: TPS25990_p12v_aux
           - name: XDPE19284C_p0v81_pex_0
           - name: XDPE19284C_p0v81_pex_1
 

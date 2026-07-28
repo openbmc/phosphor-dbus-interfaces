@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "257a0878_642f6716",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-07-28T05:31:24Z",
+      "side": 1,
+      "message": "Thanks for Acknowledging.\nI have switched to `monitoring` / `monitored_by`, aligned with `Leak.Detector` in PS5.",
+      "parentUuid": "4805950e_c3ec9917",
+      "revId": "70edbce574d33a9f73f6bca0181a2fe7f6e2b61c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cf14b865_b6525d1d",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-07-27T18:48:46Z",
       "side": 1,
       "message": "I see no reason why these specific Inventory.Items are valid and not all Inventory.Items.  Use Item directly.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 57
+      },
+      "revId": "70edbce574d33a9f73f6bca0181a2fe7f6e2b61c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eef2fc6b_5f06d5d3",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-07-28T05:31:24Z",
+      "side": 1,
+      "message": "Understood. \nSwitch to inventory item in PS5.",
+      "parentUuid": "cf14b865_b6525d1d",
       "range": {
         "startLine": 19,
         "startChar": 0,

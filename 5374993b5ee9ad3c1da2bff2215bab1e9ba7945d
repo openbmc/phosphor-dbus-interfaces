@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e9adf70_71571f2d",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-07-29T02:39:14Z",
+      "side": 1,
+      "message": "Is this expected to preserve accross BMC reboots?",
+      "revId": "5374993b5ee9ad3c1da2bff2215bab1e9ba7945d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "609c255d_155ee837",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-07-29T02:39:14Z",
+      "side": 1,
+      "message": "Are clients who use this property expected to wait after receiving a property change signal that indicates a change in Value but not in UpdatedTime?\n\nIs the sensor app supposed to update both properties atomically?",
+      "revId": "5374993b5ee9ad3c1da2bff2215bab1e9ba7945d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81535ba8_333a02ca",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-07-29T02:39:14Z",
+      "side": 1,
+      "message": "If a service fails to read the sensor, is it supposed to modify prior UpdateTime valur or not?",
+      "range": {
+        "startLine": 50,
+        "startChar": 65,
+        "endLine": 50,
+        "endChar": 70
+      },
+      "revId": "5374993b5ee9ad3c1da2bff2215bab1e9ba7945d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

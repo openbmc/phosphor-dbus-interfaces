@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc6db064_4facf5bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-07-29T08:27:41Z",
+      "side": 1,
+      "message": "somehow the entity-manager side of this change already got merged\n\nhttps://gerrit.openbmc.org/c/openbmc/entity-manager/+/77350\n\nwhile the PDI change is still pending, so it\u0027s mismatched currently.\n\nIMO either we should add this interface to the PDI or remove it from EM.",
+      "revId": "604b2ae886194e4a3c45a83e32c67076ddca120b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

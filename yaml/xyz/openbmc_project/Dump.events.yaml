@@ -1,0 +1,20 @@
+version: 1.0.1
+
+events:
+    - name: DumpCreated
+      metadata:
+          - name: EntityIdentifier
+            description: The name or identifier of the entity generating a dump
+            type: object_path
+            primary: true
+          - name: Context
+            description:
+                An [optional] context of the circumstances under which the dump
+                was generated.
+            type: string
+      en:
+          description:
+              A event indicating that a monitoring service has finish creating a
+              dump for the identified entity (Represented as the DBus object
+              path of the entity's inventory)
+          message: "Dump created for '{EntityIdentifier}'"

@@ -1,0 +1,25 @@
+description: >
+    Implement to describe the entity manager configuration an object was created
+    from: what it is, and the condition that matched it.
+
+properties:
+    - name: Name
+      type: string
+      description: >
+          The name of the configuration.
+      flags:
+          - readonly
+    - name: Type
+      type: string
+      description: >
+          The type of the configuration.
+      flags:
+          - readonly
+    - name: Probe
+      type: array[string]
+      description: >
+          The probe statements that were evaluated to decide whether the
+          configuration applies, for example a match against the properties of a
+          D-Bus object.
+      flags:
+          - readonly

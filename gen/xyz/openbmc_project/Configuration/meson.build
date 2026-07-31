@@ -3,6 +3,7 @@ subdir('AnalogValve')
 subdir('GPIODeviceDetect')
 subdir('GPIOLeakDetector')
 subdir('GPIOValve')
+subdir('Platform')
 subdir('SpdmTcpResponder')
 subdir('USBPort')
 
@@ -98,6 +99,30 @@ generated_markdown += custom_target(
         '--directory',
         meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Configuration/GPIOValve',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/Configuration/Platform__markdown'.underscorify(),
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Configuration/Platform.interface.yaml',
+    ],
+    output: ['Platform.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Configuration/Platform',
     ],
     install: should_generate_markdown,
     install_dir: [inst_markdown_dir / sdbusplus_current_path],

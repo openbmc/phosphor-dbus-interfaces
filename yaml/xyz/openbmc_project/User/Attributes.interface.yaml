@@ -10,6 +10,7 @@ properties:
           Groups to which the user belong.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
     - name: UserPrivilege
       type: string

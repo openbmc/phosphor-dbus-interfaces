@@ -1,0 +1,18 @@
+description: >
+    Implement this interface on objects that retain an OpenPOWER Platform Event
+    Log (PEL) identifier. The identifier is copied metadata and does not require
+    the corresponding PEL D-Bus object to remain present.
+
+properties:
+    - name: PELID
+      type: uint32
+      default: 0
+      flags:
+          - readonly
+      description: >
+          The 32-bit Entry ID (EID) of the Platform Event Log related to this
+          object. This is the PEL ID, not the OpenBMC logging entry ID or the
+          PEL Platform Log ID (PLID). The value remains as recorded metadata
+          even if the PEL is offloaded or purged; it does not guarantee that a
+          corresponding PEL D-Bus object exists. A value of zero indicates that
+          no PEL ID is available.

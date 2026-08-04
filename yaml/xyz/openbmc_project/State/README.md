@@ -1,4 +1,4 @@
-# BMC, Host, and Chassis State Management
+# BMC, Host, Chassis, and Device State Management
 
 ## Overview
 
@@ -11,8 +11,8 @@ reboot the BMC and hosts, and turn on and off power to the chassis. The
 interfaces are designed in a way to support a many to many mappings of each
 interface.
 
-There are three states to track and control on a BMC based server. The states
-below in () represent the actual parameter name as found in
+There are three primary states to track and control on a BMC based server. The
+states below in () represent the actual parameter name as found in
 `/xyz/openbmc_project/state/`+`/bmcX,/hostY,/chassisZ` where X,Y,Z are the
 instances (in most cases 0). For all three states, the software tracks a current
 state, and a requested transition.
@@ -36,6 +36,10 @@ state, and a requested transition.
 
 A simple system design would be to include a single _BMC_, _Host_, and
 _Chassis_.
+
+In addition to the primary platform states above, a _Device_ state interface can
+be implemented for a sub-device whose power the BMC controls on its own, such as
+a drive or a NIC.
 
 Details of the properties and their valid settings can be found in the state
 manager dbus interface [specification][2].
@@ -66,6 +70,25 @@ complete system.
 In multi-host or multi-chassis system, instance number can be used from 1-N, as
 0 is reserved for complete system. In multi chassis system this can be named as
 chassis_system1 to chassis_systemN
+
+### _Device_
+
+The _Device_ would provide interfaces at
+`/xyz/openbmc_project/state/device/<instance>`
+
+A _Device_ is a sub-device that the BMC can power or reset on its own,
+separately from the BMC, host and chassis states above. Drives and NICs are
+examples, but the interface is not specific to a device type. A client requests
+a power operation by writing `RequestedDeviceTransition`, and reads the
+resulting power state from `CurrentDeviceState`.
+
+Which transitions a device can serve is hardware dependent, so each instance
+declares its own set in `AllowedDeviceTransitions`. A request that the device
+cannot serve in its current state is rejected with
+`xyz.openbmc_project.Common.Error.NotAllowed`. Where a device draws its power
+from another entity, for example a device that cannot be on while the host that
+owns it is off, the device reports (Off) and uses that error to reject a request
+to turn it (On).
 
 ## BMC to Host to Chassis Mapping
 

@@ -59,3 +59,11 @@ associations:
       reverse_name: powering
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.PowerSupply
+    - name: monitored_by
+      description: >
+          Objects implementing Inventory.Item.Chassis can optionally implement
+          the 'managed_by' association to link to the corresponding chassis
+          state object.
+      reverse_name: monitoring
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.State.Chassis

@@ -96,3 +96,13 @@ paths:
       segments:
           - name: Chassis
             value: chassis
+
+associations:
+    - name: inventory
+      description: >
+          Objects implementing State.Chassis can optionally implement the
+          'inventory' association to link to the corresponding inventory
+          chassis item.
+      reverse_name: state
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Chassis

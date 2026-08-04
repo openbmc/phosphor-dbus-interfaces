@@ -1,0 +1,78 @@
+description: >
+    Implement to provide sub-device power state management.
+
+properties:
+    - name: RequestedDeviceTransition
+      type: enum[self.Transition]
+      default: "None"
+      description: >
+          The desired device transition. Writing a value will initiate the
+          corresponding power operation on the device.
+      errors:
+          - xyz.openbmc_project.State.Device.Error.BMCNotReady
+          - xyz.openbmc_project.Common.Error.NotAllowed
+
+    - name: AllowedDeviceTransitions
+      type: set[enum[self.Transition]]
+      flags:
+          - const
+      description: >
+          A const property describing the allowed device transitions. Different
+          device types and platforms may support different subsets of transitions.
+          If this property is empty then all transitions are supported.
+
+    - name: CurrentDeviceState
+      type: enum[self.DeviceState]
+      default: "Unknown"
+      description: >
+          A read-only property describing the current state of the device.
+      flags:
+          - readonly
+
+enumerations:
+    - name: Transition
+      description: >
+          The desired transition for a device
+      values:
+          - name: "On"
+            description: >
+                The device should be powered on.
+          - name: "Off"
+            description: >
+                The device should be powered off.
+          - name: "Reboot"
+            description: >
+                The device should be rebooted.
+          - name: "HardReboot"
+            description: >
+                The device should be non-gracefully rebooted.
+          - name: "Powercycle"
+            description: >
+                The device should be powercycled (power off then on).
+          - name: "None"
+            description: >
+                No transition is in progress.
+
+    - name: DeviceState
+      description: >
+          The current state of the device
+      values:
+          - name: "Unknown"
+            description: >
+                The device state is unknown.
+          - name: "Ready"
+            description: >
+                The device is powered on and ready.
+          - name: "NotReady"
+            description: >
+                The device is not ready. It may be powered off or in a
+                transitional state.
+          - name: "UpdateInProgress"
+            description: >
+                The device is in firmware update mode.
+
+paths:
+    - namespace: /xyz/openbmc_project/state
+      segments:
+          - name: Device
+            value: device

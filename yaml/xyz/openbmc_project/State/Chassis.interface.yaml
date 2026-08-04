@@ -96,3 +96,13 @@ paths:
       segments:
           - name: Chassis
             value: chassis
+
+associations:
+    - name: managing
+      description: >
+          Objects implementing State.Chassis can optionally implement the
+          'managing' association to link to the corresponding inventory
+          chassis item.
+      reverse_name: managed_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.Chassis

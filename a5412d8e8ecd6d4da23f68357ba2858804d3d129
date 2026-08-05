@@ -52,6 +52,24 @@
       "parentUuid": "2851e428_b408f49f",
       "revId": "a5412d8e8ecd6d4da23f68357ba2858804d3d129",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c2e04b1_61efd29a",
+        "filename": "yaml/xyz/openbmc_project/Control/Valve.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1002520
+      },
+      "writtenOn": "2026-08-05T08:22:50Z",
+      "side": 1,
+      "message": "Thanks for the feedback. I’ve reworked the implementation so that the control interface is created only after the first valid feedback reading is available:\nhttps://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/92500\n\nCould you please help review this change as well?",
+      "parentUuid": "b58a7c75_836f37c7",
+      "revId": "a5412d8e8ecd6d4da23f68357ba2858804d3d129",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

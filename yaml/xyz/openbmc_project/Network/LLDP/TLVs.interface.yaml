@@ -1,0 +1,214 @@
+description: >
+    The TLVs of the most recent Link Layer Discovery Protocol frame, as defined
+    by IEEE 802.1AB-2016, in one direction on one port. The frame has the format
+    of section 8.2, and this interface carries the basic TLVs of section 8.5
+    rather than the organizationally specific ones of section 8.6. A frame
+    received from a peer identifies the device at the far end of the link, which
+    lets a consumer verify the physical topology; a transmitted frame carries
+    the identity the peer sees.
+
+    Each direction is a separate object because a port holds an independent
+    frame per direction, which the standard keeps apart as the local system and
+    remote systems information (section 10.5.3). The objects reach the port they
+    describe through the 'monitoring' association.
+
+    A property that the frame did not carry holds its default value, and every
+    property holds its default when the port holds no frame in this direction.
+    That happens when the agent is disabled for the direction, when the link is
+    down, when the peer sends no LLDP, or when the time to live of the last
+    frame expired. A consumer that needs to tell those cases apart reads the
+    mode from the xyz.openbmc_project.Network.LLDP.Configuration object that the
+    'controlled_by' association of the port leads to, or of its network adapter
+    when the agent is configured for the whole device.
+
+properties:
+    - name: ChassisId
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The chassis identifier the frame carries in its chassis ID TLV
+          (section 8.5.2), formatted according to ChassisIdSubtype. A consumer
+          that compares identifiers pairs the two properties; the string on its
+          own is for human consumption.
+    - name: ChassisIdSubtype
+      type: enum[self.IdSubtype]
+      default: NotTransmitted
+      flags:
+          - readonly
+      description: >
+          The chassis ID subtype of the frame (table 8-2), which says what kind
+          of identifier ChassisId holds and so how it is formatted. A MacAddr or
+          NetworkAddr identifier is binary and is formatted as hexadecimal
+          octets separated by colons; an identifier of any other subtype is
+          text. NotTransmitted when the port holds no frame in this direction or
+          the frame carried a subtype the table reserves.
+    - name: Direction
+      type: enum[self.Direction]
+      flags:
+          - readonly
+      description: >
+          Whether this object holds the frame the peer sent or the frame the
+          local device transmits, the remote systems or the local system
+          information of section 10.5.3. A consumer distinguishes the two
+          objects of a port by this property rather than by their object paths.
+    - name: ManagementAddressIPv4
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The first IPv4 management address the frame carries in a management
+          address TLV (section 8.5.9).
+    - name: ManagementAddressIPv6
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The first IPv6 management address the frame carries in a management
+          address TLV (section 8.5.9).
+    - name: ManagementAddressMAC
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The first IEEE 802 MAC management address the frame carries in a
+          management address TLV (section 8.5.9).
+    - name: PortId
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The port identifier the frame carries in its port ID TLV (section
+          8.5.3), formatted according to PortIdSubtype. A consumer that compares
+          identifiers pairs the two properties; the string on its own is for
+          human consumption.
+    - name: PortIdSubtype
+      type: enum[self.IdSubtype]
+      default: NotTransmitted
+      flags:
+          - readonly
+      description: >
+          The port ID subtype of the frame (table 8-3), which says what kind of
+          identifier PortId holds and so how it is formatted. A MacAddr or
+          NetworkAddr identifier is binary and is formatted as hexadecimal
+          octets separated by colons; an identifier of any other subtype is
+          text. NotTransmitted when the port holds no frame in this direction or
+          the frame carried a subtype the table reserves.
+    - name: SystemCapabilities
+      type: array[enum[self.SystemCapability]]
+      flags:
+          - readonly
+      description: >
+          The primary functions of the device the frame describes, from the
+          system capabilities field of its system capabilities TLV (section
+          8.5.8.1). Only the functions of bits 1 through 8 of table 8-4 are
+          reported. Empty when the frame carried no system capabilities TLV.
+    - name: SystemDescription
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          A description of the device the frame describes, from its system
+          description TLV (section 8.5.7), which can be shown in user interfaces
+          but should not be used for any programmatic interrogation of an
+          object.
+    - name: SystemName
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The name of the device the frame describes, from its system name TLV
+          (section 8.5.6), which can be shown in user interfaces but should not
+          be used for any programmatic interrogation of an object.
+
+enumerations:
+    - name: Direction
+      description: >
+          Which of the two frames a port holds this object describes.
+      values:
+          - name: Received
+            description: >
+                The frame most recently received from the peer.
+          - name: Transmitted
+            description: >
+                The frame the local device transmits to the peer.
+    - name: IdSubtype
+      description: >
+          The format of a chassis or port identifier, as enumerated by IEEE
+          802.1AB-2016 tables 8-2 and 8-3. The two tables number the formats
+          differently, so a value is named rather than numbered.
+      values:
+          - name: AgentId
+            description: >
+                An agent circuit identifier.
+          - name: ChassisComp
+            description: >
+                A chassis component, as named in the entity MIB.
+          - name: IfAlias
+            description: >
+                An interface alias.
+          - name: IfName
+            description: >
+                An interface name.
+          - name: LocalAssign
+            description: >
+                A value assigned locally by the sender.
+          - name: MacAddr
+            description: >
+                An IEEE 802 MAC address.
+          - name: NetworkAddr
+            description: >
+                A network address, prefixed by its address family.
+          - name: NotTransmitted
+            description: >
+                The frame carried no identifier of this kind.
+          - name: PortComp
+            description: >
+                A port component, as named in the entity MIB.
+    - name: SystemCapability
+      description: >
+          A primary function a device performs, as enumerated by IEEE
+          802.1AB-2016 table 8-4.
+      values:
+          - name: Bridge
+            description: >
+                The device bridges frames between its ports.
+          - name: DOCSISCableDevice
+            description: >
+                The device is a DOCSIS cable device.
+          - name: None
+            description: >
+                The device declares no capability.
+          - name: Other
+            description: >
+                The device performs a function none of the other values names.
+          - name: Repeater
+            description: >
+                The device repeats what it receives.
+          - name: Router
+            description: >
+                The device routes packets between networks.
+          - name: Station
+            description: >
+                The device is an end station and forwards nothing.
+          - name: Telephone
+            description: >
+                The device is a telephone.
+          - name: WLANAccessPoint
+            description: >
+                The device is a wireless access point.
+
+associations:
+    - name: monitoring
+      description: >
+          The port whose LLDP frame this object describes.
+      reverse_name: monitored_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Connector.Port

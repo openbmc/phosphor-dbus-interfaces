@@ -22,6 +22,8 @@ interface object.
 4. IPProtocol: This describes the IP protocol type(IPv4/IPv6).
 5. VLANInterface: This describes the VLAN specific properties.
 6. Bond: This describes the interface bonding parameters.
+7. LLDP.Configuration: This describes the LLDP agent configuration of a network
+   port or device.
 
 ## D-Bus Objects
 

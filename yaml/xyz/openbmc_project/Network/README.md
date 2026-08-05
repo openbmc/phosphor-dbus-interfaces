@@ -32,6 +32,7 @@ they describe with an association.
 6. Bond: This describes the interface bonding parameters.
 7. LLDP.Configuration: This describes the LLDP agent configuration of a network
    device.
+8. LLDP.TLVs: This describes the TLVs of an LLDP frame observed on a port.
 
 ## D-Bus Objects
 

@@ -1,0 +1,63 @@
+description: >
+    Configuration of the Link Layer Discovery Protocol (LLDP) agent, as defined
+    by IEEE 802.1AB, that a network device implements. Transmit and receive are
+    configured independently because a device may advertise its own identity
+    without consuming the frames a peer sends to it, or the reverse.
+
+    An implementation whose hardware offers no per-port control applies this
+    configuration to every port of the device, and so hosts this interface on an
+    object representing the device rather than one representing a port. The
+    object is not part of the inventory hierarchy; it links to the network
+    adapter it configures through the 'controlling' association.
+
+properties:
+    - name: ReceiveMode
+      type: enum[self.Mode]
+      default: Disabled
+      description: >
+          Which TLVs the device retains from the LLDP frames a peer sends to it.
+          While this is anything other than Disabled the device consumes those
+          frames, so they no longer reach the host network stack and a host that
+          runs its own LLDP agent stops discovering neighbors. An implementation
+          rejects a value that would leave a protocol layered on top of LLDP,
+          such as DCBX, without the TLVs that protocol requires.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
+    - name: TransmitMode
+      type: enum[self.Mode]
+      default: Disabled
+      description: >
+          Which TLVs the device includes in the LLDP frames it transmits. This
+          governs only the frames the device itself originates and does not stop
+          a host from transmitting frames of its own. An implementation rejects
+          a value that would leave a protocol layered on top of LLDP, such as
+          DCBX, without the TLVs that protocol requires.
+      errors:
+          - xyz.openbmc_project.Common.Error.Unavailable
+
+enumerations:
+    - name: Mode
+      description: >
+          The set of TLVs an LLDP agent processes in one direction.
+      values:
+          - name: Disabled
+            description: >
+                The agent is inactive in this direction. It originates no frames
+                when transmitting and retains nothing when receiving.
+          - name: Mandatory
+            description: >
+                Only the TLVs that IEEE 802.1AB requires every LLDPDU to carry
+                are processed: the chassis identifier, the port identifier and
+                the time to live.
+          - name: All
+            description: >
+                Every TLV is processed, including the optional ones and the
+                organizationally specific ones.
+
+associations:
+    - name: controlling
+      description: >
+          The network adapter whose LLDP agent this object configures.
+      reverse_name: controlled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.NetworkAdapter

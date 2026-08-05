@@ -1,0 +1,197 @@
+description: >
+    The TLVs of the most recent Link Layer Discovery Protocol frame, as defined
+    by IEEE 802.1AB, in one direction on one port. A frame received from a peer
+    identifies the device at the far end of the link, which lets a consumer
+    verify the physical topology; a transmitted frame carries the identity the
+    peer sees.
+
+    Each direction is a separate object because a port holds an independent
+    frame per direction. The objects are not inventory items, so they live
+    outside the inventory hierarchy and reach the port they describe through the
+    'monitoring' association.
+
+    A property that the frame did not carry holds its default value, and every
+    property holds its default when the port holds no frame in this direction.
+    That happens when the agent is disabled for the direction, when the link is
+    down, when the peer sends no LLDP, or when the time to live of the last
+    frame expired. A consumer that needs to tell those cases apart reads the
+    mode from the LLDP configuration of the adapter the port belongs to.
+
+properties:
+    - name: ChassisId
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The chassis identifier the frame carries, formatted according to
+          ChassisIdSubtype. A consumer that compares identifiers pairs the two
+          properties; the string on its own is for human consumption.
+    - name: ChassisIdSubtype
+      type: enum[self.IdSubtype]
+      default: NotTransmitted
+      flags:
+          - readonly
+      description: >
+          How to interpret ChassisId.
+    - name: Direction
+      type: enum[self.Direction]
+      flags:
+          - readonly
+      description: >
+          Whether this object holds the frame the peer sent or the frame the
+          local device transmits. A consumer distinguishes the two objects of a
+          port by this property rather than by their object paths.
+    - name: ManagementAddressIPv4
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The first IPv4 management address the frame carries.
+    - name: ManagementAddressIPv6
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The first IPv6 management address the frame carries.
+    - name: ManagementAddressMAC
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The first IEEE 802 MAC management address the frame carries.
+    - name: ManagementVlanId
+      type: uint64
+      default: maxint
+      flags:
+          - readonly
+      description: >
+          The port VLAN identifier the frame carries in the IEEE 802.1
+          organizationally specific TLV. The default indicates the frame carried
+          no such TLV.
+    - name: PortId
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The port identifier the frame carries, formatted according to
+          PortIdSubtype. A consumer that compares identifiers pairs the two
+          properties; the string on its own is for human consumption.
+    - name: PortIdSubtype
+      type: enum[self.IdSubtype]
+      default: NotTransmitted
+      flags:
+          - readonly
+      description: >
+          How to interpret PortId.
+    - name: SystemCapabilities
+      type: array[enum[self.SystemCapability]]
+      flags:
+          - readonly
+      description: >
+          The primary functions of the device the frame describes. Empty when
+          the frame carried no capabilities TLV.
+    - name: SystemDescription
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          A description of the device the frame describes, which can be shown in
+          user interfaces but should not be used for any programmatic
+          interrogation of an object.
+    - name: SystemName
+      type: string
+      default: ""
+      flags:
+          - readonly
+      description: >
+          The name of the device the frame describes, which can be shown in user
+          interfaces but should not be used for any programmatic interrogation
+          of an object.
+
+enumerations:
+    - name: Direction
+      description: >
+          Which of the two frames a port holds this object describes.
+      values:
+          - name: Received
+            description: >
+                The frame most recently received from the peer.
+          - name: Transmitted
+            description: >
+                The frame the local device transmits to the peer.
+    - name: IdSubtype
+      description: >
+          The format of a chassis or port identifier, as enumerated by IEEE 802.
+      values:
+          - name: AgentId
+            description: >
+                An agent circuit identifier.
+          - name: ChassisComp
+            description: >
+                A chassis component, as named in the entity MIB.
+          - name: IfAlias
+            description: >
+                An interface alias.
+          - name: IfName
+            description: >
+                An interface name.
+          - name: LocalAssign
+            description: >
+                A value assigned locally by the sender.
+          - name: MacAddr
+            description: >
+                An IEEE 802 MAC address.
+          - name: NetworkAddr
+            description: >
+                A network address, prefixed by its address family.
+          - name: NotTransmitted
+            description: >
+                The frame carried no identifier of this kind.
+          - name: PortComp
+            description: >
+                A port component, as named in the entity MIB.
+    - name: SystemCapability
+      description: >
+          A primary function a device performs, as enumerated by IEEE 802.1AB.
+      values:
+          - name: Bridge
+            description: >
+                The device bridges frames between its ports.
+          - name: DOCSISCableDevice
+            description: >
+                The device is a DOCSIS cable device.
+          - name: None
+            description: >
+                The device declares no capability.
+          - name: Other
+            description: >
+                The device performs a function none of the other values names.
+          - name: Repeater
+            description: >
+                The device repeats what it receives.
+          - name: Router
+            description: >
+                The device routes packets between networks.
+          - name: Station
+            description: >
+                The device is an end station and forwards nothing.
+          - name: Telephone
+            description: >
+                The device is a telephone.
+          - name: WLANAccessPoint
+            description: >
+                The device is a wireless access point.
+
+associations:
+    - name: monitoring
+      description: >
+          The port whose LLDP frame this object describes.
+      reverse_name: monitored_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Connector.Port

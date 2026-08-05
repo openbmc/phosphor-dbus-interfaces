@@ -65,3 +65,11 @@ associations:
           - xyz.openbmc_project.Inventory.Item.FabricAdapter
           - xyz.openbmc_project.Inventory.Item.PCIeSwitch
           - xyz.openbmc_project.Inventory.Item.NetworkAdapter
+    - name: monitored_by
+      description: >
+          Objects that implement Port can optionally implement the monitored_by
+          association to provide a link to one or more objects that observe the
+          link layer state of the port.
+      reverse_name: monitoring
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Network.LLDP.TLVs

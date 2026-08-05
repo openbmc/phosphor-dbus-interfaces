@@ -14,6 +14,14 @@ physical link/virtual interfaces such as
 IP address(v4 and v6) objects must be children objects of the physical/virtual
 interface object.
 
+Not every interface in this namespace belongs to the network manager. The LLDP
+interfaces describe a link layer protocol rather than a network interface the
+BMC owns, so a daemon other than the network manager may implement them; for
+example a daemon that reads the LLDP state of a remote network adapter over a
+sideband transport. Such a daemon places its objects outside the
+`/xyz/openbmc_project/network` hierarchy and links them to the inventory objects
+they describe with an association.
+
 ## Interfaces
 
 1. SystemConfiguration: This describes the system-specific parameters.
@@ -22,6 +30,8 @@ interface object.
 4. IPProtocol: This describes the IP protocol type(IPv4/IPv6).
 5. VLANInterface: This describes the VLAN specific properties.
 6. Bond: This describes the interface bonding parameters.
+7. LLDP.Configuration: This describes the LLDP agent configuration of a network
+   device.
 
 ## D-Bus Objects
 

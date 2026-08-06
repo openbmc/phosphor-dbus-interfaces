@@ -16,6 +16,40 @@
       "message": "LGTM",
       "revId": "1bb9e2c93291f51e32d2729eccff850e22c7ed43",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b86779d5_d9234578",
+        "filename": "yaml/xyz/openbmc_project/Logging/Settings.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-08-06T21:27:33Z",
+      "side": 1,
+      "message": "I don\u0027t think this has to be \"oldest\" always but rather \"older\" as the eviction policy can be different than FIFO in case of circular.",
+      "revId": "1bb9e2c93291f51e32d2729eccff850e22c7ed43",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66da199e_d9e18693",
+        "filename": "yaml/xyz/openbmc_project/Logging/Settings.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-08-06T21:27:33Z",
+      "side": 1,
+      "message": "Same as above, better to use \"older\" rather than \"oldest\".",
+      "revId": "1bb9e2c93291f51e32d2729eccff850e22c7ed43",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

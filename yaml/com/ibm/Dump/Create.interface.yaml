@@ -40,6 +40,11 @@ enumerations:
             description: >
                 Path to the collected dump files, currently used by SBE dump
                 creation.
+          - name: "PELID"
+            description: >
+                The 32-bit PEL Entry ID (EID) associated with the event that
+                triggered the dump. Replaces ErrorLogId. The value should be a
+                32-bit unsigned integer.
 
     - name: SBEDumpTriggerType
       description: >

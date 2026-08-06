@@ -95,6 +95,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cec6c89_403e2116",
+        "filename": "yaml/xyz/openbmc_project/Metric/Threshold.events.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-08-06T18:44:38Z",
+      "side": 1,
+      "message": "As per our offline discussion changing this one to an object_path as the trigger example from above can itself be an object_path for a metric or something similar. The user facing agents can do similar processing for this object_path as they would do for other similar type properties.",
+      "parentUuid": "c85bf176_683cbe8c",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 24
+      },
+      "revId": "175e3b1aaeda3841f8f4533fa298a0400dc6afb3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e5ee7e99_3dfd2699",

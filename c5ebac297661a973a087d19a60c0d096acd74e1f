@@ -16,6 +16,24 @@
       "message": "\"\u003e\" should not be used for type?",
       "revId": "c5ebac297661a973a087d19a60c0d096acd74e1f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "051278d8_7c1aaae2",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 1000353
+      },
+      "writtenOn": "2026-08-06T13:38:39Z",
+      "side": 1,
+      "message": "but (\"type:\"s) it\u0027s data is in multiple line. we need it.\nIt is not in any of type before because it is small and written next to it.\nHere due to variant and couldn\u0027t write it next to it. \nSo need \"\u003e\"",
+      "parentUuid": "5dc7901d_991c590e",
+      "revId": "c5ebac297661a973a087d19a60c0d096acd74e1f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

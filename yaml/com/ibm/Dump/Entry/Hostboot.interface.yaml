@@ -7,7 +7,9 @@ description: >
 properties:
     - name: ErrorLogId
       type: uint32
+      deprecated: true
       description: >
+          Deprecated. Use org.open_power.Logging.PEL.PELID.PELID instead.
           The identifier of the log entry associated with the action which
           triggered the dump. This is a 32-bit unsigned integer that links the
           dump to a specific error log.

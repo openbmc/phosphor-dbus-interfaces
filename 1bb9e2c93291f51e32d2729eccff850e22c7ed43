@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f50743f_56800805",
+        "filename": "yaml/xyz/openbmc_project/Logging/Settings.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-08-07T05:14:00Z",
+      "side": 1,
+      "message": "Done. Changed \"oldest\" to \"older\" in the property description. Agreed — the eviction order is not guaranteed to be strictly FIFO in all cases.",
+      "parentUuid": "b86779d5_d9234578",
+      "revId": "1bb9e2c93291f51e32d2729eccff850e22c7ed43",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "66da199e_d9e18693",
@@ -48,6 +66,24 @@
       "writtenOn": "2026-08-06T21:27:33Z",
       "side": 1,
       "message": "Same as above, better to use \"older\" rather than \"oldest\".",
+      "revId": "1bb9e2c93291f51e32d2729eccff850e22c7ed43",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1681a8d9_110be642",
+        "filename": "yaml/xyz/openbmc_project/Logging/Settings.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-08-07T05:14:00Z",
+      "side": 1,
+      "message": "Done. Changed \"oldest\" to \"older\" in the Circular enum value description as well.",
+      "parentUuid": "66da199e_d9e18693",
       "revId": "1bb9e2c93291f51e32d2729eccff850e22c7ed43",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

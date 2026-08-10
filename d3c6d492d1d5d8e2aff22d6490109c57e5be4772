@@ -36,6 +36,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "89b9dfde_ecd0b5b3",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-10T17:35:24Z",
+      "side": 1,
+      "message": "I limited the scope of this API. so this should not longer be an issue.",
+      "parentUuid": "5873f489_11a6adfa",
+      "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a412bf17_9200eaaa",
@@ -83,6 +101,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "366978fb_a7c6c546",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-10T17:35:24Z",
+      "side": 1,
+      "message": "Removed this since I limited the scope for hints.",
+      "parentUuid": "4398507c_7e00e0f4",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 78
+      },
+      "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1c777685_ae041fe1",
@@ -114,6 +156,24 @@
       "side": 1,
       "message": "Hopefully not. I am expecting the caller needs only a few. The primary use case was for search hint which associates a threshold event log to a unique hint. So, in that case we expect only one. But I can see things like, CALLOUT_INVENTORY_PATH etc, where we would need to go through all of them. In that case, yes, if the user is expecting more than a few to just go through all the object paths exposed by the service rather than try to optimize the number of calls.",
       "parentUuid": "1c777685_ae041fe1",
+      "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3c95b23_9e3a3d9f",
+        "filename": "yaml/xyz/openbmc_project/Logging/Manager.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-10T17:35:24Z",
+      "side": 1,
+      "message": "I limited the API for the search hint. we could extend this in the future if such a need arises. But right now, I dont see it. If clients want to do more complex filtering which would require them to filter N \u003e 1 entries out of the total log entries, then they could just do that by using the getSubTree.",
+      "parentUuid": "c08e0ac9_21d7d080",
       "revId": "d3c6d492d1d5d8e2aff22d6490109c57e5be4772",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -16,6 +16,24 @@
       "message": "JSON-formatted string here is in neutral format or it can be in the final JSON format expected at the consumers of the log entries?",
       "revId": "9a19c27f3aeaf03eaa98a576ccaa50599e3a2659",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2427ccdf_e6ec6c4f",
+        "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-08-10T14:48:30Z",
+      "side": 1,
+      "message": "Yes. The proposed decoding service should support conversion and formatting at the OEM decode layer, allowing OEM-specific output in the final consumer-expected JSON format.",
+      "parentUuid": "904a1523_d591fa7d",
+      "revId": "9a19c27f3aeaf03eaa98a576ccaa50599e3a2659",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

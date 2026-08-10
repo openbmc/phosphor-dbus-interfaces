@@ -7,6 +7,7 @@ subdir('IPMI')
 subdir('SEL')
 subdir('Settings')
 subdir('Syslog')
+subdir('extensions')
 
 sdbusplus_current_path = 'xyz/openbmc_project/Logging'
 

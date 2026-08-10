@@ -18,6 +18,41 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "466c2a25_7d43df79",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-10T17:09:12Z",
+      "side": 1,
+      "message": "Not if the value is not preserved across reboots. The semantics and storage of this should match the Value property. If the value is not preserved (from code inspection dbus-sensors, pldm etc do not preserve Value across BMC reboots) then we should not preserve this. Its a meta-data of the Value property.",
+      "parentUuid": "8e9adf70_71571f2d",
+      "revId": "5374993b5ee9ad3c1da2bff2215bab1e9ba7945d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4df56e39_8bc75858",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-10T17:09:12Z",
+      "side": 1,
+      "message": "Should we default to -infinity?",
+      "revId": "5374993b5ee9ad3c1da2bff2215bab1e9ba7945d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "609c255d_155ee837",
@@ -35,6 +70,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "de01bd35_9a628e1b",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-10T17:09:12Z",
+      "side": 1,
+      "message": "If automic updates are possible, then yes thats the most optimal, but I do not believe the current dbus interfaces allows for the updates of two properties automically.\n\nI considered two possibilities:\n1. Service updates UpdatedTime before updating Value -- Risk: client has stale value but thinks it is current with the updatedTime.\n2. Service updates UpdatedTime after updating Value -- Risk: client has current value but might think its stale.\n\nBased on  this I defined the order as (2) since it poses the least risk for the client if they have certain realtime constraints.",
+      "parentUuid": "609c255d_155ee837",
+      "revId": "5374993b5ee9ad3c1da2bff2215bab1e9ba7945d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "81535ba8_333a02ca",
@@ -48,6 +101,30 @@
       "writtenOn": "2026-07-29T02:39:14Z",
       "side": 1,
       "message": "If a service fails to read the sensor, is it supposed to modify prior UpdateTime valur or not?",
+      "range": {
+        "startLine": 50,
+        "startChar": 65,
+        "endLine": 50,
+        "endChar": 70
+      },
+      "revId": "5374993b5ee9ad3c1da2bff2215bab1e9ba7945d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "efccba47_a7039755",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-10T17:09:12Z",
+      "side": 1,
+      "message": "No. If the service fails to read the sensor it can choose to leave the updated time as-is.",
+      "parentUuid": "81535ba8_333a02ca",
       "range": {
         "startLine": 50,
         "startChar": 65,

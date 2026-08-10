@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd47015d_eed85c69",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-08-10T07:03:15Z",
+      "side": 1,
+      "message": "Done. Updated the commit message to state the motivation: Redfish LogService defines an OverWritePolicy property controlling log behavior when capacity is reached; this change adds the corresponding D-Bus enumeration so BMC firmware can configure and reflect that behavior.",
+      "parentUuid": "5ccf6c28_354eb6c5",
+      "revId": "9d1287bb83afe03007c4c53306cc972dc2700216",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c33dceb8_c5478412",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-08-07T15:59:34Z",
       "side": 1,
       "message": "Who decided these are the appropriate ones?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 68
+      },
+      "revId": "9d1287bb83afe03007c4c53306cc972dc2700216",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52ea6c8e_e5a59ee4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-08-10T07:03:15Z",
+      "side": 1,
+      "message": "Done. The two values are derived directly from the Redfish LogService.OverWritePolicy specification, which defines exactly two values: NeverOverWrites (mapped to Linear) and WrapsWhenFull (mapped to Circular). This mapping is now called out explicitly in the commit message.",
+      "parentUuid": "c33dceb8_c5478412",
       "range": {
         "startLine": 14,
         "startChar": 0,

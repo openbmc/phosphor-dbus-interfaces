@@ -4,5 +4,6 @@ properties:
     - name: Available
       type: boolean
       description: >
-          True if the object can be accessed.
+          True if the object can be accessed. An "Available" of false is mapped
+          to a Redfish "Status""State" of "UnavailableOffline"
       default: true

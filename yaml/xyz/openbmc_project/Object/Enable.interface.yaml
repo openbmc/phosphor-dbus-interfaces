@@ -19,7 +19,8 @@ properties:
       type: boolean
       description: >
           Whether the object is enabled or not. Implementation may throw error
-          "NotAllowed" depends on the context how it is used.
+          "NotAllowed" depends on the context how it is used. An "Enabled" of
+          false is mapped to a Redfish "Status""State" of "Disabled"
       default: false
       errors:
           - xyz.openbmc_project.Common.Error.NotAllowed

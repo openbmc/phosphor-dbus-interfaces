@@ -70,6 +70,24 @@
       "parentUuid": "31a11547_bbdcffc8",
       "revId": "a360390eb7dec3ce2721fa9982b8ae5275d0c27b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81717f46_85e25990",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-12T18:31:50Z",
+      "side": 1,
+      "message": "@patrick@stwcx.xyz I am assuming the compatibility/versioning checks would come later. Till then would it be usable to have a yaml/.../Logging/extensions/README.md which talk about how these extensions would be persisted by the logging service and hence we need to ensure the service/clients using this should consider forwards/backwards compatibility and once implemented by the service no changes should be made to the interface and insteasd a new interface should be added with a different version.\n\nAlso considering that, should I proactively name it SearchHint_v1 or something?",
+      "parentUuid": "171ff8cd_ca0a267e",
+      "revId": "a360390eb7dec3ce2721fa9982b8ae5275d0c27b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

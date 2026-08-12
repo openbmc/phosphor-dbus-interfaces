@@ -1,8 +1,10 @@
 description: >
     Implement to indicate what chassis area or device the object implementing
-    this interface applies to. For instance, this could indicate what a sensor
-    reading applies to (examples are "GPU", "Back of the Chassis", etc.) by
-    having this implemented on the object that implements Sensor.Value.
+    this interface applies to. This can be implemented on any object requiring
+    physical context association, such as a sensor reading (e.g., an object
+    implementing Sensor.Value) or an inventory item (e.g., an object
+    implementing Inventory.Item). Examples of context values are "GPU","Back of
+    the Chassis", "Board", etc.
 
 properties:
     - name: Type
@@ -20,7 +22,12 @@ enumerations:
           - name: Accelerator
             description: >
                 An accelerator.
+          - name: Manager
+            description: >
+                A management controller, such as a BMC.
 
 paths:
     - name: Sensors
       value: /xyz/openbmc_project/sensors
+    - name: Inventory
+      value: /xyz/openbmc_project/inventory

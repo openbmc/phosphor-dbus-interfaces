@@ -1,0 +1,57 @@
+version: 1.0.0
+
+description: >
+    Events indicating accelerator error conditions, status changes, and recovery
+    from previously reported conditions.
+
+    A Source object may be provided to associate the resulting log entry with an
+    accelerator inventory object.
+
+errors:
+    - name: AcceleratorFailed
+      severity: error
+      errno: EIO
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: >
+                The inventory object associated with the accelerator.
+
+          - name: FailureType
+            type: string
+            description: >
+                An [optional] identifier of the failure type.
+
+      redfish-mapping: ResourceEvent.ResourceErrorsDetected
+
+    - name: AcceleratorCritical
+      severity: critical
+      errno: EIO
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: >
+                The inventory object associated with the accelerator.
+
+          - name: FailureType
+            type: string
+            description: >
+                An [optional] identifier of the failure type.
+
+      redfish-mapping: ResourceEvent.ResourceStatusChangedCritical
+
+events:
+    - name: AcceleratorRestored
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: >
+                The inventory object associated with the accelerator.
+
+      redfish-mapping: ResourceEvent.ResourceRecovered

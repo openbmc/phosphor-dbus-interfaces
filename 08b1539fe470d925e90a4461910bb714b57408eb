@@ -22,6 +22,30 @@
       },
       "revId": "08b1539fe470d925e90a4461910bb714b57408eb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "beede879_bd3c5ab6",
+        "filename": "yaml/xyz/openbmc_project/State/Accelerator.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-08-12T14:36:41Z",
+      "side": 1,
+      "message": "Currently, AcceleratorFailed maps to ResourceEvent.ResourceErrorsDetected regardless of the log severity. The intent was to indicate that a failure was detected, not necessarily that the resource health transitioned to Critical. If we want to explicitly represent a health state transition to Critical, we could introduce a separate event mapped to ResourceEvent.ResourceStatusChangedCritical",
+      "parentUuid": "29b102ad_0a3b3d52",
+      "range": {
+        "startLine": 27,
+        "startChar": 6,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "08b1539fe470d925e90a4461910bb714b57408eb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

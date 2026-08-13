@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83ba6220_91f15585",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-13T17:51:29Z",
+      "side": 1,
+      "message": "Why isn\u0027t it memory?  There are many things in the chip that could have ECC enabled:\n\n- memory (eg. DDR)\n- busses\n- L2 / L3 caches\n\nWhat is this mode setting describing?  What happens if you want to be able to control any/all of these independently?  I don\u0027t think that having a 1:1 between a \"chip\" and a \"setting\" is a solid plan.",
+      "revId": "d54f060bb8f2cc93d3f3feea48aad7d56b638164",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66b26b08_117d071a",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-13T17:51:29Z",
+      "side": 1,
+      "message": "What is the user supposed to do with this?",
+      "revId": "d54f060bb8f2cc93d3f3feea48aad7d56b638164",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e7ecbc0_46989ae3",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-13T17:51:29Z",
+      "side": 1,
+      "message": "Can you elaborate?",
+      "range": {
+        "startLine": 22,
+        "startChar": 60,
+        "endLine": 23,
+        "endChar": 18
+      },
+      "revId": "d54f060bb8f2cc93d3f3feea48aad7d56b638164",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61139629_2644bc85",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-13T17:51:29Z",
+      "side": 1,
+      "message": "Why isn\u0027t it \"ECC mode\" for a memory?",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 58
+      },
+      "revId": "d54f060bb8f2cc93d3f3feea48aad7d56b638164",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

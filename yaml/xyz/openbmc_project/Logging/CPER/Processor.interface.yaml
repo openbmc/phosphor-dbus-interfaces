@@ -1,0 +1,39 @@
+description: >
+    Provides a common ingress interface for submitting Common Platform Error
+    Record (CPER) content for processing.
+
+    Platform services may submit CPER records or CPER sections for decoding and
+    analysis.
+
+    Implementations may perform CPER decoding, invoke optional analysis
+    frameworks, and integrate with platform event and logging services.
+
+    Ownership of event creation, event lifecycle management, and log persistence
+    remains with downstream consumers.
+
+methods:
+    - name: Process
+      description: >
+          Submit CPER content for decoding and processing.
+
+          The supplied file descriptor shall contain CPER binary data
+          corresponding to the specified content type.
+      parameters:
+          - name: Source
+            type: object_path
+            description: >
+                Inventory object associated with the originating platform
+                component, when known by the producer.
+
+                This information may be used by downstream event and logging
+                services to associate the resulting log entry with a platform
+                component.
+          - name: Type
+            type: enum[xyz.openbmc_project.CPER.Types.ContentType]
+            description: >
+                Identifies whether the submitted content represents a complete
+                CPER record or an individual CPER section.
+          - name: Data
+            type: unixfd
+            description: >
+                File descriptor containing CPER binary data.

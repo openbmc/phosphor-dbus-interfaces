@@ -1,0 +1,56 @@
+description: >
+    Provides a common ingress interface for Common Platform Error Record (CPER)
+    diagnostic data.
+
+    Platform services may submit CPER payloads for decoding and processing.
+    Implementations may perform CPER decoding, invoke optional analysis
+    frameworks, and integrate with platform event and logging services.
+
+    Ownership of event creation, event lifecycle management, and log persistence
+    remains with downstream consumers.
+
+enumerations:
+    - name: PayloadType
+      description: >
+          Format of the submitted CPER payload.
+
+      values:
+          - name: FullRecord
+            description: >
+                A complete Common Platform Error Record containing a CPER record
+                header and one or more error sections.
+
+          - name: SingleSection
+            description: >
+                A standalone Common Platform Error Record section without a CPER
+                record header.
+
+methods:
+    - name: Process
+      description: >
+          Submit CPER diagnostic data for processing.
+
+          The supplied file descriptor shall contain CPER binary data
+          corresponding to the specified payload type.
+
+      parameters:
+          - name: Data
+            type: unixfd
+            description: >
+                File descriptor containing CPER binary data.
+
+          - name: Type
+            type: enum[self.PayloadType]
+            description: >
+                Identifies whether the binary payload represents a complete CPER
+                record or a standalone CPER section.
+
+          - name: Source
+            type: object_path
+            description: >
+                Inventory object associated with the originating platform
+                component, when known by the producer.
+
+                This information may be used by downstream event and logging
+                services to associate the resulting log entry with a platform
+                component.

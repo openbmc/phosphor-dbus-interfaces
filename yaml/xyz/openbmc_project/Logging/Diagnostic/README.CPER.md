@@ -17,6 +17,14 @@ the log entry.
 
 ```text
 +----------------------+
+| CPER Producers       |
++----------------------+
+            |
+            | Process()
+            | Logging.Diagnostic.CPER.Manager
+            |
+            v
++----------------------+
 | CPER Decoder Service |
 +----------------------+
             |
@@ -45,19 +53,34 @@ the log entry.
 The notification event is intentionally lightweight and is not used to transport
 CPER payload data.
 
+## Common Ingress Interface
+
+CPER-producing services may submit diagnostic data through the
+`xyz.openbmc_project.Logging.Diagnostic.CPER.Manager` interface.
+
+The manager provides a common ingestion point for CPER payloads and decouples
+CPER producers from CPER decoding, analysis, event generation, and logging
+implementations.
+
+Submitted payloads consist of CPER binary data and an associated payload type.
+Implementations may decode the payload, preserve the original diagnostic
+artifact, perform optional platform-specific analysis, and generate CPER
+notification events for downstream logging consumers.
+
 ## Producer Flow
 
 A CPER-producing service is expected to:
 
-1. Detect or receive a CPER record.
-2. Maintain the raw CPER binary artifact.
-3. Generate a CPER notification event.
+1. Detect or receive a CPER record or CPER section.
+2. Submit the CPER diagnostic data through the common ingress interface.
+3. Maintain the raw CPER binary artifact for retrieval through the associated
+   log entry.
 4. Provide CPER metadata through the plugin.
 5. Optionally provide decoded OEM metadata.
 
 The plugin supplies metadata used to populate the associated
-`xyz.openbmc_project.Logging.CPER` interface attached to the resulting log
-entry.
+`xyz.openbmc_project.Logging.Diagnostic.CPER` interface attached to the
+resulting log entry.
 
 ## Plugin Expectations
 

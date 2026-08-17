@@ -1,0 +1,23 @@
+description: >
+    Implement to indicate the performance of the object
+properties:
+    - name: Performance
+      type: enum[self.Status]
+      default: Normal
+      description: >
+          The current performance of the object.
+
+enumerations:
+    - name: Status
+      description: >
+          Performance status enum.
+      values:
+          - name: Normal
+            description: >
+                The object runs at its expected performance.
+          - name: Throttled
+            description: >
+                The performance of the object is capped.
+          - name: Degraded
+            description: >
+                The object runs below its expected performance.

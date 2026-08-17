@@ -1,0 +1,12 @@
+description: >
+    Implement to indicate whether the object operates in a degraded mode.
+properties:
+    - name: Degraded
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          True if the object is enabled but operates in a degraded mode, with
+          reduced function or capacity rather than a failure. A "Degraded" of
+          true is mapped to a Redfish "Status""State" of "Degraded".

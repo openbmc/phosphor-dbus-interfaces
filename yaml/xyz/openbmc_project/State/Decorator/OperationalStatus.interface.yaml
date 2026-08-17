@@ -7,3 +7,12 @@ properties:
           The object is functional or not. A "Functional" of false is mapped to
           a Redfish "Status""Health" of "Critical".
       default: false
+    - name: Degraded
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          True if the object is enabled but operates in a degraded mode, with
+          reduced function or capacity rather than a failure. A "Degraded" of
+          true is mapped to a Redfish "Status""State" of "Degraded".

@@ -1,0 +1,11 @@
+description: >
+    Implement to indicate the performance of the object
+properties:
+    - name: Degraded
+      type: boolean
+      default: false
+      flags:
+          - readonly
+      description: >
+          The object is degraded or not. A "Degraded" of true is mapped to a
+          Redfish "Status""State" of "Degraded".

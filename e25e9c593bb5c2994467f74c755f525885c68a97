@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b92debfe_0c7b27cd",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-08-20T05:23:12Z",
+      "side": 1,
+      "message": "Should `from startup` say `since the Epoch`? \nA time measured from startup could not be rendered as Redfish `ReadingTime`, which is a DateTimeOffset.",
+      "range": {
+        "startLine": 48,
+        "startChar": 41,
+        "endLine": 48,
+        "endChar": 48
+      },
+      "revId": "e25e9c593bb5c2994467f74c755f525885c68a97",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "def56425_d70d01a8",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-08-20T05:23:12Z",
+      "side": 1,
+      "message": "Could `successful updates` be defined more precisely? I would expect a poll that succeeds and returns the same reading to update the time as well.",
+      "range": {
+        "startLine": 53,
+        "startChar": 47,
+        "endLine": 53,
+        "endChar": 65
+      },
+      "revId": "e25e9c593bb5c2994467f74c755f525885c68a97",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

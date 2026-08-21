@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59b75dda_e15b2189",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-08-21T10:40:22Z",
+      "side": 1,
+      "message": "Description now states this explicitly and maps to Processor.MemorySummary.ECCModeEnabled, which DMTF defines over all memory associated with the processor collectively.",
+      "parentUuid": "83ba6220_91f15585",
+      "revId": "d54f060bb8f2cc93d3f3feea48aad7d56b638164",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "66b26b08_117d071a",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-08-13T17:51:29Z",
       "side": 1,
       "message": "What is the user supposed to do with this?",
+      "revId": "d54f060bb8f2cc93d3f3feea48aad7d56b638164",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd98981c_c9924921",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-08-21T10:40:22Z",
+      "side": 1,
+      "message": "Kept only Unavailable, which has a defined caller action: retry once the in-flight request completes. Removed the rest as unused.",
+      "parentUuid": "66b26b08_117d071a",
       "revId": "d54f060bb8f2cc93d3f3feea48aad7d56b638164",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -58,6 +94,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbc0861d_57510ceb",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-08-21T10:40:22Z",
+      "side": 1,
+      "message": "Removed the meaningless description.",
+      "parentUuid": "0e7ecbc0_46989ae3",
+      "range": {
+        "startLine": 22,
+        "startChar": 60,
+        "endLine": 23,
+        "endChar": 18
+      },
+      "revId": "d54f060bb8f2cc93d3f3feea48aad7d56b638164",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "61139629_2644bc85",
@@ -71,6 +131,30 @@
       "writtenOn": "2026-08-13T17:51:29Z",
       "side": 1,
       "message": "Why isn\u0027t it \"ECC mode\" for a memory?",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 58
+      },
+      "revId": "d54f060bb8f2cc93d3f3feea48aad7d56b638164",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7bae300_f9494c97",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-08-21T10:40:22Z",
+      "side": 1,
+      "message": "Thanks — I may be missing something, so please let me know if you\u0027d prefer otherwise. My reasoning was to follow the DMTF model: ECCModeEnabled is defined under Processor.MemorySummary, covering all memory associated with the processor collectively. On that basis keeping the endpoint as the processor that owns the memory (Item.Cpu / Item.Accelerator) seemed semantically closer; pointing it at Item.Dimm would lose the \"memory belonging to this processor\" scoping.",
+      "parentUuid": "61139629_2644bc85",
       "range": {
         "startLine": 34,
         "startChar": 0,

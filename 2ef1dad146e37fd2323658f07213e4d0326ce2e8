@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "016d96e3_164c67ca",
+        "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-21T13:42:33Z",
+      "side": 1,
+      "message": "Check the design doc to make sure these match.",
+      "parentUuid": "6822f73b_8f68b7a7",
+      "revId": "2ef1dad146e37fd2323658f07213e4d0326ce2e8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8a00d7c9_4687c250",
         "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
         "patchSetId": 13
@@ -65,6 +83,29 @@
       "writtenOn": "2026-08-21T13:39:55Z",
       "side": 1,
       "message": "Drop.  Extensions cannot have methods.",
+      "revId": "2ef1dad146e37fd2323658f07213e4d0326ce2e8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c3d52bb_1d7a166c",
+        "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-21T13:42:33Z",
+      "side": 1,
+      "message": "This belongs in a separate interface per the design.  We also need an interface for the Extensions.RawCPER.",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 66
+      },
       "revId": "2ef1dad146e37fd2323658f07213e4d0326ce2e8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6822f73b_8f68b7a7",
+        "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-21T13:39:55Z",
+      "side": 1,
+      "message": "Let\u0027s do Logging.Extension.CPER",
+      "revId": "2ef1dad146e37fd2323658f07213e4d0326ce2e8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a00d7c9_4687c250",
+        "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-21T13:39:55Z",
+      "side": 1,
+      "message": "Is an \"empty string\" an indication that it is not available?  Should we be explicit in the documentation.",
+      "revId": "2ef1dad146e37fd2323658f07213e4d0326ce2e8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e20797a_6643a971",
+        "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-21T13:39:55Z",
+      "side": 1,
+      "message": "We need to be clear that the value must be a conforming Redfish value, including an odata reference to an installed schema.",
+      "revId": "2ef1dad146e37fd2323658f07213e4d0326ce2e8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "585cad7a_39bf33a2",
+        "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-21T13:39:55Z",
+      "side": 1,
+      "message": "Drop.  Extensions cannot have methods.",
+      "revId": "2ef1dad146e37fd2323658f07213e4d0326ce2e8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86d12665_15c9cec8",
+        "filename": "yaml/xyz/openbmc_project/Logging/Diagnostic/CPER.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-08-21T13:39:55Z",
+      "side": 1,
+      "message": "I don\u0027t think this is necessary or appropriate here.  The logging entry already has this information (or if it doesn\u0027t it should).  We shouldn\u0027t duplicate it.",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 24
+      },
+      "revId": "2ef1dad146e37fd2323658f07213e4d0326ce2e8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

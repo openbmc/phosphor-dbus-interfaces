@@ -1,0 +1,21 @@
+description: >
+    Provides access to the raw Common Platform Error Record (CPER) binary
+    content associated with a log entry.
+
+    Consumers should treat the returned content as the authoritative CPER
+    artifact corresponding to the log entry.
+
+    Metadata describing the CPER content is exposed through the associated
+    CPERProcessed extension interface.
+
+methods:
+    - name: GetCPERRaw
+      description: >
+          Returns a read-only file descriptor containing the raw CPER binary
+          content associated with the log entry.
+
+      returns:
+          - name: fd
+            type: unixfd
+            description: >
+                Read-only file descriptor containing the CPER binary content.

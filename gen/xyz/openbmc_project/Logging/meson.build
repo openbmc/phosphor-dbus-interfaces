@@ -1,4 +1,5 @@
 # Generated file; do not modify.
+subdir('CPER')
 subdir('Create')
 subdir('Entry')
 subdir('ErrorBlocksTransition')

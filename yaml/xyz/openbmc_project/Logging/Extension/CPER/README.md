@@ -39,6 +39,14 @@ infrastructure during log creation and processing.
 The raw CPER binary represents the original artifact received from the CPER
 producer.
 
+## CPER.Raw Retrieval
+
+The `xyz.openbmc_project.Logging.CPER.Raw` interface provides retrieval of the
+authoritative CPER artifact associated with a log entry.
+
+This interface allows consumers to access persisted CPER content through a
+file-descriptor based retrieval mechanism.
+
 ## Design Notes
 
 - `CPER.Processed` provides processed CPER metadata.

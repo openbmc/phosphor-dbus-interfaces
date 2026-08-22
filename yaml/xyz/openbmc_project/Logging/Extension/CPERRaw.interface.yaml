@@ -1,0 +1,16 @@
+description: >
+    Provides raw Common Platform Error Record (CPER) binary content associated
+    with a log entry.
+
+    This interface is intended to transport CPER content during log creation and
+    processing.
+
+    Metadata describing the CPER content, including whether it represents a
+    complete CPER record or an individual CPER section, is exposed through the
+    associated CPERProcessed extension interface.
+
+properties:
+    - name: Data
+      type: array[byte]
+      description: >
+          Raw CPER binary content associated with the log entry.

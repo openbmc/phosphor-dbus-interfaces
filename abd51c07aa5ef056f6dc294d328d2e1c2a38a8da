@@ -22,6 +22,30 @@
       },
       "revId": "abd51c07aa5ef056f6dc294d328d2e1c2a38a8da",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f84dc81_0d3a502b",
+        "filename": "yaml/xyz/openbmc_project/State/Cper.events.yaml",
+        "patchSetId": 16
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-08-22T04:15:13Z",
+      "side": 1,
+      "message": "Good question. The Error and Information events are not meant to represent CPER severity (Fatal, Recoverable, Corrected, Informational). They are mainly used by phosphor-logging for log priority, retention, and deletion policies.\nThe actual CPER severity remains part of the associated CPER data and log entry metadata, not the Redfish event mapping.\nFor additional context, please refer to the discussion on the original CPER event reveiw:\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/78683/2/yaml/xyz/openbmc_project/State/CPER.events.yaml\n\nI\u0027ve also updated the description to better clarify the scope and make it explicit that the event classification is intended for log lifecycle management and not as a direct representation of CPER severity.",
+      "parentUuid": "afbad493_4fe98cac",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "abd51c07aa5ef056f6dc294d328d2e1c2a38a8da",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

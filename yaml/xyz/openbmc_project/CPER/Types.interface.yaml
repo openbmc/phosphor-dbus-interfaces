@@ -1,0 +1,17 @@
+description: >
+    Common type definitions used by Common Platform Error Record (CPER)
+    interfaces.
+
+enumerations:
+    - name: ContentType
+      description: >
+          Type of CPER content.
+
+      values:
+          - name: CPER
+            description: >
+                A complete Common Platform Error Record.
+
+          - name: CPERSection
+            description: >
+                A Common Platform Error Record section.

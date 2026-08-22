@@ -2,6 +2,7 @@
 subdir('Association')
 subdir('Attestation')
 subdir('BIOSConfig')
+subdir('CPER')
 subdir('Certs')
 subdir('Channel')
 subdir('Chassis')

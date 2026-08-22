@@ -24,6 +24,17 @@ Producers may submit complete CPER records or individual CPER sections.
 Implementations may decode, analyze, and transform submitted content before
 integrating with downstream event and logging services.
 
+### Raw
+
+`xyz.openbmc_project.CPER.Raw`
+
+Provides an interface for extracting the raw CPER content from a `Logging.Entry`
+that has a CPER section. This is provided as an optimization to extract
+potentially large amounts of data so that we are not hosting a large array
+through the `Logging.Extension.CPER.Raw` interface.
+
+## References
+
 For overall CPER architecture, processing flow, and implementation details,
 refer to the [CPER Event Logs][design-doc] design document.
 

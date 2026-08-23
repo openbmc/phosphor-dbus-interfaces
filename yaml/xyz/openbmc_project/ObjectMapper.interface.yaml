@@ -130,11 +130,11 @@ methods:
           association endpoint on associatedPath
       parameters:
           - name: associatedPath
-            type: string
+            type: object_path
             description: >
                 The path where the associated endpoint is fetched from.
           - name: subtree
-            type: string
+            type: object_path
             description: >
                 The subtree path for which the result should be fetched.
           - name: depth

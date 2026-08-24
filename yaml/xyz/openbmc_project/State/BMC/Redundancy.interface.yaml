@@ -161,6 +161,10 @@ enumerations:
           - name: DataSyncFailed
             description: >
                 Data sync between the BMCs is failing.
+          - name: PassiveBMCChassisNotAvailable
+            description: >
+                The chassis the passive BMC resides in has been set to not
+                available for access by the chassis availability monitor.
 
     - name: FailoversNotAllowedReason
       description: >

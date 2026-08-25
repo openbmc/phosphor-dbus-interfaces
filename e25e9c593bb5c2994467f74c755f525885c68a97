@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "305d6585_500b1b68",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-25T22:45:05Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "b92debfe_0c7b27cd",
+      "range": {
+        "startLine": 48,
+        "startChar": 41,
+        "endLine": 48,
+        "endChar": 48
+      },
+      "revId": "e25e9c593bb5c2994467f74c755f525885c68a97",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "def56425_d70d01a8",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-08-20T05:23:12Z",
       "side": 1,
       "message": "Could `successful updates` be defined more precisely? I would expect a poll that succeeds and returns the same reading to update the time as well.",
+      "range": {
+        "startLine": 53,
+        "startChar": 47,
+        "endLine": 53,
+        "endChar": 65
+      },
+      "revId": "e25e9c593bb5c2994467f74c755f525885c68a97",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "074c2fea_f4ef1fd8",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-25T22:45:05Z",
+      "side": 1,
+      "message": "Updated to include cases when reading stays the same across poll intervals. A service may choose not to update the property, but it should update this property, I agree.",
+      "parentUuid": "def56425_d70d01a8",
       "range": {
         "startLine": 53,
         "startChar": 47,

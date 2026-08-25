@@ -27,11 +27,9 @@ methods:
                 User enabled / disabled.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
-          - xyz.openbmc_project.Common.Error.InsufficientPermission
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.User.Common.Error.UserNameExists
           - xyz.openbmc_project.User.Common.Error.UserNameGroupFail
-          - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
           - xyz.openbmc_project.User.Common.Error.NoResource
 
     - name: CreateUser2
@@ -55,11 +53,9 @@ methods:
                 PasswordExpiration -> password expiration Epoch time(uint64)
                 UserPasswordExpired -> user password expired state(boolean)
       errors:
-          - xyz.openbmc_project.Common.Error.InsufficientPermission
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.User.Common.Error.UserNameExists
           - xyz.openbmc_project.User.Common.Error.UserNameGroupFail
-          - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
           - xyz.openbmc_project.User.Common.Error.NoResource
 
     - name: RenameUser
@@ -77,13 +73,10 @@ methods:
                 New User name to which user has to be updated.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
-          - xyz.openbmc_project.Common.Error.InsufficientPermission
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
           - xyz.openbmc_project.User.Common.Error.UserNameExists
           - xyz.openbmc_project.User.Common.Error.UserNameGroupFail
-          - xyz.openbmc_project.User.Common.Error.UserNamePrivFail
-          - xyz.openbmc_project.User.Common.Error.NoResource
 
     - name: GetUserInfo
       description: >
@@ -128,7 +121,6 @@ methods:
                     2.UserInfo["UserGroups"] gets list of groups of user.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
-          - xyz.openbmc_project.Common.Error.InsufficientPermission
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.User.Common.Error.UserNameDoesNotExist
 
@@ -145,6 +137,7 @@ methods:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.User.Common.Error.GroupNameExists
+          - xyz.openbmc_project.User.Common.Error.NoResource
 
     - name: DeleteGroup
       description: >

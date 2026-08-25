@@ -19,7 +19,6 @@ methods:
                 applications to generate TOTP token.
       errors:
           - xyz.openbmc_project.Common.Error.UnsupportedRequest
-          - xyz.openbmc_project.Common.Error.NotAllowed
 
     - name: VerifyOTP
       description: >
@@ -39,7 +38,6 @@ methods:
                 Returns true if provided OTP is valid otherwise returns false.
       errors:
           - xyz.openbmc_project.Common.Error.UnsupportedRequest
-          - xyz.openbmc_project.Common.Error.NotAllowed
 
     - name: ClearSecretKey
       description: >
@@ -47,7 +45,6 @@ methods:
           key for the given user.
       errors:
           - xyz.openbmc_project.Common.Error.UnsupportedRequest
-          - xyz.openbmc_project.Common.Error.NotAllowed
 properties:
     - name: SecretKeyGenerationRequired
       type: boolean

@@ -16,6 +16,23 @@
       "message": "my query:\n\nWhat is the advantage to use a method here as opposed to a property which is the approach taken in https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/84171\n\nD-Bus properties can have matches setup against them which makes it more flexible IMO",
       "revId": "ba3e63a48a6ca8c135c30e8073b53c3677414da8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0028c156_4d2bc133",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1002970
+      },
+      "writtenOn": "2026-08-26T10:12:32Z",
+      "side": 1,
+      "message": "The description says, “last successful sensor value update”, but the dbus-sensors implementation in 93918 updates this timestamp only on finite hardware-read updates (updateValue path), not on external Value writes/overrides. Could you clarify the contract text (for example, “last successful finite hardware reading update”) or align implementation to include successful external Value sets? Otherwise, clients may misinterpret staleness semantics.",
+      "revId": "ba3e63a48a6ca8c135c30e8073b53c3677414da8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e003c7f8_b4c395af",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-08-26T10:44:11Z",
+      "side": 1,
+      "message": "I see that this is as per the redfish spec, but the intent behind proposal of this was to associate physical context to the things like sensors, but i think IBM\u0027s intent was a little different right ? Would that require a change in the description of the interface ?",
+      "revId": "d3a1df0549ca340fe676e99d63a4d79f917adf4c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a23af18f_4d867a24",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000206
+      },
+      "writtenOn": "2026-08-26T10:44:11Z",
+      "side": 1,
+      "message": "I think form ibm perspective, the intent was to associate the physical context to Inventory Items like generic Boards. If so then the inventory name space path segments should be added here as well. But would that also adhere to redfish spec ?",
+      "revId": "d3a1df0549ca340fe676e99d63a4d79f917adf4c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

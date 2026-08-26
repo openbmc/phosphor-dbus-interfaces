@@ -98,6 +98,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "599852b4_dc0ec56c",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-08-26T18:35:36Z",
+      "side": 1,
+      "message": "Actually, now that I think about it, this property should follow the same unit/type as Time.EpochTime.Elapsed. Let me make a couple more changes. Thanks for pointing that out",
+      "parentUuid": "7ca3246d_9ff68e28",
+      "range": {
+        "startLine": 48,
+        "startChar": 10,
+        "endLine": 48,
+        "endChar": 75
+      },
+      "revId": "7ccd88080fbe71dff2033dac07d361889a6f8895",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e022b813_3421c51a",
         "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 10

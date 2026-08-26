@@ -61,6 +61,19 @@ properties:
           charge namespace, Unit must be "AmpereHours". For objects in the
           rotational_position namespace, Unit must be "Radians".
 
+methods:
+    - name: GetSecondsSinceLastSuccessfulUpdate
+      description: >
+          Returns the number of seconds since the last successful
+          sensor value update. Returns UINT64_MAX if no successful
+          update has occurred.
+      returns:
+          - name: seconds
+            type: uint64
+            description: >
+                Number of seconds since the last successful update,
+                or UINT64_MAX if no successful update has occurred.
+
 enumerations:
     - name: Unit
       description: >

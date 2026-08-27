@@ -61,6 +61,12 @@ properties:
           charge namespace, Unit must be "AmpereHours". For objects in the
           rotational_position namespace, Unit must be "Radians".
 
+    - name: OverrideActive
+      type: boolean
+      default: false
+      description: >
+          Indicates whether the sensor value is currently being overridden.
+
 enumerations:
     - name: Unit
       description: >

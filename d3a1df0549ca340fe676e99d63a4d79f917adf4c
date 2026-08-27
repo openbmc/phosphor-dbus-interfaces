@@ -36,6 +36,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f93d2401_7063ae67",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2026-08-27T18:53:58Z",
+      "side": 1,
+      "message": "It matches redfish.. We are going to map this to Redfish\u0027s PhysicalContext.. It seems reasonable to me \n\n            \"enumDescriptions\": {\n                \"ACInput\": \"An AC electrical input or input-related circuit.\",\n                \"ACMaintenanceBypassInput\": \"An AC electrical maintenance bypass input.\",\n                \"ACOutput\": \"An AC electrical output or output-related circuit.\",\n                \"ACStaticBypassInput\": \"An AC electrical static bypass input.\",\n                \"ACUtilityInput\": \"An AC electrical utility input.\",\n                \"ASIC\": \"An ASIC device, such as a networking chip or chipset component.\",\n                \"Accelerator\": \"An accelerator.\",\n                \"Back\": \"The back of the chassis.\",\n                \"Backplane\": \"A backplane within the chassis.\",\n                \"Battery\": \"A battery.\",\n                \"Board\": \"A circuit board.\",\n                \"CPU\": \"A processor (CPU).\",\n                \"CPUSubsystem\": \"The entire processor (CPU) subsystem.\",\n                \"Chassis\": \"The entire chassis.\",\n                \"ComputeBay\": \"A compute bay.\",\n                \"CoolingSubsystem\": \"The entire cooling, or air and liquid, subsystem.\",\n                \"DCBus\": \"A DC electrical bus.\",\n                \"Exhaust\": \"The air exhaust point or points or region of the chassis.\",\n                \"ExpansionBay\": \"An expansion bay.\",\n                \"ExpansionSubsystem\": \"A group of expansion bays.\",\n                \"FPGA\": \"An FPGA.\",\n                \"Fan\": \"A fan.\",\n                \"Filter\": \"A filter.\",\n                \"Front\": \"The front of the chassis.\",\n                \"GPU\": \"A graphics processor (GPU).\",\n                \"GPUSubsystem\": \"The entire graphics processor (GPU) subsystem.\",\n                \"Intake\": \"The air intake point or points or region of the chassis.\",\n                \"LiquidInlet\": \"The liquid inlet point of the chassis.\",\n                \"LiquidOutlet\": \"The liquid outlet point of the chassis.\",\n                \"Lower\": \"The lower portion of the chassis.\",\n                \"Manager\": \"A management controller, such as a BMC (baseboard management controller).\", \u003c--- Matches here\n                \"Memory\": \"A memory device.\",\n                \"MemorySubsystem\": \"The entire memory subsystem.\",\n                \"Motor\": \"A motor.\",\n                \"NetworkBay\": \"A networking bay.\",\n                \"NetworkingDevice\": \"A networking device.\",\n                \"PowerOutlet\": \"An electrical outlet.\",\n                \"PowerSubsystem\": \"The entire power subsystem.\",\n                \"PowerSupply\": \"A power supply.\",\n                \"PowerSupplyBay\": \"A power supply bay.\",\n                \"Pump\": \"A pump.\",\n                \"Rectifier\": \"A rectifier device.\",\n                \"Reservoir\": \"A reservoir.\",\n                \"Room\": \"The room.\",\n                \"StorageBay\": \"A storage bay.\",\n                \"StorageDevice\": \"A storage device.\",\n                \"StorageSubsystem\": \"A storage subsystem.\",\n                \"Switch\": \"A switch device.\",\n                \"SystemBoard\": \"The system board (PCB).\",\n                \"Transceiver\": \"A transceiver.\",\n                \"Transformer\": \"A transformer.\",\n                \"TrustedModule\": \"A trusted module.\",\n                \"Upper\": \"The upper portion of the chassis.\",\n                \"VoltageRegulator\": \"A voltage regulator device.\"\n            },",
+      "parentUuid": "829d9ff6_0d54f9c3",
+      "revId": "d3a1df0549ca340fe676e99d63a4d79f917adf4c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a23af18f_4d867a24",

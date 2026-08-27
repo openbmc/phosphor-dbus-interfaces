@@ -106,6 +106,24 @@
       "parentUuid": "9d32a165_f9505cfb",
       "revId": "fda76c079f35cf512a0f5cbfd0623c2640f78346",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b96e0d66_d694e109",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003102
+      },
+      "writtenOn": "2026-08-27T15:55:42Z",
+      "side": 1,
+      "message": "Thanks for the clarification. Currently, there is no existing sensor consumer patched to consume \"OverrideActive\" the current changes only expose the existing override state through the standard Sensor.Value interface. I will not claim a consumer that does not exist. I will link the related dbus-sensors and phosphor-dbus-interfaces patches under the same Gerrit topic.",
+      "parentUuid": "cebfdf63_43f0941b",
+      "revId": "fda76c079f35cf512a0f5cbfd0623c2640f78346",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -88,6 +88,24 @@
       "parentUuid": "196a6daa_8f4fd6dd",
       "revId": "fda76c079f35cf512a0f5cbfd0623c2640f78346",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cebfdf63_43f0941b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003102
+      },
+      "writtenOn": "2026-08-27T15:13:18Z",
+      "side": 1,
+      "message": "Currently, no specific sensor consumer was patched to consume OverrideActive. Since there is no concrete consumer for this property, I will remove it and kept the timeout-recovery fix to clear the stale override state and invalidate the sensor value.",
+      "parentUuid": "9d32a165_f9505cfb",
+      "revId": "fda76c079f35cf512a0f5cbfd0623c2640f78346",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

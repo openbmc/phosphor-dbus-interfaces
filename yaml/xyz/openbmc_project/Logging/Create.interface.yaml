@@ -80,6 +80,11 @@ methods:
                 5},
                   {"xyz.openbmc_project.Logging.Create.FFDCFormat.Custom", 1, 2,
                 6} ]
+      returns:
+          - name: Entry
+            type: object_path
+            description: >
+                The resulting object_path of the newly created Entry
 
 enumerations:
     - name: FFDCFormat

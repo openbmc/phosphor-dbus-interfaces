@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e2ea54d_ba624a81",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/LinkStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-08-27T13:35:43Z",
+      "side": 1,
+      "message": "Why is it in the Decorator namespace?",
+      "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4328f72c_9829c4a5",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/LinkStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-08-27T13:35:43Z",
+      "side": 1,
+      "message": "On what sort of objects would this be implemented? Need to add some details here.",
+      "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e5fad66_56d13bf0",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/LinkStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-08-27T13:35:43Z",
+      "side": 1,
+      "message": "Set readonly?",
+      "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3d2a0d7_233f0d8d",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/LinkStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-08-27T13:35:43Z",
+      "side": 1,
+      "message": "What does established/not established mean?\n\nHow does this (or does not) relate to https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Inventory/Item.interface.yaml \"connected*\" associations?",
+      "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

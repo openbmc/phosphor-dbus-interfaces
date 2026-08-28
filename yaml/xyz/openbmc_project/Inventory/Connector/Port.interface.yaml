@@ -3,6 +3,15 @@ description: >
     that could be connected to another entity.
 
 properties:
+    - name: LinkStatus
+      type: enum[self.LinkStatus]
+      default: Unknown
+      flags:
+          - readonly
+      description: >
+          Whether a link is established on this port. This reports the state of
+          the link, not what the port is attached to, which the 'connected_to'
+          association reports.
     - name: PortProtocol
       type: enum[self.PortProtocol]
       default: Unknown
@@ -32,6 +41,19 @@ properties:
           inactive).
 
 enumerations:
+    - name: LinkStatus
+      description: >
+          Possible link status of a port.
+      values:
+          - name: Up
+            description: >
+                A link is established on the port.
+          - name: Down
+            description: >
+                No link is established on the port.
+          - name: Unknown
+            description: >
+                The link status of the port has not been determined.
     - name: PortProtocol
       description: >
           Possible port protocol type.

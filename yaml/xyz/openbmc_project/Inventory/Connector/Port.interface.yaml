@@ -13,6 +13,15 @@ properties:
       default: Unknown
       description: >
           The type of this port.
+    - name: LinkStatus
+      type: enum[self.LinkStatus]
+      default: Unknown
+      flags:
+          - readonly
+      description: >
+          Whether a link is established on this port. This reports the state of
+          the link, not what the port is attached to, which the 'connected_to'
+          association reports.
     - name: Speed
       type: uint64
       default: maxint
@@ -55,6 +64,19 @@ enumerations:
           - name: Unknown
             description: >
                 Type is unknown.
+    - name: LinkStatus
+      description: >
+          Possible link status of a port.
+      values:
+          - name: Up
+            description: >
+                A link is established on the port.
+          - name: Down
+            description: >
+                No link is established on the port.
+          - name: Unknown
+            description: >
+                The link status of the port has not been determined.
 
 associations:
     - name: connected_to

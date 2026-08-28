@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "83148d41_63129334",
+        "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1003102
+      },
+      "writtenOn": "2026-08-28T08:15:46Z",
+      "side": 1,
+      "message": "Since change 84171 already adds the UpdatedTime property, the GetSecondsSinceLastSuccessfulUpdate method in change 93956 is no longer required and should be removed. The implementation should update UpdatedTime instead.thanks for your suggestion.",
+      "parentUuid": "cc34b324_9bcf9b69",
+      "revId": "ba3e63a48a6ca8c135c30e8073b53c3677414da8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0028c156_4d2bc133",
         "filename": "yaml/xyz/openbmc_project/Sensor/Value.interface.yaml",
         "patchSetId": 2

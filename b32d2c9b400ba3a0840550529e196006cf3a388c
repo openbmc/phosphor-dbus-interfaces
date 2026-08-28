@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "543a98ad_c4ab292c",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/Performance.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-08-28T09:21:46Z",
+      "side": 1,
+      "message": "The redfish schema I am referring to is in the following link:\nhttps://redfish.dmtf.org/schemas/v1/Resource.json\n\nIn `Resource.json`, there is a `state` property with enum value. One of the value `degraded` indicates the resource is in degraded mode.",
+      "parentUuid": "3127e362_b95e5319",
+      "revId": "b32d2c9b400ba3a0840550529e196006cf3a388c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "014a4bfe_11b5ec58",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "302a6096_d58ca897",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/Performance.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-08-28T09:21:46Z",
+      "side": 1,
+      "message": "DMTF redfish schema defines this in `Resource.json`. Based on my understanding, it means every inventory item defined in PDI shall be able to embedded this.",
+      "parentUuid": "014a4bfe_11b5ec58",
+      "revId": "b32d2c9b400ba3a0840550529e196006cf3a388c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "31a4a5c5_3cf53622",
@@ -48,6 +84,24 @@
       "writtenOn": "2026-08-27T13:37:49Z",
       "side": 1,
       "message": "Readonly?",
+      "revId": "b32d2c9b400ba3a0840550529e196006cf3a388c",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c94dad8a_805be51e",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/Performance.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-08-28T09:21:46Z",
+      "side": 1,
+      "message": "Acknowledged, added the line in PS3.",
+      "parentUuid": "31a4a5c5_3cf53622",
       "revId": "b32d2c9b400ba3a0840550529e196006cf3a388c",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

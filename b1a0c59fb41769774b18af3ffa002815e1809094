@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "79fc3188_21679f7a",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/LinkStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-08-28T08:01:39Z",
+      "side": 1,
+      "message": "My initial thought is to put every state set defined in DSP 0249 under state.decorator so that it can be more generalized and used by any type of inventory item.\n\nHowever, after checking the DMTF redfish scheme in the following link:\nhttps://redfish.dmtf.org/schemas/v1/Port.v1_19_0.json\n\nI noticed that only `Port` object exposes these LinkStatus, and thus I have decided to move this `LinkStatus` definition under `Inventory.Connector.Port` as one of its properties.\n\nThe tradeoff is that if we found any PLDM entity monitored by PLDM state sensor for state set Link Status that are not `Connector.Port`, we will have to define this interface for it again.",
+      "parentUuid": "4e2ea54d_ba624a81",
+      "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4328f72c_9829c4a5",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-08-27T13:35:43Z",
       "side": 1,
       "message": "On what sort of objects would this be implemented? Need to add some details here.",
+      "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4d37ad2_035772ed",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/LinkStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-08-28T08:01:39Z",
+      "side": 1,
+      "message": "According to the current DMTF redfish schema, there is only Port object exposing this. And thus I have moved this properties onto `Inventory.Connector.Port`.\n\nIn this case, I think this should be able to address your concern here as well.",
+      "parentUuid": "4328f72c_9829c4a5",
       "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -52,6 +88,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa72a631_be81a211",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/LinkStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-08-28T08:01:39Z",
+      "side": 1,
+      "message": "Understood, I have put the line in PS4.\nThanks for acknowledging this.",
+      "parentUuid": "3e5fad66_56d13bf0",
+      "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e3d2a0d7_233f0d8d",
@@ -65,6 +119,24 @@
       "writtenOn": "2026-08-27T13:35:43Z",
       "side": 1,
       "message": "What does established/not established mean?\n\nHow does this (or does not) relate to https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Inventory/Item.interface.yaml \"connected*\" associations?",
+      "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d8359e1_fabf6b9c",
+        "filename": "yaml/xyz/openbmc_project/State/Decorator/LinkStatus.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-08-28T08:01:39Z",
+      "side": 1,
+      "message": "`connected_to` says what the port is physically attached to at the other end, while `LinkStatus` says whether the link on that port is up. \n\nTo address the confusing term, I have modified the values to `Up`/`Down` to avoid the word collision here. I hope this addresses your concern.",
+      "parentUuid": "e3d2a0d7_233f0d8d",
       "revId": "b1a0c59fb41769774b18af3ffa002815e1809094",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

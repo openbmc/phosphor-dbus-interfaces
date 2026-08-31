@@ -16,6 +16,24 @@
       "message": "Are there any backend implementations that are conforming to these proposals?  Is this an already accepted pattern that we are just documenting for clarity?\n\nI don\u0027t see any changes you\u0027ve made.  I\u0027m hesitant to accept a change driven exclusively by bmcweb changes if there are no backend implementations.",
       "revId": "24b53627ccd8e8adc5e493064df1910bbea51a61",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7ac67fb_e349f1a5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2026-08-31T18:57:29Z",
+      "side": 1,
+      "message": "Available exists in several places and that support got added to bmcweb. \n\nhttps://github.com/openbmc/phosphor-power/blob/1e706b943792460bbc6396b2dc10ccf698c3f5c4/phosphor-power-supply/util.hpp#L87\n\nhttps://github.com/openbmc/dbus-sensors/blob/53d49b6085dc2fd7685d8bfea620fc09b5d33f9b/src/sensor.hpp#L465\n\nThere is less support for Enabled but I do see some at \nhttps://github.com/openbmc/openpower-vpd-parser/commit/7ad6effad904db04382957e479bfc02526d78493",
+      "parentUuid": "a344b072_d71005cf",
+      "revId": "24b53627ccd8e8adc5e493064df1910bbea51a61",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

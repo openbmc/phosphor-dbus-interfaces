@@ -89,6 +89,11 @@ properties:
       type: boolean
       description: >
           Boolean for accepting router advertisements in IPv6.
+    - name: IPv6Enable
+      type: boolean
+      default: true
+      description: >
+          Enable or disable IPv6 protocol on the ethernet interface.
     - name: NICEnabled
       type: boolean
       description: >

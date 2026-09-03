@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ee77123_a662f189",
+        "filename": "yaml/xyz/openbmc_project/State/Device.errors.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-03T14:36:09Z",
+      "side": 1,
+      "message": "We should not be creating new errors.yaml files.  Use events if that\u0027s what you want.",
+      "revId": "1fab7bfda8f4f305c7a9d36cbcb71eff4acf1ce8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5559caae_350c63b0",
+        "filename": "yaml/xyz/openbmc_project/State/Device.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-03T14:36:09Z",
+      "side": 1,
+      "message": "This should be `state/device`, right?  That\u0027s what the README seems to imply.",
+      "revId": "1fab7bfda8f4f305c7a9d36cbcb71eff4acf1ce8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8c94286_b87ed00e",
+        "filename": "yaml/xyz/openbmc_project/State/Device.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-03T14:36:09Z",
+      "side": 1,
+      "message": "A segment like this would only be used if you expect the path to be state/deviceN or state/device-FOO.  Since you\u0027ve put them as a subdirectory you just need the namespace properly.",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 25
+      },
+      "revId": "1fab7bfda8f4f305c7a9d36cbcb71eff4acf1ce8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

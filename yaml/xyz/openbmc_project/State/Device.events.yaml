@@ -1,0 +1,15 @@
+version: 1.0.0
+
+errors:
+    - name: BMCNotReady
+      severity: warning
+      metadata:
+          - name: DevicePath
+            type: object_path
+            primary: true
+            description: The device whose transition request was rejected.
+      en:
+          description: A device transition request was rejected because the BMC has not finished starting.
+          message: A device transition request on {DevicePath} was rejected because the BMC is not ready.
+          resolution: Retry the request once the BMC has finished starting.
+      errno: EAGAIN

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "051f12d8_04fe44e0",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2026-09-08T05:32:14Z",
+      "side": 1,
+      "message": "Drop NVLink prefix from here also.",
+      "revId": "f0857f42df988ca19af4564e2d37c147fea9eab8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46758cf1_9f5e35f8",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2026-09-08T05:32:14Z",
+      "side": 1,
+      "message": "This represent a generic network port metric and it is not NVLink specific and they also map to redfish property that is generic to any network port. Suggest dropping nvlink prefix.",
+      "revId": "f0857f42df988ca19af4564e2d37c147fea9eab8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd7c36b7_e5cb8d7a",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2026-09-08T05:32:14Z",
+      "side": 1,
+      "message": "Make description generic for any network port and not NVLink Specific.",
+      "revId": "f0857f42df988ca19af4564e2d37c147fea9eab8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

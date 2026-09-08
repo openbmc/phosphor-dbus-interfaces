@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "226dcda6_5fae6bb0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-09-08T02:43:03Z",
+      "side": 1,
+      "message": "I am trying to maps the PLDM state set `LinkState`(DSP0249, v1.4.0, Table 2) with only 2 states(Connected \u0026 Disconnected). Therefore, I only implemented as such. \n\nOf course it can be the full lists as stated in the redfish schema. However, I think that should be submitted in another patch if needed.",
+      "parentUuid": "cd56473e_d4e1059e",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 52
+      },
+      "revId": "6e6fe7913948b90c223f0baee7486cd89845b9b5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4243309_8e5b2284",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-09-07T07:21:49Z",
       "side": 1,
       "message": "Does this require corresponding bmcweb and backend changes to actually populate and expose this property?",
+      "revId": "6e6fe7913948b90c223f0baee7486cd89845b9b5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea1b3901_47d0a6c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-09-08T02:43:03Z",
+      "side": 1,
+      "message": "Currently there is no consumer at the bmcweb yet, and therefore I believe corresponding implementation will be needed to enabled this feature.\n\nFor the backend daemon, I surveyed only pldm and has found nothing related to this state set so far. To answer your question, I think implementation at the backend daemon will also be needed.",
+      "parentUuid": "a4243309_8e5b2284",
       "revId": "6e6fe7913948b90c223f0baee7486cd89845b9b5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

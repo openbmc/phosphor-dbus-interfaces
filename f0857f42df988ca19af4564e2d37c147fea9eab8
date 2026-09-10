@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "96fd527b_937af8f1",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-09-10T09:54:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "051f12d8_04fe44e0",
+      "revId": "f0857f42df988ca19af4564e2d37c147fea9eab8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "46758cf1_9f5e35f8",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7cc4691d_dfd47d27",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-09-10T09:54:25Z",
+      "side": 1,
+      "message": "Done, renamed to NICRXErrors / NICRXFrames / NICTXFrames / NICTXDiscards.",
+      "parentUuid": "46758cf1_9f5e35f8",
+      "revId": "f0857f42df988ca19af4564e2d37c147fea9eab8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fd7c36b7_e5cb8d7a",
@@ -48,6 +84,24 @@
       "writtenOn": "2026-09-08T05:32:14Z",
       "side": 1,
       "message": "Make description generic for any network port and not NVLink Specific.",
+      "revId": "f0857f42df988ca19af4564e2d37c147fea9eab8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "062a541e_c0c7d04d",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-09-10T09:54:25Z",
+      "side": 1,
+      "message": "Done, the descriptions now read `on a port`, matching the existing NIC entries.",
+      "parentUuid": "fd7c36b7_e5cb8d7a",
       "revId": "f0857f42df988ca19af4564e2d37c147fea9eab8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

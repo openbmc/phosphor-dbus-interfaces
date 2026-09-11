@@ -85,6 +85,24 @@
       "message": "Do we also need to have a default value?  something like \"unknown\"?",
       "revId": "d28dc11c22194115a94a57f9aaffb1a79e00d407",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8294e57b_532054d1",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000938
+      },
+      "writtenOn": "2026-09-11T05:24:36Z",
+      "side": 1,
+      "message": "No default value is intentional here.\n\nType is readonly, which means I believe sdbusplus generates a constructor that requires this value to be supplied at object creation time — it cannot be omitted. The contract is: if you implement PhysicalContext, you already know the physical context of the thing you’re describing, and you pass it in at construction. There is no valid “I don’t know yet” state for a descriptor property like this.\n\nAdding default: Unknown (or any value) would silently allow a service to instantiate the object without ever setting Type, and the interface would report a wrong or meaningless value to any consumer. That is worse than a build/runtime failure that forces the author to fix it.\n\nFor comparison, properties like Progress.Status (default: NotStarted) or Host.CurrentHostState (default: Unknown) carry defaults because they model state that transitions over time — there is a universally sensible starting point before the first transition. PhysicalContext.Type is a static classification — it does not transition, and there is no universally sensible starting point across all implementors.\n\nPer PDI guidance: only add a default when a value is universally sensible for all implementors. A GPU sensor, a BMC sensor, and a switchboard sensor all implement this interface — and their correct Type values are different. There is no single default that works for all of them.",
+      "parentUuid": "772ec703_b8f54ee6",
+      "revId": "d28dc11c22194115a94a57f9aaffb1a79e00d407",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

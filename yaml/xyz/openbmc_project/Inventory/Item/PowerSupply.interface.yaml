@@ -1,6 +1,15 @@
 description: >
     Implement to provide PowerSupply attributes.
 
+properties:
+    - name: PowerCapacityWatts
+      type: uint64
+      default: maxint
+      description: >
+          The maximum rated power output capacity of this power supply in Watts.
+          `maxint` if it cannot be determined. Maps to the Redfish
+          PowerCapacityWatts property in the PowerSupply schema.
+
 associations:
     - name: powering
       description: >

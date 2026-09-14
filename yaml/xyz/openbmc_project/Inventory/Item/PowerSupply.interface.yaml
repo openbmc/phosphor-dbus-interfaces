@@ -1,6 +1,14 @@
 description: >
     Implement to provide PowerSupply attributes.
 
+properties:
+    - name: PowerCapacityWatts
+      type: uint64
+      default: 0
+      description: >
+          The maximum rated power output capacity of this power supply in Watts.
+          `0` if it cannot be determined.
+
 associations:
     - name: powering
       description: >

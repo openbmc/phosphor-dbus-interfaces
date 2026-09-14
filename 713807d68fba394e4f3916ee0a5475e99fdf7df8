@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2a2dc80_38f44554",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-14T17:47:23Z",
+      "side": 1,
+      "message": "I don\u0027t see any associated topic here, so it\u0027s hard to know how this is going to work...",
+      "revId": "713807d68fba394e4f3916ee0a5475e99fdf7df8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46a5e26a_ba8dcb53",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-14T17:47:23Z",
+      "side": 1,
+      "message": "Is it const or readonly?  Would you be able to modify a config file and have phosphor-networkd change this value?",
+      "revId": "713807d68fba394e4f3916ee0a5475e99fdf7df8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6934c6dc_c2dd81e0",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-14T17:47:23Z",
+      "side": 1,
+      "message": "How do you anticipate this is controlled and configured?",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 64
+      },
+      "revId": "713807d68fba394e4f3916ee0a5475e99fdf7df8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

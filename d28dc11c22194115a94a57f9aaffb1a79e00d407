@@ -72,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3a2083cc_7701fe13",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-14T18:29:55Z",
+      "side": 1,
+      "message": "You gave me an answer for why we have accelerator but I\u0027m not very satisfied that this is the same answer for \"manager\".\n\nAn \"Assembly\" is a piece of inventory; which can come from multiple underlying inventory-types.  There is no Redfish BMC type, so if you wanted to transform the Item.BMC into a Assembly you can already do that.  I don\u0027t know why you also need a \"Physical Context\" to tell you it is a BMC when you already know it is from the \"Item.BMC\" type.",
+      "parentUuid": "103fea58_382723c4",
+      "revId": "d28dc11c22194115a94a57f9aaffb1a79e00d407",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "772ec703_b8f54ee6",
         "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
         "patchSetId": 4

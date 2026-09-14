@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47a772d9_f3bcf555",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-14T17:54:30Z",
+      "side": 1,
+      "message": "The only current user of Item.Ethernet is openpower-vpd-parser.  Please coordinate a migration plan.",
+      "revId": "3f220fda8f325f61c1ef205863a4a916e5e826a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c670f86f_dab77c3b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Ethernet.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-14T17:54:30Z",
+      "side": 1,
+      "message": "Why wouldn\u0027t we port everything to NetworkAdapter?",
+      "range": {
+        "startLine": 6,
+        "startChar": 77,
+        "endLine": 8,
+        "endChar": 0
+      },
+      "revId": "3f220fda8f325f61c1ef205863a4a916e5e826a3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

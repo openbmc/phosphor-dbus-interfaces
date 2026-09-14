@@ -9,6 +9,16 @@ properties:
           - const
       description: >
           Name of the ethernet interface.
+    - name: Internal
+      type: boolean
+      default: false
+      flags:
+          - const
+      description: >
+          Indicates the interface is reserved for internal platform use, such as
+          a host to BMC USB gadget link. The network manager rejects
+          configuration changes on such an interface, and external management
+          interfaces, for example Redfish, should not expose it.
     - name: Speed
       type: uint32
       flags:

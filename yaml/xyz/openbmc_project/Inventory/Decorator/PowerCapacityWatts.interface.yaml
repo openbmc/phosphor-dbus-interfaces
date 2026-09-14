@@ -1,0 +1,11 @@
+description: >
+    Implement to provide the power capacity of an inventory item.
+
+properties:
+    - name: PowerCapacityWatts
+      type: uint64
+      default: maxint
+      description: >
+          The maximum rated power output capacity in Watts. `maxint` if it
+          cannot be determined. Maps to the Redfish PowerCapacityWatts property
+          in the PowerSupply schema.

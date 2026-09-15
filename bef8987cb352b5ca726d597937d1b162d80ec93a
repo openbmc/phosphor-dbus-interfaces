@@ -16,6 +16,24 @@
       "message": "I would prefer a TransitionRejected message with a enum for all possible reasoning as one of the parameters. In this case the reason argument would be BMCNotReady.",
       "revId": "bef8987cb352b5ca726d597937d1b162d80ec93a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "065277d9_8b2b0ef7",
+        "filename": "yaml/xyz/openbmc_project/State/Device.events.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002134
+      },
+      "writtenOn": "2026-09-15T11:10:03Z",
+      "side": 1,
+      "message": "Thanks for the suggestion. I checked for similar patterns in the repo and didn\u0027t find an existing example of a generic error combined with an enum reason. The closest match I found, Sensor threshold events, still uses distinct error names per reason.\n\nJust to better understand the intent behind the suggestion: is this scoped to Device\u0027s own BMCNotReady, or would it also extend to NotAllowed/Unavailable? And do you see this as a Device-specific improvement, or more generally a pattern we\u0027d want to adopt across interfaces going forward?",
+      "parentUuid": "ddb4b663_38298c55",
+      "revId": "bef8987cb352b5ca726d597937d1b162d80ec93a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

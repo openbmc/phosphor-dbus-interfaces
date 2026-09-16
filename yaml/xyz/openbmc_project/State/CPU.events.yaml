@@ -1,0 +1,22 @@
+version: 1.0.0
+
+description: >
+    Events indicating CPU error conditions reported through platform
+    reliability, availability, and serviceability (RAS) mechanisms.
+
+errors:
+    - name: CPUError
+      severity: critical
+      errno: EIO
+
+      metadata:
+          - name: ErrorType
+            type: string
+            description: >
+                The CPU error type or cause.
+
+      en:
+          description:
+              Indicates that a CPU error occurred of the specified type or
+              cause.
+          message: "CPU Error Occurred: {ErrorType}."

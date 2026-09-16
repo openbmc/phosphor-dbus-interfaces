@@ -1,0 +1,19 @@
+version: 1.0.0
+
+description: >
+    Events indicating At-Scale Debug connection state changes.
+
+events:
+    - name: AtScaleDebugConnected
+
+      metadata:
+          - name: ConnectionInfo
+            type: string
+            description: >
+                Information associated with the established At-Scale Debug
+                connection.
+
+      en:
+          description:
+              Indicates that an At-Scale Debug connection has been established.
+          message: "At-Scale Debug service is now connected {ConnectionInfo}."

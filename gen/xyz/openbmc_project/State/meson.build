@@ -1,5 +1,6 @@
 # Generated file; do not modify.
 subdir('Accelerator')
+subdir('AtScaleDebug')
 subdir('BMC')
 subdir('BMCRedundancy')
 subdir('Boot')
@@ -70,6 +71,54 @@ generated_registry += custom_target(
         '--directory',
         meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/State/Accelerator',
+    ],
+    install: should_generate_registry,
+    install_dir: [inst_registry_dir / sdbusplus_current_path],
+    build_by_default: should_generate_registry,
+)
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/State/AtScaleDebug__markdown'.underscorify(),
+    input: [
+        '../../../../yaml/xyz/openbmc_project/State/AtScaleDebug.events.yaml',
+    ],
+    output: ['AtScaleDebug.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/State/AtScaleDebug',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_registry += custom_target(
+    'xyz/openbmc_project/State/AtScaleDebug__registry'.underscorify(),
+    input: [
+        '../../../../yaml/xyz/openbmc_project/State/AtScaleDebug.events.yaml',
+    ],
+    output: ['AtScaleDebug.json'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'registry',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/State/AtScaleDebug',
     ],
     install: should_generate_registry,
     install_dir: [inst_registry_dir / sdbusplus_current_path],

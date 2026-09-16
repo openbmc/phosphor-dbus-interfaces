@@ -43,6 +43,16 @@ properties:
           enabled, a failover may not be allowed because there are periods when
           doing a failover could cause issues, such as in the middle of a boot
           or code update.
+    - name: HostFailoversAllowed
+      type: boolean
+      flags:
+          - readonly
+      default: false
+      description: >
+          States if a failover is allowed via the host channel. This may be true
+          even when FailoversAllowed is false.  Specifically, during a system
+          boot the host firmware may need to request a failover even though
+          failovers by others aren't allowed at that time.
     - name: FailoverImminent
       type: boolean
       flags:

@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c015a763_b89988d2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-09-16T05:37:27Z",
+      "side": 1,
+      "message": "I think the case you mentioned is specified as `Functionality` degraded.\nHowever, I think that case has already been covered by the PDI in the following link:\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/261c11dd50d9c96e558abb848512f8f4f7c613b3/yaml/xyz/openbmc_project/State/Decorator/OperationalStatus.interface.yaml#L4",
+      "parentUuid": "04315aec_f2598978",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 37
+      },
+      "revId": "76dbe283015f918a21d8c644de915457323d8d58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9c81158_4042c1a2",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-09-14T18:00:54Z",
       "side": 1,
       "message": "Please don\u0027t markdown escape a URL.",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 3
+      },
+      "revId": "76dbe283015f918a21d8c644de915457323d8d58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c729b288_232ddef4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-09-16T05:37:27Z",
+      "side": 1,
+      "message": "Thanks for acknowledging this, I have removed them in PS7.",
+      "parentUuid": "a9c81158_4042c1a2",
       "range": {
         "startLine": 14,
         "startChar": 0,

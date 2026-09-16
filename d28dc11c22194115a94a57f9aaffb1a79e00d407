@@ -90,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "52e6e996_b91c6d7e",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2026-09-16T13:39:01Z",
+      "side": 1,
+      "message": "\u003e There is no Redfish BMC type\n\nThere is a https://redfish.dmtf.org/schemas/v1/Manager.v1_25_0.json / https://github.com/openbmc/bmcweb/blob/9cf1da4f5e189ac84e26050029032618969dbd4d/redfish-core/include/utils/manager_utils.hpp#L26 \n\nThis is mostly the logical view of the BMC (network, firmware, datetime, state of the bmc, log services) but there is also some inventory properties in Redfish\u0027s Manager (model, which we default to \"OpenBMC\", manufacturer, and part number). If using a ASPEED AST2600, I would think manufacturer would be \"ASPEEED\" and Part Number would be like \"AST2600A3-GP\" \nhttps://www.aspeedtech.com/server_ast2600/\nSo I think this Redfish Manager represents the logical BMC and the BMC SoC.\n\nSeveral (most? Meta I thought too?) companies have a BMC Card this BMC SoC sits on. That is an Item.Board, this PhysicalContext is useful in identifying that Board \nhttps://www.ebay.com/itm/286322755472 and https://opensource.googleblog.com/2022/05/DC-SCM-compatible-FPGA-based-open-source-BMC-hardware-platform.html are some example of that Card I found",
+      "parentUuid": "3a2083cc_7701fe13",
+      "revId": "d28dc11c22194115a94a57f9aaffb1a79e00d407",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "772ec703_b8f54ee6",
         "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
         "patchSetId": 4

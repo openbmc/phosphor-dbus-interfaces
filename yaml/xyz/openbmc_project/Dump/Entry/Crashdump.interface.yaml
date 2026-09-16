@@ -1,0 +1,13 @@
+# xyz.openbmc_project.Dump.Entry.Crashdump
+
+description: >
+    Represents a crashdump artifact collected by the system for diagnostic and
+    failure analysis purposes.
+
+    Objects implementing this interface shall also implement:
+
+      - xyz.openbmc_project.Common.FilePath
+
+    Implementations should additionally expose a suitable time interface, such
+    as xyz.openbmc_project.Time.EpochTime, to indicate when the crashdump
+    artifact was generated.

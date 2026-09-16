@@ -57,6 +57,13 @@ methods:
             description: >
                 The SPDM version used by the SPDM Responder to generate the
                 cryptographic signed statement.
+          - name: OpaqueData
+            type: array[byte]
+            description: >
+                Optional raw byte payload returned in an SPDM MEASUREMENTS
+                response, containing implementation-defined attestation
+                metadata.
+
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
           - xyz.openbmc_project.Common.Error.InternalFailure

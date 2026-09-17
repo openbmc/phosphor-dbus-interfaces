@@ -1,0 +1,15 @@
+description: >
+    Implement to manage cables in system.
+
+methods:
+    - name: GetBmcPosition
+      description: >
+          Fetches the position of the local BMC, that is the BMC servicing this
+          call.
+      returns:
+          - name: Position
+            type: size
+            description: Position of the local BMC.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure

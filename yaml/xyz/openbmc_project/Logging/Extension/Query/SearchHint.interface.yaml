@@ -4,10 +4,14 @@ description: >
     instantiated at the same object path as the Logging.Entry interface.
 
 properties:
+    - name: Service
+      type: string
+      description:
+          The unique identifier/name of the service generating the log. The
+          service name is expected to be globally unique.
     - name: Hint
       type: string
       description: >
           The Hint parameter is used for daemons to be able to query for their
           previously recorded error, for marking as resolved. These strings need
-          to be globally unique and are suggested to be of the format
-          "<service_name>:<key>"
+          to be unique within the service.

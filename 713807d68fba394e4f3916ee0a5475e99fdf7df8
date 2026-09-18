@@ -35,6 +35,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2914f92e_edfb53bd",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001673
+      },
+      "writtenOn": "2026-09-18T12:06:55Z",
+      "side": 1,
+      "message": "its const, not modifiable https://gerrit.openbmc.org/c/openbmc/phosphor-networkd/+/91204/7/src/ethernet_interface.cpp",
+      "parentUuid": "46a5e26a_ba8dcb53",
+      "revId": "713807d68fba394e4f3916ee0a5475e99fdf7df8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6934c6dc_c2dd81e0",
@@ -48,6 +66,30 @@
       "writtenOn": "2026-09-14T17:47:23Z",
       "side": 1,
       "message": "How do you anticipate this is controlled and configured?",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 64
+      },
+      "revId": "713807d68fba394e4f3916ee0a5475e99fdf7df8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fff54cf7_3e764e23",
+        "filename": "yaml/xyz/openbmc_project/Network/EthernetInterface.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001673
+      },
+      "writtenOn": "2026-09-18T12:06:55Z",
+      "side": 1,
+      "message": "meson option \u0027protected-interfaces\u0027 here https://gerrit.openbmc.org/c/openbmc/phosphor-networkd/+/91204/7/meson.options#34, used while building the image , configured during construction as true/false shwon here",
+      "parentUuid": "6934c6dc_c2dd81e0",
       "range": {
         "startLine": 18,
         "startChar": 0,

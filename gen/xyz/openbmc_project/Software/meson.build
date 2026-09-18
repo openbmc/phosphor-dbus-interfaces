@@ -332,6 +332,7 @@ generated_markdown += custom_target(
 generated_markdown += custom_target(
     'xyz/openbmc_project/Software/Update__markdown'.underscorify(),
     input: [
+        '../../../../yaml/xyz/openbmc_project/Software/Update.errors.yaml',
         '../../../../yaml/xyz/openbmc_project/Software/Update.events.yaml',
         '../../../../yaml/xyz/openbmc_project/Software/Update.interface.yaml',
     ],

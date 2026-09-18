@@ -54,6 +54,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5a0e1e73_b98519f7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000318
+      },
+      "writtenOn": "2026-09-18T16:35:01Z",
+      "side": 1,
+      "message": "We don\u0027t have other patches yet; we wanted to make sure the PDI update got approved first.\n\nOur systems could have different power supply types in the same system, so as designed we\u0027d actually populate the newly added property based on the phosphor-power phosphor-psu-monitor service reading the value.  But an alternative could be separate EM files per power supply, and the EM file could contain the value, should others choose to implement it that way.",
+      "parentUuid": "cd58e155_273a5689",
+      "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e1eba38a_0840a3f4",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
         "patchSetId": 1

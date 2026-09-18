@@ -67,6 +67,86 @@
       "message": "@patrick@stwcx.xyz Gentle reminder for the review.",
       "revId": "f4abb244bdf0400835cf04ecd9f14354a25981d8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1ddc362_cb5105b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-18T21:24:07Z",
+      "side": 1,
+      "message": "dbus interfaces should not be direct copies of a byte-wise protocol like IPMI.  Please fix your types.\n\nIs this really just a \"registry\" type operation?  We are just doing this to save data in the BMC?  There is no actual actions by the BMC?  Why would we want/need this then?  Can\u0027t the BIOS store their own data in their own CMOS?  I don\u0027t really understand the purpose of this function.",
+      "revId": "f4abb244bdf0400835cf04ecd9f14354a25981d8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06e0047e_c6753422",
+        "filename": "yaml/xyz/openbmc_project/Control/ThermalLimit.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-18T21:24:07Z",
+      "side": 1,
+      "message": "no",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 16
+      },
+      "revId": "f4abb244bdf0400835cf04ecd9f14354a25981d8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca8e4ac5_581def1f",
+        "filename": "yaml/xyz/openbmc_project/Control/ThermalLimit.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-18T21:24:07Z",
+      "side": 1,
+      "message": "no",
+      "range": {
+        "startLine": 16,
+        "startChar": 12,
+        "endLine": 16,
+        "endChar": 18
+      },
+      "revId": "f4abb244bdf0400835cf04ecd9f14354a25981d8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94a86e99_dc1d9320",
+        "filename": "yaml/xyz/openbmc_project/Control/ThermalLimit.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-18T21:24:07Z",
+      "side": 1,
+      "message": "We don\u0027t do \"time in seconds\".",
+      "revId": "f4abb244bdf0400835cf04ecd9f14354a25981d8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

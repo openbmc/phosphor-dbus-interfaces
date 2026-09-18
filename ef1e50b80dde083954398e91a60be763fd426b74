@@ -16,6 +16,63 @@
       "message": "Looks great!",
       "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fdb26f3_d8c3e1aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-09-18T15:03:20Z",
+      "side": 1,
+      "message": "overall in favor of this change but might require other patches too",
+      "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd58e155_273a5689",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-09-18T15:03:20Z",
+      "side": 1,
+      "message": "Since EM exposes this interface (without leveraging generated server), do you have a patch for EM to populate the newly added property?\n\ni did not find any such change, please let me know.\n\nAdditionally are there any other services populating this interface which may also need to be updated?",
+      "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1eba38a_0840a3f4",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-09-18T15:03:20Z",
+      "side": 1,
+      "message": "nit, it would be nice to document the intended Redfish mapping.\n\n```suggestion\n          The maximum rated power output capacity of this power supply in Watts.\n          `0` if it cannot be determined. Maps to Redfish PowerCapacityWatts property in the PowerSupply schema.\n```",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 10,
+        "endChar": 41
+      },
+      "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

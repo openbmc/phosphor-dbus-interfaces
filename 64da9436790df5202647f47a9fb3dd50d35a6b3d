@@ -20,6 +20,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d40796aa_e7ddd681",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-21T10:55:00Z",
+      "side": 1,
+      "message": "I don\u0027t understand how this is useful.  Isn\u0027t it possible that I have a UEFI \"BootBAD1\" that is in my UEFI variables but is not listed in the _current_ boot order?  I should be able to add this to the boot order, right?\n\nI\u0027m using that as an example but this is also true for \"Network\".  I could have PXE boot turned off and want to enable it.\n\nThe way you have this worded, PendingBootOrder becomes an exclusively smaller and smaller set every time I change it unless I enable every single valid boot option every single time.",
+      "range": {
+        "startLine": 16,
+        "startChar": 53,
+        "endLine": 18,
+        "endChar": 71
+      },
+      "revId": "64da9436790df5202647f47a9fb3dd50d35a6b3d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7ff969a5_94c97c34",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOrder.interface.yaml",
         "patchSetId": 13

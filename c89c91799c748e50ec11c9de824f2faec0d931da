@@ -52,6 +52,24 @@
       "parentUuid": "a18fc09c_ff481791",
       "revId": "c89c91799c748e50ec11c9de824f2faec0d931da",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17ad9910_54e28ba9",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-09-21T11:29:48Z",
+      "side": 1,
+      "message": "Internal means that the user is system user (authenticated within the system not from an external users (LDPA/AD)).\n\nSince the bootstrap user account is also a system user, it will always come under the below case.\nhttps://github.com/openbmc/phosphor-user-manager/blob/27ff229be5741d5157d0a4f345692930dc42cf74/user_mgr.cpp#L1500",
+      "parentUuid": "19961cc5_17858761",
+      "revId": "c89c91799c748e50ec11c9de824f2faec0d931da",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

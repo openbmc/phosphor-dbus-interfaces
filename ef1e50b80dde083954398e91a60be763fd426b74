@@ -70,6 +70,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f64552dd_ee8cadfa",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002971
+      },
+      "writtenOn": "2026-09-21T16:56:41Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "5a0e1e73_b98519f7",
+      "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2c77762d_8a47e3d2",
@@ -87,6 +105,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a2ef24a_99e75f86",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002971
+      },
+      "writtenOn": "2026-09-21T16:56:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2c77762d_8a47e3d2",
+      "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e1eba38a_0840a3f4",
@@ -100,6 +136,30 @@
       "writtenOn": "2026-09-18T15:03:20Z",
       "side": 1,
       "message": "nit, it would be nice to document the intended Redfish mapping.\n\n```suggestion\n          The maximum rated power output capacity of this power supply in Watts.\n          `0` if it cannot be determined. Maps to Redfish PowerCapacityWatts property in the PowerSupply schema.\n```",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 10,
+        "endChar": 41
+      },
+      "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b9574c9_8d2f51ec",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002971
+      },
+      "writtenOn": "2026-09-21T16:56:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e1eba38a_0840a3f4",
       "range": {
         "startLine": 9,
         "startChar": 1,

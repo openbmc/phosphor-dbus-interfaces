@@ -91,6 +91,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c18bc7fd_4e9eb333",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-21T10:56:29Z",
+      "side": 1,
+      "message": "Again, I asked for a design... where is it?  Who is reviewing the proposal here?",
+      "parentUuid": "c461516c_2bfa7d5b",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f9ab2887_c412ce91",
         "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
         "patchSetId": 4
@@ -155,6 +173,24 @@
       "side": 1,
       "message": "The value will be set by bmcweb when BIOS sends the value via Redfish Host interface.",
       "parentUuid": "3eccfaa6_60a4a08b",
+      "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2cbbd624_0d63652f",
+        "filename": "yaml/xyz/openbmc_project/Control/Boot/BootOption.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-21T10:56:29Z",
+      "side": 1,
+      "message": "Is there going to be some restriction in the Redfish Host interface so that this can only be set by them?",
+      "parentUuid": "3540102f_e83473db",
       "revId": "1a06f112d75fb4f1b2309060fa6d05567cfff20d",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

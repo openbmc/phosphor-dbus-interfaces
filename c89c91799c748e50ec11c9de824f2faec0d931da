@@ -16,6 +16,24 @@
       "message": "Can this be a value of UserType?\n\nWhat is the rationale for this being the first property in the interface?",
       "revId": "c89c91799c748e50ec11c9de824f2faec0d931da",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a18fc09c_ff481791",
+        "filename": "yaml/xyz/openbmc_project/User/Attributes.interface.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002630
+      },
+      "writtenOn": "2026-09-21T07:30:19Z",
+      "side": 1,
+      "message": "\u003e Can this be a value of UserType?\n\nUserType identifies the authentication source. A bootstrap account is created locally and will always be Internal. Keeping them distinct avoids complicating every Internal check with bootstrap logic.",
+      "parentUuid": "dbbf45c1_95eb8d91",
+      "revId": "c89c91799c748e50ec11c9de824f2faec0d931da",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

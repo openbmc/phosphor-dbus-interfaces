@@ -126,6 +126,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "aa238856_73e0066f",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000318
+      },
+      "writtenOn": "2026-09-22T17:18:39Z",
+      "side": 1,
+      "message": "Looks like we store other psu info in Decorator interfaces (eg Asset, LocationCode) that gets pulled into redfish already.  \n\nWould we just create a new PowerCapacityWatts PDI under https://github.com/openbmc/phosphor-dbus-interfaces/tree/master/yaml/xyz/openbmc_project/Inventory/Decorator?",
+      "parentUuid": "c1cb7f6a_e2409a86",
+      "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2c77762d_8a47e3d2",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
         "patchSetId": 1

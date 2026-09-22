@@ -90,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "afbf8e3c_126f94aa",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-09-22T10:30:14Z",
+      "side": 1,
+      "message": "I do not think this is resolved yet. If an interface definition is updated all producers must then expose the interface as per the new definition.\n\nTherefore EM must expose this property whenever it creates the interface and we may need a patch to implement that before this change gets merged.\n\n\u003e We don\u0027t have other patches yet; we wanted to make sure the PDI update got approved first.\n\nSince the proposed change by itself would leave the project in an inconsistent state (interface definition differs from what producers expose) it does not look ready to be merged. Maybe the commit message can be changed to `RFC (DNM): ...` to indicate that you are looking for feedback on the change rather than something that is ready to merge.\n\nLet\u0027s leave this comment as unresolved until there are patches to fully implement this change across producers.",
+      "parentUuid": "f64552dd_ee8cadfa",
+      "revId": "ef1e50b80dde083954398e91a60be763fd426b74",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2c77762d_8a47e3d2",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml",
         "patchSetId": 1

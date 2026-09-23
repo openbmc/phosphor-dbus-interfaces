@@ -94,6 +94,30 @@
       },
       "revId": "64f2447c0577f0a4a2afd49fca05cd080edfbb96",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4eeaeed7_d7bc2715",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-23T13:47:07Z",
+      "side": 1,
+      "message": "\u003e I was under the impression that OEM specific interfaces can be pushed under OEM folders.\n\nCompany-specific directories shouldn\u0027t be considered a free-for-all sandbox though.  Other people sometimes point to them as a \"reference\" so if the design doesn\u0027t make sense in the scope of the greater project, the interfaces shouldn\u0027t be there.\n\n\u003e Interfaces are not strictly tied to a service\n\nWhen there isn\u0027t an upstream implementation, interfaces are candidates to be removed.",
+      "parentUuid": "6b2829a4_f70775e0",
+      "range": {
+        "startLine": 11,
+        "startChar": 29,
+        "endLine": 11,
+        "endChar": 59
+      },
+      "revId": "64f2447c0577f0a4a2afd49fca05cd080edfbb96",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

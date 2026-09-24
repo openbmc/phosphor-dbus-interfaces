@@ -16,6 +16,23 @@
       "message": "We have some precedence of using Decorator interfaces for other unchanging psu info, so looks good to me.",
       "revId": "7a8d94d0c57a40c9a1699da0b9b8291b78648ef0",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61d8f180_e1ab4b3c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerCapacityWatts.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-09-24T16:13:34Z",
+      "side": 1,
+      "message": "I\u0027m not super excited about a single-property decorator here.  Are there other power related properties that would all belong in a single decorator? \n\nIs this the \"nameplate capacity\" of the power supply?  What would it mean for a Battery or a Chassis?",
+      "revId": "7a8d94d0c57a40c9a1699da0b9b8291b78648ef0",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

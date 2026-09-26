@@ -10,10 +10,11 @@ methods:
           updated as per the
           xyz/openbmc_project/User/Ldap/Config.interface.yaml.
       parameters:
-          - name: LDAPServerURI
-            type: string
+          - name: LDAPServerURIs
+            type: array[string]
             description: >
-                Specifies the LDAP URI of the server to connect to.
+                Ordered list of LDAP/LDAPS URIs. nslcd attempts each in sequence
+                when the previous server is unreachable.
           - name: LDAPBindDN
             type: string
             description: >

@@ -4,10 +4,11 @@ description: >
     Object.Enable interface on the object.
 
 properties:
-    - name: LDAPServerURI
-      type: string
+    - name: LDAPServerURIs
+      type: array[string]
       description: >
-          Specifies the LDAP URI of the server to connect to.
+          Ordered list of LDAP/LDAPS URIs. nslcd attempts each in sequence when
+          the previous server is unreachable.
       errors:
           - xyz.openbmc_project.Common.Error.InternalFailure
           - xyz.openbmc_project.Common.Error.InvalidArgument

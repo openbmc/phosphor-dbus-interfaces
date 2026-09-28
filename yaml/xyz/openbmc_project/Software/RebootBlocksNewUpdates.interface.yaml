@@ -1,0 +1,15 @@
+description: >
+    Empty interface to indicate that a BMC reboot is pending (for example,
+    deferred until in-progress firmware updates complete) and that new
+    firmware updates must not be started while any object implements this
+    interface.
+
+    This is the counterpart of `Software.ActivationBlocksTransition`: that
+    interface blocks a state transition of a managed element while a
+    `Software.Version` is `Activating`; this interface blocks new firmware
+    updates while a state transition (a pending BMC reboot) is outstanding.
+
+    An updater, before starting a new update, checks for any object exposing
+    this interface and, if one is present, refuses to start the update until
+    the interface is gone.  Causal ordering of D-Bus operations can prove that
+    no reboot is currently pending and the update may safely begin.

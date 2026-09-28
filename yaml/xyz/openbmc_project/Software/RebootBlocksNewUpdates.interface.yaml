@@ -1,0 +1,16 @@
+description: >
+    An object implements this interface to signal that a BMC reboot is pending
+    to activate completed BMC firmware, and that new firmware updates must not
+    be started until that reboot has happened.
+
+    The BMC updater about to reboot exposes an object with this interface for
+    the duration of the pending reboot. Before starting an update, any updater
+    (for the BMC or for a device) checks the object mapper for an object
+    implementing this interface and, if one is present, rejects the update with
+    xyz.openbmc_project.Common.Error.Unavailable.
+
+    Device updates are rejected as well as BMC updates: the pending reboot is
+    deferred until updates already in progress finish, so allowing new updates
+    to start would either keep extending that deferral (delaying activation of
+    the completed BMC firmware) or leave a new update to be interrupted
+    mid-write when the reboot proceeds.

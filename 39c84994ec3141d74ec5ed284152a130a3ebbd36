@@ -16,6 +16,47 @@
       "message": "Just curious, do you intend to create the association with phosphor-inventory-manager?",
       "revId": "39c84994ec3141d74ec5ed284152a130a3ebbd36",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b37f2247_7d4b1857",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2026-09-28T21:42:59Z",
+      "side": 1,
+      "message": "Yes, companion commit for the associations for the IBM systems: https://gerrit.openbmc.org/c/openbmc/openbmc/+/93462\n\nI\u0027ve updated the commit message to include this information.",
+      "parentUuid": "acae1e7b_2e0fa3af",
+      "revId": "39c84994ec3141d74ec5ed284152a130a3ebbd36",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09556d95_2a24534d",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Chassis.interface.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1001621
+      },
+      "writtenOn": "2026-09-28T21:42:59Z",
+      "side": 1,
+      "message": "Corrected since it didn\u0027t match the association name.",
+      "range": {
+        "startLine": 65,
+        "startChar": 15,
+        "endLine": 65,
+        "endChar": 25
+      },
+      "revId": "39c84994ec3141d74ec5ed284152a130a3ebbd36",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

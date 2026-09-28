@@ -1,0 +1,10 @@
+description: >
+    An object implements this interface to signal that a BMC reboot is pending
+    (for example, a BMC firmware update has completed and the BMC is about to
+    reboot) and that new firmware updates must not be started until the reboot
+    has happened.
+
+    The updater that is about to reboot the BMC exposes an object with this
+    interface for the duration. Before starting an update, an updater checks the
+    object mapper for any object implementing this interface and, if one is
+    present, rejects the update instead of starting it.

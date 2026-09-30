@@ -1,0 +1,16 @@
+description: >
+    This is used to define enumerations for FaultLog dump data types.
+
+enumerations:
+    - name: FaultLogTypes
+      description: >
+          Type of fault data logged.
+      values:
+          - name: CPER
+            description: >
+                UEFI Common Platform Error Record.
+          - name: Crashdump
+            description: >
+                Collection of processor and chipset register values typically
+                gathered for debugging purposes at the time of a crash (or
+                sometimes on-demand).

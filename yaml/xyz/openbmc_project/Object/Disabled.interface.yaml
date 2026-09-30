@@ -1,0 +1,31 @@
+description: >
+    Implement on hardware inventory objects to indicate a persistent decision to
+    keep the hardware disabled in the system. This decision may be made
+    automatically by the system or manually by a service engineer.
+
+    Hardware can be selected to remain disabled without an active error
+    condition. This information is independent of its presence, operational
+    health, and accessibility.
+
+    The provider must initialize this interface from the authoritative policy
+    before publishing it and keep it synchronized with subsequent policy
+    changes. The absence of this interface must not be interpreted as an
+    indication that the hardware is enabled.
+
+properties:
+    - name: Disabled
+      type: boolean
+      flags:
+          - readonly
+      description: >
+          True if the hardware represented by this object has been selected,
+          either automatically by the system or manually by a service engineer,
+          to remain disabled. False if no such selection is in effect for this
+          hardware.
+
+          This property reports the policy for this hardware only. A decision to
+          disable a parent does not by itself set this property.
+
+          This property does not indicate whether the hardware has already
+          stopped participating in the current system configuration. A value of
+          false does not guarantee that the hardware is currently usable.

@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2006f6bf_d6237d59",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-09-30T06:50:35Z",
+      "side": 1,
+      "message": "This mirrors the already-merged Control.Power.Cap and Control.OperatingClockSpeed, which both live on their own /xyz/openbmc_project/control/... object and link back via controlling/controlled_by, and it keeps the daemon that can actually perform the reset decoupled from whoever owns the inventory item.",
+      "parentUuid": "5a490031_638cc734",
+      "range": {
+        "startLine": 5,
+        "startChar": 48,
+        "endLine": 6,
+        "endChar": 66
+      },
+      "revId": "67a79b28ed1ae466f5cec71506827ef5e0094750",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6f3875d4_bfa40fc8",
@@ -47,6 +71,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9732a765_6beda8ee",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-09-30T06:50:35Z",
+      "side": 1,
+      "message": "Thanks for pointing this out. `PendingReset` returns to `None` once the daemon finishes the request either way, with request time failures reported as `NotAllowed` or `Unavailable`, and the eventual outcome observed through the controlled device\u0027s own state rather than this interface. I have updated the description accordingly",
+      "parentUuid": "6f3875d4_bfa40fc8",
+      "range": {
+        "startLine": 28,
+        "startChar": 38,
+        "endLine": 28,
+        "endChar": 73
+      },
+      "revId": "67a79b28ed1ae466f5cec71506827ef5e0094750",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "edb85b89_5660321a",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-09-30T06:03:48Z",
       "side": 1,
       "message": "How is this managed - bmcweb is supposed to do this?",
+      "range": {
+        "startLine": 44,
+        "startChar": 77,
+        "endLine": 45,
+        "endChar": 49
+      },
+      "revId": "67a79b28ed1ae466f5cec71506827ef5e0094750",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5145024_9bca5895",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-09-30T06:50:35Z",
+      "side": 1,
+      "message": "The implementing daemon manages it. It never advertises `None` in `SupportedResetTypes` and rejects a write of it with `NotAllowed`; bmcweb only maps `SupportedResetTypes` onto `ResetType@Redfish.AllowableValues`.",
+      "parentUuid": "edb85b89_5660321a",
       "range": {
         "startLine": 44,
         "startChar": 77,

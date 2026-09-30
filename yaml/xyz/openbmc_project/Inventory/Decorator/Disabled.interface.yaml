@@ -1,0 +1,41 @@
+description: >
+    Implement on hardware inventory objects to indicate a persistent decision to
+    keep the hardware disabled in the system. This decision may be made
+    automatically by the system or through a manual hardware-management request.
+
+    For example, a present and healthy unit may be selected to remain disabled
+    for maintenance without an active error condition. This value is not derived
+    from Present, Functional, or Available.
+
+    This interface describes the hardware. It does not describe whether the
+    D-Bus object and its properties can be relied upon, as described by
+    xyz.openbmc_project.Object.Enable. Consumers may continue to use the other
+    inventory properties when Disabled is true.
+
+    The service responsible for hardware disablement must initialize the value
+    from its saved decision before publishing the interface and update it when
+    the decision changes. It may host this interface itself or publish property
+    updates to the service hosting the inventory object.
+
+    Manual requests are handled by the platform's hardware-management API.
+    Writing this property publishes the resulting decision; it does not itself
+    disable or enable hardware. This interface does not define that control API.
+    Its absence must not be interpreted as an indication that hardware is
+    enabled.
+
+properties:
+    - name: Disabled
+      type: boolean
+      description: >
+          True if the hardware represented by this object has been selected,
+          either automatically or through a manual hardware-management request,
+          to remain disabled. False if no such selection is in effect for this
+          hardware. The property is writable so that a separate service can
+          publish the decision on the inventory object.
+
+          This property reports the policy for this hardware only. A decision to
+          disable a parent does not by itself set this property.
+
+          This property does not indicate whether the hardware has already
+          stopped participating in the current system configuration. A value of
+          false does not guarantee that the hardware is currently usable.

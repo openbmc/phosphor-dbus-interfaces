@@ -1,0 +1,25 @@
+description: >
+    Implement this to add FaultLog dump management.
+
+properties:
+    - name: Type
+      type: enum[xyz.openbmc_project.Common.FaultLogType.FaultLogTypes]
+      description: >
+          Type of fault data in the log indicated by PrimaryLogId.
+      flags:
+          - const
+    - name: AdditionalTypeName
+      type: string
+      description: >
+          Additional string to further identify the Type (e.g. it can indicate
+          the OEM format of a Crashdump)
+      flags:
+          - const
+    - name: PrimaryLogId
+      type: string
+      description: >
+          This is intended to be a unique identifier, depending on Type, to
+          reference the primary fault data log but is not intended otherwise to
+          be programmatically interpreted (e.g. string parsing)
+      flags:
+          - const

@@ -20,6 +20,86 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e900d29e_bf160581",
+        "filename": "yaml/xyz/openbmc_project/Object/Disabled.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-09-30T05:39:32Z",
+      "side": 1,
+      "message": "If this is specific to HW inventory objects then this should likely be in the Inventory namespace.",
+      "revId": "4eed2e95eb08ce75ffc95939a08e2d7c922c47c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1839ba99_cb1b8ffd",
+        "filename": "yaml/xyz/openbmc_project/Object/Disabled.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-09-30T05:39:32Z",
+      "side": 1,
+      "message": "Who is the consumer of this? Is there a design doc or other relevant patches that explain how this is used/controlled?",
+      "revId": "4eed2e95eb08ce75ffc95939a08e2d7c922c47c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb05d8b0_86d83a75",
+        "filename": "yaml/xyz/openbmc_project/Object/Disabled.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-09-30T05:39:32Z",
+      "side": 1,
+      "message": "Not following this - how can this be set if something is not present?",
+      "range": {
+        "startLine": 7,
+        "startChar": 35,
+        "endLine": 7,
+        "endChar": 62
+      },
+      "revId": "4eed2e95eb08ce75ffc95939a08e2d7c922c47c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61931701_dd82ea1d",
+        "filename": "yaml/xyz/openbmc_project/Object/Disabled.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-09-30T05:39:32Z",
+      "side": 1,
+      "message": "Not really following what providers should do.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 12
+      },
+      "revId": "4eed2e95eb08ce75ffc95939a08e2d7c922c47c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "464369ed_881fac82",
         "filename": "yaml/xyz/openbmc_project/Object/Disabled.interface.yaml",
         "patchSetId": 1
@@ -49,6 +129,47 @@
       "side": 1,
       "message": "This property is only a reprsentation of internal state, and the state is change is not driven by changing this property.\nBut if this is hosted by PIM and another service owns the value, this cannot be read-only, will change",
       "parentUuid": "464369ed_881fac82",
+      "revId": "4eed2e95eb08ce75ffc95939a08e2d7c922c47c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e7ae1cc_c3e5920b",
+        "filename": "yaml/xyz/openbmc_project/Object/Disabled.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-09-30T05:39:32Z",
+      "side": 1,
+      "message": "Readonly for this seems to contradict the description. How can the service engineer set this property?",
+      "parentUuid": "da25db5b_0e51ef07",
+      "revId": "4eed2e95eb08ce75ffc95939a08e2d7c922c47c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af4008d2_ae37bca8",
+        "filename": "yaml/xyz/openbmc_project/Object/Disabled.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-09-30T05:39:32Z",
+      "side": 1,
+      "message": "So the policy itself is not controlled via this inteface? How is it controlled?",
+      "range": {
+        "startLine": 26,
+        "startChar": 36,
+        "endLine": 26,
+        "endChar": 42
+      },
       "revId": "4eed2e95eb08ce75ffc95939a08e2d7c922c47c9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

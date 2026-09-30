@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a490031_638cc734",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-09-30T06:03:48Z",
+      "side": 1,
+      "message": "Curious why we would not implement this interface on the inventory object itself? Do we have a need to find the Reset interface and get to the inventory item from the object implementing the Reset interface?",
+      "range": {
+        "startLine": 5,
+        "startChar": 48,
+        "endLine": 6,
+        "endChar": 66
+      },
+      "revId": "67a79b28ed1ae466f5cec71506827ef5e0094750",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f3875d4_bfa40fc8",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-09-30T06:03:48Z",
+      "side": 1,
+      "message": "How about in the case of failure?",
+      "range": {
+        "startLine": 28,
+        "startChar": 38,
+        "endLine": 28,
+        "endChar": 73
+      },
+      "revId": "67a79b28ed1ae466f5cec71506827ef5e0094750",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "edb85b89_5660321a",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-09-30T06:03:48Z",
+      "side": 1,
+      "message": "How is this managed - bmcweb is supposed to do this?",
+      "range": {
+        "startLine": 44,
+        "startChar": 77,
+        "endLine": 45,
+        "endChar": 49
+      },
+      "revId": "67a79b28ed1ae466f5cec71506827ef5e0094750",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

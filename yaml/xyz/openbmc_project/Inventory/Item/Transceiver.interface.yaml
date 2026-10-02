@@ -1,0 +1,111 @@
+description: >
+    This defines a pluggable transceiver module, such as the module inserted
+    into the cage of a network port.
+
+properties:
+    - name: Type
+      type: enum[self.TransceiverType]
+      default: Unknown
+      description: >
+          The form factor of the transceiver.
+    - name: MediumType
+      type: enum[self.MediumType]
+      default: Unknown
+      description: >
+          The transmission medium the transceiver drives.
+    - name: ManagementInterface
+      type: enum[self.ManagementInterface]
+      default: Unknown
+      description: >
+          The specification used to manage the transceiver.
+
+enumerations:
+    - name: TransceiverType
+      description: >
+          Possible transceiver form factors.
+      values:
+          - name: Unknown
+            description: >
+                The form factor is unknown.
+          - name: SFP
+            description: >
+                Small Form Factor Pluggable.
+          - name: SFPPlus
+            description: >
+                Enhanced Small Form Factor Pluggable.
+          - name: SFP28
+            description: >
+                Small Form Factor Pluggable 28.
+          - name: SFP56
+            description: >
+                Small Form Factor Pluggable 56.
+          - name: SFP112
+            description: >
+                Small Form Factor Pluggable 112.
+          - name: SFPDD
+            description: >
+                Small Form Factor Pluggable Double Density.
+          - name: SFPDD112
+            description: >
+                Small Form Factor Pluggable Double Density 112.
+          - name: cSFP
+            description: >
+                Compact Small Form Factor Pluggable.
+          - name: QSFP
+            description: >
+                Quad Small Form Factor Pluggable.
+          - name: QSFPPlus
+            description: >
+                Enhanced Quad Small Form Factor Pluggable.
+          - name: QSFP14
+            description: >
+                Quad Small Form Factor Pluggable 14.
+          - name: QSFP28
+            description: >
+                Quad Small Form Factor Pluggable 28.
+          - name: QSFP56
+            description: >
+                Quad Small Form Factor Pluggable 56.
+          - name: QSFP112
+            description: >
+                Quad Small Form Factor Pluggable 112.
+          - name: QSFPDD
+            description: >
+                Quad Small Form Factor Pluggable Double Density.
+          - name: OSFP
+            description: >
+                Octal Small Form Factor Pluggable.
+          - name: MiniSASHD
+            description: >
+                Mini Serial Attached SCSI High Density.
+          - name: CDFP
+            description: >
+                400 Gigabit Form Factor Pluggable.
+    - name: MediumType
+      description: >
+          Possible transmission media.
+      values:
+          - name: Unknown
+            description: >
+                The medium is unknown.
+          - name: Copper
+            description: >
+                The medium is copper, either passive or active.
+          - name: FiberOptic
+            description: >
+                The medium is optical fiber.
+    - name: ManagementInterface
+      description: >
+          Possible transceiver management specifications.
+      values:
+          - name: Unknown
+            description: >
+                The management specification is unknown.
+          - name: SFP
+            description: >
+                The transceiver is managed through SFF-8472, SFF-8436 or
+                SFF-8636.
+          - name: CMIS
+            description: >
+                The transceiver is managed through the Common Management
+                Interface Specification.

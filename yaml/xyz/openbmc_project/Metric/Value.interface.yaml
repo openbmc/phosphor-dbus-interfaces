@@ -51,6 +51,15 @@ enumerations:
           - name: Seconds
             description: >
                 Unit to indicate duration in seconds.
+          - name: Volts
+            description: >
+                Unit to indicate electric potential in volts.
+          - name: Amperes
+            description: >
+                Unit to indicate electric current in amperes.
+          - name: Watts
+            description: >
+                Unit to indicate power in watts.
 
 associations:
     - name: measuring
@@ -315,6 +324,25 @@ paths:
                 Bandwidth usage of the memory as a percentage of total memory
                 bandwidth.
             value: memory_bandwidth
+          - name: TransceiverTXOutputPower
+            description: >
+                The optical output power of one lane of a port's transceiver.
+                The lane number is appended to the path value below.
+            value: transceiver/tx_output_power_lane_
+          - name: TransceiverRXInputPower
+            description: >
+                The optical input power of one lane of a port's transceiver.
+                The lane number is appended to the path value below.
+            value: transceiver/rx_input_power_lane_
+          - name: TransceiverTXBiasCurrent
+            description: >
+                The laser bias current of one lane of a port's transceiver. The
+                lane number is appended to the path value below.
+            value: transceiver/tx_bias_current_lane_
+          - name: TransceiverSupplyVoltage
+            description: >
+                The supply voltage of a port's transceiver.
+            value: transceiver/supply_voltage
     - name: BMC
       description: >
           The BMC metrics.

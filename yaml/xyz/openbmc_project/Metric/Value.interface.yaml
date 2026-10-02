@@ -51,6 +51,15 @@ enumerations:
           - name: Seconds
             description: >
                 Unit to indicate duration in seconds.
+          - name: Volts
+            description: >
+                Unit to indicate electric potential in volts.
+          - name: Amperes
+            description: >
+                Unit to indicate electric current in amperes.
+          - name: Watts
+            description: >
+                Unit to indicate power in watts.
 
 associations:
     - name: measuring
@@ -300,6 +309,25 @@ paths:
                 The total duration of throttling caused by a thermal limit of
                 the device since reset.
             value: thermal_limit_throttle_duration
+          - name: TransceiverTXOutputPower
+            description: >
+                The optical output power of one lane of a transceiver. The lane
+                number is appended to the path value below.
+            value: tx_output_power_lane_
+          - name: TransceiverRXInputPower
+            description: >
+                The optical input power of one lane of a transceiver. The lane
+                number is appended to the path value below.
+            value: rx_input_power_lane_
+          - name: TransceiverTXBiasCurrent
+            description: >
+                The laser bias current of one lane of a transceiver. The lane
+                number is appended to the path value below.
+            value: tx_bias_current_lane_
+          - name: TransceiverSupplyVoltage
+            description: >
+                The supply voltage of a transceiver.
+            value: supply_voltage
           - name: OperatingFrequency
             description: >
                 The operating frequency of a device. Examples are operating
@@ -325,6 +353,12 @@ paths:
           object is expected to implement Connector.Port. The port ID
           (index/name/etc) is appended to the path.
       value: /xyz/openbmc_project/metric/port_
+    - name: Transceiver
+      description: >
+          A transceiver's metrics. The inventory item associated with the
+          transceiver metrics object is expected to implement Item.Transceiver.
+          The transceiver ID (index/name/etc) is appended to the path.
+      value: /xyz/openbmc_project/metric/transceiver_
     - name: CPU
       description: >
           A CPU's metrics. The inventory item associated with the CPU metrics

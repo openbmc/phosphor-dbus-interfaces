@@ -72,6 +72,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "341cc432_e3ad34ee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-10-05T06:20:42Z",
+      "side": 1,
+      "message": "The PDI doesn\u0027t define a threshold for this.\n\nFor my implementing service(PLDM), it reflects what the devices or its firmware reports, by using pre-define state set at DSP0249(v1.4.0), Table 1, State Set 14.\n\nRef:\nhttps://www.dmtf.org/sites/default/files/standards/documents/DSP0249_1.4.0.pdf\n\nIn this case, I think the definition of `degraded` is defined by the vendor itself.",
+      "parentUuid": "07a8ce9c_326d35d0",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 37
+      },
+      "revId": "76dbe283015f918a21d8c644de915457323d8d58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9c81158_4042c1a2",

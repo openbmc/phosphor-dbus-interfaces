@@ -62,12 +62,6 @@ foreach d : yaml_selected_subdirs
     )
 endforeach
 
-# If libphosphor_dbus was not enabled, exit out from here.  We installed
-# the YAML which is all we are asked to do.
-if not get_option('libphosphor_dbus')
-    subdir_done()
-endif
-
 should_generate_cpp = true
 should_generate_markdown = get_option('generate_md')
 should_generate_registry = true

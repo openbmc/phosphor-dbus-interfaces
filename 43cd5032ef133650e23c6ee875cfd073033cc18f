@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e917fc41_26ffb7a0",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkAdapter.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000522
+      },
+      "writtenOn": "2026-10-06T15:00:40Z",
+      "side": 1,
+      "message": "As network adapter is a generic broad term for any hardware that connects to the network and work as an umbrella category which as stated can include Ethernet NICs, converged network adapters etc.\nShould there be a property under this interface to hold enumerations of such type to identify the actual hardware component being referred to?\nWithout which all adapters looks identical in inventory.",
+      "revId": "43cd5032ef133650e23c6ee875cfd073033cc18f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05ebee69_4855c251",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-06T13:14:56Z",
+      "side": 1,
+      "message": "if we \u0027defer\u0027 starting the update, that means the updater must persist the update contents until after the reboot.\n\ni don\u0027t know of any device specific updater that implements persisting deferred-update details across BMC reboots today.\n\noverall i would recommend to change the wording to\n\n```\nAn updater checks for this interface before starting an update\n and, if present, rejects the update.\n```",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 42
+      },
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a75f50d9_fc1a65fd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1003117
+      },
+      "writtenOn": "2026-10-06T17:38:09Z",
+      "side": 1,
+      "message": "Reworded to \"reject\" in PS3, description and commit message now say the updater rejects the update.",
+      "parentUuid": "05ebee69_4855c251",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 42
+      },
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a03b82d3_c10de815",
         "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
         "patchSetId": 2
@@ -37,6 +61,24 @@
       "writtenOn": "2026-10-06T13:57:52Z",
       "side": 1,
       "message": "Is this meant to be BMC specific?",
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "447ad4a0_c475ea6d",
+        "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1003117
+      },
+      "writtenOn": "2026-10-06T17:38:09Z",
+      "side": 1,
+      "message": "Yes, it\u0027s specific to a pending BMC reboot. Clarified in the description (BMC reboot is pending until the reboot has happened).",
+      "parentUuid": "a03b82d3_c10de815",
       "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -66,6 +108,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "23161270_e5052584",
+        "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1003117
+      },
+      "writtenOn": "2026-10-06T17:38:09Z",
+      "side": 1,
+      "message": "The updater about to reboot the BMC exposes an object with this interface; other updaters look it up via the object mapper before starting.",
+      "parentUuid": "36e104e5_f1400254",
+      "range": {
+        "startLine": 3,
+        "startChar": 47,
+        "endLine": 3,
+        "endChar": 57
+      },
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cc46a6b6_ecc251ed",
         "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
         "patchSetId": 2
@@ -77,6 +143,24 @@
       "writtenOn": "2026-10-06T13:57:52Z",
       "side": 1,
       "message": "Do we need to define any events/errors? Do you have related patches in updater code/bmcweb?",
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "487385ba_84a81d16",
+        "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1003117
+      },
+      "writtenOn": "2026-10-06T17:38:09Z",
+      "side": 1,
+      "message": "No new error needed — the consumer rejects with the existing xyz.openbmc_project.Common.Error.Unavailable.  The consumer is a phosphor-bmc-code-mgmt change (BMC updater exposes this, common/ SoftwareUpdate checks it in start_update)",
+      "parentUuid": "cc46a6b6_ecc251ed",
       "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

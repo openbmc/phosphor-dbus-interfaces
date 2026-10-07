@@ -15,7 +15,7 @@ Provides common type definitions shared across CPER-related interfaces.
 
 ### Processor
 
-`xyz.openbmc_project.CPER.Processor`
+`xyz.openbmc_project.Logging.CPER.Processor`
 
 Provides a common ingress interface for submitting CPER content for decoding and
 processing.
@@ -26,7 +26,7 @@ integrating with downstream event and logging services.
 
 ### Raw
 
-`xyz.openbmc_project.CPER.Raw`
+`xyz.openbmc_project.Logging.CPER.Raw`
 
 Provides an interface for extracting the raw CPER content from a `Logging.Entry`
 that has a CPER section. This is provided as an optimization to extract

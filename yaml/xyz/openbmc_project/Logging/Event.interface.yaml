@@ -8,7 +8,7 @@ description: >
     instantiated for the phosphor::events namespace. This interface is a
     collection of objects, therefore it is required to implement
     org.freedesktop.DBus.ObjectManager on the events namespace root. Optionally,
-    implement xyz.openbmc_project.Delete to allow the deletion of individual
+    implement xyz.openbmc_project.Object.Delete to allow the deletion of individual
     entries. The event D-Bus object path would look like
     <PhosphorDbusRoot>/events/<type>/<id> Here "type" is the type of event,
     Could be network/system state event etc. Type would be given by the

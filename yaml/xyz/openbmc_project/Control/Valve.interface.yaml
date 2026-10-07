@@ -2,7 +2,7 @@ description: >
     Implement to provide a valve control interface to open/close a valve.
 
     Any service implementing this interface must also implement
-    the  xyz.openbmc_project.Sensors.Value interface to show valve's open status
+    the xyz.openbmc_project.Sensor.Value interface to show valve's open status
     in percentage units.
 
 properties:

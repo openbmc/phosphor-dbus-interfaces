@@ -4,7 +4,7 @@ description: >
     within the sensors/fan_tach namespace.
 
     Any service implementing Control.FanSpeed on one or more objects must
-    implement xyz.openbmc_project.Sensors.Value on the object and
+    implement xyz.openbmc_project.Sensor.Value on the object and
     org.freedesktop.DBus.ObjectManager on the sensors namespace root.
 
     All Control.FanSpeed properties are read/write.

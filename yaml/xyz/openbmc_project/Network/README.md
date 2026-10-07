@@ -9,7 +9,7 @@ and `org.freedesktop.DBus.ObjectManager`.
 When the network manager daemon comes up, it should create objects implementing
 physical link/virtual interfaces such as
 `xyz.openbmc_project.Network.EthernetInterface` or
-`xyz.openbmc_project.Network.VLANInterface` on the system.
+`xyz.openbmc_project.Network.VLAN` on the system.
 
 IP address(v4 and v6) objects must be children objects of the physical/virtual
 interface object.

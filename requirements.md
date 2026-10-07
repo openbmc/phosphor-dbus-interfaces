@@ -123,7 +123,7 @@ associations:
 
 In this example the DBus object with
 `xyz.openbmc_project.Inventory.Item.PCIeSlot` interface may have a
-`connected_to` associtation to another DBus object holding at least ONE OF these
+`connected_to` association to another DBus object holding at least ONE OF these
 required endpoint interfaces.
 
 ### Documenting at both ends of an association

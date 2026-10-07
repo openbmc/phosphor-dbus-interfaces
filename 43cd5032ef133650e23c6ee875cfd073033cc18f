@@ -16,6 +16,24 @@
       "message": "As network adapter is a generic broad term for any hardware that connects to the network and work as an umbrella category which as stated can include Ethernet NICs, converged network adapters etc.\nShould there be a property under this interface to hold enumerations of such type to identify the actual hardware component being referred to?\nWithout which all adapters looks identical in inventory.",
       "revId": "43cd5032ef133650e23c6ee875cfd073033cc18f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "102da534_78af310b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkAdapter.interface.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-10-07T02:41:40Z",
+      "side": 1,
+      "message": "Thanks Sunny. Same as my reply on Discord:\n\nI agree adapters need to be distinguishable in inventory. A type enum on this interface may not be needed for that, though: the information is already defined elsewhere (Decorator.Asset for the product, Connector.Port.PortProtocol for the protocol), and a single type for the whole adapter would be inaccurate when one adapter runs more than one protocol.\n\n    adapter object\n      interfaces on this object:\n        Item.NetworkAdapter  \u003d\u003e it is a network adapter     (89247, this change under review)\n        Decorator.Asset      \u003d\u003e Manufacturer, Model, PartNumber, SKU (which product)\n\n      linked by the \"connecting\" association:\n        |-- port 0 object\n        |     Connector.Port \u003d\u003e PortProtocol \u003d Ethernet     (89248, under review)\n        `-- port 1 object\n              Connector.Port \u003d\u003e PortProtocol \u003d InfiniBand   (95051, under review)\n                                (what each port runs)\n\nIf my understanding is incorrect, please feel free to correct me. Thanks!",
+      "parentUuid": "e917fc41_26ffb7a0",
+      "revId": "43cd5032ef133650e23c6ee875cfd073033cc18f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

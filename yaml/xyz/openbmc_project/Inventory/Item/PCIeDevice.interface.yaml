@@ -399,9 +399,11 @@ associations:
     - name: exposing
       description: >
           Objects that implement PCIeDevice can optionally implement the
-          upstexposing association to provide a link back to a PCIe function.
+          exposing association to provide a link back to a PCIe function.
       reverse_name: exposed_by
-      required_endpoint_interfaces: xyz.openbmc_project.Inventory.Item.PCIeFunction
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeFunction
+
     - name: connecting
       description: >
           Objects that implement PCIeDevice can optionally implement the

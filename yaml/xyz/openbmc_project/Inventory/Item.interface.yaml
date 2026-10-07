@@ -63,7 +63,7 @@ associations:
           association to provide a link to one or more metrics.
       reverse_name: measuring
       required_endpoint_interfaces:
-          - xyz.openbmc_project.Metrics
+          - xyz.openbmc_project.Metric.Value
     - name: monitored_by
       description: >
           Any inventory Item (usually Boards or Chassis) can optionally
@@ -130,6 +130,22 @@ associations:
           - xyz.openbmc_project.Control.Valve
           - xyz.openbmc_project.Control.Power.Cap
           - xyz.openbmc_project.Control.OperatingClockSpeed
+    - name: ran_on
+      description: >
+          Objects that implement Item can optionally implement the 'ran_on'
+          association to provide a link to the software versions currently
+          running on the item.
+      reverse_name: running
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Software.Version
+    - name: activated_on
+      description: >
+          Objects that implement Item can optionally implement the
+          'activated_on' association to provide a link to the software versions
+          that are activated for the item.
+      reverse_name: activating
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Software.Version
 
 paths:
     - namespace: /xyz/openbmc_project/inventory

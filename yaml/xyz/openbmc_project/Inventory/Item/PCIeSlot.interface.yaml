@@ -110,3 +110,12 @@ associations:
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item.Cpu
           - xyz.openbmc_project.Inventory.Item.PCIeSwitch
+
+    - name: associated_pcie_device
+      description: >
+          Objects that implement PCIeSlot can optionally implement the
+          associated_pcie_device association to provide a link to the PCIe
+          device that is plugged into this slot.
+      reverse_name: upstream_pcie_slot
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice

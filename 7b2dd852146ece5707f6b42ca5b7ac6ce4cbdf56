@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "24bcd159_25cb4ed0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002971
+      },
+      "writtenOn": "2026-10-07T19:35:59Z",
+      "side": 1,
+      "message": "Not a formally documented guideline, but it is the established PDI convention in this repo for uint64 inventory properties where the value may be unavailable; the same pattern is used by Inventory.Item.Accelerator for BaseSpeedInHz, MaxSpeedInHz, and MinSpeedInHz. If a sdbusplus-based service implements this interface but never explicitly sets PowerCapacityWatts, the property will automatically report UINT64_MAX on D-Bus",
+      "parentUuid": "1300ced4_070f452e",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 30
+      },
+      "revId": "7b2dd852146ece5707f6b42ca5b7ac6ce4cbdf56",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "49dc26cf_fc22d397",
@@ -41,6 +65,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "631aec09_f2c3b68c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerAttributes.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1002971
+      },
+      "writtenOn": "2026-10-07T19:35:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "49dc26cf_fc22d397",
+      "revId": "7b2dd852146ece5707f6b42ca5b7ac6ce4cbdf56",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c64aedc1_5033a7b1",
@@ -54,6 +96,24 @@
       "writtenOn": "2026-10-06T18:03:58Z",
       "side": 1,
       "message": "Is https://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Inventory/Item/PowerSupply.interface.yaml a better fit for this?",
+      "revId": "7b2dd852146ece5707f6b42ca5b7ac6ce4cbdf56",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "889f17d0_ae7d5a5c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Decorator/PowerAttributes.interface.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002971
+      },
+      "writtenOn": "2026-10-07T19:35:59Z",
+      "side": 1,
+      "message": "This was discussed with Patrick and Alexander in the earlier patchsets (if you scroll up). The concern was that adding a property to Item.PowerSupply requires all existing producers of that interface (notably entity-manager) to be updated, leaving the interface definition out of sync with what\u0027s actually on D-Bus. A Decorator is opt-in. The broader name PowerAttributes was suggested to accommodate potential future properties.",
+      "parentUuid": "c64aedc1_5033a7b1",
       "revId": "7b2dd852146ece5707f6b42ca5b7ac6ce4cbdf56",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

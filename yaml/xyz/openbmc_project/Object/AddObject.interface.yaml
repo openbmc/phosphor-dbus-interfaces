@@ -1,0 +1,42 @@
+description: >
+    Implement to allow a new exposed record (for example a sensor, EEPROM, or
+    other inventory item) to be added to an existing Entity Manager
+    board/configuration object at runtime.
+
+    This interface is implemented by Entity Manager on each board object that it
+    creates, for example /xyz/openbmc_project/inventory/system/board/<board
+    name>.
+
+methods:
+    - name: AddObject
+      description: >
+          Add a new exposed record under this board/object. The supplied data is
+          validated against the entity-manager configuration JSON schema for the
+          record's Type field, merged into the in-memory system configuration,
+          exposed on D-Bus, and persisted to system.json so that it survives a
+          reboot.
+      parameters:
+          - name: Data
+            type:
+                dict[string,
+                variant[array[string],array[double],string,int64,uint64,double,int32,uint32,int16,uint16,byte,boolean]]
+            description: >
+                Key/value pairs describing the fields of the new exposed record
+                (e.g. Name, Type, Address, Bus, etc.), matching the
+                entity-manager configuration JSON schema for the given record
+                Type.
+    - name: AddObjectDynamic
+      description: >
+          Same as AddObject, except the new record is only added to the
+          in-memory system configuration and exposed on D-Bus; it is never
+          written to system.json. Intended for fields whose values are assigned
+          dynamically at runtime (for example a virtual I2C bus number behind an
+          SMBus mux or I3C hub) and are therefore not guaranteed to be stable
+          across reboots.
+      parameters:
+          - name: Data
+            type:
+                dict[string,
+                variant[array[string],array[double],string,int64,uint64,double,int32,uint32,int16,uint16,byte,boolean]]
+            description: >
+                Same semantics as the Data parameter of AddObject.

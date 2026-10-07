@@ -1,6 +1,6 @@
 description: >
     This defines an ethernet interface. An object implementing this interface
-    must implement xyz.openbmc_project.State.OperationalStatus.
+    must implement xyz.openbmc_project.State.Decorator.OperationalStatus.
 
 properties:
     - name: InterfaceName

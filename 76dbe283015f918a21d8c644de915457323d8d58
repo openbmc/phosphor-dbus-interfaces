@@ -168,6 +168,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "690b546b_8a815763",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-10-08T08:09:46Z",
+      "side": 1,
+      "message": "Understood your concern and I have moved the property to a new interface instead of the existing one, to avoid affecting the current consumer.\n\nIn addition, I have moved the property to new interfaces named `Degradation` as I see this is similar to that of `Availability` and should be fine to be used to represent if the object is operated under degraded functional or performance.",
+      "parentUuid": "5a3b8408_1213b56f",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 37
+      },
+      "revId": "76dbe283015f918a21d8c644de915457323d8d58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9c81158_4042c1a2",

@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d495dfad_6749f915",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-08T10:06:34Z",
+      "side": 1,
+      "message": "you are creating `xyz.openbmc_project.Object.AddObject` which is a different interface from  `xyz.openbmc_project.AddObject` which is what EM currently uses. I am not telling you which one it should be but the commit message should be consistent with the patch content.",
+      "range": {
+        "startLine": 9,
+        "startChar": 4,
+        "endLine": 9,
+        "endChar": 33
+      },
+      "revId": "1e677469a611819ef8cb4704edca8f6e1adf4392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd17f037_e00ef1c9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-08T10:06:34Z",
+      "side": 1,
+      "message": "can we add a section here about the existing users of `AddObject` and the concrete use-cases they have which cannot be realized via normal probing.\n\nA commit message introducing an interface could benefit from listing a concrete use-case from e.g. the existing bmcweb usage of this interface.",
+      "revId": "1e677469a611819ef8cb4704edca8f6e1adf4392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b79710ff_f558d93f",
+        "filename": "yaml/xyz/openbmc_project/Object/AddObject.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-08T10:06:34Z",
+      "side": 1,
+      "message": "```suggestion\n          exposed on D-Bus, and persisted so that it survives a\n          reboot.\n```\n\ni am not sure if `system.json` is considered an implementation detail therefore we may want to avoid naming it directly.\n\nFor the purposes of documenting this interface the concrete persistence mechanism does not need to be known.",
+      "range": {
+        "startLine": 16,
+        "startChar": 28,
+        "endLine": 17,
+        "endChar": 17
+      },
+      "revId": "1e677469a611819ef8cb4704edca8f6e1adf4392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3063664e_d0abc172",
+        "filename": "yaml/xyz/openbmc_project/Object/AddObject.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-08T10:06:34Z",
+      "side": 1,
+      "message": "```suggestion\n          in-memory system configuration and exposed on D-Bus; it is not persisted.\n          Intended for fields whose values are assigned\n```",
+      "range": {
+        "startLine": 31,
+        "startChar": 63,
+        "endLine": 32,
+        "endChar": 34
+      },
+      "revId": "1e677469a611819ef8cb4704edca8f6e1adf4392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

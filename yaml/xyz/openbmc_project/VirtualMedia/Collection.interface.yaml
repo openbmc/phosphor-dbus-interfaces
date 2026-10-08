@@ -1,0 +1,26 @@
+description: >
+    This interface defines a collection of virtual media resources.
+
+properties:
+    - name: Members
+      type: array[object_path]
+      description: >
+          An array of D-Bus object paths for the virtual media slots in the
+          collection. Each path must implement
+          xyz.openbmc_project.VirtualMedia.Slot.
+      flags:
+          - const
+
+    - name: MemberCount
+      type: size
+      description: >
+          The number of virtual media slots in the collection.
+      flags:
+          - const
+
+    - name: Name
+      type: string
+      description: >
+          Name of the virtual media collection.
+      flags:
+          - const

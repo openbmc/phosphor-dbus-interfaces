@@ -1,0 +1,20 @@
+description: >
+    "Local" media references an image from the Redfish LocalImageStore. This
+    interface defines properties specific to local media configurations.
+
+properties:
+    - name: ImageName
+      type: string
+      description: The name of the image file.
+      flags:
+          - readonly
+
+associations:
+    - name: backed_by
+      description: >
+          Objects that implement Local must implement the 'backed_by'
+          association to provide a link to the object that provides the path to
+          the local image file.
+      reverse_name: backing
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Common.FilePath

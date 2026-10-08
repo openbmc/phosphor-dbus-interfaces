@@ -1,0 +1,40 @@
+description: >
+    "Remote" media points to an image located on a remote server. This interface
+    defines properties specific to remote media configurations.
+
+properties:
+    - name: Image
+      type: string
+      description: >
+          The URL of the remote image.
+      flags:
+          - readonly
+
+    - name: ImageName
+      type: string
+      description: The name of the image.
+      flags:
+          - readonly
+
+    - name: TransferProtocolType
+      type: enum[self.TransferProtocolTypes]
+      description: >
+          The network protocol to use with the URI specified by the 'Image'
+          property.
+      flags:
+          - readonly
+
+enumerations:
+    - name: TransferProtocolTypes
+      description: >
+          Possible transfer protocols for streamed virtual media images.
+      values:
+          - name: FTP
+            description: >
+                File Transfer Protocol (FTP).
+          - name: HTTP
+            description: >
+                Hypertext Transfer Protocol (HTTP).
+          - name: HTTPS
+            description: >
+                Hypertext Transfer Protocol Secure (HTTPS).

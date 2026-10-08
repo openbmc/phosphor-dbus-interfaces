@@ -1,0 +1,56 @@
+description: >
+    This interface defines the common properties for a virtual media
+    configuration.
+
+properties:
+    - name: EjectPolicy
+      type: enum[self.EjectPolicies]
+      default: OnPowerOff
+      description: The ejection policy for the virtual media.
+      flags:
+          - readonly
+
+    - name: TransferMethod
+      type: enum[self.TransferMethods]
+      description: Describes how the image data is transferred to the BMC.
+      flags:
+          - readonly
+
+    - name: WriteProtected
+      type: boolean
+      default: true
+      description: An indication of whether the media is write-protected.
+      flags:
+          - readonly
+
+enumerations:
+    - name: EjectPolicies
+      description: >
+          Possible eject policies for the virtual media image.
+      values:
+          - name: OnPowerOff
+            description: >
+                The virtual media ejection occurs during a system power or reset
+                event.
+          - name: Persistent
+            description: >
+                The virtual media mount information persists indefinitely.
+          - name: Session
+            description: >
+                The virtual media ejection occurs when a session is terminated.
+                The session might be outside the virtual media service.
+
+    - name: TransferMethods
+      description: >
+          Possible transfer methods for the virtual media image.
+      values:
+          - name: Stream
+            description: >
+                Image file data is streamed from the source URI, or through the
+                bmcweb virtual media proxy.
+          - name: Upload
+            description: >
+                Image file data is from an uploaded, local file.
+
+service_names:
+    - default: com.hp.virtual_media

@@ -1,0 +1,172 @@
+version: 0.0.1
+
+errors:
+    - name: InsertFailed
+      severity: critical
+      errno: EIO
+      en:
+          description: The attempt to insert virtual media failed.
+          message: Failed to insert virtual media.
+          resolution: Check debug log.
+
+    - name: EjectFailed
+      severity: critical
+      errno: EIO
+      en:
+          description: The attempt to eject virtual media failed.
+          message: Failed to eject virtual media.
+          resolution: Check debug log.
+
+    - name: VirtualMediaStreamFailed
+      severity: critical
+      errno: EIO
+      en:
+          description: Virtual Media stream failed.
+          message: Virtual Media stream failed.
+          resolution: Retry setting up Virtual Media stream with a valid URL.
+
+    - name: CouldNotResolveHost
+      severity: critical
+      errno: EHOSTUNREACH
+      en:
+          description: Virtual Media could not resolve host.
+          message: Virtual Media could not resolve host.
+          resolution: Retry setting up Virtual Media stream with a valid URL.
+
+    - name: RemoteTlsFailure
+      severity: critical
+      errno: EIO
+      en:
+          description: Virtual Media stream TLS failed.
+          message: Virtual Media stream TLS failed.
+          resolution:
+              Add a certificate that can validate the host's and retry setting
+              up Virtual Media streaming with a valid URL.
+
+    - name: RemoteAuthenticationFailed
+      severity: critical
+      errno: EACCES
+      en:
+          description: Remote server authentication for virtual media failed.
+          message: Remote server authentication for virtual media failed.
+          resolution: Verify the credentials and retry setting up Virtual Media.
+
+    - name: RemoteAccessDenied
+      severity: critical
+      errno: EACCES
+      en:
+          description: Access to the remote server for virtual media was denied.
+          message: Access to the remote server for virtual media was denied.
+          resolution:
+              Verify the access permissions and retry setting up Virtual Media.
+
+    - name: RemoteMediaNotFound
+      severity: critical
+      errno: ENOENT
+      en:
+          description: The remote media file could not be found.
+          message: The remote media file could not be found.
+          resolution: Verify the remote media URL and ensure the media exists.
+
+    - name: RemoteRangeNotSupported
+      severity: critical
+      errno: ENOTSUP
+      en:
+          description: The server does not support byte-range requests.
+          message: The streaming server does not support byte-range requests.
+          resolution:
+              The Virtual Media streaming server must support byte-range
+              requests.
+
+    - name: RemoteUrlInvalid
+      severity: critical
+      errno: EINVAL
+      en:
+          description: The remote URL provided for the virtual media is invalid.
+          message: The remote URL provided for the virtual media is invalid.
+          resolution: Provide a valid remote URL for the virtual media.
+
+    - name: RemoteConnectionFailure
+      severity: critical
+      errno: ETIMEDOUT
+      en:
+          description: Failed to connect to the remote server for virtual media.
+          message: Failed to connect to the remote server for virtual media.
+          resolution: Retry setting up Virtual Media stream with a valid URL.
+
+    - name: RemoteHttpError
+      severity: critical
+      errno: EIO
+      metadata:
+          - name: HttpStatusCode
+            type: int64
+            description: The HTTP status code returned by the remote server.
+      en:
+          description:
+              The remote server returned an HTTP error for the virtual media
+              request.
+          message:
+              The remote server returned an HTTP error for the virtual media
+              request.
+          resolution:
+              Verify the remote server and retry setting up Virtual Media.
+
+    - name: Inserted
+      severity: critical
+      errno: EBUSY
+      en:
+          description:
+              Operation failed because the virtual media is already inserted.
+          message:
+              The operation cannot be completed because the virtual media is
+              inserted.
+          resolution:
+              Eject this virtual media before attempting the operation again.
+
+    - name: Busy
+      severity: critical
+      errno: EBUSY
+      en:
+          description:
+              The virtual media is currently busy performing an operation and
+              cannot accept the request.
+          message: The virtual media is busy performing an operation.
+          resolution:
+              Wait for the current operation to complete before attempting the
+              requested operation.
+
+    - name: LocalImageNotFound
+      severity: critical
+      errno: ENOENT
+      en:
+          description: The specified local image could not be found.
+          message: The specified local image could not be found.
+          resolution:
+              Verify the local image resource path and ensure the image exists.
+
+    - name: NoMediaConfig
+      severity: critical
+      errno: ENOENT
+      en:
+          description: The media slot has no active media configuration.
+          message: The virtual media resource has no active media configuration.
+          resolution: Configure the virtual media to use a valid image.
+
+    - name: SocketNotFound
+      severity: critical
+      errno: ENOENT
+      en:
+          description: The specified socket could not be found.
+          message: The specified socket could not be found.
+          resolution: Verify the socket path and ensure the socket exists.
+
+events:
+    - name: InsertedVirtualMedia
+      en:
+          description: Virtual media was inserted.
+          message: Virtual media was inserted.
+
+    - name: EjectedVirtualMedia
+      en:
+          description: Virtual media was ejected.
+          message: Virtual media was ejected.

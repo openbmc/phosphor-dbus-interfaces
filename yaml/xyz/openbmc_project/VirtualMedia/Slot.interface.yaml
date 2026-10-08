@@ -1,0 +1,142 @@
+description: >
+    This interface defines a virtual media slot object. Each media slot can be
+    independently inserted and ejected from the host, similar to a physical
+    media drive. The slot can be configured to use locally stored images,
+    remotely stored images, or a connection to an NBD server proxy.
+
+methods:
+    - name: StageLocalImage
+      description: >
+          Configures the virtual media slot to use a locally stored image.
+          Creates an object at <slot_object_path>/MediaConfig that provides the
+          configuration details.
+      parameters:
+          - name: LocalImageObject
+            type: object_path
+            description: >
+                The D-Bus object path that exposes the local image details. This
+                object is expected to be owned by the
+                xyz.openbmc_project.Software.Version service.
+      errors:
+          - self.Busy
+          - self.LocalImageNotFound
+          - self.Inserted
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: StageRemoteImage
+      description: >
+          Configures the virtual media slot to use a remotely stored image.
+          Creates an object at <slot_object_path>/MediaConfig that provides the
+          configuration details.
+      parameters:
+          - name: RemoteImageUrl
+            type: string
+            description: >
+                The URL of the remote image.
+      errors:
+          - self.Busy
+          - self.RemoteUrlInvalid
+          - self.Inserted
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: Insert
+      description: >
+          Attach the virtual media to the host.
+      errors:
+          - self.Busy
+          - self.InsertFailed
+          - self.NoMediaConfig
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: InsertProxyMedia
+      description: >
+          Configures the virtual media slot for use with an NBD server proxy.
+          Creates an object at <slot_object_path>/MediaConfig that provides the
+          configuration details. Upon a successful connection, the media is
+          immediately made visible to the host.
+      parameters:
+          - name: proxySocket
+            type: string
+            description: >
+                The path of the unix socket to be used to connect to the NBD
+                server proxy. The caller should listen on this socket before
+                calling this method.
+      errors:
+          - self.Busy
+          - self.Inserted
+          - self.InsertFailed
+          - self.SocketNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: Eject
+      description: >
+          Detaches media from the host, if currently inserted. Removes any
+          configuration object at <slot_object_path>/MediaConfig, if present.
+      errors:
+          - self.Busy
+          - self.EjectFailed
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+properties:
+    - name: ConnectedVia
+      type: enum[self.ConnectionTypes]
+      default: NotConnected
+      description: >
+          The current connection method from a client to the virtual media that
+          this resource represents.
+      flags:
+          - readonly
+
+    - name: Id
+      type: string
+      description: The unique identifier of the media slot.
+      flags:
+          - const
+
+    - name: Name
+      type: string
+      description: The name of the media slot.
+      flags:
+          - const
+
+    - name: Inserted
+      type: boolean
+      default: false
+      description: >
+          An indication of whether the media is mounted and visible to the host
+          system.
+      flags:
+          - readonly
+
+    - name: MediaTypes
+      type: array[enum[self.MediaTypes]]
+      description: >
+          The media types supported as virtual media.
+      flags:
+          - const
+
+enumerations:
+    - name: ConnectionTypes
+      description: >
+          Possible connection types of the virtual media image.
+      values:
+          - name: NotConnected
+            description: >
+                No current connection. Also used when mounting local images.
+          - name: URI
+            description: >
+                Connected to a remote image using a URI.
+          - name: Oem
+            description: >
+                Connected through an OEM-defined method.
+
+    - name: MediaTypes
+      description: >
+          Possible media types for a virtual media image.
+      values:
+          - name: CD
+            description: >
+                A CD-ROM format (ISO) image.
+          - name: USBStick
+            description: >
+                An emulation of a USB storage device.

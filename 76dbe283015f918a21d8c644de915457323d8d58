@@ -120,6 +120,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d75d1fe_70611d4a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002885
+      },
+      "writtenOn": "2026-10-08T05:23:48Z",
+      "side": 1,
+      "message": "Hi @deepak.kodihalli.83@gmail.com,\n\nRegarding the Redfish Status::State issue, I was deducing the mapping through the following logic. `Redfish Status::State` defines several enum properties, including `Degraded` and `Updating`.\n\n```\n\"State\": {\n    \"enumDescriptions\": {\n        ...,\n        \"Degraded\": \"The function or resource is degraded.\",\n        ...,\n        \"Updating\": \"The element is updating and might be unavailable or degraded.\"\n    },\n    \"enumLongDescriptions\": {\n        ..., \n        \"Degraded\": \"This value shall indicate the resource is enabled but operating in a degraded mode.\",\n        ..., \n        \"Updating\": \"This value shall indicate the element is updating.  The element may become unavailable or operate at a degraded level of performance or functionality.\"\n    },\n}\n```\n\nAs of my opinion, `Degraded` and `Updating` are both property of Redfish Status::State, thus they should be indicating same property with different value.\nOn the other hand, `Updating` indicates the element is updating and might be degraded(in short description), and in the long description it has explicitly mentioned \"The element may become unavailable or operate at a degraded level of performance or functionality.\"\n\nI see this as an indirect evidence that Redfish Status::State accepts degraded in either functionality or performance. In this case, I modified in PS9 to move `degraded` property to the existing interface of `OperationalStatus`.\n\nRegarding the second question, as DMTF redfish schema explicitly mentioned degraded indicates either functional or performance aspects degraded, I think both of the PLDM state set should be mapped to the same property then, which means `degraded` is true either performance or functional degraded happened.",
+      "parentUuid": "a5da5f11_ec096192",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 37
+      },
+      "revId": "76dbe283015f918a21d8c644de915457323d8d58",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9c81158_4042c1a2",

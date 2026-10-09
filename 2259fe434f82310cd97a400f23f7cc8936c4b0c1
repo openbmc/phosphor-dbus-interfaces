@@ -222,6 +222,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1802f721_552b9170",
+        "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-10-09T18:30:09Z",
+      "side": 1,
+      "message": "Some of these details should go in the YAML. However, why should a BMC pending reboot prevent a device update?",
+      "parentUuid": "e812305c_32c425db",
+      "range": {
+        "startLine": 3,
+        "startChar": 47,
+        "endLine": 3,
+        "endChar": 57
+      },
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cc46a6b6_ecc251ed",
         "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
         "patchSetId": 2
@@ -287,6 +311,24 @@
       "side": 1,
       "message": "The pending BMC reboot is deferred specifically to avoid interrupting device updates already in progress. Without blocking, a new device update that starts during that window is also waited on, so a steady stream keeps pushing the reboot out — up to the fallback timeout, which would then fire mid-write and cause the very interruption we\u0027re trying to avoid. Blocking new updates while a reboot is pending bounds the wait to the updates already running, so the deferred reboot proceeds cleanly once they finish; it also avoids starting an update that\u0027s about to be cut off by the reboot.",
       "parentUuid": "3a9fdd4f_687ce42d",
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a71bb93_786fdff6",
+        "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-10-09T18:30:09Z",
+      "side": 1,
+      "message": "I suppose what I wanted to ask was - would there be an indication on Redfish as well that a BMC reboot is pending to activate new BMC FW?",
+      "parentUuid": "432e1b2e_e1331dc6",
       "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

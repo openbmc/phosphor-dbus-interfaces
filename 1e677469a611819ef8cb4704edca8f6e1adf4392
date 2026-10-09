@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ff38d440_efeff0a2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001076
+      },
+      "writtenOn": "2026-10-09T05:41:58Z",
+      "side": 1,
+      "message": "Acknowledge, refactored this patch.",
+      "parentUuid": "d495dfad_6749f915",
+      "range": {
+        "startLine": 9,
+        "startChar": 4,
+        "endLine": 9,
+        "endChar": 33
+      },
+      "revId": "1e677469a611819ef8cb4704edca8f6e1adf4392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dd17f037_e00ef1c9",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -37,6 +61,24 @@
       "writtenOn": "2026-10-08T10:06:34Z",
       "side": 1,
       "message": "can we add a section here about the existing users of `AddObject` and the concrete use-cases they have which cannot be realized via normal probing.\n\nA commit message introducing an interface could benefit from listing a concrete use-case from e.g. the existing bmcweb usage of this interface.",
+      "revId": "1e677469a611819ef8cb4704edca8f6e1adf4392",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbadfb65_cd1617d4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001076
+      },
+      "writtenOn": "2026-10-09T05:41:58Z",
+      "side": 1,
+      "message": "Currently not sure if there is any usecase for exisiting users. We have a use case that isnt available upstream to detect MCTPI2cTarget and then add it to EM dynamically.",
+      "parentUuid": "dd17f037_e00ef1c9",
       "revId": "1e677469a611819ef8cb4704edca8f6e1adf4392",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

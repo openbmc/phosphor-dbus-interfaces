@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9907f610_b8d41931",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-10-12T07:17:42Z",
+      "side": 1,
+      "message": "The Item.Ethernet removal is split into these changes.\n@sunnsr25@in.ibm.com @patrick@stwcx.xyz Please help review them. If you\nhave any concerns, let me know and I\u0027ll update them. Thanks for help.\n\n1. openpower-vpd-parser: replace Item.Ethernet with Connector.Port on\n   the HMC ports. This needs PortProtocol.Ethernet from 89248 first.\n   https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/89248\n   https://gerrit.openbmc.org/c/openbmc/openpower-vpd-parser/+/95556\n\n2. openbmc: remove Item.Ethernet from the machine configs. (I\u0027ll check\n   with the reviewers on each change for any concerns.)\n   https://gerrit.openbmc.org/c/openbmc/openbmc/+/95557 (meta-ibm)\n   https://gerrit.openbmc.org/c/openbmc/openbmc/+/95561 (meta-quanta)\n   https://gerrit.openbmc.org/c/openbmc/openbmc/+/95562 (meta-yadro)\n   https://gerrit.openbmc.org/c/openbmc/openbmc/+/95563 (meta-nuvoton)\n   https://gerrit.openbmc.org/c/openbmc/openbmc/+/95565 (meta-openpower)\n\n3. ibm-panel (ibm-openbmc) reads Item.Ethernet; switch it to\n   Item.NetworkInterface.\n   https://github.com/ibm-openbmc/ibm-panel/pull/269\n   https://github.com/ibm-openbmc/ibm-panel/pull/270\n\n4. phosphor-dbus-interfaces: remove Item.Ethernet after the above land.\n   https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/\u003cPDI\u003e",
+      "revId": "43cd5032ef133650e23c6ee875cfd073033cc18f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e917fc41_26ffb7a0",
         "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkAdapter.interface.yaml",
         "patchSetId": 11

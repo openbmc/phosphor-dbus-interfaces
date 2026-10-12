@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d7434b5_396c010e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-12T08:12:32Z",
+      "side": 1,
+      "message": "why did you write `Object: ...` ?\n\nis this leftovers from when you had `xyz.openbmc_project.Object.AddObject` ?",
+      "range": {
+        "startLine": 6,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 31
+      },
+      "revId": "4b3dc0d82da04f6f344d3ab2d8c089c1cd019bce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "071682e5_a505e91d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-12T08:12:32Z",
+      "side": 1,
+      "message": "This is not exactly true. There is an interface which is being used and that does not have the `AddObjectDynamic`. So *this* interface, as written is not already being used.\n\n\"A subset of this interface is already being used in existing code\" would be more accurate.",
+      "range": {
+        "startLine": 14,
+        "startChar": 1,
+        "endLine": 18,
+        "endChar": 45
+      },
+      "revId": "4b3dc0d82da04f6f344d3ab2d8c089c1cd019bce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a270f9d8_a09be675",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-12T08:12:32Z",
+      "side": 1,
+      "message": "i would recommend you to investigate the nvidia platform-init, for example the `void bringup_devices()`.\n\n```\n  void bringup_devices()\n  {   \n      // There\u0027s a lot of hackery going on here\n      // This is for handling (as of today) unsupported bridged endpoints\n      // The MCU\u0027s on this platform act as MCTP bridges\n      // We know their absolute USB path through the platform hub, and that\u0027s\n      // symlinked to a mctp net device So we will start there we also know that\n      // each device the USB device is bridging to will always have the same\n      // relative ordering \n      //  inside of a given pool. This is not a generally true assumption but it\n      //  is true for our MCU\u0027s\n      // So we can put each bridge and is downstream devices through enumeration\n      // with mctpd, when we get the response, we know the bridges eid we can then\n      // ask mctpd what the pool size and start eid is for the bridge pool. From\n      // there we can infer the eid of each bridged device behind it and call\n      // AddObject on EntityManager for each board to bring up the requisite nodes\n      // beneath it which will allow the rest of the system to start behaving as\n      // expected. Once we have real support for bridged eid\u0027s, we can and should\n      // delete this mess.\n...\n      for (const auto\u0026 [usb_path, name, board_name] : device_name_map)\n      {\n          std::cerr \u003c\u003c \"looking at device \" \u003c\u003c name \u003c\u003c std::endl;\n          std::string path \u003d std::format(\"{}/{}\", usb_prefix, usb_path);\n          int dev_index \u003d get_device_from_port_string(path);\n          if (dev_index \u003c 0)\n          {\n              std::cerr \u003c\u003c std::format(\n                  \"Unable to bring up {} because it doesn\u0027t seem to exist\\n\",\n                  name);\n              continue;\n          }\n  \n          // enumerate the bridge device\n          uint8_t bridge_eid \u003d enumerate_mctp(dev_index);\n  \n          auto [pool_start, pool_size] \u003d get_pool_start_and_size(bridge_eid);\n  \n          std::this_thread::sleep_for(std::chrono::milliseconds{500});\n  \n          // yes this sucks, no I don\u0027t like it but we know we\u0027ll only have two\n          // types of bridged endpoints on this platform and its 9PM the night\n          // before it needs to work so we\u0027re going to do it *to* it\n          if (name.starts_with(\"GPU\"))\n          {\n              // each GPU has an SMA, as well as a GPU, they both talk over vdm\n              // so add both as separate nodes\n              std::cerr \u003c\u003c \"Adding SMA\\n\";\n              populate_gpu(board_name, bridge_eid, name + \"SMA\");\n              std::cerr \u003c\u003c \"Adding GPU\\n\";\n              populate_gpu(board_name, pool_start, name);\n          }\n          else if (name.starts_with(\"CX8\"))\n          {\n              // TODO: deal with this\n              std::cerr \u003c\u003c \"Skipping CX8\u0027s for now\\n\";\n          }\n          else\n          {\n              std::cerr \u003c\u003c std::format(\n                  \"Something awful happened with path: {}, name {}\\n\", path,\n                  name);\n          }\n      }\n  }\n```\n\nthe `populate_gpu(...)` then performs `AddObject`.\n\nSince platform-init is supposed to init each time, maybe they do not need the configuration to be persisted.\n\nThat could be an upstream use-case for adding a temporary configuration.\n\nOverall we may need an upstream use-case for adding temporary configuration.",
+      "range": {
+        "startLine": 21,
+        "startChar": 1,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "4b3dc0d82da04f6f344d3ab2d8c089c1cd019bce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -116,6 +116,30 @@
       },
       "revId": "4b3dc0d82da04f6f344d3ab2d8c089c1cd019bce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08555e5d_37859000",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000928
+      },
+      "writtenOn": "2026-10-13T09:48:04Z",
+      "side": 1,
+      "message": "Hi. The use case here is a bit different. The actual issue is that once a configuration is added to the system using AddObject, it persists across reboots. The same configuration reappears on D-Bus after a BMC reboot or an AC power cycle.\n\nIn some cases, however, the configuration added through this method may no longer be valid after a reboot. In my case, the I2C bus number changed after the reboot, making the stored configuration invalid.\n\nAs a workaround for this behavior of AddObject, we proposed an API that adds the configuration at runtime without storing it permanently.",
+      "parentUuid": "a270f9d8_a09be675",
+      "range": {
+        "startLine": 21,
+        "startChar": 1,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "4b3dc0d82da04f6f344d3ab2d8c089c1cd019bce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

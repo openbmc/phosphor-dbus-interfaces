@@ -49,7 +49,7 @@ properties:
     - name: LDAPType
       type: enum[self.Type]
       description: >
-          Specifies the the configured server is ActiveDirectory(AD) or
+          Specifies whether the configured server is ActiveDirectory(AD) or
           OpenLdap. It's just an indication for the LDAP stack running on the
           BMC, in case the app is implemented in such a way that it has to react
           differently for AD vs openldap. This property is readonly, Once the

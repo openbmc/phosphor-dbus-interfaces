@@ -316,6 +316,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b5ccade_359c9e17",
+        "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-14T09:37:40Z",
+      "side": 1,
+      "message": "\u003e I think an assumption is being made that a BMC reboot can correlate with a device\u0027s FW update. Those two can be totally unrelated and independent.\n\nIMO the BMC is fully responsible to ensure the platform is not (soft)bricked.\n\nTherefore the BMC *must* take the necessary precautions to ensure that BMC reboot does not overlap with a device fw update.\n\nOf course it\u0027s user error to update the BMC firmware and reboot while a device update is still running. But a robust BMC solution should be resistant to such user errors.",
+      "parentUuid": "f7cbe677_7f844590",
+      "range": {
+        "startLine": 3,
+        "startChar": 47,
+        "endLine": 3,
+        "endChar": 57
+      },
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc46a6b6_ecc251ed",

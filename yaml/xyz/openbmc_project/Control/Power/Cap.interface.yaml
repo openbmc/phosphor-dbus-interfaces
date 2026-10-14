@@ -22,6 +22,8 @@ properties:
           the power usage of the associated item will be limited to keep the
           power at or below this cap.  This value is in Watts. If this has not
           been set by the user, the value will be maxint.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
 
     - name: PowerCapEnable
       type: boolean

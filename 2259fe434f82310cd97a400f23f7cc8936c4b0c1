@@ -292,6 +292,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7cbe677_7f844590",
+        "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1003117
+      },
+      "writtenOn": "2026-10-14T07:26:17Z",
+      "side": 1,
+      "message": "Firmware images are unrelated, agreed. The coupling here is operational, though: a device FW update (VR/CPLD/etc.) is carried out by the BMC over I2C/PMBus, so a BMC reboot to activate new BMC firmware interrupts an in-progress device update mid-write. This interface just lets the BMC updater flag that pending-reboot window so a new update isn\u0027t started into it. The full background is in https://github.com/openbmc/phosphor-bmc-code-mgmt/issues/18",
+      "parentUuid": "1dc613c8_fdcd31c9",
+      "range": {
+        "startLine": 3,
+        "startChar": 47,
+        "endLine": 3,
+        "endChar": 57
+      },
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc46a6b6_ecc251ed",

@@ -244,6 +244,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "249cbd1a_058fcbe1",
+        "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1003117
+      },
+      "writtenOn": "2026-10-14T05:29:00Z",
+      "side": 1,
+      "message": "Moved the who-exposes/who-checks and the rationale into the description in PS4. On \"why block a device update\": the pending reboot is deferred until in-progress updates finish, so a new device update would either keep extending that deferral (delaying activation of the completed BMC firmware) or be interrupted mid-write when the reboot proceeds — so it\u0027s rejected to bound the wait and avoid starting an update that\u0027s about to be cut off.",
+      "parentUuid": "1802f721_552b9170",
+      "range": {
+        "startLine": 3,
+        "startChar": 47,
+        "endLine": 3,
+        "endChar": 57
+      },
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc46a6b6_ecc251ed",
@@ -329,6 +353,24 @@
       "side": 1,
       "message": "I suppose what I wanted to ask was - would there be an indication on Redfish as well that a BMC reboot is pending to activate new BMC FW?",
       "parentUuid": "432e1b2e_e1331dc6",
+      "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b57992a9_8efeb603",
+        "filename": "yaml/xyz/openbmc_project/Software/RebootBlocksNewUpdates.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1003117
+      },
+      "writtenOn": "2026-10-14T05:29:00Z",
+      "side": 1,
+      "message": "Not today — an update attempted during the window is rejected with Common.Error.Unavailable, which bmcweb surfaces as a Redfish error. A dedicated \"BMC reboot pending\" status on Redfish would be a bmcweb follow-up, out of scope for this D-Bus interface (this is just the internal signal the updaters coordinate on).",
+      "parentUuid": "7a71bb93_786fdff6",
       "revId": "2259fe434f82310cd97a400f23f7cc8936c4b0c1",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2dbff57e_29927b76",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-10-14T21:14:27Z",
+      "side": 1,
+      "message": "Please add more \"why\" rather than \"what\".",
+      "revId": "6ed08e98cfe7fdc09b7b165eea3cdb6d238e80ac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9713740_810f494a",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-10-14T21:14:27Z",
+      "side": 1,
+      "message": "In what cases would we get InvalidArgument?  It isn\u0027t clear to me.  How is the user supposed to know?\n\nIf it is related to MinPowerCapValue then specify that in the description here.",
+      "revId": "6ed08e98cfe7fdc09b7b165eea3cdb6d238e80ac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

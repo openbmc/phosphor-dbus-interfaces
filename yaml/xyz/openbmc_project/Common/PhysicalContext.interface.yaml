@@ -20,6 +20,21 @@ enumerations:
           - name: Accelerator
             description: >
                 An accelerator.
+          - name: Board
+            description: >
+                A circuit board.
+          - name: CPU
+            description: >
+                A processor (CPU).
+          - name: DCBus
+            description: >
+                A DC electrical bus.
+          - name: GPUSubsystem
+            description: >
+                The entire graphics processor (GPU) subsystem.
+          - name: VoltageRegulator
+            description: >
+                A voltage regulator device.
 
 paths:
     - name: Sensors

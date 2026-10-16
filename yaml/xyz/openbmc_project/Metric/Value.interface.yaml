@@ -282,6 +282,21 @@ paths:
                 The total number of transmitted frames that were discarded on a
                 port since reset.
             value: nic/tx_discards
+          - name: NICRDMATXReadRequests
+            description: >
+                The total number of RDMA read requests transmitted on a port
+                since reset.
+            value: nic/rdma_tx_read_requests
+          - name: NICRDMATXSendRequests
+            description: >
+                The total number of RDMA send requests transmitted on a port
+                since reset.
+            value: nic/rdma_tx_send_requests
+          - name: NICRDMATXWriteRequests
+            description: >
+                The total number of RDMA write requests transmitted on a port
+                since reset.
+            value: nic/rdma_tx_write_requests
           - name: ValveClosedDuration
             description: >
                 The duration since the valve was fully closed.

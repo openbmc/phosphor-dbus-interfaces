@@ -161,11 +161,20 @@ paths:
                 The total number of Negative Acks issued on the PCIe link by a
                 receiver.
             value: pcie/nak_received_count
+          - name: PCIeDLLPCRCErrorCount
+            description: >
+                The total number of Data Link Layer Packet CRC errors seen by a
+                device.
+            value: pcie/dllp_crc_error_count
           - name: PCIeUnsupportedRequestCount
             description: >
                 The total number of PCIe unsupported requests received by a
                 device.
             value: pcie/unsupported_request_count
+          - name: PCIeRXErrors
+            description: >
+                The total number of received errors on a PCIe port since reset.
+            value: pcie/rx_errors
           - name: NICTXBytes
             description: >
                 The total number of bytes transmitted on a port since reset.

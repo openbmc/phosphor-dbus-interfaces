@@ -3,6 +3,9 @@ subdir('AnalogValve')
 subdir('GPIODeviceDetect')
 subdir('GPIOLeakDetector')
 subdir('GPIOValve')
+subdir('MCTPI2CTarget')
+subdir('MCTPI3CTarget')
+subdir('MCTPUSBDevice')
 subdir('Platform')
 subdir('Probe')
 subdir('SpdmTcpResponder')
@@ -100,6 +103,78 @@ generated_markdown += custom_target(
         '--directory',
         meson.current_source_dir() / '../../../../yaml',
         'xyz/openbmc_project/Configuration/GPIOValve',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/Configuration/MCTPI2CTarget__markdown'.underscorify(),
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Configuration/MCTPI2CTarget.interface.yaml',
+    ],
+    output: ['MCTPI2CTarget.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Configuration/MCTPI2CTarget',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/Configuration/MCTPI3CTarget__markdown'.underscorify(),
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Configuration/MCTPI3CTarget.interface.yaml',
+    ],
+    output: ['MCTPI3CTarget.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Configuration/MCTPI3CTarget',
+    ],
+    install: should_generate_markdown,
+    install_dir: [inst_markdown_dir / sdbusplus_current_path],
+    build_by_default: should_generate_markdown,
+)
+
+generated_markdown += custom_target(
+    'xyz/openbmc_project/Configuration/MCTPUSBDevice__markdown'.underscorify(),
+    input: [
+        '../../../../yaml/xyz/openbmc_project/Configuration/MCTPUSBDevice.interface.yaml',
+    ],
+    output: ['MCTPUSBDevice.md'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'markdown',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/Configuration/MCTPUSBDevice',
     ],
     install: should_generate_markdown,
     install_dir: [inst_markdown_dir / sdbusplus_current_path],

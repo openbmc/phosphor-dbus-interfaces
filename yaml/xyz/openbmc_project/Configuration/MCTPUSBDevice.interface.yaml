@@ -51,3 +51,12 @@ properties:
           its interface descriptor.
       flags:
           - readonly
+
+associations:
+    - name: configures
+      description: >
+          The MCTP endpoints whose existence this configuration drove, the
+          reverse of their configured_by association.
+      reverse_name: configured_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.MCTP.Endpoint

@@ -16,6 +16,24 @@
       "message": "What will be the backend implementation of this?  I really don\u0027t like all of these \"design by random dbus interface\" that your team is doing.",
       "revId": "483c3b4d23af895507830317b0c5dbc5c0c4a7c3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c5bab04_ac47aeef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-19T16:18:13Z",
+      "side": 1,
+      "message": "The backend is https://gerrit.openbmc.org/c/openbmc/dbus-sensors/+/89529, which implements this for a PCIe switch and is tested on hardware. \nI expect more device classes to need a reset over time, such as MCU, NVMe drives, FPGA accelerators and SmartNICs, so I kept this generic rather than adding a new interface per class. \nThat is why it attaches to any Inventory.Item through the controlling association and why ResetTypes mirrors the Redfish Resource ResetType enumeration.",
+      "parentUuid": "a4ec2cd1_e190a2a6",
+      "revId": "483c3b4d23af895507830317b0c5dbc5c0c4a7c3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "de52759c_f5bb2b89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-19T16:43:21Z",
+      "side": 1,
+      "message": "Done. Thanks.",
+      "parentUuid": "c9fd2841_05730f0c",
+      "revId": "1d2ff9ef898ba0eea891af6749786b9209710252",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e8f1c3ae_b5b2a050",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-10-19T13:31:27Z",
       "side": 1,
       "message": "Due to how EM works and the way the schema is written,\n\ndefining it this way here misses the \u0027optional\u0027 property `BridgedEndpoints`\ndefined in EM schema.\n\nSo generated clients will not be able to get the full information from this interface that is contained in the configuration and EM cannot use this to produce the interface from configuration json.\n\nI\u0027m not sure if we should still define it like this here. Looking for input from other reviewers.\n\nIt\u0027s technically correct but only partially useful for a consumer or producer of\nthis interface since they will still need to get the `BridgedEndpoints` via some other helper function from another interface.\n\nIf you want to make this compatible and fully usable with generated client/server\nthen the schema could be reworked.\n\nFor example to have\n- `BridgedEndpointsNames` as array[string] and \n- `BridgedEndpointsBoards` as array[string]\n\nwhich should keep things flat and contained to one interface. Optional `Board` can then be represented via empty string.",
+      "revId": "1d2ff9ef898ba0eea891af6749786b9209710252",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc315cb9_f2cb5ff8",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPUSBDevice.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-19T16:43:21Z",
+      "side": 1,
+      "message": "Thanks, that\u0027s a fair point. I\u0027m planning to change the platform schema so that each endpoint behind a bridge becomes a record of its own rather than an entry in BridgedEndpoints, for example:\n\n    {\n        \"Type\": \"MCTPUSBDevice\", \"Name\": \"Bridge_0\", \"Board\": \"...\",\n        \"RootHubPosition\": 1, \"Port\": [1, 2],\n        \"Configuration\": 1, \"InterfaceNumber\": 0\n    },\n    {\n        \"Type\": \"MCTPBridgedEndpoint\", \"Name\": \"Device_0\", \"Board\": \"...\",\n        \"Bridge\": \"Bridge_0\", \"BridgePort\": 2, \"Address\": \"0x32\"\n    }\n\nThe bridge\u0027s routing table (Get Routing Table Entries in DSP0236) reports the port and physical address behind each EID it routes, so BridgePort and Address can pair a record with the EID its device was given, even when EIDs are assigned dynamically. The goal is for each bridged endpoint object to be associated with its EID through configured_by, so that a service such as SPDM or PLDM can find the EID of a device behind a bridge. Because of that I\u0027d rather not add BridgedEndpoints to this interface for now.\n\nWhat do you think? If this works for you, I\u0027ll update the platform schema and add documentation for it.",
+      "parentUuid": "e8f1c3ae_b5b2a050",
       "revId": "1d2ff9ef898ba0eea891af6749786b9209710252",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

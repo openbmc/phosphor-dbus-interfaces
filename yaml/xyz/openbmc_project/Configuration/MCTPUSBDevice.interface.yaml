@@ -1,0 +1,53 @@
+description: >
+    Implement to provide entity manager configuration for an MCTP endpoint
+    reached over USB.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          The type of configuration object.
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: >
+          The name of the device.
+      flags:
+          - readonly
+    - name: Board
+      type: string
+      description: >
+          The name of the board inventory object the device is on.
+      flags:
+          - readonly
+    - name: RootHubPosition
+      type: uint64
+      description: >
+          Which of the USB root hubs the device is reached through, counting
+          from zero. Only the host controllers count, so a companion controller
+          serving the same ports at a lower speed is not a root hub of its own.
+      flags:
+          - readonly
+    - name: Port
+      type: array[uint64]
+      description: >
+          The hub ports to follow from the root hub down to the device,
+          outermost first. With the bus number of the root hub this names the
+          device in sysfs, so [1, 2, 1] is /sys/bus/usb/devices/<bus>-1.2.1.
+      flags:
+          - readonly
+    - name: Configuration
+      type: uint64
+      description: >
+          The USB configuration to use, the bConfigurationValue of the
+          configuration descriptor of the device.
+      flags:
+          - readonly
+    - name: InterfaceNumber
+      type: uint64
+      description: >
+          The USB interface within that configuration, the bInterfaceNumber of
+          its interface descriptor.
+      flags:
+          - readonly

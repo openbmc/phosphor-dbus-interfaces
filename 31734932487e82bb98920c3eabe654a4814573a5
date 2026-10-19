@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed1ac0c7_8ede35ee",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPI3CTarget.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-19T17:10:07Z",
+      "side": 1,
+      "message": "do we need to adjust the EM schema as well to remove type `string` as a possible type there?\n\n```\n        \"MCTPI3CTarget\": {\n            \"properties\": {\n                \"Address\": {\n                    \"description\": \"The 6-byte PID for the device on the I3C bus\",\n                    \"type\": [\"string\", \"array\"]\n                },\n```\n\nIt\u0027s more an EM side concern and generated code can still work from this yaml, provided the array type is used.",
+      "range": {
+        "startLine": 23,
+        "startChar": 20,
+        "endLine": 25,
+        "endChar": 25
+      },
+      "revId": "31734932487e82bb98920c3eabe654a4814573a5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

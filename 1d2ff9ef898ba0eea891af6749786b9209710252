@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9fd2841_05730f0c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-19T13:31:27Z",
+      "side": 1,
+      "message": "is it possible to split this into one patch per interface?\n\nlike\n\n- MCTPI2CTarget\n\n- MCTPI3CTarget\n\n- MCTPUSBTarget (with changes)\n\nbecause you are changing a property name on one of the interfaces\nbut the other 2 are just documenting existing things so they could go faster i guess. Also the `MCTPUSBTarget` might need some rework before it can be in PDI because of `BridgedEndpoints` *\u0027optional\u0027* property.",
+      "revId": "1d2ff9ef898ba0eea891af6749786b9209710252",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8f1c3ae_b5b2a050",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPUSBDevice.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-19T13:31:27Z",
+      "side": 1,
+      "message": "Due to how EM works and the way the schema is written,\n\ndefining it this way here misses the \u0027optional\u0027 property `BridgedEndpoints`\ndefined in EM schema.\n\nSo generated clients will not be able to get the full information from this interface that is contained in the configuration and EM cannot use this to produce the interface from configuration json.\n\nI\u0027m not sure if we should still define it like this here. Looking for input from other reviewers.\n\nIt\u0027s technically correct but only partially useful for a consumer or producer of\nthis interface since they will still need to get the `BridgedEndpoints` via some other helper function from another interface.\n\nIf you want to make this compatible and fully usable with generated client/server\nthen the schema could be reworked.\n\nFor example to have\n- `BridgedEndpointsNames` as array[string] and \n- `BridgedEndpointsBoards` as array[string]\n\nwhich should keep things flat and contained to one interface. Optional `Board` can then be represented via empty string.",
+      "revId": "1d2ff9ef898ba0eea891af6749786b9209710252",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

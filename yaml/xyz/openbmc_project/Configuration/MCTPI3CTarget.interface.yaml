@@ -1,0 +1,30 @@
+description: >
+    Implement to provide entity manager configuration for an MCTP endpoint
+    reached over I3C.
+
+properties:
+    - name: Type
+      type: string
+      description: >
+          The type of configuration object.
+      flags:
+          - readonly
+    - name: Name
+      type: string
+      description: >
+          The name of the device.
+      flags:
+          - readonly
+    - name: Bus
+      type: uint64
+      description: >
+          The index of the I3C bus the device is attached to.
+      flags:
+          - readonly
+    - name: Address
+      type: array[byte]
+      description: >
+          The 6-byte provisioned ID of the device on the I3C bus, one byte per
+          element.
+      flags:
+          - readonly

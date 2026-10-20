@@ -16,3 +16,11 @@ associations:
       reverse_name: connected_to
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Connector.Port
+    - name: connected_to
+      description: >
+          Objects that are connected at the other end of the link. A network
+          controller reached over PCIe names the PCIeDevice it sits behind, such
+          as a bridge integrated in the same package.
+      reverse_name: connecting
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item.PCIeDevice

@@ -405,10 +405,12 @@ associations:
     - name: connecting
       description: >
           Objects that implement PCIeDevice can optionally implement the
-          connecting association to provide links to one or more Ports.
+          connecting association to provide links to one or more Ports, or to a
+          NetworkAdapter whose controller is reached through this device.
       reverse_name: connected_to
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Connector.Port
+          - xyz.openbmc_project.Inventory.Item.NetworkAdapter
     - name: connected_to
       description: >
           Objects that are connected at the other end of the link.

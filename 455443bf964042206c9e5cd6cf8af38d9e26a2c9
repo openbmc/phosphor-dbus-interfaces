@@ -16,6 +16,24 @@
       "message": "@ed@tanous.net / @gunnar@gmills.xyz - Are you in alignment with this proposal?",
       "revId": "455443bf964042206c9e5cd6cf8af38d9e26a2c9",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09d11934_f11e6d30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2026-10-20T04:29:03Z",
+      "side": 1,
+      "message": "I am fine. It aligns with what we have today. \n\nIt will map to \n```\n[\"Status\"][\"State\"] \u003d\n            resource::State::Degraded;\n```\nThis, Present, Available, Enabled all map to the same Redfish \"Status\"\"State\" property so it isn\u0027t ideal for a bmcweb side but workable. \nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/94396 is the bmcweb code adding Degraded.\n\nThe ideal solution from a bmcweb side is an enum property called like State which can be values  Enabled, Absent, Unavailable, Disabled, Degraded. \n\nThe complete list from Redfish:\n```\n      \"State\": {\n            \"enum\": [\n                \"Enabled\",\n                \"Disabled\",\n                \"StandbyOffline\",\n                \"StandbySpare\",\n                \"InTest\",\n                \"Starting\",\n                \"Absent\",\n                \"UnavailableOffline\",\n                \"Deferring\",\n                \"Quiesced\",\n                \"Updating\",\n                \"Qualified\",\n                \"Degraded\"\n            ],\n```\nFrom http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status\n\n\nOther interfaces mapping to this same Redfish Status State:\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/4d2db8cc64f98154cf7e83eab13f6c86014d6992/yaml/xyz/openbmc_project/Inventory/Item.interface.yaml#L14\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/State/Decorator/Availability.interface.yaml\nhttps://github.com/openbmc/phosphor-dbus-interfaces/blob/master/yaml/xyz/openbmc_project/Object/Enable.interface.yaml",
+      "parentUuid": "20b5da26_8d0719aa",
+      "revId": "455443bf964042206c9e5cd6cf8af38d9e26a2c9",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

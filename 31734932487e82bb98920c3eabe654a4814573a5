@@ -22,6 +22,30 @@
       },
       "revId": "31734932487e82bb98920c3eabe654a4814573a5",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c82d53d_8ac82ff9",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPI3CTarget.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-20T03:23:42Z",
+      "side": 1,
+      "message": "Yes, mctpreactor only accepts an array for the I3C Address, so I\u0027ve dropped string from the EM schema in https://gerrit.openbmc.org/c/openbmc/entity-manager/+/96035.\nThanks.",
+      "parentUuid": "ed1ac0c7_8ede35ee",
+      "range": {
+        "startLine": 23,
+        "startChar": 20,
+        "endLine": 25,
+        "endChar": 25
+      },
+      "revId": "31734932487e82bb98920c3eabe654a4814573a5",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

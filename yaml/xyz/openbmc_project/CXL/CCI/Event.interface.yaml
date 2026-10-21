@@ -1,0 +1,26 @@
+description: >
+    CXL Type 3 Device CCI Event notification interface.
+
+    Implemented by ccid. The daemon acks incoming Event Notification messages
+    (opcode 0x0106), drains the event logs via Get/Clear Event Records, writes
+    each event to phosphor-logging, then emits this signal.
+
+    The signal is emitted on /xyz/openbmc_project/cxl/cci.
+
+signals:
+    - name: EventNotification
+      description: >
+          Emitted after ccid receives an unsolicited CXL Event Notification
+          (CCI opcode 0x0106), drains the affected log, and records each event
+          in phosphor-logging. Subscribers that need to react to CXL events
+          (e.g. health monitors) can watch this signal.
+
+      properties:
+          - name: EID
+            type: byte
+            description: MCTP EID of the CXL device.
+
+          - name: EventLog
+            type: enum[xyz.openbmc_project.CXL.CCI.Types.EventLog]
+            description: >
+                The event log that contained records.

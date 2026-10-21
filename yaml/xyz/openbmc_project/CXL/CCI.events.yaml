@@ -1,0 +1,116 @@
+version: 1.0.0
+
+description: >
+    Events indicating that a CXL Type 3 device reported an event record over
+    its Component Command Interface (CXL r3.1 section 8.2.9.2). One event is
+    defined per Event Record Severity. The decoded record fields and the raw
+    record are added as additional data.
+
+errors:
+    - name: Fatal
+      severity: critical
+      errno: EIO
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: >
+                The inventory object of the CXL device that reported the
+                event.
+          - name: RecordType
+            type: enum[xyz.openbmc_project.CXL.CCI.Types.RecordType]
+            primary: true
+            description: >
+                The event record type, from the Event Record Identifier.
+          - name: Summary
+            type: string
+            primary: true
+            description: >
+                A one-line summary of the decoded event record.
+
+      en:
+          description: "A CXL device reported a Fatal event record."
+          message: "CXL device '{Source}' reported a fatal event: {Summary}"
+          resolution: "The device is no longer operating correctly. Check the event details and replace the device if the condition persists."
+
+    - name: Failure
+      severity: error
+      errno: EIO
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: >
+                The inventory object of the CXL device that reported the
+                event.
+          - name: RecordType
+            type: enum[xyz.openbmc_project.CXL.CCI.Types.RecordType]
+            primary: true
+            description: >
+                The event record type, from the Event Record Identifier.
+          - name: Summary
+            type: string
+            primary: true
+            description: >
+                A one-line summary of the decoded event record.
+
+      en:
+          description: "A CXL device reported a Failure event record."
+          message: "CXL device '{Source}' reported a failure: {Summary}"
+          resolution: "Check the event details. If the device reports Maintenance Needed or Hardware Replacement Needed, service the device."
+
+    - name: Warning
+      severity: warning
+      errno: EIO
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: >
+                The inventory object of the CXL device that reported the
+                event.
+          - name: RecordType
+            type: enum[xyz.openbmc_project.CXL.CCI.Types.RecordType]
+            primary: true
+            description: >
+                The event record type, from the Event Record Identifier.
+          - name: Summary
+            type: string
+            primary: true
+            description: >
+                A one-line summary of the decoded event record.
+
+      en:
+          description: "A CXL device reported a Warning event record."
+          message: "CXL device '{Source}' reported a warning: {Summary}"
+          resolution: "Monitor the device. Repeated warnings may precede a failure."
+
+    - name: Informational
+      severity: informational
+      errno: EIO
+
+      metadata:
+          - name: Source
+            type: object_path
+            primary: true
+            description: >
+                The inventory object of the CXL device that reported the
+                event.
+          - name: RecordType
+            type: enum[xyz.openbmc_project.CXL.CCI.Types.RecordType]
+            primary: true
+            description: >
+                The event record type, from the Event Record Identifier.
+          - name: Summary
+            type: string
+            primary: true
+            description: >
+                A one-line summary of the decoded event record.
+
+      en:
+          description: "A CXL device reported an Informational event record."
+          message: "CXL device '{Source}' reported: {Summary}"
+          resolution: "None."

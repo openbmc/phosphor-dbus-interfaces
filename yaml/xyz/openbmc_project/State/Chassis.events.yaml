@@ -1,0 +1,20 @@
+version: 1.0.0
+
+events:
+    - name: TransitionRequested
+      metadata:
+          - name: Target
+            type: object_path
+            primary: true
+            description: The chassis on which the transition was requested.
+          - name: Cause
+            type: enum[xyz.openbmc_project.State.Chassis.TransitionCause]
+            primary: true
+            description: The reason the transition was requested.
+      en:
+          description:
+              A chassis power transition was requested, and the reason was
+              identified.
+          message:
+              A power transition on chassis {Target} was requested due to
+              '{Cause}'.

@@ -1,0 +1,334 @@
+description: >
+    Common type definitions for CXL Type 3 device event logging over CCI (CXL
+    r3.1 section 8.2.9.2, Events).
+
+enumerations:
+    - name: EventLog
+      description: >
+          Event Log identifier used by Get/Clear Event Records (opcodes 0100h
+          and 0101h).
+
+      values:
+          - name: Informational
+            description: >
+                Informational Event Log (00h).
+          - name: Warning
+            description: >
+                Warning Event Log (01h).
+          - name: Failure
+            description: >
+                Failure Event Log (02h).
+          - name: Fatal
+            description: >
+                Fatal Event Log (03h).
+          - name: DynamicCapacity
+            description: >
+                Dynamic Capacity Event Log (04h).
+
+    - name: Severity
+      description: >
+          Severity field, bits [1:0] of the Event Record Flags.
+
+      values:
+          - name: Informational
+            description: >
+                Informational Event (00b).
+          - name: Warning
+            description: >
+                Warning Event (01b).
+          - name: Failure
+            description: >
+                Failure Event (10b).
+          - name: Fatal
+            description: >
+                Fatal Event (11b).
+
+    - name: RecordType
+      description: >
+          Event Record type, identified by the Event Record Identifier UUID.
+
+      values:
+          - name: GeneralMedia
+            description: >
+                General Media Event Record,
+                fbcd0a77-c260-417f-85a9-088b1621eba6.
+          - name: DRAM
+            description: >
+                DRAM Event Record, 601dcbb3-9c06-4eab-b8af-4e9bfb5c9624.
+          - name: MemoryModule
+            description: >
+                Memory Module Event Record,
+                fe927475-dd59-4339-a586-79bab113b774.
+          - name: DynamicCapacity
+            description: >
+                Dynamic Capacity Event Record,
+                ca95afa7-f183-4018-8c2f-95268e101a2a.
+          - name: PhysicalSwitch
+            description: >
+                Physical Switch Event Record,
+                77cf9271-9c02-470b-9fe4-bc7b75f2da97.
+          - name: VirtualSwitch
+            description: >
+                Virtual Switch Event Record,
+                40d26425-3396-4c4d-a5da-3d47263af425.
+          - name: MLDPort
+            description: >
+                MLD Port Event Record, 8dc44363-0c96-4710-b7bf-04bb99534c3f.
+          - name: MemorySparing
+            description: >
+                Memory Sparing Event Record,
+                e71f3a40-2d29-4092-8a39-4d1c966c7c65.
+          - name: VendorSpecific
+            description: >
+                Any other UUID; the record is vendor specific.
+
+    - name: MemoryEventType
+      description: >
+          Memory Event Type of a General Media or DRAM Event Record. The two
+          record types encode it differently (CXL r3.1 Tables 8-45 and 8-46), so
+          the values here are named by meaning; each lists its General Media
+          (GM) and DRAM encoding.
+
+      values:
+          - name: MediaECCError
+            description: >
+                Media ECC Error (GM 00h, DRAM 00h).
+          - name: InvalidAddress
+            description: >
+                Invalid Address (GM 01h, DRAM 02h).
+          - name: DataPathError
+            description: >
+                Data Path Error (GM 02h, DRAM 03h).
+          - name: TEStateViolation
+            description: >
+                TE State Violation (GM 03h, DRAM 04h).
+          - name: ScrubMediaECCError
+            description: >
+                Scrub Media ECC Error (GM 04h, DRAM 01h).
+          - name: AdvancedProgrammableCMECounterExpiration
+            description: >
+                Advanced Programmable Corrected Memory Error Counter Expiration
+                (GM and DRAM 05h).
+          - name: CKIDViolation
+            description: >
+                CKID Violation (GM and DRAM 06h).
+
+    - name: MemoryEventSubType
+      description: >
+          Memory Event Sub-Type of a General Media or DRAM Event Record (GM
+          offset 56h, DRAM offset 7Eh). Only defined when the Memory Event Type
+          is Data Path Error; for every other type the only defined value is
+          NotReported.
+
+      values:
+          - name: NotReported
+            description: >
+                Memory Event Sub-Type Not Reported (00h).
+          - name: InternalDatapathError
+            description: >
+                Internal Datapath Error (01h).
+          - name: MediaLinkCommandTrainingError
+            description: >
+                Media Link Command Training Error (02h).
+          - name: MediaLinkControlTrainingError
+            description: >
+                Media Link Control Training Error (03h).
+          - name: MediaLinkDataTrainingError
+            description: >
+                Media Link Data Training Error (04h).
+          - name: MediaLinkCRCError
+            description: >
+                Media Link CRC Error (05h).
+
+    - name: TransactionType
+      description: >
+          Transaction Type of a General Media or DRAM Event Record.
+
+      values:
+          - name: Unknown
+            description: >
+                Unknown or not reported (00h).
+          - name: HostRead
+            description: >
+                Host Read (01h).
+          - name: HostWrite
+            description: >
+                Host Write (02h).
+          - name: HostScanMedia
+            description: >
+                Host Scan Media (03h).
+          - name: HostInjectPoison
+            description: >
+                Host Inject Poison (04h).
+          - name: MediaPatrolScrub
+            description: >
+                Media Patrol Scrub (05h).
+          - name: MediaManagement
+            description: >
+                Media Management (06h).
+          - name: InternalMediaErrorCheckScrub
+            description: >
+                Internal Media Error Check Scrub (07h).
+          - name: MediaInitialization
+            description: >
+                Media Initialization (08h), CXL r3.1.
+
+    - name: DeviceEventType
+      description: >
+          Device Event Type of a Memory Module Event Record.
+
+      values:
+          - name: HealthStatusChange
+            description: >
+                Health Status Change (00h).
+          - name: MediaStatusChange
+            description: >
+                Media Status Change (01h).
+          - name: LifeUsedChange
+            description: >
+                Life Used Change (02h).
+          - name: TemperatureChange
+            description: >
+                Temperature Change (03h).
+          - name: DataPathError
+            description: >
+                Data Path Error (04h).
+          - name: LSAError
+            description: >
+                Label Storage Area Error (05h).
+          - name: UnrecoverableInternalSidebandBusError
+            description: >
+                Unrecoverable Internal Sideband Bus Error (06h), CXL r3.1.
+          - name: MemoryMediaFRUError
+            description: >
+                Memory Media FRU Error (07h), CXL r3.1.
+          - name: PowerManagementFault
+            description: >
+                Power Management Fault (08h), CXL r3.1.
+
+    - name: DeviceEventSubType
+      description: >
+          Device Event Sub-Type of a Memory Module Event Record (CXL r3.1 Table
+          8-47, offset 55h). Only defined when the Device Event Type is Memory
+          Media FRU Error; for every other type the only defined value is
+          NotReported.
+
+      values:
+          - name: NotReported
+            description: >
+                Device Event Sub-Type Not Reported (00h).
+          - name: InvalidConfigurationData
+            description: >
+                Invalid Configuration Data (01h). Configuration data (e.g. SPD)
+                for the memory media FRU is invalid or corrupt.
+          - name: UnsupportedConfigurationData
+            description: >
+                Unsupported Configuration Data (02h). Configuration data (e.g.
+                SPD) for the memory media FRU is unsupported or unrecognized.
+          - name: UnsupportedMemoryMediaFRU
+            description: >
+                Unsupported Memory Media FRU (03h).
+
+    - name: MediaStatus
+      description: >
+          Media Status of the device health information (CXL r3.1 Table 8-133,
+          offset 01h), returned by Get Health Info and carried in the Memory
+          Module Event Record.
+
+      values:
+          - name: Normal
+            description: >
+                Normal (00h). The media is operating normally.
+          - name: NotReady
+            description: >
+                Not Ready (01h). The media is not ready.
+          - name: WritePersistencyLost
+            description: >
+                Write Persistency Lost (02h). Write requests cannot be
+                persisted, but stored data can still be read.
+          - name: AllDataLost
+            description: >
+                All Data Lost (03h). All data has been lost from the device.
+          - name: WritePersistencyLossOnPowerLoss
+            description: >
+                Write Persistency Loss in the Event of Power Loss (04h).
+          - name: WritePersistencyLossOnShutdown
+            description: >
+                Write Persistency Loss in the Event of Shutdown (05h).
+          - name: WritePersistencyLossImminent
+            description: >
+                Write Persistency Loss Imminent (06h).
+          - name: AllDataLossOnPowerLoss
+            description: >
+                All Data Loss in the Event of Power Loss (07h).
+          - name: AllDataLossOnShutdown
+            description: >
+                All Data Loss in the Event of Shutdown (08h).
+          - name: AllDataLossImminent
+            description: >
+                All Data Loss Imminent (09h).
+
+    - name: HealthLevel
+      description: >
+          A two-bit status level of the Additional Status field of the device
+          health information (CXL r3.1 Table 8-133, offset 02h): Life Used (bits
+          1:0) and Device Temperature (bits 3:2).
+
+      values:
+          - name: Normal
+            description: >
+                Normal (00b).
+          - name: Warning
+            description: >
+                Warning (01b). The user-programmable warning threshold has been
+                reached.
+          - name: Critical
+            description: >
+                Critical (10b). Performance or reliability may be affected.
+
+    - name: DynamicCapacityEventType
+      description: >
+          Dynamic Capacity Event Type of a Dynamic Capacity Event Record (CXL
+          r3.1 Table 8-50, offset 30h).
+
+      values:
+          - name: AddCapacity
+            description: >
+                Add Capacity (00h). The device requests the host to add the
+                capacity in the Dynamic Capacity Extent.
+          - name: ReleaseCapacity
+            description: >
+                Release Capacity (01h). The device requests the host to release
+                the capacity in the Dynamic Capacity Extent.
+          - name: ForcedCapacityRelease
+            description: >
+                Forced Capacity Release (02h). The device has forcefully
+                released the capacity in the Dynamic Capacity Extent.
+          - name: RegionConfigurationUpdated
+            description: >
+                Region Configuration Updated (03h). The configuration of the DC
+                Region in Updated Region Index has been updated.
+          - name: AddCapacityResponse
+            description: >
+                Add Capacity Response (04h). The host has responded to an Add
+                Capacity event. Only reported to the Fabric Manager.
+          - name: CapacityReleased
+            description: >
+                Capacity Released (05h). The host has released capacity. Only
+                reported to the Fabric Manager.
+
+    - name: MemorySparingResult
+      description: >
+          Result of a Memory Sparing Event Record (CXL r3.1 Table 8-48, offset
+          33h).
+
+      values:
+          - name: Success
+            description: >
+                Success (00h).
+          - name: ResourcesExhausted
+            description: >
+                Resources Exhausted (01h).
+          - name: GeneralFailure
+            description: >
+                General Failure (FFh).

@@ -1,0 +1,37 @@
+description: >
+    Control of the administrative link state of a port. The link state currently
+    in effect is reported by the LinkState property of
+    xyz.openbmc_project.Inventory.Connector.Port. When a requested state does
+    not take effect immediately, such as when it is applied at the next reset of
+    the device containing the port, the control object also implements
+    xyz.openbmc_project.Control.Decorator.ApplyTime to report when it takes
+    effect.
+
+properties:
+    - name: RequestedLinkState
+      type: enum[xyz.openbmc_project.Inventory.Connector.Port.LinkState]
+      default: Unknown
+      description: >
+          The link state requested for the port, as held by the device. A write
+          is forwarded to the device and is reflected here only once the device
+          reports it, so a request the device does not take leaves the value
+          unchanged. The device keeps the request across resets until a
+          different state is requested; it is not cleared when it takes effect.
+          Unknown indicates the requested state has not been read from the
+          device yet. Maps to the LinkState property of the Redfish Port when
+          the requested state takes effect immediately, and to the LinkState
+          property of the settings resource referenced by @Redfish.Settings on
+          the Port when Control.Decorator.ApplyTime reports OnReset.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.Unavailable
+
+associations:
+    - name: controlling
+      description: >
+          Objects implementing Control.Port.LinkState must implement the
+          'controlling' association to provide a link to the port whose link
+          state is being controlled.
+      reverse_name: controlled_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Connector.Port

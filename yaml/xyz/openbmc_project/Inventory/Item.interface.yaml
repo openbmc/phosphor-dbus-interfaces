@@ -18,6 +18,15 @@ properties:
           a Redfish "Status""State" of "Absent".
 
 associations:
+    - name: configured_by
+      description: >
+          An inventory Item created by a service from an entity manager
+          configuration, rather than by entity manager itself, can optionally
+          implement the 'configured_by' association to provide a link to the
+          Exposes entry it was created from.
+      reverse_name: configures
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Configuration.Exposes
     - name: containing
       description: >
           Any inventory Items (usually Boards or Chassis) can optionally

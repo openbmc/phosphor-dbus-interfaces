@@ -132,3 +132,11 @@ associations:
           - xyz.openbmc_project.Inventory.Item.FabricAdapter
           - xyz.openbmc_project.Inventory.Item.PCIeSwitch
           - xyz.openbmc_project.Inventory.Item.PCIeDevice
+    - name: controlled_by
+      description: >
+          Objects implementing Connector.Port can optionally implement the
+          'controlled_by' association to provide a link to the control
+          interfaces of the port.
+      reverse_name: controlling
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Control.Port.LinkState

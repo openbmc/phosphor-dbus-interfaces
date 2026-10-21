@@ -200,6 +200,7 @@ generated_markdown += custom_target(
     'xyz/openbmc_project/State/Chassis__markdown'.underscorify(),
     input: [
         '../../../../yaml/xyz/openbmc_project/State/Chassis.errors.yaml',
+        '../../../../yaml/xyz/openbmc_project/State/Chassis.events.yaml',
         '../../../../yaml/xyz/openbmc_project/State/Chassis.interface.yaml',
     ],
     output: ['Chassis.md'],
@@ -219,6 +220,30 @@ generated_markdown += custom_target(
     install: should_generate_markdown,
     install_dir: [inst_markdown_dir / sdbusplus_current_path],
     build_by_default: should_generate_markdown,
+)
+
+generated_registry += custom_target(
+    'xyz/openbmc_project/State/Chassis__registry'.underscorify(),
+    input: [
+        '../../../../yaml/xyz/openbmc_project/State/Chassis.events.yaml',
+    ],
+    output: ['Chassis.json'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'registry',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/State/Chassis',
+    ],
+    install: should_generate_registry,
+    install_dir: [inst_registry_dir / sdbusplus_current_path],
+    build_by_default: should_generate_registry,
 )
 
 generated_markdown += custom_target(
@@ -345,6 +370,7 @@ generated_markdown += custom_target(
     'xyz/openbmc_project/State/Host__markdown'.underscorify(),
     input: [
         '../../../../yaml/xyz/openbmc_project/State/Host.errors.yaml',
+        '../../../../yaml/xyz/openbmc_project/State/Host.events.yaml',
         '../../../../yaml/xyz/openbmc_project/State/Host.interface.yaml',
     ],
     output: ['Host.md'],
@@ -364,6 +390,30 @@ generated_markdown += custom_target(
     install: should_generate_markdown,
     install_dir: [inst_markdown_dir / sdbusplus_current_path],
     build_by_default: should_generate_markdown,
+)
+
+generated_registry += custom_target(
+    'xyz/openbmc_project/State/Host__registry'.underscorify(),
+    input: [
+        '../../../../yaml/xyz/openbmc_project/State/Host.events.yaml',
+    ],
+    output: ['Host.json'],
+    depend_files: sdbusplusplus_depfiles,
+    command: [
+        sdbuspp_gen_meson_prog,
+        '--command',
+        'registry',
+        '--output',
+        meson.current_build_dir(),
+        '--tool',
+        sdbusplusplus_prog,
+        '--directory',
+        meson.current_source_dir() / '../../../../yaml',
+        'xyz/openbmc_project/State/Host',
+    ],
+    install: should_generate_registry,
+    install_dir: [inst_registry_dir / sdbusplus_current_path],
+    build_by_default: should_generate_registry,
 )
 
 generated_markdown += custom_target(

@@ -135,6 +135,26 @@ enumerations:
                 The host firmware crashed and the BMC has automatically
                 initiated a restart of the host firmware
 
+    - name: TransitionCause
+      description: >
+          The reason a power transition of the host was requested.
+      values:
+          - name: "ExternalStateChange"
+            description: >
+                The hardware power state was observed to differ from the state
+                recorded by the BMC, and the BMC is bringing its recorded state
+                in line with it.
+          - name: "HotPlugInserted"
+            description: >
+                The insertion of a hot-pluggable component was detected.
+          - name: "HotPlugRemoved"
+            description: >
+                The removal of a hot-pluggable component was detected.
+          - name: "FirmwareUpdate"
+            description: >
+                The transition is part of a firmware update, for example a BIOS
+                update.
+
 paths:
     - namespace: /xyz/openbmc_project/state
       segments:

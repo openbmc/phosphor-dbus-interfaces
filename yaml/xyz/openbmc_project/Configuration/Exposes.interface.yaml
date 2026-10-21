@@ -1,0 +1,28 @@
+description: >
+    Implement on each object entity manager creates from an entry in the Exposes
+    array of a configuration, alongside the interface specific to the entry's
+    type. It gives services one interface to find these objects and to associate
+    with them, whatever the type of the entry.
+
+properties:
+    - name: Name
+      type: string
+      description: >
+          The name of the entry.
+      flags:
+          - readonly
+    - name: Type
+      type: string
+      description: >
+          The type of the entry, which also names the interface specific to it.
+      flags:
+          - readonly
+
+associations:
+    - name: configures
+      description: >
+          The inventory items created from this entry by the services that
+          consume it, the reverse of their configured_by association.
+      reverse_name: configured_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Inventory.Item

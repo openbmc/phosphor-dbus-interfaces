@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e01fc134_ff89c387",
+        "filename": "yaml/xyz/openbmc_project/Configuration/Exposes.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-22T16:53:10Z",
+      "side": 1,
+      "message": "Done, renamed to `xyz.openbmc_project.Configuration.Object`.",
+      "parentUuid": "9beb361d_e2d90f6a",
+      "revId": "94fea1302c5271775ea8fa71ebe7180b90b37d84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1f2a2989_83c50338",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-10-22T14:19:21Z",
       "side": 1,
       "message": "```suggestion\n          implement the \u0027configured_by\u0027 association to provide a link to the\n          configuration object it was created from.\n```\n\nmaybe we could reword it like this",
+      "range": {
+        "startLine": 25,
+        "startChar": 52,
+        "endLine": 26,
+        "endChar": 44
+      },
+      "revId": "94fea1302c5271775ea8fa71ebe7180b90b37d84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c50e5bb1_b4e73175",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-22T16:53:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1f2a2989_83c50338",
       "range": {
         "startLine": 25,
         "startChar": 52,

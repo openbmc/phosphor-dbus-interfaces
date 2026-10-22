@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6dba8295_344b4be2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-10-22T06:23:19Z",
+      "side": 1,
+      "message": "Where are you planning to add patches consuming this?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 7
+      },
+      "revId": "af044ea1bba265e1556790500ee1834a692ba8eb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ba95de8_9ce096c7",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-10-22T06:23:19Z",
+      "side": 1,
+      "message": "nit: some whitespaces need to be removed.",
+      "range": {
+        "startLine": 25,
+        "startChar": 76,
+        "endLine": 25,
+        "endChar": 80
+      },
+      "revId": "af044ea1bba265e1556790500ee1834a692ba8eb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df4b1da0_85b4c4e3",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-10-22T06:23:19Z",
+      "side": 1,
+      "message": "For this case, I don\u0027t think InvalidArgument is apt.",
+      "range": {
+        "startLine": 27,
+        "startChar": 50,
+        "endLine": 27,
+        "endChar": 78
+      },
+      "revId": "af044ea1bba265e1556790500ee1834a692ba8eb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aad5edc3_040a4706",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-10-22T06:23:19Z",
+      "side": 1,
+      "message": "In case of failure, what would be the value of PowerCap? Retain older user-set value, if it exists?",
+      "revId": "af044ea1bba265e1556790500ee1834a692ba8eb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

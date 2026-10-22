@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1521e5f6_19126649",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002771
+      },
+      "writtenOn": "2026-10-22T06:39:33Z",
+      "side": 1,
+      "message": "The consumer is NumericEffecterPowerCapIntf in PLDM change https://gerrit.openbmc.org/c/openbmc/pldm/+/85852. Its setter already throws InvalidArgument for out-of-range values. This declaration lets the generated D-Bus binding propagate that error correctly.",
+      "parentUuid": "6dba8295_344b4be2",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 7
+      },
+      "revId": "af044ea1bba265e1556790500ee1834a692ba8eb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6ba95de8_9ce096c7",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
         "patchSetId": 4
@@ -72,6 +96,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "16f01e8c_99856da4",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1002771
+      },
+      "writtenOn": "2026-10-22T06:39:33Z",
+      "side": 1,
+      "message": "My intention is to describe range-validation failures, not arbitrary device or transport failures. The device-specific wording is too broad; I’ll narrow it. Would InvalidArgument be appropriate specifically for an out-of-range PowerCap value?",
+      "parentUuid": "df4b1da0_85b4c4e3",
+      "range": {
+        "startLine": 27,
+        "startChar": 50,
+        "endLine": 27,
+        "endChar": 78
+      },
+      "revId": "af044ea1bba265e1556790500ee1834a692ba8eb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "aad5edc3_040a4706",
         "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
         "patchSetId": 4
@@ -83,6 +131,24 @@
       "writtenOn": "2026-10-22T06:23:19Z",
       "side": 1,
       "message": "In case of failure, what would be the value of PowerCap? Retain older user-set value, if it exists?",
+      "revId": "af044ea1bba265e1556790500ee1834a692ba8eb",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45c160a0_4c518a81",
+        "filename": "yaml/xyz/openbmc_project/Control/Power/Cap.interface.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1002771
+      },
+      "writtenOn": "2026-10-22T06:39:33Z",
+      "side": 1,
+      "message": "For a validation rejection, the current PowerCap value remains unchanged and no PLDM command is sent. It retains the existing cached value, which may be device-reported rather than the last requested value. Later asynchronous device failures are separate from this validation error",
+      "parentUuid": "aad5edc3_040a4706",
       "revId": "af044ea1bba265e1556790500ee1834a692ba8eb",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9beb361d_e2d90f6a",
+        "filename": "yaml/xyz/openbmc_project/Configuration/Exposes.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-22T14:19:21Z",
+      "side": 1,
+      "message": "alternatively we could name the interface as `xyz.openbmc_project.Configuration.Object` since it is a marker interface for a configuration object.\n\n\nFrom my perspective `Exposes` sounds more like a verb as in \"entity-manager exposes these interfaces\" and is tightly coupled to the json key which could put it out of date should we decide to create any other key besides `Exposes` under which to put configuration objects.",
+      "revId": "94fea1302c5271775ea8fa71ebe7180b90b37d84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f2a2989_83c50338",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-22T14:19:21Z",
+      "side": 1,
+      "message": "```suggestion\n          implement the \u0027configured_by\u0027 association to provide a link to the\n          configuration object it was created from.\n```\n\nmaybe we could reword it like this",
+      "range": {
+        "startLine": 25,
+        "startChar": 52,
+        "endLine": 26,
+        "endChar": 44
+      },
+      "revId": "94fea1302c5271775ea8fa71ebe7180b90b37d84",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

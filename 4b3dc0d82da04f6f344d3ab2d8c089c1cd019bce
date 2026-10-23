@@ -140,6 +140,30 @@
       },
       "revId": "4b3dc0d82da04f6f344d3ab2d8c089c1cd019bce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60b99b90_56029df2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-23T12:26:15Z",
+      "side": 1,
+      "message": "\u003e Hi. The use case here is a bit different. The actual issue is that once a configuration is added to the system using AddObject, it persists across reboots. The same configuration reappears on D-Bus after a BMC reboot or an AC power cycle.\n\nAs per discussion https://discordapp.com/channels/775381525260664832/819741065531359263/1559601420624199693\n\n\u003e We actually disable configuration persistence if I remember correctly\nOn nvl32-obmc\n\nTheir use-case is similar as yours but it is not visible in the API since they\ndisable config persistence via meson option.",
+      "parentUuid": "08555e5d_37859000",
+      "range": {
+        "startLine": 21,
+        "startChar": 1,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "4b3dc0d82da04f6f344d3ab2d8c089c1cd019bce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

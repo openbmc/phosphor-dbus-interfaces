@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e71c09b6_dade3bd1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-10-23T17:31:16Z",
+      "side": 1,
+      "message": "This is not an interface I want added.  An existing hack in entity-manager is not a reason to define it.\n\nBased on Discord discussions this sounds like it is deprecated.  We should work to remove it rather than documenting it (which just encourages further use).  Please work to eliminate all uses of this API.",
+      "revId": "0c7b810fbd6092d096ed3fe69679a77fda7c8168",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

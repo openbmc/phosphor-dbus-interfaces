@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31efd9bb_eb435e5b",
+        "filename": "yaml/xyz/openbmc_project/Configuration/Object.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-10-25T14:06:14Z",
+      "side": 1,
+      "message": "Is there a corresponding EM patch you need to list in the commit msg?",
+      "revId": "c751b750d1e22b70f80453d4e1bc3157679b51a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9346c6ac_6ce29b8d",
+        "filename": "yaml/xyz/openbmc_project/Configuration/Object.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-10-25T14:06:14Z",
+      "side": 1,
+      "message": "How about platform configs?",
+      "range": {
+        "startLine": 3,
+        "startChar": 17,
+        "endLine": 3,
+        "endChar": 24
+      },
+      "revId": "c751b750d1e22b70f80453d4e1bc3157679b51a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "587a3438_4f35a54d",
+        "filename": "yaml/xyz/openbmc_project/Configuration/Object.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000056
+      },
+      "writtenOn": "2026-10-25T14:06:14Z",
+      "side": 1,
+      "message": "When these services create the inventory object, they should already have access to the necessary EM config? If so, what purpose does the association further serve?",
+      "range": {
+        "startLine": 4,
+        "startChar": 67,
+        "endLine": 5,
+        "endChar": 22
+      },
+      "revId": "c751b750d1e22b70f80453d4e1bc3157679b51a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

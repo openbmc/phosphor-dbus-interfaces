@@ -190,6 +190,12 @@ methods:
             type: object_path
             description: >
                 Dbus path of the FRU whose VPD needs to be collected.
+          - name: isConcurrentMaintenance
+            type: boolean
+            default: true
+            description: >
+                Flag which indicates whether this API is being invoked during
+                concurrent maintenance flow
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
 

@@ -2,8 +2,8 @@ description: >
     Provides access to the objects, interfaces, and properties in a subtree of
     objects. The root of the subtree implements this interface.
 
-    The variant used here may need to be extended when new property types are
-    introduced.
+    Property values use the aggregate variant of all non-recursive property
+    types defined in this repository. Enumerations are represented as strings.
 
     See
     https://dbus.freedesktop.org/doc/dbus-specification.html#standard-interfaces-objectmanager.
@@ -16,28 +16,7 @@ methods:
           this interface; the ObjectManager object itself is not included.
       returns:
           - name: Objects
-            type:
-                dict[object_path,dict[string,dict[string,variant[
-                boolean,double,int32,int64,object_path,
-                dict[string,dict[string,double]],dict[string,string],
-                dict[string,struct[string,boolean,string,string,string,
-                variant[int64,string],variant[int64,string],
-                array[struct[string,variant[int64,string],string]]]],
-                dict[string,struct[string,variant[int64,string]]],string,
-                struct[array[byte],array[byte]],
-                struct[uint64,array[struct[string,string,double,uint64]]],
-                array[double],array[object_path],array[variant[string]],
-                array[dict[object_path,string]],array[string],
-                array[struct[string,string,string]],
-                array[struct[string,string,uint64,string]],
-                array[struct[string,string]],
-                array[struct[string,uint64,string,double]],
-                array[struct[array[struct[object_path,string]],string,string,
-                string,uint64]],array[struct[uint32,size]],
-                array[struct[uint32,array[uint32]]],array[struct[uint64,int64]],
-                array[struct[byte,variant[uint16,uint32],uint16]],
-                array[uint16],array[uint32],array[uint64],array[byte],
-                uint16,uint32,uint64,byte]]]]
+            type: dict[object_path,dict[string,dict[string,variant[all]]]]
             description: >
                 Maps object paths to interface names, then to property names and
                 values. Each property dictionary is the same as the result of
@@ -56,28 +35,7 @@ signals:
             description: >
                 The object path of the object gaining interfaces.
           - name: InterfacesAndProperties
-            type:
-                dict[string,dict[string,variant[
-                boolean,double,int32,int64,object_path,
-                dict[string,dict[string,double]],dict[string,string],
-                dict[string,struct[string,boolean,string,string,string,
-                variant[int64,string],variant[int64,string],
-                array[struct[string,variant[int64,string],string]]]],
-                dict[string,struct[string,variant[int64,string]]],string,
-                struct[array[byte],array[byte]],
-                struct[uint64,array[struct[string,string,double,uint64]]],
-                array[double],array[object_path],array[variant[string]],
-                array[dict[object_path,string]],array[string],
-                array[struct[string,string,string]],
-                array[struct[string,string,uint64,string]],
-                array[struct[string,string]],
-                array[struct[string,uint64,string,double]],
-                array[struct[array[struct[object_path,string]],string,string,
-                string,uint64]],array[struct[uint32,size]],
-                array[struct[uint32,array[uint32]]],array[struct[uint64,int64]],
-                array[struct[byte,variant[uint16,uint32],uint16]],
-                array[uint16],array[uint32],array[uint64],array[byte],
-                uint16,uint32,uint64,byte]]]
+            type: dict[string,dict[string,variant[all]]]
             description: >
                 Maps the added interface names to their property names and
                 values. Interfaces without properties have an empty property

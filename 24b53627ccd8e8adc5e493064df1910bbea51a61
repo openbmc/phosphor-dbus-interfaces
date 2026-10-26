@@ -71,6 +71,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b6db5e6_620776a4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2026-10-26T17:39:48Z",
+      "side": 1,
+      "message": "There isn\u0027t a Available. \n\nEnabled is the default state. \nSo the logic will eventually look like \n```\nIf (Present \u003d False):\n    State \u003d Absent\nElse if (Available \u003d False):\n    State \u003d UnavailableOffline\nElse if (Enabled \u003d False):\n    State \u003d Disabled\nElse if (Degraded \u003d True):\n    State \u003d Degraded \nElse:\n    State \u003d Enabled\n```\n\nhttps://gerrit.openbmc.org/c/openbmc/bmcweb/+/94396/3/redfish-core/include/utils/resource_utils.hpp / https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/93594 is adding degraded \n\nThis and https://gerrit.openbmc.org/c/openbmc/bmcweb/+/94994 are adding disabled",
+      "parentUuid": "497497a7_bf0858e7",
+      "revId": "24b53627ccd8e8adc5e493064df1910bbea51a61",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "080412a4_492215c7",

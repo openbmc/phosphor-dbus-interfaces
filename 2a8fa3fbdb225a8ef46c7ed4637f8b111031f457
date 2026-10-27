@@ -52,6 +52,24 @@
       "parentUuid": "33acc8d0_22010fd0",
       "revId": "2a8fa3fbdb225a8ef46c7ed4637f8b111031f457",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2b27036_1140e156",
+        "filename": "yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-10-27T16:10:31Z",
+      "side": 1,
+      "message": "The backend already needs to support \"maxint\" because it is the implied \"this is the default state\".\n\nI\u0027m not interested in adding \"Reset\" to various dbus interfaces.  If you want something similar to FactoryReset but not quite, define a common one.",
+      "parentUuid": "35b9b1b3_aecbd6d0",
+      "revId": "2a8fa3fbdb225a8ef46c7ed4637f8b111031f457",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

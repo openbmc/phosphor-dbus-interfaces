@@ -60,3 +60,11 @@ associations:
       reverse_name: configured_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.MCTP.Endpoint
+    - name: describes
+      description: >
+          The configuration object of the device, exposed by the board named in
+          Board under the same name, the reverse of its described_by
+          association.
+      reverse_name: described_by
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Configuration.Object

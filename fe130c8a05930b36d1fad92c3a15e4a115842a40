@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "458521d7_46562764",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/Configuration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2026-10-27T15:33:57Z",
+      "side": 1,
+      "message": "Please mention relevant sections also.",
+      "range": {
+        "startLine": 2,
+        "startChar": 69,
+        "endLine": 3,
+        "endChar": 19
+      },
+      "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c5b030b_808a69bd",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/Configuration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2026-10-27T15:33:57Z",
+      "side": 1,
+      "message": "Is it valid to define this Interface for a network port instead of a network device? If yes please make it explicit here and add relevant association also.",
+      "range": {
+        "startLine": 9,
+        "startChar": 35,
+        "endLine": 9,
+        "endChar": 70
+      },
+      "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd257d9d_888aab26",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/Configuration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2026-10-27T15:33:57Z",
+      "side": 1,
+      "message": "nit: this is not necessary I think.",
+      "range": {
+        "startLine": 9,
+        "startChar": 72,
+        "endLine": 10,
+        "endChar": 50
+      },
+      "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9ff6365_0c289a86",
+        "filename": "yaml/xyz/openbmc_project/Network/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1002395
+      },
+      "writtenOn": "2026-10-27T15:33:57Z",
+      "side": 1,
+      "message": "Since this file describes only network management, this paragraph may not be needed at all.",
+      "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

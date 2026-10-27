@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "28d995a3_8926be03",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPI2CTarget.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T17:45:26Z",
+      "side": 1,
+      "message": "It\u0027s intended, since requirements.md asks that when interface A documents an association to interface B, B documents the reverse one, as Software.Version and Inventory.Item do for activating and activated_on: https://github.com/openbmc/phosphor-dbus-interfaces/blob/ebcf812314d3c8f55ff5c7bc8e7a4122e5e4b910/requirements.md?plain\u003d1#L129-L133",
+      "parentUuid": "db08e5fb_e26c585a",
+      "revId": "90813d51208c27df342ea42ebc9c71e212b45e54",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7541848e_f7049d10",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-10-27T16:58:14Z",
       "side": 1,
       "message": "Does required_endpoint_interfaces with three entries mean any-of or all-of? Please confirm, or point to an existing example.",
+      "revId": "90813d51208c27df342ea42ebc9c71e212b45e54",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f30e04d_efcccd47",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T17:45:26Z",
+      "side": 1,
+      "message": "It means any of them, as the connected_to example in requirements.md describes, so an endpoint configured by any one of the three transports matches: https://github.com/openbmc/phosphor-dbus-interfaces/blob/ebcf812314d3c8f55ff5c7bc8e7a4122e5e4b910/requirements.md?plain\u003d1#L124-L127",
+      "parentUuid": "7541848e_f7049d10",
       "revId": "90813d51208c27df342ea42ebc9c71e212b45e54",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

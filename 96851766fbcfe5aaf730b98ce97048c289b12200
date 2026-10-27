@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf6a52be_b543bcb6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002734
+      },
+      "writtenOn": "2026-10-27T03:23:54Z",
+      "side": 1,
+      "message": "Will submit the bmcweb change later.",
+      "parentUuid": "d0fc7117_45277b77",
+      "revId": "96851766fbcfe5aaf730b98ce97048c289b12200",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2b273e92_a209d390",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-10-25T15:54:09Z",
       "side": 1,
       "message": "Why is Metric.Value preferred over Sensor.Value for these?",
+      "range": {
+        "startLine": 327,
+        "startChar": 0,
+        "endLine": 345,
+        "endChar": 45
+      },
+      "revId": "96851766fbcfe5aaf730b98ce97048c289b12200",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f6376aa_78626abf",
+        "filename": "yaml/xyz/openbmc_project/Metric/Value.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1002734
+      },
+      "writtenOn": "2026-10-27T03:23:54Z",
+      "side": 1,
+      "message": "These value are map to Redfish PortMetrics schema[1] (TXOutputPowerMilliWatts/RXInputPowerMilliWatts/TXBiasCurrentMilliAmps/SupplyVoltage).\n[1]: https://redfish.dmtf.org/schemas/v1/PortMetrics_v1.xml",
+      "parentUuid": "2b273e92_a209d390",
       "range": {
         "startLine": 327,
         "startChar": 0,

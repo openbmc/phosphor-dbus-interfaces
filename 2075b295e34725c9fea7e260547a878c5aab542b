@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e465438_d289120f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2026-10-27T19:43:10Z",
+      "side": 1,
+      "message": "@Redfish.Settings does not have an implementation, nor a design, and is a pretty significant deviation in how we model Redfish.\n\nIt\u0027s not clear to me from this commit message how that\u0027s intended to wire up.  Does that mean that everywhere we have a value that\u0027s potentially latched on reset, we have an add an interface like this?  How do clients differentiate?\n\nThese are questions that need answered.",
+      "range": {
+        "startLine": 21,
+        "startChar": 30,
+        "endLine": 22,
+        "endChar": 62
+      },
+      "revId": "2075b295e34725c9fea7e260547a878c5aab542b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94d9a799_b82a74d2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000153
+      },
+      "writtenOn": "2026-10-27T19:43:10Z",
+      "side": 1,
+      "message": "Can you please include WHY this change is required?\n\nPresumably the intent here is to wire this up to Redfish, which doesn\u0027t have the concept of requested and current for a link state.  How do you intend to bridge that gap?\n\n(Please answer these in your commit message).",
+      "revId": "2075b295e34725c9fea7e260547a878c5aab542b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

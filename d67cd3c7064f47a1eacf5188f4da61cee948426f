@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "32093db9_35abeac2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T08:42:15Z",
+      "side": 1,
+      "message": "The dbus-sensors and bmcweb changes that implement and consume this interface are grouped under the [gpu-nvlink](https://gerrit.openbmc.org/q/topic:%22gpu-nvlink%22) topic.",
+      "parentUuid": "f002e5d4_2aa51dce",
+      "revId": "d67cd3c7064f47a1eacf5188f4da61cee948426f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3485fc9b_cb09d476",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-10-25T15:45:00Z",
       "side": 1,
       "message": "How are errors communicated?",
+      "range": {
+        "startLine": 3,
+        "startChar": 4,
+        "endLine": 3,
+        "endChar": 24
+      },
+      "revId": "d67cd3c7064f47a1eacf5188f4da61cee948426f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ae02ac3_d00b6fa0",
+        "filename": "yaml/xyz/openbmc_project/Control/Port/LinkState.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T08:42:15Z",
+      "side": 1,
+      "message": "A write the producer cannot accept fails with `InvalidArgument` or `Unavailable`, and a request the device later refuses leaves `RequestedLinkState` unchanged, which the description now states.",
+      "parentUuid": "3485fc9b_cb09d476",
       "range": {
         "startLine": 3,
         "startChar": 4,
@@ -58,6 +100,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a146bf7_bbc877bf",
+        "filename": "yaml/xyz/openbmc_project/Control/Port/LinkState.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T08:42:15Z",
+      "side": 1,
+      "message": "It is not cleared, since the device keeps the request across resets until another state is requested (verified on hardware), and the description now says so.",
+      "parentUuid": "fad23e8e_fc1f74b2",
+      "revId": "d67cd3c7064f47a1eacf5188f4da61cee948426f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c8792474_01c8b1bd",
@@ -71,6 +131,30 @@
       "writtenOn": "2026-10-25T15:45:00Z",
       "side": 1,
       "message": "Is this populated by reading from the device or when the user writes it?",
+      "range": {
+        "startLine": 13,
+        "startChar": 29,
+        "endLine": 13,
+        "endChar": 49
+      },
+      "revId": "d67cd3c7064f47a1eacf5188f4da61cee948426f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03279f46_0e684de3",
+        "filename": "yaml/xyz/openbmc_project/Control/Port/LinkState.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T08:42:15Z",
+      "side": 1,
+      "message": "It is read from the device, and a write only shows up here once the device reports it back, as the description now states.",
+      "parentUuid": "c8792474_01c8b1bd",
       "range": {
         "startLine": 13,
         "startChar": 29,

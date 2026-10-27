@@ -15,3 +15,10 @@ associations:
       reverse_name: configured_by
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
+    - name: described_by
+      description: >
+          The records of the platform configuration that describe how the device
+          of this object is reached, the reverse of their describes association.
+      reverse_name: describes
+      required_endpoint_interfaces:
+          - xyz.openbmc_project.Configuration.MCTPUSBDevice

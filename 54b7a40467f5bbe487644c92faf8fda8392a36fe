@@ -34,6 +34,24 @@
       "parentUuid": "dd10bc5b_0b6e3dd3",
       "revId": "54b7a40467f5bbe487644c92faf8fda8392a36fe",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88dfda9d_673ec027",
+        "filename": "yaml/xyz/openbmc_project/MCTP/Endpoint.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T04:43:12Z",
+      "side": 1,
+      "message": "Since the association isn\u0027t specific to platform configuration, I\u0027ve listed `MCTPI2CTarget` and `MCTPI3CTarget` alongside `MCTPUSBDevice`, as one match in `required_endpoint_interfaces` is enough",
+      "parentUuid": "134088f0_33e24dfa",
+      "revId": "54b7a40467f5bbe487644c92faf8fda8392a36fe",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

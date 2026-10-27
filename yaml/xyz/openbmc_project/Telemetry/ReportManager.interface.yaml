@@ -80,7 +80,7 @@ properties:
       flags:
           - const
     - name: SupportedOperationTypes
-      type: array[enum[xyz.openbmc_project.Telemetry.Report.OperationType]]
+      type: set[enum[xyz.openbmc_project.Telemetry.Report.OperationType]]
       description: >
           Contains subset of operation types currently supported by this
           service.

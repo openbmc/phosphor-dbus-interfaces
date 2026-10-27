@@ -10,7 +10,7 @@ description: >
 
 properties:
     - name: Supported
-      type: array[string]
+      type: set[string]
       flags:
           - readonly
       description: >

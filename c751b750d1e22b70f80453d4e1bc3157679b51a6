@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "756a9264_fe7480a3",
+        "filename": "yaml/xyz/openbmc_project/Configuration/Object.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T02:26:25Z",
+      "side": 1,
+      "message": "Yes, I\u0027ll add https://gerrit.openbmc.org/c/openbmc/entity-manager/+/96105 to the commit message.",
+      "parentUuid": "31efd9bb_eb435e5b",
+      "revId": "c751b750d1e22b70f80453d4e1bc3157679b51a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9346c6ac_6ce29b8d",
@@ -41,6 +59,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "38c3e5a4_b18d5729",
+        "filename": "yaml/xyz/openbmc_project/Configuration/Object.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T02:26:25Z",
+      "side": 1,
+      "message": "This is for the devices exposed by board configurations. A device described in a platform configuration also has to be exposed by a board configuration, and its platform record refers to that exposed device by board and name:\n```\nex:\n/xyz/openbmc_project/inventory/system\n|- board\n|  |- Nvidia_IMGX_ConnectX8_SuperNIC_Switch\n|  |  `- GPU_SMA_0_VDM            \u003c- board config Exposes (bridge device)\n|  `- Nvidia_RTX_PRO_6000_Blackwell_0\n|     |- NVIDIA_RTX_PRO_6000_VDM  \u003c- board config Exposes (device behind the bridge)\n|     `- MCU                      \u003c- board config Exposes (direct I2C target)\n`- platform\n   `- Nvidia_MGX_ConnectX8_SuperNIC_Server\n      |- GPU_SMA_0                \u003c- platform config record for GPU_SMA_0_VDM\n```",
+      "parentUuid": "9346c6ac_6ce29b8d",
+      "range": {
+        "startLine": 3,
+        "startChar": 17,
+        "endLine": 3,
+        "endChar": 24
+      },
+      "revId": "c751b750d1e22b70f80453d4e1bc3157679b51a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "587a3438_4f35a54d",
@@ -54,6 +96,30 @@
       "writtenOn": "2026-10-25T14:06:14Z",
       "side": 1,
       "message": "When these services create the inventory object, they should already have access to the necessary EM config? If so, what purpose does the association further serve?",
+      "range": {
+        "startLine": 4,
+        "startChar": 67,
+        "endLine": 5,
+        "endChar": 22
+      },
+      "revId": "c751b750d1e22b70f80453d4e1bc3157679b51a6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0407e14f_c93645cc",
+        "filename": "yaml/xyz/openbmc_project/Configuration/Object.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-27T02:26:25Z",
+      "side": 1,
+      "message": "The service creating the item doesn\u0027t need it. It matters when several services create objects for the same device, for example `pldmd` and `spdmd`. Each picks its own object path, so today `bmcweb` cannot tell that those objects belong to one device. With each of them linked by `configured_by` to the same configuration object, `bmcweb` can gather them through that object\u0027s `configures` association.",
+      "parentUuid": "587a3438_4f35a54d",
       "range": {
         "startLine": 4,
         "startChar": 67,

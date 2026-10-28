@@ -237,6 +237,7 @@ methods:
                 True if both EEPROMs contain identical VPD, false otherwise.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
 
     - name: CollectAllFRUVPD
       description: >

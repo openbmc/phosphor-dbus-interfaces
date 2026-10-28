@@ -1,0 +1,31 @@
+version: 1.0.0
+
+description: >
+    Events indicating that the watchdog timer of a device has expired.
+
+errors:
+    - name: WatchdogTimeout
+      severity: critical
+      errno: ETIMEDOUT
+
+      metadata:
+          - name: Device
+            type: object_path
+            primary: true
+            description: >
+                The name or identifier of the device whose watchdog timer
+                expired.
+          - name: TimerUse
+            type: enum[xyz.openbmc_project.State.Watchdog.TimerUse]
+            description: >
+                The timer use of the watchdog that expired, as set by the
+                software that armed it. The values are the timer uses of the
+                IPMI Set Watchdog Timer command, for example BIOSFRB2 for the
+                BIOS FRB2 timer.
+          - name: FailureData
+            type: string
+            description: >
+                An [Optional] set of additional failure data to identify the
+                cause of the watchdog timeout.
+
+      redfish-mapping: Device.WatchdogTimeout

@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e6d9825_6ded5960",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-28T15:09:56Z",
+      "side": 1,
+      "message": "It is not a BMC service; the daemon that already manages the adapter implements it over a sideband, and the commit message now says so.",
+      "parentUuid": "517bb715_e50ff020",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 67
+      },
+      "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "458521d7_46562764",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-10-27T15:33:57Z",
       "side": 1,
       "message": "Please mention relevant sections also.",
+      "range": {
+        "startLine": 2,
+        "startChar": 69,
+        "endLine": 3,
+        "endChar": 19
+      },
+      "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebcf514c_971538b9",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/Configuration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-28T15:09:56Z",
+      "side": 1,
+      "message": "Done, the description now cites IEEE 802.1AB-2016 sections 9.2.5.1 and 10.2.2, and says where the receive side has no equivalent in the standard.",
+      "parentUuid": "458521d7_46562764",
       "range": {
         "startLine": 2,
         "startChar": 69,
@@ -70,6 +118,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cb56d56_54e2807e",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/Configuration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-28T15:09:56Z",
+      "side": 1,
+      "message": "Yes, so the description now says a port hosts it where the hardware allows, and the `controlling` association accepts a Port, with `controlled_by` added on Port.",
+      "parentUuid": "8c5b030b_808a69bd",
+      "range": {
+        "startLine": 9,
+        "startChar": 35,
+        "endLine": 9,
+        "endChar": 70
+      },
+      "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cd257d9d_888aab26",
@@ -93,6 +165,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "917d8040_a13e1f7a",
+        "filename": "yaml/xyz/openbmc_project/Network/LLDP/Configuration.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-28T15:09:56Z",
+      "side": 1,
+      "message": "Removed.",
+      "parentUuid": "cd257d9d_888aab26",
+      "range": {
+        "startLine": 9,
+        "startChar": 72,
+        "endLine": 10,
+        "endChar": 50
+      },
+      "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9ff6365_0c289a86",
@@ -106,6 +202,24 @@
       "writtenOn": "2026-10-27T15:33:57Z",
       "side": 1,
       "message": "Since this file describes only network management, this paragraph may not be needed at all.",
+      "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97e6c574_61738b91",
+        "filename": "yaml/xyz/openbmc_project/Network/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-28T15:09:56Z",
+      "side": 1,
+      "message": "Removed; the note on which daemon implements these moved to the commit message.",
+      "parentUuid": "a9ff6365_0c289a86",
       "revId": "fe130c8a05930b36d1fad92c3a15e4a115842a40",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

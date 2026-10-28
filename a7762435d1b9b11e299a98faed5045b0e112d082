@@ -22,6 +22,30 @@
       },
       "revId": "a7762435d1b9b11e299a98faed5045b0e112d082",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dffb0d7b_55391b3e",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPI3CTarget.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-28T02:42:49Z",
+      "side": 1,
+      "message": "Yes, that is a point. The fact is entity manager publishes this array as `at`, since it picks the D-Bus type from the JSON values rather than the schema, so `array[byte]` wouldn\u0027t match what\u0027s on the bus today. @alexander.hansen@9elements.com, would it make sense for entity manager to take the type from the schema so Address could be published as `ay`?",
+      "parentUuid": "d666ca8f_3528ce50",
+      "range": {
+        "startLine": 25,
+        "startChar": 18,
+        "endLine": 25,
+        "endChar": 24
+      },
+      "revId": "a7762435d1b9b11e299a98faed5045b0e112d082",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

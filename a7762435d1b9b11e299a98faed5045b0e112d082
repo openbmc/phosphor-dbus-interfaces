@@ -70,6 +70,30 @@
       },
       "revId": "a7762435d1b9b11e299a98faed5045b0e112d082",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9e66ac5_98690fff",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPI3CTarget.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-28T16:33:02Z",
+      "side": 1,
+      "message": "Thanks @alexander.hansen@9elements.com, since keeping the array matches what entity manager publishes and what mctpreactor reads today, I\u0027d lean towards leaving it as `array[uint64]` and switching to `ay` once entity manager can take the D-Bus type from the schema. @andrew@codeconstruct.com.au, would that work for you?",
+      "parentUuid": "d630766d_0337aa57",
+      "range": {
+        "startLine": 25,
+        "startChar": 18,
+        "endLine": 25,
+        "endChar": 24
+      },
+      "revId": "a7762435d1b9b11e299a98faed5045b0e112d082",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

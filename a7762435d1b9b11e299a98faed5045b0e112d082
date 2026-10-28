@@ -46,6 +46,30 @@
       },
       "revId": "a7762435d1b9b11e299a98faed5045b0e112d082",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d630766d_0337aa57",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPI3CTarget.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001712
+      },
+      "writtenOn": "2026-10-28T11:04:34Z",
+      "side": 1,
+      "message": "If you only need 6 bytes you could also make it a `uint64` and leave 2 bytes zeroed out. Or just leave it as is and simply discard 7 bytes from each array element.\n\nWhatever Andrew wants to see here.\n\n\u003e would it make sense for entity manager to take the type from the schema so Address could be published as ay?\n\nYes, we need such a mechanism anyways due to the way EM uses template strings.\nToday someone can write \"address\" instead of \"$address\" into their config and EM will simply publish it as `string` instead of `uint64`.\n\nThe `config type in json !\u003d intended runtime type on D-Bus` so besides `type` in json schema there needs to be another source of information. For example in case of `Address` in many schemas that\u0027s a string so it can be templated, and needs to be config-validated as string but on D-Bus it needs to be a number in many of these schemas.\n\nCurrently the schema does not represent it. It currently only represents the type to be used in config json but it\u0027s missing the intended D-Bus type.\n\nThat\u0027s a longstanding bug in EM and i am very interested in patches to fix it.\n\nFrom my side i would not want to block this change on it since it\u0027s a bug that\u0027s affecting all configuration schemas.",
+      "parentUuid": "dffb0d7b_55391b3e",
+      "range": {
+        "startLine": 25,
+        "startChar": 18,
+        "endLine": 25,
+        "endChar": 24
+      },
+      "revId": "a7762435d1b9b11e299a98faed5045b0e112d082",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

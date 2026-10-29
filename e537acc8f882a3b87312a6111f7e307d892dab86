@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c76678ff_6c3f6e01",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-10-29T02:24:10Z",
+      "side": 1,
+      "message": "Right, it is restricted to Cpu and Accelerator. That paragraph was left over from an earlier patchset and I forgot to remove it, sorry. Removed it and fixed the example.\n\nThe restriction follows DMTF Processor.MemorySummary.ECCModeEnabled [1]: \"An indication of whether memory ECC mode is enabled for this processor.\"\n\n[1] https://github.com/DMTF/Redfish-Publications/blob/main/json-schema/Processor.v1_13_0.json#L447-L456",
+      "parentUuid": "8741605b_06c05623",
+      "range": {
+        "startLine": 2,
+        "startChar": 58,
+        "endLine": 2,
+        "endChar": 67
+      },
+      "revId": "e537acc8f882a3b87312a6111f7e307d892dab86",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b7a6316_65a27dda",
@@ -47,6 +71,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "78bb4732_0fb361c3",
+        "filename": "yaml/xyz/openbmc_project/Control/Processor/EccMode.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-10-29T02:24:10Z",
+      "side": 1,
+      "message": "Made it required. The control path is not tied to the inventory path, so consumers find the control through this association, same as Control.OperatingClockSpeed [1].\n\n[1] https://github.com/openbmc/phosphor-dbus-interfaces/blob/7ff537f76de2bee983cf3dccdc7c5c5316a86cf3/yaml/xyz/openbmc_project/Control/OperatingClockSpeed.interface.yaml#L49-L56",
+      "parentUuid": "9b7a6316_65a27dda",
+      "range": {
+        "startLine": 34,
+        "startChar": 61,
+        "endLine": 34,
+        "endChar": 71
+      },
+      "revId": "e537acc8f882a3b87312a6111f7e307d892dab86",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b520d805_1f4f8585",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-10-26T05:18:02Z",
       "side": 1,
       "message": "Two controlled_by associations?",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 67,
+        "endChar": 25
+      },
+      "revId": "e537acc8f882a3b87312a6111f7e307d892dab86",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fa3c517_1633904b",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Accelerator.interface.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-10-29T02:24:10Z",
+      "side": 1,
+      "message": "Merged into the existing controlled_by entry.",
+      "parentUuid": "b520d805_1f4f8585",
       "range": {
         "startLine": 67,
         "startChar": 12,

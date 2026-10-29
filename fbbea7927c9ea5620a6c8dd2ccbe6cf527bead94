@@ -16,6 +16,24 @@
       "message": "How does this get associated with the object implementing Item.NetworkInterface.Infiniband",
       "revId": "fbbea7927c9ea5620a6c8dd2ccbe6cf527bead94",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd55f077_5e7f7446",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Connector/Port.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-10-29T02:23:32Z",
+      "side": 1,
+      "message": "The object implementing Item.NetworkInterface.InfiniBand also implements\nItem.NetworkInterface, and is linked to the Port through the\nassigned_to/assigning association added in\nhttps://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/89649\n\n```\n          +----------------------------------------------+\n          |            NetworkAdapter  (89247)           |\n          +----------------------------------------------+\n           |                                            |\nconnecting |                                            | exposing\n   (89247) |                                            | (89649)\n           v                                            v\n+----------------------+                 +-----------------------------+\n| Connector.Port       |                 | NetworkInterface            |\n|                      |\u003c- assigned_to --| NetworkInterface.InfiniBand |\n| PortProtocol:        |     (89649)     |   (92492)                   |\n|   Ethernet   (89248) |                 |   PermanentNodeGUID         |\n|   InfiniBand (95051) |                 |   PermanentPortGUID         |\n|                      |                 |                             |\n+----------------------+                 +-----------------------------+\n\nReverse names: connected_to, exposed_by, assigning\n```",
+      "parentUuid": "1b864cc2_2c985e06",
+      "revId": "fbbea7927c9ea5620a6c8dd2ccbe6cf527bead94",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

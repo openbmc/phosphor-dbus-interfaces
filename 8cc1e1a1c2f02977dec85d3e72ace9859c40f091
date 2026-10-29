@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2e65377_50993453",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkInterface/InfiniBand.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-10-29T02:23:05Z",
+      "side": 1,
+      "message": "Done. These are read-only in the Redfish schema as well\n(\"This address is not assignable\"), so marked readonly.\nhttps://redfish.dmtf.org/schemas/v1/NetworkDeviceFunction.v1_11_1.json",
+      "parentUuid": "7ba323a1_a1d1e0e9",
+      "revId": "8cc1e1a1c2f02977dec85d3e72ace9859c40f091",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4b22eb49_e72ec2be",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "88dd1059_abfb6a79",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkInterface/InfiniBand.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-10-29T02:23:05Z",
+      "side": 1,
+      "message": "Done. These are read-only in the Redfish schema as well\n(\"This address is not assignable\"), so marked readonly.\nhttps://redfish.dmtf.org/schemas/v1/NetworkDeviceFunction.v1_11_1.json",
+      "parentUuid": "4b22eb49_e72ec2be",
+      "revId": "8cc1e1a1c2f02977dec85d3e72ace9859c40f091",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8dae17fe_cc29305e",
@@ -48,6 +84,24 @@
       "writtenOn": "2026-10-25T16:50:41Z",
       "side": 1,
       "message": "do we need a default if one of these is not available?",
+      "revId": "8cc1e1a1c2f02977dec85d3e72ace9859c40f091",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b23c320_82d6dcb7",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkInterface/InfiniBand.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1002810
+      },
+      "writtenOn": "2026-10-29T02:23:05Z",
+      "side": 1,
+      "message": "Good point, thanks. I originally relied on the string property already defaulting to an empty string on D-Bus, but you\u0027re right that declaring it in the PDI makes the intent explicit.",
+      "parentUuid": "8dae17fe_cc29305e",
       "revId": "8cc1e1a1c2f02977dec85d3e72ace9859c40f091",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

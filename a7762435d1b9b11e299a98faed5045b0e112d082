@@ -94,6 +94,30 @@
       },
       "revId": "a7762435d1b9b11e299a98faed5045b0e112d082",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc78911c_cb47ccdd",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPI3CTarget.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-10-29T16:07:14Z",
+      "side": 1,
+      "message": "Thanks for the suggestion. I prototyped an `x-dbus-type` keyword on schema properties, using the type names from phosphor-dbus-interfaces, in https://gerrit.openbmc.org/c/openbmc/entity-manager/+/96528 (validated at build time) and https://gerrit.openbmc.org/c/openbmc/entity-manager/+/96529 (used by entity-manager to convert values when publishing). \nA value like `address` missing its `$` now fails validation instead of being published as a string, and existing output stays the same.",
+      "parentUuid": "d9e66ac5_98690fff",
+      "range": {
+        "startLine": 25,
+        "startChar": 18,
+        "endLine": 25,
+        "endChar": 24
+      },
+      "revId": "a7762435d1b9b11e299a98faed5045b0e112d082",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

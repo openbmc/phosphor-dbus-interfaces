@@ -1,0 +1,54 @@
+description: >
+    Implement to allow MCTP I2C target records (Type "MCTPI2CTarget") to be
+    added to or removed from an existing Entity Manager board/configuration
+    object at runtime, without going through the generic
+    xyz.openbmc_project.AddObject interface.
+
+    This interface is implemented by Entity Manager on each board object that it
+    creates, for example /xyz/openbmc_project/inventory/system/board/<board
+    name>. Records added through this interface are persisted so that they
+    survive a reboot, and are exposed on D-Bus as
+    xyz.openbmc_project.Configuration.MCTPI2CTarget objects underneath the board
+    object.
+
+methods:
+    - name: AddMCTPI2CTarget
+      description: >
+          Add a new MCTP I2C target record under this board/object.
+      parameters:
+          - name: Name
+            type: string
+            description: >
+                A recognisable name for the device. Must be unique among the
+                MCTPI2CTarget records of this board.
+          - name: Bus
+            type: uint64
+            description: >
+                The I2C bus index to which the device is attached.
+          - name: Address
+            type: byte
+            description: >
+                The 7-bit I2C address of the device.
+      returns:
+          - name: Path
+            type: object_path
+            description: >
+                The object path of the newly created
+                xyz.openbmc_project.Configuration.MCTPI2CTarget object.
+      errors:
+          - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
+
+    - name: RemoveMCTPI2CTarget
+      description: >
+          Remove an existing MCTP I2C target record from this board/object. The
+          record is removed from the system configuration, from D-Bus, and from
+          persistent storage.
+      parameters:
+          - name: Name
+            type: string
+            description: >
+                The Name of the MCTPI2CTarget record to remove.
+      errors:
+          - xyz.openbmc_project.Common.Error.ResourceNotFound
+          - xyz.openbmc_project.Common.Error.InternalFailure

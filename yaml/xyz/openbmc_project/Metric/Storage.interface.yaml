@@ -1,0 +1,17 @@
+description: >
+    This interface provides the state of the filesystem measured by a storage
+    metric. It is implemented alongside xyz.openbmc_project.Metric.Value on
+    the storage metric objects, such as
+    /xyz/openbmc_project/metric/bmc/storage/rw.
+
+properties:
+    - name: ReadOnly
+      type: boolean
+      default: false
+      description: >
+          Whether the filesystem is read-only. This is true both when it is
+          mounted read-only and when the filesystem has switched itself to
+          read-only after an error, in which case anything that persists data
+          to it fails.
+      flags:
+          - readonly

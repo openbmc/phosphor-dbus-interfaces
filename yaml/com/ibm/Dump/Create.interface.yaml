@@ -40,6 +40,15 @@ enumerations:
             description: >
                 Path to the collected dump files, currently used by SBE dump
                 creation.
+          - name: "OperationStatus"
+            description: >
+                The status the new dump entry is created with, given as an
+                xyz.openbmc_project.Common.Progress.OperationStatus value.
+                Only InProgress (the default when the key is absent) and
+                Completed are accepted. Completed is used for System and
+                Resource dumps that were already written by an application,
+                such as the host, so no host state check is done and the entry
+                is not announced as in progress.
 
     - name: SBEDumpTriggerType
       description: >

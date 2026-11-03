@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b010b5ea_8473ac7c",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Transceiver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1003195
+      },
+      "writtenOn": "2026-11-03T11:37:41Z",
+      "side": 1,
+      "message": "The commit message cites Redfish Port_v1.xml and states it uses ManagementInterfaceType:\"naming its form factor, the transmission medium it uses and the specification used to manage it through the Type, MediumType and ManagementInterfaceType properties\"\n\nHowever, here the property and enum are named ManagementInterface. Should we align this with Redfish and rename the property and enum to ManagementInterfaceType?",
+      "revId": "99543e40591715dec6301f1b3f8c1d33f66f1f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ca79a1a_30d0dd35",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Transceiver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1003195
+      },
+      "writtenOn": "2026-11-03T11:37:41Z",
+      "side": 1,
+      "message": "SFF-8436 and SFF-8636 are QSFP / QSFP28 management specifications rather than SFP. Lumping them under an enum named SFP is ambiguous when mapping to Redfish or when inspecting QSFP modules. \nShould we distinguish them according to the specification standards (e.g. SFF8472, SFF8436, SFF8636, or match Redfish ManagementInterfaceType enum values)?",
+      "revId": "99543e40591715dec6301f1b3f8c1d33f66f1f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

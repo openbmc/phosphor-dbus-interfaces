@@ -16,6 +16,63 @@
       "message": "hey @geissonator@yahoo.com, just adding you because i noticed that PSTM doesn\u0027t currently send off real time events during systemd service failures and wanted to wire that up -- this is a first step to define something that redfish will be ok with.\n\nlmk if you have any suggestions on the schema.",
       "revId": "fbf65852c1fce658874eda14841553a33f76a1d6",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "51a52483_28c4b22d",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-11-03T06:28:21Z",
+      "side": 1,
+      "message": "I\u0027d be ok if this event ends up in a separate message registry also... but if @geissonator@yahoo.com would prefer it here I\u0027m ok with that also.\n\nI\u0027m slightly concerned that \"BMC\" is overly broad, since we\u0027re talking more about services/software running inside the BMC, but effectively right now these are all events that PSM is responsible for so it does fit from that perspective.",
+      "revId": "fbf65852c1fce658874eda14841553a33f76a1d6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff3f7ea6_011c8415",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-11-03T06:28:21Z",
+      "side": 1,
+      "message": "I suspect you\u0027re going to want a Warning and a Critical one of these based on the changes you were proposing in PSM, right?",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 24
+      },
+      "revId": "fbf65852c1fce658874eda14841553a33f76a1d6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4021c1e_1812291f",
+        "filename": "yaml/xyz/openbmc_project/State/BMC.events.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-11-03T06:28:21Z",
+      "side": 1,
+      "message": "If you\u0027re getting this from the JobRemoved signal, won\u0027t \"result\" always be \"failed\"?  What is the value of that?\n\nIf the value isn\u0027t always \"failed\", what are the possible values?  Should we map these to an enumeration or just let the systemd-string leak through the Redfish API?",
+      "revId": "fbf65852c1fce658874eda14841553a33f76a1d6",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

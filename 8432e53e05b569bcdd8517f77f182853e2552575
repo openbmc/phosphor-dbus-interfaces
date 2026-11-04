@@ -16,6 +16,24 @@
       "message": "Rebase on the older patch https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/92699 please",
       "revId": "8432e53e05b569bcdd8517f77f182853e2552575",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "edc2709b_79383b9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002734
+      },
+      "writtenOn": "2026-11-04T03:41:22Z",
+      "side": 1,
+      "message": "The four paths that 92699 adds (nic/rx_errors, nic/rx_frames, nic/tx_frames, nic/tx_discards) are already on master through https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/92415.",
+      "parentUuid": "4a672734_47ae1078",
+      "revId": "8432e53e05b569bcdd8517f77f182853e2552575",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -33,6 +33,24 @@
       "message": "SFF-8436 and SFF-8636 are QSFP / QSFP28 management specifications rather than SFP. Lumping them under an enum named SFP is ambiguous when mapping to Redfish or when inspecting QSFP modules. \nShould we distinguish them according to the specification standards (e.g. SFF8472, SFF8436, SFF8636, or match Redfish ManagementInterfaceType enum values)?",
       "revId": "99543e40591715dec6301f1b3f8c1d33f66f1f13",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72dadf10_2ebcd1e5",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/Transceiver.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1002734
+      },
+      "writtenOn": "2026-11-04T02:16:39Z",
+      "side": 1,
+      "message": "This follows Redfish definition: TransceiverManagementInterfaceType in Port_v1 has only SFP and CMIS, and defines SFP as \"managed via an interface defined by SFF-8472, SFF-8436, or SFF-8636\".",
+      "parentUuid": "3ca79a1a_30d0dd35",
+      "revId": "99543e40591715dec6301f1b3f8c1d33f66f1f13",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

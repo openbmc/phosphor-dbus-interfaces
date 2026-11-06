@@ -24,7 +24,7 @@ methods:
                     "key1": "value1",
                     "key2": "value2"
                   }
-                ends up in AdditionaData like:
+                ends up in AdditionalData like:
                   ["KEY1=value1", "KEY2=value2"]
       returns:
           - name: Entry
@@ -60,7 +60,7 @@ methods:
                     "key1": "value1",
                     "key2": "value2"
                   }
-                ends up in AdditionaData like:
+                ends up in AdditionalData like:
                   ["KEY1=value1", "KEY2=value2"]
           - name: FFDC
             type: array[struct[enum[self.FFDCFormat], byte, byte, unixfd]]

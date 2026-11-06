@@ -13,9 +13,9 @@ errors:
             primary: true
             description: The source of the failed reset.
       en:
-          description: An error occured during factory reset.
+          description: An error occurred during factory reset.
           message:
-              An error occured at '{Source}' during factory reset. Reset cause
+              An error occurred at '{Source}' during factory reset. Reset cause
               is '{ResetCause}'.
           resolution: Retry reset.
       errno: EIO

@@ -5,6 +5,10 @@ properties:
       type: string
       description: >
           MAC address of the item
+    - name: MACAddress2
+      type: string
+      description: >
+          Second MAC address of the item
 
 associations:
     - name: produced_by

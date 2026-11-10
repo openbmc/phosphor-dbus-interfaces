@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d38ce5a_bac114df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001076
+      },
+      "writtenOn": "2026-11-10T02:14:40Z",
+      "side": 1,
+      "message": "No, this is not competing design. This can be used when MCTP I2C devices are dynamic in nature and the buses are known only at runtime.",
+      "parentUuid": "ec781d17_b2e28320",
+      "revId": "15db3aadd92512c56e70fdd6a577e10186013018",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ab97daf8_228fb8eb",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-11-06T22:38:57Z",
       "side": 1,
       "message": "Are you planning on upstreaming the code that is going to call this?  What repo will it be in?",
+      "revId": "15db3aadd92512c56e70fdd6a577e10186013018",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c97e5010_03edc575",
+        "filename": "yaml/xyz/openbmc_project/Configuration/MCTPTarget.interface.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1001076
+      },
+      "writtenOn": "2026-11-10T02:14:40Z",
+      "side": 1,
+      "message": "Current use case was mentioned by @nidhin.ms@intel.com in https://discord.com/channels/775381525260664832/819741065531359263/1559789847764271114",
+      "parentUuid": "ab97daf8_228fb8eb",
       "revId": "15db3aadd92512c56e70fdd6a577e10186013018",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

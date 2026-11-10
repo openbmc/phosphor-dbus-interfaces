@@ -1,0 +1,11 @@
+description: >
+    Provide an interface for services to associate a timestamp with a log entry.
+    This is useful for services retrieving log entries for other secondary management
+    controllers to help influence the ordering of log entries.
+
+properties:
+    - name: Value
+      type: uint64
+      description:
+          The time in microseconds since the Epoch (1 Jan 1970 00:00:00 UTC),
+          as reported by the log origin for the current log entry being created.

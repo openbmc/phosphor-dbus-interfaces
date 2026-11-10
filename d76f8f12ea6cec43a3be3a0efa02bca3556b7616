@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b4e3580_e6813140",
+        "filename": "yaml/com/ibm/VPD/Manager.interface.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2026-11-10T22:31:08Z",
+      "side": 1,
+      "message": "FYI, returning InternalFailure from a D-Bus method is frowned upon and not allowed for other areas of PDI.  I would reduce this usage as much as possible and not add any new ones.",
+      "revId": "d76f8f12ea6cec43a3be3a0efa02bca3556b7616",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}

@@ -19,20 +19,13 @@ enumerations:
       values:
           - name: Host
 
-    - name: PCIeSwitch
-      description: >
-          The compatible hardware strings for the PCIe switch flash on Anacapa
-          T16 bridge board.
-      values:
-          - name: PEX90080_lbb
-          - name: PEX90080_rbb
-
     - name: Retimer
       description: >
-          The compatible hardware strings for the retimer on Anacapa T20 bridge
+          The compatible hardware strings for the retimer on Anacapa bridge
           board.
       values:
           - name: PT5081L
+          - name: KB9002
 
     - name: VR
       description: >

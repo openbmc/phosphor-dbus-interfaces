@@ -213,12 +213,14 @@ methods:
             type: array[string]
             description: >
                 An array containing hardware paths corresponding to given D-Bus
-                object path. The first entry represents the primary hardware
-                path. All other entries(if any) represents the redundant
-                hardware paths. Note: The inventory path must be present in the
-                system configuration JSON used by vpd-manager.
+                object path, if the path fully or partially inherits data from
+                the corresponding EEPROM. The first entry represents the primary
+                hardware path. All other entries(if any) represents the
+                redundant hardware paths. Note: The inventory path must be
+                present in the system configuration JSON used by vpd-manager.
       errors:
           - xyz.openbmc_project.Common.Error.InvalidArgument
+          - xyz.openbmc_project.Common.Error.InternalFailure
           - com.ibm.VPD.Error.PathNotFound
 
     - name: DeleteAllFRUVPD

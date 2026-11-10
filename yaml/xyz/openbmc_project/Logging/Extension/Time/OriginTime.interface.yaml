@@ -1,0 +1,11 @@
+description: >
+    Associates an origin timestamp with a log entry. This is useful for services
+    that collect log entries from secondary management controllers, allowing the
+    entries to be ordered by the time reported by the originating controller.
+
+properties:
+    - name: Value
+      type: uint64
+      description:
+          The time, in microseconds since the Epoch (1 Jan 1970 00:00:00 UTC),
+          at which the log entry was reported by its origin.

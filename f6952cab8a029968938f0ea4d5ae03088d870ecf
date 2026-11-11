@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "95d85e71_b4edd1f2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-11-11T17:33:58Z",
+      "side": 1,
+      "message": "So ... associate to the CPU, VR, etc. and not the board?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 56
+      },
+      "revId": "f6952cab8a029968938f0ea4d5ae03088d870ecf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ff79bd40_a2817aa5",
         "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
         "patchSetId": 1
@@ -14,6 +37,23 @@
       "writtenOn": "2026-11-11T15:11:09Z",
       "side": 1,
       "message": "Would it be good to name the redfish schema this enum is mapped to?",
+      "revId": "f6952cab8a029968938f0ea4d5ae03088d870ecf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4629a5e5_9cbf9d92",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-11-11T17:33:58Z",
+      "side": 1,
+      "message": "We\u0027ve had this conversation before.  I absolutely hate this Redfish enumeration.  For things where we already have an inventory interface to represent the \"physical context\" we should use that interface.  We don\u0027t need an additional \"physical context\" interface with the same information.\n\nI\u0027m not going to accept Board or CPU for certain.  I don\u0027t know what a \"GPUSubsystem\" is but that sounds to me like a \"logical context\" which is clearly not a \"physical context\".  VR  and DCBus ... why don\u0027t we have inventory objects for those if those are something worth modeling.",
       "revId": "f6952cab8a029968938f0ea4d5ae03088d870ecf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

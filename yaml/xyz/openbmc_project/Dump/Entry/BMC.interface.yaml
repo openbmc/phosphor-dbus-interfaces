@@ -3,3 +3,33 @@ description: >
 
     BMC dump is generated on the BMC with debug data for debugging the issues
     encountered on the BMC.
+
+properties:
+    - name: DumpType
+      type: enum[self.Type]
+      default: Unknown
+      flags:
+          - readonly
+      description: >
+          The source trigger or type of the BMC dump.
+enumerations:
+    - name: Type
+      description: >
+          Supported BMC dump types.
+      values:
+          - name: Unknown
+            description: >
+                The dump trigger is unknown, for example because an older dump
+                does not contain persisted type information.
+          - name: User
+            description: >
+                User-initiated BMC dump (e.g. via Redfish or CLI).
+          - name: Core
+            description: >
+                Dump triggered by an application core dump / crash.
+          - name: Elog
+            description: >
+                Dump triggered by an error log (elog).
+          - name: RAMOOPS
+            description: >
+                Dump triggered by a kernel panic (ramoops).

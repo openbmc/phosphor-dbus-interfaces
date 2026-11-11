@@ -1,0 +1,20 @@
+description: >
+    Optional companion to xyz.openbmc_project.Control.Power.Cap for Concurrent
+    Power Capping (CPC). Each object represents an additional limit, such as PL1
+    or PL2, over a platform-defined cap averaging interval (CAI) or CAI range. A
+    domain supports a limited number of concurrent limits with non-overlapping
+    CAIs or CAI ranges.
+
+    Use only Power.Cap when CPC is not implemented or needed and a single limit
+    suffices. PowerCapEnable on the domain's Power.Cap interface enables or
+    disables all limits together. This interface provides neither a separate
+    enable property nor CAI configuration.
+
+properties:
+    - name: PowerLimit
+      type: uint32
+      default: maxint
+      description: >
+          Requested power limit in watts for this object's CAI or CAI range,
+          within platform-defined bounds. This value does not confirm that the
+          host has applied the limit.

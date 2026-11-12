@@ -16,6 +16,24 @@
       "message": "Is your usecase having an extra network interface or is it having an extra mac for the same network interface ?",
       "revId": "d07992023ce0936d0553a4f25b809a884c775689",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d77dba0_60c415f8",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1002520
+      },
+      "writtenOn": "2026-11-12T06:43:33Z",
+      "side": 1,
+      "message": "Our use case involves two separate network interfaces: eth0 (Marvell 88E6393) and eth1 (Intel E810). Each interface has its own MAC address, and both MAC addresses are stored in the same motherboard inventory.",
+      "parentUuid": "2b228db4_7447fc3c",
+      "revId": "d07992023ce0936d0553a4f25b809a884c775689",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

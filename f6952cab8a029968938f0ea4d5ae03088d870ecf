@@ -56,6 +56,24 @@
       "message": "We\u0027ve had this conversation before.  I absolutely hate this Redfish enumeration.  For things where we already have an inventory interface to represent the \"physical context\" we should use that interface.  We don\u0027t need an additional \"physical context\" interface with the same information.\n\nI\u0027m not going to accept Board or CPU for certain.  I don\u0027t know what a \"GPUSubsystem\" is but that sounds to me like a \"logical context\" which is clearly not a \"physical context\".  VR  and DCBus ... why don\u0027t we have inventory objects for those if those are something worth modeling.",
       "revId": "f6952cab8a029968938f0ea4d5ae03088d870ecf",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48c6e7ce_9d75b647",
+        "filename": "yaml/xyz/openbmc_project/Common/PhysicalContext.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-11-12T10:42:05Z",
+      "side": 1,
+      "message": "Would deriving it from the sensor\u0027s `inventory` association work instead, with bmcweb mapping `Item.Cpu`, `Item.Board` and `Item.Vrm` to `PhysicalContext` the way it already checks `Item.PowerSupply`?",
+      "parentUuid": "4629a5e5_9cbf9d92",
+      "revId": "f6952cab8a029968938f0ea4d5ae03088d870ecf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -30,13 +30,16 @@ properties:
 
     - name: LastUpdated
       type: uint64
+      default: 0
       flags:
           - readonly
       description: >
           The date and time when information for the component was last updated.
           Firmware update, device certificate change or other device state
           change that leads to component integrity change should update this
-          date. It is represented in milliseconds since the UNIX epoch.
+          date. It is represented in milliseconds since the UNIX epoch. A value
+          of zero indicates that no component integrity information has been
+          acquired yet.
 
 associations:
     - name: authenticating

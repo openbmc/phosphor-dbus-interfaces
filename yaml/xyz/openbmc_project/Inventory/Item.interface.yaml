@@ -139,20 +139,20 @@ associations:
           - xyz.openbmc_project.Control.Valve
           - xyz.openbmc_project.Control.Power.Cap
           - xyz.openbmc_project.Control.OperatingClockSpeed
-    - name: ran_on
+    - name: running
       description: >
-          Objects that implement Item can optionally implement the 'ran_on'
+          Objects that implement Item can optionally implement the 'running'
           association to provide a link to the software versions currently
           running on the item.
-      reverse_name: running
+      reverse_name: ran_on
       required_endpoint_interfaces:
           - xyz.openbmc_project.Software.Version
-    - name: activated_on
+    - name: activating
       description: >
-          Objects that implement Item can optionally implement the
-          'activated_on' association to provide a link to the software versions
-          that are activated for the item.
-      reverse_name: activating
+          Objects that implement Item can optionally implement the 'activating'
+          association to provide a link to the software versions that are
+          activated for the item.
+      reverse_name: activated_on
       required_endpoint_interfaces:
           - xyz.openbmc_project.Software.Version
 

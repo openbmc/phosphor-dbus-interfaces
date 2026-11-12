@@ -44,21 +44,21 @@ enumerations:
                 The version is a version for a PSU.
 
 associations:
-    - name: running
+    - name: ran_on
       description: >
-          This indicates the current running version for the associated
-          inventory item.
-      reverse_name: ran_on
+          This indicates the inventory items this version is currently running
+          on.
+      reverse_name: running
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
-    - name: activating
+    - name: activated_on
       description: >
-          This indicates the current activated version for the associated
-          inventory item. There can be more than one active version associated
-          with the same inventory item. In such a case, RedundancyPriority
-          interface will help to decide the correct priority order for the
-          active version transition to running.
-      reverse_name: activated_on
+          This indicates the inventory items this version is activated on. There
+          can be more than one active version associated with the same inventory
+          item. In such a case, RedundancyPriority interface will help to decide
+          the correct priority order for the active version transition to
+          running.
+      reverse_name: activating
       required_endpoint_interfaces:
           - xyz.openbmc_project.Inventory.Item
 

@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b67136ef_5b33dc84",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-11-12T13:00:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "edd9d0d6_ef159862",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 17
+      },
+      "revId": "c5cee3f5e9ddb5c0b56f8f2ff6f5b18c926fdfd7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e4766774_407c4ce6",
@@ -47,6 +71,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcfb6189_f04d7db5",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-11-12T13:00:58Z",
+      "side": 1,
+      "message": "Done, removed.",
+      "parentUuid": "e4766774_407c4ce6",
+      "range": {
+        "startLine": 29,
+        "startChar": 62,
+        "endLine": 31,
+        "endChar": 67
+      },
+      "revId": "c5cee3f5e9ddb5c0b56f8f2ff6f5b18c926fdfd7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e5cde6cd_e7ef2119",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-10-27T16:33:20Z",
       "side": 1,
       "message": "These aren\u0027t clear to me as to when one is happening over another.  I understand if one isn\u0027t in SupportedResetTypes, but would that be an InvalidArgument?  What is the case for the other one?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 56
+      },
+      "revId": "c5cee3f5e9ddb5c0b56f8f2ff6f5b18c926fdfd7",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c4b8126_e65c98d4",
+        "filename": "yaml/xyz/openbmc_project/Control/Reset.interface.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-11-12T13:00:58Z",
+      "side": 1,
+      "message": "A type not in `SupportedResetTypes` now returns `InvalidArgument`.\n`Unavailable` is for a write while a previous reset is still in progress, so the caller can retry once `PendingReset` is back to `None`.",
+      "parentUuid": "e5cde6cd_e7ef2119",
       "range": {
         "startLine": 37,
         "startChar": 0,

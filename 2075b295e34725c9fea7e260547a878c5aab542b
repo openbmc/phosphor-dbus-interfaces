@@ -24,6 +24,30 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "79a93f12_533e335d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-11-13T09:00:56Z",
+      "side": 1,
+      "message": "When a value takes effect is now reported generically by Control.Decorator.ApplyTime (https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/97262), which bmcweb handles in one shared helper (https://gerrit.openbmc.org/c/openbmc/bmcweb/+/97268) and exposes as SupportedApplyTimes, and the rule is written down in https://gerrit.openbmc.org/c/openbmc/bmcweb/+/97269.",
+      "parentUuid": "7e465438_d289120f",
+      "range": {
+        "startLine": 21,
+        "startChar": 30,
+        "endLine": 22,
+        "endChar": 62
+      },
+      "revId": "2075b295e34725c9fea7e260547a878c5aab542b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "94d9a799_b82a74d2",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-10-27T19:43:10Z",
       "side": 1,
       "message": "Can you please include WHY this change is required?\n\nPresumably the intent here is to wire this up to Redfish, which doesn\u0027t have the concept of requested and current for a link state.  How do you intend to bridge that gap?\n\n(Please answer these in your commit message).",
+      "revId": "2075b295e34725c9fea7e260547a878c5aab542b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6da1955_ad15a9eb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-11-13T09:00:56Z",
+      "side": 1,
+      "message": "Redfish does model this through the settings resource referenced by @Redfish.Settings, and the commit message now explains why the request cannot live in Connector.Port.LinkState and how the two map.",
+      "parentUuid": "94d9a799_b82a74d2",
       "revId": "2075b295e34725c9fea7e260547a878c5aab542b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

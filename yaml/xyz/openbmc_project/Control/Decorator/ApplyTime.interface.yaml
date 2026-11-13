@@ -1,0 +1,34 @@
+description: >
+    Implement on a control object to indicate when values written to the
+    writable properties of the other control interfaces on the same object take
+    effect on the controlled device. A control object that does not implement
+    this interface does not report its apply time, and clients must not assume
+    that written values take effect immediately. The same control interface can
+    apply values at different times on different devices, so this is reported by
+    the implementation rather than fixed by the control interface definition.
+    Maps to the SupportedApplyTimes property of the "@Redfish.Settings"
+    annotation on the Redfish resource that represents the controlled device.
+
+properties:
+    - name: ApplyTime
+      type: enum[self.ApplyTimes]
+      default: Immediate
+      flags:
+          - readonly
+      description: >
+          When values written to the control interfaces on this object take
+          effect on the controlled device.
+
+enumerations:
+    - name: ApplyTimes
+      description: >
+          The possible times at which written values take effect.
+      values:
+          - name: Immediate
+            description: >
+                Written values take effect immediately.
+          - name: OnReset
+            description: >
+                Written values are held by the controlled device and take effect
+                at its next reset. Until then, the properties that report the
+                current state of the device keep their present values.

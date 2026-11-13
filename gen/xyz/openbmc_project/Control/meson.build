@@ -2,6 +2,7 @@
 subdir('Boot')
 subdir('CFMLimit')
 subdir('ChassisCapabilities')
+subdir('Decorator')
 subdir('Device')
 subdir('Failover')
 subdir('FanPwm')

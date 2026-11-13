@@ -16,6 +16,24 @@
       "message": "Could the absence of this decorator mean that the apply time is unknown rather than immediate? OperatingClockSpeed already permits a requested value to take effect after a device reset or host driver load, and existing implementations would not necessarily provide this new interface. Assuming immediate application could therefore cause a client to report the wrong behavior until those implementations are updated.",
       "revId": "8c837828c67e72eeff6dab8d390f75f47959377b",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "988b881e_e0d7feb5",
+        "filename": "yaml/xyz/openbmc_project/Control/Decorator/ApplyTime.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-11-13T09:46:52Z",
+      "side": 1,
+      "message": "Agreed, absence now means the apply time is not reported, and bmcweb only uses the settings resource when OnReset is reported, so existing implementations are unaffected.",
+      "parentUuid": "b9774599_b6ceccd1",
+      "revId": "8c837828c67e72eeff6dab8d390f75f47959377b",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

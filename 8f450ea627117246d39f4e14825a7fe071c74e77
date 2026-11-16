@@ -16,6 +16,24 @@
       "message": "@dirkchen@amd.com Why are you dropping this entry ? I don\u0027t see any reasoning mentioned in the commit message.",
       "revId": "8f450ea627117246d39f4e14825a7fe071c74e77",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00531cb0_84039f90",
+        "filename": "yaml/com/meta/Hardware/Anacapa.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1002744
+      },
+      "writtenOn": "2026-11-16T08:52:51Z",
+      "side": 0,
+      "message": "@paligill@gmail.com Sorry, my mistake.\n\nThe PCIe switch entries correspond to an early Anacapa PCIe-switch design that was later canceled and never supported by BMC.\n\nHowever, you are right that this removal is not explained in the commit message. I\u0027ll restore the entries in this change and submit the cleanup as a separate PR.",
+      "parentUuid": "4a6b0727_12372fb5",
+      "revId": "8f450ea627117246d39f4e14825a7fe071c74e77",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -34,6 +34,24 @@
       "parentUuid": "2b228db4_7447fc3c",
       "revId": "d07992023ce0936d0553a4f25b809a884c775689",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "721caf00_8a3a4f39",
+        "filename": "yaml/xyz/openbmc_project/Inventory/Item/NetworkInterface.interface.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001758
+      },
+      "writtenOn": "2026-11-16T17:56:02Z",
+      "side": 1,
+      "message": "\u003e Our use case involves two separate network interfaces: eth0 (Marvell 88E6393) and eth1 (Intel E810). Each interface has its own MAC address, and both MAC addresses are stored in the same motherboard inventory.\n\n@eldin.lee@quantatw.com Then i suppose this model doesn\u0027t reflect your usecase as both mac address are under same interface. I am wondering if it would make sense to add the name property to interface and let EM create two different entries on two different object paths if name property is present.\n\n@patrick@stwcx.xyz Any thoughts ?",
+      "parentUuid": "4d77dba0_60c415f8",
+      "revId": "d07992023ce0936d0553a4f25b809a884c775689",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

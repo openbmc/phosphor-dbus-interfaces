@@ -16,6 +16,23 @@
       "message": "I see some relevant messages in Redfish. \n\n- OperatingSystemCrash\n- PlatformError\n- PlatformErrorAtLocation\n\nhttps://www.dmtf.org/sites/default/files/standards/documents/DSP2065_2026.1.pdf\n\n@patrick@stwcx.xyz I am wondering if PlatformErrorAtLocation can be utilized as it also provides the location info?",
       "revId": "d31bec0d90a67b2adf02c1fabaed953b2046552f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0f8217c_2973fe9f",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry.events.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-11-17T23:15:44Z",
+      "side": 1,
+      "message": "IMHO this is still not usable from outside the BMC. If this is a FaultLog then the file is retrieved using the attachment, the path of the file has no value.",
+      "revId": "d31bec0d90a67b2adf02c1fabaed953b2046552f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

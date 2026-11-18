@@ -16,6 +16,23 @@
       "message": "You can change severity https://github.com/openbmc/phosphor-logging/blob/master/lib/include/phosphor-logging/commit.hpp#L19 so all these messages are pretty much \"SomethingHappened\". We do not want to define extremely generic logs like that.\n\nAlso, I do not prefer having a CCI specific event interface. The events should define whats happening, not where it came from.",
       "revId": "eec6fd3c61a8c27e01f35b0a06ef384e8c511696",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4bff24fd_744dd6ed",
+        "filename": "yaml/xyz/openbmc_project/CXL/CCI/Event.interface.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000212
+      },
+      "writtenOn": "2026-11-18T22:21:03Z",
+      "side": 1,
+      "message": "why do we need this? I suspect it already generates a PDI event.",
+      "revId": "eec6fd3c61a8c27e01f35b0a06ef384e8c511696",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

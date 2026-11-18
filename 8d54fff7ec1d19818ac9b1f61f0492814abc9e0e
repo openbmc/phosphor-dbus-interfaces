@@ -16,6 +16,24 @@
       "message": "There\u0027s a similar proposal already here: https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/83533",
       "revId": "8d54fff7ec1d19818ac9b1f61f0492814abc9e0e",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "534c09cc_6ce62d85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002790
+      },
+      "writtenOn": "2026-11-18T08:37:57Z",
+      "side": 1,
+      "message": "Thanks Asmitha, I had missed it. [83533](https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/83533) manages the BMC\u0027s own LLDP through lldpd with writable transmit TLVs, while this reports what a network adapter\u0027s own firmware agent sends and receives over a sideband. @ugoldfeld@nvidia.com, would you be open to both sharing one read-only TLVs interface, with the writable TLVs and the enable switch staying in [83533](https://gerrit.openbmc.org/c/openbmc/phosphor-dbus-interfaces/+/83533)?",
+      "parentUuid": "52c673a0_f930d469",
+      "revId": "8d54fff7ec1d19818ac9b1f61f0492814abc9e0e",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }

@@ -166,6 +166,54 @@ paths:
                 The total number of PCIe unsupported requests received by a
                 device.
             value: pcie/unsupported_request_count
+          - name: PCIeCompletionCreditExhaustionDrops
+            description: >
+                The total number of read requests dropped on a PCIe port since
+                reset because completion credits were exhausted.
+            value: pcie/completion_credit_exhaustion_drops
+          - name: PCIeNPCreditExhaustionDrops
+            description: >
+                The total number of read requests dropped on a PCIe port since
+                reset because non-posted credits were exhausted.
+            value: pcie/np_credit_exhaustion_drops
+          - name: PCIeOutboundCompletionTLPBytes
+            description: >
+                The total data payload in bytes transferred through outbound
+                completion transaction layer packets (TLPs) on a PCIe port since
+                reset.
+            value: pcie/outbound_completion_tlp_bytes
+          - name: PCIeOutboundCompletionTLPCount
+            description: >
+                The total number of outbound completion transaction layer
+                packets (TLPs) on a PCIe port since reset.
+            value: pcie/outbound_completion_tlp_count
+          - name: PCIeOutboundReadTLPBytes
+            description: >
+                The total data payload in bytes transferred through outbound
+                read transaction layer packets (TLPs) on a PCIe port since
+                reset.
+            value: pcie/outbound_read_tlp_bytes
+          - name: PCIeOutboundReadTLPCount
+            description: >
+                The total number of outbound read transaction layer packets
+                (TLPs) on a PCIe port since reset.
+            value: pcie/outbound_read_tlp_count
+          - name: PCIeOutboundWriteTLPBytes
+            description: >
+                The total data payload in bytes transferred through outbound
+                write transaction layer packets (TLPs) on a PCIe port since
+                reset.
+            value: pcie/outbound_write_tlp_bytes
+          - name: PCIeOutboundWriteTLPCount
+            description: >
+                The total number of outbound write transaction layer packets
+                (TLPs) on a PCIe port since reset.
+            value: pcie/outbound_write_tlp_count
+          - name: PCIeTagUnavailabilityDrops
+            description: >
+                The total number of read requests dropped on a PCIe port since
+                reset because no tag was available.
+            value: pcie/tag_unavailability_drops
           - name: NICTXBytes
             description: >
                 The total number of bytes transmitted on a port since reset.

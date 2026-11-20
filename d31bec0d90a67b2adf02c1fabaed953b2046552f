@@ -36,6 +36,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f89520c_062604be",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2026-11-20T03:36:35Z",
+      "side": 1,
+      "message": "bmcweb already has similar handling implemntaion for Intel (https://github.com/openbmc/bmcweb/blob/master/redfish-core/lib/log_services.hpp#L52), but there is no equivalent PDI event today. I\ns this new event intended to model the same flow through PDI, or is this a new/different flow?\nIt would help to clarify how the PDI event maps back to the PDC dump entry",
+      "parentUuid": "d5f97aa2_504a23ff",
+      "revId": "d31bec0d90a67b2adf02c1fabaed953b2046552f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4538798d_95fca938",

@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5f97aa2_504a23ff",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2026-11-20T02:32:32Z",
+      "side": 1,
+      "message": "The requirement includes both. Users need to be notified when a crashdump has been generated, and the notification should include the corresponding Entry ID. They can then use a common Redfish interface, such as the Attachment interface, to retrieve the crashdump using that Entry ID.",
+      "parentUuid": "05b1e92d_348e98c7",
+      "revId": "d31bec0d90a67b2adf02c1fabaed953b2046552f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4538798d_95fca938",
@@ -35,6 +53,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdaf4085_a4dc147c",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry.events.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2026-11-20T02:32:32Z",
+      "side": 1,
+      "message": "PlatformErrorAtLocation is a good fit, with only the entryID argument missing.\nRename it to PlatformCrashdump to align with the spec naming.",
+      "parentUuid": "4538798d_95fca938",
+      "revId": "d31bec0d90a67b2adf02c1fabaed953b2046552f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e0f8217c_2973fe9f",
@@ -48,6 +84,24 @@
       "writtenOn": "2026-11-17T23:15:44Z",
       "side": 1,
       "message": "IMHO this is still not usable from outside the BMC. If this is a FaultLog then the file is retrieved using the attachment, the path of the file has no value.",
+      "revId": "d31bec0d90a67b2adf02c1fabaed953b2046552f",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76969ee0_97f0dc19",
+        "filename": "yaml/xyz/openbmc_project/Dump/Entry.events.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2026-11-20T02:32:32Z",
+      "side": 1,
+      "message": "Change to enrtyID",
+      "parentUuid": "e0f8217c_2973fe9f",
       "revId": "d31bec0d90a67b2adf02c1fabaed953b2046552f",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

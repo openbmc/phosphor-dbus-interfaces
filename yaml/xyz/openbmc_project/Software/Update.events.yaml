@@ -1,4 +1,4 @@
-version: 1.3.0
+version: 1.4.0
 
 errors:
     - name: VerificationFailed
@@ -153,6 +153,22 @@ events:
                 PackageVersionString for a PLDM package and version field for a
                 manifest based image format.
       redfish-mapping: Update.UpdateSuccessful
+
+    - name: AwaitToActivate
+      metadata:
+          - name: ImageIdentifier
+            type: string
+            primary: true
+            description:
+                The identifier for the image. This shall map to
+                PackageVersionString for a PLDM package and version field for a
+                manifest based image format.
+          - name: TargetName
+            type: object_path
+            primary: true
+            description:
+                The name or identifier of the firmware target or resource.
+      redfish-mapping: Update.AwaitToActivate
 
     - name: ResetRequired
       metadata:
